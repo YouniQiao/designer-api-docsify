@@ -1182,7 +1182,7 @@ KEYCODE_SEMICOLON = 2062
 KEYCODE_APOSTROPHE = 2063
 ```
 
-按键''' (单引号)。
+按键'''（单引号）。
 
 **起始版本：** 9
 
@@ -2404,7 +2404,7 @@ KEYCODE_SCALE = 2612
 KEYCODE_HANGUEL = 2613
 ```
 
-日文韩语键。
+韩文键。
 
 **起始版本：** 9
 
@@ -2418,7 +2418,7 @@ KEYCODE_HANGUEL = 2613
 KEYCODE_HANJA = 2614
 ```
 
-日文汉语键。
+韩文汉字键。
 
 **起始版本：** 9
 
@@ -3412,7 +3412,7 @@ KEYCODE_CALENDAR = 2685
 KEYCODE_RED = 2686
 ```
 
-红色指示器。
+红色指示器键。
 
 **起始版本：** 9
 
@@ -3426,7 +3426,7 @@ KEYCODE_RED = 2686
 KEYCODE_GREEN = 2687
 ```
 
-绿色指示器。
+绿色指示器键。
 
 **起始版本：** 9
 
@@ -3440,7 +3440,7 @@ KEYCODE_GREEN = 2687
 KEYCODE_YELLOW = 2688
 ```
 
-黄色指示器。
+黄色指示器键。
 
 **起始版本：** 9
 
@@ -3454,7 +3454,7 @@ KEYCODE_YELLOW = 2688
 KEYCODE_BLUE = 2689
 ```
 
-蓝色指示器。
+蓝色指示器键。
 
 **起始版本：** 9
 
@@ -3720,7 +3720,7 @@ KEYCODE_NEWS = 2707
 KEYCODE_VOICEMAIL = 2708
 ```
 
-语音信箱。
+语音信箱键。
 
 **起始版本：** 9
 
@@ -3734,7 +3734,7 @@ KEYCODE_VOICEMAIL = 2708
 KEYCODE_ADDRESSBOOK = 2709
 ```
 
-通讯簿。
+通讯簿键。
 
 **起始版本：** 9
 
@@ -3790,7 +3790,7 @@ KEYCODE_SPELLCHECK = 2712
 KEYCODE_COFFEE = 2713
 ```
 
-终端锁/屏幕保护程序。
+终端锁/屏幕保护程序键。
 
 **起始版本：** 9
 
@@ -3846,7 +3846,7 @@ KEYCODE_BUTTONCONFIG = 2716
 KEYCODE_TASKMANAGER = 2717
 ```
 
-任务管理器。
+任务管理器键。
 
 **起始版本：** 9
 
@@ -4104,7 +4104,7 @@ KEYCODE_AOD_SINGLE_CLICK = 2740
 KEYCODE_FRONT = 2800
 ```
 
-挡风玻璃除雾器开关。
+挡风玻璃除雾器开关键。
 
 **起始版本：** 9
 
@@ -4524,7 +4524,7 @@ KEYCODE_PROG4 = 2829
 KEYCODE_DASHBOARD = 2830
 ```
 
-仪表板。
+仪表板键。
 
 **起始版本：** 9
 
@@ -4692,7 +4692,7 @@ KEYCODE_BLUETOOTH = 2843
 KEYCODE_WLAN = 2844
 ```
 
-无线局域网。
+无线局域网键。
 
 **起始版本：** 9
 
@@ -4734,7 +4734,7 @@ KEYCODE_WWAN_WIMAX = 2846
 KEYCODE_RFKILL = 2847
 ```
 
-控制所有收音机的键。
+控制所有无线设备的键。
 
 **起始版本：** 9
 
@@ -4762,7 +4762,7 @@ KEYCODE_CHANNEL = 3001
 KEYCODE_BTN_0 = 3100
 ```
 
-按键0。
+按钮'0'。
 
 **起始版本：** 9
 
@@ -4776,7 +4776,7 @@ KEYCODE_BTN_0 = 3100
 KEYCODE_BTN_1 = 3101
 ```
 
-按键1。
+按钮'1'。
 
 **起始版本：** 9
 
@@ -4790,7 +4790,7 @@ KEYCODE_BTN_1 = 3101
 KEYCODE_BTN_2 = 3102
 ```
 
-按键2。
+按钮'2'。
 
 **起始版本：** 9
 
@@ -4804,7 +4804,7 @@ KEYCODE_BTN_2 = 3102
 KEYCODE_BTN_3 = 3103
 ```
 
-按键3。
+按钮'3'。
 
 **起始版本：** 9
 
@@ -4818,7 +4818,7 @@ KEYCODE_BTN_3 = 3103
 KEYCODE_BTN_4 = 3104
 ```
 
-按键4。
+按钮'4'。
 
 **起始版本：** 9
 
@@ -4832,7 +4832,7 @@ KEYCODE_BTN_4 = 3104
 KEYCODE_BTN_5 = 3105
 ```
 
-按键5。
+按钮'5'。
 
 **起始版本：** 9
 
@@ -4846,7 +4846,7 @@ KEYCODE_BTN_5 = 3105
 KEYCODE_BTN_6 = 3106
 ```
 
-按键6。
+按钮'6'。
 
 **起始版本：** 9
 
@@ -4860,7 +4860,7 @@ KEYCODE_BTN_6 = 3106
 KEYCODE_BTN_7 = 3107
 ```
 
-按键7。
+按钮'7'。
 
 **起始版本：** 9
 
@@ -4874,7 +4874,7 @@ KEYCODE_BTN_7 = 3107
 KEYCODE_BTN_8 = 3108
 ```
 
-按键8。
+按钮'8'。
 
 **起始版本：** 9
 
@@ -4888,7 +4888,7 @@ KEYCODE_BTN_8 = 3108
 KEYCODE_BTN_9 = 3109
 ```
 
-按键9。
+按钮'9'。
 
 **起始版本：** 9
 
@@ -4997,5 +4997,149 @@ KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_CLICK
+
+```TypeScript
+KEYCODE_PTZ_CLICK = 3235
+```
+
+云台单击键。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_CLICK = 3235--><!--Device-KeyCode-KEYCODE_PTZ_CLICK = 3235-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_FOCUS_LEFT
+
+```TypeScript
+KEYCODE_PTZ_FOCUS_LEFT = 3236
+```
+
+云台调焦左调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_FOCUS_LEFT = 3236--><!--Device-KeyCode-KEYCODE_PTZ_FOCUS_LEFT = 3236-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_FOCUS_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_FOCUS_RIGHT = 3237
+```
+
+云台调焦右调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_FOCUS_RIGHT = 3237--><!--Device-KeyCode-KEYCODE_PTZ_FOCUS_RIGHT = 3237-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_EXPOSURE_LEFT
+
+```TypeScript
+KEYCODE_PTZ_EXPOSURE_LEFT = 3238
+```
+
+云台曝光左调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_EXPOSURE_LEFT = 3238--><!--Device-KeyCode-KEYCODE_PTZ_EXPOSURE_LEFT = 3238-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_EXPOSURE_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_EXPOSURE_RIGHT = 3239
+```
+
+云台曝光右调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_EXPOSURE_RIGHT = 3239--><!--Device-KeyCode-KEYCODE_PTZ_EXPOSURE_RIGHT = 3239-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_SHUTTER_LEFT
+
+```TypeScript
+KEYCODE_PTZ_SHUTTER_LEFT = 3240
+```
+
+云台快门速度左调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_SHUTTER_LEFT = 3240--><!--Device-KeyCode-KEYCODE_PTZ_SHUTTER_LEFT = 3240-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_SHUTTER_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_SHUTTER_RIGHT = 3241
+```
+
+云台快门速度右调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_SHUTTER_RIGHT = 3241--><!--Device-KeyCode-KEYCODE_PTZ_SHUTTER_RIGHT = 3241-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_APERTURE_LEFT
+
+```TypeScript
+KEYCODE_PTZ_APERTURE_LEFT = 3242
+```
+
+云台光圈左调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_APERTURE_LEFT = 3242--><!--Device-KeyCode-KEYCODE_PTZ_APERTURE_LEFT = 3242-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## KEYCODE_PTZ_APERTURE_RIGHT
+
+```TypeScript
+KEYCODE_PTZ_APERTURE_RIGHT = 3243
+```
+
+云台光圈右调节。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-KeyCode-KEYCODE_PTZ_APERTURE_RIGHT = 3243--><!--Device-KeyCode-KEYCODE_PTZ_APERTURE_RIGHT = 3243-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

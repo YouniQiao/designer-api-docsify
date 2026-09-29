@@ -427,7 +427,7 @@ dateTimeOptions?: DateTimeOptions
 
 **类型：** [DateTimeOptions](arkts-arkui-timepicker-comp-datetimeoptions-t.md)
 
-**默认值：** hour: In the 24-hour format, it defaults to 2-digit, which means a leading zero is used; <br>In the 12-hour format, it defaults to numeric, which means no leading zero is used. <br>minute: defaults to 2-digit, which means a leading zero is used.
+**默认值：** hour: 24小时制默认为2-digit，即使用前导0；<br>12小时制默认为numeric，即不使用前导0。<br>minute: 默认为2-digit，即使用前导0。
 
 **起始版本：** 12
 
@@ -521,7 +521,7 @@ enableHoverMode?: boolean
 
 **类型：** boolean
 
-**默认值：** false - meaning not to enable the hover mode.
+**默认值：** false - 表示不开启悬停模式。
 
 **起始版本：** 14
 

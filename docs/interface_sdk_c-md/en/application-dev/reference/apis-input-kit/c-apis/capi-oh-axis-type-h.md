@@ -2,6 +2,8 @@
 
 ## Overview
 
+Axis event enums of input devices. The axis type defines the physical behavior characteristics of the input device in different interaction scenarios. The system distinguishes and delivers different gesture interaction information through the axis type.
+
 **Include**: <multimodalinput/oh_axis_type.h>
 
 **Library**: libohinput.so

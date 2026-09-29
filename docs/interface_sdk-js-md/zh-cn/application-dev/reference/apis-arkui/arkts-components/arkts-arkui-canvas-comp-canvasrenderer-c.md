@@ -610,7 +610,7 @@ getLineDash(): number[]
 
 | 类型 | 说明 |
 | --- | --- |
-| number[] |  |
+| number[] | 虚线样式数组，包含交替绘制线和间距的距离。 |
 
 ## getPixelMap
 

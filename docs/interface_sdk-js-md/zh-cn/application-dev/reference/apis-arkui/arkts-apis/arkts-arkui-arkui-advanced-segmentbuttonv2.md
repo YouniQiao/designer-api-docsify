@@ -12,7 +12,7 @@ import { SegmentButtonV2ItemOptions, OnSelectedIndexChange, OnSelectedIndexesCha
 
 | 名称 | 说明 |
 | --- | --- |
-| [SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) |  |
+| [SegmentButtonV2Item](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2item-c.md) | 分段按钮选项类，用于定义单个分段按钮的文本、图标等属性。 |
 | [SegmentButtonV2Items](arkts-arkui-arkui-advanced-segmentbuttonv2-segmentbuttonv2items-c.md) | 分段按钮选项集合。 |
 
 ### 结构体

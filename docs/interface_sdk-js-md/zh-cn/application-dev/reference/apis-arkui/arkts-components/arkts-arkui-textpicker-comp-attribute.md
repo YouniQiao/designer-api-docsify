@@ -288,7 +288,7 @@ divider(value: DividerOptions | null)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) &#124; null | 是 |  |
+| value | [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) &#124; null | 是 | 分割线样式。当需要自定义分割线的线宽、边距、颜色时传入DividerOptions对象；当需要隐藏分割线时传入null；不传入时使用默认样式。<br>默认值：<br>{<br>strokeWidth: '2px', <br>startMargin: 0, <br>endMargin: 0, <br>color: '#33000000'<br>} <br>1. 当value设置为有效的[DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md)时，按设置的样式显示分割线。<br>2. 当value设置为null时，不显示分割线。 |
 
 <a id="divider-1"></a>
 
@@ -416,7 +416,7 @@ onChange(callback: (value: string[], index: number[]) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: string[], index: number[]) =&gt; void | 是 |  |
+| callback | (value: string[], index: number[]) =&gt; void | 是 | 选项归位至选中项位置时触发的回调。回调返回选中项的文本和索引值。 |
 
 <a id="onchange-1"></a>
 
@@ -798,7 +798,7 @@ onAccept(callback: (value: string, index: number) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: string, index: number) =&gt; void | 是 |  |
+| callback | (value: string, index: number) =&gt; void | 是 | 点击弹窗中的"确定"按钮时触发的回调。回调返回选中项的文本和索引值。 |
 
 ## onCancel
 
@@ -826,4 +826,4 @@ onCancel(callback: () => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | () =&gt; void | 是 | Callback invoked when the cancel button in the dialog box is clicked. |
+| callback | () =&gt; void | 是 | 点击弹窗中的"取消"按钮时触发的回调。 |

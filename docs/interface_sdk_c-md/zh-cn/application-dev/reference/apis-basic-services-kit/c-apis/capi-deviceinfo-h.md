@@ -34,6 +34,8 @@
 | [const char *OH_GetOsReleaseType(void)](#oh_getosreleasetype) | 获取系统的发布类型。返回预定义的发布类型字符串。 |
 | [const char *OH_GetOSFullName(void)](#oh_getosfullname) | 获取完整的系统版本名。 |
 | [int OH_GetSdkApiVersion(void)](#oh_getsdkapiversion) | 获取系统软件API版本。 |
+| [int OH_GetSdkMinorApiVersion(void)](#oh_getsdkminorapiversion) | 获取系统次版本号。从API版本26.0.0起，为配合语义化版本号，新增次版本号的定义，即中间 字段的值，值为整型数。完整版本号由sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion共同构成。 |
+| [int OH_GetSdkPatchApiVersion(void)](#oh_getsdkpatchapiversion) | 获取系统修订版本号。从API版本26.0.0起，为配合语义化版本号，新增修订版本号的定义，即第三 个字段的值，值为整型数。完整版本号由sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion共同构成。 |
 | [int OH_GetFirstApiVersion(void)](#oh_getfirstapiversion) | 获取首个版本系统软件API版本。指设备首次发布时所支持的系统软件API版本。 |
 | [const char *OH_GetVersionId(void)](#oh_getversionid) | 获取版本ID。 |
 | [const char *OH_GetBuildType(void)](#oh_getbuildtype) | 获取系统的构建类型。 |
@@ -335,6 +337,42 @@ int OH_GetSdkApiVersion(void)
 | 类型 | 说明 |
 | -- | -- |
 | int | 系统软件API版本，取值范围为整数。常见的取值包括：12等。 |
+
+### OH_GetSdkMinorApiVersion()
+
+```c
+int OH_GetSdkMinorApiVersion(void)
+```
+
+**描述：**
+
+获取系统次版本号。从API版本26.0.0起，为配合语义化版本号，新增次版本号的定义，即中间 字段的值，值为整型数。完整版本号由sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion共同构成。
+
+**起始版本：** 26.0.1
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int | <ul> <li>0 ~ 99 - 系统次版本号，取值范围为整数。</li> <li>-1 - 未查询到系统次版本号, 或调用内部接口失败。</li> </ul> |
+
+### OH_GetSdkPatchApiVersion()
+
+```c
+int OH_GetSdkPatchApiVersion(void)
+```
+
+**描述：**
+
+获取系统修订版本号。从API版本26.0.0起，为配合语义化版本号，新增修订版本号的定义，即第三 个字段的值，值为整型数。完整版本号由sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion共同构成。
+
+**起始版本：** 26.0.1
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| int | <ul> <li>0 ~ 99 - 系统修订版本号，取值范围为整数。</li> <li>-1 - 未查询到系统修订版本号, 或调用内部接口失败。</li> </ul> |
 
 ### OH_GetFirstApiVersion()
 

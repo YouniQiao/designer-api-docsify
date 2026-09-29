@@ -300,7 +300,7 @@ The callback is triggered after the scroll animation ends. If you need to obtain
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: TimePickerResult) =&gt; void | Yes | Time in 24-hour format. |
+| callback | (value: TimePickerResult) =&gt; void | Yes | Callback used to return the selected time. The value of hour ranges from 0 to 23, regardless of the display format. |
 
 <a id="onchange-1"></a>
 

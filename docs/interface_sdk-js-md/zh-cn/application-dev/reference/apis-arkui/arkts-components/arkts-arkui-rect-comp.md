@@ -4,8 +4,6 @@
 
 > **说明：** 
 > 
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
 > 该组件从API version 20开始支持使用[AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md)类的
 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
@@ -21,7 +19,7 @@ Rect(
   )
 ```
 
-Use new function to create Rect. Anonymous Object Rectification.
+用于绘制矩形的构造函数。调用后创建一个Rect对象，可设置宽度、高度、圆角等属性。
 
 **起始版本：** 7
 
@@ -39,7 +37,7 @@ Use new function to create Rect. Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [RectOptions](arkts-arkui-rect-comp-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-rect-comp-roundedrectoptions-i.md) | 否 | Rect options |
+| options | [RectOptions](arkts-arkui-rect-comp-rectoptions-i.md) &#124; [RoundedRectOptions](arkts-arkui-rect-comp-roundedrectoptions-i.md) | 否 | Rect绘制属性，包含宽度、高度、圆角等配置。不传入时使用各属性默认值绘制矩形（宽高和圆角均为0）。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## Rect
 

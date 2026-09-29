@@ -4,7 +4,7 @@
 interface AVDownloaderManager
 ```
 
-Definition of the Offline Download Management Interface
+This module provides APIs for managing offline download tasks of media resources, including creating, pausing, resuming, and removing download tasks, as well as listening for download status and progress change events. This module is applicable to scenarios where streaming media resources need to be cached offline in an app and played without network access. It helps users save traffic and improves media playback experience in poor network connection or offline scenarios. You can call [createAVDownloaderManager()](arkts-media-media-createavdownloadermanager-f.md) to create an instance.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { media } from '@kit.MediaKit';
 addAVDownloadTask(source: MediaSource): string
 ```
 
-Create a download task based on the media description.
+Creates an offline download task based on the media source. By default, download tasks are performed only over Wi-Fi. To perform download tasks on the cellular network, set **allowsCellularAccess** to **true**.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Create a download task based on the media description.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| source | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Media description, including at least the resource URL.<br>Value constraint:The value cannot be null. |
+| source | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Media resource, which must contain at least the resource URL.<br>The value cannot be null. |
 
 **Return value:**
 
@@ -52,7 +52,7 @@ Create a download task based on the media description.
 allowsCellularAccess(value: boolean): void
 ```
 
-Set the network environment for the download. By default, the download is performed only in the Wi-Fi environment.
+Sets whether download is allowed on a cellular network. By default, download is allowed only over Wi-Fi. If download is not allowed on a cellular network but the current network is a cellular network, the download task will be paused and resumed when Wi-Fi is available.
 
 **Since:** 26.0.0
 
@@ -66,7 +66,7 @@ Set the network environment for the download. By default, the download is perfor
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | If is set to true, the download can be performed in any network environment, Otherwise, the download is performed only in the free Wi-Fi network environment. |
+| value | boolean | Yes | Whether download is allowed on a cellular network.<br>- **true**: allowed. <br>- **false**: not allowed (default). |
 
 ## getDownloadTasks
 
@@ -74,7 +74,7 @@ Set the network environment for the download. By default, the download is perfor
 getDownloadTasks(): Array<string>
 ```
 
-Obtains all offline download tasks in the Task Manager. Ended download tasks are automatically cleared.
+Obtains all offline download tasks in the offline download manager.
 
 **Since:** 26.0.0
 
@@ -88,7 +88,7 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 
 | Type | Description |
 | --- | --- |
-| Array&lt;string&gt; | If a task exists in the task manager, the task ID array is returned. Otherwise null. |
+| Array&lt;string&gt; | If tasks exist in the task manager, an array of the task IDs is returned. Otherwise, an empty array is returned. |
 
 ## getTaskCacheDirectory
 
@@ -96,7 +96,7 @@ Obtains all offline download tasks in the Task Manager. Ended download tasks are
 getTaskCacheDirectory(taskId: string): string
 ```
 
-Obtains the offline download cache directory of a specified task.
+Obtains the cache directory of a specified offline download task.
 
 **Since:** 26.0.0
 
@@ -110,13 +110,13 @@ Obtains the offline download cache directory of a specified task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of a task whose download cache directory is queried. |
+| taskId | string | Yes | ID of the offline download task whose cache directory is to be queried. The value must be the ID of an existing task in the current manager. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | Return the accessible path of the offline download task on the disk. |
+| string | Path of the cache directory of the offline download task on the disk. |
 
 **Error codes:**
 
@@ -130,7 +130,7 @@ Obtains the offline download cache directory of a specified task.
 getTaskProgress(taskId: string): number
 ```
 
-Obtains the progress of a specified offline download task.
+Obtains the download progress of a specified offline download task.
 
 **Since:** 26.0.0
 
@@ -144,13 +144,13 @@ Obtains the progress of a specified offline download task.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of the task for querying the progress. |
+| taskId | string | Yes | ID of the offline download task whose progress is to be queried. The value must be the ID of an existing task in the current manager. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| number | Returns the approximate ratio of the download progress of a specified task. Value range: [0.0-1.0] If the returned value range is -1, the resource size is unknown. |
+| number | Download progress percentage.<br>- Value range: [0.0, 1.0] <br>- If the return value is **-1**, the resource size is unknown. |
 
 **Error codes:**
 
@@ -164,7 +164,7 @@ Obtains the progress of a specified offline download task.
 getTaskStatus(taskId: string): AVDownloadTaskState
 ```
 
-Obtains the status of a specified offline download task. For details, see #AVDownloadTaskState.
+Obtains the status of a specified offline download task. For details about the status types, see #AVDownloadTaskState.
 
 **Since:** 26.0.0
 
@@ -178,13 +178,13 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of a task whose status is queried. |
+| taskId | string | Yes | ID of the offline download task whose status is to be queried. The value must be the ID of an existing task in the current manager. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Returns the task status of a specified task. |
+| [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Download status of the specified task. |
 
 **Error codes:**
 
@@ -198,7 +198,7 @@ Obtains the status of a specified offline download task. For details, see #AVDow
 offProgressChange(callback?: OnAVDownloadProgressChangeHandle): void
 ```
 
-Deregisters a specified function's listening on task progress change events.
+Unregisters the listener for the progress change event of an offline download task.
 
 **Since:** 26.0.0
 
@@ -212,7 +212,7 @@ Deregisters a specified function's listening on task progress change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No | Prototype of the function called by the event. The first parameter indicates the offline download task ID. The second parameter indicates the progress of an offline download task. The progress value ranges from 0.0 to 1.0, If the value is -1, the size of the resource is unknown.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No | Callback for progress changes, which must be registered using **onProgressChange**.<br>By default, if this parameter is not specified, all callbacks for the event are unregistered. |
 
 ## offStatusChange
 
@@ -220,7 +220,7 @@ Deregisters a specified function's listening on task progress change events.
 offStatusChange(callback?: OnAVDownloadTaskStateHandle): void
 ```
 
-Deregisters a specified function's listening on task status change events.
+Unregisters the listener for the status change event of an offline download task.
 
 **Since:** 26.0.0
 
@@ -234,7 +234,7 @@ Deregisters a specified function's listening on task status change events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No | Prototype of the function invoked by the event. The first parameter indicates the ID of the offline download task. The second parameter indicates the latest status of the offline download task.<br>Default value: If no parameter is set, all listening functions for the event are canceled. |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No | Callback for status changes, which must be registered using **onStatusChange**.<br>By default, if this parameter is not specified, all callbacks for the event are unregistered. |
 
 ## onProgressChange
 
@@ -242,7 +242,7 @@ Deregisters a specified function's listening on task status change events.
 onProgressChange(callback: OnAVDownloadProgressChangeHandle): void
 ```
 
-Registers a function to listen to the progress change value of an offline download task. The progress change of the offline download task exceeds 1% compared with that of the last time. The event is triggered after the interval exceeds 500 ms.
+Registers a listener for the progress change event of an offline download task. This event is triggered when the download progress changes by more than 1% compared to the last time and the interval since the last triggering exceeds 500 ms.
 
 **Since:** 26.0.0
 
@@ -256,7 +256,7 @@ Registers a function to listen to the progress change value of an offline downlo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | Yes | Prototype of the function called by the event. The first parameter indicates the offline download task ID. The second parameter indicates the progress of an offline download task. The progress value ranges from 0.0 to 1.0, If the value is -1, the size of the resource is unknown. |
+| callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | Yes | Callback for progress changes, which is implemented by the app.<br>The first parameter indicates the download task ID, and the second parameter indicates the download progress. <br>The value can be **-1** or a number within the range of [0.0, 1.0]. The value **-1** indicates that the resource size is unknown. |
 
 ## onStatusChange
 
@@ -264,7 +264,7 @@ Registers a function to listen to the progress change value of an offline downlo
 onStatusChange(callback: OnAVDownloadTaskStateHandle): void
 ```
 
-Registering a Function for Listening on Status Changes of Offline Download Tasks
+Registers a listener for the status change event of an offline download task.
 
 **Since:** 26.0.0
 
@@ -278,7 +278,7 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | Yes | Prototype of the function invoked by the event. The first parameter indicates the ID of the task whose status changes. The second parameter indicates the new status of the task switchover. |
+| callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | Yes | Callback for status changes, which is implemented by the app.<br>The first parameter indicates the ID of the task whose status changes, and the second parameter indicates the new status of the task |
 
 ## pauseDownloadTask
 
@@ -286,7 +286,7 @@ Registering a Function for Listening on Status Changes of Offline Download Tasks
 pauseDownloadTask(taskId?: string): void
 ```
 
-Suspending the download of a specified task
+Pauses a specified offline download task. The downloaded data will be retained. After the task is resumed, the download can continue from the breakpoint. The task must be in the downloading state. Otherwise, error code 5400102 will be returned. If no task ID is specified, all offline download tasks are paused. A paused task can be resumed using **resumeDownloadTask**.
 
 **Since:** 26.0.0
 
@@ -300,7 +300,7 @@ Suspending the download of a specified task
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | No | ID of the task whose download needs to be suspended. Value constraint:If the task ID is not transferred, all download tasks are suspended.. |
+| taskId | string | No | ID of the offline download task to pause.<br>By default, if this parameter is not specified, all download tasks are paused. |
 
 **Error codes:**
 
@@ -315,7 +315,7 @@ Suspending the download of a specified task
 release(): void
 ```
 
-Release resources used for AVDownloaderManager.
+Releases the resources used by the **AVDownloaderManager** instance. After this method is called, all download tasks will be stopped and removed, and the instance cannot be used to manage download tasks anymore.
 
 **Since:** 26.0.0
 
@@ -331,7 +331,7 @@ Release resources used for AVDownloaderManager.
 removeDownloadTask(taskId?: string): void
 ```
 
-Remove a download task from the offline download manager
+Removes an offline download task from the offline download manager. After the task is removed, the download will stop and the task will be deleted from the manager.
 
 **Since:** 26.0.0
 
@@ -345,7 +345,7 @@ Remove a download task from the offline download manager
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | No | Specifies the ID of an offline download task.<br>Default value: If this parameter is not specified, all offline download tasks are cleared.. |
+| taskId | string | No | ID of the offline download task to remove.<br>By default, if this parameter is not specified, all offline download tasks are removed. |
 
 **Error codes:**
 
@@ -359,7 +359,7 @@ Remove a download task from the offline download manager
 resumeDownloadTask(taskId?: string): void
 ```
 
-Resuming Offline Download of a Specified Task
+Resumes a specified offline download task from the breakpoint where the task was paused last time. The task must be in the paused state. Otherwise, error code 5400102 will be returned. If no task ID is specified, all paused offline download tasks are resumed.
 
 **Since:** 26.0.0
 
@@ -373,7 +373,7 @@ Resuming Offline Download of a Specified Task
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | No | Specifies the ID of an offline download task. Value constraint:If this parameter is not specified, all suspended offline download tasks are resumed.. |
+| taskId | string | No | ID of the offline download task to resume. The task must be in the paused state.<br>By default, if this parameter is not specified, all paused offline download tasks are resumed. |
 
 **Error codes:**
 
@@ -388,7 +388,7 @@ Resuming Offline Download of a Specified Task
 setRequestTimeout(timeout: number): void
 ```
 
-Sets the network timeout interval for HTTP requests. If the timeout interval is exceeded, the download fails.
+Sets the network timeout interval for an HTTP request. If the timeout interval is reached, the download task will fail.
 
 **Since:** 26.0.0
 
@@ -402,4 +402,4 @@ Sets the network timeout interval for HTTP requests. If the timeout interval is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| timeout | number | Yes | Timeout duration, in ms. If is not set, the default timeout duration is used. The value should be an integer.<br>**Description**&lt;/br&gt; &lt;ul&gt;&lt;li&gt;If the value is less than 0, there is no timeout duration.&lt;/li&gt;&lt;/ul&gt;. |
+| timeout | number | Yes | Timeout interval, in milliseconds.<br>The value must be an integer. <br>- If the value is greater than 0, it indicates the timeout interval. The value range is (0, +∞). <br>- If the value is less than or equal to 0, there is no timeout limit. You are advised to set a proper timeout interval based on the service scenario to prevent tasks from being suspended for a long time. <br>- If this parameter is not specified, the default timeout interval of 60,000 milliseconds is used. |

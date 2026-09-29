@@ -4,7 +4,7 @@
 type OnAdsEventLoadingErrorHandle = (adsId: string, reason: BusinessError) => void
 ```
 
-Describes the callback function for the ad media resource loading error event.
+Registers a callback for the ad media resource loading failure event.
 
 **Since:** 26.0.0
 
@@ -18,5 +18,5 @@ Describes the callback function for the ad media resource loading error event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| adsId | string | Yes | ID of the advertisement resource that fails to be loaded. |
-| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) | Yes | Indicates the reason of the loading failure. |
+| adsId | string | Yes | ID of the ad resource that fails to be loaded. |
+| reason | [BusinessError](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-businesserror-i.md) | Yes | Cause of the loading failure. |

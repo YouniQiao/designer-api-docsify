@@ -4,7 +4,7 @@
 declare enum AccessibilityHoverType
 ```
 
-Type of accessibility hover event.
+Enumerates the accessibility hover action types.
 
 **Since:** 12
 

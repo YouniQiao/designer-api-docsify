@@ -81,7 +81,7 @@ Dimension_4_4 = 3
 ## Dimension_2_1
 
 ```TypeScript
-Dimension_2_1
+Dimension_2_1 = 4
 ```
 
 2*1 卡片
@@ -92,7 +92,7 @@ Dimension_2_1
 
 **废弃版本：** 20
 
-<!--Device-FormDimension-Dimension_2_1--><!--Device-FormDimension-Dimension_2_1-End-->
+<!--Device-FormDimension-Dimension_2_1 = 4--><!--Device-FormDimension-Dimension_2_1 = 4-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,7 +4,7 @@
 interface AVAdsController
 ```
 
-Definition of the Ad Content Control Interface
+Provides APIs for controlling ad content, including managing ad resources in the ad playback controller and listening for ad events. You can add and remove ad sources, skip the current ad, and disable remaining ads. This module can be used to insert and manage ad content during video playback. Use [createAVAdsController()](arkts-media-media-createavadscontroller-f.md) to create an instance.
 
 **Since:** 26.0.0
 
@@ -24,7 +24,7 @@ import { media } from '@kit.MediaKit';
 addAdsMediaSource(src: MediaSource, start: number): Promise<string>
 ```
 
-Add an advertisement film source to the advertisement controller, The insertion time (relative to the playback progress of the main media asset) can be specified.
+Adds an ad media source to the ad controller and specifies the position where the ad is inserted during the playback of the main media resource. For example, you can insert an ad before the main content is played in the video player or during the playback. If multiple ads are inserted at the same position, they are played in the sequence in which they are added. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -38,14 +38,14 @@ Add an advertisement film source to the advertisement controller, The insertion 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Video source to be inserted into the main content for playback. |
-| start | number | Yes | Progress value of inserting data to the main media asset.<br>Unit: milliseconds. The value should be an integer. |
+| src | [MediaSource](arkts-media-media-mediasource-i.md) | Yes | Media source of the ad to be inserted into the main content. |
+| start | number | Yes | Position where the ad is inserted during the playback of the main media resources, which is calculated from the start of the main media resource playback.<br>The unit is milliseconds.<br>The value must be a non-negative integer and cannot exceed the total duration of the main media resource. Otherwise, error code 5400108 will be triggered. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the ID of the added media source in the ad controller. |
+| Promise&lt;string&gt; | Promise used to return the ID of the media source added to the ad controller. The **removeAdsMediaSource** API can remove the corresponding ad source based on this ID. |
 
 **Error codes:**
 
@@ -59,7 +59,7 @@ Add an advertisement film source to the advertisement controller, The insertion 
 disableAllAdsMediaSource(): void
 ```
 
-Disable playback of the remaining broadcast content in the current session
+Disables the playback of remaining ad content in the current session. Subsequent ads that have not been played will not be played. For example, when a user has purchased the ad-free option or ads should not be displayed according to the content review mechanism, this API can be called to disable all subsequent ads.
 
 **Since:** 26.0.0
 
@@ -75,7 +75,7 @@ Disable playback of the remaining broadcast content in the current session
 offAdsEventListenerLoadingError(callback?: OnAdsEventLoadingErrorHandle): void
 ```
 
-Unregisters the event processing function when the ad content fails to be loaded.
+Unregisters the callback for handling ad content loading failures.
 
 **Since:** 26.0.0
 
@@ -89,7 +89,7 @@ Unregisters the event processing function when the ad content fails to be loaded
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Ad content loading failure processing function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Callback for handling ad content loading failures.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
 ## offAdsListenerAdsCompleted
 
@@ -97,7 +97,7 @@ Unregisters the event processing function when the ad content fails to be loaded
 offAdsListenerAdsCompleted(callback?: Callback<string>): void
 ```
 
-Unregisters the processing function of the event triggered by the completion of ad content playing.
+Unregisters the callback triggered when the ad content playback is complete.
 
 **Since:** 26.0.0
 
@@ -111,7 +111,7 @@ Unregisters the processing function of the event triggered by the completion of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Processing function of the advertisement playing completion event.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the ad playback is complete.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
 ## offAdsListenerAdsSkipped
 
@@ -119,7 +119,7 @@ Unregisters the processing function of the event triggered by the completion of 
 offAdsListenerAdsSkipped(callback?: Callback<string>): void
 ```
 
-Unregisters the processing function of the event triggered when advertisement is skipped.
+Unregisters the callback triggered when an ad is skipped.
 
 **Since:** 26.0.0
 
@@ -133,7 +133,7 @@ Unregisters the processing function of the event triggered when advertisement is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Advertisement Skipped Processing Function.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback for ad skipping.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
 ## offAdsListenerAdsStarted
 
@@ -141,7 +141,7 @@ Unregisters the processing function of the event triggered when advertisement is
 offAdsListenerAdsStarted(callback?: OnAdsEventAdsStartedHandle): void
 ```
 
-Unregisters the processing function for the event triggered when a new ad content is played.
+Unregisters the callback triggered when a new ad is played.
 
 **Since:** 26.0.0
 
@@ -155,7 +155,7 @@ Unregisters the processing function for the event triggered when a new ad conten
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Processing function when the ad content starts to be played. It is usually used to switch the logic of the playback page.<br>Default value: If this parameter is not specified, all processing functions of the event are deregistered. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Callback triggered when the ad starts playing. It is usually used when the main content playback screen is switched to the ad playback screen.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
 ## onAdsEventListenerLoadingError
 
@@ -163,7 +163,7 @@ Unregisters the processing function for the event triggered when a new ad conten
 onAdsEventListenerLoadingError(callback: OnAdsEventLoadingErrorHandle): void
 ```
 
-Registers the event processing function when the ad content fails to be loaded.
+Registers a callback for handling ad content loading failures.
 
 **Since:** 26.0.0
 
@@ -177,7 +177,7 @@ Registers the event processing function when the ad content fails to be loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | This function is used to process ad content loading failures. This function needs to be implemented by the application.<br>The first parameter is used to transfer the advertisement ID, and the second parameter is used to transfer the failure cause. |
+| callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | Callback for handling ad content loading failures, which is implemented by the user.<br>The first parameter is used to pass the ad ID, and the second parameter is used to pass the failure cause. |
 
 ## onAdsListenerAdsCompleted
 
@@ -185,7 +185,7 @@ Registers the event processing function when the ad content fails to be loaded.
 onAdsListenerAdsCompleted(callback: Callback<string>): void
 ```
 
-Registers the processing function of the event triggered by the completion of ad content playing.
+Registers a callback triggered when the ad content playback is complete.
 
 **Since:** 26.0.0
 
@@ -199,7 +199,7 @@ Registers the processing function of the event triggered by the completion of ad
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function of the ad event, which contains the ID of the ad that is played. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the ad playback is complete. It is usually used to resume the playback of the main content. The parameter is the ID of the ad that has been played. |
 
 ## onAdsListenerAdsSkipped
 
@@ -207,7 +207,7 @@ Registers the processing function of the event triggered by the completion of ad
 onAdsListenerAdsSkipped(callback: Callback<string>): void
 ```
 
-Registers the processing function of the event triggered when advertisement is skipped.
+Registers a callback triggered when an ad is skipped.
 
 **Since:** 26.0.0
 
@@ -221,7 +221,7 @@ Registers the processing function of the event triggered when advertisement is s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Processing function for the advertisement to be jumped out of date. The parameter is passed as the ID of the skipped advertisement. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback for ad skipping. It is usually used to resume the playback of the main content. The parameter is the ID of the ad that is skipped. |
 
 ## onAdsListenerAdsStarted
 
@@ -229,7 +229,7 @@ Registers the processing function of the event triggered when advertisement is s
 onAdsListenerAdsStarted(callback: OnAdsEventAdsStartedHandle): void
 ```
 
-Registers the processing function for the event triggered when a new ad content is played.
+Registers a callback triggered when a new ad is played.
 
 **Since:** 26.0.0
 
@@ -243,7 +243,7 @@ Registers the processing function for the event triggered when a new ad content 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Processing function when the ad content starts to be played. The logic for switching the playback page is commonly used.<br>The first parameter indicates the ID of the advertisement that is being played, and the second parameter indicates the duration of the advertisement. |
+| callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Callback triggered when the ad starts playing. It is usually used when the main content playback screen is switched to the ad playback screen.<br>The first parameter indicates the ID of the ad being played, and the second parameter indicates the ad duration, in milliseconds |
 
 ## release
 
@@ -251,7 +251,7 @@ Registers the processing function for the event triggered when a new ad content 
 release(): void
 ```
 
-Release the AVAdsController object.
+Releases the **AVAdsController** object. After the release, the registered callback will not be triggered. You need to call this method to release the ad controller before releasing the AVPlayer.
 
 **Since:** 26.0.0
 
@@ -267,7 +267,7 @@ Release the AVAdsController object.
 removeAdsMediaSource(id: string): void
 ```
 
-Remove the ad source specified in the AdsController.
+Removes the specified ad media source from the ad controller. If the ad is being played, it will be removed after the playback is complete. For example, you can call this method to remove an ad when its content expires or the user has purchased the ad-free option.
 
 **Since:** 26.0.0
 
@@ -281,7 +281,7 @@ Remove the ad source specified in the AdsController.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | UUID value of the MediaSource. |
+| id | string | Yes | ID of the ad media source, which is returned by the **addAdsMediaSource** API. |
 
 **Error codes:**
 
@@ -295,7 +295,7 @@ Remove the ad source specified in the AdsController.
 skipCurrentAdsMediaSource(): void
 ```
 
-Skip the ad content that is being played.
+Skips the ad that is being played. After the ad is skipped, the playback of the main content resumes immediately, and the **onAdsListenerAdsSkipped** callback is triggered. For example, when a user taps the ad skip button on the player, this API can be called to skip the current ad and continue playing the main content.
 
 **Since:** 26.0.0
 

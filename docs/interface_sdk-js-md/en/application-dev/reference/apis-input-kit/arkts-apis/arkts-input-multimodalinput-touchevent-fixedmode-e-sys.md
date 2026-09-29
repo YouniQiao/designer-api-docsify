@@ -4,7 +4,7 @@
 export declare enum FixedMode
 ```
 
-Enumerates coordinate correction modes.
+Coordinate correction mode. The default value is NONE.
 
 **Since:** 19
 

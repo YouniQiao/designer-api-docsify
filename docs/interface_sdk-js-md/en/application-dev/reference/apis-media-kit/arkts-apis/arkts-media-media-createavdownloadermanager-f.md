@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function createAVDownloaderManager(): Promise<AVDownloaderManager>
 ```
 
-Creating a Streaming Resource Download Task Manager
+Creates an offline download task manager instance. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -26,4 +26,4 @@ Creating a Streaming Resource Download Task Manager
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; | Promise used to return AVDownloaderManager. |
+| Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; | Promise used to return an offline download task manager instance. |

@@ -18,7 +18,7 @@
   - [hasIrEmitter](arkts-input-infraredemitter-hasiremitter-f.md)
   - [transmitInfrared](arkts-input-infraredemitter-transmitinfrared-f.md)
   - [InfraredFrequency](arkts-input-infraredemitter-infraredfrequency-i.md)
-- [@ohos.multimodalInput.inputConsumer(Global Shortcut Keys)](arkts-input-multimodalinput-inputconsumer.md)
+- [@ohos.multimodalInput.inputConsumer(Global Hotkeys)](arkts-input-multimodalinput-inputconsumer.md)
   - [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md)
   <!--Del-->
   - [getShieldStatus(system api)](arkts-input-inputconsumer-getshieldstatus-f-sys.md)<!--DelEnd-->
@@ -137,7 +137,7 @@
   - [TouchEventReceiver(system api)](arkts-input-inputmonitor-toucheventreceiver-t-sys.md)<!--DelEnd-->
 - [@ohos.multimodalInput.intentionCode(Intention Code)](arkts-input-multimodalinput-intentioncode.md)
   - [IntentionCode](arkts-input-multimodalinput-intentioncode-intentioncode-e.md)
-- [@ohos.multimodalInput.keyCode(Keycode)](arkts-input-multimodalinput-keycode.md)
+- [@ohos.multimodalInput.keyCode(Key Code)](arkts-input-multimodalinput-keycode.md)
   - [KeyCode](arkts-input-multimodalinput-keycode-keycode-e.md)
 - [@ohos.multimodalInput.keyEvent(Key Event)](arkts-input-multimodalinput-keyevent.md)
   - [Key](arkts-input-multimodalinput-keyevent-key-i.md)

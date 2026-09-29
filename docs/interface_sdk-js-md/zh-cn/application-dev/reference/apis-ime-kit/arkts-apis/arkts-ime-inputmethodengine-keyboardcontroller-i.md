@@ -24,7 +24,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用callback异步回调。
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。从API版本26.0.1开始，支持提供系统级输入能力的输入法应用调用。使用callback异步回调。
 
 **起始版本：** 11
 
@@ -67,7 +67,7 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 exitCurrentInputType(): Promise<void>
 ```
 
-退出当前输入类型，仅支持系统配置的默认输入法应用调用。使用promise异步回调。
+退出当前输入类型，仅支持系统配置的默认输入法应用调用。从API版本26.0.1开始，支持提供系统级输入能力的输入法应用调用。使用promise异步回调。
 
 **起始版本：** 11
 

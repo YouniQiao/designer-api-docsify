@@ -42,7 +42,7 @@ This feature cannot be used together with the [overlay](../../../reference/apis-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to enable the AI image analyzer.<br>**true**: enable; **false**: disable<br> Default value: **false**. |
+| enable | boolean | Yes | Whether to enable the AI analysis feature.<br>true: enables AI analysis; false: disables AI analysis.<br>Default value: false |
 
 ## enableSecure
 
@@ -66,7 +66,7 @@ Sets whether to enable the secure surface to protect the content rendered within
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSecure | boolean | Yes | Whether to enable the secure surface.<br>The value **true** means to enable the secure surface, and **false** means the opposite.<br>Default value: **false**. |
+| isSecure | boolean | Yes | Whether to enable the privacy layer mode.<br>true: enables the privacy layer mode; false: disables the privacy layer mode.<br>Default value: false |
 
 ## hdrBrightness
 
@@ -90,7 +90,7 @@ Sets the brightness of HDR video playback for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | Brightness of HDR video playback.<br>Value range: 0.0 to 1.0. Values less than 0.0 are equivalent to 0.0, and values greater than 1.0 are equivalent to 1.0. **0.0** indicates the brightness of the SDR video, and **1.0** indicates the brightness of the HDR video.<br>Default value: **1.0**. |
+| brightness | number | Yes | Brightness of the HDR video.<br>Default value: **1.0**<br>Value range: [0.0, 1.0]. Values less than 0.0 are treated as 0.0, values greater than 1.0 are treated as 1.0, and other abnormal values are treated as 1.0.<br>0.0 indicates that the video is displayed at SDR brightness, and 1.0 indicates that the video is displayed at the highest HDR brightness currently allowed. |
 
 <a id="hdrbrightness-1"></a>
 
@@ -100,7 +100,17 @@ Sets the brightness of HDR video playback for the component.
 hdrBrightness(brightness: number, type?: HdrType)
 ```
 
-Set hdrBrightness for XComponent.
+Adjusts the brightness when the component displays HDR content.<br> When the parameter **type** is set to a value other than [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md).DEFAULT, before calling this API, check whether the **hdrFormats** attribute of [Display](../arkts-apis/arkts-arkui-display-display-i.md) contains the corresponding [HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md).<br>Only when **hdrFormats** contains the corresponding HDRFormat does the current device support the corresponding HDR type and the parameter setting take effect; otherwise, the default value [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md).DEFAULT is used.<br> The mapping is as follows:
+
+| Value of type | HDRFormat that hdrFormats must contain |  
+| -------- | -------- |  
+| [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md).AIHDR | [HDRFormat](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-hdrcapability-hdrformat-e.md).VIDEO_AIHDR |
+
+> **NOTE:** 
+
+> - This API takes effect only when **type** in the XComponent constructor parameters is [XComponentType](../arkts-apis/arkts-arkui-xcomponenttype-e.md).SURFACE. Otherwise, it does not take effect.
+> 
+> - XComponent components created through the [ArkUI NDK APIs](../../../ui/ndk-build-ui-overview.md) are not supported.
 
 **Since:** 24
 
@@ -116,8 +126,8 @@ Set hdrBrightness for XComponent.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| brightness | number | Yes | control the brightness of HDR video. |
-| type | [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md) | No | the HDR type of the XComponent. |
+| brightness | number | Yes | Brightness of the HDR content.<br>Default value: **1.0**<br>Value range: [0.0, 1.0]. Values less than 0.0 are treated as 0.0, values greater than 1.0 are treated as 1.0, and other abnormal values are treated as 1.0.<br>**0.0** indicates that the content is displayed at SDR brightness, and **1.0** indicates that the content is displayed at the maximum HDR brightness currently allowed. |
+| type | [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md) | No | HDR type used when displaying HDR content.<br>Default value: **HdrType.DEFAULT** |
 
 ## onDestroy
 
@@ -125,7 +135,7 @@ Set hdrBrightness for XComponent.
 onDestroy(event: VoidCallback)
 ```
 
-Triggered when the plugin is destroyed.
+Callback event triggered when native unloading is complete. Difference from [onSurfaceDestroyed](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#onsurfacedestroyed): **onDestroy** applies to the scenario where the **libraryname** parameter is set, and the callback has no parameters; **onSurfaceDestroyed** applies to the scenario where the **libraryname** parameter is not set, and the callback parameter is **surfaceId**.
 
 **Since:** 8
 
@@ -139,7 +149,7 @@ Triggered when the plugin is destroyed.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback triggered after **XComponent** is destroyed.<br>**Since:** 18 |
+| event | [VoidCallback](../arkts-apis/arkts-arkui-voidcallback-t.md) | Yes | Callback invoked when the native component is unloaded.<br>**Since:** 18 |
 
 ## onLoad
 
@@ -147,7 +157,13 @@ Triggered when the plugin is destroyed.
 onLoad(callback: OnNativeLoadCallback)
 ```
 
-Triggered when the plugin is loaded.
+Callback event triggered when native loading is complete.
+
+> **NOTE:** 
+
+> This callback is triggered only when the **libraryname** parameter is set for the **XComponent**. If the
+> **libraryname** parameter is not set, use callbacks such as
+> [onSurfaceCreated](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#onsurfacecreated).
 
 **Since:** 8
 
@@ -161,4 +177,4 @@ Triggered when the plugin is loaded.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [OnNativeLoadCallback](arkts-arkui-xcomponent-comp-onnativeloadcallback-t.md) | Yes | Callback triggered after the surface held by **XComponent** is created.<br>**Since:** 18 |
+| callback | [OnNativeLoadCallback](arkts-arkui-xcomponent-comp-onnativeloadcallback-t.md) | Yes | Callback invoked when the native content is loaded, used to obtain the context of the XComponent instance.<br>**Since:** 18 |

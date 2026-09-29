@@ -300,7 +300,7 @@ onChange(callback: (value: TimePickerResult) => void)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | (value: TimePickerResult) =&gt; void | 是 | Time in 24-hour format. |
+| callback | (value: TimePickerResult) =&gt; void | 是 | 回调返回选中的时间结果，hour取值0-23，与展示制式无关。 |
 
 <a id="onchange-1"></a>
 

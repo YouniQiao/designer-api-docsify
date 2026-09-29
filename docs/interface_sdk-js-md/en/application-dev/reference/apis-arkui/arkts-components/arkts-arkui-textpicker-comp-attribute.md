@@ -288,7 +288,7 @@ If the sum of **startMargin** and **endMargin** in [DividerOptions](arkts-arkui-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) &#124; null | Yes |  |
+| value | [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) &#124; null | Yes | Divider style. To customize the width, margin, and color of the divider, pass the **DividerOptions** object. To hide the divider, pass **null**. If no value is passed, the default style is used.<br>Default value: <br>{<br>strokeWidth: '2px', <br>startMargin: 0, <br>endMargin: 0, <br>color: '#33000000'<br>} <br>1. If **value** is set to a valid [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md) object, the divider is rendered using the specified style. <br>2. If **value** is **null**, the divider is hidden. |
 
 <a id="divider-1"></a>
 
@@ -416,7 +416,7 @@ This callback is triggered only after the scroll animation completes. To obtain 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string[], index: number[]) =&gt; void | Yes |  |
+| callback | (value: string[], index: number[]) =&gt; void | Yes | Callback invoked when the text picker snaps to the selected item. The callback returns the text and index of the selected item. |
 
 <a id="onchange-1"></a>
 
@@ -799,7 +799,7 @@ Triggered when the OK button in the dialog box is clicked. This event can be tri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (value: string, index: number) =&gt; void | Yes |  |
+| callback | (value: string, index: number) =&gt; void | Yes | Callback invoked when the OK button in the dialog box is clicked. The callback returns the text and index of the selected item. |
 
 ## onCancel
 

@@ -4,7 +4,7 @@
 export declare enum KeyCode
 ```
 
-The **keyCode** module provides key codes of key devices, including keyboards, CDs, and gamepads.
+Enumerates the key codes.
 
 **Since:** 9
 
@@ -88,11 +88,7 @@ Search key
 KEYCODE_MEDIA_PLAY_PAUSE = 10
 ```
 
-Play/Pause key
-
-Difference between this key and **KEYCODE_PLAYPAUSE**:
-
-**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
+Media key: Play/Pause key<br>Difference between this key and **KEYCODE_PLAYPAUSE**:<br>**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
 **Since:** 9
 
@@ -108,7 +104,7 @@ Difference between this key and **KEYCODE_PLAYPAUSE**:
 KEYCODE_MEDIA_STOP = 11
 ```
 
-Media: Stop Key
+Media key: Stop key
 
 **Since:** 9
 
@@ -124,7 +120,7 @@ Media: Stop Key
 KEYCODE_MEDIA_NEXT = 12
 ```
 
-Next key
+Media key: Next key
 
 **Since:** 9
 
@@ -140,7 +136,7 @@ Next key
 KEYCODE_MEDIA_PREVIOUS = 13
 ```
 
-Previous key
+Media key: Previous key
 
 **Since:** 9
 
@@ -156,7 +152,7 @@ Previous key
 KEYCODE_MEDIA_REWIND = 14
 ```
 
-Rewind key
+Media key: Rewind key
 
 **Since:** 9
 
@@ -172,7 +168,7 @@ Rewind key
 KEYCODE_MEDIA_FAST_FORWARD = 15
 ```
 
-Fast forward key
+Media key: Fast forward key
 
 **Since:** 9
 
@@ -440,7 +436,7 @@ Key 9
 KEYCODE_STAR = 2010
 ```
 
-Key /
+Key *
 
 **Since:** 9
 
@@ -454,7 +450,7 @@ Key /
 KEYCODE_POUND = 2011
 ```
 
-Key /
+Key #
 
 **Since:** 9
 
@@ -1084,7 +1080,7 @@ Delete key
 KEYCODE_GRAVE = 2056
 ```
 
-Key /
+Key `
 
 **Since:** 9
 
@@ -1182,7 +1178,7 @@ Key ;
 KEYCODE_APOSTROPHE = 2063
 ```
 
-Key '
+Key ''' (single quote)
 
 **Since:** 9
 
@@ -1210,7 +1206,7 @@ Key /
 KEYCODE_AT = 2065
 ```
 
-Key /
+Key @
 
 **Since:** 9
 
@@ -2404,7 +2400,7 @@ Scale key
 KEYCODE_HANGUEL = 2613
 ```
 
-Hanguel key
+Hangul key
 
 **Since:** 9
 
@@ -2642,11 +2638,7 @@ Page Down key
 KEYCODE_PLAYPAUSE = 2630
 ```
 
-Play/Pause key
-
-Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:
-
-**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
+Play/Pause key<br>Difference between this key and **KEYCODE_MEDIA_PLAY_PAUSE**:<br>**KEYCODE_PLAYPAUSE** is an earlier definition, while **KEYCODE_MEDIA_PLAY_PAUSE** is designed for modern media key devices.
 
 **Since:** 9
 
@@ -3416,7 +3408,7 @@ Calendar key
 KEYCODE_RED = 2686
 ```
 
-Red indicator.
+Red indicator key
 
 **Since:** 9
 
@@ -3430,7 +3422,7 @@ Red indicator.
 KEYCODE_GREEN = 2687
 ```
 
-Green indicator.
+Green indicator key
 
 **Since:** 9
 
@@ -3444,7 +3436,7 @@ Green indicator.
 KEYCODE_YELLOW = 2688
 ```
 
-Yellow indicator.
+Yellow indicator key
 
 **Since:** 9
 
@@ -3458,7 +3450,7 @@ Yellow indicator.
 KEYCODE_BLUE = 2689
 ```
 
-Blue indicator.
+Blue indicator key
 
 **Since:** 9
 
@@ -3794,7 +3786,7 @@ Spell Check key
 KEYCODE_COFFEE = 2713
 ```
 
-Coffee key, which is used to launch screen lock or screen saver
+Terminal lock/screen saver key
 
 **Since:** 9
 
@@ -3850,7 +3842,7 @@ Button Configuration key
 KEYCODE_TASKMANAGER = 2717
 ```
 
-Task Manager key
+Task manager key
 
 **Since:** 9
 
@@ -4062,10 +4054,6 @@ KEYCODE_MOUSE_ASSISTANT = 2732
 
 Mouse AI assistant key.
 
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
-
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -4081,10 +4069,6 @@ KEYCODE_MOUSE_INTELLIGENCE_SELECTION = 2733
 ```
 
 Mouse smart selection key.
-
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
@@ -4102,10 +4086,6 @@ KEYCODE_AOD_SINGLE_CLICK = 2740
 
 Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
 
-**Starting Version:** 26.0.0
-
-**Model constraint:** This API can only be used in the stage model.
-
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -4120,7 +4100,7 @@ Phone touchscreen single-click event, used in Always-On Display (AOD) mode.
 KEYCODE_FRONT = 2800
 ```
 
-Front key, which is used to launch the windshield defogger
+Windshield defogger on/off key
 
 **Since:** 9
 
@@ -4750,7 +4730,7 @@ Mobile Network Control key
 KEYCODE_RFKILL = 2847
 ```
 
-RF Kill key
+Key that controls all wireless devices
 
 **Since:** 9
 
@@ -4778,7 +4758,7 @@ Channel key
 KEYCODE_BTN_0 = 3100
 ```
 
-Button 0
+Button '0'
 
 **Since:** 9
 
@@ -4792,7 +4772,7 @@ Button 0
 KEYCODE_BTN_1 = 3101
 ```
 
-Button 1
+Button '1'
 
 **Since:** 9
 
@@ -4806,7 +4786,7 @@ Button 1
 KEYCODE_BTN_2 = 3102
 ```
 
-Button 2
+Button '2'
 
 **Since:** 9
 
@@ -4820,7 +4800,7 @@ Button 2
 KEYCODE_BTN_3 = 3103
 ```
 
-Button 3
+Button '3'
 
 **Since:** 9
 
@@ -4834,7 +4814,7 @@ Button 3
 KEYCODE_BTN_4 = 3104
 ```
 
-Button 4
+Button '4'
 
 **Since:** 9
 
@@ -4848,7 +4828,7 @@ Button 4
 KEYCODE_BTN_5 = 3105
 ```
 
-Button 5
+Button '5'
 
 **Since:** 9
 
@@ -4862,7 +4842,7 @@ Button 5
 KEYCODE_BTN_6 = 3106
 ```
 
-Button 6
+Button '6'
 
 **Since:** 9
 
@@ -4876,7 +4856,7 @@ Button 6
 KEYCODE_BTN_7 = 3107
 ```
 
-Button 7
+Button '7'
 
 **Since:** 9
 
@@ -4890,7 +4870,7 @@ Button 7
 KEYCODE_BTN_8 = 3108
 ```
 
-Button 8
+Button '8'
 
 **Since:** 9
 
@@ -4904,7 +4884,7 @@ Button 8
 KEYCODE_BTN_9 = 3109
 ```
 
-Button 9
+Button '9'
 
 **Since:** 9
 
@@ -4978,10 +4958,6 @@ Custom hotkey
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can only be used in the stage model.
-
-**Since:** 26.0.0
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyCode-KEYCODE_XKEY = 3232--><!--Device-KeyCode-KEYCODE_XKEY = 3232-End-->
@@ -4995,10 +4971,6 @@ KEYCODE_FINGERPRINT_SLIDE_UP = 3233
 ```
 
 Smart control key slide-up
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.0
 
@@ -5018,10 +4990,6 @@ Smart control key slide-down
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can only be used in the stage model.
-
-**Since:** 26.0.0
-
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234--><!--Device-KeyCode-KEYCODE_FINGERPRINT_SLIDE_DOWN = 3234-End-->
@@ -5035,8 +5003,6 @@ KEYCODE_PTZ_CLICK = 3235
 ```
 
 PTZ click
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.1
 
@@ -5054,8 +5020,6 @@ KEYCODE_PTZ_FOCUS_LEFT = 3236
 
 PTZ focus left
 
-**Model restriction:** This API can only be used in the stage model.
-
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5071,8 +5035,6 @@ KEYCODE_PTZ_FOCUS_RIGHT = 3237
 ```
 
 PTZ focus right
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.1
 
@@ -5090,8 +5052,6 @@ KEYCODE_PTZ_EXPOSURE_LEFT = 3238
 
 PTZ exposure left
 
-**Model restriction:** This API can only be used in the stage model.
-
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5107,8 +5067,6 @@ KEYCODE_PTZ_EXPOSURE_RIGHT = 3239
 ```
 
 PTZ exposure right
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.1
 
@@ -5126,8 +5084,6 @@ KEYCODE_PTZ_SHUTTER_LEFT = 3240
 
 PTZ shutter left
 
-**Model restriction:** This API can only be used in the stage model.
-
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5143,8 +5099,6 @@ KEYCODE_PTZ_SHUTTER_RIGHT = 3241
 ```
 
 PTZ shutter right
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.1
 
@@ -5162,8 +5116,6 @@ KEYCODE_PTZ_APERTURE_LEFT = 3242
 
 PTZ aperture left
 
-**Model restriction:** This API can only be used in the stage model.
-
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
@@ -5179,8 +5131,6 @@ KEYCODE_PTZ_APERTURE_RIGHT = 3243
 ```
 
 PTZ aperture right
-
-**Model restriction:** This API can only be used in the stage model.
 
 **Since:** 26.0.1
 

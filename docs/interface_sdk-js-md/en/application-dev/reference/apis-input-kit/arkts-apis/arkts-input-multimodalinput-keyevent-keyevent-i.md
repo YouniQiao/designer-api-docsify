@@ -144,7 +144,7 @@ Defines a key.
 keys: Key[]
 ```
 
-List of pressed keys.
+List of keys that are currently in the pressed state.
 
 **Type:** [Key](arkts-input-multimodalinput-keyevent-key-i.md)[]
 

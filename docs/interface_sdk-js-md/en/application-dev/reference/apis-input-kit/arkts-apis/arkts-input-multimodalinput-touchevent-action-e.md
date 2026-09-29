@@ -76,8 +76,6 @@ PULL_DOWN = 4
 
 Drag started.
 
-**Since**: 26.0.0
-
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -94,8 +92,6 @@ PULL_MOVE = 5
 
 Dragging.
 
-**Since**: 26.0.0
-
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -111,8 +107,6 @@ PULL_UP = 6
 ```
 
 Drag ended.
-
-**Since**: 26.0.0
 
 **Since:** 26.0.0
 

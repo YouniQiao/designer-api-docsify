@@ -14,11 +14,6 @@ function getDeviceIds(callback: AsyncCallback<Array<number>>): void
 
 Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result.
 
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
-
 **Since:** 8
 
 **Deprecated since:** 9
@@ -72,11 +67,6 @@ function getDeviceIds(): Promise<Array<number>>
 ```
 
 Obtains the IDs of all input devices. This API uses a promise to return the result.
-
-> **NOTE:** 
-> 
-> This API is supported since API version 8 and deprecated since API version 9. Use
-> [inputDevice.getDeviceList](arkts-input-inputdevice-getdevicelist-f.md) instead.
 
 **Since:** 8
 

@@ -4,8 +4,6 @@
 
 > **说明：** 
 > 
-> 该组件从API version 7开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
 > 该组件从API version 20开始支持使用[AttributeUpdater](../arkts-apis/arkts-arkui-attributeupdater-c.md)类的
 > [updateConstructorParams](../../../reference/apis-arkui/js-apis-arkui-AttributeUpdater.md#属性)接口更新构造参数。
 
@@ -19,7 +17,7 @@
 Polygon(options?: PolygonOptions)
 ```
 
-Uses new to create Polygon. Anonymous Object Rectification.
+用于绘制多边形的构造函数。
 
 **起始版本：** 7
 
@@ -38,7 +36,7 @@ Uses new to create Polygon. Anonymous Object Rectification.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | [PolygonOptions](arkts-arkui-polygon-comp-polygonoptions-i.md) | 否 | Polygon options |
+| options | [PolygonOptions](arkts-arkui-polygon-comp-polygonoptions-i.md) | 否 | Polygon组件的配置选项，用于定义绘制区域的宽度和高度。需要指定多边形尺寸时传入此参数，不传入时使用默认宽度和高度（均为0）。当传入undefined或null时，参数设置无效，组件属性维持原值。 |
 
 ## Polygon
 

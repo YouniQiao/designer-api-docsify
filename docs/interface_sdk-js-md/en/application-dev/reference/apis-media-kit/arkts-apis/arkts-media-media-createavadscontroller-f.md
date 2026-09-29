@@ -12,7 +12,7 @@ import { media } from '@kit.MediaKit';
 function createAVAdsController(player: AVPlayer): Promise<AVAdsController | undefined>
 ```
 
-Create an ad playback controller associated with the player instance.
+Creates an ad playback controller associated with a player instance. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -26,13 +26,13 @@ Create an ad playback controller associated with the player instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| player | [AVPlayer](arkts-media-media-avplayer-i.md) | Yes | Created player instance. |
+| player | [AVPlayer](arkts-media-media-avplayer-i.md) | Yes | Player instance created. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) &#124; undefined&gt; | If success, an Controller is returned. Otherwise returns null. |
+| Promise&lt;[AVAdsController](arkts-media-media-avadscontroller-i.md) &#124; undefined&gt; | Promise used to return the result. An **AVAdsController** instance is returned if the operation is successful; **undefined** is returned otherwise. |
 
 **Error codes:**
 

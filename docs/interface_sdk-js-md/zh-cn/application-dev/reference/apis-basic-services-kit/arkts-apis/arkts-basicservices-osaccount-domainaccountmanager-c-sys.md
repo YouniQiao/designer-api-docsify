@@ -791,7 +791,7 @@ static registerPlugin(plugin: DomainPlugin): void
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported.<br>**适用版本：** 18+ |
-| 12300201 | The domain plugin has been registered. |
+| [12300201](../errorcode-account.md#12300201-域插件已注册) | The domain plugin has been registered. |
 
 **示例**
 

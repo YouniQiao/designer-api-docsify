@@ -4,7 +4,7 @@
 type OnAdsEventAdsStartedHandle = (adsId: string, duration: number) => void
 ```
 
-Describes the callback function of the ad content playback start event.
+Registers a callback invoked when the ad starts to play.
 
 **Since:** 26.0.0
 
@@ -19,4 +19,4 @@ Describes the callback function of the ad content playback start event.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | adsId | string | Yes | ID of the ad resource that is being played. |
-| duration | number | Yes | Playing duration of the advertisement, in milliseconds.<br>The value should be an integer. |
+| duration | number | Yes | Playback duration of an ad, in milliseconds.<br>The value must be an integer. |

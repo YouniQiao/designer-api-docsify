@@ -14,8 +14,6 @@ function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): 
 
 获取指定id的输入设备信息，使用callback异步回调。
 
-> **说明：** 
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -70,8 +68,6 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 ```
 
 获取指定id的输入设备信息，使用Promise异步回调。
-
-> **说明：** 
 
 **起始版本：** 8
 

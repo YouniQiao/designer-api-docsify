@@ -1,6 +1,6 @@
 # @ohos.multimodalInput.inputEventClient(Input Event Injection)
 
-The **inputEventClient** module provides the capability of injecting key, mouse/touchpad, and touchscreen events.
+The inputEventClient module provides the capability to inject input events, including key, mouse/touchpad, and touchscreen events.
 
 **Since:** 26.0.0
 

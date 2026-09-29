@@ -6,8 +6,6 @@
 
 > **说明：** 
 > 
-> * 该组件从API version 9开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
-> 
 > * 在RelativeContainer组件中，不设置[width](arkts-arkui-common-comp-commonmethod-c.md#width)、[height](arkts-arkui-common-comp-commonmethod-c.md#height)时，对应属性布局表现与设置为100%相同。
 > 
 > * 从API version 11开始，在RelativeContainer组件中，[width](arkts-arkui-common-comp-commonmethod-c.md#width)、[height](arkts-arkui-common-comp-commonmethod-c.md#height)设置"auto"表示自适应子组件。当width设置"auto"时，如果水平方向上子组件以容器作为锚点，则"auto"不生效（即视为不设置width），垂直方向上同理。

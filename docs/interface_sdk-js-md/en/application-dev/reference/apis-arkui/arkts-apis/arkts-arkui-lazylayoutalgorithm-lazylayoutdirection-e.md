@@ -4,7 +4,7 @@
 export enum LazyLayoutDirection
 ```
 
-Defines the direction of lazy layout.
+Enumerates lazy loading layout directions.
 
 **Since:** 26.0.0
 
@@ -18,7 +18,7 @@ Defines the direction of lazy layout.
 FORWARD = 0
 ```
 
-Forward direction.
+Forward direction, indicating that the current layout is from the start to the end of the content.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Forward direction.
 BACKWARD = 1
 ```
 
-Backward direction.
+Backward direction, indicating that the current layout is from the end to the start of the content.
 
 **Since:** 26.0.0
 

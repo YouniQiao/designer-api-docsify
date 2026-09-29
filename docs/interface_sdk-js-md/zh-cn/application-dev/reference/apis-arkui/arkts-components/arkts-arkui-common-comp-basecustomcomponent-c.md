@@ -291,7 +291,7 @@ ArkUI框架会在自定义组件确定尺寸时，将该自定义组件的节点
 
 | 类型 | 说明 |
 | --- | --- |
-| [SizeResult](arkts-arkui-common-comp-sizeresult-i.md) | Component size information. |
+| [SizeResult](arkts-arkui-common-comp-sizeresult-i.md) | 组件尺寸信息。 |
 
 ## onNewParam
 

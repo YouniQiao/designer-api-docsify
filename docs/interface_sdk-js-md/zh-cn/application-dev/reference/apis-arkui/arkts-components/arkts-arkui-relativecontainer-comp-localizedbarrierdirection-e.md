@@ -25,7 +25,7 @@ declare enum LocalizedBarrierDirection
 START = 0
 ```
 
-The barrier is on the left (for left-to-right scripts) or right (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md).
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。
 
 **起始版本：** 12
 
@@ -43,7 +43,7 @@ The barrier is on the left (for left-to-right scripts) or right (for right-to-le
 END = 1
 ```
 
-The barrier is on the right (for left-to-right scripts) or left (for right-to-left scripts) side of all the referenced components specified by [referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md).
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的结束侧，LTR模式时为最右侧，RTL模式时为最左侧。
 
 **起始版本：** 12
 
@@ -61,7 +61,7 @@ The barrier is on the right (for left-to-right scripts) or left (for right-to-le
 TOP = 2
 ```
 
-The barrier is at the top of all the referenced components specified by [referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md).
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的最上方。
 
 **起始版本：** 12
 
@@ -79,7 +79,7 @@ The barrier is at the top of all the referenced components specified by [referen
 BOTTOM = 3
 ```
 
-The barrier is at the bottom of all the referenced components specified by [referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md).
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的最下方。
 
 **起始版本：** 12
 

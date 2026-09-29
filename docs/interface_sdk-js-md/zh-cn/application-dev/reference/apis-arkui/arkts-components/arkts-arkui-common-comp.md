@@ -76,7 +76,7 @@ Common()
 | 名称 | 说明 |
 | --- | --- |
 | [AccessibilityHoverEvent](arkts-arkui-common-comp-accessibilityhoverevent-i.md) | The accessibility hover action triggers this method invocation. |
-| [AlignRuleOption](arkts-arkui-common-comp-alignruleoption-i.md) | Defines the align rule options of relative container. |
+| [AlignRuleOption](arkts-arkui-common-comp-alignruleoption-i.md) | 相对布局组件中子组件的对齐规则。 |
 | [AnimatableArithmetic](arkts-arkui-common-comp-animatablearithmetic-i.md) | 该接口定义非number数据类型的动画运算规则。对非number类型的数据（如数组、结构体、颜色等）做动画，需要实现AnimatableArithmetic\&lt;T\&gt;接口中加法、减法、乘法和判断相等函数，使得该数据能参与动画的插值运算和识别该数据是否发生改变。即定义它们为实现了AnimatableArithmetic\&lt;T\&gt;接口的类型。 |
 | [AnimateParam](arkts-arkui-common-comp-animateparam-i.md) | 动画效果相关参数。 |
 | [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | 区域变化相关的参数。 |
@@ -129,7 +129,7 @@ Common()
 | [FocusMovement](arkts-arkui-common-comp-focusmovement-i.md) | 设置对应的按键对应的走焦目的组件，缺省则遵循默认走焦规则。 |
 | [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | 继承自[BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md)，内容模糊样式选项。 |
 | [ForegroundEffectOptions](arkts-arkui-common-comp-foregroundeffectoptions-i.md) | 前景效果参数，用于配置组件前景的模糊半径，控制前景内容的模糊程度。 |
-| [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | 父组件（自定义组件）布局信息，继承自[SizeResult](arkts-arkui-common-comp-sizeresult-i.md)。 |
+| [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | 父组件（自定义组件）布局信息。在onMeasureSize和onPlaceChildren方法中，可通过selfLayoutInfo参数获取GeometryInfo对象，其中包含父组件的边框宽度、外边距和内边距信息，开发者在计算子组件布局时需要考虑这些信息。 |
 | [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) |  |
 | [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | 开发者需要自定义class实现GestureModifier接口。 |
 | [GravityCenterOptions](arkts-arkui-common-comp-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
@@ -148,7 +148,7 @@ Common()
 | [KeyEvent](arkts-arkui-common-comp-keyevent-i.md) | 按键事件信息。 |
 | [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | 动画选项设置。 |
 | [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | 关键帧状态设置。 |
-| [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | 子组件布局信息。 |
+| [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | 子组件布局信息。Layoutable对象由ArkUI框架在onPlaceChildren调用时创建并传入，包含子组件的测量结果和唯一标识。开发者通过Layoutable的layout方法设置子组件位置，通过getMargin、getPadding、getBorderWidth方法获取子组件的边距信息用于精确布局计算。 |
 | [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息 |
 | [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
 | [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息 |
@@ -156,11 +156,11 @@ Common()
 | [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
 | [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) |  |
 | [LinearGradientOptions](arkts-arkui-common-comp-lineargradientoptions-i.md) | 线性渐变的参数。 |
-| [LocalizedAlignRuleOptions](arkts-arkui-common-comp-localizedalignruleoptions-i.md) | Defines the Localized align rule options of relative container. |
-| [LocalizedHorizontalAlignParam](arkts-arkui-common-comp-localizedhorizontalalignparam-i.md) | Defines the localized horizontal align param of relative container. |
-| [LocalizedVerticalAlignParam](arkts-arkui-common-comp-localizedverticalalignparam-i.md) | Defines the localized vertical align param of relative container. |
-| [Measurable](arkts-arkui-common-comp-measurable-i.md) | 子组件位置信息。 |
-| [MeasureResult](arkts-arkui-common-comp-measureresult-i.md) | Sub component MeasureResult info. |
+| [LocalizedAlignRuleOptions](arkts-arkui-common-comp-localizedalignruleoptions-i.md) | 相对布局组件中子组件的对齐规则。 |
+| [LocalizedHorizontalAlignParam](arkts-arkui-common-comp-localizedhorizontalalignparam-i.md) | 定义相对容器的水平对齐规则。 |
+| [LocalizedVerticalAlignParam](arkts-arkui-common-comp-localizedverticalalignparam-i.md) | 定义相对容器的纵向对齐规则。 |
+| [Measurable](arkts-arkui-common-comp-measurable-i.md) | 子组件测量信息。Measurable对象由ArkUI框架在onMeasureSize调用时创建并传入，用于测量阶段。与Layoutable（用于布局阶段）不同，Measurable主要用于测量子组件尺寸，开发者通过measure方法设置约束条件并获取测量结果。Measurable和Layoutable是同一子组件在不同布局阶段的两种表示形式。 |
+| [MeasureResult](arkts-arkui-common-comp-measureresult-i.md) | 测量后的组件布局信息。 |
 | [MenuElement](arkts-arkui-common-comp-menuelement-i.md) | 菜单项的图标、文本和交互信息。 |
 | [MenuGridStyleOptions](arkts-arkui-common-comp-menugridstyleoptions-i.md) | 菜单栅格样式选项。 |
 | [MenuMaskType](arkts-arkui-common-comp-menumasktype-i.md) | 设置蒙层样式。 |

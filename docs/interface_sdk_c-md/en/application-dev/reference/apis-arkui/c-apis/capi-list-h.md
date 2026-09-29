@@ -16,7 +16,7 @@ Defines enumerations and APIs related to **List**.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_ListChildrenMainSize](capi-arkui-nativemodule-arkui-listchildrenmainsize.md) | ArkUI_ListChildrenMainSize | Defines the size of the main axis of a child component of the **List** component. |
+| [ArkUI_ListChildrenMainSize](capi-arkui-nativemodule-arkui-listchildrenmainsize.md) | ArkUI_ListChildrenMainSize | Defines the main axis size information of the child component of the **List** component. |
 
 ### Enum
 

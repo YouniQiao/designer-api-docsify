@@ -94,4 +94,16 @@ Defines the number of times that the animation is played. This attribute can be 
 
 **Since**: 12
 
+### NODE_IMAGE_ANIMATOR_INTERPOLATION
+
+```c
+NODE_IMAGE_ANIMATOR_INTERPOLATION = 19007
+```
+
+**Description**
+
+Defines the interpolation effect of the frame images, which mitigates aliasing during image scaling. This attribute can be set, reset, and obtained as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].i32: interpolation effect of the frame images. The parameter type is [ArkUI_ImageInterpolation](capi-image-h.md#arkui_imageinterpolation). The default value is <b>ARKUI_IMAGE_INTERPOLATION_LOW</b>.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].i32: interpolation effect of the frame images. The parameter type is [ArkUI_ImageInterpolation](capi-image-h.md#arkui_imageinterpolation).</li> </ul>
+
+**Since**: 26.0.1
+
 

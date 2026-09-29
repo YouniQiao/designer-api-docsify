@@ -14,6 +14,10 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 Defines LazyDynamicLayout Component.
 
+### Child Components
+
+Child components are supported.
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.

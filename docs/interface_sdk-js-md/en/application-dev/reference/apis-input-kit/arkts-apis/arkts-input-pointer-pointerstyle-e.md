@@ -284,7 +284,7 @@ Opening hand
 HAND_POINTING = 19
 ```
 
-Hand-shaped pointer
+Hand pointer
 
 **Since:** 9
 
@@ -564,7 +564,7 @@ Moving as a cone in four directions
 HORIZONTAL_TEXT_CURSOR = 39
 ```
 
-Horizontal text selection
+Selecting text horizontally
 
 **Since:** 10
 
@@ -606,7 +606,7 @@ Circle
 LOADING = 42
 ```
 
-Animation loading
+Animated cursor for loading
 
 **Since:** 10
 
@@ -622,7 +622,7 @@ Animation loading
 RUNNING = 43
 ```
 
-Animation running in the background
+Animated cursor for background loading
 
 **Since:** 10
 
@@ -652,7 +652,7 @@ Scrolling east-west
 RUNNING_LEFT = 45
 ```
 
-Running in the background (extension 1)
+Animated cursor for background running (extension 1)
 
 **Since:** 22
 
@@ -666,7 +666,7 @@ Running in the background (extension 1)
 RUNNING_RIGHT = 46
 ```
 
-Running in the background (extension 2)
+Animated cursor for background running (extension 2)
 
 **Since:** 22
 
@@ -708,9 +708,7 @@ Screen recording
 LASER_CURSOR = 49
 ```
 
-Floating This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
-
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+Hover cursor. This cursor is used when the stylus enters air mouse mode and cannot be set directly. <br>In air mouse mode, the stylus can be rotated in the air to control the movement of the virtual cursor on the screen, and the buttons on the stylus body can be used to page up and down, which is suitable for scenarios such as PPT presentations and air operations.
 
 **Since:** 22
 
@@ -724,9 +722,7 @@ In air mouse mode, you can rotate the stylus in the air to control the movement 
 LASER_CURSOR_DOT = 50
 ```
 
-Click This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
-
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+Click cursor. This cursor is used when the stylus enters air mouse mode and cannot be set directly. <br>In air mouse mode, the stylus can be rotated in the air to control the movement of the virtual cursor on the screen, and the buttons on the stylus body can be used to page up and down, which is suitable for scenarios such as PPT presentations and air operations.
 
 **Since:** 22
 
@@ -740,9 +736,7 @@ In air mouse mode, you can rotate the stylus in the air to control the movement 
 LASER_CURSOR_DOT_RED = 51
 ```
 
-Laser pointer This pointer can be used only when the stylus enters the air mouse mode and cannot be directly set.
-
-In air mouse mode, you can rotate the stylus in the air to control the movement of the virtual pointer on the screen and press the button on the stylus to turn pages up or down. This mode is used for PPT presentation and air gesture control.
+Laser pointer cursor. This cursor is used when the stylus enters air mouse mode and cannot be set directly. <br>In air mouse mode, the stylus can be rotated in the air to control the movement of the virtual cursor on the screen, and the buttons on the stylus body can be used to page up and down, which is suitable for scenarios such as PPT presentations and air operations.
 
 **Since:** 22
 

@@ -4,7 +4,7 @@
 declare type Worker = import('../api/@ohos.worker').default.Worker
 ```
 
-Defines the worker thread object for running the .abc file.
+Worker thread object used to run .abc. It must be created through **worker.ThreadWorker**.
 
 **Since:** 26.0.0
 

@@ -17,7 +17,7 @@ Provides shared list item-related type and function definitions for <b>NativeNod
 | Name | typedef keyword | Description |
 | -- | -- | -- |
 | [ArkUI_ListItemSwipeActionItem](capi-arkui-nativemodule-arkui-listitemswipeactionitem.md) | ArkUI_ListItemSwipeActionItem | Defines the configuration information of an item in the **ListItemSwipeActionOption**. |
-| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Defines the configuration information of the **ListItemSwipeActionOption**. |
+| [ArkUI_ListItemSwipeActionOption](capi-arkui-nativemodule-arkui-listitemswipeactionoption.md) | ArkUI_ListItemSwipeActionOption | Defines a configuration of a swipe action on a list item. |
 
 ### Enum
 

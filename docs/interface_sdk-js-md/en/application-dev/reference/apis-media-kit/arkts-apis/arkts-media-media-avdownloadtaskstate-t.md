@@ -16,10 +16,10 @@ Enumerates the states of the download task.
 
 | Type | Description |
 | --- | --- |
-| 'init' |  |
-| 'queued' |  |
-| 'running' |  |
-| 'completed' |  |
-| 'paused' |  |
-| 'removing' |  |
-| 'error' |  |
+| 'init' | The download task is being initialized. |
+| 'queued' | The download task is waiting in the queue. |
+| 'running' | The download task is running. |
+| 'completed' | The download task is complete. |
+| 'paused' | The download task is paused. |
+| 'removing' | The download task is being removed. |
+| 'error' | An error occurred in the download task. |

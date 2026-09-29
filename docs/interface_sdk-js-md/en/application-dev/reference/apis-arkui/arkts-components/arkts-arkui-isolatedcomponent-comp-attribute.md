@@ -8,7 +8,7 @@ Only the [width](arkts-arkui-common-comp-commonmethod-c.md#width), [height](arkt
 
 The [universal events](arkts-arkui-common-comp.md) are not supported.
 
-Events are asynchronously passed to the restricted Worker thread after coordinate conversion.
+Events are asynchronously passed to the restricted Worker thread after coordinate conversion. Inter-thread event bubbling is not supported, and event conflicts may occur during inter-thread UI interactions.
 
 The following events are supported:
 

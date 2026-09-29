@@ -27,7 +27,7 @@ ArkUI提供的Native侧自定义弹窗接口集合。
 | [int32_t (\*setContent)(ArkUI_NativeDialogHandle handle, ArkUI_NodeHandle content)](#setcontent) | 挂载自定义弹窗内容。 |
 | [int32_t (\*removeContent)(ArkUI_NativeDialogHandle handle)](#removecontent) | 卸载自定义弹窗内容。 |
 | [int32_t (\*setContentAlignment)(ArkUI_NativeDialogHandle handle, int32_t alignment, float offsetX, float offsetY)](#setcontentalignment) | 设置自定义弹窗对齐方式。 |
-| [int32_t (\*resetContentAlignment)(ArkUI_NativeDialogHandle handle)](#resetcontentalignment) | 重置setContentAlignment方法设置的属性，使用系统默认的对齐方式，默认值：ARKUI_ALIGNMENT_TOP_START，参考[ArkUI_Alignment](capi-native-type-h.md#arkui_alignment)。 |
+| [int32_t (\*resetContentAlignment)(ArkUI_NativeDialogHandle handle)](#resetcontentalignment) | 重置setContentAlignment方法设置的属性，使用系统默认的对齐方式，默认值：ARKUI_ALIGNMENT_TOP_START，参考[ArkUI_Alignment](capi-layout-h.md#arkui_alignment)。 |
 | [int32_t (\*setModalMode)(ArkUI_NativeDialogHandle handle, bool isModal)](#setmodalmode) | 设置自定义弹窗是否开启模态窗口模式。 |
 | [int32_t (\*setAutoCancel)(ArkUI_NativeDialogHandle handle, bool autoCancel)](#setautocancel) | 设置自定义弹窗是否允许通过点击遮罩层退出。 |
 | [int32_t (\*setMask)(ArkUI_NativeDialogHandle handle, uint32_t maskColor, const ArkUI_Rect* maskRect)](#setmask) | 设置自定义弹窗遮罩属性。 |
@@ -151,7 +151,7 @@ int32_t (*setContentAlignment)(ArkUI_NativeDialogHandle handle, int32_t alignmen
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_NativeDialogHandle](capi-arkui-nativemodule-arkui-nativedialoghandle.md) handle | 指向自定义弹窗控制器的指针。 |
-|  int32_t alignment | 对齐方式，参数类型[ArkUI_Alignment](capi-native-type-h.md#arkui_alignment)。 |
+|  int32_t alignment | 对齐方式，参数类型[ArkUI_Alignment](capi-layout-h.md#arkui_alignment)。 |
 |  float offsetX | 弹窗的水平偏移量，浮点型，单位：vp。 |
 |  float offsetY | 弹窗的垂直偏移量，浮点型，单位：vp。 |
 
@@ -169,7 +169,7 @@ int32_t (*resetContentAlignment)(ArkUI_NativeDialogHandle handle)
 
 **描述：**
 
-重置setContentAlignment方法设置的属性，使用系统默认的对齐方式，默认值：ARKUI_ALIGNMENT_TOP_START，参考[ArkUI_Alignment](capi-native-type-h.md#arkui_alignment)。
+重置setContentAlignment方法设置的属性，使用系统默认的对齐方式，默认值：ARKUI_ALIGNMENT_TOP_START，参考[ArkUI_Alignment](capi-layout-h.md#arkui_alignment)。
 
 > **说明：**
 >

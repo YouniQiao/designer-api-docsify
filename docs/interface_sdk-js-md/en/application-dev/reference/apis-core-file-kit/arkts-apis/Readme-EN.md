@@ -60,9 +60,19 @@
 <!--Del-->
 - [@ohos.file.cloudDiskManager(Cloud Disk Management)](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
   <!--Del-->
+  - [CloudDiskSystemAccessor(system api)](arkts-corefile-clouddiskmanager-clouddisksystemaccessor-c-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SyncFolderAccessor(system api)](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [HydrateProgress(system api)](arkts-corefile-clouddiskmanager-hydrateprogress-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SyncFolder(system api)](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CallbackType(system api)](arkts-corefile-clouddiskmanager-callbacktype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [HydratePriority(system api)](arkts-corefile-clouddiskmanager-hydratepriority-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [HydrateProgressState(system api)](arkts-corefile-clouddiskmanager-hydrateprogressstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderState(system api)](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)<!--DelEnd-->
 - [@ohos.file.cloudSync(Device-Cloud Sync)](arkts-corefile-file-cloudsync.md)

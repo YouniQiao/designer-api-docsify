@@ -4,6 +4,8 @@
 export declare class SegmentButtonV2Item
 ```
 
+分段按钮选项类，用于定义单个分段按钮的文本、图标等属性。
+
 **起始版本：** 18
 
 **装饰器类型：** @ObservedV2

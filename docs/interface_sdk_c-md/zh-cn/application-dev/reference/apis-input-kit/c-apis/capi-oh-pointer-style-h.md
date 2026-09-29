@@ -2,6 +2,8 @@
 
 ## 概述
 
+鼠标光标的样式。
+
 **引用文件：** <multimodalinput/oh_pointer_style.h>
 
 **库：** libohinput.so
@@ -85,13 +87,13 @@ enum Input_PointerStyle
 | LOADING = 42 | 正在载入动画光标<br>**起始版本：** 22 |
 | RUNNING = 43 | 后台运行中动画光标<br>**起始版本：** 22 |
 | MIDDLE_BTN_EAST_WEST = 44 | 向东西滚动<br>**起始版本：** 22 |
-| RUNNING_LEFT = 45 | 后台运行中动画光标(拓展1)<br>**起始版本：** 22 |
-| RUNNING_RIGHT = 46 | 后台运行中动画光标(拓展2)<br>**起始版本：** 22 |
+| RUNNING_LEFT = 45 | 后台运行中动画光标（拓展1）<br>**起始版本：** 22 |
+| RUNNING_RIGHT = 46 | 后台运行中动画光标（拓展2）<br>**起始版本：** 22 |
 | AECH_DEVELOPER_DEFINED_ICON = 47 | 圆形自定义光标<br>**起始版本：** 22 |
 | SCREENRECORDER_CURSOR = 48 | 录屏光标<br>**起始版本：** 22 |
 | LASER_CURSOR = 49 | 悬浮光标。手写笔进入空鼠模式时使用该光标，无法直接设置。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。<br>**起始版本：** 22 |
 | LASER_CURSOR_DOT = 50 | 点击光标。手写笔进入空鼠模式时使用该光标，无法直接设置。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。<br>**起始版本：** 22 |
 | LASER_CURSOR_DOT_RED = 51 | 激光笔光标。手写笔进入空鼠模式时使用该光标，无法直接设置。<br>空鼠模式支持通过手写笔在空中转动来控制屏幕上虚拟光标的移动，并借助笔身按键实现上下翻页功能，用于演示PPT、隔空操作等场景。<br>**起始版本：** 22 |
-| DEVELOPER_DEFINED_ICON = -100 | 自定义光标，开发者可使用OH_Input_SetCustomCursor设置自定义光标，不支持使用OH_Input_SetPointerStyle直接设置。<br>**起始版本：** 22 |
+| DEVELOPER_DEFINED_ICON = -100 | 自定义光标，开发者可使用[OH_Input_SetCustomCursor](capi-oh-input-manager-h.md#oh_input_setcustomcursor)设置自定义光标， 不支持使用[OH_Input_SetPointerStyle](capi-oh-input-manager-h.md#oh_input_setpointerstyle)直接设置。<br>**起始版本：** 22 |
 
 

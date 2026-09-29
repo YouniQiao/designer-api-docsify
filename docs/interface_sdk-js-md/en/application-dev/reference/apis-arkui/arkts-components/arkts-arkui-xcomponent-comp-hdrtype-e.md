@@ -4,7 +4,7 @@
 declare enum HdrType
 ```
 
-Sets the HDR type of the XComponent.
+Enumerates the high dynamic range rendering types of HDR content.
 
 **Since:** 24
 
@@ -18,7 +18,7 @@ Sets the HDR type of the XComponent.
 DEFAULT = 0
 ```
 
-Default type.
+Default HDR type, which uses the standard high dynamic range rendering mode.
 
 **Since:** 24
 
@@ -36,7 +36,7 @@ Default type.
 AIHDR = 1
 ```
 
-AIHDR type.
+AI HDR type, which uses AI algorithms to intelligently expand the dynamic range of non-HDR content to achieve HDR display effects.
 
 **Since:** 24
 

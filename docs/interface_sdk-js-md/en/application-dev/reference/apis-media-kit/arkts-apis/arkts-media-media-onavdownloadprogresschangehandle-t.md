@@ -4,7 +4,7 @@
 type OnAVDownloadProgressChangeHandle = (taskId: string, progress: number) => void
 ```
 
-Describes the callback invoked for the AVDownloader progress change event.
+Registers a callback for the progress change event of an offline download task. This event is triggered when the download progress changes by more than 1% compared to the last time and the interval since the last triggering exceeds 500 ms.
 
 **Since:** 26.0.0
 
@@ -18,5 +18,5 @@ Describes the callback invoked for the AVDownloader progress change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of the task whose status changes. |
+| taskId | string | Yes | ID of an offline download task. |
 | progress | number | Yes |  |

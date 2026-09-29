@@ -4,7 +4,7 @@
 type OnAVDownloadTaskStateHandle = (taskId: string, state: AVDownloadTaskState) => void
 ```
 
-Describes the callback invoked for the AVDownloader state change event.
+Registers a callback for the status change event of an offline download task.
 
 **Since:** 26.0.0
 
@@ -18,5 +18,5 @@ Describes the callback invoked for the AVDownloader state change event.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| taskId | string | Yes | ID of the task whose status changes. |
+| taskId | string | Yes | ID of the offline download task whose status changes. |
 | state | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Yes |  |

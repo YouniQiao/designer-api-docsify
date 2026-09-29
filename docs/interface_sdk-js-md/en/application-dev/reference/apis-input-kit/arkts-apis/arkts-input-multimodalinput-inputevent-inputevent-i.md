@@ -4,7 +4,7 @@
 export declare interface InputEvent
 ```
 
-The **inputEvent** module provides the basic events reported by the device.
+Represents an input event.
 
 @interface InputEvent [since 9 - 11]
 
@@ -62,7 +62,7 @@ Unique ID of the input device. If a physical device is repeatedly reinstalled or
 id: number
 ```
 
-Enumerates event IDs.
+Event ID.
 
 **Type:** number
 

@@ -45,6 +45,7 @@ Declares the APIs of **NativeDrag**.
 | [int32_t OH_ArkUI_DragEvent_GetUdmfData(ArkUI_DragEvent* event, OH_UdmfData *data)](#oh_arkui_dragevent_getudmfdata) | Obtains the default drag data from a drag event. |
 | [int32_t OH_ArkUI_DragEvent_GetDataTypeCount(ArkUI_DragEvent* event, int32_t* count)](#oh_arkui_dragevent_getdatatypecount) | Obtains the number of drag data types from a drag event. |
 | [int32_t OH_ArkUI_DragEvent_GetDataTypes(ArkUI_DragEvent *event, char *eventTypeArray[], int32_t length, int32_t maxStrLen)](#oh_arkui_dragevent_getdatatypes) | Obtains the list of drag data types from a drag event. |
+| [int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent* event, OH_UDMF_Summary* summary)](#oh_arkui_dragevent_getsummary) | Obtains the data summary from a drag event. |
 | [int32_t OH_ArkUI_DragEvent_GetDragResult(ArkUI_DragEvent* event, ArkUI_DragResult* result)](#oh_arkui_dragevent_getdragresult) | Obtains the drag and drop result from the drag event. |
 | [int32_t OH_ArkUI_DragEvent_GetDropOperation(ArkUI_DragEvent* event, ArkUI_DropOperation* operation)](#oh_arkui_dragevent_getdropoperation) | Obtains the data handling method from the drag event. |
 | [float OH_ArkUI_DragEvent_GetPreviewTouchPointX(ArkUI_DragEvent* event)](#oh_arkui_dragevent_getpreviewtouchpointx) | Obtains the x-coordinate of the touch point for a drag preview from a drag event. |
@@ -452,6 +453,31 @@ Obtains the list of drag data types from a drag event.
 | Type | Description |
 | -- | -- |
 | int32_t | Returns the result code. Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. Returns ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR if the giving buffer is not enough for string copy. |
+
+### OH_ArkUI_DragEvent_GetSummary()
+
+```c
+int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent* event, OH_UDMF_Summary* summary)
+```
+
+**Description**
+
+Obtains the data summary from a drag event.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | [in] Pointer to an <b>ArkUI_DragEvent</b> object. The pointer cannot be null. |
+| [OH_UDMF_Summary](../../apis-arkdata/c-apis/capi-udmf-oh-udmf-summary.md)* summary | [out] Pointer to an <b>OH_UDMF_Summary</b> object used to receive the summary. The pointer cannot be null. The object must be created by the caller before this API is called and destroyed by the caller after use. If the operation fails, the content of the object is not guaranteed to be valid. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| int32_t | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. <br>Returns ARKUI_ERROR_CODE_INTERNAL_ERROR if an internal error occurs. |
 
 ### OH_ArkUI_DragEvent_GetDragResult()
 

@@ -4,7 +4,7 @@
 type KVObject = { [key: string]: number | string | boolean | [] | KVObject }
 ```
 
-Defines a key-value pair data structure that conforms to JSON format.
+Stores information in the form of key-value pairs, conforming to the JSON format.
 
 **Since:** 8
 

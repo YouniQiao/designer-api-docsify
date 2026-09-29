@@ -101,7 +101,6 @@ Canvas(params: CanvasParams)
 | --- | --- |
 | [CanvasParams](arkts-arkui-canvas-comp-canvasparams-i.md) | 定义Canvas的具体配置参数。 |
 | [CanvasPattern](arkts-arkui-canvas-comp-canvaspattern-i.md) | 一个Object对象，使用[createPattern](arkts-arkui-canvas-comp-canvasrenderer-c.md#createpattern)方法创建，通过指定图像和重复方式创建图片填充的模板。 |
-| [OffscreenCanvasRenderingContext2DInterface](arkts-arkui-canvas-comp-offscreencanvasrenderingcontext2dinterface-i.md) | 使用OffscreenCanvasRenderingContext2D在Canvas上进行离屏绘制，绘制对象可以是形状、文本、图片等。离屏绘制是指将需要绘制的内容先绘制在缓存区，然后将其转换成图片，一次性绘制到Canvas上。离屏绘制使用CPU进行绘制，绘制速度较慢，对绘制速度有要求的场景应避免使用离屏绘制。 |
 | [RenderingContextOptions](arkts-arkui-canvas-comp-renderingcontextoptions-i.md) | 定义渲染上下文的具体配置参数。 |
 | [Size](arkts-arkui-canvas-comp-size-i.md) | DrawingRenderingContext的尺寸信息。 |
 | [TextMetrics](arkts-arkui-canvas-comp-textmetrics-i.md) | 文本的尺寸信息。 |
@@ -117,7 +116,7 @@ Canvas(params: CanvasParams)
 | [CanvasTextAlign](arkts-arkui-canvas-comp-canvastextalign-t.md) | 定义文本对齐方式的类型。取值类型为下表类型中的并集。 |
 | [CanvasTextBaseline](arkts-arkui-canvas-comp-canvastextbaseline-t.md) | 定义文本基线类型。取值类型为下表类型中的并集。 |
 | [DrawingCanvas](arkts-arkui-canvas-comp-drawingcanvas-t.md) | 可用于向DrawingRenderingContext上绘制内容的画布对象。 |
-| [FrameNode](arkts-arkui-canvas-comp-framenode-t.md) | Import the frame node type object for Canvas. |
+| [FrameNode](arkts-arkui-canvas-comp-framenode-t.md) | 为Canvas导入FrameNode类型对象。 |
 | [ImageSmoothingQuality](arkts-arkui-canvas-comp-imagesmoothingquality-t.md) | 定义图片平滑度类型。取值类型为下表类型中的并集。 |
 
 ## 示例

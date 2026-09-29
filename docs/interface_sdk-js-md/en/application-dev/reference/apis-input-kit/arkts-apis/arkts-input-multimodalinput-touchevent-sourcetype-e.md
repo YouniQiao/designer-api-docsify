@@ -4,7 +4,7 @@
 export declare enum SourceType
 ```
 
-Enumerates touch sources. Currently, only the touchscreen and touchpad are supported.
+Device type of the touch input source. Currently the touchscreen, stylus, and touchpad are supported.
 
 **Since:** 9
 
