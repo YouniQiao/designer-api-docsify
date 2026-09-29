@@ -4,9 +4,7 @@
 export declare type AdvancedDialogV2OnCheckedChange = (checked: boolean) => void
 ```
 
-Declare the callback when the checkbox of dialog is changed.
-
-@typedef { function } AdvancedDialogV2OnCheckedChange
+Defines the event triggered when the selected status of the check box changes.
 
 **Since:** 18
 

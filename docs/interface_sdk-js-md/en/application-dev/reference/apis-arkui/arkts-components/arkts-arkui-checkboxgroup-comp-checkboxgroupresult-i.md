@@ -40,7 +40,7 @@ Names of all the selected check boxes in the group.
 status: SelectStatus
 ```
 
-Selected status.
+Selected state of the check box in the group.
 
 **Type:** [SelectStatus](arkts-arkui-checkboxgroup-comp-selectstatus-e.md)
 

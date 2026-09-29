@@ -6,8 +6,6 @@ Declares the APIs for controlling vibration. This module supports multiple vibra
 
 **Library**: libohvibrator.z.so
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Since**: 11
 
 **Related module**: [Vibrator](capi-vibrator.md)
@@ -16,10 +14,10 @@ Declares the APIs for controlling vibration. This module supports multiple vibra
 
 ### Struct
 
-| Name | typedef keyword | Description |
-| -- | -- | -- |
-| [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md) | Vibrator_Attribute | The **Vibrator_Attribute** struct is used to describe the attributes of the vibrator. You can use this struct to specify the vibrator ID and vibration scenario. For details about the application scenarios and implementation mechanism, see the {@link Vibrator} module documentation. |
-| [Vibrator_FileDescription](capi-vibrator-vibrator-filedescription.md) | Vibrator_FileDescription | Defines the vibration file description. This method is used to describe the file information of a custom vibration pattern. You can use a custom vibration file to implement precise vibration control. |
+| Name | Description |
+| -- | -- |
+| [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md) | The **Vibrator_Attribute** struct is used to describe the attributes of the vibrator. You can use this struct to specify the vibrator ID and vibration scenario. For details about the application scenarios and implementation mechanism, see the Vibrator module documentation. |
+| [Vibrator_FileDescription](capi-vibrator-vibrator-filedescription.md) | Defines the vibration file description. This method is used to describe the file information of a custom vibration pattern. You can use a custom vibration file to implement precise vibration control. |
 
 ### Enum
 
@@ -40,8 +38,6 @@ enum Vibrator_ErrorCode
 
 Enumerates the error codes. If an exception occurs during use of vibration APIs, the corresponding error code is returned.
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Since**: 11
 
 | Enum item | Description |
@@ -60,8 +56,6 @@ enum Vibrator_Usage
 **Description**
 
 Enumerates the vibration priorities in different scenarios. A vibration with a higher priority interrupts a vibration with a lower priority. Suggestions: Select a proper priority based on the application scenario. In scenarios where continuous vibration is required, keep the priority consistent to avoid performance loss caused by frequently switching priorities. It is recommended that a higher priority be used for physical feedback and touch vibrations to ensure timely response.
-
-**System capability**: SystemCapability.Sensors.MiscDevice
 
 **Since**: 11
 

@@ -26,9 +26,9 @@ import { uiMaterial } from '@kit.ArkUI';
 type?: MaterialType
 ```
 
-Material type.
+Material type. Select MaterialType.NONE when no material effect is needed, and MaterialType.SEMI_TRANSPARENT when a semi-transparent background effect is needed.
 
-Default value: **MaterialType.NONE**.
+Default value: MaterialType.NONE
 
 **Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 

@@ -4,9 +4,13 @@
 export declare interface PopoverOptions extends CustomPopupOptions
 ```
 
-Defines PopoverDialog Options
+Defines a set of options used to configure the popover dialog box, including its content and position.
 
-@typedef PopoverOptions @extends CustomPopupOptions
+Inherits [CustomPopupOptions](../arkts-components/arkts-arkui-common-comp-custompopupoptions-i.md).
+
+> **NOTE:** 
+> 
+> The default value of **radius** is **32vp**.
 
 **Inheritance/Implementation:** PopoverOptions extends [CustomPopupOptions](../arkts-components/arkts-arkui-common-comp-custompopupoptions-i.md)
 

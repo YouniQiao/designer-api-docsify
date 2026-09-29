@@ -4,7 +4,7 @@
 declare type OnRatingChangeCallback = (rating: number) => void
 ```
 
-Defines the callback triggered when the rating value changes.
+Called when the rating value changes.
 
 **Since:** 18
 
@@ -20,4 +20,4 @@ Defines the callback triggered when the rating value changes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| rating | number | Yes | Rating value. |
+| rating | number | Yes | Rating value. The value range is [0, **stars**]. |

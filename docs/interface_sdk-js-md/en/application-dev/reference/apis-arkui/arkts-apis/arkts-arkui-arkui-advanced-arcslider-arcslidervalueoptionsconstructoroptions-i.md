@@ -30,11 +30,9 @@ Default value: **100**
 
 **NOTE:** 
 
-If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.
+When an abnormal situation occurs where **min** &gt;= **max**, **min** takes the default value **0** and **max** takes the default value **100**.
 
-If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
-
-@Trace
+When **progress** is not within the [min, max] range, the nearest boundary value is taken: if **progress** is less than **min**, **min** is taken; if **progress** is greater than **max**, **max** is taken.
 
 **Type:** number
 
@@ -58,8 +56,6 @@ Minimum value.
 
 Default value: **0**.
 
-@Trace
-
 **Type:** number
 
 **Default:** 0
@@ -81,8 +77,6 @@ progress?: number
 Current progress.
 
 Default value: same as the value of **min**.
-
-@Trace
 
 **Type:** number
 

@@ -6,8 +6,6 @@ Defines enumerations and APIs related to **Progress**, supporting multiple progr
 
 **Library**: libace_ndk.z.so
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -53,8 +51,6 @@ enum ArkUI_ProgressType
 
 Enumerates progress indicator types.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 | Enum item | Description |
@@ -78,15 +74,13 @@ ArkUI_ProgressLinearStyleOption* OH_ArkUI_ProgressLinearStyleOption_Create(void)
 
 Creates a **ProgressLinearStyleOption** instance. After use, you must call [OH_ArkUI_ProgressLinearStyleOption_Destroy](capi-progress-h.md#oh_arkui_progresslinearstyleoption_destroy) to release resources to avoid memory leaks.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 15
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Pointer to the ArkUI_ProgressLinearStyleOption instance, which can be used to configure display styles      such as smooth animation, scan effect, width, and corner radius of a linear progress indicator.      <br>If a null pointer is returned, the memory may be insufficient. |
+| [ArkUI_ProgressLinearStyleOption*](capi-arkui-nativemodule-arkui-progresslinearstyleoption.md) | Pointer to the **ArkUI_ProgressLinearStyleOption** instance, which can be used to configure display styles such as smooth animation, scan effect, width, and corner radius of a linear progress indicator. <br>If a null pointer is returned, the memory may be insufficient. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_Destroy()
 
@@ -97,8 +91,6 @@ void OH_ArkUI_ProgressLinearStyleOption_Destroy(ArkUI_ProgressLinearStyleOption*
 **Description**
 
 Destroys a **ProgressLinearStyleOption** instance. This API must be used in pair with [OH_ArkUI_ProgressLinearStyleOption_Create](capi-progress-h.md#oh_arkui_progresslinearstyleoption_create). The **option** parameter should be obtained through **<br>OH_ArkUI_ProgressLinearStyleOption_Create()**, and the object should not be used after **<br>OH_ArkUI_ProgressLinearStyleOption_Destroy()** is called.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -117,8 +109,6 @@ void OH_ArkUI_ProgressLinearStyleOption_SetScanEffectEnabled(ArkUI_ProgressLinea
 **Description**
 
 Sets whether to enable the scan effect. It is suitable for loading scenarios that require enhanced visual feedback of the progress indicator, such as data loading and file upload. The scan effect refers to the dynamic visual effect of a light beam scanning across the progress indicator.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -139,8 +129,6 @@ void OH_ArkUI_ProgressLinearStyleOption_SetSmoothEffectEnabled(ArkUI_ProgressLin
 
 Sets whether to enable the smooth effect.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 15
 
 **Parameters**:
@@ -159,8 +147,6 @@ void OH_ArkUI_ProgressLinearStyleOption_SetStrokeWidth(ArkUI_ProgressLinearStyle
 **Description**
 
 Sets the stroke width for a progress indicator.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -181,8 +167,6 @@ void OH_ArkUI_ProgressLinearStyleOption_SetStrokeRadius(ArkUI_ProgressLinearStyl
 
 Sets the corner radius for a progress indicator.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 15
 
 **Parameters**:
@@ -202,8 +186,6 @@ bool OH_ArkUI_ProgressLinearStyleOption_GetScanEffectEnabled(ArkUI_ProgressLinea
 
 Obtains the enabled status of the scan effect.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 15
 
 **Parameters**:
@@ -216,7 +198,7 @@ Obtains the enabled status of the scan effect.
 
 | Type | Description |
 | -- | -- |
-| bool | Whether the scan effect is enabled. true: The scan effect is enabled. false: The scan effect is      disabled. The default value is false. |
+| bool | Whether the scan effect is enabled. **true**: The scan effect is enabled. **false**: The scan effect is disabled. The default value is **false**. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_GetSmoothEffectEnabled()
 
@@ -228,8 +210,6 @@ bool OH_ArkUI_ProgressLinearStyleOption_GetSmoothEffectEnabled(ArkUI_ProgressLin
 
 Obtains the enabled status of the smooth effect.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 15
 
 **Parameters**:
@@ -242,7 +222,7 @@ Obtains the enabled status of the smooth effect.
 
 | Type | Description |
 | -- | -- |
-| bool | Whether the smooth effect is enabled. true: The smooth effect is enabled. false: The smooth effect      is disabled. The default value is true. |
+| bool | Whether the smooth effect is enabled. **true**: The smooth effect is enabled. **false**: The smooth effect is disabled. The default value is **true**. |
 
 ### OH_ArkUI_ProgressLinearStyleOption_GetStrokeWidth()
 
@@ -253,8 +233,6 @@ float OH_ArkUI_ProgressLinearStyleOption_GetStrokeWidth(ArkUI_ProgressLinearStyl
 **Description**
 
 Obtains the stroke width of the progress indicator.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -279,8 +257,6 @@ float OH_ArkUI_ProgressLinearStyleOption_GetStrokeRadius(ArkUI_ProgressLinearSty
 **Description**
 
 Obtains the corner radius of the progress indicator.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 

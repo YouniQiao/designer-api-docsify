@@ -20,6 +20,8 @@ group?: string
 
 Group name.
 
+Default value: **undefined**. In the default state, the options whose **group** value is **undefined** in [CheckboxOptions](arkts-arkui-checkbox-comp-checkboxoptions-i.md) are managed by this parameter.
+
 **NOTE:** 
 
 Among multiple check box groups with the same group name, only the first one takes effect.

@@ -6,8 +6,6 @@ Defines enumerations and APIs related to **CustomSpan**, which is used to implem
 
 **Library**: libace_ndk.z.so
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -52,15 +50,13 @@ ArkUI_CustomSpanMeasureInfo* OH_ArkUI_CustomSpanMeasureInfo_Create(void)
 
 Creates measurement information for a custom span.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | Pointer to the ArkUI_CustomSpanMeasureInfo instance. It is used to provide measurement data of the      component in the measurement callback of the custom span.      <br>If a null pointer is returned, the memory may be insufficient. |
+| [ArkUI_CustomSpanMeasureInfo*](capi-arkui-nativemodule-arkui-customspanmeasureinfo.md) | Pointer to the **ArkUI_CustomSpanMeasureInfo** instance. It is used to provide measurement data of the component in the measurement callback of the custom span. <br>If a null pointer is returned, the memory may be insufficient. |
 
 ### OH_ArkUI_CustomSpanMeasureInfo_Dispose()
 
@@ -71,8 +67,6 @@ void OH_ArkUI_CustomSpanMeasureInfo_Dispose(ArkUI_CustomSpanMeasureInfo* info)
 **Description**
 
 Disposes of measurement information of a custom span.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -92,8 +86,6 @@ float OH_ArkUI_CustomSpanMeasureInfo_GetFontSize(ArkUI_CustomSpanMeasureInfo* in
 
 Obtains the font size of the parent text node of a custom span. In the measurement callback of a custom span, the layout size of the custom component can be calculated based on the font size of the parent text node. This API is used to implement precise typesetting in scenarios such as layout of text and images and emoji embedding.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -106,7 +98,7 @@ Obtains the font size of the parent text node of a custom span. In the measureme
 
 | Type | Description |
 | -- | -- |
-| float | Font size of the parent node text, in fp. If parameter verification fails, 0.0f is returned.      <br>A possible cause is that the parameter is null. |
+| float | Font size of the parent node text, in fp. If parameter verification fails, **0.0f** is returned. <br>A possible cause is that the parameter is null. |
 
 ### OH_ArkUI_CustomSpanMetrics_Create()
 
@@ -118,15 +110,13 @@ ArkUI_CustomSpanMetrics* OH_ArkUI_CustomSpanMetrics_Create(void)
 
 Creates measurement metrics for a custom span.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | Pointer to the ArkUI_CustomSpanMetrics instance. It is used to describe layout information such as the      width and height of a custom span.      <br>If a null pointer is returned, the memory may be insufficient. |
+| [ArkUI_CustomSpanMetrics*](capi-arkui-nativemodule-arkui-customspanmetrics.md) | Pointer to the **ArkUI_CustomSpanMetrics** instance. It is used to describe layout information such as the width and height of a custom span. <br>If a null pointer is returned, the memory may be insufficient. |
 
 ### OH_ArkUI_CustomSpanMetrics_Dispose()
 
@@ -137,8 +127,6 @@ void OH_ArkUI_CustomSpanMetrics_Dispose(ArkUI_CustomSpanMetrics* metrics)
 **Description**
 
 Disposes of measurement metrics of a custom span.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -158,8 +146,6 @@ int32_t OH_ArkUI_CustomSpanMetrics_SetWidth(ArkUI_CustomSpanMetrics* metrics, fl
 
 Sets the width for a custom span. In text and image layout scenarios, you need to set an appropriate width for embedded images or emojis to match the text line height. In document applications, you may need to set a fixed width for custom marker elements.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -173,7 +159,7 @@ Sets the width for a custom span. In text and image layout scenarios, you need t
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.      <br>Possible cause: Parameter validation fails because the parameter is null.      <br>Handling steps: Ensure that the metrics parameter passed in is not a null pointer. |
+| int32_t | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. <br>Possible cause: Parameter validation fails because the parameter is null. <br>Handling steps: Ensure that the **metrics** parameter passed in is not a null pointer. |
 
 ### OH_ArkUI_CustomSpanMetrics_SetHeight()
 
@@ -184,8 +170,6 @@ int32_t OH_ArkUI_CustomSpanMetrics_SetHeight(ArkUI_CustomSpanMetrics* metrics, f
 **Description**
 
 Sets the height for a custom span. In emoji embedding scenarios, you need to set an appropriate height based on the emoji size to maintain alignment with the text. In text and image layout scenarios, you need to set a height for embedded elements that matches the text line height.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -200,7 +184,7 @@ Sets the height for a custom span. In emoji embedding scenarios, you need to set
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code.      <br>Returns {@link ARKUI_ERROR_CODE_NO_ERROR} if the operation is successful.<br>    <br>Returns {@link ARKUI_ERROR_CODE_PARAM_INVALID} if a parameter error occurs.      <br>Possible cause: Parameter validation fails because the parameter is null.      <br>Handling steps: Ensure that the metrics parameter passed in is not a null pointer. |
+| int32_t | Result code. <br>Returns ARKUI_ERROR_CODE_NO_ERROR if the operation is successful. <br>Returns ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs. <br>Possible cause: Parameter validation fails because the parameter is null. <br>Handling steps: Ensure that the **metrics** parameter passed in is not a null pointer. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Create()
 
@@ -212,15 +196,13 @@ ArkUI_CustomSpanDrawInfo* OH_ArkUI_CustomSpanDrawInfo_Create(void)
 
 Creates drawing information for a custom span.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | Pointer to the ArkUI_CustomSpanDrawInfo instance, indicating the drawing information of the custom span.      <br>If a null pointer is returned, the memory may be insufficient. |
+| [ArkUI_CustomSpanDrawInfo*](capi-arkui-nativemodule-arkui-customspandrawinfo.md) | Pointer to the **ArkUI_CustomSpanDrawInfo** instance, indicating the drawing information of the custom span. <br>If a null pointer is returned, the memory may be insufficient. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_Dispose()
 
@@ -231,8 +213,6 @@ void OH_ArkUI_CustomSpanDrawInfo_Dispose(ArkUI_CustomSpanDrawInfo* info)
 **Description**
 
 Disposes of drawing information for a custom span.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -252,8 +232,6 @@ float OH_ArkUI_CustomSpanDrawInfo_GetXOffset(ArkUI_CustomSpanDrawInfo* info)
 
 Obtains the x-axis offset of the custom span relative to the mounted component. In the custom drawing callback, you need to determine the drawing start position based on the offset value. This API is used to implement precise drawing in scenarios such as emoji embedding and layout of text and images.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Parameters**:
@@ -266,7 +244,7 @@ Obtains the x-axis offset of the custom span relative to the mounted component. 
 
 | Type | Description |
 | -- | -- |
-| float | X-axis offset value, in px. If parameter verification fails, 0.0f is returned.      <br>The parameter verification fails because the parameter is null. |
+| float | X-axis offset value, in px. If parameter verification fails, **0.0f** is returned. <br>The parameter verification fails because the parameter is null. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineTop()
 
@@ -277,8 +255,6 @@ float OH_ArkUI_CustomSpanDrawInfo_GetLineTop(ArkUI_CustomSpanDrawInfo* info)
 **Description**
 
 Obtains the top margin of the custom span relative to the mounted component. In custom drawing, you need to determine the vertical start position of the drawing area based on the top margin. This API is used for precise typesetting in scenarios such as rich text editors and document applications.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -292,7 +268,7 @@ Obtains the top margin of the custom span relative to the mounted component. In 
 
 | Type | Description |
 | -- | -- |
-| float | Top margin, in px. If parameter validation fails, 0.0f is returned.      <br>The parameter validation fails because the parameter is null. |
+| float | Top margin, in px. If parameter validation fails, **0.0f** is returned. <br>The parameter validation fails because the parameter is null. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetLineBottom()
 
@@ -303,8 +279,6 @@ float OH_ArkUI_CustomSpanDrawInfo_GetLineBottom(ArkUI_CustomSpanDrawInfo* info)
 **Description**
 
 Obtains the bottom margin of the custom span relative to the mounted component. In custom drawing, you need to calculate the height range of the drawing area by combining the top margin and bottom margin. This API is used for precise layout in scenarios such as layout of text and images and emoji embedding.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -318,7 +292,7 @@ Obtains the bottom margin of the custom span relative to the mounted component. 
 
 | Type | Description |
 | -- | -- |
-| float | Bottom margin, in px. If parameter validation fails, 0.0f is returned.      <br>The parameter validation fails because the parameter is null. |
+| float | Bottom margin, in px. If parameter validation fails, **0.0f** is returned. <br>The parameter validation fails because the parameter is null. |
 
 ### OH_ArkUI_CustomSpanDrawInfo_GetBaseline()
 
@@ -329,8 +303,6 @@ float OH_ArkUI_CustomSpanDrawInfo_GetBaseline(ArkUI_CustomSpanDrawInfo* info)
 **Description**
 
 Obtains the baseline offset of the custom span relative to the mounted component. In the drawing callback of a custom span, use this API to obtain the baseline offset for text alignment and typesetting, achieving precise drawing effects in scenarios such as rich text editors and layout of text and images.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -344,6 +316,6 @@ Obtains the baseline offset of the custom span relative to the mounted component
 
 | Type | Description |
 | -- | -- |
-| float | Baseline offset, in px. If parameter verification fails, 0.0f is returned.      <br>The parameter verification fails because the parameter is null. |
+| float | Baseline offset, in px. If parameter verification fails, **0.0f** is returned. <br>The parameter verification fails because the parameter is null. |
 
 

@@ -4,7 +4,7 @@
 class Material
 ```
 
-System material object on the UI.
+Base class for system material objects.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ static get empty(): Material
 
 Returns an empty material object, which is used to disable the immersive system material effect for a component. The usage method is **uiMaterial.Material.empty**.
 
-In enabled state, you can disable the immersive system material effect for a component by setting **systemMaterial(uiMaterial.Material.empty)**. If the component does not support the component-level immersive system material API, the material effect cannot be disabled using this API.
+In enabled mode, you can set `systemMaterial(uiMaterial.Material.empty)` to individually disable the immersive system material effect for a specific component. If the component does not support the component-level immersive system material API, the material effect cannot be disabled through this method.
 
 **Since:** 26.0.0
 

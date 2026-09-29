@@ -4,7 +4,9 @@
 declare type LevelMode = import('../api/@ohos.promptAction').LevelMode
 ```
 
-Defines the display level mode for the dialog box.
+Import the LevelMode type from promptAction.
+
+@typedef { import('../api/@ohos.promptAction').LevelMode } LevelMode
 
 **Since:** 15
 

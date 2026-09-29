@@ -36,7 +36,7 @@ Default mode. Submenus are expanded on the side on the same plane.
 EMBEDDED_EXPAND = 1
 ```
 
-Embedded mode. Submenus are expanded while embedded within the main menu.
+Embedded mode. Submenus are expanded within the main menu.
 
 **Since:** 12
 

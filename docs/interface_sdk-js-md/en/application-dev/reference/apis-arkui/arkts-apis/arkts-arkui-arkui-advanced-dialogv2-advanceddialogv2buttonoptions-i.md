@@ -4,9 +4,7 @@
 export declare interface AdvancedDialogV2ButtonOptions
 ```
 
-Declare the options of AdvancedDialogV2Button
-
-@interface AdvancedDialogV2ButtonOptions
+Provides options used to initialize an **AdvancedDialogV2Button** object.
 
 **Since:** 18
 
@@ -26,7 +24,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 action?: AdvancedDialogV2ButtonAction
 ```
 
-Sets the Button Callback.
+Action triggered when the button is clicked.
+
+By default, there is no event.
 
 **Since:** 18
 
@@ -44,7 +44,9 @@ Sets the Button Callback.
 background?: ColorMetrics
 ```
 
-Sets the background color of a button.
+Background of the button.
+
+The setting follows **buttonStyle** by default.
 
 **Type:** ColorMetrics
 
@@ -64,7 +66,9 @@ Sets the background color of a button.
 buttonStyle?: ButtonStyleMode
 ```
 
-Describes the Button style.
+Style of the button.
+
+Default value: **ButtonStyleMode.NORMAL** for 2-in-1 devices and **ButtonStyleMode.TEXTUAL** for other devices
 
 **Type:** [ButtonStyleMode](../arkts-components/arkts-arkui-button-comp-buttonstylemode-e.md)
 
@@ -86,7 +90,7 @@ Describes the Button style.
 content: ResourceStr
 ```
 
-Sets the Display Content of a Button.
+Content of the button.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -106,7 +110,13 @@ Sets the Display Content of a Button.
 defaultFocus?: boolean
 ```
 
-Set the default focus of a button.
+Whether the button is the default focus.
+
+**true**: The button is the default focus.
+
+**false**: The button is not the default focus.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -128,7 +138,13 @@ Set the default focus of a button.
 enabled?: boolean
 ```
 
-Set the availability of the button.
+Whether the button is enabled.
+
+**true**: The button is enabled.
+
+**false**: The button is disabled.
+
+Default value: **true**.
 
 **Type:** boolean
 
@@ -150,7 +166,9 @@ Set the availability of the button.
 fontColor?: ColorMetrics
 ```
 
-Sets the Button Text Color.
+Font color of the button.
+
+The setting follows **buttonStyle** by default.
 
 **Type:** ColorMetrics
 
@@ -170,7 +188,9 @@ Sets the Button Text Color.
 role?: ButtonRole
 ```
 
-Describes the Button role.
+Role of the button.
+
+Default value: **ButtonRole.NORMAL**
 
 **Type:** [ButtonRole](../arkts-components/arkts-arkui-button-comp-buttonrole-e.md)
 
@@ -192,7 +212,9 @@ Describes the Button role.
 textAlign?: TextAlign
 ```
 
-Set the alignment mode for the button label.
+Alignment method of the button text.
+
+Default value: **TextAlign.Start**
 
 **Type:** [TextAlign](arkts-arkui-textalign-e.md)
 

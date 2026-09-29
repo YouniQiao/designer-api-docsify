@@ -6,8 +6,6 @@ Provides a unified entry for the native module APIs.
 
 **Library**: libace_ndk.z.so
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -48,8 +46,6 @@ enum ArkUI_NativeAPIVariantKind
 
 Defines the native API types.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 | Enum item | Description |
@@ -70,8 +66,6 @@ enum OH_ArkUI_NativeModule_RuntimeCheckType
 
 Defines the runtime check types for ArkUI C APIs.<br> Each check type corresponds to a specific improper usage scenario of ArkUI C APIs, used to detect misuse at runtime (such as cross-thread calls, accessing destroyed objects, etc.). You can use [OH_ArkUI_NativeModule_SetRuntimeCheckMode](capi-native-interface-h.md#oh_arkui_nativemodule_setruntimecheckmode) to independently configure a runtime check mode for each check type. The behavior upon check failure is determined by the configured runtime check mode. For available modes, see [OH_ArkUI_NativeModule_RuntimeCheckMode](capi-native-interface-h.md#oh_arkui_nativemodule_runtimecheckmode).
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -88,8 +82,6 @@ enum OH_ArkUI_NativeModule_RuntimeCheckMode
 **Description**
 
 Defines the runtime check modes for ArkUI C APIs.<br> All runtime check types use the same set of modes (DISABLED, LOG, CRASH) defined in this enum to determine the behavior upon check failure. That is, each check type can be independently set to one of the following three modes. The default mode depends on the application's build type: For applications compiled in debug mode (Debug build in DevEco Studio, used for development and debugging), the default is [OH_ARKUI_NATIVEMODULE_CHECK_MODE_CRASH](capi-native-interface-h.md#oh_arkui_nativemodule_runtimecheckmode). For applications compiled in release mode (Release build in DevEco Studio, used for production release), the default is [OH_ARKUI_NATIVEMODULE_CHECK_MODE_DISABLED](capi-native-interface-h.md#oh_arkui_nativemodule_runtimecheckmode).
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -111,8 +103,6 @@ void* OH_ArkUI_QueryModuleInterfaceByName(ArkUI_NativeAPIVariantKind type, const
 **Description**
 
 Obtains the native API set of a specified type.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -139,8 +129,6 @@ const char* OH_ArkUI_NativeModule_GetErrorMessage()
 
 Retrieves the latest error message, which includes the error code, method name, and error cause. When other interfaces return an error code, they save the corresponding error message, and this interface can retrieve the currently stored error message. The information returned by this interface may evolve with versions and is intended solely for output to aid in analysis and troubleshooting. It should not be used for logical decisions.<br> The returned string is a thread-local global string created by the system. The caller must not modify its content. If any editing is required, create a copy of the string content yourself. No memory deallocation is required by the caller.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 26.0.0
 
 **Returns**:
@@ -159,8 +147,6 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_SetRuntimeCheckMode(OH_ArkUI_NativeModule_
 
 Sets the process-level runtime check mode for ArkUI C APIs.<br> This function configures the behavior of a specific runtime check type when misuse is detected. The setting is process-level and remains in effect until the next successful call for the same check type.<br> <b>Thread requirement:</b> This function must be called on the UI thread. Calling it from any other thread will immediately terminate the application without returning. The thread check is performed before parameter validation.<br> <b>Default behavior:</b> If this function is not called for a specific check type, debug application builds default to [OH_ARKUI_NATIVEMODULE_CHECK_MODE_CRASH](capi-native-interface-h.md#oh_arkui_nativemodule_runtimecheckmode), and release application builds default to [OH_ARKUI_NATIVEMODULE_CHECK_MODE_DISABLED](capi-native-interface-h.md#oh_arkui_nativemodule_runtimecheckmode).
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 26.2.0
 
 **Parameters**:
@@ -174,6 +160,6 @@ Sets the process-level runtime check mode for ArkUI C APIs.<br> This function co
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | Return value:      <ul><li>Returns [ARKUI_ERROR_CODE_NO_ERROR](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if the setting is updated successfully.      </li><li>Returns [ARKUI_ERROR_CODE_PARAM_INVALID](../../apis-arkdata/c-apis/capi-error-code-h.md#arkui_errorcode) if checkType or mode is invalid.</li></ul>      When an invalid parameter error is returned, the previous setting is retained. |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | Return value: <ul><li>Returns ARKUI_ERROR_CODE_NO_ERROR if the setting is updated successfully. </li><li>Returns ARKUI_ERROR_CODE_PARAM_INVALID if checkType or mode is invalid.</li></ul> When an invalid parameter error is returned, the previous setting is retained. |
 
 

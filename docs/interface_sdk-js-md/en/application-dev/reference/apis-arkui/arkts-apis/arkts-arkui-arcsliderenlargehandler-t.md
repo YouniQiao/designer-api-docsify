@@ -4,7 +4,7 @@
 declare type ArcSliderEnlargeHandler = (isEnlarged: boolean) => void
 ```
 
-Defines the callback invoked to notify the application when the arc slider is enlarged or reduced.
+Triggered when the arc slider is enlarged or shrunk.
 
 **Since:** 18
 
@@ -18,4 +18,4 @@ Defines the callback invoked to notify the application when the arc slider is en
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isEnlarged | boolean | Yes | Whether the arc slider is enlarged.<br>**false**: The arc slider is in a reduced state.<br>**true**: The arc slider is in an enlarged state. |
+| isEnlarged | boolean | Yes | Whether the arc slider is enlarged.<br>**false**: The arc slider is in a reduced state. <br>**true**: The arc slider is in an enlarged state. |

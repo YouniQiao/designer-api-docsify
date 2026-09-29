@@ -205,7 +205,7 @@ console.info("result = " + result);
 ## encodeToString
 
 ```TypeScript
-encodeToString(src: Uint8Array, options?: Type): Promise<string>
+encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>
 ```
 
 Encodes the input content into a string. This API uses a promise to return the result.
@@ -214,7 +214,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
+<!--Device-Base64Helper-encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -222,7 +222,7 @@ Encodes the input content into a string. This API uses a promise to return the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | Yes | Uint8Array object to encode.<br>**Since:** 26.2.0 |
 | options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. Each line of the return value contains a maximum of 76 characters and ends with '\r\n'.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 10 |
 
 **Return value:**
@@ -250,7 +250,7 @@ base64Helper.encodeToString(array, util.Type.MIME).then((val) => {
 ## encodeToStringSync
 
 ```TypeScript
-encodeToStringSync(src: Uint8Array, options?: Type): string
+encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string
 ```
 
 Performs Base64 encoding on the input Uint8Array byte array and returns a string. This method supports multiple encoding formats, including standard Base64 encoding, MIME-compliant Base64 encoding (with line breaks), and URL- safe Base64 encoding.
@@ -259,7 +259,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
+<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -267,7 +267,7 @@ Performs Base64 encoding on the input Uint8Array byte array and returns a string
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | Uint8Array | Yes | Uint8Array object to encode. |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | Yes | Uint8Array object to encode.<br>**Since:** 26.2.0 |
 | options | [Type](arkts-arkts-util-type-e.md) | No | Encoding format.<br>The following values are available:<br>- **util.Type.BASIC** (default): Base64 encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME**: Base64 encoding. If the return value exceeds 76 characters, a line break is inserted every 76 characters, and each line ends with '\r\n'. If the return value is fewer than 76 characters, an exception is thrown.<br>- **util.Type.BASIC_URL_SAFE**: Base64URL encoding. The return value does not contain carriage return characters or newline characters.<br>- **util.Type.MIME_URL_SAFE**: Base64 URL encoding. Each line in the return value contains a maximum of 76 characters and ends with '\r\n'.<br>**Since:** 12 |
 
 **Return value:**

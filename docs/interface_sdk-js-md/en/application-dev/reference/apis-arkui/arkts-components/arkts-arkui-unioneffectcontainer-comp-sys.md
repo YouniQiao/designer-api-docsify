@@ -38,7 +38,7 @@ Specify the construction options for the UnionEffectContainer to create the Unio
 
 | Name | Description |
 | --- | --- |
-| [UnionMode](arkts-arkui-unioneffectcontainer-comp-unionmode-e-sys.md) | Enumerates the union modes. |
+| [UnionMode](arkts-arkui-unioneffectcontainer-comp-unionmode-e-sys.md) | Enumerates the union effect modes. |
 
 ## Examples
 

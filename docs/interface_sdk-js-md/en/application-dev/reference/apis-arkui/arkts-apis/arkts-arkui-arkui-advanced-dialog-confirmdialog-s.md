@@ -4,9 +4,11 @@
 export declare struct ConfirmDialog
 ```
 
-Declare CustomDialog ConfirmDialog
+ConfirmDialog({controller: CustomDialogController, title: ResourceStr, content?: ResourceStr, checkTips?: ResourceStr, isChecked?: boolean, onCheckedChange?: Callback\&lt;boolean&gt;, primaryButton?: ButtonOptions, secondaryButton?: ButtonOptions, theme?: Theme | CustomTheme, themeColorMode?: ThemeColorMode})
 
-**Since:** 18
+Defines a confirmation dialog box used to provide error feedback or prompt information when an operation is not correctly executed (for example, a network error or low battery level) or when an incorrect operation is performed (for example, fingerprint enrollment).
+
+**Since:** 10
 
 **Decorator:** @CustomDialog
 
@@ -26,15 +28,19 @@ import { AlertDialog, ButtonOptions, ConfirmDialog, LoadingDialog, SelectDialog,
 checkTips?: ResourceStr
 ```
 
-Sets the ConfirmDialog checkbox tips.
+Tip content of the checkbox.
+
+When not set by default or set to **undefined**, the tip content of the checkbox is not displayed.
+
+**Note:** When the tip content is not set, the checkbox is also displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-checkTips?: ResourceStr--><!--Device-ConfirmDialog-checkTips?: ResourceStr-End-->
 
@@ -46,15 +52,17 @@ Sets the ConfirmDialog checkbox tips.
 content?: ResourceStr
 ```
 
-Sets the ConfirmDialog content.
+Content of the dialog box.
+
+If this parameter is not set or is set to **undefined**, the content is not displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-content?: ResourceStr--><!--Device-ConfirmDialog-content?: ResourceStr-End-->
 
@@ -66,15 +74,17 @@ Sets the ConfirmDialog content.
 controller: CustomDialogController
 ```
 
-Sets the ConfirmDialog Controller.
+Confirmation dialog box controller, used to control the show and hide of the dialog box.
+
+**Note:** When **@Require** is not used, mandatory validation is not performed on the parameter during construction.
 
 **Type:** [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-controller: CustomDialogController--><!--Device-ConfirmDialog-controller: CustomDialogController-End-->
 
@@ -86,15 +96,19 @@ Sets the ConfirmDialog Controller.
 isChecked?: boolean
 ```
 
-Sets the ConfirmDialog checkbox state.
+Whether the checkbox is selected. The value **true** means selected, and **false** means unselected.
+
+Default value: **false**
 
 **Type:** boolean
 
-**Since:** 18
+**Since:** 10
+
+**Decorator:** @Prop
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-isChecked?: boolean--><!--Device-ConfirmDialog-isChecked?: boolean-End-->
 
@@ -106,15 +120,15 @@ Sets the ConfirmDialog checkbox state.
 onCheckedChange?: Callback<boolean>
 ```
 
-Sets the ConfirmDialog CheckBox Callback.
+Callback invoked when the checked state of the checkbox changes. The callback parameter is of the boolean type. The value **true** indicates that the checkbox is checked, and **false** indicates that the checkbox is not checked.
 
 **Type:** Callback&lt;boolean&gt;
 
-**Since:** 18
+**Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ConfirmDialog-onCheckedChange?: Callback<boolean>--><!--Device-ConfirmDialog-onCheckedChange?: Callback<boolean>-End-->
 
@@ -126,15 +140,17 @@ Sets the ConfirmDialog CheckBox Callback.
 primaryButton?: ButtonOptions
 ```
 
-Sets the ConfirmDialog primary button.
+Left button of the dialog box.
+
+If this parameter is not set or is set to **undefined**, the left button is not displayed.
 
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-primaryButton?: ButtonOptions--><!--Device-ConfirmDialog-primaryButton?: ButtonOptions-End-->
 
@@ -146,15 +162,17 @@ Sets the ConfirmDialog primary button.
 secondaryButton?: ButtonOptions
 ```
 
-Sets the ConfirmDialog secondary button.
+Right button of the dialog box.
+
+If this parameter is not set or is set to **undefined**, the right button is not displayed.
 
 **Type:** [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-secondaryButton?: ButtonOptions--><!--Device-ConfirmDialog-secondaryButton?: ButtonOptions-End-->
 
@@ -166,7 +184,7 @@ Sets the ConfirmDialog secondary button.
 theme?: Theme | CustomTheme
 ```
 
-Custom Theme.
+Theme information, which can be a custom theme or a **Theme** instance obtained from **onWillApplyTheme**.
 
 **Type:** [Theme](arkts-arkui-arkui-theme-theme-i.md) &#124; [CustomTheme](arkts-arkui-arkui-theme-customtheme-i.md)
 
@@ -186,7 +204,9 @@ Custom Theme.
 themeColorMode?: ThemeColorMode
 ```
 
-Sets the ConfirmDialog dark or light Mode.
+Theme color mode of the dialog box.
+
+Default value: **ThemeColorMode.SYSTEM**
 
 **Type:** [ThemeColorMode](../arkts-components/arkts-arkui-common-comp-themecolormode-e.md)
 
@@ -206,15 +226,19 @@ Sets the ConfirmDialog dark or light Mode.
 title: ResourceStr
 ```
 
-Sets the ConfirmDialog title.
+Title of the dialog box.
+
+**NOTE:** 
+
+If the title exceeds two lines, it will be truncated with an ellipsis (...).
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
-**Since:** 18
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 18.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ConfirmDialog-title: ResourceStr--><!--Device-ConfirmDialog-title: ResourceStr-End-->
 

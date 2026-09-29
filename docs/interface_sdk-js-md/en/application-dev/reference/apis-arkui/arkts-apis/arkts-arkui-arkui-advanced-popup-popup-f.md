@@ -12,6 +12,8 @@ import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOpt
 export declare function Popup(options: PopupOptions): void
 ```
 
+Build function of Popup.
+
 **Since:** 11
 
 **Decorator:** @Builder
@@ -28,4 +30,4 @@ export declare function Popup(options: PopupOptions): void
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | Parameters of the popup. |
+| options | [PopupOptions](arkts-arkui-arkui-advanced-popup-popupoptions-i.md) | Yes | Configuration parameters of the **Popup** component. |

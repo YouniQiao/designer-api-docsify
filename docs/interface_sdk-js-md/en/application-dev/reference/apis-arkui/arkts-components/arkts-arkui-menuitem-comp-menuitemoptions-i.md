@@ -18,7 +18,7 @@ Provides information about the menu item.
 builder?: CustomBuilder
 ```
 
-Builder for a level-2 menu.
+Builder for a level-2 menu. By default, no secondary menu is displayed.
 
 **Type:** [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)
 
@@ -38,7 +38,7 @@ Builder for a level-2 menu.
 content?: ResourceStr
 ```
 
-Content of the menu item.
+Content of the menu item. The default value is an empty string.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -58,7 +58,7 @@ Content of the menu item.
 endIcon?: ResourceStr
 ```
 
-End icon of the menu item. Symbol icons are not supported. If the symbol icon is used, **symbolEndIcon** must be used.
+End icon of the menu item. Symbol icons are not supported. If the symbol icon is used, **symbolEndIcon** must be used. By default, no end icon is displayed.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -78,7 +78,7 @@ End icon of the menu item. Symbol icons are not supported. If the symbol icon is
 labelInfo?: ResourceStr
 ```
 
-Label information at the end of the menu item, such as shortcut keys like Ctrl+C.
+Label information at the end of the menu item, such as shortcut keys like Ctrl+C. By default, no label information is displayed.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -98,7 +98,7 @@ Label information at the end of the menu item, such as shortcut keys like Ctrl+C
 startIcon?: ResourceStr
 ```
 
-Start icon of the menu item. Symbol icons are not supported. If a symbol icon is used, **symbolStartIcon** must be used.
+Start icon of the menu item. Symbol icons are not supported. If a symbol icon is used, **symbolStartIcon** must be used. By default, no start icon is displayed.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -118,7 +118,7 @@ Start icon of the menu item. Symbol icons are not supported. If a symbol icon is
 symbolEndIcon?: SymbolGlyphModifier
 ```
 
-Symbol icon at the end of a menu item. When this parameter is set, the icon set through **endIcon** is not displayed.
+Symbol icon at the end of the menu item. When this parameter is set, the icon set through **endIcon** is not displayed. By default, no symbol icon is displayed at the end of the menu item.
 
 **Type:** [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 
@@ -138,7 +138,7 @@ Symbol icon at the end of a menu item. When this parameter is set, the icon set 
 symbolStartIcon?: SymbolGlyphModifier
 ```
 
-Symbol icon at the start of a menu item. When this parameter is set, the icon set through **startIcon** is not displayed.
+Symbol icon at the start of the menu item. When this parameter is set, the icon set through **startIcon** is not displayed. By default, no symbol icon is displayed at the start of the menu item.
 
 **Type:** [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md)
 

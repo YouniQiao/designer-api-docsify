@@ -4,7 +4,7 @@
 declare enum SliderChangeMode
 ```
 
-Enumerates the slider states.
+Enumerates the slider states, including pressed, dragged, released, and moved when the slider is tapped.
 
 **Since:** 7
 
@@ -58,11 +58,11 @@ The user is dragging the slider.
 End
 ```
 
-The user stops dragging the slider by lifting their finger or releasing the mouse device.
+The user releases the slider by a gesture or mouse.
 
-**NOTE:** 
+**Note:** 
 
-The trigger occurs when an invalid value is restored to the default value, that is, when the value is set to less than **min** or greater than **max**.
+This state is triggered when the user releases the slider by a gesture or mouse, including the end of a normal drag. It is also triggered when an invalid value is restored to the default value, that is, when the value is set to a value less than **min** or greater than **max**.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ The trigger occurs when an invalid value is restored to the default value, that 
 Click
 ```
 
-The user moves the thumb by touching or clicking the track.
+The user moves the thumb by clicking the track.
 
 **Since:** 8
 

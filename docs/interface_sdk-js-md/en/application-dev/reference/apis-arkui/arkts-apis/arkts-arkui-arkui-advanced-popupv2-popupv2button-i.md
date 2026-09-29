@@ -4,9 +4,7 @@
 export interface PopupV2Button
 ```
 
-Defines the popup button
-
-@typedef PopupV2Button
+Defines the related attributes and events of a button.
 
 **Since:** 26.0.0
 
@@ -26,7 +24,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 action?: Callback<void>
 ```
 
-Set the button callback.
+Callback for the button click event. No operation is performed by default.
 
 **Type:** Callback&lt;void&gt;
 
@@ -44,7 +42,13 @@ Set the button callback.
 buttonTextModifier?: TextModifier
 ```
 
-The button text attributes of Popup.
+Text properties of the button, such as the text color and font size.
+
+Default value: **undefined**
+
+When the value is **undefined**, the system button text properties are used by default.
+
+**Model constraint**: This API can only be used in the stage model.
 
 **Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -64,7 +68,7 @@ The button text attributes of Popup.
 text: ResourceStr
 ```
 
-Set the button display content.
+Button content.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -4,9 +4,7 @@
 declare enum ParticleUpdater
 ```
 
-Enumerates the updater types of a particle.
-
-@enum { string }
+Particle change type.
 
 **Since:** 10
 
@@ -38,7 +36,7 @@ No change.
 RANDOM = 'random'
 ```
 
-Random change.
+Random uniform change.
 
 **Since:** 10
 
@@ -56,7 +54,7 @@ Random change.
 CURVE = 'curve'
 ```
 
-Change with the animation curve.
+Animation curve change.
 
 **Since:** 10
 

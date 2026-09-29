@@ -4,7 +4,7 @@
 interface PointParticleParameters
 ```
 
-Defines the parameters for a point-like particle. @interface PointParticleParameters
+Sets the radius of a particle.
 
 **Since:** 10
 
@@ -19,6 +19,10 @@ radius: VP
 ```
 
 Particle radius.
+
+Default value: **0**. If the value is less than 0, the default value **0** is used.
+
+Value range: [0, +∞)
 
 **Type:** VP
 

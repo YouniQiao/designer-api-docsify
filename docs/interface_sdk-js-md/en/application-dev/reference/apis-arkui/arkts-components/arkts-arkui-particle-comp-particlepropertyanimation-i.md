@@ -4,7 +4,7 @@
 interface ParticlePropertyAnimation<T>
 ```
 
-Defines the particle property lifecycle. @interface ParticlePropertyAnimation
+Sets the lifecycle of particle properties.
 
 **Since:** 10
 
@@ -46,7 +46,7 @@ End time of the animation.
 
 Unit: ms.
 
-Value range: [0, +∞).
+Value range: [0, +∞). If a negative value is passed in, the default value **0** is used.
 
 **Type:** number
 
@@ -90,7 +90,7 @@ Start time of the animation.
 
 Unit: ms.
 
-Value range: [0, +∞).
+Value range: [0, +∞). If a negative value is passed in, the default value **0** is used.
 
 **Type:** number
 

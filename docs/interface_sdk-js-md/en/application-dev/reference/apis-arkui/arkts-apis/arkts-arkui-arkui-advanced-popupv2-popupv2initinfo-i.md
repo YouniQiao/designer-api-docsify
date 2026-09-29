@@ -4,9 +4,7 @@
 export interface PopupV2InitInfo
 ```
 
-Defines the popup init info.
-
-@typedef PopupV2InitInfo
+Defines the specific style parameters of **PopupV2**.
 
 **Since:** 26.0.0
 
@@ -26,7 +24,9 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 buttons?: [PopupV2Button?, PopupV2Button?]
 ```
 
-The buttons of Popup.
+PopupV2 action buttons. A maximum of two buttons can be set. No buttons are displayed by default.
+
+Default value: **[{ text: '' }, { text: '' }]**
 
 **Type:** [PopupV2Button?, PopupV2Button?]
 
@@ -44,7 +44,9 @@ The buttons of Popup.
 direction?: Direction
 ```
 
-Indicates the attribute of the current popup direction.
+Layout direction of **PopupV2**, which controls text arrangement and alignment. This is applicable to RTL (right- to-left) layout in internationalization scenarios. For details about the enum values, see Direction.
+
+Default value: **Direction.Auto**
 
 **Type:** [Direction](arkts-arkui-direction-e.md)
 
@@ -62,7 +64,9 @@ Indicates the attribute of the current popup direction.
 icon?: ResourceStr
 ```
 
-The icon of Popup.
+PopupV2 icon.
+
+**Note:** Default value: **''**, meaning no icon is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -80,7 +84,9 @@ The icon of Popup.
 iconModifier?: ImageModifier
 ```
 
-The icon attributes of Popup.
+icon properties, such as the icon color, size, and border.
+
+Default value: **undefined**, meaning the system icon properties are used.
 
 **Type:** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -98,7 +104,15 @@ The icon attributes of Popup.
 maxWidth?: Dimension
 ```
 
-Set the max width of the popup.
+Maximum width of **PopupV2**, allowing **PopupV2** to be displayed with a custom width.
+
+Default value: **400vp**
+
+NOTE
+
+1. When using a referenced resource type, the parameter type must be consistent with the attribute method type.
+2. **maxWidth** is of the [Dimension](arkts-arkui-dimension-t.md) type, which supports numbers, percentages, or strings with units (such as 400, '50%', '400vp'). When using a referenced resource type, the resource type supports float and integer, for example, `$r('app.float.maxWidth')` and `$r('app.integer.maxWidth')`.
+3. When the type is Resource, if no unit is set, the default unit is px.
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -116,7 +130,9 @@ Set the max width of the popup.
 message: ResourceStr
 ```
 
-The message of Popup.
+PopupV2 content text.
+
+**Note:** Default value: **''**, meaning no content text is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -134,7 +150,9 @@ The message of Popup.
 messageModifier?: TextModifier
 ```
 
-The message attributes of Popup.
+Content text properties, such as the content text color, font size, and font weight.
+
+Default value: **undefined**, meaning the system content text properties are used.
 
 **Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -152,7 +170,7 @@ The message attributes of Popup.
 onClose?: Callback<void>
 ```
 
-The close button callback of Popup.
+Callback for the **PopupV2** close button. No close button callback is set by default.
 
 **Type:** Callback&lt;void&gt;
 
@@ -170,7 +188,9 @@ The close button callback of Popup.
 showClose?: boolean | Resource
 ```
 
-The show close of Popup.
+PopupV2 close button. **true**: displays the close button; **false**: hides the close button. Resource type: displays the corresponding icon.
+
+Default value: **true**
 
 **Type:** boolean &#124; [Resource](arkts-arkui-resource-t.md)
 
@@ -188,7 +208,9 @@ The show close of Popup.
 title?: ResourceStr
 ```
 
-The title of Popup.
+PopupV2 title text.
+
+**Note:** Default value: **''**, meaning no title text is displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -206,7 +228,9 @@ The title of Popup.
 titleModifier?: TextModifier
 ```
 
-The title attributes of Popup.
+Title text properties, such as the title color, font size, and font weight.
+
+Default value: **undefined**, meaning the system title text properties are used.
 
 **Type:** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

@@ -34,4 +34,4 @@ Constructor of **ColorMetricsLinearGradient**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorStops | [ColorMetricsStop](arkts-arkui-slider-comp-colormetricsstop-i.md)[] | Yes | Array of linear gradient color stops. Each element describes a color and its stop in the gradient. |
+| colorStops | [ColorMetricsStop](arkts-arkui-slider-comp-colormetricsstop-i.md)[] | Yes | Array of color stops for the linear gradient. Each element describes a color and its stop value in the gradient. |

@@ -4,9 +4,16 @@
 export declare class AdvancedDialogV2Button
 ```
 
-Declare AdvancedDialogV2Button.
+Defines the button used in a dialog box to perform actions.
 
-@class AdvancedDialogV2Button
+> **NOTE:** 
+> 
+> The priority of **buttonStyle** and **role** is higher than that of **fontColor** and **background**. If
+> **buttonStyle** and **role** are at the default values, the settings of **fontColor** and **background** take
+> effect.
+> 
+> If **defaultFocus** is set for multiple buttons, the default focus is the first button in the display order that
+> has **defaultFocus** set.
 
 **Since:** 18
 
@@ -28,7 +35,11 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 action?: AdvancedDialogV2ButtonAction
 ```
 
-Sets the Button Callback.
+Action triggered when the button is clicked.
+
+By default, there is no action.
+
+Decorator: @Trace
 
 **Since:** 18
 
@@ -48,7 +59,7 @@ Sets the Button Callback.
 constructor(options: AdvancedDialogV2ButtonOptions)
 ```
 
-The constructor used to create a AdvancedDialogV2Button object.
+A constructor used to create an **AdvancedDialogV2Button** instance.
 
 **Since:** 18
 
@@ -72,7 +83,11 @@ The constructor used to create a AdvancedDialogV2Button object.
 background?: ColorMetrics
 ```
 
-Sets the background color of a button.
+Background of the button.
+
+The setting follows **buttonStyle** by default.
+
+Decorator: @Trace
 
 **Type:** ColorMetrics
 
@@ -94,9 +109,11 @@ Sets the background color of a button.
 buttonStyle?: ButtonStyleMode
 ```
 
-Describes the Button style.
+Style of the button.
 
 Default value: **ButtonStyleMode.NORMAL** for 2-in-1 devices and **ButtonStyleMode.TEXTUAL** for other devices
+
+Decorator: @Trace
 
 **Type:** [ButtonStyleMode](../arkts-components/arkts-arkui-button-comp-buttonstylemode-e.md)
 
@@ -118,7 +135,9 @@ Default value: **ButtonStyleMode.NORMAL** for 2-in-1 devices and **ButtonStyleMo
 content: ResourceStr
 ```
 
-Sets the Display Content of a Button.
+Content of the button.
+
+Decorator: @Trace
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -140,7 +159,15 @@ Sets the Display Content of a Button.
 defaultFocus?: boolean
 ```
 
-Set the default focus of a button.
+Whether the button is the default focus.
+
+**true**: The button is the default focus.
+
+**false**: The button is not the default focus.
+
+Default value: **false**.
+
+Decorator: @Trace
 
 **Type:** boolean
 
@@ -164,7 +191,15 @@ Set the default focus of a button.
 enabled?: boolean
 ```
 
-Set the availability of the button.
+Whether the button is enabled.
+
+**true**: The button is enabled.
+
+**false**: The button is disabled.
+
+Default value: **true**.
+
+Decorator: @Trace
 
 **Type:** boolean
 
@@ -188,7 +223,11 @@ Set the availability of the button.
 fontColor?: ColorMetrics
 ```
 
-Sets the Button Text Color.
+Font color of the button.
+
+The setting follows **buttonStyle** by default.
+
+Decorator: @Trace
 
 **Type:** ColorMetrics
 
@@ -210,7 +249,11 @@ Sets the Button Text Color.
 role?: ButtonRole
 ```
 
-Describes the Button role.
+Role of the button.
+
+Default value: **ButtonRole.NORMAL**
+
+Decorator: @Trace
 
 **Type:** [ButtonRole](../arkts-components/arkts-arkui-button-comp-buttonrole-e.md)
 
@@ -234,7 +277,11 @@ Describes the Button role.
 textAlign?: TextAlign
 ```
 
-Set the alignment mode for the button label.
+Alignment method of the button text.
+
+Default value: **TextAlign.Start**
+
+Decorator: @Trace
 
 **Type:** [TextAlign](arkts-arkui-textalign-e.md)
 

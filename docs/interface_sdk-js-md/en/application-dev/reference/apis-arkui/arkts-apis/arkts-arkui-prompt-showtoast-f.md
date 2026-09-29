@@ -12,7 +12,7 @@ import { prompt } from '@kit.ArkUI';
 function showToast(options: ShowToastOptions): void
 ```
 
-Displays the notification text.
+Shows a toast.
 
 **Since:** 8
 
@@ -30,7 +30,7 @@ Displays the notification text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Yes | Options. |
+| options | [ShowToastOptions](arkts-arkui-prompt-showtoastoptions-i.md) | Yes | Toast options. |
 
 **Examples**
 

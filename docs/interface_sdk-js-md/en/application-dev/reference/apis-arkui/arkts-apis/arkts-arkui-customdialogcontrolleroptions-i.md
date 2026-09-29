@@ -12,9 +12,9 @@ Defines the style of the custom dialog box.
 > 
 > - If the dialog box reaches its maximum allowable height on the screen when avoiding the soft keyboard, it reduces its height to fit.
 > 
-> It should be noted that this height adjustment is applied to the outermost container. If a child component
-> within this container has been assigned a larger fixed height, since the container does not clip its content by
-> default, parts of the dialog box may still be displayed off-screen.
+> It should be noted that this height adjustment is applied to the outermost container. If a child component within
+> this container has been assigned a larger fixed height, since the container does not clip its content by default,
+> parts of the dialog box may still be displayed off-screen.
 > 
 > - Use the custom dialog box to contain simple alert messages only. Do not use it as a page. When the dialog box avoids the soft keyboard, there is a 16 vp safe spacing between the two.
 > 
@@ -23,7 +23,7 @@ Defines the style of the custom dialog box.
 > Note: During animation playback, the page does not respond to touch, swipe, or click interactions. To disable
 > default dialog box animations, set **duration** of both **openAnimation** and **closeAnimation** to **0**.
 > 
-> - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To enable a dialog box to be dismissed during page navigation, consider using the [navigation subpage displayed in dialog mode](../../../ui/arkts-navigation-navdestination.md#page-display-mode) or [page-level dialog box](../../../ui/arkts-embedded-dialog.md).
+> - In ArkUI, dialog boxes do not close automatically when you switch pages unless you manually call **close**. To enable a dialog box to be dismissed during page navigation.
 
 **Since:** 7
 
@@ -101,7 +101,7 @@ backgroundBlurStyle?: BlurStyle
 
 Background blur style of the dialog box.
 
-Default value: **BlurStyle.COMPONENT_ULTRA_THICK**
+Default value: **BlurStyle.NONE** (API version 26.0.0 and later); **BlurStyle.COMPONENT_ULTRA_THICK** (earlier than API version 26.0.0)
 
 **NOTE:** 
 
@@ -388,7 +388,13 @@ When this parameter is set to **true**:
 displayModeInSubWindow?: DialogDisplayMode
 ```
 
-Defines the dialog display mode when show in subwindow.
+Display mode of the dialog box in the subwindow.
+
+Default value: **DialogDisplayMode.SCREEN_BASED**
+
+**NOTE:** 
+
+This parameter is valid only when **showInSubWindow** is set to **true**.
 
 **Type:** [DialogDisplayMode](arkts-arkui-dialogdisplaymode-e.md)
 
@@ -466,7 +472,7 @@ Only dialog boxes that are displayed on top of the current window can gain focus
 gridCount?: number
 ```
 
-Number of [grid columns](../../../ui/arkts-layout-development-grid-layout.md) occupied by the dialog box.
+Number of grid columns occupied by the dialog box.
 
 The default value is subject to the window size, and the maximum value is the maximum number of columns supported by the system. If this parameter is set to an invalid value, the default value is used.
 
@@ -699,7 +705,7 @@ Display order of the dialog box.
 levelUniqueId?: number
 ```
 
-[Unique ID](arkts-arkui-framenode-c.md#getuniqueid) of the node under the display level for the page-level dialog box.
+Unique ID of the node under the display level for the page-level dialog box. The unique ID can be obtained via [getUniqueId](arkts-arkui-framenode-c.md#getuniqueid).
 
 Value range: a number no less than 0
 
@@ -800,9 +806,12 @@ Event callback after the dialog box appears.
 **NOTE:** 
 
 1. The normal timing sequence is as follows: onWillAppear &gt; onDidAppear &gt; onWillDisappear &gt; onDidDisappear.
-2. You can set the callback event for changing the dialog box display effect in **onDidAppear**. The settings take effect next time the dialog box appears.
-3. When a dialog box is dismissed immediately after being shown, **onWillDisappear** may be triggered before **onDidAppear**.
-4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted, and **onDidAppear** will not be triggered.
+2. You can set the callback event for changing the dialog box display effect in **onDidAppear**.
+The settings take effect next time the dialog box appears.
+3. When a dialog box is dismissed immediately after being shown,  
+**onWillDisappear** may be triggered before **onDidAppear**.
+4. If the dialog box is dismissed before its entrance animation is finished, the animation will be interrupted,
+and **onDidAppear** will not be triggered.
 
 **Type:** Callback&lt;void&gt;
 
@@ -899,7 +908,8 @@ Callback for interactive closure of the dialog box.
 
 **NOTE:** 
 
-1. If this callback is registered, the dialog box will not be dismissed immediately after the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
+1. If this callback is registered, the dialog box will not be dismissed immediately after
+the user touches the mask or the Back button, presses the Esc key, or swipes left or right on the screen. The **reason** parameter in the callback is used to determine whether the dialog box can be closed. The reason returned by the component does not support the value **CLOSE_BUTTON**.
 2. In the **onWillDismiss** callback, another **onWillDismiss** callback is not allowed.
 
 **Type:** Callback&lt;[DismissDialogAction](arkts-arkui-dismissdialogaction-i.md)&gt;
@@ -950,7 +960,7 @@ shadow?: ShadowOptions | ShadowStyle
 
 Shadow of the dialog box.
 
-Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise On other devices, the dialog box has no shadow by default.
+Default value on 2-in-1 devices: **ShadowStyle.OUTER_FLOATING_MD** when the dialog box is focused and **ShadowStyle.OUTER_FLOATING_SM** otherwise. On other devices, the dialog box has no shadow by default.
 
 **Type:** [ShadowOptions](../arkts-components/arkts-arkui-common-comp-shadowoptions-i.md) &#124; [ShadowStyle](../arkts-components/arkts-arkui-common-comp-shadowstyle-e.md)
 
@@ -999,7 +1009,13 @@ A dialog box whose **showInSubWindow** attribute is **true** cannot trigger the 
 systemMaterial?: SystemUiMaterial
 ```
 
-System material of the dialog box. Different materials have different effects and can affect visual attributes such as the background color, border, and shadow of the dialog box.
+System material of the dialog box.
+
+**NOTE:** 
+
+- Default value: ImmersiveMaterial object whose **style** in [ImmersiveOptions](arkts-arkui-uimaterial-immersiveoptions-i.md) is  
+**ImmersiveStyle.ULTRA_THICK** If this parameter is set to **undefined**, the default value is used.  
+- Different materials produce distinct effects. This API impacts the following attributes:[backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor), [backgroundBlurStyle](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundblurstyle), [backgroundEffect](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundeffect), [borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor), [borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth), and [shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow). When the system material is set, the aforementioned attributes do not take effect.
 
 **Type:** [SystemUiMaterial](../arkts-components/arkts-arkui-common-comp-systemuimaterial-t.md)
 

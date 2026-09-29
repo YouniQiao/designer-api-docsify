@@ -4,7 +4,7 @@
 declare interface SliderConfiguration extends CommonConfiguration<SliderConfiguration>
 ```
 
-You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. It inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** SliderConfiguration extends CommonConfiguration<SliderConfiguration>
 
@@ -78,7 +78,7 @@ Minimum value.
 step: number
 ```
 
-Step of the slider.
+Step of the slider, which indicates the value increment of each slider movement.
 
 **Type:** number
 

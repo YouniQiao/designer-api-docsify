@@ -4,9 +4,12 @@
 declare enum DepthSpaceType
 ```
 
-Depth space type enumeration.
+Enumerates depth space types.
 
-@enum { number }
+> **NOTE:** 
+> 
+> In global mode, other processes reuse the background, depth map, camera parameters, and lighting parameters of the
+> wallpaper process, and these cannot be customized.
 
 **Since:** 26.0.0
 
@@ -22,7 +25,7 @@ Depth space type enumeration.
 INSTANCE = 0
 ```
 
-Instance mode.
+Instance mode, which uses the background, depth map, camera parameters, and lighting parameters of the current process.
 
 **Since:** 26.0.0
 
@@ -42,7 +45,7 @@ Instance mode.
 GLOBAL = 1
 ```
 
-Global mode.
+Global mode, which uses the global background, depth map, camera parameters, and lighting parameters.
 
 **Since:** 26.0.0
 

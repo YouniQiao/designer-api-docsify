@@ -14,7 +14,7 @@ This component can contain only one child component.
 Button()
 ```
 
-Creates an empty button.
+Button object
 
 **Since:** 7
 
@@ -97,7 +97,7 @@ By default, the text content is displayed in a one line.
 
 | Name | Description |
 | --- | --- |
-| [ButtonTriggerClickCallback](arkts-arkui-button-comp-buttontriggerclickcallback-t.md) | Defines the callback type used in **ButtonConfiguration**. |
+| [ButtonTriggerClickCallback](arkts-arkui-button-comp-buttontriggerclickcallback-t.md) | Defines the callback type used in ButtonConfiguration. |
 
 ### Enums
 

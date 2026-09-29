@@ -4,7 +4,7 @@
 declare interface DepthComponentCompleteEvent
 ```
 
-Information about the background resource loaded successfully.
+Provides the event information about the successful loading of the background resource.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Information about the background resource loaded successfully.
 componentHeight: number
 ```
 
-Component height.
+Height of the component, in vp.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ Component height.
 componentWidth: number
 ```
 
-Component width.
+Width of the component, in vp.
 
 **Type:** number
 

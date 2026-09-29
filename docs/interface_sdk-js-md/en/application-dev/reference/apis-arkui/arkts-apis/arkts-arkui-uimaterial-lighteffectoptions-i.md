@@ -4,7 +4,7 @@
 interface LightEffectOptions
 ```
 
-Provides the light sensing interaction feedback configuration for immersive materials. The configuration is used to customize the color of the light sensing feedback.
+Provides the light sensing interaction feedback configuration for immersive materials. Light sensing interaction feedback refers to the visual effect of dynamic light changes on the surface of a material when a user interacts with a component through touch. The configuration is used to customize the color of the light sensing feedback.
 
 **Since:** 26.0.0
 

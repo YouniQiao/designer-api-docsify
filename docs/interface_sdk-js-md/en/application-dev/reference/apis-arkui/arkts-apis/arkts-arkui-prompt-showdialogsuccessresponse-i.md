@@ -4,9 +4,7 @@
 interface ShowDialogSuccessResponse
 ```
 
-Defines the response of ShowDialog.
-
-@interface ShowDialogSuccessResponse
+Describes the dialog box response result.
 
 **Since:** 8
 
@@ -30,7 +28,7 @@ import { prompt } from '@kit.ArkUI';
 index: number
 ```
 
-Defines the index of data.
+Index of the selected button in the **buttons** array.
 
 **Type:** number
 

@@ -82,7 +82,7 @@
     - [GcStats](arkts-performanceanalysis-hidebug-gcstats-t.md)
     - [JsRawHeapTrimLevel](arkts-performanceanalysis-hidebug-jsrawheaptrimlevel-e.md)
     - [TraceFlag](arkts-performanceanalysis-hidebug-traceflag-e.md)
-- [@ohos.hilog](arkts-performanceanalysis-hilog.md)
+- [@ohos.hilog(log print)](arkts-performanceanalysis-hilog.md)
   - [clean](arkts-performanceanalysis-hilog-clean-f.md)
   - [debug](arkts-performanceanalysis-hilog-debug-f.md)
   - [error](arkts-performanceanalysis-hilog-error-f.md)

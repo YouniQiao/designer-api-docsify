@@ -6,7 +6,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 26.0.0
+**Since**: 12
 
 ## Files
 
@@ -28,7 +28,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [common_type.h](capi-common-type-h.md) | Defines the common types for ArkUI native APIs. |
 | [drawable_descriptor.h](capi-drawable-descriptor-h.md) | Declares the APIs of **NativeDrawableDescriptor**. |
 | [native_node_napi.h](capi-native-node-napi-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side. |
-| [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose {@link type} is set to **ARKUI_NODE_TEXT**<br>on the native side. |
+| [styled_string.h](capi-styled-string-h.md) | Defines the text style and layout manager for the component whose [type](capi-oh-nativexcomponent-native-xcomponent-oh-nativexcomponent-historicalpoint.md) is set to **ARKUI_NODE_TEXT**<br>on the native side. |
 | [custom_span.h](capi-custom-span-h.md) | Defines enumerations and APIs related to **CustomSpan**, which is used to implement precise size measurement, layout typesetting, and drawing effects for custom spans. It supports you in implementing text and image layout, emoji embedding, custom markers, and other features in scenarios such as rich text editors, chat applications, and document applications, providing flexible custom span capabilities to help improve development efficiency and achieve richer text layout effects. |
 | [node_water_flow.h](capi-node-water-flow-h.md) | Defines enumerations and APIs related to **WaterFlow**. |
 | [swiper.h](capi-swiper-h.md) | Defines the enumerations and APIs of the **Swiper** component for implementing scenarios such as carousel display and content navigation. It supports custom navigation indicators (dot/number types), navigation arrow styles, nested scrolling modes, mouse wheel page-turning modes, and animation modes, helping users quickly build carousel interaction experiences. |

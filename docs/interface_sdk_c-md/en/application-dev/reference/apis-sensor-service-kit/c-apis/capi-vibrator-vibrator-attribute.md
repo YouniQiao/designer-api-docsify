@@ -1,12 +1,12 @@
 # Vibrator_Attribute
 
 ```c
-typedef struct Vibrator_Attribute {...} Vibrator_Attribute
+struct Vibrator_Attribute {...}
 ```
 
 ## Overview
 
-The **Vibrator_Attribute** struct is used to describe the attributes of the vibrator. You can use this struct to specify the vibrator ID and vibration scenario. For details about the application scenarios and implementation mechanism, see the {@link Vibrator} module documentation.
+The **Vibrator_Attribute** struct is used to describe the attributes of the vibrator. You can use this struct to specify the vibrator ID and vibration scenario. For details about the application scenarios and implementation mechanism, see the Vibrator module documentation.
 
 **System capability**: SystemCapability.Sensors.MiscDevice
 

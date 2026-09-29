@@ -4,7 +4,9 @@
 declare type ImmersiveMode = import('../api/@ohos.promptAction').ImmersiveMode
 ```
 
-Defines the overlay effect for the dialog box.
+Import the ImmersiveMode type from promptAction.
+
+@typedef { import('../api/@ohos.promptAction').ImmersiveMode } ImmersiveMode
 
 **Since:** 15
 

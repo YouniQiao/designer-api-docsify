@@ -34,4 +34,4 @@ Applies the current transformation effect to a coordinate point.
 
 | Type | Description |
 | --- | --- |
-| [number, number] | Point object after matrix transformation |
+| [number, number] | Coordinate point after matrix transformation, in the format [x, y]. |

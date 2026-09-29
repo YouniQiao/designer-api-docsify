@@ -4,7 +4,7 @@
 declare interface CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>
 ```
 
-You need a custom class to implement the **ContentModifier** API. Inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md).
+You need a custom class to implement the **ContentModifier** API. It inherits from [CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md).
 
 **Inheritance/Implementation:** CheckBoxConfiguration extends CommonConfiguration<CheckBoxConfiguration>
 
@@ -40,13 +40,9 @@ Name of the check box.
 selected: boolean
 ```
 
-Whether the check box is selected.
+Whether the check box is selected. The value **true** means the check box is selected, and **false** means the opposite.
 
-**true**: The check box is selected.
-
-**false**: The check box is not selected.
-
-If the **select** attribute is not set, the default value **false** is used.
+If the **select** attribute is not set, the default value is **false**.
 
 If the **select** attribute is set, the attribute value is used here.
 
@@ -68,9 +64,7 @@ If the **select** attribute is set, the attribute value is used here.
 triggerChange: Callback<boolean>
 ```
 
-Triggers a change in the check box selection state.
-
-The value **true** indicates a change from unselected to selected, and **false** indicates a change from selected to unselected.
+Callback invoked when the selected state of the check box changes. The value **true** indicates the checkbox is set to the selected state, and **false** indicates the opposite.
 
 **Type:** Callback&lt;boolean&gt;
 

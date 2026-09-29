@@ -12,7 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function scale(options: ScaleOption): Matrix4Transit
 ```
 
-Scales this matrix object along the x, y, and z axes.
+Scales this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Scales this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | Scaling configuration. |
+| options | [ScaleOption](arkts-arkui-matrix4-scaleoption-i.md) | Yes | Scaling options for setting the scale multiples of the x-axis, y-axis, and z-axis and the coordinates of the transform center point. |
 
 **Return value:**
 

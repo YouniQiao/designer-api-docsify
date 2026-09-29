@@ -4,9 +4,7 @@
 declare enum DistributionType
 ```
 
-Enumerates the color distribution types of a particle.
-
-@enum { number }
+Defines the random distribution type of the initial color.
 
 **Since:** 12
 

@@ -46,9 +46,10 @@ function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
-| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
+| [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
+| [17700101](../errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service is excepted. |
 
 **示例**
 

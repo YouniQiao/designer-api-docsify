@@ -4,7 +4,7 @@
 declare interface CropOffset
 ```
 
-2D offset for crop frame.
+Provides crop offset.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ declare interface CropOffset
 x: number
 ```
 
-X coordinate.
+Horizontal offset, in pixels.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ X coordinate.
 y: number
 ```
 
-Y coordinate.
+Vertical offset, in pixels.
 
 **Type:** number
 

@@ -46,4 +46,4 @@ A constructor used to create a **CircleShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | Size of the shape. |
+| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | Size of the shape, including the **width** and **height** attributes, which is used to set the dimensions of the shape. If not specified, the default size is used, with the default width of 0 vp and default height of 0 vp. |

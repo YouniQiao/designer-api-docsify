@@ -40,7 +40,7 @@ A constructor used to create an **ArcSliderStyleOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderStyleOptions**. |
+| options | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | No | Construction information of **ArcSliderStyleOptions**. When not passed in, all sub-attributes of **ArcSliderStyleOptions** take their default values. |
 
 ## activeTrackThickness
 
@@ -54,7 +54,7 @@ Default value: **24**
 
 Value range: [24, 36]. If the value is invalid, the default value is used.
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** number
 
@@ -80,7 +80,7 @@ Highlight color of the stroke.
 
 Default value: **#FF5EA1FF**
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** string
 
@@ -102,13 +102,13 @@ Default value: **#FF5EA1FF**
 trackBlur?: number
 ```
 
-Blur effect applied to the stroke background, in vp.
+Stroke background blur value, in vp.
 
 Default value: **20**
 
-If a value less than 0 is set, the default is used.
+Value range: [0, +∞). Abnormal values are handled as default.
 
-@Trace
+**Decorator:*
 
 **Type:** number
 
@@ -134,7 +134,7 @@ Background color of the stroke.
 
 Default value: **#33FFFFFF**
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** string
 
@@ -162,7 +162,7 @@ Default value: **5**
 
 Value range: [5, 16]. If the value is invalid, the default value is used.
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** number
 

@@ -300,6 +300,8 @@
   - [LiteResultSet(system api)](arkts-arkdata-relationalstore-literesultset-c-sys.md)<!--DelEnd-->
   - [RdbPredicates](arkts-arkdata-relationalstore-rdbpredicates-c.md)
   - [Asset](arkts-arkdata-relationalstore-asset-i.md)
+  <!--Del-->
+  - [Asset(system api)](arkts-arkdata-relationalstore-asset-i-sys.md)<!--DelEnd-->
   - [ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)
   - [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i.md)
   <!--Del-->

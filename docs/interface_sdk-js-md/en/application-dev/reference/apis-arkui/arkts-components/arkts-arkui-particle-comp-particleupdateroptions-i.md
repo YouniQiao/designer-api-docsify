@@ -4,7 +4,7 @@
 interface ParticleUpdaterOptions<TYPE, UPDATER extends ParticleUpdater>
 ```
 
-Defines the particle updater options.
+Defines the property change configuration.
 
 > **NOTE:** 
 > 
@@ -24,14 +24,14 @@ Defines the particle updater options.
 config: ParticlePropertyUpdaterConfigs<TYPE>[UPDATER]
 ```
 
-How the property is updated. The available options of **type** are as follows:
+Property change configuration. The property change type has three categories:
 
-1. **ParticleUpdater.NONE**: The property does not change. In this case, the **config** type is
+1. When **type** is **ParticleUpdater.NONE**, it indicates no change, and **config** is of type
 [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.NONE].
-2. **ParticleUpdater.RANDOM**: The property changes randomly. In this case, the **config** type is
+2. When type is **ParticleUpdater.RANDOM**, it indicates the change type is random, and **config** is of type
 [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.RANDOM].
-3. **ParticleUpdater.CURVE**: The property changes with the animation curve. In this case,
-the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE].
+3. When **type** is **ParticleUpdater.CURVE**, it indicates the change type is curve, and **config** is of type
+[ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md)[ParticleUpdater.CURVE]. **Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-comp-particlepropertyupdaterconfigs-i.md)&lt;TYPE&gt;[UPDATER]
 
@@ -51,7 +51,9 @@ the **config** type is [ParticlePropertyUpdaterConfigs](arkts-arkui-particle-com
 type: UPDATER
 ```
 
-Particle updater type.
+Property change type.
+
+Default value: **type** defaults to **ParticleUpdater.NONE**. **Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** UPDATER
 

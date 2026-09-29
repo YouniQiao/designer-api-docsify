@@ -4,7 +4,7 @@
 interface TrailOptimization
 ```
 
-Trail optimization configuration for spring animations.
+Trail optimization configuration for spring animations. When the animation progress reaches the threshold, the response value decays each frame to accelerate convergence and optimize the trail duration.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,9 @@ import { curves } from '@kit.ArkUI';
 progressThreshold?: number
 ```
 
-Animation progress threshold. <br>Value range: [0, 1].
+Animation progress threshold. When the animation progress reaches this threshold, rapid convergence starts to optimize the trail duration. For underdamped spring curves, rapid convergence starts when the envelope of the spring curve reaches the progress threshold.
+
+<br> Value range: &lt;0, 1&gt;.
 
 **Type:** number
 
@@ -48,7 +50,7 @@ Animation progress threshold. <br>Value range: [0, 1].
 responseDecayFactor?: number
 ```
 
-Response decay factor. Value range: (0, 1].
+Response decay factor. After rapid convergence starts, the response of each frame becomes the previous frame's response multiplied by this factor to accelerate convergence. Value range: &lt;0, 1&gt;.
 
 **Type:** number
 

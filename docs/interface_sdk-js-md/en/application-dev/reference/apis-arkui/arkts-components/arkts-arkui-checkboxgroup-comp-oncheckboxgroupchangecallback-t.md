@@ -4,7 +4,9 @@
 declare type OnCheckboxGroupChangeCallback = (value: CheckboxGroupResult) => void
 ```
 
-Information about the check box group.
+Defines a CheckboxGroup callback when onChange. Anonymous Object Rectification.
+
+@typedef { function } OnCheckboxGroupChangeCallback
 
 **Since:** 18
 
@@ -22,4 +24,4 @@ Information about the check box group.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CheckboxGroupResult](arkts-arkui-checkboxgroup-comp-checkboxgroupresult-i.md) | Yes | Information about the check box group. |
+| value | [CheckboxGroupResult](arkts-arkui-checkboxgroup-comp-checkboxgroupresult-i.md) | Yes | checkbox group result |

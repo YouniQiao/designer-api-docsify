@@ -120,6 +120,30 @@ Sets image frame information. Dynamic update is not supported; otherwise, issues
 | --- | --- | --- | --- |
 | value | Array&lt;[ImageFrameInfo](arkts-arkui-imageanimator-comp-imageframeinfo-i.md)&gt; | Yes | Image frame information. The information of each frame includes the path, size, position, and playback duration of an image. For details, see [ImageFrameInfo](arkts-arkui-imageanimator-comp-imageframeinfo-i.md). <br>Default value: **[]** <br> Note: If the input array is too large, memory usage may increase. Therefore, as the controller of memory usage, be sure to assess potential memory consumption before passing in the data to avoid issues such as insufficient memory. |
 
+## interpolation
+
+```TypeScript
+interpolation(value: ImageInterpolation)
+```
+
+Sets the interpolation effect of the frame images. This attribute mitigates aliasing during image scaling. This attribute is not applicable to SVG images.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-ImageAnimatorAttribute-interpolation(value: ImageInterpolation): ImageAnimatorAttribute--><!--Device-ImageAnimatorAttribute-interpolation(value: ImageInterpolation): ImageAnimatorAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ImageInterpolation](arkts-arkui-image-comp-imageinterpolation-e.md) | Yes | Interpolation effect of the frame images.<br>Default value: **ImageInterpolation.Low**<br>When set to **undefined**, the value is treated as **ImageInterpolation.Low**. |
+
 ## iterations
 
 ```TypeScript

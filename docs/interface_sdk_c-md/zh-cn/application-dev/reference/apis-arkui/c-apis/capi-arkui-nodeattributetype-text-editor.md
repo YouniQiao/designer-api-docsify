@@ -78,7 +78,7 @@ NODE_TEXT_EDITOR_DATA_DETECTOR_CONFIG
 
 **描述：**
 
-TextEditor组件文本实体识别配置，设置后，可配置识别类型、实体显示样式，并可选择是否开启长按预览功能。配合NODE_TEXT_EDITOR_ENABLE_DATA_DETECTOR属性使用， 支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：文本实体识别配置，设置后可指定需要识别的文本实体类型（如电话号码、邮箱、链接等）及识别后的交互行为。仅在启用文本实体识别功能( NODE_TEXT_EDITOR_ENABLE_DATA_DETECTOR设置为1)后传入此参数以自定义识别类型，不传入时使用系统默认识别配置。参数类型{@link ArkUI_TextDataDetectorConfig}。
+TextEditor组件文本实体识别配置，设置后，可配置识别类型、实体显示样式，并可选择是否开启长按预览功能。配合NODE_TEXT_EDITOR_ENABLE_DATA_DETECTOR属性使用， 支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：文本实体识别配置，设置后可指定需要识别的文本实体类型（如电话号码、邮箱、链接等）及识别后的交互行为。仅在启用文本实体识别功能( NODE_TEXT_EDITOR_ENABLE_DATA_DETECTOR设置为1)后传入此参数以自定义识别类型，不传入时使用系统默认识别配置。参数类型ArkUI_TextDataDetectorConfig。
 
 **起始版本：** 24
 
@@ -102,7 +102,7 @@ NODE_TEXT_EDITOR_PLACEHOLDER
 
 **描述：**
 
-TextEditor组件无输入时的提示文本选项，支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：无输入时的提示文本选项，参数类型{@link ArkUI_TextEditorPlaceholderOptions}。不传入时，编辑器无输入状态下不显示提示文本。
+TextEditor组件无输入时的提示文本选项，支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：无输入时的提示文本选项，参数类型ArkUI_TextEditorPlaceholderOptions。不传入时，编辑器无输入状态下不显示提示文本。
 
 **起始版本：** 24
 
@@ -114,7 +114,7 @@ NODE_TEXT_EDITOR_STYLED_STRING_CONTROLLER
 
 **描述：**
 
-TextEditor组件属性字符串控制器，支持属性设置。设置后，可通过该控制器管理TextEditor中的内容、光标、选区、输入样式及编辑状态。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：属性字符串控制器，参数类型{@link ArkUI_TextEditorStyledStringController}。
+TextEditor组件属性字符串控制器，支持属性设置。设置后，可通过该控制器管理TextEditor中的内容、光标、选区、输入样式及编辑状态。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：属性字符串控制器，参数类型ArkUI_TextEditorStyledStringController。
 
 **起始版本：** 24
 
@@ -270,7 +270,7 @@ NODE_TEXT_EDITOR_CUSTOM_KEYBOARD
 
 **描述：**
 
-TextEditor组件自定义键盘。当需要替换系统默认键盘时传入此参数（如数字键盘、表情键盘等特殊输入布局），不传入时使用系统默认键盘。支持属性设置、属性重置和属性获取。 <br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：自定义键盘，参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)。 <br>.value[0]?.i32：设置自定义键盘是否支持内容避让功能，即键盘弹出时页面内容自动调整位置以避免被键盘遮挡，0表示不支持，1表示支持，默认值为0。 <br>**返回：**<br><br>.object：自定义键盘，参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md)。 <br>.value[0].i32：自定义键盘是否支持内容避让功能，即键盘弹出时页面内容自动调整位置以避免被键盘遮挡，0表示不支持，1表示支持。
+TextEditor组件自定义键盘。当需要替换系统默认键盘时传入此参数（如数字键盘、表情键盘等特殊输入布局），不传入时使用系统默认键盘。支持属性设置、属性重置和属性获取。 <br>作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：自定义键盘，参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)。 <br>.value[0]?.i32：设置自定义键盘是否支持内容避让功能，即键盘弹出时页面内容自动调整位置以避免被键盘遮挡，0表示不支持，1表示支持，默认值为0。 <br>**返回：**<br><br>.object：自定义键盘，参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)。 <br>.value[0].i32：自定义键盘是否支持内容避让功能，即键盘弹出时页面内容自动调整位置以避免被键盘遮挡，0表示不支持，1表示支持。
 
 **起始版本：** 24
 
@@ -282,7 +282,7 @@ NODE_TEXT_EDITOR_BIND_SELECTION_MENU
 
 **描述：**
 
-TextEditor组件自定义文本选择菜单绑定，支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：自定义选择菜单，不传入时使用系统默认文本选择菜单。参数类型{@link ArkUI_TextEditorSelectionMenuOptions}。
+TextEditor组件自定义文本选择菜单绑定，支持属性设置和属性重置。 <br>作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。 <br>**参数：**<br><br>.object：自定义选择菜单，不传入时使用系统默认文本选择菜单。参数类型ArkUI_TextEditorSelectionMenuOptions。
 
 **起始版本：** 24
 

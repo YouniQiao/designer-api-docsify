@@ -4,9 +4,7 @@
 interface ParticleConfigs
 ```
 
-Defines the particle configs.
-
-@interface ParticleConfigs
+Sets particle configuration items.
 
 **Since:** 10
 

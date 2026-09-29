@@ -30,8 +30,6 @@ Default value: **24**
 
 Value range: [24, 36]. If the value is invalid, the default value is used.
 
-@Trace
-
 **Type:** number
 
 **Default:** 24
@@ -54,8 +52,6 @@ Highlight color of the stroke.
 
 Default value: **#FF5EA1FF**
 
-@Trace
-
 **Type:** string
 
 **Default:** #FF5EA1FF
@@ -74,13 +70,11 @@ Default value: **#FF5EA1FF**
 trackBlur?: number
 ```
 
-Blur effect applied to the stroke background, in vp.
+Stroke background blur value. Unit: vp.
 
 Default value: **20**
 
-If a value less than 0 is set, the default is used.
-
-@Trace
+Value range: [0, +∞). Abnormal values are handled as default.
 
 **Type:** number
 
@@ -103,8 +97,6 @@ trackColor?: string
 Background color of the stroke.
 
 Default value: **#33FFFFFF**
-
-@Trace
 
 **Type:** string
 
@@ -129,8 +121,6 @@ Stroke width of the arc slider in the normal state, in vp.
 Default value: **5**
 
 Value range: [5, 16]. If the value is invalid, the default value is used.
-
-@Trace
 
 **Type:** number
 

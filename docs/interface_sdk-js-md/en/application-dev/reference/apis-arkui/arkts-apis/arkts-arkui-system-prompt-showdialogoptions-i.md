@@ -4,11 +4,9 @@
 export interface ShowDialogOptions
 ```
 
-Defines the option of show dialog.
+Describes the options for showing the dialog box.
 
-@interface ShowDialogOptions
-
-**Since:** 11
+**Since:** 3
 
 <!--Device-unnamed-export interface ShowDialogOptions--><!--Device-unnamed-export interface ShowDialogOptions-End-->
 
@@ -26,9 +24,9 @@ import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuc
 cancel?: (data: string, code: string) => void
 ```
 
-Called when the operation is cancelled.
+Callback invoked when the API call is canceled.
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -51,9 +49,9 @@ Called when the operation is cancelled.
 complete?: (data: string) => void
 ```
 
-Called when the dialog box is closed.
+Called invoked when the API call is complete.
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -75,9 +73,9 @@ Called when the dialog box is closed.
 success?: (data: ShowDialogSuccessResponse) => void
 ```
 
-Called when the dialog box is displayed.
+Callback invoked upon success.
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -99,11 +97,11 @@ Called when the dialog box is displayed.
 buttons?: [Button, Button?, Button?]
 ```
 
-Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
+Array of buttons in the dialog box. The structure is {text:'button', color: '#666666'}, which supports 1 to 3 buttons. If more than 3 buttons are specified, the dialog box is not displayed.
 
 **Type:** [Button, Button?, Button?]
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -123,7 +121,7 @@ Text body.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -143,7 +141,7 @@ Title of the text to display.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

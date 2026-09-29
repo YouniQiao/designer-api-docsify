@@ -4,11 +4,9 @@
 export interface Button
 ```
 
-Defines the prompt info of button.
+Defines the display information of a button.
 
-@interface Button
-
-**Since:** 11
+**Since:** 3
 
 <!--Device-unnamed-export interface Button--><!--Device-unnamed-export interface Button-End-->
 
@@ -26,11 +24,11 @@ import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuc
 color: string
 ```
 
-Defines the color of button.
+Color of the button.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -46,11 +44,11 @@ Defines the color of button.
 text: string
 ```
 
-Defines the button info.
+Text of the button.
 
 **Type:** string
 
-**Since:** 11
+**Since:** 3
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

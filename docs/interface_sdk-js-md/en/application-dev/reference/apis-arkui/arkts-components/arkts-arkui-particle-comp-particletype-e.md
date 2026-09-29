@@ -4,9 +4,7 @@
 declare enum ParticleType
 ```
 
-Enumerates the particle types.
-
-@enum { string }
+Particle type.
 
 **Since:** 10
 
@@ -20,7 +18,7 @@ Enumerates the particle types.
 POINT = 'point'
 ```
 
-Point-like particle.
+Point particle.
 
 **Since:** 10
 
@@ -38,7 +36,9 @@ Point-like particle.
 IMAGE = 'image'
 ```
 
-Image-like particle.
+Image particle.
+
+Image particles do not support color settings.
 
 **Since:** 10
 

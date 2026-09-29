@@ -14,6 +14,8 @@ Not supported
 Select(options: Array<SelectOption>)
 ```
 
+Creates the Select component.
+
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.
@@ -44,7 +46,7 @@ Select(options: Array<SelectOption>)
 
 | Name | Description |
 | --- | --- |
-| [OnSelectCallback](arkts-arkui-select-comp-onselectcallback-t.md) | Defines the callback invoked when a drop-down menu option is selected. |
+| [OnSelectCallback](arkts-arkui-select-comp-onselectcallback-t.md) | Callback of selecting an item from the select event. |
 
 ### Enums
 

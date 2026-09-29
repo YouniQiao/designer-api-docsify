@@ -8,7 +8,7 @@ Enumerates the types of the slider in the block direction.
 
 | Name | Value| Description |  
 | ------- | -- | ---------------------- |  
-| DEFAULT | 0 | Round slider. |
+| DEFAULT | 0 | Default slider (round). |
 | IMAGE | 1 | Slider with an image background. |
 | SHAPE | 2 | Slider in a custom shape.|
 

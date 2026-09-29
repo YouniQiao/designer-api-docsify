@@ -78,7 +78,7 @@ NODE_TEXT_EDITOR_DATA_DETECTOR_CONFIG
 
 **Description**
 
-Recognition configuration for the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Recognition configuration. The parameter type is {@link ArkUI_TextDataDetectorConfig}.</li> </ul>
+Recognition configuration for the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Recognition configuration. The parameter type is ArkUI_TextDataDetectorConfig.</li> </ul>
 
 **Since**: 24
 
@@ -102,7 +102,7 @@ NODE_TEXT_EDITOR_PLACEHOLDER
 
 **Description**
 
-Placeholder options when there is no input for the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Placeholder options when there is no input. The parameter type is {@link ArkUI_TextEditorPlaceholderOptions}.</li> </ul>
+Placeholder options when there is no input for the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Placeholder options when there is no input. The parameter type is ArkUI_TextEditorPlaceholderOptions.</li> </ul>
 
 **Since**: 24
 
@@ -114,7 +114,7 @@ NODE_TEXT_EDITOR_STYLED_STRING_CONTROLLER
 
 **Description**
 
-Styled string controller of the **TextEditor** component. This attribute can be set as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Styled string controller. The parameter type is {@link ArkUI_TextEditorStyledStringController}.</li> </ul>
+Styled string controller of the **TextEditor** component. This attribute can be set as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Styled string controller. The parameter type is ArkUI_TextEditorStyledStringController.</li> </ul>
 
 **Since**: 24
 
@@ -270,7 +270,7 @@ NODE_TEXT_EDITOR_CUSTOM_KEYBOARD
 
 **Description**
 
-Custom keyboard of the **TextEditor** component. This attribute can be set, reset, and obtained as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Custom keyboard. The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li> <li>.value[0]?.i32: Whether the custom keyboard supports avoidance. The value **0** indicates no, and the value * *1** indicates yes. The default value is **0**.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.object: Custom keyboard. The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-node8h.md).</li> <li>.value[0].i32: Whether the custom keyboard supports avoidance. The value **0** indicates no, and the value ** 1** indicates yes.</li> </ul>
+Custom keyboard of the **TextEditor** component. This attribute can be set, reset, and obtained as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Custom keyboard. The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md).</li> <li>.value[0]?.i32: Whether the custom keyboard supports avoidance. The value **0** indicates no, and the value * *1** indicates yes. The default value is **0**.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.object: Custom keyboard. The parameter type is [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md).</li> <li>.value[0].i32: Whether the custom keyboard supports avoidance. The value **0** indicates no, and the value ** 1** indicates yes.</li> </ul>
 
 **Since**: 24
 
@@ -282,7 +282,7 @@ NODE_TEXT_EDITOR_BIND_SELECTION_MENU
 
 **Description**
 
-Binds the custom text selection menu of the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Text selection menu. The parameter type is {@link ArkUI_TextEditorSelectionMenuOptions}.</li> </ul>
+Binds the custom text selection menu of the **TextEditor** component. This attribute can be set and reset as required through APIs. **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: Text selection menu. The parameter type is ArkUI_TextEditorSelectionMenuOptions.</li> </ul>
 
 **Since**: 24
 

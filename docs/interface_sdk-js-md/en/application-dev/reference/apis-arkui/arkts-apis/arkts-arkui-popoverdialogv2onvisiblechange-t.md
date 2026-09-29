@@ -4,9 +4,7 @@
 export declare type PopoverDialogV2OnVisibleChange = (visible: boolean) => void
 ```
 
-Declare the callback when the visibility of PopoverDialogV2 is changed.
-
-@typedef { function } PopoverDialogV2OnVisibleChange
+Defines the event triggered when the visibility of the popover dialog box changes.
 
 **Since:** 18
 

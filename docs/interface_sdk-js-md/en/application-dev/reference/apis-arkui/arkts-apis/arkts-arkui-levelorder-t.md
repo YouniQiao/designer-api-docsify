@@ -4,7 +4,9 @@
 declare type LevelOrder = import('../api/@ohos.promptAction').LevelOrder
 ```
 
-Defines the display order of the dialog box.
+Import the LevelOrder type from promptAction.
+
+@typedef { import('../api/@ohos.promptAction').LevelOrder } LevelOrder
 
 **Since:** 18
 

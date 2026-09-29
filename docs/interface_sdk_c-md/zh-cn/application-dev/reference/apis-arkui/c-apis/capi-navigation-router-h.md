@@ -6,8 +6,6 @@ Defines the enumerations related to the **NavDestination** and **Router** compon
 
 **库：** libace_ndk.z.so
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -32,8 +30,6 @@ enum ArkUI_NavDestinationState
 **描述：**
 
 定义NavDestination组件的状态。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -60,8 +56,6 @@ enum ArkUI_RouterPageState
 **描述：**
 
 定义[Router](arkts-apis-uicontext-router.md)（路由页面）的状态。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 

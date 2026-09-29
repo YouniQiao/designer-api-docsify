@@ -58,6 +58,4 @@ Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/
 
 <!--Device-KVManagerConfig-context: BaseContext--><!--Device-KVManagerConfig-context: BaseContext-End-->
 
-**系统能力：** 
-- API版本10+：SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new BaseContext to create the KVManager
-- API版本9-23：SystemCapability.DistributedDataManager.KVStore.Core if swap the area, you should close all the KV store and use the new Context to create the KVManager
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

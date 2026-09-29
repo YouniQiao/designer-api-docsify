@@ -28,13 +28,13 @@ The default value of the universal attribute [margin](arkts-arkui-common-comp-co
 
 {
 
-top: '14px',
+ top: '14px',
 
-right: '14px',
+ right: '14px',
 
-bottom: '14px',
+ bottom: '14px',
 
-left: '14px'
+ left: '14px'
 
 }.
 
@@ -68,13 +68,13 @@ The default value of the universal attribute [margin](arkts-arkui-common-comp-co
 
 {
 
-top: '6px',
+ top: '6px',
 
-right: '14px',
+ right: '14px',
 
-bottom: '6px',
+ bottom: '6px',
 
-left: '14px'
+ left: '14px'
 
 }.
 

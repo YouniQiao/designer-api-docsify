@@ -28,7 +28,7 @@ backgroundUri: ResourceStr
 
 Image path for the unselected star. You can use the default system image or a custom image.
 
-Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Since API version 20, this parameter supports **Resource** configuration. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -52,7 +52,7 @@ foregroundUri: ResourceStr
 
 Image path for the selected star. You can use the default system image or a custom image.
 
-Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Since API version 20, this parameter supports **Resource** configuration. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 
@@ -74,9 +74,9 @@ Resource configuration is supported since API version 20. For details, see [Exam
 secondaryUri?: ResourceStr
 ```
 
-Image path for the partially selected star. You can use the default system image or a custom image.
+Image path for the partially selected star. You can use the default system image or a custom image. If this parameter is not set, **backgroundUri** is used preferentially. The effect is the same as that when only **foregroundUri** and **backgroundUri** are set.
 
-Resource configuration is supported since API version 20. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
+Since API version 20, this parameter supports **Resource** configuration. For details, see [Example 3: Setting the Rating Style Through Resource Configuration](../../../reference/apis-arkui/arkui-ts/ts-basic-components-rating.md#example-3-setting-the-rating-style-through-resource-configuration).
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md)
 

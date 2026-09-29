@@ -42,9 +42,9 @@ Callback invoked when the button is selected.
 defaultFocus?: boolean
 ```
 
-Whether the button is the default focus. The value **true** means that the button is the default focus, and **false** means the opposite.
+Whether the button is the default focus. The value **true** indicates that the button is the default focus, and **false** indicates the opposite. When the dialog box gains focus and no focus traversal is performed using the Tab key, this button responds to the Enter key by default. In the case of multiple dialog boxes, the button can automatically gain focus and respond continuously. The default Enter key response capability does not take effect when defaultFocus is true.
 
-Default value: **false**
+Default value: false
 
 **Type:** boolean
 

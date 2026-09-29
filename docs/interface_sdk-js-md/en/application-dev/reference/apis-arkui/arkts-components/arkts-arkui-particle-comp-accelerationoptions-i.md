@@ -12,8 +12,8 @@ Particle acceleration.
 > **NOTE:** 
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the
-> outer element's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 
@@ -27,9 +27,11 @@ Particle acceleration.
 angle?: ParticlePropertyOptions<number, ACC_ANGLE_UPDATER>
 ```
 
-Acceleration direction (in angles).
+Acceleration direction. The unit is degree (°).
 
 Default value: **{range:[0.0,0.0]}**
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particle-comp-particlepropertyoptions-i.md)&lt;number, ACC_ANGLE_UPDATER&gt;
 
@@ -49,9 +51,11 @@ Default value: **{range:[0.0,0.0]}**
 speed?: ParticlePropertyOptions<number, ACC_SPEED_UPDATER>
 ```
 
-Acceleration speed.
+Acceleration magnitude. Unit: vp/s²
 
 Default value: **{range:[0.0,0.0]}**
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ParticlePropertyOptions](arkts-arkui-particle-comp-particlepropertyoptions-i.md)&lt;number, ACC_SPEED_UPDATER&gt;
 

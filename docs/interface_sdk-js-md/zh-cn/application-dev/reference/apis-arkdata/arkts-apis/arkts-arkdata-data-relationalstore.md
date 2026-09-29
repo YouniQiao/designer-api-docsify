@@ -95,6 +95,7 @@ import { relationalStore } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
+| [Asset](arkts-arkdata-relationalstore-asset-i-sys.md) | 记录资产附件（文件、图片、视频等类型文件）的相关信息。 |
 | [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i-sys.md) | 云同步配置信息。 |
 | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i-sys.md) | 记录表的分布式配置信息。 |
 | [DistributedInfo](arkts-arkdata-relationalstore-distributedinfo-i-sys.md) | 记录分布式信息。 |

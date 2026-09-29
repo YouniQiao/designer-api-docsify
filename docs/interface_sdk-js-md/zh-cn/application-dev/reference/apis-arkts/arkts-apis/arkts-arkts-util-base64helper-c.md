@@ -205,7 +205,7 @@ console.info("result = " + result);
 ## encodeToString
 
 ```TypeScript
-encodeToString(src: Uint8Array, options?: Type): Promise<string>
+encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>
 ```
 
 将输入内容编码为字符串。该接口使用 promise 返回结果。
@@ -214,7 +214,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array, options?: Type): Promise<string>-End-->
+<!--Device-Base64Helper-encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>--><!--Device-Base64Helper-encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promise<string>-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -222,7 +222,7 @@ encodeToString(src: Uint8Array, options?: Type): Promise<string>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.2.0 |
 | options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。<br>可取值如下：<br>- **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME**：Base64 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>- **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 10 |
 
 **返回值：**
@@ -250,7 +250,7 @@ base64Helper.encodeToString(array, util.Type.MIME).then((val) => {
 ## encodeToStringSync
 
 ```TypeScript
-encodeToStringSync(src: Uint8Array, options?: Type): string
+encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string
 ```
 
 对输入的 Uint8Array 字节数组进行 Base64 编码，并返回字符串。该方法支持多种编码格式，包括标准 Base64 编码、符合MIME 规范的 Base64 编码（带换行）以及 URL 安全的 Base64 编码。
@@ -259,7 +259,7 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array, options?: Type): string-End-->
+<!--Device-Base64Helper-encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string--><!--Device-Base64Helper-encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): string-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -267,8 +267,8 @@ encodeToStringSync(src: Uint8Array, options?: Type): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array | 是 | 要编码的 Uint8Array 对象。 |
-| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。<br>可取值如下：<br>- **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME**：Base64 编码。如果返回值超过 76 个字符，则每 76 个字符插入一个换行，每行以 '\r\n' 结尾。如果返回值少于 76 个字符，则抛出异常。<br>- **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以'\r\n' 结尾。<br>**适用版本：** 12 |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.2.0 |
+| options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。<br>可取值如下：<br>- **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME**：Base64 编码。如果返回值超过 76 个字符，则每 76 个字符插入一个换行，每行以 '\r\n' 结尾。如果返回值少于 76 个字符，则抛出异常。<br>- **util.Type.BASIC_URL_SAFE**：Base64URL编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 12 |
 
 **返回值：**
 

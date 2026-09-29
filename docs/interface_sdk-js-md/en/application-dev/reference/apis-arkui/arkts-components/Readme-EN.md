@@ -820,7 +820,7 @@
   - [DatePickerResult](arkts-arkui-datepicker-comp-datepickerresult-i.md)
   - [LunarSwitchStyle](arkts-arkui-datepicker-comp-lunarswitchstyle-i.md)
   - [DatePickerMode](arkts-arkui-datepicker-comp-datepickermode-e.md)
-- [DepthComponent](arkts-arkui-depthcomponent-comp-sys.md)
+- [DepthComponent(System API)](arkts-arkui-depthcomponent-comp-sys.md)
   - [DepthComponent properties/events](arkts-arkui-depthcomponent-comp-attribute.md)
   <!--Del-->
   - [CameraBufferCrop(system api)](arkts-arkui-depthcomponent-comp-camerabuffercrop-i-sys.md)<!--DelEnd-->
@@ -1495,7 +1495,7 @@
   - [ProgressType](arkts-arkui-progress-comp-progresstype-e.md)
 - [QRCode](arkts-arkui-qrcode-comp.md)
   - [QRCode properties/events](arkts-arkui-qrcode-comp-attribute.md)
-- [Radio](arkts-arkui-radio-comp.md)
+- [Radio(Radio)](arkts-arkui-radio-comp.md)
   - [Radio properties/events](arkts-arkui-radio-comp-attribute.md)
   - [RadioConfiguration](arkts-arkui-radio-comp-radioconfiguration-i.md)
   - [RadioOptions](arkts-arkui-radio-comp-radiooptions-i.md)

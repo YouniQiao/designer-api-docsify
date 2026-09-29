@@ -20,5 +20,5 @@ Defines the callback type used in **SliderConfiguration**.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Current progress.<br>Value range: [[min](arkts-arkui-slider-comp-slideroptions-i.md), [max](arkts-arkui-slider-comp-slideroptions-i.md)] |
+| value | number | Yes | Current progress.<br>Value range: [[min](arkts-arkui-slider-comp-slideroptions-i.md)-[max](arkts-arkui-slider-comp-slideroptions-i.md)] |
 | mode | [SliderChangeMode](arkts-arkui-slider-comp-sliderchangemode-e.md) | Yes | State triggered by the event. |

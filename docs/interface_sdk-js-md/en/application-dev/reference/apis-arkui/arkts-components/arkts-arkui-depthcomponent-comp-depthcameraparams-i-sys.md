@@ -4,7 +4,7 @@
 declare interface DepthCameraParams
 ```
 
-Camera parameters struct.
+Provides camera parameters.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Camera parameters struct.
 cameraBufferCrop?: CameraBufferCrop
 ```
 
-Camera buffer crop parameters.
+Camera buffer crop parameters. If not set, the component layout size is used as the default image reference size, with a crop offset of (0, 0) and a scale factor of 1.0.
 
 **Type:** [CameraBufferCrop](arkts-arkui-depthcomponent-comp-camerabuffercrop-i-sys.md)
 
@@ -42,7 +42,7 @@ Camera buffer crop parameters.
 position: DepthVector3
 ```
 
-Camera position in 3D space.
+Position of the camera in 3D space, without a unit. The value indicates the coordinates in 3D space.
 
 **Type:** [DepthVector3](arkts-arkui-common-comp-depthvector3-i-sys.md)
 
@@ -64,7 +64,7 @@ Camera position in 3D space.
 quaternion: DepthVector4
 ```
 
-Camera rotation as quaternion (x, y, z, w). Represents the orientation of the camera in 3D space.
+Rotation quaternion of the camera, represented as (x, y, z, w). There is no unit.
 
 **Type:** [DepthVector4](arkts-arkui-common-comp-depthvector4-i-sys.md)
 
@@ -86,7 +86,7 @@ Camera rotation as quaternion (x, y, z, w). Represents the orientation of the ca
 yFov: number
 ```
 
-Vertical field of view in radians.
+Vertical field of view of the camera, in radians.
 
 **Type:** number
 
@@ -108,7 +108,7 @@ Vertical field of view in radians.
 zFar: number
 ```
 
-Far clipping plane distance.
+Distance to the far clipping plane, without a unit. The value must be a positive number.
 
 **Type:** number
 
@@ -130,7 +130,7 @@ Far clipping plane distance.
 zNear: number
 ```
 
-Near clipping plane distance.
+Distance to the near clipping plane, without a unit. The value must be a positive number.
 
 **Type:** number
 

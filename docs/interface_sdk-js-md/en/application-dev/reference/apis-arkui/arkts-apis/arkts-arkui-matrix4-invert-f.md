@@ -12,7 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function invert(): Matrix4Transit
 ```
 
-Inverts this matrix object.
+Inverts this matrix object. The matrix that calls this API will be changed.
 
 **Since:** 7
 

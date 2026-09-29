@@ -276,7 +276,7 @@ Sets the maximum font scale factor for text.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text.<br>Value range: [1, +∞)<br>**NOTE:** <br>A value less than 1 is handled as **1**. Abnormal values are ineffective by default.<br>If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
+| scale | number &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | Yes | Maximum font scale factor for text. Value range: [1, +∞) **NOTE:** A value less than 1 is handled as **1**. Abnormal values are ineffective by default. If this parameter is not configured, the maximum scale for a circular button is 1x, while the maximum scale for capsule-type buttons, standard buttons, and rounded rectangle buttons defaults to the system-defined value. |
 
 ## minFontScale
 

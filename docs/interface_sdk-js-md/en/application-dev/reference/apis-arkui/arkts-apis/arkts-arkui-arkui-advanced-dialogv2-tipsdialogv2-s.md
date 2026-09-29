@@ -4,7 +4,15 @@
 export declare struct TipsDialogV2
 ```
 
-Declare CustomDialog TipsDialogV2
+The dialog box is a modal window that commands attention while retaining the current context. It is frequently used to draw the user's attention to vital information or prompt the user to complete a specific task. As all modal windows, this component requires the user to interact before exiting.
+
+This component is implemented based on [state management V2](../../../ui/state-management/arkts-state-management-overview.md#state-management-v2). Compared with [state management V1](../../../ui/state-management/arkts-state-management-overview.md#state-management-v1), V2 offers a higher level of observation and management over data objects beyond the component level. You can now more easily manage dialog box data and states with greater flexibility, leading to faster UI updates.
+
+> **NOTE:** 
+> 
+> - This component can be used only in the stage model.
+> 
+> - If the **DialogV2** component has [universal attributes](../arkts-components/arkts-arkui-common-comp.md) and [universal events](../arkts-components/arkts-arkui-common-comp.md) configured, the compiler toolchain automatically generates an additional \_\_Common\_\_ node and mounts the universal attributes and universal events on this node rather than the **DialogV2** component itself. As a result, the configured universal attributes and universal events may fail to take effect or behave as intended. For this reason, avoid using universal attributes and events with the **DialogV2** component.
 
 @struct { TipsDialogV2 }
 
@@ -28,7 +36,9 @@ import { AlertDialogV2, AdvancedDialogV2Button, AdvancedDialogV2ButtonOptions, A
 onCheckedChange?: AdvancedDialogV2OnCheckedChange
 ```
 
-Sets the TipsDialogV2 CheckBox Callback.
+Event triggered when the selected status of the check box changes.
+
+By default, there is no event.
 
 **Since:** 18
 
@@ -46,7 +56,11 @@ Sets the TipsDialogV2 CheckBox Callback.
 checked?: boolean
 ```
 
-Sets the TipsDialogV2 checkbox check state.
+Whether to select the check box.
+
+**true**: The check box is selected. **false**: The check box is not selected.
+
+Default value: **false**.
 
 **Type:** boolean
 
@@ -66,7 +80,9 @@ Sets the TipsDialogV2 checkbox check state.
 checkTips?: ResourceStr
 ```
 
-Sets the TipsDialogV2 checkbox tips.
+Content of the check box.
+
+It is not displayed by default.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -86,7 +102,9 @@ Sets the TipsDialogV2 checkbox tips.
 content?: ResourceStr
 ```
 
-Sets the TipsDialogV2 content.
+Content of the dialog box.
+
+It is not displayed by default.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -106,9 +124,9 @@ Sets the TipsDialogV2 content.
 imageBorderColor?: ColorMetrics
 ```
 
-Sets the borderColor of TipsDialogV2 image.
+Stroke color of the image.
 
-Default value: **Color.Black**
+Default value: **Color.Black**.
 
 **Type:** ColorMetrics
 
@@ -128,7 +146,9 @@ Default value: **Color.Black**
 imageBorderWidth?: LengthMetrics
 ```
 
-Sets the borderWidth of TipsDialogV2 image.
+Stroke width of the image.
+
+By default, there is no stroke effect.
 
 **Type:** LengthMetrics
 
@@ -148,7 +168,7 @@ Sets the borderWidth of TipsDialogV2 image.
 imageRes: ResourceStr | PixelMap
 ```
 
-Sets the TipsDialogV2 imageRes.
+Image to be displayed.
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; [PixelMap](../arkts-components/arkts-arkui-common-comp-pixelmap-t.md)
 
@@ -170,9 +190,9 @@ Sets the TipsDialogV2 imageRes.
 imageSize?: SizeOptions
 ```
 
-Sets the TipsDialogV2 image size.
+Size of the image.
 
-Default value: **64*64vp**
+Default value: **64*64vp**.
 
 **Type:** [SizeOptions](arkts-arkui-sizeoptions-i.md)
 
@@ -192,7 +212,9 @@ Default value: **64*64vp**
 primaryButton?: AdvancedDialogV2Button
 ```
 
-Sets the TipsDialogV2 primary button.
+Left button of the dialog box.
+
+It is not displayed by default.
 
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -212,7 +234,9 @@ Sets the TipsDialogV2 primary button.
 secondaryButton?: AdvancedDialogV2Button
 ```
 
-Sets the TipsDialogV2 secondary button.
+Right button of the dialog box.
+
+It is not displayed by default.
 
 **Type:** [AdvancedDialogV2Button](arkts-arkui-arkui-advanced-dialogv2-advanceddialogv2button-c.md)
 
@@ -232,7 +256,13 @@ Sets the TipsDialogV2 secondary button.
 title?: ResourceStr
 ```
 
-Sets the TipsDialogV2 title.
+Title of the dialog box.
+
+It is not displayed by default.
+
+**NOTE:** 
+
+If the title exceeds two lines, it will be truncated with an ellipsis (...).
 
 **Type:** [ResourceStr](arkts-arkui-resourcestr-t.md)
 

@@ -4,9 +4,7 @@
 interface ShowDialogOptions
 ```
 
-Defines the option of show dialog.
-
-@interface ShowDialogOptions
+Describes the options for showing the dialog box.
 
 **Since:** 8
 
@@ -30,7 +28,7 @@ import { prompt } from '@kit.ArkUI';
 buttons?: [Button, Button?, Button?]
 ```
 
-Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to three buttons are supported. The first button is of the positiveButton type, the second is of the negativeButton type, and the third is of the neutralButton type.
+Array of buttons in the dialog box. The array structure is **{text:'button', color: '#666666'}**. Up to three buttons are supported. The first button is of the **positiveButton** type, the second is of the **negativeButton** type, and the third is of the **neutralButton** type.
 
 **Type:** [Button, Button?, Button?]
 
@@ -74,7 +72,7 @@ Text body.
 title?: string
 ```
 
-Title of the text to display.
+Title of the dialog box.
 
 **Type:** string
 

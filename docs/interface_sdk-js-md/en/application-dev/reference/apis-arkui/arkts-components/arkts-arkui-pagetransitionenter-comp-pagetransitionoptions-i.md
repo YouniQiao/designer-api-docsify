@@ -4,9 +4,7 @@
 declare interface PageTransitionOptions
 ```
 
-Parameters of the exit or entrance animation.
-
-@interface PageTransitionOptions
+Defines the parameters of the exit/entrance animation.
 
 **Since:** 7
 
@@ -22,9 +20,9 @@ curve?: Curve | string | ICurve
 
 Animation curve.
 
-You are advised to specify the curve using the **Curve** or **ICurve** type.
+It is recommended to specify it in the form of **Curve** or **ICurve**.
 
-For the string type, this parameter indicates an animation interpolation curve. For available values, see the **curve** parameter in [AnimateParam](arkts-arkui-common-comp-animateparam-i.md).
+When the type is string, it is the animation interpolation curve. For details about the value, see the **curve** parameter of [AnimateParam](arkts-arkui-common-comp-animateparam-i.md).
 
 Default value: **Curve.Linear**
 
@@ -52,10 +50,6 @@ Unit: ms
 
 Default value: **0**
 
-**NOTE:** 
-
-If no match is found, the default page transition effect is used (which may vary according to the device). To disable the default page transition effect, set **duration** to **0**.
-
 **Type:** number
 
 **Default:** 0
@@ -74,7 +68,7 @@ If no match is found, the default page transition effect is used (which may vary
 duration?: number
 ```
 
-Animation duration.
+Duration of the animation.
 
 Unit: ms
 
@@ -98,9 +92,15 @@ Value range: [0, +∞)
 type?: RouteType
 ```
 
-Route type for the page transition effect to take effect.
+Route type for which the page transition effect takes effect.
 
-Default value: **RouteType.None**
+Default value: **RouteType.None**.
+
+**Note:** 
+
+When multiple [PageTransitionEnter](../../../reference/apis-arkui/arkui-ts/ts-page-transition-animation.md#pagetransitionenter) or [PageTransitionExit](../../../reference/apis-arkui/arkui-ts/ts-page-transition-animation.md#pagetransitionexit) components are configured in the **pageTransition** function, they take effect according to the **RouteType** matching rule: the system selects the last matching component from all configured **PageTransitionEnter**\/ **PageTransitionExit** components based on the current route operation type (**Push** or **Pop**); if no component matches, the system default page transition effect is used (which may vary by device). If multiple **PageTransitionEnter** components match the same **RouteType**, the last configured one takes effect; if multiple **PageTransitionExit** components match the same **RouteType**, the last configured one takes effect. **RouteType.None** matches all route types.
+
+Value selection principle: **None** indicates that it takes effect for all route types; **Push** takes effect only for push routes; **Pop** takes effect only for pop routes.
 
 **Type:** [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md)
 

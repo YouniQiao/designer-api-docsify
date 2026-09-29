@@ -4,9 +4,7 @@
 interface Button
 ```
 
-Defines the prompt info of button.
-
-@interface Button
+Describes the menu item button in the action menu.
 
 **Since:** 8
 
@@ -30,7 +28,7 @@ import { prompt } from '@kit.ArkUI';
 color: string
 ```
 
-Defines the color of button.
+Text color of the button.
 
 **Type:** string
 
@@ -52,7 +50,7 @@ Defines the color of button.
 text: string
 ```
 
-Defines the button info.
+Button text.
 
 **Type:** string
 

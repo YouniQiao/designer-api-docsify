@@ -4,7 +4,7 @@
 interface ShapeSize
 ```
 
-Describes the size of a shape.
+Provides the size parameters of a shape.
 
 **Since:** 12
 
@@ -26,11 +26,15 @@ height?: number | string
 
 Height of the shape.
 
-When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
+If the type is number, the value range is [0, +∞); if the type is string, the value is specified by [Length](arkts-arkui-length-t.md).
 
-Unit: vp.
+Unit: vp
 
-If the value is invalid, 0 vp is used.
+Default value: **0vp**
+
+If an abnormal value is set, **0vp** is used.
+
+If not set, the default value **0vp** is used.
 
 **Type:** number &#124; string
 
@@ -54,11 +58,15 @@ width?: number | string
 
 Width of the shape.
 
-When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
+If the type is number, the value range is [0, +∞); if the type is string, the value is specified by [Length](arkts-arkui-length-t.md).
 
-Unit: vp.
+Unit: vp
 
-If the value is invalid, 0 vp is used.
+Default value: **0vp**
+
+If an abnormal value is set, **0vp** is used.
+
+If not set, the default value **0vp** is used.
 
 **Type:** number &#124; string
 

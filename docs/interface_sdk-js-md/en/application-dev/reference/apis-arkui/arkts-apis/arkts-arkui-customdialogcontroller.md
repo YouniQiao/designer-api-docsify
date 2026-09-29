@@ -27,7 +27,7 @@
 
 | Name | Description |
 | --- | --- |
-| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | Defines the state of the custom dialog box. |
+| [PromptActionCommonState](arkts-arkui-promptactioncommonstate-t.md) | Import the CommonState type from promptAction. |
 
 ## Examples
 

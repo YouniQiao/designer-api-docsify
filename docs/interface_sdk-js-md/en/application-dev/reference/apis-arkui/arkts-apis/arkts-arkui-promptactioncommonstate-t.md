@@ -4,7 +4,9 @@
 declare type PromptActionCommonState = import('../api/@ohos.promptAction').promptAction.CommonState
 ```
 
-Defines the state of the custom dialog box.
+Import the CommonState type from promptAction.
+
+@typedef { import('../api/@ohos.promptAction').promptAction.CommonState } PromptActionCommonState
 
 **Since:** 20
 

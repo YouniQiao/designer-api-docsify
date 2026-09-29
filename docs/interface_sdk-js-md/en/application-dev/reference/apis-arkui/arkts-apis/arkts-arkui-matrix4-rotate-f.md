@@ -12,7 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function rotate(options: RotateOption): Matrix4Transit
 ```
 
-Rotates this matrix object along the x, y, and z axes.
+Rotates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed.
 
 **Since:** 7
 
@@ -28,7 +28,7 @@ Rotates this matrix object along the x, y, and z axes.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation configuration. |
+| options | [RotateOption](arkts-arkui-matrix4-rotateoption-i.md) | Yes | Rotation options for setting the rotation axis vector (x/y/z), rotation angle, and transform center point offset. |
 
 **Return value:**
 

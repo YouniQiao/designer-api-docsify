@@ -6,8 +6,6 @@ declare type PageTransitionCallback = (type: RouteType, progress: number) => voi
 
 Represents the callback for page transition events.
 
-@typedef { function } PageTransitionCallback
-
 **Since:** 18
 
 **Model restriction:** This API can be used only in the stage model.
@@ -22,5 +20,5 @@ Represents the callback for page transition events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md) | Yes | transition route type |
-| progress | number | Yes | transition progess |
+| type | [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md) | Yes | Route type for which the page transition effect takes effect. |
+| progress | number | Yes | Transition progress, ranging from 0 to 1. |

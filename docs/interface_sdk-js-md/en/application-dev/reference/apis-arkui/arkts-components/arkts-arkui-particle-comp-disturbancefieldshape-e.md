@@ -4,9 +4,7 @@
 declare enum DisturbanceFieldShape
 ```
 
-Defines particle disturbance shape.
-
-@enum { number }
+Defines the shape of the disturbance field.
 
 **Since:** 12
 

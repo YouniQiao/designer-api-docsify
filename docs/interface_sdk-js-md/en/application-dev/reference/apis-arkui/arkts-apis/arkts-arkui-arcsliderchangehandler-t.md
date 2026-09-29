@@ -4,7 +4,7 @@
 declare type ArcSliderChangeHandler = (progress: number) => void
 ```
 
-Defines the callback invoked to notify the application when the progress value of the arc slider changes.
+Triggered when the progress value of the arc slider changes.
 
 **Since:** 18
 

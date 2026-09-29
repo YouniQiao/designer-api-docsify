@@ -1,4 +1,4 @@
-# Radio
+# Radio(Radio)
 
 The **Radio** component allows users to select from a set of mutually exclusive options.
 
@@ -51,7 +51,7 @@ Creates a radio button.
 
 | Name | Description |
 | --- | --- |
-| [OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md) | Defines the callback type for radio button selected state changes. |
+| [OnRadioChangeCallback](arkts-arkui-radio-comp-onradiochangecallback-t.md) | Callback of radio box selection status changes event. |
 
 ### Enums
 

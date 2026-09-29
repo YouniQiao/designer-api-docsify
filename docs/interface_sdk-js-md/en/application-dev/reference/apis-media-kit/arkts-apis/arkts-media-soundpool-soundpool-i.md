@@ -571,7 +571,7 @@ Releases a **SoundPool** instance. This API uses a promise to return the result.
 setInterruptMode(interruptMode: media.SoundInterruptMode): void
 ```
 
-Sets the interruption mode of the audio files with the same ID during playback. After the **SoundPool** is created, this API is valid only when the **Play** function of the **SoundPool** is called for the first time. You can set the interruption mode for multiple times. If the interruption mode is not set, the [SAME_SOUND_INTERRUPT](../../../reference/apis-media-kit/arkts-media-media-soundinterruptmode-e.md) mode is used by default. That is, if the former audio file is not completely played, the latter audio file with the same ID interrupts the former audio file.
+Sets the interruption mode of the audio resources with the same sound ID during playback. After a **soundPool** instance is created, this API is valid only before the play function of the **soundPool** instance is called for the first time. If this parameter is not set, [SAME_SOUND_INTERRUPT](arkts-apis-media-e.md#soundinterruptmode) is used by default. That is, for the audio resources with the same sound ID, if the previous playback instance has not finished playing, the next playback instance interrupts the previous one before playing.
 
 **Since:** 23
 
@@ -606,7 +606,7 @@ Sets the loop mode. This API uses an asynchronous callback to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
+| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br>If this parameter is set to a floating-point number, only the integer part is used. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback function. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -638,7 +638,7 @@ Sets the loop mode. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | streamID | number | Yes | Audio stream ID, which is obtained by calling **play()**. |
-| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br> If this parameter is set to a value less than 0, the content is played repeatedly. |
+| loop | number | Yes | Number of loops.<br>If this parameter is set to a value greater than or equal to 0, the number of times the content is actually played is the value of **loop** plus 1.<br>If this parameter is set to a floating-point number, only the integer part is used. |
 
 **Return value:**
 

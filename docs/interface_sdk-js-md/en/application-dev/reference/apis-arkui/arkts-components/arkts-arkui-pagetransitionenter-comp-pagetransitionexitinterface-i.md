@@ -6,8 +6,6 @@ interface PageTransitionExitInterface extends CommonTransition<PageTransitionExi
 
 Provide an interface to set transition style when a page exits.
 
-@extends CommonTransition&lt;PageTransitionExitInterface&gt; @interface PageTransitionExitInterface
-
 **Inheritance/Implementation:** PageTransitionExitInterface extends CommonTransition<PageTransitionExitInterface>
 
 **Since:** 7

@@ -4,7 +4,7 @@
 interface ParticleColorPropertyUpdaterConfigs
 ```
 
-Defines the particle color property updater configs. @interface ParticleColorPropertyUpdaterConfigs
+Sets the configuration of the particle color attribute updater.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Defines the particle color property updater configs. @interface ParticleColorPro
 [ParticleUpdater.CURVE]: Array<ParticlePropertyAnimation<ResourceColor>>
 ```
 
-The color changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0–3000 ms, 3000–5000 ms, and 5000–8000 ms.
+Indicates the configuration of color change when the change mode is curve. The array type indicates that the current property can be set with multiple animation segments, for example, **0ms-3000ms**, **3000ms-5000ms**, and **5000ms-8000ms** are set as separate animations.
 
 **Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particle-comp-particlepropertyanimation-i.md)&lt;[ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md)&gt;&gt;
 
@@ -58,7 +58,7 @@ The color does not change.
 [ParticleUpdater.RANDOM]: ParticleColorOptions
 ```
 
-The color changes randomly, with the per-second change difference being a value randomly generated from the range. The target color is obtained by applying the change difference to the current color value of each of the R, G, B, A channels.
+Indicates that when the change mode is random, a difference value is randomly generated for each particle within the change range. The r, g, b, and a color channels each use the difference value to overlay the current color value per second to generate the target color value, achieving the effect of random color change.
 
 **Type:** [ParticleColorOptions](arkts-arkui-particle-comp-particlecoloroptions-i.md)
 

@@ -27,7 +27,7 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | Defines the construction information for **ArcSliderLayoutValueOptions**. |
+| [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | Defines the construction information of **ArcSliderLayoutOptions**. |
 | [ArcSliderOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslideroptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderOptions**. |
 | [ArcSliderStyleOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderstyleoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderStyleOptions**. |
 | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | Defines the constructor information for **ArcSliderValueOptions**. |
@@ -36,9 +36,9 @@ import { ArcSlider, ArcSliderPosition, ArcSliderOptions, ArcSliderOptionsConstru
 
 | Name | Description |
 | --- | --- |
-| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | Defines the callback invoked to notify the application when the progress value of the arc slider changes. |
-| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | Defines the callback invoked to notify the application when the arc slider is enlarged or reduced. |
-| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | Defines the callback invoked to notify the application when the arc slider is touched. |
+| [ArcSliderChangeHandler](arkts-arkui-arcsliderchangehandler-t.md) | Triggered when the progress value of the arc slider changes. |
+| [ArcSliderEnlargeHandler](arkts-arkui-arcsliderenlargehandler-t.md) | Triggered when the arc slider is enlarged or shrunk. |
+| [ArcSliderTouchHandler](arkts-arkui-arcslidertouchhandler-t.md) | Triggered when the arc slider is touched. |
 
 ### Enums
 

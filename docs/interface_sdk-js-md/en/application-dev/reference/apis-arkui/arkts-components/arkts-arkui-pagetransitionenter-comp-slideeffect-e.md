@@ -4,9 +4,7 @@
 declare enum SlideEffect
 ```
 
-Slide-in and slide-out effects for page transitions.
-
-@enum { number }
+Defines the slide-in and slide-out effects for page transitions.
 
 **Since:** 7
 
@@ -20,7 +18,9 @@ Slide-in and slide-out effects for page transitions.
 Left
 ```
 
-When set to Enter, slides in from the left. When set to Exit, slides out to the left.
+When set for entrance, it indicates sliding in from the left; when set for exit, it indicates sliding out to the left.
+
+**Atomic service API:** Since API version 11, this interface is supported in atomic services.
 
 **Since:** 7
 
@@ -36,7 +36,9 @@ When set to Enter, slides in from the left. When set to Exit, slides out to the 
 Right
 ```
 
-When set to Enter, slides in from the right. When set to Exit, slides out to the right.
+When set for entrance, it indicates sliding in from the right; when set for exit, it indicates sliding out to the right.
+
+**Atomic service API:** Since API version 11, this interface is supported in atomic services.
 
 **Since:** 7
 
@@ -52,7 +54,9 @@ When set to Enter, slides in from the right. When set to Exit, slides out to the
 Top
 ```
 
-When set to Enter, slides in from the top. When set to Exit, slides out to the top.
+When set for entrance, it indicates sliding in from the top; when set for exit, it indicates sliding out to the top.
+
+**Atomic service API:** Since API version 11, this interface is supported in atomic services.
 
 **Since:** 7
 
@@ -68,7 +72,9 @@ When set to Enter, slides in from the top. When set to Exit, slides out to the t
 Bottom
 ```
 
-When set to Enter, slides in from the bottom. When set to Exit, slides out to the bottom.
+When set for entrance, it indicates sliding in from the bottom; when set for exit, it indicates sliding out to the bottom.
+
+**Atomic service API:** Since API version 11, this interface is supported in atomic services.
 
 **Since:** 7
 
@@ -84,7 +90,11 @@ When set to Enter, slides in from the bottom. When set to Exit, slides out to th
 START = 5
 ```
 
-Left-to-right scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left. Right- to-left scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right.
+When set for LTR entrance, it indicates sliding in from the left; for exit, it indicates sliding out to the left. When set for RTL entrance, it indicates sliding in from the right; for exit, it indicates sliding out to the right.
+
+**Atomic service API:** Since API version 12, this interface is supported in atomic services.
+
+**Model constraint:** This interface can be used only under the Stage model.
 
 **Since:** 12
 
@@ -102,7 +112,11 @@ Left-to-right scripts: When set to Enter, slides in from the left; when set to E
 END = 6
 ```
 
-Left-to-right scripts: When set to Enter, slides in from the right; when set to Exit, slides out to the right. Right-to-left scripts: When set to Enter, slides in from the left; when set to Exit, slides out to the left.
+When set for LTR entrance, it indicates sliding in from the right; for exit, it indicates sliding out to the right. When set for RTL entrance, it indicates sliding in from the left; for exit, it indicates sliding out to the left.
+
+**Atomic service API:** Since API version 12, this interface is supported in atomic services.
+
+**Model constraint:** This interface can be used only under the Stage model.
 
 **Since:** 12
 

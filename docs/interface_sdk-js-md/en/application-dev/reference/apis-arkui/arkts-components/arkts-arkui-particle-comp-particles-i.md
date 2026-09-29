@@ -12,7 +12,7 @@ interface Particles<
 >
 ```
 
-Defines the particle array.
+Defines a collection of particle animations.
 
 > **NOTE:** 
 > 
@@ -42,7 +42,9 @@ particles: Array<
   >
 ```
 
-An array of particle options, each of which covers the emitter, color, opacity, scale, velocity, acceleration, and spin speed of particles. For details, see [ParticleOptions](arkts-arkui-particle-comp-particleoptions-i.md).
+Collection of particle animations. Each particle animation ([ParticleOptions](arkts-arkui-particle-comp-particleoptions-i.md)) contains particle emission, and can configure the color, opacity, size, velocity, acceleration, and spin angle of particles. For details, see [ParticleOptions](arkts-arkui-particle-comp-particleoptions-i.md).
+
+**Atomic service API:** This API is supported in atomic services since API version 11.
 
 **Type:** Array&lt;[ParticleOptions](arkts-arkui-particle-comp-particleoptions-i.md)&lt;PARTICLE, COLOR_UPDATER, OPACITY_UPDATER, SCALE_UPDATER, ACC_SPEED_UPDATER, ACC_ANGLE_UPDATER, SPIN_UPDATER&gt;&gt;
 

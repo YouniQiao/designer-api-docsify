@@ -12,7 +12,7 @@ import { matrix4 } from '@kit.ArkUI';
 function identity(): Matrix4Transit
 ```
 
-Constructs an identity matrix.
+Initializes a matrix and returns an identity matrix object, which can serve as the basis for subsequent matrix transformation operations.
 
 **Since:** 7
 

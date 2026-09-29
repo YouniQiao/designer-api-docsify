@@ -32,7 +32,7 @@ Creates a DistortionComponent with content.
 
 | Name | Description |
 | --- | --- |
-| [DistortionComponentOptions](arkts-arkui-distortioncomponent-comp-distortioncomponentoptions-i-sys.md) | Defines the DistortionComponent constructor options. |
+| [DistortionComponentOptions](arkts-arkui-distortioncomponent-comp-distortioncomponentoptions-i-sys.md) | Defines the spatial distortion options. |
 | [DistortionParam](arkts-arkui-distortioncomponent-comp-distortionparam-i-sys.md) | Defines the spatial distortion parameters. |
 
 ### Types

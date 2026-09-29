@@ -53,7 +53,7 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 | Name | Description |
 | --- | --- |
 | [PageTransitionExitInterface](arkts-arkui-pagetransitionenter-comp-pagetransitionexitinterface-i.md) | Provide an interface to set transition style when a page exits. |
-| [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | Parameters of the exit or entrance animation. |
+| [PageTransitionOptions](arkts-arkui-pagetransitionenter-comp-pagetransitionoptions-i.md) | Defines the parameters of the exit/entrance animation. |
 
 ### Types
 
@@ -66,7 +66,7 @@ Invoked on a per-frame basis until the entrance animation is complete, with the 
 | Name | Description |
 | --- | --- |
 | [RouteType](arkts-arkui-pagetransitionenter-comp-routetype-e.md) | Sets the type of page transition. |
-| [SlideEffect](arkts-arkui-pagetransitionenter-comp-slideeffect-e.md) | Slide-in and slide-out effects for page transitions. |
+| [SlideEffect](arkts-arkui-pagetransitionenter-comp-slideeffect-e.md) | Defines the slide-in and slide-out effects for page transitions. |
 
 ## Examples
 

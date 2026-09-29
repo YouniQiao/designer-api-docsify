@@ -24,7 +24,7 @@ import { dialog, DialogBaseAlignment, DialogButtonOrientation, DialogState, Dial
 distortionMode?: DistortionMode
 ```
 
-Sets the distortion animation Mode of the dialog.
+Nonlinear animation mode of the dialog box under the system material. Default value: DistortionMode.DISTORTION_AUTO.
 
 **Type:** [DistortionMode](../arkts-components/arkts-arkui-common-comp-distortionmode-e-sys.md)
 
@@ -46,7 +46,7 @@ Sets the distortion animation Mode of the dialog.
 edgeLightMode?: EdgeLightMode
 ```
 
-Sets the edgeLight animation Mode of the dialog.
+Edge light animation mode of the dialog box under the system material. Default value: EdgeLightMode.EDGELIGHT_AUTO.
 
 **Type:** [EdgeLightMode](../arkts-components/arkts-arkui-common-comp-edgelightmode-e-sys.md)
 

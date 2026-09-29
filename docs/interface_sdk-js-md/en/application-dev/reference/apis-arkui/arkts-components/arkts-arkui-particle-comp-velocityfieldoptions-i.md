@@ -4,9 +4,7 @@
 declare interface VelocityFieldOptions
 ```
 
-Parameter used to describe the velocity field of particles.
-
-@interface VelocityFieldOptions
+Defines the parameters used to describe the particle velocity field information.
 
 **Since:** 22
 

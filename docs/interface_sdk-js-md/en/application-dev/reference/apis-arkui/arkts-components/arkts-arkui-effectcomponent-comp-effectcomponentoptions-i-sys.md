@@ -20,7 +20,7 @@ Sets the construction parameters of the current EffectComponent, including the r
 effectLayer?: EffectLayer
 ```
 
-Rendering layer of the EffectComponent.
+Rendering layer of EffectComponent.
 
 Default value: EffectLayer.NONE
 

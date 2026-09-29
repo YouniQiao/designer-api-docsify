@@ -24,7 +24,7 @@ Provides configuration options for the **Rating** component.
 indicator?: boolean
 ```
 
-Whether the component is used as an indicator. If this parameter is set to **true**, the rating value cannot be changed.
+Whether the **Rating** component is used as an indicator. The value **true** indicates the component is used as an indicator without changing the rating. The value **false** indicates the component is not used as an indicator and the rating can be changed.
 
 Default value: **false**
 

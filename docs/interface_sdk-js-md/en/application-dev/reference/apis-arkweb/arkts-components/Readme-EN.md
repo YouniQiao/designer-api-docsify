@@ -1,6 +1,6 @@
 # ArkTS Components<!--arkts-components-arkweb-->
 
-- [Web](arkts-arkweb-web-comp.md)
+- [Web(Web Controller)](arkts-arkweb-web-comp.md)
   - [Web properties/events](arkts-arkweb-web-comp-attribute.md)
   - [AcceptableFileType](arkts-arkweb-web-comp-acceptablefiletype-i.md)
   - [AdsBlockedDetails](arkts-arkweb-web-comp-adsblockeddetails-i.md)

@@ -18,7 +18,7 @@ Provides accessibility configuration of the slider step markers.
 text?: ResourceStr
 ```
 
-Text for assistive technologies (for example, screen readers).
+Accessibility text, read by tools such as screen readers to enhance accessibility.
 
 Default value: **""**
 

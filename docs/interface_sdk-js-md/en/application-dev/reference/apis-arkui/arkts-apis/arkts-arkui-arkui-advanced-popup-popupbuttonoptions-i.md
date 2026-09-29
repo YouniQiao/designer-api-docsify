@@ -70,9 +70,11 @@ Font size of the button text.
 
 Default value: **$r('sys.float.ohos_id_text_size_button2')**
 
-The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported.
+Optional values of the string type: a string that can be converted to a number (for example, '10') or a string with a length unit (for example, '10px'). Setting a percentage string is not supported.
 
-Invalid values are handled as default values.
+number: value range (0, +∞). When the type is number, the unit is fp.
+
+The default value is used when an abnormal value is set.
 
 **Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 

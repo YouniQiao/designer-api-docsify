@@ -4,7 +4,7 @@
 interface ParticlePropertyUpdaterConfigs<T>
 ```
 
-Defines the particle property updater configs. @interface ParticlePropertyUpdaterConfigs
+Sets the particle property updater configuration.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Defines the particle property updater configs. @interface ParticlePropertyUpdate
 [ParticleUpdater.CURVE]: Array<ParticlePropertyAnimation<T>>
 ```
 
-The property changes with the animation curve. The array type indicates that multiple animation segments can be set for the current property, for example, 0-3000 ms, 3000-5000 ms, and 5000-8000 ms. **T** represents a number.
+Configuration of property change when the change mode is curve. The array type indicates that multiple animation segments can be set for the current property, for example, **0ms-3000ms**, **3000ms-5000ms**, and **5000ms-8000ms**. **T** is number.
 
 **Type:** Array&lt;[ParticlePropertyAnimation](arkts-arkui-particle-comp-particlepropertyanimation-i.md)&lt;T&gt;&gt;
 
@@ -38,7 +38,7 @@ The property changes with the animation curve. The array type indicates that mul
 [ParticleUpdater.NONE]: void
 ```
 
-No effect of particle updater.
+No change.
 
 **Type:** void
 
@@ -58,19 +58,19 @@ No effect of particle updater.
 [ParticleUpdater.RANDOM]: ParticleTuple<T, T>
 ```
 
-The property changes randomly, with the per-second change difference being a value randomly generated from the range.
+When the change mode is random, the change difference per second is a value randomly generated within the configured range.
 
-The target property value is obtained by applying the change difference to the current property value. For example, if the current property value is **0.2** and **config** is set to **[0.1,1.0]**, then:
+The target property value is the current property value plus the change difference. For example, if the current property value is **0.2** and **config** is [0.1,1.0]:
 
-1. When the random change difference is 0.5, the target property value is 0.2 + 0.5 = 0.7.
-2. The change difference may also be a negative value. For example, if the current property
-value is **0.2** and **config** is set to **[-3.0,2.0]**, then when the random change difference is **-2.0**, the target property value is 0.2 - 2.0 = -1.8.
+1. If the change difference takes a random value 0.5 within the range [0.1,1.0], the target property value is 0.2 + 0.5 = 0.7.
+2. The change difference can also be negative. For example, if the current property value is 0.2 and **config** is [-3.0,2.0],
+and the change difference takes a random value -2.0 within the range [-3.0,2.0], the target property value is 0.2 - 2.0 = -1.8.
 
-**NOTE:** 
+**Note:** 
 
-**config** sets the value range of the change difference. While the change difference does not have a maximum or minimum value limit, the target property value does. Therefore, if the target property value is greater than the maximum property value, the maximum property value will be used instead; if the target property value is less than the minimum property value, the minimum property value will be used instead. **T** represents a number.
+**config** configures the value range of the change difference, and there is no constraint on the maximum and minimum values of the difference. However, if the current property value plus the difference is greater than the maximum property value, the target property value takes the maximum property value; if the current property value plus the difference is less than the minimum property value, the target property value takes the minimum property value. **T** is number.
 
-For example, if the value range of **opacity** is **[0.0, 1.0]**, then if the target property value is greater than 1.0, **1.0** will be used instead.
+For example, if the value range of **opacity** is [0.0,1.0], when the current property value plus the difference exceeds 1.0, 1.0 is used.
 
 **Type:** [ParticleTuple](arkts-arkui-particle-comp-particletuple-t.md)&lt;T, T&gt;
 

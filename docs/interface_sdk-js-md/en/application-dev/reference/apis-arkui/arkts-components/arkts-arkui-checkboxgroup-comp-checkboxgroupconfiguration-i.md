@@ -20,7 +20,7 @@ You must customize this class to implement the ContentModifier interface. For de
 name: string
 ```
 
-Name of the check box group.
+Name of the current check box group, used to identify and associate **Checkbox** with **CheckboxGroup**. When the value is the same as the **group** attribute of **Checkbox**, they are the same group.
 
 **Type:** string
 
@@ -60,7 +60,7 @@ Selected status of the check box group.
 triggerChange: Callback<boolean>
 ```
 
-Triggers a change in the selection state of the check box group. The value true indicates that the selected status changes from partially selected or unselected to fully selected, and the value false indicates that the selected status changes from fully selected or partially selected to unselected.
+Triggers a change in the selection state of the check box group. The value true indicates that the selected status changes from partially selected or unselected to fully selected, and the value false indicates that the selected status changes from fully selected or partially selected to fully unselected.
 
 **Type:** Callback&lt;boolean&gt;
 

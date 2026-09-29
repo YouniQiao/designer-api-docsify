@@ -46,7 +46,7 @@ Material enabling state.
 type: MaterialType
 ```
 
-Material type ID, indicating the material type corresponding to the current configuration. The value is used only for type identification and does not map to underlying features.
+System material type ID, indicating the material type corresponding to the current configuration. The value is used only for type identification and does not map to underlying features.
 
 **Type:** [MaterialType](arkts-arkui-uimaterial-materialtype-e.md)
 

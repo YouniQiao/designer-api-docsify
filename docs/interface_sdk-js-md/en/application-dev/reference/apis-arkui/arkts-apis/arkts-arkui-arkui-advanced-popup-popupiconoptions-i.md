@@ -24,9 +24,9 @@ import { Popup, PopupButtonOptions, PopupIconOptions, PopupOptions, PopupTextOpt
 borderRadius?: Length | BorderRadiuses
 ```
 
-Rounded corner of the icon.
+Icon corner radius. Unit: vp.
 
-Default value: **$r('sys.float.ohos_id_corner_radius_default_s')**
+Default value: `$r('sys.float.ohos_id_corner_radius_default_s')`
 
 **Type:** [Length](arkts-arkui-length-t.md) &#124; [BorderRadiuses](arkts-arkui-borderradiuses-t.md)
 
@@ -68,9 +68,9 @@ By default, the icon color is not changed.
 height?: Dimension
 ```
 
-Icon height.
+Icon height. Unit: vp.
 
-Default value: **32VP**
+Default value: **32vp**
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 
@@ -110,9 +110,9 @@ Icon content.
 width?: Dimension
 ```
 
-Icon width.
+Icon width. Unit: vp.
 
-Default value: **32VP**
+Default value: **32vp**
 
 **Type:** [Dimension](arkts-arkui-dimension-t.md)
 

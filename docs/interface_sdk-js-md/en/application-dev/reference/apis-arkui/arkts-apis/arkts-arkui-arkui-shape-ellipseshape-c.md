@@ -28,7 +28,7 @@ import { RectShape, CircleShape, EllipseShape, PathShape } from '@kit.ArkUI';
 constructor(options?: ShapeSize)
 ```
 
-A constructor used to create a **EllipseShape** object.
+A constructor used to create an **EllipseShape** object.
 
 **Since:** 12
 
@@ -46,4 +46,4 @@ A constructor used to create a **EllipseShape** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | Size of the shape. |
+| options | [ShapeSize](arkts-arkui-arkui-shape-shapesize-i.md) | No | Size of the shape, which is used to customize the width and height of the ellipse. If not specified, the default value of **width** and **height** is 0 vp. |

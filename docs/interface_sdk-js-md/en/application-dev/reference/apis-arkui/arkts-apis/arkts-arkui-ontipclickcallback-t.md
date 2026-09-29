@@ -4,7 +4,7 @@
 declare type OnTipClickCallback = () => void
 ```
 
-Declare the callback function type to be called when clicking the text on the left. @typedef { function } OnTipClickCallback
+Defines the callback function type for tapping the left-side tip text.
 
 **Since:** 26.0.0
 

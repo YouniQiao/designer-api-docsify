@@ -1,4 +1,4 @@
-# context_menu
+# context_menu(openMenu)
 
 ## Summary
 
@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [ContextMenu](arkts-arkui-contextmenu-c.md) | Defines Close contextMenu. |
+| [ContextMenu](arkts-arkui-contextmenu-c.md) | The [Menu](../../../ui/arkts-popup-and-menu-components-menu.md) component is a great option for creating menus, but it relies on a bound UI component to work. Since API version 18, however, the global API [openMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#openmenu) offers a more flexible solution. This API can be used directly or encapsulated in scenarios where no bound UI components are available, making it ideal for use cases such as event callbacks or when integrating with external systems. |
 
 ## Examples
 

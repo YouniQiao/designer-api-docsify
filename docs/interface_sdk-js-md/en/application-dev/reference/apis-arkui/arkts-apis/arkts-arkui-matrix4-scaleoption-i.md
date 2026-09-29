@@ -24,7 +24,7 @@ import { matrix4 } from '@kit.ArkUI';
 centerX?: number
 ```
 
-X-coordinate of the center point.
+X-coordinate of the transformation center.
 
 Unit: px
 
@@ -48,7 +48,7 @@ Value range: (-∞, +∞)
 centerY?: number
 ```
 
-Y-coordinate of the center point.
+Y-coordinate of the transformation center.
 
 Unit: px
 
@@ -72,7 +72,9 @@ Value range: (-∞, +∞)
 x?: number
 ```
 
-Scaling multiple along the x-axis. x &gt; 1: The image is scaled up along the x-axis.
+Scaling multiple along the x-axis. x = 1: No scaling is applied, and the original size is retained.
+
+x &gt; 1: The image is scaled up along the x-axis.
 
 0 &lt; x &lt; 1: The image is scaled down along the x-axis.
 
@@ -124,7 +126,9 @@ Value range: (-∞, +∞)
 z?: number
 ```
 
-Scaling multiple along the z-axis. z &gt; 1: The image is scaled up along the z-axis.
+Scaling multiple along the z-axis. z = 1: No scaling is applied, and the original size is retained.
+
+z &gt; 1: The image is scaled up along the z-axis.
 
 0 &lt; z &lt; 1: The image is scaled down along the z-axis.
 

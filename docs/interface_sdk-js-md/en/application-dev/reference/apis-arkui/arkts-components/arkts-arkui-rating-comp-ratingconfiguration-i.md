@@ -48,7 +48,7 @@ Default value: **0**
 
 Value range: [0, stars]
 
-Values less than 0 are treated as **0**, and values greater than the value of [stars](arkts-arkui-rating-comp-attribute.md#stars) are treated as the value of **stars**.
+If the value is less than 0, 0 is used. If the value is greater than the value of [stars](arkts-arkui-rating-comp-attribute.md#stars), the value of [stars](arkts-arkui-rating-comp-attribute.md#stars) is used.
 
 This parameter supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
@@ -72,9 +72,13 @@ This parameter supports two-way binding through [!!](../../../ui/state-managemen
 stars: number
 ```
 
-Total number of ratings.
+Total number of stars.
 
 Default value: **5**
+
+Value range: greater than 0. Values less than or equal to 0 are treated as the default value.
+
+This parameter also defines the maximum values of both **rating** and **stepSize**.
 
 **Type:** number
 
@@ -98,6 +102,8 @@ Step of an operation.
 
 Default value: **0.5**
 
+Value range: [0.1, stars]
+
 **Type:** number
 
 **Since:** 12
@@ -116,7 +122,7 @@ Default value: **0.5**
 triggerChange: Callback<number>
 ```
 
-Callback triggered when the rating value changes.
+Called when the rating value changes. The parameter is the new rating value.
 
 **Type:** Callback&lt;number&gt;
 

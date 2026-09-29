@@ -14,6 +14,8 @@ This component can contain child components only when **ToggleType** is set to *
 Toggle(options: ToggleOptions)
 ```
 
+Creates the Toggle component.
+
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.

@@ -4,7 +4,7 @@
 declare interface DepthComponentErrorEvent
 ```
 
-Information about the background resource loading error.
+Provides the event information about the background resource load failure.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Information about the background resource loading error.
 componentHeight: number
 ```
 
-Component height.
+Height of the component, in vp.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ Component height.
 componentWidth: number
 ```
 
-Component width.
+Width of the component, in vp.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ Component width.
 error?: BusinessError<void>
 ```
 
-Business Error.
+Error information of the load failure.
 
 **Type:** [BusinessError](arkts-arkui-image-comp-businesserror-t.md)&lt;void&gt;
 

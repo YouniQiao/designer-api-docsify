@@ -40,7 +40,7 @@ A constructor used to create an **ArcSliderValueOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | No | Constructor information for **ArcSliderValueOptions**. |
+| options | [ArcSliderValueOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcslidervalueoptionsconstructoroptions-i.md) | No | Construction information of **ArcSliderValueOptions**. When not passed in, each sub-attribute of **ArcSliderValueOptions** takes its default value. |
 
 ## max
 
@@ -54,11 +54,11 @@ Default value: **100**
 
 **NOTE:** 
 
-If the value of **min** is greater than or equal to that of **max**, **min** is set to **0** and **max** **100**.
+When an abnormal situation occurs where **min** &gt;= max, **min** takes the default value **0** and max takes the default value **100**.
 
-If the value is not within the [min, max] range, the value of **min** or **max** is used, whichever is closer.
+When progress is not within the range of [min, max], the nearest boundary value is taken: if **progress** is less than **min**, **min** is taken; if **progress** is greater than **max**, **max** is taken.
 
-@Trace
+**Decorator:*
 
 **Type:** number
 
@@ -84,7 +84,7 @@ Minimum value.
 
 Default value: **0**.
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** number
 
@@ -110,7 +110,7 @@ Current progress.
 
 Default value: same as the value of **min**.
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** number
 

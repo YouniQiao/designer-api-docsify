@@ -4,7 +4,7 @@
 declare class DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>
 ```
 
-Style the DepthComponent.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
 **Inheritance/Implementation:** DepthComponentAttribute extends CommonMethod<DepthComponentAttribute>
 

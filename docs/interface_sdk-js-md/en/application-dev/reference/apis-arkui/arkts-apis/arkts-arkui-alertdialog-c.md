@@ -4,6 +4,8 @@
 declare class AlertDialog
 ```
 
+Class for AlertDialog.
+
 **Since:** 7
 
 **Deprecated since:** 26.0.0

@@ -4,15 +4,13 @@
 declare interface VelocityOptions
 ```
 
-Defines velocity options.
+Particle velocity.
 
-*  
 > **NOTE:** 
-
 > 
 > To standardize anonymous object definitions, the element definitions here have been revised in API version 18.
-> While historical version information is preserved for anonymous objects, there may be cases where the outer
-> element's
+> While historical version information is preserved for anonymous objects, there may be cases where the outer element
+> 's
 
 **Since:** 18
 
@@ -26,7 +24,11 @@ Defines velocity options.
 angle: ParticleTuple<number, number>
 ```
 
-Direction (in angles) in which the particle moves, with the geometric center of the element as the coordinate origin and the horizontal direction as the x-axis. A positive number indicates clockwise rotation.
+Direction of velocity, in degrees (°). With the geometric center of the element as the coordinate origin and the horizontal direction as the X-axis, a positive value indicates a clockwise rotation angle.
+
+Default value: **{range:[0.0,0.0]}**
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ParticleTuple](arkts-arkui-particle-comp-particletuple-t.md)&lt;number, number&gt;
 
@@ -46,7 +48,11 @@ Direction (in angles) in which the particle moves, with the geometric center of 
 speed: ParticleTuple<number, number>
 ```
 
-Time rate at which the particle moves.
+Velocity magnitude.
+
+Default value: **{range:[0.0,0.0]}**
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [ParticleTuple](arkts-arkui-particle-comp-particletuple-t.md)&lt;number, number&gt;
 

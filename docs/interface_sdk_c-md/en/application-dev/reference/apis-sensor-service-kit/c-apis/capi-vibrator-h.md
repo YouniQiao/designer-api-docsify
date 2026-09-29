@@ -6,8 +6,6 @@ Declares the APIs for starting or stopping vibration. Two vibration modes are su
 
 **Library**: libohvibrator.z.so
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Since**: 11
 
 **Related module**: [Vibrator](capi-vibrator.md)
@@ -34,8 +32,6 @@ int32_t OH_Vibrator_PlayVibration(int32_t duration, Vibrator_Attribute attribute
 
 Configures the vibrator to vibrate continuously for a given duration. After the API is successfully called, the vibrator starts to vibrate immediately and automatically stops after the specified duration. This method is applicable to scenarios where the vibrator needs to vibrate for a fixed duration, such as alarm clock, timing reminder, game feedback, and message notification.
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Required permission**: ohos.permission.VIBRATE
 
 **Since**: 11
@@ -45,13 +41,13 @@ Configures the vibrator to vibrate continuously for a given duration. After the 
 | Parameter | Description |
 | -- | -- |
 | int32_t duration | Vibration duration, in milliseconds. It is used to control the duration of vibration. The value range is [1, 60000]. |
-| Vibrator_Attribute attribute | Vibration attribute, which is used to configure the vibration strength and mode. For details, see [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md). |
+| [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md) attribute | Vibration attribute, which is used to configure the vibration strength and mode. For details, see [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | If the operation is successful, 0 is returned. Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is      returned. Common error codes include:      <br>201: PERMISSION_DENIED (The permission verification failed);      <br>401: PARAMETER_ERROR (The parameter check fails);      <br>801: UNSUPPORTED (It is not supported on the device). |
+| int32_t | If the operation is successful, **0** is returned. Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is returned. Common error codes include: <br>**201**: **PERMISSION_DENIED** (The permission verification failed); <br>**401**: **PARAMETER_ERROR** (The parameter check fails); <br>**801**: **UNSUPPORTED** (It is not supported on the device). |
 
 **Reference**:
 
@@ -69,8 +65,6 @@ int32_t OH_Vibrator_PlayVibrationCustom(Vibrator_FileDescription fileDescription
 
 Configures the vibrator to vibrate with the custom sequence. After the API is successfully called, the system plays the vibration effect based on the custom vibration sequence. This method is applicable to scenarios that require complex vibration patterns, such as notification reminders, games, and tactile feedback, to provide personalized vibration experiences and enhance user immersion.
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Required permission**: ohos.permission.VIBRATE
 
 **Since**: 11
@@ -79,14 +73,14 @@ Configures the vibrator to vibrate with the custom sequence. After the API is su
 
 | Parameter | Description |
 | -- | -- |
-| Vibrator_FileDescription fileDescription | File descriptor of the custom vibration effect, which specifies the location and range of the file that contains the vibration sequence data. You can play a custom vibration effect by setting the file handle, offset address, and length. For details, see [Vibrator_FileDescription](capi-vibrator-vibrator-filedescription.md). |
-| Vibrator_Attribute vibrateAttribute | Vibration attribute, which is used to control the strength and frequency of the custom vibration effect. For details, see [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md). |
+| [Vibrator_FileDescription](capi-vibrator-vibrator-filedescription.md) fileDescription | File descriptor of the custom vibration effect, which specifies the location and range of the file that contains the vibration sequence data. You can play a custom vibration effect by setting the file handle, offset address, and length. For details, see [Vibrator_FileDescription](capi-vibrator-vibrator-filedescription.md). |
+| [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md) vibrateAttribute | Vibration attribute, which is used to control the strength and frequency of the custom vibration effect. For details, see [Vibrator_Attribute](capi-vibrator-vibrator-attribute.md). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | If the operation is successful, 0 is returned.      <br>Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is returned.      <br>If the parameters are incorrect, check whether the values of fileDescription and       vibrateAttribute are valid. If the device does not support vibration, check the device capability. For details      about the error codes, see [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode). |
+| int32_t | If the operation is successful, **0** is returned. <br>Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is returned. <br>If the parameters are incorrect, check whether the values of **fileDescription** and ** vibrateAttribute** are valid. If the device does not support vibration, check the device capability. For details about the error codes, see [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode). |
 
 **Reference**:
 
@@ -103,8 +97,6 @@ int32_t OH_Vibrator_Cancel()
 
 Stops the vibration. After the API is successfully called, the ongoing vibration or custom vibration sequence is stopped immediately. This method is applicable to scenarios where vibration needs to be stopped immediately, such as when a user cancels an operation, switches between apps, or clears a system notification. It helps optimize user experience and reduce device power consumption.
 
-**System capability**: SystemCapability.Sensors.MiscDevice
-
 **Required permission**: ohos.permission.VIBRATE
 
 **Since**: 11
@@ -113,6 +105,6 @@ Stops the vibration. After the API is successfully called, the ongoing vibration
 
 | Type | Description |
 | -- | -- |
-| int32_t | If the operation is successful, 0 is returned. Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is      returned. For details about the possible causes and solutions, see the table below. |
+| int32_t | If the operation is successful, **0** is returned. Otherwise, an error code in [Vibrator_ErrorCode](capi-vibrator-type-h.md#vibrator_errorcode) is returned. For details about the possible causes and solutions, see the table below. |
 
 

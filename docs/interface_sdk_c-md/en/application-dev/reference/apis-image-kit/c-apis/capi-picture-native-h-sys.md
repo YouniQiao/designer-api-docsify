@@ -6,8 +6,6 @@ The file declares the APIs for obtaining picture data and information.
 
 **Library**: libpicture.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 13
 
 **System API:** This is a system API.
@@ -49,9 +47,9 @@ Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, ui
 
 Creates an OH_AuxiliaryPictureNative object with a specified memory type. By default, the system selects the memory type based on the image type, image size, platform capability, and other factors. When processing the auxiliary picture returned by this API, always consider the impact of stride. If **data** is null or **dataLength**<br>is less than or equal to 0, the auxiliary picture will not be initialized.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
+
+**Resource release**: picture_native/OH_AuxiliaryPictureNative_Release {auxiliaryPicture}
 
 **System API:** This is a system API.
 
@@ -62,14 +60,14 @@ Creates an OH_AuxiliaryPictureNative object with a specified memory type. By def
 | uint8_t *data | Pointer to the image data. |
 | uint32_t dataLength | Length of the image data. |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | Pointer to the basic information of the auxiliary picture. |
-| IMAGE_ALLOCATOR_MODE allocator | Memory type used by the auxiliary picture. For details about the available options, see [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). |
+| [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode) allocator | Memory type used by the auxiliary picture. For details about the available options, see [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). |
 | [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) **auxiliaryPicture | Double pointer to the OH_AuxiliaryPictureNative object created. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>202 if a non-system application calls this system API.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info or auxiliaryPicture is nullptr, or allocator is invalid,          or the size is invalid, or the type is unsupported, or dataLength is smaller than required.</li>          <li>[IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE](capi-image-common-h.md#image_errorcode) unsupported allocator type,          e.g., use share memory create a gainmap as only DMA supported hdr metadata.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>202 if a non-system application calls this system API.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) info or auxiliaryPicture is nullptr, or allocator is invalid, or the size is invalid, or the type is unsupported, or dataLength is smaller than required.</li> <li>[IMAGE_SOURCE_UNSUPPORTED_ALLOCATOR_TYPE](capi-image-common-h.md#image_errorcode) unsupported allocator type, e.g., use share memory create a gainmap as only DMA supported hdr metadata.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li> </ul> |
 
 ### OH_DecomposeOptions_Create()
 
@@ -81,9 +79,9 @@ Image_ErrorCode OH_DecomposeOptions_Create(OH_DecomposeOptions **outOwnedOptions
 
 Creates an OH_DecomposeOptions object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
+
+**Resource release**: picture_native/OH_DecomposeOptions_Release {outOwnedOptions}
 
 **System API:** This is a system API.
 
@@ -97,7 +95,7 @@ Creates an OH_DecomposeOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) outOwnedOptions is nullptr.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) outOwnedOptions is nullptr.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_DecomposeOptions_SetIsFullSizeGainmap()
 
@@ -108,8 +106,6 @@ Image_ErrorCode OH_DecomposeOptions_SetIsFullSizeGainmap(OH_DecomposeOptions *op
 **Description**
 
 Sets whether to generate a full-size gainmap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -126,7 +122,7 @@ Sets whether to generate a full-size gainmap.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_DecomposeOptions_GetIsFullSizeGainmap()
 
@@ -137,8 +133,6 @@ Image_ErrorCode OH_DecomposeOptions_GetIsFullSizeGainmap(OH_DecomposeOptions *op
 **Description**
 
 Gets whether to generate a full-size gainmap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -155,7 +149,7 @@ Gets whether to generate a full-size gainmap.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or isFullSizeGainmap is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or isFullSizeGainmap is nullptr.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_DecomposeOptions_SetDesiredPixelFormat()
 
@@ -166,8 +160,6 @@ Image_ErrorCode OH_DecomposeOptions_SetDesiredPixelFormat(OH_DecomposeOptions *o
 **Description**
 
 Sets the desired pixel format of the SDR pixel map generated after HDR decomposition.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -184,7 +176,7 @@ Sets the desired pixel format of the SDR pixel map generated after HDR decomposi
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) desiredPixelFormat is not supported.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li> <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) desiredPixelFormat is not supported.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_DecomposeOptions_GetDesiredPixelFormat()
 
@@ -195,8 +187,6 @@ Image_ErrorCode OH_DecomposeOptions_GetDesiredPixelFormat(OH_DecomposeOptions *o
 **Description**
 
 Gets the desired pixel format of the SDR pixel map generated after HDR decomposition.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -213,7 +203,7 @@ Gets the desired pixel format of the SDR pixel map generated after HDR decomposi
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredPixelFormat is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options or desiredPixelFormat is nullptr.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_DecomposeOptions_Release()
 
@@ -224,8 +214,6 @@ Image_ErrorCode OH_DecomposeOptions_Release(OH_DecomposeOptions *options)
 **Description**
 
 Releases an OH_DecomposeOptions object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -241,7 +229,7 @@ Releases an OH_DecomposeOptions object.
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) options is nullptr.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_PictureNative_DecomposeToPicture()
 
@@ -253,9 +241,9 @@ Image_ErrorCode OH_PictureNative_DecomposeToPicture(OH_PixelmapNative *hdrPixelm
 
 Decomposes an HDR pixel map into a Picture object which contains an SDR pixel map and a gainmap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
+
+**Resource release**: picture_native/OH_PictureNative_Release {outOwnedPicture}
 
 **System API:** This is a system API.
 
@@ -263,7 +251,7 @@ Decomposes an HDR pixel map into a Picture object which contains an SDR pixel ma
 
 | Parameter | Description |
 | -- | -- |
-| OH_PixelmapNative *hdrPixelmap | The HDR pixel map to be decomposed. |
+| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *hdrPixelmap | The HDR pixel map to be decomposed. |
 | [OH_DecomposeOptions](capi-image-nativemodule-oh-decomposeoptions-sys.md) *options | Options used to control HDR decomposition. This parameter is mandatory. |
 | [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) **outOwnedPicture | Pointer to the created Picture object. |
 
@@ -271,7 +259,7 @@ Decomposes an HDR pixel map into a Picture object which contains an SDR pixel ma
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li><br>        <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) hdrPixelmap, options, or outOwnedPicture is nullptr.</li><br>        <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) the pixel map is not supported for decomposition.</li><br>        <li>{@link IMAGE_DECOMPOSE_FAILED} the decomposition process failed.</li><br>        <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li>          <li>202 if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) hdrPixelmap, options, or outOwnedPicture is nullptr.</li> <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) the pixel map is not supported for decomposition.</li> <li>IMAGE_DECOMPOSE_FAILED the decomposition process failed.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) memory allocation failed.</li> <li>202 if a non-system application calls this system API.</li> </ul> |
 
 ### OH_PictureNative_ConvertPictureNativeToNapi()
 
@@ -282,8 +270,6 @@ Image_ErrorCode OH_PictureNative_ConvertPictureNativeToNapi(napi_env env, OH_Pic
 **Description**
 
 Converts an [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) object to an ArkTS <b>Picture</b> object represented by a napi_value. The returned ArkTS Picture object holds its own strong reference to the same underlying Picture as pictureNative. This function does not copy the main image, auxiliary pictures, or metadata.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.1
 
@@ -301,7 +287,7 @@ Converts an [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) obje
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the conversion is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if env, pictureNative, or outPictureNapi is nullptr.</li>          <li>[IMAGE_UNKNOWN_ERROR](capi-image-common-h.md#image_errorcode) if creation of the ArkTS Picture object fails.</li>          <li>[OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION](capi-image-common-h.md#image_errorcode) if system API is called by a non-system application.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the conversion is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if env, pictureNative, or outPictureNapi is nullptr.</li> <li>[IMAGE_UNKNOWN_ERROR](capi-image-common-h.md#image_errorcode) if creation of the ArkTS Picture object fails.</li> <li>[OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION](capi-image-common-h.md#image_errorcode) if system API is called by a non-system application.</li> </ul> |
 
 ### OH_PictureNative_ConvertPictureNativeFromNapi()
 
@@ -313,9 +299,9 @@ Image_ErrorCode OH_PictureNative_ConvertPictureNativeFromNapi(napi_env env, napi
 
 Converts an ArkTS <b>Picture</b> object represented by a napi_value to an [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) object. The returned OH_PictureNative object and pictureNapi share the same underlying Picture object. This function does not copy the main image, auxiliary pictures, or metadata.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.1
+
+**Resource release**: picture_native/OH_PictureNative_Release {outOwnedPictureNative}
 
 **System API:** This is a system API.
 
@@ -331,6 +317,6 @@ Converts an ArkTS <b>Picture</b> object represented by a napi_value to an [OH_Pi
 
 | Type | Description |
 | -- | -- |
-| Image_ErrorCode | <ul>          <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li>          <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if env, pictureNapi, or outOwnedPictureNative is nullptr,          pictureNapi is not an ArkTS Picture object, or the ArkTS Picture object has been released.</li>          <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) if memory allocation fails.</li>          <li>[IMAGE_UNKNOWN_ERROR](capi-image-common-h.md#image_errorcode) if an N-API operation fails while inspecting pictureNapi in env.</li>          <li>[OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION](capi-image-common-h.md#image_errorcode) if a non-system application calls this system API.</li>          </ul> |
+| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if env, pictureNapi, or outOwnedPictureNative is nullptr, pictureNapi is not an ArkTS Picture object, or the ArkTS Picture object has been released.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) if memory allocation fails.</li> <li>[IMAGE_UNKNOWN_ERROR](capi-image-common-h.md#image_errorcode) if an N-API operation fails while inspecting pictureNapi in env.</li> <li>[OH_IMAGE_ERROR_NOT_SYSTEM_APPLICATION](capi-image-common-h.md#image_errorcode) if a non-system application calls this system API.</li> </ul> |
 
 

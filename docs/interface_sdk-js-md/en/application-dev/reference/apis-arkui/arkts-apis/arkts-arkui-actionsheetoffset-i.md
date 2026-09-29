@@ -4,7 +4,7 @@
 interface ActionSheetOffset
 ```
 
-Alignment mode of the dialog box.
+Defines the offset of the dialog box relative to the position of **alignment**.
 
 **Since:** 18
 
@@ -18,13 +18,13 @@ Alignment mode of the dialog box.
 dx: number | string | Resource
 ```
 
-Offset of the action sheet along the x-axis relative to the alignment position.
+Offset of the dialog box relative to the alignment position on the x-axis.
 
-Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
+A pixel unit can be specified, for example, '10px', or a percentage string can be set, for example, '100%'.
 
 **NOTE:** 
 
-If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
+When no pixel unit is specified, the default unit is vp. For example, '10' is equivalent to '10vp'.
 
 **Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 
@@ -44,13 +44,13 @@ If the unit is not specified, the default unit vp is used, in which case **'10'*
 dy: number | string | Resource
 ```
 
-Offset of the action sheet along the y-axis relative to the alignment position.
+Offset of the dialog box relative to the alignment position on the y-axis.
 
-Explicitly specify the length unit explicitly, for example, **'10px'**, or provide the length in percentage, for example, **'100%'**.
+A pixel unit can be specified, for example, '10px', or a percentage string can be set, for example, '100%'.
 
 **NOTE:** 
 
-If the unit is not specified, the default unit vp is used, in which case **'10'** is equivalent to **10**.
+When no pixel unit is specified, the default unit is vp. For example, '10' is equivalent to '10vp'.
 
 **Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 

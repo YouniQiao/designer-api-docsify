@@ -25,7 +25,7 @@
   - [WindowExtensionAbility(system api)](arkts-arkui-application-windowextensionability-windowextensionability-c-sys.md)<!--DelEnd-->
   <!--Del-->
   - [WindowExtensionContext(system api)](arkts-arkui-windowextensioncontext-t-sys.md)<!--DelEnd-->
-- [@ohos.arkui.advanced.ArcButton(Defines the arc button component)](arkts-arkui-arkui-advanced-arcbutton.md)
+- [@ohos.arkui.advanced.ArcButton(ArcButton)](arkts-arkui-arkui-advanced-arcbutton.md)
   - [ArcButtonOptions](arkts-arkui-arkui-advanced-arcbutton-arcbuttonoptions-c.md)
   - [ArcButtonProgressConfig](arkts-arkui-arkui-advanced-arcbutton-arcbuttonprogressconfig-c.md)
   - [ArcButton](arkts-arkui-arkui-advanced-arcbutton-arcbutton-s.md)
@@ -177,7 +177,7 @@
   - [DateMode](arkts-arkui-arkui-advanced-datepickercomponent-datemode-e.md)
   - [DisplayMode](arkts-arkui-arkui-advanced-datepickercomponent-displaymode-e.md)
   - [TimeFormat](arkts-arkui-arkui-advanced-datepickercomponent-timeformat-e.md)
-- [@ohos.arkui.advanced.Dialog](arkts-arkui-arkui-advanced-dialog.md)
+- [@ohos.arkui.advanced.Dialog(Dialog)](arkts-arkui-arkui-advanced-dialog.md)
   - [ButtonOptions](arkts-arkui-arkui-advanced-dialog-buttonoptions-c.md)
   - [AlertDialog](arkts-arkui-arkui-advanced-dialog-alertdialog-s.md)
   - [ConfirmDialog](arkts-arkui-arkui-advanced-dialog-confirmdialog-s.md)
@@ -1439,7 +1439,7 @@
   - [PersistPropsOptions](arkts-arkui-persistpropsoptions-i.md)
   <!--Del-->
   - [Constants(system api)](arkts-arkui-commontsetsapi-con-sys.md)<!--DelEnd-->
-- [context_menu](arkts-arkui-contextmenu.md)
+- [context_menu(openMenu)](arkts-arkui-contextmenu.md)
   - [ContextMenu](arkts-arkui-contextmenu-c.md)
 - [custom_dialog_controller(CustomDialog)](arkts-arkui-customdialogcontroller.md)
   - [CustomDialogController](arkts-arkui-customdialogcontroller-c.md)

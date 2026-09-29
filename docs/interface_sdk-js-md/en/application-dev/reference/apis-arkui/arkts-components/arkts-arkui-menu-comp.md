@@ -1,6 +1,6 @@
 # Menu
 
-The **Menu** component is a vertical list of items presented to the user.
+The **Menu** component is a vertical list of items presented to the user. It supports menu items, submenus, icons, and separators, which can be used to display operation options and feature entries.
 
 > **NOTE:** 
 > 
@@ -10,7 +10,7 @@ The **Menu** component is a vertical list of items presented to the user.
 
 ## Child Components
 
-This component contains the MenuItem and MenuItemGroup child components.
+This component contains the [MenuItem](arkts-arkui-menuitem-comp.md) and [MenuItemGroup](arkts-arkui-menuitemgroup-comp.md) child components.
 
 ## Menu
 
@@ -24,25 +24,18 @@ Creates a fixed container for a menu. This API does not have any parameters.
 > 
 > - Rules for calculating the width of menus and menu items:
 > 
+> - During the layout, the width of each menu item is expected to be the same. If a child component has its width set, [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) prevails.
 > 
-> 
-> - During the layout, the width of each menu item is expected to be the same. If a child component has its width set, the [size calculation rule](arkts-arkui-common-comp-commonmethod-c.md#constraintsize) prevails.
-> 
-> 
-> 
-> - If no width is set for the **Menu** component, it applies a default two-column width to the **MenuItem**and **MenuItemGroup** child components. If a menu item's content area exceeds the two-column width, the
-> **Menu** component automatically expands the menu item's content area.
-> 
-> 
+> - If no width is set for the **Menu** component, it applies a default two-column width to the **MenuItem** and
+> **MenuItemGroup** child components. If a menu item's content area exceeds the two-column width, the **Menu**
+> component automatically expands the menu item's content area.
 > 
 > - When an explicit width is set for the **Menu** component, its child components **MenuItem** and
 > **MenuItemGroup** adopt a fixed width (equal to the **Menu** component's configured width minus the padding).
 > 
-> 
-> 
 > - The minimum width is 64 vp.
 > 
-> - Universal attributes unsupported by **Menu**: outline attributes and the [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow) attribute
+> - Common attributes that are not supported by **Menu** include the following: attributes [Outline Styling](arkts-arkui-common-comp.md) and the [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow) attribute.
 
 **Since:** 9
 

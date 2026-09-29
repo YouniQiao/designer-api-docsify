@@ -4,7 +4,7 @@
 declare type ArcSliderTouchHandler = (event: TouchEvent) => void
 ```
 
-Defines the callback invoked to notify the application when the arc slider is touched.
+Triggered when the arc slider is touched.
 
 **Since:** 18
 

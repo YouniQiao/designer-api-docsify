@@ -4,7 +4,7 @@
 enum ImmersiveStyle
 ```
 
-Enumerates immersive material styles. Different material styles correspond to different material parameters, including the blur degree and brightness.
+Enumerates the material styles. The enum values suffixed with EC are set on [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md), and those suffixed with EC_SUB are set on the child components of EffectComponent. The two work together to achieve merged optimization of material effect rendering. The material blur set on EffectComponent will ultimately take effect on its child components. Different material styles correspond to different material parameters, mainly including the blur level and highlight effect of the material. For details, see [ImmersiveStyle](arkts-arkui-uimaterial-immersivestyle-e.md).
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 declare enum SelectStatus
 ```
 
-Enumerates the selection states of check boxes in the check box group.
+Enumerates the selected states of check boxes in the check box group.
 
 **Since:** 8
 
@@ -58,7 +58,7 @@ Some check boxes in the group are selected.
 None
 ```
 
-None of the check boxes in the group are selected.
+No check box in the group is selected.
 
 **Since:** 8
 

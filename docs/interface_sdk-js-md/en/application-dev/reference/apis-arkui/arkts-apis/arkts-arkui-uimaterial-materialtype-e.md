@@ -4,7 +4,7 @@
 enum MaterialType
 ```
 
-Enumerates system material types.
+Enumerates the system material types. This section contains only the system APIs of this module. For other public types, see [MaterialType](arkts-arkui-uimaterial-materialtype-e.md).
 
 **Since:** 26.0.0
 

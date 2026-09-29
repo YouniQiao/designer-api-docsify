@@ -4,9 +4,7 @@
 declare interface RippleFieldOptions
 ```
 
-Defines ripple field options.
-
-@interface RippleFieldOptions
+Defines the parameters used to describe the particle ripple field information.
 
 **Since:** 22
 

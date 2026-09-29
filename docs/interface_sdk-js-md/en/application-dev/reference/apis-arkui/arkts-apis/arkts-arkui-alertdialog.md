@@ -6,7 +6,7 @@
 
 | Name | Description |
 | --- | --- |
-| [AlertDialog](arkts-arkui-alertdialog-c.md) |  |
+| [AlertDialog](arkts-arkui-alertdialog-c.md) | Class for AlertDialog. |
 
 ### Interfaces
 
@@ -33,7 +33,7 @@
 
 | Name | Description |
 | --- | --- |
-| [LevelOrder](arkts-arkui-levelorder-t.md) | Defines the display order of the dialog box. |
+| [LevelOrder](arkts-arkui-levelorder-t.md) | Import the LevelOrder type from promptAction. |
 
 ### Enums
 

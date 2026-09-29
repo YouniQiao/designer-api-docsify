@@ -98,6 +98,7 @@ import { relationalStore } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
+| [Asset](arkts-arkdata-relationalstore-asset-i-sys.md) | Represents the asset (such as a document, image, or video). |
 | [CloudSyncConfig](arkts-arkdata-relationalstore-cloudsyncconfig-i-sys.md) | Cloud sync configuration. |
 | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i-sys.md) | Defines a struct for distributed configuration of a table. |
 | [DistributedInfo](arkts-arkdata-relationalstore-distributedinfo-i-sys.md) | Manages the distributed info of the table. |

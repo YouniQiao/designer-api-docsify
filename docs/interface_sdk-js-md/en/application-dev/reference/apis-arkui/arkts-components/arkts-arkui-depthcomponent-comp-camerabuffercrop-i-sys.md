@@ -4,7 +4,7 @@
 declare interface CameraBufferCrop
 ```
 
-Camera buffer crop parameters.
+Provides camera buffer crop parameters.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Camera buffer crop parameters.
 bufferHeight: number
 ```
 
-Camera off-screen rendering buffer height.
+Height of the base image, in pixels. Ensure that the height of the input image is consistent with the actual image height; otherwise, display exceptions such as position offset may occur.
 
 **Type:** number
 
@@ -42,7 +42,7 @@ Camera off-screen rendering buffer height.
 bufferWidth: number
 ```
 
-Camera off-screen rendering buffer width.
+Width of the base image, in pixels. Ensure that the width of the input image is consistent with the actual image width; otherwise, display exceptions such as position offset may occur.
 
 **Type:** number
 
@@ -64,7 +64,7 @@ Camera off-screen rendering buffer width.
 cropOffset: CropOffset
 ```
 
-Crop frame offset relative to buffer top-left corner.
+Crop offset.
 
 **Type:** [CropOffset](arkts-arkui-depthcomponent-comp-cropoffset-i-sys.md)
 
@@ -86,7 +86,7 @@ Crop frame offset relative to buffer top-left corner.
 cropScale: number
 ```
 
-Crop frame scale relative to depth component size.
+Scale factor of the crop area. The base size of the crop area is the size of the **DepthComponent** component.
 
 **Type:** number
 

@@ -4,9 +4,7 @@
 declare enum ParticleEmitterShape
 ```
 
-Enumerates the emitter shapes of a particle.
-
-@enum { string }
+Particle emitter shape.
 
 **Since:** 10
 
@@ -20,7 +18,7 @@ Enumerates the emitter shapes of a particle.
 RECTANGLE = 'rectangle'
 ```
 
-Rectangle.
+The particle emitter is a rectangle.
 
 **Since:** 10
 
@@ -38,7 +36,7 @@ Rectangle.
 CIRCLE = 'circle'
 ```
 
-Circle.
+The particle emitter is a circle.
 
 **Since:** 10
 
@@ -56,7 +54,7 @@ Circle.
 ELLIPSE = 'ellipse'
 ```
 
-Ellipse.
+The particle emitter is an ellipse.
 
 **Since:** 10
 
@@ -74,7 +72,7 @@ Ellipse.
 ANNULUS = 'annulus'
 ```
 
-Annulus.
+The particle emitter is an annulus. When this shape is used, the **annulusRegion** parameter must be configured, and the **position** and **size** parameters do not take effect.
 
 **Since:** 20
 

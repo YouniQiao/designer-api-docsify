@@ -4,9 +4,7 @@
 declare type SizeT<T> = import('../api/arkui/Graphics').SizeT<T>
 ```
 
-Defines the SizeT type.
-
-@typedef { import('../api/arkui/Graphics').SizeT&lt;T&gt; }
+Defines the Size type.
 
 **Since:** 12
 

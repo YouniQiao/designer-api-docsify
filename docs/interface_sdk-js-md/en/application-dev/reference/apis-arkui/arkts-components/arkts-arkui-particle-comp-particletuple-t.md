@@ -4,9 +4,7 @@
 declare type ParticleTuple<T1, T2> = [T1, T2]
 ```
 
-Defines a pair of given type for particle.
-
-@typedef { [T1, T2] } ParticleTuple
+Defines the particle tuple, which defines the type of animation parameter configuration value pairs.
 
 **Since:** 18
 

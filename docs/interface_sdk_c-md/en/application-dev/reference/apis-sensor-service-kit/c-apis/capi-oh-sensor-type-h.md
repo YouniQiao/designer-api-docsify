@@ -6,8 +6,6 @@ Declares the common sensor attributes.
 
 **Library**: libohsensor.so
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Related module**: [Sensor](capi-sensor.md)
@@ -82,7 +80,7 @@ Declares the common sensor attributes.
 
 | Name | Description |
 | -- | -- |
-| void (*Sensor_EventCallback)(Sensor_Event *event) | Defines the callback function used to report sensor data.<br>**Since**: 11 |
+| void (*Sensor_EventCallback)(Sensor_Event *event) | Defines the callback function used to report sensor data.<br>**Since**: 11<br>**System capability**: SystemCapability.Sensors.Sensor |
 
 ## Enum type description
 
@@ -95,8 +93,6 @@ enum Sensor_Type
 **Description**
 
 Enumerates the sensor types.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -128,8 +124,6 @@ enum Sensor_Result
 
 Enumerates the sensor result codes.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 | Enum item | Description |
@@ -148,8 +142,6 @@ enum Sensor_Accuracy
 **Description**
 
 Enumerates the accuracy levels of data reported by a sensor.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -173,8 +165,6 @@ Sensor_Info **OH_Sensor_CreateInfos(uint32_t count)
 
 Creates an instance array using a given number. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After the instance is successfully created, a pointer to the array of **count** **Sensor_Info** instances is returned. <br>After the instance array created by calling this function is used, you must call **OH_Sensor_DestroyInfos()** to destroy the instance array and reclaim the memory. Otherwise, resource leak may occur.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -187,7 +177,7 @@ Creates an instance array using a given number. For details, see [Sensor_Info](c
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Info **](capi-sensor-sensor-info.md) | Double pointer to the [Sensor_Info](capi-sensor-sensor-info.md) instance array if the operation is successful. The array contains       count Sensor_Info instances for storing sensor information. Otherwise, NULL is returned. |
+| [Sensor_Info **](capi-sensor-sensor-info.md) | Double pointer to the [Sensor_Info](capi-sensor-sensor-info.md) instance array if the operation is successful. The array contains * *count** **Sensor_Info** instances for storing sensor information. Otherwise, **NULL** is returned. |
 
 ### OH_Sensor_DestroyInfos()
 
@@ -198,8 +188,6 @@ int32_t OH_Sensor_DestroyInfos(Sensor_Info **sensors, uint32_t count)
 **Description**
 
 Destroys the instance array and reclaims the memory. For details, see [Sensor_Info](capi-sensor-sensor-info.md). After this API is successfully called, the memory occupied by the instance array is released, and the **sensors** pointer and all **<br>Sensor_Info** instances to which the pointer points can no longer be used.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -214,7 +202,7 @@ Destroys the instance array and reclaims the memory. For details, see [Sensor_In
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that all      instances have been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that all instances have been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetName()
 
@@ -225,8 +213,6 @@ int32_t OH_SensorInfo_GetName(Sensor_Info* sensor, char *sensorName, uint32_t *l
 **Description**
 
 Obtains the sensor name. After the sensor name is obtained, the **sensorName** parameter is filled with the sensor name string, and the **length** parameter returns the length of the string (including the terminator).
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -242,7 +228,7 @@ Obtains the sensor name. After the sensor name is obtained, the **sensorName** p
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetVendorName()
 
@@ -253,8 +239,6 @@ int32_t OH_SensorInfo_GetVendorName(Sensor_Info* sensor, char *vendorName, uint3
 **Description**
 
 Obtains the sensor's vendor name. After the vendor name is obtained, the **vendorName** parameter is filled with the sensor vendor name string, and the **length** parameter returns the length of the string (including the terminator).
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -270,7 +254,7 @@ Obtains the sensor's vendor name. After the vendor name is obtained, the **vendo
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      vendor sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the vendor sensor name has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetType()
 
@@ -281,8 +265,6 @@ int32_t OH_SensorInfo_GetType(Sensor_Info* sensor, Sensor_Type *sensorType)
 **Description**
 
 Obtains the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type). After the sensor type is obtained, the **sensorType** parameter is filled with the sensor type value.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -297,7 +279,7 @@ Obtains the [Sensor_Type](capi-oh-sensor-type-h.md#sensor_type). After the senso
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetResolution()
 
@@ -308,8 +290,6 @@ int32_t OH_SensorInfo_GetResolution(Sensor_Info* sensor, float *resolution)
 **Description**
 
 Obtains the sensor resolution. After the sensor resolution is obtained, the **resolution** parameter is filled with the sensor resolution value.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -324,7 +304,7 @@ Obtains the sensor resolution. After the sensor resolution is obtained, the **re
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor resolution has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor resolution has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetMinSamplingInterval()
 
@@ -335,8 +315,6 @@ int32_t OH_SensorInfo_GetMinSamplingInterval(Sensor_Info* sensor, int64_t *minSa
 **Description**
 
 Obtains the minimum data reporting interval of a sensor. After the interval is obtained, the **<br>minSamplingInterval** parameter is filled with the minimum data reporting interval of the sensor, in nanoseconds.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -351,7 +329,7 @@ Obtains the minimum data reporting interval of a sensor. After the interval is o
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      minimum data reporting interval has been successfully obtained. Otherwise, the error code defined in      [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the minimum data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorInfo_GetMaxSamplingInterval()
 
@@ -362,8 +340,6 @@ int32_t OH_SensorInfo_GetMaxSamplingInterval(Sensor_Info* sensor, int64_t *maxSa
 **Description**
 
 Obtains the maximum data reporting interval of a sensor. After the interval is obtained, the **<br>maxSamplingInterval** parameter is filled with the maximum data reporting interval of the sensor, in nanoseconds.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -378,7 +354,7 @@ Obtains the maximum data reporting interval of a sensor. After the interval is o
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      maximum data reporting interval has been successfully obtained. Otherwise, the error code defined in      [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the maximum data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorEvent_GetType()
 
@@ -389,8 +365,6 @@ int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorTyp
 **Description**
 
 Obtains the sensor type.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -405,7 +379,7 @@ Obtains the sensor type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor event type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor event type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorEvent_GetTimestamp()
 
@@ -416,8 +390,6 @@ int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestam
 **Description**
 
 Obtains the timestamp of sensor data.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -432,7 +404,7 @@ Obtains the timestamp of sensor data.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      timestamp has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the timestamp has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorEvent_GetAccuracy()
 
@@ -443,8 +415,6 @@ int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *a
 **Description**
 
 Obtains the accuracy of sensor data.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -459,7 +429,7 @@ Obtains the accuracy of sensor data.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor data accuracy has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result)      is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data accuracy has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorEvent_GetData()
 
@@ -487,8 +457,6 @@ Obtains sensor data. The data length and content depend on the sensor type. The 
 \| SENSOR_TYPE_LINEAR_ACCELERATION \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the linear acceleration around the x, y, and z axes of a device, respectively, in m/s².\|
 \| SENSOR_TYPE_GAME_ROTATION_VECTOR \| This parameter is available since API version 13. **data[0]**, **data[1]**, and **data[2]** indicate the rotation angles of a device around the x, y, and z axes, respectively, in degree. **data[3]** indicates the rotation vector.\|
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
@@ -503,7 +471,7 @@ Obtains sensor data. The data length and content depend on the sensor type. The 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor data has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_Sensor_CreateSubscriptionId()
 
@@ -515,15 +483,13 @@ Sensor_SubscriptionId *OH_Sensor_CreateSubscriptionId(void)
 
 Creates a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriptionId()**<br>to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Sensor_SubscriptionId *](capi-sensor-sensor-subscriptionid.md) | Pointer to the [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance (which can be used to identify sensor subscription) if      the operation is successful; NULL otherwise. |
+| [Sensor_SubscriptionId *](capi-sensor-sensor-subscriptionid.md) | Pointer to the [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance (which can be used to identify sensor subscription) if the operation is successful; **NULL** otherwise. |
 
 ### OH_Sensor_DestroySubscriptionId()
 
@@ -534,8 +500,6 @@ int32_t OH_Sensor_DestroySubscriptionId(Sensor_SubscriptionId *id)
 **Description**
 
 Destroys a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instance and reclaims the memory.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -549,7 +513,7 @@ Destroys a [Sensor_SubscriptionId](capi-sensor-sensor-subscriptionid.md) instanc
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      instance ID has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the instance ID has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriptionId_GetType()
 
@@ -560,8 +524,6 @@ int32_t OH_SensorSubscriptionId_GetType(Sensor_SubscriptionId* id, Sensor_Type *
 **Description**
 
 Obtains the sensor type.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -576,7 +538,7 @@ Obtains the sensor type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor subscription type has been successfully obtained. Otherwise, the error code defined in      [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor subscription type has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriptionId_SetType()
 
@@ -587,8 +549,6 @@ int32_t OH_SensorSubscriptionId_SetType(Sensor_SubscriptionId* id, const Sensor_
 **Description**
 
 Sets the sensor type. After this method is successfully called, the subscription ID type is set to the value of **sensorType**.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -603,7 +563,7 @@ Sets the sensor type. After this method is successfully called, the subscription
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor subscription type has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result)      is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor subscription type has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_Sensor_CreateSubscriptionAttribute()
 
@@ -615,15 +575,13 @@ Sensor_SubscriptionAttribute *OH_Sensor_CreateSubscriptionAttribute(void)
 
 Creates a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance. <br>After using the instance created by calling this function, you must call **<br>OH_Sensor_DestroySubscriptionAttribute()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful. The instance      can be used to configure sensor subscription attributes. Otherwise, NULL is returned. |
+| [Sensor_SubscriptionAttribute *](capi-sensor-sensor-subscriptionattribute.md) | Pointer to the [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance if the operation is successful. The instance can be used to configure sensor subscription attributes. Otherwise, **NULL** is returned. |
 
 ### OH_Sensor_DestroySubscriptionAttribute()
 
@@ -634,8 +592,6 @@ int32_t OH_Sensor_DestroySubscriptionAttribute(Sensor_SubscriptionAttribute *att
 **Description**
 
 Destroys a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribute.md) instance and reclaims the memory.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -649,7 +605,7 @@ Destroys a [Sensor_SubscriptionAttribute](capi-sensor-sensor-subscriptionattribu
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      attribute instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result)      is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the attribute instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriptionAttribute_SetSamplingInterval()
 
@@ -660,8 +616,6 @@ int32_t OH_SensorSubscriptionAttribute_SetSamplingInterval(Sensor_SubscriptionAt
 **Description**
 
 Sets the sensor data reporting interval. After this API is called successfully, the sampling interval of the subscription is set to the value of **samplingInterval**. Subsequent sensor data will be reported at this interval.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -676,7 +630,7 @@ Sets the sensor data reporting interval. After this API is called successfully, 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor data reporting interval has been successfully set. Otherwise, the error code defined in      [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data reporting interval has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriptionAttribute_GetSamplingInterval()
 
@@ -687,8 +641,6 @@ int32_t OH_SensorSubscriptionAttribute_GetSamplingInterval(Sensor_SubscriptionAt
 **Description**
 
 Obtains the sensor data reporting interval.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -703,7 +655,7 @@ Obtains the sensor data reporting interval.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      sensor data reporting interval has been successfully obtained. Otherwise, the error code defined in      [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the sensor data reporting interval has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### Sensor_EventCallback()
 
@@ -715,15 +667,13 @@ typedef void (*Sensor_EventCallback)(Sensor_Event *event)
 
 Defines the callback function used to report sensor data.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| [Sensor_Event](capi-sensor-sensor-event.md) \*event | Pointer to the sensor data information. |
+| [Sensor_Event](capi-sensor-sensor-event.md) *event | Pointer to the sensor data information. |
 
 ### OH_Sensor_CreateSubscriber()
 
@@ -735,15 +685,13 @@ Sensor_Subscriber *OH_Sensor_CreateSubscriber(void)
 
 Creates a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance. <br>After using the instance created by calling this function, you must call **OH_Sensor_DestroySubscriber()** to destroy the instance and reclaim the memory. Otherwise, resource leakage may occur.
 
-**System capability**: SystemCapability.Sensors.Sensor
-
 **Since**: 11
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [Sensor_Subscriber *](capi-sensor-sensor-subscriber.md) | Pointer to the [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance if the operation is successful. The instance can be used      to subscribe to sensor data. Otherwise, NULL is returned. |
+| [Sensor_Subscriber *](capi-sensor-sensor-subscriber.md) | Pointer to the [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance if the operation is successful. The instance can be used to subscribe to sensor data. Otherwise, **NULL** is returned. |
 
 ### OH_Sensor_DestroySubscriber()
 
@@ -754,8 +702,6 @@ int32_t OH_Sensor_DestroySubscriber(Sensor_Subscriber *subscriber)
 **Description**
 
 Destroys a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance and reclaims the memory.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -769,7 +715,7 @@ Destroys a [Sensor_Subscriber](capi-sensor-sensor-subscriber.md) instance and re
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      subscriber instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result)      is returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the subscriber instance has been successfully destroyed. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriber_SetCallback()
 
@@ -780,8 +726,6 @@ int32_t OH_SensorSubscriber_SetCallback(Sensor_Subscriber* subscriber, const Sen
 **Description**
 
 Sets a callback function to report sensor data. After this API is called successfully, the subscriber will use the specified callback function to report sensor data.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -796,7 +740,7 @@ Sets a callback function to report sensor data. After this API is called success
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      callback function has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the callback function has been successfully set. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 ### OH_SensorSubscriber_GetCallback()
 
@@ -807,8 +751,6 @@ int32_t OH_SensorSubscriber_GetCallback(Sensor_Subscriber* subscriber, Sensor_Ev
 **Description**
 
 Obtains the callback function used to report sensor data.
-
-**System capability**: SystemCapability.Sensors.Sensor
 
 **Since**: 11
 
@@ -823,6 +765,6 @@ Obtains the callback function used to report sensor data.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the      callback function has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is      returned. |
+| int32_t | Operation result. If the operation is successful, <b>SENSOR_SUCCESS</b> is returned, indicating that the callback function has been successfully obtained. Otherwise, the error code defined in [Sensor_Result](capi-oh-sensor-type-h.md#sensor_result) is returned. |
 
 

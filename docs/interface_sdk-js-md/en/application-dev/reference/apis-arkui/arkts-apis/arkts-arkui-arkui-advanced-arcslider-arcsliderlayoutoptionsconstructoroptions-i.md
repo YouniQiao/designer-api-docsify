@@ -4,7 +4,7 @@
 interface ArcSliderLayoutOptionsConstructorOptions
 ```
 
-Defines the construction information for **ArcSliderLayoutValueOptions**.
+Defines the construction information of **ArcSliderLayoutOptions**.
 
 **Since:** 18
 
@@ -28,8 +28,6 @@ Position of the arc slider on the screen.
 
 Default value: **ArcSliderPosition.RIGHT**
 
-@Trace
-
 **Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
 **Default:** ArcSliderPosition.RIGHT
@@ -48,11 +46,9 @@ Default value: **ArcSliderPosition.RIGHT**
 reverse?: boolean
 ```
 
-Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding.
+Whether to reverse the sliding direction of the arc slider. The value **false** means sliding from top to bottom.
 
-**true** (default): bottom-to-top sliding.
-
-@Trace
+Default value: **true**, meaning sliding from bottom to top.
 
 **Type:** boolean
 

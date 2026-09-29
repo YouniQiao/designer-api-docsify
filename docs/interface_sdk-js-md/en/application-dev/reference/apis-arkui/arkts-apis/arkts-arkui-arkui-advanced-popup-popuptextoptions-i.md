@@ -46,13 +46,13 @@ Default value: **$r('sys.color.ohos_id_color_text_secondary')**
 fontSize?: number | string | Resource
 ```
 
-Text font size.
+Font size of the text.
 
-Default value: **$r('sys.float.ohos_id_text_size_body2')**
+Default value: `$r('sys.float.ohos_id_text_size_body2')`
 
-The string value must be convertible to a number (for example, **'10'**) or include a length unit (for example, **'10px'**); percentage-based strings are not supported.
+For the string type, the value can be a string that can be converted to a number (such as '10') or a string with a length unit (such as '10px'). Setting a percentage string is not supported.
 
-Value range of number values: (0, +∞)
+For the number type, the value range is (0, +∞). When the type is number, the unit is fp.
 
 **Type:** number &#124; string &#124; [Resource](arkts-arkui-resource-t.md)
 

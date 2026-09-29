@@ -4,20 +4,17 @@
 declare interface ParticleAnnulusRegion
 ```
 
-Configures the annular emitter area.
+Configures the annulus emitter area.
 
 > **NOTE:** 
 > 
-> - If the value of outerRadius or innerRadius is less than 0 or uses the percentage unit, the value is considered as
-> 0.
+> - If **outerRadius** or **innerRadius** is less than 0 or uses the percentage unit, the value 0 is used.
 > 
-> - If the value of outerRadius is less than that of innerRadius, the smaller value is used as the new inner radius and the larger value is used as the new outer radius.
+> - If **outerRadius** is less than **innerRadius** (that is, the outer circle radius is less than the inner circle radius), the smaller value is used as the new inner circle radius, and the larger value is used as the new outer circle radius.
 > 
-> - If the value of endAngle is less than that of startAngle, the smaller value is used as the new start angle and the larger value is used as the new end angle.
+> - If **endAngle** is less than **startAngle** (that is, the end angle is less than the start angle), the smaller value is used as the new start angle, and the larger value is used as the new end angle.
 > 
 > ![](../../../reference/apis-arkui/arkui-ts/figures/annulus.png)
-
-@interface ParticleAnnulusRegion
 
 **Since:** 20
 

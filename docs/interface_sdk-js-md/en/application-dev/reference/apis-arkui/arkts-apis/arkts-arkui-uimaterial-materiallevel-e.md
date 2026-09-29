@@ -4,7 +4,7 @@
 enum MaterialLevel
 ```
 
-Enumerates the material levels, which indicate the computing power level of the device. Use [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device.
+Enumerates material levels, which indicate the computing power levels of devices. You can use [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) to obtain the material level of the current device.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Material level of devices with high-level computing power.
 GENTLE = 1
 ```
 
-Material level of devices with mid-level computing power.
+Material level of devices with medium-level computing power.
 
 **Since:** 26.0.0
 

@@ -12,7 +12,7 @@ import { curves } from '@kit.ArkUI';
 function springCurve(velocity: number, mass: number, stiffness: number, damping: number): ICurve
 ```
 
-Creates a spring curve. The curve shape is subject to the spring parameters, and the animation duration is subject to the **duration** parameter in **animation** and **animateTo**.
+Creates a spring curve. The curve shape is subject to the spring parameters, and the animation duration is subject to the duration parameter in the animation parameters.
 
 **Since:** 9
 
@@ -35,7 +35,7 @@ Creates a spring curve. The curve shape is subject to the spring parameters, and
 
 | Type | Description |
 | --- | --- |
-| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation curve. |
+| [ICurve](arkts-arkui-curves-icurve-i.md) | Interpolation object of the curve. You can use the **interpolate** method to obtain the interpolation at a specified normalized time point. |
 
 **Examples**
 

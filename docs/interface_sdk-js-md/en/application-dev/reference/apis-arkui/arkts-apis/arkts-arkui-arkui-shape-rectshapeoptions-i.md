@@ -30,9 +30,9 @@ radius?: number | string | Array<number | string>
 
 Radius of the rectangle border corners.
 
-When the parameter type is number, the valid value range is [0, +∞). When the parameter type is string, the value must conform to the [Length](arkts-arkui-length-t.md) type specification.
+If the type is number, the value range is [0, +∞); if the type is string, the value is specified by [Length](arkts-arkui-length-t.md).
 
-Unit: vp.
+Unit: vp
 
 If the value is invalid, 0 vp is used.
 

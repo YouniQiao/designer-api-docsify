@@ -12,7 +12,9 @@ import { uiMaterial } from '@kit.ArkUI';
 function convertToECMaterial(material: uiMaterial.ImmersiveMaterial) : uiMaterial.ImmersiveMaterial
 ```
 
-Convert from ImmersiveMaterial to another ImmersiveMaterial set on EffectComponent.
+Converts an [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) material into an ImmersiveMaterial material applicable to [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md).
+
+The [materialColor](arkts-arkui-uimaterial-immersiveoptions-i.md), [applyShadow](arkts-arkui-uimaterial-immersiveoptions-i.md), [interactive](arkts-arkui-uimaterial-immersiveoptions-i.md), and [lightEffect](arkts-arkui-uimaterial-immersiveoptions-i.md) properties in the material do not take effect on the EffectComponent. If a material converted through this API has these properties configured, they will also not take effect.
 
 **Since:** 26.0.0
 
@@ -30,10 +32,10 @@ Convert from ImmersiveMaterial to another ImmersiveMaterial set on EffectCompone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| material | [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Yes | The ImmersiveMaterial. |
+| material | [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Yes | Immersive material to convert. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | The ImmersiveMaterial set on EffectComponent. |
+| [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) | Immersive material applicable to [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md) after conversion. |

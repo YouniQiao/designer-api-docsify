@@ -4,7 +4,7 @@
 declare type OnCheckboxChangeCallback = (value: boolean) => void
 ```
 
-Represents the callback invoked when the selected state of the check box changes.
+Invoked when the selected state of the check box changes.
 
 **Since:** 18
 

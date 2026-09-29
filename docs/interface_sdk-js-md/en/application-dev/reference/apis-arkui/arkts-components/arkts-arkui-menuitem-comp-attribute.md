@@ -4,7 +4,7 @@
 declare class MenuItemAttribute extends CommonMethod<MenuItemAttribute>
 ```
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
 **Inheritance/Implementation:** MenuItemAttribute extends CommonMethod<MenuItemAttribute>
 
@@ -160,7 +160,7 @@ Since API version 18, this parameter supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the menu item is selected.<br>**true**: The menu item is selected. **false**: The menu item is not selected.<br>Default value: **false**. |
+| value | boolean | Yes | Whether the menu item is selected.<br>**true**: The menu item is selected. **false**: The menu item is not selected. <br>Default value: **false**. |
 
 ## selectIcon
 
@@ -168,7 +168,7 @@ Since API version 18, this parameter supports two-way binding through [!!](../..
 selectIcon(value: boolean | ResourceStr | SymbolGlyphModifier)
 ```
 
-Sets whether to display the selected icon when the menu item is selected.
+Sets how the icon of a menu item is displayed when the menu item is selected.
 
 **Since:** 9
 
@@ -184,7 +184,7 @@ Sets whether to display the selected icon when the menu item is selected.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | Whether to display the selected icon when the menu item is selected.<br>**true**: Display the default check mark icon. **false**: Hide the selected state icon.<br>**ResourceStr**: Display the specified custom icon resource.<br>**SymbolGlyphModifier**: Display the specified HMSymbol icon.<br>Default value: **false**.<br>**Since:** 12 |
+| value | boolean &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | How the icon is displayed when the menu item is selected.<br>**true**: display the default check mark icon. **false**: do not display the icon.<br> **ResourceStr**: display the specified icon.<br>**SymbolGlyphModifier**: display the specified HMSymbol icon.<br>Default value: **false**<br>**Since:** 12 |
 
 ## subMenuBuilder
 
@@ -192,7 +192,7 @@ Sets whether to display the selected icon when the menu item is selected.
 subMenuBuilder(builder: CustomBuilder)
 ```
 
-Create the submenu for custom menu item.
+Sets the submenu of a custom menu item.
 
 **Since:** 26.0.0
 
@@ -208,4 +208,4 @@ Create the submenu for custom menu item.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Indicates the builder function for submenu. |
+| builder | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Custom content of the submenu.<br>When the input parameter type of the **MenuItem** component is [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md), this parameter can be used to access the custom submenu.<br>When the parent component is [Menu](arkts-arkui-menu-comp.md), the submenu can be triggered only when the [subMenuExpandingMode](arkts-arkui-menu-comp-attribute.md#submenuexpandingmode) attribute is set to **SubMenuExpandingMode.SIDE_EXPAND** or **SubMenuExpandingMode.STACK_EXPAND**. |

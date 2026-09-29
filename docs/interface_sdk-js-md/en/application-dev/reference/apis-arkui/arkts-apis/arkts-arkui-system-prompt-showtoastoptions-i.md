@@ -4,9 +4,7 @@
 export interface ShowToastOptions
 ```
 
-Defines the options of ShowToast.
-
-@interface ShowToastOptions
+Describes the options for showing the toast.
 
 **Since:** 3
 
@@ -30,7 +28,7 @@ import { Prompt, Button, ShowActionMenuOptions, ShowDialogOptions, ShowDialogSuc
 bottom?: string | number
 ```
 
-The distance between toast dialog box and the bottom of screen.
+Distance between the toast border and the bottom of the screen.
 
 **Type:** string &#124; number
 
@@ -52,7 +50,7 @@ The distance between toast dialog box and the bottom of screen.
 duration?: number
 ```
 
-Duration of toast dialog box. The default value is 1500. The recommended value ranges from 1500 ms to 10000ms. NOTE: A value less than 1500 is automatically changed to 1500. The maximum value is 10000 ms.
+Duration that the toast will remain on the screen. The default value is 1500 ms. The recommended value range is 1500 ms to 10000 ms. If a value less than 1500 ms is set, the default value is used.
 
 **Type:** number
 

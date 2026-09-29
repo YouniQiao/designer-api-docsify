@@ -4,9 +4,7 @@
 declare type PositionT<T> = import('../api/arkui/Graphics').PositionT<T>
 ```
 
-Defines the PositionT type.
-
-@typedef { import('../api/arkui/Graphics').PositionT&lt;T&gt; }
+Sets or returns the position of the component.
 
 **Since:** 12
 

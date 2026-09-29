@@ -236,7 +236,7 @@ Sets the text style of the drop-down button. When **size** is set to **0**, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br>} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
+| value | Font | Yes | Text style of the drop-down list button.<br>For API versions 11 and earlier, the default value is as follows:<br>{<br>size: `$r('sys.float.ohos_id_text_size_button1')`,<br>weight: FontWeight.Medium<br>} <br>Since API version 12: The default value of **size** is **$r('sys.float.ohos_id_text_size_button2')** in the case of **controlSize.SMALL** and **$r('sys.float.ohos_id_text_size_button1')** in other cases. |
 
 <a id="font-1"></a>
 
@@ -800,7 +800,7 @@ Sets the text font of options in the drop-down menu. When **size** is set to **0
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text font of options in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| value | Font | Yes | Text font of options in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 <a id="optionfont-1"></a>
 
@@ -828,7 +828,7 @@ Compared with [optionFont](#optionfont), this API supports the **undefined** typ
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Text font of options in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| selectFont | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Text font of options in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 ## optionFontColor
 
@@ -1154,7 +1154,7 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Font | Yes | Text font of the selected option in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
+| value | Font | Yes | Text font of the selected option in the drop-down menu.<br>Default value:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br>weight: FontWeight.Regular<br>} |
 
 <a id="selectedoptionfont-1"></a>
 
@@ -1180,7 +1180,7 @@ Sets the text font of the selected option in the drop-down menu. When **size** i
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| selectFont | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Text font of the selected option in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br> weight: FontWeight.Regular<br>} |
+| selectFont | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Text font of the selected option in the drop-down menu.<br>If **selectFont** is set to **undefined**, the default value is used:<br>{<br>size: $r('sys.float.ohos_id_text_size_body1'),<br> weight: FontWeight.Regular<br>} |
 
 ## selectedOptionFontColor
 

@@ -4,9 +4,7 @@
 declare interface FieldRegion
 ```
 
-Defines the area information of the particle field.
-
-@interface FieldRegion
+Sets the region information of the particle field.
 
 **Since:** 22
 

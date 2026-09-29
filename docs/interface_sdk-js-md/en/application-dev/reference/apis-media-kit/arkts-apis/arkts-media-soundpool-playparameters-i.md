@@ -62,7 +62,7 @@ If this parameter is set to a floating-point number, only the integer part is us
 pitch?: number
 ```
 
-Pitch of the sound. The value ranges from 0.25 to 4.0 with a step size of 0.001. The default value is 1.0.
+Pitch for playing an audio stream. The value range is [0.25, 4.0]. The default value is **1.0**.<br>When the pitch exceeds the boundary value, the boundary value is automatically used.<br>**Since:** 26.0.0<br> **Model restriction**: This API can be used only in the stage model.
 
 **Type:** number
 
@@ -101,7 +101,7 @@ If this parameter is set to a negative value, it is automatically set to 0. If t
 rate?: number
 ```
 
-Playback rate. For details, see [AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md). Default value: **0**
+Playback rate. For details, see [AudioRendererRate](../../apis-audio-kit/arkts-apis/arkts-audio-audio-audiorendererrate-e.md). The default value is **RENDER_RATE_NORMAL**, corresponding to the enumerated value **0**.
 
 **Type:** number
 

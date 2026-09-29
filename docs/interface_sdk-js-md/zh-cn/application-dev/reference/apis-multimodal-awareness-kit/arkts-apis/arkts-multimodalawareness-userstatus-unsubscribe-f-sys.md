@@ -18,7 +18,7 @@ function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatu
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): number--><!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): number-End-->
+<!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): int--><!--Device-userStatus-function unsubscribe(featureId: UserStatusFeature, callback?: Callback<UserStatusData>): int-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.UserStatus
 

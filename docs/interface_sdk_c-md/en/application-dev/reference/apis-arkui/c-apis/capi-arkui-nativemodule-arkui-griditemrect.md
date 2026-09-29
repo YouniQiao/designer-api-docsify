@@ -6,7 +6,7 @@ typedef struct ArkUI_GridItemRect {...} ArkUI_GridItemRect
 
 ## Overview
 
-Defines the return value for the {@link OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback} callback in **Grid** layout options, which is used to specify the start row, start column, row span, and column span for the grid item in **Grid** at the specified index.
+Defines the return value for the [OH_ArkUI_GridLayoutOptions_RegisterGetRectByIndexCallback](capi-grid-h.md#oh_arkui_gridlayoutoptions_registergetrectbyindexcallback) callback in **Grid** layout options, which is used to specify the start row, start column, row span, and column span for the grid item in **Grid** at the specified index.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

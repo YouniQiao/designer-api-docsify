@@ -6,7 +6,7 @@ typedef struct ArkUI_GridItemSize {...} ArkUI_GridItemSize
 
 ## Overview
 
-Defines the return value for the {@link OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback} callback in **Grid** layout options, which is used to specify the row span and column span for an irregular grid item at the specified index.
+Defines the return value for the [OH_ArkUI_GridLayoutOptions_RegisterGetIrregularSizeByIndexCallback](capi-grid-h.md#oh_arkui_gridlayoutoptions_registergetirregularsizebyindexcallback) callback in **Grid** layout options, which is used to specify the row span and column span for an irregular grid item at the specified index.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

@@ -4,7 +4,9 @@
 declare type OnRadioChangeCallback = (isChecked: boolean) => void
 ```
 
-Defines the callback type for radio button selected state changes.
+Callback of radio box selection status changes event.
+
+@typedef {function} OnRadioChangeCallback
 
 **Since:** 18
 

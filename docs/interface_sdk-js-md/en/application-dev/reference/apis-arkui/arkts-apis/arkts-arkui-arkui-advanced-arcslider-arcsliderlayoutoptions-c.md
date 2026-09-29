@@ -40,7 +40,7 @@ A constructor used to create an **ArcSliderLayoutOptions** instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No | Construction information for **ArcSliderLayoutOptions**. |
+| options | [ArcSliderLayoutOptionsConstructorOptions](arkts-arkui-arkui-advanced-arcslider-arcsliderlayoutoptionsconstructoroptions-i.md) | No | Construction information of **ArcSliderLayoutOptions**. When not passed in, all sub-attributes of **ArcSliderLayoutOptions** take their default values. |
 
 ## position
 
@@ -52,7 +52,7 @@ Position of the arc slider on the screen.
 
 Default value: **ArcSliderPosition.RIGHT**
 
-@Trace
+**Decorator**: @Trace
 
 **Type:** [ArcSliderPosition](arkts-arkui-arkui-advanced-arcslider-arcsliderposition-e.md)
 
@@ -74,11 +74,11 @@ Default value: **ArcSliderPosition.RIGHT**
 reverse?: boolean
 ```
 
-Whether the value range of the arc slider is reversed. **false**: top-to-bottom sliding.
+Whether to reverse the sliding direction of the arc slider. The value **false** means sliding from top to bottom.
 
-**true** (default): bottom-to-top sliding.
+Default value: **true**, meaning sliding from bottom to top.
 
-@Trace
+**Decorator:*
 
 **Type:** boolean
 

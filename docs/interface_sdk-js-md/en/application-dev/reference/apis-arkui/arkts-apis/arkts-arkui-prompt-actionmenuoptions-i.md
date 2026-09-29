@@ -4,9 +4,7 @@
 interface ActionMenuOptions
 ```
 
-Defines the option of ShowActionMenu.
-
-@interface ActionMenuOptions
+Describes the options for showing the action menu.
 
 **Since:** 8
 
@@ -30,7 +28,7 @@ import { prompt } from '@kit.ArkUI';
 buttons: [Button, Button?, Button?, Button?, Button?, Button?]
 ```
 
-Array of buttons in the dialog box. The array structure is {text:'button', color: '#666666'}. One to six buttons are supported.
+Array of menu item buttons. The array structure is **{text:'button', color: '#666666'}**. Up to six buttons are supported. If there are more than six buttons, extra buttons will not be displayed.
 
 **Type:** [Button, Button?, Button?, Button?, Button?, Button?]
 
@@ -52,7 +50,7 @@ Array of buttons in the dialog box. The array structure is {text:'button', color
 title?: string
 ```
 
-Title of the text to display.
+Title of the menu.
 
 **Type:** string
 

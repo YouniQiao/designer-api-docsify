@@ -4,7 +4,7 @@
 declare interface MenuItemGroupOptions
 ```
 
-Describes the header and footer of the menu item group.
+Describes the header and footer information of the menu item group.
 
 **Since:** 9
 
@@ -18,7 +18,9 @@ Describes the header and footer of the menu item group.
 footer?: ResourceStr | CustomBuilder
 ```
 
-Footer of the menu item group.
+Footer information of the menu item group, which is displayed at the bottom of all menu items in the group.
+
+If not set, no footer is displayed.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)
 
@@ -38,7 +40,9 @@ Footer of the menu item group.
 header?: ResourceStr | CustomBuilder
 ```
 
-Header of the menu item group.
+Header information of the menu item group, which is displayed at the top of all menu items in the group.
+
+If not set, no header is displayed.
 
 **Type:** [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md)
 

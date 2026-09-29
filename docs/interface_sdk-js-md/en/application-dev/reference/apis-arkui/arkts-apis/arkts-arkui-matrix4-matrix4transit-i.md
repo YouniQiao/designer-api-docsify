@@ -4,7 +4,17 @@
 interface Matrix4Transit
 ```
 
-Implements a **Matrix4Transit** object.
+Implements a matrix object. It supports combining multiple transformation effects by chained calls of the **translate**, **scale**, **rotate**, and **skew** APIs.
+
+> **NOTE:** 
+> 
+> When multiple transformation APIs are called in chain mode, the order of transformations affects the final
+> result. For example, translating first and then scaling produces a different transformation effect from scaling
+> first and then translating. Select the correct call order based on the expected effect.
+> 
+> The **translate**, **scale**, **rotate**, **skew**, **combine**, and **invert** APIs modify the original matrix
+> on which they are called. To keep the original matrix unchanged, call **copy()** before performing the
+> transformation, for example, **matrix.copy().translate({x:100})**.
 
 **Since:** 7
 
@@ -38,7 +48,7 @@ Combines the effects of two matrices to generate a new matrix object. The matrix
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | Matrix object to be combined. |
+| options | [Matrix4Transit](arkts-arkui-matrix4-matrix4transit-i.md) | Yes | Matrix object to be combined. Its transformation effect is combined on the current matrix (matrix multiplication) to generate a new transformation matrix. |
 
 **Return value:**
 
@@ -143,7 +153,7 @@ struct Test {
 invert(): Matrix4Transit
 ```
 
-Inverts this matrix object. The matrix that calls this API will be changed.
+Inverts this matrix object. The matrix that calls this API will be changed and transformed into its inverse matrix, which is then returned. The product of the inverse matrix and the original matrix is the identity matrix.
 
 **Since:** 7
 
@@ -309,7 +319,7 @@ struct Test {
 setPolyToPoly(options: PolyToPolyOptions): Matrix4Transit
 ```
 
-Maps the vertex coordinates of a polygon to those of another polygon.
+Maps the vertex coordinates of a polygon to those of another polygon. This API is applicable to scenarios requiring custom deformation, such as image perspective correction, 3D visual effects, and card flip effects.
 
 **Since:** 12
 
@@ -325,7 +335,7 @@ Maps the vertex coordinates of a polygon to those of another polygon.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | Parameters for mapping. |
+| options | [PolyToPolyOptions](arkts-arkui-matrix4-polytopolyoptions-i.md) | Yes | Options for polygon mapping, which specify the mapping relationship between the source polygon vertex coordinates and the target polygon vertex coordinates. |
 
 **Return value:**
 
@@ -384,8 +394,8 @@ Skews this matrix object along the x and y axes. The matrix that calls this API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| x | number | Yes | Amount of skewing on the x-axis. |
-| y | number | Yes | Amount of skewing on the y-axis. |
+| x | number | Yes | Skew on the x-axis. The value is the shear factor (that is, the tan value).<br>The value **0** indicates no skew, a positive value indicates the skew along the positive direction of the x-axis, and a negative value indicates the skew along the negative direction of the x-axis. |
+| y | number | Yes | Skew on the y-axis. The value is the shear factor (that is, the tan value).<br>The value **0** indicates no skew, a positive value indicates the skew along the positive direction of the y-axis, and a negative value indicates the skew along the negative direction of the y-axis. |
 
 **Return value:**
 
@@ -439,13 +449,13 @@ Applies the current transformation effect to a coordinate point.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [number, number] | Yes | Point to be transformed. |
+| options | [number, number] | Yes | Coordinate point to be transformed, in the format of [x, y], where **x** is the horizontal coordinate and **y** is the vertical coordinate, in px. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [number, number] | Point object after matrix transformation |
+| [number, number] | Coordinate point after matrix transformation, in the format of [x, y]. |
 
 **Examples**
 
