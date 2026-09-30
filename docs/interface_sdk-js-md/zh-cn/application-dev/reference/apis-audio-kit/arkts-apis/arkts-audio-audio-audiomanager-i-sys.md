@@ -175,6 +175,36 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
+## getSuiteDownloadManager
+
+```TypeScript
+getSuiteDownloadManager(): AudioSuiteDownloadManager
+```
+
+获取AudioSuiteDownloadManager实例，用于下载音频编辑算法。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioManager-getSuiteDownloadManager(): AudioSuiteDownloadManager--><!--Device-AudioManager-getSuiteDownloadManager(): AudioSuiteDownloadManager-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [AudioSuiteDownloadManager](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md) | 返回音频套件下载管理器的实例。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+
 <a id="setaudioscene1"></a>
 
 ## setAudioScene

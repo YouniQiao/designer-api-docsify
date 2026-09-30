@@ -109,3 +109,51 @@ System error.
 <!--Device-AudioErrors-ERROR_SYSTEM = 6800301--><!--Device-AudioErrors-ERROR_SYSTEM = 6800301-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_SERVICE_DIED
+
+```TypeScript
+ERROR_SERVICE_DIED = 6800302
+```
+
+System service process terminated.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioErrors-ERROR_SERVICE_DIED = 6800302--><!--Device-AudioErrors-ERROR_SERVICE_DIED = 6800302-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_NETWORK_CONDITION_NOT_MET
+
+```TypeScript
+ERROR_NETWORK_CONDITION_NOT_MET = 6800501
+```
+
+Required network conditions not met.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioErrors-ERROR_NETWORK_CONDITION_NOT_MET = 6800501--><!--Device-AudioErrors-ERROR_NETWORK_CONDITION_NOT_MET = 6800501-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_STORAGE_NOT_ENOUGH
+
+```TypeScript
+ERROR_STORAGE_NOT_ENOUGH = 6800502
+```
+
+Insufficient storage space.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioErrors-ERROR_STORAGE_NOT_ENOUGH = 6800502--><!--Device-AudioErrors-ERROR_STORAGE_NOT_ENOUGH = 6800502-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core

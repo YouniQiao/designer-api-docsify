@@ -109,3 +109,51 @@ ERROR_SYSTEM = 6800301
 <!--Device-AudioErrors-ERROR_SYSTEM = 6800301--><!--Device-AudioErrors-ERROR_SYSTEM = 6800301-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_SERVICE_DIED
+
+```TypeScript
+ERROR_SERVICE_DIED = 6800302
+```
+
+系统服务进程终止。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioErrors-ERROR_SERVICE_DIED = 6800302--><!--Device-AudioErrors-ERROR_SERVICE_DIED = 6800302-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_NETWORK_CONDITION_NOT_MET
+
+```TypeScript
+ERROR_NETWORK_CONDITION_NOT_MET = 6800501
+```
+
+网络条件不满足。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioErrors-ERROR_NETWORK_CONDITION_NOT_MET = 6800501--><!--Device-AudioErrors-ERROR_NETWORK_CONDITION_NOT_MET = 6800501-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## ERROR_STORAGE_NOT_ENOUGH
+
+```TypeScript
+ERROR_STORAGE_NOT_ENOUGH = 6800502
+```
+
+存储空间不足。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioErrors-ERROR_STORAGE_NOT_ENOUGH = 6800502--><!--Device-AudioErrors-ERROR_STORAGE_NOT_ENOUGH = 6800502-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core

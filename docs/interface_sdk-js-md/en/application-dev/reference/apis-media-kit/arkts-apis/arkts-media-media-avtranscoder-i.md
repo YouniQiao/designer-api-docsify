@@ -449,7 +449,7 @@ Sets video transcoding parameters. This API uses a promise to return the result.
 | [5400103](../errorcode-media.md#5400103-io-error) | IO error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise.<br>**Applicable version:** 22 and later |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. Return by promise. |
 
 **Examples**
 

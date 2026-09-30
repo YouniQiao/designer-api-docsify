@@ -31,6 +31,7 @@
   - [enableAdmin(system api)](arkts-mdm-adminmanager-enableadmin-f-sys.md)<!--DelEnd-->
   - [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md)
   - [enableSelfDeviceAdmin](arkts-mdm-adminmanager-enableselfdeviceadmin-f.md)
+  - [getAdminInfos](arkts-mdm-adminmanager-getadmininfos-f.md)
   <!--Del-->
   - [getAdmins(system api)](arkts-mdm-adminmanager-getadmins-f-sys.md)<!--DelEnd-->
   - [getDelegatedBundleNames](arkts-mdm-adminmanager-getdelegatedbundlenames-f.md)
@@ -44,6 +45,7 @@
   <!--Del-->
   - [isAdminEnabled(system api)](arkts-mdm-adminmanager-isadminenabled-f-sys.md)<!--DelEnd-->
   - [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md)
+  - [isSelfSuperAdmin](arkts-mdm-adminmanager-isselfsuperadmin-f.md)
   <!--Del-->
   - [isSuperAdmin(system api)](arkts-mdm-adminmanager-issuperadmin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -62,6 +64,7 @@
   <!--Del-->
   - [unsubscribeManagedEvent(system api)](arkts-mdm-adminmanager-unsubscribemanagedevent-f-sys.md)<!--DelEnd-->
   - [unsubscribeManagedEventSync](arkts-mdm-adminmanager-unsubscribemanagedeventsync-f.md)
+  - [AdminInfo](arkts-mdm-adminmanager-admininfo-i.md)
   <!--Del-->
   - [EnterpriseInfo(system api)](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md)<!--DelEnd-->
   - [AdminType](arkts-mdm-adminmanager-admintype-e.md)

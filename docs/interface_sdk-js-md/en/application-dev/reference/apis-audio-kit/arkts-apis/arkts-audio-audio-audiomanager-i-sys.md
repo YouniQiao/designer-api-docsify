@@ -177,6 +177,36 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
+## getSuiteDownloadManager
+
+```TypeScript
+getSuiteDownloadManager(): AudioSuiteDownloadManager
+```
+
+Obtains the AudioSuiteDownloadManager instance for downloading audio suite algorithms.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AudioManager-getSuiteDownloadManager(): AudioSuiteDownloadManager--><!--Device-AudioManager-getSuiteDownloadManager(): AudioSuiteDownloadManager-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**System API:** This is a system API.
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [AudioSuiteDownloadManager](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md) | Returns an instance of audio suite download manager. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
+
 <a id="setaudioscene1"></a>
 
 ## setAudioScene

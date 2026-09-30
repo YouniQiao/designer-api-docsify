@@ -93,6 +93,12 @@
   - [AudioStreamDeviceChangeInfo](arkts-audio-audio-audiostreamdevicechangeinfo-i.md)
   - [AudioStreamInfo](arkts-audio-audio-audiostreaminfo-i.md)
   - [AudioStreamManager](arkts-audio-audio-audiostreammanager-i.md)
+  <!--Del-->
+  - [AudioSuiteDownloadManager(系统接口)](arkts-audio-audio-audiosuitedownloadmanager-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AudioSuiteFeatureStatusInfo(系统接口)](arkts-audio-audio-audiosuitefeaturestatusinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AudioSuiteFeatureVersionInfo(系统接口)](arkts-audio-audio-audiosuitefeatureversioninfo-i-sys.md)<!--DelEnd-->
   - [AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md)
   - [AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md)
   <!--Del-->
@@ -132,6 +138,8 @@
   - [AudioEffectInfoArray](arkts-audio-audio-audioeffectinfoarray-t.md)
   - [AudioRendererChangeInfoArray](arkts-audio-audio-audiorendererchangeinfoarray-t.md)
   - [AudioRendererWriteDataCallback](arkts-audio-audio-audiorendererwritedatacallback-t.md)
+  <!--Del-->
+  - [AudioSuiteFeatureStatusInfoArray(系统接口)](arkts-audio-audio-audiosuitefeaturestatusinfoarray-t-sys.md)<!--DelEnd-->
   - [DeviceTypeArray](arkts-audio-audio-devicetypearray-t.md)
   <!--Del-->
   - [StreamUsageArray(系统接口)](arkts-audio-audio-streamusagearray-t-sys.md)<!--DelEnd-->
@@ -185,6 +193,10 @@
   - [AudioSpatializationSceneType(系统接口)](arkts-audio-audio-audiospatializationscenetype-e-sys.md)<!--DelEnd-->
   - [AudioState](arkts-audio-audio-audiostate-e.md)
   - [AudioStreamDeviceChangeReason](arkts-audio-audio-audiostreamdevicechangereason-e.md)
+  <!--Del-->
+  - [AudioSuiteFeatureStatus(系统接口)](arkts-audio-audio-audiosuitefeaturestatus-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AudioSuiteFeatureType(系统接口)](arkts-audio-audio-audiosuitefeaturetype-e-sys.md)<!--DelEnd-->
   - [AudioVolumeMode](arkts-audio-audio-audiovolumemode-e.md)
   - [AudioVolumeType](arkts-audio-audio-audiovolumetype-e.md)
   <!--Del-->
@@ -216,6 +228,8 @@
   <!--Del-->
   - [InterruptRequestType(系统接口)](arkts-audio-audio-interruptrequesttype-e-sys.md)<!--DelEnd-->
   - [InterruptType](arkts-audio-audio-interrupttype-e.md)
+  <!--Del-->
+  - [NetworkType(系统接口)](arkts-audio-audio-networktype-e-sys.md)<!--DelEnd-->
   - [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md)
   - [OutputDeviceChangeRecommendedAction](arkts-audio-audio-outputdevicechangerecommendedaction-e.md)
   - [PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md)

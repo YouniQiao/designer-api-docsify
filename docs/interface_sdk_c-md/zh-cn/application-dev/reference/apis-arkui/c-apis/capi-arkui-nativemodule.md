@@ -27,7 +27,9 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
 | [common_type.h](capi-common-type-h.md) | 定义ArkUI Native API的公共类型。 |
 | [drawable_descriptor.h](capi-drawable-descriptor-h.md) | 提供NativeDrawableDescriptor接口的类型定义。 |
+| [ui_json_wrapper.h](capi-ui-json-wrapper-h.md) | Declares the shared JSON data object for the UI perception and control APIs. |
 | [native_node_napi.h](capi-native-node-napi-h.md) | 提供ArkTS侧的FrameNode转换NodeHandle的方式。 |
+| [ui_info_collection.h](capi-ui-info-collection-h.md) | Declares the APIs used by in-app intelligent agents and UI automation to observe UI interaction events and hit nodes. |
 | [styled_string.h](capi-styled-string-h.md) | 在Native侧定义[ArkUI_NodeType](capi-native-node-h.md#arkui_nodetype)为ARKUI_NODE_TEXT的组件的文本样式和文本布局管理器。 |
 | [custom_span.h](capi-custom-span-h.md) | 定义CustomSpan相关的结构体和接口，用于实现自定义绘制Span的精确尺寸测量、布局排版和绘制效果。支持开发者在富文本编辑器、聊天应用、文档应用等场景中实现图文混排、表情内嵌、自定义标记等功能， 提供灵活的自定义绘制Span能力，帮助开发者提升开发效率，实现更丰富的文本排版效果。 |
 | [water_flow.h](capi-water-flow-h.md) | 定义WaterFlow组件相关的枚举和接口。 |

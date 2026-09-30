@@ -763,7 +763,7 @@ void OH_ArkUI_TextContentBaseController_Dispose(ArkUI_TextContentBaseController*
 
 | 参数项 | 描述 |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller Pointer to the controller object to be disposed. |
+| {ArkUI_TextContentBaseController*} | controller 待销毁的控制器对象指针。 |
 
 ### OH_ArkUI_TextContentBaseController_DeleteBackward()
 
@@ -781,7 +781,7 @@ void OH_ArkUI_TextContentBaseController_DeleteBackward(ArkUI_TextContentBaseCont
 
 | 参数项 | 描述 |
 | -- | -- |
-| {ArkUI_TextContentBaseController*} | controller Pointer to the configuration object to be modified. |
+| {ArkUI_TextContentBaseController*} | controller 待修改的配置对象指针。 |
 
 ### OH_ArkUI_TextContentBaseController_ScrollToVisible()
 
@@ -800,7 +800,7 @@ void OH_ArkUI_TextContentBaseController_ScrollToVisible(ArkUI_TextContentBaseCon
 | 参数项 | 描述 |
 | -- | -- |
 | {ArkUI_TextContentBaseController*} | controller 待修改的配置对象指针。 通过此controller将起始索引与结束索引传递给与其绑定的输入框组件并进行滚动操作。 |
-| {int32_t} | start Start text index. The start index must be less than or equal to the end index. Otherwise, the API call is invalid. The value range is [0, Total length of the text in the text box]. If the start index is less than 0, the start index is regarded as 0. If the start index is greater than the total length, the start indexis regarded as the total length. |
+| {int32_t} | start 起始文字索引值。 起始索引应小于等于结束索引，否则接口调用无效。取值范围[0, 输入框文本总长度]，起始索引小于0视为0，大于总长度视为总长度。 |
 | {int32_t} | end 结束文字索引值。 结束索引应大于等于起始索引，否则接口调用无效。取值范围[0, 输入框文本总长度]，结束索引小于0视为0，大于总长度视为总长度。 |
 
 ### OH_ArkUI_DecorationStyleOptions_Create()
