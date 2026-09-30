@@ -20,6 +20,8 @@ Control class for backup procedure.
 import { backup } from '@kit.CoreFileKit';
 ```
 
+<a id="appendbundles1"></a>
+
 ## appendBundles
 
 ```TypeScript
@@ -168,7 +170,7 @@ async function appendBundles() {
 }
 ```
 
-<a id="appendbundles-1"></a>
+<a id="appendbundles2"></a>
 
 ## appendBundles
 

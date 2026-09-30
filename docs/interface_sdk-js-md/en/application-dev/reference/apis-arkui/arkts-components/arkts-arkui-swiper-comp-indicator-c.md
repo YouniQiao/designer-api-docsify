@@ -12,6 +12,8 @@ Sets the distance between the navigation indicator and the **Swiper** component.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="bottom1"></a>
+
 ## bottom
 
 ```TypeScript
@@ -44,7 +46,7 @@ Sets the position of the navigation indicator relative to the bottom edge of the
 | --- | --- |
 | T | Current navigation indicator. |
 
-<a id="bottom-1"></a>
+<a id="bottom2"></a>
 
 ## bottom
 

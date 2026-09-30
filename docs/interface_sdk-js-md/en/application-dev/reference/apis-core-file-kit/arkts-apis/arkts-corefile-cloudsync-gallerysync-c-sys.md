@@ -42,6 +42,8 @@ A constructor used to create a **GallerySync** instance.
 let gallerySync = new cloudSync.GallerySync()
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -90,7 +92,7 @@ gallerySync.on('progress', callback);
 gallerySync.off('progress', callback);
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -181,6 +183,8 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 });
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -234,7 +238,7 @@ gallerySync.start().then(() => {
 });
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -287,6 +291,8 @@ gallerySync.start((err: BusinessError) => {
 });
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -338,7 +344,7 @@ gallerySync.stop().then(() => {
 });
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="recoverforms1"></a>
+
 ## recoverForms
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="recoverforms-1"></a>
+<a id="recoverforms2"></a>
 
 ## recoverForms
 

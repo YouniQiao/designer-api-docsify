@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="stopbackgroundrunning1"></a>
+
 ## stopBackgroundRunning
 
 ```TypeScript
@@ -17,7 +19,7 @@ Requests to cancel a continuous task. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md)(context: Context, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning1)(context: Context, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void-End-->
 
@@ -75,7 +77,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="stopbackgroundrunning-1"></a>
+<a id="stopbackgroundrunning2"></a>
 
 ## stopBackgroundRunning
 
@@ -89,7 +91,7 @@ Requests to cancel a continuous task. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-1)(context: Context)
+**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning2)(context: Context)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>-End-->
 

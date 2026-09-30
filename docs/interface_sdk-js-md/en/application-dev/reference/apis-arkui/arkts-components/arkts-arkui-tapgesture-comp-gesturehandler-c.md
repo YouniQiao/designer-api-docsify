@@ -6,7 +6,7 @@ declare class GestureHandler<T> implements GestureInterface<T>
 
 Represents the base type for gesture handlers.
 
-**Inheritance/Implementation:** GestureHandler implements GestureInterface<T>
+**Inheritance/Implementation:** GestureHandler implements GestureInterface&lt;T&gt;
 
 **Since:** 12
 

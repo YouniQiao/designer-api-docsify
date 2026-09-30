@@ -44,7 +44,7 @@ Obtains the issuer name of the revoked certificate.
 
 **Deprecated since:** 11
 
-**Substitutes:** getCertIssuer
+**Substitutes:** [getCertIssuer](arkts-devicecertificate-cert-x509crlentry-i.md#getcertissuer)
 
 <!--Device-X509CrlEntry-getCertIssuer(): DataBlob--><!--Device-X509CrlEntry-getCertIssuer(): DataBlob-End-->
 
@@ -113,6 +113,8 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
+<a id="getencoded1"></a>
+
 ## getEncoded
 
 ```TypeScript
@@ -124,13 +126,13 @@ Obtains the serialized data of this revoked certificate entry. This API uses an 
 > **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
-> [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded) instead.
+> [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded1) instead.
 
 **Since:** 9
 
 **Deprecated since:** 11
 
-**Substitutes:** getEncoded
+**Substitutes:** [getEncoded](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)
 
 <!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
@@ -205,7 +207,7 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
-<a id="getencoded-1"></a>
+<a id="getencoded2"></a>
 
 ## getEncoded
 
@@ -224,7 +226,7 @@ Obtains the serialized data of this revoked certificate entry. This API uses a p
 
 **Deprecated since:** 11
 
-**Substitutes:** getEncoded
+**Substitutes:** [getEncoded](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)
 
 <!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>-End-->
 
@@ -314,7 +316,7 @@ Obtains the certificate's revocation date.
 
 **Deprecated since:** 11
 
-**Substitutes:** getRevocationDate
+**Substitutes:** [getRevocationDate](arkts-devicecertificate-cert-x509crlentry-i.md#getrevocationdate)
 
 <!--Device-X509CrlEntry-getRevocationDate(): string--><!--Device-X509CrlEntry-getRevocationDate(): string-End-->
 
@@ -400,7 +402,7 @@ Obtains the serial number of this revoked certificate.
 
 **Deprecated since:** 11
 
-**Substitutes:** getSerialNumber
+**Substitutes:** [getSerialNumber](arkts-devicecertificate-cert-x509crlentry-i.md#getserialnumber)
 
 <!--Device-X509CrlEntry-getSerialNumber(): number--><!--Device-X509CrlEntry-getSerialNumber(): number-End-->
 

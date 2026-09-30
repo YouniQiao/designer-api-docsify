@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="setslotbybundle1"></a>
+
 ## setSlotByBundle
 
 ```TypeScript
@@ -14,7 +16,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 
 设置指定应用的通知渠道。使用callback异步回调。
 
-设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f-sys.md)创建通知渠道。
+设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f-sys.md#addslot1)创建通知渠道。
 
 **起始版本：** 9
 
@@ -69,7 +71,7 @@ notificationManager.setSlotByBundle(bundle, notificationSlot, setSlotByBundleCal
 ```
 
 
-<a id="setslotbybundle-1"></a>
+<a id="setslotbybundle2"></a>
 
 ## setSlotByBundle
 
@@ -79,7 +81,7 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot): Promise<
 
 设置指定应用的通知渠道。使用Promise异步回调。
 
-设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f-sys.md)创建通知渠道。
+设置前需要先通过[addSlot](arkts-notification-notificationmanager-addslot-f-sys.md#addslot1)创建通知渠道。
 
 **起始版本：** 9
 

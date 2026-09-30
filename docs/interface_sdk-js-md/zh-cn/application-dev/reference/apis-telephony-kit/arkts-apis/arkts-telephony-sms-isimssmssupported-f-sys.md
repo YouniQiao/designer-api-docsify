@@ -6,6 +6,8 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
+<a id="isimssmssupported1"></a>
+
 ## isImsSmsSupported
 
 ```TypeScript
@@ -53,7 +55,7 @@ sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isimssmssupported-1"></a>
+<a id="isimssmssupported2"></a>
 
 ## isImsSmsSupported
 

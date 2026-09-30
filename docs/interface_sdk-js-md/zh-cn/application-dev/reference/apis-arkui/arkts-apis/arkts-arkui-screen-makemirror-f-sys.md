@@ -6,6 +6,8 @@
 import { screen } from '@kit.ArkUI';
 ```
 
+<a id="makemirror1"></a>
+
 ## makeMirror
 
 ```TypeScript
@@ -58,7 +60,7 @@ screen.makeMirror(mainScreenId, mirrorScreenIds, (err: BusinessError, data: numb
 ```
 
 
-<a id="makemirror-1"></a>
+<a id="makemirror2"></a>
 
 ## makeMirror
 

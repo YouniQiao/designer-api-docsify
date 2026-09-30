@@ -6,6 +6,8 @@
 import { securityManager } from '@kit.MDMKit';
 ```
 
+<a id="setappclipboardpolicy1"></a>
+
 ## setAppClipboardPolicy
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="setappclipboardpolicy-1"></a>
+<a id="setappclipboardpolicy2"></a>
 
 ## setAppClipboardPolicy
 

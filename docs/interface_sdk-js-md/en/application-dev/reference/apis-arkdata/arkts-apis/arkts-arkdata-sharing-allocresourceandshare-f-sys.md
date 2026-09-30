@@ -6,6 +6,8 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
+<a id="allocresourceandshare1"></a>
+
 ## allocResourceAndShare
 
 ```TypeScript
@@ -97,7 +99,7 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, [
 ```
 
 
-<a id="allocresourceandshare-1"></a>
+<a id="allocresourceandshare2"></a>
 
 ## allocResourceAndShare
 
@@ -186,7 +188,7 @@ cloudData.sharing.allocResourceAndShare('storeName', predicates, participants, (
 ```
 
 
-<a id="allocresourceandshare-2"></a>
+<a id="allocresourceandshare3"></a>
 
 ## allocResourceAndShare
 

@@ -4,7 +4,7 @@
 declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 ```
 
-[width](arkts-arkui-common-comp-commonmethod-c.md#width)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
+[width](arkts-arkui-common-comp-commonmethod-c.md#width1)属性设置"auto"时表示自适应宽度，宽度会随索引项最大宽度变化。
 
 [padding](arkts-arkui-common-comp-commonmethod-c.md#padding)属性默认为4vp。
 
@@ -14,7 +14,7 @@ declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttri
 
 除支持通用事件外，还支持以下事件：
 
-**继承/实现关系：** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
+**继承/实现关系：** AlphabetIndexerAttribute extends CommonMethod&lt;AlphabetIndexerAttribute&gt;
 
 **起始版本：** 7
 

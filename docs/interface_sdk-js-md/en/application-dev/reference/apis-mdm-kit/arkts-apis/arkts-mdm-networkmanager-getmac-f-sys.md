@@ -6,6 +6,8 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
+<a id="getmac1"></a>
+
 ## getMac
 
 ```TypeScript
@@ -71,7 +73,7 @@ networkManager.getMac(wantTemp, 'eth0', (err, result) => {
 ```
 
 
-<a id="getmac-1"></a>
+<a id="getmac2"></a>
 
 ## getMac
 

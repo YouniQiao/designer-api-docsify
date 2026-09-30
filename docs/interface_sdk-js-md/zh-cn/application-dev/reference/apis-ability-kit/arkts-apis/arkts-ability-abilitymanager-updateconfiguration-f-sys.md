@@ -6,6 +6,8 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
+<a id="updateconfiguration1"></a>
+
 ## updateConfiguration
 
 ```TypeScript
@@ -41,7 +43,7 @@ function updateConfiguration(config: Configuration, callback: AsyncCallback<void
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 
-<a id="updateconfiguration-1"></a>
+<a id="updateconfiguration2"></a>
 
 ## updateConfiguration
 

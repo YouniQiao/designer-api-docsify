@@ -172,5 +172,5 @@
     - [PlayParameters](arkts-media-soundpool-playparameters-i.md)
     <!--Del-->
     - [PlayParameters(system api)](arkts-media-soundpool-playparameters-i-sys.md)<!--DelEnd-->
-    - [SoundPool](arkts-media-soundpool-soundpool-i.md)
+    - [SoundPool](arkts-media-soundpool-i.md)
     - [ErrorType](arkts-media-soundpool-errortype-e.md)

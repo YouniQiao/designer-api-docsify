@@ -6,6 +6,8 @@
 import { preferences } from '@kit.ArkData';
 ```
 
+<a id="removepreferencesfromcache1"></a>
+
 ## removePreferencesFromCache
 
 ```TypeScript
@@ -83,7 +85,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="removepreferencesfromcache-1"></a>
+<a id="removepreferencesfromcache2"></a>
 
 ## removePreferencesFromCache
 
@@ -167,7 +169,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="removepreferencesfromcache-2"></a>
+<a id="removepreferencesfromcache3"></a>
 
 ## removePreferencesFromCache
 
@@ -249,7 +251,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="removepreferencesfromcache-3"></a>
+<a id="removepreferencesfromcache4"></a>
 
 ## removePreferencesFromCache
 

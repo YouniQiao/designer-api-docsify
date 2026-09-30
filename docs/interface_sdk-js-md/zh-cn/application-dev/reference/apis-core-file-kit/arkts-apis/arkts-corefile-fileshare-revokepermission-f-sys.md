@@ -6,7 +6,7 @@
 import { fileShare } from '@kit.CoreFileKit';
 ```
 
-<a id="revokepermission-1"></a>
+<a id="revokepermission2"></a>
 
 ## revokePermission
 
@@ -71,7 +71,7 @@ async function revokeAllPermissionExample() {
 ```
 
 
-<a id="revokepermission-2"></a>
+<a id="revokepermission3"></a>
 
 ## revokePermission
 

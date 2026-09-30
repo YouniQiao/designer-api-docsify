@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="casttempform1"></a>
+
 ## castTempForm
 
 ```TypeScript
@@ -48,7 +50,7 @@ formHost.castTempForm(formId, (error: Base.BusinessError) => {
 ```
 
 
-<a id="casttempform-1"></a>
+<a id="casttempform2"></a>
 
 ## castTempForm
 

@@ -163,6 +163,8 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 }
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -249,7 +251,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 

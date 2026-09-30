@@ -44,7 +44,7 @@ Starts the widget provider page to be edited. This API uses a promise to return 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise used to return the ability result. |
+| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-i.md)&gt; | Promise used to return the ability result. |
 
 **Error codes:**
 

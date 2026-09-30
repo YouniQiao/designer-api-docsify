@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="acquireformstate1"></a>
+
 ## acquireFormState
 
 ```TypeScript
@@ -74,7 +76,7 @@ try {
 ```
 
 
-<a id="acquireformstate-1"></a>
+<a id="acquireformstate2"></a>
 
 ## acquireFormState
 

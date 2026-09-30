@@ -10,7 +10,7 @@ Defines the KV store constants.
 
 **Deprecated since:** 9
 
-**Substitutes:** Constants
+**Substitutes:** [Constants](arkts-arkdata-distributedkvstore-constants-i.md)
 
 <!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
 

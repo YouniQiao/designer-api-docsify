@@ -26,7 +26,7 @@ Sets a value for the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** setSync
+**Substitutes:** [setSync](arkts-basicservices-systemparameterenhance-setsync-f-sys.md)
 
 <!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 

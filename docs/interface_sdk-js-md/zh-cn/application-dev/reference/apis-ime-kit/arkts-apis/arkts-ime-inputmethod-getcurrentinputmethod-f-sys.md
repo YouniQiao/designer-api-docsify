@@ -6,7 +6,7 @@
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="getcurrentinputmethod-1"></a>
+<a id="getcurrentinputmethod2"></a>
 
 ## getCurrentInputMethod
 

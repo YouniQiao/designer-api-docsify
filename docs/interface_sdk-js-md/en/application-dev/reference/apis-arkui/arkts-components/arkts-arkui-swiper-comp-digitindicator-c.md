@@ -16,7 +16,7 @@ A constructor used to create a **DigitIndicator** object. It inherits from [Indi
 > 
 > The mirror display of the page number depends on the RTL status of the system.
 
-**Inheritance/Implementation:** DigitIndicator extends Indicator<DigitIndicator>
+**Inheritance/Implementation:** DigitIndicator extends Indicator&lt;DigitIndicator&gt;
 
 **Since:** 10
 

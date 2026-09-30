@@ -6,6 +6,8 @@
 import { fileAccess } from '@kit.CoreFileKit';
 ```
 
+<a id="createfileaccesshelper1"></a>
+
 ## createFileAccessHelper
 
 ```TypeScript
@@ -99,7 +101,7 @@ function createFileAccessHelper02(context: common.UIAbilityContext) {
 ```
 
 
-<a id="createfileaccesshelper-1"></a>
+<a id="createfileaccesshelper2"></a>
 
 ## createFileAccessHelper
 

@@ -6,6 +6,8 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
+<a id="getforegrounduiabilities1"></a>
+
 ## getForegroundUIAbilities
 
 ```TypeScript
@@ -55,7 +57,7 @@ abilityManager.getForegroundUIAbilities((err: BusinessError, data: Array<ability
 ```
 
 
-<a id="getforegrounduiabilities-1"></a>
+<a id="getforegrounduiabilities2"></a>
 
 ## getForegroundUIAbilities
 

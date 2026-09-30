@@ -28,7 +28,7 @@ function openCustomDialog(options: CustomDialogOptions): Promise<number>
 
 **废弃版本：** 18
 
-**替代接口：** openCustomDialog
+**替代接口：** [openCustomDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#opencustomdialog)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

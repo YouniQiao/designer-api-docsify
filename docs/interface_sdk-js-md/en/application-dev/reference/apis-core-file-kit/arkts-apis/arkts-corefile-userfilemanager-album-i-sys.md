@@ -26,6 +26,8 @@ Provides APIs to manage albums.
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
+<a id="addphotoassets1"></a>
+
 ## addPhotoAssets
 
 ```TypeScript
@@ -93,7 +95,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="addphotoassets-1"></a>
+<a id="addphotoassets2"></a>
 
 ## addPhotoAssets
 
@@ -166,6 +168,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="commitmodify1"></a>
+
 ## commitModify
 
 ```TypeScript
@@ -220,7 +224,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="commitmodify-1"></a>
+<a id="commitmodify2"></a>
 
 ## commitModify
 
@@ -278,6 +282,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<a id="deletephotoassets1"></a>
 
 ## deletePhotoAssets
 
@@ -351,7 +357,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="deletephotoassets-1"></a>
+<a id="deletephotoassets2"></a>
 
 ## deletePhotoAssets
 
@@ -429,6 +435,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="recoverphotoassets1"></a>
+
 ## recoverPhotoAssets
 
 ```TypeScript
@@ -496,7 +504,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="recoverphotoassets-1"></a>
+<a id="recoverphotoassets2"></a>
 
 ## recoverPhotoAssets
 
@@ -569,6 +577,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="removephotoassets1"></a>
+
 ## removePhotoAssets
 
 ```TypeScript
@@ -636,7 +646,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="removephotoassets-1"></a>
+<a id="removephotoassets2"></a>
 
 ## removePhotoAssets
 

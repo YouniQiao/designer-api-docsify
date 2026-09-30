@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="setgesturenavigationenabled1"></a>
+
 ## setGestureNavigationEnabled
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="setgesturenavigationenabled-1"></a>
+<a id="setgesturenavigationenabled2"></a>
 
 ## setGestureNavigationEnabled
 

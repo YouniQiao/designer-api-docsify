@@ -47,7 +47,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | number | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount). |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
 **Return value:**
 
@@ -116,6 +116,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="requestmodaluiextension1"></a>
 
 ## requestModalUIExtension
 
@@ -199,7 +201,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="requestmodaluiextension-1"></a>
+<a id="requestmodaluiextension2"></a>
 
 ## requestModalUIExtension
 
@@ -379,6 +381,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissionicon1"></a>
+
 ## setMissionIcon
 
 ```TypeScript
@@ -449,7 +453,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setmissionicon-1"></a>
+<a id="setmissionicon2"></a>
 
 ## setMissionIcon
 
@@ -525,6 +529,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startabilityascaller1"></a>
 
 ## startAbilityAsCaller
 
@@ -612,7 +618,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityascaller-1"></a>
+<a id="startabilityascaller2"></a>
 
 ## startAbilityAsCaller
 
@@ -702,7 +708,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityascaller-2"></a>
+<a id="startabilityascaller3"></a>
 
 ## startAbilityAsCaller
 
@@ -909,6 +915,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresultwithaccount1"></a>
+
 ## startAbilityForResultWithAccount
 
 ```TypeScript
@@ -942,7 +950,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | number | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the API call is successful, **code** in **err** is **0** and **data** is the result code and data when the UIAbility is terminated. Otherwise, **err** contains the corresponding error code and error information. |
 
 **Error codes:**
 
@@ -1012,7 +1020,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresultwithaccount-1"></a>
+<a id="startabilityforresultwithaccount2"></a>
 
 ## startAbilityForResultWithAccount
 
@@ -1125,7 +1133,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresultwithaccount-2"></a>
+<a id="startabilityforresultwithaccount3"></a>
 
 ## startAbilityForResultWithAccount
 
@@ -1166,7 +1174,7 @@ Starts a UIAbility with the account ID specified and returns the result when the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise that contains the **AbilityResult** parameter. |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Promise that contains the **AbilityResult** parameter. |
 
 **Error codes:**
 
@@ -1237,6 +1245,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startabilitywithaccount1"></a>
 
 ## startAbilityWithAccount
 
@@ -1340,7 +1350,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilitywithaccount-1"></a>
+<a id="startabilitywithaccount2"></a>
 
 ## startAbilityWithAccount
 
@@ -1448,7 +1458,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilitywithaccount-2"></a>
+<a id="startabilitywithaccount3"></a>
 
 ## startAbilityWithAccount
 
@@ -1561,6 +1571,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startrecentability1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -1660,7 +1672,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startrecentability-1"></a>
+<a id="startrecentability2"></a>
 
 ## startRecentAbility
 
@@ -1766,7 +1778,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startrecentability-2"></a>
+<a id="startrecentability3"></a>
 
 ## startRecentAbility
 
@@ -1876,6 +1888,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startserviceextensionability1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -1955,7 +1969,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startserviceextensionability-1"></a>
+<a id="startserviceextensionability2"></a>
 
 ## startServiceExtensionAbility
 
@@ -2040,6 +2054,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startserviceextensionabilitywithaccount1"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2131,7 +2147,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startserviceextensionabilitywithaccount-1"></a>
+<a id="startserviceextensionabilitywithaccount2"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2228,6 +2244,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="stopserviceextensionability1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2305,7 +2323,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="stopserviceextensionability-1"></a>
+<a id="stopserviceextensionability2"></a>
 
 ## stopServiceExtensionAbility
 
@@ -2386,6 +2404,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="stopserviceextensionabilitywithaccount1"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -2470,7 +2490,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="stopserviceextensionabilitywithaccount-1"></a>
+<a id="stopserviceextensionabilitywithaccount2"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -2597,7 +2617,7 @@ Connects this UIAbility to a ServiceExtensionAbility, with the account ID specif
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target UIAbility. |
 | accountId | number | Yes | ID of a system account. For details, see [getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount). |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | Yes | Instance of the callback function after the connection to the ServiceExtensionAbility is set up. |
 
 **Return value:**
 
@@ -2664,6 +2684,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="disconnectability1"></a>
 
 ## disconnectAbility
 
@@ -2737,7 +2759,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="disconnectability-1"></a>
+<a id="disconnectability2"></a>
 
 ## disconnectAbility
 

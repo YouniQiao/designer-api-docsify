@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getsimspn1"></a>
+
 ## getSimSpn
 
 ```TypeScript
@@ -50,7 +52,7 @@ sim.getSimSpn(0, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getsimspn-1"></a>
+<a id="getsimspn2"></a>
 
 ## getSimSpn
 

@@ -20,6 +20,8 @@ The maintenance of this interface has been stopped since version api 9. Please u
 import { media } from '@kit.MediaKit';
 ```
 
+<a id="getinputsurface1"></a>
+
 ## getInputSurface
 
 ```TypeScript
@@ -68,7 +70,7 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 });
 ```
 
-<a id="getinputsurface-2"></a>
+<a id="getinputsurface3"></a>
 
 ## getInputSurface
 
@@ -159,6 +161,8 @@ videoRecorder.on('error', (error: BusinessError) => { // Set the 'error' event c
 })
 ```
 
+<a id="pause1"></a>
+
 ## pause
 
 ```TypeScript
@@ -205,7 +209,7 @@ videoRecorder.pause((err: BusinessError) => {
 });
 ```
 
-<a id="pause-1"></a>
+<a id="pause2"></a>
 
 ## pause
 
@@ -250,6 +254,8 @@ videoRecorder.pause().then(() => {
   console.error('pause videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="prepare1"></a>
 
 ## prepare
 
@@ -324,7 +330,7 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
 })
 ```
 
-<a id="prepare-1"></a>
+<a id="prepare2"></a>
 
 ## prepare
 
@@ -402,6 +408,8 @@ videoRecorder.prepare(videoConfig).then(() => {
 });
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -446,7 +454,7 @@ videoRecorder.release((err: BusinessError) => {
 });
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -489,6 +497,8 @@ videoRecorder.release().then(() => {
   console.error('release videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="reset1"></a>
 
 ## reset
 
@@ -535,7 +545,7 @@ videoRecorder.reset((err: BusinessError) => {
 });
 ```
 
-<a id="reset-1"></a>
+<a id="reset2"></a>
 
 ## reset
 
@@ -579,6 +589,8 @@ videoRecorder.reset().then(() => {
   console.error('reset videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="resume1"></a>
 
 ## resume
 
@@ -626,7 +638,7 @@ videoRecorder.resume((err: BusinessError) => {
 });
 ```
 
-<a id="resume-1"></a>
+<a id="resume2"></a>
 
 ## resume
 
@@ -671,6 +683,8 @@ videoRecorder.resume().then(() => {
   console.error('resume videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="start1"></a>
 
 ## start
 
@@ -718,7 +732,7 @@ videoRecorder.start((err: BusinessError) => {
 });
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -763,6 +777,8 @@ videoRecorder.start().then(() => {
   console.error('start videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="stop1"></a>
 
 ## stop
 
@@ -810,7 +826,7 @@ videoRecorder.stop((err: BusinessError) => {
 });
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

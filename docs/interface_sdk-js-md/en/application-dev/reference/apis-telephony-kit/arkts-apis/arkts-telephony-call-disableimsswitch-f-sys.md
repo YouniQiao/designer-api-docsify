@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="disableimsswitch1"></a>
+
 ## disableImsSwitch
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.disableImsSwitch(0, (err: BusinessError) => {
 ```
 
 
-<a id="disableimsswitch-1"></a>
+<a id="disableimsswitch2"></a>
 
 ## disableImsSwitch
 

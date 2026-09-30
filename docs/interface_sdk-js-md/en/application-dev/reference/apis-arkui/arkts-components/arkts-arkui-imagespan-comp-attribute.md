@@ -8,7 +8,7 @@ The attributes inherit from [BaseSpan](arkts-arkui-span-comp-basespan-c.md). Amo
 
 @extends CommonMethod&lt;ImageSpanAttribute&gt; [since 10 - 10] @extends BaseSpan&lt;ImageSpanAttribute&gt; [since 11]
 
-**Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
+**Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan&lt;ImageSpanAttribute&gt;
 
 **Since:** 10
 

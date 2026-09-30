@@ -6,6 +6,8 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
+<a id="startsharing1"></a>
+
 ## startSharing
 
 ```TypeScript
@@ -60,7 +62,7 @@ sharing.startSharing(SHARING_WIFI, (error: BusinessError) => {
 ```
 
 
-<a id="startsharing-1"></a>
+<a id="startsharing2"></a>
 
 ## startSharing
 

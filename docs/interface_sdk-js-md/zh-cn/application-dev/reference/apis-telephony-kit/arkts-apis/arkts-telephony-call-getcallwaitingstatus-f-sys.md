@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="getcallwaitingstatus1"></a>
+
 ## getCallWaitingStatus
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.getCallWaitingStatus(0, (err: BusinessError, data: call.CallWaitingStatus) 
 ```
 
 
-<a id="getcallwaitingstatus-1"></a>
+<a id="getcallwaitingstatus2"></a>
 
 ## getCallWaitingStatus
 

@@ -14,7 +14,7 @@ Creates rendering resources that can be shared in multiple scenes ([Scene](arkts
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="createscene-1"></a>
+<a id="createscene2"></a>
 
 ## createScene
 

@@ -6,6 +6,8 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
+<a id="issharing1"></a>
+
 ## isSharing
 
 ```TypeScript
@@ -53,7 +55,7 @@ sharing.isSharing((error: BusinessError, data: boolean) => {
 ```
 
 
-<a id="issharing-1"></a>
+<a id="issharing2"></a>
 
 ## isSharing
 

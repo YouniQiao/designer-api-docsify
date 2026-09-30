@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="removegroupbybundle1"></a>
+
 ## removeGroupByBundle
 
 ```TypeScript
@@ -64,7 +66,7 @@ notificationManager.removeGroupByBundle(bundleOption, groupName, removeGroupByBu
 ```
 
 
-<a id="removegroupbybundle-1"></a>
+<a id="removegroupbybundle2"></a>
 
 ## removeGroupByBundle
 

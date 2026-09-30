@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="cansetcalltransfertime1"></a>
+
 ## canSetCallTransferTime
 
 ```TypeScript
@@ -59,7 +61,7 @@ call.canSetCallTransferTime(slotId, (err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="cansetcalltransfertime-1"></a>
+<a id="cansetcalltransfertime2"></a>
 
 ## canSetCallTransferTime
 

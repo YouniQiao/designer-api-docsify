@@ -49,7 +49,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的Ability的信息，如Ability名称，Bundle名称等。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
 
 **返回值：**
 
@@ -147,7 +147,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的Want信息。 |
 | accountId | number | 是 | 系统账号的账号ID。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 远端对象实例。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | 远端对象实例。 |
 
 **返回值：**
 
@@ -217,6 +217,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="disconnectserviceextensionability1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -283,7 +285,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="disconnectserviceextensionability-1"></a>
+<a id="disconnectserviceextensionability2"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -632,6 +634,8 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="requestmodaluiextension1"></a>
+
 ## requestModalUIExtension
 
 ```TypeScript
@@ -715,7 +719,7 @@ class ServiceExtension extends ServiceExtensionAbility {
 }
 ```
 
-<a id="requestmodaluiextension-1"></a>
+<a id="requestmodaluiextension2"></a>
 
 ## requestModalUIExtension
 
@@ -894,6 +898,8 @@ export default class ServiceExtension extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -981,7 +987,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 
@@ -1075,7 +1081,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startability-2"></a>
+<a id="startability3"></a>
 
 ## startAbility
 
@@ -1173,6 +1179,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilityascaller1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -1258,7 +1266,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startabilityascaller-1"></a>
+<a id="startabilityascaller2"></a>
 
 ## startAbilityAsCaller
 
@@ -1348,7 +1356,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startabilityascaller-2"></a>
+<a id="startabilityascaller3"></a>
 
 ## startAbilityAsCaller
 
@@ -1680,6 +1688,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startabilitywithaccount1"></a>
+
 ## startAbilityWithAccount
 
 ```TypeScript
@@ -1777,7 +1787,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startabilitywithaccount-1"></a>
+<a id="startabilitywithaccount2"></a>
 
 ## startAbilityWithAccount
 
@@ -1881,7 +1891,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startabilitywithaccount-2"></a>
+<a id="startabilitywithaccount3"></a>
 
 ## startAbilityWithAccount
 
@@ -1990,6 +2000,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startrecentability1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -2081,7 +2093,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startrecentability-1"></a>
+<a id="startrecentability2"></a>
 
 ## startRecentAbility
 
@@ -2181,7 +2193,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startrecentability-2"></a>
+<a id="startrecentability3"></a>
 
 ## startRecentAbility
 
@@ -2283,6 +2295,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="startserviceextensionability1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -2360,7 +2374,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startserviceextensionability-1"></a>
+<a id="startserviceextensionability2"></a>
 
 ## startServiceExtensionAbility
 
@@ -2443,6 +2457,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="startserviceextensionabilitywithaccount1"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2532,7 +2548,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="startserviceextensionabilitywithaccount-1"></a>
+<a id="startserviceextensionabilitywithaccount2"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2797,6 +2813,8 @@ export default class MyServiceExtensionAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="stopserviceextensionability1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2870,7 +2888,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="stopserviceextensionability-1"></a>
+<a id="stopserviceextensionability2"></a>
 
 ## stopServiceExtensionAbility
 
@@ -2949,6 +2967,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<a id="stopserviceextensionabilitywithaccount1"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -3032,7 +3052,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="stopserviceextensionabilitywithaccount-1"></a>
+<a id="stopserviceextensionabilitywithaccount2"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -3121,6 +3141,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<a id="terminateself1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -3178,7 +3200,7 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="terminateself-1"></a>
+<a id="terminateself2"></a>
 
 ## terminateSelf
 

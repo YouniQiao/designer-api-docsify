@@ -4,7 +4,7 @@
 interface PixelMap
 ```
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 7
 
@@ -17,6 +17,8 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ```TypeScript
 import { image } from '@kit.ImageKit';
 ```
+
+<a id="applycolorspace1"></a>
 
 ## applyColorSpace
 
@@ -67,7 +69,7 @@ function applyColorSpace(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="applycolorspace-1"></a>
+<a id="applycolorspace2"></a>
 
 ## applyColorSpace
 
@@ -751,7 +753,7 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
@@ -795,7 +797,7 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
@@ -869,6 +871,8 @@ function convertPixelFormat(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="createalphapixelmap1"></a>
+
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -909,7 +913,7 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="createalphapixelmap-1"></a>
+<a id="createalphapixelmap2"></a>
 
 ## createAlphaPixelmap
 
@@ -982,7 +986,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1157,7 +1161,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1208,7 +1212,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1227,6 +1231,8 @@ function createScaledPixelMapSync(pixelMap: image.PixelMap) {
   }
 }
 ```
+
+<a id="crop1"></a>
 
 ## crop
 
@@ -1272,7 +1278,7 @@ function crop(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="crop-1"></a>
+<a id="crop2"></a>
 
 ## crop
 
@@ -1350,7 +1356,7 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1473,6 +1479,8 @@ function extractAlphaPixelMapSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="flip1"></a>
+
 ## flip
 
 ```TypeScript
@@ -1519,7 +1527,7 @@ function flip(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="flip-1"></a>
+<a id="flip2"></a>
 
 ## flip
 
@@ -1600,7 +1608,7 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1728,6 +1736,8 @@ function getDensity(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="getimageinfo1"></a>
+
 ## getImageInfo
 
 ```TypeScript
@@ -1766,7 +1776,7 @@ function getImageInfo(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="getimageinfo-1"></a>
+<a id="getimageinfo2"></a>
 
 ## getImageInfo
 
@@ -1836,7 +1846,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1885,7 +1895,7 @@ Obtains the value of the metadata with a given key in this PixelMap.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
@@ -2103,6 +2113,8 @@ async function marshal() {
 }
 ```
 
+<a id="opacity1"></a>
+
 ## opacity
 
 ```TypeScript
@@ -2147,7 +2159,7 @@ function opacity(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="opacity-1"></a>
+<a id="opacity2"></a>
 
 ## opacity
 
@@ -2225,7 +2237,7 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitys
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -2358,6 +2370,8 @@ function readAllPixelsToBufferSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="readpixels1"></a>
+
 ## readPixels
 
 ```TypeScript
@@ -2426,7 +2440,7 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="readpixels-1"></a>
+<a id="readpixels2"></a>
 
 ## readPixels
 
@@ -2524,7 +2538,7 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readp
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -2726,6 +2740,8 @@ function readPixelsToAreaSyncYUV(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="readpixelstobuffer1"></a>
+
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -2773,7 +2789,7 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="readpixelstobuffer-1"></a>
+<a id="readpixelstobuffer2"></a>
 
 ## readPixelsToBuffer
 
@@ -2850,7 +2866,7 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -2868,6 +2884,8 @@ function readPixelsToBufferSync(pixelMap: image.PixelMap) {
   }
 }
 ```
+
+<a id="release1"></a>
 
 ## release
 
@@ -2914,7 +2932,7 @@ function release(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -2958,6 +2976,8 @@ function release(pixelMap: image.PixelMap) {
   });
 }
 ```
+
+<a id="rotate1"></a>
 
 ## rotate
 
@@ -3003,7 +3023,7 @@ function rotate(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="rotate-1"></a>
+<a id="rotate2"></a>
 
 ## rotate
 
@@ -3081,7 +3101,7 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotat
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3099,6 +3119,8 @@ function rotateSync(pixelMap: image.PixelMap) {
   }
 }
 ```
+
+<a id="scale1"></a>
 
 ## scale
 
@@ -3146,7 +3168,7 @@ function scale(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scale-1"></a>
+<a id="scale2"></a>
 
 ## scale
 
@@ -3197,7 +3219,7 @@ function scale(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scale-2"></a>
+<a id="scale3"></a>
 
 ## scale
 
@@ -3238,7 +3260,7 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3255,6 +3277,8 @@ function scaleSync(pixelMap: image.PixelMap) {
   });
 }
 ```
+
+<a id="scalesync1"></a>
 
 ## scaleSync
 
@@ -3286,7 +3310,7 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3306,7 +3330,7 @@ function scaleSync(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scalesync-1"></a>
+<a id="scalesync2"></a>
 
 ## scaleSync
 
@@ -3339,7 +3363,7 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3432,7 +3456,7 @@ Sets a memory name for this PixelMap.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 | [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
 
 **Examples**
@@ -3483,7 +3507,7 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
@@ -3649,7 +3673,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3754,6 +3778,8 @@ async function toSdr(context: Context) {
 }
 ```
 
+<a id="translate1"></a>
+
 ## translate
 
 ```TypeScript
@@ -3800,7 +3826,7 @@ function translate(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="translate-1"></a>
+<a id="translate2"></a>
 
 ## translate
 
@@ -3881,7 +3907,7 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytr
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -4125,6 +4151,8 @@ function writeAllPixelsFromBufferSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="writebuffertopixels1"></a>
+
 ## writeBufferToPixels
 
 ```TypeScript
@@ -4176,7 +4204,7 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="writebuffertopixels-1"></a>
+<a id="writebuffertopixels2"></a>
 
 ## writeBufferToPixels
 
@@ -4255,7 +4283,7 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -4277,6 +4305,8 @@ function writeBufferToPixelsSync(pixelMap: image.PixelMap) {
   }
 }
 ```
+
+<a id="writepixels1"></a>
 
 ## writePixels
 
@@ -4352,7 +4382,7 @@ function writePixelsYUV(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="writepixels-1"></a>
+<a id="writepixels2"></a>
 
 ## writePixels
 
@@ -4666,7 +4696,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
+| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 

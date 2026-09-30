@@ -6,6 +6,8 @@
 import { privacyManager } from '@kit.AbilityKit';
 ```
 
+<a id="startusingpermission1"></a>
+
 ## startUsingPermission
 
 ```TypeScript
@@ -71,7 +73,7 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO').then(
 ```
 
 
-<a id="startusingpermission-1"></a>
+<a id="startusingpermission2"></a>
 
 ## startUsingPermission
 
@@ -166,7 +168,7 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, 
 ```
 
 
-<a id="startusingpermission-2"></a>
+<a id="startusingpermission3"></a>
 
 ## startUsingPermission
 
@@ -270,7 +272,7 @@ privacyManager.startUsingPermission(tokenID, 'ohos.permission.READ_AUDIO', pid, 
 ```
 
 
-<a id="startusingpermission-3"></a>
+<a id="startusingpermission4"></a>
 
 ## startUsingPermission
 

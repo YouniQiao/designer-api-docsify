@@ -18,7 +18,7 @@ Provides APIs for data management in a single KV store, such as adding data, del
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="delete-2"></a>
+<a id="delete3"></a>
 
 ## delete
 
@@ -109,7 +109,7 @@ try {
 }
 ```
 
-<a id="delete-3"></a>
+<a id="delete4"></a>
 
 ## delete
 
@@ -155,7 +155,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 
 See [delete](#delete)
 
-<a id="getresultset-4"></a>
+<a id="getresultset5"></a>
 
 ## getResultSet
 
@@ -359,7 +359,7 @@ try {
 }
 ```
 
-<a id="getresultset-5"></a>
+<a id="getresultset6"></a>
 
 ## getResultSet
 
@@ -568,7 +568,7 @@ try {
 }
 ```
 
-<a id="putbatch-2"></a>
+<a id="putbatch3"></a>
 
 ## putBatch
 
@@ -684,7 +684,7 @@ try {
 }
 ```
 
-<a id="putbatch-3"></a>
+<a id="putbatch4"></a>
 
 ## putBatch
 

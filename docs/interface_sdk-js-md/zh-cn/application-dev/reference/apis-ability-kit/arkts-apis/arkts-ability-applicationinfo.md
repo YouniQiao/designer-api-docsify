@@ -1,7 +1,7 @@
 # ApplicationInfo
 
 The module defines the application information. An application can obtain its own application information through
- [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
+ [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself1)
  , with **GET_BUNDLE_INFO_WITH_APPLICATION** passed in to
  [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 

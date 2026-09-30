@@ -6,6 +6,8 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
+<a id="prepare1"></a>
+
 ## prepare
 
 ```TypeScript
@@ -18,7 +20,7 @@ function prepare(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="prepare-1"></a>
+<a id="prepare2"></a>
 
 ## prepare
 

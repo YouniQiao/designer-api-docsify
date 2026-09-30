@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="muteringer1"></a>
+
 ## muteRinger
 
 ```TypeScript
@@ -57,7 +59,7 @@ call.muteRinger((err: BusinessError) => {
 ```
 
 
-<a id="muteringer-1"></a>
+<a id="muteringer2"></a>
 
 ## muteRinger
 

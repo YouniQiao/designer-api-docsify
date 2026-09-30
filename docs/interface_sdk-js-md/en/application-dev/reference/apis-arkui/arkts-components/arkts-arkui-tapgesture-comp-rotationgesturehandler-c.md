@@ -6,7 +6,7 @@ declare class RotationGestureHandler extends GestureHandler<RotationGestureHandl
 
 Defines a rotation gesture handler object.
 
-**Inheritance/Implementation:** RotationGestureHandler extends GestureHandler<RotationGestureHandler>
+**Inheritance/Implementation:** RotationGestureHandler extends GestureHandler&lt;RotationGestureHandler&gt;
 
 **Since:** 12
 
@@ -38,6 +38,8 @@ Constructor used to create a rotation gesture handler instance.
 | --- | --- | --- | --- |
 | options | [RotationGestureHandlerOptions](arkts-arkui-tapgesture-comp-rotationgesturehandleroptions-i.md) | No | Parameters of the rotation gesture handler. |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -68,7 +70,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 | --- | --- |
 | [RotationGestureHandler](arkts-arkui-tapgesture-comp-rotationgesturehandler-c.md) | Rotation gesture handler object. |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 
@@ -76,7 +78,7 @@ Sets the callback for rotation gesture cancellation. This callback is triggered 
 onActionCancel(event: Callback<GestureEvent>): RotationGestureHandler
 ```
 
-Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
+Sets the callback for rotation gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel1), this API returns gesture event information.
 
 **Since:** 18
 

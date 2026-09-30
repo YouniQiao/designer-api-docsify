@@ -12,7 +12,7 @@ type ParamsInterface = {
 
 **废弃版本：** 8
 
-**替代接口：** params
+**替代接口：** [params](arkts-arkui-router-routeroptions-i.md#params)
 
 <!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}--><!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}-End-->
 

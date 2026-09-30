@@ -424,6 +424,8 @@ pageTransition函数用于定义页面入场和页面退场的转场动效。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="querynavdestinationinfo1"></a>
+
 ## queryNavDestinationInfo
 
 ```TypeScript
@@ -448,7 +450,7 @@ queryNavDestinationInfo(): NavDestinationInfo | undefined
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
 
-<a id="querynavdestinationinfo-1"></a>
+<a id="querynavdestinationinfo2"></a>
 
 ## queryNavDestinationInfo
 

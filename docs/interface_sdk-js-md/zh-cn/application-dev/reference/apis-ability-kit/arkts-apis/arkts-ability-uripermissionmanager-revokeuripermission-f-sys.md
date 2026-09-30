@@ -6,6 +6,8 @@
 import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
+<a id="revokeuripermission1"></a>
+
 ## revokeUriPermission
 
 ```TypeScript
@@ -70,7 +72,7 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName, (error) => {
 ```
 
 
-<a id="revokeuripermission-2"></a>
+<a id="revokeuripermission3"></a>
 
 ## revokeUriPermission
 
@@ -141,7 +143,7 @@ uriPermissionManager.revokeUriPermission(uri, targetBundleName)
 ```
 
 
-<a id="revokeuripermission-4"></a>
+<a id="revokeuripermission5"></a>
 
 ## revokeUriPermission
 

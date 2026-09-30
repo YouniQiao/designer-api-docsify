@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="kickoutfromconference1"></a>
+
 ## kickOutFromConference
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.kickOutFromConference(1, (err: BusinessError) => {
 ```
 
 
-<a id="kickoutfromconference-1"></a>
+<a id="kickoutfromconference2"></a>
 
 ## kickOutFromConference
 

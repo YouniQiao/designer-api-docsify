@@ -18,6 +18,8 @@ ApplicationContext inherits from [Context](arkts-ability-context.md) and provide
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+<a id="clearupapplicationdata1"></a>
+
 ## clearUpApplicationData
 
 ```TypeScript
@@ -72,7 +74,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-<a id="clearupapplicationdata-1"></a>
+<a id="clearupapplicationdata2"></a>
 
 ## clearUpApplicationData
 
@@ -450,6 +452,8 @@ export default class MyAbilityStage extends AbilityStage {
 }
 ```
 
+<a id="getrunningprocessinformation1"></a>
+
 ## getRunningProcessInformation
 
 ```TypeScript
@@ -502,7 +506,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-<a id="getrunningprocessinformation-1"></a>
+<a id="getrunningprocessinformation2"></a>
 
 ## getRunningProcessInformation
 
@@ -671,6 +675,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="killallprocesses1"></a>
+
 ## killAllProcesses
 
 ```TypeScript
@@ -722,7 +728,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-<a id="killallprocesses-1"></a>
+<a id="killallprocesses2"></a>
 
 ## killAllProcesses
 
@@ -783,7 +789,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-<a id="killallprocesses-2"></a>
+<a id="killallprocesses3"></a>
 
 ## killAllProcesses
 

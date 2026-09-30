@@ -6,7 +6,7 @@
 import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
-<a id="queryappkeystate-1"></a>
+<a id="queryappkeystate2"></a>
 
 ## queryAppKeyState
 

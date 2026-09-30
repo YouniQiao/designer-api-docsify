@@ -6,13 +6,13 @@ export interface MifareUltralightTag extends TagSession
 
 MifareUltralightTag 提供对MIFARE Ultralight属性和I/O操作的访问，继承自TagSession。
 
-TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
+TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-i.md)。
 
 MifareUltralightTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
 
 以下是MifareUltralightTag的独有接口。
 
-**继承/实现关系：** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**继承/实现关系：** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **起始版本：** 9
 
@@ -51,6 +51,8 @@ import { tag } from '@kit.ConnectivityKit';
 let getType : tag.MifareUltralightType = mifareUltralight.getType();
 console.info("mifareUltralight getType: " + getType);
 ```
+
+<a id="readmultiplepages1"></a>
 
 ## readMultiplePages
 
@@ -121,7 +123,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readmultiplepages-1"></a>
+<a id="readmultiplepages2"></a>
 
 ## readMultiplePages
 
@@ -188,6 +190,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesinglepage1"></a>
 
 ## writeSinglePage
 
@@ -260,7 +264,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writesinglepage-1"></a>
+<a id="writesinglepage2"></a>
 
 ## writeSinglePage
 

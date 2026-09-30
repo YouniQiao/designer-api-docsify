@@ -6,6 +6,8 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
+<a id="setvideo1"></a>
+
 ## setVideo
 
 ```TypeScript
@@ -61,7 +63,7 @@ try {
 ```
 
 
-<a id="setvideo-1"></a>
+<a id="setvideo2"></a>
 
 ## setVideo
 

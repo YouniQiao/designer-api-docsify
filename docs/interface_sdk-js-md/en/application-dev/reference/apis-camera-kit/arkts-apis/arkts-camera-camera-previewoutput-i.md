@@ -88,7 +88,7 @@ Before enabling this feature, you can call [isBandwidthCompressionSupported](#is
 > **NOTE:** 
 > 
 > This function must be called prior to
-> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig). Otherwise, the
+> [Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig1). Otherwise, the
 > preview output stream format will be affected.
 
 **Since:** 23
@@ -725,6 +725,8 @@ function testSetPreviewRotation(previewOutput: camera.PreviewOutput, previewRota
 }
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -737,7 +739,7 @@ Starts to output preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [start](arkts-camera-camera-session-i.md#start1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -771,7 +773,7 @@ function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
 }
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -817,6 +819,8 @@ function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
 }
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -829,7 +833,7 @@ Stops outputting preview streams. This API uses an asynchronous callback to retu
 
 **Deprecated since:** 11
 
-**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stop](arkts-camera-camera-session-i.md#stop1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -857,7 +861,7 @@ function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
 }
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

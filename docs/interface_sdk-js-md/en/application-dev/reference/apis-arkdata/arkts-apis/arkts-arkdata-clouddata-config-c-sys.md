@@ -88,6 +88,8 @@ try {
 }
 ```
 
+<a id="changeappcloudswitch1"></a>
+
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -150,7 +152,7 @@ try {
 }
 ```
 
-<a id="changeappcloudswitch-1"></a>
+<a id="changeappcloudswitch2"></a>
 
 ## changeAppCloudSwitch
 
@@ -212,7 +214,7 @@ try {
 }
 ```
 
-<a id="changeappcloudswitch-2"></a>
+<a id="changeappcloudswitch3"></a>
 
 ## changeAppCloudSwitch
 
@@ -292,6 +294,8 @@ try {
 }
 ```
 
+<a id="clear1"></a>
+
 ## clear
 
 ```TypeScript
@@ -356,7 +360,7 @@ try {
 }
 ```
 
-<a id="clear-1"></a>
+<a id="clear2"></a>
 
 ## clear
 
@@ -421,7 +425,7 @@ try {
 }
 ```
 
-<a id="clear-2"></a>
+<a id="clear3"></a>
 
 ## clear
 
@@ -649,6 +653,8 @@ try {
 }
 ```
 
+<a id="disablecloud1"></a>
+
 ## disableCloud
 
 ```TypeScript
@@ -703,7 +709,7 @@ try {
 }
 ```
 
-<a id="disablecloud-1"></a>
+<a id="disablecloud2"></a>
 
 ## disableCloud
 
@@ -761,6 +767,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="enablecloud1"></a>
 
 ## enableCloud
 
@@ -822,7 +830,7 @@ try {
 }
 ```
 
-<a id="enablecloud-1"></a>
+<a id="enablecloud2"></a>
 
 ## enableCloud
 
@@ -882,6 +890,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<a id="notifydatachange1"></a>
 
 ## notifyDataChange
 
@@ -945,7 +955,7 @@ try {
 }
 ```
 
-<a id="notifydatachange-1"></a>
+<a id="notifydatachange2"></a>
 
 ## notifyDataChange
 
@@ -1004,7 +1014,7 @@ try {
 }
 ```
 
-<a id="notifydatachange-2"></a>
+<a id="notifydatachange3"></a>
 
 ## notifyDataChange
 
@@ -1065,7 +1075,7 @@ try {
 }
 ```
 
-<a id="notifydatachange-3"></a>
+<a id="notifydatachange4"></a>
 
 ## notifyDataChange
 
@@ -1126,7 +1136,7 @@ try {
 }
 ```
 
-<a id="notifydatachange-4"></a>
+<a id="notifydatachange5"></a>
 
 ## notifyDataChange
 

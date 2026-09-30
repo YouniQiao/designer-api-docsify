@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="setcallrestriction1"></a>
+
 ## setCallRestriction
 
 ```TypeScript
@@ -64,7 +66,7 @@ call.setCallRestriction(0, callRestrictionInfo, (err: BusinessError) => {
 ```
 
 
-<a id="setcallrestriction-1"></a>
+<a id="setcallrestriction2"></a>
 
 ## setCallRestriction
 

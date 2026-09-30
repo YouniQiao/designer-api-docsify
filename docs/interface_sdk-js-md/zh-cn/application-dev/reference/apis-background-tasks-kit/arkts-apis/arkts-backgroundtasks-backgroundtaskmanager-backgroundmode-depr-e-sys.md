@@ -28,7 +28,7 @@ WLAN相关
 
 **废弃版本：** 9
 
-**替代接口：** WIFI_INTERACTION
+**替代接口：** [WIFI_INTERACTION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e-sys.md#wifi_interaction)
 
 <!--Device-BackgroundMode-WIFI_INTERACTION = 7--><!--Device-BackgroundMode-WIFI_INTERACTION = 7-End-->
 
@@ -48,7 +48,7 @@ VOIP = 8
 
 **废弃版本：** 9
 
-**替代接口：** VOIP
+**替代接口：** [VOIP](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#voip)
 
 <!--Device-BackgroundMode-VOIP = 8--><!--Device-BackgroundMode-VOIP = 8-End-->
 

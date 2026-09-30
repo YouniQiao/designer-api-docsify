@@ -6,6 +6,8 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
+<a id="isrunninginstabilitytest1"></a>
+
 ## isRunningInStabilityTest
 
 ```TypeScript
@@ -57,7 +59,7 @@ appManager.isRunningInStabilityTest((err, flag) => {
 ```
 
 
-<a id="isrunninginstabilitytest-1"></a>
+<a id="isrunninginstabilitytest2"></a>
 
 ## isRunningInStabilityTest
 

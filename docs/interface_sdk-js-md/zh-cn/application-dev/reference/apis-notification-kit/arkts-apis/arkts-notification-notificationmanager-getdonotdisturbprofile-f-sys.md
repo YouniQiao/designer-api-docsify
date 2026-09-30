@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="getdonotdisturbprofile1"></a>
+
 ## getDoNotDisturbProfile
 
 ```TypeScript
@@ -62,7 +64,7 @@ notificationManager.getDoNotDisturbProfile(1).then((data: notificationManager.Do
 ```
 
 
-<a id="getdonotdisturbprofile-1"></a>
+<a id="getdonotdisturbprofile2"></a>
 
 ## getDoNotDisturbProfile
 

@@ -6,6 +6,8 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
+<a id="opendlpfile1"></a>
+
 ## openDLPFile
 
 ```TypeScript
@@ -93,7 +95,7 @@ ExampleFunction();
 ```
 
 
-<a id="opendlpfile-1"></a>
+<a id="opendlpfile2"></a>
 
 ## openDLPFile
 

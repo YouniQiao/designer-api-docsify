@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="removeallslots1"></a>
+
 ## removeAllSlots
 
 ```TypeScript
@@ -26,9 +28,9 @@ After deletion, all notification slots and their configurations of the current a
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of a specified type.
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md) obtains a notification slot of a specified type.
+[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot1) obtains a notification slot of a specified type.
 
-[removeSlots](arkts-notification-notificationmanager-removeslot-f.md) removes all notification slots for this application.
+[removeSlots](arkts-notification-notificationmanager-removeslot-f.md#removeslot1) removes all notification slots for this application.
 
 **Parameters:**
 
@@ -61,7 +63,7 @@ notificationManager.removeAllSlots(removeAllSlotsCallback);
 ```
 
 
-<a id="removeallslots-1"></a>
+<a id="removeallslots2"></a>
 
 ## removeAllSlots
 
@@ -83,9 +85,9 @@ After deletion, all notification slots and their configurations of the current a
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) adds a notification slot of a specified type.
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot-2) obtains a notification slot of a specified type.
+[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot3) obtains a notification slot of a specified type.
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot-1) removes a notification slot of a specified type for this application.
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot2) removes a notification slot of a specified type for this application.
 
 **Return value:**
 

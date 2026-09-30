@@ -18,6 +18,8 @@ Defines a **WebSocket** object. Before invoking WebSocket APIs, you need to call
 import { webSocket } from '@kit.NetworkKit';
 ```
 
+<a id="close1"></a>
+
 ## close
 
 ```TypeScript
@@ -65,7 +67,7 @@ ws.close((err: BusinessError) => {
 });
 ```
 
-<a id="close-1"></a>
+<a id="close2"></a>
 
 ## close
 
@@ -121,7 +123,7 @@ ws.close(options, (err: BusinessError) => {
 });
 ```
 
-<a id="close-2"></a>
+<a id="close3"></a>
 
 ## close
 
@@ -178,6 +180,8 @@ promise.then((value: boolean) => {
     console.error("close fail, error:" + JSON.stringify(err))
 });
 ```
+
+<a id="connect1"></a>
 
 ## connect
 
@@ -246,7 +250,7 @@ ws.connect(url, (err: BusinessError, value: boolean) => {
 });
 ```
 
-<a id="connect-1"></a>
+<a id="connect2"></a>
 
 ## connect
 
@@ -340,7 +344,7 @@ ws.connect(url, options, (err: BusinessError, value: Object) => {
 });
 ```
 
-<a id="connect-2"></a>
+<a id="connect3"></a>
 
 ## connect
 
@@ -691,7 +695,7 @@ ws.off('headerReceive');
 on(type: 'open', callback: AsyncCallback<Object>): void
 ```
 
-Subscribes to WebSocket open events. This API uses an asynchronous callback to return the result. This event indicates whether the WebSocket connection is successful. This API must be called before [connect](#connect) is called to initiate a connection request.
+Subscribes to WebSocket open events. This API uses an asynchronous callback to return the result. This event indicates whether the WebSocket connection is successful. This API must be called before [connect](#connect1) is called to initiate a connection request.
 
 **Since:** 6
 
@@ -938,6 +942,8 @@ ws.on('headerReceive', (data) => {
 });
 ```
 
+<a id="send1"></a>
+
 ## send
 
 ```TypeScript
@@ -1001,7 +1007,7 @@ ws.on('open', (err: BusinessError, value: Object) => {
 });
 ```
 
-<a id="send-1"></a>
+<a id="send2"></a>
 
 ## send
 

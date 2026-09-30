@@ -24,13 +24,15 @@ interface VideoRecorder
 import { media } from '@kit.MediaKit';
 ```
 
+<a id="getinputsurface1"></a>
+
 ## getInputSurface
 
 ```TypeScript
 getInputSurface(callback: AsyncCallback<string>): void
 ```
 
-获得录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare)接口调用后调用。
+获得录制需要的surface。使用callback异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare1)接口调用后调用。
 
 **起始版本：** 9
 
@@ -72,7 +74,7 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 });
 ```
 
-<a id="getinputsurface-2"></a>
+<a id="getinputsurface3"></a>
 
 ## getInputSurface
 
@@ -80,7 +82,7 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
 getInputSurface(): Promise<string>
 ```
 
-获得录制需要的surface。使用Promise异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare-1)接口调用后调用。
+获得录制需要的surface。使用Promise异步回调。开发者从此surface中获取surfaceBuffer，填入相应的数据。应当注意，填入的视频数据需要携带时间戳（单位ns），buffersize。时间戳的起始时间请以系统启动时间为基准。只能在[prepare()](#prepare2)接口调用后调用。
 
 **起始版本：** 9
 
@@ -163,6 +165,8 @@ videoRecorder.on('error', (error: BusinessError) => { // 设置'error'事件回�
 })
 ```
 
+<a id="pause1"></a>
+
 ## pause
 
 ```TypeScript
@@ -171,7 +175,7 @@ pause(callback: AsyncCallback<void>): void
 
 暂停视频录制。使用callback异步回调。
 
-在[start()](#start)后调用。可以通过调用[resume()](#resume)接口来恢复录制。
+在[start()](#start1)后调用。可以通过调用[resume()](#resume1)接口来恢复录制。
 
 **起始版本：** 9
 
@@ -211,7 +215,7 @@ videoRecorder.pause((err: BusinessError) => {
 });
 ```
 
-<a id="pause-1"></a>
+<a id="pause2"></a>
 
 ## pause
 
@@ -258,6 +262,8 @@ videoRecorder.pause().then(() => {
   console.error('pause videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="prepare1"></a>
 
 ## prepare
 
@@ -332,7 +338,7 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
 })
 ```
 
-<a id="prepare-1"></a>
+<a id="prepare2"></a>
 
 ## prepare
 
@@ -410,6 +416,8 @@ videoRecorder.prepare(videoConfig).then(() => {
 });
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -454,7 +462,7 @@ videoRecorder.release((err: BusinessError) => {
 });
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -498,6 +506,8 @@ videoRecorder.release().then(() => {
 });
 ```
 
+<a id="reset1"></a>
+
 ## reset
 
 ```TypeScript
@@ -506,7 +516,7 @@ reset(callback: AsyncCallback<void>): void
 
 重置视频录制。使用callback异步回调。
 
-需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
+需要重新调用[prepare()](#prepare1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -545,7 +555,7 @@ videoRecorder.reset((err: BusinessError) => {
 });
 ```
 
-<a id="reset-1"></a>
+<a id="reset2"></a>
 
 ## reset
 
@@ -555,7 +565,7 @@ reset(): Promise<void>
 
 重置视频录制。使用Promise异步回调。
 
-需要重新调用[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
+需要重新调用[prepare()](#prepare2)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -591,6 +601,8 @@ videoRecorder.reset().then(() => {
   console.error('reset videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<a id="resume1"></a>
 
 ## resume
 
@@ -638,7 +650,7 @@ videoRecorder.resume((err: BusinessError) => {
 });
 ```
 
-<a id="resume-1"></a>
+<a id="resume2"></a>
 
 ## resume
 
@@ -684,6 +696,8 @@ videoRecorder.resume().then(() => {
 });
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -692,7 +706,7 @@ start(callback: AsyncCallback<void>): void
 
 开始视频录制。使用callback异步回调。
 
-在[prepare()](#prepare)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
+在[prepare()](#prepare1)和[getInputSurface()](#getinputsurface1)后调用，需要依赖数据源先给surface传递数据。
 
 **起始版本：** 9
 
@@ -732,7 +746,7 @@ videoRecorder.start((err: BusinessError) => {
 });
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -742,7 +756,7 @@ start(): Promise<void>
 
 开始视频录制。使用Promise异步回调。
 
-在[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
+在[prepare()](#prepare2)和[getInputSurface()](#getinputsurface)后调用，需要依赖数据源先给surface传递数据。
 
 **起始版本：** 9
 
@@ -780,6 +794,8 @@ videoRecorder.start().then(() => {
 });
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -788,7 +804,7 @@ stop(callback: AsyncCallback<void>): void
 
 停止视频录制。使用callback异步回调。
 
-需要重新调用[prepare()](#prepare)和[getInputSurface()](#getinputsurface)接口才能重新录制。
+需要重新调用[prepare()](#prepare1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 
@@ -828,7 +844,7 @@ videoRecorder.stop((err: BusinessError) => {
 });
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 
@@ -838,7 +854,7 @@ stop(): Promise<void>
 
 停止视频录制。使用callback异步回调。
 
-需要重新调用[prepare()](#prepare-1)和[getInputSurface()](#getinputsurface)接口才能重新录制。
+需要重新调用[prepare()](#prepare2)和[getInputSurface()](#getinputsurface)接口才能重新录制。
 
 **起始版本：** 9
 

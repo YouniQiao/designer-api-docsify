@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="cancel1"></a>
+
 ## cancel
 
 ```TypeScript
@@ -24,9 +26,9 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 
 **参见：**
 
-[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md#publish1) 发布通知。
 
-[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelall1) 取消当前应用所有已发布的通知。
 
 [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
 
@@ -64,7 +66,7 @@ notificationManager.cancel(0, cancelCallback);
 ```
 
 
-<a id="cancel-1"></a>
+<a id="cancel2"></a>
 
 ## cancel
 
@@ -84,9 +86,9 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 
 **参见：**
 
-[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md#publish1) 发布通知。
 
-[cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
+[cancelAll](arkts-notification-notificationmanager-cancelall-f.md#cancelall1) 取消当前应用所有已发布的通知。
 
 [cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md) 取消当前应用指定组下的通知。
 
@@ -125,7 +127,7 @@ notificationManager.cancel(0, 'label', cancelCallback);
 ```
 
 
-<a id="cancel-2"></a>
+<a id="cancel3"></a>
 
 ## cancel
 
@@ -145,11 +147,11 @@ function cancel(id: number, label?: string): Promise<void>
 
 **参见：**
 
-[publish](arkts-notification-notificationmanager-publish-f.md) 发布通知。
+[publish](arkts-notification-notificationmanager-publish-f.md#publish1) 发布通知。
 
 [cancelAll](arkts-notification-notificationmanager-cancelall-f.md) 取消当前应用所有已发布的通知。
 
-[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup-1) 取消当前应用指定组下的通知。
+[cancelGroup](arkts-notification-notificationmanager-cancelgroup-f.md#cancelgroup2) 取消当前应用指定组下的通知。
 
 **参数：**
 

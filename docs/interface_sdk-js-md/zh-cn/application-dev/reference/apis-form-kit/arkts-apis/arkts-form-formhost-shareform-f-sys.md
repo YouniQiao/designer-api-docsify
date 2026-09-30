@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="shareform1"></a>
+
 ## shareForm
 
 ```TypeScript
@@ -64,7 +66,7 @@ try {
 ```
 
 
-<a id="shareform-1"></a>
+<a id="shareform2"></a>
 
 ## shareForm
 

@@ -229,6 +229,8 @@ struct UIExtensionPage {
 }
 ```
 
+<a id="setwindowprivacymode1"></a>
+
 ## setWindowPrivacyMode
 
 ```TypeScript
@@ -297,7 +299,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
-<a id="setwindowprivacymode-1"></a>
+<a id="setwindowprivacymode2"></a>
 
 ## setWindowPrivacyMode
 
@@ -361,6 +363,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
   // ...
 }
 ```
+
+<a id="startabilitybytype1"></a>
 
 ## startAbilityByType
 
@@ -436,7 +440,7 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
-<a id="startabilitybytype-2"></a>
+<a id="startabilitybytype3"></a>
 
 ## startAbilityByType
 
@@ -517,6 +521,8 @@ export default class ShareExtAbility extends ShareExtensionAbility {
 }
 ```
 
+<a id="terminateself1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -579,7 +585,7 @@ struct Index {
 }
 ```
 
-<a id="terminateself-1"></a>
+<a id="terminateself2"></a>
 
 ## terminateSelf
 
@@ -637,6 +643,8 @@ struct Index {
 }
 ```
 
+<a id="terminateselfwithresult1"></a>
+
 ## terminateSelfWithResult
 
 ```TypeScript
@@ -657,7 +665,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the host application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -710,7 +718,7 @@ struct Index {
 }
 ```
 
-<a id="terminateselfwithresult-1"></a>
+<a id="terminateselfwithresult2"></a>
 
 ## terminateSelfWithResult
 
@@ -732,7 +740,7 @@ Destroys this UIExtensionAbility, closes the corresponding window of the host ap
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | Yes | Information returned to the host application. |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | Yes | Information returned to the host application. |
 
 **Return value:**
 

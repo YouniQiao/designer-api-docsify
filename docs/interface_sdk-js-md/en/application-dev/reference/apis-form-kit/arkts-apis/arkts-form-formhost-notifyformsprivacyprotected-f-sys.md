@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="notifyformsprivacyprotected1"></a>
+
 ## notifyFormsPrivacyProtected
 
 ```TypeScript
@@ -48,7 +50,7 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="notifyformsprivacyprotected-1"></a>
+<a id="notifyformsprivacyprotected2"></a>
 
 ## notifyFormsPrivacyProtected
 

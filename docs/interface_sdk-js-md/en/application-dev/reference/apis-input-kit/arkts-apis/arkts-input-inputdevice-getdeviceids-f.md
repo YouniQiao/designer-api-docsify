@@ -6,6 +6,8 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
+<a id="getdeviceids1"></a>
+
 ## getDeviceIds
 
 ```TypeScript
@@ -18,7 +20,7 @@ Obtains the IDs of all input devices. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** getDeviceList
+**Substitutes:** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
 
 <!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void--><!--Device-inputDevice-function getDeviceIds(callback: AsyncCallback<Array<number>>): void-End-->
 
@@ -58,7 +60,7 @@ struct Index {
 ```
 
 
-<a id="getdeviceids-1"></a>
+<a id="getdeviceids2"></a>
 
 ## getDeviceIds
 
@@ -72,7 +74,7 @@ Obtains the IDs of all input devices. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** getDeviceList
+**Substitutes:** [getDeviceList](arkts-input-inputdevice-getdevicelist-f.md)
 
 <!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>--><!--Device-inputDevice-function getDeviceIds(): Promise<Array<number>>-End-->
 

@@ -24,6 +24,8 @@ AVSessionController控制器可查看会话ID，并可完成对会话发送命�
 import { avSession } from '@kit.AVSessionKit';
 ```
 
+<a id="destroy1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -63,7 +65,7 @@ avcontroller.destroy((err: BusinessError) => {
 });
 ```
 
-<a id="destroy-1"></a>
+<a id="destroy2"></a>
 
 ## destroy
 
@@ -101,6 +103,8 @@ avcontroller.destroy().then(() => {
   console.info('Succeeded in destroying.');
 });
 ```
+
+<a id="getavcallstate1"></a>
 
 ## getAVCallState
 
@@ -142,7 +146,7 @@ avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallStat
 });
 ```
 
-<a id="getavcallstate-1"></a>
+<a id="getavcallstate2"></a>
 
 ## getAVCallState
 
@@ -179,6 +183,8 @@ avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
   console.info(`Succeeded in getting AV call state: ${callstate.state}`);
 });
 ```
+
+<a id="getavmetadata1"></a>
 
 ## getAVMetadata
 
@@ -220,7 +226,7 @@ avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) 
 });
 ```
 
-<a id="getavmetadata-1"></a>
+<a id="getavmetadata2"></a>
 
 ## getAVMetadata
 
@@ -296,6 +302,8 @@ getAVMetadataSync(): AVMetadata
 let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
 ```
 
+<a id="getavplaybackstate1"></a>
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -336,7 +344,7 @@ avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlayback
 });
 ```
 
-<a id="getavplaybackstate-1"></a>
+<a id="getavplaybackstate2"></a>
 
 ## getAVPlaybackState
 
@@ -412,6 +420,8 @@ getAVPlaybackStateSync(): AVPlaybackState
 let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
 ```
 
+<a id="getavqueueitems1"></a>
+
 ## getAVQueueItems
 
 ```TypeScript
@@ -452,7 +462,7 @@ avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]
 });
 ```
 
-<a id="getavqueueitems-1"></a>
+<a id="getavqueueitems2"></a>
 
 ## getAVQueueItems
 
@@ -528,6 +538,8 @@ getAVQueueItemsSync(): Array<AVQueueItem>
 let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
 ```
 
+<a id="getavqueuetitle1"></a>
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -568,7 +580,7 @@ avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
 });
 ```
 
-<a id="getavqueuetitle-1"></a>
+<a id="getavqueuetitle2"></a>
 
 ## getAVQueueTitle
 
@@ -644,6 +656,8 @@ getAVQueueTitleSync(): string
 let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
 ```
 
+<a id="getcallmetadata1"></a>
+
 ## getCallMetadata
 
 ```TypeScript
@@ -684,7 +698,7 @@ avcontroller.getCallMetadata((err: BusinessError, calldata: avSession.CallMetada
 });
 ```
 
-<a id="getcallmetadata-1"></a>
+<a id="getcallmetadata2"></a>
 
 ## getCallMetadata
 
@@ -760,6 +774,8 @@ getDesktopLyricState(): Promise<DesktopLyricState>
 avcontroller.getDesktopLyricState();
 ```
 
+<a id="getextras1"></a>
+
 ## getExtras
 
 ```TypeScript
@@ -805,7 +821,7 @@ avcontroller.getExtras((err: BusinessError, extras) => {
 });
 ```
 
-<a id="getextras-2"></a>
+<a id="getextras3"></a>
 
 ## getExtras
 
@@ -940,6 +956,8 @@ if (controller !== undefined) {
 }
 ```
 
+<a id="getlaunchability1"></a>
+
 ## getLaunchAbility
 
 ```TypeScript
@@ -958,7 +976,7 @@ getLaunchAbility(callback: AsyncCallback<WantAgent>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability-1)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | 是 | 回调函数。返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability2)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
@@ -982,7 +1000,7 @@ avcontroller.getLaunchAbility((err: BusinessError, agent: WantAgent) => {
 });
 ```
 
-<a id="getlaunchability-1"></a>
+<a id="getlaunchability2"></a>
 
 ## getLaunchAbility
 
@@ -1004,7 +1022,7 @@ getLaunchAbility(): Promise<WantAgent>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability-1)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
+| Promise&lt;[WantAgent](../../apis-ability-kit/arkts-apis/arkts-ability-wantagent-t.md)&gt; | Promise对象，返回在[setLaunchAbility](arkts-avsession-avsession-avsession-i.md#setlaunchability2)保存的对象，包括应用的相关属性信息，如bundleName，abilityName，deviceId等。 |
 
 **错误码：**
 
@@ -1063,6 +1081,8 @@ avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterCon
 });
 ```
 
+<a id="getoutputdevice1"></a>
+
 ## getOutputDevice
 
 ```TypeScript
@@ -1102,7 +1122,7 @@ avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDe
 });
 ```
 
-<a id="getoutputdevice-1"></a>
+<a id="getoutputdevice2"></a>
 
 ## getOutputDevice
 
@@ -1293,6 +1313,8 @@ avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
 });
 ```
 
+<a id="getvalidcommands1"></a>
+
 ## getValidCommands
 
 ```TypeScript
@@ -1333,7 +1355,7 @@ avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVCo
 });
 ```
 
-<a id="getvalidcommands-1"></a>
+<a id="getvalidcommands2"></a>
 
 ## getValidCommands
 
@@ -1409,6 +1431,8 @@ getValidCommandsSync(): Array<AVControlCommandType>
 let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
 ```
 
+<a id="isactive1"></a>
+
 ## isActive
 
 ```TypeScript
@@ -1449,7 +1473,7 @@ avcontroller.isActive((err: BusinessError, isActive: boolean) => {
 });
 ```
 
-<a id="isactive-1"></a>
+<a id="isactive2"></a>
 
 ## isActive
 
@@ -3088,6 +3112,8 @@ avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
 });
 ```
 
+<a id="sendavkeyevent1"></a>
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -3137,7 +3163,7 @@ avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
 });
 ```
 
-<a id="sendavkeyevent-1"></a>
+<a id="sendavkeyevent2"></a>
 
 ## sendAVKeyEvent
 
@@ -3191,6 +3217,8 @@ avcontroller.sendAVKeyEvent(event).then(() => {
 });
 ```
 
+<a id="sendcommoncommand1"></a>
+
 ## sendCommonCommand
 
 ```TypeScript
@@ -3240,7 +3268,7 @@ avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (e
 })
 ```
 
-<a id="sendcommoncommand-2"></a>
+<a id="sendcommoncommand3"></a>
 
 ## sendCommonCommand
 
@@ -3294,6 +3322,8 @@ avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).th
 });
 ```
 
+<a id="sendcontrolcommand1"></a>
+
 ## sendControlCommand
 
 ```TypeScript
@@ -3346,7 +3376,7 @@ avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
 });
 ```
 
-<a id="sendcontrolcommand-1"></a>
+<a id="sendcontrolcommand2"></a>
 
 ## sendControlCommand
 
@@ -3568,6 +3598,8 @@ setDesktopLyricVisible(visible: boolean): Promise<void>
 avcontroller.setDesktopLyricVisible(true);
 ```
 
+<a id="skiptoqueueitem1"></a>
+
 ## skipToQueueItem
 
 ```TypeScript
@@ -3611,7 +3643,7 @@ avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
 });
 ```
 
-<a id="skiptoqueueitem-1"></a>
+<a id="skiptoqueueitem2"></a>
 
 ## skipToQueueItem
 

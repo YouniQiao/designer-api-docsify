@@ -6,7 +6,7 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="answercall-2"></a>
+<a id="answercall3"></a>
 
 ## answerCall
 

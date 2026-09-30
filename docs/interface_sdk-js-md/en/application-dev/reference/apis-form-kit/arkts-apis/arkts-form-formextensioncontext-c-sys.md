@@ -41,7 +41,7 @@ Connects this ability to a ServiceExtensionAbility.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability, such as the ability name and bundle name. |
-| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful, interrupted, or failed. |
+| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) | Yes | Callback used to return the information indicating that the connection is successful, interrupted, or failed. |
 
 **Return value:**
 
@@ -112,6 +112,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="disconnectserviceextensionability1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -180,7 +182,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-<a id="disconnectserviceextensionability-1"></a>
+<a id="disconnectserviceextensionability2"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -256,6 +258,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -322,7 +326,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 

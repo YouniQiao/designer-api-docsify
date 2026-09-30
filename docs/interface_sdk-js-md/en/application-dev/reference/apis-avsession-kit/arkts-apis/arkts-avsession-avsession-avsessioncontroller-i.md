@@ -20,6 +20,8 @@ Session controller,used to control media playback and get media information
 import { avSession } from '@kit.AVSessionKit';
 ```
 
+<a id="destroy1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -59,7 +61,7 @@ avcontroller.destroy((err: BusinessError) => {
 });
 ```
 
-<a id="destroy-1"></a>
+<a id="destroy2"></a>
 
 ## destroy
 
@@ -97,6 +99,8 @@ avcontroller.destroy().then(() => {
   console.info('Succeeded in destroying.');
 });
 ```
+
+<a id="getavcallstate1"></a>
 
 ## getAVCallState
 
@@ -138,7 +142,7 @@ avcontroller.getAVCallState((err: BusinessError, callstate: avSession.AVCallStat
 });
 ```
 
-<a id="getavcallstate-1"></a>
+<a id="getavcallstate2"></a>
 
 ## getAVCallState
 
@@ -175,6 +179,8 @@ avcontroller.getAVCallState().then((callstate: avSession.AVCallState) => {
   console.info(`Succeeded in getting AV call state: ${callstate.state}`);
 });
 ```
+
+<a id="getavmetadata1"></a>
 
 ## getAVMetadata
 
@@ -216,7 +222,7 @@ avcontroller.getAVMetadata((err: BusinessError, metadata: avSession.AVMetadata) 
 });
 ```
 
-<a id="getavmetadata-1"></a>
+<a id="getavmetadata2"></a>
 
 ## getAVMetadata
 
@@ -292,6 +298,8 @@ Get the metadata of the current session
 let metaData: avSession.AVMetadata = avcontroller.getAVMetadataSync();
 ```
 
+<a id="getavplaybackstate1"></a>
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -332,7 +340,7 @@ avcontroller.getAVPlaybackState((err: BusinessError, state: avSession.AVPlayback
 });
 ```
 
-<a id="getavplaybackstate-1"></a>
+<a id="getavplaybackstate2"></a>
 
 ## getAVPlaybackState
 
@@ -408,6 +416,8 @@ Get the playback status of the current session
 let playbackState: avSession.AVPlaybackState = avcontroller.getAVPlaybackStateSync();
 ```
 
+<a id="getavqueueitems1"></a>
+
 ## getAVQueueItems
 
 ```TypeScript
@@ -448,7 +458,7 @@ avcontroller.getAVQueueItems((err: BusinessError, items: avSession.AVQueueItem[]
 });
 ```
 
-<a id="getavqueueitems-1"></a>
+<a id="getavqueueitems2"></a>
 
 ## getAVQueueItems
 
@@ -524,6 +534,8 @@ Get the playlist of the current session
 let currentQueueItems: Array<avSession.AVQueueItem> = avcontroller.getAVQueueItemsSync();
 ```
 
+<a id="getavqueuetitle1"></a>
+
 ## getAVQueueTitle
 
 ```TypeScript
@@ -564,7 +576,7 @@ avcontroller.getAVQueueTitle((err: BusinessError, title: string) => {
 });
 ```
 
-<a id="getavqueuetitle-1"></a>
+<a id="getavqueuetitle2"></a>
 
 ## getAVQueueTitle
 
@@ -640,6 +652,8 @@ Get the name of the playlist of the current session
 let currentQueueTitle: string = avcontroller.getAVQueueTitleSync();
 ```
 
+<a id="getcallmetadata1"></a>
+
 ## getCallMetadata
 
 ```TypeScript
@@ -680,7 +694,7 @@ avcontroller.getCallMetadata((err: BusinessError, calldata: avSession.CallMetada
 });
 ```
 
-<a id="getcallmetadata-1"></a>
+<a id="getcallmetadata2"></a>
 
 ## getCallMetadata
 
@@ -756,6 +770,8 @@ Get desktop lyric state such as lock state for this session.
 avcontroller.getDesktopLyricState();
 ```
 
+<a id="getextras1"></a>
+
 ## getExtras
 
 ```TypeScript
@@ -801,7 +817,7 @@ avcontroller.getExtras((err: BusinessError, extras) => {
 });
 ```
 
-<a id="getextras-2"></a>
+<a id="getextras3"></a>
 
 ## getExtras
 
@@ -936,6 +952,8 @@ if (controller !== undefined) {
 }
 ```
 
+<a id="getlaunchability1"></a>
+
 ## getLaunchAbility
 
 ```TypeScript
@@ -978,7 +996,7 @@ avcontroller.getLaunchAbility((err: BusinessError, agent: WantAgent) => {
 });
 ```
 
-<a id="getlaunchability-1"></a>
+<a id="getlaunchability2"></a>
 
 ## getLaunchAbility
 
@@ -1057,6 +1075,8 @@ avcontroller.getMediaCenterControlType().then((types: avSession.AVMediaCenterCon
 });
 ```
 
+<a id="getoutputdevice1"></a>
+
 ## getOutputDevice
 
 ```TypeScript
@@ -1096,7 +1116,7 @@ avcontroller.getOutputDevice((err: BusinessError, deviceInfo: avSession.OutputDe
 });
 ```
 
-<a id="getoutputdevice-1"></a>
+<a id="getoutputdevice2"></a>
 
 ## getOutputDevice
 
@@ -1283,6 +1303,8 @@ avcontroller.getSupportedPlaySpeeds().then((speeds: number[]) => {
 });
 ```
 
+<a id="getvalidcommands1"></a>
+
 ## getValidCommands
 
 ```TypeScript
@@ -1323,7 +1345,7 @@ avcontroller.getValidCommands((err: BusinessError, validCommands: avSession.AVCo
 });
 ```
 
-<a id="getvalidcommands-1"></a>
+<a id="getvalidcommands2"></a>
 
 ## getValidCommands
 
@@ -1399,6 +1421,8 @@ Get commands supported by the current session
 let validCommands: Array<avSession.AVControlCommandType> = avcontroller.getValidCommandsSync();
 ```
 
+<a id="isactive1"></a>
+
 ## isActive
 
 ```TypeScript
@@ -1439,7 +1463,7 @@ avcontroller.isActive((err: BusinessError, isActive: boolean) => {
 });
 ```
 
-<a id="isactive-1"></a>
+<a id="isactive2"></a>
 
 ## isActive
 
@@ -3046,6 +3070,8 @@ avcontroller.onSupportedPlaySpeedsChange((speeds: number[]) => {
 });
 ```
 
+<a id="sendavkeyevent1"></a>
+
 ## sendAVKeyEvent
 
 ```TypeScript
@@ -3095,7 +3121,7 @@ avcontroller.sendAVKeyEvent(event, (err: BusinessError) => {
 });
 ```
 
-<a id="sendavkeyevent-1"></a>
+<a id="sendavkeyevent2"></a>
 
 ## sendAVKeyEvent
 
@@ -3149,6 +3175,8 @@ avcontroller.sendAVKeyEvent(event).then(() => {
 });
 ```
 
+<a id="sendcommoncommand1"></a>
+
 ## sendCommonCommand
 
 ```TypeScript
@@ -3198,7 +3226,7 @@ avcontroller.sendCommonCommand(commandName, {command : "This is my command"}, (e
 })
 ```
 
-<a id="sendcommoncommand-2"></a>
+<a id="sendcommoncommand3"></a>
 
 ## sendCommonCommand
 
@@ -3252,6 +3280,8 @@ avcontroller.sendCommonCommand(commandName, {command : "This is my command"}).th
 });
 ```
 
+<a id="sendcontrolcommand1"></a>
+
 ## sendControlCommand
 
 ```TypeScript
@@ -3298,7 +3328,7 @@ avcontroller.sendControlCommand(avCommand, (err: BusinessError) => {
 });
 ```
 
-<a id="sendcontrolcommand-1"></a>
+<a id="sendcontrolcommand2"></a>
 
 ## sendControlCommand
 
@@ -3514,6 +3544,8 @@ Set desktop lyric visible state for this session.
 avcontroller.setDesktopLyricVisible(true);
 ```
 
+<a id="skiptoqueueitem1"></a>
+
 ## skipToQueueItem
 
 ```TypeScript
@@ -3557,7 +3589,7 @@ avcontroller.skipToQueueItem(queueItemId, (err: BusinessError) => {
 });
 ```
 
-<a id="skiptoqueueitem-1"></a>
+<a id="skiptoqueueitem2"></a>
 
 ## skipToQueueItem
 

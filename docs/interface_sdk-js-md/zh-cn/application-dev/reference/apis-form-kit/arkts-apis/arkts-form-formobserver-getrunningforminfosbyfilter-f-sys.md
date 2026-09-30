@@ -6,6 +6,8 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
+<a id="getrunningforminfosbyfilter1"></a>
+
 ## getRunningFormInfosByFilter
 
 ```TypeScript
@@ -80,7 +82,7 @@ try {
 ```
 
 
-<a id="getrunningforminfosbyfilter-1"></a>
+<a id="getrunningforminfosbyfilter2"></a>
 
 ## getRunningFormInfosByFilter
 

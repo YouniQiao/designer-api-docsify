@@ -12,6 +12,8 @@ OffscreenCanvas支持以下属性：
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="addcolorstop1"></a>
+
 ## addColorStop
 
 ```TypeScript
@@ -72,7 +74,7 @@ struct AddColorStop {
 }
 ```
 
-<a id="addcolorstop-1"></a>
+<a id="addcolorstop2"></a>
 
 ## addColorStop
 

@@ -6,6 +6,8 @@
 import { privacyManager } from '@kit.AbilityKit';
 ```
 
+<a id="getpermissionusedrecord1"></a>
+
 ## getPermissionUsedRecord
 
 ```TypeScript
@@ -74,7 +76,7 @@ privacyManager.getPermissionUsedRecord(request).then((data) => {
 ```
 
 
-<a id="getpermissionusedrecord-1"></a>
+<a id="getpermissionusedrecord2"></a>
 
 ## getPermissionUsedRecord
 

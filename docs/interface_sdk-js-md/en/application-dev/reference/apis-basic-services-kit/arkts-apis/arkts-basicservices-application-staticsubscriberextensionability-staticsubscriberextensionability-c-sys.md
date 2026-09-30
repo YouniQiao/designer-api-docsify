@@ -48,7 +48,7 @@ Defines a callback to be invoked when a common event is triggered in static mode
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [CommonEventData](arkts-basicservices-commoneventdata-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
+| event | [CommonEventData](arkts-basicservices-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
 
 **Examples**
 

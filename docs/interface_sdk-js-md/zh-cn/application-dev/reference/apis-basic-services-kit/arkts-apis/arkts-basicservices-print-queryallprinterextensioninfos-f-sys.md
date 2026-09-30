@@ -6,6 +6,8 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
+<a id="queryallprinterextensioninfos1"></a>
+
 ## queryAllPrinterExtensionInfos
 
 ```TypeScript
@@ -53,7 +55,7 @@ print.queryAllPrinterExtensionInfos((error: BusinessError, extensionInfos: print
 ```
 
 
-<a id="queryallprinterextensioninfos-1"></a>
+<a id="queryallprinterextensioninfos2"></a>
 
 ## queryAllPrinterExtensionInfos
 

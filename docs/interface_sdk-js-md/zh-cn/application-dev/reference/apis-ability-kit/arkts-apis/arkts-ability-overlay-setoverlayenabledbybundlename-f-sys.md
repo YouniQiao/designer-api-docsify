@@ -6,6 +6,8 @@
 import { overlay } from '@kit.AbilityKit';
 ```
 
+<a id="setoverlayenabledbybundlename1"></a>
+
 ## setOverlayEnabledByBundleName
 
 ```TypeScript
@@ -74,7 +76,7 @@ try {
 ```
 
 
-<a id="setoverlayenabledbybundlename-1"></a>
+<a id="setoverlayenabledbybundlename2"></a>
 
 ## setOverlayEnabledByBundleName
 

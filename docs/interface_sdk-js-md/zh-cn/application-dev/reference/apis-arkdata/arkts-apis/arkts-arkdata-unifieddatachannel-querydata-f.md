@@ -6,6 +6,8 @@
 import { unifiedDataChannel } from '@kit.ArkData';
 ```
 
+<a id="querydata1"></a>
+
 ## queryData
 
 ```TypeScript
@@ -72,7 +74,7 @@ try {
 ```
 
 
-<a id="querydata-1"></a>
+<a id="querydata2"></a>
 
 ## queryData
 

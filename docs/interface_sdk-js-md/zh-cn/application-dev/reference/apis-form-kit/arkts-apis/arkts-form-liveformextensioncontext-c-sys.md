@@ -22,7 +22,7 @@ public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): n
 
 将当前LiveFormExtensionAbility客户端连接到一个[ServiceExtensionAbility](../../../application-models/serviceextensionability-sys.md)服务端。
 
-调用该接口前，必须实现[ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md)接口。
+调用该接口前，必须实现[ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md)接口。
 
 通过本接口连接成功后，LiveFormExtensionAbility可以通过ConnectOptions返回的[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)与ServiceExtensionAbility进行通信，以使用ServiceExtensionAbility对外提供的能力。
 
@@ -47,7 +47,7 @@ ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | 连接ServiceExtensionAbility的Want信息，包括Ability名称、Bundle名称等。 |
-| connection | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息，连接成功会返回[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)实例。 |
+| connection | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息，连接成功会返回[IRemoteObject](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-iremoteobject-c.md)实例。 |
 
 **返回值：**
 

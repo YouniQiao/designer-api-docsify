@@ -6,6 +6,8 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
+<a id="queryallprintjobs1"></a>
+
 ## queryAllPrintJobs
 
 ```TypeScript
@@ -68,7 +70,7 @@ print.queryAllPrintJobs().then(() => {
 ```
 
 
-<a id="queryallprintjobs-1"></a>
+<a id="queryallprintjobs2"></a>
 
 ## queryAllPrintJobs
 

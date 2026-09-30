@@ -20,7 +20,7 @@ Provides APIs for querying data in a device KV store and performing cross-device
 import { distributedKVStore } from '@kit.ArkData';
 ```
 
-<a id="getresultset-8"></a>
+<a id="getresultset9"></a>
 
 ## getResultSet
 
@@ -387,7 +387,7 @@ try {
 }
 ```
 
-<a id="getresultset-9"></a>
+<a id="getresultset10"></a>
 
 ## getResultSet
 
@@ -759,7 +759,7 @@ try {
 }
 ```
 
-<a id="getresultset-10"></a>
+<a id="getresultset11"></a>
 
 ## getResultSet
 
@@ -1127,7 +1127,7 @@ try {
 }
 ```
 
-<a id="getresultset-11"></a>
+<a id="getresultset12"></a>
 
 ## getResultSet
 

@@ -6,6 +6,8 @@
 import { backup } from '@kit.CoreFileKit';
 ```
 
+<a id="getlocalcapabilities1"></a>
+
 ## getLocalCapabilities
 
 ```TypeScript
@@ -79,7 +81,7 @@ async function getLocalCapabilities() {
 ```
 
 
-<a id="getlocalcapabilities-1"></a>
+<a id="getlocalcapabilities2"></a>
 
 ## getLocalCapabilities
 
@@ -157,7 +159,7 @@ try {
 ```
 
 
-<a id="getlocalcapabilities-2"></a>
+<a id="getlocalcapabilities3"></a>
 
 ## getLocalCapabilities
 

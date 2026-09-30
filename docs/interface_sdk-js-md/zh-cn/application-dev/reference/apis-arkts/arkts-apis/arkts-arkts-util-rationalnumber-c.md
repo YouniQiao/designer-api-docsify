@@ -56,7 +56,7 @@ console.info("result = " + result);
 // 输出结果：result = -1
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -79,6 +79,8 @@ constructor()
 ```TypeScript
 let rationalNumber = new util.RationalNumber();
 ```
+
+<a id="constructor1"></a>
 
 ## constructor
 
@@ -572,7 +574,7 @@ compareTo(another: RationalNumber): number
 
 **废弃版本：** 9
 
-**替代接口：** compare
+**替代接口：** [compare](#compare)
 
 <!--Device-RationalNumber-compareTo(another: RationalNumber): number--><!--Device-RationalNumber-compareTo(another: RationalNumber): number-End-->
 

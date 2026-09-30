@@ -6,7 +6,7 @@ declare class PinchGestureHandler extends GestureHandler<PinchGestureHandler>
 
 Defines a type of gesture handler object for pinch gestures.
 
-**Inheritance/Implementation:** PinchGestureHandler extends GestureHandler<PinchGestureHandler>
+**Inheritance/Implementation:** PinchGestureHandler extends GestureHandler&lt;PinchGestureHandler&gt;
 
 **Since:** 12
 
@@ -38,6 +38,8 @@ Constructor used to create a pinch gesture handler instance.
 | --- | --- | --- | --- |
 | options | [PinchGestureHandlerOptions](arkts-arkui-tapgesture-comp-pinchgesturehandleroptions-i.md) | No | Parameters of the pinch gesture handler. |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -68,7 +70,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 | --- | --- |
 | [PinchGestureHandler](arkts-arkui-tapgesture-comp-pinchgesturehandler-c.md) | Pinch gesture handler object. |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 
@@ -76,7 +78,7 @@ Sets the callback for pinch gesture cancellation. This callback is triggered whe
 onActionCancel(event: Callback<GestureEvent>): PinchGestureHandler
 ```
 
-Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
+Sets the callback for pinch gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel1), this API returns gesture event information.
 
 **Since:** 18
 

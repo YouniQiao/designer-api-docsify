@@ -137,7 +137,7 @@ This API is supported since API version 9 and deprecated since API version 11. Y
 
 **Deprecated since:** 11
 
-**Substitutes:** active
+**Substitutes:** [active](#active)
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 

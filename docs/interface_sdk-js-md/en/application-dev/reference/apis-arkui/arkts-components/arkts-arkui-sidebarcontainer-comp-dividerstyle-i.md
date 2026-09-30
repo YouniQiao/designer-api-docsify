@@ -17,7 +17,7 @@ Sets the divider style.
 > If the [showSideBar](arkts-arkui-sidebarcontainer-comp-attribute.md#showsidebar) attribute is not set, the sidebar's visibility is
 > subject to its size.
 
-> - If the size is less than the sum of [minSideBarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#minsidebarwidth) and [minContentWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#mincontentwidth), the sidebar is not displayed by default.
+> - If the size is less than the sum of [minSideBarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#minsidebarwidth1) and [minContentWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#mincontentwidth), the sidebar is not displayed by default.
 > 
 > - If the size is greater than or equal to the sum of **minSideBarWidth** and **minContentWidth**, the sidebar is displayed by default.
 
@@ -117,7 +117,7 @@ Value range: [0, +∞).
 
 **NOTE:** 
 
-Percentage values are not supported. The priority of this attribute is lower than that of the universal attribute [height](arkts-arkui-common-comp-commonmethod-c.md#height). If the value of this attribute is greater than that of **height**, cropping is performed based on the **height** settings. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value.
+Percentage values are not supported. The priority of this attribute is lower than that of the universal attribute [height](arkts-arkui-common-comp-commonmethod-c.md#height1). If the value of this attribute is greater than that of **height**, cropping is performed based on the **height** settings. Due to hardware limitations on some devices where 1 px dividers may not display properly after rounding, you are advised to use the **2px** value.
 
 **Type:** [Length](../arkts-apis/arkts-arkui-length-t.md)
 

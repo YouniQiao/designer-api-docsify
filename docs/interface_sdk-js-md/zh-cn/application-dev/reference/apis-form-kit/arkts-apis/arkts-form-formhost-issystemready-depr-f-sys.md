@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="issystemready1"></a>
+
 ## isSystemReady
 
 ```TypeScript
@@ -45,7 +47,7 @@ formHost.isSystemReady((error: Base.BusinessError) => {
 ```
 
 
-<a id="issystemready-1"></a>
+<a id="issystemready2"></a>
 
 ## isSystemReady
 

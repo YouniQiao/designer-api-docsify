@@ -8,7 +8,7 @@ In addition to universal attributes, the following attributes are supported.
 
 Since API version 12, the [universal events](arkts-arkui-common-comp.md) are supported when **type** is set to **SURFACE** or **TEXTURE**.
 
-**Inheritance/Implementation:** XComponentAttribute extends CommonMethod<XComponentAttribute>
+**Inheritance/Implementation:** XComponentAttribute extends CommonMethod&lt;XComponentAttribute&gt;
 
 **Since:** 8
 
@@ -68,6 +68,8 @@ Sets whether to enable the secure surface to protect the content rendered within
 | --- | --- | --- | --- |
 | isSecure | boolean | Yes | Whether to enable the privacy layer mode.<br>true: enables the privacy layer mode; false: disables the privacy layer mode.<br>Default value: false |
 
+<a id="hdrbrightness1"></a>
+
 ## hdrBrightness
 
 ```TypeScript
@@ -92,7 +94,7 @@ Sets the brightness of HDR video playback for the component.
 | --- | --- | --- | --- |
 | brightness | number | Yes | Brightness of the HDR video.<br>Default value: **1.0**<br>Value range: [0.0, 1.0]. Values less than 0.0 are treated as 0.0, values greater than 1.0 are treated as 1.0, and other abnormal values are treated as 1.0.<br>0.0 indicates that the video is displayed at SDR brightness, and 1.0 indicates that the video is displayed at the highest HDR brightness currently allowed. |
 
-<a id="hdrbrightness-1"></a>
+<a id="hdrbrightness2"></a>
 
 ## hdrBrightness
 

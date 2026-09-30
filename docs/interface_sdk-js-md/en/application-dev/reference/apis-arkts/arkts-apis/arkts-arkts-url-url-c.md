@@ -18,7 +18,7 @@ The interface of URL is used to parse, construct, normalize, and encode URLs.
 import { url } from '@kit.ArkTS';
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -52,6 +52,8 @@ new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is 
 new url.URL('https://www.example.com', ); // Output https://www.example.com/
 new url.URL('https://www.example.com', b); // Output https://www.example.com/
 ```
+
+<a id="constructor1"></a>
 
 ## constructor
 
@@ -435,7 +437,7 @@ Gets the URLSearchParams object that represents the URL query parameter. This pr
 
 **Deprecated since:** 9
 
-**Substitutes:** params
+**Substitutes:** [params](#params)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

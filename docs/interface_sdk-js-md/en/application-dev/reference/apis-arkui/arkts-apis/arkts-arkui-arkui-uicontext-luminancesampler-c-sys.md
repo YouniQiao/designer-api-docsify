@@ -9,6 +9,7 @@ Sets the background luminance color picking parameters, registers the luminance 
 > **NOTE:** 
 > 
 > In the following API examples, you must first use [getLuminanceSampler](arkts-arkui-arkui-uicontext-uicontext-c-sys.md#getluminancesampler) in
+> 
 > **UIContext** to obtain a **LuminanceSampler** object, and then call the APIs using the obtained object.
 
 **Since:** 23
@@ -167,7 +168,7 @@ The background luminance is divided into three ranges based on the luminance thr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance.<br>Note: [offBackgroundLuminanceChange](#offbackgroundluminancechange) cannot be called in the listening callback. |
+| samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance. <br>Note: [offBackgroundLuminanceChange](#offbackgroundluminancechange) cannot be called in the listening callback. |
 
 **Examples**
 

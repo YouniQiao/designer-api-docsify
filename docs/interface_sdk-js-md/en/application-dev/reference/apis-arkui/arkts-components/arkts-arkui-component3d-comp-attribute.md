@@ -6,7 +6,7 @@ declare class Component3DAttribute extends CommonMethod<Component3DAttribute>
 
 @extends CommonMethod&lt;Component3DAttribute&gt;
 
-**Inheritance/Implementation:** Component3DAttribute extends CommonMethod<Component3DAttribute>
+**Inheritance/Implementation:** Component3DAttribute extends CommonMethod&lt;Component3DAttribute&gt;
 
 **Since:** 12
 

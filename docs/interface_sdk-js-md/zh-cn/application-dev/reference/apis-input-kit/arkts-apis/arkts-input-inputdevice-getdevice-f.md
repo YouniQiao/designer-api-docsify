@@ -6,6 +6,8 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
+<a id="getdevice1"></a>
+
 ## getDevice
 
 ```TypeScript
@@ -18,7 +20,7 @@ function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): 
 
 **废弃版本：** 9
 
-**替代接口：** getDeviceInfo
+**替代接口：** [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md)
 
 <!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void--><!--Device-inputDevice-function getDevice(deviceId: number, callback: AsyncCallback<InputDeviceData>): void-End-->
 
@@ -59,7 +61,7 @@ struct Index {
 ```
 
 
-<a id="getdevice-1"></a>
+<a id="getdevice2"></a>
 
 ## getDevice
 
@@ -73,7 +75,7 @@ function getDevice(deviceId: number): Promise<InputDeviceData>
 
 **废弃版本：** 9
 
-**替代接口：** getDeviceInfo
+**替代接口：** [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md)
 
 <!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>--><!--Device-inputDevice-function getDevice(deviceId: number): Promise<InputDeviceData>-End-->
 

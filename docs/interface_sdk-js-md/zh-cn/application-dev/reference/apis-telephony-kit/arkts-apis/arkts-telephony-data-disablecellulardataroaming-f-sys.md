@@ -6,6 +6,8 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
+<a id="disablecellulardataroaming1"></a>
+
 ## disableCellularDataRoaming
 
 ```TypeScript
@@ -59,7 +61,7 @@ data.disableCellularDataRoaming(0, (err: BusinessError) => {
 ```
 
 
-<a id="disablecellulardataroaming-1"></a>
+<a id="disablecellulardataroaming2"></a>
 
 ## disableCellularDataRoaming
 

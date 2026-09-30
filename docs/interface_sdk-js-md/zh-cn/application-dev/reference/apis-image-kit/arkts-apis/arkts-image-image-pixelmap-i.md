@@ -4,7 +4,7 @@
 interface PixelMap
 ```
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap-1) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **起始版本：** 7
 
@@ -17,6 +17,8 @@ The **PixelMap** class provides APIs to read or write image data and obtain imag
 ```TypeScript
 import { image } from '@kit.ImageKit';
 ```
+
+<a id="applycolorspace1"></a>
 
 ## applyColorSpace
 
@@ -67,7 +69,7 @@ function applyColorSpace(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="applycolorspace-1"></a>
+<a id="applycolorspace2"></a>
 
 ## applyColorSpace
 
@@ -869,6 +871,8 @@ function convertPixelFormat(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="createalphapixelmap1"></a>
+
 ## createAlphaPixelmap
 
 ```TypeScript
@@ -909,7 +913,7 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="createalphapixelmap-1"></a>
+<a id="createalphapixelmap2"></a>
 
 ## createAlphaPixelmap
 
@@ -1232,6 +1236,8 @@ function createScaledPixelMapSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="crop1"></a>
+
 ## crop
 
 ```TypeScript
@@ -1276,7 +1282,7 @@ function crop(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="crop-1"></a>
+<a id="crop2"></a>
 
 ## crop
 
@@ -1477,6 +1483,8 @@ function extractAlphaPixelMapSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="flip1"></a>
+
 ## flip
 
 ```TypeScript
@@ -1523,7 +1531,7 @@ function flip(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="flip-1"></a>
+<a id="flip2"></a>
 
 ## flip
 
@@ -1732,6 +1740,8 @@ function getDensity(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="getimageinfo1"></a>
+
 ## getImageInfo
 
 ```TypeScript
@@ -1770,7 +1780,7 @@ function getImageInfo(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="getimageinfo-1"></a>
+<a id="getimageinfo2"></a>
 
 ## getImageInfo
 
@@ -2104,6 +2114,8 @@ async function marshal() {
 }
 ```
 
+<a id="opacity1"></a>
+
 ## opacity
 
 ```TypeScript
@@ -2148,7 +2160,7 @@ function opacity(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="opacity-1"></a>
+<a id="opacity2"></a>
 
 ## opacity
 
@@ -2359,6 +2371,8 @@ function readAllPixelsToBufferSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="readpixels1"></a>
+
 ## readPixels
 
 ```TypeScript
@@ -2427,7 +2441,7 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="readpixels-1"></a>
+<a id="readpixels2"></a>
 
 ## readPixels
 
@@ -2727,6 +2741,8 @@ function readPixelsToAreaSyncYUV(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="readpixelstobuffer1"></a>
+
 ## readPixelsToBuffer
 
 ```TypeScript
@@ -2774,7 +2790,7 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="readpixelstobuffer-1"></a>
+<a id="readpixelstobuffer2"></a>
 
 ## readPixelsToBuffer
 
@@ -2870,6 +2886,8 @@ function readPixelsToBufferSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -2915,7 +2933,7 @@ function release(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -2959,6 +2977,8 @@ function release(pixelMap: image.PixelMap) {
   });
 }
 ```
+
+<a id="rotate1"></a>
 
 ## rotate
 
@@ -3004,7 +3024,7 @@ function rotate(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="rotate-1"></a>
+<a id="rotate2"></a>
 
 ## rotate
 
@@ -3101,6 +3121,8 @@ function rotateSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="scale1"></a>
+
 ## scale
 
 ```TypeScript
@@ -3147,7 +3169,7 @@ function scale(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scale-1"></a>
+<a id="scale2"></a>
 
 ## scale
 
@@ -3198,7 +3220,7 @@ function scale(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scale-2"></a>
+<a id="scale3"></a>
 
 ## scale
 
@@ -3257,6 +3279,8 @@ function scaleSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="scalesync1"></a>
+
 ## scaleSync
 
 ```TypeScript
@@ -3307,7 +3331,7 @@ function scaleSync(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="scalesync-1"></a>
+<a id="scalesync2"></a>
 
 ## scaleSync
 
@@ -3755,6 +3779,8 @@ async function toSdr(context: Context) {
 }
 ```
 
+<a id="translate1"></a>
+
 ## translate
 
 ```TypeScript
@@ -3801,7 +3827,7 @@ function translate(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="translate-1"></a>
+<a id="translate2"></a>
 
 ## translate
 
@@ -4123,6 +4149,8 @@ function writeAllPixelsFromBufferSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="writebuffertopixels1"></a>
+
 ## writeBufferToPixels
 
 ```TypeScript
@@ -4174,7 +4202,7 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="writebuffertopixels-1"></a>
+<a id="writebuffertopixels2"></a>
 
 ## writeBufferToPixels
 
@@ -4276,6 +4304,8 @@ function writeBufferToPixelsSync(pixelMap: image.PixelMap) {
 }
 ```
 
+<a id="writepixels1"></a>
+
 ## writePixels
 
 ```TypeScript
@@ -4350,7 +4380,7 @@ function writePixelsYUV(pixelMap: image.PixelMap) {
 }
 ```
 
-<a id="writepixels-1"></a>
+<a id="writepixels2"></a>
 
 ## writePixels
 

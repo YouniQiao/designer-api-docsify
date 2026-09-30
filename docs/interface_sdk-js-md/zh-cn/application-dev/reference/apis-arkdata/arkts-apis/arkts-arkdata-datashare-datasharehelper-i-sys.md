@@ -77,6 +77,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="batchinsert1"></a>
+
 ## batchInsert
 
 ```TypeScript
@@ -139,7 +141,7 @@ try {
 }
 ```
 
-<a id="batchinsert-1"></a>
+<a id="batchinsert2"></a>
 
 ## batchInsert
 
@@ -342,6 +344,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="delete1"></a>
+
 ## delete
 
 ```TypeScript
@@ -402,7 +406,7 @@ try {
 }
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -523,6 +527,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="denormalizeuri1"></a>
+
 ## denormalizeUri
 
 ```TypeScript
@@ -573,7 +579,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="denormalizeuri-1"></a>
+<a id="denormalizeuri2"></a>
 
 ## denormalizeUri
 
@@ -628,6 +634,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="getpublisheddata1"></a>
+
 ## getPublishedData
 
 ```TypeScript
@@ -675,7 +683,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="getpublisheddata-1"></a>
+<a id="getpublisheddata2"></a>
 
 ## getPublishedData
 
@@ -723,6 +731,8 @@ if (dataShareHelper != undefined) {
   let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="insert1"></a>
 
 ## insert
 
@@ -793,7 +803,7 @@ try {
 }
 ```
 
-<a id="insert-1"></a>
+<a id="insert2"></a>
 
 ## insert
 
@@ -867,6 +877,8 @@ try {
 }
 ```
 
+<a id="normalizeuri1"></a>
+
 ## normalizeUri
 
 ```TypeScript
@@ -917,7 +929,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="normalizeuri-1"></a>
+<a id="normalizeuri2"></a>
 
 ## normalizeUri
 
@@ -972,6 +984,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="notifychange1"></a>
+
 ## notifyChange
 
 ```TypeScript
@@ -1016,7 +1030,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="notifychange-1"></a>
+<a id="notifychange2"></a>
 
 ## notifyChange
 
@@ -1065,7 +1079,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="notifychange-2"></a>
+<a id="notifychange3"></a>
 
 ## notifyChange
 
@@ -1170,7 +1184,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -1178,7 +1192,7 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#on-1)相对应。
+取消订阅指定URI下指定callback对应的数据资源的变更通知。与订阅接口[on](#on2)相对应。
 
 **起始版本：** 12
 
@@ -1347,7 +1361,7 @@ if (dataShareHelper != undefined) {
 on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-1)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。<br>规格限制：
+订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange2)方法，就会触发对指定URI订阅者的通知；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知。<br>规格限制：
 
 <br>* 在OpenHarmony 6.0之前，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持50个订阅。<br>* 从OpenHarmony 6.0开始，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持2500个订阅。
 
@@ -1389,7 +1403,7 @@ if (dataShareHelper !== undefined) {
 }
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -1397,7 +1411,7 @@ if (dataShareHelper !== undefined) {
 on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallback<ChangeInfo>): void
 ```
 
-订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange-2)方法，就会触发对指定URI订阅者的通知，通知携带[ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md)；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知，但此时callback通知中的ChangeInfo无效。<br>规格限制：<br>  
+订阅指定URI对应数据的数据变更事件。不支持跨用户订阅通知。<br> **触发通知：** 非静默场景下，调用[notifyChange](#notifychange3)方法，就会触发对指定URI订阅者的通知，通知携带[ChangeInfo](arkts-arkdata-datashare-changeinfo-i-sys.md)；或者静默场景下，使用指定URI的静默访问修改了数据，也会自动触发通知，但此时callback通知中的ChangeInfo无效。<br>规格限制：<br>  
 * 在OpenHarmony 6.0之前，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持50个订阅。  
 * 从OpenHarmony 6.0开始，同一应用内对单个URI的重复订阅上限为50次，单个URI全局最多支持2500个订阅。
 
@@ -1585,6 +1599,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="publish1"></a>
+
 ## publish
 
 ```TypeScript
@@ -1647,7 +1663,7 @@ try {
 }
 ```
 
-<a id="publish-1"></a>
+<a id="publish2"></a>
 
 ## publish
 
@@ -1705,7 +1721,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="publish-2"></a>
+<a id="publish3"></a>
 
 ## publish
 
@@ -1759,6 +1775,8 @@ if (dataShareHelper != undefined) {
   let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="query1"></a>
 
 ## query
 
@@ -1827,7 +1845,7 @@ try {
 }
 ```
 
-<a id="query-1"></a>
+<a id="query2"></a>
 
 ## query
 
@@ -1897,6 +1915,8 @@ try {
   console.error(`Failed to query. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="update1"></a>
 
 ## update
 
@@ -1975,7 +1995,7 @@ try {
 }
 ```
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

@@ -6,6 +6,8 @@
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
+<a id="changeappcloudswitch1"></a>
+
 ## changeAppCloudSwitch
 
 ```TypeScript
@@ -59,7 +61,7 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
 ```
 
 
-<a id="changeappcloudswitch-1"></a>
+<a id="changeappcloudswitch2"></a>
 
 ## changeAppCloudSwitch
 

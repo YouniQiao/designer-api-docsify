@@ -157,6 +157,8 @@ try {
 }
 ```
 
+<a id="destroyappclone1"></a>
+
 ## destroyAppClone
 
 ```TypeScript
@@ -227,7 +229,7 @@ try {
 }
 ```
 
-<a id="destroyappclone-1"></a>
+<a id="destroyappclone2"></a>
 
 ## destroyAppClone
 
@@ -307,6 +309,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<a id="install1"></a>
 
 ## install
 
@@ -409,7 +413,7 @@ try {
 }
 ```
 
-<a id="install-1"></a>
+<a id="install2"></a>
 
 ## install
 
@@ -505,7 +509,7 @@ try {
 }
 ```
 
-<a id="install-2"></a>
+<a id="install3"></a>
 
 ## install
 
@@ -771,6 +775,8 @@ try {
 }
 ```
 
+<a id="recover1"></a>
+
 ## recover
 
 ```TypeScript
@@ -840,7 +846,7 @@ try {
 }
 ```
 
-<a id="recover-1"></a>
+<a id="recover2"></a>
 
 ## recover
 
@@ -904,7 +910,7 @@ try {
 }
 ```
 
-<a id="recover-2"></a>
+<a id="recover3"></a>
 
 ## recover
 
@@ -1044,6 +1050,8 @@ try {
 }
 ```
 
+<a id="uninstall1"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -1117,7 +1125,7 @@ try {
 }
 ```
 
-<a id="uninstall-1"></a>
+<a id="uninstall2"></a>
 
 ## uninstall
 
@@ -1184,7 +1192,7 @@ try {
 }
 ```
 
-<a id="uninstall-2"></a>
+<a id="uninstall3"></a>
 
 ## uninstall
 
@@ -1263,7 +1271,7 @@ try {
 }
 ```
 
-<a id="uninstall-3"></a>
+<a id="uninstall4"></a>
 
 ## uninstall
 
@@ -1329,7 +1337,7 @@ try {
 }
 ```
 
-<a id="uninstall-4"></a>
+<a id="uninstall5"></a>
 
 ## uninstall
 
@@ -1609,6 +1617,8 @@ try {
 }
 ```
 
+<a id="updatebundleforself1"></a>
+
 ## updateBundleForSelf
 
 ```TypeScript
@@ -1692,7 +1702,7 @@ try {
 }
 ```
 
-<a id="updatebundleforself-1"></a>
+<a id="updatebundleforself2"></a>
 
 ## updateBundleForSelf
 
@@ -1770,7 +1780,7 @@ try {
 }
 ```
 
-<a id="updatebundleforself-2"></a>
+<a id="updatebundleforself3"></a>
 
 ## updateBundleForSelf
 

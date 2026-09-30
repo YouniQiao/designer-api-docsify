@@ -4,21 +4,23 @@
 export interface MifareClassicTag extends TagSession
 ```
 
-Provides APIs to access MIFARE Classic properties and perform I/O operations on a tag. This class inherits from [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+Provides APIs to access MIFARE Classic properties and perform I/O operations on a tag. This class inherits from [TagSession](arkts-connectivity-tagsession-i.md).
 
-**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-i.md).
 
 For details about how to obtain a **MifareClassicTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
 
 The following describes the unique APIs of **MifareClassicTag**.
 
-**Inheritance/Implementation:** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 9
 
 <!--Device-unnamed-export interface MifareClassicTag extends TagSession--><!--Device-unnamed-export interface MifareClassicTag extends TagSession-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag
+
+<a id="authenticatesector1"></a>
 
 ## authenticateSector
 
@@ -92,7 +94,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="authenticatesector-1"></a>
+<a id="authenticatesector2"></a>
 
 ## authenticateSector
 
@@ -162,6 +164,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="decrementblock1"></a>
 
 ## decrementBlock
 
@@ -234,7 +238,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="decrementblock-1"></a>
+<a id="decrementblock2"></a>
 
 ## decrementBlock
 
@@ -556,6 +560,8 @@ let getType : tag.MifareClassicType = mifareClassic.getType();
 console.info("mifareClassic getType: " + getType);
 ```
 
+<a id="incrementblock1"></a>
+
 ## incrementBlock
 
 ```TypeScript
@@ -627,7 +633,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="incrementblock-1"></a>
+<a id="incrementblock2"></a>
 
 ## incrementBlock
 
@@ -730,6 +736,8 @@ let isEmulatedTag : boolean = mifareClassic.isEmulatedTag();
 console.info("mifareClassic isEmulatedTag: " + isEmulatedTag);
 ```
 
+<a id="readsingleblock1"></a>
+
 ## readSingleBlock
 
 ```TypeScript
@@ -799,7 +807,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readsingleblock-1"></a>
+<a id="readsingleblock2"></a>
 
 ## readSingleBlock
 
@@ -866,6 +874,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="restorefromblock1"></a>
 
 ## restoreFromBlock
 
@@ -936,7 +946,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="restorefromblock-1"></a>
+<a id="restorefromblock2"></a>
 
 ## restoreFromBlock
 
@@ -1003,6 +1013,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="transfertoblock1"></a>
 
 ## transferToBlock
 
@@ -1073,7 +1085,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="transfertoblock-1"></a>
+<a id="transfertoblock2"></a>
 
 ## transferToBlock
 
@@ -1140,6 +1152,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesingleblock1"></a>
 
 ## writeSingleBlock
 
@@ -1213,7 +1227,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writesingleblock-1"></a>
+<a id="writesingleblock2"></a>
 
 ## writeSingleBlock
 

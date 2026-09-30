@@ -26,6 +26,8 @@ Implements a matrix. A 3 x 3 matrix is shown as below.![matrix_3x3](../../../ref
 import { drawing } from '@kit.ArkGraphics2D';
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -48,7 +50,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 let matrix = new drawing.Matrix();
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -918,6 +920,8 @@ matrix2.setMatrix([-2, 1, 3, 1, 0, -1, 3, -1, 2]);
 matrix1.setConcat(matrix2, matrix1);
 ```
 
+<a id="setmatrix1"></a>
+
 ## setMatrix
 
 ```TypeScript
@@ -954,7 +958,7 @@ let value : Array<number> = [2, 2, 2, 2, 2, 2, 2, 2, 2];
 matrix.setMatrix(value);
 ```
 
-<a id="setmatrix-1"></a>
+<a id="setmatrix2"></a>
 
 ## setMatrix
 

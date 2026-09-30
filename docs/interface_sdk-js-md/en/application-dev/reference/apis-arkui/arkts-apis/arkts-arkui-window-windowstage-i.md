@@ -20,6 +20,8 @@ Before calling any of the following APIs, you must use [onWindowStageCreate()](.
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="createsubwindow1"></a>
+
 ## createSubWindow
 
 ```TypeScript
@@ -87,7 +89,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="createsubwindow-1"></a>
+<a id="createsubwindow2"></a>
 
 ## createSubWindow
 
@@ -232,6 +234,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="getmainwindow1"></a>
+
 ## getMainWindow
 
 ```TypeScript
@@ -295,7 +299,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="getmainwindow-1"></a>
+<a id="getmainwindow2"></a>
 
 ## getMainWindow
 
@@ -421,6 +425,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="getsubwindow1"></a>
+
 ## getSubWindow
 
 ```TypeScript
@@ -477,7 +483,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="getsubwindow-1"></a>
+<a id="getsubwindow2"></a>
 
 ## getSubWindow
 
@@ -595,6 +601,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="loadcontent1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -661,7 +669,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="loadcontent-1"></a>
+<a id="loadcontent2"></a>
 
 ## loadContent
 
@@ -733,7 +741,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="loadcontent-2"></a>
+<a id="loadcontent3"></a>
 
 ## loadContent
 
@@ -796,6 +804,8 @@ export default class EntryAbility extends UIAbility {
   }
 };
 ```
+
+<a id="loadcontentbyname1"></a>
 
 ## loadContentByName
 
@@ -885,7 +895,7 @@ export struct Index {
 }
 ```
 
-<a id="loadcontentbyname-1"></a>
+<a id="loadcontentbyname2"></a>
 
 ## loadContentByName
 
@@ -970,7 +980,7 @@ export struct Index {
 }
 ```
 
-<a id="loadcontentbyname-2"></a>
+<a id="loadcontentbyname3"></a>
 
 ## loadContentByName
 
@@ -1063,6 +1073,8 @@ export struct Index {
 }
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -1134,7 +1146,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -1198,7 +1210,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="off-2"></a>
+<a id="off3"></a>
 
 ## off
 
@@ -1260,6 +1272,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="on1"></a>
+
 ## on
 
 ```TypeScript
@@ -1316,7 +1330,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -1388,7 +1402,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="on-2"></a>
+<a id="on3"></a>
 
 ## on
 
@@ -1604,6 +1618,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="setcustomdensity1"></a>
+
 ## setCustomDensity
 
 ```TypeScript
@@ -1662,7 +1678,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="setcustomdensity-1"></a>
+<a id="setcustomdensity2"></a>
 
 ## setCustomDensity
 
@@ -1787,6 +1803,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="setimageforrecent1"></a>
+
 ## setImageForRecent
 
 ```TypeScript
@@ -1798,8 +1816,8 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 > **NOTE:** 
 > 
 > Before calling this API, you are advised to complete page loading via
-> [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent-1). If this API is called before the application
+> [loadContent](arkts-arkui-window-window-i.md#loadcontent1) or
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent2). If this API is called before the application
 > completes page loading, the intended functionality does not take effect. As a result, only the application's
 > launch page is displayed in the multitasking view.
 
@@ -1864,6 +1882,8 @@ export default class EntryAbility extends UIAbility {
   }
 };
 ```
+
+<a id="setsupportedwindowmodes1"></a>
 
 ## setSupportedWindowModes
 
@@ -1933,7 +1953,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setsupportedwindowmodes-1"></a>
+<a id="setsupportedwindowmodes2"></a>
 
 ## setSupportedWindowModes
 
@@ -2069,6 +2089,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setwindowrectautosave1"></a>
+
 ## setWindowRectAutoSave
 
 ```TypeScript
@@ -2134,7 +2156,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setwindowrectautosave-1"></a>
+<a id="setwindowrectautosave2"></a>
 
 ## setWindowRectAutoSave
 

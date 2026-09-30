@@ -18,7 +18,7 @@ Binds to the specified component and returns the corresponding observation handl
 
 **Deprecated since:** 18
 
-**Substitutes:** createComponentObserver
+**Substitutes:** [createComponentObserver](arkts-arkui-arkui-uicontext-uiinspector-c.md#createcomponentobserver)
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,6 +6,8 @@
 import { bundleResourceManager } from '@kit.AbilityKit';
 ```
 
+<a id="getbundleresourceinfo1"></a>
+
 ## getBundleResourceInfo
 
 ```TypeScript
@@ -84,7 +86,7 @@ try {
 ```
 
 
-<a id="getbundleresourceinfo-1"></a>
+<a id="getbundleresourceinfo2"></a>
 
 ## getBundleResourceInfo
 

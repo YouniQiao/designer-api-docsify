@@ -4,7 +4,7 @@
 declare class AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
 ```
 
-When the [width](arkts-arkui-common-comp-commonmethod-c.md#width) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
+When the [width](arkts-arkui-common-comp-commonmethod-c.md#width1) attribute is set to **"auto"**, the width is adaptive. This means that the width will adjust according to the maximum width of the index items.
 
 The default value of the [padding](arkts-arkui-common-comp-commonmethod-c.md#padding) attribute is 4 vp.
 
@@ -14,7 +14,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
 
-**Inheritance/Implementation:** AlphabetIndexerAttribute extends CommonMethod<AlphabetIndexerAttribute>
+**Inheritance/Implementation:** AlphabetIndexerAttribute extends CommonMethod&lt;AlphabetIndexerAttribute&gt;
 
 **Since:** 7
 

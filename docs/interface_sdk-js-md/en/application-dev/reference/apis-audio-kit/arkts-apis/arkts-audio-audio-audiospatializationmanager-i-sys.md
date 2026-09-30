@@ -216,7 +216,7 @@ try {
 }
 ```
 
-<a id="isheadtrackingenabled-1"></a>
+<a id="isheadtrackingenabled2"></a>
 
 ## isHeadTrackingEnabled
 
@@ -283,6 +283,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isheadtrackingenabled1"></a>
 
 ## isHeadTrackingEnabled
 
@@ -507,7 +509,7 @@ Checks whether personalized spatialization is supported by system.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
-<a id="isspatializationenabled-1"></a>
+<a id="isspatializationenabled2"></a>
 
 ## isSpatializationEnabled
 
@@ -574,6 +576,8 @@ try {
   console.error(`ERROR: ${error}`);
 }
 ```
+
+<a id="isspatializationenabled1"></a>
 
 ## isSpatializationEnabled
 
@@ -842,7 +846,7 @@ Unsubscribes to the spatialization enable state change events.
 
 **Deprecated since:** 12
 
-**Substitutes:** off
+**Substitutes:** [off](#offspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -893,7 +897,7 @@ Unsubscribes to the head tracking enable state change events.
 
 **Deprecated since:** 12
 
-**Substitutes:** off
+**Substitutes:** [off](#offspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -1156,7 +1160,7 @@ Subscribes to the spatialization enable state change events. When the spatializa
 
 **Deprecated since:** 12
 
-**Substitutes:** on
+**Substitutes:** [on](#onspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1201,7 +1205,7 @@ Subscribes to the head tracking enable state change events. When the head tracki
 
 **Deprecated since:** 12
 
-**Substitutes:** on
+**Substitutes:** [on](#onspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1416,7 +1420,7 @@ audioSpatializationManager.setAdaptiveSpatialRenderingEnabled(deviceDescriptor, 
 });
 ```
 
-<a id="setheadtrackingenabled-2"></a>
+<a id="setheadtrackingenabled3"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1487,6 +1491,8 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 });
 ```
 
+<a id="setheadtrackingenabled1"></a>
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1542,7 +1548,7 @@ audioSpatializationManager.setHeadTrackingEnabled(enable, (err: BusinessError) =
 });
 ```
 
-<a id="setheadtrackingenabled-1"></a>
+<a id="setheadtrackingenabled2"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1642,7 +1648,7 @@ Set the personalized spatialization enabled or disabled by the specified device.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported on the device. |
 
-<a id="setspatializationenabled-2"></a>
+<a id="setspatializationenabled3"></a>
 
 ## setSpatializationEnabled
 
@@ -1713,6 +1719,8 @@ audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).t
 });
 ```
 
+<a id="setspatializationenabled1"></a>
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1768,7 +1776,7 @@ audioSpatializationManager.setSpatializationEnabled(enable, (err: BusinessError)
 });
 ```
 
-<a id="setspatializationenabled-1"></a>
+<a id="setspatializationenabled2"></a>
 
 ## setSpatializationEnabled
 

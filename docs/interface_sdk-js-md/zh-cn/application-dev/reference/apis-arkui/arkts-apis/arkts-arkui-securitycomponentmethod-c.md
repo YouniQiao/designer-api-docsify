@@ -178,6 +178,8 @@ align(alignType: Alignment): T
 | --- | --- |
 | T | 安全控件的属性。 |
 
+<a id="alignrules1"></a>
+
 ## alignRules
 
 ```TypeScript
@@ -208,7 +210,7 @@ alignRules(alignRule: AlignRuleOption): T
 | --- | --- |
 | T | 安全控件的属性。 |
 
-<a id="alignrules-1"></a>
+<a id="alignrules2"></a>
 
 ## alignRules
 
@@ -300,6 +302,8 @@ borderColor(value: ResourceColor): T
 | --- | --- |
 | T | 安全控件的属性。 |
 
+<a id="borderradius1"></a>
+
 ## borderRadius
 
 ```TypeScript
@@ -332,7 +336,7 @@ borderRadius的设置效果受ButtonType影响。当按钮类型为Capsule或Cir
 | --- | --- |
 | T | 安全控件的属性。 |
 
-<a id="borderradius-1"></a>
+<a id="borderradius2"></a>
 
 ## borderRadius
 

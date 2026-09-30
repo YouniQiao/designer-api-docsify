@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="unregistermissionlistener1"></a>
+
 ## unregisterMissionListener
 
 ```TypeScript
@@ -73,7 +75,7 @@ missionManager.unregisterMissionListener(listenerId, (error) => {
 ```
 
 
-<a id="unregistermissionlistener-1"></a>
+<a id="unregistermissionlistener2"></a>
 
 ## unregisterMissionListener
 

@@ -113,6 +113,8 @@ Obtains the number of glyphs in this run.
 let glyphs = runs[0].getGlyphCount();
 ```
 
+<a id="getglyphs1"></a>
+
 ## getGlyphs
 
 ```TypeScript
@@ -141,7 +143,7 @@ Obtains the index of each glyph in this run.
 let glyph = runs[0].getGlyphs();
 ```
 
-<a id="getglyphs-1"></a>
+<a id="getglyphs2"></a>
 
 ## getGlyphs
 
@@ -265,6 +267,8 @@ Obtains the offset of each glyph in this run relative to its index.
 let offsets = runs[0].getOffsets();
 ```
 
+<a id="getpositions1"></a>
+
 ## getPositions
 
 ```TypeScript
@@ -293,7 +297,7 @@ Obtains the position of each glyph relative to the respective line in this run.
 let positions = runs[0].getPositions();
 ```
 
-<a id="getpositions-1"></a>
+<a id="getpositions2"></a>
 
 ## getPositions
 

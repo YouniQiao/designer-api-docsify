@@ -6,6 +6,8 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
+<a id="iscellulardataenabled1"></a>
+
 ## isCellularDataEnabled
 
 ```TypeScript
@@ -55,7 +57,7 @@ data.isCellularDataEnabled((err: BusinessError, contextData: boolean) => {
 ```
 
 
-<a id="iscellulardataenabled-1"></a>
+<a id="iscellulardataenabled2"></a>
 
 ## isCellularDataEnabled
 

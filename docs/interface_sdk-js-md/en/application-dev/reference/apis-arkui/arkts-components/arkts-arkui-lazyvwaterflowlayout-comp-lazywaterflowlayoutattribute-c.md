@@ -6,7 +6,7 @@ export declare class LazyWaterFlowLayoutAttribute<T> extends CommonMethod<T>
 
 Defines the lazy waterflow layout attribute.
 
-**Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends CommonMethod<T>
+**Inheritance/Implementation:** LazyWaterFlowLayoutAttribute extends CommonMethod&lt;T&gt;
 
 **Since:** 26.0.0
 

@@ -57,6 +57,8 @@ this.context.startAbility(targetWant);
 import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
+<a id="destroy1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -103,7 +105,7 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
 }
 ```
 
-<a id="destroy-1"></a>
+<a id="destroy2"></a>
 
 ## destroy
 

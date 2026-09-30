@@ -46,7 +46,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | number | 是 | 系统账号的账号ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接口获取。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 与ServiceExtensionAbility建立连接后回调函数的实例。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | 与ServiceExtensionAbility建立连接后回调函数的实例。 |
 
 **返回值：**
 
@@ -115,6 +115,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="requestmodaluiextension1"></a>
 
 ## requestModalUIExtension
 
@@ -197,7 +199,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="requestmodaluiextension-1"></a>
+<a id="requestmodaluiextension2"></a>
 
 ## requestModalUIExtension
 
@@ -374,6 +376,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissionicon1"></a>
+
 ## setMissionIcon
 
 ```TypeScript
@@ -444,7 +448,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setmissionicon-1"></a>
+<a id="setmissionicon2"></a>
 
 ## setMissionIcon
 
@@ -520,6 +524,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startabilityascaller1"></a>
 
 ## startAbilityAsCaller
 
@@ -606,7 +612,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityascaller-1"></a>
+<a id="startabilityascaller2"></a>
 
 ## startAbilityAsCaller
 
@@ -695,7 +701,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityascaller-2"></a>
+<a id="startabilityascaller3"></a>
 
 ## startAbilityAsCaller
 
@@ -899,6 +905,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresultwithaccount1"></a>
+
 ## startAbilityForResultWithAccount
 
 ```TypeScript
@@ -931,7 +939,7 @@ startAbilityForResultWithAccount(want: Want, accountId: number, callback: AsyncC
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
 | accountId | number | 是 | 系统账号的账号ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接口获取。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起的UIAbility销毁时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起的UIAbility销毁时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
 
@@ -1001,7 +1009,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresultwithaccount-1"></a>
+<a id="startabilityforresultwithaccount2"></a>
 
 ## startAbilityForResultWithAccount
 
@@ -1113,7 +1121,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresultwithaccount-2"></a>
+<a id="startabilityforresultwithaccount3"></a>
 
 ## startAbilityForResultWithAccount
 
@@ -1153,7 +1161,7 @@ startAbilityForResultWithAccount(want: Want, accountId: number, options?: StartO
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，包含AbilityResult参数。 |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Promise对象，包含AbilityResult参数。 |
 
 **错误码：**
 
@@ -1224,6 +1232,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startabilitywithaccount1"></a>
 
 ## startAbilityWithAccount
 
@@ -1326,7 +1336,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilitywithaccount-1"></a>
+<a id="startabilitywithaccount2"></a>
 
 ## startAbilityWithAccount
 
@@ -1433,7 +1443,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilitywithaccount-2"></a>
+<a id="startabilitywithaccount3"></a>
 
 ## startAbilityWithAccount
 
@@ -1545,6 +1555,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startrecentability1"></a>
+
 ## startRecentAbility
 
 ```TypeScript
@@ -1644,7 +1656,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startrecentability-1"></a>
+<a id="startrecentability2"></a>
 
 ## startRecentAbility
 
@@ -1750,7 +1762,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startrecentability-2"></a>
+<a id="startrecentability3"></a>
 
 ## startRecentAbility
 
@@ -1860,6 +1872,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startserviceextensionability1"></a>
+
 ## startServiceExtensionAbility
 
 ```TypeScript
@@ -1939,7 +1953,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startserviceextensionability-1"></a>
+<a id="startserviceextensionability2"></a>
 
 ## startServiceExtensionAbility
 
@@ -2024,6 +2038,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="startserviceextensionabilitywithaccount1"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2114,7 +2130,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startserviceextensionabilitywithaccount-1"></a>
+<a id="startserviceextensionabilitywithaccount2"></a>
 
 ## startServiceExtensionAbilityWithAccount
 
@@ -2210,6 +2226,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="stopserviceextensionability1"></a>
+
 ## stopServiceExtensionAbility
 
 ```TypeScript
@@ -2287,7 +2305,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="stopserviceextensionability-1"></a>
+<a id="stopserviceextensionability2"></a>
 
 ## stopServiceExtensionAbility
 
@@ -2368,6 +2386,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="stopserviceextensionabilitywithaccount1"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 
@@ -2452,7 +2472,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="stopserviceextensionabilitywithaccount-1"></a>
+<a id="stopserviceextensionabilitywithaccount2"></a>
 
 ## stopServiceExtensionAbilityWithAccount
 

@@ -6,6 +6,8 @@
 import { inputDeviceCooperate } from '@kit.InputKit';
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -70,7 +72,7 @@ struct Index {
 ```
 
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

@@ -86,7 +86,7 @@ PLAY_KARAOKE = 'playKaroke'
 
 K song on demand
 
-**Since:** 26.2.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -102,7 +102,7 @@ PLAY_KARAOKE_LIST = 'playKarokeList'
 
 K song playlist on-demand
 
-**Since:** 26.2.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

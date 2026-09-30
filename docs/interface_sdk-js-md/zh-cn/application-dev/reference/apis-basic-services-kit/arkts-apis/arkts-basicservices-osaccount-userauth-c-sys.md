@@ -20,6 +20,8 @@ class UserAuth
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
+<a id="auth1"></a>
+
 ## auth
 
 ```TypeScript
@@ -107,7 +109,7 @@ try {
 }
 ```
 
-<a id="auth-1"></a>
+<a id="auth2"></a>
 
 ## auth
 
@@ -436,6 +438,8 @@ try {
 }
 ```
 
+<a id="getproperty1"></a>
+
 ## getProperty
 
 ```TypeScript
@@ -501,7 +505,7 @@ try {
 }
 ```
 
-<a id="getproperty-1"></a>
+<a id="getproperty2"></a>
 
 ## getProperty
 
@@ -755,6 +759,8 @@ distributedDeviceMgr.getAvailableDeviceList().then((data: Array<distributedDevic
 )
 ```
 
+<a id="setproperty1"></a>
+
 ## setProperty
 
 ```TypeScript
@@ -815,7 +821,7 @@ try {
 }
 ```
 
-<a id="setproperty-1"></a>
+<a id="setproperty2"></a>
 
 ## setProperty
 

@@ -18,6 +18,8 @@ Provides the ImageProcessor type, including the processing function. @typedef Im
 import { videoProcessingEngine } from '@kit.ImageKit';
 ```
 
+<a id="enhancedetail1"></a>
+
 ## enhanceDetail
 
 ```TypeScript
@@ -71,7 +73,7 @@ async function enhanceDetail(sourceImage: image.PixelMap, width: number, height:
 }
 ```
 
-<a id="enhancedetail-1"></a>
+<a id="enhancedetail2"></a>
 
 ## enhanceDetail
 
@@ -124,6 +126,8 @@ async function enhanceDetail(sourceImage: image.PixelMap, scale: number) {
     imageProcessor.enhanceDetail(sourceImage, scale, videoProcessingEngine.QualityLevel.HIGH);
 }
 ```
+
+<a id="enhancedetailsync1"></a>
 
 ## enhanceDetailSync
 
@@ -179,7 +183,7 @@ async function enhanceDetailSync(sourceImage: image.PixelMap, width: number, hei
 }
 ```
 
-<a id="enhancedetailsync-1"></a>
+<a id="enhancedetailsync2"></a>
 
 ## enhanceDetailSync
 

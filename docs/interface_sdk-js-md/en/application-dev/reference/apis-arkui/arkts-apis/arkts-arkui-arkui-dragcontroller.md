@@ -29,8 +29,8 @@ import { dragController } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
-| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. |
-| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag-1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
+| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. |
+| [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag2) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
 | [getDragPreview](arkts-arkui-dragcontroller-getdragpreview-f.md) | Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. |
 
 ### Classes

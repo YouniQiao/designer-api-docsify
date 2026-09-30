@@ -120,6 +120,8 @@ Resets the video player. The current frame is displayed, and playback starts fro
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="setcurrenttime1"></a>
+
 ## setCurrentTime
 
 ```TypeScript
@@ -147,9 +149,9 @@ Sets the video playback position.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Video playback progress position. <br>Value range: [0, [duration](arkts-arkui-video-comp-preparedinfo-i.md)] <br>If the **value** is greater than **duration**, the progress jumps to the end; if the **value** is less than 0, no progress jump is performed. <br>Unit: s <br>Since API version 8, the video seek mode can be set. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime-1). |
+| value | number | Yes | Video playback progress position. <br>Value range: [0, [duration](arkts-arkui-video-comp-preparedinfo-i.md)] <br>If the **value** is greater than **duration**, the progress jumps to the end; if the **value** is less than 0, no progress jump is performed. <br>Unit: s <br>Since API version 8, the video seek mode can be set. For details, see [setCurrentTime&lt;sup&gt;8+&lt;/sup&gt;](#setcurrenttime2). |
 
-<a id="setcurrenttime-1"></a>
+<a id="setcurrenttime2"></a>
 
 ## setCurrentTime
 

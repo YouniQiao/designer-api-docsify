@@ -6,7 +6,7 @@ declare class GaugeAttribute extends CommonMethod<GaugeAttribute>
 
 In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-**Inheritance/Implementation:** GaugeAttribute extends CommonMethod<GaugeAttribute>
+**Inheritance/Implementation:** GaugeAttribute extends CommonMethod&lt;GaugeAttribute&gt;
 
 **Since:** 8
 

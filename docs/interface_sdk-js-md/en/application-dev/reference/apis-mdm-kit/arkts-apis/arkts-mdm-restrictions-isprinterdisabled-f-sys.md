@@ -6,6 +6,8 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
+<a id="isprinterdisabled1"></a>
+
 ## isPrinterDisabled
 
 ```TypeScript
@@ -18,7 +20,7 @@ Queries whether the printing capability of a device is disabled. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy2)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
@@ -69,7 +71,7 @@ restrictions.isPrinterDisabled(wantTemp, (err, result) => {
 ```
 
 
-<a id="isprinterdisabled-1"></a>
+<a id="isprinterdisabled2"></a>
 
 ## isPrinterDisabled
 
@@ -83,7 +85,7 @@ Queries whether the printing capability of a device is disabled. This API uses a
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy2)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 

@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="deleteinvalidforms1"></a>
+
 ## deleteInvalidForms
 
 ```TypeScript
@@ -43,7 +45,7 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="deleteinvalidforms-1"></a>
+<a id="deleteinvalidforms2"></a>
 
 ## deleteInvalidForms
 

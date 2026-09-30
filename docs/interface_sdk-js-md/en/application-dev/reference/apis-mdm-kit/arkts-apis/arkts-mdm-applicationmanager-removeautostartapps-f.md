@@ -6,6 +6,8 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
+<a id="removeautostartapps1"></a>
+
 ## removeAutoStartApps
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="removeautostartapps-1"></a>
+<a id="removeautostartapps2"></a>
 
 ## removeAutoStartApps
 

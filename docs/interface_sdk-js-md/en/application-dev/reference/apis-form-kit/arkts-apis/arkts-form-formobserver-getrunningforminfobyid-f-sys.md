@@ -6,6 +6,8 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
+<a id="getrunningforminfobyid1"></a>
+
 ## getRunningFormInfoById
 
 ```TypeScript
@@ -50,7 +52,7 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-1"></a>
+<a id="getrunningforminfobyid2"></a>
 
 ## getRunningFormInfoById
 
@@ -97,7 +99,7 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-2"></a>
+<a id="getrunningforminfobyid3"></a>
 
 ## getRunningFormInfoById
 
@@ -138,7 +140,7 @@ Obtains the RunningFormInfo object by formId.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfobyid-3"></a>
+<a id="getrunningforminfobyid4"></a>
 
 ## getRunningFormInfoById
 

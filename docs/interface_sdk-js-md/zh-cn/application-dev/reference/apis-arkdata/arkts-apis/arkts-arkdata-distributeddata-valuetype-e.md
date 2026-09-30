@@ -10,7 +10,7 @@ enum ValueType
 
 **废弃版本：** 9
 
-**替代接口：** ValueType
+**替代接口：** [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md)
 
 <!--Device-distributedData-enum ValueType--><!--Device-distributedData-enum ValueType-End-->
 
@@ -28,7 +28,7 @@ STRING = 0
 
 **废弃版本：** 9
 
-**替代接口：** STRING
+**替代接口：** [STRING](arkts-arkdata-distributedkvstore-valuetype-e.md#string)
 
 <!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
@@ -46,7 +46,7 @@ INTEGER = 1
 
 **废弃版本：** 9
 
-**替代接口：** INTEGER
+**替代接口：** [INTEGER](arkts-arkdata-distributedkvstore-valuetype-e.md#integer)
 
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
@@ -64,7 +64,7 @@ FLOAT = 2
 
 **废弃版本：** 9
 
-**替代接口：** FLOAT
+**替代接口：** [FLOAT](arkts-arkdata-distributedkvstore-valuetype-e.md#float)
 
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
@@ -82,7 +82,7 @@ BYTE_ARRAY = 3
 
 **废弃版本：** 9
 
-**替代接口：** BYTE_ARRAY
+**替代接口：** [BYTE_ARRAY](arkts-arkdata-distributedkvstore-valuetype-e.md#byte_array)
 
 <!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
 
@@ -100,7 +100,7 @@ BOOLEAN = 4
 
 **废弃版本：** 9
 
-**替代接口：** BOOLEAN
+**替代接口：** [BOOLEAN](arkts-arkdata-distributedkvstore-valuetype-e.md#boolean)
 
 <!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
@@ -118,7 +118,7 @@ DOUBLE = 5
 
 **废弃版本：** 9
 
-**替代接口：** DOUBLE
+**替代接口：** [DOUBLE](arkts-arkdata-distributedkvstore-valuetype-e.md#double)
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
 

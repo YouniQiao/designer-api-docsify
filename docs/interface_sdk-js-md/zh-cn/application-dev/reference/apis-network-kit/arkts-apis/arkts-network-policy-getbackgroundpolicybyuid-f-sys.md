@@ -6,6 +6,8 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
+<a id="getbackgroundpolicybyuid1"></a>
+
 ## getBackgroundPolicyByUid
 
 ```TypeScript
@@ -54,7 +56,7 @@ policy.getBackgroundPolicyByUid(11111, (error: BusinessError, data: policy.NetBa
 ```
 
 
-<a id="getbackgroundpolicybyuid-1"></a>
+<a id="getbackgroundpolicybyuid2"></a>
 
 ## getBackgroundPolicyByUid
 

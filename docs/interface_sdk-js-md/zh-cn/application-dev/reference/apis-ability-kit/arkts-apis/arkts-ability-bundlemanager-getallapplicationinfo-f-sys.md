@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="getallapplicationinfo1"></a>
+
 ## getAllApplicationInfo
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="getallapplicationinfo-1"></a>
+<a id="getallapplicationinfo2"></a>
 
 ## getAllApplicationInfo
 
@@ -126,7 +128,7 @@ try {
 ```
 
 
-<a id="getallapplicationinfo-2"></a>
+<a id="getallapplicationinfo3"></a>
 
 ## getAllApplicationInfo
 

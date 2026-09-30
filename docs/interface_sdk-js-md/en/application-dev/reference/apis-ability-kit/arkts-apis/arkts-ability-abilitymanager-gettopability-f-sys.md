@@ -6,6 +6,8 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
+<a id="gettopability1"></a>
+
 ## getTopAbility
 
 ```TypeScript
@@ -36,7 +38,7 @@ Obtains the top ability, which is the ability that has the window focus. This AP
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 
-<a id="gettopability-1"></a>
+<a id="gettopability2"></a>
 
 ## getTopAbility
 

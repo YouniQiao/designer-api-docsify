@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getdefaultvoicesimid1"></a>
+
 ## getDefaultVoiceSimId
 
 ```TypeScript
@@ -50,7 +52,7 @@ sim.getDefaultVoiceSimId((err: BusinessError, data: number) => {
 ```
 
 
-<a id="getdefaultvoicesimid-1"></a>
+<a id="getdefaultvoicesimid2"></a>
 
 ## getDefaultVoiceSimId
 

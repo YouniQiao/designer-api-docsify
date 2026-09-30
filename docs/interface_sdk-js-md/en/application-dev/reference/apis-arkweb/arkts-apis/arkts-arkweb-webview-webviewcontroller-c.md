@@ -1167,6 +1167,8 @@ HTML file to be loaded:
 </html>
 ```
 
+<a id="createpdf1"></a>
+
 ## createPdf
 
 ```TypeScript
@@ -1255,7 +1257,7 @@ struct Index {
 }
 ```
 
-<a id="createpdf-1"></a>
+<a id="createpdf2"></a>
 
 ## createPdf
 
@@ -1446,6 +1448,8 @@ struct WebComponent {
 }
 ```
 
+<a id="customizeschemes1"></a>
+
 ## customizeSchemes
 
 ```TypeScript
@@ -1513,7 +1517,7 @@ struct WebComponent {
 }
 ```
 
-<a id="customizeschemes-1"></a>
+<a id="customizeschemes2"></a>
 
 ## customizeSchemes
 
@@ -2385,6 +2389,8 @@ struct WebComponent {
 }
 ```
 
+<a id="getcertificate1"></a>
+
 ## getCertificate
 
 ```TypeScript
@@ -2552,7 +2558,7 @@ struct Index {
 }
 ```
 
-<a id="getcertificate-1"></a>
+<a id="getcertificate2"></a>
 
 ## getCertificate
 
@@ -4243,6 +4249,8 @@ Gets the current browser zoom factor of this web page.
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. |
 
+<a id="hasimage1"></a>
+
 ## hasImage
 
 ```TypeScript
@@ -4304,7 +4312,7 @@ struct WebComponent {
 }
 ```
 
-<a id="hasimage-1"></a>
+<a id="hasimage2"></a>
 
 ## hasImage
 
@@ -6797,6 +6805,8 @@ struct Index {
 }
 ```
 
+<a id="prefetchpage1"></a>
+
 ## prefetchPage
 
 ```TypeScript
@@ -6871,7 +6881,7 @@ struct WebComponent {
 }
 ```
 
-<a id="prefetchpage-1"></a>
+<a id="prefetchpage2"></a>
 
 ## prefetchPage
 
@@ -7057,6 +7067,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="refresh1"></a>
+
 ## refresh
 
 ```TypeScript
@@ -7107,7 +7119,7 @@ struct WebComponent {
 }
 ```
 
-<a id="refresh-1"></a>
+<a id="refresh2"></a>
 
 ## refresh
 
@@ -7937,6 +7949,8 @@ HTML file to be loaded:
 </html>
 ```
 
+<a id="runjavascript1"></a>
+
 ## runJavaScript
 
 ```TypeScript
@@ -8043,7 +8057,7 @@ HTML file to be loaded:
 </html>
 ```
 
-<a id="runjavascript-1"></a>
+<a id="runjavascript2"></a>
 
 ## runJavaScript
 
@@ -8151,6 +8165,8 @@ HTML file to be loaded:
   </body>
 </html>
 ```
+
+<a id="runjavascriptext1"></a>
 
 ## runJavaScriptExt
 
@@ -8376,7 +8392,7 @@ function test() {
 </html>
 ```
 
-<a id="runjavascriptext-1"></a>
+<a id="runjavascriptext2"></a>
 
 ## runJavaScriptExt
 
@@ -9767,6 +9783,8 @@ struct WebComponent {
 }
 ```
 
+<a id="seterrorpageenabled1"></a>
+
 ## setErrorPageEnabled
 
 ```TypeScript
@@ -9818,7 +9836,7 @@ struct WebComponent {
 }
 ```
 
-<a id="seterrorpageenabled-1"></a>
+<a id="seterrorpageenabled2"></a>
 
 ## setErrorPageEnabled
 
@@ -9834,7 +9852,7 @@ When **enable** is set to **true**, an error page is displayed when a mainframe 
 > 
 > - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled regardless of the value of **includeSubframe**.
 > 
-> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled)&lt;sup&gt;20+&lt;/sup&gt;, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
+> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled1)&lt;sup&gt;20+&lt;/sup&gt;, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
 > 
 > - You can use [errorPageEvent.request.isMainFrame()](../arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe) to determine whether the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
 > **onOverrideErrorPage** callback.
@@ -10670,6 +10688,8 @@ struct WebComponent {
 }
 ```
 
+<a id="seturltrustlist1"></a>
+
 ## setUrlTrustList
 
 ```TypeScript
@@ -10763,7 +10783,7 @@ struct WebComponent {
 }
 ```
 
-<a id="seturltrustlist-1"></a>
+<a id="seturltrustlist2"></a>
 
 ## setUrlTrustList
 
@@ -11082,6 +11102,8 @@ Sets the **UserAgentMetadata** corresponding to the **User-Agent**.
 
 For details about the sample code, see [setUserAgentClientHintsEnabled](#setuseragentclienthintsenabled).
 
+<a id="setwebdebuggingaccess1"></a>
+
 ## setWebDebuggingAccess
 
 ```TypeScript
@@ -11140,7 +11162,7 @@ struct WebComponent {
 }
 ```
 
-<a id="setwebdebuggingaccess-1"></a>
+<a id="setwebdebuggingaccess2"></a>
 
 ## setWebDebuggingAccess
 
@@ -11150,7 +11172,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 
 Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.
 
-* If no port is specified, this API is equivalent to the[setWebDebuggingAccess](#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener.  
+* If no port is specified, this API is equivalent to the[setWebDebuggingAccess](#setwebdebuggingaccess1) API. In this case, ArkWeb starts a local domain socket listener.  
 * When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).
 
 A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.
@@ -11770,6 +11792,8 @@ Stops microphone capture on the current web page.
 
 For the complete sample code, see [resumeMicrophone](#resumemicrophone).
 
+<a id="storewebarchive1"></a>
+
 ## storeWebArchive
 
 ```TypeScript
@@ -11843,7 +11867,7 @@ struct WebComponent {
 }
 ```
 
-<a id="storewebarchive-1"></a>
+<a id="storewebarchive2"></a>
 
 ## storeWebArchive
 

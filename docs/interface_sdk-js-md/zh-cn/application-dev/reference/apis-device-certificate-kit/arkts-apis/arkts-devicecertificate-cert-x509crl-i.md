@@ -18,6 +18,8 @@ interface X509CRL
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="getencoded1"></a>
+
 ## getEncoded
 
 ```TypeScript
@@ -95,7 +97,7 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getencoded-1"></a>
+<a id="getencoded2"></a>
 
 ## getEncoded
 
@@ -330,6 +332,8 @@ async function crlGetExtensionsObject() {
 }
 ```
 
+<a id="getissuername1"></a>
+
 ## getIssuerName
 
 ```TypeScript
@@ -411,7 +415,7 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getissuername-1"></a>
+<a id="getissuername2"></a>
 
 ## getIssuerName
 
@@ -811,6 +815,8 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
+<a id="getrevokedcerts1"></a>
+
 ## getRevokedCerts
 
 ```TypeScript
@@ -887,7 +893,7 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getrevokedcerts-1"></a>
+<a id="getrevokedcerts2"></a>
 
 ## getRevokedCerts
 
@@ -1897,6 +1903,8 @@ async function crlMatch() {
 }
 ```
 
+<a id="tostring1"></a>
+
 ## toString
 
 ```TypeScript
@@ -1971,7 +1979,7 @@ async function crlToString() {
 }
 ```
 
-<a id="tostring-1"></a>
+<a id="tostring2"></a>
 
 ## toString
 
@@ -2056,6 +2064,8 @@ async function crlToString() {
   }
 }
 ```
+
+<a id="verify1"></a>
 
 ## verify
 
@@ -2212,7 +2222,7 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="verify-1"></a>
+<a id="verify2"></a>
 
 ## verify
 

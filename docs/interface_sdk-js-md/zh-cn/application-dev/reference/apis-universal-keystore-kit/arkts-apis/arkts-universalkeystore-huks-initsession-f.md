@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="initsession1"></a>
+
 ## initSession
 
 ```TypeScript
@@ -63,7 +65,7 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 
-<a id="initsession-1"></a>
+<a id="initsession2"></a>
 
 ## initSession
 

@@ -347,6 +347,8 @@ function removeMetadataObjectTypes(metadataOutput: camera.MetadataOutput, types:
 }
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -392,7 +394,7 @@ function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
 }
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -437,6 +439,8 @@ function startMetadataOutput(metadataOutput: camera.MetadataOutput): void {
 }
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -475,7 +479,7 @@ function stopMetadataOutput(metadataOutput: camera.MetadataOutput): void {
 }
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

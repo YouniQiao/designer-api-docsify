@@ -22,6 +22,8 @@ Provides a **FileAccessHelper** object.
 import { fileAccess } from '@kit.CoreFileKit';
 ```
 
+<a id="access1"></a>
+
 ## access
 
 ```TypeScript
@@ -122,7 +124,7 @@ async function accessFunc() {
 }
 ```
 
-<a id="access-1"></a>
+<a id="access2"></a>
 
 ## access
 
@@ -220,6 +222,8 @@ try {
   console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="copy1"></a>
 
 ## copy
 
@@ -327,7 +331,7 @@ try {
 }
 ```
 
-<a id="copy-1"></a>
+<a id="copy2"></a>
 
 ## copy
 
@@ -396,7 +400,7 @@ try {
 }
 ```
 
-<a id="copy-2"></a>
+<a id="copy3"></a>
 
 ## copy
 
@@ -465,6 +469,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="copyfile1"></a>
 
 ## copyFile
 
@@ -560,7 +566,7 @@ async function copyFunc01() {
 }
 ```
 
-<a id="copyfile-1"></a>
+<a id="copyfile2"></a>
 
 ## copyFile
 
@@ -649,6 +655,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="createfile1"></a>
 
 ## createFile
 
@@ -753,7 +761,7 @@ async function createFile() {
 }
 ```
 
-<a id="createfile-1"></a>
+<a id="createfile2"></a>
 
 ## createFile
 
@@ -849,6 +857,8 @@ try {
   console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="delete1"></a>
 
 ## delete
 
@@ -947,7 +957,7 @@ async function deleteFile01() {
 }
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -1042,6 +1052,8 @@ try {
 }
 ```
 
+<a id="getfileinfofromrelativepath1"></a>
+
 ## getFileInfoFromRelativePath
 
 ```TypeScript
@@ -1097,7 +1109,7 @@ async function getRelativePath() {
 }
 ```
 
-<a id="getfileinfofromrelativepath-1"></a>
+<a id="getfileinfofromrelativepath2"></a>
 
 ## getFileInfoFromRelativePath
 
@@ -1152,6 +1164,8 @@ try {
   console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="getfileinfofromuri1"></a>
 
 ## getFileInfoFromUri
 
@@ -1209,7 +1223,7 @@ async function getUri() {
 }
 ```
 
-<a id="getfileinfofromuri-1"></a>
+<a id="getfileinfofromuri2"></a>
 
 ## getFileInfoFromUri
 
@@ -1265,6 +1279,8 @@ try {
   console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="getroots1"></a>
 
 ## getRoots
 
@@ -1362,7 +1378,7 @@ async function getRoots() {
 }
 ```
 
-<a id="getroots-1"></a>
+<a id="getroots2"></a>
 
 ## getRoots
 
@@ -1460,6 +1476,8 @@ async function getRoots() {
   }
 }
 ```
+
+<a id="mkdir1"></a>
 
 ## mkDir
 
@@ -1564,7 +1582,7 @@ async function createDirectory() {
 }
 ```
 
-<a id="mkdir-1"></a>
+<a id="mkdir2"></a>
 
 ## mkDir
 
@@ -1660,6 +1678,8 @@ try {
   console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="move1"></a>
 
 ## move
 
@@ -1759,7 +1779,7 @@ async function moveFile01() {
 }
 ```
 
-<a id="move-1"></a>
+<a id="move2"></a>
 
 ## move
 
@@ -1856,6 +1876,8 @@ try {
 }
 ```
 
+<a id="movefile1"></a>
+
 ## moveFile
 
 ```TypeScript
@@ -1948,7 +1970,7 @@ async function moveFile01() {
 }
 ```
 
-<a id="movefile-1"></a>
+<a id="movefile2"></a>
 
 ## moveFile
 
@@ -2038,6 +2060,8 @@ try {
   console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<a id="moveitem1"></a>
 
 ## moveItem
 
@@ -2174,7 +2198,7 @@ try {
 }
 ```
 
-<a id="moveitem-1"></a>
+<a id="moveitem2"></a>
 
 ## moveItem
 
@@ -2272,7 +2296,7 @@ try {
 }
 ```
 
-<a id="moveitem-2"></a>
+<a id="moveitem3"></a>
 
 ## moveItem
 
@@ -2371,6 +2395,8 @@ try {
 }
 ```
 
+<a id="openfile1"></a>
+
 ## openFile
 
 ```TypeScript
@@ -2467,7 +2493,7 @@ async function openFile01() {
 }
 ```
 
-<a id="openfile-1"></a>
+<a id="openfile2"></a>
 
 ## openFile
 
@@ -2563,6 +2589,8 @@ try {
 }
 ```
 
+<a id="query1"></a>
+
 ## query
 
 ```TypeScript
@@ -2620,7 +2648,7 @@ async function getQuery01() {
 }
 ```
 
-<a id="query-1"></a>
+<a id="query2"></a>
 
 ## query
 
@@ -2714,6 +2742,8 @@ Registers a callback to listen for a URI. URIs and callbacks can be in many-to-m
 | Error Code ID | Error Message |
 | --- | --- |
 | 14300002 | Invalid uri |
+
+<a id="rename1"></a>
 
 ## rename
 
@@ -2812,7 +2842,7 @@ async function renameFile01() {
 }
 ```
 
-<a id="rename-1"></a>
+<a id="rename2"></a>
 
 ## rename
 

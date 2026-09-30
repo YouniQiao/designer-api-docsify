@@ -18,6 +18,8 @@ Provides APIs for managing OS accounts.
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
+<a id="activateosaccount1"></a>
+
 ## activateOsAccount
 
 ```TypeScript
@@ -80,7 +82,7 @@ try {
 }
 ```
 
-<a id="activateosaccount-1"></a>
+<a id="activateosaccount2"></a>
 
 ## activateOsAccount
 
@@ -147,7 +149,7 @@ try {
 }
 ```
 
-<a id="activateosaccount-2"></a>
+<a id="activateosaccount3"></a>
 
 ## activateOsAccount
 
@@ -286,6 +288,8 @@ try {
 }
 ```
 
+<a id="createosaccount1"></a>
+
 ## createOsAccount
 
 ```TypeScript
@@ -348,7 +352,7 @@ try {
 }
 ```
 
-<a id="createosaccount-1"></a>
+<a id="createosaccount2"></a>
 
 ## createOsAccount
 
@@ -422,6 +426,8 @@ try {
 }
 ```
 
+<a id="createosaccountfordomain1"></a>
+
 ## createOsAccountForDomain
 
 ```TypeScript
@@ -491,7 +497,7 @@ try {
 }
 ```
 
-<a id="createosaccountfordomain-1"></a>
+<a id="createosaccountfordomain2"></a>
 
 ## createOsAccountForDomain
 
@@ -629,6 +635,8 @@ try {
 }
 ```
 
+<a id="getbundleidforuid1"></a>
+
 ## getBundleIdForUid
 
 ```TypeScript
@@ -683,7 +691,7 @@ try {
 }
 ```
 
-<a id="getbundleidforuid-1"></a>
+<a id="getbundleidforuid2"></a>
 
 ## getBundleIdForUid
 
@@ -912,7 +920,7 @@ try {
 }
 ```
 
-<a id="getforegroundosaccountlocalid-1"></a>
+<a id="getforegroundosaccountlocalid2"></a>
 
 ## getForegroundOsAccountLocalId
 
@@ -972,6 +980,8 @@ try {
 }
 ```
 
+<a id="getosaccountconstraintsourcetypes1"></a>
+
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1030,7 +1040,7 @@ try {
 }
 ```
 
-<a id="getosaccountconstraintsourcetypes-1"></a>
+<a id="getosaccountconstraintsourcetypes2"></a>
 
 ## getOsAccountConstraintSourceTypes
 
@@ -1093,6 +1103,8 @@ try {
 }
 ```
 
+<a id="getosaccountprofilephoto1"></a>
+
 ## getOsAccountProfilePhoto
 
 ```TypeScript
@@ -1152,7 +1164,7 @@ try {
 }
 ```
 
-<a id="getosaccountprofilephoto-1"></a>
+<a id="getosaccountprofilephoto2"></a>
 
 ## getOsAccountProfilePhoto
 
@@ -1216,7 +1228,7 @@ try {
 }
 ```
 
-<a id="getosaccounttype-2"></a>
+<a id="getosaccounttype3"></a>
 
 ## getOsAccountType
 
@@ -1277,6 +1289,8 @@ try {
 }
 ```
 
+<a id="ismainosaccount1"></a>
+
 ## isMainOsAccount
 
 ```TypeScript
@@ -1330,7 +1344,7 @@ try {
 }
 ```
 
-<a id="ismainosaccount-1"></a>
+<a id="ismainosaccount2"></a>
 
 ## isMainOsAccount
 
@@ -1443,7 +1457,7 @@ try {
 }
 ```
 
-<a id="isosaccountconstraintenabled-1"></a>
+<a id="isosaccountconstraintenabled2"></a>
 
 ## isOsAccountConstraintEnabled
 
@@ -1508,7 +1522,7 @@ try {
 }
 ```
 
-<a id="isosaccountunlocked-1"></a>
+<a id="isosaccountunlocked2"></a>
 
 ## isOsAccountUnlocked
 
@@ -1994,6 +2008,8 @@ try {
 }
 ```
 
+<a id="queryallcreatedosaccounts1"></a>
+
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2047,7 +2063,7 @@ try {
 }
 ```
 
-<a id="queryallcreatedosaccounts-1"></a>
+<a id="queryallcreatedosaccounts2"></a>
 
 ## queryAllCreatedOsAccounts
 
@@ -2146,6 +2162,8 @@ try {
 }
 ```
 
+<a id="querymaxosaccountnumber1"></a>
+
 ## queryMaxOsAccountNumber
 
 ```TypeScript
@@ -2196,7 +2214,7 @@ try {
 }
 ```
 
-<a id="querymaxosaccountnumber-1"></a>
+<a id="querymaxosaccountnumber2"></a>
 
 ## queryMaxOsAccountNumber
 
@@ -2295,6 +2313,8 @@ try {
 }
 ```
 
+<a id="queryosaccountbyid1"></a>
+
 ## queryOsAccountById
 
 ```TypeScript
@@ -2354,7 +2374,7 @@ try {
 }
 ```
 
-<a id="queryosaccountbyid-1"></a>
+<a id="queryosaccountbyid2"></a>
 
 ## queryOsAccountById
 
@@ -2418,6 +2438,8 @@ try {
 }
 ```
 
+<a id="removeosaccount1"></a>
+
 ## removeOsAccount
 
 ```TypeScript
@@ -2480,7 +2502,7 @@ try {
 }
 ```
 
-<a id="removeosaccount-1"></a>
+<a id="removeosaccount2"></a>
 
 ## removeOsAccount
 
@@ -2547,7 +2569,7 @@ try {
 }
 ```
 
-<a id="removeosaccount-2"></a>
+<a id="removeosaccount3"></a>
 
 ## removeOsAccount
 
@@ -2619,6 +2641,8 @@ try {
 }
 ```
 
+<a id="setosaccountconstraints1"></a>
+
 ## setOsAccountConstraints
 
 ```TypeScript
@@ -2682,7 +2706,7 @@ try {
 }
 ```
 
-<a id="setosaccountconstraints-1"></a>
+<a id="setosaccountconstraints2"></a>
 
 ## setOsAccountConstraints
 
@@ -2749,6 +2773,8 @@ try {
 }
 ```
 
+<a id="setosaccountname1"></a>
+
 ## setOsAccountName
 
 ```TypeScript
@@ -2811,7 +2837,7 @@ try {
 }
 ```
 
-<a id="setosaccountname-1"></a>
+<a id="setosaccountname2"></a>
 
 ## setOsAccountName
 
@@ -2878,6 +2904,8 @@ try {
 }
 ```
 
+<a id="setosaccountprofilephoto1"></a>
+
 ## setOsAccountProfilePhoto
 
 ```TypeScript
@@ -2943,7 +2971,7 @@ try {
 }
 ```
 
-<a id="setosaccountprofilephoto-1"></a>
+<a id="setosaccountprofilephoto2"></a>
 
 ## setOsAccountProfilePhoto
 

@@ -6,7 +6,7 @@ declare class StepperItemAttribute extends CommonMethod<StepperItemAttribute>
 
 Defines StepperItem Component instance.
 
-**Inheritance/Implementation:** StepperItemAttribute extends CommonMethod<StepperItemAttribute>
+**Inheritance/Implementation:** StepperItemAttribute extends CommonMethod&lt;StepperItemAttribute&gt;
 
 **Since:** 8
 

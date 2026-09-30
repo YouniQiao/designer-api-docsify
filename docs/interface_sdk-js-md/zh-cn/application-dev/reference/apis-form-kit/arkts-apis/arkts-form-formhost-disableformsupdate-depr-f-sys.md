@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="disableformsupdate1"></a>
+
 ## disableFormsUpdate
 
 ```TypeScript
@@ -48,7 +50,7 @@ formHost.disableFormsUpdate(formIds, (error: Base.BusinessError) => {
 ```
 
 
-<a id="disableformsupdate-1"></a>
+<a id="disableformsupdate2"></a>
 
 ## disableFormsUpdate
 

@@ -24,6 +24,8 @@ CanvasRenderingContext2D对象与Canvas组件绑定后，可在Canvas组件上�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -92,7 +94,7 @@ struct LengthMetricsUnitDemo {
 }
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

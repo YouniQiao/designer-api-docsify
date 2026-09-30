@@ -76,6 +76,8 @@ record.addEntry(uniformTypeDescriptor.UniformDataType.FILE_URI, fileUri);
 unifiedData.addRecord(record);
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -100,7 +102,7 @@ Defines a constructor used to create a **UnfiedRecord** object.
 let unifiedRecord = new unifiedDataChannel.UnifiedRecord();
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

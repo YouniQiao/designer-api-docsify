@@ -6,6 +6,8 @@
 import { windowAnimationManager } from '@kit.ArkUI';
 ```
 
+<a id="minimizewindowwithanimation1"></a>
+
 ## minimizeWindowWithAnimation
 
 ```TypeScript
@@ -95,7 +97,7 @@ windowAnimationManager.minimizeWindowWithAnimation(target, (err: BusinessError, 
 ```
 
 
-<a id="minimizewindowwithanimation-1"></a>
+<a id="minimizewindowwithanimation2"></a>
 
 ## minimizeWindowWithAnimation
 

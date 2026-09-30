@@ -71,7 +71,7 @@ Canvas(params: CanvasParams)
 
 > **说明：** 
 > 
-> - 使用本接口创建的Canvas组件将在[onReady&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-canvas-comp-attribute.md#onready-1)回调的入参中返回一个[DrawingRenderingContext&lt;sup&gt;12+&lt;/sup&gt;](#canvas)对象，可用于在该Canvas组件上进行绘制。
+> - 使用本接口创建的Canvas组件将在[onReady&lt;sup&gt;23+&lt;/sup&gt;](arkts-arkui-canvas-comp-attribute.md#onready2)回调的入参中返回一个[DrawingRenderingContext&lt;sup&gt;12+&lt;/sup&gt;](#canvas)对象，可用于在该Canvas组件上进行绘制。
 > 
 > - 使用本接口创建的Canvas组件在组件不可见时将不响应绘制指令。
 > 

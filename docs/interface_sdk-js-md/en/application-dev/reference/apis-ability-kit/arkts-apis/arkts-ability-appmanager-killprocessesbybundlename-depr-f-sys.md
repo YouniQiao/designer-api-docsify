@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="killprocessesbybundlename1"></a>
+
 ## killProcessesByBundleName
 
 ```TypeScript
@@ -56,7 +58,7 @@ appManager.killProcessesByBundleName(bundleName)
 ```
 
 
-<a id="killprocessesbybundlename-1"></a>
+<a id="killprocessesbybundlename2"></a>
 
 ## killProcessesByBundleName
 

@@ -37,12 +37,12 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 | [showToast](arkts-arkui-promptaction-showtoast-f.md) | Creates and displays a toast. |
 | [openToast](arkts-arkui-promptaction-opentoast-f.md) | Shows a toast. This API uses a promise to return the toast ID. |
 | [closeToast](arkts-arkui-promptaction-closetoast-f.md) | Closes the specified toast. |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog) | Creates and displays a dialog box. This API uses an asynchronous callback to return the result. |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog-1) | Creates and displays a dialog box in the given settings. This API uses a promise to return the result. |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog1) | Creates and displays a dialog box. This API uses an asynchronous callback to return the result. |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog2) | Creates and displays a dialog box in the given settings. This API uses a promise to return the result. |
 | [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | Opens a custom dialog box. This API uses a promise to return the result. |
 | [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md) | Closes the specified custom dialog box. |
-| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu) | Creates and displays an action menu. This API uses an asynchronous callback to return the result. |
-| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu-1) | Creates and displays an action menu in the given settings. This API uses a promise to return the result. |
+| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu1) | Creates and displays an action menu. This API uses an asynchronous callback to return the result. |
+| [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu2) | Creates and displays an action menu in the given settings. This API uses a promise to return the result. |
 
 ### Classes
 

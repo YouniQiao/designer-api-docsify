@@ -187,6 +187,8 @@ Sets the alignment of the icon and text on the security component.
 | --- | --- |
 | T | Attribute of the security component. |
 
+<a id="alignrules1"></a>
+
 ## alignRules
 
 ```TypeScript
@@ -217,7 +219,7 @@ Sets the alignment rules for child components within a relative container. This 
 | --- | --- |
 | T | Attribute of the security component. |
 
-<a id="alignrules-1"></a>
+<a id="alignrules2"></a>
 
 ## alignRules
 
@@ -309,6 +311,8 @@ Sets the border color of the security component.
 | --- | --- |
 | T | Attribute of the security component. |
 
+<a id="borderradius1"></a>
+
 ## borderRadius
 
 ```TypeScript
@@ -341,7 +345,7 @@ The effect of **borderRadius** is influenced by **ButtonType**. When **ButtonTyp
 | --- | --- |
 | T | Attribute of the security component. |
 
-<a id="borderradius-1"></a>
+<a id="borderradius2"></a>
 
 ## borderRadius
 

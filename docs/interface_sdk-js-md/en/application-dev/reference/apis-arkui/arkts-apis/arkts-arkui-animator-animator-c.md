@@ -18,7 +18,7 @@ Creates an **Animator** object.
 import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
-<a id="create-1"></a>
+<a id="create2"></a>
 
 ## create
 
@@ -26,7 +26,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with [create](#create), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](#create1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -70,6 +70,8 @@ let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duratio
 animator.create(options); // You are advised to use UIContext.createAnimator().
 ```
 
+<a id="create1"></a>
+
 ## create
 
 ```TypeScript
@@ -86,7 +88,7 @@ Creates an **AnimatorResult** object for animations.
 
 **Deprecated since:** 18
 
-**Substitutes:** createAnimator
+**Substitutes:** [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -148,7 +150,7 @@ Creates an animation.
 
 **Deprecated since:** 9
 
-**Substitutes:** create
+**Substitutes:** [create](#create)
 
 <!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 

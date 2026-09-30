@@ -28,7 +28,7 @@ Defines an explicit animation. When an animation is required, call this API expl
 
 **Deprecated since:** 18
 
-**Substitutes:** animateTo
+**Substitutes:** [animateTo](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#animateto)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

@@ -20,7 +20,7 @@ declare class LiveFormExtensionContext extends ExtensionContext
 public connectServiceExtensionAbility(want: Want, connection: ConnectOptions): number
 ```
 
-Connect a service extension ability.The destination of the connection must be a service extension. You must implement the [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) interface to obtain the proxy of the target service extension when the Service extension is connected.
+Connect a service extension ability.The destination of the connection must be a service extension. You must implement the [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) interface to obtain the proxy of the target service extension when the Service extension is connected.
 
 **Since:** 21
 
@@ -37,7 +37,7 @@ Connect a service extension ability.The destination of the connection must be a 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the service extension to connect. |
-| connection | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | Yes | Indicates the callback of connection. |
+| connection | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) | Yes | Indicates the callback of connection. |
 
 **Return value:**
 

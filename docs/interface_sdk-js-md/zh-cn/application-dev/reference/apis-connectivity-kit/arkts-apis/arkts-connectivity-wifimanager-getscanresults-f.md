@@ -6,6 +6,8 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
+<a id="getscanresults1"></a>
+
 ## getScanResults
 
 ```TypeScript
@@ -88,7 +90,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 
-<a id="getscanresults-1"></a>
+<a id="getscanresults2"></a>
 
 ## getScanResults
 

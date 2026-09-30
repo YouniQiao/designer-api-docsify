@@ -6,13 +6,15 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="issupporttemplate1"></a>
+
 ## isSupportTemplate
 
 ```TypeScript
 function isSupportTemplate(templateName: string, callback: AsyncCallback<boolean>): void
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -53,7 +55,7 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 ```
 
 
-<a id="issupporttemplate-1"></a>
+<a id="issupporttemplate2"></a>
 
 ## isSupportTemplate
 
@@ -61,7 +63,7 @@ notificationManager.isSupportTemplate(templateName, isSupportTemplateCallback);
 function isSupportTemplate(templateName: string): Promise<boolean>
 ```
 
-在使用[通知模板](arkts-notification-notificationtemplate-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
+在使用[通知模板](arkts-notification-notificationtemplate-i.md)发布通知前，可以通过该接口查询是否支持对应的通知模板。使用Promise异步回调。
 
 **起始版本：** 9
 

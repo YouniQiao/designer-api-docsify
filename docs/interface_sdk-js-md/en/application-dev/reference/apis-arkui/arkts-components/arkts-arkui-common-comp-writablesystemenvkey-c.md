@@ -6,7 +6,7 @@ declare class WritableSystemEnvKey<T> extends SystemEnvKey<T>
 
 Defines a writable system environment variable key, which inherits from [SystemEnvKey&lt;T&gt;](arkts-arkui-common-comp-systemenvkey-c.md).
 
-**Inheritance/Implementation:** WritableSystemEnvKey extends SystemEnvKey<T>
+**Inheritance/Implementation:** WritableSystemEnvKey extends SystemEnvKey&lt;T&gt;
 
 **Since:** 26.0.0
 

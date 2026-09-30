@@ -4,7 +4,7 @@
 export interface OverlayModuleInfo
 ```
 
-The module provides information about a module with the overlay feature. An application can obtain such information through [overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo-1).
+The module provides information about a module with the overlay feature. An application can obtain such information through [overlay.getOverlayModuleInfo](arkts-ability-overlay-getoverlaymoduleinfo-f.md#getoverlaymoduleinfo2).
 
 **Since:** 10
 
@@ -66,7 +66,7 @@ Priority of the module with the overlay feature. The value is an integer ranging
 readonly state: number
 ```
 
-Whether the module with the overlay feature is [disabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled-1). The value **0** means that the module with the overlay feature is disabled, and **1** means the opposite.
+Whether the module with the overlay feature is [disabled](arkts-ability-overlay-setoverlayenabled-f.md#setoverlayenabled2). The value **0** means that the module with the overlay feature is disabled, and **1** means the opposite.
 
 **Type:** number
 

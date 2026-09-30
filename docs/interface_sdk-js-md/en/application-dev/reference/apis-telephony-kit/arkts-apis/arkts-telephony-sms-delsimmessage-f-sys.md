@@ -6,6 +6,8 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
+<a id="delsimmessage1"></a>
+
 ## delSimMessage
 
 ```TypeScript
@@ -58,7 +60,7 @@ sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
 ```
 
 
-<a id="delsimmessage-1"></a>
+<a id="delsimmessage2"></a>
 
 ## delSimMessage
 

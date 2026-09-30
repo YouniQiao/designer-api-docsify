@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="isringing1"></a>
+
 ## isRinging
 
 ```TypeScript
@@ -57,7 +59,7 @@ call.isRinging((err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isringing-1"></a>
+<a id="isringing2"></a>
 
 ## isRinging
 

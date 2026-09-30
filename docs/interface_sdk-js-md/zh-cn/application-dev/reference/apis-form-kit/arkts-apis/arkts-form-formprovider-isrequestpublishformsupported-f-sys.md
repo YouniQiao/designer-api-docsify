@@ -6,6 +6,8 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
+<a id="isrequestpublishformsupported1"></a>
+
 ## isRequestPublishFormSupported
 
 ```TypeScript
@@ -78,7 +80,7 @@ try {
 ```
 
 
-<a id="isrequestpublishformsupported-1"></a>
+<a id="isrequestpublishformsupported2"></a>
 
 ## isRequestPublishFormSupported
 

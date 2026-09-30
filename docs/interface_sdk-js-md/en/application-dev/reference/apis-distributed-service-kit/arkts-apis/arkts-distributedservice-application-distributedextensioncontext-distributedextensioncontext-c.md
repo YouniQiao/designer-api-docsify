@@ -28,7 +28,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 
 Connects to a remote Service extension ability.
 
-This method connects to a Service extension ability on a remote device. You must implement the [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) interface to obtain the proxy of the target service extension when connected.
+This method connects to a Service extension ability on a remote device. You must implement the [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) interface to obtain the proxy of the target service extension when connected.
 
 **Since:** 26.0.0
 
@@ -43,7 +43,7 @@ This method connects to a Service extension ability on a remote device. You must
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the service extension to connect. |
-| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | Yes | Indicates the callback of connection. |
+| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) | Yes | Indicates the callback of connection. |
 
 **Return value:**
 

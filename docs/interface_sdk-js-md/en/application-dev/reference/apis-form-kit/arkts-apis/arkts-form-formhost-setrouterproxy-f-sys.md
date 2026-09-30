@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="setrouterproxy1"></a>
+
 ## setRouterProxy
 
 ```TypeScript
@@ -53,7 +55,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="setrouterproxy-1"></a>
+<a id="setrouterproxy2"></a>
 
 ## setRouterProxy
 

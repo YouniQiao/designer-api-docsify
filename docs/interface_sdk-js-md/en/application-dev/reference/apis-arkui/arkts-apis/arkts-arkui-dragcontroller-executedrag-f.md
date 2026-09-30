@@ -6,6 +6,8 @@
 import { dragController } from '@kit.ArkUI';
 ```
 
+<a id="executedrag1"></a>
+
 ## executeDrag
 
 ```TypeScript
@@ -25,7 +27,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** executeDrag
+**Substitutes:** [executeDrag](arkts-arkui-arkui-uicontext-dragcontroller-c.md#executedrag)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -134,7 +136,7 @@ struct DragControllerPage {
 ```
 
 
-<a id="executedrag-1"></a>
+<a id="executedrag2"></a>
 
 ## executeDrag
 
@@ -154,7 +156,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** executeDrag
+**Substitutes:** [executeDrag](arkts-arkui-arkui-uicontext-dragcontroller-c.md#executedrag)
 
 **Model restriction:** This API can be used only in the stage model.
 

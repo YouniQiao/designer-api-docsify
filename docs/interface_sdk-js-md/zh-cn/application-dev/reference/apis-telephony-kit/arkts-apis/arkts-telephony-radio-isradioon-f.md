@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="isradioon1"></a>
+
 ## isRadioOn
 
 ```TypeScript
@@ -56,7 +58,7 @@ radio.isRadioOn(slotId, (err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isradioon-1"></a>
+<a id="isradioon2"></a>
 
 ## isRadioOn
 
@@ -111,7 +113,7 @@ radio.isRadioOn(slotId).then((data: boolean) => {
 ```
 
 
-<a id="isradioon-2"></a>
+<a id="isradioon3"></a>
 
 ## isRadioOn
 

@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="setwindowlayoutmode1"></a>
+
 ## setWindowLayoutMode
 
 ```TypeScript
@@ -59,7 +61,7 @@ try {
 ```
 
 
-<a id="setwindowlayoutmode-1"></a>
+<a id="setwindowlayoutmode2"></a>
 
 ## setWindowLayoutMode
 

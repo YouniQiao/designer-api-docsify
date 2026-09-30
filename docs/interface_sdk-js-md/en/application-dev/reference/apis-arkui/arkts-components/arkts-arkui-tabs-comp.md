@@ -25,8 +25,8 @@ Only the child component TabContent and rendering control types [if/else](../../
 > [Example 13](../../../reference/apis-arkui/arkui-ts/ts-container-tabs.md#example-13-implementing-lazy-loading-and-resource-release-of-pages).
 > 
 > 
-> If [height](arkts-arkui-common-comp-commonmethod-c.md#height) is set to **auto** for **Tabs**, the tab height can be
-> automatically adjusted based on that of the child component. When [width](arkts-arkui-common-comp-commonmethod-c.md#width)
+> If [height](arkts-arkui-common-comp-commonmethod-c.md#height1) is set to **auto** for **Tabs**, the tab height can be
+> automatically adjusted based on that of the child component. When [width](arkts-arkui-common-comp-commonmethod-c.md#width1)
 > is set to **auto**, the tab width can be automatically adjusted based on that of the child component.
 
 ## Tabs

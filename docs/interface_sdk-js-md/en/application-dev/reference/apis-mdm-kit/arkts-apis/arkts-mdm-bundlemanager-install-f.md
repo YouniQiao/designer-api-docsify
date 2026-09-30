@@ -6,7 +6,7 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="install-2"></a>
+<a id="install3"></a>
 
 ## install
 

@@ -6,7 +6,7 @@ export declare class LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamic
 
 Defines the LazyDynamicLayout attribute functions.
 
-**Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod<LazyDynamicLayoutAttribute>
+**Inheritance/Implementation:** LazyDynamicLayoutAttribute extends CommonMethod&lt;LazyDynamicLayoutAttribute&gt;
 
 **Since:** 26.0.0
 

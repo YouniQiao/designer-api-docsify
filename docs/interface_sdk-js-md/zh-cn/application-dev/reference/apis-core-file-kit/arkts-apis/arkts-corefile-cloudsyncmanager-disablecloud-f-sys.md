@@ -6,6 +6,8 @@
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
+<a id="disablecloud1"></a>
+
 ## disableCloud
 
 ```TypeScript
@@ -58,7 +60,7 @@ cloudSyncManager.disableCloud(accountId).then(() => {
 ```
 
 
-<a id="disablecloud-1"></a>
+<a id="disablecloud2"></a>
 
 ## disableCloud
 

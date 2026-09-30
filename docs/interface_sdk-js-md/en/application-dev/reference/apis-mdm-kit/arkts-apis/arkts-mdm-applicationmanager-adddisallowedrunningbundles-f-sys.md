@@ -6,6 +6,8 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
+<a id="adddisallowedrunningbundles1"></a>
+
 ## addDisallowedRunningBundles
 
 ```TypeScript
@@ -73,7 +75,7 @@ applicationManager.addDisallowedRunningBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="adddisallowedrunningbundles-1"></a>
+<a id="adddisallowedrunningbundles2"></a>
 
 ## addDisallowedRunningBundles
 
@@ -143,7 +145,7 @@ applicationManager.addDisallowedRunningBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="adddisallowedrunningbundles-2"></a>
+<a id="adddisallowedrunningbundles3"></a>
 
 ## addDisallowedRunningBundles
 

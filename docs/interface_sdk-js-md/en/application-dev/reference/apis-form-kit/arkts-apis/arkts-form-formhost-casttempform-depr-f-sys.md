@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="casttempform1"></a>
+
 ## castTempForm
 
 ```TypeScript
@@ -35,7 +37,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is converted to a normal one, **error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="casttempform-1"></a>
+<a id="casttempform2"></a>
 
 ## castTempForm
 

@@ -24,6 +24,8 @@ Before calling any API in AudioVolumeGroupManager, you must use [getVolumeGroupM
 import { audio } from '@kit.AudioKit';
 ```
 
+<a id="adjustsystemvolumebystep1"></a>
+
 ## adjustSystemVolumeByStep
 
 ```TypeScript
@@ -73,7 +75,7 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 });
 ```
 
-<a id="adjustsystemvolumebystep-1"></a>
+<a id="adjustsystemvolumebystep2"></a>
 
 ## adjustSystemVolumeByStep
 
@@ -127,6 +129,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
 });
 ```
 
+<a id="adjustvolumebystep1"></a>
+
 ## adjustVolumeByStep
 
 ```TypeScript
@@ -176,7 +180,7 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
 });
 ```
 
-<a id="adjustvolumebystep-1"></a>
+<a id="adjustvolumebystep2"></a>
 
 ## adjustVolumeByStep
 
@@ -310,6 +314,8 @@ Checks whether the persistent microphone status is muted.
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 ```
 
+<a id="mute1"></a>
+
 ## mute
 
 ```TypeScript
@@ -350,7 +356,7 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
 });
 ```
 
-<a id="mute-1"></a>
+<a id="mute2"></a>
 
 ## mute
 
@@ -486,6 +492,8 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
 });
 ```
 
+<a id="setringermode1"></a>
+
 ## setRingerMode
 
 ```TypeScript
@@ -525,7 +533,7 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
 });
 ```
 
-<a id="setringermode-1"></a>
+<a id="setringermode2"></a>
 
 ## setRingerMode
 
@@ -564,6 +572,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).th
   console.info('Promise returned to indicate a successful setting of the ringer mode.');
 });
 ```
+
+<a id="setvolume1"></a>
 
 ## setVolume
 
@@ -605,7 +615,7 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
 });
 ```
 
-<a id="setvolume-1"></a>
+<a id="setvolume2"></a>
 
 ## setVolume
 

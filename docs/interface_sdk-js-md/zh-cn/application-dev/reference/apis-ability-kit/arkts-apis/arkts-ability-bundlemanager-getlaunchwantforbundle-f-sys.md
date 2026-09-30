@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="getlaunchwantforbundle1"></a>
+
 ## getLaunchWantForBundle
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="getlaunchwantforbundle-1"></a>
+<a id="getlaunchwantforbundle2"></a>
 
 ## getLaunchWantForBundle
 
@@ -129,7 +131,7 @@ try {
 ```
 
 
-<a id="getlaunchwantforbundle-2"></a>
+<a id="getlaunchwantforbundle3"></a>
 
 ## getLaunchWantForBundle
 

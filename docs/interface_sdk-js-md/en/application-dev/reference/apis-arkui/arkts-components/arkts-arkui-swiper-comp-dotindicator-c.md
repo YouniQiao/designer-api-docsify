@@ -6,7 +6,7 @@ declare class DotIndicator extends Indicator<DotIndicator>
 
 A constructor used to create a **DotIndicator** object. It inherits from [Indicator](arkts-arkui-swiper-comp-indicator-c.md).
 
-**Inheritance/Implementation:** DotIndicator extends Indicator<DotIndicator>
+**Inheritance/Implementation:** DotIndicator extends Indicator&lt;DotIndicator&gt;
 
 **Since:** 10
 

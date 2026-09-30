@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
+<a id="uninstall1"></a>
+
 ## uninstall
 
 ```TypeScript
@@ -23,7 +25,7 @@ function uninstall(admin: Want, bundleName: string, callback: AsyncCallback<void
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall5)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -75,7 +77,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', (err) => {
 ```
 
 
-<a id="uninstall-1"></a>
+<a id="uninstall2"></a>
 
 ## uninstall
 
@@ -94,7 +96,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, callback: As
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall5)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -147,7 +149,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', 100, (err) => {
 ```
 
 
-<a id="uninstall-2"></a>
+<a id="uninstall3"></a>
 
 ## uninstall
 
@@ -166,7 +168,7 @@ function uninstall(admin: Want, bundleName: string, isKeepData: boolean, callbac
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall5)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 
@@ -219,7 +221,7 @@ bundleManager.uninstall(wantTemp, 'bundleName', true, (err) => {
 ```
 
 
-<a id="uninstall-3"></a>
+<a id="uninstall4"></a>
 
 ## uninstall
 
@@ -238,7 +240,7 @@ function uninstall(admin: Want, bundleName: string, userId: number, isKeepData: 
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall-4)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
+**替代接口：** [uninstall](arkts-mdm-bundlemanager-uninstall-f.md#uninstall5)(admin: Want, bundleName: string, userId?: number, isKeepData?: boolean)
 
 **需要权限：** ohos.permission.ENTERPRISE_INSTALL_BUNDLE
 

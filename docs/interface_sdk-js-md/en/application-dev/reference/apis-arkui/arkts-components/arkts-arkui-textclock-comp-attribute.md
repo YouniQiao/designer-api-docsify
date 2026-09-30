@@ -6,7 +6,7 @@ declare class TextClockAttribute extends CommonMethod<TextClockAttribute>
 
 In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
-**Inheritance/Implementation:** TextClockAttribute extends CommonMethod<TextClockAttribute>
+**Inheritance/Implementation:** TextClockAttribute extends CommonMethod&lt;TextClockAttribute&gt;
 
 **Since:** 8
 

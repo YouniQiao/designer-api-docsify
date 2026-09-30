@@ -22,6 +22,8 @@ AudioPlayer is a class for audio playback management. It provides APIs to manage
 import { media } from '@kit.MediaKit';
 ```
 
+<a id="gettrackdescription1"></a>
+
 ## getTrackDescription
 
 ```TypeScript
@@ -34,7 +36,7 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 
 **Deprecated since:** 9
 
-**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+**Substitutes:** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription1)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
 
 <!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AudioPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -46,7 +48,7 @@ Obtains the audio track information. It can be called only after the **'dataLoad
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the MediaDescription array obtained; otherwise, **err** is an error object. |
 
-<a id="gettrackdescription-1"></a>
+<a id="gettrackdescription2"></a>
 
 ## getTrackDescription
 
@@ -209,7 +211,7 @@ Pauses audio playback.
 
 **Deprecated since:** 9
 
-**Substitutes:** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [pause](arkts-media-media-avplayer-i.md#pause1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AudioPlayer-pause(): void--><!--Device-AudioPlayer-pause(): void-End-->
 
@@ -227,7 +229,7 @@ Starts to play an audio asset. This API can be called only after the **'dataLoad
 
 **Deprecated since:** 9
 
-**Substitutes:** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [play](arkts-media-media-avplayer-i.md#play1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AudioPlayer-play(): void--><!--Device-AudioPlayer-play(): void-End-->
 
@@ -245,7 +247,7 @@ Releases the audio playback resources.
 
 **Deprecated since:** 9
 
-**Substitutes:** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [release](arkts-media-media-avplayer-i.md#release1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AudioPlayer-release(): void--><!--Device-AudioPlayer-release(): void-End-->
 
@@ -263,7 +265,7 @@ Resets the audio asset to be played.
 
 **Deprecated since:** 9
 
-**Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [reset](arkts-media-media-avplayer-i.md#reset1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AudioPlayer-reset(): void--><!--Device-AudioPlayer-reset(): void-End-->
 
@@ -329,7 +331,7 @@ Stops audio playback.
 
 **Deprecated since:** 9
 
-**Substitutes:** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stop](arkts-media-media-avplayer-i.md#stop1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AudioPlayer-stop(): void--><!--Device-AudioPlayer-stop(): void-End-->
 

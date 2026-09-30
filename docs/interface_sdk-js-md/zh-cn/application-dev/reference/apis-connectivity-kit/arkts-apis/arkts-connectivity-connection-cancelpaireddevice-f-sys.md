@@ -6,6 +6,8 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
+<a id="cancelpaireddevice1"></a>
+
 ## cancelPairedDevice
 
 ```TypeScript
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="cancelpaireddevice-1"></a>
+<a id="cancelpaireddevice2"></a>
 
 ## cancelPairedDevice
 

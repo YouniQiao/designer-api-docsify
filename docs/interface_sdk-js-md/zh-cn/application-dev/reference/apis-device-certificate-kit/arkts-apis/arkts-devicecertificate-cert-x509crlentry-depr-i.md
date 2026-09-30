@@ -43,7 +43,7 @@ getCertIssuer(): DataBlob
 
 **废弃版本：** 11
 
-**替代接口：** getCertIssuer
+**替代接口：** [getCertIssuer](arkts-devicecertificate-cert-x509crlentry-i.md#getcertissuer)
 
 <!--Device-X509CrlEntry-getCertIssuer(): DataBlob--><!--Device-X509CrlEntry-getCertIssuer(): DataBlob-End-->
 
@@ -112,6 +112,8 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
+<a id="getencoded1"></a>
+
 ## getEncoded
 
 ```TypeScript
@@ -123,13 +125,13 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
-> [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)替代。
+> [X509CRLEntry.getEncoded()](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded1)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 11
 
-**替代接口：** getEncoded
+**替代接口：** [getEncoded](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)
 
 <!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void--><!--Device-X509CrlEntry-getEncoded(callback: AsyncCallback<EncodingBlob>): void-End-->
 
@@ -204,7 +206,7 @@ cert.createX509Crl(encodingBlob, (err, x509Crl) => {
 });
 ```
 
-<a id="getencoded-1"></a>
+<a id="getencoded2"></a>
 
 ## getEncoded
 
@@ -222,7 +224,7 @@ getEncoded(): Promise<EncodingBlob>
 
 **废弃版本：** 11
 
-**替代接口：** getEncoded
+**替代接口：** [getEncoded](arkts-devicecertificate-cert-x509crlentry-i.md#getencoded)
 
 <!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>--><!--Device-X509CrlEntry-getEncoded(): Promise<EncodingBlob>-End-->
 
@@ -312,7 +314,7 @@ getRevocationDate(): string
 
 **废弃版本：** 11
 
-**替代接口：** getRevocationDate
+**替代接口：** [getRevocationDate](arkts-devicecertificate-cert-x509crlentry-i.md#getrevocationdate)
 
 <!--Device-X509CrlEntry-getRevocationDate(): string--><!--Device-X509CrlEntry-getRevocationDate(): string-End-->
 
@@ -398,7 +400,7 @@ getSerialNumber(): number
 
 **废弃版本：** 11
 
-**替代接口：** getSerialNumber
+**替代接口：** [getSerialNumber](arkts-devicecertificate-cert-x509crlentry-i.md#getserialnumber)
 
 <!--Device-X509CrlEntry-getSerialNumber(): number--><!--Device-X509CrlEntry-getSerialNumber(): number-End-->
 

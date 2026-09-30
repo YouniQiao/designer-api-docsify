@@ -6,6 +6,8 @@
 import { missionManager } from '@kit.AbilityKit';
 ```
 
+<a id="movemissionstobackground1"></a>
+
 ## moveMissionsToBackground
 
 ```TypeScript
@@ -75,7 +77,7 @@ try {
 ```
 
 
-<a id="movemissionstobackground-1"></a>
+<a id="movemissionstobackground2"></a>
 
 ## moveMissionsToBackground
 

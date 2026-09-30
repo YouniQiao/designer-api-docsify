@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -42,7 +44,7 @@ huks.init、huks.update、huks.finish为三段式接口，需要一起使用。
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HuksResult](arkts-universalkeystore-huks-huksresult-i.md)&gt; | 是 | 回调函数。当密钥操作update成功时，err为undefined，data为获取到的HuksResult；否则为错误对象。 |
 
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

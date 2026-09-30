@@ -6,6 +6,8 @@
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
+<a id="enablecloud1"></a>
+
 ## enableCloud
 
 ```TypeScript
@@ -63,7 +65,7 @@ cloudSyncManager.enableCloud(accountId, switches).then(() => {
 ```
 
 
-<a id="enablecloud-1"></a>
+<a id="enablecloud2"></a>
 
 ## enableCloud
 

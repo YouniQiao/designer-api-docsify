@@ -6,6 +6,8 @@
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
+<a id="createenrollintelligentvoiceengine1"></a>
+
 ## createEnrollIntelligentVoiceEngine
 
 ```TypeScript
@@ -61,7 +63,7 @@ intelligentVoice.createEnrollIntelligentVoiceEngine(engineDescriptor, (err: Busi
 ```
 
 
-<a id="createenrollintelligentvoiceengine-1"></a>
+<a id="createenrollintelligentvoiceengine2"></a>
 
 ## createEnrollIntelligentVoiceEngine
 

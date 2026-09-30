@@ -4,7 +4,7 @@
 interface AVImageGenerator
 ```
 
-视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-2)构建一个AVImageGenerator实例。
+视频缩略图获取类，用于从视频资源中获取缩略图。在调用AVImageGenerator的方法前，需要先通过[createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator3)构建一个AVImageGenerator实例。
 
 获取视频缩略图的demo可参考：[获取视频缩略图开发指导](../../../media/media/avimagegenerator.md)。
 
@@ -24,6 +24,8 @@ interface AVImageGenerator
 ```TypeScript
 import { media } from '@kit.MediaKit';
 ```
+
+<a id="fetchframebytime1"></a>
 
 ## fetchFrameByTime
 
@@ -96,7 +98,7 @@ media.createAVImageGenerator(async (err: BusinessError, generator: media.AVImage
 });
 ```
 
-<a id="fetchframebytime-2"></a>
+<a id="fetchframebytime3"></a>
 
 ## fetchFrameByTime
 
@@ -241,6 +243,8 @@ media.createAVImageGenerator(async (err: BusinessError, generator: media.AVImage
 });
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -293,7 +297,7 @@ media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenera
 });
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 

@@ -20,6 +20,8 @@ Control class for incremental backup procedure.
 import { backup } from '@kit.CoreFileKit';
 ```
 
+<a id="appendbundles1"></a>
+
 ## appendBundles
 
 ```TypeScript
@@ -124,7 +126,7 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray).then(() => {
 }); // Appends the applications that require incremental backup.
 ```
 
-<a id="appendbundles-1"></a>
+<a id="appendbundles2"></a>
 
 ## appendBundles
 

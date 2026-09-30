@@ -18,6 +18,8 @@ AVCastController definition used to implement a remote control when a cast is co
 import { avSession } from '@kit.AVSessionKit';
 ```
 
+<a id="getavplaybackstate1"></a>
+
 ## getAVPlaybackState
 
 ```TypeScript
@@ -56,7 +58,7 @@ avCastController.getAVPlaybackState((err: BusinessError, state: avSession.AVPlay
 });
 ```
 
-<a id="getavplaybackstate-1"></a>
+<a id="getavplaybackstate2"></a>
 
 ## getAVPlaybackState
 
@@ -96,6 +98,8 @@ avCastController.getAVPlaybackState().then((state: avSession.AVPlaybackState) =>
 });
 ```
 
+<a id="getcurrentitem1"></a>
+
 ## getCurrentItem
 
 ```TypeScript
@@ -134,7 +138,7 @@ avCastController.getCurrentItem((err: BusinessError, value: avSession.AVQueueIte
 });
 ```
 
-<a id="getcurrentitem-1"></a>
+<a id="getcurrentitem2"></a>
 
 ## getCurrentItem
 
@@ -344,6 +348,8 @@ avCastController.getSupportedPlaySpeeds().then((nums: number[]) => {
 });
 ```
 
+<a id="getvalidcommands1"></a>
+
 ## getValidCommands
 
 ```TypeScript
@@ -382,7 +388,7 @@ avCastController.getValidCommands((err: BusinessError, state: avSession.AVCastCo
 });
 ```
 
-<a id="getvalidcommands-1"></a>
+<a id="getvalidcommands2"></a>
 
 ## getValidCommands
 
@@ -1821,6 +1827,8 @@ avCastController.on('customDataChange', (data: Record<string, Object>) => {
 });
 ```
 
+<a id="prepare1"></a>
+
 ## prepare
 
 ```TypeScript
@@ -1880,7 +1888,7 @@ avCastController.prepare(playItem, (err: BusinessError) => {
 });
 ```
 
-<a id="prepare-1"></a>
+<a id="prepare2"></a>
 
 ## prepare
 
@@ -1999,6 +2007,8 @@ let keyRequestCallback: avSession.KeyRequestCallback = async(assetId: string, re
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -2037,7 +2047,7 @@ avCastController.release((err: BusinessError) => {
 });
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -2076,6 +2086,8 @@ avCastController.release().then(() => {
   console.error(`Failed to release, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="sendcontrolcommand1"></a>
 
 ## sendControlCommand
 
@@ -2120,7 +2132,7 @@ avCastController.sendControlCommand(avCommand, (err: BusinessError) => {
 });
 ```
 
-<a id="sendcontrolcommand-1"></a>
+<a id="sendcontrolcommand2"></a>
 
 ## sendControlCommand
 
@@ -2214,6 +2226,8 @@ avCastController.sendCustomData({customData: 'This is custom data'}).then(() => 
 });
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -2274,7 +2288,7 @@ avCastController.start(playItem, (err: BusinessError) => {
 });
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 

@@ -6,6 +6,8 @@
 import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
+<a id="write1"></a>
+
 ## write
 
 ```TypeScript
@@ -72,7 +74,7 @@ hiAppEvent.write({
 ```
 
 
-<a id="write-1"></a>
+<a id="write2"></a>
 
 ## write
 

@@ -8,7 +8,7 @@ declare class GridColAttribute extends CommonMethod<GridColAttribute>
 
 支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
 
-**继承/实现关系：** GridColAttribute extends CommonMethod<GridColAttribute>
+**继承/实现关系：** GridColAttribute extends CommonMethod&lt;GridColAttribute&gt;
 
 **起始版本：** 9
 

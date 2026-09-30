@@ -6,6 +6,8 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
+<a id="removeiptablesfilterrule1"></a>
+
 ## removeIptablesFilterRule
 
 ```TypeScript
@@ -77,7 +79,7 @@ networkManager.removeIptablesFilterRule(wantTemp, filterRule, (err) => {
 ```
 
 
-<a id="removeiptablesfilterrule-1"></a>
+<a id="removeiptablesfilterrule2"></a>
 
 ## removeIptablesFilterRule
 

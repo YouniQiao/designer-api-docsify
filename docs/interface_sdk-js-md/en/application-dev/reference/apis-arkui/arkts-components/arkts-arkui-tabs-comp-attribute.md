@@ -8,7 +8,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
 
-**Inheritance/Implementation:** TabsAttribute extends CommonMethod<TabsAttribute>
+**Inheritance/Implementation:** TabsAttribute extends CommonMethod&lt;TabsAttribute&gt;
 
 **Since:** 7
 
@@ -94,6 +94,8 @@ Sets the animation mode for tab switching initiated by clicking a specific tab o
 | --- | --- | --- | --- |
 | mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md)&gt; | Yes | Animation mode for tab switching initiated by clicking a specific tab or by calling the **changeIndex** API of **TabsController**.<br>Default value: **AnimationMode.CONTENT_FIRST**, which means the target page content is loaded first, followed by the animation. |
 
+<a id="barbackgroundblurstyle1"></a>
+
 ## barBackgroundBlurStyle
 
 ```TypeScript
@@ -122,7 +124,7 @@ Sets the background blur style of the tab bar.
 | --- | --- | --- | --- |
 | value | [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md) | Yes | Background blur style of the tab bar.<br>Default value: **BlurStyle.NONE** |
 
-<a id="barbackgroundblurstyle-1"></a>
+<a id="barbackgroundblurstyle2"></a>
 
 ## barBackgroundBlurStyle
 
@@ -269,6 +271,8 @@ Sets the visible area of the tab bar in grid mode. For details, see **BarGridCol
 | --- | --- | --- | --- |
 | value | [BarGridColumnOptions](arkts-arkui-tabs-comp-bargridcolumnoptions-i.md) | Yes | Visible area of the tab bar in grid mode. |
 
+<a id="barheight1"></a>
+
 ## barHeight
 
 ```TypeScript
@@ -293,7 +297,7 @@ In versions earlier than API version 14, setting **barHeight** to a fixed value 
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the tab bar.<br>Default value:<br>If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **false**, the default value is 56 vp.<br>If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **true**, the default value is the height of the **Tabs** component.<br>If [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) is set, and the **vertical** attribute is **false**, the default value is 56 vp.<br>If **SubTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.<br>If [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md) is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.<br>If **BottomTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is 56 vp in versions earlier than API version 12 and 48 vp since API version 12.<br>**Since:** 8 |
 
-<a id="barheight-1"></a>
+<a id="barheight2"></a>
 
 ## barHeight
 
@@ -320,6 +324,8 @@ Sets the height of the tab bar. For horizontal **Tabs** components, you can set 
 | height | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Height of the tab bar.<br>Default value:<br>If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **false**, the default value is 56 vp.<br>If no style is set or **CustomBuilder** is used to set a custom style for the **TabBar**, and **vertical** is set to **true**, the default value is the height of the **Tabs** component.<br>If [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) is set, and the **vertical** attribute is **false**, the default value is 56 vp.<br>If **SubTabBarStyle** is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.<br>If [BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md) is set, and the **vertical** attribute is **true**, the default value is the height of the **Tabs** component.<br>If **BottomTabBarStyle** is set, and the **vertical** attribute is **false**, the default value is 48 vp. |
 | noMinHeightLimit | boolean | Yes | Whether to remove the minimum height limit of the tab bar when **height** is set to **'auto'**. The default value is **false**.<br>**NOTE:** <br>**true**: removes the minimum height limit, allowing the height to be less than the default value.<br>**false**: enforces the minimum height limit, meaning the height cannot be less than the default value. |
 
+<a id="barmode1"></a>
+
 ## barMode
 
 ```TypeScript
@@ -344,7 +350,7 @@ Sets the tab bar layout mode to **BarMode.Fixed**.
 | --- | --- | --- | --- |
 | value | [BarMode.Fixed](arkts-arkui-tabs-comp-barmode-e.md) | Yes | The width of each tab is determined by equally dividing the number of tabs by the bar width (or bar height in the vertical layout). |
 
-<a id="barmode-1"></a>
+<a id="barmode2"></a>
 
 ## barMode
 
@@ -371,7 +377,7 @@ Sets the tab bar layout mode to **BarMode.Scrollable**.
 | value | [BarMode.Scrollable](arkts-arkui-tabs-comp-barmode-e.md) | Yes | The width of each tab is determined by the actual layout. The tabs are scrollable in the following case: In horizontal layout, the total width exceeds the tab bar width; in vertical layout, the total height exceeds the tab bar height. |
 | options | [ScrollableBarModeOptions](arkts-arkui-tabs-comp-scrollablebarmodeoptions-i.md) | Yes | Layout style of the tab bar in scrollable mode.<br>**NOTE:** <br>This parameter is effective only when the tab bar is in scrollable mode. |
 
-<a id="barmode-2"></a>
+<a id="barmode3"></a>
 
 ## barMode
 

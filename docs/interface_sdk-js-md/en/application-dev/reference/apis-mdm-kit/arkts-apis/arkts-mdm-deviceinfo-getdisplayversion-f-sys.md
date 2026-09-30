@@ -6,6 +6,8 @@
 import { deviceInfo } from '@kit.MDMKit';
 ```
 
+<a id="getdisplayversion1"></a>
+
 ## getDisplayVersion
 
 ```TypeScript
@@ -69,7 +71,7 @@ deviceInfo.getDisplayVersion(wantTemp, (err, result) => {
 ```
 
 
-<a id="getdisplayversion-1"></a>
+<a id="getdisplayversion2"></a>
 
 ## getDisplayVersion
 

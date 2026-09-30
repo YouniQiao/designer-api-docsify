@@ -53,3 +53,19 @@ VoIP语音通话音频会话场景。
 <!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## AUDIO_SESSION_SCENE_VOICE_MESSAGE
+
+```TypeScript
+AUDIO_SESSION_SCENE_VOICE_MESSAGE = 3
+```
+
+语音消息音频会话场景。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_MESSAGE = 3--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_VOICE_MESSAGE = 3-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core

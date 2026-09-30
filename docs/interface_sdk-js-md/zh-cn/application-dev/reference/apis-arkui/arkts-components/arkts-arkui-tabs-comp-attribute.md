@@ -8,7 +8,7 @@ declare class TabsAttribute extends CommonMethod<TabsAttribute>
 
 除支持通用事件外，还支持以下事件：
 
-**继承/实现关系：** TabsAttribute extends CommonMethod<TabsAttribute>
+**继承/实现关系：** TabsAttribute extends CommonMethod&lt;TabsAttribute&gt;
 
 **起始版本：** 7
 
@@ -94,6 +94,8 @@ animationMode(mode: Optional<AnimationMode>)
 | --- | --- | --- | --- |
 | mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md)&gt; | 是 | 点击TabBar页签或调用TabsController的changeIndex接口时切换TabContent的动画形式。<br>默认值：AnimationMode.CONTENT_FIRST，表示在点击TabBar页签或调用TabsController的changeIndex接口切换TabContent时，先加载目标页内容，再开始切换动画。 |
 
+<a id="barbackgroundblurstyle1"></a>
+
 ## barBackgroundBlurStyle
 
 ```TypeScript
@@ -122,7 +124,7 @@ barBackgroundBlurStyle(value: BlurStyle)
 | --- | --- | --- | --- |
 | value | [BlurStyle](arkts-arkui-common-comp-blurstyle-e.md) | 是 | TabBar的背景模糊材质。<br>默认值：BlurStyle.NONE |
 
-<a id="barbackgroundblurstyle-1"></a>
+<a id="barbackgroundblurstyle2"></a>
 
 ## barBackgroundBlurStyle
 
@@ -245,6 +247,8 @@ barGridAlign(value: BarGridColumnOptions)
 | --- | --- | --- | --- |
 | value | [BarGridColumnOptions](arkts-arkui-tabs-comp-bargridcolumnoptions-i.md) | 是 | 以栅格化方式设置TabBar的可见区域。 |
 
+<a id="barheight1"></a>
+
 ## barHeight
 
 ```TypeScript
@@ -269,7 +273,7 @@ API version 14之前的版本，若设置barHeight为固定值后，TabBar无法
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的高度值。<br>默认值：<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为false时，默认值为56vp。<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为true时，默认值为Tabs的高度。<br>设置[SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md)样式且vertical属性为false时，默认值为56vp。<br>设置SubTabBarStyle样式且vertical属性为true时，默认值为Tabs的高度。<br>设置[BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md)样式且vertical属性为true时，默认值为Tabs的高度。<br>设置BottomTabBarStyle样式且vertical属性为false时，默认值为56vp，从API version 12开始，默认值变更为48vp。<br>**适用版本：** 8 |
 
-<a id="barheight-1"></a>
+<a id="barheight2"></a>
 
 ## barHeight
 
@@ -296,6 +300,8 @@ barHeight(height: Length, noMinHeightLimit: boolean)
 | height | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | TabBar的高度值。<br>默认值：<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为false时，默认值为56 vp。<br>未设置样式或者通过CustomBuilder设置自定义样式的TabBar且vertical属性为true时，默认值为Tabs的高度。<br>设置[SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md)样式且vertical属性为false时，默认值为56vp。<br>设置SubTabBarStyle样式且vertical属性为true时，默认值为Tabs的高度。<br>设置[BottomTabBarStyle](arkts-arkui-tabcontent-comp-bottomtabbarstyle-c.md)样式且vertical属性为true时，默认值为Tabs的高度。<br>设置BottomTabBarStyle样式且vertical属性为false时，默认值为48vp。 |
 | noMinHeightLimit | boolean | 是 | height设置为'auto'时，设置是否取消TabBar的最小高度限制。默认值为false。<br>**说明：** <br>值为true表示取消TabBar的最小高度限制，即TabBar的高度值可以小于默认值。<br>值为false表示限制TabBar的最小高度，即TabBar的最小高度值等于默认值。 |
 
+<a id="barmode1"></a>
+
 ## barMode
 
 ```TypeScript
@@ -320,7 +326,7 @@ barMode(value: BarMode.Fixed)
 | --- | --- | --- | --- |
 | value | [BarMode.Fixed](arkts-arkui-tabs-comp-barmode-e.md) | 是 | 所有TabBar会平均分配barWidth宽度（纵向时平均分配barHeight高度）。 |
 
-<a id="barmode-1"></a>
+<a id="barmode2"></a>
 
 ## barMode
 
@@ -347,7 +353,7 @@ barMode(value: BarMode.Scrollable, options: ScrollableBarModeOptions)
 | value | [BarMode.Scrollable](arkts-arkui-tabs-comp-barmode-e.md) | 是 | 所有TabBar都使用实际布局宽度，超过总宽度（横向Tabs的barWidth，纵向Tabs的barHeight）后可滑动。 |
 | options | [ScrollableBarModeOptions](arkts-arkui-tabs-comp-scrollablebarmodeoptions-i.md) | 是 | Scrollable模式下的TabBar的布局样式。<br>**说明：** <br>仅水平模式下有效。 |
 
-<a id="barmode-2"></a>
+<a id="barmode3"></a>
 
 ## barMode
 

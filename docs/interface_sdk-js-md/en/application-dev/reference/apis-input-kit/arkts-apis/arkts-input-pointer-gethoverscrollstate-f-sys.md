@@ -6,6 +6,8 @@
 import { pointer } from '@kit.InputKit';
 ```
 
+<a id="gethoverscrollstate1"></a>
+
 ## getHoverScrollState
 
 ```TypeScript
@@ -67,7 +69,7 @@ struct Index {
 ```
 
 
-<a id="gethoverscrollstate-1"></a>
+<a id="gethoverscrollstate2"></a>
 
 ## getHoverScrollState
 

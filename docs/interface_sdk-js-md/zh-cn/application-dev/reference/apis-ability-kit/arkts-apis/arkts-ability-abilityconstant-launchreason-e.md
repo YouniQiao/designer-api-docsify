@@ -36,7 +36,7 @@ UNKNOWN = 0
 START_ABILITY = 1
 ```
 
-通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability)接口启动Ability。
+通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability1)接口启动Ability。
 
 **起始版本：** 9
 

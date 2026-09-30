@@ -6,6 +6,8 @@
 import { pointer } from '@kit.InputKit';
 ```
 
+<a id="setpointercolor1"></a>
+
 ## setPointerColor
 
 ```TypeScript
@@ -72,7 +74,7 @@ struct Index {
 ```
 
 
-<a id="setpointercolor-1"></a>
+<a id="setpointercolor2"></a>
 
 ## setPointerColor
 

@@ -6,6 +6,8 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
+<a id="get1"></a>
+
 ## get
 
 ```TypeScript
@@ -18,7 +20,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** get
+**Substitutes:** [get](arkts-basicservices-systemparameterenhance-get-f-sys.md)
 
 <!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -52,7 +54,7 @@ try {
 ```
 
 
-<a id="get-1"></a>
+<a id="get2"></a>
 
 ## get
 
@@ -66,7 +68,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** get
+**Substitutes:** [get](arkts-basicservices-systemparameterenhance-get-f-sys.md)
 
 <!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void--><!--Device-systemParameter-function get(key: string, def: string, callback: AsyncCallback<string>): void-End-->
 
@@ -101,7 +103,7 @@ try {
 ```
 
 
-<a id="get-2"></a>
+<a id="get3"></a>
 
 ## get
 
@@ -115,7 +117,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** get
+**Substitutes:** [get](arkts-basicservices-systemparameterenhance-get-f-sys.md)
 
 <!--Device-systemParameter-function get(key: string, def?: string): Promise<string>--><!--Device-systemParameter-function get(key: string, def?: string): Promise<string>-End-->
 

@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="getallwindowlayoutinfo1"></a>
+
 ## getAllWindowLayoutInfo
 
 ```TypeScript
@@ -44,7 +46,7 @@ Obtains the layout information array of all windows visible on a display. The la
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. Possible cause: Internal task error. |
 
 
-<a id="getallwindowlayoutinfo-1"></a>
+<a id="getallwindowlayoutinfo2"></a>
 
 ## getAllWindowLayoutInfo
 

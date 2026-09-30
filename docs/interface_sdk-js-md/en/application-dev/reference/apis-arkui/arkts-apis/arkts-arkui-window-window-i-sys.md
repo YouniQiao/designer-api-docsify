@@ -6,7 +6,7 @@ interface Window
 
 Represents a window instance, which is the basic unit managed by the window manager.
 
-In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md), [createWindow()](arkts-arkui-window-createwindow-f.md), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow1), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow1), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 6
 
@@ -36,7 +36,7 @@ Attaches a first-level child window to the main window to maintain a fixed relat
 > 
 > -After the child window calls this API, calling APIs such as
 > [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto),
-> [maximize()](arkts-arkui-window-window-i.md#maximize), and
+> [maximize()](arkts-arkui-window-window-i.md#maximize1), and
 > [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)
 > to change the window position, or dragging and moving or dragging and resizing the child window through mouse
 > or touch operations will not take effect.
@@ -122,6 +122,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<a id="binddialogtarget1"></a>
 
 ## bindDialogTarget
 
@@ -213,7 +215,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="binddialogtarget-1"></a>
+<a id="binddialogtarget2"></a>
 
 ## bindDialogTarget
 
@@ -302,7 +304,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="binddialogtarget-2"></a>
+<a id="binddialogtarget3"></a>
 
 ## bindDialogTarget
 
@@ -382,7 +384,7 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
-<a id="binddialogtarget-3"></a>
+<a id="binddialogtarget4"></a>
 
 ## bindDialogTarget
 
@@ -473,7 +475,7 @@ Detach a first-level child window from the main window to cancel a fixed relativ
 > 
 > - After detached by calling this API, the child window retains its position during attaching.You can drag the child window to change its size and position.
 > 
-> - After the detaching, calling APIs such as [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or [maximize()](arkts-arkui-window-window-i.md#maximize), and [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)to change the window position, or dragging and moving or dragging and resizing the child window through mouse or touch operations will take effect.
+> - After the detaching, calling APIs such as [moveWindowTo()](arkts-arkui-window-window-i.md#movewindowto) or [maximize()](arkts-arkui-window-window-i.md#maximize1), and [setFollowParentWindowLayoutEnabled()](arkts-arkui-window-window-i.md#setfollowparentwindowlayoutenabled)to change the window position, or dragging and moving or dragging and resizing the child window through mouse or touch operations will take effect.
 
 **Since:** 24
 
@@ -614,6 +616,8 @@ Obtains the transition animation controller.
 let controller = windowClass.getTransitionController(); // Obtain the transition animation controller.
 ```
 
+<a id="hide1"></a>
+
 ## hide
 
 ```TypeScript
@@ -658,7 +662,7 @@ windowClass.hide((err: BusinessError) => {
 });
 ```
 
-<a id="hide-1"></a>
+<a id="hide2"></a>
 
 ## hide
 
@@ -701,6 +705,8 @@ promise.then(() => {
   console.error(`Failed to hide the window. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="hidenonsystemfloatingwindows1"></a>
 
 ## hideNonSystemFloatingWindows
 
@@ -783,7 +789,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="hidenonsystemfloatingwindows-1"></a>
+<a id="hidenonsystemfloatingwindows2"></a>
 
 ## hideNonSystemFloatingWindows
 
@@ -871,6 +877,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="hidewithanimation1"></a>
+
 ## hideWithAnimation
 
 ```TypeScript
@@ -917,7 +925,7 @@ windowClass.hideWithAnimation((err: BusinessError) => {
 });
 ```
 
-<a id="hidewithanimation-1"></a>
+<a id="hidewithanimation2"></a>
 
 ## hideWithAnimation
 
@@ -1150,6 +1158,8 @@ try {
 }
 ```
 
+<a id="raiseabovetarget1"></a>
+
 ## raiseAboveTarget
 
 ```TypeScript
@@ -1158,7 +1168,7 @@ raiseAboveTarget(windowId: number, callback: AsyncCallback<void>): void
 
 Raises a child window above a target child window. This API uses an asynchronous callback to return the result.
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow1) has been successfully executed for each.
 
 **Since:** 10
 
@@ -1229,7 +1239,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="raiseabovetarget-1"></a>
+<a id="raiseabovetarget2"></a>
 
 ## raiseAboveTarget
 
@@ -1239,7 +1249,7 @@ raiseAboveTarget(windowId: number): Promise<void>
 
 Raises a child window above a target child window. This API uses a promise to return the result.
 
-Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed for each.
+Before calling this API, ensure that the child window to raise and the target child window have been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow1) has been successfully executed for each.
 
 **Since:** 10
 
@@ -1483,6 +1493,8 @@ export default class RaiseMainWindowAbility extends UIAbility {
 }
 ```
 
+<a id="raisetoapptop1"></a>
+
 ## raiseToAppTop
 
 ```TypeScript
@@ -1491,7 +1503,7 @@ raiseToAppTop(callback: AsyncCallback<void>): void
 
 Raises the application child window to the top layer of the application. This API uses an asynchronous callback to return the result.
 
-Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow1) has been successfully executed.
 
 **Since:** 10
 
@@ -1876,7 +1888,7 @@ try {
 setDefaultDensityEnabled(enabled: boolean): void
 ```
 
-Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent).
+Sets whether the window uses the default density of the current screen. In the stage model, you need to call this API after [loadContent()](arkts-arkui-window-window-i.md#loadcontent1) or [setUIContent()](arkts-arkui-window-window-i.md#setuicontent1).
 
 If this API is not called, the default density is not used.
 
@@ -2044,6 +2056,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setraisebyclickenabled1"></a>
+
 ## setRaiseByClickEnabled
 
 ```TypeScript
@@ -2054,7 +2068,7 @@ Sets whether to enable a child window to raise itself by click. This API uses an
 
 Generally, when a user clicks a child window, the child window is displayed on the top. If the **enable** parameter is set to **false**, the child window is not displayed on the top when being clicked.
 
-Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow) has been successfully executed.
+Before calling this API, ensure that the child window has been created and [showWindow()](arkts-arkui-window-window-i.md#showwindow1) has been successfully executed.
 
 **Since:** 10
 
@@ -2130,15 +2144,15 @@ Allows a [system window](../../../windowmanager/window-terminology.md#system-win
 
 > **NOTE:** 
 > 
-> - If the main window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)while rotation is locked, the window restores the last orientation request when brought to the foreground after unlocking.
+> - If the main window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation2)while rotation is locked, the window restores the last orientation request when brought to the foreground after unlocking.
 > 
-> - If the system window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)while rotation is locked, the window restores the last orientation request when brought to the foreground with the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**does not hinder the system window at a higher level to set the display orientation by calling [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1).
+> - If the system window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation2)while rotation is locked, the window restores the last orientation request when brought to the foreground with the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**does not hinder the system window at a higher level to set the display orientation by calling [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation2).
 > 
 > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after unlocking.
 > 
-> - If the application calls [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
+> - If the application calls [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation1)to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
 > 
-> - When rotation is unlocked, the application's display orientation is determined based on the main window's display orientation set via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1), the sensor orientation, and more. For details, see [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
+> - When rotation is unlocked, the application's display orientation is determined based on the main window's display orientation set via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation2), the sensor orientation, and more. For details, see [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
 > 
 > - The API does not affect the launch orientation set by the **orientation** under [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the application.
 
@@ -2508,6 +2522,8 @@ try {
 }
 ```
 
+<a id="setwatermarkflag1"></a>
+
 ## setWaterMarkFlag
 
 ```TypeScript
@@ -2561,7 +2577,7 @@ try {
 }
 ```
 
-<a id="setwatermarkflag-1"></a>
+<a id="setwatermarkflag2"></a>
 
 ## setWaterMarkFlag
 
@@ -2618,6 +2634,8 @@ try {
   console.error(`Failed to set water mark flag of window. Cause code: ${exception.code}, message: ${exception.message}`);
 }
 ```
+
+<a id="setwindowmode1"></a>
 
 ## setWindowMode
 
@@ -2691,7 +2709,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setwindowmode-1"></a>
+<a id="setwindowmode2"></a>
 
 ## setWindowMode
 
@@ -2762,6 +2780,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="showwithanimation1"></a>
+
 ## showWithAnimation
 
 ```TypeScript
@@ -2808,7 +2828,7 @@ windowClass.showWithAnimation((err: BusinessError) => {
 });
 ```
 
-<a id="showwithanimation-1"></a>
+<a id="showwithanimation2"></a>
 
 ## showWithAnimation
 
@@ -2990,6 +3010,8 @@ try {
 }
 ```
 
+<a id="setforbidsplitmove1"></a>
+
 ## setForbidSplitMove
 
 ```TypeScript
@@ -3061,7 +3083,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setforbidsplitmove-1"></a>
+<a id="setforbidsplitmove2"></a>
 
 ## setForbidSplitMove
 
@@ -3137,6 +3159,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setwindowtype1"></a>
+
 ## setWindowType
 
 ```TypeScript
@@ -3181,7 +3205,7 @@ promise.then(() => {
 });
 ```
 
-<a id="setwindowtype-1"></a>
+<a id="setwindowtype2"></a>
 
 ## setWindowType
 

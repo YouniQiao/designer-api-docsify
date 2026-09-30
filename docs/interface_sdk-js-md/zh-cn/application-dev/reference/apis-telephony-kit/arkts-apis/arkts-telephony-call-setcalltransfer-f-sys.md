@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="setcalltransfer1"></a>
+
 ## setCallTransfer
 
 ```TypeScript
@@ -64,7 +66,7 @@ call.setCallTransfer(0, callTransferInfo, (err: BusinessError) => {
 ```
 
 
-<a id="setcalltransfer-1"></a>
+<a id="setcalltransfer2"></a>
 
 ## setCallTransfer
 

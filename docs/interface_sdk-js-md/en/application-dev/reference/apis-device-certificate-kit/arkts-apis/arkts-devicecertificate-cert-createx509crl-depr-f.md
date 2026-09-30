@@ -6,6 +6,8 @@
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="createx509crl1"></a>
+
 ## createX509Crl
 
 ```TypeScript
@@ -17,7 +19,7 @@ Creates an **X509Crl** instance. This API uses an asynchronous callback to retur
 > **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
-> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md) instead.
+> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl1) instead.
 
 **Since:** 9
 
@@ -84,7 +86,7 @@ cert.createX509Crl(encodingBlob, (error, _x509Crl) => {
 ```
 
 
-<a id="createx509crl-1"></a>
+<a id="createx509crl2"></a>
 
 ## createX509Crl
 
@@ -97,7 +99,7 @@ Creates an **X509Crl** instance. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > This API is supported since API version 9 and deprecated since API version 11. Use
-> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl-1) instead.
+> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl2) instead.
 
 **Since:** 9
 

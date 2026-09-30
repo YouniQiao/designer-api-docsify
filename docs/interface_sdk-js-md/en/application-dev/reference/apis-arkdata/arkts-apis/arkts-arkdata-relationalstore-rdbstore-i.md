@@ -6,9 +6,9 @@ interface RdbStore
 
 Provides APIs for managing data in an RDB store.
 
-Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore-1) method and then call the corresponding method through the instance.
+Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore2) method and then call the corresponding method through the instance.
 
-In addition, use [execute](#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+In addition, use [execute](#execute1) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 9
 
@@ -21,6 +21,8 @@ In addition, use [execute](#execute) to initialize the database table structure 
 ```TypeScript
 import { relationalStore } from '@kit.ArkData';
 ```
+
+<a id="attach1"></a>
 
 ## attach
 
@@ -94,7 +96,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="attach-1"></a>
+<a id="attach2"></a>
 
 ## attach
 
@@ -160,6 +162,8 @@ Attaches a database file to the currently linked database.
 
 See [attach](#attach)
 
+<a id="backup1"></a>
+
 ## backup
 
 ```TypeScript
@@ -220,7 +224,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="backup-1"></a>
+<a id="backup2"></a>
 
 ## backup
 
@@ -286,6 +290,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<a id="batchinsert1"></a>
 
 ## batchInsert
 
@@ -387,7 +393,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="batchinsert-1"></a>
+<a id="batchinsert2"></a>
 
 ## batchInsert
 
@@ -1116,6 +1122,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="cleandirtydata1"></a>
+
 ## cleanDirtyData
 
 ```TypeScript
@@ -1181,7 +1189,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="cleandirtydata-1"></a>
+<a id="cleandirtydata2"></a>
 
 ## cleanDirtyData
 
@@ -1243,7 +1251,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="cleandirtydata-2"></a>
+<a id="cleandirtydata3"></a>
 
 ## cleanDirtyData
 
@@ -1354,6 +1362,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="cloudsync1"></a>
+
 ## cloudSync
 
 ```TypeScript
@@ -1400,7 +1410,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="cloudsync-1"></a>
+<a id="cloudsync2"></a>
 
 ## cloudSync
 
@@ -1453,7 +1463,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="cloudsync-2"></a>
+<a id="cloudsync3"></a>
 
 ## cloudSync
 
@@ -1509,7 +1519,7 @@ if (store != undefined) {
 };
 ```
 
-<a id="cloudsync-3"></a>
+<a id="cloudsync4"></a>
 
 ## cloudSync
 
@@ -1624,6 +1634,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="commit1"></a>
+
 ## commit
 
 ```TypeScript
@@ -1685,7 +1697,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="commit-1"></a>
+<a id="commit2"></a>
 
 ## commit
 
@@ -1824,6 +1836,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="delete1"></a>
+
 ## delete
 
 ```TypeScript
@@ -1888,7 +1902,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -2268,6 +2282,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="execute1"></a>
+
 ## execute
 
 ```TypeScript
@@ -2374,7 +2390,7 @@ await store!.execute(insertSql, [0, vectorValue]);
 await store!.execute("insert into test values(1, '[3.5, 1.8]');");
 ```
 
-<a id="execute-1"></a>
+<a id="execute2"></a>
 
 ## execute
 
@@ -2456,6 +2472,8 @@ if (store != null) {
 }
 ```
 
+<a id="executesql1"></a>
+
 ## executeSql
 
 ```TypeScript
@@ -2518,7 +2536,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="executesql-1"></a>
+<a id="executesql2"></a>
 
 ## executeSql
 
@@ -2583,7 +2601,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="executesql-2"></a>
+<a id="executesql3"></a>
 
 ## executeSql
 
@@ -2742,6 +2760,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="getmodifytime1"></a>
+
 ## getModifyTime
 
 ```TypeScript
@@ -2812,7 +2832,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="getmodifytime-1"></a>
+<a id="getmodifytime2"></a>
 
 ## getModifyTime
 
@@ -2881,6 +2901,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<a id="insert1"></a>
 
 ## insert
 
@@ -2970,7 +2992,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="insert-1"></a>
+<a id="insert2"></a>
 
 ## insert
 
@@ -3062,7 +3084,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="insert-2"></a>
+<a id="insert3"></a>
 
 ## insert
 
@@ -3155,7 +3177,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="insert-3"></a>
+<a id="insert4"></a>
 
 ## insert
 
@@ -3249,6 +3271,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="insertsync1"></a>
+
 ## insertSync
 
 ```TypeScript
@@ -3340,7 +3364,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="insertsync-1"></a>
+<a id="insertsync2"></a>
 
 ## insertSync
 
@@ -3485,6 +3509,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="obtaindistributedtablename1"></a>
+
 ## obtainDistributedTableName
 
 ```TypeScript
@@ -3552,7 +3578,7 @@ if (store != undefined && deviceId != undefined) {
 }
 ```
 
-<a id="obtaindistributedtablename-1"></a>
+<a id="obtaindistributedtablename2"></a>
 
 ## obtainDistributedTableName
 
@@ -3624,6 +3650,8 @@ if (store != undefined && deviceId != undefined) {
 }
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -3684,7 +3712,7 @@ try {
 }
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -3725,7 +3753,7 @@ Remove specified observer of specified type from the database.
 
 See [off](#off)
 
-<a id="off-2"></a>
+<a id="off3"></a>
 
 ## off
 
@@ -3763,7 +3791,7 @@ Remove specified observer of specified type from the database.
 
 See [off](#off)
 
-<a id="off-3"></a>
+<a id="off4"></a>
 
 ## off
 
@@ -3798,7 +3826,7 @@ Unregister the database auto synchronization callback.
 
 See [off](#off)
 
-<a id="off-4"></a>
+<a id="off5"></a>
 
 ## off
 
@@ -3834,7 +3862,7 @@ Unsubscribes from the SQL statistics.
 
 See [off](#off)
 
-<a id="off-5"></a>
+<a id="off6"></a>
 
 ## off
 
@@ -3868,7 +3896,7 @@ Unsubscribes from the SQL performance statistics.
 
 See [off](#off)
 
-<a id="off-6"></a>
+<a id="off7"></a>
 
 ## off
 
@@ -3901,6 +3929,8 @@ Unsubscribes from the SQL execution error logs.
 **Examples**
 
 See [off](#off)
+
+<a id="on1"></a>
 
 ## on
 
@@ -3952,7 +3982,7 @@ try {
 }
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -3989,7 +4019,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 
 See [on](#on)
 
-<a id="on-2"></a>
+<a id="on3"></a>
 
 ## on
 
@@ -4027,7 +4057,7 @@ Registers an observer for the database.
 
 See [on](#on)
 
-<a id="on-3"></a>
+<a id="on4"></a>
 
 ## on
 
@@ -4062,7 +4092,7 @@ Register an automatic synchronization callback to the database.
 
 See [on](#on)
 
-<a id="on-4"></a>
+<a id="on5"></a>
 
 ## on
 
@@ -4098,7 +4128,7 @@ Subscribes to the SQL statistics.
 
 See [on](#on)
 
-<a id="on-5"></a>
+<a id="on6"></a>
 
 ## on
 
@@ -4132,7 +4162,7 @@ Subscribes to the SQL performance statistics.
 
 See [on](#on)
 
-<a id="on-6"></a>
+<a id="on7"></a>
 
 ## on
 
@@ -4165,6 +4195,8 @@ Subscribes to the SQL execution error logs.
 **Examples**
 
 See [on](#on)
+
+<a id="query1"></a>
 
 ## query
 
@@ -4227,7 +4259,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="query-1"></a>
+<a id="query2"></a>
 
 ## query
 
@@ -4291,7 +4323,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="query-2"></a>
+<a id="query3"></a>
 
 ## query
 
@@ -4360,6 +4392,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="querybystep1"></a>
+
 ## queryByStep
 
 ```TypeScript
@@ -4424,7 +4458,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="querybystep-1"></a>
+<a id="querybystep2"></a>
 
 ## queryByStep
 
@@ -4574,6 +4608,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="querysql1"></a>
+
 ## querySql
 
 ```TypeScript
@@ -4651,7 +4687,7 @@ const querySql2 = "select * from test where id in (select id from test1)";
 let resultSet2 = await store.querySql(querySql2);
 ```
 
-<a id="querysql-1"></a>
+<a id="querysql2"></a>
 
 ## querySql
 
@@ -4713,7 +4749,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="querysql-2"></a>
+<a id="querysql3"></a>
 
 ## querySql
 
@@ -5406,6 +5442,8 @@ Change the encryption parameters of the database.
 | [14800028](../errorcode-data-rdb.md#14800028-sqlite-io-error) | SQLite: Some kind of disk I/O error occurred. |
 | [14800029](../errorcode-data-rdb.md#14800029-sqlite-database-is-full) | SQLite: The database is full. |
 
+<a id="remotequery1"></a>
+
 ## remoteQuery
 
 ```TypeScript
@@ -5496,7 +5534,7 @@ if (store != undefined && deviceId != undefined) {
 }
 ```
 
-<a id="remotequery-1"></a>
+<a id="remotequery2"></a>
 
 ## remoteQuery
 
@@ -5585,6 +5623,8 @@ if (store != undefined && deviceId != undefined) {
 }
 ```
 
+<a id="restore1"></a>
+
 ## restore
 
 ```TypeScript
@@ -5644,7 +5684,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="restore-1"></a>
+<a id="restore2"></a>
 
 ## restore
 
@@ -5857,6 +5897,8 @@ if (store != null) {
 }
 ```
 
+<a id="setdistributedtables1"></a>
+
 ## setDistributedTables
 
 ```TypeScript
@@ -5903,7 +5945,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="setdistributedtables-1"></a>
+<a id="setdistributedtables2"></a>
 
 ## setDistributedTables
 
@@ -5956,7 +5998,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="setdistributedtables-2"></a>
+<a id="setdistributedtables3"></a>
 
 ## setDistributedTables
 
@@ -6006,7 +6048,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="setdistributedtables-3"></a>
+<a id="setdistributedtables4"></a>
 
 ## setDistributedTables
 
@@ -6064,7 +6106,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="setdistributedtables-4"></a>
+<a id="setdistributedtables5"></a>
 
 ## setDistributedTables
 
@@ -6221,6 +6263,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="sync1"></a>
+
 ## sync
 
 ```TypeScript
@@ -6293,7 +6337,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="sync-1"></a>
+<a id="sync2"></a>
 
 ## sync
 
@@ -6518,6 +6562,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -6608,7 +6654,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 
@@ -6706,7 +6752,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="update-2"></a>
+<a id="update3"></a>
 
 ## update
 
@@ -6801,7 +6847,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="update-3"></a>
+<a id="update4"></a>
 
 ## update
 

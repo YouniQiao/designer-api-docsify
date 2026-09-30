@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="importwrappedkeyitem1"></a>
+
 ## importWrappedKeyItem
 
 ```TypeScript
@@ -243,7 +245,7 @@ function huksImportWrappedKey() {
 ```
 
 
-<a id="importwrappedkeyitem-1"></a>
+<a id="importwrappedkeyitem2"></a>
 
 ## importWrappedKeyItem
 

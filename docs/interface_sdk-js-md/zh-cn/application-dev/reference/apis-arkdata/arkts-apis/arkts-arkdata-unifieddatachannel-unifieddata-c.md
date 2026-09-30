@@ -70,6 +70,8 @@ let link = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDat
 unifiedData.addRecord(link);
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -113,7 +115,7 @@ let text = new unifiedDataChannel.UnifiedRecord(uniformTypeDescriptor.UniformDat
 let unifiedData = new unifiedDataChannel.UnifiedData(text);
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

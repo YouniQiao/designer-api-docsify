@@ -555,6 +555,8 @@ Obtains the height of a given line.
 let lineHeight = paragraph.getLineHeight(0);
 ```
 
+<a id="getlinemetrics1"></a>
+
 ## getLineMetrics
 
 ```TypeScript
@@ -583,7 +585,7 @@ Obtains an array of line measurement information.
 let arrLineMetric =  paragraph.getLineMetrics();
 ```
 
-<a id="getlinemetrics-1"></a>
+<a id="getlinemetrics2"></a>
 
 ## getLineMetrics
 

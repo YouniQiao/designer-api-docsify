@@ -6,7 +6,7 @@
 import { adminManager } from '@kit.MDMKit';
 ```
 
-<a id="setdelegatedpolicies-1"></a>
+<a id="setdelegatedpolicies2"></a>
 
 ## setDelegatedPolicies
 

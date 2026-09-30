@@ -6,7 +6,7 @@ declare class LazyGridLayoutAttribute<T> extends CommonMethod<T>
 
 Defines the lazy grid layout attribute.
 
-**Inheritance/Implementation:** LazyGridLayoutAttribute extends CommonMethod<T>
+**Inheritance/Implementation:** LazyGridLayoutAttribute extends CommonMethod&lt;T&gt;
 
 **Since:** 19
 

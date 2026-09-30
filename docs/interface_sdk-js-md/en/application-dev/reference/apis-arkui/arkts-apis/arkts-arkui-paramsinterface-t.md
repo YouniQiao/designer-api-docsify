@@ -12,7 +12,7 @@ List of routing parameters.
 
 **Deprecated since:** 8
 
-**Substitutes:** params
+**Substitutes:** [params](arkts-arkui-router-routeroptions-i.md#params)
 
 <!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}--><!--Device-unnamed-type ParamsInterface = {  [key: string]: Object;}-End-->
 

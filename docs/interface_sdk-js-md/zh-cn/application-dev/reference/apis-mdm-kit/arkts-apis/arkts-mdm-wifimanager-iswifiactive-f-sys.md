@@ -6,6 +6,8 @@
 import { wifiManager } from '@kit.MDMKit';
 ```
 
+<a id="iswifiactive1"></a>
+
 ## isWifiActive
 
 ```TypeScript
@@ -69,7 +71,7 @@ wifiManager.isWifiActive(wantTemp, (err, result) => {
 ```
 
 
-<a id="iswifiactive-1"></a>
+<a id="iswifiactive2"></a>
 
 ## isWifiActive
 

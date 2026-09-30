@@ -341,6 +341,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -419,7 +421,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 
@@ -502,7 +504,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startability-2"></a>
+<a id="startability3"></a>
 
 ## startAbility
 
@@ -592,6 +594,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startabilityascaller1"></a>
+
 ## startAbilityAsCaller
 
 ```TypeScript
@@ -668,7 +672,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startabilityascaller-1"></a>
+<a id="startabilityascaller2"></a>
 
 ## startAbilityAsCaller
 
@@ -749,7 +753,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startabilityascaller-2"></a>
+<a id="startabilityascaller3"></a>
 
 ## startAbilityAsCaller
 
@@ -837,6 +841,8 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
+<a id="startabilityforresult1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -847,10 +853,10 @@ Starts an ability and returns the result to the caller after the ability is term
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
 is returned to the caller.  
-- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE:** 
 > 
@@ -874,7 +880,7 @@ is returned to the caller.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -922,7 +928,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startabilityforresult-1"></a>
+<a id="startabilityforresult2"></a>
 
 ## startAbilityForResult
 
@@ -934,10 +940,10 @@ Starts an ability with **options** specified and returns the result to the calle
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
 is returned to the caller.  
-- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE:** 
 > 
@@ -961,7 +967,7 @@ is returned to the caller.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the target ability. |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Parameters used for starting the ability. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Yes | Callback used to return the result. If the ability is started and terminated, **err** is **undefined** and **data** is the obtained result code and data; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1011,7 +1017,7 @@ export default class UIExtAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="startabilityforresult-2"></a>
+<a id="startabilityforresult3"></a>
 
 ## startAbilityForResult
 
@@ -1023,10 +1029,10 @@ Starts an ability and returns the result to the caller after the ability is term
 
 An ability can be terminated in the following ways:
 
-- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability. The result is returned to the caller.  
+- Normally, you can call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability. The result is returned to the caller.  
 - If an exception occurs, for example, the ability is killed, an error message, in which **resultCode** is **-1**,  
 is returned to the caller.  
-- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
+- If different applications call this API to start an ability that uses the singleton mode and then call [terminateSelfWithResult](arkts-ability-uiabilitycontext-c.md#terminateselfwithresult1) to terminate the ability, the normal result is returned to the last caller, and an exception message, in which **resultCode** is **-1**, is returned to others.
 
 > **NOTE:** 
 > 
@@ -1055,7 +1061,7 @@ is returned to the caller.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise used to return the result code and data. |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Promise used to return the result code and data. |
 
 **Error codes:**
 

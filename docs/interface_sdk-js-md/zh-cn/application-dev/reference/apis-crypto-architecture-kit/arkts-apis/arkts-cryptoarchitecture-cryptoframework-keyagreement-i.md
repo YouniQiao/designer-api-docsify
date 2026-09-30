@@ -20,6 +20,8 @@ interface KeyAgreement
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="generatesecret1"></a>
+
 ## generateSecret
 
 ```TypeScript
@@ -55,7 +57,7 @@ generateSecret(priKey: PriKey, pubKey: PubKey, callback: AsyncCallback<DataBlob>
 | [17620002](../errorcode-crypto-framework.md#17620002-获取native对象失败或参数转换失败) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
-<a id="generatesecret-1"></a>
+<a id="generatesecret2"></a>
 
 ## generateSecret
 

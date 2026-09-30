@@ -218,7 +218,7 @@ try {
 }
 ```
 
-<a id="isheadtrackingenabled-1"></a>
+<a id="isheadtrackingenabled2"></a>
 
 ## isHeadTrackingEnabled
 
@@ -286,6 +286,8 @@ try {
 }
 ```
 
+<a id="isheadtrackingenabled1"></a>
+
 ## isHeadTrackingEnabled
 
 ```TypeScript
@@ -297,7 +299,7 @@ isHeadTrackingEnabled(): boolean
 > **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled-1)
+> [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled2)
 > 替代。
 
 **起始版本：** 11
@@ -515,7 +517,7 @@ isPersonalizedSpatializationSupported(): boolean
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
-<a id="isspatializationenabled-1"></a>
+<a id="isspatializationenabled2"></a>
 
 ## isSpatializationEnabled
 
@@ -583,6 +585,8 @@ try {
 }
 ```
 
+<a id="isspatializationenabled1"></a>
+
 ## isSpatializationEnabled
 
 ```TypeScript
@@ -593,7 +597,7 @@ isSpatializationEnabled(): boolean
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled-1)
+> [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled2)
 > 替代。
 
 **起始版本：** 11
@@ -860,7 +864,7 @@ off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 
 **废弃版本：** 12
 
-**替代接口：** off
+**替代接口：** [off](#offspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -916,7 +920,7 @@ off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 
 **废弃版本：** 12
 
-**替代接口：** off
+**替代接口：** [off](#offspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -1184,7 +1188,7 @@ on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 
 **废弃版本：** 12
 
-**替代接口：** on
+**替代接口：** [on](#onspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1234,7 +1238,7 @@ on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 
 **废弃版本：** 12
 
-**替代接口：** on
+**替代接口：** [on](#onspatializationenabledchange)
 
 <!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1449,7 +1453,7 @@ audioSpatializationManager.setAdaptiveSpatialRenderingEnabled(deviceDescriptor, 
 });
 ```
 
-<a id="setheadtrackingenabled-2"></a>
+<a id="setheadtrackingenabled3"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1520,6 +1524,8 @@ audioSpatializationManager.setHeadTrackingEnabled(deviceDescriptor, enable).then
 });
 ```
 
+<a id="setheadtrackingenabled1"></a>
+
 ## setHeadTrackingEnabled
 
 ```TypeScript
@@ -1530,7 +1536,7 @@ setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled-2)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1580,7 +1586,7 @@ audioSpatializationManager.setHeadTrackingEnabled(enable, (err: BusinessError) =
 });
 ```
 
-<a id="setheadtrackingenabled-1"></a>
+<a id="setheadtrackingenabled2"></a>
 
 ## setHeadTrackingEnabled
 
@@ -1592,7 +1598,7 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled-2)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1686,7 +1692,7 @@ setPersonalizedSpatializationEnabled(selectedAudioDevice: AudioDeviceDescriptor,
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability is not supported in this device. |
 
-<a id="setspatializationenabled-2"></a>
+<a id="setspatializationenabled3"></a>
 
 ## setSpatializationEnabled
 
@@ -1757,6 +1763,8 @@ audioSpatializationManager.setSpatializationEnabled(deviceDescriptor, enabled).t
 });
 ```
 
+<a id="setspatializationenabled1"></a>
+
 ## setSpatializationEnabled
 
 ```TypeScript
@@ -1768,7 +1776,7 @@ setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled-2)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1818,7 +1826,7 @@ audioSpatializationManager.setSpatializationEnabled(enable, (err: BusinessError)
 });
 ```
 
-<a id="setspatializationenabled-1"></a>
+<a id="setspatializationenabled2"></a>
 
 ## setSpatializationEnabled
 
@@ -1830,7 +1838,7 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled-2)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled3)
 > 替代。
 
 **起始版本：** 11

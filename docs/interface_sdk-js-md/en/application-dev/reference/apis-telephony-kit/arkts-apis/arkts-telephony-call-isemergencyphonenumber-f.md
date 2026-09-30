@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="isemergencyphonenumber1"></a>
+
 ## isEmergencyPhoneNumber
 
 ```TypeScript
@@ -54,7 +56,7 @@ call.isEmergencyPhoneNumber("112", options, (err: BusinessError, data: boolean) 
 ```
 
 
-<a id="isemergencyphonenumber-1"></a>
+<a id="isemergencyphonenumber2"></a>
 
 ## isEmergencyPhoneNumber
 
@@ -107,7 +109,7 @@ call.isEmergencyPhoneNumber("138xxxxxxxx", options).then((data: boolean) => {
 ```
 
 
-<a id="isemergencyphonenumber-2"></a>
+<a id="isemergencyphonenumber3"></a>
 
 ## isEmergencyPhoneNumber
 

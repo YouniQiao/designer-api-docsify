@@ -10,7 +10,7 @@ Enumerates the data types.
 
 **Deprecated since:** 9
 
-**Substitutes:** ValueType
+**Substitutes:** [ValueType](arkts-arkdata-distributedkvstore-valuetype-e.md)
 
 <!--Device-distributedData-enum ValueType--><!--Device-distributedData-enum ValueType-End-->
 
@@ -28,7 +28,7 @@ String.
 
 **Deprecated since:** 9
 
-**Substitutes:** STRING
+**Substitutes:** [STRING](arkts-arkdata-distributedkvstore-valuetype-e.md#string)
 
 <!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
@@ -46,7 +46,7 @@ Integer.
 
 **Deprecated since:** 9
 
-**Substitutes:** INTEGER
+**Substitutes:** [INTEGER](arkts-arkdata-distributedkvstore-valuetype-e.md#integer)
 
 <!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
 
@@ -64,7 +64,7 @@ Float (single-precision floating point).
 
 **Deprecated since:** 9
 
-**Substitutes:** FLOAT
+**Substitutes:** [FLOAT](arkts-arkdata-distributedkvstore-valuetype-e.md#float)
 
 <!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
 
@@ -82,7 +82,7 @@ Byte array.
 
 **Deprecated since:** 9
 
-**Substitutes:** BYTE_ARRAY
+**Substitutes:** [BYTE_ARRAY](arkts-arkdata-distributedkvstore-valuetype-e.md#byte_array)
 
 <!--Device-ValueType-BYTE_ARRAY = 3--><!--Device-ValueType-BYTE_ARRAY = 3-End-->
 
@@ -100,7 +100,7 @@ Boolean.
 
 **Deprecated since:** 9
 
-**Substitutes:** BOOLEAN
+**Substitutes:** [BOOLEAN](arkts-arkdata-distributedkvstore-valuetype-e.md#boolean)
 
 <!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
@@ -118,7 +118,7 @@ Double (double-precision floating point).
 
 **Deprecated since:** 9
 
-**Substitutes:** DOUBLE
+**Substitutes:** [DOUBLE](arkts-arkdata-distributedkvstore-valuetype-e.md#double)
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
 

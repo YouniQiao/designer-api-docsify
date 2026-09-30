@@ -50,7 +50,7 @@ Connects to a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want parameter. |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | Yes | Connection options. |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | Yes | Connection options. |
 
 **Return value:**
 

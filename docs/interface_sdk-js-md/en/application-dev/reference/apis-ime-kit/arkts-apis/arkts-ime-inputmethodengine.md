@@ -44,7 +44,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | [KeyEvent](arkts-ime-inputmethodengine-keyevent-i.md) | Represents the attributes of a key. |
 | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | Represents a custom communication object.<br> <br> |
 | [Movement](arkts-ime-inputmethodengine-movement-i.md) | Describes the direction in which the cursor moves when the text is selected. |
-| [Panel](arkts-ime-inputmethodengine-panel-i.md) | You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance. |
+| [Panel](arkts-ime-inputmethodengine-panel-i.md) | You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel1) to obtain the panel instance and then call the following APIs through the instance. |
 | [PanelInfo](arkts-ime-inputmethodengine-panelinfo-i.md) | Describes the attributes of the input method panel. |
 | [PanelRect](arkts-ime-inputmethodengine-panelrect-i.md) | Represents the size of the input method panel. |
 | [Range](arkts-ime-inputmethodengine-range-i.md) | Describes the range of the selected text. |
@@ -59,7 +59,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 | --- | --- |
 | [EditorAttribute](arkts-ime-inputmethodengine-editorattribute-i-sys.md) | Represents the attributes of the edit box. |
 | [ImmersiveEffect](arkts-ime-inputmethodengine-immersiveeffect-i-sys.md) | Describes the immersive effect. |
-| [Panel](arkts-ime-inputmethodengine-panel-i-sys.md) | You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain the panel instance and then call the following APIs through the instance. |
+| [Panel](arkts-ime-inputmethodengine-panel-i-sys.md) | You need to use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel1) to obtain the panel instance and then call the following APIs through the instance. |
 <!--DelEnd-->
 
 ### Types

@@ -28,6 +28,8 @@ The module provides the capabilities of the [WindowExtensionAbility](arkts-arkui
 
 **System API:** This is a system API.
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -103,7 +105,7 @@ class WindowExtAbility extends WindowExtensionAbility {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 

@@ -6,6 +6,8 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
+<a id="getdisallowedpolicyforaccount1"></a>
+
 ## getDisallowedPolicyForAccount
 
 ```TypeScript
@@ -18,7 +20,7 @@ Obtains the status of a feature for a specified user.
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount-1)(admin: Want | null, feature: FeatureForAccount, accountId: number)
+**Substitutes:** [getDisallowedPolicyForAccount](#getdisallowedpolicyforaccount2)(admin: Want | null, feature: FeatureForAccount, accountId: number)
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_RESTRICTIONS
 
@@ -72,7 +74,7 @@ try {
 ```
 
 
-<a id="getdisallowedpolicyforaccount-1"></a>
+<a id="getdisallowedpolicyforaccount2"></a>
 
 ## getDisallowedPolicyForAccount
 

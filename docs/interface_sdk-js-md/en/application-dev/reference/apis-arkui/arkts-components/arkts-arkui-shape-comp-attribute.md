@@ -6,7 +6,7 @@ declare class ShapeAttribute extends CommonMethod<ShapeAttribute>
 
 In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) and [universal drawing attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported:
 
-**Inheritance/Implementation:** ShapeAttribute extends CommonMethod<ShapeAttribute>
+**Inheritance/Implementation:** ShapeAttribute extends CommonMethod&lt;ShapeAttribute&gt;
 
 **Since:** 7
 

@@ -6,6 +6,8 @@
 import { componentSnapshot } from '@kit.ArkUI';
 ```
 
+<a id="createfrombuilder1"></a>
+
 ## createFromBuilder
 
 ```TypeScript
@@ -29,7 +31,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Deprecated since:** 18
 
-**Substitutes:** createFromBuilder
+**Substitutes:** [createFromBuilder](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#createfrombuilder)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -120,7 +122,7 @@ struct OffscreenSnapshotExample {
 ```
 
 
-<a id="createfrombuilder-1"></a>
+<a id="createfrombuilder2"></a>
 
 ## createFromBuilder
 
@@ -145,7 +147,7 @@ Renders a custom component in the application background and outputs its snapsho
 
 **Deprecated since:** 18
 
-**Substitutes:** createFromBuilder
+**Substitutes:** [createFromBuilder](arkts-arkui-arkui-uicontext-componentsnapshot-c.md#createfrombuilder)
 
 **Model restriction:** This API can be used only in the stage model.
 

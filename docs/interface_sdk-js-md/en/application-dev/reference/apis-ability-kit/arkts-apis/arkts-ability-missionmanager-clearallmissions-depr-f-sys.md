@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="clearallmissions1"></a>
+
 ## clearAllMissions
 
 ```TypeScript
@@ -55,7 +57,7 @@ try {
 ```
 
 
-<a id="clearallmissions-1"></a>
+<a id="clearallmissions2"></a>
 
 ## clearAllMissions
 

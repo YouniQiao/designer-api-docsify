@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="requestenablenotification1"></a>
+
 ## requestEnableNotification
 
 ```TypeScript
@@ -57,7 +59,7 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 ```
 
 
-<a id="requestenablenotification-1"></a>
+<a id="requestenablenotification2"></a>
 
 ## requestEnableNotification
 
@@ -83,7 +85,7 @@ function requestEnableNotification(context: UIAbilityContext, callback: AsyncCal
 
 **参见：**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) 查询当前应用通知授权状态。
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled3) 查询当前应用通知授权状态。
 
 [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) 拉起当前应用的通知设置界面。
 
@@ -138,7 +140,7 @@ class MyAbility extends UIAbility {
 ```
 
 
-<a id="requestenablenotification-2"></a>
+<a id="requestenablenotification3"></a>
 
 ## requestEnableNotification
 
@@ -187,7 +189,7 @@ notificationManager.requestEnableNotification().then(() => {
 ```
 
 
-<a id="requestenablenotification-3"></a>
+<a id="requestenablenotification4"></a>
 
 ## requestEnableNotification
 
@@ -213,7 +215,7 @@ function requestEnableNotification(context: UIAbilityContext): Promise<void>
 
 **参见：**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) 查询当前应用通知授权状态。
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled3) 查询当前应用通知授权状态。
 
 [openNotificationSettings](arkts-notification-notificationmanager-opennotificationsettings-f.md) 拉起当前应用的通知设置界面。
 

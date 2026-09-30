@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
+<a id="getdisallowedinstallbundles1"></a>
+
 ## getDisallowedInstallBundles
 
 ```TypeScript
@@ -69,7 +71,7 @@ bundleManager.getDisallowedInstallBundles(wantTemp, (err, result) => {
 ```
 
 
-<a id="getdisallowedinstallbundles-1"></a>
+<a id="getdisallowedinstallbundles2"></a>
 
 ## getDisallowedInstallBundles
 
@@ -135,7 +137,7 @@ bundleManager.getDisallowedInstallBundles(wantTemp, 100, (err, result) => {
 ```
 
 
-<a id="getdisallowedinstallbundles-2"></a>
+<a id="getdisallowedinstallbundles3"></a>
 
 ## getDisallowedInstallBundles
 

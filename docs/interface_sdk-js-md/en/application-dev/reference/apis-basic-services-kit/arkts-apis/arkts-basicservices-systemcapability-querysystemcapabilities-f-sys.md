@@ -6,6 +6,8 @@
 import { systemCapability } from '@kit.BasicServicesKit';
 ```
 
+<a id="querysystemcapabilities1"></a>
+
 ## querySystemCapabilities
 
 ```TypeScript
@@ -44,7 +46,7 @@ try {
 ```
 
 
-<a id="querysystemcapabilities-1"></a>
+<a id="querysystemcapabilities2"></a>
 
 ## querySystemCapabilities
 

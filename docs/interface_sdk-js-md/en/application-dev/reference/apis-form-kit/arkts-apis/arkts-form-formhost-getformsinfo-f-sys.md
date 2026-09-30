@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="getformsinfo1"></a>
+
 ## getFormsInfo
 
 ```TypeScript
@@ -44,7 +46,7 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-1"></a>
+<a id="getformsinfo2"></a>
 
 ## getFormsInfo
 
@@ -89,7 +91,7 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-2"></a>
+<a id="getformsinfo3"></a>
 
 ## getFormsInfo
 
@@ -135,7 +137,7 @@ Obtains the widget information provided by a specified application on the device
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getformsinfo-3"></a>
+<a id="getformsinfo4"></a>
 
 ## getFormsInfo
 

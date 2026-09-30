@@ -6,6 +6,8 @@
 import { geoLocationManager } from '@kit.LocationKit';
 ```
 
+<a id="flushcachedgnsslocations1"></a>
+
 ## flushCachedGnssLocations
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="flushcachedgnsslocations-1"></a>
+<a id="flushcachedgnsslocations2"></a>
 
 ## flushCachedGnssLocations
 

@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="releaseform1"></a>
+
 ## releaseForm
 
 ```TypeScript
@@ -45,7 +47,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="releaseform-1"></a>
+<a id="releaseform2"></a>
 
 ## releaseForm
 
@@ -87,7 +89,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
 
-<a id="releaseform-2"></a>
+<a id="releaseform3"></a>
 
 ## releaseForm
 

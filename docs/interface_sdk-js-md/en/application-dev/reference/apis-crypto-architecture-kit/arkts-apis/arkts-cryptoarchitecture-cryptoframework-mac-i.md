@@ -4,7 +4,7 @@
 interface Mac
 ```
 
-Message authentication code (MAC) interface, defining methods for calculating MACs based on symmetric keys. Before use, you must create a **Mac** instance by using [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md).
+Message authentication code (MAC) interface, defining methods for calculating MACs based on symmetric keys. Before use, you must create a **Mac** instance by using [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac1).
 
 **Since:** 9
 
@@ -19,6 +19,8 @@ Message authentication code (MAC) interface, defining methods for calculating MA
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
+
+<a id="dofinal1"></a>
 
 ## doFinal
 
@@ -76,7 +78,7 @@ function hmacByCallback() {
 }
 ```
 
-<a id="dofinal-1"></a>
+<a id="dofinal2"></a>
 
 ## doFinal
 
@@ -253,6 +255,8 @@ function testGetMacLength() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -286,7 +290,7 @@ Initializes the MAC computation using a symmetric key. This API uses an asynchro
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -359,6 +363,8 @@ Initializes the MAC computation using a symmetric key. This API returns the resu
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -398,7 +404,7 @@ Updates the MAC status. This API uses an asynchronous callback to return the res
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

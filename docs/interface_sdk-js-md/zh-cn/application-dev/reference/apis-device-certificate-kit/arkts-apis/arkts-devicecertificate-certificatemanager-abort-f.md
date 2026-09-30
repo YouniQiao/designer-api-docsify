@@ -6,6 +6,8 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="abort1"></a>
+
 ## abort
 
 ```TypeScript
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="abort-1"></a>
+<a id="abort2"></a>
 
 ## abort
 

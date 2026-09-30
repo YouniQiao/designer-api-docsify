@@ -27,6 +27,8 @@ declare class OffscreenCanvasRenderingContext2D extends CanvasRenderer
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -55,7 +57,7 @@ constructor(width: number, height: number, settings?: RenderingContextSettings)
 | height | number | 是 | 离屏画布的高度，默认单位：vp。<br>异常值NaN和Infinity按无效值处理。 |
 | settings | [RenderingContextSettings](arkts-arkui-canvas-comp-renderingcontextsettings-c.md) | 否 | 用来配置OffscreenCanvasRenderingContext2D对象的参数，见RenderingContextSettings接口描述。<br>异常值undefined按RenderingContextSettings的默认值处理。<br>默认值：null。 |
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

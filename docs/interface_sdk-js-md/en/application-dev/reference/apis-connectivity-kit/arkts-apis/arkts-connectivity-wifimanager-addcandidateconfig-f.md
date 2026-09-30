@@ -6,6 +6,8 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
+<a id="addcandidateconfig1"></a>
+
 ## addCandidateConfig
 
 ```TypeScript
@@ -67,7 +69,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 
-<a id="addcandidateconfig-1"></a>
+<a id="addcandidateconfig2"></a>
 
 ## addCandidateConfig
 

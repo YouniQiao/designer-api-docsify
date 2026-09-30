@@ -6,6 +6,8 @@
 import { hiSysEvent } from '@kit.PerformanceAnalysisKit';
 ```
 
+<a id="write1"></a>
+
 ## write
 
 ```TypeScript
@@ -86,7 +88,7 @@ try {
 ```
 
 
-<a id="write-1"></a>
+<a id="write2"></a>
 
 ## write
 

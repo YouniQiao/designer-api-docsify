@@ -58,7 +58,7 @@ Copies the source directory to the destination path. This API uses a promise to 
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="copydir-1"></a>
+<a id="copydir2"></a>
 
 ## copyDir
 
@@ -105,7 +105,7 @@ Copies the source directory to the destination directory. This API uses an async
 | 13900042 | Unknown error |
 
 
-<a id="copydir-2"></a>
+<a id="copydir3"></a>
 
 ## copyDir
 
@@ -138,7 +138,7 @@ An exception will be thrown if the destination directory contains a directory wi
 | 13900015 | File exists |
 
 
-<a id="copydir-3"></a>
+<a id="copydir4"></a>
 
 ## copyDir
 
@@ -186,7 +186,7 @@ Copies the source directory to the destination directory. You can set the copy m
 | 13900042 | Unknown error |
 
 
-<a id="copydir-4"></a>
+<a id="copydir5"></a>
 
 ## copyDir
 

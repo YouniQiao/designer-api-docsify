@@ -80,6 +80,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="commitmodify1"></a>
+
 ## commitModify
 
 ```TypeScript
@@ -146,7 +148,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="commitmodify-1"></a>
+<a id="commitmodify2"></a>
 
 ## commitModify
 
@@ -278,6 +280,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getthumbnail1"></a>
+
 ## getThumbnail
 
 ```TypeScript
@@ -338,7 +342,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getthumbnail-1"></a>
+<a id="getthumbnail2"></a>
 
 ## getThumbnail
 
@@ -407,7 +411,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getthumbnail-2"></a>
+<a id="getthumbnail3"></a>
 
 ## getThumbnail
 
@@ -530,6 +534,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="close1"></a>
+
 ## close
 
 ```TypeScript
@@ -595,7 +601,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="close-1"></a>
+<a id="close2"></a>
 
 ## close
 
@@ -662,6 +668,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getreadonlyfd1"></a>
+
 ## getReadOnlyFd
 
 ```TypeScript
@@ -727,7 +735,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getreadonlyfd-1"></a>
+<a id="getreadonlyfd2"></a>
 
 ## getReadOnlyFd
 

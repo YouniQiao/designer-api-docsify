@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="getpermissiondef1"></a>
+
 ## getPermissionDef
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="getpermissiondef-1"></a>
+<a id="getpermissiondef2"></a>
 
 ## getPermissionDef
 

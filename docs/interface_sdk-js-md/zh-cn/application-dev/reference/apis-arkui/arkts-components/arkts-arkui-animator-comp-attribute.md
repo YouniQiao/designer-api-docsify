@@ -6,13 +6,13 @@ declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>
 
 定义Animator属性。
 
-**继承/实现关系：** AnimatorAttribute extends CommonMethod<AnimatorAttribute>
+**继承/实现关系：** AnimatorAttribute extends CommonMethod&lt;AnimatorAttribute&gt;
 
 **起始版本：** 7
 
 **废弃版本：** 22
 
-**替代接口：** createAnimator
+**替代接口：** [createAnimator](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)
 
 <!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>--><!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>-End-->
 

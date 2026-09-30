@@ -6,6 +6,8 @@
 import { missionManager } from '@kit.AbilityKit';
 ```
 
+<a id="getmissioninfos1"></a>
+
 ## getMissionInfos
 
 ```TypeScript
@@ -64,7 +66,7 @@ try {
 ```
 
 
-<a id="getmissioninfos-1"></a>
+<a id="getmissioninfos2"></a>
 
 ## getMissionInfos
 

@@ -844,6 +844,8 @@ struct Index {
 }
 ```
 
+<a id="getchild1"></a>
+
 ## getChild
 
 ```TypeScript
@@ -878,7 +880,7 @@ Obtains the child node in the specified position of this node.
 
 See Example of Node Operations.
 
-<a id="getchild-1"></a>
+<a id="getchild2"></a>
 
 ## getChild
 
@@ -915,6 +917,8 @@ Obtains a child node at a specified index from this FrameNode, with optional sup
 
 See Example of Node Operations in the LazyForEach Scenario.
 
+<a id="getchildrencount1"></a>
+
 ## getChildrenCount
 
 ```TypeScript
@@ -943,7 +947,7 @@ Obtains the number of child nodes of this FrameNode.
 
 See Example of Node Operations.
 
-<a id="getchildrencount-1"></a>
+<a id="getchildrencount2"></a>
 
 ## getChildrenCount
 
@@ -1936,7 +1940,7 @@ struct Index {
 getPositionToParentWithTransform(): Position
 ```
 
-Obtains the position offset of this FrameNode relative to its parent component with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate). This API returns the transformed coordinates of the upper left corner after component layout.
+Obtains the position offset of this FrameNode relative to its parent component with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform1) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate1). This API returns the transformed coordinates of the upper left corner after component layout.
 
 **Since:** 12
 
@@ -2112,7 +2116,7 @@ struct Index {
 getPositionToScreenWithTransform(): Position
 ```
 
-Obtains the position offset of this FrameNode relative to the screen with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate). This API returns the transformed coordinates of the upper left corner after component layout.
+Obtains the position offset of this FrameNode relative to the screen with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform1) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate1). This API returns the transformed coordinates of the upper left corner after component layout.
 
 **Since:** 12
 
@@ -2287,7 +2291,7 @@ struct Index {
 getPositionToWindowWithTransform(): Position
 ```
 
-Obtains the position offset of this FrameNode relative to the window with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate). This API returns the transformed coordinates of the upper left corner after component layout.
+Obtains the position offset of this FrameNode relative to the window with drawing attributes applied, in vp. Drawing attributes include [transform](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#transform1) and [translate](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#translate1). This API returns the transformed coordinates of the upper left corner after component layout.
 
 **Since:** 12
 

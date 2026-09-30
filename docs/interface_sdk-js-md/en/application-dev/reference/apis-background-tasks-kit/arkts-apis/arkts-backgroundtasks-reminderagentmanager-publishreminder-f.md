@@ -6,6 +6,8 @@
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="publishreminder1"></a>
+
 ## publishReminder
 
 ```TypeScript
@@ -17,7 +19,7 @@ Publishes a reminder. This API uses an asynchronous callback to return the resul
 > **NOTE:** 
 > 
 > This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-1)
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification2)
 > permission is obtained. &gt;
 
 **Since:** 9
@@ -65,7 +67,7 @@ reminderAgentManager.publishReminder(timer, (err: BusinessError, reminderId: num
 ```
 
 
-<a id="publishreminder-1"></a>
+<a id="publishreminder2"></a>
 
 ## publishReminder
 
@@ -78,7 +80,7 @@ Publishes a reminder. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > This API can be called only after the
-> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification-1)
+> [notificationManager.requestEnableNotification](../../apis-notification-kit/arkts-apis/arkts-notification-notificationmanager-requestenablenotification-f.md#requestenablenotification2)
 > permission is obtained. &gt;
 
 **Since:** 9

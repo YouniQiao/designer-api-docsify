@@ -8,7 +8,7 @@ In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
 
-**Inheritance/Implementation:** ArcSwiperAttribute extends CommonMethod<ArcSwiperAttribute>
+**Inheritance/Implementation:** ArcSwiperAttribute extends CommonMethod&lt;ArcSwiperAttribute&gt;
 
 **Since:** 18
 

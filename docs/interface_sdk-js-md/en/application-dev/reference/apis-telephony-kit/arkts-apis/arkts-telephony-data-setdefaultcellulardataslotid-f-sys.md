@@ -6,6 +6,8 @@
 import { data } from '@kit.TelephonyKit';
 ```
 
+<a id="setdefaultcellulardataslotid1"></a>
+
 ## setDefaultCellularDataSlotId
 
 ```TypeScript
@@ -61,7 +63,7 @@ data.setDefaultCellularDataSlotId(0, (err: BusinessError) => {
 ```
 
 
-<a id="setdefaultcellulardataslotid-1"></a>
+<a id="setdefaultcellulardataslotid2"></a>
 
 ## setDefaultCellularDataSlotId
 

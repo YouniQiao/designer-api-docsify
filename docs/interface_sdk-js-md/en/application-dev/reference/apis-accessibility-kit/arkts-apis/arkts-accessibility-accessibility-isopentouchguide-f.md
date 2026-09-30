@@ -7,6 +7,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
+<a id="isopentouchguide1"></a>
+
 ## isOpenTouchGuide
 
 ```TypeScript
@@ -47,7 +49,7 @@ accessibility.isOpenTouchGuide((err: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isopentouchguide-1"></a>
+<a id="isopentouchguide2"></a>
 
 ## isOpenTouchGuide
 

@@ -18,6 +18,8 @@ In the following API examples, you must first use [getSetting](arkts-ime-inputme
 import { inputMethod } from '@kit.IMEKit';
 ```
 
+<a id="enableinputmethod1"></a>
+
 ## enableInputMethod
 
 ```TypeScript
@@ -89,7 +91,7 @@ function enableInputMethodSafely() {
 enableInputMethodSafely();
 ```
 
-<a id="enableinputmethod-1"></a>
+<a id="enableinputmethod2"></a>
 
 ## enableInputMethod
 
@@ -152,7 +154,7 @@ inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodE
 });
 ```
 
-<a id="getallinputmethodssync-1"></a>
+<a id="getallinputmethodssync2"></a>
 
 ## getAllInputMethodsSync
 
@@ -309,7 +311,7 @@ try {
 }
 ```
 
-<a id="getinputmethodssync-1"></a>
+<a id="getinputmethodssync2"></a>
 
 ## getInputMethodsSync
 
@@ -425,6 +427,8 @@ try {
 }
 ```
 
+<a id="ispanelshown1"></a>
+
 ## isPanelShown
 
 ```TypeScript
@@ -479,7 +483,7 @@ try {
 }
 ```
 
-<a id="ispanelshown-1"></a>
+<a id="ispanelshown2"></a>
 
 ## isPanelShown
 

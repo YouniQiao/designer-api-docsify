@@ -70,6 +70,8 @@ rand.generateRandom(12, (err, randData) => {
 });
 ```
 
+<a id="generaterandom1"></a>
+
 ## generateRandom
 
 ```TypeScript
@@ -122,7 +124,7 @@ rand.generateRandom(12, (err, randData) => {
 });
 ```
 
-<a id="generaterandom-1"></a>
+<a id="generaterandom2"></a>
 
 ## generateRandom
 

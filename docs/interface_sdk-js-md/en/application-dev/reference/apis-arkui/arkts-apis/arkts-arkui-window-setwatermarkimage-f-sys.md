@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="setwatermarkimage1"></a>
+
 ## setWaterMarkImage
 
 ```TypeScript
@@ -26,7 +28,7 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap-1). |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap2). |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 
 **Return value:**
@@ -75,7 +77,7 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
 ```
 
 
-<a id="setwatermarkimage-1"></a>
+<a id="setwatermarkimage2"></a>
 
 ## setWaterMarkImage
 
@@ -148,7 +150,7 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
 ```
 
 
-<a id="setwatermarkimage-2"></a>
+<a id="setwatermarkimage3"></a>
 
 ## setWaterMarkImage
 
@@ -170,7 +172,7 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap-1). |
+| pixelMap | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | Yes | Watermark image, which can be obtained by calling [createPixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-createpixelmap-f.md#createpixelmap2). |
 | enable | boolean | Yes | Whether to display the watermark image. **true** to display, **false** otherwise. After the watermark image is displayed, you need to set this parameter to **false** to disable the watermark display. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 

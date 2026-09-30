@@ -22,7 +22,7 @@ Obtains a **ComponentInfo** object based on the component ID and synchronously r
 
 **Deprecated since:** 18
 
-**Substitutes:** getRectangleById
+**Substitutes:** [getRectangleById](arkts-arkui-arkui-uicontext-componentutils-c.md#getrectanglebyid)
 
 **Model restriction:** This API can be used only in the stage model.
 

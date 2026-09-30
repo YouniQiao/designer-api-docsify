@@ -37,6 +37,8 @@ installation.
 import { update } from '@kit.BasicServicesKit';
 ```
 
+<a id="applynewversion1"></a>
+
 ## applyNewVersion
 
 ```TypeScript
@@ -113,7 +115,7 @@ try {
 }
 ```
 
-<a id="applynewversion-1"></a>
+<a id="applynewversion2"></a>
 
 ## applyNewVersion
 
@@ -327,6 +329,8 @@ try {
 }
 ```
 
+<a id="verifyupgradepackage1"></a>
+
 ## verifyUpgradePackage
 
 ```TypeScript
@@ -412,7 +416,7 @@ try {
 }
 ```
 
-<a id="verifyupgradepackage-1"></a>
+<a id="verifyupgradepackage2"></a>
 
 ## verifyUpgradePackage
 

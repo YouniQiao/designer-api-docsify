@@ -6,6 +6,8 @@
 import { dateTimeManager } from '@kit.MDMKit';
 ```
 
+<a id="setdatetime1"></a>
+
 ## setDateTime
 
 ```TypeScript
@@ -71,7 +73,7 @@ dateTimeManager.setDateTime(wantTemp, 1526003846000, (err) => {
 ```
 
 
-<a id="setdatetime-1"></a>
+<a id="setdatetime2"></a>
 
 ## setDateTime
 

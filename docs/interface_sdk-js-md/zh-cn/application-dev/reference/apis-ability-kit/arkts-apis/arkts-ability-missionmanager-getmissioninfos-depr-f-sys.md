@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="getmissioninfos1"></a>
+
 ## getMissionInfos
 
 ```TypeScript
@@ -52,7 +54,7 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
 ```
 
 
-<a id="getmissioninfos-1"></a>
+<a id="getmissioninfos2"></a>
 
 ## getMissionInfos
 

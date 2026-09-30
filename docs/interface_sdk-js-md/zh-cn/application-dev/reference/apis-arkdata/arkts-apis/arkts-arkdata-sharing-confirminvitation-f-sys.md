@@ -6,6 +6,8 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
+<a id="confirminvitation1"></a>
+
 ## confirmInvitation
 
 ```TypeScript
@@ -55,7 +57,7 @@ cloudData.sharing.confirmInvitation('sharing_invitation_code_test', cloudData.sh
 ```
 
 
-<a id="confirminvitation-1"></a>
+<a id="confirminvitation2"></a>
 
 ## confirmInvitation
 

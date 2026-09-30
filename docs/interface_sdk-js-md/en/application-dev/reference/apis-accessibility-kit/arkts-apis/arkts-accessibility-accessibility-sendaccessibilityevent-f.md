@@ -7,6 +7,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
+<a id="sendaccessibilityevent1"></a>
+
 ## sendAccessibilityEvent
 
 ```TypeScript
@@ -118,7 +120,7 @@ accessibility.sendAccessibilityEvent(eventInfo, (err: BusinessError) => {
 ```
 
 
-<a id="sendaccessibilityevent-1"></a>
+<a id="sendaccessibilityevent2"></a>
 
 ## sendAccessibilityEvent
 

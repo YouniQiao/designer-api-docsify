@@ -6,6 +6,8 @@
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="createx509crl1"></a>
+
 ## createX509Crl
 
 ```TypeScript
@@ -17,7 +19,7 @@ function createX509Crl(inStream: EncodingBlob, callback: AsyncCallback<X509Crl>)
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
-> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md)替代。
+> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl1)替代。
 
 **起始版本：** 9
 
@@ -84,7 +86,7 @@ cert.createX509Crl(encodingBlob, (error, _x509Crl) => {
 ```
 
 
-<a id="createx509crl-1"></a>
+<a id="createx509crl2"></a>
 
 ## createX509Crl
 
@@ -97,7 +99,7 @@ function createX509Crl(inStream: EncodingBlob): Promise<X509Crl>
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 11开始废弃，建议使用
-> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl-1)替代。
+> [cert.createX509CRL()](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl2)替代。
 
 **起始版本：** 9
 

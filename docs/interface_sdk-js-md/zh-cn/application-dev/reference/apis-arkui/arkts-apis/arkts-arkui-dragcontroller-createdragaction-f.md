@@ -24,7 +24,7 @@ function createDragAction(customArray: Array<CustomBuilder | DragItemInfo>, drag
 
 **废弃版本：** 18
 
-**替代接口：** createDragAction
+**替代接口：** [createDragAction](arkts-arkui-arkui-uicontext-dragcontroller-c.md#createdragaction)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

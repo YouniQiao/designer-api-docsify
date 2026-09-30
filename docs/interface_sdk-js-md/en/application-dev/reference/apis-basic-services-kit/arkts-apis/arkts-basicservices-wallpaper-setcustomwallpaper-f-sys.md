@@ -6,6 +6,8 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
+<a id="setcustomwallpaper1"></a>
+
 ## setCustomWallpaper
 
 ```TypeScript
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="setcustomwallpaper-1"></a>
+<a id="setcustomwallpaper2"></a>
 
 ## setCustomWallpaper
 

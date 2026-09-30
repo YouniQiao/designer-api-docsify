@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="createwindow1"></a>
+
 ## createWindow
 
 ```TypeScript
@@ -85,7 +87,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="createwindow-1"></a>
+<a id="createwindow2"></a>
 
 ## createWindow
 

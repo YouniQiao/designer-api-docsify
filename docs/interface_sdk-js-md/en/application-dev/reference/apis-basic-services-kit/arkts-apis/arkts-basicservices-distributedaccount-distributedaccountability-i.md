@@ -18,6 +18,8 @@ Provides APIs for querying and updating the login state of a distributed account
 import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
+<a id="getosaccountdistributedinfo1"></a>
+
 ## getOsAccountDistributedInfo
 
 ```TypeScript
@@ -70,7 +72,7 @@ try {
 }
 ```
 
-<a id="getosaccountdistributedinfo-1"></a>
+<a id="getosaccountdistributedinfo2"></a>
 
 ## getOsAccountDistributedInfo
 
@@ -119,6 +121,8 @@ try {
   console.error(`getOsAccountDistributedInfo exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setosaccountdistributedinfo1"></a>
 
 ## setOsAccountDistributedInfo
 
@@ -178,7 +182,7 @@ try {
 }
 ```
 
-<a id="setosaccountdistributedinfo-1"></a>
+<a id="setosaccountdistributedinfo2"></a>
 
 ## setOsAccountDistributedInfo
 
@@ -241,6 +245,8 @@ try {
 }
 ```
 
+<a id="queryosaccountdistributedinfo1"></a>
+
 ## queryOsAccountDistributedInfo
 
 ```TypeScript
@@ -252,14 +258,14 @@ Queries the distributed account information. This API uses an asynchronous callb
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getOsAccountDistributedInfo](#getosaccountdistributedinfo)
+> [getOsAccountDistributedInfo](#getosaccountdistributedinfo1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo)(callback: AsyncCallback&lt;DistributedInfo&gt;)
+**Substitutes:** [getOsAccountDistributedInfo](#getosaccountdistributedinfo1)(callback: AsyncCallback&lt;DistributedInfo&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS or ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -290,7 +296,7 @@ accountAbility.queryOsAccountDistributedInfo(
   });
 ```
 
-<a id="queryosaccountdistributedinfo-1"></a>
+<a id="queryosaccountdistributedinfo2"></a>
 
 ## queryOsAccountDistributedInfo
 
@@ -338,6 +344,8 @@ accountAbility.queryOsAccountDistributedInfo().then((data: distributedAccount.Di
 });
 ```
 
+<a id="updateosaccountdistributedinfo1"></a>
+
 ## updateOsAccountDistributedInfo
 
 ```TypeScript
@@ -349,14 +357,14 @@ Updates the distributed account information. This API uses an asynchronous callb
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo1)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo1)(accountInfo: DistributedInfo, callback: AsyncCallback&lt;void&gt;)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 
@@ -390,7 +398,7 @@ accountAbility.updateOsAccountDistributedInfo(accountInfo, (err: BusinessError) 
 });
 ```
 
-<a id="updateosaccountdistributedinfo-1"></a>
+<a id="updateosaccountdistributedinfo2"></a>
 
 ## updateOsAccountDistributedInfo
 
@@ -403,14 +411,14 @@ Updates the distributed account information. This API uses a promise to return t
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo2)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)(accountInfo: DistributedInfo)
+**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo2)(accountInfo: DistributedInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

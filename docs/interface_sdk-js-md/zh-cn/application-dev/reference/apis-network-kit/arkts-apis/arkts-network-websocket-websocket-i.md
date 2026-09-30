@@ -18,6 +18,8 @@ export interface WebSocket
 import { webSocket } from '@kit.NetworkKit';
 ```
 
+<a id="close1"></a>
+
 ## close
 
 ```TypeScript
@@ -65,7 +67,7 @@ ws.close((err: BusinessError) => {
 });
 ```
 
-<a id="close-1"></a>
+<a id="close2"></a>
 
 ## close
 
@@ -121,7 +123,7 @@ ws.close(options, (err: BusinessError) => {
 });
 ```
 
-<a id="close-2"></a>
+<a id="close3"></a>
 
 ## close
 
@@ -178,6 +180,8 @@ promise.then((value: boolean) => {
     console.error("close fail, error:" + JSON.stringify(err))
 });
 ```
+
+<a id="connect1"></a>
 
 ## connect
 
@@ -242,7 +246,7 @@ ws.connect(url, (err: BusinessError, value: boolean) => {
 });
 ```
 
-<a id="connect-1"></a>
+<a id="connect2"></a>
 
 ## connect
 
@@ -332,7 +336,7 @@ ws.connect(url, options, (err: BusinessError, value: Object) => {
 });
 ```
 
-<a id="connect-2"></a>
+<a id="connect3"></a>
 
 ## connect
 
@@ -677,7 +681,7 @@ ws.off('headerReceive');
 on(type: 'open', callback: AsyncCallback<Object>): void
 ```
 
-订阅WebSocket的打开事件，使用callback异步回调。该事件用于指示WebSocket是否连接成功。该接口需要在调用[connect](#connect)发起连接请求前调用。
+订阅WebSocket的打开事件，使用callback异步回调。该事件用于指示WebSocket是否连接成功。该接口需要在调用[connect](#connect1)发起连接请求前调用。
 
 **起始版本：** 6
 
@@ -755,7 +759,7 @@ ws.on('message', (err: BusinessError<void>, value: string | ArrayBuffer) => {
 on(type: 'openInfo', callback: AsyncCallback<WebSocketOpenInfo>): void
 ```
 
-订阅WebSocket的打开信息事件，使用callback异步回调。该事件用于获取WebSocket连接成功后的详细信息。该接口需要在调用[connect](#connect)发起连接请求前调用。
+订阅WebSocket的打开信息事件，使用callback异步回调。该事件用于获取WebSocket连接成功后的详细信息。该接口需要在调用[connect](#connect1)发起连接请求前调用。
 
 **起始版本：** 26.0.0
 
@@ -924,6 +928,8 @@ ws.on('headerReceive', (data) => {
 });
 ```
 
+<a id="send1"></a>
+
 ## send
 
 ```TypeScript
@@ -987,7 +993,7 @@ ws.on('open', (err: BusinessError, value: Object) => {
 });
 ```
 
-<a id="send-1"></a>
+<a id="send2"></a>
 
 ## send
 

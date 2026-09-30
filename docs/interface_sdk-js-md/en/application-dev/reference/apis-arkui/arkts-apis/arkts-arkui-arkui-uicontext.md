@@ -79,7 +79,7 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 
 | Name | Description |
 | --- | --- |
-| [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | Sets the background luminance sampling parameters. |
+| [BackgroundLuminanceSamplingConfigs](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md) | Defines the background luminance sampling parameter configuration. |
 <!--DelEnd-->
 
 ### Types

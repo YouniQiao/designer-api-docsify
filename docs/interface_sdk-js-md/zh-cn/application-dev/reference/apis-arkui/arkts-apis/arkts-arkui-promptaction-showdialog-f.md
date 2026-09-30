@@ -6,6 +6,8 @@
 import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
+<a id="showdialog1"></a>
+
 ## showDialog
 
 ```TypeScript
@@ -24,7 +26,7 @@ function showDialog(options: ShowDialogOptions, callback: AsyncCallback<ShowDial
 
 **废弃版本：** 18
 
-**替代接口：** showDialog
+**替代接口：** [showDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#showdialog)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -204,7 +206,7 @@ struct DialogExample {
 ```
 
 
-<a id="showdialog-1"></a>
+<a id="showdialog2"></a>
 
 ## showDialog
 
@@ -224,7 +226,7 @@ function showDialog(options: ShowDialogOptions): Promise<ShowDialogSuccessRespon
 
 **废弃版本：** 18
 
-**替代接口：** showDialog
+**替代接口：** [showDialog](arkts-arkui-arkui-uicontext-promptaction-c.md#showdialog)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

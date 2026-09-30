@@ -29,6 +29,8 @@ class EntryAbility extends AccessibilityExtensionAbility {
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+<a id="getfocuselement1"></a>
+
 ## getFocusElement
 
 ```TypeScript
@@ -79,7 +81,7 @@ axContext.getFocusElement(isAccessibilityFocus, (err: BusinessError, data: Acces
 });
 ```
 
-<a id="getfocuselement-1"></a>
+<a id="getfocuselement2"></a>
 
 ## getFocusElement
 
@@ -133,7 +135,7 @@ axContext.getFocusElement().then((data: AccessibilityElement) => {
 });
 ```
 
-<a id="getfocuselement-2"></a>
+<a id="getfocuselement3"></a>
 
 ## getFocusElement
 
@@ -182,6 +184,8 @@ axContext.getFocusElement((err: BusinessError, data: AccessibilityElement) => {
   console.info(`succeeded in getting focus element, ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="getwindowrootelement1"></a>
 
 ## getWindowRootElement
 
@@ -233,7 +237,7 @@ axContext.getWindowRootElement(windowId, (err: BusinessError, data: Accessibilit
 });
 ```
 
-<a id="getwindowrootelement-1"></a>
+<a id="getwindowrootelement2"></a>
 
 ## getWindowRootElement
 
@@ -287,7 +291,7 @@ axContext.getWindowRootElement().then((data: AccessibilityElement) => {
 });
 ```
 
-<a id="getwindowrootelement-2"></a>
+<a id="getwindowrootelement3"></a>
 
 ## getWindowRootElement
 
@@ -337,6 +341,8 @@ axContext.getWindowRootElement((err: BusinessError, data: AccessibilityElement) 
 });
 ```
 
+<a id="getwindows1"></a>
+
 ## getWindows
 
 ```TypeScript
@@ -384,7 +390,7 @@ axContext.getWindows(displayId, (err: BusinessError, data: AccessibilityElement[
 });
 ```
 
-<a id="getwindows-1"></a>
+<a id="getwindows2"></a>
 
 ## getWindows
 
@@ -435,7 +441,7 @@ axContext.getWindows().then((data: AccessibilityElement[]) => {
 });
 ```
 
-<a id="getwindows-2"></a>
+<a id="getwindows3"></a>
 
 ## getWindows
 
@@ -481,6 +487,8 @@ axContext.getWindows((err: BusinessError, data: AccessibilityElement[]) => {
   console.info(`succeeded in getting windows, ${JSON.stringify(data)}`);
 });
 ```
+
+<a id="injectgesture1"></a>
 
 ## injectGesture
 
@@ -535,7 +543,7 @@ axContext.injectGesture(gesturePath, (err: BusinessError) => {
 });
 ```
 
-<a id="injectgesture-1"></a>
+<a id="injectgesture2"></a>
 
 ## injectGesture
 
@@ -637,6 +645,8 @@ for (let i = 0; i < 10; i++) {
 axContext.injectGestureSync(gesturePath);
 ```
 
+<a id="settargetbundlename1"></a>
+
 ## setTargetBundleName
 
 ```TypeScript
@@ -686,7 +696,7 @@ try {
 }
 ```
 
-<a id="settargetbundlename-1"></a>
+<a id="settargetbundlename2"></a>
 
 ## setTargetBundleName
 

@@ -320,6 +320,8 @@ async function certGetCRLDistributionPoint() {
 }
 ```
 
+<a id="getencoded1"></a>
+
 ## getEncoded
 
 ```TypeScript
@@ -398,7 +400,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
-<a id="getencoded-1"></a>
+<a id="getencoded2"></a>
 
 ## getEncoded
 
@@ -744,6 +746,8 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
+<a id="getissuername1"></a>
+
 ## getIssuerName
 
 ```TypeScript
@@ -827,7 +831,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
-<a id="getissuername-1"></a>
+<a id="getissuername2"></a>
 
 ## getIssuerName
 
@@ -2290,6 +2294,8 @@ async function matchX509Cert() {
 }
 ```
 
+<a id="tostring1"></a>
+
 ## toString
 
 ```TypeScript
@@ -2379,7 +2385,7 @@ async function certToString() {
 }
 ```
 
-<a id="tostring-1"></a>
+<a id="tostring2"></a>
 
 ## toString
 
@@ -2475,6 +2481,8 @@ async function certToString() {
 }
 ```
 
+<a id="verify1"></a>
+
 ## verify
 
 ```TypeScript
@@ -2563,7 +2571,7 @@ cert.createX509Cert(encodingBlob, (error, x509Cert) => {
 });
 ```
 
-<a id="verify-1"></a>
+<a id="verify2"></a>
 
 ## verify
 

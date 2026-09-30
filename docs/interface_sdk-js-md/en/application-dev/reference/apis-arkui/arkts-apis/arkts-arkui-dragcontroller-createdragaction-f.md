@@ -24,7 +24,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 
 **Deprecated since:** 18
 
-**Substitutes:** createDragAction
+**Substitutes:** [createDragAction](arkts-arkui-arkui-uicontext-dragcontroller-c.md#createdragaction)
 
 **Model restriction:** This API can be used only in the stage model.
 

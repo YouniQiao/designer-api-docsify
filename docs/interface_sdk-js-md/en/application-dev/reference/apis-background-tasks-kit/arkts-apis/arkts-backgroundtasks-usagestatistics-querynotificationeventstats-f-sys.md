@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querynotificationeventstats1"></a>
+
 ## queryNotificationEventStats
 
 ```TypeScript
@@ -68,7 +70,7 @@ usageStatistics.queryNotificationEventStats(0, 20000000000000, (err: BusinessErr
 ```
 
 
-<a id="querynotificationeventstats-1"></a>
+<a id="querynotificationeventstats2"></a>
 
 ## queryNotificationEventStats
 

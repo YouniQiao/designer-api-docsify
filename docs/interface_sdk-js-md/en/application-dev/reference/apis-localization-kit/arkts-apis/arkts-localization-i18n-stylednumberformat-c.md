@@ -18,6 +18,8 @@ Provide a number formatting interface which could format number to StyleString.
 import { i18n } from '@kit.LocalizationKit';
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -77,7 +79,7 @@ try {
 }
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -91,7 +93,7 @@ Creates a **NumberFormat** object for rich text display.
 
 **Deprecated since:** 20
 
-**Substitutes:** [constructor](#constructor)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
+**Substitutes:** [constructor](#constructor1)(numberFormat: Intl.NumberFormat | SimpleNumberFormat, options?: StyledNumberFormatOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 

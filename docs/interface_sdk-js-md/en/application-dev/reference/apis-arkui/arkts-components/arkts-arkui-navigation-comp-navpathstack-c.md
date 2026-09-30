@@ -310,6 +310,8 @@ Moves the first navigation destination page that matches **name** from the botto
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
+<a id="pop1"></a>
+
 ## pop
 
 ```TypeScript
@@ -362,7 +364,7 @@ Pops the top element out of the routing stack.
 | --- | --- |
 | [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) &#124; undefined | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
-<a id="pop-1"></a>
+<a id="pop2"></a>
 
 ## pop
 
@@ -417,6 +419,8 @@ Pops the top element out of the routing stack and invokes the **onPop** callback
 | --- | --- |
 | [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) &#124; undefined | **NavPathInfo**: information about the navigation destination page at the top of the stack.<br>**undefined**: the routing stack is empty. |
 
+<a id="poptoindex1"></a>
+
 ## popToIndex
 
 ```TypeScript
@@ -442,7 +446,7 @@ Returns the routing stack to the page specified by **index**.
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true**<br>**Since:** 11 |
 
-<a id="poptoindex-1"></a>
+<a id="poptoindex2"></a>
 
 ## popToIndex
 
@@ -469,6 +473,8 @@ Returns the routing stack to the page specified by **index** and invokes the **o
 | index | number | Yes | Index of the navigation destination page. The index is zero-based. |
 | result | Object | Yes | Custom processing result on the page. The boolean type is not supported. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true** |
+
+<a id="poptoname1"></a>
 
 ## popToName
 
@@ -501,7 +507,7 @@ Pops pages until the first navigation destination page that matches **name** fro
 | --- | --- |
 | number | Returns the index of the first navigation destination page that matches **name** from the bottom of the routing stack; returns **-1** if such a page does not exist. |
 
-<a id="poptoname-1"></a>
+<a id="poptoname2"></a>
 
 ## popToName
 
@@ -574,6 +580,8 @@ Preloads navigation destination page specified by **info**. The preload page wil
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
+<a id="pushdestination1"></a>
+
 ## pushDestination
 
 ```TypeScript
@@ -620,7 +628,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushdestination-1"></a>
+<a id="pushdestination2"></a>
 
 ## pushDestination
 
@@ -667,6 +675,8 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+
+<a id="pushdestinationbyname1"></a>
 
 ## pushDestinationByName
 
@@ -715,7 +725,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
-<a id="pushdestinationbyname-1"></a>
+<a id="pushdestinationbyname2"></a>
 
 ## pushDestinationByName
 
@@ -747,7 +757,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#poptoname-1), or [popToIndex](#poptoindex-1). |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to handle the result returned when the page is popped out of the stack. It is triggered only when the **result** parameter is set in [pop](#pop2), [popToName](#poptoname2), or [popToIndex](#poptoindex2). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true** |
 
 **Return value:**
@@ -764,6 +774,8 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
+
+<a id="pushpath1"></a>
 
 ## pushPath
 
@@ -790,7 +802,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | info | [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br>If the input parameter is invalid, the value **true** is used.<br>**Since:** 11 |
 
-<a id="pushpath-1"></a>
+<a id="pushpath2"></a>
 
 ## pushPath
 
@@ -816,6 +828,8 @@ Pushes the navigation destination page specified by **info** onto the routing st
 | --- | --- | --- | --- |
 | info | [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Information about the navigation destination page. |
 | options | [NavigationOptions](arkts-arkui-navigation-comp-navigationoptions-i.md) | No | Routing stack operation options. |
+
+<a id="pushpathbyname1"></a>
 
 ## pushPathByName
 
@@ -843,7 +857,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | param | unknown | Yes | Detailed parameters for the custom **NavDestination** page. The **unknown** type can be replaced with a user-defined type. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true**<br>**Since:** 11 |
 
-<a id="pushpathbyname-1"></a>
+<a id="pushpathbyname2"></a>
 
 ## pushPathByName
 
@@ -869,7 +883,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 | --- | --- | --- | --- |
 | name | string | Yes | Name of the navigation destination page. |
 | param | Object | Yes | Detailed parameters for the custom **NavDestination** page. |
-| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](#pop-1), [popToName](#poptoname-1), or [popToIndex](#poptoindex-1). |
+| onPop | import('../api/@ohos.base').Callback&lt;[PopInfo](arkts-arkui-navigation-comp-popinfo-i.md)&gt; | Yes | Callback used to receive the result. It is triggered only when the **result** parameter is set in [pop](#pop2), [popToName](#poptoname2), or [popToIndex](#poptoindex2). |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true** |
 
 ## removeByIndexes
@@ -1002,6 +1016,8 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 
+<a id="replacepath1"></a>
+
 ## replacePath
 
 ```TypeScript
@@ -1027,7 +1043,7 @@ Replaces the top of the routing stack with the navigation destination page speci
 | info | [NavPathInfo](arkts-arkui-navigation-comp-navpathinfo-c.md) | Yes | Parameters for the new top page of the routing stack. |
 | animated | boolean | No | Whether to enable the transition animation.<br>**true**: yes; **false**: no<br> Default value: **true** |
 
-<a id="replacepath-1"></a>
+<a id="replacepath2"></a>
 
 ## replacePath
 

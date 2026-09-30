@@ -6,6 +6,8 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="getallcontinuoustasks1"></a>
+
 ## getAllContinuousTasks
 
 ```TypeScript
@@ -67,7 +69,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="getallcontinuoustasks-1"></a>
+<a id="getallcontinuoustasks2"></a>
 
 ## getAllContinuousTasks
 

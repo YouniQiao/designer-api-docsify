@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="setmuted1"></a>
+
 ## setMuted
 
 ```TypeScript
@@ -54,7 +56,7 @@ call.setMuted((err: BusinessError) => {
 ```
 
 
-<a id="setmuted-1"></a>
+<a id="setmuted2"></a>
 
 ## setMuted
 

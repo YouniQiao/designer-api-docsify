@@ -20,6 +20,8 @@ Defines a VPN connection object. Before calling **VpnConnection** APIs, you need
 import { vpn } from '@kit.NetworkKit';
 ```
 
+<a id="destroy1"></a>
+
 ## destroy
 
 ```TypeScript
@@ -79,7 +81,7 @@ struct Index {
 }
 ```
 
-<a id="destroy-1"></a>
+<a id="destroy2"></a>
 
 ## destroy
 
@@ -141,6 +143,8 @@ struct Index {
   build() { }
 }
 ```
+
+<a id="protect1"></a>
 
 ## protect
 
@@ -222,7 +226,7 @@ struct Index {
 }
 ```
 
-<a id="protect-1"></a>
+<a id="protect2"></a>
 
 ## protect
 
@@ -311,6 +315,8 @@ struct Index {
 }
 ```
 
+<a id="setup1"></a>
+
 ## setUp
 
 ```TypeScript
@@ -386,7 +392,7 @@ struct Index {
 }
 ```
 
-<a id="setup-1"></a>
+<a id="setup2"></a>
 
 ## setUp
 

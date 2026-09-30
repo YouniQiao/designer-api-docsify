@@ -120,6 +120,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getallobjects1"></a>
+
 ## getAllObjects
 
 ```TypeScript
@@ -174,7 +176,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getallobjects-1"></a>
+<a id="getallobjects2"></a>
 
 ## getAllObjects
 
@@ -274,6 +276,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getfirstobject1"></a>
+
 ## getFirstObject
 
 ```TypeScript
@@ -328,7 +332,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getfirstobject-1"></a>
+<a id="getfirstobject2"></a>
 
 ## getFirstObject
 
@@ -434,6 +438,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getlastobject1"></a>
+
 ## getLastObject
 
 ```TypeScript
@@ -488,7 +494,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getlastobject-1"></a>
+<a id="getlastobject2"></a>
 
 ## getLastObject
 
@@ -538,6 +544,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   console.info('photoAsset displayName: ', photoAsset.displayName);
 }
 ```
+
+<a id="getnextobject1"></a>
 
 ## getNextObject
 
@@ -598,7 +606,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getnextobject-1"></a>
+<a id="getnextobject2"></a>
 
 ## getNextObject
 
@@ -653,6 +661,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="getobjectbyposition1"></a>
 
 ## getObjectByPosition
 
@@ -709,7 +719,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getobjectbyposition-1"></a>
+<a id="getobjectbyposition2"></a>
 
 ## getObjectByPosition
 

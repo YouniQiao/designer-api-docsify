@@ -6,6 +6,8 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
+<a id="setimage1"></a>
+
 ## setImage
 
 ```TypeScript
@@ -78,7 +80,7 @@ imageSource.createPixelMap(opts).then((pixelMap: image.PixelMap) => {
 ```
 
 
-<a id="setimage-1"></a>
+<a id="setimage2"></a>
 
 ## setImage
 

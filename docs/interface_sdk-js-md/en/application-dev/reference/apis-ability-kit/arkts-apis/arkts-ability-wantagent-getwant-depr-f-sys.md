@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="getwant1"></a>
+
 ## getWant
 
 ```TypeScript
@@ -33,7 +35,7 @@ Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](a
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Obtain the callback method for Want in WantAgent. |
 
 
-<a id="getwant-1"></a>
+<a id="getwant2"></a>
 
 ## getWant
 

@@ -8,13 +8,15 @@ In addition to the universal attributes, the following attributes are supported.
 
 In addition to the universal events, the following events are supported.
 
-**Inheritance/Implementation:** SwiperAttribute extends CommonMethod<SwiperAttribute>
+**Inheritance/Implementation:** SwiperAttribute extends CommonMethod&lt;SwiperAttribute&gt;
 
 **Since:** 7
 
 <!--Device-unnamed-declare class SwiperAttribute extends CommonMethod<SwiperAttribute>--><!--Device-unnamed-declare class SwiperAttribute extends CommonMethod<SwiperAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="autoplay1"></a>
 
 ## autoPlay
 
@@ -42,7 +44,7 @@ If [loop](#loop) is set to **false**, the automatic playback stops at the last p
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable automatic playback for child components.<br>**true**: yes; **false**: no<br>If an invalid value is passed, the value **false** is used. |
 
-<a id="autoplay-1"></a>
+<a id="autoplay2"></a>
 
 ## autoPlay
 
@@ -72,6 +74,8 @@ If [loop](#loop) is set to **false**, automatic playback stops at the last page 
 | --- | --- | --- | --- |
 | autoPlay | boolean | Yes | Whether to enable automatic playback for child components.<br>**true**: yes; **false**: no<br>If an invalid value is passed, the value **false** is used. |
 | options | [AutoPlayOptions](arkts-arkui-swiper-comp-autoplayoptions-i.md) | Yes | Whether child components stop automatic playback when the screen is pressed by fingers, a mouse device, or other input devices. If **stopWhenTouched** is set to **true**, automatic playback resumes after any finger lifts in multi-touch scenarios.<br>Default value: **{ stopWhenTouched: true }**. |
+
+<a id="cachedcount1"></a>
 
 ## cachedCount
 
@@ -106,7 +110,7 @@ Sets the number of child components to be preloaded (cached), which are needed f
 | --- | --- | --- | --- |
 | value | number | Yes | Number of child components to be preloaded (cached).<br>Default value: **1**<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
 
-<a id="cachedcount-1"></a>
+<a id="cachedcount2"></a>
 
 ## cachedCount
 
@@ -139,7 +143,7 @@ Sets the number of child components to be cached.
 | count | number | Yes | Number of child components to be preloaded (cached).<br>Default value: **1**<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
 | isShown | boolean | Yes | Whether the cached nodes within the range rendered without being added to the render tree.<br>**true**: yes; **false**: no<br>If an invalid value is passed, the value **false** is used. |
 
-<a id="cachedcount-2"></a>
+<a id="cachedcount3"></a>
 
 ## cachedCount
 
@@ -151,7 +155,7 @@ Sets the number of child components to be prloaded and configuration options.
 
 > **NOTE:** 
 > 
-> - When **independent** in options is set to **true**, the number of preloaded child components is calculated based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of [displayCount](#displaycount-1).For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the current child node are preloaded.
+> - When **independent** in options is set to **true**, the number of preloaded child components is calculated based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of [displayCount](#displaycount2).For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the current child node are preloaded.
 > 
 > - If **swipeByGroup** of **displayCount** is set to **true** and **independent** of **options** is set to
 > **false** (default value), the number of child components to be preloaded is calculated by group. For example, if
@@ -295,6 +299,8 @@ Sets the arrow style of the navigation indicator.
 | value | [ArrowStyle](arkts-arkui-swiper-comp-arrowstyle-i.md) &#124; boolean | Yes | Arrow and background to set. In cases of exceptions, the default values in the **ArrowStyle** object are used. The value **true** means to show the arrow and background in the default styles, and **false** means to hide the arrow and background.<br>Default value: **false**. |
 | isHoverShow | boolean | No | Whether to show the arrow on mouse hover.<br>Default value: **false**.<br>**NOTE:** <br>1. **false**: The arrow is always displayed.<br>2. **true**: The arrow is displayed.<br>With navigation indicators, the arrow is displayed when the mouse pointer hovers over the indicators or arrow areas.<br>Without navigation indicators, the arrow is displayed when the mouse pointer hovers over the **Swiper** display area.<br>3. When the arrow is displayed, clicking the arrow turns pages. |
 
+<a id="displaycount1"></a>
+
 ## displayCount
 
 ```TypeScript
@@ -363,7 +369,7 @@ Dots Displayed| Description|
 | value | number &#124; string &#124; [SwiperAutoFill](arkts-arkui-swiper-comp-swiperautofill-i.md) | Yes | Number of elements to display per page.<br> Default value: **1**<br>Value range: (0, +∞). If this parameter is set to a value less than or equal to 0, the default value is used.<br>**Since:** 10 |
 | swipeByGroup | boolean | No | Whether to turn pages by group. The value **true** means to turn pages by group, and **false** means to turn pages by child element. When turning pages by group is used, the number of child elements per group is the value of **displayCount**.<br> Default value: **false**.<br>**Since:** 11 |
 
-<a id="displaycount-1"></a>
+<a id="displaycount2"></a>
 
 ## displayCount
 
@@ -381,7 +387,7 @@ Sets the number of elements to display per page.
 
 **ItemFillPolicy** type: Child elements' main-axis width adapts to the **Swiper** component's main-axis width. The number of displayed elements is determined based on the breakpoint type corresponding to the **Swiper** component's width. For example, if the breakpoint type is set to **ItemFillPolicy.BREAKPOINT_DEFAULT**, one column is displayed when the component width falls within the sm or smaller breakpoint range, two columns are displayed for the md breakpoint range, and three columns are displayed for the lg or a larger breakpoint range.
 
-For details about the parameter, see [displayCount](#displaycount).
+For details about the parameter, see [displayCount](#displaycount1).
 
 **Since:** 22
 
@@ -408,7 +414,7 @@ For details about the parameter, see [displayCount](#displaycount).
 displayMode(value: SwiperDisplayMode)
 ```
 
-Sets the mode in which elements are displayed along the main axis. This API takes effect only when [displayCount](#displaycount) is not set.
+Sets the mode in which elements are displayed along the main axis. This API takes effect only when [displayCount](#displaycount1) is not set.
 
 **Since:** 7
 
@@ -458,7 +464,7 @@ The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts
 effectMode(value: EdgeEffect)
 ```
 
-Edge sliding effect. This parameter takes effect only when [loop](#loop) is set to **false** or all child nodes are displayed on one screen in the **Swiper** viewport. When the [SwiperController.changeIndex()](arkts-arkui-swiper-comp-swipercontroller-c.md#changeindex), [SwiperController.showNext()](arkts-arkui-swiper-comp-swipercontroller-c.md#shownext), or [SwiperController.showPrevious()](arkts-arkui-swiper-comp-swipercontroller-c.md#showprevious) API is called to go to the first or last page, the rebound effect does not take effect.
+Edge sliding effect. This parameter takes effect only when [loop](#loop) is set to **false** or all child nodes are displayed on one screen in the **Swiper** viewport. When the [SwiperController.changeIndex()](arkts-arkui-swiper-comp-swipercontroller-c.md#changeindex1), [SwiperController.showNext()](arkts-arkui-swiper-comp-swipercontroller-c.md#shownext), or [SwiperController.showPrevious()](arkts-arkui-swiper-comp-swipercontroller-c.md#showprevious) API is called to go to the first or last page, the rebound effect does not take effect.
 
 **Since:** 8
 
@@ -502,6 +508,8 @@ Since API version 10, this attribute supports two-way binding through [$$](../..
 | --- | --- | --- | --- |
 | value | number | Yes | Index of the child component currently displayed in the container.<br>Default value: **0**<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
 
+<a id="indicator1"></a>
+
 ## indicator
 
 ```TypeScript
@@ -526,7 +534,7 @@ Sets the style of the navigation indicator.
 | --- | --- | --- | --- |
 | value | [DotIndicator](arkts-arkui-swiper-comp-dotindicator-c.md) &#124; [DigitIndicator](arkts-arkui-swiper-comp-digitindicator-c.md) &#124; boolean | Yes | Style of the navigation indicator.<br> - **DotIndicator**: dot-style indicator.<br> - **DigitIndicator**: digit-style indicator.<br> - **boolean**: whether to enable the navigation indicator. **true** to enable, **false** otherwise.<br> Default value: **true**<br> Default style: **DotIndicator**<br>**Since:** 10 |
 
-<a id="indicator-1"></a>
+<a id="indicator2"></a>
 
 ## indicator
 
@@ -666,7 +674,7 @@ maintainVisibleContentPosition(enabled: boolean)
 
 Sets whether to maintain the visible content position when data is inserted or deleted above or ahead of the viewport. This applies to **Swiper** components using a single [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) as the child node, where the data source is modified using **LazyForEach** API such as [onDataAdd](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondataadd) or [onDataDelete](arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatadelete). In other scenarios, the position of the visible content changes when data is inserted or deleted above or before the display area.
 
-When **swipeByGroup** in [displayCount](#displaycount) is set to **true**, the visible content position remains unchanged only if the amount of data inserted or deleted above or before the display area is a multiple of the group size. Otherwise, the visible content position may change during group recalculation.
+When **swipeByGroup** in [displayCount](#displaycount1) is set to **true**, the visible content position remains unchanged only if the amount of data inserted or deleted above or before the display area is a multiple of the group size. Otherwise, the visible content position may change during group recalculation.
 
 **Since:** 20
 
@@ -1108,7 +1116,7 @@ Sets the style of the navigation indicator.
 
 **Deprecated since:** 10
 
-**Substitutes:** [indicator](#indicator)(value: DotIndicator | DigitIndicator | boolean)
+**Substitutes:** [indicator](#indicator1)(value: DotIndicator | DigitIndicator | boolean)
 
 <!--Device-SwiperAttribute-indicatorStyle(value?: IndicatorStyle): SwiperAttribute--><!--Device-SwiperAttribute-indicatorStyle(value?: IndicatorStyle): SwiperAttribute-End-->
 

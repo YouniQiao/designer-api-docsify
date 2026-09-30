@@ -6,6 +6,8 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
+<a id="startdlpmanagerforresult1"></a>
+
 ## startDLPManagerForResult
 
 ```TypeScript
@@ -75,7 +77,7 @@ if (context !== undefined) {
 ```
 
 
-<a id="startdlpmanagerforresult-1"></a>
+<a id="startdlpmanagerforresult2"></a>
 
 ## startDLPManagerForResult
 

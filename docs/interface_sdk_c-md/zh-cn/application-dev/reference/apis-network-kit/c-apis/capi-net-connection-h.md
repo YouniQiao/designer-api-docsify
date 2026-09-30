@@ -12,6 +12,12 @@
 
 ## 汇总
 
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| NATIVE_NET_CONN_API_H | 为网络管理数据网络连接模块提供C接口。<br>**起始版本：** 11<br>**系统能力：** SystemCapability.Communication.NetManager.Core |
+
 ### 函数
 
 | 名称 | 描述 |

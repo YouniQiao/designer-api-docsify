@@ -18,6 +18,8 @@ Defines the abstract interface of albums.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="getassets1"></a>
+
 ## getAssets
 
 ```TypeScript
@@ -81,7 +83,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getassets-1"></a>
+<a id="getassets2"></a>
 
 ## getAssets
 

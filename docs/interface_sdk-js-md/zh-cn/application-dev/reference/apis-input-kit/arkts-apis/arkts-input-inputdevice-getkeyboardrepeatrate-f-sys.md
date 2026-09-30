@@ -6,6 +6,8 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
+<a id="getkeyboardrepeatrate1"></a>
+
 ## getKeyboardRepeatRate
 
 ```TypeScript
@@ -67,7 +69,7 @@ struct Index {
 ```
 
 
-<a id="getkeyboardrepeatrate-1"></a>
+<a id="getkeyboardrepeatrate2"></a>
 
 ## getKeyboardRepeatRate
 

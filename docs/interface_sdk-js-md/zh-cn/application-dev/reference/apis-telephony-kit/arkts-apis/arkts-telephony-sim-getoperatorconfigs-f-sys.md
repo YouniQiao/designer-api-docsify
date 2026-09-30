@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getoperatorconfigs1"></a>
+
 ## getOperatorConfigs
 
 ```TypeScript
@@ -55,7 +57,7 @@ sim.getOperatorConfigs(0, (err: BusinessError, data: Array<sim.OperatorConfig>) 
 ```
 
 
-<a id="getoperatorconfigs-1"></a>
+<a id="getoperatorconfigs2"></a>
 
 ## getOperatorConfigs
 

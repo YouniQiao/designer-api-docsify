@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="publishasuser1"></a>
+
 ## publishAsUser
 
 ```TypeScript
@@ -55,7 +57,7 @@ commonEvent.publishAsUser('event', userId, publishCallBack);
 ```
 
 
-<a id="publishasuser-1"></a>
+<a id="publishasuser2"></a>
 
 ## publishAsUser
 
@@ -88,7 +90,7 @@ Publishes a common event with given properties to a specific user. This API uses
 | --- | --- | --- | --- |
 | event | string | Yes | Name of the common event to publish. |
 | userId | number | Yes | ID of the user to whom the common event is published. |
-| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
+| options | [CommonEventPublishData](arkts-basicservices-commoneventpublishdata-i.md) | Yes | Properties of the common event to publish. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the common event publication result. |
 
 **Examples**

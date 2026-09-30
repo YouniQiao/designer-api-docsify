@@ -6,6 +6,8 @@
 import { connection } from '@kit.NetworkKit';
 ```
 
+<a id="getglobalhttpproxy1"></a>
+
 ## getGlobalHttpProxy
 
 ```TypeScript
@@ -50,7 +52,7 @@ connection.getGlobalHttpProxy((error: BusinessError, data: connection.HttpProxy)
 ```
 
 
-<a id="getglobalhttpproxy-1"></a>
+<a id="getglobalhttpproxy2"></a>
 
 ## getGlobalHttpProxy
 

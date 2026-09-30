@@ -20,6 +20,8 @@ class IncrementalBackupSession
 import { backup } from '@kit.CoreFileKit';
 ```
 
+<a id="appendbundles1"></a>
+
 ## appendBundles
 
 ```TypeScript
@@ -124,7 +126,7 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray).then(() => {
 }); // 添加需要增量备份的应用
 ```
 
-<a id="appendbundles-1"></a>
+<a id="appendbundles2"></a>
 
 ## appendBundles
 

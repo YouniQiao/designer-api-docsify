@@ -36,7 +36,7 @@ Access token ID of the application, which is used in the [application access con
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**: application installed from AppGallery. <!--RP1--><!--RP1End-->&lt;li&gt;**enterprise**: enterprise internal application. These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. <!--RP2-- ><!--RP2End-->&lt;li&gt;**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md). <!--DelEnd--><!--RP3--><!--RP3End-->&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. <!--RP4--><!--RP4End-->&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. <!-- RP5--><!--RP5End-->&lt;li&gt;none: others.
+Distribution type of the application signing certificate. The options are as follows:&lt;li&gt;**app_gallery**: application installed from AppGallery. <!--RP1--><!--RP1End-->&lt;li&gt;**enterprise**: enterprise internal application. These are applications developed by an enterprise for its internal use by employees only. They are not distributed through public channels like AppGallery but are distributed internally via the enterprise's own channels. <!--RP2-- ><!--RP2End-->&lt;li&gt;**enterprise_mdm**: enterprise [Mobile Device Management (MDM) application](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del-->To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin1). <!--DelEnd--><!--RP3--><!--RP3End-->&lt;li&gt;**enterprise_normal**: standard enterprise application. These applications do not need to be released to AppGallery. Instead, they can be distributed and installed through an enterprise [MDM application](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. <!--RP4--><!--RP4End-->&lt;li&gt;**os_integration**: pre-installed application. They are not available for third-party applications. &lt;li&gt;crowdtesting: application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery. This API is deprecated since API version 11. &lt;li&gt;**internaltesting**: application under internal testing of AppGallery. <!-- RP5--><!--RP5End-->&lt;li&gt;none: others.
 
 **Type:** string
 
@@ -234,7 +234,7 @@ readonly descriptionResource: Resource
 
 Resource information of the application description. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent) to obtain the resource details.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)
 
 **Since:** 9
 
@@ -306,7 +306,7 @@ readonly iconResource: Resource
 
 Resource information of the application icon. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent) to obtain the resource details.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)
 
 **Since:** 9
 
@@ -385,7 +385,7 @@ readonly labelResource: Resource
 
 Resource information of the application label. The resource information obtained contains the bundle name, module name, and ID of the resource. You can call [getMediaContent](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-resourcemanager-i.md#getmediacontent) to obtain the resource details.
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)
 
 **Since:** 9
 

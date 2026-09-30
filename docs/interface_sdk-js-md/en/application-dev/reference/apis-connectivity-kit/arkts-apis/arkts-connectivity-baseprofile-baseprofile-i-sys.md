@@ -18,6 +18,8 @@ Base interface of profile.
 import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
+<a id="getconnectionstrategy1"></a>
+
 ## getConnectionStrategy
 
 ```TypeScript
@@ -58,7 +60,7 @@ Get connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="getconnectionstrategy-1"></a>
+<a id="getconnectionstrategy2"></a>
 
 ## getConnectionStrategy
 
@@ -104,6 +106,8 @@ Get connection strategy of this profile.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
+
+<a id="setconnectionstrategy1"></a>
 
 ## setConnectionStrategy
 
@@ -151,7 +155,7 @@ Set connection strategy of this profile.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
-<a id="setconnectionstrategy-1"></a>
+<a id="setconnectionstrategy2"></a>
 
 ## setConnectionStrategy
 

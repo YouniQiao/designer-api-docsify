@@ -85,6 +85,8 @@ function testGetSignSpec() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -122,7 +124,7 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**适用版本：** 26.0.0+ |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -202,6 +204,8 @@ initSync(priKey: PriKey): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**适用版本：** 26.0.0+ |
 
+<a id="setsignspec1"></a>
+
 ## setSignSpec
 
 ```TypeScript
@@ -260,7 +264,7 @@ function testSetSignSpec() {
 }
 ```
 
-<a id="setsignspec-1"></a>
+<a id="setsignspec2"></a>
 
 ## setSignSpec
 
@@ -313,7 +317,7 @@ function testSetSignSpec() {
 }
 ```
 
-<a id="setsignspec-2"></a>
+<a id="setsignspec3"></a>
 
 ## setSignSpec
 
@@ -364,6 +368,8 @@ function testSetSignSpec() {
 }
 ```
 
+<a id="sign1"></a>
+
 ## sign
 
 ```TypeScript
@@ -399,7 +405,7 @@ sign(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
-<a id="sign-1"></a>
+<a id="sign2"></a>
 
 ## sign
 
@@ -436,7 +442,7 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
-<a id="sign-2"></a>
+<a id="sign3"></a>
 
 ## sign
 
@@ -478,7 +484,7 @@ sign(data: DataBlob): Promise<DataBlob>
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed.<br>**适用版本：** 26.0.0+ |
 
-<a id="sign-3"></a>
+<a id="sign4"></a>
 
 ## sign
 
@@ -752,6 +758,8 @@ function signBySync() {
 }
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -805,7 +813,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call.<br>**适用版本：** 26.0.0+ |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 
@@ -820,7 +828,7 @@ update(data: DataBlob): Promise<void>
 > **说明：** 
 > 
 > 根据数据量，可以不调用update（即[init](#init)
-> 完成后直接调用[sign](#sign-1)）
+> 完成后直接调用[sign](#sign2)）
 > 或多次调用update。
 > 
 > 算法库不对单次或累计的update数据量设置大小限制。建议在处理大数据量的签名操作时，采用多次update方式传入数据，以避免一次性申请过大内

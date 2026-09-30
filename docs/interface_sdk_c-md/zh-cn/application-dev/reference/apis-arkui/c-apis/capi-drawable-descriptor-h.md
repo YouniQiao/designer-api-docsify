@@ -20,7 +20,6 @@
 | [OH_PixelmapNative](capi-arkui-nativemodule-oh-pixelmapnative.md) | - | 使用Image Kit定义的Native侧的OH_PixelmapNative对象。 |
 | [OH_PixelmapNativeHandle](capi-arkui-nativemodule-oh-pixelmapnativehandle.md) | OH_PixelmapNativeHandle | 定义OH_PixelmapNative对象指针类型。 |
 | [ArkUI_Node](capi-arkui-nativemodule-arkui-node.md) | - | 定义ArkUI Native组件实例对象，供ArkUI_NodeHandle指针在Native接口中标识和传递组件实例。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) | ArkUI_NodeHandle | 定义ArkUI Native组件实例对象指针，用于在ArkUI Native接口中标识和传递组件实例， 例如创建、挂载、移除或销毁组件节点。 |
 | [ArkUI_DrawableDescriptor_AnimationController](capi-arkui-nativemodule-arkui-drawabledescriptor-animationcontroller.md) | ArkUI_DrawableDescriptor_AnimationController | 定义DrawableDescriptor动图控制器对象。 |
 
 ### 枚举
@@ -493,7 +492,7 @@ int32_t OH_ArkUI_DrawableDescriptor_CreateAnimationController(ArkUI_DrawableDesc
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_DrawableDescriptor](capi-arkui-nativemodule-arkui-drawabledescriptor.md) *drawableDescriptor | DrawableDescriptor对象指针。 必须是通过[OH_ArkUI_DrawableDescriptor_CreateFromAnimatedPixelMap](capi-drawable-descriptor-h.md#oh_arkui_drawabledescriptor_createfromanimatedpixelmap)创建的动图对象。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 组件节点指针。必须是有效的ArkUI组件节点。 |
+| ArkUI_NodeHandle node | 组件节点指针。必须是有效的ArkUI组件节点。 |
 | [ArkUI_DrawableDescriptor_AnimationController](capi-arkui-nativemodule-arkui-drawabledescriptor-animationcontroller.md)** controller | DrawableDescriptor动图控制器对象指针。输出参数，调用成功时返回控制器指针。 |
 
 **返回值：**

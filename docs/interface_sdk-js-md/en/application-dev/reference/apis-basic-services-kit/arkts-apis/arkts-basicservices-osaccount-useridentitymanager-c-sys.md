@@ -333,6 +333,8 @@ try {
 }
 ```
 
+<a id="getauthinfo1"></a>
+
 ## getAuthInfo
 
 ```TypeScript
@@ -386,7 +388,7 @@ try {
 }
 ```
 
-<a id="getauthinfo-1"></a>
+<a id="getauthinfo2"></a>
 
 ## getAuthInfo
 
@@ -444,7 +446,7 @@ try {
 }
 ```
 
-<a id="getauthinfo-2"></a>
+<a id="getauthinfo3"></a>
 
 ## getAuthInfo
 
@@ -504,7 +506,7 @@ try {
 }
 ```
 
-<a id="getauthinfo-3"></a>
+<a id="getauthinfo4"></a>
 
 ## getAuthInfo
 
@@ -760,6 +762,8 @@ try {
 }
 ```
 
+<a id="opensession1"></a>
+
 ## openSession
 
 ```TypeScript
@@ -813,7 +817,7 @@ try {
 }
 ```
 
-<a id="opensession-1"></a>
+<a id="opensession2"></a>
 
 ## openSession
 

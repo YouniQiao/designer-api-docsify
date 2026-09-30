@@ -321,6 +321,8 @@ struct Index {
 }
 ```
 
+<a id="executedrag1"></a>
+
 ## executeDrag
 
 ```TypeScript
@@ -414,7 +416,7 @@ struct DragControllerPage {
 }
 ```
 
-<a id="executedrag-1"></a>
+<a id="executedrag2"></a>
 
 ## executeDrag
 

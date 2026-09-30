@@ -6,6 +6,8 @@
 import { usbManager } from '@kit.MDMKit';
 ```
 
+<a id="getdisallowedusbdevices1"></a>
+
 ## getDisallowedUsbDevices
 
 ```TypeScript
@@ -65,7 +67,7 @@ try {
 ```
 
 
-<a id="getdisallowedusbdevices-1"></a>
+<a id="getdisallowedusbdevices2"></a>
 
 ## getDisallowedUsbDevices
 

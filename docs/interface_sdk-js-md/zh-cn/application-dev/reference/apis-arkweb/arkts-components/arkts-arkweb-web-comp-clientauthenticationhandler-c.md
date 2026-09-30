@@ -28,6 +28,8 @@ cancel(): void
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
+<a id="confirm1"></a>
+
 ## confirm
 
 ```TypeScript
@@ -51,7 +53,7 @@ confirm(priKeyFile: string, certChainFile: string): void
 | priKeyFile | string | 是 | 存放私钥文件的完整路径。 |
 | certChainFile | string | 是 | 存放证书链文件的完整路径。 |
 
-<a id="confirm-1"></a>
+<a id="confirm2"></a>
 
 ## confirm
 
@@ -75,7 +77,7 @@ confirm(authUri: string): void
 | --- | --- | --- | --- |
 | authUri | string | 是 | 凭据的关键值。 |
 
-<a id="confirm-2"></a>
+<a id="confirm3"></a>
 
 ## confirm
 

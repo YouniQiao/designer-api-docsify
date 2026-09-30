@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="disablenotificationfeature1"></a>
+
 ## disableNotificationFeature
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="disablenotificationfeature-1"></a>
+<a id="disablenotificationfeature2"></a>
 
 ## disableNotificationFeature
 

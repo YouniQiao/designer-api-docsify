@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="setnotificationenableslot1"></a>
+
 ## setNotificationEnableSlot
 
 ```TypeScript
@@ -73,7 +75,7 @@ notificationManager.setNotificationEnableSlot(
 ```
 
 
-<a id="setnotificationenableslot-1"></a>
+<a id="setnotificationenableslot2"></a>
 
 ## setNotificationEnableSlot
 
@@ -177,7 +179,7 @@ notificationManager.setNotificationEnableSlot(
 ```
 
 
-<a id="setnotificationenableslot-2"></a>
+<a id="setnotificationenableslot3"></a>
 
 ## setNotificationEnableSlot
 

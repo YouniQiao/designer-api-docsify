@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="getnetworksearchinformation1"></a>
+
 ## getNetworkSearchInformation
 
 ```TypeScript
@@ -58,7 +60,7 @@ radio.getNetworkSearchInformation(0, (err: BusinessError, data: radio.NetworkSea
 ```
 
 
-<a id="getnetworksearchinformation-1"></a>
+<a id="getnetworksearchinformation2"></a>
 
 ## getNetworkSearchInformation
 

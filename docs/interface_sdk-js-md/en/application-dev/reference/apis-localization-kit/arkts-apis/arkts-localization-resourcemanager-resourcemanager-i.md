@@ -91,6 +91,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="closerawfd1"></a>
+
 ## closeRawFd
 
 ```TypeScript
@@ -151,7 +153,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="closerawfd-1"></a>
+<a id="closerawfd2"></a>
 
 ## closeRawFd
 
@@ -268,6 +270,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getboolean1"></a>
+
 ## getBoolean
 
 ```TypeScript
@@ -339,7 +343,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getboolean-1"></a>
+<a id="getboolean2"></a>
 
 ## getBoolean
 
@@ -489,6 +493,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getcolor1"></a>
+
 ## getColor
 
 ```TypeScript
@@ -592,7 +598,7 @@ this.context.resourceManager.getColor(resource)
   });
 ```
 
-<a id="getcolor-1"></a>
+<a id="getcolor2"></a>
 
 ## getColor
 
@@ -664,7 +670,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getcolor-2"></a>
+<a id="getcolor3"></a>
 
 ## getColor
 
@@ -737,7 +743,7 @@ this.context.resourceManager.getColor(resource, (error: BusinessError, value: nu
 });
 ```
 
-<a id="getcolor-3"></a>
+<a id="getcolor4"></a>
 
 ## getColor
 
@@ -815,6 +821,8 @@ this.context.resourceManager.getColor(resource)
   });
 ```
 
+<a id="getcolorbyname1"></a>
+
 ## getColorByName
 
 ```TypeScript
@@ -880,7 +888,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getcolorbyname-1"></a>
+<a id="getcolorbyname2"></a>
 
 ## getColorByName
 
@@ -1023,6 +1031,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getcolorsync1"></a>
+
 ## getColorSync
 
 ```TypeScript
@@ -1094,7 +1104,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getcolorsync-1"></a>
+<a id="getcolorsync2"></a>
 
 ## getColorSync
 
@@ -1173,6 +1183,8 @@ try {
 }
 ```
 
+<a id="getconfiguration1"></a>
+
 ## getConfiguration
 
 ```TypeScript
@@ -1220,7 +1232,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getconfiguration-1"></a>
+<a id="getconfiguration2"></a>
 
 ## getConfiguration
 
@@ -1307,6 +1319,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getdevicecapability1"></a>
+
 ## getDeviceCapability
 
 ```TypeScript
@@ -1354,7 +1368,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getdevicecapability-1"></a>
+<a id="getdevicecapability2"></a>
 
 ## getDeviceCapability
 
@@ -1531,6 +1545,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getdoublepluralstringvaluesync1"></a>
+
 ## getDoublePluralStringValueSync
 
 ```TypeScript
@@ -1621,7 +1637,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getdoublepluralstringvaluesync-2"></a>
+<a id="getdoublepluralstringvaluesync3"></a>
 
 ## getDoublePluralStringValueSync
 
@@ -1639,7 +1655,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [getDoublePluralStringValueSync](#getdoublepluralstringvaluesync)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getDoublePluralStringValueSync](#getdoublepluralstringvaluesync1)(resId: number, num: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1718,6 +1734,8 @@ try {
 }
 ```
 
+<a id="getdrawabledescriptor1"></a>
+
 ## getDrawableDescriptor
 
 ```TypeScript
@@ -1793,7 +1811,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getdrawabledescriptor-1"></a>
+<a id="getdrawabledescriptor2"></a>
 
 ## getDrawableDescriptor
 
@@ -2039,6 +2057,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getintpluralstringvaluesync1"></a>
+
 ## getIntPluralStringValueSync
 
 ```TypeScript
@@ -2129,7 +2149,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getintpluralstringvaluesync-2"></a>
+<a id="getintpluralstringvaluesync3"></a>
 
 ## getIntPluralStringValueSync
 
@@ -2147,7 +2167,7 @@ Obtains the [plural](../../../internationalization/l10n-singular-plural.md) stri
 
 **Deprecated since:** 20
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -2296,6 +2316,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabase64byname1"></a>
+
 ## getMediaBase64ByName
 
 ```TypeScript
@@ -2353,7 +2375,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabase64byname-1"></a>
+<a id="getmediabase64byname2"></a>
 
 ## getMediaBase64ByName
 
@@ -2413,7 +2435,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabase64byname-2"></a>
+<a id="getmediabase64byname3"></a>
 
 ## getMediaBase64ByName
 
@@ -2475,7 +2497,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabase64byname-3"></a>
+<a id="getmediabase64byname4"></a>
 
 ## getMediaBase64ByName
 
@@ -2604,6 +2626,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getmediabyname1"></a>
+
 ## getMediaByName
 
 ```TypeScript
@@ -2661,7 +2685,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabyname-1"></a>
+<a id="getmediabyname2"></a>
 
 ## getMediaByName
 
@@ -2721,7 +2745,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabyname-2"></a>
+<a id="getmediabyname3"></a>
 
 ## getMediaByName
 
@@ -2783,7 +2807,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediabyname-3"></a>
+<a id="getmediabyname4"></a>
 
 ## getMediaByName
 
@@ -2912,7 +2936,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontent-4"></a>
+<a id="getmediacontent5"></a>
 
 ## getMediaContent
 
@@ -2972,7 +2996,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontent-5"></a>
+<a id="getmediacontent6"></a>
 
 ## getMediaContent
 
@@ -3032,7 +3056,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontent-6"></a>
+<a id="getmediacontent7"></a>
 
 ## getMediaContent
 
@@ -3094,7 +3118,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontent-7"></a>
+<a id="getmediacontent8"></a>
 
 ## getMediaContent
 
@@ -3156,6 +3180,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getmediacontent1"></a>
 
 ## getMediaContent
 
@@ -3220,7 +3246,7 @@ try {
 }
 ```
 
-<a id="getmediacontent-1"></a>
+<a id="getmediacontent2"></a>
 
 ## getMediaContent
 
@@ -3286,7 +3312,7 @@ try {
 }
 ```
 
-<a id="getmediacontent-2"></a>
+<a id="getmediacontent3"></a>
 
 ## getMediaContent
 
@@ -3354,7 +3380,7 @@ try {
 }
 ```
 
-<a id="getmediacontent-3"></a>
+<a id="getmediacontent4"></a>
 
 ## getMediaContent
 
@@ -3423,7 +3449,7 @@ try {
 }
 ```
 
-<a id="getmediacontentbase64-4"></a>
+<a id="getmediacontentbase645"></a>
 
 ## getMediaContentBase64
 
@@ -3482,7 +3508,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontentbase64-5"></a>
+<a id="getmediacontentbase646"></a>
 
 ## getMediaContentBase64
 
@@ -3542,7 +3568,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontentbase64-6"></a>
+<a id="getmediacontentbase647"></a>
 
 ## getMediaContentBase64
 
@@ -3604,7 +3630,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontentbase64-7"></a>
+<a id="getmediacontentbase648"></a>
 
 ## getMediaContentBase64
 
@@ -3666,6 +3692,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getmediacontentbase641"></a>
 
 ## getMediaContentBase64
 
@@ -3730,7 +3758,7 @@ try {
 }
 ```
 
-<a id="getmediacontentbase64-1"></a>
+<a id="getmediacontentbase642"></a>
 
 ## getMediaContentBase64
 
@@ -3796,7 +3824,7 @@ try {
 }
 ```
 
-<a id="getmediacontentbase64-2"></a>
+<a id="getmediacontentbase643"></a>
 
 ## getMediaContentBase64
 
@@ -3864,7 +3892,7 @@ try {
 }
 ```
 
-<a id="getmediacontentbase64-3"></a>
+<a id="getmediacontentbase644"></a>
 
 ## getMediaContentBase64
 
@@ -3933,6 +3961,8 @@ try {
 }
 ```
 
+<a id="getmediacontentbase64sync1"></a>
+
 ## getMediaContentBase64Sync
 
 ```TypeScript
@@ -3999,7 +4029,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontentbase64sync-1"></a>
+<a id="getmediacontentbase64sync2"></a>
 
 ## getMediaContentBase64Sync
 
@@ -4072,6 +4102,8 @@ try {
 }
 ```
 
+<a id="getmediacontentsync1"></a>
+
 ## getMediaContentSync
 
 ```TypeScript
@@ -4138,7 +4170,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getmediacontentsync-1"></a>
+<a id="getmediacontentsync2"></a>
 
 ## getMediaContentSync
 
@@ -4210,6 +4242,8 @@ try {
   console.error(`getMediaContentSync failed, error code: ${code}, message: ${message}.`);
 }
 ```
+
+<a id="getnumber1"></a>
 
 ## getNumber
 
@@ -4308,7 +4342,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getnumber-1"></a>
+<a id="getnumber2"></a>
 
 ## getNumber
 
@@ -4322,7 +4356,7 @@ Obtains an integer or float number based on the specified resource object. This 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getNumber](#getnumber)(resId: number)
+**Substitutes:** [getNumber](#getnumber1)(resId: number)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -4591,6 +4625,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getrawfd1"></a>
+
 ## getRawFd
 
 ```TypeScript
@@ -4602,7 +4638,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 > **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
-> [closeRawFd](#closerawfd)
+> [closeRawFd](#closerawfd1)
 > to close the fd after use.
 
 **Since:** 9
@@ -4658,7 +4694,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getrawfd-1"></a>
+<a id="getrawfd2"></a>
 
 ## getRawFd
 
@@ -4671,7 +4707,7 @@ Obtains the file descriptor (fd) of the HAP where a specific rawfile in the **re
 > **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
-> [closeRawFd](#closerawfd)
+> [closeRawFd](#closerawfd1)
 > to close the fd after use.
 
 **Since:** 9
@@ -4741,7 +4777,7 @@ Obtains the file descriptor (fd) of the HAP where the rawfile file in the resour
 > **NOTE:** 
 > 
 > To prevent resource leakage, call [closeRawFdSync](#closerawfdsync) or
-> [closeRawFd](#closerawfd)
+> [closeRawFd](#closerawfd1)
 > to close the fd after use.
 
 **Since:** 10
@@ -4792,6 +4828,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getrawfilecontent1"></a>
 
 ## getRawFileContent
 
@@ -4851,7 +4889,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getrawfilecontent-1"></a>
+<a id="getrawfilecontent2"></a>
 
 ## getRawFileContent
 
@@ -4971,6 +5009,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getrawfilelist1"></a>
+
 ## getRawFileList
 
 ```TypeScript
@@ -5028,7 +5068,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getrawfilelist-1"></a>
+<a id="getrawfilelist2"></a>
 
 ## getRawFileList
 
@@ -5225,6 +5265,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getstringarraybyname1"></a>
+
 ## getStringArrayByName
 
 ```TypeScript
@@ -5295,7 +5337,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringarraybyname-1"></a>
+<a id="getstringarraybyname2"></a>
 
 ## getStringArrayByName
 
@@ -5446,7 +5488,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringarrayvalue-2"></a>
+<a id="getstringarrayvalue3"></a>
 
 ## getStringArrayValue
 
@@ -5518,7 +5560,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringarrayvalue-3"></a>
+<a id="getstringarrayvalue4"></a>
 
 ## getStringArrayValue
 
@@ -5593,6 +5635,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringarrayvalue1"></a>
 
 ## getStringArrayValue
 
@@ -5669,7 +5713,7 @@ this.context.resourceManager.getStringArrayValue(resource, (error: BusinessError
 });
 ```
 
-<a id="getstringarrayvalue-1"></a>
+<a id="getstringarrayvalue2"></a>
 
 ## getStringArrayValue
 
@@ -5751,6 +5795,8 @@ this.context.resourceManager.getStringArrayValue(resource)
   });
 ```
 
+<a id="getstringarrayvaluesync1"></a>
+
 ## getStringArrayValueSync
 
 ```TypeScript
@@ -5826,7 +5872,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringarrayvaluesync-1"></a>
+<a id="getstringarrayvaluesync2"></a>
 
 ## getStringArrayValueSync
 
@@ -5909,6 +5955,8 @@ try {
 }
 ```
 
+<a id="getstringbyname1"></a>
+
 ## getStringByName
 
 ```TypeScript
@@ -5974,7 +6022,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringbyname-1"></a>
+<a id="getstringbyname2"></a>
 
 ## getStringByName
 
@@ -6043,6 +6091,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringbynamesync1"></a>
 
 ## getStringByNameSync
 
@@ -6115,7 +6165,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringbynamesync-1"></a>
+<a id="getstringbynamesync2"></a>
 
 ## getStringByNameSync
 
@@ -6190,6 +6240,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getstringsync1"></a>
+
 ## getStringSync
 
 ```TypeScript
@@ -6261,7 +6313,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringsync-1"></a>
+<a id="getstringsync2"></a>
 
 ## getStringSync
 
@@ -6336,7 +6388,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getstringsync-3"></a>
+<a id="getstringsync4"></a>
 
 ## getStringSync
 
@@ -6415,7 +6467,7 @@ try {
 }
 ```
 
-<a id="getstringsync-4"></a>
+<a id="getstringsync5"></a>
 
 ## getStringSync
 
@@ -6429,7 +6481,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getStringSync](#getstringsync2)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -6496,7 +6548,7 @@ try {
 }
 ```
 
-<a id="getstringvalue-2"></a>
+<a id="getstringvalue3"></a>
 
 ## getStringValue
 
@@ -6580,7 +6632,7 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 });
 ```
 
-<a id="getstringvalue-3"></a>
+<a id="getstringvalue4"></a>
 
 ## getStringValue
 
@@ -6649,6 +6701,8 @@ export default class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<a id="getstringvalue1"></a>
 
 ## getStringValue
 
@@ -6721,7 +6775,7 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 });
 ```
 
-<a id="getstringvalue-1"></a>
+<a id="getstringvalue2"></a>
 
 ## getStringValue
 
@@ -6787,6 +6841,8 @@ this.context.resourceManager.getStringValue(resource, (error: BusinessError, val
 });
 ```
 
+<a id="getsymbol1"></a>
+
 ## getSymbol
 
 ```TypeScript
@@ -6846,7 +6902,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="getsymbol-1"></a>
+<a id="getsymbol2"></a>
 
 ## getSymbol
 
@@ -7145,6 +7201,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="closerawfiledescriptor1"></a>
+
 ## closeRawFileDescriptor
 
 ```TypeScript
@@ -7157,7 +7215,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](#closerawfd)(path: string, callback: _AsyncCallback&lt;void&gt;)
+**Substitutes:** [closeRawFd](#closerawfd1)(path: string, callback: _AsyncCallback&lt;void&gt;)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void-End-->
 
@@ -7186,7 +7244,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="closerawfiledescriptor-1"></a>
+<a id="closerawfiledescriptor2"></a>
 
 ## closeRawFileDescriptor
 
@@ -7200,7 +7258,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](#closerawfd-1)(path: string)
+**Substitutes:** [closeRawFd](#closerawfd2)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -7229,6 +7287,8 @@ resourceManager.getResourceManager((error, mgr) => {
     mgr.closeRawFileDescriptor("test.txt");
 });
 ```
+
+<a id="getmedia1"></a>
 
 ## getMedia
 
@@ -7269,7 +7329,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getmedia-1"></a>
+<a id="getmedia2"></a>
 
 ## getMedia
 
@@ -7315,6 +7375,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getmediabase641"></a>
+
 ## getMediaBase64
 
 ```TypeScript
@@ -7354,7 +7416,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getmediabase64-1"></a>
+<a id="getmediabase642"></a>
 
 ## getMediaBase64
 
@@ -7400,6 +7462,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getpluralstring1"></a>
+
 ## getPluralString
 
 ```TypeScript
@@ -7417,7 +7481,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getpluralstringvalue-2)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue3)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -7447,7 +7511,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getpluralstring-1"></a>
+<a id="getpluralstring2"></a>
 
 ## getPluralString
 
@@ -7466,7 +7530,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getpluralstringvalue-3)(resId: number, num: number)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue4)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -7498,6 +7562,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getpluralstringbyname1"></a>
 
 ## getPluralStringByName
 
@@ -7579,7 +7645,7 @@ this.context.resourceManager.getPluralStringByName("test", 1, (error: BusinessEr
 });
 ```
 
-<a id="getpluralstringbyname-1"></a>
+<a id="getpluralstringbyname2"></a>
 
 ## getPluralStringByName
 
@@ -7752,6 +7818,8 @@ try {
 }
 ```
 
+<a id="getpluralstringvalue1"></a>
+
 ## getPluralStringValue
 
 ```TypeScript
@@ -7769,7 +7837,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7841,7 +7909,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1,
   });
 ```
 
-<a id="getpluralstringvalue-1"></a>
+<a id="getpluralstringvalue2"></a>
 
 ## getPluralStringValue
 
@@ -7860,7 +7928,7 @@ Obtains the plural string based on the specified resource information and the sp
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7936,7 +8004,7 @@ this.context.resourceManager.getPluralStringValue(resource, 1)
   });
 ```
 
-<a id="getpluralstringvalue-2"></a>
+<a id="getpluralstringvalue3"></a>
 
 ## getPluralStringValue
 
@@ -7955,7 +8023,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8019,7 +8087,7 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1,
   });
 ```
 
-<a id="getpluralstringvalue-3"></a>
+<a id="getpluralstringvalue4"></a>
 
 ## getPluralStringValue
 
@@ -8038,7 +8106,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8106,6 +8174,8 @@ this.context.resourceManager.getPluralStringValue($r("app.plural.test").id, 1)
   });
 ```
 
+<a id="getpluralstringvaluesync1"></a>
+
 ## getPluralStringValueSync
 
 ```TypeScript
@@ -8123,7 +8193,7 @@ Obtains singular/plural strings based on the specified resource ID and quantity.
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -8192,7 +8262,7 @@ try {
 }
 ```
 
-<a id="getpluralstringvaluesync-1"></a>
+<a id="getpluralstringvaluesync2"></a>
 
 ## getPluralStringValueSync
 
@@ -8211,7 +8281,7 @@ Obtains singular/plural strings based on the specified quantity and resource obj
 
 **Deprecated since:** 18
 
-**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync)(resId: number, num: number,...args: Array&lt;string | number&gt;)
+**Substitutes:** [getIntPluralStringValueSync](#getintpluralstringvaluesync1)(resId: number, num: number,...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -8288,6 +8358,8 @@ try {
 }
 ```
 
+<a id="getrawfile1"></a>
+
 ## getRawFile
 
 ```TypeScript
@@ -8300,7 +8372,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
+**Substitutes:** [getRawFileContent](#getrawfilecontent1)(path: string, callback: _AsyncCallback&lt;Uint8Array&gt;)
 
 <!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void-End-->
 
@@ -8331,7 +8403,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getrawfile-1"></a>
+<a id="getrawfile2"></a>
 
 ## getRawFile
 
@@ -8345,7 +8417,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](#getrawfilecontent-1)(path: string)
+**Substitutes:** [getRawFileContent](#getrawfilecontent2)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -8379,6 +8451,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getrawfiledescriptor1"></a>
+
 ## getRawFileDescriptor
 
 ```TypeScript
@@ -8391,7 +8465,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](#getrawfd)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
+**Substitutes:** [getRawFd](#getrawfd1)(path: string, callback: _AsyncCallback&lt;RawFileDescriptor&gt;)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -8424,7 +8498,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getrawfiledescriptor-1"></a>
+<a id="getrawfiledescriptor2"></a>
 
 ## getRawFileDescriptor
 
@@ -8438,7 +8512,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](#getrawfd-1)(path: string)
+**Substitutes:** [getRawFd](#getrawfd2)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -8473,6 +8547,8 @@ resourceManager.getResourceManager((error, mgr) => {
     });
 });
 ```
+
+<a id="getstring1"></a>
 
 ## getString
 
@@ -8513,7 +8589,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getstring-1"></a>
+<a id="getstring2"></a>
 
 ## getString
 
@@ -8559,6 +8635,8 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
+<a id="getstringarray1"></a>
+
 ## getStringArray
 
 ```TypeScript
@@ -8598,7 +8676,7 @@ resourceManager.getResourceManager((error, mgr) => {
 });
 ```
 
-<a id="getstringarray-1"></a>
+<a id="getstringarray2"></a>
 
 ## getStringArray
 

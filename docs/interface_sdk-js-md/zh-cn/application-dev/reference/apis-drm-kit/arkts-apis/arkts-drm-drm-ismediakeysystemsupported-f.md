@@ -6,6 +6,8 @@
 import { drm } from '@kit.DrmKit';
 ```
 
+<a id="ismediakeysystemsupported1"></a>
+
 ## isMediaKeySystemSupported
 
 ```TypeScript
@@ -54,7 +56,7 @@ console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
-<a id="ismediakeysystemsupported-1"></a>
+<a id="ismediakeysystemsupported2"></a>
 
 ## isMediaKeySystemSupported
 
@@ -103,7 +105,7 @@ console.info("isMediaKeySystemSupported: ", supported);
 ```
 
 
-<a id="ismediakeysystemsupported-2"></a>
+<a id="ismediakeysystemsupported3"></a>
 
 ## isMediaKeySystemSupported
 

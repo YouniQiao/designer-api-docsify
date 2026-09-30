@@ -6,6 +6,8 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
+<a id="create1"></a>
+
 ## create
 
 ```TypeScript
@@ -48,7 +50,7 @@ function create(context: BaseContext, config: Config, callback: AsyncCallback<Ta
 | [21900005](../errorcode-request.md#21900005-任务模式错误) | Operation with wrong task mode. |
 
 
-<a id="create-1"></a>
+<a id="create2"></a>
 
 ## create
 

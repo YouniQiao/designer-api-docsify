@@ -20,6 +20,8 @@ Implements wakeup intelligent voice engine. @typedef WakeupIntelligentVoiceEngin
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
+<a id="getparameter1"></a>
+
 ## getParameter
 
 ```TypeScript
@@ -71,7 +73,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="getparameter-1"></a>
+<a id="getparameter2"></a>
 
 ## getParameter
 
@@ -175,6 +177,8 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="getsupportedregions1"></a>
+
 ## getSupportedRegions
 
 ```TypeScript
@@ -223,7 +227,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="getsupportedregions-1"></a>
+<a id="getsupportedregions2"></a>
 
 ## getSupportedRegions
 
@@ -404,6 +408,8 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -451,7 +457,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -497,6 +503,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setparameter1"></a>
 
 ## setParameter
 
@@ -549,7 +557,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setparameter-1"></a>
+<a id="setparameter2"></a>
 
 ## setParameter
 
@@ -605,6 +613,8 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="setsensibility1"></a>
+
 ## setSensibility
 
 ```TypeScript
@@ -655,7 +665,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setsensibility-1"></a>
+<a id="setsensibility2"></a>
 
 ## setSensibility
 
@@ -709,6 +719,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setwakeuphapinfo1"></a>
 
 ## setWakeupHapInfo
 
@@ -765,7 +777,7 @@ if (wakeupIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setwakeuphapinfo-1"></a>
+<a id="setwakeuphapinfo2"></a>
 
 ## setWakeupHapInfo
 

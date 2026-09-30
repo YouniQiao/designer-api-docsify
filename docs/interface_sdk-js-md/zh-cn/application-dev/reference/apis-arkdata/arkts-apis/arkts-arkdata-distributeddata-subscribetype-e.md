@@ -10,7 +10,7 @@ enum SubscribeType
 
 **废弃版本：** 9
 
-**替代接口：** SubscribeType
+**替代接口：** [SubscribeType](arkts-arkdata-distributedkvstore-subscribetype-e.md)
 
 <!--Device-distributedData-enum SubscribeType--><!--Device-distributedData-enum SubscribeType-End-->
 
@@ -28,7 +28,7 @@ SUBSCRIBE_TYPE_LOCAL = 0
 
 **废弃版本：** 9
 
-**替代接口：** SUBSCRIBE_TYPE_LOCAL
+**替代接口：** [SUBSCRIBE_TYPE_LOCAL](arkts-arkdata-distributedkvstore-subscribetype-e.md#subscribe_type_local)
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0--><!--Device-SubscribeType-SUBSCRIBE_TYPE_LOCAL = 0-End-->
 
@@ -46,7 +46,7 @@ SUBSCRIBE_TYPE_REMOTE = 1
 
 **废弃版本：** 9
 
-**替代接口：** SUBSCRIBE_TYPE_REMOTE
+**替代接口：** [SUBSCRIBE_TYPE_REMOTE](arkts-arkdata-distributedkvstore-subscribetype-e.md#subscribe_type_remote)
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1--><!--Device-SubscribeType-SUBSCRIBE_TYPE_REMOTE = 1-End-->
 
@@ -64,7 +64,7 @@ SUBSCRIBE_TYPE_ALL = 2
 
 **废弃版本：** 9
 
-**替代接口：** SUBSCRIBE_TYPE_ALL
+**替代接口：** [SUBSCRIBE_TYPE_ALL](arkts-arkdata-distributedkvstore-subscribetype-e.md#subscribe_type_all)
 
 <!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2--><!--Device-SubscribeType-SUBSCRIBE_TYPE_ALL = 2-End-->
 

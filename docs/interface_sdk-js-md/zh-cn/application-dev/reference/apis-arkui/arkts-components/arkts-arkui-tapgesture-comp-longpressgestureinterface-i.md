@@ -10,13 +10,15 @@ interface LongPressGestureInterface extends GestureInterface<LongPressGestureInt
 > 
 > 从API version 18开始，部分设备会优先响应系统的双指长按手势，导致应用的双指长按手势不生效。
 
-**继承/实现关系：** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
+**继承/实现关系：** LongPressGestureInterface extends GestureInterface&lt;LongPressGestureInterface&gt;
 
 **起始版本：** 7
 
 <!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>--><!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -52,7 +54,7 @@ interface LongPressGestureInterface extends GestureInterface<LongPressGestureInt
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 
@@ -118,6 +120,8 @@ onAction(event: (event: GestureEvent) => void): LongPressGestureInterface
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -146,7 +150,7 @@ onActionCancel(event: () => void): LongPressGestureInterface
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 

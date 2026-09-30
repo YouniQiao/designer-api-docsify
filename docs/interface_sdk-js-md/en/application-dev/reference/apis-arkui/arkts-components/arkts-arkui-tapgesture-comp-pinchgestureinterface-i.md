@@ -11,13 +11,15 @@ interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 > To trigger the pinch gesture again after successful recognition, all fingers must be lifted and then make
 > contact again to satisfy the recognition criteria.
 
-**Inheritance/Implementation:** PinchGestureInterface extends GestureInterface<PinchGestureInterface>
+**Inheritance/Implementation:** PinchGestureInterface extends GestureInterface&lt;PinchGestureInterface&gt;
 
 **Since:** 7
 
 <!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>--><!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -47,7 +49,7 @@ Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 
@@ -79,6 +81,8 @@ Sets the parameters for the pinch gesture. Compared with PinchGesture)}, this AP
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -107,7 +111,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 
@@ -115,7 +119,7 @@ Triggered when a touch cancellation event occurs after successful pinch gesture 
 onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
-Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with [onActionCancel](#onactioncancel), this callback returns gesture event information.
+Triggered when a touch cancellation event occurs after successful pinch gesture recognition. Compared with [onActionCancel](#onactioncancel1), this callback returns gesture event information.
 
 **Since:** 18
 

@@ -113,6 +113,8 @@ getGlyphCount(): number
 let glyphs = runs[0].getGlyphCount();
 ```
 
+<a id="getglyphs1"></a>
+
 ## getGlyphs
 
 ```TypeScript
@@ -141,7 +143,7 @@ getGlyphs(): Array<number>
 let glyph = runs[0].getGlyphs();
 ```
 
-<a id="getglyphs-1"></a>
+<a id="getglyphs2"></a>
 
 ## getGlyphs
 
@@ -265,6 +267,8 @@ getOffsets(): Array<common2D.Point>
 let offsets = runs[0].getOffsets();
 ```
 
+<a id="getpositions1"></a>
+
 ## getPositions
 
 ```TypeScript
@@ -293,7 +297,7 @@ getPositions(): Array<common2D.Point>
 let positions = runs[0].getPositions();
 ```
 
-<a id="getpositions-1"></a>
+<a id="getpositions2"></a>
 
 ## getPositions
 

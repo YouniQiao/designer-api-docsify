@@ -6,6 +6,8 @@
 import { appControl } from '@kit.AbilityKit';
 ```
 
+<a id="setdisposedstatus1"></a>
+
 ## setDisposedStatus
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="setdisposedstatus-1"></a>
+<a id="setdisposedstatus2"></a>
 
 ## setDisposedStatus
 

@@ -6,6 +6,8 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
+<a id="sendscreenlockevent1"></a>
+
 ## sendScreenLockEvent
 
 ```TypeScript
@@ -56,7 +58,7 @@ screenLock.sendScreenLockEvent('unlockScreenResult', 0, (err: BusinessError, res
 ```
 
 
-<a id="sendscreenlockevent-1"></a>
+<a id="sendscreenlockevent2"></a>
 
 ## sendScreenLockEvent
 

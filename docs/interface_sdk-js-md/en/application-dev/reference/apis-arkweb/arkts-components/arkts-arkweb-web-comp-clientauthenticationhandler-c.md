@@ -28,6 +28,8 @@ Cancel this certificate request.
 
 **System capability:** SystemCapability.Web.Webview.Core
 
+<a id="confirm1"></a>
+
 ## confirm
 
 ```TypeScript
@@ -51,7 +53,7 @@ Uses the specified private key and client certificate chain.
 | priKeyFile | string | Yes | Full path for storing the private key file. |
 | certChainFile | string | Yes | Full path for storing the certificate chain file. |
 
-<a id="confirm-1"></a>
+<a id="confirm2"></a>
 
 ## confirm
 
@@ -75,7 +77,7 @@ Instructs the **Web** component to use the specified credentials (obtained from 
 | --- | --- | --- | --- |
 | authUri | string | Yes | Key value of the credentials. |
 
-<a id="confirm-2"></a>
+<a id="confirm3"></a>
 
 ## confirm
 

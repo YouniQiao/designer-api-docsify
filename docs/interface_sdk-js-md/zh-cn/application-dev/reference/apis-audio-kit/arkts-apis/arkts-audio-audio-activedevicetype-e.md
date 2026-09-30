@@ -32,7 +32,7 @@ SPEAKER = 2
 
 **废弃版本：** 9
 
-**替代接口：** SPEAKER
+**替代接口：** [SPEAKER](arkts-audio-audio-communicationdevicetype-e.md#speaker)
 
 <!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
@@ -50,7 +50,7 @@ BLUETOOTH_SCO = 7
 
 **废弃版本：** 9
 
-**替代接口：** BLUETOOTH_SCO
+**替代接口：** [BLUETOOTH_SCO](arkts-audio-audio-devicetype-e.md#bluetooth_sco)
 
 <!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
 

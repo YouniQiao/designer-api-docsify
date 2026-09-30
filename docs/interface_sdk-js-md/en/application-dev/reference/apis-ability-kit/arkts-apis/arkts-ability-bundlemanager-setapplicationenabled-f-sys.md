@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="setapplicationenabled1"></a>
+
 ## setApplicationEnabled
 
 ```TypeScript
@@ -70,7 +72,7 @@ try {
 ```
 
 
-<a id="setapplicationenabled-1"></a>
+<a id="setapplicationenabled2"></a>
 
 ## setApplicationEnabled
 
@@ -144,7 +146,7 @@ try {
 ```
 
 
-<a id="setapplicationenabled-2"></a>
+<a id="setapplicationenabled3"></a>
 
 ## setApplicationEnabled
 
@@ -205,7 +207,7 @@ try {
 ```
 
 
-<a id="setapplicationenabled-3"></a>
+<a id="setapplicationenabled4"></a>
 
 ## setApplicationEnabled
 

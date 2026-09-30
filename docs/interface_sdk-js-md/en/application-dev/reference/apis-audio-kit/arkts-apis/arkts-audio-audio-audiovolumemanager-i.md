@@ -206,6 +206,8 @@ try {
 }
 ```
 
+<a id="getvolumegroupmanager1"></a>
+
 ## getVolumeGroupManager
 
 ```TypeScript
@@ -245,7 +247,7 @@ audioVolumeManager.getVolumeGroupManager(groupId, (err: BusinessError, value: au
 });
 ```
 
-<a id="getvolumegroupmanager-1"></a>
+<a id="getvolumegroupmanager2"></a>
 
 ## getVolumeGroupManager
 

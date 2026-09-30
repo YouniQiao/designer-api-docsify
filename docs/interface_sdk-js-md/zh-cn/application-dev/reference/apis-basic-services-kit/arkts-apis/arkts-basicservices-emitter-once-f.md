@@ -6,6 +6,8 @@
 import { emitter } from '@kit.BasicServicesKit';
 ```
 
+<a id="once1"></a>
+
 ## once
 
 ```TypeScript
@@ -46,7 +48,7 @@ emitter.once(innerEvent, callback);
 ```
 
 
-<a id="once-1"></a>
+<a id="once2"></a>
 
 ## once
 
@@ -84,7 +86,7 @@ emitter.once('eventId', callback);
 ```
 
 
-<a id="once-2"></a>
+<a id="once3"></a>
 
 ## once
 

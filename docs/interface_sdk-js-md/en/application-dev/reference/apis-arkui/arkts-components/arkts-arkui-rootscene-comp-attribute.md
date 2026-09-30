@@ -8,7 +8,7 @@ Defines the attribute functions of RootScene.
 
 @extends CommonMethod&lt;RootSceneAttribute&gt;
 
-**Inheritance/Implementation:** RootSceneAttribute extends CommonMethod<RootSceneAttribute>
+**Inheritance/Implementation:** RootSceneAttribute extends CommonMethod&lt;RootSceneAttribute&gt;
 
 **Since:** 10
 

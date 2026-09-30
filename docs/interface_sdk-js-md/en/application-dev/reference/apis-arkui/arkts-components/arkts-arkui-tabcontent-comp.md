@@ -4,7 +4,7 @@ The **TabContent** component is used only in the **Tabs** component. It correspo
 
 > **NOTE:** 
 
-> - By default, the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) attribute of this component is set to **true**.If you want to extend the content area to the outside of the component, disable the **clip** attribute first.
+> - By default, the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip1) attribute of this component is set to **true**.If you want to extend the content area to the outside of the component, disable the **clip** attribute first.
 
 ## Child Components
 

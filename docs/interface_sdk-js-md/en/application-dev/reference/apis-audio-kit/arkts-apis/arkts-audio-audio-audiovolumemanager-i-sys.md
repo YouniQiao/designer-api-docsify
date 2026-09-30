@@ -523,6 +523,8 @@ try {
 }
 ```
 
+<a id="getvolumegroupinfos1"></a>
+
 ## getVolumeGroupInfos
 
 ```TypeScript
@@ -560,7 +562,7 @@ audioVolumeManager.getVolumeGroupInfos(audio.LOCAL_NETWORK_ID, (err: BusinessErr
 });
 ```
 
-<a id="getvolumegroupinfos-1"></a>
+<a id="getvolumegroupinfos2"></a>
 
 ## getVolumeGroupInfos
 

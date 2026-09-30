@@ -6,6 +6,8 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
+<a id="addiptablesfilterrule1"></a>
+
 ## addIptablesFilterRule
 
 ```TypeScript
@@ -79,7 +81,7 @@ networkManager.addIptablesFilterRule(wantTemp, filterRule, (err) => {
 ```
 
 
-<a id="addiptablesfilterrule-1"></a>
+<a id="addiptablesfilterrule2"></a>
 
 ## addIptablesFilterRule
 

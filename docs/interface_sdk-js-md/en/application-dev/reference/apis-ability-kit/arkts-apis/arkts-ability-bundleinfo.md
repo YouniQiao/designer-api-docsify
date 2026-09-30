@@ -1,7 +1,7 @@
 # BundleInfo
 
 The module defines the bundle information. An application can obtain its own bundle information through
- [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
+ [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself1)
  , with [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md) set to the information to be
  contained in the returned [BundleInfo](arkts-ability-bundleinfo-i.md).
 

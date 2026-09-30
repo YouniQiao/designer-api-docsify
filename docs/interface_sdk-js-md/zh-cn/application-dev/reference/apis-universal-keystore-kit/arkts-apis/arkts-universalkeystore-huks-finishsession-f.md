@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="finishsession1"></a>
+
 ## finishSession
 
 ```TypeScript
@@ -61,7 +63,7 @@ huks.initSession、huks.updateSession、huks.finishSession为三段式接口，�
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 
-<a id="finishsession-1"></a>
+<a id="finishsession2"></a>
 
 ## finishSession
 
@@ -116,7 +118,7 @@ Finishes the key operation. This API uses an asynchronous callback to return the
 | [12000026](../errorcode-huks.md#12000026-安全元件故障) | the secure element is not available<br>**适用版本：** 26.0.0+ |
 
 
-<a id="finishsession-2"></a>
+<a id="finishsession3"></a>
 
 ## finishSession
 

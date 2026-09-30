@@ -42,6 +42,8 @@ A constructor used to create a **Download** instance.
 let download = new cloudSync.Download()
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -90,7 +92,7 @@ download.on('progress', callback);
 download.off('progress', callback);
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -181,6 +183,8 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
 });
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -240,7 +244,7 @@ download.start(uri).then(() => {
 });
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -293,6 +297,8 @@ download.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<a id="stop1"></a>
 
 ## stop
 
@@ -352,7 +358,7 @@ download.stop(uri).then(() => {
 });
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

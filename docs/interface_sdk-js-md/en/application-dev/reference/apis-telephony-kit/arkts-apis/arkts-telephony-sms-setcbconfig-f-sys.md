@@ -6,6 +6,8 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
+<a id="setcbconfig1"></a>
+
 ## setCBConfig
 
 ```TypeScript
@@ -62,7 +64,7 @@ sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
 ```
 
 
-<a id="setcbconfig-1"></a>
+<a id="setcbconfig2"></a>
 
 ## setCBConfig
 

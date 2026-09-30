@@ -6,6 +6,8 @@
 import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 ```
 
+<a id="showactionmenu1"></a>
+
 ## showActionMenu
 
 ```TypeScript
@@ -24,7 +26,7 @@ function showActionMenu(options: ActionMenuOptions, callback: AsyncCallback<Acti
 
 **废弃版本：** 18
 
-**替代接口：** showActionMenu
+**替代接口：** [showActionMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -179,7 +181,7 @@ struct Index {
 ```
 
 
-<a id="showactionmenu-1"></a>
+<a id="showactionmenu2"></a>
 
 ## showActionMenu
 
@@ -199,7 +201,7 @@ function showActionMenu(options: ActionMenuOptions): Promise<ActionMenuSuccessRe
 
 **废弃版本：** 18
 
-**替代接口：** showActionMenu
+**替代接口：** [showActionMenu](arkts-arkui-arkui-uicontext-promptaction-c.md#showactionmenu)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

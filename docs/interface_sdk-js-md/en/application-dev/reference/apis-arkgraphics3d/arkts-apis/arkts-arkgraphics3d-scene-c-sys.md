@@ -12,7 +12,7 @@ Describes a scene.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-<a id="load-1"></a>
+<a id="load2"></a>
 
 ## load
 

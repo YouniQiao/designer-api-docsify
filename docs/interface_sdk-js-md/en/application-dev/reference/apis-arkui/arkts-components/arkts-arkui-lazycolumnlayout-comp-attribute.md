@@ -6,7 +6,7 @@ export declare class LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLa
 
 Defines the lazy column layout attribute.
 
-**Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod<LazyColumnLayoutAttribute>
+**Inheritance/Implementation:** LazyColumnLayoutAttribute extends CommonMethod&lt;LazyColumnLayoutAttribute&gt;
 
 **Since:** 26.0.0
 

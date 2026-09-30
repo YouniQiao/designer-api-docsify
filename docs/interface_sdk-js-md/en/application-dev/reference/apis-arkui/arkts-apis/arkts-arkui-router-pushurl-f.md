@@ -6,6 +6,8 @@
 import { router } from '@kit.ArkUI';
 ```
 
+<a id="pushurl1"></a>
+
 ## pushUrl
 
 ```TypeScript
@@ -22,7 +24,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl1)(options: router.RouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -82,7 +84,7 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-1"></a>
+<a id="pushurl2"></a>
 
 ## pushUrl
 
@@ -100,7 +102,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-1)(options: router.RouterOptions)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl2)(options: router.RouterOptions)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -167,7 +169,7 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-2"></a>
+<a id="pushurl3"></a>
 
 ## pushUrl
 
@@ -185,7 +187,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-2)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl3)(options: router.RouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -246,7 +248,7 @@ router.pushUrl({
 ```
 
 
-<a id="pushurl-3"></a>
+<a id="pushurl4"></a>
 
 ## pushUrl
 
@@ -264,7 +266,7 @@ Navigates to a specified page in the application.
 
 **Deprecated since:** 18
 
-**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl-3)(options: router.RouterOptions, mode: router.RouterMode)
+**Substitutes:** [pushUrl](arkts-arkui-arkui-uicontext-router-c.md#pushurl4)(options: router.RouterOptions, mode: router.RouterMode)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

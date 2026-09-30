@@ -79,6 +79,8 @@ atManager.getPermissionFlags(tokenID, 'ohos.permission.GRANT_SENSITIVE_PERMISSIO
 });
 ```
 
+<a id="getpermissionrequesttogglestatus1"></a>
+
 ## getPermissionRequestToggleStatus
 
 ```TypeScript
@@ -120,7 +122,7 @@ Obtains the toggle state of a permission. This API uses a promise to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName exceeds 256 characters, or the specified permission is not a user_grant permission. |
 | [12100003](../errorcode-access-token.md#12100003-permission-not-exist) | The specified permission does not exist. |
-| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | This API must be used together with [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus).<br>**Applicable version:** 26.0.1 and later |
+| [12100004](../errorcode-access-token.md#12100004-listener-apis-not-used-in-pairs) | This API must be used together with [setPermissionRequestToggleStatus](#setpermissionrequesttogglestatus1).<br>**Applicable version:** 26.0.1 and later |
 | [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
 
 **Examples**
@@ -143,7 +145,7 @@ atManager.getPermissionRequestToggleStatus(permission).then((res: abilityAccessC
 });
 ```
 
-<a id="getpermissionrequesttogglestatus-1"></a>
+<a id="getpermissionrequesttogglestatus2"></a>
 
 ## getPermissionRequestToggleStatus
 
@@ -363,6 +365,8 @@ atManager.grantPermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlags
 });
 ```
 
+<a id="grantusergrantedpermission1"></a>
+
 ## grantUserGrantedPermission
 
 ```TypeScript
@@ -428,7 +432,7 @@ atManager.grantUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', perm
 });
 ```
 
-<a id="grantusergrantedpermission-1"></a>
+<a id="grantusergrantedpermission2"></a>
 
 ## grantUserGrantedPermission
 
@@ -957,6 +961,8 @@ atManager.revokePermission(tokenID, 'ohos.permission.READ_AUDIO', permissionFlag
 });
 ```
 
+<a id="revokeusergrantedpermission1"></a>
+
 ## revokeUserGrantedPermission
 
 ```TypeScript
@@ -1024,7 +1030,7 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
-<a id="revokeusergrantedpermission-1"></a>
+<a id="revokeusergrantedpermission2"></a>
 
 ## revokeUserGrantedPermission
 
@@ -1091,6 +1097,8 @@ atManager.revokeUserGrantedPermission(tokenID, 'ohos.permission.READ_AUDIO', per
 });
 ```
 
+<a id="setpermissionrequesttogglestatus1"></a>
+
 ## setPermissionRequestToggleStatus
 
 ```TypeScript
@@ -1153,7 +1161,7 @@ atManager.setPermissionRequestToggleStatus(permission, abilityAccessCtrl.Permiss
 });
 ```
 
-<a id="setpermissionrequesttogglestatus-1"></a>
+<a id="setpermissionrequesttogglestatus2"></a>
 
 ## setPermissionRequestToggleStatus
 

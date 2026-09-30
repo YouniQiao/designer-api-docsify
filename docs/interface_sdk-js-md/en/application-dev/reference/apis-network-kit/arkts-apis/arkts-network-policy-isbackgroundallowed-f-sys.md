@@ -6,6 +6,8 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
+<a id="isbackgroundallowed1"></a>
+
 ## isBackgroundAllowed
 
 ```TypeScript
@@ -53,7 +55,7 @@ policy.isBackgroundAllowed((error: BusinessError, data: boolean) => {
 ```
 
 
-<a id="isbackgroundallowed-1"></a>
+<a id="isbackgroundallowed2"></a>
 
 ## isBackgroundAllowed
 

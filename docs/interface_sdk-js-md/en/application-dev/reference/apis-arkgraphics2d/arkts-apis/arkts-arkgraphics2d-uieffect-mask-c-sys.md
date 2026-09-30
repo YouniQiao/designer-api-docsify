@@ -118,6 +118,8 @@ Creates a fractal glass mask. It performs periodic horizontal displacement sampl
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | Mask instance carrying the fractal‑glass mask effect. |
 
+<a id="createpixelmapmask1"></a>
+
 ## createPixelMapMask
 
 ```TypeScript
@@ -197,7 +199,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
-<a id="createpixelmapmask-1"></a>
+<a id="createpixelmapmask2"></a>
 
 ## createPixelMapMask
 

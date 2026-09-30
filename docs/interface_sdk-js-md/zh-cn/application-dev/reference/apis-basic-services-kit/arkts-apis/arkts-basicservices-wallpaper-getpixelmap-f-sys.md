@@ -6,6 +6,8 @@
 import { wallpaper } from '@kit.BasicServicesKit';
 ```
 
+<a id="getpixelmap1"></a>
+
 ## getPixelMap
 
 ```TypeScript
@@ -52,7 +54,7 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
 ```
 
 
-<a id="getpixelmap-1"></a>
+<a id="getpixelmap2"></a>
 
 ## getPixelMap
 

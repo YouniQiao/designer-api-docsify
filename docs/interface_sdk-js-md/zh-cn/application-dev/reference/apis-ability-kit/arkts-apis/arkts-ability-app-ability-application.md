@@ -22,7 +22,7 @@ import { application } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createModuleContext](arkts-ability-application-createmodulecontext-f.md) | 创建指定模块的上下文。创建出的模块上下文中[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md)资源继承自入参上下文，便于开发者获取[跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨HAP/HSP包资源)。使用Promise异步回调。 |
+| [createModuleContext](arkts-ability-application-createmodulecontext-f.md#createmodulecontext1) | 创建指定模块的上下文。创建出的模块上下文中[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md)资源继承自入参上下文，便于开发者获取[跨HAP/HSP包资源](../../../quick-start/resource-categories-and-access.md#访问跨HAP/HSP包资源)。使用Promise异步回调。 |
 | [createModuleContextSync](arkts-ability-application-createmodulecontextsync-f.md) | 创建指定模块的上下文。创建出的模块上下文中[resourceManager.Configuration](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager-configuration-c.md)资源继承自入参上下文，便于开发者获取[跨HAP/HSP包应用资源](../../../quick-start/resource-categories-and-access.md#访问跨HAP/HSP包资源)。 |
 | [createPluginModuleContext](arkts-ability-application-createpluginmodulecontext-f.md) | 根据入参Context、指定的插件包名和插件模块名，创建本应用下插件的Context，用于获取插件的基本信息。使用Promise异步回调。 |
 | [demoteCurrentFromCandidateMasterProcess](arkts-ability-application-demotecurrentfromcandidatemasterprocess-f.md) | 撤销当前进程的备选主控进程资格。使用Promise异步回调。该接口在PC/2in1、Tablet中可正常调用，在其他设备类型中返回801错误码。 |
@@ -38,7 +38,7 @@ import { application } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [createBundleContext](arkts-ability-application-createbundlecontext-f-sys.md) | 根据入参Context创建相应应用的Context。使用Promise异步回调。 |
-| [createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md#createmodulecontext-1) | 根据入参Context创建相应模块的Context。使用Promise异步回调。 |
+| [createModuleContext](arkts-ability-application-createmodulecontext-f-sys.md#createmodulecontext2) | 根据入参Context创建相应模块的Context。使用Promise异步回调。 |
 | [createPluginModuleContextForHostBundle](arkts-ability-application-createpluginmodulecontextforhostbundle-f-sys.md) | 根据入参Context、插件包名、插件模块名和安装插件的应用包名，创建对应插件的Context，用于获取插件的基本信息。使用Promise异步回调。 |
 <!--DelEnd-->
 

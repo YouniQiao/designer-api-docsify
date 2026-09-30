@@ -8,7 +8,7 @@ declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGrid
 
 除支持[通用事件](arkts-arkui-common-comp.md)外，还支持以下事件：
 
-**继承/实现关系：** LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGridLayoutAttribute>
+**继承/实现关系：** LazyVGridLayoutAttribute extends LazyGridLayoutAttribute&lt;LazyVGridLayoutAttribute&gt;
 
 **起始版本：** 19
 

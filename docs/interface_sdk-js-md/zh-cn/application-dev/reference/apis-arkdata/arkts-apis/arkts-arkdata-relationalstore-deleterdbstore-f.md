@@ -6,6 +6,8 @@
 import { relationalStore } from '@kit.ArkData';
 ```
 
+<a id="deleterdbstore1"></a>
+
 ## deleteRdbStore
 
 ```TypeScript
@@ -84,7 +86,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deleterdbstore-1"></a>
+<a id="deleterdbstore2"></a>
 
 ## deleteRdbStore
 
@@ -175,7 +177,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deleterdbstore-2"></a>
+<a id="deleterdbstore3"></a>
 
 ## deleteRdbStore
 
@@ -256,7 +258,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deleterdbstore-3"></a>
+<a id="deleterdbstore4"></a>
 
 ## deleteRdbStore
 

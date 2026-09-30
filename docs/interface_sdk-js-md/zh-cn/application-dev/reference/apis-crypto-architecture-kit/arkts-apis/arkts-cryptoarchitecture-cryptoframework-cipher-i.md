@@ -4,7 +4,7 @@
 interface Cipher
 ```
 
-加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。按序调用Cipher实例中的[init()](#init-3)、[update()](#update)、[doFinal()](#dofinal-1)方法完成加解密操作。
+加解密接口，定义对称加解密和非对称加解密方法。调用前，需通过[createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md)方法创建一个Cipher实例。按序调用Cipher实例中的[init()](#init4)、[update()](#update1)、[doFinal()](#dofinal2)方法完成加解密操作。
 
 <br>完整的加解密流程示例可参考[开发指南](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md)。
 
@@ -28,6 +28,8 @@ interface Cipher
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
+
+<a id="dofinal1"></a>
 
 ## doFinal
 
@@ -161,7 +163,7 @@ async function cipherByPromise() {
 }
 ```
 
-<a id="dofinal-1"></a>
+<a id="dofinal2"></a>
 
 ## doFinal
 
@@ -265,7 +267,7 @@ function cipherByCallback() {
 }
 ```
 
-<a id="dofinal-3"></a>
+<a id="dofinal4"></a>
 
 ## doFinal
 
@@ -405,7 +407,7 @@ async function cipherByPromise() {
 }
 ```
 
-<a id="dofinal-4"></a>
+<a id="dofinal5"></a>
 
 ## doFinal
 
@@ -527,7 +529,7 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 （2）在RSA和SM2非对称加解密中，使用**doFinal**方法加解密传入的数据，并使用Promise异步回调获取加密或解密结果。如果数据量较大，可以多次调用**doFinal**，拼接结果以获得完整的明文或密文。
 
-<br>关于其他注意事项，请参见[doFinal()](#dofinal-1)中的**说明：** 。
+<br>关于其他注意事项，请参见[doFinal()](#dofinal2)中的**说明：** 。
 
 <br><br>**说明：** <br>建议优先使用异步API，doFinal。同步API可能因系统繁忙、高负载等原因耗时较长而阻塞主线程。因此建议在子线程中调用同步API，以避免阻塞主线程。
 
@@ -660,6 +662,8 @@ function testGetCipherSpec() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -699,7 +703,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec, callback: AsyncCallback<v
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -740,7 +744,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
 
-<a id="init-2"></a>
+<a id="init3"></a>
 
 ## init
 
@@ -787,7 +791,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec): Promise<void>
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid opMode value; <br>2. Invalid iv length; <br>3. Invalid key length.<br>**适用版本：** 22+ |
 
-<a id="init-3"></a>
+<a id="init4"></a>
 
 ## init
 
@@ -918,6 +922,8 @@ function testSetCipherSpec() {
 }
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -926,7 +932,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 更新要分段加密或解密的数据。使用Callback异步回调。
 
-<br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
+<br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init4)初始化后，才能使用本函数。
 
 > **说明：** 
 > 
@@ -968,7 +974,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The data is too long.<br>**适用版本：** 22+ |
 
-<a id="update-2"></a>
+<a id="update3"></a>
 
 ## update
 
@@ -978,7 +984,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 分段更新加密或者解密数据操作。使用Promise异步回调。
 
-<br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init-3)初始化后，才能使用本函数。
+<br>必须在对[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例使用[init()](#init4)初始化后，才能使用本函数。
 
 > **说明：** 
 > 

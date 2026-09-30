@@ -26,8 +26,8 @@ import { dialogSession } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [getDialogSessionInfo](arkts-ability-dialogsession-getdialogsessioninfo-f-sys.md) | 通过dialogSessionId获取会话信息。 |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult) | 发送用户请求。使用Promise异步回调。 |
-| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult-1) | 发送用户请求。使用callback异步回调。 |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult1) | 发送用户请求。使用Promise异步回调。 |
+| [sendDialogResult](arkts-ability-dialogsession-senddialogresult-f-sys.md#senddialogresult2) | 发送用户请求。使用callback异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

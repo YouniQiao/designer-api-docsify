@@ -8,13 +8,15 @@ declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerA
 
 支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
 
-**继承/实现关系：** RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>
+**继承/实现关系：** RelativeContainerAttribute extends CommonMethod&lt;RelativeContainerAttribute&gt;
 
 **起始版本：** 9
 
 <!--Device-unnamed-declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>--><!--Device-unnamed-declare class RelativeContainerAttribute extends CommonMethod<RelativeContainerAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="barrier1"></a>
 
 ## barrier
 
@@ -40,7 +42,7 @@ barrier(value: Array<BarrierStyle>)
 | --- | --- | --- | --- |
 | value | Array&lt;[BarrierStyle](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)&gt; | 是 | RelativeContainer容器内的屏障，用于定义屏障的id、方向和依赖组件，子组件可以以屏障为锚点进行对齐定位。 |
 
-<a id="barrier-1"></a>
+<a id="barrier2"></a>
 
 ## barrier
 

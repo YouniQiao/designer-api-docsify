@@ -6,6 +6,8 @@
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="createx509cert1"></a>
+
 ## createX509Cert
 
 ```TypeScript
@@ -79,7 +81,7 @@ cert.createX509Cert(encodingBlob, (error, _x509Cert) => {
 ```
 
 
-<a id="createx509cert-1"></a>
+<a id="createx509cert2"></a>
 
 ## createX509Cert
 

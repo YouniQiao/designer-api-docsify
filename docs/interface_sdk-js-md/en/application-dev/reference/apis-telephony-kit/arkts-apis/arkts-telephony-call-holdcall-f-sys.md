@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="holdcall1"></a>
+
 ## holdCall
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.holdCall(1, (err: BusinessError) => {
 ```
 
 
-<a id="holdcall-1"></a>
+<a id="holdcall2"></a>
 
 ## holdCall
 

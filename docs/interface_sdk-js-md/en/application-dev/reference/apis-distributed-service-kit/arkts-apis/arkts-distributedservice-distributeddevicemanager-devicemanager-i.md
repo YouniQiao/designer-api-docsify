@@ -86,6 +86,8 @@ try {
 }
 ```
 
+<a id="getavailabledevicelist1"></a>
+
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -136,7 +138,7 @@ try {
 }
 ```
 
-<a id="getavailabledevicelist-1"></a>
+<a id="getavailabledevicelist2"></a>
 
 ## getAvailableDeviceList
 

@@ -20,6 +20,8 @@ interface Md
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="digest1"></a>
+
 ## digest
 
 ```TypeScript
@@ -73,7 +75,7 @@ function mdByCallback() {
 }
 ```
 
-<a id="digest-1"></a>
+<a id="digest2"></a>
 
 ## digest
 
@@ -468,6 +470,8 @@ squeezeSync(len: number): DataBlob
 | [17620003](../errorcode-crypto-framework.md#17620003-参数检查失败) | Parameter check failed. Possible causes:<br>1. Invalid len value; |
 | [17620004](../errorcode-crypto-framework.md#17620004-无效的函数调用) | Invalid function call. The fixed-length digest algorithm, such as SHA256, does not support this API. |
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -510,7 +514,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

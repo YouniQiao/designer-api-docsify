@@ -20,6 +20,8 @@ Key agreement interface, defining methods for generating shared secrets based on
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="generatesecret1"></a>
+
 ## generateSecret
 
 ```TypeScript
@@ -55,7 +57,7 @@ Generates a shared secret based on the given private key and public key. This AP
 | [17620002](../errorcode-crypto-framework.md#17620002-failed-to-obtain-the-native-object-or-convert-parameters) | Failed to obtain the native object or convert parameters. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
-<a id="generatesecret-1"></a>
+<a id="generatesecret2"></a>
 
 ## generateSecret
 

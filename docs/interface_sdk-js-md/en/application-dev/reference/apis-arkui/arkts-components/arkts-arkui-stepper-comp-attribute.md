@@ -8,7 +8,7 @@ Defines the stepper attribute functions
 
 @extends CommonMethod&lt;StepperAttribute&gt;
 
-**Inheritance/Implementation:** StepperAttribute extends CommonMethod<StepperAttribute>
+**Inheritance/Implementation:** StepperAttribute extends CommonMethod&lt;StepperAttribute&gt;
 
 **Since:** 8
 

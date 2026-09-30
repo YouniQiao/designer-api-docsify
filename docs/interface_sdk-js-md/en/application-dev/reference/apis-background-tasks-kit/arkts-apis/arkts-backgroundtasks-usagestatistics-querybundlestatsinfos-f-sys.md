@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querybundlestatsinfos1"></a>
+
 ## queryBundleStatsInfos
 
 ```TypeScript
@@ -66,7 +68,7 @@ usageStatistics.queryBundleStatsInfos(0, 20000000000000, (err: BusinessError, re
 ```
 
 
-<a id="querybundlestatsinfos-1"></a>
+<a id="querybundlestatsinfos2"></a>
 
 ## queryBundleStatsInfos
 

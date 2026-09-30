@@ -18,6 +18,8 @@ Provides APIs for managing a distributed data object. Before using any API of th
 import { distributedDataObject } from '@kit.ArkData';
 ```
 
+<a id="bindassetstore1"></a>
+
 ## bindAssetStore
 
 ```TypeScript
@@ -103,7 +105,7 @@ class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="bindassetstore-1"></a>
+<a id="bindassetstore2"></a>
 
 ## bindAssetStore
 
@@ -629,6 +631,8 @@ try {
 }
 ```
 
+<a id="revokesave1"></a>
+
 ## revokeSave
 
 ```TypeScript
@@ -682,7 +686,7 @@ g_object.revokeSave((err: BusinessError, result: distributedDataObject.RevokeSav
 });
 ```
 
-<a id="revokesave-1"></a>
+<a id="revokesave2"></a>
 
 ## revokeSave
 
@@ -732,6 +736,8 @@ g_object.revokeSave().then((result: distributedDataObject.RevokeSaveSuccessRespo
 });
 ```
 
+<a id="save1"></a>
+
 ## save
 
 ```TypeScript
@@ -776,7 +782,7 @@ g_object.save('local', (err: BusinessError, result:distributedDataObject.SaveSuc
 });
 ```
 
-<a id="save-1"></a>
+<a id="save2"></a>
 
 ## save
 
@@ -981,6 +987,8 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setsessionid1"></a>
+
 ## setSessionId
 
 ```TypeScript
@@ -1025,7 +1033,7 @@ g_object.setSessionId('', () => {
 });
 ```
 
-<a id="setsessionid-1"></a>
+<a id="setsessionid2"></a>
 
 ## setSessionId
 
@@ -1072,7 +1080,7 @@ g_object.setSessionId(() => {
 });
 ```
 
-<a id="setsessionid-2"></a>
+<a id="setsessionid3"></a>
 
 ## setSessionId
 

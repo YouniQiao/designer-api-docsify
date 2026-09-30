@@ -6,6 +6,8 @@
 import { freeInstall } from '@kit.AbilityKit';
 ```
 
+<a id="getdispatchinfo1"></a>
+
 ## getDispatchInfo
 
 ```TypeScript
@@ -39,7 +41,7 @@ function getDispatchInfo(callback: AsyncCallback<DispatchInfo>): void
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 
 
-<a id="getdispatchinfo-1"></a>
+<a id="getdispatchinfo2"></a>
 
 ## getDispatchInfo
 

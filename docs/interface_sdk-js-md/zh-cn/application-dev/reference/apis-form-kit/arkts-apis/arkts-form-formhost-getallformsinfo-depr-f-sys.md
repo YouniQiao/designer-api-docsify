@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="getallformsinfo1"></a>
+
 ## getAllFormsInfo
 
 ```TypeScript
@@ -49,7 +51,7 @@ formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) 
 ```
 
 
-<a id="getallformsinfo-1"></a>
+<a id="getallformsinfo2"></a>
 
 ## getAllFormsInfo
 

@@ -6,6 +6,8 @@
 import { display } from '@kit.ArkUI';
 ```
 
+<a id="iscaptured1"></a>
+
 ## isCaptured
 
 ```TypeScript
@@ -43,7 +45,7 @@ ret = display.isCaptured();
 ```
 
 
-<a id="iscaptured-1"></a>
+<a id="iscaptured2"></a>
 
 ## isCaptured
 

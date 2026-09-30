@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="formatphonenumber1"></a>
+
 ## formatPhoneNumber
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.formatPhoneNumber("138xxxxxxxx", options, (err: BusinessError, data: string
 ```
 
 
-<a id="formatphonenumber-1"></a>
+<a id="formatphonenumber2"></a>
 
 ## formatPhoneNumber
 
@@ -115,7 +117,7 @@ call.formatPhoneNumber("138xxxxxxxx", options).then((data: string) => {
 ```
 
 
-<a id="formatphonenumber-2"></a>
+<a id="formatphonenumber3"></a>
 
 ## formatPhoneNumber
 

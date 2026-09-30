@@ -6,6 +6,8 @@
 import { dateTimeManager } from '@kit.MDMKit';
 ```
 
+<a id="ismodifydatetimedisallowed1"></a>
+
 ## isModifyDateTimeDisallowed
 
 ```TypeScript
@@ -18,7 +20,7 @@ Queries whether the system time of a device can be modified. This API uses an as
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy2)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 
@@ -69,7 +71,7 @@ dateTimeManager.isModifyDateTimeDisallowed(wantTemp, (err, result) => {
 ```
 
 
-<a id="ismodifydatetimedisallowed-1"></a>
+<a id="ismodifydatetimedisallowed2"></a>
 
 ## isModifyDateTimeDisallowed
 
@@ -83,7 +85,7 @@ Queries whether the system time of a device can be modified. This API uses a pro
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy-1)(admin: Want | null, feature: FeatureForDevice)
+**Substitutes:** [getDisallowedPolicy](arkts-mdm-restrictions-getdisallowedpolicy-f.md#getdisallowedpolicy2)(admin: Want | null, feature: FeatureForDevice)
 
 **Required permissions:** ohos.permission.ENTERPRISE_SET_DATETIME
 

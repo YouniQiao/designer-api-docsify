@@ -6,6 +6,8 @@
 import { autoFillManager } from '@kit.AbilityKit';
 ```
 
+<a id="requestautosave1"></a>
+
 ## requestAutoSave
 
 ```TypeScript
@@ -140,7 +142,7 @@ struct Index {
 ```
 
 
-<a id="requestautosave-1"></a>
+<a id="requestautosave2"></a>
 
 ## requestAutoSave
 

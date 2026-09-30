@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="rejectcall1"></a>
+
 ## rejectCall
 
 ```TypeScript
@@ -62,7 +64,7 @@ call.rejectCall(1, rejectMessageOptions, (err: BusinessError) => {
 ```
 
 
-<a id="rejectcall-1"></a>
+<a id="rejectcall2"></a>
 
 ## rejectCall
 
@@ -123,7 +125,7 @@ call.rejectCall(1, rejectMessageOptions).then(() => {
 ```
 
 
-<a id="rejectcall-2"></a>
+<a id="rejectcall3"></a>
 
 ## rejectCall
 
@@ -177,7 +179,7 @@ call.rejectCall(1, (err: BusinessError) => {
 ```
 
 
-<a id="rejectcall-4"></a>
+<a id="rejectcall5"></a>
 
 ## rejectCall
 

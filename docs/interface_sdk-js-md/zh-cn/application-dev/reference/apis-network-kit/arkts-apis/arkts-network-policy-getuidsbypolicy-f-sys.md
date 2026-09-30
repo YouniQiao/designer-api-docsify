@@ -6,6 +6,8 @@
 import { policy } from '@kit.NetworkKit';
 ```
 
+<a id="getuidsbypolicy1"></a>
+
 ## getUidsByPolicy
 
 ```TypeScript
@@ -54,7 +56,7 @@ policy.getUidsByPolicy(11111, (error: BusinessError, data: number[]) => {
 ```
 
 
-<a id="getuidsbypolicy-1"></a>
+<a id="getuidsbypolicy2"></a>
 
 ## getUidsByPolicy
 

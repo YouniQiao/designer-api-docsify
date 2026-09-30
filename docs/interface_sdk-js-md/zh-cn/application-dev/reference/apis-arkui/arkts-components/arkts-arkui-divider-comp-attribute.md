@@ -8,7 +8,7 @@ declare class DividerAttribute extends CommonMethod<DividerAttribute>
 
 支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
 
-**继承/实现关系：** DividerAttribute extends CommonMethod<DividerAttribute>
+**继承/实现关系：** DividerAttribute extends CommonMethod&lt;DividerAttribute&gt;
 
 **起始版本：** 7
 
@@ -76,7 +76,7 @@ strokeWidth(value: number | string)
 > 
 > - 分割线的宽度不支持百分比设置。
 > 
-> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性[height](arkts-arkui-common-comp-commonmethod-c.md#height)； 使用垂直分割线时，strokeWidth控制宽度，优先级低于通用属性[width](arkts-arkui-common-comp-commonmethod-c.md#width)。
+> - 使用水平分割线时，strokeWidth控制高度，优先级低于通用属性[height](arkts-arkui-common-comp-commonmethod-c.md#height1)； 使用垂直分割线时，strokeWidth控制宽度，优先级低于通用属性[width](arkts-arkui-common-comp-commonmethod-c.md#width1)。
 > 
 > - 超过通用属性设置大小时，按照通用属性进行裁切。
 > 

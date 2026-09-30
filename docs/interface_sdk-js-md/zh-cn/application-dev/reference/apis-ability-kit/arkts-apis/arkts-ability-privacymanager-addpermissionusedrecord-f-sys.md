@@ -6,6 +6,8 @@
 import { privacyManager } from '@kit.AbilityKit';
 ```
 
+<a id="addpermissionusedrecord1"></a>
+
 ## addPermissionUsedRecord
 
 ```TypeScript
@@ -92,7 +94,7 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
 ```
 
 
-<a id="addpermissionusedrecord-1"></a>
+<a id="addpermissionusedrecord2"></a>
 
 ## addPermissionUsedRecord
 

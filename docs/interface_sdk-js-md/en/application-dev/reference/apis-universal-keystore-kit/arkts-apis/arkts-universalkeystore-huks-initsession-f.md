@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="initsession1"></a>
+
 ## initSession
 
 ```TypeScript
@@ -64,7 +66,7 @@ The **huks.initSession**, **huks.updateSession**, and **huks.finishSession** mus
 | [12000026](../errorcode-huks.md#12000026-secure-element-fault) | the secure element is not available<br>**Applicable version:** 26.0.0 and later |
 
 
-<a id="initsession-1"></a>
+<a id="initsession2"></a>
 
 ## initSession
 

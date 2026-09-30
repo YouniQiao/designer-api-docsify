@@ -4,21 +4,23 @@
 export interface MifareClassicTag extends TagSession
 ```
 
-MifareClassicTag提供对MIFARE Classic属性和I/O操作的访问，继承自[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
+MifareClassicTag提供对MIFARE Classic属性和I/O操作的访问，继承自[TagSession](arkts-connectivity-tagsession-i.md)。
 
-TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
+TagSession是所有NFC Tag技术类型的基类， 提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-i.md)。
 
 MifareClassicTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
 
 以下是MifareClassicTag的独有接口。
 
-**继承/实现关系：** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**继承/实现关系：** MifareClassicTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **起始版本：** 9
 
 <!--Device-unnamed-export interface MifareClassicTag extends TagSession--><!--Device-unnamed-export interface MifareClassicTag extends TagSession-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.Tag
+
+<a id="authenticatesector1"></a>
 
 ## authenticateSector
 
@@ -92,7 +94,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="authenticatesector-1"></a>
+<a id="authenticatesector2"></a>
 
 ## authenticateSector
 
@@ -162,6 +164,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="decrementblock1"></a>
 
 ## decrementBlock
 
@@ -234,7 +238,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="decrementblock-1"></a>
+<a id="decrementblock2"></a>
 
 ## decrementBlock
 
@@ -556,6 +560,8 @@ let getType : tag.MifareClassicType = mifareClassic.getType();
 console.info("mifareClassic getType: " + getType);
 ```
 
+<a id="incrementblock1"></a>
+
 ## incrementBlock
 
 ```TypeScript
@@ -627,7 +633,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="incrementblock-1"></a>
+<a id="incrementblock2"></a>
 
 ## incrementBlock
 
@@ -730,6 +736,8 @@ let isEmulatedTag : boolean = mifareClassic.isEmulatedTag();
 console.info("mifareClassic isEmulatedTag: " + isEmulatedTag);
 ```
 
+<a id="readsingleblock1"></a>
+
 ## readSingleBlock
 
 ```TypeScript
@@ -799,7 +807,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readsingleblock-1"></a>
+<a id="readsingleblock2"></a>
 
 ## readSingleBlock
 
@@ -866,6 +874,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="restorefromblock1"></a>
 
 ## restoreFromBlock
 
@@ -936,7 +946,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="restorefromblock-1"></a>
+<a id="restorefromblock2"></a>
 
 ## restoreFromBlock
 
@@ -1003,6 +1013,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="transfertoblock1"></a>
 
 ## transferToBlock
 
@@ -1073,7 +1085,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="transfertoblock-1"></a>
+<a id="transfertoblock2"></a>
 
 ## transferToBlock
 
@@ -1140,6 +1152,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesingleblock1"></a>
 
 ## writeSingleBlock
 
@@ -1213,7 +1227,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writesingleblock-1"></a>
+<a id="writesingleblock2"></a>
 
 ## writeSingleBlock
 

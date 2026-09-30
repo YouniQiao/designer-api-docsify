@@ -6,6 +6,8 @@
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
+<a id="cancel1"></a>
+
 ## cancel
 
 ```TypeScript
@@ -111,7 +113,7 @@ try {
 ```
 
 
-<a id="cancel-1"></a>
+<a id="cancel2"></a>
 
 ## cancel
 

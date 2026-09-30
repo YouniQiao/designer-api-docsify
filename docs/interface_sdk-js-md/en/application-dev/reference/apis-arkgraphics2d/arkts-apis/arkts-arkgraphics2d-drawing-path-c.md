@@ -512,6 +512,8 @@ const path = new drawing.Path();
 path.conicTo(200, 400, 100, 200, 0);
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -536,7 +538,7 @@ import { drawing } from '@kit.ArkGraphics2D';
 let path: drawing.Path = new drawing.Path();
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

@@ -10,7 +10,7 @@ KVStore常量。
 
 **废弃版本：** 9
 
-**替代接口：** Constants
+**替代接口：** [Constants](arkts-arkdata-distributedkvstore-constants-i.md)
 
 <!--Device-distributedData-namespace Constants--><!--Device-distributedData-namespace Constants-End-->
 

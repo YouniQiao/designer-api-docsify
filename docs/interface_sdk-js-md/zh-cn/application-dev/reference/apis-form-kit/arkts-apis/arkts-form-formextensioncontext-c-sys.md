@@ -39,7 +39,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-want-want-c.md) | 是 | Want类型参数，传入需要启动的ability的信息，如Ability名称，Bundle名称等。 |
-| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
+| options | [ConnectOptions](../../apis-ability-kit/arkts-apis/arkts-ability-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、断开或连接失败后的信息。 |
 
 **返回值：**
 
@@ -110,6 +110,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="disconnectserviceextensionability1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -178,7 +180,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-<a id="disconnectserviceextensionability-1"></a>
+<a id="disconnectserviceextensionability2"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -254,6 +256,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -320,7 +324,7 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 

@@ -6,6 +6,8 @@
 import { audio } from '@kit.AudioKit';
 ```
 
+<a id="createtoneplayer1"></a>
+
 ## createTonePlayer
 
 ```TypeScript
@@ -52,7 +54,7 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
 ```
 
 
-<a id="createtoneplayer-2"></a>
+<a id="createtoneplayer3"></a>
 
 ## createTonePlayer
 

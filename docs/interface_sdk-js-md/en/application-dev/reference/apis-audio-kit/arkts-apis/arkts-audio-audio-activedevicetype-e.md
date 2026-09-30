@@ -28,7 +28,7 @@ Speaker.
 
 **Deprecated since:** 9
 
-**Substitutes:** SPEAKER
+**Substitutes:** [SPEAKER](arkts-audio-audio-communicationdevicetype-e.md#speaker)
 
 <!--Device-ActiveDeviceType-SPEAKER = 2--><!--Device-ActiveDeviceType-SPEAKER = 2-End-->
 
@@ -46,7 +46,7 @@ Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Deprecated since:** 9
 
-**Substitutes:** BLUETOOTH_SCO
+**Substitutes:** [BLUETOOTH_SCO](arkts-audio-audio-devicetype-e.md#bluetooth_sco)
 
 <!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7--><!--Device-ActiveDeviceType-BLUETOOTH_SCO = 7-End-->
 

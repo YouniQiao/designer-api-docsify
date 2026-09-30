@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="combineconference1"></a>
+
 ## combineConference
 
 ```TypeScript
@@ -56,7 +58,7 @@ call.combineConference(1, (err: BusinessError) => {
 ```
 
 
-<a id="combineconference-1"></a>
+<a id="combineconference2"></a>
 
 ## combineConference
 

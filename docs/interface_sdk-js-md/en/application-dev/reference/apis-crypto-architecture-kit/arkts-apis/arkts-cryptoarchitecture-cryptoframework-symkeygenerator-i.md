@@ -20,6 +20,8 @@ Symmetric key generator interface, defining methods for generating symmetric key
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="convertkey1"></a>
+
 ## convertKey
 
 ```TypeScript
@@ -84,7 +86,7 @@ function testConvertKey() {
 }
 ```
 
-<a id="convertkey-1"></a>
+<a id="convertkey2"></a>
 
 ## convertKey
 
@@ -217,6 +219,8 @@ function testConvertKeySync() {
 }
 ```
 
+<a id="generatesymkey1"></a>
+
 ## generateSymKey
 
 ```TypeScript
@@ -231,7 +235,7 @@ Generates a random key using this symmetric key generator. This API uses an asyn
 > when the symmetric key generator is created, a binary key matching the hash length (for example, a 256-bit key)
 > will be randomly generated. If no hash algorithm is specified, for example, only **HMAC** is specified, random
 > symmetric key generation is not supported. You can generate symmetric key data using
-> [convertKey](#convertkey).
+> [convertKey](#convertkey1).
 
 **Since:** 9
 
@@ -268,7 +272,7 @@ let symKeyGenerator = cryptoFramework.createSymKeyGenerator('3DES192');
   });
 ```
 
-<a id="generatesymkey-1"></a>
+<a id="generatesymkey2"></a>
 
 ## generateSymKey
 

@@ -18,6 +18,8 @@ PhotoViewPicker provides APIs for the user to select images and videos. Before u
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="select1"></a>
+
 ## select
 
 ```TypeScript
@@ -30,7 +32,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -85,7 +87,7 @@ async function example01(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="select-1"></a>
+<a id="select2"></a>
 
 ## select
 
@@ -99,7 +101,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -151,7 +153,7 @@ async function example02(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="select-2"></a>
+<a id="select3"></a>
 
 ## select
 
@@ -165,7 +167,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 

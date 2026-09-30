@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="getabilityicon1"></a>
+
 ## getAbilityIcon
 
 ```TypeScript
@@ -75,7 +77,7 @@ try {
 ```
 
 
-<a id="getabilityicon-1"></a>
+<a id="getabilityicon2"></a>
 
 ## getAbilityIcon
 

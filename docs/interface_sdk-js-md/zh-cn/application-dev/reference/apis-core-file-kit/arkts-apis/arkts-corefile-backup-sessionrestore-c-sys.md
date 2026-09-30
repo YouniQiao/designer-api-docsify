@@ -20,6 +20,8 @@ class SessionRestore
 import { backup } from '@kit.CoreFileKit';
 ```
 
+<a id="appendbundles1"></a>
+
 ## appendBundles
 
 ```TypeScript
@@ -157,7 +159,7 @@ async function appendBundles() {
 }
 ```
 
-<a id="appendbundles-1"></a>
+<a id="appendbundles2"></a>
 
 ## appendBundles
 
@@ -766,6 +768,8 @@ async function getRestoreCompatibilityInfo() {
 }
 ```
 
+<a id="getfilehandle1"></a>
+
 ## getFileHandle
 
 ```TypeScript
@@ -867,7 +871,7 @@ async function getFileHandle() {
 }
 ```
 
-<a id="getfilehandle-1"></a>
+<a id="getfilehandle2"></a>
 
 ## getFileHandle
 
@@ -1361,6 +1365,8 @@ async function testMigrateFile() {
 }
 ```
 
+<a id="publishfile1"></a>
+
 ## publishFile
 
 ```TypeScript
@@ -1474,7 +1480,7 @@ function createSessionRestore() {
 g_session = createSessionRestore();
 ```
 
-<a id="publishfile-1"></a>
+<a id="publishfile2"></a>
 
 ## publishFile
 

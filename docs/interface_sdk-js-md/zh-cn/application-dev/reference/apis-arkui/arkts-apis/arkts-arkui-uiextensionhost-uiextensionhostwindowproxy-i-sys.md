@@ -20,6 +20,8 @@ Transition Controller
 import { uiExtensionHost } from '@kit.ArkUI';
 ```
 
+<a id="createsubwindowwithoptions1"></a>
+
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -107,7 +109,7 @@ export default class EntryAbility extends UIExtensionAbility {
 }
 ```
 
-<a id="createsubwindowwithoptions-1"></a>
+<a id="createsubwindowwithoptions2"></a>
 
 ## createSubWindowWithOptions
 

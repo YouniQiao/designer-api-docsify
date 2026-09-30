@@ -6,6 +6,8 @@
 import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
+<a id="registermissionlistener1"></a>
+
 ## registerMissionListener
 
 ```TypeScript
@@ -81,7 +83,7 @@ try {
 ```
 
 
-<a id="registermissionlistener-1"></a>
+<a id="registermissionlistener2"></a>
 
 ## registerMissionListener
 

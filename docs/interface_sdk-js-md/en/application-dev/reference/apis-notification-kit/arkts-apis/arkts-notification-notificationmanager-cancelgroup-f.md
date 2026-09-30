@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="cancelgroup1"></a>
+
 ## cancelGroup
 
 ```TypeScript
@@ -26,7 +28,7 @@ The notification group **groupName** is the group identifier specified through t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) when the notification is published. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification is published. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -55,7 +57,7 @@ notificationManager.cancelGroup(groupName, cancelGroupCallback);
 ```
 
 
-<a id="cancelgroup-1"></a>
+<a id="cancelgroup2"></a>
 
 ## cancelGroup
 
@@ -77,7 +79,7 @@ The notification group **groupName** is the group identifier specified through t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-notificationrequest-i.md) when the notification is published. |
+| groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification is published. |
 
 **Return value:**
 

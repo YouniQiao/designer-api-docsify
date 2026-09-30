@@ -11,13 +11,15 @@ interface LongPressGestureInterface extends GestureInterface<LongPressGestureInt
 > Since API version 18, on some devices, the system's two-finger long press gesture may take precedence, causing
 > the application's two-finger long press gesture to be ineffective.
 
-**Inheritance/Implementation:** LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>
+**Inheritance/Implementation:** LongPressGestureInterface extends GestureInterface&lt;LongPressGestureInterface&gt;
 
 **Since:** 7
 
 <!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>--><!--Device-unnamed-interface LongPressGestureInterface extends GestureInterface<LongPressGestureInterface>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -53,7 +55,7 @@ If the long press duration reaches or exceeds 500 milliseconds, the system prior
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 
@@ -119,6 +121,8 @@ Registers the callback for successful long press gesture recognition.
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -147,7 +151,7 @@ Registers the callback for long press gesture cancellation. This callback is tri
 | --- | --- |
 | [LongPressGestureInterface](arkts-arkui-tapgesture-comp-longpressgestureinterface-i.md) |  |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 

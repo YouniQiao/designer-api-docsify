@@ -6,6 +6,8 @@
 import { fileShare } from '@kit.CoreFileKit';
 ```
 
+<a id="granturipermission1"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -73,7 +75,7 @@ try {
 ```
 
 
-<a id="granturipermission-1"></a>
+<a id="granturipermission2"></a>
 
 ## grantUriPermission
 
@@ -140,7 +142,7 @@ try {
 ```
 
 
-<a id="granturipermission-2"></a>
+<a id="granturipermission3"></a>
 
 ## grantUriPermission
 

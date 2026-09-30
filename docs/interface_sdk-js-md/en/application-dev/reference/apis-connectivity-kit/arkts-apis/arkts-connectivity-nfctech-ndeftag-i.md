@@ -6,13 +6,13 @@ export interface NdefTag extends TagSession
 
 Provides APIs to access the tags in the NFC Data Exchange Format (NDEF). This class inherits from **TagSession**.
 
-**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-i.md).
 
 For details about how to obtain an **NdefTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
 
 The following describes the unique APIs of **NdefTag**.
 
-**Inheritance/Implementation:** NdefTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** NdefTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 9
 
@@ -207,6 +207,8 @@ let isWritable : boolean = ndefTag.isNdefWritable();
 console.info("ndef isNdefWritable: " + isWritable);
 ```
 
+<a id="readndef1"></a>
+
 ## readNdef
 
 ```TypeScript
@@ -296,7 +298,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readndef-1"></a>
+<a id="readndef2"></a>
 
 ## readNdef
 
@@ -334,6 +336,8 @@ Reads the NDEF message from the NDEF tag. This API uses an asynchronous callback
 **Examples**
 
 See [readNdef](#readndef)
+
+<a id="setreadonly1"></a>
 
 ## setReadOnly
 
@@ -397,7 +401,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="setreadonly-1"></a>
+<a id="setreadonly2"></a>
 
 ## setReadOnly
 
@@ -462,6 +466,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writendef1"></a>
 
 ## writeNdef
 
@@ -568,7 +574,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writendef-1"></a>
+<a id="writendef2"></a>
 
 ## writeNdef
 

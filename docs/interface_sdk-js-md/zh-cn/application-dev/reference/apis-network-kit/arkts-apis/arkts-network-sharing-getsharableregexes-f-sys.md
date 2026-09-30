@@ -6,6 +6,8 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
+<a id="getsharableregexes1"></a>
+
 ## getSharableRegexes
 
 ```TypeScript
@@ -56,7 +58,7 @@ sharing.getSharableRegexes(SHARING_WIFI, (error: BusinessError, data: string[]) 
 ```
 
 
-<a id="getsharableregexes-1"></a>
+<a id="getsharableregexes2"></a>
 
 ## getSharableRegexes
 

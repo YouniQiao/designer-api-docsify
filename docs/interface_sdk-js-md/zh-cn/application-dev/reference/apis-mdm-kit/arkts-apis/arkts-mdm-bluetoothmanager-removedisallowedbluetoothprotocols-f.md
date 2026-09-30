@@ -6,6 +6,8 @@
 import { bluetoothManager } from '@kit.MDMKit';
 ```
 
+<a id="removedisallowedbluetoothprotocols1"></a>
+
 ## removeDisallowedBluetoothProtocols
 
 ```TypeScript
@@ -66,7 +68,7 @@ try {
 ```
 
 
-<a id="removedisallowedbluetoothprotocols-1"></a>
+<a id="removedisallowedbluetoothprotocols2"></a>
 
 ## removeDisallowedBluetoothProtocols
 

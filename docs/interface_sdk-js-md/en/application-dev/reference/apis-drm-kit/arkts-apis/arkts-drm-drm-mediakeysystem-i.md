@@ -59,6 +59,8 @@ let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
 mediaKeySystem.clearOfflineMediaKeys(mediaKeyId);
 ```
 
+<a id="createmediakeysession1"></a>
+
 ## createMediaKeySession
 
 ```TypeScript
@@ -105,7 +107,7 @@ let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay
 let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
 ```
 
-<a id="createmediakeysession-2"></a>
+<a id="createmediakeysession3"></a>
 
 ## createMediaKeySession
 

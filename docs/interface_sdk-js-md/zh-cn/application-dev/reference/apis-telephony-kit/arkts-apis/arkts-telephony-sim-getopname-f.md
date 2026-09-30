@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getopname1"></a>
+
 ## getOpName
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="getopname-1"></a>
+<a id="getopname2"></a>
 
 ## getOpName
 

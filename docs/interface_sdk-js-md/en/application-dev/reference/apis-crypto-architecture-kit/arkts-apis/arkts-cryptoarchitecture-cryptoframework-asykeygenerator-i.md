@@ -20,6 +20,8 @@ Asymmetric key generator interface, defining methods for generating asymmetric k
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="convertkey1"></a>
+
 ## convertKey
 
 ```TypeScript
@@ -103,7 +105,7 @@ keyGenPromise.then(keyPair => {
 });
 ```
 
-<a id="convertkey-1"></a>
+<a id="convertkey2"></a>
 
 ## convertKey
 
@@ -165,7 +167,7 @@ asyKeyGenerator.convertKey(pubKeyBlob, priKeyBlob, (err, keyPair) => {
 });
 ```
 
-<a id="convertkey-2"></a>
+<a id="convertkey3"></a>
 
 ## convertKey
 
@@ -256,7 +258,7 @@ keyGenPromise.then(keyPair => {
 });
 ```
 
-<a id="convertkey-3"></a>
+<a id="convertkey4"></a>
 
 ## convertKey
 
@@ -392,6 +394,8 @@ try {
 }
 ```
 
+<a id="convertpemkey1"></a>
+
 ## convertPemKey
 
 ```TypeScript
@@ -477,7 +481,7 @@ async function testConvertPemKeyByPromise() {
 }
 ```
 
-<a id="convertpemkey-1"></a>
+<a id="convertpemkey2"></a>
 
 ## convertPemKey
 
@@ -561,6 +565,8 @@ async function testConvertPemKeyByPromise() {
 }
 ```
 
+<a id="convertpemkeysync1"></a>
+
 ## convertPemKeySync
 
 ```TypeScript
@@ -572,7 +578,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 > **NOTE:** 
 > The precautions for using **convertPemKeySync** are the same as those for **convertPemKey**. For details, see
 > the description of
-> [convertPemKey](#convertpemkey)
+> [convertPemKey](#convertpemkey1)
 > .
 
 <br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
@@ -651,7 +657,7 @@ function testConvertPemKeyBySync() {
 }
 ```
 
-<a id="convertpemkeysync-1"></a>
+<a id="convertpemkeysync2"></a>
 
 ## convertPemKeySync
 
@@ -663,7 +669,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 > **NOTE:** 
 > The precautions for using **convertPemKeySync** are the same as those for
-> [convertPemKey](#convertpemkey-1)
+> [convertPemKey](#convertpemkey2)
 > .
 
 <br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, [convertPemKey](#convertpemkey). Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
@@ -738,6 +744,8 @@ function testConvertPemKeyBySync() {
 }
 ```
 
+<a id="generatekeypair1"></a>
+
 ## generateKeyPair
 
 ```TypeScript
@@ -785,7 +793,7 @@ asyKeyGenerator.generateKeyPair((err, keyPair) => {
 })
 ```
 
-<a id="generatekeypair-1"></a>
+<a id="generatekeypair2"></a>
 
 ## generateKeyPair
 

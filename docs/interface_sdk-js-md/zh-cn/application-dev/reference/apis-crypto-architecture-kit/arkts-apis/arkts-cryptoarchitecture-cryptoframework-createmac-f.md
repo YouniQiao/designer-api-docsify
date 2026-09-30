@@ -6,6 +6,8 @@
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="createmac1"></a>
+
 ## createMac
 
 ```TypeScript
@@ -16,7 +18,7 @@ function createMac(algName: string): Mac
 
 > **说明：** 
 > 
-> 此接口仅支持HMAC。推荐使用[createMac()](#createmac-1)接口。
+> 此接口仅支持HMAC。推荐使用[createMac()](#createmac2)接口。
 
 <br>支持的规格详见[HMAC消息认证码算法规格](../../../security/CryptoArchitectureKit/crypto-compute-mac-overview.md)。
 
@@ -66,7 +68,7 @@ try {
 ```
 
 
-<a id="createmac-1"></a>
+<a id="createmac2"></a>
 
 ## createMac
 

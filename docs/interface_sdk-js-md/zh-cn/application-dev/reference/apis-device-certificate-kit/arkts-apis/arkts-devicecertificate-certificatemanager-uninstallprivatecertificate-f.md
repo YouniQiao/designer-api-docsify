@@ -6,6 +6,8 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="uninstallprivatecertificate1"></a>
+
 ## uninstallPrivateCertificate
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="uninstallprivatecertificate-1"></a>
+<a id="uninstallprivatecertificate2"></a>
 
 ## uninstallPrivateCertificate
 

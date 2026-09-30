@@ -6,6 +6,8 @@
 import { request } from '@kit.BasicServicesKit';
 ```
 
+<a id="remove1"></a>
+
 ## remove
 
 ```TypeScript
@@ -38,7 +40,7 @@ function remove(id: string, callback: AsyncCallback<void>): void
 | [21900006](../errorcode-request.md#21900006-操作不存在的任务错误) | Task removed or not found. |
 
 
-<a id="remove-1"></a>
+<a id="remove2"></a>
 
 ## remove
 

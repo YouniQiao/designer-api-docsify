@@ -6,7 +6,7 @@ declare class PanGestureHandler extends GestureHandler<PanGestureHandler>
 
 Defines a pan gesture handler object.
 
-**Inheritance/Implementation:** PanGestureHandler extends GestureHandler<PanGestureHandler>
+**Inheritance/Implementation:** PanGestureHandler extends GestureHandler&lt;PanGestureHandler&gt;
 
 **Since:** 12
 
@@ -38,6 +38,8 @@ Constructor used to create a pan gesture handler instance.
 | --- | --- | --- | --- |
 | options | [PanGestureHandlerOptions](arkts-arkui-tapgesture-comp-pangesturehandleroptions-i.md) | No | Parameters of the pan gesture handler. |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -68,7 +70,7 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 | --- | --- |
 | [PanGestureHandler](arkts-arkui-tapgesture-comp-pangesturehandler-c.md) | Pan gesture handler object. |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 
@@ -76,7 +78,7 @@ Sets the callback for pan gesture cancellation. This callback is triggered when 
 onActionCancel(event: Callback<GestureEvent>): PanGestureHandler
 ```
 
-Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel), this API returns gesture event information.
+Sets the callback for pan gesture cancellation. This callback is triggered when a touch cancellation event occurs after successful recognition. Compared with [onActionCancel](#onactioncancel1), this API returns gesture event information.
 
 **Since:** 18
 

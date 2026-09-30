@@ -6,7 +6,7 @@ interface Display
 
 屏幕实例。描述Display对象的属性和方法。
 
-下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md)、[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md)中的任一方法获取到Display实例，再通过此实例调用对应方法。
+下列API示例中都需先使用[getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays1)、[getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md)中的任一方法获取到Display实例，再通过此实例调用对应方法。
 
 **起始版本：** 7
 
@@ -70,6 +70,8 @@ try {
 }
 ```
 
+<a id="getcutoutinfo1"></a>
+
 ## getCutoutInfo
 
 ```TypeScript
@@ -116,7 +118,7 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
 });
 ```
 
-<a id="getcutoutinfo-1"></a>
+<a id="getcutoutinfo2"></a>
 
 ## getCutoutInfo
 

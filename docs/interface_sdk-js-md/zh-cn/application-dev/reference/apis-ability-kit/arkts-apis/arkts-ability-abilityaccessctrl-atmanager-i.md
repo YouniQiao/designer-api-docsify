@@ -531,6 +531,8 @@ atManager.requestPermissionOnSetting(context, ['ohos.permission.CAMERA']).then((
 });
 ```
 
+<a id="requestpermissionsfromuser1"></a>
+
 ## requestPermissionsFromUser
 
 ```TypeScript
@@ -603,7 +605,7 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA'], (err: 
 });
 ```
 
-<a id="requestpermissionsfromuser-1"></a>
+<a id="requestpermissionsfromuser2"></a>
 
 ## requestPermissionsFromUser
 
@@ -676,6 +678,8 @@ atManager.requestPermissionsFromUser(context, ['ohos.permission.CAMERA']).then((
 });
 ```
 
+<a id="verifyaccesstoken1"></a>
+
 ## verifyAccessToken
 
 ```TypeScript
@@ -732,7 +736,7 @@ atManager.verifyAccessToken(tokenID, permissionName).then((data: abilityAccessCt
 });
 ```
 
-<a id="verifyaccesstoken-1"></a>
+<a id="verifyaccesstoken2"></a>
 
 ## verifyAccessToken
 

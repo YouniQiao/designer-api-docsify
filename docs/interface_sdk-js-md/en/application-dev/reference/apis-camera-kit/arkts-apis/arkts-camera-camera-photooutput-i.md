@@ -20,6 +20,8 @@ PhotoOutput implements output information used in a photo session. It inherits f
 import { camera } from '@kit.CameraKit';
 ```
 
+<a id="capture1"></a>
+
 ## capture
 
 ```TypeScript
@@ -65,7 +67,7 @@ function capture(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
-<a id="capture-1"></a>
+<a id="capture2"></a>
 
 ## capture
 
@@ -110,7 +112,7 @@ function capture(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
-<a id="capture-2"></a>
+<a id="capture3"></a>
 
 ## capture
 
@@ -170,7 +172,7 @@ function capture(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
-<a id="capture-3"></a>
+<a id="capture4"></a>
 
 ## capture
 

@@ -28,6 +28,8 @@ WindowExtensionContext模块提供[WindowExtensionAbility](arkts-arkui-applicati
 
 **系统接口：** 此接口为系统接口。
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -38,7 +40,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 > **说明：** 
 > 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability-1)。
+> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability2)。
 
 **起始版本：** 9
 
@@ -107,7 +109,7 @@ class WindowExtAbility extends WindowExtensionAbility {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 
@@ -119,7 +121,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 > **说明：** 
 > 
-> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability-2)。
+> - 从API version 9开始支持，从API version 21开始废弃，推荐使用[UIExtensionContext.startability](../../apis-ability-kit/arkts-apis/arkts-ability-uiextensioncontext-c.md#startability3)。
 
 **起始版本：** 9
 

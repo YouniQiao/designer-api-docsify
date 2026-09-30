@@ -6,6 +6,8 @@
 import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
+<a id="getuserstoragestats1"></a>
+
 ## getUserStorageStats
 
 ```TypeScript
@@ -52,7 +54,7 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
 ```
 
 
-<a id="getuserstoragestats-1"></a>
+<a id="getuserstoragestats2"></a>
 
 ## getUserStorageStats
 
@@ -103,7 +105,7 @@ storageStatistics.getUserStorageStats((error: BusinessError, storageStats: stora
 ```
 
 
-<a id="getuserstoragestats-2"></a>
+<a id="getuserstoragestats3"></a>
 
 ## getUserStorageStats
 
@@ -159,7 +161,7 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
 ```
 
 
-<a id="getuserstoragestats-3"></a>
+<a id="getuserstoragestats4"></a>
 
 ## getUserStorageStats
 

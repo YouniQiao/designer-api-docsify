@@ -10,13 +10,15 @@ interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 > 
 > 捏合手势触发成功后，抬起手指直至不再满足触发条件。再次满足条件时，可重新触发捏合手势。
 
-**继承/实现关系：** PinchGestureInterface extends GestureInterface<PinchGestureInterface>
+**继承/实现关系：** PinchGestureInterface extends GestureInterface&lt;PinchGestureInterface&gt;
 
 **起始版本：** 7
 
 <!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>--><!--Device-unnamed-interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -46,7 +48,7 @@ interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 
@@ -78,6 +80,8 @@ interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
+<a id="onactioncancel1"></a>
+
 ## onActionCancel
 
 ```TypeScript
@@ -106,7 +110,7 @@ Pinch手势识别成功，接收到触摸取消事件触发的回调，不返回
 | --- | --- |
 | [PinchGestureInterface](arkts-arkui-tapgesture-comp-pinchgestureinterface-i.md) |  |
 
-<a id="onactioncancel-1"></a>
+<a id="onactioncancel2"></a>
 
 ## onActionCancel
 
@@ -114,7 +118,7 @@ Pinch手势识别成功，接收到触摸取消事件触发的回调，不返回
 onActionCancel(event: Callback<GestureEvent>): PinchGestureInterface
 ```
 
-Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCancel](#onactioncancel)相比，该回调返回手势事件信息。
+Pinch手势识别成功并接收到触摸取消事件的回调。与[onActionCancel](#onactioncancel1)相比，该回调返回手势事件信息。
 
 **起始版本：** 18
 

@@ -6,6 +6,8 @@
 import { restrictions } from '@kit.MDMKit';
 ```
 
+<a id="sethdcdisabled1"></a>
+
 ## setHdcDisabled
 
 ```TypeScript
@@ -18,7 +20,7 @@ Enables or disables [HDC](../../../../device-dev/subsystems/subsys-toolchain-hdc
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy2)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 
@@ -70,7 +72,7 @@ restrictions.setHdcDisabled(wantTemp, true, (err) => {
 ```
 
 
-<a id="sethdcdisabled-1"></a>
+<a id="sethdcdisabled2"></a>
 
 ## setHdcDisabled
 
@@ -84,7 +86,7 @@ Enables or disables HDC on a device. This API uses a promise to return the resul
 
 **Deprecated since:** 26.0.0
 
-**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy-1)(admin: Want, feature: FeatureForDevice, disallow: boolean)
+**Substitutes:** [setDisallowedPolicy](arkts-mdm-restrictions-setdisallowedpolicy-f.md#setdisallowedpolicy2)(admin: Want, feature: FeatureForDevice, disallow: boolean)
 
 **Required permissions:** ohos.permission.ENTERPRISE_RESTRICT_POLICY
 

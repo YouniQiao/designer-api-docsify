@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="releaseform1"></a>
+
 ## releaseForm
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="releaseform-1"></a>
+<a id="releaseform2"></a>
 
 ## releaseForm
 
@@ -123,7 +125,7 @@ try {
 ```
 
 
-<a id="releaseform-2"></a>
+<a id="releaseform3"></a>
 
 ## releaseForm
 

@@ -6,6 +6,8 @@
 import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
+<a id="removecandidateconfig1"></a>
+
 ## removeCandidateConfig
 
 ```TypeScript
@@ -67,7 +69,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 ```
 
 
-<a id="removecandidateconfig-1"></a>
+<a id="removecandidateconfig2"></a>
 
 ## removeCandidateConfig
 

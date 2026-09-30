@@ -367,6 +367,8 @@ try {
 }
 ```
 
+<a id="notifycharacteristicchanged1"></a>
+
 ## notifyCharacteristicChanged
 
 ```TypeScript
@@ -437,7 +439,7 @@ try {
 }
 ```
 
-<a id="notifycharacteristicchanged-1"></a>
+<a id="notifycharacteristicchanged2"></a>
 
 ## notifyCharacteristicChanged
 

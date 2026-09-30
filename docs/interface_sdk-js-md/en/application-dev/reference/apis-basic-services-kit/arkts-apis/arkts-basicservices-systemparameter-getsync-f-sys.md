@@ -26,7 +26,7 @@ Obtains a value of the specified key.
 
 **Deprecated since:** 9
 
-**Substitutes:** getSync
+**Substitutes:** [getSync](arkts-basicservices-systemparameterenhance-getsync-f-sys.md)
 
 <!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
 

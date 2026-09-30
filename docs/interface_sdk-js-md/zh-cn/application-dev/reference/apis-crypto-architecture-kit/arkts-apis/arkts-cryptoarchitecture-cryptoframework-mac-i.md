@@ -4,7 +4,7 @@
 interface Mac
 ```
 
-消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过[createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md)方法创建一个Mac实例。
+消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过[createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac1)方法创建一个Mac实例。
 
 **起始版本：** 9
 
@@ -19,6 +19,8 @@ interface Mac
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
+
+<a id="dofinal1"></a>
 
 ## doFinal
 
@@ -76,7 +78,7 @@ function hmacByCallback() {
 }
 ```
 
-<a id="dofinal-1"></a>
+<a id="dofinal2"></a>
 
 ## doFinal
 
@@ -253,6 +255,8 @@ function testGetMacLength() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -286,7 +290,7 @@ init(key: SymKey, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -359,6 +363,8 @@ initSync(key: SymKey): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -396,7 +402,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 | [17620001](../errorcode-crypto-framework.md#17620001-内存操作失败) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-密码操作错误) | Crypto operation error. |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

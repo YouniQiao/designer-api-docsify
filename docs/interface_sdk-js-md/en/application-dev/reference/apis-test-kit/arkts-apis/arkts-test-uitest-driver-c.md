@@ -881,6 +881,8 @@ async function demo() {
 }
 ```
 
+<a id="fling1"></a>
+
 ## fling
 
 ```TypeScript
@@ -933,7 +935,7 @@ async function demo() {
 }
 ```
 
-<a id="fling-1"></a>
+<a id="fling2"></a>
 
 ## fling
 
@@ -985,7 +987,7 @@ async function demo() {
 }
 ```
 
-<a id="fling-2"></a>
+<a id="fling3"></a>
 
 ## fling
 
@@ -1038,6 +1040,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplaydensity1"></a>
+
 ## getDisplayDensity
 
 ```TypeScript
@@ -1085,7 +1089,7 @@ async function demo() {
 }
 ```
 
-<a id="getdisplaydensity-1"></a>
+<a id="getdisplaydensity2"></a>
 
 ## getDisplayDensity
 
@@ -1136,6 +1140,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplayrotation1"></a>
+
 ## getDisplayRotation
 
 ```TypeScript
@@ -1183,7 +1189,7 @@ async function demo() {
 }
 ```
 
-<a id="getdisplayrotation-1"></a>
+<a id="getdisplayrotation2"></a>
 
 ## getDisplayRotation
 
@@ -1234,6 +1240,8 @@ async function demo() {
 }
 ```
 
+<a id="getdisplaysize1"></a>
+
 ## getDisplaySize
 
 ```TypeScript
@@ -1281,7 +1289,7 @@ async function demo() {
 }
 ```
 
-<a id="getdisplaysize-1"></a>
+<a id="getdisplaysize2"></a>
 
 ## getDisplaySize
 
@@ -1519,6 +1527,8 @@ async function demo() {
 }
 ```
 
+<a id="inputtext1"></a>
+
 ## inputText
 
 ```TypeScript
@@ -1575,7 +1585,7 @@ async function demo() {
 }
 ```
 
-<a id="inputtext-1"></a>
+<a id="inputtext2"></a>
 
 ## inputText
 
@@ -2113,6 +2123,8 @@ async function demo() {
 }
 ```
 
+<a id="mousedrag1"></a>
+
 ## mouseDrag
 
 ```TypeScript
@@ -2164,7 +2176,7 @@ async function demo() {
 }
 ```
 
-<a id="mousedrag-1"></a>
+<a id="mousedrag2"></a>
 
 ## mouseDrag
 
@@ -2281,6 +2293,8 @@ async function demo() {
 }
 ```
 
+<a id="mouselongclick1"></a>
+
 ## mouseLongClick
 
 ```TypeScript
@@ -2334,7 +2348,7 @@ async function demo() {
 }
 ```
 
-<a id="mouselongclick-1"></a>
+<a id="mouselongclick2"></a>
 
 ## mouseLongClick
 
@@ -2490,6 +2504,8 @@ async function demo() {
 }
 ```
 
+<a id="mousescroll1"></a>
+
 ## mouseScroll
 
 ```TypeScript
@@ -2543,7 +2559,7 @@ async function demo() {
 }
 ```
 
-<a id="mousescroll-1"></a>
+<a id="mousescroll2"></a>
 
 ## mouseScroll
 
@@ -2799,6 +2815,8 @@ async function demo() {
 }
 ```
 
+<a id="pressback1"></a>
+
 ## pressBack
 
 ```TypeScript
@@ -2846,7 +2864,7 @@ async function demo() {
 }
 ```
 
-<a id="pressback-1"></a>
+<a id="pressback2"></a>
 
 ## pressBack
 
@@ -2897,6 +2915,8 @@ async function demo() {
 }
 ```
 
+<a id="presshome1"></a>
+
 ## pressHome
 
 ```TypeScript
@@ -2939,7 +2959,7 @@ async function demo() {
 }
 ```
 
-<a id="presshome-1"></a>
+<a id="presshome2"></a>
 
 ## pressHome
 
@@ -2990,6 +3010,8 @@ async function demo() {
 }
 ```
 
+<a id="screencap1"></a>
+
 ## screenCap
 
 ```TypeScript
@@ -3039,7 +3061,7 @@ async function demo() {
 }
 ```
 
-<a id="screencap-1"></a>
+<a id="screencap2"></a>
 
 ## screenCap
 
@@ -3513,6 +3535,8 @@ async function demo() {
 }
 ```
 
+<a id="triggercombinekeys1"></a>
+
 ## triggerCombineKeys
 
 ```TypeScript
@@ -3565,7 +3589,7 @@ async function demo() {
 }
 ```
 
-<a id="triggercombinekeys-1"></a>
+<a id="triggercombinekeys2"></a>
 
 ## triggerCombineKeys
 
@@ -3619,6 +3643,8 @@ async function demo() {
 }
 ```
 
+<a id="triggerkey1"></a>
+
 ## triggerKey
 
 ```TypeScript
@@ -3669,7 +3695,7 @@ async function demo() {
 }
 ```
 
-<a id="triggerkey-1"></a>
+<a id="triggerkey2"></a>
 
 ## triggerKey
 

@@ -6,6 +6,8 @@
 import { application } from '@kit.AbilityKit';
 ```
 
+<a id="createmodulecontext1"></a>
+
 ## createModuleContext
 
 ```TypeScript

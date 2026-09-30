@@ -6,6 +6,8 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
+<a id="getrunningforminfos1"></a>
+
 ## getRunningFormInfos
 
 ```TypeScript
@@ -42,7 +44,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-1"></a>
+<a id="getrunningforminfos2"></a>
 
 ## getRunningFormInfos
 
@@ -85,7 +87,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-2"></a>
+<a id="getrunningforminfos3"></a>
 
 ## getRunningFormInfos
 
@@ -128,7 +130,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
 
-<a id="getrunningforminfos-3"></a>
+<a id="getrunningforminfos4"></a>
 
 ## getRunningFormInfos
 

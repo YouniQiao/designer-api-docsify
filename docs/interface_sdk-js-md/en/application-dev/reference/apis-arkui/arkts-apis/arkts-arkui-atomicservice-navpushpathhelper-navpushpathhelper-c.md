@@ -40,6 +40,8 @@ A constructor used to create a **NavPushPathHelper** object.
 | --- | --- | --- | --- |
 | navPathStack | [NavPathStack](../arkts-components/arkts-arkui-navigation-comp-navpathstack-c.md) | Yes | [Navigation](../arkts-components/arkts-arkui-navigation-comp.md) stack. |
 
+<a id="pushdestination1"></a>
+
 ## pushDestination
 
 ```TypeScript
@@ -80,7 +82,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
-<a id="pushdestination-1"></a>
+<a id="pushdestination2"></a>
 
 ## pushDestination
 
@@ -124,6 +126,8 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushdestinationbyname1"></a>
+
 ## pushDestinationByName
 
 ```TypeScript
@@ -165,7 +169,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
-<a id="pushdestinationbyname-1"></a>
+<a id="pushdestinationbyname2"></a>
 
 ## pushDestinationByName
 
@@ -210,6 +214,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushpath1"></a>
+
 ## pushPath
 
 ```TypeScript
@@ -246,7 +252,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
-<a id="pushpath-1"></a>
+<a id="pushpath2"></a>
 
 ## pushPath
 
@@ -286,6 +292,8 @@ Depending on the LaunchMode specified in the **options** parameter, different be
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="pushpathbyname1"></a>
+
 ## pushPathByName
 
 ```TypeScript
@@ -323,7 +331,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
-<a id="pushpathbyname-1"></a>
+<a id="pushpathbyname2"></a>
 
 ## pushPathByName
 
@@ -364,6 +372,8 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
+<a id="replacepath1"></a>
+
 ## replacePath
 
 ```TypeScript
@@ -400,7 +410,7 @@ Checks for the target subpackage and, if it is not present, initiates a download
 | --- | --- |
 | [300001](../errorcode-router.md#300001-silent-installation-of-the-hsp-failed-before-navigation) | hsp silent install fail. |
 
-<a id="replacepath-1"></a>
+<a id="replacepath2"></a>
 
 ## replacePath
 

@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="getkeyitemproperties1"></a>
+
 ## getKeyItemProperties
 
 ```TypeScript
@@ -83,7 +85,7 @@ huks.getKeyItemProperties(keyAlias, emptyOptions, (error, data) => {
 ```
 
 
-<a id="getkeyitemproperties-1"></a>
+<a id="getkeyitemproperties2"></a>
 
 ## getKeyItemProperties
 

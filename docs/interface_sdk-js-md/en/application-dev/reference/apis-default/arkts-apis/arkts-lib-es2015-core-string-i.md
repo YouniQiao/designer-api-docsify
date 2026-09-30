@@ -59,6 +59,8 @@ Returns true if searchString appears as a substring of the result of converting 
 | searchString | string | Yes |  |
 | position | number | No |  |
 
+<a id="normalize1"></a>
+
 ## normalize
 
 ```TypeScript
@@ -75,7 +77,7 @@ Returns the String value result of normalizing the string into the normalization
 | --- | --- | --- | --- |
 | form | "NFC" &#124; "NFD" &#124; "NFKC" &#124; "NFKD" | Yes |  |
 
-<a id="normalize-1"></a>
+<a id="normalize2"></a>
 
 ## normalize
 
@@ -210,6 +212,8 @@ Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 | --- | --- | --- | --- |
 | color | string | Yes |  |
 
+<a id="fontsize1"></a>
+
 ## fontsize
 
 ```TypeScript
@@ -228,7 +232,7 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 | --- | --- | --- | --- |
 | size | number | Yes |  |
 
-<a id="fontsize-1"></a>
+<a id="fontsize2"></a>
 
 ## fontsize
 

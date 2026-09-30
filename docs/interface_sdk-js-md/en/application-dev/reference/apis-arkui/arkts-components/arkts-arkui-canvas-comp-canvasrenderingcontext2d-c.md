@@ -31,6 +31,8 @@ declare class CanvasRenderingContext2D extends CanvasRenderer
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -99,7 +101,7 @@ struct LengthMetricsUnitDemo {
 }
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

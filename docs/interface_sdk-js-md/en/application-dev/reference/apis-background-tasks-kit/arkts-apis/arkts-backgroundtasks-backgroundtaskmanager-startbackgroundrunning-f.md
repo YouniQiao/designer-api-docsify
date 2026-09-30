@@ -6,13 +6,15 @@
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="startbackgroundrunning1"></a>
+
 ## startBackgroundRunning
 
 ```TypeScript
 function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void
 ```
 
-Requests a continuous task of a specific type. This API uses an asynchronous callback to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning-3) added in API version 21.
+Requests a continuous task of a specific type. This API uses an asynchronous callback to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning4) added in API version 21.
 
 **Since:** 9
 
@@ -102,7 +104,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="startbackgroundrunning-1"></a>
+<a id="startbackgroundrunning2"></a>
 
 ## startBackgroundRunning
 
@@ -110,7 +112,7 @@ export default class EntryAbility extends UIAbility {
 function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>
 ```
 
-Requests a continuous task of a specific type. This API uses a promise to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning-3) added in API version 21.
+Requests a continuous task of a specific type. This API uses a promise to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning4) added in API version 21.
 
 **Since:** 9
 
@@ -201,7 +203,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="startbackgroundrunning-2"></a>
+<a id="startbackgroundrunning3"></a>
 
 ## startBackgroundRunning
 
@@ -209,7 +211,7 @@ export default class EntryAbility extends UIAbility {
 function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent): Promise<ContinuousTaskNotification>
 ```
 
-Requests continuous tasks of multiple types. This API uses a promise to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning-3) added in API version 21.
+Requests continuous tasks of multiple types. This API uses a promise to return the result. After a continuous task is successfully requested, there will be a notification message without prompt tone. A UIAbility (ServiceAbility in the FA model) can request only one continuous task at a time through this API. You can request multiple continuous tasks by calling [startBackgroundRunning](#startbackgroundrunning4) added in API version 21.
 
 **Since:** 12
 
@@ -343,7 +345,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="startbackgroundrunning-3"></a>
+<a id="startbackgroundrunning4"></a>
 
 ## startBackgroundRunning
 

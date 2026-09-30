@@ -390,6 +390,8 @@ function ImportSceneTest() {
 }
 ```
 
+<a id="load1"></a>
+
 ## load
 
 ```TypeScript

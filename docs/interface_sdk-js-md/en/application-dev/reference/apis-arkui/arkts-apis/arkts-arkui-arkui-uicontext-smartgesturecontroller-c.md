@@ -334,7 +334,7 @@ Requests to set the specified component as the current smart gesture selected no
 
 > **NOTE:** 
 > 
-> - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an [onClick](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onclick-1) event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
+> - The request takes effect only when all the following conditions are met: the target component can respond to smart gestures, the component is visible on the screen, and the component has an [onClick](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#onclick2) event bound or a [TapGesture](../arkts-components/arkts-arkui-gesturecontrol-n.md#tapgesture) gesture bound.
 > 
 > - Whether a component can respond to smart gestures is determined by **enabled** in [smartGestureShortcut](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#smartgestureshortcut).
 

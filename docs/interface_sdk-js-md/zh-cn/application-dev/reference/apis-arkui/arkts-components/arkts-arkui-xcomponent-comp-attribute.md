@@ -10,7 +10,7 @@ declare class XComponentAttribute extends CommonMethod<XComponentAttribute>
 
 从API版本12开始，当type设置为**SURFACE**或**TEXTURE**时，支持[通用事件](arkts-arkui-common-comp.md)。
 
-**继承/实现关系：** XComponentAttribute extends CommonMethod<XComponentAttribute>
+**继承/实现关系：** XComponentAttribute extends CommonMethod&lt;XComponentAttribute&gt;
 
 **起始版本：** 8
 
@@ -74,6 +74,8 @@ enableSecure(isSecure: boolean)
 | --- | --- | --- | --- |
 | isSecure | boolean | 是 | 是否开启隐私图层模式。<br>true：开启隐私图层模式；false：关闭隐私图层模式。<br>默认值：false |
 
+<a id="hdrbrightness1"></a>
+
 ## hdrBrightness
 
 ```TypeScript
@@ -98,7 +100,7 @@ hdrBrightness(brightness: number)
 | --- | --- | --- | --- |
 | brightness | number | 是 | HDR视频的亮度。<br>默认值：1.0<br>取值范围：[0.0, 1.0]。小于0.0的值按0.0处理，大于1.0的值按1.0处理，其他异常值按1.0处理。<br>0.0表示视频按照SDR亮度显示，1.0表示视频按照当前允许的最高HDR亮度显示。 |
 
-<a id="hdrbrightness-1"></a>
+<a id="hdrbrightness2"></a>
 
 ## hdrBrightness
 

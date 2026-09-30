@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial(System Material)
 
-This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color ([backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)), border color ([borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor)), border width ([borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth)), and shadow ([shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow)).
+This module provides APIs for system materials. Different system materials correspond to different UI effects, including the background color ([backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor1)), border color ([borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor)), border width ([borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth)), and shadow ([shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow1)).
 
 > **NOTE:** 
 > 

@@ -6,13 +6,15 @@ declare class NavigationAttribute extends CommonMethod<NavigationAttribute>
 
 In addition to the universal attributes, the following attributes are supported.
 
-**Inheritance/Implementation:** NavigationAttribute extends CommonMethod<NavigationAttribute>
+**Inheritance/Implementation:** NavigationAttribute extends CommonMethod&lt;NavigationAttribute&gt;
 
 **Since:** 8
 
 <!--Device-unnamed-declare class NavigationAttribute extends CommonMethod<NavigationAttribute>--><!--Device-unnamed-declare class NavigationAttribute extends CommonMethod<NavigationAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="backbuttonicon1"></a>
 
 ## backButtonIcon
 
@@ -42,7 +44,7 @@ Sets the icon of the back button in the title bar.
 | --- | --- | --- | --- |
 | value | string &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | Icon of the back button in the title bar.<br>**Since:** 12 |
 
-<a id="backbuttonicon-1"></a>
+<a id="backbuttonicon2"></a>
 
 ## backButtonIcon
 
@@ -208,7 +210,7 @@ Sets whether to enable the animation for switching between single- and split-col
 enableToolBarAdaptation(enable: Optional<boolean>)
 ```
 
-Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfiguration)) for the **Navigation** and **NavDestination** components. If this feature is disabled, the bottom toolbar ([toolbarConfiguration](#toolbarconfiguration)) will no longer be moved into the menu in the upper right corner of the page. This API does not apply to custom menus; using it requires defining the [menu](#menus) via the [NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md) API.
+Sets whether to enable toolbar adaptation ([toolbarConfiguration](#toolbarconfiguration)) for the **Navigation** and **NavDestination** components. If this feature is disabled, the bottom toolbar ([toolbarConfiguration](#toolbarconfiguration)) will no longer be moved into the menu in the upper right corner of the page. This API does not apply to custom menus; using it requires defining the [menu](#menus1) via the [NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md) API.
 
 **Since:** 19
 
@@ -296,6 +298,8 @@ From API version 9 to API version 10, this attribute takes effect only in split-
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the navigation page.<br>**true**: yes<br>**false**: no<br>If the input parameter is invalid, the value **false** is used. |
 
+<a id="hidetitlebar1"></a>
+
 ## hideTitleBar
 
 ```TypeScript
@@ -318,7 +322,7 @@ Specifies whether to hide the title bar.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the title bar.<br>**true**: yes<br>**false**: no<br>If the input parameter is invalid, the value **false** is used. |
 
-<a id="hidetitlebar-1"></a>
+<a id="hidetitlebar2"></a>
 
 ## hideTitleBar
 
@@ -326,7 +330,7 @@ Specifies whether to hide the title bar.
 hideTitleBar(hide: boolean, animated: boolean)
 ```
 
-Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar), this API adds the capability to control whether to animate the visibility change of the title bar.
+Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar1), this API adds the capability to control whether to animate the visibility change of the title bar.
 
 **Since:** 13
 
@@ -344,6 +348,8 @@ Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitle
 | --- | --- | --- | --- |
 | hide | boolean | Yes | Whether to hide the title bar.<br>**true**: yes<br>**false**: no<br>If the input parameter is invalid, the value **false** is used. |
 | animated | boolean | Yes | Whether to animate the visibility change.<br>**true**: yes<br> **false**: no<br>If the input parameter is invalid, the value **false** is used. |
+
+<a id="hidetoolbar1"></a>
 
 ## hideToolBar
 
@@ -367,7 +373,7 @@ Specifies whether to hide the toolbar.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the toolbar.<br>**true**: Hide the toolbar. <br>**false**: Display the toolbar.<br>If the input parameter is invalid, the value **false** is used. |
 
-<a id="hidetoolbar-1"></a>
+<a id="hidetoolbar2"></a>
 
 ## hideToolBar
 
@@ -375,7 +381,7 @@ Specifies whether to hide the toolbar.
 hideToolBar(hide: boolean, animated: boolean)
 ```
 
-Specifies whether to hide the toolbar. Compared with [hideToolBar](#hidetoolbar), this API adds the capability to control whether to animate the visibility change of the toolbar.
+Specifies whether to hide the toolbar. Compared with [hideToolBar](#hidetoolbar1), this API adds the capability to control whether to animate the visibility change of the toolbar.
 
 **Since:** 13
 
@@ -430,6 +436,8 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 | types | Array&lt;[LayoutSafeAreaType](arkts-arkui-common-comp-layoutsafeareatype-e.md)&gt; | No | Types of non-safe areas to extend into.<br>Default value:<br> [LayoutSafeAreaType.SYSTEM] |
 | edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-common-comp-layoutsafeareaedge-e.md)&gt; | No | Edges for expanding the safe area.<br> Default value:<br> [LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM] |
 
+<a id="menus1"></a>
+
 ## menus
 
 ```TypeScript
@@ -458,7 +466,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 | --- | --- | --- | --- |
 | value | Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
 
-<a id="menus-1"></a>
+<a id="menus2"></a>
 
 ## menus
 
@@ -466,7 +474,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus1), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 > **NOTE:** 
 > 

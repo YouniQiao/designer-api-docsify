@@ -18,7 +18,7 @@ Provides APIs for the file manager application to perform device-cloud sync of t
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

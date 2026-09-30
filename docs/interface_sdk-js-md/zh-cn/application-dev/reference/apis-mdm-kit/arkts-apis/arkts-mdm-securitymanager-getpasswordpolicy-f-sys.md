@@ -6,7 +6,7 @@
 import { securityManager } from '@kit.MDMKit';
 ```
 
-<a id="getpasswordpolicy-2"></a>
+<a id="getpasswordpolicy3"></a>
 
 ## getPasswordPolicy
 

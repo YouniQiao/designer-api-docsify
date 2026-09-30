@@ -18,6 +18,8 @@ You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodabi
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
+<a id="deletebackward1"></a>
+
 ## deleteBackward
 
 ```TypeScript
@@ -66,7 +68,7 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-<a id="deletebackward-1"></a>
+<a id="deletebackward2"></a>
 
 ## deleteBackward
 
@@ -154,6 +156,8 @@ let length: number = 1;
 inputClient.deleteBackwardSync(length);
 ```
 
+<a id="deleteforward1"></a>
+
 ## deleteForward
 
 ```TypeScript
@@ -202,7 +206,7 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
 });
 ```
 
-<a id="deleteforward-1"></a>
+<a id="deleteforward2"></a>
 
 ## deleteForward
 
@@ -395,6 +399,8 @@ let attachOptions: inputMethodEngine.AttachOptions = inputClient.getAttachOption
 console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptions}`);
 ```
 
+<a id="getbackward1"></a>
+
 ## getBackward
 
 ```TypeScript
@@ -439,7 +445,7 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-<a id="getbackward-1"></a>
+<a id="getbackward2"></a>
 
 ## getBackward
 
@@ -574,6 +580,8 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 });
 ```
 
+<a id="geteditorattribute1"></a>
+
 ## getEditorAttribute
 
 ```TypeScript
@@ -615,7 +623,7 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
 });
 ```
 
-<a id="geteditorattribute-2"></a>
+<a id="geteditorattribute3"></a>
 
 ## getEditorAttribute
 
@@ -690,6 +698,8 @@ console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
 console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 ```
 
+<a id="getforward1"></a>
+
 ## getForward
 
 ```TypeScript
@@ -734,7 +744,7 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
 });
 ```
 
-<a id="getforward-1"></a>
+<a id="getforward2"></a>
 
 ## getForward
 
@@ -825,6 +835,8 @@ let text: string = inputClient.getForwardSync(length);
 console.info(`Succeeded in getting forward, text: ${text}`);
 ```
 
+<a id="gettextindexatcursor1"></a>
+
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -866,7 +878,7 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: number) => {
 });
 ```
 
-<a id="gettextindexatcursor-1"></a>
+<a id="gettextindexatcursor2"></a>
 
 ## getTextIndexAtCursor
 
@@ -941,6 +953,8 @@ let index: number = inputClient.getTextIndexAtCursorSync();
 console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 ```
 
+<a id="inserttext1"></a>
+
 ## insertText
 
 ```TypeScript
@@ -989,7 +1003,7 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
 });
 ```
 
-<a id="inserttext-1"></a>
+<a id="inserttext2"></a>
 
 ## insertText
 
@@ -1075,6 +1089,8 @@ Inserts text.
 inputClient.insertTextSync('test');
 ```
 
+<a id="movecursor1"></a>
+
 ## moveCursor
 
 ```TypeScript
@@ -1117,7 +1133,7 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 });
 ```
 
-<a id="movecursor-1"></a>
+<a id="movecursor2"></a>
 
 ## moveCursor
 
@@ -1296,7 +1312,7 @@ Registers or unregisters MessageHandler. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage-1) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage2) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). <br>If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1323,6 +1339,8 @@ inputMethodEngine.getInputMethodAbility()
       inputClient.recvMessage(messageHandler);
     });
 ```
+
+<a id="selectbymovement1"></a>
 
 ## selectByMovement
 
@@ -1367,7 +1385,7 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
 });
 ```
 
-<a id="selectbymovement-1"></a>
+<a id="selectbymovement2"></a>
 
 ## selectByMovement
 
@@ -1449,6 +1467,8 @@ let movement: inputMethodEngine.Movement = { direction: 1 };
 inputClient.selectByMovementSync(movement);
 ```
 
+<a id="selectbyrange1"></a>
+
 ## selectByRange
 
 ```TypeScript
@@ -1492,7 +1512,7 @@ inputClient.selectByRange(range, (err: BusinessError) => {
 });
 ```
 
-<a id="selectbyrange-1"></a>
+<a id="selectbyrange2"></a>
 
 ## selectByRange
 
@@ -1574,6 +1594,8 @@ let range: inputMethodEngine.Range = { start: 0, end: 1 };
 inputClient.selectByRangeSync(range);
 ```
 
+<a id="sendextendaction1"></a>
+
 ## sendExtendAction
 
 ```TypeScript
@@ -1622,7 +1644,7 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
 });
 ```
 
-<a id="sendextendaction-1"></a>
+<a id="sendextendaction2"></a>
 
 ## sendExtendAction
 
@@ -1675,6 +1697,8 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 });
 ```
 
+<a id="sendkeyfunction1"></a>
+
 ## sendKeyFunction
 
 ```TypeScript
@@ -1723,7 +1747,7 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
 });
 ```
 
-<a id="sendkeyfunction-1"></a>
+<a id="sendkeyfunction2"></a>
 
 ## sendKeyFunction
 

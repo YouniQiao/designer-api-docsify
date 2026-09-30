@@ -6,6 +6,8 @@
 import { networkManager } from '@kit.MDMKit';
 ```
 
+<a id="getallnetworkinterfaces1"></a>
+
 ## getAllNetworkInterfaces
 
 ```TypeScript
@@ -69,7 +71,7 @@ networkManager.getAllNetworkInterfaces(wantTemp, (err, result) => {
 ```
 
 
-<a id="getallnetworkinterfaces-1"></a>
+<a id="getallnetworkinterfaces2"></a>
 
 ## getAllNetworkInterfaces
 

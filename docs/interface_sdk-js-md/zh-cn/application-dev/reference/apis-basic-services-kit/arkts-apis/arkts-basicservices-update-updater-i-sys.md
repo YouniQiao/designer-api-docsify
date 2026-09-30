@@ -33,6 +33,8 @@ export interface Updater
 import { update } from '@kit.BasicServicesKit';
 ```
 
+<a id="checknewversion1"></a>
+
 ## checkNewVersion
 
 ```TypeScript
@@ -118,7 +120,7 @@ try {
 }
 ```
 
-<a id="checknewversion-1"></a>
+<a id="checknewversion2"></a>
 
 ## checkNewVersion
 
@@ -203,6 +205,8 @@ try {
   console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<a id="clearerror1"></a>
 
 ## clearError
 
@@ -297,7 +301,7 @@ try {
 }
 ```
 
-<a id="clearerror-1"></a>
+<a id="clearerror2"></a>
 
 ## clearError
 
@@ -392,6 +396,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="download1"></a>
 
 ## download
 
@@ -495,7 +501,7 @@ try {
 }
 ```
 
-<a id="download-1"></a>
+<a id="download2"></a>
 
 ## download
 
@@ -598,6 +604,8 @@ try {
 }
 ```
 
+<a id="getcurrentversiondescription1"></a>
+
 ## getCurrentVersionDescription
 
 ```TypeScript
@@ -683,7 +691,7 @@ try {
 }
 ```
 
-<a id="getcurrentversiondescription-1"></a>
+<a id="getcurrentversiondescription2"></a>
 
 ## getCurrentVersionDescription
 
@@ -768,6 +776,8 @@ try {
 }
 ```
 
+<a id="getcurrentversioninfo1"></a>
+
 ## getCurrentVersionInfo
 
 ```TypeScript
@@ -839,7 +849,7 @@ try {
 }
 ```
 
-<a id="getcurrentversioninfo-1"></a>
+<a id="getcurrentversioninfo2"></a>
 
 ## getCurrentVersionInfo
 
@@ -906,6 +916,8 @@ try {
   console.error(`Fail to get updater error: ${error}`);
 }
 ```
+
+<a id="getnewversiondescription1"></a>
 
 ## getNewVersionDescription
 
@@ -997,7 +1009,7 @@ try {
 }
 ```
 
-<a id="getnewversiondescription-1"></a>
+<a id="getnewversiondescription2"></a>
 
 ## getNewVersionDescription
 
@@ -1094,6 +1106,8 @@ try {
 }
 ```
 
+<a id="getnewversioninfo1"></a>
+
 ## getNewVersionInfo
 
 ```TypeScript
@@ -1180,7 +1194,7 @@ try {
 }
 ```
 
-<a id="getnewversioninfo-1"></a>
+<a id="getnewversioninfo2"></a>
 
 ## getNewVersionInfo
 
@@ -1266,6 +1280,8 @@ try {
 }
 ```
 
+<a id="gettaskinfo1"></a>
+
 ## getTaskInfo
 
 ```TypeScript
@@ -1347,7 +1363,7 @@ try {
 }
 ```
 
-<a id="gettaskinfo-1"></a>
+<a id="gettaskinfo2"></a>
 
 ## getTaskInfo
 
@@ -1428,6 +1444,8 @@ try {
 }
 ```
 
+<a id="getupgradepolicy1"></a>
+
 ## getUpgradePolicy
 
 ```TypeScript
@@ -1495,7 +1513,7 @@ try {
 }
 ```
 
-<a id="getupgradepolicy-1"></a>
+<a id="getupgradepolicy2"></a>
 
 ## getUpgradePolicy
 
@@ -1707,6 +1725,8 @@ try {
 }
 ```
 
+<a id="pausedownload1"></a>
+
 ## pauseDownload
 
 ```TypeScript
@@ -1802,7 +1822,7 @@ try {
 }
 ```
 
-<a id="pausedownload-1"></a>
+<a id="pausedownload2"></a>
 
 ## pauseDownload
 
@@ -1898,6 +1918,8 @@ try {
 }
 ```
 
+<a id="resumedownload1"></a>
+
 ## resumeDownload
 
 ```TypeScript
@@ -1988,7 +2010,7 @@ try {
 }
 ```
 
-<a id="resumedownload-1"></a>
+<a id="resumedownload2"></a>
 
 ## resumeDownload
 
@@ -2078,6 +2100,8 @@ try {
 }
 ```
 
+<a id="setupgradepolicy1"></a>
+
 ## setUpgradePolicy
 
 ```TypeScript
@@ -2153,7 +2177,7 @@ try {
 }
 ```
 
-<a id="setupgradepolicy-1"></a>
+<a id="setupgradepolicy2"></a>
 
 ## setUpgradePolicy
 
@@ -2232,6 +2256,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="terminateupgrade1"></a>
 
 ## terminateUpgrade
 
@@ -2312,7 +2338,7 @@ try {
 }
 ```
 
-<a id="terminateupgrade-1"></a>
+<a id="terminateupgrade2"></a>
 
 ## terminateUpgrade
 
@@ -2390,6 +2416,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<a id="upgrade1"></a>
 
 ## upgrade
 
@@ -2489,7 +2517,7 @@ try {
 }
 ```
 
-<a id="upgrade-1"></a>
+<a id="upgrade2"></a>
 
 ## upgrade
 

@@ -4,7 +4,7 @@
 interface DataShareHelper
 ```
 
-Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md).
+Provides a **DataShareHelper** instance to access or manage data on the server. Before calling an API provided by **DataShareHelper**, you must create a **DataShareHelper** instance using [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper1).
 
 **Since:** 9
 
@@ -79,6 +79,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="batchinsert1"></a>
+
 ## batchInsert
 
 ```TypeScript
@@ -143,7 +145,7 @@ try {
 }
 ```
 
-<a id="batchinsert-1"></a>
+<a id="batchinsert2"></a>
 
 ## batchInsert
 
@@ -350,6 +352,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="delete1"></a>
+
 ## delete
 
 ```TypeScript
@@ -414,7 +418,7 @@ try {
 }
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -541,6 +545,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="denormalizeuri1"></a>
+
 ## denormalizeUri
 
 ```TypeScript
@@ -591,7 +597,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="denormalizeuri-1"></a>
+<a id="denormalizeuri2"></a>
 
 ## denormalizeUri
 
@@ -646,6 +652,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="getpublisheddata1"></a>
+
 ## getPublishedData
 
 ```TypeScript
@@ -695,7 +703,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="getpublisheddata-1"></a>
+<a id="getpublisheddata2"></a>
 
 ## getPublishedData
 
@@ -745,6 +753,8 @@ if (dataShareHelper != undefined) {
   let publishedData: Promise<Array<dataShare.PublishedItem>> = (dataShareHelper as dataShare.DataShareHelper).getPublishedData("com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="insert1"></a>
 
 ## insert
 
@@ -819,7 +829,7 @@ try {
 }
 ```
 
-<a id="insert-1"></a>
+<a id="insert2"></a>
 
 ## insert
 
@@ -897,6 +907,8 @@ try {
 }
 ```
 
+<a id="normalizeuri1"></a>
+
 ## normalizeUri
 
 ```TypeScript
@@ -947,7 +959,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="normalizeuri-1"></a>
+<a id="normalizeuri2"></a>
 
 ## normalizeUri
 
@@ -1002,6 +1014,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="notifychange1"></a>
+
 ## notifyChange
 
 ```TypeScript
@@ -1048,7 +1062,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="notifychange-1"></a>
+<a id="notifychange2"></a>
 
 ## notifyChange
 
@@ -1099,7 +1113,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="notifychange-2"></a>
+<a id="notifychange3"></a>
 
 ## notifyChange
 
@@ -1206,7 +1220,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -1214,7 +1228,7 @@ if (dataShareHelper != undefined) {
 off(event: 'dataChange', type:SubscriptionType, uri: string, callback?: AsyncCallback<ChangeInfo>): void
 ```
 
-Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on-1) API.
+Unsubscribes from the data change of the specified URI. This API corresponds to the [on](#on2) API.
 
 **Since:** 12
 
@@ -1233,7 +1247,7 @@ Unsubscribes from the data change of the specified URI. This API corresponds to 
 | event | 'dataChange' | Yes | Event/callback type. The value is **'dataChange'**, which indicates the data change. |
 | type | [SubscriptionType](arkts-arkdata-datashare-subscriptiontype-e-sys.md) | Yes | Subscription type. |
 | uri | string | Yes | URI of the data to be observed. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on-1). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt; | No | Callback to unregister. If this parameter is **undefined**, **null**, or left empty, this API unregisters all callbacks for the specified URI. If this parameter is specified, the callback must be the one registered in [on('datachange')](#on2). |
 
 **Error codes:**
 
@@ -1383,7 +1397,7 @@ on(type: 'dataChange', uri: string, callback: AsyncCallback<void>): void
 
 Subscribes to the data change of the specified URI. After an observer is registered, the subscriber will receive a notification when the **notifyChange** API is called. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](#notifychange-1) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](#notifychange2) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access.
 
 **Since:** 9
 
@@ -1423,7 +1437,7 @@ if (dataShareHelper !== undefined) {
 }
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -1433,7 +1447,7 @@ on(event: 'dataChange', type:SubscriptionType, uri: string, callback: AsyncCallb
 
 Subscribes to the data change of the specified URI. After a change notification is registered, the subscriber will receive a notification when the **notifyChange** API is called. The change notification contains the data change type, URI of the data changed, and the changed data. This API uses an asynchronous callback to return the result. This function does not support cross-user notification subscription. An application can subscribe to a single URI for a maximum of 51 times.
 
-Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](#notifychange-2) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
+Notification triggering: In non-silent scenarios, a notification is published if the [notifyChange](#notifychange3) method is called. In silent scenarios, a notification is automatically published if data is modified via silent access, but **changeInfo** in the callback is invalid.
 
 **Since:** 12
 
@@ -1618,6 +1632,8 @@ if (dataShareHelper != undefined) {
 }
 ```
 
+<a id="publish1"></a>
+
 ## publish
 
 ```TypeScript
@@ -1682,7 +1698,7 @@ try {
 }
 ```
 
-<a id="publish-1"></a>
+<a id="publish2"></a>
 
 ## publish
 
@@ -1742,7 +1758,7 @@ if (dataShareHelper != undefined) {
 }
 ```
 
-<a id="publish-2"></a>
+<a id="publish3"></a>
 
 ## publish
 
@@ -1798,6 +1814,8 @@ if (dataShareHelper != undefined) {
   let result: Promise<Array<dataShare.OperationResult>> = (dataShareHelper as dataShare.DataShareHelper).publish(dataArray, "com.acts.ohos.data.datasharetest");
 }
 ```
+
+<a id="query1"></a>
 
 ## query
 
@@ -1872,7 +1890,7 @@ try {
 }
 ```
 
-<a id="query-1"></a>
+<a id="query2"></a>
 
 ## query
 
@@ -1948,6 +1966,8 @@ try {
   console.error(`Failed to query. Code: ${code}, message: ${message}`);
 }
 ```
+
+<a id="update1"></a>
 
 ## update
 
@@ -2030,7 +2050,7 @@ try {
 }
 ```
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

@@ -6,6 +6,8 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
+<a id="changeprivilege1"></a>
+
 ## changePrivilege
 
 ```TypeScript
@@ -72,7 +74,7 @@ cloudData.sharing.changePrivilege('sharing_resource_test', participants, (err: B
 ```
 
 
-<a id="changeprivilege-1"></a>
+<a id="changeprivilege2"></a>
 
 ## changePrivilege
 

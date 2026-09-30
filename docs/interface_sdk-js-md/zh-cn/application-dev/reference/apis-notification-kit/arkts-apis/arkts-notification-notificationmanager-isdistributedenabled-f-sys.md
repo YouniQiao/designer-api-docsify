@@ -6,7 +6,7 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="isdistributedenabled-2"></a>
+<a id="isdistributedenabled3"></a>
 
 ## isDistributedEnabled
 

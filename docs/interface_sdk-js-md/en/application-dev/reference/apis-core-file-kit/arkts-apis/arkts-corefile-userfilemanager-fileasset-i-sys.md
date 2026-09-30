@@ -24,6 +24,8 @@ Provides APIs for encapsulating file asset attributes.
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
+<a id="close1"></a>
+
 ## close
 
 ```TypeScript
@@ -83,7 +85,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="close-1"></a>
+<a id="close2"></a>
 
 ## close
 
@@ -143,6 +145,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<a id="commitmodify1"></a>
 
 ## commitModify
 
@@ -205,7 +209,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="commitmodify-1"></a>
+<a id="commitmodify2"></a>
 
 ## commitModify
 
@@ -267,6 +271,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="favorite1"></a>
+
 ## favorite
 
 ```TypeScript
@@ -322,7 +328,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="favorite-1"></a>
+<a id="favorite2"></a>
 
 ## favorite
 
@@ -440,6 +446,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<a id="getexif1"></a>
 
 ## getExif
 
@@ -561,7 +569,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getexif-1"></a>
+<a id="getexif2"></a>
 
 ## getExif
 
@@ -673,6 +681,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="getthumbnail1"></a>
+
 ## getThumbnail
 
 ```TypeScript
@@ -728,7 +738,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getthumbnail-1"></a>
+<a id="getthumbnail2"></a>
 
 ## getThumbnail
 
@@ -788,7 +798,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getthumbnail-2"></a>
+<a id="getthumbnail3"></a>
 
 ## getThumbnail
 
@@ -852,6 +862,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="open1"></a>
+
 ## open
 
 ```TypeScript
@@ -906,7 +918,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="open-1"></a>
+<a id="open2"></a>
 
 ## open
 
@@ -1022,6 +1034,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="sethidden1"></a>
+
 ## setHidden
 
 ```TypeScript
@@ -1086,7 +1100,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="sethidden-1"></a>
+<a id="sethidden2"></a>
 
 ## setHidden
 
@@ -1159,6 +1173,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="setusercomment1"></a>
+
 ## setUserComment
 
 ```TypeScript
@@ -1230,7 +1246,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="setusercomment-1"></a>
+<a id="setusercomment2"></a>
 
 ## setUserComment
 

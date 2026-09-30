@@ -18,6 +18,8 @@ interface CameraOutput
 import { camera } from '@kit.CameraKit';
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -72,7 +74,7 @@ function releaseVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 

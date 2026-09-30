@@ -6,7 +6,7 @@ declare class PathAttribute extends CommonShapeMethod<PathAttribute>
 
 In addition to the [universal attributes](arkts-arkui-common-comp.md) and [universal drawing attributes](arkts-arkui-common-comp.md), the following attributes are supported:
 
-**Inheritance/Implementation:** PathAttribute extends CommonShapeMethod<PathAttribute>
+**Inheritance/Implementation:** PathAttribute extends CommonShapeMethod&lt;PathAttribute&gt;
 
 **Since:** 7
 

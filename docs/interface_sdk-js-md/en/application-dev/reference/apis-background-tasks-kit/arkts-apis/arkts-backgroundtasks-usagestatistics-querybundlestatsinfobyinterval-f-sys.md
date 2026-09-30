@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querybundlestatsinfobyinterval1"></a>
+
 ## queryBundleStatsInfoByInterval
 
 ```TypeScript
@@ -73,7 +75,7 @@ usageStatistics.queryBundleStatsInfoByInterval(0, 0, 20000000000000, (err: Busin
 ```
 
 
-<a id="querybundlestatsinfobyinterval-1"></a>
+<a id="querybundlestatsinfobyinterval2"></a>
 
 ## queryBundleStatsInfoByInterval
 

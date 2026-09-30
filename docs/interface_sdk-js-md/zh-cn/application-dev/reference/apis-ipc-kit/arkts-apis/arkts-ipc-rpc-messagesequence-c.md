@@ -670,6 +670,8 @@ try {
 }
 ```
 
+<a id="readbooleanarray1"></a>
+
 ## readBooleanArray
 
 ```TypeScript
@@ -717,7 +719,7 @@ try {
 }
 ```
 
-<a id="readbooleanarray-1"></a>
+<a id="readbooleanarray2"></a>
 
 ## readBooleanArray
 
@@ -815,6 +817,8 @@ try {
 }
 ```
 
+<a id="readbytearray1"></a>
+
 ## readByteArray
 
 ```TypeScript
@@ -864,7 +868,7 @@ try {
 }
 ```
 
-<a id="readbytearray-1"></a>
+<a id="readbytearray2"></a>
 
 ## readByteArray
 
@@ -958,6 +962,8 @@ try {
 }
 ```
 
+<a id="readchararray1"></a>
+
 ## readCharArray
 
 ```TypeScript
@@ -1005,7 +1011,7 @@ try {
 }
 ```
 
-<a id="readchararray-1"></a>
+<a id="readchararray2"></a>
 
 ## readCharArray
 
@@ -1103,6 +1109,8 @@ try {
 }
 ```
 
+<a id="readdoublearray1"></a>
+
 ## readDoubleArray
 
 ```TypeScript
@@ -1150,7 +1158,7 @@ try {
 }
 ```
 
-<a id="readdoublearray-1"></a>
+<a id="readdoublearray2"></a>
 
 ## readDoubleArray
 
@@ -1403,6 +1411,8 @@ try {
 }
 ```
 
+<a id="readfloatarray1"></a>
+
 ## readFloatArray
 
 ```TypeScript
@@ -1450,7 +1460,7 @@ try {
 }
 ```
 
-<a id="readfloatarray-1"></a>
+<a id="readfloatarray2"></a>
 
 ## readFloatArray
 
@@ -1548,6 +1558,8 @@ try {
 }
 ```
 
+<a id="readintarray1"></a>
+
 ## readIntArray
 
 ```TypeScript
@@ -1598,7 +1610,7 @@ try {
 }
 ```
 
-<a id="readintarray-1"></a>
+<a id="readintarray2"></a>
 
 ## readIntArray
 
@@ -1742,6 +1754,8 @@ try {
 }
 ```
 
+<a id="readlongarray1"></a>
+
 ## readLongArray
 
 ```TypeScript
@@ -1789,7 +1803,7 @@ try {
 }
 ```
 
-<a id="readlongarray-1"></a>
+<a id="readlongarray2"></a>
 
 ## readLongArray
 
@@ -2104,6 +2118,8 @@ try {
 }
 ```
 
+<a id="readremoteobjectarray1"></a>
+
 ## readRemoteObjectArray
 
 ```TypeScript
@@ -2166,7 +2182,7 @@ try {
 }
 ```
 
-<a id="readremoteobjectarray-1"></a>
+<a id="readremoteobjectarray2"></a>
 
 ## readRemoteObjectArray
 
@@ -2272,6 +2288,8 @@ try {
 }
 ```
 
+<a id="readshortarray1"></a>
+
 ## readShortArray
 
 ```TypeScript
@@ -2319,7 +2337,7 @@ try {
 }
 ```
 
-<a id="readshortarray-1"></a>
+<a id="readshortarray2"></a>
 
 ## readShortArray
 
@@ -2416,6 +2434,8 @@ try {
 }
 ```
 
+<a id="readstringarray1"></a>
+
 ## readStringArray
 
 ```TypeScript
@@ -2467,7 +2487,7 @@ try {
 }
 ```
 
-<a id="readstringarray-1"></a>
+<a id="readstringarray2"></a>
 
 ## readStringArray
 
@@ -2920,7 +2940,7 @@ writeBooleanArray(booleanArray: boolean[]): void
 
 将布尔数组写入MessageSequence实例。
 
-- 必须与[readBooleanArray](#readbooleanarray)配对使用。  
+- 必须与[readBooleanArray](#readbooleanarray1)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -3963,7 +3983,7 @@ writeRemoteObjectArray(objectArray: IRemoteObject[]): void
 
 将IRemoteObject对象数组写入MessageSequence。适用于需要传递多个远程对象的场景，如批量注册多个服务代理、传递多个回调接口、多服务端点管理等。
 
-- 必须与[readRemoteObjectArray](#readremoteobjectarray)配对使用。  
+- 必须与[readRemoteObjectArray](#readremoteobjectarray1)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9
@@ -4172,7 +4192,7 @@ writeStringArray(stringArray: string[]): void
 
 将字符串数组写入MessageSequence实例。
 
-- 必须与[readStringArray](#readstringarray)配对使用。  
+- 必须与[readStringArray](#readstringarray1)配对使用。  
 - 读取数组长度必须与写入数组长度一致。
 
 **起始版本：** 9

@@ -18,6 +18,8 @@ class Readable
 import { stream } from '@kit.ArkTS';
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -40,7 +42,7 @@ constructor()
 let readableStream = new stream.Readable();
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

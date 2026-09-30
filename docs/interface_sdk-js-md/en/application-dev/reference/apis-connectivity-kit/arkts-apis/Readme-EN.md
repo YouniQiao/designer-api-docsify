@@ -1089,4 +1089,4 @@
     - [NfcFTag](arkts-connectivity-nfctech-nfcftag-i.md)
     - [NfcVTag](arkts-connectivity-nfctech-nfcvtag-i.md)
   - [tagSession(Standard NFC Tag Session)](arkts-connectivity-tagsession.md)
-    - [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+    - [TagSession](arkts-connectivity-tagsession-i.md)

@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="acquireformdata1"></a>
+
 ## acquireFormData
 
 ```TypeScript
@@ -46,7 +48,7 @@ Requests data from the widget provider. This API uses an asynchronous callback t
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. invalid input parameter during form operation |
 
 
-<a id="acquireformdata-1"></a>
+<a id="acquireformdata2"></a>
 
 ## acquireFormData
 

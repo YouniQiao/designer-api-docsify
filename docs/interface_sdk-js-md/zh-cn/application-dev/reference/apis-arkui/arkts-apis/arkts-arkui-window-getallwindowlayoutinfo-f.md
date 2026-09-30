@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="getallwindowlayoutinfo1"></a>
+
 ## getAllWindowLayoutInfo
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="getallwindowlayoutinfo-1"></a>
+<a id="getallwindowlayoutinfo2"></a>
 
 ## getAllWindowLayoutInfo
 

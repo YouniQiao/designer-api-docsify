@@ -20,6 +20,8 @@ Helper functions to access photos and albums.
 import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="createasset1"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -89,7 +91,7 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
 }
 ```
 
-<a id="createasset-1"></a>
+<a id="createasset2"></a>
 
 ## createAsset
 

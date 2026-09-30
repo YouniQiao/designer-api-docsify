@@ -6,6 +6,8 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
+<a id="cancelretentionstate1"></a>
+
 ## cancelRetentionState
 
 ```TypeScript
@@ -57,7 +59,7 @@ dlpPermission.cancelRetentionState([uri]).then(() => { // Cancel the retention s
 ```
 
 
-<a id="cancelretentionstate-1"></a>
+<a id="cancelretentionstate2"></a>
 
 ## cancelRetentionState
 

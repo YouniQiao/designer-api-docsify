@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="anonattestkeyitem1"></a>
+
 ## anonAttestKeyItem
 
 ```TypeScript
@@ -150,7 +152,7 @@ async function generateKeyThenAttestKey(): Promise<void> {
 ```
 
 
-<a id="anonattestkeyitem-1"></a>
+<a id="anonattestkeyitem2"></a>
 
 ## anonAttestKeyItem
 

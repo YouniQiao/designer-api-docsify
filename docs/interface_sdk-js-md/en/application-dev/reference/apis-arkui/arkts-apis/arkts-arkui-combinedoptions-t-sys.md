@@ -20,4 +20,4 @@ Used for ide.
 
 **System API:** This is a system API.
 
-**Type:** object & [Options](arkts-arkui-viewmodel-options-i.md)&lt;T, Data&gt; & ThisType&lt;T & [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md) & Data&gt;
+**Type:** object & [Options](arkts-arkui-viewmodel-options-i.md)&lt;T, Data&gt; & ThisType&lt;T & [ViewModel](arkts-arkui-viewmodel-i.md) & Data&gt;

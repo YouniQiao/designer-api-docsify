@@ -14,6 +14,8 @@ Before calling methods of AccessibilityElement, obtain an AccessibilityElement i
 
 **System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
+<a id="actionnames1"></a>
+
 ## actionNames
 
 ```TypeScript
@@ -51,7 +53,7 @@ rootElement.actionNames((err: BusinessError, data: string[]) => {
 });
 ```
 
-<a id="actionnames-1"></a>
+<a id="actionnames2"></a>
 
 ## actionNames
 
@@ -87,6 +89,8 @@ rootElement.actionNames().then((data: string[]) => {
   console.error(`Failed to get action names. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="attributenames1"></a>
 
 ## attributeNames
 
@@ -126,7 +130,7 @@ rootElement.attributeNames((err: BusinessError, data: ElementAttributeKeys[]) =>
 });
 ```
 
-<a id="attributenames-1"></a>
+<a id="attributenames2"></a>
 
 ## attributeNames
 
@@ -163,6 +167,8 @@ rootElement.attributeNames().then((data: ElementAttributeKeys[]) => {
   console.error(`Failed to get attribute names. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="attributevalue1"></a>
 
 ## attributeValue
 
@@ -215,7 +221,7 @@ rootElement.attributeValue(attributeName, (err: BusinessError, data: string) => 
 });
 ```
 
-<a id="attributevalue-1"></a>
+<a id="attributevalue2"></a>
 
 ## attributeValue
 
@@ -565,6 +571,8 @@ rootElement.findElement('focusDirection', condition).then((data: AccessibilityEl
 });
 ```
 
+<a id="performaction1"></a>
+
 ## performAction
 
 ```TypeScript
@@ -614,7 +622,7 @@ rootElement.performAction(actionName, parameters, (err: BusinessError) => {
 });
 ```
 
-<a id="performaction-1"></a>
+<a id="performaction2"></a>
 
 ## performAction
 
@@ -702,7 +710,7 @@ rootElement.performAction('setCursorPosition', {
 });
 ```
 
-<a id="performaction-2"></a>
+<a id="performaction3"></a>
 
 ## performAction
 

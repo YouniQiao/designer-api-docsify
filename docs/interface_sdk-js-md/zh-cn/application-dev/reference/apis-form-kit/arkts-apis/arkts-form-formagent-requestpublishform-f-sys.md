@@ -6,6 +6,8 @@
 import { formAgent } from '@kit.FormKit';
 ```
 
+<a id="requestpublishform1"></a>
+
 ## requestPublishForm
 
 ```TypeScript
@@ -75,7 +77,7 @@ try {
 ```
 
 
-<a id="requestpublishform-1"></a>
+<a id="requestpublishform2"></a>
 
 ## requestPublishForm
 

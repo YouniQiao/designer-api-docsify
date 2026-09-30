@@ -6,6 +6,8 @@
 import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="openauthorizedialog1"></a>
+
 ## openAuthorizeDialog
 
 ```TypeScript
@@ -71,7 +73,7 @@ try {
 ```
 
 
-<a id="openauthorizedialog-1"></a>
+<a id="openauthorizedialog2"></a>
 
 ## openAuthorizeDialog
 

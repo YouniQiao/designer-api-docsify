@@ -6,6 +6,8 @@
 import { screenLock } from '@kit.BasicServicesKit';
 ```
 
+<a id="lock1"></a>
+
 ## lock
 
 ```TypeScript
@@ -54,7 +56,7 @@ screenLock.lock((err: BusinessError, data: Boolean) => {
 ```
 
 
-<a id="lock-1"></a>
+<a id="lock2"></a>
 
 ## lock
 

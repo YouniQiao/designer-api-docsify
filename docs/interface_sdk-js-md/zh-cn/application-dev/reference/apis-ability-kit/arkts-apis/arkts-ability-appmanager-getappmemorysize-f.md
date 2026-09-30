@@ -6,6 +6,8 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
+<a id="getappmemorysize1"></a>
+
 ## getAppMemorySize
 
 ```TypeScript
@@ -48,7 +50,7 @@ appManager.getAppMemorySize().then((data) => {
 ```
 
 
-<a id="getappmemorysize-1"></a>
+<a id="getappmemorysize2"></a>
 
 ## getAppMemorySize
 

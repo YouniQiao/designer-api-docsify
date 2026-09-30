@@ -6,6 +6,8 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
+<a id="getkeyboardrepeatdelay1"></a>
+
 ## getKeyboardRepeatDelay
 
 ```TypeScript
@@ -67,7 +69,7 @@ struct Index {
 ```
 
 
-<a id="getkeyboardrepeatdelay-1"></a>
+<a id="getkeyboardrepeatdelay2"></a>
 
 ## getKeyboardRepeatDelay
 

@@ -6,13 +6,15 @@ interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 
 用于触发快滑手势，滑动速度需大于速度阈值，默认最小速度为100vp/s。
 
-**继承/实现关系：** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
+**继承/实现关系：** SwipeGestureInterface extends GestureInterface&lt;SwipeGestureInterface&gt;
 
 **起始版本：** 8
 
 <!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>--><!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -42,7 +44,7 @@ interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-tapgesture-comp-swipegestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 

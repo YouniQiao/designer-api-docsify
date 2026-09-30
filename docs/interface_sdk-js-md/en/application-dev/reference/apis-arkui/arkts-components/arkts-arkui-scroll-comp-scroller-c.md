@@ -357,6 +357,8 @@ By default, the **Scroll** component comes with an animation, while the **Grid**
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. |
 | options | [ScrollEdgeOptions](arkts-arkui-scroll-comp-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position.<br>&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
+<a id="scrollpage1"></a>
+
 ## scrollPage
 
 ```TypeScript
@@ -381,7 +383,7 @@ Scrolls to the next or previous page.
 | --- | --- | --- | --- |
 | value | [ScrollPageOptions](arkts-arkui-scroll-comp-scrollpageoptions-i.md) | Yes | Paging mode. It contains the **next** (whether to page down) and **animation** (whether to enable the paging animation) fields, which are used to specify the paging behavior.<br>**Since:** 14 |
 
-<a id="scrollpage-1"></a>
+<a id="scrollpage2"></a>
 
 ## scrollPage
 
@@ -461,7 +463,7 @@ When the smooth animation is enabled, all items passed through are loaded and la
 > 
 > 2. When refreshing the data source in [LazyForEach](arkts-arkui-lazyforeach-comp.md), [ForEach](arkts-arkui-foreach-comp-attribute.md#foreachattribute), or [Repeat](arkts-arkui-repeat-comp.md), ensure that this API is called after the data refresh is complete.
 > 
-> 3. Since API version 11, [contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset) and [contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset) are supported in **List**. Since API version 22,contentStartOffsetand contentEndOffsetcan be set in the **Grid** and **WaterFlow** components.
+> 3. Since API version 11, [contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset1) and [contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset1) are supported in **List**. Since API version 22,contentStartOffsetand contentEndOffsetcan be set in the **Grid** and **WaterFlow** components.
 > 
 > - When **contentStartOffset** is set for the scroll container component and **ScrollAlign** is set to **START**,the head of the specified item is aligned with the **contentStartOffset** position of the scroll container component when scrolling ends.
 > 

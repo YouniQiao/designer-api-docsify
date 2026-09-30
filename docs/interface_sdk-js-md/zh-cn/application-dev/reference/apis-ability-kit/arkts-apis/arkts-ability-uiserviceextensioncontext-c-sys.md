@@ -49,7 +49,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | Want parameter. |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | Connection options. |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | Connection options. |
 
 **返回值：**
 

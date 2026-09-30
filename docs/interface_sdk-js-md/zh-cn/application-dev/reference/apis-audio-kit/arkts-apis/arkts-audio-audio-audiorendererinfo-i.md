@@ -86,7 +86,7 @@ content?: ContentType
 
 **废弃版本：** 10
 
-**替代接口：** usage
+**替代接口：** [usage](#usage)
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 

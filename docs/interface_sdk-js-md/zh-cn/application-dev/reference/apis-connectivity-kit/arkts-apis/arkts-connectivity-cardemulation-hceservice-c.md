@@ -271,6 +271,8 @@ stop(elementName: ElementName): void
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [3100301](../errorcode-nfc.md#3100301-nfc卡模拟状态异常) | Card emulation running state is abnormal in service. |
 
+<a id="transmit1"></a>
+
 ## transmit
 
 ```TypeScript
@@ -346,7 +348,7 @@ hceService.transmit(responseData).then(() => {
 console.info("transmit Promise end.");
 ```
 
-<a id="transmit-1"></a>
+<a id="transmit2"></a>
 
 ## transmit
 

@@ -6,7 +6,7 @@
 import { inputConsumer } from '@kit.InputKit';
 ```
 
-<a id="offkey-1"></a>
+<a id="offkey2"></a>
 
 ## offKey
 

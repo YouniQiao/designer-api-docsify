@@ -8,7 +8,7 @@ Define the attribute functions of ability component.
 
 @extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
-**Inheritance/Implementation:** AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>
+**Inheritance/Implementation:** AbilityComponentAttribute extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
 **Since:** 9
 

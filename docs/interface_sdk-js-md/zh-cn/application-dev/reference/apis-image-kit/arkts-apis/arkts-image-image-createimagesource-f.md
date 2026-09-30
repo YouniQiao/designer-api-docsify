@@ -6,6 +6,8 @@
 import { image } from '@kit.ImageKit';
 ```
 
+<a id="createimagesource1"></a>
+
 ## createImageSource
 
 ```TypeScript
@@ -14,7 +16,7 @@ function createImageSource(uri: string): ImageSource
 
 通过传入的uri创建ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 从API version 10开始支持SVG标签，使用版本为(SVG) 1.1, SVG标签需设置width和height。SVG文件可添加XML声明，应以**&lt;?xml**开头，当前支持的标签列表有：
 
@@ -88,7 +90,7 @@ async function CreateImageSource(context : Context) {
 ```
 
 
-<a id="createimagesource-2"></a>
+<a id="createimagesource3"></a>
 
 ## createImageSource
 
@@ -98,7 +100,7 @@ function createImageSource(uri: string, options: SourceOptions): ImageSource
 
 通过传入的uri创建ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 * 从API version 10开始支持SVG标签，使用版本为(SVG) 1.1, SVG标签需设置width和height。SVG文件可添加XML声明，应以**&lt;?xml**开头，当前支持的标签列表有：
 
@@ -176,7 +178,7 @@ async function CreateImageSource(context : Context) {
 ```
 
 
-<a id="createimagesource-4"></a>
+<a id="createimagesource5"></a>
 
 ## createImageSource
 
@@ -186,7 +188,7 @@ function createImageSource(fd: number): ImageSource
 
 通过传入文件描述符来创建ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 7
 
@@ -222,7 +224,7 @@ async function CreateImageSource(context : Context) {
 ```
 
 
-<a id="createimagesource-6"></a>
+<a id="createimagesource7"></a>
 
 ## createImageSource
 
@@ -232,7 +234,7 @@ function createImageSource(fd: number, options: SourceOptions): ImageSource
 
 通过传入文件描述符来创建ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -272,7 +274,7 @@ async function CreateImageSource(context : Context) {
 ```
 
 
-<a id="createimagesource-8"></a>
+<a id="createimagesource9"></a>
 
 ## createImageSource
 
@@ -282,7 +284,7 @@ function createImageSource(buf: ArrayBuffer): ImageSource
 
 通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YUV的像素buffer数据，如果想通过像素buffer数据创建pixelMap，可以调用[image.createPixelMapSync](arkts-image-image-createpixelmapsync-f.md)这一类接口。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -316,7 +318,7 @@ async function CreateImageSource() {
 ```
 
 
-<a id="createimagesource-10"></a>
+<a id="createimagesource11"></a>
 
 ## createImageSource
 
@@ -326,7 +328,7 @@ function createImageSource(buf: ArrayBuffer, options: SourceOptions): ImageSourc
 
 通过缓冲区创建ImageSource实例。buf数据是未解码的数据，不可以传入类似于RBGA，YUV的像素buffer数据，如果想通过像素buffer数据创建pixelMap，可以调用[image.createPixelMapSync](arkts-image-image-createpixelmapsync-f.md)这一类接口。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 9
 
@@ -362,7 +364,7 @@ async function CreateImageSource() {
 ```
 
 
-<a id="createimagesource-12"></a>
+<a id="createimagesource13"></a>
 
 ## createImageSource
 
@@ -372,7 +374,7 @@ function createImageSource(rawfile: resourceManager.RawFileDescriptor, options?:
 
 通过图像资源文件的RawFileDescriptor创建ImageSource实例。
 
-由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImageSource实例使用完成后，应主动调用[release](arkts-image-image-imagesource-i.md#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 **起始版本：** 11
 

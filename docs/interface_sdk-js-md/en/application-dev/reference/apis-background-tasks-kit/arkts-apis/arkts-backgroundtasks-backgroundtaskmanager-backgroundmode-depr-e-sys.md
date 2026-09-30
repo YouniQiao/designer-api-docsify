@@ -28,7 +28,7 @@ WLAN-related.
 
 **Deprecated since:** 9
 
-**Substitutes:** WIFI_INTERACTION
+**Substitutes:** [WIFI_INTERACTION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e-sys.md#wifi_interaction)
 
 <!--Device-BackgroundMode-WIFI_INTERACTION = 7--><!--Device-BackgroundMode-WIFI_INTERACTION = 7-End-->
 
@@ -48,7 +48,7 @@ Audio and video calls.
 
 **Deprecated since:** 9
 
-**Substitutes:** VOIP
+**Substitutes:** [VOIP](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#voip)
 
 <!--Device-BackgroundMode-VOIP = 8--><!--Device-BackgroundMode-VOIP = 8-End-->
 

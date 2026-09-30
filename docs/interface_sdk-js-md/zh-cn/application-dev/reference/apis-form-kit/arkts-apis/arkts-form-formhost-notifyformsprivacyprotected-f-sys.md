@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="notifyformsprivacyprotected1"></a>
+
 ## notifyFormsPrivacyProtected
 
 ```TypeScript
@@ -66,7 +68,7 @@ try {
 ```
 
 
-<a id="notifyformsprivacyprotected-1"></a>
+<a id="notifyformsprivacyprotected2"></a>
 
 ## notifyFormsPrivacyProtected
 

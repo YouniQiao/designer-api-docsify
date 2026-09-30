@@ -18,6 +18,8 @@ interface X509CRLEntry
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="getcertissuer1"></a>
+
 ## getCertIssuer
 
 ```TypeScript
@@ -102,7 +104,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
 });
 ```
 
-<a id="getcertissuer-1"></a>
+<a id="getcertissuer2"></a>
 
 ## getCertIssuer
 
@@ -265,6 +267,8 @@ async function certGetCertIssuerX500DistinguishedName() {
 }
 ```
 
+<a id="getencoded1"></a>
+
 ## getEncoded
 
 ```TypeScript
@@ -350,7 +354,7 @@ cert.createX509CRL(encodingBlob, (err, x509CRL) => {
 });
 ```
 
-<a id="getencoded-1"></a>
+<a id="getencoded2"></a>
 
 ## getEncoded
 

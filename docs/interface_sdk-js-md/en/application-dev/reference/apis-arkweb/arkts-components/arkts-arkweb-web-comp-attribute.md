@@ -6,7 +6,7 @@ declare class WebAttribute extends CommonMethod<WebAttribute>
 
 Defines the Web attribute functions.
 
-**Inheritance/Implementation:** WebAttribute extends CommonMethod<WebAttribute>
+**Inheritance/Implementation:** WebAttribute extends CommonMethod&lt;WebAttribute&gt;
 
 **Since:** 8
 
@@ -1651,7 +1651,7 @@ Triggered when an SSL client certificate request is received.
 
 > **NOTE:** 
 > 
-> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm-1),[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore).
+> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm2),[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore).
 > 
 > - If **ClientAuthenticationHandler.confirm** or **ClientAuthenticationHandler.cancel** is called, the **Web**component stores the authentication result in the memory (within the application lifecycle) and does not call
 > **onClientAuthenticationRequest()** again for the same host and port. If **onClientAuthenticationRequest.ignore**
@@ -2515,7 +2515,7 @@ Triggered when an error occurs during web page loading of main resources. You ca
 > **NOTE:** 
 > 
 > This feature takes effect only after the default error page is enabled by calling the
-> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)
+> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled1)
 > API.
 > 
 > If the error code obtained through [errorPageEvent.error.getErrorCode()](arkts-arkweb-web-comp-webresourceerror-c.md#geterrorcode) is
@@ -2779,6 +2779,8 @@ Triggered for the application to update its access history when the navigation i
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRefreshAccessedHistoryEvent](arkts-arkweb-web-comp-onrefreshaccessedhistoryevent-i.md)&gt; | Yes | Callback triggered when the navigation is complete.<br>**Since:** 12 |
 
+<a id="onrenderexited1"></a>
+
 ## onRenderExited
 
 ```TypeScript
@@ -2807,7 +2809,7 @@ For details about the component lifecycle, see [Lifecycle of the Web Components]
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRenderExitedEvent](arkts-arkweb-web-comp-onrenderexitedevent-i.md)&gt; | Yes | Callback triggered when the rendering process exits abnormally.<br>**Since:** 12 |
 
-<a id="onrenderexited-1"></a>
+<a id="onrenderexited2"></a>
 
 ## onRenderExited
 
@@ -4077,7 +4079,7 @@ Sets the user agent.
 
 **Deprecated since:** 10
 
-**Substitutes:** setCustomUserAgent
+**Substitutes:** [setCustomUserAgent](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#setcustomuseragent)
 
 <!--Device-WebAttribute-userAgent(userAgent: string): WebAttribute--><!--Device-WebAttribute-userAgent(userAgent: string): WebAttribute-End-->
 

@@ -6,6 +6,8 @@
 import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
+<a id="resetdefaultapplication1"></a>
+
 ## resetDefaultApplication
 
 ```TypeScript
@@ -79,7 +81,7 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 ```
 
 
-<a id="resetdefaultapplication-1"></a>
+<a id="resetdefaultapplication2"></a>
 
 ## resetDefaultApplication
 
@@ -149,7 +151,7 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
 ```
 
 
-<a id="resetdefaultapplication-2"></a>
+<a id="resetdefaultapplication3"></a>
 
 ## resetDefaultApplication
 

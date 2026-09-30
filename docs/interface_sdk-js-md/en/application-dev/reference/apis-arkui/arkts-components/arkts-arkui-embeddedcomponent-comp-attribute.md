@@ -16,7 +16,7 @@ Event information related to screen coordinates is converted based on the positi
 
 Universal events, such as the [click event](arkts-arkui-common-comp.md), are not supported. Only the following events are supported.
 
-**Inheritance/Implementation:** EmbeddedComponentAttribute extends CommonMethod<EmbeddedComponentAttribute>
+**Inheritance/Implementation:** EmbeddedComponentAttribute extends CommonMethod&lt;EmbeddedComponentAttribute&gt;
 
 **Since:** 12
 
@@ -82,7 +82,7 @@ Called when an error occurs during the running of the started EmbeddedUIExtensio
 onTerminated(callback: import('../api/@ohos.base').Callback<TerminationInfo>)
 ```
 
-Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself).
+Triggered when the the launched EmbeddedUIExtensionAbility exits normally by calling [terminateSelfWithResult](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateselfwithresult1) or [terminateSelf](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#terminateself1).
 
 > **NOTE:** 
 > 

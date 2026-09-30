@@ -6,6 +6,8 @@
 import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
+<a id="setapplicationautostartup1"></a>
+
 ## setApplicationAutoStartup
 
 ```TypeScript
@@ -45,7 +47,7 @@ function setApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCallbac
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 
 
-<a id="setapplicationautostartup-1"></a>
+<a id="setapplicationautostartup2"></a>
 
 ## setApplicationAutoStartup
 

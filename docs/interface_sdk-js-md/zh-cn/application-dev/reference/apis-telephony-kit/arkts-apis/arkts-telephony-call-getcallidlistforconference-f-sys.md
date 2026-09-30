@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="getcallidlistforconference1"></a>
+
 ## getCallIdListForConference
 
 ```TypeScript
@@ -55,7 +57,7 @@ call.getCallIdListForConference(1, (err: BusinessError, data: Array<string>) => 
 ```
 
 
-<a id="getcallidlistforconference-1"></a>
+<a id="getcallidlistforconference2"></a>
 
 ## getCallIdListForConference
 

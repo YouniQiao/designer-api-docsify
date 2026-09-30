@@ -26,7 +26,7 @@ function getSync(key: string, def?: string): string
 
 **废弃版本：** 9
 
-**替代接口：** getSync
+**替代接口：** [getSync](arkts-basicservices-systemparameterenhance-getsync-f-sys.md)
 
 <!--Device-systemParameter-function getSync(key: string, def?: string): string--><!--Device-systemParameter-function getSync(key: string, def?: string): string-End-->
 

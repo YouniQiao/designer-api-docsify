@@ -46,7 +46,7 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | Want | 是 | 预加载UIExtensionAbility的want信息。 |
+| want | [Want](arkts-ability-want-i.md) | 是 | 预加载UIExtensionAbility的want信息。 |
 
 **返回值：**
 
@@ -108,6 +108,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="getprocessrunninginformation1"></a>
+
 ## getProcessRunningInformation
 
 ```TypeScript
@@ -162,7 +164,7 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
-<a id="getprocessrunninginformation-1"></a>
+<a id="getprocessrunninginformation2"></a>
 
 ## getProcessRunningInformation
 
@@ -382,6 +384,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="unregisterabilitylifecyclecallback1"></a>
+
 ## unregisterAbilityLifecycleCallback
 
 ```TypeScript
@@ -441,7 +445,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="unregisterabilitylifecyclecallback-1"></a>
+<a id="unregisterabilitylifecyclecallback2"></a>
 
 ## unregisterAbilityLifecycleCallback
 
@@ -507,6 +511,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="unregisterenvironmentcallback1"></a>
+
 ## unregisterEnvironmentCallback
 
 ```TypeScript
@@ -565,7 +571,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="unregisterenvironmentcallback-1"></a>
+<a id="unregisterenvironmentcallback2"></a>
 
 ## unregisterEnvironmentCallback
 

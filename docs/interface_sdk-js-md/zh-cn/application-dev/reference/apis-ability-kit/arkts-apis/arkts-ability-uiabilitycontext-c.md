@@ -20,7 +20,7 @@ UIAbilityContext是需要保存状态的[UIAbility](arkts-ability-app-ability-ui
 backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string): Promise<void>
 ```
 
-当通过[startAbilityForResult](#startabilityforresult)或[openLink](#openlink)拉起目标方UIAbility，且需要目标方返回结果时，目标方可以通过该接口将结果返回并拉起调用方。与[terminateSelfWithResult](#terminateselfwithresult)不同的是，本接口在返回时不会销毁当前UIAbility。使用Promise异步回调。
+当通过[startAbilityForResult](#startabilityforresult1)或[openLink](#openlink)拉起目标方UIAbility，且需要目标方返回结果时，目标方可以通过该接口将结果返回并拉起调用方。与[terminateSelfWithResult](#terminateselfwithresult1)不同的是，本接口在返回时不会销毁当前UIAbility。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -36,8 +36,8 @@ backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| abilityResult | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 包含目标方返回给拉起方的结果。 |
-| requestCode | string | 是 | 通过[startAbilityForResult](#startabilityforresult)或[openLink](#openlink)拉起目标方Ability且需要目标方返回结果时，系统生成的用于标识本次调用的requestCode。该值可以通过want中的[CALLER_REQUEST_CODE](arkts-ability-app-ability-wantconstant.md)字段获取。 |
+| abilityResult | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 包含目标方返回给拉起方的结果。 |
+| requestCode | string | 是 | 通过[startAbilityForResult](#startabilityforresult1)或[openLink](#openlink)拉起目标方Ability且需要目标方返回结果时，系统生成的用于标识本次调用的requestCode。该值可以通过want中的[CALLER_REQUEST_CODE](arkts-ability-app-ability-wantconstant.md)字段获取。 |
 
 **返回值：**
 
@@ -86,7 +86,7 @@ connectAppServiceExtensionAbility(want: Want, callback: ConnectOptions): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 连接[AppServiceExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-ability-appServiceExtensionAbility.md)的Want信息。 |
-| callback | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
+| callback | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | ConnectOptions类型的回调函数，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**
 
@@ -178,7 +178,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 连接ServiceExtensionAbility的Want信息。 |
-| options | [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md) | 是 | 回调对象，返回服务连接成功、连接失败、断开的信息。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | 回调对象，返回服务连接成功、连接失败、断开的信息。 |
 
 **返回值：**
 
@@ -435,6 +435,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="disconnectserviceextensionability1"></a>
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -502,7 +504,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="disconnectserviceextensionability-1"></a>
+<a id="disconnectserviceextensionability2"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -899,9 +901,9 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 启动一个独立窗口的原子化服务。使用Promise异步回调。仅支持在主线程调用。原子化服务被启动后，有如下情况：
 
-- 正常情况下原子化服务可以通过[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身，并且返回结果给调用方。  
+- 正常情况下原子化服务可以通过[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身，并且返回结果给调用方。  
 - 异常情况下比如杀死原子化服务会返回异常结果给调用方，异常结果的resultCode为-1。  
-- 如果不同应用多次调用该接口启动同一个原子化服务，当这个原子化服务调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方, 其它调用方返回异常结果，异常结果中resultCode为-1。
+- 如果不同应用多次调用该接口启动同一个原子化服务，当这个原子化服务调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身时，只将正常结果返回给最后一个调用方, 其它调用方返回异常结果，异常结果中resultCode为-1。
 
 > **说明：** 
 > 
@@ -928,7 +930,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<Abilit
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，包含返回给拉起方的信息。 |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Promise对象，包含返回给拉起方的信息。 |
 
 **错误码：**
 
@@ -990,7 +992,7 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 - "actions"列表中包含"ohos.want.action.viewData"。  
 - "entities"列表中包含"entity.system.browsable"。  
 - "uris"列表中包含"scheme"为"https"且"domainVerify"为true的元素。  
-如果希望获取被拉起方终止后的结果，可以设置callback参数，此参数的使用可参照[startAbilityForResult](#startabilityforresult)接口。传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
+如果希望获取被拉起方终止后的结果，可以设置callback参数，此参数的使用可参照[startAbilityForResult](#startabilityforresult1)接口。传入的参数不合法时，如未设置必选参数或link字符串不是标准格式的URL，接口会直接抛出异常。参数校验通过，拉起目标方时出现的错误通过promise返回错误信息。
 
 > **说明：** 
 > 
@@ -1012,7 +1014,7 @@ openLink(link: string, options?: OpenLinkOptions, callback?: AsyncCallback<Abili
 | --- | --- | --- | --- |
 | link | string | 是 | 指示要打开的标准格式URL。 |
 | options | [OpenLinkOptions](arkts-ability-app-ability-openlinkoptions-openlinkoptions-i.md) | 否 | 打开URL的选项参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 否 | 回调函数，包含返回给拉起方的信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | 否 | 回调函数，包含返回给拉起方的信息。 |
 
 **返回值：**
 
@@ -1160,6 +1162,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="requestdialogservice1"></a>
+
 ## requestDialogService
 
 ```TypeScript
@@ -1243,7 +1247,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="requestdialogservice-1"></a>
+<a id="requestdialogservice2"></a>
 
 ## requestDialogService
 
@@ -1472,6 +1476,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setabilityinstanceinfo1"></a>
+
 ## setAbilityInstanceInfo
 
 ```TypeScript
@@ -1560,7 +1566,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setabilityinstanceinfo-1"></a>
+<a id="setabilityinstanceinfo2"></a>
 
 ## setAbilityInstanceInfo
 
@@ -1667,6 +1673,8 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+<a id="setmissioncontinuestate1"></a>
+
 ## setMissionContinueState
 
 ```TypeScript
@@ -1725,7 +1733,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setmissioncontinuestate-1"></a>
+<a id="setmissioncontinuestate2"></a>
 
 ## setMissionContinueState
 
@@ -1782,6 +1790,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setmissionlabel1"></a>
+
 ## setMissionLabel
 
 ```TypeScript
@@ -1834,7 +1844,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setmissionlabel-1"></a>
+<a id="setmissionlabel2"></a>
 
 ## setMissionLabel
 
@@ -1904,7 +1914,7 @@ setMissionWindowIcon(windowIcon: image.PixelMap): Promise<void>
 > **说明：** 
 > 
 > setMissionWindowIcon<!--Del-->、
-> [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setmissionicon)
+> [setMissionIcon](arkts-ability-uiabilitycontext-c-sys.md#setmissionicon1)
 > <!--DelEnd-->和
 > [setAbilityInstanceInfo](#setabilityinstanceinfo)之间不存在调用优先级关系。
 > 当多个接口被依次调用时，后一次调用的接口所设置的图标信息将覆盖之前调用接口所设置的内容，最终生效的图标以最后一次调用的接口为准。
@@ -2200,6 +2210,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startability1"></a>
+
 ## startAbility
 
 ```TypeScript
@@ -2295,7 +2307,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startability-1"></a>
+<a id="startability2"></a>
 
 ## startAbility
 
@@ -2401,7 +2413,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startability-2"></a>
+<a id="startability3"></a>
 
 ## startAbility
 
@@ -2711,6 +2723,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilitybytype1"></a>
+
 ## startAbilityByType
 
 ```TypeScript
@@ -2781,7 +2795,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilitybytype-2"></a>
+<a id="startabilitybytype3"></a>
 
 ## startAbilityByType
 
@@ -2857,6 +2871,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="startabilityforresult1"></a>
+
 ## startAbilityForResult
 
 ```TypeScript
@@ -2865,10 +2881,10 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用callback异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
 - 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
-用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 
 > **说明：** 
 > 
@@ -2889,7 +2905,7 @@ startAbilityForResult(want: Want, callback: AsyncCallback<AbilityResult>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
 
@@ -2958,7 +2974,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresult-1"></a>
+<a id="startabilityforresult2"></a>
 
 ## startAbilityForResult
 
@@ -2968,10 +2984,10 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用callback异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
 - 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
-用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 
 > **说明：** 
 > 
@@ -2993,7 +3009,7 @@ startAbilityForResult(want: Want, options: StartOptions, callback: AsyncCallback
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动Ability的必要信息。 |
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动Ability所携带的参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | 是 | 回调函数，当接口调用成功，err中code为0，data为被拉起方退出时的结果码和数据；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
 
@@ -3065,7 +3081,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="startabilityforresult-2"></a>
+<a id="startabilityforresult3"></a>
 
 ## startAbilityForResult
 
@@ -3075,10 +3091,10 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 启动一个UIAbility，并通过回调函数接收被拉起的UIAbility退出时的返回结果。使用Promise异步回调。仅支持在主线程调用。UIAbility被启动后，有如下情况：
 
-- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身，并将结果返回给调用方。  
+- 正常情况下可以通过调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身，并将结果返回给调用方。  
 - 异常情况下比如杀死UIAbility会将异常结果返回给调用方，异常结果中resultCode为-1。  
 - 如果被启动的UIAbility是[单实例模式](../../../application-models/uiability-launch-type.md#singleton启动模式)，且这个UIAbility被不同应用多次调  
-用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
+用该接口启动，当这个UIAbility调用[terminateSelfWithResult](#terminateselfwithresult1)接口销毁自身时，只将正常结果返回给最后一个调用方，其它调用方返回异常结果，异常结果中resultCode为-1。
 
 > **说明：** 
 > 
@@ -3105,7 +3121,7 @@ startAbilityForResult(want: Want, options?: StartOptions): Promise<AbilityResult
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，包含返回给拉起方的信息。 |
+| Promise&lt;[AbilityResult](arkts-ability-abilityresult-i.md)&gt; | Promise对象，包含返回给拉起方的信息。 |
 
 **错误码：**
 
@@ -3538,6 +3554,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="terminateself1"></a>
+
 ## terminateSelf
 
 ```TypeScript
@@ -3626,7 +3644,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="terminateself-1"></a>
+<a id="terminateself2"></a>
 
 ## terminateSelf
 
@@ -3715,13 +3733,15 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="terminateselfwithresult1"></a>
+
 ## terminateSelfWithResult
 
 ```TypeScript
 terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>): void
 ```
 
-销毁UIAbility自身。使用callback异步回调。仅支持在主线程调用。仅当UIAbility通过[startAbilityForResult](#startabilityforresult)接口拉起时，调用terminateSelfWithResult接口销毁UIAbility，才会返回结果给调用方。
+销毁UIAbility自身。使用callback异步回调。仅支持在主线程调用。仅当UIAbility通过[startAbilityForResult](#startabilityforresult1)接口拉起时，调用terminateSelfWithResult接口销毁UIAbility，才会返回结果给调用方。
 
 > **说明：** 
 > 
@@ -3742,7 +3762,7 @@ terminateSelfWithResult(parameter: AbilityResult, callback: AsyncCallback<void>)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给startAbilityForResult?接口调用方的相关信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给startAbilityForResult?接口调用方的相关信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当销毁UIAbility自身成功，err中code为0；否则err会返回对应的错误码和错误信息。 |
 
 **错误码：**
@@ -3797,7 +3817,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="terminateselfwithresult-1"></a>
+<a id="terminateselfwithresult2"></a>
 
 ## terminateSelfWithResult
 
@@ -3805,7 +3825,7 @@ export default class EntryAbility extends UIAbility {
 terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 ```
 
-销毁UIAbility自身。使用Promise异步回调。仅支持在主线程调用。仅当UIAbility通过[startAbilityForResult](#startabilityforresult)接口拉起时，调用terminateSelfWithResult接口销毁UIAbility，才会返回结果给调用方。
+销毁UIAbility自身。使用Promise异步回调。仅支持在主线程调用。仅当UIAbility通过[startAbilityForResult](#startabilityforresult1)接口拉起时，调用terminateSelfWithResult接口销毁UIAbility，才会返回结果给调用方。
 
 > **说明：** 
 > 
@@ -3826,7 +3846,7 @@ terminateSelfWithResult(parameter: AbilityResult): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给startAbilityForResult?接口调用方的信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给startAbilityForResult?接口调用方的信息。 |
 
 **返回值：**
 

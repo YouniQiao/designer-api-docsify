@@ -6,6 +6,8 @@
 import { fileAccess } from '@kit.CoreFileKit';
 ```
 
+<a id="getfileaccessabilityinfo1"></a>
+
 ## getFileAccessAbilityInfo
 
 ```TypeScript
@@ -91,7 +93,7 @@ async function getFileAccessAbilityInfo() {
 ```
 
 
-<a id="getfileaccessabilityinfo-1"></a>
+<a id="getfileaccessabilityinfo2"></a>
 
 ## getFileAccessAbilityInfo
 

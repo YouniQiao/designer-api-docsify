@@ -6,6 +6,8 @@
 import { quickFixManager } from '@kit.AbilityKit';
 ```
 
+<a id="revokequickfix1"></a>
+
 ## revokeQuickFix
 
 ```TypeScript
@@ -56,7 +58,7 @@ quickFixManager.revokeQuickFix(bundleName, (err) => {
 ```
 
 
-<a id="revokequickfix-1"></a>
+<a id="revokequickfix2"></a>
 
 ## revokeQuickFix
 

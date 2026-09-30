@@ -8,7 +8,7 @@ declare class AbilityComponentAttribute extends CommonMethod<AbilityComponentAtt
 
 @extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
-**继承/实现关系：** AbilityComponentAttribute extends CommonMethod<AbilityComponentAttribute>
+**继承/实现关系：** AbilityComponentAttribute extends CommonMethod&lt;AbilityComponentAttribute&gt;
 
 **起始版本：** 9
 

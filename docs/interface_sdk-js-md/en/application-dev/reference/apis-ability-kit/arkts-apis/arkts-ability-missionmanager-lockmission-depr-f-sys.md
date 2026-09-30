@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="lockmission1"></a>
+
 ## lockMission
 
 ```TypeScript
@@ -57,7 +59,7 @@ try {
 ```
 
 
-<a id="lockmission-1"></a>
+<a id="lockmission2"></a>
 
 ## lockMission
 

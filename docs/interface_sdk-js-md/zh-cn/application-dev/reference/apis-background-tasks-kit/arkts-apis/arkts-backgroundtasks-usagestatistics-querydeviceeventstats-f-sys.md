@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querydeviceeventstats1"></a>
+
 ## queryDeviceEventStats
 
 ```TypeScript
@@ -64,7 +66,7 @@ usageStatistics.queryDeviceEventStats(0, 20000000000000, (err: BusinessError, re
 ```
 
 
-<a id="querydeviceeventstats-1"></a>
+<a id="querydeviceeventstats2"></a>
 
 ## queryDeviceEventStats
 

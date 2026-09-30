@@ -18,6 +18,8 @@ Provides APIs for selecting and saving documents in different formats. Before us
 import { picker } from '@kit.CoreFileKit';
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -40,7 +42,7 @@ A constructor used to create a **DocumentViewPicker** instance. This constructor
 let documentPicker = new picker.DocumentViewPicker(); // Construction without parameter is not recommended. There is a possibility that the DocumentViewPicker instance fails to start.
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -92,7 +94,7 @@ struct Index {
 }
 ```
 
-<a id="constructor-2"></a>
+<a id="constructor3"></a>
 
 ## constructor
 
@@ -156,7 +158,7 @@ struct Index {
 getSelectedIndex(): number
 ```
 
-Obtains the index of the file suffix type of the file saved. This method takes effect only when used with [save()](#save). This method can be used only after [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md) is configured. The index (number) returned by this method indicates the location of the file suffix specified in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md). If no file suffix is specified, **getSelectedIndex()** returns **-1**.
+Obtains the index of the file suffix type of the file saved. This method takes effect only when used with [save()](#save1). This method can be used only after [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md) is configured. The index (number) returned by this method indicates the location of the file suffix specified in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md). If no file suffix is specified, **getSelectedIndex()** returns **-1**.
 
 **Since:** 14
 
@@ -171,6 +173,8 @@ Obtains the index of the file suffix type of the file saved. This method takes e
 | Type | Description |
 | --- | --- |
 | number | Subscript (number) of the selected suffix type in [DocumentSaveOptions.fileSuffixChoices](arkts-corefile-picker-documentsaveoptions-c.md). The default value is **-1**. |
+
+<a id="save1"></a>
 
 ## save
 
@@ -223,7 +227,7 @@ async function example10(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-<a id="save-1"></a>
+<a id="save2"></a>
 
 ## save
 
@@ -273,7 +277,7 @@ async function example11(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-<a id="save-2"></a>
+<a id="save3"></a>
 
 ## save
 
@@ -319,6 +323,8 @@ async function example12(context: common.UIAbilityContext) { // Ensure that cont
   }
 }
 ```
+
+<a id="select1"></a>
 
 ## select
 
@@ -370,7 +376,7 @@ async function example07(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-<a id="select-1"></a>
+<a id="select2"></a>
 
 ## select
 
@@ -419,7 +425,7 @@ async function example08(context: common.UIAbilityContext) { // Ensure that cont
 }
 ```
 
-<a id="select-2"></a>
+<a id="select3"></a>
 
 ## select
 

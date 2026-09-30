@@ -6,6 +6,8 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
+<a id="getcrossingswitchstate1"></a>
+
 ## getCrossingSwitchState
 
 ```TypeScript
@@ -18,7 +20,7 @@ Obtains the screen hopping status of the target device. This API uses an asynchr
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate1)(networkId: string, callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void--><!--Device-cooperate-function getCrossingSwitchState(networkId: string, callback: AsyncCallback<boolean>): void-End-->
 
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="getcrossingswitchstate-1"></a>
+<a id="getcrossingswitchstate2"></a>
 
 ## getCrossingSwitchState
 
@@ -74,7 +76,7 @@ Obtains the screen hopping status of the target device. This API uses a promise 
 
 **Deprecated since:** 11
 
-**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate-1)(networkId: string)
+**Substitutes:** [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate2)(networkId: string)
 
 <!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>--><!--Device-cooperate-function getCrossingSwitchState(networkId: string): Promise<boolean>-End-->
 

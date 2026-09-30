@@ -6,7 +6,7 @@
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="getphotoaccesshelper-2"></a>
+<a id="getphotoaccesshelper3"></a>
 
 ## getPhotoAccessHelper
 

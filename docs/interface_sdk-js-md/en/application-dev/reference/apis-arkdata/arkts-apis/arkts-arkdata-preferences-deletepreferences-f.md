@@ -6,6 +6,8 @@
 import { preferences } from '@kit.ArkData';
 ```
 
+<a id="deletepreferences1"></a>
+
 ## deletePreferences
 
 ```TypeScript
@@ -79,7 +81,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deletepreferences-1"></a>
+<a id="deletepreferences2"></a>
 
 ## deletePreferences
 
@@ -159,7 +161,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deletepreferences-2"></a>
+<a id="deletepreferences3"></a>
 
 ## deletePreferences
 
@@ -237,7 +239,7 @@ class EntryAbility extends UIAbility {
 ```
 
 
-<a id="deletepreferences-3"></a>
+<a id="deletepreferences4"></a>
 
 ## deletePreferences
 

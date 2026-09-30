@@ -739,6 +739,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="createasset1"></a>
+
 ## createAsset
 
 ```TypeScript
@@ -804,7 +806,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-1"></a>
+<a id="createasset2"></a>
 
 ## createAsset
 
@@ -875,7 +877,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-2"></a>
+<a id="createasset3"></a>
 
 ## createAsset
 
@@ -950,7 +952,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-3"></a>
+<a id="createasset4"></a>
 
 ## createAsset
 
@@ -1829,6 +1831,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="gethiddenalbums1"></a>
+
 ## getHiddenAlbums
 
 ```TypeScript
@@ -1902,7 +1906,7 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
-<a id="gethiddenalbums-1"></a>
+<a id="gethiddenalbums2"></a>
 
 ## getHiddenAlbums
 
@@ -2000,7 +2004,7 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
-<a id="gethiddenalbums-2"></a>
+<a id="gethiddenalbums3"></a>
 
 ## getHiddenAlbums
 
@@ -2361,6 +2365,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getphotoindex1"></a>
+
 ## getPhotoIndex
 
 ```TypeScript
@@ -2440,7 +2446,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getphotoindex-1"></a>
+<a id="getphotoindex2"></a>
 
 ## getPhotoIndex
 
@@ -4300,6 +4306,8 @@ Release medialibrary database backup resources incluses closing backup database 
 | [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, this api only works on beta device. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<a id="removeforminfo1"></a>
+
 ## removeFormInfo
 
 ```TypeScript
@@ -4359,7 +4367,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="removeforminfo-1"></a>
+<a id="removeforminfo2"></a>
 
 ## removeFormInfo
 
@@ -4482,6 +4490,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="saveforminfo1"></a>
+
 ## saveFormInfo
 
 ```TypeScript
@@ -4550,7 +4560,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="saveforminfo-1"></a>
+<a id="saveforminfo2"></a>
 
 ## saveFormInfo
 
@@ -4701,6 +4711,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<a id="setassetcompatiblecapability1"></a>
 
 ## setAssetCompatibleCapability
 
@@ -5083,6 +5095,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="startthumbnailcreationtask1"></a>
+
 ## startThumbnailCreationTask
 
 ```TypeScript
@@ -5146,7 +5160,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="startthumbnailcreationtask-1"></a>
+<a id="startthumbnailcreationtask2"></a>
 
 ## startThumbnailCreationTask
 
@@ -5449,6 +5463,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="createalbum1"></a>
+
 ## createAlbum
 
 ```TypeScript
@@ -5516,7 +5532,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createalbum-1"></a>
+<a id="createalbum2"></a>
 
 ## createAlbum
 
@@ -5590,6 +5606,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="deletealbums1"></a>
+
 ## deleteAlbums
 
 ```TypeScript
@@ -5658,7 +5676,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="deletealbums-1"></a>
+<a id="deletealbums2"></a>
 
 ## deleteAlbums
 
@@ -5731,6 +5749,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   fetchResult.close();
 }
 ```
+
+<a id="deleteassets1"></a>
 
 ## deleteAssets
 
@@ -5806,7 +5826,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="deleteassets-1"></a>
+<a id="deleteassets2"></a>
 
 ## deleteAssets
 

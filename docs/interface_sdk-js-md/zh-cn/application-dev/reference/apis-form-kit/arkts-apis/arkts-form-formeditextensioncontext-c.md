@@ -43,7 +43,7 @@ startSecondPage(want: Want): Promise<AbilityResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-abilityresult-i.md)&gt; | Promise对象，返回被启动方退出时的结果码和数据。 |
+| Promise&lt;[AbilityResult](../../apis-ability-kit/arkts-apis/arkts-ability-abilityresult-i.md)&gt; | Promise对象，返回被启动方退出时的结果码和数据。 |
 
 **错误码：**
 

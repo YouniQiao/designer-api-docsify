@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="unholdcall1"></a>
+
 ## unHoldCall
 
 ```TypeScript
@@ -58,7 +60,7 @@ call.unHoldCall(1, (err: BusinessError) => {
 ```
 
 
-<a id="unholdcall-1"></a>
+<a id="unholdcall2"></a>
 
 ## unHoldCall
 

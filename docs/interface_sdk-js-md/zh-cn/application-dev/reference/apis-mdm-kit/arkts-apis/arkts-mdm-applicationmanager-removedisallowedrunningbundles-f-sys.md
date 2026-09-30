@@ -6,6 +6,8 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
+<a id="removedisallowedrunningbundles1"></a>
+
 ## removeDisallowedRunningBundles
 
 ```TypeScript
@@ -72,7 +74,7 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removedisallowedrunningbundles-1"></a>
+<a id="removedisallowedrunningbundles2"></a>
 
 ## removeDisallowedRunningBundles
 
@@ -141,7 +143,7 @@ applicationManager.removeDisallowedRunningBundles(wantTemp, appIds, 100, (err) =
 ```
 
 
-<a id="removedisallowedrunningbundles-2"></a>
+<a id="removedisallowedrunningbundles3"></a>
 
 ## removeDisallowedRunningBundles
 

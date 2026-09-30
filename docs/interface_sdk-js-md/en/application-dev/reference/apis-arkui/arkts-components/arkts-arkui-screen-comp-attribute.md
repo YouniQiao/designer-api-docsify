@@ -8,7 +8,7 @@ Defines the attribute functions of Screen.
 
 @extends CommonMethod&lt;ScreenAttribute&gt;
 
-**Inheritance/Implementation:** ScreenAttribute extends CommonMethod<ScreenAttribute>
+**Inheritance/Implementation:** ScreenAttribute extends CommonMethod&lt;ScreenAttribute&gt;
 
 **Since:** 10
 

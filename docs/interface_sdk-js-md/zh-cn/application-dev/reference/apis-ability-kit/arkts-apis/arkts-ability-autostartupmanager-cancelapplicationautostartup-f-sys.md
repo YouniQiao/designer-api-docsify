@@ -6,6 +6,8 @@
 import { autoStartupManager } from '@kit.AbilityKit';
 ```
 
+<a id="cancelapplicationautostartup1"></a>
+
 ## cancelApplicationAutoStartup
 
 ```TypeScript
@@ -45,7 +47,7 @@ function cancelApplicationAutoStartup(info: AutoStartupInfo, callback: AsyncCall
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 
 
-<a id="cancelapplicationautostartup-1"></a>
+<a id="cancelapplicationautostartup2"></a>
 
 ## cancelApplicationAutoStartup
 

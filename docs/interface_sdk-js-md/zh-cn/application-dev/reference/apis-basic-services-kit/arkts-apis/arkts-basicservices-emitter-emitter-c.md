@@ -40,6 +40,8 @@ constructor()
 let emitter1: emitter.Emitter = new emitter.Emitter();
 ```
 
+<a id="emit1"></a>
+
 ## emit
 
 ```TypeScript
@@ -81,7 +83,7 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', eventData);
 ```
 
-<a id="emit-1"></a>
+<a id="emit2"></a>
 
 ## emit
 
@@ -133,7 +135,7 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter1.emit('eventId', eventData);
 ```
 
-<a id="emit-2"></a>
+<a id="emit3"></a>
 
 ## emit
 
@@ -181,7 +183,7 @@ let eventData: emitter.EventData = {
 emitter1.emit('eventId', options, eventData);
 ```
 
-<a id="emit-3"></a>
+<a id="emit4"></a>
 
 ## emit
 
@@ -272,6 +274,8 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 let count: number = emitter1.getListenerCount('eventId');
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -304,7 +308,7 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emitter1.off('eventId');
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -312,7 +316,7 @@ emitter1.off('eventId');
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](#on)或[once](#once)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+取消订阅当前Emitter类实例的事件。仅当已使用[on](#on1)或[once](#once1)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
 
 使用该接口取消事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
@@ -345,7 +349,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.off('eventId', callback);
 ```
 
-<a id="off-2"></a>
+<a id="off3"></a>
 
 ## off
 
@@ -353,7 +357,7 @@ emitter1.off('eventId', callback);
 off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](#on-1)或[once](#once-1)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+取消订阅当前Emitter类实例的事件。仅当已使用[on](#on2)或[once](#once2)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
 
 使用该接口取消事件订阅后，已通过emit接口发布但尚未被执行的事件将被取消。
 
@@ -400,6 +404,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off('eventId', callback);
 ```
 
+<a id="on1"></a>
+
 ## on
 
 ```TypeScript
@@ -437,7 +443,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.on('eventId', callback);
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -490,6 +496,8 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on('eventId', callback);
 ```
 
+<a id="once1"></a>
+
 ## once
 
 ```TypeScript
@@ -527,7 +535,7 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.once('eventId', callback);
 ```
 
-<a id="once-1"></a>
+<a id="once2"></a>
 
 ## once
 

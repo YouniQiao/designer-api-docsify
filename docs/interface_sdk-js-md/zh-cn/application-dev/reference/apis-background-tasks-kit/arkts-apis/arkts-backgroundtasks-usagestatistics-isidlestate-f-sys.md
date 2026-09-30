@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="isidlestate1"></a>
+
 ## isIdleState
 
 ```TypeScript
@@ -61,7 +63,7 @@ usageStatistics.isIdleState('com.ohos.camera', (err: BusinessError, res: boolean
 ```
 
 
-<a id="isidlestate-1"></a>
+<a id="isidlestate2"></a>
 
 ## isIdleState
 

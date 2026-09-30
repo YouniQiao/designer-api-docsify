@@ -6,7 +6,7 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="isnotificationenabled-2"></a>
+<a id="isnotificationenabled3"></a>
 
 ## isNotificationEnabled
 
@@ -64,7 +64,7 @@ notificationManager.isNotificationEnabled(isNotificationEnabledCallback);
 ```
 
 
-<a id="isnotificationenabled-3"></a>
+<a id="isnotificationenabled4"></a>
 
 ## isNotificationEnabled
 

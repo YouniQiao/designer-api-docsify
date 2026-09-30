@@ -6,6 +6,8 @@
 import { commonEventManager } from '@kit.BasicServicesKit';
 ```
 
+<a id="publishasuser1"></a>
+
 ## publishAsUser
 
 ```TypeScript
@@ -65,7 +67,7 @@ try {
 ```
 
 
-<a id="publishasuser-1"></a>
+<a id="publishasuser2"></a>
 
 ## publishAsUser
 

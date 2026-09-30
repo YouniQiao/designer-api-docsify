@@ -20,6 +20,8 @@ interface Config<T>
 import { config } from '@kit.AccessibilityKit';
 ```
 
+<a id="get1"></a>
+
 ## get
 
 ```TypeScript
@@ -62,7 +64,7 @@ config.highContrastText.get().then((data: boolean) => {
 });
 ```
 
-<a id="get-1"></a>
+<a id="get2"></a>
 
 ## get
 
@@ -194,6 +196,8 @@ config.highContrastText.on((data: boolean) => {
 });
 ```
 
+<a id="set1"></a>
+
 ## set
 
 ```TypeScript
@@ -247,7 +251,7 @@ config.highContrastText.set(value).then(() => {
 });
 ```
 
-<a id="set-1"></a>
+<a id="set2"></a>
 
 ## set
 

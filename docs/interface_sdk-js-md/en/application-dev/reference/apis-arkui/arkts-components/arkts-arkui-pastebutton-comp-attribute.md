@@ -8,7 +8,7 @@ This component can only inherit the [universal attributes of security components
 
 <br>Only the following events are supported.
 
-**Inheritance/Implementation:** PasteButtonAttribute extends SecurityComponentMethod<PasteButtonAttribute>
+**Inheritance/Implementation:** PasteButtonAttribute extends SecurityComponentMethod&lt;PasteButtonAttribute&gt;
 
 **Since:** 10
 

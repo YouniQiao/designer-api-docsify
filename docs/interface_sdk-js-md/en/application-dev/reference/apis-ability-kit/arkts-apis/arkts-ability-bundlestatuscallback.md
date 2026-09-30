@@ -7,5 +7,5 @@
 
 | Name | Description |
 | --- | --- |
-| [BundleStatusCallback](arkts-ability-bundlestatuscallback-bundlestatuscallback-depr-i-sys.md) |  |
+| [BundleStatusCallback](arkts-ability-bundlestatuscallback-depr-i-sys.md) |  |
 <!--DelEnd-->

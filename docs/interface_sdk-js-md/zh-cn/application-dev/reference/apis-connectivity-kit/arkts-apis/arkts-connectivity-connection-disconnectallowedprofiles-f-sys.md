@@ -6,6 +6,8 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
+<a id="disconnectallowedprofiles1"></a>
+
 ## disconnectAllowedProfiles
 
 ```TypeScript

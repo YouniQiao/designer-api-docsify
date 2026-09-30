@@ -26,7 +26,7 @@ function setSync(key: string, value: string): void
 
 **废弃版本：** 9
 
-**替代接口：** setSync
+**替代接口：** [setSync](arkts-basicservices-systemparameterenhance-setsync-f-sys.md)
 
 <!--Device-systemParameter-function setSync(key: string, value: string): void--><!--Device-systemParameter-function setSync(key: string, value: string): void-End-->
 

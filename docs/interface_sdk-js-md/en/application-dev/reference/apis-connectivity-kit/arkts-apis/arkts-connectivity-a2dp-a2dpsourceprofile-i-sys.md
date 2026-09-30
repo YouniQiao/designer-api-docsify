@@ -57,6 +57,8 @@ Initiate an A2DP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+<a id="disableabsolutevolume1"></a>
+
 ## disableAbsoluteVolume
 
 ```TypeScript
@@ -99,7 +101,7 @@ Turn off the absolute volume switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="disableabsolutevolume-1"></a>
+<a id="disableabsolutevolume2"></a>
 
 ## disableAbsoluteVolume
 
@@ -218,6 +220,8 @@ Disconnect the A2DP connection with the remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Operation failed. |
 
+<a id="enableabsolutevolume1"></a>
+
 ## enableAbsoluteVolume
 
 ```TypeScript
@@ -260,7 +264,7 @@ Turn on the absolute volume switch.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="enableabsolutevolume-1"></a>
+<a id="enableabsolutevolume2"></a>
 
 ## enableAbsoluteVolume
 
@@ -467,6 +471,8 @@ Get the full codec capabilities negotiated between the active device and the loc
 | 2900099 | Operation failed. |
 | 2902008 | Current device is not an active device. |
 
+<a id="isabsolutevolumeenabled1"></a>
+
 ## isAbsoluteVolumeEnabled
 
 ```TypeScript
@@ -509,7 +515,7 @@ Checks whether the absolute volume is enabled.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="isabsolutevolumeenabled-1"></a>
+<a id="isabsolutevolumeenabled2"></a>
 
 ## isAbsoluteVolumeEnabled
 
@@ -547,6 +553,8 @@ Checks whether the absolute volume is enabled.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+
+<a id="isabsolutevolumesupported1"></a>
 
 ## isAbsoluteVolumeSupported
 
@@ -590,7 +598,7 @@ Checks whether the device supports absolute volume.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
-<a id="isabsolutevolumesupported-1"></a>
+<a id="isabsolutevolumesupported2"></a>
 
 ## isAbsoluteVolumeSupported
 

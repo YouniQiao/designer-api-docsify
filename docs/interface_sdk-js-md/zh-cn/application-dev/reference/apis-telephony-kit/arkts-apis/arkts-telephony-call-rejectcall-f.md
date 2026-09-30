@@ -6,7 +6,7 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="rejectcall-3"></a>
+<a id="rejectcall4"></a>
 
 ## rejectCall
 

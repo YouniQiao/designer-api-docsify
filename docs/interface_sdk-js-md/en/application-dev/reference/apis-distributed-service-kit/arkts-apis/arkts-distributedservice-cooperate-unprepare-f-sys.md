@@ -6,6 +6,8 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
+<a id="unprepare1"></a>
+
 ## unprepare
 
 ```TypeScript
@@ -18,7 +20,7 @@ Cancels the preparation for screen hopping. This API uses an asynchronous callba
 
 **Deprecated since:** 11
 
-**Substitutes:** [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-cooperate-function unprepare(callback: AsyncCallback<void>): void--><!--Device-cooperate-function unprepare(callback: AsyncCallback<void>): void-End-->
 
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="unprepare-1"></a>
+<a id="unprepare2"></a>
 
 ## unprepare
 

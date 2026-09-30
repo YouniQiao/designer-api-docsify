@@ -22,6 +22,8 @@ class PhotoViewPicker
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="select1"></a>
+
 ## select
 
 ```TypeScript
@@ -33,7 +35,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
@@ -88,7 +90,7 @@ async function openBindSheet01() {
 }
 ```
 
-<a id="select-1"></a>
+<a id="select2"></a>
 
 ## select
 
@@ -101,7 +103,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
@@ -153,7 +155,7 @@ async function openBindSheet02() {
 }
 ```
 
-<a id="select-2"></a>
+<a id="select3"></a>
 
 ## select
 
@@ -166,7 +168,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10

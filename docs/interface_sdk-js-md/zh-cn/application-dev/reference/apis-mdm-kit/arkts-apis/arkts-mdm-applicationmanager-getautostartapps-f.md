@@ -6,6 +6,8 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
+<a id="getautostartapps1"></a>
+
 ## getAutoStartApps
 
 ```TypeScript
@@ -81,7 +83,7 @@ try {
 ```
 
 
-<a id="getautostartapps-1"></a>
+<a id="getautostartapps2"></a>
 
 ## getAutoStartApps
 
@@ -153,7 +155,7 @@ try {
 ```
 
 
-<a id="getautostartapps-2"></a>
+<a id="getautostartapps3"></a>
 
 ## getAutoStartApps
 
@@ -230,7 +232,7 @@ try {
 ```
 
 
-<a id="getautostartapps-3"></a>
+<a id="getautostartapps4"></a>
 
 ## getAutoStartApps
 

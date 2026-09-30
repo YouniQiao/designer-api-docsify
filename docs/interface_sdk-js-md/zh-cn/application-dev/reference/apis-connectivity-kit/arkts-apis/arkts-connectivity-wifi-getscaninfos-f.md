@@ -6,6 +6,8 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
+<a id="getscaninfos1"></a>
+
 ## getScanInfos
 
 ```TypeScript
@@ -59,7 +61,7 @@ wifi.getScanInfos().then(result => {
 ```
 
 
-<a id="getscaninfos-1"></a>
+<a id="getscaninfos2"></a>
 
 ## getScanInfos
 

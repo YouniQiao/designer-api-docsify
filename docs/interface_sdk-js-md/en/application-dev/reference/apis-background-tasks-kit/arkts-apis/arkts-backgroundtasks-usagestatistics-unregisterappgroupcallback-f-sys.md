@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="unregisterappgroupcallback1"></a>
+
 ## unregisterAppGroupCallBack
 
 ```TypeScript
@@ -60,7 +62,7 @@ usageStatistics.unregisterAppGroupCallBack((err: BusinessError) => {
 ```
 
 
-<a id="unregisterappgroupcallback-1"></a>
+<a id="unregisterappgroupcallback2"></a>
 
 ## unregisterAppGroupCallBack
 

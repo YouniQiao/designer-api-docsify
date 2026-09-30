@@ -6,6 +6,8 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="getprivatecertificate1"></a>
+
 ## getPrivateCertificate
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="getprivatecertificate-1"></a>
+<a id="getprivatecertificate2"></a>
 
 ## getPrivateCertificate
 

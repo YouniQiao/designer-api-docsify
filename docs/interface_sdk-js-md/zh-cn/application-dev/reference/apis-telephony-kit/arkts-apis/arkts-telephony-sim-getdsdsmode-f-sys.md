@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getdsdsmode1"></a>
+
 ## getDsdsMode
 
 ```TypeScript
@@ -55,7 +57,7 @@ sim.getDsdsMode((err: BusinessError, data: sim.DsdsMode) => {
 ```
 
 
-<a id="getdsdsmode-1"></a>
+<a id="getdsdsmode2"></a>
 
 ## getDsdsMode
 

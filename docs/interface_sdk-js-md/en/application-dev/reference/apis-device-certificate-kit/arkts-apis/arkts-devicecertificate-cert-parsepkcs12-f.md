@@ -6,6 +6,8 @@
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="parsepkcs121"></a>
+
 ## parsePkcs12
 
 ```TypeScript
@@ -223,7 +225,7 @@ function doTestParsePkcs12() {
 ```
 
 
-<a id="parsepkcs12-1"></a>
+<a id="parsepkcs122"></a>
 
 ## parsePkcs12
 

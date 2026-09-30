@@ -10,7 +10,7 @@ The component width and height must be explicitly set to valid non-zero values; 
 
 In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
-**Inheritance/Implementation:** PluginComponentAttribute extends CommonMethod<PluginComponentAttribute>
+**Inheritance/Implementation:** PluginComponentAttribute extends CommonMethod&lt;PluginComponentAttribute&gt;
 
 **Since:** 9
 

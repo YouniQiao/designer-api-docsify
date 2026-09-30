@@ -6,6 +6,8 @@
 import { browser } from '@kit.MDMKit';
 ```
 
+<a id="getpolicies1"></a>
+
 ## getPolicies
 
 ```TypeScript
@@ -67,7 +69,7 @@ browser.getPolicies(wantTemp, appId, (err, result) => {
 ```
 
 
-<a id="getpolicies-1"></a>
+<a id="getpolicies2"></a>
 
 ## getPolicies
 

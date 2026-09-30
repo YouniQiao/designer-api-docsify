@@ -6,7 +6,7 @@ interface Display
 
 Implements a Display instance, with attributes and APIs defined.
 
-Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
+Before calling any API in Display, you must use [getAllDisplays()](arkts-arkui-display-getalldisplays-f.md#getalldisplays1) or [getDefaultDisplaySync()](arkts-arkui-display-getdefaultdisplaysync-f.md) to obtain a Display instance.
 
 **Since:** 7
 
@@ -72,6 +72,8 @@ try {
 }
 ```
 
+<a id="getcutoutinfo1"></a>
+
 ## getCutoutInfo
 
 ```TypeScript
@@ -118,7 +120,7 @@ displayClass.getCutoutInfo((err: BusinessError, data: display.CutoutInfo) => {
 });
 ```
 
-<a id="getcutoutinfo-1"></a>
+<a id="getcutoutinfo2"></a>
 
 ## getCutoutInfo
 

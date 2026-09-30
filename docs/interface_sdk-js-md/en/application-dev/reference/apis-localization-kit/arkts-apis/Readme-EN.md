@@ -130,8 +130,8 @@
   - [SendableResource](arkts-localization-sendableresourcemanager-sendableresource-t.md)
 - global<!--arkts-localizationkit-global-->
   - [rawFileDescriptor](arkts-localization-rawfiledescriptor.md)
-    - [RawFileDescriptor](arkts-localization-rawfiledescriptor-rawfiledescriptor-i.md)
+    - [RawFileDescriptor](arkts-localization-rawfiledescriptor-i.md)
   - [resource](arkts-localization-resource.md)
-    - [Resource](arkts-localization-resource-resource-i.md)
+    - [Resource](arkts-localization-resource-i.md)
   - [sendableResource](arkts-localization-sendableresource.md)
-    - [SendableResource](arkts-localization-sendableresource-sendableresource-i.md)
+    - [SendableResource](arkts-localization-sendableresource-i.md)

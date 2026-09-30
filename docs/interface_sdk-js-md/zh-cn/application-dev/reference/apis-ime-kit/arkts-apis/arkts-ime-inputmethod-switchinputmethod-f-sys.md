@@ -6,7 +6,7 @@
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="switchinputmethod-2"></a>
+<a id="switchinputmethod3"></a>
 
 ## switchInputMethod
 

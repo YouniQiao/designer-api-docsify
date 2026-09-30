@@ -6,6 +6,8 @@
 import { inputDevice } from '@kit.InputKit';
 ```
 
+<a id="getdeviceids1"></a>
+
 ## getDeviceIds
 
 ```TypeScript
@@ -58,7 +60,7 @@ struct Index {
 ```
 
 
-<a id="getdeviceids-1"></a>
+<a id="getdeviceids2"></a>
 
 ## getDeviceIds
 

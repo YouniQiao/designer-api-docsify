@@ -113,7 +113,7 @@ Creates a DepthDataOutput instance. This API returns the result synchronously.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | 是 | Supported preview profile, which is obtained through  [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability-1). |
+| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | 是 | Supported preview profile, which is obtained through  [getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability2). |
 
 **返回值：**
 

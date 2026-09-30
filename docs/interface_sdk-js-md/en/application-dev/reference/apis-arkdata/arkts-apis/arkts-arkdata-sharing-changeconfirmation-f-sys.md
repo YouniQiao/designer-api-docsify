@@ -6,6 +6,8 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
+<a id="changeconfirmation1"></a>
+
 ## changeConfirmation
 
 ```TypeScript
@@ -53,7 +55,7 @@ cloudData.sharing.changeConfirmation('sharing_resource_test', cloudData.sharing.
 ```
 
 
-<a id="changeconfirmation-1"></a>
+<a id="changeconfirmation2"></a>
 
 ## changeConfirmation
 

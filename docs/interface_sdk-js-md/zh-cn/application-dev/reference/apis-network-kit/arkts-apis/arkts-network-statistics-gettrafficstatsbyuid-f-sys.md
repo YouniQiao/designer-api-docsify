@@ -6,6 +6,8 @@
 import { statistics } from '@kit.NetworkKit';
 ```
 
+<a id="gettrafficstatsbyuid1"></a>
+
 ## getTrafficStatsByUid
 
 ```TypeScript
@@ -86,7 +88,7 @@ statistics.getTrafficStatsByUid(
 ```
 
 
-<a id="gettrafficstatsbyuid-1"></a>
+<a id="gettrafficstatsbyuid2"></a>
 
 ## getTrafficStatsByUid
 

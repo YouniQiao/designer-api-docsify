@@ -10,7 +10,7 @@ ImagePacker类，用于图片压缩和编码。
 
 编码期间，请避免修改或释放作为输入的ImageSource/PixelMap/Picture对象，以免出现crash或其他未定义行为。
 
-由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
+由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
 当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
 
@@ -178,7 +178,7 @@ async function PackBinaryImageToTiffFile(context: Context) {
 }
 ```
 
-<a id="packing-4"></a>
+<a id="packing5"></a>
 
 ## packing
 
@@ -245,6 +245,8 @@ async function Packing(context: Context) {
 }
 ```
 
+<a id="packing1"></a>
+
 ## packing
 
 ```TypeScript
@@ -255,7 +257,7 @@ packing(source: ImageSource, option: PackingOption, callback: AsyncCallback<Arra
 
 > **说明：** 
 > 
-> [packToData](#packtodata)代替。
+> [packToData](#packtodata1)代替。
 
 **起始版本：** 6
 
@@ -298,7 +300,7 @@ async function Packing(context : Context) {
 }
 ```
 
-<a id="packing-1"></a>
+<a id="packing2"></a>
 
 ## packing
 
@@ -310,7 +312,7 @@ packing(source: ImageSource, option: PackingOption): Promise<ArrayBuffer>
 
 > **说明：** 
 > 
-> [packToData](#packtodata)代替。
+> [packToData](#packtodata1)代替。
 
 **起始版本：** 6
 
@@ -357,7 +359,7 @@ async function Packing(context : Context) {
 }
 ```
 
-<a id="packing-2"></a>
+<a id="packing3"></a>
 
 ## packing
 
@@ -369,7 +371,7 @@ packing(source: PixelMap, option: PackingOption, callback: AsyncCallback<ArrayBu
 
 > **说明：** 
 > 
-> [packToData](#packtodata)代替。
+> [packToData](#packtodata1)代替。
 > 
 > **注意：**
 > 
@@ -419,7 +421,7 @@ async function Packing() {
 }
 ```
 
-<a id="packing-3"></a>
+<a id="packing4"></a>
 
 ## packing
 
@@ -431,7 +433,7 @@ packing(source: PixelMap, option: PackingOption): Promise<ArrayBuffer>
 
 > **说明：** 
 > 
-> [packToData](#packtodata)代替。
+> [packToData](#packtodata1)代替。
 > 
 > **注意：**
 > 
@@ -484,6 +486,8 @@ async function Packing() {
   })
 }
 ```
+
+<a id="packtodata1"></a>
 
 ## packToData
 
@@ -548,7 +552,7 @@ async function PackToData(context : Context) {
 }
 ```
 
-<a id="packtodata-1"></a>
+<a id="packtodata2"></a>
 
 ## packToData
 
@@ -682,6 +686,8 @@ async function PackToDataFromPixelmapSequence(context : Context) {
 }
 ```
 
+<a id="packtofile1"></a>
+
 ## packToFile
 
 ```TypeScript
@@ -743,7 +749,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-1"></a>
+<a id="packtofile2"></a>
 
 ## packToFile
 
@@ -809,7 +815,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-2"></a>
+<a id="packtofile3"></a>
 
 ## packToFile
 
@@ -877,7 +883,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-3"></a>
+<a id="packtofile4"></a>
 
 ## packToFile
 
@@ -949,7 +955,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-4"></a>
+<a id="packtofile5"></a>
 
 ## packToFile
 
@@ -1087,6 +1093,8 @@ async function PackToFile(context : Context) {
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -1128,7 +1136,7 @@ async function Release() {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 

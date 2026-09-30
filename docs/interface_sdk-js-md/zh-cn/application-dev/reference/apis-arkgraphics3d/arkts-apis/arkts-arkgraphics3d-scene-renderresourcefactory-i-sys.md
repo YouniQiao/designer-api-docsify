@@ -14,7 +14,7 @@ export interface RenderResourceFactory
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-<a id="createscene-1"></a>
+<a id="createscene2"></a>
 
 ## createScene
 

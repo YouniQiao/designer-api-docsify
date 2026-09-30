@@ -18,7 +18,7 @@ class URL
 import { url } from '@kit.ArkTS';
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -52,6 +52,8 @@ new url.URL('/path/path1'); // Raises a TypeError exception as '/path/path1' is 
 new url.URL('https://www.example.com', ); // Output https://www.example.com/
 new url.URL('https://www.example.com', absoluteUrl); // Output https://www.example.com/
 ```
+
+<a id="constructor1"></a>
 
 ## constructor
 
@@ -448,7 +450,7 @@ readonly searchParams: URLSearchParams
 
 **废弃版本：** 9
 
-**替代接口：** params
+**替代接口：** [params](#params)
 
 <!--Device-URL-readonly searchParams: URLSearchParams--><!--Device-URL-readonly searchParams: URLSearchParams-End-->
 

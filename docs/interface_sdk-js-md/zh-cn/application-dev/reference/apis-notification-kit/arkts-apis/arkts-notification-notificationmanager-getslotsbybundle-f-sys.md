@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="getslotsbybundle1"></a>
+
 ## getSlotsByBundle
 
 ```TypeScript
@@ -63,7 +65,7 @@ notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
 ```
 
 
-<a id="getslotsbybundle-1"></a>
+<a id="getslotsbybundle2"></a>
 
 ## getSlotsByBundle
 

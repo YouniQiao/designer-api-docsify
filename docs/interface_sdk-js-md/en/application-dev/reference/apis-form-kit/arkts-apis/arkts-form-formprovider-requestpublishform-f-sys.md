@@ -6,6 +6,8 @@
 import { formProvider } from '@kit.FormKit';
 ```
 
+<a id="requestpublishform1"></a>
+
 ## requestPublishForm
 
 ```TypeScript
@@ -49,7 +51,7 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
 
 
-<a id="requestpublishform-1"></a>
+<a id="requestpublishform2"></a>
 
 ## requestPublishForm
 
@@ -89,7 +91,7 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
 
 
-<a id="requestpublishform-2"></a>
+<a id="requestpublishform3"></a>
 
 ## requestPublishForm
 

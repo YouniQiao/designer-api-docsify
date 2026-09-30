@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="requestform1"></a>
+
 ## requestForm
 
 ```TypeScript
@@ -48,7 +50,7 @@ formHost.requestForm(formId, (error: Base.BusinessError) => {
 ```
 
 
-<a id="requestform-1"></a>
+<a id="requestform2"></a>
 
 ## requestForm
 

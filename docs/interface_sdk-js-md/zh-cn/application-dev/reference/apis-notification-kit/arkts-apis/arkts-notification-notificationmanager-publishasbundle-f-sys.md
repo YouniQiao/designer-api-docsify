@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="publishasbundle1"></a>
+
 ## publishAsBundle
 
 ```TypeScript
@@ -98,7 +100,7 @@ notificationManager.publishAsBundle(request, representativeBundle, userId, callb
 ```
 
 
-<a id="publishasbundle-1"></a>
+<a id="publishasbundle2"></a>
 
 ## publishAsBundle
 
@@ -188,7 +190,7 @@ notificationManager.publishAsBundle(request, representativeBundle, userId).then(
 ```
 
 
-<a id="publishasbundle-2"></a>
+<a id="publishasbundle3"></a>
 
 ## publishAsBundle
 

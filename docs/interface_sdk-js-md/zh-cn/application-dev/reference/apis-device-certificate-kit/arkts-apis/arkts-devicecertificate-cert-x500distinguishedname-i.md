@@ -73,6 +73,8 @@ async function getEncoded() {
 }
 ```
 
+<a id="getname1"></a>
+
 ## getName
 
 ```TypeScript
@@ -130,7 +132,7 @@ async function getName() {
 }
 ```
 
-<a id="getname-1"></a>
+<a id="getname2"></a>
 
 ## getName
 
@@ -193,7 +195,7 @@ async function getName() {
 }
 ```
 
-<a id="getname-2"></a>
+<a id="getname3"></a>
 
 ## getName
 
@@ -256,7 +258,7 @@ async function getName() {
 }
 ```
 
-<a id="getname-3"></a>
+<a id="getname4"></a>
 
 ## getName
 

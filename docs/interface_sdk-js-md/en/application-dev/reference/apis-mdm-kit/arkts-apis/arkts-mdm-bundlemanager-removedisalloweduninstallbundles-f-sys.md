@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
+<a id="removedisalloweduninstallbundles1"></a>
+
 ## removeDisallowedUninstallBundles
 
 ```TypeScript
@@ -72,7 +74,7 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, (err) => {
 ```
 
 
-<a id="removedisalloweduninstallbundles-1"></a>
+<a id="removedisalloweduninstallbundles2"></a>
 
 ## removeDisallowedUninstallBundles
 
@@ -141,7 +143,7 @@ bundleManager.removeDisallowedUninstallBundles(wantTemp, appIds, 100, (err) => {
 ```
 
 
-<a id="removedisalloweduninstallbundles-2"></a>
+<a id="removedisalloweduninstallbundles3"></a>
 
 ## removeDisallowedUninstallBundles
 

@@ -6,7 +6,7 @@ interface Screen
 
 Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
 
-Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
+Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens1) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createvirtualscreen1) to obtain a Screen instance.
 
 **Since:** 9
 
@@ -21,6 +21,8 @@ Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-scr
 ```TypeScript
 import { screen } from '@kit.ArkUI';
 ```
+
+<a id="setdensitydpi1"></a>
 
 ## setDensityDpi
 
@@ -95,7 +97,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-<a id="setdensitydpi-1"></a>
+<a id="setdensitydpi2"></a>
 
 ## setDensityDpi
 
@@ -172,6 +174,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<a id="setorientation1"></a>
+
 ## setOrientation
 
 ```TypeScript
@@ -244,7 +248,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-<a id="setorientation-1"></a>
+<a id="setorientation2"></a>
 
 ## setOrientation
 
@@ -321,7 +325,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-<a id="setorientation-2"></a>
+<a id="setorientation3"></a>
 
 ## setOrientation
 
@@ -390,6 +394,8 @@ screensPromise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<a id="setscreenactivemode1"></a>
 
 ## setScreenActiveMode
 
@@ -464,7 +470,7 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
-<a id="setscreenactivemode-1"></a>
+<a id="setscreenactivemode2"></a>
 
 ## setScreenActiveMode
 

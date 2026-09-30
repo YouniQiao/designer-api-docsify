@@ -18,6 +18,8 @@ interface SystemPasteboard
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
+<a id="cleardata1"></a>
+
 ## clearData
 
 ```TypeScript
@@ -61,7 +63,7 @@ systemPasteboard.clearData((err, data) => {
 });
 ```
 
-<a id="cleardata-1"></a>
+<a id="cleardata2"></a>
 
 ## clearData
 
@@ -223,6 +225,8 @@ try {
 };
 ```
 
+<a id="getdata1"></a>
+
 ## getData
 
 ```TypeScript
@@ -277,7 +281,7 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 });
 ```
 
-<a id="getdata-1"></a>
+<a id="getdata2"></a>
 
 ## getData
 
@@ -376,7 +380,7 @@ try {
 getDataSync(): PasteData
 ```
 
-读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](#getdata)。
+读取系统剪贴板内容，此接口为同步接口。适用于应用需要在关键业务流程中同步获取剪贴板数据，或需要立即处理剪贴板内容的场景。避免在UI线程调用此接口，以免阻塞界面；处理大量数据或远端数据时，建议使用异步接口[getData](#getdata1)。
 
 应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
@@ -544,7 +548,7 @@ systemPasteboard.getMimeTypes().then((data: Array<string>) => {
 getUnifiedData(): Promise<unifiedDataChannel.UnifiedData>
 ```
 
-读取系统剪贴板内容，使用Promise异步回调。适用于需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)进行跨应用数据交换的场景。当应用需要与其他支持UnifiedData的应用进行数据共享，或需要处理复杂的多类型数据时，使用本接口。与[getData](#getdata)相比，getUnifiedData提供了更标准化的数据格式。
+读取系统剪贴板内容，使用Promise异步回调。适用于需要使用标准化数据结构[UnifiedData](../../apis-arkdata/arkts-apis/arkts-arkdata-unifieddatachannel-unifieddata-c.md)进行跨应用数据交换的场景。当应用需要与其他支持UnifiedData的应用进行数据共享，或需要处理复杂的多类型数据时，使用本接口。与[getData](#getdata1)相比，getUnifiedData提供了更标准化的数据格式。
 
 应用使用自定义控件访问剪贴板内容需[申请访问剪贴板权限](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md)。应用[使用粘贴控件](../../../security/AccessToken/pastebutton.md)访问剪贴板内容，无需申请权限。
 
@@ -638,6 +642,8 @@ try {
 };
 ```
 
+<a id="hasdata1"></a>
+
 ## hasData
 
 ```TypeScript
@@ -681,7 +687,7 @@ systemPasteboard.hasData((err: BusinessError, data: boolean) => {
 });
 ```
 
-<a id="hasdata-1"></a>
+<a id="hasdata2"></a>
 
 ## hasData
 
@@ -1122,6 +1128,8 @@ try {
 }
 ```
 
+<a id="setdata1"></a>
+
 ## setData
 
 ```TypeScript
@@ -1170,7 +1178,7 @@ systemPasteboard.setData(pasteData, (err, data) => {
 });
 ```
 
-<a id="setdata-1"></a>
+<a id="setdata2"></a>
 
 ## setData
 
@@ -1389,6 +1397,8 @@ try {
 };
 ```
 
+<a id="clear1"></a>
+
 ## clear
 
 ```TypeScript
@@ -1401,7 +1411,7 @@ clear(callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [clearData](#cleardata1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -1432,7 +1442,7 @@ systemPasteboard.clear((err, data) => {
 });
 ```
 
-<a id="clear-1"></a>
+<a id="clear2"></a>
 
 ## clear
 
@@ -1471,6 +1481,8 @@ systemPasteboard.clear().then((data) => {
 });
 ```
 
+<a id="getpastedata1"></a>
+
 ## getPasteData
 
 ```TypeScript
@@ -1483,7 +1495,7 @@ getPasteData(callback: AsyncCallback<PasteData>): void
 
 **废弃版本：** 9
 
-**替代接口：** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
+**替代接口：** [getData](#getdata1)(callback: AsyncCallback&lt;PasteData&gt;)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -1519,7 +1531,7 @@ systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteDa
 });
 ```
 
-<a id="getpastedata-1"></a>
+<a id="getpastedata2"></a>
 
 ## getPasteData
 
@@ -1561,6 +1573,8 @@ systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
 });
 ```
 
+<a id="haspastedata1"></a>
+
 ## hasPasteData
 
 ```TypeScript
@@ -1573,7 +1587,7 @@ hasPasteData(callback: AsyncCallback<boolean>): void
 
 **废弃版本：** 9
 
-**替代接口：** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
+**替代接口：** [hasData](#hasdata1)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1606,7 +1620,7 @@ systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
 });
 ```
 
-<a id="haspastedata-1"></a>
+<a id="haspastedata2"></a>
 
 ## hasPasteData
 
@@ -1645,6 +1659,8 @@ systemPasteboard.hasPasteData().then((data: boolean) => {
 });
 ```
 
+<a id="setpastedata1"></a>
+
 ## setPasteData
 
 ```TypeScript
@@ -1657,7 +1673,7 @@ setPasteData(data: PasteData, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setData](#setdata1)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1690,7 +1706,7 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
 });
 ```
 
-<a id="setpastedata-1"></a>
+<a id="setpastedata2"></a>
 
 ## setPasteData
 
@@ -1704,7 +1720,7 @@ setPasteData(data: PasteData): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setData](#setdata-1)(data: PasteData)
+**替代接口：** [setData](#setdata2)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 

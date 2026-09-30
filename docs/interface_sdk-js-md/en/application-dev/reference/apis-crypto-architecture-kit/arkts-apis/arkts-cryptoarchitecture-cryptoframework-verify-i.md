@@ -83,6 +83,8 @@ function testGetVerifySpec() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -118,7 +120,7 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -358,6 +360,8 @@ Recovers the original data from a signature. This API returns the result synchro
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
+<a id="setverifyspec1"></a>
+
 ## setVerifySpec
 
 ```TypeScript
@@ -418,7 +422,7 @@ function testSetVerifySpec() {
 }
 ```
 
-<a id="setverifyspec-1"></a>
+<a id="setverifyspec2"></a>
 
 ## setVerifySpec
 
@@ -473,7 +477,7 @@ function testSetVerifySpec() {
 }
 ```
 
-<a id="setverifyspec-2"></a>
+<a id="setverifyspec3"></a>
 
 ## setVerifySpec
 
@@ -526,6 +530,8 @@ function testSetVerifySpec() {
 }
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -539,7 +545,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify-1)
+> [verify](#verify2)
 > after [init](#init)), depending on
 > the data volume.
 > 
@@ -584,7 +590,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 
@@ -599,7 +605,7 @@ Updates the data for signature verification. This API uses a promise to return t
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify-3) after
+> [verify](#verify4) after
 > [init](#init)), depending on the data volume.
 
 > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a
@@ -704,6 +710,8 @@ Updates the data for signature verification. This API returns the result synchro
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
+<a id="verify1"></a>
+
 ## verify
 
 ```TypeScript
@@ -740,7 +748,7 @@ Verifies the message, including the update data. This API uses an asynchronous c
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="verify-1"></a>
+<a id="verify2"></a>
 
 ## verify
 
@@ -778,7 +786,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="verify-2"></a>
+<a id="verify3"></a>
 
 ## verify
 
@@ -821,7 +829,7 @@ Verifies the message, including the update data. This API uses a promise to retu
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="verify-3"></a>
+<a id="verify4"></a>
 
 ## verify
 

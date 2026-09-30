@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="sendenvelopecmd1"></a>
+
 ## sendEnvelopeCmd
 
 ```TypeScript
@@ -57,7 +59,7 @@ sim.sendEnvelopeCmd(0, "ls", (err: BusinessError) => {
 ```
 
 
-<a id="sendenvelopecmd-1"></a>
+<a id="sendenvelopecmd2"></a>
 
 ## sendEnvelopeCmd
 

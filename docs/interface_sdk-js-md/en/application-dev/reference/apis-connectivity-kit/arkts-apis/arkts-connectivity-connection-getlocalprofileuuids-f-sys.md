@@ -6,6 +6,8 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
+<a id="getlocalprofileuuids1"></a>
+
 ## getLocalProfileUuids
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="getlocalprofileuuids-1"></a>
+<a id="getlocalprofileuuids2"></a>
 
 ## getLocalProfileUuids
 

@@ -6,7 +6,7 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
-<a id="getcalltransferinfo-1"></a>
+<a id="getcalltransferinfo2"></a>
 
 ## getCallTransferInfo
 
@@ -61,7 +61,7 @@ call.getCallTransferInfo(0, call.CallTransferType.TRANSFER_TYPE_BUSY, (err: Busi
 ```
 
 
-<a id="getcalltransferinfo-2"></a>
+<a id="getcalltransferinfo3"></a>
 
 ## getCallTransferInfo
 

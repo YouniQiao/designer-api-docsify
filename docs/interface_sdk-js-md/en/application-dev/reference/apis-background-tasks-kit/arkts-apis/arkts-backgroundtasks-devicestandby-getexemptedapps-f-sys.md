@@ -6,6 +6,8 @@
 import { deviceStandby } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="getexemptedapps1"></a>
+
 ## getExemptedApps
 
 ```TypeScript
@@ -64,7 +66,7 @@ deviceStandby.getExemptedApps(resourceTypes, (err: BusinessError, res: Array<dev
 ```
 
 
-<a id="getexemptedapps-1"></a>
+<a id="getexemptedapps2"></a>
 
 ## getExemptedApps
 

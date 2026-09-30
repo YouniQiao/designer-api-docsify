@@ -6,6 +6,8 @@
 import { overlay } from '@kit.AbilityKit';
 ```
 
+<a id="gettargetoverlaymoduleinfos1"></a>
+
 ## getTargetOverlayModuleInfos
 
 ```TypeScript
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="gettargetoverlaymoduleinfos-1"></a>
+<a id="gettargetoverlaymoduleinfos2"></a>
 
 ## getTargetOverlayModuleInfos
 

@@ -474,6 +474,8 @@ Query the local AI-enhanced task status.
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | Scene parameters validate failed, possible causes: 1. The photoAsset does not support local AI enhancement. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. The database is corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
+<a id="submitcloudenhancementtasks1"></a>
+
 ## submitCloudEnhancementTasks
 
 ```TypeScript
@@ -542,7 +544,7 @@ async function example(context: Context) {
 }
 ```
 
-<a id="submitcloudenhancementtasks-1"></a>
+<a id="submitcloudenhancementtasks2"></a>
 
 ## submitCloudEnhancementTasks
 

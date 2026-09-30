@@ -404,6 +404,8 @@ async function certChainToString() {
 }
 ```
 
+<a id="validate1"></a>
+
 ## validate
 
 ```TypeScript
@@ -563,7 +565,7 @@ async function validate() {
 validate();
 ```
 
-<a id="validate-1"></a>
+<a id="validate2"></a>
 
 ## validate
 

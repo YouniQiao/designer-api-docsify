@@ -20,6 +20,8 @@ interface WindowStage
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="createsubwindow1"></a>
+
 ## createSubWindow
 
 ```TypeScript
@@ -89,7 +91,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="createsubwindow-1"></a>
+<a id="createsubwindow2"></a>
 
 ## createSubWindow
 
@@ -240,6 +242,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="getmainwindow1"></a>
+
 ## getMainWindow
 
 ```TypeScript
@@ -248,7 +252,7 @@ getMainWindow(): Promise<Window>
 
 获取该WindowStage实例下的主窗口，使用Promise异步回调。
 
-调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent1)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent1)方法完成页面加载。
 
 **起始版本：** 9
 
@@ -305,7 +309,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="getmainwindow-1"></a>
+<a id="getmainwindow2"></a>
 
 ## getMainWindow
 
@@ -315,7 +319,7 @@ getMainWindow(callback: AsyncCallback<Window>): void
 
 获取该WindowStage实例下的主窗口，使用callback异步回调。
 
-调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent)方法完成页面加载。
+调用该接口前，建议先通过[loadContent](arkts-arkui-window-window-i.md#loadcontent1)方法或者[setUIContent](arkts-arkui-window-window-i.md#setuicontent1)方法完成页面加载。
 
 **起始版本：** 9
 
@@ -433,6 +437,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="getsubwindow1"></a>
+
 ## getSubWindow
 
 ```TypeScript
@@ -489,7 +495,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="getsubwindow-1"></a>
+<a id="getsubwindow2"></a>
 
 ## getSubWindow
 
@@ -607,6 +613,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="loadcontent1"></a>
+
 ## loadContent
 
 ```TypeScript
@@ -677,7 +685,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="loadcontent-1"></a>
+<a id="loadcontent2"></a>
 
 ## loadContent
 
@@ -750,7 +758,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="loadcontent-2"></a>
+<a id="loadcontent3"></a>
 
 ## loadContent
 
@@ -817,6 +825,8 @@ export default class EntryAbility extends UIAbility {
   }
 };
 ```
+
+<a id="loadcontentbyname1"></a>
 
 ## loadContentByName
 
@@ -906,7 +916,7 @@ export struct Index {
 }
 ```
 
-<a id="loadcontentbyname-1"></a>
+<a id="loadcontentbyname2"></a>
 
 ## loadContentByName
 
@@ -995,7 +1005,7 @@ export struct Index {
 }
 ```
 
-<a id="loadcontentbyname-2"></a>
+<a id="loadcontentbyname3"></a>
 
 ## loadContentByName
 
@@ -1088,6 +1098,8 @@ export struct Index {
 }
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -1163,7 +1175,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -1227,7 +1239,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="off-2"></a>
+<a id="off3"></a>
 
 ## off
 
@@ -1290,6 +1302,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="on1"></a>
+
 ## on
 
 ```TypeScript
@@ -1346,7 +1360,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -1418,7 +1432,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="on-2"></a>
+<a id="on3"></a>
 
 ## on
 
@@ -1667,6 +1681,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="setcustomdensity1"></a>
+
 ## setCustomDensity
 
 ```TypeScript
@@ -1725,7 +1741,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="setcustomdensity-1"></a>
+<a id="setcustomdensity2"></a>
 
 ## setCustomDensity
 
@@ -1852,6 +1868,8 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
+<a id="setsupportedwindowmodes1"></a>
+
 ## setSupportedWindowModes
 
 ```TypeScript
@@ -1920,7 +1938,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setsupportedwindowmodes-1"></a>
+<a id="setsupportedwindowmodes2"></a>
 
 ## setSupportedWindowModes
 
@@ -2056,6 +2074,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<a id="setwindowrectautosave1"></a>
+
 ## setWindowRectAutoSave
 
 ```TypeScript
@@ -2133,7 +2153,7 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="setwindowrectautosave-1"></a>
+<a id="setwindowrectautosave2"></a>
 
 ## setWindowRectAutoSave
 

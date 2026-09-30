@@ -374,6 +374,8 @@ Scroll组件默认有动画，Grid、List、WaterFlow组件默认无动画。
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | 是 | 滚动到的边缘位置。 |
 | options | [ScrollEdgeOptions](arkts-arkui-scroll-comp-scrolledgeoptions-i.md) | 否 | 设置滚动到边缘位置的模式。<br>&lt;em&gt;原子化服务API&lt;/em&gt;：该API可在原子化服务中使用，从API version 12开始。<br>**适用版本：** 12 |
 
+<a id="scrollpage1"></a>
+
 ## scrollPage
 
 ```TypeScript
@@ -398,7 +400,7 @@ scrollPage(value: ScrollPageOptions)
 | --- | --- | --- | --- |
 | value | [ScrollPageOptions](arkts-arkui-scroll-comp-scrollpageoptions-i.md) | 是 | 设置翻页模式。包含next（是否向下翻页）和animation（是否开启翻页动画）字段，用于指定翻页行为。<br>**适用版本：** 14 |
 
-<a id="scrollpage-1"></a>
+<a id="scrollpage2"></a>
 
 ## scrollPage
 
@@ -478,7 +480,7 @@ scrollToIndex(value: number, smooth?: boolean, align?: ScrollAlign, options?: Sc
 > 
 > 2. 在[LazyForEach](arkts-arkui-lazyforeach-comp.md)、[ForEach](arkts-arkui-foreach-comp-attribute.md)、[Repeat](arkts-arkui-repeat-comp.md)刷新数据源时，需确保在数据刷新完成之后再调用此接口。
 > 
-> 3. 从API version 11开始，在List中支持[contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset)和[contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset)。从API version 22开始，在Grid和WaterFlow组件中支持设置contentStartOffset和contentEndOffset。
+> 3. 从API version 11开始，在List中支持[contentStartOffset](arkts-arkui-list-comp-attribute.md#contentstartoffset1)和[contentEndOffset](arkts-arkui-list-comp-attribute.md#contentendoffset1)。从API version 22开始，在Grid和WaterFlow组件中支持设置contentStartOffset和contentEndOffset。
 > 
 > - 当滚动容器组件设置contentStartOffset时，如果ScrollAlign设置为START，滚动结束时，指定item首部会与滚动容器组件contentStartOffset处对齐。
 > 

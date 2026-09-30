@@ -6,6 +6,8 @@
 import { router } from '@kit.ArkUI';
 ```
 
+<a id="replacenamedroute1"></a>
+
 ## replaceNamedRoute
 
 ```TypeScript
@@ -22,7 +24,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute1)(options: router.NamedRouterOptions, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -73,7 +75,7 @@ router.replaceNamedRoute({
 ```
 
 
-<a id="replacenamedroute-1"></a>
+<a id="replacenamedroute2"></a>
 
 ## replaceNamedRoute
 
@@ -91,7 +93,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute-1)(options: router.NamedRouterOptions)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute2)(options: router.NamedRouterOptions)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -149,7 +151,7 @@ router.replaceNamedRoute({
 ```
 
 
-<a id="replacenamedroute-2"></a>
+<a id="replacenamedroute3"></a>
 
 ## replaceNamedRoute
 
@@ -167,7 +169,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute-2)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute3)(options: router.NamedRouterOptions, mode: router.RouterMode, callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -219,7 +221,7 @@ router.replaceNamedRoute({
 ```
 
 
-<a id="replacenamedroute-3"></a>
+<a id="replacenamedroute4"></a>
 
 ## replaceNamedRoute
 
@@ -237,7 +239,7 @@ Replaces the current page with another one using the named route and destroys th
 
 **Deprecated since:** 18
 
-**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute-3)(options: router.NamedRouterOptions, mode: router.RouterMode)
+**Substitutes:** [replaceNamedRoute](arkts-arkui-arkui-uicontext-router-c.md#replacenamedroute4)(options: router.NamedRouterOptions, mode: router.RouterMode)
 
 **Model restriction:** This API can be used only in the stage model.
 

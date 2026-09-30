@@ -6,6 +6,8 @@
 import { defaultAppManager } from '@kit.AbilityKit';
 ```
 
+<a id="setdefaultapplication1"></a>
+
 ## setDefaultApplication
 
 ```TypeScript
@@ -92,7 +94,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
-<a id="setdefaultapplication-1"></a>
+<a id="setdefaultapplication2"></a>
 
 ## setDefaultApplication
 
@@ -177,7 +179,7 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 ```
 
 
-<a id="setdefaultapplication-2"></a>
+<a id="setdefaultapplication3"></a>
 
 ## setDefaultApplication
 

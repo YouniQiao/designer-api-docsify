@@ -198,6 +198,8 @@ async function testGetEncodedDer() {
 }
 ```
 
+<a id="getencodedpem1"></a>
+
 ## getEncodedPem
 
 ```TypeScript
@@ -267,7 +269,7 @@ function testPriKeyPkcs1ToPkcs8BySync1024() {
 }
 ```
 
-<a id="getencodedpem-1"></a>
+<a id="getencodedpem2"></a>
 
 ## getEncodedPem
 

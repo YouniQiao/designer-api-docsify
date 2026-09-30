@@ -6,13 +6,13 @@ export interface MifareUltralightTag extends TagSession
 
 Provides APIs to access MIFARE Ultralight properties and perform I/O operations on a tag. This class inherits from **TagSession**.
 
-**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-tagsession-i.md).
+**TagSession** is the base class of all NFC tag technologies. It provides common interfaces for establishing connections and transferring data. For more details, see [TagSession](arkts-connectivity-tagsession-i.md).
 
 For details about how to obtain a **MifareUltralightTag** object, see [NFC Tag Read/Write Development](../../../connectivity/nfc/nfc-tag-access-guide.md).
 
 The following describes the unique APIs of **MifareUltralightTag**.
 
-**Inheritance/Implementation:** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**Inheritance/Implementation:** MifareUltralightTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **Since:** 9
 
@@ -51,6 +51,8 @@ import { tag } from '@kit.ConnectivityKit';
 let getType : tag.MifareUltralightType = mifareUltralight.getType();
 console.info("mifareUltralight getType: " + getType);
 ```
+
+<a id="readmultiplepages1"></a>
 
 ## readMultiplePages
 
@@ -121,7 +123,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readmultiplepages-1"></a>
+<a id="readmultiplepages2"></a>
 
 ## readMultiplePages
 
@@ -188,6 +190,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writesinglepage1"></a>
 
 ## writeSinglePage
 
@@ -260,7 +264,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writesinglepage-1"></a>
+<a id="writesinglepage2"></a>
 
 ## writeSinglePage
 

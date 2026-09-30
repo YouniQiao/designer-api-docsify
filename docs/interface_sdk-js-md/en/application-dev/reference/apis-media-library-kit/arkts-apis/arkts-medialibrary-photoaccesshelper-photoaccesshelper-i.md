@@ -119,7 +119,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-4"></a>
+<a id="createasset5"></a>
 
 ## createAsset
 
@@ -183,7 +183,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-5"></a>
+<a id="createasset6"></a>
 
 ## createAsset
 
@@ -243,7 +243,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createasset-6"></a>
+<a id="createasset7"></a>
 
 ## createAsset
 
@@ -555,6 +555,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getalbums1"></a>
+
 ## getAlbums
 
 ```TypeScript
@@ -629,7 +631,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getalbums-1"></a>
+<a id="getalbums2"></a>
 
 ## getAlbums
 
@@ -691,7 +693,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getalbums-2"></a>
+<a id="getalbums3"></a>
 
 ## getAlbums
 
@@ -766,6 +768,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getassets1"></a>
+
 ## getAssets
 
 ```TypeScript
@@ -828,7 +832,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getassets-1"></a>
+<a id="getassets2"></a>
 
 ## getAssets
 
@@ -1891,6 +1895,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -1938,7 +1944,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -2106,7 +2112,7 @@ console.info('requestPhotoUrisReadPermissionExDemo.');
 }
 ```
 
-<a id="setassetcompatiblecapability-1"></a>
+<a id="setassetcompatiblecapability2"></a>
 
 ## setAssetCompatibleCapability
 
@@ -2444,6 +2450,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+<a id="createdeleterequest1"></a>
+
 ## createDeleteRequest
 
 ```TypeScript
@@ -2514,7 +2522,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createdeleterequest-1"></a>
+<a id="createdeleterequest2"></a>
 
 ## createDeleteRequest
 

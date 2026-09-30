@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="getactivenotificationbyfilter1"></a>
+
 ## getActiveNotificationByFilter
 
 ```TypeScript
@@ -68,7 +70,7 @@ notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationB
 ```
 
 
-<a id="getactivenotificationbyfilter-2"></a>
+<a id="getactivenotificationbyfilter3"></a>
 
 ## getActiveNotificationByFilter
 

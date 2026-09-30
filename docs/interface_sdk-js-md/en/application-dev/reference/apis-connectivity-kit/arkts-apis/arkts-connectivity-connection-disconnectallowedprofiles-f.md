@@ -6,7 +6,7 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
-<a id="disconnectallowedprofiles-1"></a>
+<a id="disconnectallowedprofiles2"></a>
 
 ## disconnectAllowedProfiles
 

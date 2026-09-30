@@ -6,6 +6,8 @@
 import { access } from '@kit.ConnectivityKit';
 ```
 
+<a id="factoryreset1"></a>
+
 ## factoryReset
 
 ```TypeScript
@@ -57,7 +59,7 @@ try {
 ```
 
 
-<a id="factoryreset-1"></a>
+<a id="factoryreset2"></a>
 
 ## factoryReset
 

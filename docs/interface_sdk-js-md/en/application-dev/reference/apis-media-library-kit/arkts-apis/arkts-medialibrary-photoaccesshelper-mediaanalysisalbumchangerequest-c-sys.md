@@ -76,7 +76,7 @@ async function example(context: Context) {
 }
 ```
 
-<a id="createanalysisalbumrequest-1"></a>
+<a id="createanalysisalbumrequest2"></a>
 
 ## createAnalysisAlbumRequest
 

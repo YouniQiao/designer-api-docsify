@@ -18,6 +18,8 @@ Provides **SystemPasteboard** APIs. Before calling any **SystemPasteboard** API,
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
 
+<a id="cleardata1"></a>
+
 ## clearData
 
 ```TypeScript
@@ -61,7 +63,7 @@ systemPasteboard.clearData((err, data) => {
 });
 ```
 
-<a id="cleardata-1"></a>
+<a id="cleardata2"></a>
 
 ## clearData
 
@@ -223,6 +225,8 @@ try {
 };
 ```
 
+<a id="getdata1"></a>
+
 ## getData
 
 ```TypeScript
@@ -277,7 +281,7 @@ systemPasteboard.getData((err: BusinessError, pasteData: pasteboard.PasteData) =
 });
 ```
 
-<a id="getdata-1"></a>
+<a id="getdata2"></a>
 
 ## getData
 
@@ -378,7 +382,7 @@ getDataSync(): PasteData
 
 Obtains a **PasteData** object from the pasteboard. This API returns the result synchronously. This API is used to obtain pasteboard data synchronously in key service processes or process pasteboard data immediately.
 
-Do not call this API in the UI thread to prevent blocking the UI. Use the asynchronous API [getData](#getdata) to process a large amount of data or remote data.
+Do not call this API in the UI thread to prevent blocking the UI. Use the asynchronous API [getData](#getdata1) to process a large amount of data or remote data.
 
 While most applications must [request permissions to access the pasteboard](../../../basic-services/pasteboard/get-pastedata-permission-guidelines.md), those using [PasteButton](../../../security/AccessToken/pastebutton.md) can access the pasteboard content without permission requests.
 
@@ -640,6 +644,8 @@ try {
 };
 ```
 
+<a id="hasdata1"></a>
+
 ## hasData
 
 ```TypeScript
@@ -683,7 +689,7 @@ systemPasteboard.hasData((err: BusinessError, data: boolean) => {
 });
 ```
 
-<a id="hasdata-1"></a>
+<a id="hasdata2"></a>
 
 ## hasData
 
@@ -1100,6 +1106,8 @@ try {
 }
 ```
 
+<a id="setdata1"></a>
+
 ## setData
 
 ```TypeScript
@@ -1148,7 +1156,7 @@ systemPasteboard.setData(pasteData, (err, data) => {
 });
 ```
 
-<a id="setdata-1"></a>
+<a id="setdata2"></a>
 
 ## setData
 
@@ -1367,6 +1375,8 @@ try {
 };
 ```
 
+<a id="clear1"></a>
+
 ## clear
 
 ```TypeScript
@@ -1379,7 +1389,7 @@ Clears the system pasteboard. This API uses an asynchronous callback to return t
 
 **Deprecated since:** 9
 
-**Substitutes:** [clearData](#cleardata)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [clearData](#cleardata1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-clear(callback: AsyncCallback<void>): void-End-->
 
@@ -1410,7 +1420,7 @@ systemPasteboard.clear((err, data) => {
 });
 ```
 
-<a id="clear-1"></a>
+<a id="clear2"></a>
 
 ## clear
 
@@ -1449,6 +1459,8 @@ systemPasteboard.clear().then((data) => {
 });
 ```
 
+<a id="getpastedata1"></a>
+
 ## getPasteData
 
 ```TypeScript
@@ -1461,7 +1473,7 @@ Obtains a **PasteData** object from the pasteboard. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [getData](#getdata)(callback: AsyncCallback&lt;PasteData&gt;)
+**Substitutes:** [getData](#getdata1)(callback: AsyncCallback&lt;PasteData&gt;)
 
 <!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void--><!--Device-SystemPasteboard-getPasteData(callback: AsyncCallback<PasteData>): void-End-->
 
@@ -1497,7 +1509,7 @@ systemPasteboard.getPasteData((err: BusinessError, pasteData: pasteboard.PasteDa
 });
 ```
 
-<a id="getpastedata-1"></a>
+<a id="getpastedata2"></a>
 
 ## getPasteData
 
@@ -1539,6 +1551,8 @@ systemPasteboard.getPasteData().then((pasteData: pasteboard.PasteData) => {
 });
 ```
 
+<a id="haspastedata1"></a>
+
 ## hasPasteData
 
 ```TypeScript
@@ -1551,7 +1565,7 @@ Checks whether the system pasteboard contains data. This API uses an asynchronou
 
 **Deprecated since:** 9
 
-**Substitutes:** [hasData](#hasdata)(callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [hasData](#hasdata1)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void--><!--Device-SystemPasteboard-hasPasteData(callback: AsyncCallback<boolean>): void-End-->
 
@@ -1584,7 +1598,7 @@ systemPasteboard.hasPasteData((err: BusinessError, data: boolean) => {
 });
 ```
 
-<a id="haspastedata-1"></a>
+<a id="haspastedata2"></a>
 
 ## hasPasteData
 
@@ -1623,6 +1637,8 @@ systemPasteboard.hasPasteData().then((data: boolean) => {
 });
 ```
 
+<a id="setpastedata1"></a>
+
 ## setPasteData
 
 ```TypeScript
@@ -1635,7 +1651,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses an asynchr
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setdata)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setData](#setdata1)(data: PasteData, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void--><!--Device-SystemPasteboard-setPasteData(data: PasteData, callback: AsyncCallback<void>): void-End-->
 
@@ -1668,7 +1684,7 @@ systemPasteboard.setPasteData(pasteData, (err, data) => {
 });
 ```
 
-<a id="setpastedata-1"></a>
+<a id="setpastedata2"></a>
 
 ## setPasteData
 
@@ -1682,7 +1698,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setdata-1)(data: PasteData)
+**Substitutes:** [setData](#setdata2)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 

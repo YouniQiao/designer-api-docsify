@@ -202,6 +202,8 @@ try {
 }
 ```
 
+<a id="getdeviceinfo1"></a>
+
 ## getDeviceInfo
 
 ```TypeScript
@@ -262,7 +264,7 @@ try {
 }
 ```
 
-<a id="getdeviceinfo-1"></a>
+<a id="getdeviceinfo2"></a>
 
 ## getDeviceInfo
 
@@ -322,6 +324,8 @@ dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
 });
 ```
 
+<a id="getlocaldeviceinfo1"></a>
+
 ## getLocalDeviceInfo
 
 ```TypeScript
@@ -380,7 +384,7 @@ try {
 }
 ```
 
-<a id="getlocaldeviceinfo-1"></a>
+<a id="getlocaldeviceinfo2"></a>
 
 ## getLocalDeviceInfo
 
@@ -483,6 +487,8 @@ try {
 }
 ```
 
+<a id="gettrusteddevicelist1"></a>
+
 ## getTrustedDeviceList
 
 ```TypeScript
@@ -495,7 +501,7 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 
 **Deprecated since:** 11
 
-**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
+**Substitutes:** [getAvailableDeviceList](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelist1)(callback: AsyncCallback&lt;Array&lt;DeviceBasicInfo&gt;&gt;)
 
 **Required permissions:** ohos.permission.ACCESS_SERVICE_DM
 
@@ -540,7 +546,7 @@ try {
 }
 ```
 
-<a id="gettrusteddevicelist-1"></a>
+<a id="gettrusteddevicelist2"></a>
 
 ## getTrustedDeviceList
 
@@ -590,6 +596,8 @@ dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) =
     console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
 });
 ```
+
+<a id="gettrusteddevicelistsync1"></a>
 
 ## getTrustedDeviceListSync
 
@@ -643,7 +651,7 @@ try {
 }
 ```
 
-<a id="gettrusteddevicelistsync-1"></a>
+<a id="gettrusteddevicelistsync2"></a>
 
 ## getTrustedDeviceListSync
 
@@ -1868,6 +1876,8 @@ try {
 }
 ```
 
+<a id="startdevicediscovery1"></a>
+
 ## startDeviceDiscovery
 
 ```TypeScript
@@ -1942,7 +1952,7 @@ try {
 }
 ```
 
-<a id="startdevicediscovery-1"></a>
+<a id="startdevicediscovery2"></a>
 
 ## startDeviceDiscovery
 

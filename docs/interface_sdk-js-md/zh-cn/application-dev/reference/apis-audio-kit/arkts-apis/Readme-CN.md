@@ -305,7 +305,7 @@
     <!--Del-->
     - [RingtoneOptions(系统接口)](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [RingtonePlayer(系统接口)](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
+    - [RingtonePlayer(系统接口)](arkts-audio-ringtoneplayer-i-sys.md)<!--DelEnd-->
   - [SystemSoundPlayer(系统音效播放器)](arkts-audio-systemsoundplayer.md)
     - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
   <!--Del-->
@@ -313,4 +313,4 @@
     <!--Del-->
     - [SystemToneOptions(系统接口)](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SystemTonePlayer(系统接口)](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->
+    - [SystemTonePlayer(系统接口)](arkts-audio-systemtoneplayer-i-sys.md)<!--DelEnd-->

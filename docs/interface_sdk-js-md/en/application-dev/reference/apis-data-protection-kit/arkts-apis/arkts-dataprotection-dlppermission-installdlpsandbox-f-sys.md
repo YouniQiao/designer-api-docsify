@@ -6,6 +6,8 @@
 import { dlpPermission } from '@kit.DataProtectionKit';
 ```
 
+<a id="installdlpsandbox1"></a>
+
 ## installDLPSandbox
 
 ```TypeScript
@@ -14,7 +16,7 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 
 Installs a DLP sandbox application for an application. The DLP sandbox creates an independent running environment for protected DLP files, which is isolated from the original application process. This ensures that data is securely transferred within the authorized scope. The sandbox application inherits the functions of the original application but can access only authorized DLP files. This API uses a promise to return the result.
 
-After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) to uninstall the sandbox after using it.
+After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox1) to uninstall the sandbox after using it.
 
 Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 
@@ -69,7 +71,7 @@ dlpPermission.installDLPSandbox('com.ohos.note', dlpPermission.DLPFileAccess.REA
 ```
 
 
-<a id="installdlpsandbox-1"></a>
+<a id="installdlpsandbox2"></a>
 
 ## installDLPSandbox
 
@@ -79,7 +81,7 @@ function installDLPSandbox(bundleName: string, access: DLPFileAccess, userId: nu
 
 Installs a DLP sandbox application for an application. This API uses an asynchronous callback to return the result. After the API is called, the system creates a DLP sandbox for the application and returns the sandbox information.
 
-After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md) to uninstall the sandbox after using it.
+After calling **installDLPSandbox** to install a sandbox, the system must call [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox1) to uninstall the sandbox after using it.
 
 Before a DLP file management application opens a protected file, the system needs to install a DLP sandbox for the target application.
 

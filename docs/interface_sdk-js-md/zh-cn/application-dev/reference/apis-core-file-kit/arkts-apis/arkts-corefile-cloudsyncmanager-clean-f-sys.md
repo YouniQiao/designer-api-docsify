@@ -6,6 +6,8 @@
 import { cloudSyncManager } from '@kit.CoreFileKit';
 ```
 
+<a id="clean1"></a>
+
 ## clean
 
 ```TypeScript
@@ -63,7 +65,7 @@ cloudSyncManager.clean(accountId, appActions).then(() => {
 ```
 
 
-<a id="clean-1"></a>
+<a id="clean2"></a>
 
 ## clean
 

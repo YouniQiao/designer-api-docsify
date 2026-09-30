@@ -47,7 +47,7 @@
 - [Performance Analysis Kit (248)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-performance-analysis-kit/arkts-apis/arkts-performanceanalysis-faultlogger.md)
 - [Security Guard Kit (17)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-security-guard-kit/arkts-apis/arkts-securityguard-security-securityguard.md)
 - [Sensor Service Kit (144)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-sensor-service-kit/arkts-apis/arkts-sensorservice-sensor.md)
-- [Telephony Kit (454)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-telephony-call.md)
+- [Telephony Kit (451)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-telephony-kit/arkts-apis/arkts-telephony-telephony-call.md)
 - [Test Kit (55)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-test-kit/arkts-apis/arkts-test-app-ability-abilitydelegatorregistry.md)
 - [Universal Keystore Kit (129)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-universal-keystore-kit/arkts-apis/arkts-universalkeystore-security-cryptoextensionability.md)
 - [User Authentication Kit (93)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-user-authentication-kit/arkts-apis/arkts-userauthentication-app-ability-userauthextensionability.md)

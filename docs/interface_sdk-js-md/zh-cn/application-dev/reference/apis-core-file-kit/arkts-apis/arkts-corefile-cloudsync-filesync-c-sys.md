@@ -18,7 +18,7 @@ class FileSync
 import { cloudSync } from '@kit.CoreFileKit';
 ```
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 

@@ -6,6 +6,8 @@
 import { bundleManager } from '@kit.AbilityKit';
 ```
 
+<a id="getprofilebyextensionability1"></a>
+
 ## getProfileByExtensionAbility
 
 ```TypeScript
@@ -66,7 +68,7 @@ try {
 ```
 
 
-<a id="getprofilebyextensionability-1"></a>
+<a id="getprofilebyextensionability2"></a>
 
 ## getProfileByExtensionAbility
 

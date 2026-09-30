@@ -6,6 +6,8 @@
 import { startupManager } from '@kit.AbilityKit';
 ```
 
+<a id="run1"></a>
+
 ## run
 
 ```TypeScript
@@ -17,7 +19,7 @@ function run(startupTasks: Array<string>, config?: StartupConfig): Promise<void>
 > **说明：** 
 > 
 > 本接口不支持执行feature类型HAP中的启动任务，如需要使用相关能力请调用
-> [startupManager.run](#run-1)
+> [startupManager.run](#run2)
 > 接口。
 
 **起始版本：** 12
@@ -82,7 +84,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="run-1"></a>
+<a id="run2"></a>
 
 ## run
 

@@ -20,6 +20,8 @@ Message digest interface, defining methods for calculating message digests. Befo
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="digest1"></a>
+
 ## digest
 
 ```TypeScript
@@ -73,7 +75,7 @@ function mdByCallback() {
 }
 ```
 
-<a id="digest-1"></a>
+<a id="digest2"></a>
 
 ## digest
 
@@ -468,6 +470,8 @@ Squeezes the output for XOF algorithms such as SHAKE128 and SHAKE256. This API r
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Invalid len value; |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call. The fixed-length digest algorithm, such as SHA256, does not support this API. |
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -511,7 +515,7 @@ Updates the message digest status. This API uses an asynchronous callback to ret
 | [17620001](../errorcode-crypto-framework.md#17620001-memory-operation-failed) | Memory operation failed. |
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

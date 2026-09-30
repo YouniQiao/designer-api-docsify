@@ -20,6 +20,8 @@ Implements enroll intelligent voice engine. @typedef EnrollIntelligentVoiceEngin
 import { intelligentVoice } from '@kit.BasicServicesKit';
 ```
 
+<a id="commit1"></a>
+
 ## commit
 
 ```TypeScript
@@ -68,7 +70,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="commit-1"></a>
+<a id="commit2"></a>
 
 ## commit
 
@@ -115,6 +117,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="enrollforresult1"></a>
 
 ## enrollForResult
 
@@ -168,7 +172,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="enrollforresult-1"></a>
+<a id="enrollforresult2"></a>
 
 ## enrollForResult
 
@@ -280,6 +284,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="getparameter1"></a>
+
 ## getParameter
 
 ```TypeScript
@@ -331,7 +337,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="getparameter-1"></a>
+<a id="getparameter2"></a>
 
 ## getParameter
 
@@ -387,6 +393,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="getsupportedregions1"></a>
+
 ## getSupportedRegions
 
 ```TypeScript
@@ -437,7 +445,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="getsupportedregions-1"></a>
+<a id="getsupportedregions2"></a>
 
 ## getSupportedRegions
 
@@ -485,6 +493,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="init1"></a>
 
 ## init
 
@@ -541,7 +551,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -601,6 +611,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -648,7 +660,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -694,6 +706,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setparameter1"></a>
 
 ## setParameter
 
@@ -746,7 +760,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setparameter-1"></a>
+<a id="setparameter2"></a>
 
 ## setParameter
 
@@ -802,6 +816,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="setsensibility1"></a>
+
 ## setSensibility
 
 ```TypeScript
@@ -852,7 +868,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setsensibility-1"></a>
+<a id="setsensibility2"></a>
 
 ## setSensibility
 
@@ -906,6 +922,8 @@ if (enrollIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<a id="setwakeuphapinfo1"></a>
 
 ## setWakeupHapInfo
 
@@ -961,7 +979,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="setwakeuphapinfo-1"></a>
+<a id="setwakeuphapinfo2"></a>
 
 ## setWakeupHapInfo
 
@@ -1020,6 +1038,8 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -1067,7 +1087,7 @@ if (enrollIntelligentVoiceEngine != null) {
 }
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

@@ -6,6 +6,8 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
+<a id="setdevicepincode1"></a>
+
 ## setDevicePinCode
 
 ```TypeScript
@@ -58,7 +60,7 @@ try {
 ```
 
 
-<a id="setdevicepincode-1"></a>
+<a id="setdevicepincode2"></a>
 
 ## setDevicePinCode
 

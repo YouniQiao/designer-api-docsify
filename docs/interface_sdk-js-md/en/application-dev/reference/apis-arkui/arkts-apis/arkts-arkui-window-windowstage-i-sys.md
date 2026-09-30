@@ -64,7 +64,7 @@ export default class EntryAbility extends UIAbility {
 };
 ```
 
-<a id="setimageforrecent-1"></a>
+<a id="setimageforrecent2"></a>
 
 ## setImageForRecent
 

@@ -6,6 +6,8 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
+<a id="getcooperateswitchstate1"></a>
+
 ## getCooperateSwitchState
 
 ```TypeScript
@@ -59,7 +61,7 @@ try {
 ```
 
 
-<a id="getcooperateswitchstate-1"></a>
+<a id="getcooperateswitchstate2"></a>
 
 ## getCooperateSwitchState
 

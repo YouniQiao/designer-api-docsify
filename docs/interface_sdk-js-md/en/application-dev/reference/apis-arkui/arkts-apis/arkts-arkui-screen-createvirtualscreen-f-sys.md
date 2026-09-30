@@ -6,6 +6,8 @@
 import { screen } from '@kit.ArkUI';
 ```
 
+<a id="createvirtualscreen1"></a>
+
 ## createVirtualScreen
 
 ```TypeScript
@@ -76,7 +78,7 @@ screen.createVirtualScreen(option, (err: BusinessError, data: screen.Screen) => 
 ```
 
 
-<a id="createvirtualscreen-1"></a>
+<a id="createvirtualscreen2"></a>
 
 ## createVirtualScreen
 

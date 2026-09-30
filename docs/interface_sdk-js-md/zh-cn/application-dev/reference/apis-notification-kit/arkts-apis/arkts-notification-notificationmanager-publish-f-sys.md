@@ -6,7 +6,7 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="publish-2"></a>
+<a id="publish3"></a>
 
 ## publish
 
@@ -94,7 +94,7 @@ notificationManager.publish(notificationRequest, userId, publishCallback);
 ```
 
 
-<a id="publish-3"></a>
+<a id="publish4"></a>
 
 ## publish
 

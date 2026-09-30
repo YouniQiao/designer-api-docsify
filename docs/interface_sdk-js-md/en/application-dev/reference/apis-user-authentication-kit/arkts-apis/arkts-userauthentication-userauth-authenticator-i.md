@@ -22,6 +22,8 @@ Provides APIs for managing the **Authenticator** object.
 import { userAuth } from '@kit.UserAuthenticationKit';
 ```
 
+<a id="execute1"></a>
+
 ## execute
 
 ```TypeScript
@@ -65,7 +67,7 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
 });
 ```
 
-<a id="execute-1"></a>
+<a id="execute2"></a>
 
 ## execute
 

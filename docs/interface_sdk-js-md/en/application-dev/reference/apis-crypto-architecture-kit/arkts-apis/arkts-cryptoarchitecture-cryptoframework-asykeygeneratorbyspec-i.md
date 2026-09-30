@@ -20,6 +20,8 @@ Asymmetric key generator interface with specified key specifications, defining m
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="generatekeypair1"></a>
+
 ## generateKeyPair
 
 ```TypeScript
@@ -97,7 +99,7 @@ function testGenerateKeyPair() {
 }
 ```
 
-<a id="generatekeypair-1"></a>
+<a id="generatekeypair2"></a>
 
 ## generateKeyPair
 
@@ -258,6 +260,8 @@ function testGenerateKeyPairSync() {
 }
 ```
 
+<a id="generateprikey1"></a>
+
 ## generatePriKey
 
 ```TypeScript
@@ -335,7 +339,7 @@ function testGeneratePriKey() {
 }
 ```
 
-<a id="generateprikey-1"></a>
+<a id="generateprikey2"></a>
 
 ## generatePriKey
 
@@ -494,6 +498,8 @@ function testGeneratePriKeySync() {
 }
 ```
 
+<a id="generatepubkey1"></a>
+
 ## generatePubKey
 
 ```TypeScript
@@ -571,7 +577,7 @@ function testGeneratePubKey() {
 }
 ```
 
-<a id="generatepubkey-1"></a>
+<a id="generatepubkey2"></a>
 
 ## generatePubKey
 

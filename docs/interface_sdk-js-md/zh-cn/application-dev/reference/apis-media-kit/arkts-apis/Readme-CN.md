@@ -174,5 +174,5 @@
     - [PlayParameters](arkts-media-soundpool-playparameters-i.md)
     <!--Del-->
     - [PlayParameters(系统接口)](arkts-media-soundpool-playparameters-i-sys.md)<!--DelEnd-->
-    - [SoundPool](arkts-media-soundpool-soundpool-i.md)
+    - [SoundPool](arkts-media-soundpool-i.md)
     - [ErrorType](arkts-media-soundpool-errortype-e.md)

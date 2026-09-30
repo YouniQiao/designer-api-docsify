@@ -38,7 +38,7 @@ declare function open(path: string, flags?: number, mode?: number): Promise<numb
 | Promise&lt;number&gt; | Promise对象。返回打开文件的文件描述符。 |
 
 
-<a id="open-1"></a>
+<a id="open2"></a>
 
 ## open
 
@@ -66,7 +66,7 @@ declare function open(path: string, callback: AsyncCallback<number>): void
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步打开文件之后的回调，返回打开文件的文件描述符。 |
 
 
-<a id="open-2"></a>
+<a id="open3"></a>
 
 ## open
 
@@ -95,7 +95,7 @@ declare function open(path: string, flags: number, callback: AsyncCallback<numbe
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 异步打开文件之后的回调，返回打开文件的文件描述符。 |
 
 
-<a id="open-3"></a>
+<a id="open4"></a>
 
 ## open
 

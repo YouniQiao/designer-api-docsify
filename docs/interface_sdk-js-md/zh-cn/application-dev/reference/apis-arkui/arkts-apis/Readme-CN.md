@@ -1854,7 +1854,7 @@
 - common<!--arkts-arkui-common-->
   - [canvaspattern](arkts-arkui-canvaspattern.md)
     - [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md)
-    - [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+    - [CanvasPattern](arkts-arkui-canvaspattern-i.md)
   - [console](arkts-arkui-console.md)
     - [console](arkts-arkui-console-c.md)
   - [console](arkts-arkui-console.md)

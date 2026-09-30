@@ -6,6 +6,8 @@
 import { usageStatistics } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querybundleevents1"></a>
+
 ## queryBundleEvents
 
 ```TypeScript
@@ -67,7 +69,7 @@ usageStatistics.queryBundleEvents(0, 20000000000000, (err: BusinessError, res: A
 ```
 
 
-<a id="querybundleevents-1"></a>
+<a id="querybundleevents2"></a>
 
 ## queryBundleEvents
 
@@ -133,7 +135,7 @@ usageStatistics.queryBundleEvents(0, 20000000000000).then((res: Array<usageStati
 ```
 
 
-<a id="querybundleevents-2"></a>
+<a id="querybundleevents3"></a>
 
 ## queryBundleEvents
 

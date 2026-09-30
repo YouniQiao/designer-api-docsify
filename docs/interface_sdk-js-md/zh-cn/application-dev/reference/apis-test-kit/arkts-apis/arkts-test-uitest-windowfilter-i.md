@@ -145,7 +145,7 @@ actived?: boolean
 
 **废弃版本：** 11
 
-**替代接口：** active
+**替代接口：** [active](#active)
 
 <!--Device-WindowFilter-actived?: boolean--><!--Device-WindowFilter-actived?: boolean-End-->
 

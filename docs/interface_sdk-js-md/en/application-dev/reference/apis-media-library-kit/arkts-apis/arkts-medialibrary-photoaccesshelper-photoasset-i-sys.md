@@ -89,6 +89,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="commiteditedasset1"></a>
+
 ## commitEditedAsset
 
 ```TypeScript
@@ -166,7 +168,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="commiteditedasset-1"></a>
+<a id="commiteditedasset2"></a>
 
 ## commitEditedAsset
 
@@ -525,6 +527,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="getexif1"></a>
+
 ## getExif
 
 ```TypeScript
@@ -602,7 +606,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="getexif-1"></a>
+<a id="getexif2"></a>
 
 ## getExif
 
@@ -841,6 +845,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="isedited1"></a>
+
 ## isEdited
 
 ```TypeScript
@@ -908,7 +914,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="isedited-1"></a>
+<a id="isedited2"></a>
 
 ## isEdited
 
@@ -971,6 +977,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="requesteditdata1"></a>
 
 ## requestEditData
 
@@ -1037,7 +1045,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="requesteditdata-1"></a>
+<a id="requesteditdata2"></a>
 
 ## requestEditData
 
@@ -1098,6 +1106,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="requestphoto1"></a>
 
 ## requestPhoto
 
@@ -1171,7 +1181,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="requestphoto-2"></a>
+<a id="requestphoto3"></a>
 
 ## requestPhoto
 
@@ -1250,6 +1260,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="requestsource1"></a>
+
 ## requestSource
 
 ```TypeScript
@@ -1313,7 +1325,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="requestsource-1"></a>
+<a id="requestsource2"></a>
 
 ## requestSource
 
@@ -1372,6 +1384,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="reverttooriginal1"></a>
 
 ## revertToOriginal
 
@@ -1441,7 +1455,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="reverttooriginal-1"></a>
+<a id="reverttooriginal2"></a>
 
 ## revertToOriginal
 
@@ -1509,6 +1523,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="setpending1"></a>
 
 ## setPending
 
@@ -1580,7 +1596,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="setpending-1"></a>
+<a id="setpending2"></a>
 
 ## setPending
 
@@ -1646,6 +1662,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<a id="open1"></a>
 
 ## open
 
@@ -1713,7 +1731,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="open-1"></a>
+<a id="open2"></a>
 
 ## open
 
@@ -1789,6 +1807,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="setfavorite1"></a>
+
 ## setFavorite
 
 ```TypeScript
@@ -1854,7 +1874,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="setfavorite-1"></a>
+<a id="setfavorite2"></a>
 
 ## setFavorite
 
@@ -1929,6 +1949,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="sethidden1"></a>
+
 ## setHidden
 
 ```TypeScript
@@ -1996,7 +2018,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="sethidden-1"></a>
+<a id="sethidden2"></a>
 
 ## setHidden
 
@@ -2072,6 +2094,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="setusercomment1"></a>
+
 ## setUserComment
 
 ```TypeScript
@@ -2142,7 +2166,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="setusercomment-1"></a>
+<a id="setusercomment2"></a>
 
 ## setUserComment
 

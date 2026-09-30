@@ -155,7 +155,7 @@ belongingDisplay(displayId: number): On
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。可通过[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md)获取当前所有的display对象，并由display对象获取对应的屏幕ID。 |
+| displayId | number | 是 | 指定控件所属屏幕ID，取值范围：大于等于0的整数。**说明：** 传入displayId不存在时，将抛出17000007异常。可通过[getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays1)获取当前所有的display对象，并由display对象获取对应的屏幕ID。 |
 
 **返回值：**
 
@@ -495,6 +495,8 @@ import { MatchPattern, On, ON } from '@kit.TestKit';
 let on: On = ON.hint('welcome', MatchPattern.EQUALS); // 使用静态构造器ON创建On对象，指定目标控件的提示文本属性。
 ```
 
+<a id="id1"></a>
+
 ## id
 
 ```TypeScript
@@ -540,7 +542,7 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.id('123'); // 使用静态构造器ON创建On对象，指定目标控件的id属性。
 ```
 
-<a id="id-1"></a>
+<a id="id2"></a>
 
 ## id
 
@@ -964,6 +966,8 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.text('123'); // 使用静态构造器ON创建On对象，指定目标控件的text属性。
 ```
 
+<a id="type1"></a>
+
 ## type
 
 ```TypeScript
@@ -1009,7 +1013,7 @@ import { On, ON } from '@kit.TestKit';
 let on: On = ON.type('Button'); // 使用静态构造器ON创建On对象，指定目标控件的控件类型属性。
 ```
 
-<a id="type-1"></a>
+<a id="type2"></a>
 
 ## type
 

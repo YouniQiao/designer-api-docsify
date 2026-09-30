@@ -18,6 +18,8 @@ interface DistributedAccountAbility
 import { distributedAccount } from '@kit.BasicServicesKit';
 ```
 
+<a id="getosaccountdistributedinfobylocalid1"></a>
+
 ## getOsAccountDistributedInfoByLocalId
 
 ```TypeScript
@@ -76,7 +78,7 @@ try {
 }
 ```
 
-<a id="getosaccountdistributedinfobylocalid-1"></a>
+<a id="getosaccountdistributedinfobylocalid2"></a>
 
 ## getOsAccountDistributedInfoByLocalId
 
@@ -138,6 +140,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<a id="setosaccountdistributedinfobylocalid1"></a>
 
 ## setOsAccountDistributedInfoByLocalId
 
@@ -201,7 +205,7 @@ try {
 }
 ```
 
-<a id="setosaccountdistributedinfobylocalid-1"></a>
+<a id="setosaccountdistributedinfobylocalid2"></a>
 
 ## setOsAccountDistributedInfoByLocalId
 

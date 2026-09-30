@@ -6,7 +6,7 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
-<a id="getabilityrunninginfos-1"></a>
+<a id="getabilityrunninginfos2"></a>
 
 ## getAbilityRunningInfos
 

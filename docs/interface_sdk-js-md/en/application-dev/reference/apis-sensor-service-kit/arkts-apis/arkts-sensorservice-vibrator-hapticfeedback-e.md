@@ -4,7 +4,7 @@
 enum HapticFeedback
 ```
 
-Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects are specific values of the **EffectId** parameter. For details about how to use them, see the sample code for delivering the [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) vibration effect using the [vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md) or [vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md) API.
+Defines the vibration effect. The frequency of the same vibration effect may vary depending on the vibrator, but the frequency trend remains consistent. These vibration effects are specific values of the **EffectId** parameter. For details about how to use them, see the sample code for delivering the [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) vibration effect using the [vibrator.startVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-startvibration-f.md#startvibration1) or [vibrator.stopVibration&lt;sup&gt;9+&lt;/sup&gt;](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration1) API.
 
 **Since:** 12
 

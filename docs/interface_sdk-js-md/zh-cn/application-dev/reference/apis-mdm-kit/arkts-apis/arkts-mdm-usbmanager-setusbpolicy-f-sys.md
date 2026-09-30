@@ -6,6 +6,8 @@
 import { usbManager } from '@kit.MDMKit';
 ```
 
+<a id="setusbpolicy1"></a>
+
 ## setUsbPolicy
 
 ```TypeScript
@@ -71,7 +73,7 @@ usbManager.setUsbPolicy(wantTemp, policy, (err) => {
 ```
 
 
-<a id="setusbpolicy-1"></a>
+<a id="setusbpolicy2"></a>
 
 ## setUsbPolicy
 

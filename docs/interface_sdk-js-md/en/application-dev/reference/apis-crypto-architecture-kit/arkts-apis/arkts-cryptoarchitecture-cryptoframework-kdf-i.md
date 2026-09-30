@@ -20,6 +20,8 @@ Key derivation function (KDF) interface, defining methods for deriving keys base
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="generatesecret1"></a>
+
 ## generateSecret
 
 ```TypeScript
@@ -100,7 +102,7 @@ kdf.generateSecret(spec, (err, secret) => {
 });
 ```
 
-<a id="generatesecret-1"></a>
+<a id="generatesecret2"></a>
 
 ## generateSecret
 

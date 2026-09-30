@@ -22,6 +22,8 @@ AudioStreamManager是音频系统中的音频流管理模块。本模块提供�
 import { audio } from '@kit.AudioKit';
 ```
 
+<a id="getaudioeffectinfoarray1"></a>
+
 ## getAudioEffectInfoArray
 
 ```TypeScript
@@ -64,7 +66,7 @@ audioStreamManager.getAudioEffectInfoArray(audio.StreamUsage.STREAM_USAGE_MUSIC,
 });
 ```
 
-<a id="getaudioeffectinfoarray-1"></a>
+<a id="getaudioeffectinfoarray2"></a>
 
 ## getAudioEffectInfoArray
 
@@ -158,6 +160,8 @@ try {
 }
 ```
 
+<a id="getcurrentaudiocapturerinfoarray1"></a>
+
 ## getCurrentAudioCapturerInfoArray
 
 ```TypeScript
@@ -196,7 +200,7 @@ audioStreamManager.getCurrentAudioCapturerInfoArray((err: BusinessError, audioCa
 });
 ```
 
-<a id="getcurrentaudiocapturerinfoarray-1"></a>
+<a id="getcurrentaudiocapturerinfoarray2"></a>
 
 ## getCurrentAudioCapturerInfoArray
 
@@ -272,6 +276,8 @@ try {
 }
 ```
 
+<a id="getcurrentaudiorendererinfoarray1"></a>
+
 ## getCurrentAudioRendererInfoArray
 
 ```TypeScript
@@ -310,7 +316,7 @@ audioStreamManager.getCurrentAudioRendererInfoArray((err: BusinessError, audioRe
 });
 ```
 
-<a id="getcurrentaudiorendererinfoarray-1"></a>
+<a id="getcurrentaudiorendererinfoarray2"></a>
 
 ## getCurrentAudioRendererInfoArray
 
@@ -1065,6 +1071,8 @@ audioStreamManager.on('audioCapturerChange', (audioCapturerChangeInfoArray: audi
 });
 ```
 
+<a id="isactive1"></a>
+
 ## isActive
 
 ```TypeScript
@@ -1113,7 +1121,7 @@ audioStreamManager.isActive(audio.AudioVolumeType.MEDIA, (err: BusinessError, va
 });
 ```
 
-<a id="isactive-1"></a>
+<a id="isactive2"></a>
 
 ## isActive
 

@@ -7,7 +7,7 @@ declare class SyncedPropertyOneWay<T> extends SubscribedAbstractProperty<T>
 
 Inherits from [SubscribedAbstractProperty&lt;T&gt;](arkts-arkui-subscribedabstractproperty-c.md) to receive one-way synchronization of the parent component's state value. The value is updated when the parent component state changes.
 
-**Inheritance/Implementation:** SyncedPropertyOneWay extends SubscribedAbstractProperty<T> and implements ISinglePropertyChangeSubscriber<T>
+**Inheritance/Implementation:** SyncedPropertyOneWay extends SubscribedAbstractProperty&lt;T&gt; and implements ISinglePropertyChangeSubscriber&lt;T&gt;
 
 **Since:** 7
 

@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="deletekeyitem1"></a>
+
 ## deleteKeyItem
 
 ```TypeScript
@@ -148,7 +150,7 @@ export default {
 ```
 
 
-<a id="deletekeyitem-1"></a>
+<a id="deletekeyitem2"></a>
 
 ## deleteKeyItem
 

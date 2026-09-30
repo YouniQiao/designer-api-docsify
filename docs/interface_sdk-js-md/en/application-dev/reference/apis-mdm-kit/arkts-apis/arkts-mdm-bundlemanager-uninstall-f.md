@@ -6,7 +6,7 @@
 import { bundleManager } from '@kit.MDMKit';
 ```
 
-<a id="uninstall-4"></a>
+<a id="uninstall5"></a>
 
 ## uninstall
 

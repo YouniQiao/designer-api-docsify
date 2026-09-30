@@ -8,13 +8,13 @@ Defines AnimatorAttribute.
 
 @extends CommonMethod&lt;AnimatorAttribute&gt;
 
-**Inheritance/Implementation:** AnimatorAttribute extends CommonMethod<AnimatorAttribute>
+**Inheritance/Implementation:** AnimatorAttribute extends CommonMethod&lt;AnimatorAttribute&gt;
 
 **Since:** 7
 
 **Deprecated since:** 22
 
-**Substitutes:** createAnimator
+**Substitutes:** [createAnimator](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)
 
 <!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>--><!--Device-unnamed-declare class AnimatorAttribute extends CommonMethod<AnimatorAttribute>-End-->
 

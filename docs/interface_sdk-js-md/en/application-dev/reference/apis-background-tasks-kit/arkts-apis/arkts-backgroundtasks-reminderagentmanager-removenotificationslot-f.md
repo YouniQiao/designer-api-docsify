@@ -6,6 +6,8 @@
 import { reminderAgentManager } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="removenotificationslot1"></a>
+
 ## removeNotificationSlot
 
 ```TypeScript
@@ -51,7 +53,7 @@ reminderAgentManager.removeNotificationSlot(notificationManager.SlotType.CONTENT
 ```
 
 
-<a id="removenotificationslot-1"></a>
+<a id="removenotificationslot2"></a>
 
 ## removeNotificationSlot
 

@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="notifyformsenableupdate1"></a>
+
 ## notifyFormsEnableUpdate
 
 ```TypeScript
@@ -53,7 +55,7 @@ formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
 ```
 
 
-<a id="notifyformsenableupdate-1"></a>
+<a id="notifyformsenableupdate2"></a>
 
 ## notifyFormsEnableUpdate
 

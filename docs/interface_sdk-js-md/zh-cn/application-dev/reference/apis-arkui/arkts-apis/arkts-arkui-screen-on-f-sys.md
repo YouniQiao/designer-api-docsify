@@ -6,6 +6,8 @@
 import { screen } from '@kit.ArkUI';
 ```
 
+<a id="on1"></a>
+
 ## on
 
 ```TypeScript
@@ -47,7 +49,7 @@ screen.on('connect', callback);
 ```
 
 
-<a id="on-1"></a>
+<a id="on2"></a>
 
 ## on
 
@@ -84,7 +86,7 @@ function on(eventType: 'connect' | 'disconnect' | 'change', callback: Callback<n
 参见 [on](#on)
 
 
-<a id="on-2"></a>
+<a id="on3"></a>
 
 ## on
 

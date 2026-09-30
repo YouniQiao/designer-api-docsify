@@ -6,6 +6,8 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
+<a id="off1"></a>
+
 ## off
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="off-1"></a>
+<a id="off2"></a>
 
 ## off
 
@@ -164,7 +166,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off-2"></a>
+<a id="off3"></a>
 
 ## off
 
@@ -228,7 +230,7 @@ try {
 ```
 
 
-<a id="off-3"></a>
+<a id="off4"></a>
 
 ## off
 

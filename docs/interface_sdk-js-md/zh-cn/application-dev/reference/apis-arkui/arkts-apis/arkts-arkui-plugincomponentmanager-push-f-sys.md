@@ -6,7 +6,7 @@
 import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 ```
 
-<a id="push-1"></a>
+<a id="push2"></a>
 
 ## push
 

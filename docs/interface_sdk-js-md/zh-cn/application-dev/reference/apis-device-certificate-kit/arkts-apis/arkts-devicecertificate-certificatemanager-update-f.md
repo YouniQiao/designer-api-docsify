@@ -6,6 +6,8 @@
 import { certificateManager } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -64,7 +66,7 @@ try {
 ```
 
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

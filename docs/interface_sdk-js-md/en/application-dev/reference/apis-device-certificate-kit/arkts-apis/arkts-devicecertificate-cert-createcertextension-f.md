@@ -6,6 +6,8 @@
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="createcertextension1"></a>
+
 ## createCertExtension
 
 ```TypeScript
@@ -72,7 +74,7 @@ cert.createCertExtension(encodingBlob, (error, _certExt) => {
 ```
 
 
-<a id="createcertextension-1"></a>
+<a id="createcertextension2"></a>
 
 ## createCertExtension
 

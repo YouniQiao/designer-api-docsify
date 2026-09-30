@@ -6,6 +6,8 @@
 import { display } from '@kit.ArkUI';
 ```
 
+<a id="getalldisplays1"></a>
+
 ## getAllDisplays
 
 ```TypeScript
@@ -52,7 +54,7 @@ display.getAllDisplays((err: BusinessError, data: Array<display.Display>) => {
 ```
 
 
-<a id="getalldisplays-1"></a>
+<a id="getalldisplays2"></a>
 
 ## getAllDisplays
 

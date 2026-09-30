@@ -140,6 +140,8 @@ Sets the initial screen reader focus on the page.
 | --- | --- |
 | T |  |
 
+<a id="accessibilitydescription1"></a>
+
 ## accessibilityDescription
 
 ```TypeScript
@@ -172,7 +174,7 @@ Sets the accessibility description. <br>This attribute provides additional conte
 | --- | --- |
 | T |  |
 
-<a id="accessibilitydescription-1"></a>
+<a id="accessibilitydescription2"></a>
 
 ## accessibilityDescription
 
@@ -238,6 +240,8 @@ Sets the drawing level for the accessibility focus highlight (green frame).
 | --- | --- |
 | T |  |
 
+<a id="accessibilitygroup1"></a>
+
 ## accessibilityGroup
 
 ```TypeScript
@@ -272,7 +276,7 @@ Sets whether to enable accessibility grouping.
 | --- | --- |
 | T |  |
 
-<a id="accessibilitygroup-1"></a>
+<a id="accessibilitygroup2"></a>
 
 ## accessibilityGroup
 
@@ -343,6 +347,8 @@ Sets the accessibility level. This property determines whether the component can
 | --- | --- |
 | T |  |
 
+<a id="accessibilitynextfocusid1"></a>
+
 ## accessibilityNextFocusId
 
 ```TypeScript
@@ -375,7 +381,7 @@ Sets the next component to receive focus during screen reader navigation.
 | --- | --- |
 | T |  |
 
-<a id="accessibilitynextfocusid-1"></a>
+<a id="accessibilitynextfocusid2"></a>
 
 ## accessibilityNextFocusId
 
@@ -538,6 +544,8 @@ Sets the state description of a component for broadcasting, which clearly descri
 | --- | --- |
 | T | return component instance who call the method. |
 
+<a id="accessibilitytext1"></a>
+
 ## accessibilityText
 
 ```TypeScript
@@ -570,7 +578,7 @@ Sets the accessibility text. When a component does not contain a text attribute,
 | --- | --- |
 | T |  |
 
-<a id="accessibilitytext-1"></a>
+<a id="accessibilitytext2"></a>
 
 ## accessibilityText
 
@@ -702,6 +710,8 @@ Sets an accessibility virtual child node. For custom drawing components, a **Cus
 | --- | --- |
 | T |  |
 
+<a id="align1"></a>
+
 ## align
 
 ```TypeScript
@@ -732,7 +742,7 @@ Sets the alignment mode for child components within the component's drawing area
 | --- | --- |
 | T | Current component. |
 
-<a id="align-1"></a>
+<a id="align2"></a>
 
 ## align
 
@@ -766,6 +776,8 @@ Sets the alignment mode for child components within the component's drawing area
 | --- | --- |
 | T | Current component. |
 
+<a id="alignrules1"></a>
+
 ## alignRules
 
 ```TypeScript
@@ -796,7 +808,7 @@ Sets the alignment rule for child components within the relative container. This
 | --- | --- |
 | T | Current component. |
 
-<a id="alignrules-1"></a>
+<a id="alignrules2"></a>
 
 ## alignRules
 
@@ -930,7 +942,7 @@ Sets a property animation for the component.
 
 > **NOTE:** 
 > 
-> - When a single page contains a large number of components with animations, use [renderGroup](#rendergroup) to minimize frame freezing and improve animation performance. For best practices, see [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
+> - When a single page contains a large number of components with animations, use [renderGroup](#rendergroup1) to minimize frame freezing and improve animation performance. For best practices, see [Animation Usage Guide – Using RenderGroup](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-fair-use-animation#section1223162922415).
 > 
 > 
 > - This API cannot be called within [attributeModifier](#attributemodifier).
@@ -1019,6 +1031,8 @@ Creates an attribute modifier.
 | --- | --- |
 | T | Current component. |
 
+<a id="backdropblur1"></a>
+
 ## backdropBlur
 
 ```TypeScript
@@ -1050,7 +1064,7 @@ Applies a background blur effect to the component. You can customize the blur ra
 | --- | --- |
 | T | Current component. |
 
-<a id="backdropblur-1"></a>
+<a id="backdropblur2"></a>
 
 ## backdropBlur
 
@@ -1058,7 +1072,7 @@ Applies a background blur effect to the component. You can customize the blur ra
 backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 ```
 
-Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](#backdropblur), the **radius** parameter supports the **undefined** type.
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared to [backdropBlur](#backdropblur1), the **radius** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1085,7 +1099,7 @@ Applies a background blur effect to the component. You can customize the blur ra
 | --- | --- |
 | T | Current component. |
 
-<a id="backdropblur-2"></a>
+<a id="backdropblur3"></a>
 
 ## backdropBlur
 
@@ -1093,7 +1107,7 @@ Applies a background blur effect to the component. You can customize the blur ra
 backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared with [backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropblur-1), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+Applies a background blur effect to the component. You can customize the blur radius and grayscale parameters. Compared with [backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropblur2), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1154,6 +1168,8 @@ Anonymous Object Rectification.
 | --- | --- |
 | T |  |
 
+<a id="backgroundblurstyle1"></a>
+
 ## backgroundBlurStyle
 
 ```TypeScript
@@ -1185,7 +1201,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 | --- | --- |
 | T | Current component. |
 
-<a id="backgroundblurstyle-1"></a>
+<a id="backgroundblurstyle2"></a>
 
 ## backgroundBlurStyle
 
@@ -1193,7 +1209,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions): T
 ```
 
-Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to [backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundblurstyle), the **style** parameter supports the **undefined** type.
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to [backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundblurstyle1), the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1220,7 +1236,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 | --- | --- |
 | T | Current component. |
 
-<a id="backgroundblurstyle-2"></a>
+<a id="backgroundblurstyle3"></a>
 
 ## backgroundBlurStyle
 
@@ -1228,7 +1244,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared with [backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundblurstyle-1), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared with [backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundblurstyle2), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -1255,6 +1271,8 @@ Defines the background material blur style. It encapsulates various blur radius,
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="backgroundbrightness1"></a>
 
 ## backgroundBrightness
 
@@ -1286,7 +1304,7 @@ Sets the background brightness of the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="backgroundbrightness-1"></a>
+<a id="backgroundbrightness2"></a>
 
 ## backgroundBrightness
 
@@ -1294,7 +1312,7 @@ Sets the background brightness of the component.
 backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
-Sets the background brightness of the component. Compared to [backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundbrightness), the **options** parameter supports the **undefined** type.
+Sets the background brightness of the component. Compared to [backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundbrightness1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1317,6 +1335,8 @@ Sets the background brightness of the component. Compared to [backgroundBrightne
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="backgroundcolor1"></a>
 
 ## backgroundColor
 
@@ -1348,7 +1368,7 @@ Background color
 | --- | --- |
 | T |  |
 
-<a id="backgroundcolor-1"></a>
+<a id="backgroundcolor2"></a>
 
 ## backgroundColor
 
@@ -1382,7 +1402,7 @@ Background color
 | --- | --- |
 | T |  |
 
-<a id="backgroundcolor-2"></a>
+<a id="backgroundcolor3"></a>
 
 ## backgroundColor
 
@@ -1416,6 +1436,8 @@ Background color
 | --- | --- |
 | T |  |
 
+<a id="backgroundeffect1"></a>
+
 ## backgroundEffect
 
 ```TypeScript
@@ -1446,7 +1468,7 @@ Sets the background effect of the component, including the blur radius, brightne
 | --- | --- |
 | T | Current component. |
 
-<a id="backgroundeffect-1"></a>
+<a id="backgroundeffect2"></a>
 
 ## backgroundEffect
 
@@ -1454,7 +1476,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundeffect), the **options** parameter supports the **undefined** type.
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundeffect1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1478,7 +1500,7 @@ Sets the background effect of the component, including the blur radius, brightne
 | --- | --- |
 | T | Current component. |
 
-<a id="backgroundeffect-2"></a>
+<a id="backgroundeffect3"></a>
 
 ## backgroundEffect
 
@@ -1486,7 +1508,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with [backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect-1), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared with [backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect2), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 > **NOTE:** 
 > 
@@ -1552,6 +1574,8 @@ Sets the visual effect of the background filter.
 | --- | --- |
 | T | Current component. |
 
+<a id="backgroundimage1"></a>
+
 ## backgroundImage
 
 ```TypeScript
@@ -1583,7 +1607,7 @@ Background image src: Image address url
 | --- | --- |
 | T |  |
 
-<a id="backgroundimage-1"></a>
+<a id="backgroundimage2"></a>
 
 ## backgroundImage
 
@@ -1708,6 +1732,8 @@ Background image size
 | --- | --- |
 | T |  |
 
+<a id="bindcontentcover1"></a>
+
 ## bindContentCover
 
 ```TypeScript
@@ -1744,7 +1770,7 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 | --- | --- |
 | T | Current component. |
 
-<a id="bindcontentcover-1"></a>
+<a id="bindcontentcover2"></a>
 
 ## bindContentCover
 
@@ -1778,6 +1804,8 @@ Binds a full-screen modal to the component, which can be displayed when the comp
 | --- | --- |
 | T | Current component. |
 
+<a id="bindcontextmenu1"></a>
+
 ## bindContextMenu
 
 ```TypeScript
@@ -1808,7 +1836,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | T |  |
 
-<a id="bindcontextmenu-1"></a>
+<a id="bindcontextmenu2"></a>
 
 ## bindContextMenu
 
@@ -1907,6 +1935,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | T |  |
 
+<a id="bindcontextmenuwithresponse1"></a>
+
 ## bindContextMenuWithResponse
 
 ```TypeScript
@@ -1938,7 +1968,7 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | T |  |
 
-<a id="bindcontextmenuwithresponse-1"></a>
+<a id="bindcontextmenuwithresponse2"></a>
 
 ## bindContextMenuWithResponse
 
@@ -1972,6 +2002,8 @@ Binds a context menu to this component, which is displayed when the user long-pr
 | --- | --- |
 | T |  |
 
+<a id="bindmenu1"></a>
+
 ## bindMenu
 
 ```TypeScript
@@ -2001,7 +2033,7 @@ Menu control
 | --- | --- |
 | T |  |
 
-<a id="bindmenu-1"></a>
+<a id="bindmenu2"></a>
 
 ## bindMenu
 
@@ -2131,6 +2163,8 @@ Tips control
 | --- | --- |
 | T |  |
 
+<a id="blendmode1"></a>
+
 ## blendMode
 
 ```TypeScript
@@ -2156,7 +2190,7 @@ Defines how the component's content (including the content of it child component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [BlendMode](arkts-arkui-common-comp-blendmode-e.md) | Yes | Blend mode.<br>Default value: **BlendMode.NONE**<br>**NOTE:** <br>When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur), [backgroundEffect](#backgroundeffect), [brightness](#brightness), and [blur](#blur). |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
 
 **Return value:**
 
@@ -2164,7 +2198,7 @@ Defines how the component's content (including the content of it child component
 | --- | --- |
 | T | Current component. |
 
-<a id="blendmode-1"></a>
+<a id="blendmode2"></a>
 
 ## blendMode
 
@@ -2172,7 +2206,7 @@ Defines how the component's content (including the content of it child component
 blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
-Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to [blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendmode), the **mode** parameter supports the **undefined** type.
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to [blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendmode1), the **mode** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -2191,13 +2225,15 @@ Defines how the component's content (including the content of it child component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[BlendMode](arkts-arkui-common-comp-blendmode-e.md)&gt; | Yes | Blend mode.<br>Default value: **BlendMode.NONE**<br>If **mode** is **undefined**, the component reverts to its original effect of not enabling offscreen rendering as a whole before blending with the parent component.<br>**NOTE:** <br>When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur), [backgroundEffect](#backgroundeffect), [brightness](#brightness), and [blur](#blur). |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen.<br>Default value: **BlendApplyType.FAST**<br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="blur1"></a>
 
 ## blur
 
@@ -2230,7 +2266,7 @@ Applies a foreground blur effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="blur-1"></a>
+<a id="blur2"></a>
 
 ## blur
 
@@ -2238,7 +2274,7 @@ Applies a foreground blur effect to the component.
 blur(blurRadius: Optional<number>, options?: BlurOptions): T
 ```
 
-Applies a foreground blur effect to the component. Compared to [blur](#blur), the **blurRadius** parameter supports the **undefined** type.
+Applies a foreground blur effect to the component. Compared to [blur](#blur1), the **blurRadius** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -2265,7 +2301,7 @@ Applies a foreground blur effect to the component. Compared to [blur](#blur), th
 | --- | --- |
 | T | Current component. |
 
-<a id="blur-2"></a>
+<a id="blur3"></a>
 
 ## blur
 
@@ -2273,7 +2309,7 @@ Applies a foreground blur effect to the component. Compared to [blur](#blur), th
 blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-Applies a foreground blur effect to the component. Compared to [blur&lt;sup&gt;18+&lt;/sup&gt;](#blur-1), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
+Applies a foreground blur effect to the component. Compared to [blur&lt;sup&gt;18+&lt;/sup&gt;](#blur2), this API adds the **sysOptions** parameter, which allows for system adaptive adjustments.
 
 **Since:** 19
 
@@ -2396,6 +2432,8 @@ Sets the border image of the component.
 | --- | --- |
 | T |  |
 
+<a id="borderradius1"></a>
+
 ## borderRadius
 
 ```TypeScript
@@ -2427,7 +2465,7 @@ Sets the border radius.
 | --- | --- |
 | T | Current component. |
 
-<a id="borderradius-1"></a>
+<a id="borderradius2"></a>
 
 ## borderRadius
 
@@ -2523,6 +2561,8 @@ Sets the border width.
 | --- | --- |
 | T | Current component. |
 
+<a id="brightness1"></a>
+
 ## brightness
 
 ```TypeScript
@@ -2553,7 +2593,7 @@ Applies a brightness effect to the component. If this API is not used, there wil
 | --- | --- |
 | T | Current component. |
 
-<a id="brightness-1"></a>
+<a id="brightness2"></a>
 
 ## brightness
 
@@ -2561,7 +2601,7 @@ Applies a brightness effect to the component. If this API is not used, there wil
 brightness(brightness: Optional<number>): T
 ```
 
-Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](#brightness), this API supports the **undefined** type for the **brightness** parameter.
+Applies a brightness effect to the component. If this API is not used, there will be no change by default. Compared with [brightness](#brightness1), this API supports the **undefined** type for the **brightness** parameter.
 
 **Since:** 18
 
@@ -2652,6 +2692,8 @@ Since API version 23, dynamic configuration via [attributeModifier](#attributemo
 | --- | --- |
 | T | Current component. |
 
+<a id="clickeffect1"></a>
+
 ## clickEffect
 
 ```TypeScript
@@ -2682,7 +2724,7 @@ Sets the click feedback effect of the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="clickeffect-1"></a>
+<a id="clickeffect2"></a>
 
 ## clickEffect
 
@@ -2690,7 +2732,7 @@ Sets the click feedback effect of the component.
 clickEffect(effect: Optional<ClickEffect | null>): T
 ```
 
-Sets the click feedback effect of the component. Compared with [clickEffect](#clickeffect), this API supports the **undefined** type.
+Sets the click feedback effect of the component. Compared with [clickEffect](#clickeffect1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2713,6 +2755,8 @@ Sets the click feedback effect of the component. Compared with [clickEffect](#cl
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="clip1"></a>
 
 ## clip
 
@@ -2746,7 +2790,7 @@ Sets whether to clip the areas of child components that extend beyond this compo
 | --- | --- |
 | T | Current component. |
 
-<a id="clip-1"></a>
+<a id="clip2"></a>
 
 ## clip
 
@@ -2754,7 +2798,7 @@ Sets whether to clip the areas of child components that extend beyond this compo
 clip(clip: Optional<boolean>): T
 ```
 
-Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with [clip&lt;sup&gt;12+&lt;/sup&gt;](#clip), this API supports the **undefined** type.
+Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with [clip&lt;sup&gt;12+&lt;/sup&gt;](#clip1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2780,7 +2824,7 @@ Sets whether to clip the areas of child components that extend beyond this compo
 | --- | --- |
 | T | Current component. |
 
-<a id="clip-2"></a>
+<a id="clip3"></a>
 
 ## clip
 
@@ -2815,6 +2859,8 @@ Sets whether to clip this component based on the given shape.
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="clipshape1"></a>
 
 ## clipShape
 
@@ -2859,7 +2905,7 @@ Clips this component according to the specified shape (which may include positio
 | --- | --- |
 | T | Current component. |
 
-<a id="clipshape-1"></a>
+<a id="clipshape2"></a>
 
 ## clipShape
 
@@ -2867,7 +2913,7 @@ Clips this component according to the specified shape (which may include positio
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape), this API supports the **undefined** type.
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape1), this API supports the **undefined** type.
 
 > **NOTE:** 
 > 
@@ -2904,6 +2950,8 @@ Clips this component according to the specified shape (which may include positio
 | --- | --- |
 | T | Current component. |
 
+<a id="colorblend1"></a>
+
 ## colorBlend
 
 ```TypeScript
@@ -2934,7 +2982,7 @@ Applies a color blend effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="colorblend-1"></a>
+<a id="colorblend2"></a>
 
 ## colorBlend
 
@@ -2942,7 +2990,7 @@ Applies a color blend effect to the component.
 colorBlend(color: Optional<Color | string | Resource>): T
 ```
 
-Applies a color blend effect to the component. Compared with [colorBlend](#colorblend), this API supports the **undefined** type for the **color** parameter.
+Applies a color blend effect to the component. Compared with [colorBlend](#colorblend1), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -3045,13 +3093,15 @@ Sets the constraint size, which limits the size range during component layout. A
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size. The priority of **constraintSize** is higher than that of [width](#width) and [height](#height). For the value result, refer to the impact of the **constraintSize** value on width and height. <br>Default value:<br>**{<br>minWidth:&nbsp;0,<br>maxWidth:&nbsp;Infinity,<br>minHeight:&nbsp;0, <br>maxHeight:&nbsp;Infinity<br>}**<br>Abnormal value: For a string starting with a number, only the numeric part is parsed; for a string not starting with a number, it is parsed as 0. For other abnormal values, the **constraintSize** attribute is restored to the default behavior when it is not configured. <br>Unit: vp |
+| value | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Constraint size. The priority of **constraintSize** is higher than that of [width](#width1) and [height](#height1). For the value result, refer to the impact of the **constraintSize** value on width and height. <br>Default value:<br>**{<br>minWidth:&nbsp;0,<br>maxWidth:&nbsp;Infinity,<br>minHeight:&nbsp;0, <br>maxHeight:&nbsp;Infinity<br>}**<br>Abnormal value: For a string starting with a number, only the numeric part is parsed; for a string not starting with a number, it is parsed as 0. For other abnormal values, the **constraintSize** attribute is restored to the default behavior when it is not configured. <br>Unit: vp |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="contrast1"></a>
 
 ## contrast
 
@@ -3085,7 +3135,7 @@ Applies a contrast effect to the component. If this API is not used, there will 
 | --- | --- |
 | T | Current component. |
 
-<a id="contrast-1"></a>
+<a id="contrast2"></a>
 
 ## contrast
 
@@ -3093,7 +3143,7 @@ Applies a contrast effect to the component. If this API is not used, there will 
 contrast(contrast: Optional<number>): T
 ```
 
-Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](#contrast), the **contrast** parameter supports the **undefined** type.
+Applies a contrast effect to the component. If this API is not used, there will be no change by default. Compared to [contrast](#contrast1), the **contrast** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3313,6 +3363,8 @@ Sets whether the component is draggable. By default, the component is not dragga
 | --- | --- |
 | T | Current component. |
 
+<a id="dragpreview1"></a>
+
 ## dragPreview
 
 ```TypeScript
@@ -3335,7 +3387,7 @@ Sets the preview image displayed during component drag operations.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) &#124; string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
+| value | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) &#124; string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu1), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation.<br>**Since:** 12 |
 
 **Return value:**
 
@@ -3343,7 +3395,7 @@ Sets the preview image displayed during component drag operations.
 | --- | --- |
 | T | Current component. |
 
-<a id="dragpreview-1"></a>
+<a id="dragpreview2"></a>
 
 ## dragPreview
 
@@ -3371,7 +3423,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| preview | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) &#124; string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
+| preview | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) &#124; string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu1), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
 | config | [PreviewConfiguration](arkts-arkui-common-comp-previewconfiguration-i.md) | No | Additional settings for the drag preview.<br>This parameter is effective only for previews set using [dragPreview](#dragpreview). |
 
 **Return value:**
@@ -3753,6 +3805,8 @@ Sets whether the component is focusable on touch. If **focusOnTouch** is not set
 | --- | --- |
 | T | Current component. |
 
+<a id="focusscopeid1"></a>
+
 ## focusScopeId
 
 ```TypeScript
@@ -3784,7 +3838,7 @@ Set container as a focus group with a specific identifier.
 | --- | --- |
 | T |  |
 
-<a id="focusscopeid-1"></a>
+<a id="focusscopeid2"></a>
 
 ## focusScopeId
 
@@ -3849,6 +3903,8 @@ Set the focus priority of component in a specific focus scope.
 | --- | --- |
 | T |  |
 
+<a id="foregroundblurstyle1"></a>
+
 ## foregroundBlurStyle
 
 ```TypeScript
@@ -3884,7 +3940,7 @@ Applies a foreground blur style to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="foregroundblurstyle-1"></a>
+<a id="foregroundblurstyle2"></a>
 
 ## foregroundBlurStyle
 
@@ -3892,7 +3948,7 @@ Applies a foreground blur style to the component.
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions): T
 ```
 
-Applies a foreground blur style to the component. Compared to [foregroundBlurStyle](#foregroundblurstyle), the **style** parameter supports the **undefined** type.
+Applies a foreground blur style to the component. Compared to [foregroundBlurStyle](#foregroundblurstyle1), the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -3917,7 +3973,7 @@ Applies a foreground blur style to the component. Compared to [foregroundBlurSty
 | --- | --- |
 | T | Current component. |
 
-<a id="foregroundblurstyle-2"></a>
+<a id="foregroundblurstyle3"></a>
 
 ## foregroundBlurStyle
 
@@ -3951,6 +4007,8 @@ Foreground blur style. blurStyle:Blur style type. sysOptions: system adaptive op
 | --- | --- |
 | T |  |
 
+<a id="foregroundcolor1"></a>
+
 ## foregroundColor
 
 ```TypeScript
@@ -3981,7 +4039,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 | --- | --- |
 | T | Current component. |
 
-<a id="foregroundcolor-1"></a>
+<a id="foregroundcolor2"></a>
 
 ## foregroundColor
 
@@ -3989,7 +4047,7 @@ Sets the foreground color of the component. Components without explicit foregrou
 foregroundColor(color: Optional<ResourceColor | ColoringStrategy>): T
 ```
 
-Sets the foreground color of the component. Components without explicit foreground color settings inherit from their parent components by default. Compared to [foregroundColor](#foregroundcolor), the **color** parameter supports the **undefined** type.
+Sets the foreground color of the component. Components without explicit foreground color settings inherit from their parent components by default. Compared to [foregroundColor](#foregroundcolor1), the **color** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4077,6 +4135,8 @@ Sets the visual effect of the foreground (content) filter.
 | --- | --- |
 | T | Current component. |
 
+<a id="freeze1"></a>
+
 ## freeze
 
 ```TypeScript
@@ -4111,7 +4171,7 @@ Sets whether to freeze the component. When frozen, the component and its childre
 | --- | --- |
 | T | Current component. |
 
-<a id="freeze-1"></a>
+<a id="freeze2"></a>
 
 ## freeze
 
@@ -4119,7 +4179,7 @@ Sets whether to freeze the component. When frozen, the component and its childre
 freeze(freeze: Optional<boolean>): T
 ```
 
-Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with [freeze](#freeze), this API supports the **undefined** type for the **freeze** parameter.
+Sets whether to freeze the component. When frozen, the component and its children are cached for repeated drawing after offscreen rendering, without updating internal attributes. Compared with [freeze](#freeze1), this API supports the **undefined** type for the **freeze** parameter.
 
 > **NOTE:** 
 > 
@@ -4146,6 +4206,8 @@ Sets whether to freeze the component. When frozen, the component and its childre
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="geometrytransition1"></a>
 
 ## geometryTransition
 
@@ -4175,7 +4237,7 @@ Implements an implicit shared element transition.
 | --- | --- |
 | T | Current component. |
 
-<a id="geometrytransition-1"></a>
+<a id="geometrytransition2"></a>
 
 ## geometryTransition
 
@@ -4277,6 +4339,8 @@ Creates a gesture modifier.
 | --- | --- |
 | T |  |
 
+<a id="grayscale1"></a>
+
 ## grayscale
 
 ```TypeScript
@@ -4307,7 +4371,7 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 | --- | --- |
 | T | Current component. |
 
-<a id="grayscale-1"></a>
+<a id="grayscale2"></a>
 
 ## grayscale
 
@@ -4315,7 +4379,7 @@ Applies a grayscale effect to the component. The grayscale rendering of the uppe
 grayscale(grayscale: Optional<number>): T
 ```
 
-Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower- layer child components. If this API is not used, there will be no change by default. Compared to [grayscale](#grayscale), the **grayscale** parameter supports the **undefined** type.
+Applies a grayscale effect to the component. The grayscale rendering of the upper layer will overlay that of lower- layer child components. If this API is not used, there will be no change by default. Compared to [grayscale](#grayscale1), the **grayscale** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4369,6 +4433,8 @@ Specifies whether to set the component as the default focus of the container. If
 | --- | --- |
 | T | Current component. |
 
+<a id="height1"></a>
+
 ## height
 
 ```TypeScript
@@ -4405,7 +4471,7 @@ Sets the height of the component itself. By default, the height required for the
 | --- | --- |
 | T | Current component. |
 
-<a id="height-1"></a>
+<a id="height2"></a>
 
 ## height
 
@@ -4501,6 +4567,8 @@ Sets the hover effect for the component. When no hover effect is specified, the 
 | --- | --- |
 | T | Current component. |
 
+<a id="huerotate1"></a>
+
 ## hueRotate
 
 ```TypeScript
@@ -4531,7 +4599,7 @@ Rotates the hue of the component. If this API is not used, there will be no chan
 | --- | --- |
 | T | Current component. |
 
-<a id="huerotate-1"></a>
+<a id="huerotate2"></a>
 
 ## hueRotate
 
@@ -4539,7 +4607,7 @@ Rotates the hue of the component. If this API is not used, there will be no chan
 hueRotate(rotation: Optional<number | string>): T
 ```
 
-Rotates the hue of the component. If this API is not used, there will be no change by default. Compared to [hueRotate](#huerotate), the **rotation** parameter supports the **undefined** type.
+Rotates the hue of the component. If this API is not used, there will be no change by default. Compared to [hueRotate](#huerotate1), the **rotation** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4668,6 +4736,8 @@ Set the component's inspector label which only display on DevEco Studio.
 | --- | --- |
 | T |  |
 
+<a id="invert1"></a>
+
 ## invert
 
 ```TypeScript
@@ -4698,7 +4768,7 @@ Inverts an image.
 | --- | --- |
 | T | Current component. |
 
-<a id="invert-1"></a>
+<a id="invert2"></a>
 
 ## invert
 
@@ -4706,7 +4776,7 @@ Inverts an image.
 invert(options: Optional<number | InvertOptions>): T
 ```
 
-Inverts an image. Compared with [invert](#invert), this API supports the **undefined** type for the **options** parameter.
+Inverts an image. Compared with [invert](#invert1), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -4860,6 +4930,8 @@ Sets the layout weight of a component so that the component is allocated a size 
 | --- | --- |
 | T | Current component. |
 
+<a id="lightupeffect1"></a>
+
 ## lightUpEffect
 
 ```TypeScript
@@ -4890,7 +4962,7 @@ Applies a light up effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="lightupeffect-1"></a>
+<a id="lightupeffect2"></a>
 
 ## lightUpEffect
 
@@ -4898,7 +4970,7 @@ Applies a light up effect to the component.
 lightUpEffect(degree: Optional<number>): T
 ```
 
-Applies a light up effect to the component. Compared to [lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightupeffect), the **degree** parameter supports the **undefined** type.
+Applies a light up effect to the component. Compared to [lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightupeffect1), the **degree** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -4921,6 +4993,8 @@ Applies a light up effect to the component. Compared to [lightUpEffect&lt;sup&gt
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="lineargradient1"></a>
 
 ## linearGradient
 
@@ -4952,7 +5026,7 @@ Creates a linear gradient.
 | --- | --- |
 | T | Current component. |
 
-<a id="lineargradient-1"></a>
+<a id="lineargradient2"></a>
 
 ## linearGradient
 
@@ -4960,7 +5034,7 @@ Creates a linear gradient.
 linearGradient(options: Optional<LinearGradientOptions>): T
 ```
 
-Creates a linear gradient. Compared to [linearGradient](#lineargradient), this API supports the **undefined** type for the **options** parameter.
+Creates a linear gradient. Compared to [linearGradient](#lineargradient1), this API supports the **undefined** type for the **options** parameter.
 
 **Since:** 18
 
@@ -4985,6 +5059,8 @@ Creates a linear gradient. Compared to [linearGradient](#lineargradient), this A
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="lineargradientblur1"></a>
 
 ## linearGradientBlur
 
@@ -5017,7 +5093,7 @@ Applies a linear gradient foreground blur effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="lineargradientblur-1"></a>
+<a id="lineargradientblur2"></a>
 
 ## linearGradientBlur
 
@@ -5025,7 +5101,7 @@ Applies a linear gradient foreground blur effect to the component.
 linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T
 ```
 
-Applies a linear gradient foreground blur effect to the component. Compared with [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur), this API supports the **undefined** type.
+Applies a linear gradient foreground blur effect to the component. Compared with [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5110,6 +5186,8 @@ Sets the anchor for element positioning. This attribute supports dynamic configu
 | --- | --- |
 | T | Current component. |
 
+<a id="mask1"></a>
+
 ## mask
 
 ```TypeScript
@@ -5140,7 +5218,7 @@ Adds a mask to the component to indicate the progress.
 | --- | --- |
 | T | Current component. |
 
-<a id="mask-1"></a>
+<a id="mask2"></a>
 
 ## mask
 
@@ -5148,7 +5226,7 @@ Adds a mask to the component to indicate the progress.
 mask(mask: Optional<ProgressMask>): T
 ```
 
-Adds a mask to the component to indicate the progress. Compared with [mask&lt;sup&gt;12+&lt;/sup&gt;](#mask), this API supports the **undefined** type.
+Adds a mask to the component to indicate the progress. Compared with [mask&lt;sup&gt;12+&lt;/sup&gt;](#mask1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5172,7 +5250,7 @@ Adds a mask to the component to indicate the progress. Compared with [mask&lt;su
 | --- | --- |
 | T | Current component. |
 
-<a id="mask-2"></a>
+<a id="mask3"></a>
 
 ## mask
 
@@ -5208,6 +5286,8 @@ Adds a mask of the specified shape to the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="maskshape1"></a>
+
 ## maskShape
 
 ```TypeScript
@@ -5240,7 +5320,7 @@ Adds a mask of the specified shape to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="maskshape-1"></a>
+<a id="maskshape2"></a>
 
 ## maskShape
 
@@ -5248,7 +5328,7 @@ Adds a mask of the specified shape to the component.
 maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Adds a mask of the specified shape to the component. Compared with [maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskshape), this API supports the **undefined** type.
+Adds a mask of the specified shape to the component. Compared with [maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskshape1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5334,6 +5414,8 @@ Sets whether the component exclusively handles events.
 | --- | --- |
 | T |  |
 
+<a id="motionblur1"></a>
+
 ## motionBlur
 
 ```TypeScript
@@ -5378,7 +5460,7 @@ Applies a motion blur effect to the component being scaled or moved.
 | --- | --- |
 | T | Current component. |
 
-<a id="motionblur-1"></a>
+<a id="motionblur2"></a>
 
 ## motionBlur
 
@@ -5386,7 +5468,7 @@ Applies a motion blur effect to the component being scaled or moved.
 motionBlur(motionBlur: Optional<MotionBlurOptions>): T
 ```
 
-Applies a motion blur effect to the component being scaled or moved. Compared with [motionBlur](#motionblur), this API supports the **undefined** type for the **motionBlur** parameter.
+Applies a motion blur effect to the component being scaled or moved. Compared with [motionBlur](#motionblur1), this API supports the **undefined** type for the **motionBlur** parameter.
 
 1. Do not use this API in intra-component transitions, shared element transitions, implicit element transitions,
 or particle animations. Doing so may cause unexpected results.
@@ -5733,6 +5815,8 @@ Triggered when this component appears.
 | --- | --- |
 | T | Current component. |
 
+<a id="onareachange1"></a>
+
 ## onAreaChange
 
 ```TypeScript
@@ -5741,7 +5825,7 @@ onAreaChange(event: (oldValue: Area, newValue: Area) => void): T
 
 Triggered when the component area changes in size or position due to layout updates.
 
-This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate), [offset](#offset), [markAnchor](#markanchor), [scale](#scale), or [transform](#transform). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered.
+This event is not triggered for render attribute changes caused by re-rendering, such as changes to [translate](#translate1), [offset](#offset), [markAnchor](#markanchor), [scale](#scale1), or [transform](#transform1). In addition, if the component position is altered due to drawing changes, for example, through [bindSheet](#bindsheet), this event is also not triggered.
 
 > **NOTE:** 
 > 
@@ -5770,7 +5854,7 @@ This event is not triggered for render attribute changes caused by re-rendering,
 | --- | --- |
 | T | Current component. |
 
-<a id="onareachange-1"></a>
+<a id="onareachange2"></a>
 
 ## onAreaChange
 
@@ -5936,6 +6020,8 @@ Allows the current component to customize the hit test and control child compone
 | --- | --- |
 | T | Current component. |
 
+<a id="onclick1"></a>
+
 ## onClick
 
 ```TypeScript
@@ -5976,7 +6062,7 @@ When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unk
 | --- | --- |
 | T | Current component. |
 
-<a id="onclick-1"></a>
+<a id="onclick2"></a>
 
 ## onClick
 
@@ -6157,7 +6243,7 @@ Triggered when the dragging of the component bound to the event ends.
 onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item enters a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop) event is enabled.
+Triggered when a dragged item enters a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
 
 **Since:** 8
 
@@ -6185,7 +6271,7 @@ Triggered when a dragged item enters a valid drop target. This event takes effec
 onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop) event is enabled.
+Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
 
 **Since:** 8
 
@@ -6213,7 +6299,7 @@ Triggered when a dragged item leaves a valid drop target. This event takes effec
 onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item moves in a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop) event is enabled.
+Triggered when a dragged item moves in a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
 
 **Since:** 8
 
@@ -6307,6 +6393,8 @@ The custom drag preview is not supported for dragging selected text in the follo
 | --- | --- |
 | T | Current component. |
 
+<a id="ondrop1"></a>
+
 ## onDrop
 
 ```TypeScript
@@ -6335,7 +6423,7 @@ A component bound with this event can serve as a drop target. This callback is t
 | --- | --- |
 | T | Current component. |
 
-<a id="ondrop-1"></a>
+<a id="ondrop2"></a>
 
 ## onDrop
 
@@ -6492,6 +6580,8 @@ Binds a custom gesture determination callback to the component. When the gesture
 | --- | --- |
 | T | Current component. |
 
+<a id="ongesturerecognizerjudgebegin1"></a>
+
 ## onGestureRecognizerJudgeBegin
 
 ```TypeScript
@@ -6522,7 +6612,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="ongesturerecognizerjudgebegin-1"></a>
+<a id="ongesturerecognizerjudgebegin2"></a>
 
 ## onGestureRecognizerJudgeBegin
 
@@ -6534,7 +6624,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 The **exposeInnerGesture** parameter indicates whether to expose gestures from built-in components within ArkUI system composite components to developers. When this parameter is set to **true**, these internal gestures are exposed.
 
-For scenarios where exposure of internal gestures is not required, use the original [onGestureRecognizerJudgeBegin](#ongesturerecognizerjudgebegin) API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
+For scenarios where exposure of internal gestures is not required, use the original [onGestureRecognizerJudgeBegin](#ongesturerecognizerjudgebegin1) API. Use this API with **exposeInnerGesture** set to **true** only when internal gesture exposure is necessary.
 
 **Since:** 13
 
@@ -6617,6 +6707,8 @@ Triggered when a stylus hovers over the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="onkeyevent1"></a>
+
 ## onKeyEvent
 
 ```TypeScript
@@ -6645,7 +6737,7 @@ Triggered when a key event occurs.
 | --- | --- |
 | T | Current component. |
 
-<a id="onkeyevent-1"></a>
+<a id="onkeyevent2"></a>
 
 ## onKeyEvent
 
@@ -6791,7 +6883,7 @@ Called when component is focused, the return value indicates whether keyboard is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach3) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
 
 **Return value:**
 
@@ -6997,6 +7089,8 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 | --- | --- |
 | T | Current component. |
 
+<a id="onvisibleareachange1"></a>
+
 ## onVisibleAreaChange
 
 ```TypeScript
@@ -7011,11 +7105,11 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor nodes (up to the window boundary) and its own area.
 > 
-> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any ancestor node, window-level occlusion, and component rotation. Examples include layouts using [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and [rotate](#rotate) transformations.
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any ancestor node, window-level occlusion, and component rotation. Examples include layouts using [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and [rotate](#rotate1) transformations.
 > 
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](#scale) attribute. To enable support for the [scale](#scale) attribute, use [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange-1)and set **measureFromViewport** to **true**.
+> - This API does not support the [scale](#scale1) attribute. To enable support for the [scale](#scale1) attribute, use [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange2)and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7038,7 +7132,7 @@ Called when the visible area of the component changes. For details about the dev
 | --- | --- |
 | T | Current component. |
 
-<a id="onvisibleareachange-1"></a>
+<a id="onvisibleareachange2"></a>
 
 ## onVisibleAreaChange
 
@@ -7064,13 +7158,15 @@ Called when the visible area of the component changes. You can use **measureFrom
 | --- | --- | --- | --- |
 | ratios | Array&lt;number&gt; | Yes | Threshold array. Each threshold represents the ratio of the component's visible area to its own total area. This callback is invoked when the ratio of the component's visible area to its total area is greater than or less than the threshold. The value of each threshold ranges from 0.0 to 1.0. If a threshold value is less than 0.0, it is clamped to 0.0; if it is greater than 1.0, it is clamped to 1.0.<br> **NOTE:** <br>When the value is close to the boundary 0 or 1, it is rounded off with a round-off error not greater than 0.001. For example, 0.9997 is rounded off to 1. |
 | event | [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) | Yes | Callback for visible area changes of the component. |
-| measureFromViewport | boolean | Yes | Visible area calculation mode.<br>**true**: considers the parent's [clip](#clip) attribute. If [clip](#clip) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](#clip) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](#clip) attribute, treating areas beyond the parent's bounds as invisible.<br>When **measureFromViewport** is set to **true**, and an ancestor node has the [scale](#scale) attribute set, the component's visible ratio will be correctly calculated. |
+| measureFromViewport | boolean | Yes | Visible area calculation mode.<br>**true**: considers the parent's [clip](#clip1) attribute. If [clip](#clip1) is **false**, areas of the child component beyond the parent's bounds are counted as visible; if [clip](#clip1) is **true**, such areas are counted as invisible. **false**: ignores the parent's [clip](#clip1) attribute, treating areas beyond the parent's bounds as invisible.<br>When **measureFromViewport** is set to **true**, and an ancestor node has the [scale](#scale1) attribute set, the component's visible ratio will be correctly calculated. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="opacity1"></a>
 
 ## opacity
 
@@ -7102,7 +7198,7 @@ Sets the opacity of the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="opacity-1"></a>
+<a id="opacity2"></a>
 
 ## opacity
 
@@ -7136,6 +7232,8 @@ Sets the opacity of the component. Compared with [opacity](../../../reference/ap
 | --- | --- |
 | T | Current component. |
 
+<a id="outline1"></a>
+
 ## outline
 
 ```TypeScript
@@ -7168,7 +7266,7 @@ Sets the outline attributes in one declaration.
 | --- | --- |
 | T | Current component. |
 
-<a id="outline-1"></a>
+<a id="outline2"></a>
 
 ## outline
 
@@ -7202,6 +7300,8 @@ Sets the outline attributes in one declaration. Compared with [outline](../../..
 | --- | --- |
 | T | Current component. |
 
+<a id="outlinecolor1"></a>
+
 ## outlineColor
 
 ```TypeScript
@@ -7234,7 +7334,7 @@ Sets the outline color. If this API is not used, the default color black will be
 | --- | --- |
 | T | Current component. |
 
-<a id="outlinecolor-1"></a>
+<a id="outlinecolor2"></a>
 
 ## outlineColor
 
@@ -7242,7 +7342,7 @@ Sets the outline color. If this API is not used, the default color black will be
 outlineColor(color: Optional<ResourceColor | EdgeColors | LocalizedEdgeColors>): T
 ```
 
-Sets the outline color. If this API is not used, the default color black will be applied. Compared with [outlineColor](#outlinecolor), this API supports the **undefined** type for the **color** parameter.
+Sets the outline color. If this API is not used, the default color black will be applied. Compared with [outlineColor](#outlinecolor1), this API supports the **undefined** type for the **color** parameter.
 
 **Since:** 18
 
@@ -7267,6 +7367,8 @@ Sets the outline color. If this API is not used, the default color black will be
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="outlineradius1"></a>
 
 ## outlineRadius
 
@@ -7300,7 +7402,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 | --- | --- |
 | T | Current component. |
 
-<a id="outlineradius-1"></a>
+<a id="outlineradius2"></a>
 
 ## outlineRadius
 
@@ -7308,7 +7410,7 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 outlineRadius(radius: Optional<Dimension | OutlineRadiuses>): T
 ```
 
-Sets the radius of the outline corners. If this API is not used, there will be no change by default. Compared with [outlineRadius](#outlineradius), this API supports the **undefined** type for the **radius** parameter.
+Sets the radius of the outline corners. If this API is not used, there will be no change by default. Compared with [outlineRadius](#outlineradius1), this API supports the **undefined** type for the **radius** parameter.
 
 **Since:** 18
 
@@ -7333,6 +7435,8 @@ Sets the radius of the outline corners. If this API is not used, there will be n
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="outlinestyle1"></a>
 
 ## outlineStyle
 
@@ -7366,7 +7470,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 | --- | --- |
 | T | Current component. |
 
-<a id="outlinestyle-1"></a>
+<a id="outlinestyle2"></a>
 
 ## outlineStyle
 
@@ -7374,7 +7478,7 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 outlineStyle(style: Optional<OutlineStyle | EdgeOutlineStyles>): T
 ```
 
-Sets the outline style. If this API is not used, a solid line is displayed by default. Compared with [outlineStyle](#outlinestyle), this API supports the **undefined** type for the **style** parameter.
+Sets the outline style. If this API is not used, a solid line is displayed by default. Compared with [outlineStyle](#outlinestyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -7399,6 +7503,8 @@ Sets the outline style. If this API is not used, a solid line is displayed by de
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="outlinewidth1"></a>
 
 ## outlineWidth
 
@@ -7432,7 +7538,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 | --- | --- |
 | T | Current component. |
 
-<a id="outlinewidth-1"></a>
+<a id="outlinewidth2"></a>
 
 ## outlineWidth
 
@@ -7440,7 +7546,7 @@ Sets the thickness of the outline. If this API is not used, there will be no cha
 outlineWidth(width: Optional<Dimension | EdgeOutlineWidths>): T
 ```
 
-Sets the thickness of the outline. If this API is not used, there will be no change by default. Compared with [outlineWidth](#outlinewidth), this API supports the **undefined** type for the **width** parameter.
+Sets the thickness of the outline. If this API is not used, there will be no change by default. Compared with [outlineWidth](#outlinewidth1), this API supports the **undefined** type for the **width** parameter.
 
 **Since:** 18
 
@@ -7616,6 +7722,8 @@ coordinates (API version 11 uses half-pixel alignment, and API version 12 uses r
 | --- | --- |
 | T | Current component. |
 
+<a id="pixelstretcheffect1"></a>
+
 ## pixelStretchEffect
 
 ```TypeScript
@@ -7646,7 +7754,7 @@ Applies a pixel stretch effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="pixelstretcheffect-1"></a>
+<a id="pixelstretcheffect2"></a>
 
 ## pixelStretchEffect
 
@@ -7654,7 +7762,7 @@ Applies a pixel stretch effect to the component.
 pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
-Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelstretcheffect), the **options** parameter supports the **undefined** type.
+Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelstretcheffect1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -7756,6 +7864,8 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 | --- | --- |
 | T | Current component. |
 
+<a id="radialgradient1"></a>
+
 ## radialGradient
 
 ```TypeScript
@@ -7788,7 +7898,7 @@ Anonymous Object Rectification.
 | --- | --- |
 | T |  |
 
-<a id="radialgradient-1"></a>
+<a id="radialgradient2"></a>
 
 ## radialGradient
 
@@ -7822,6 +7932,8 @@ Radial Gradient center:Center point of radial gradient radius:Radius of Radial G
 | --- | --- |
 | T |  |
 
+<a id="renderfit1"></a>
+
 ## renderFit
 
 ```TypeScript
@@ -7854,7 +7966,7 @@ Sets how the final state of the component's content is rendered during its width
 | --- | --- |
 | T | Current component. |
 
-<a id="renderfit-1"></a>
+<a id="renderfit2"></a>
 
 ## renderFit
 
@@ -7862,7 +7974,7 @@ Sets how the final state of the component's content is rendered during its width
 renderFit(fitMode: Optional<RenderFit>): T
 ```
 
-Sets how the final state of the component's content is rendered during its width and height animation process. If it is not set via this API, the content size at the end of the animation is maintained, and the content always remains top-left aligned with the component. Compared to [renderFit](#renderfit), this API supports the **undefined** type for the **fitMode** parameter.
+Sets how the final state of the component's content is rendered during its width and height animation process. If it is not set via this API, the content size at the end of the animation is maintained, and the content always remains top-left aligned with the component. Compared to [renderFit](#renderfit1), this API supports the **undefined** type for the **fitMode** parameter.
 
 **Since:** 18
 
@@ -7887,6 +7999,8 @@ Sets how the final state of the component's content is rendered during its width
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="rendergroup1"></a>
 
 ## renderGroup
 
@@ -7922,7 +8036,7 @@ If this attribute is not set, no render group is formed by default.
 | --- | --- |
 | T | Current component. |
 
-<a id="rendergroup-1"></a>
+<a id="rendergroup2"></a>
 
 ## renderGroup
 
@@ -8110,6 +8224,8 @@ Reuse identifier, used to divide custom components into reuse groups. This API c
 | --- | --- |
 | T | Current component. |
 
+<a id="rotate1"></a>
+
 ## rotate
 
 ```TypeScript
@@ -8140,7 +8256,7 @@ Rotates the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="rotate-1"></a>
+<a id="rotate2"></a>
 
 ## rotate
 
@@ -8148,7 +8264,7 @@ Rotates the component.
 rotate(options: Optional<RotateOptions>): T
 ```
 
-Rotates the component. Compared with [rotate](#rotate), this API supports the **undefined** type.
+Rotates the component. Compared with [rotate](#rotate1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -8174,7 +8290,7 @@ Rotates the component. Compared with [rotate](#rotate), this API supports the **
 | --- | --- |
 | T | Current component. |
 
-<a id="rotate-2"></a>
+<a id="rotate3"></a>
 
 ## rotate
 
@@ -8182,7 +8298,7 @@ Rotates the component. Compared with [rotate](#rotate), this API supports the **
 rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
-Sets the component rotation effect. Compared with [rotate](#rotate-1), this API supports the **RotateAngleOptions** type for the **options** parameter.
+Sets the component rotation effect. Compared with [rotate](#rotate2), this API supports the **RotateAngleOptions** type for the **options** parameter.
 
 **Since:** 20
 
@@ -8259,6 +8375,8 @@ Sets the safe area padding attribute. It allows a container to add a component-l
 | --- | --- |
 | T | Current component. |
 
+<a id="saturate1"></a>
+
 ## saturate
 
 ```TypeScript
@@ -8289,7 +8407,7 @@ Applies a saturation effect to the component. If this API is not used, there wil
 | --- | --- |
 | T | Current component. |
 
-<a id="saturate-1"></a>
+<a id="saturate2"></a>
 
 ## saturate
 
@@ -8297,7 +8415,7 @@ Applies a saturation effect to the component. If this API is not used, there wil
 saturate(saturate: Optional<number>): T
 ```
 
-Applies a saturation effect to the component. If this API is not used, there will be no change by default. Compared to [saturate](#saturate), the **saturate** parameter supports the **undefined** type.
+Applies a saturation effect to the component. If this API is not used, there will be no change by default. Compared to [saturate](#saturate1), the **saturate** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8322,6 +8440,8 @@ Applies a saturation effect to the component. If this API is not used, there wil
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="scale1"></a>
 
 ## scale
 
@@ -8353,7 +8473,7 @@ Scales the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="scale-1"></a>
+<a id="scale2"></a>
 
 ## scale
 
@@ -8361,7 +8481,7 @@ Scales the component.
 scale(options: Optional<ScaleOptions>): T
 ```
 
-Scales the component. Compared with [scale](#scale), this API supports the **undefined** type.
+Scales the component. Compared with [scale](#scale1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -8386,6 +8506,8 @@ Scales the component. Compared with [scale](#scale), this API supports the **und
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="sepia1"></a>
 
 ## sepia
 
@@ -8417,7 +8539,7 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 | --- | --- |
 | T | Current component. |
 
-<a id="sepia-1"></a>
+<a id="sepia2"></a>
 
 ## sepia
 
@@ -8425,7 +8547,7 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 sepia(sepia: Optional<number>): T
 ```
 
-Converts the image to a sepia tone, reducing color intensity to create a warm, vintage image style. Compared to [sepia](#sepia), this API supports the **undefined** type for the **sepia** parameter.
+Converts the image to a sepia tone, reducing color intensity to create a warm, vintage image style. Compared to [sepia](#sepia1), this API supports the **undefined** type for the **sepia** parameter.
 
 **Since:** 18
 
@@ -8450,6 +8572,8 @@ Converts the image to a sepia tone, reducing color intensity to create a warm, v
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="shadow1"></a>
 
 ## shadow
 
@@ -8481,7 +8605,7 @@ Applies a shadow effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="shadow-1"></a>
+<a id="shadow2"></a>
 
 ## shadow
 
@@ -8489,7 +8613,7 @@ Applies a shadow effect to the component.
 shadow(options: Optional<ShadowOptions | ShadowStyle>): T
 ```
 
-Applies a shadow effect to the component. Compared to [shadow](#shadow), the **options** parameter supports the **undefined** type.
+Applies a shadow effect to the component. Compared to [shadow](#shadow1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8668,6 +8792,8 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 | --- | --- |
 | T | return component instance who call the method. |
 
+<a id="sphericaleffect1"></a>
+
 ## sphericalEffect
 
 ```TypeScript
@@ -8698,7 +8824,7 @@ Applies a spherical effect to the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="sphericaleffect-1"></a>
+<a id="sphericaleffect2"></a>
 
 ## sphericalEffect
 
@@ -8706,7 +8832,7 @@ Applies a spherical effect to the component.
 sphericalEffect(effect: Optional<number>): T
 ```
 
-Applies a spherical effect to the component. Compared to [sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericaleffect), the **effect** parameter supports the **undefined** type.
+Applies a spherical effect to the component. Compared to [sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericaleffect1), the **effect** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8764,6 +8890,8 @@ Sets the state-specific styles for the component.
 | --- | --- |
 | T | Current component. |
 
+<a id="sweepgradient1"></a>
+
 ## sweepGradient
 
 ```TypeScript
@@ -8796,7 +8924,7 @@ Anonymous Object Rectification.
 | --- | --- |
 | T |  |
 
-<a id="sweepgradient-1"></a>
+<a id="sweepgradient2"></a>
 
 ## sweepGradient
 
@@ -8860,7 +8988,7 @@ Applies a system bar effect to the component, which means to invert colors based
 systemMaterial(material: SystemUiMaterial | undefined): T
 ```
 
-Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](#backgroundcolor)), border color ([borderColor](#bordercolor)), border width ([borderWidth](#borderwidth)), and shadow ([shadow](#shadow)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
+Sets the system material for a component. Different system materials have different attribute effects. This API affects the background color ([backgroundColor](#backgroundcolor1)), border color ([borderColor](#bordercolor)), border width ([borderWidth](#borderwidth)), and shadow ([shadow](#shadow1)). You are advised not to use this API together with the aforementioned APIs. For details about the example, see [Setting the System Material](../../../reference/apis-arkui/arkts-apis-uimaterial-sys.md#example-1-setting-the-system-material).
 
 **Since:** 26.0.0
 
@@ -8976,6 +9104,8 @@ Config toolbar for current component.
 | --- | --- |
 | T |  |
 
+<a id="transform1"></a>
+
 ## transform
 
 ```TypeScript
@@ -9004,7 +9134,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 | --- | --- |
 | T | Current component. |
 
-<a id="transform-1"></a>
+<a id="transform2"></a>
 
 ## transform
 
@@ -9066,6 +9196,8 @@ Sets the 3D transformation matrix of the component. When 3D transformation with 
 | --- | --- |
 | T | Current component. |
 
+<a id="transition1"></a>
+
 ## transition
 
 ```TypeScript
@@ -9096,7 +9228,7 @@ Sets the transition effects used when a component is inserted or removed.
 | --- | --- |
 | T | Current component. |
 
-<a id="transition-1"></a>
+<a id="transition2"></a>
 
 ## transition
 
@@ -9104,7 +9236,7 @@ Sets the transition effects used when a component is inserted or removed.
 transition(effect: TransitionEffect, onFinish: Optional<TransitionFinishCallback>): T
 ```
 
-Sets the transition effects used when a component is inserted or removed. Compared with [transition](#transition), this API provides the callback when the transition animation ends.
+Sets the transition effects used when a component is inserted or removed. Compared with [transition](#transition1), this API provides the callback when the transition animation ends.
 
 > **NOTE:** 
 > 
@@ -9134,6 +9266,8 @@ Sets the transition effects used when a component is inserted or removed. Compar
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="translate1"></a>
 
 ## translate
 
@@ -9165,7 +9299,7 @@ Translates the component.
 | --- | --- |
 | T | Current component. |
 
-<a id="translate-1"></a>
+<a id="translate2"></a>
 
 ## translate
 
@@ -9173,7 +9307,7 @@ Translates the component.
 translate(translate: Optional<TranslateOptions>): T
 ```
 
-Translates the component. Compared with [translate](#translate), this API supports the **undefined** type.
+Translates the component. Compared with [translate](#translate1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -9198,6 +9332,8 @@ Translates the component. Compared with [translate](#translate), this API suppor
 | Type | Description |
 | --- | --- |
 | T | Current component. |
+
+<a id="useeffect1"></a>
 
 ## useEffect
 
@@ -9230,7 +9366,7 @@ Sets whether the component should apply the effects template defined by the pare
 | --- | --- |
 | T | return the component attribute. |
 
-<a id="useeffect-1"></a>
+<a id="useeffect2"></a>
 
 ## useEffect
 
@@ -9263,7 +9399,7 @@ Sets whether the component should apply the effects template defined by the pare
 | --- | --- |
 | T | return the component attribute. |
 
-<a id="useeffect-2"></a>
+<a id="useeffect3"></a>
 
 ## useEffect
 
@@ -9294,6 +9430,8 @@ Sets whether the component should apply the effects template defined by the pare
 | Type | Description |
 | --- | --- |
 | T | return the component attribute. |
+
+<a id="useshadowbatching1"></a>
 
 ## useShadowBatching
 
@@ -9327,7 +9465,7 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 | --- | --- |
 | T | Current component. |
 
-<a id="useshadowbatching-1"></a>
+<a id="useshadowbatching2"></a>
 
 ## useShadowBatching
 
@@ -9335,7 +9473,7 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useshadowbatching), this API supports the **undefined** type for the **use** parameter.
+Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useshadowbatching1), this API supports the **undefined** type for the **use** parameter.
 
 **Since:** 18
 
@@ -9425,6 +9563,8 @@ Sets a visual effect that is not a filter effect.
 | --- | --- |
 | T | Current component. |
 
+<a id="width1"></a>
+
 ## width
 
 ```TypeScript
@@ -9464,7 +9604,7 @@ Sets the width of the component itself. By default, the width required for the c
 | --- | --- |
 | T | Current component. |
 
-<a id="width-1"></a>
+<a id="width2"></a>
 
 ## width
 

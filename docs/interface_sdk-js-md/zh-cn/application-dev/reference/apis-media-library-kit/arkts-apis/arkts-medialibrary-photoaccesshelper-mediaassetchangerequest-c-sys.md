@@ -26,7 +26,7 @@ MediaAssetChangeRequest implements [MediaChangeRequest](arkts-medialibrary-photo
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
-<a id="addresource-2"></a>
+<a id="addresource3"></a>
 
 ## addResource
 
@@ -122,6 +122,8 @@ addResourceForPicker(type: ResourceType, fileUri: string): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
+
+<a id="createassetrequest1"></a>
 
 ## createAssetRequest
 

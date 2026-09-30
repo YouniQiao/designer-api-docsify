@@ -59,13 +59,15 @@ connect(deviceId: string): void
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
+<a id="disableabsolutevolume1"></a>
+
 ## disableAbsoluteVolume
 
 ```TypeScript
 disableAbsoluteVolume(deviceId: string): Promise<void>
 ```
 
-关闭设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再关闭设备绝对音量能力。使用Promise异步回调。
+关闭设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再关闭设备绝对音量能力。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -101,7 +103,7 @@ disableAbsoluteVolume(deviceId: string): Promise<void>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-<a id="disableabsolutevolume-1"></a>
+<a id="disableabsolutevolume2"></a>
 
 ## disableAbsoluteVolume
 
@@ -109,7 +111,7 @@ disableAbsoluteVolume(deviceId: string): Promise<void>
 disableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-关闭设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再关闭设备绝对音量能力。使用Callback异步回调。
+关闭设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再关闭设备绝对音量能力。使用Callback异步回调。
 
 **起始版本：** 11
 
@@ -220,13 +222,15 @@ disconnect(deviceId: string): void
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
+<a id="enableabsolutevolume1"></a>
+
 ## enableAbsoluteVolume
 
 ```TypeScript
 enableAbsoluteVolume(deviceId: string): Promise<void>
 ```
 
-开启设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再开启设备绝对音量能力。使用Promise异步回调。
+开启设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再开启设备绝对音量能力。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -262,7 +266,7 @@ enableAbsoluteVolume(deviceId: string): Promise<void>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-<a id="enableabsolutevolume-1"></a>
+<a id="enableabsolutevolume2"></a>
 
 ## enableAbsoluteVolume
 
@@ -270,7 +274,7 @@ enableAbsoluteVolume(deviceId: string): Promise<void>
 enableAbsoluteVolume(deviceId: string, callback: AsyncCallback<void>): void
 ```
 
-开启设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再开启设备绝对音量能力。使用Callback异步回调。
+开启设备绝对音量能力。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再开启设备绝对音量能力。使用Callback异步回调。
 
 **起始版本：** 11
 
@@ -469,13 +473,15 @@ getCurrentFullCodecInfo(deviceId: string): CodecInfoList[]
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 | 2902008 | Current device is not an active device. |
 
+<a id="isabsolutevolumeenabled1"></a>
+
 ## isAbsoluteVolumeEnabled
 
 ```TypeScript
 isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>
 ```
 
-获取设备绝对音量能力是否开启。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再获取设备绝对音量能力是否开启。使用Promise异步回调。
+获取设备绝对音量能力是否开启。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再获取设备绝对音量能力是否开启。使用Promise异步回调。
 
 **起始版本：** 11
 
@@ -511,7 +517,7 @@ isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-<a id="isabsolutevolumeenabled-1"></a>
+<a id="isabsolutevolumeenabled2"></a>
 
 ## isAbsoluteVolumeEnabled
 
@@ -519,7 +525,7 @@ isAbsoluteVolumeEnabled(deviceId: string): Promise<boolean>
 isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): void
 ```
 
-获取设备绝对音量能力是否开启。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported-1))，再获取设备绝对音量能力是否开启。使用Callback异步回调。
+获取设备绝对音量能力是否开启。需要在设备支持绝对音量的情况下(参考[isAbsoluteVolumeSupported](#isabsolutevolumesupported2))，再获取设备绝对音量能力是否开启。使用Callback异步回调。
 
 **起始版本：** 11
 
@@ -549,6 +555,8 @@ isAbsoluteVolumeEnabled(deviceId: string, callback: AsyncCallback<boolean>): voi
 | [2900001](../errorcode-bluetoothManager.md#2900001-蓝牙服务停止) | Service stopped. |
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
+
+<a id="isabsolutevolumesupported1"></a>
 
 ## isAbsoluteVolumeSupported
 
@@ -592,7 +600,7 @@ isAbsoluteVolumeSupported(deviceId: string): Promise<boolean>
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-<a id="isabsolutevolumesupported-1"></a>
+<a id="isabsolutevolumesupported2"></a>
 
 ## isAbsoluteVolumeSupported
 

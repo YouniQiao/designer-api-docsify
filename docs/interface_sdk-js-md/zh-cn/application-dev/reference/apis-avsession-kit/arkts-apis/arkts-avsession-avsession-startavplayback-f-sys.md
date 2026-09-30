@@ -6,6 +6,8 @@
 import { avSession } from '@kit.AVSessionKit';
 ```
 
+<a id="startavplayback1"></a>
+
 ## startAVPlayback
 
 ```TypeScript
@@ -57,7 +59,7 @@ avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
 ```
 
 
-<a id="startavplayback-1"></a>
+<a id="startavplayback2"></a>
 
 ## startAVPlayback
 

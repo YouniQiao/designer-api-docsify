@@ -6,6 +6,8 @@
 import { adminManager } from '@kit.MDMKit';
 ```
 
+<a id="subscribemanagedevent1"></a>
+
 ## subscribeManagedEvent
 
 ```TypeScript
@@ -71,7 +73,7 @@ adminManager.subscribeManagedEvent(wantTemp, events, (err) => {
 ```
 
 
-<a id="subscribemanagedevent-1"></a>
+<a id="subscribemanagedevent2"></a>
 
 ## subscribeManagedEvent
 

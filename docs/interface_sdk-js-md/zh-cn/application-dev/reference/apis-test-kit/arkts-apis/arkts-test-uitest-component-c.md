@@ -615,6 +615,8 @@ async function demo() {
 }
 ```
 
+<a id="inputtext1"></a>
+
 ## inputText
 
 ```TypeScript
@@ -669,7 +671,7 @@ async function demo() {
 }
 ```
 
-<a id="inputtext-1"></a>
+<a id="inputtext2"></a>
 
 ## inputText
 
@@ -1254,6 +1256,8 @@ async function demo() {
 }
 ```
 
+<a id="scrollsearch1"></a>
+
 ## scrollSearch
 
 ```TypeScript
@@ -1308,7 +1312,7 @@ async function demo() {
 }
 ```
 
-<a id="scrollsearch-1"></a>
+<a id="scrollsearch2"></a>
 
 ## scrollSearch
 

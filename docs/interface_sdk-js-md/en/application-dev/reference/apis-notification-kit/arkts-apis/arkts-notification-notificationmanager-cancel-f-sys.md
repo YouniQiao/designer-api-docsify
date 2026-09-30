@@ -6,7 +6,7 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
-<a id="cancel-3"></a>
+<a id="cancel4"></a>
 
 ## cancel
 

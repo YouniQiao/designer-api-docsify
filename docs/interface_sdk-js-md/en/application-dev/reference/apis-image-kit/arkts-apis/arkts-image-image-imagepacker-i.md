@@ -8,7 +8,7 @@ The **ImagePacker** class provides APIs to compress and encode images.
 
 Before calling any API in ImagePacker, you must use [image.createImagePacker](arkts-image-image-createimagepacker-f.md) to create an ImagePacker instance. During encoding, do not modify or release the ImageSource, PixelMap, or Picture object that is being used as the input. Otherwise, a crash or other undefined behavior may occur.
 
-Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
@@ -176,7 +176,7 @@ async function PackBinaryImageToTiffFile(context: Context) {
 }
 ```
 
-<a id="packing-4"></a>
+<a id="packing5"></a>
 
 ## packing
 
@@ -243,6 +243,8 @@ async function Packing(context: Context) {
 }
 ```
 
+<a id="packing1"></a>
+
 ## packing
 
 ```TypeScript
@@ -292,7 +294,7 @@ async function Packing(context : Context) {
 }
 ```
 
-<a id="packing-1"></a>
+<a id="packing2"></a>
 
 ## packing
 
@@ -347,7 +349,7 @@ async function Packing(context : Context) {
 }
 ```
 
-<a id="packing-2"></a>
+<a id="packing3"></a>
 
 ## packing
 
@@ -407,7 +409,7 @@ async function Packing() {
 }
 ```
 
-<a id="packing-3"></a>
+<a id="packing4"></a>
 
 ## packing
 
@@ -470,6 +472,8 @@ async function Packing() {
   })
 }
 ```
+
+<a id="packtodata1"></a>
 
 ## packToData
 
@@ -534,7 +538,7 @@ async function PackToData(context : Context) {
 }
 ```
 
-<a id="packtodata-1"></a>
+<a id="packtodata2"></a>
 
 ## packToData
 
@@ -670,6 +674,8 @@ async function PackToDataFromPixelmapSequence(context : Context) {
 }
 ```
 
+<a id="packtofile1"></a>
+
 ## packToFile
 
 ```TypeScript
@@ -731,7 +737,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-1"></a>
+<a id="packtofile2"></a>
 
 ## packToFile
 
@@ -797,7 +803,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-2"></a>
+<a id="packtofile3"></a>
 
 ## packToFile
 
@@ -867,7 +873,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-3"></a>
+<a id="packtofile4"></a>
 
 ## packToFile
 
@@ -941,7 +947,7 @@ async function PackToFile(context : Context) {
 }
 ```
 
-<a id="packtofile-4"></a>
+<a id="packtofile5"></a>
 
 ## packToFile
 
@@ -1079,6 +1085,8 @@ async function PackToFile(context : Context) {
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -1120,7 +1128,7 @@ async function Release() {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 

@@ -8,7 +8,7 @@ Defines the parameter type for the globalConnect API. **ConnectOptionsCollection
 
 The following shows the examples of **StorageDefaultCreator\&lt;T&gt;** and **StorageDefaultCreator\&lt;S&gt;**:
 
-**Inheritance/Implementation:** ConnectOptionsCollections extends ConnectOptions<T>
+**Inheritance/Implementation:** ConnectOptionsCollections extends ConnectOptions&lt;T&gt;
 
 **Since:** 23
 

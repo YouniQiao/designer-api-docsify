@@ -6,13 +6,15 @@ interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 
 **SwipeGesture** is used to trigger a swipe gesture. This gesture is successfully recognized when the swipe speed exceeds the specified threshold, which is 100 vp/s by default.
 
-**Inheritance/Implementation:** SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
+**Inheritance/Implementation:** SwipeGestureInterface extends GestureInterface&lt;SwipeGestureInterface&gt;
 
 **Since:** 8
 
 <!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>--><!--Device-unnamed-interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="call1"></a>
 
 ## [[Call]]
 
@@ -42,7 +44,7 @@ Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&
 | --- | --- |
 | [SwipeGestureInterface](arkts-arkui-tapgesture-comp-swipegestureinterface-i.md) |  |
 
-<a id="call-1"></a>
+<a id="call2"></a>
 
 ## [[Call]]
 

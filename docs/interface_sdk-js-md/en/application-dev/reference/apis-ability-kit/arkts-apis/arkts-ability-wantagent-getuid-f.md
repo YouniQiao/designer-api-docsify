@@ -6,6 +6,8 @@
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
+<a id="getuid1"></a>
+
 ## getUid
 
 ```TypeScript
@@ -111,7 +113,7 @@ try {
 ```
 
 
-<a id="getuid-1"></a>
+<a id="getuid2"></a>
 
 ## getUid
 

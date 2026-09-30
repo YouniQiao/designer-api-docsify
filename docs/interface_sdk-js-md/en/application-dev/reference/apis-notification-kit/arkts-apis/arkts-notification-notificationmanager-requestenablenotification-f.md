@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="requestenablenotification1"></a>
+
 ## requestEnableNotification
 
 ```TypeScript
@@ -57,7 +59,7 @@ notificationManager.requestEnableNotification(requestEnableNotificationCallback)
 ```
 
 
-<a id="requestenablenotification-1"></a>
+<a id="requestenablenotification2"></a>
 
 ## requestEnableNotification
 
@@ -83,7 +85,7 @@ Requests notification to be enabled for this application. You can call this API 
 
 **See also:**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) checks whether notification is enabled for a specified user.
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled3) checks whether notification is enabled for a specified user.
 
 [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc.
 
@@ -138,7 +140,7 @@ class MyAbility extends UIAbility {
 ```
 
 
-<a id="requestenablenotification-2"></a>
+<a id="requestenablenotification3"></a>
 
 ## requestEnableNotification
 
@@ -187,7 +189,7 @@ notificationManager.requestEnableNotification().then(() => {
 ```
 
 
-<a id="requestenablenotification-3"></a>
+<a id="requestenablenotification4"></a>
 
 ## requestEnableNotification
 
@@ -213,7 +215,7 @@ Requests notification to be enabled for this application. You can call this API 
 
 **See also:**
 
-[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled-2) checks whether notification is enabled for a specified user.
+[isNotificationEnabled](arkts-notification-notificationmanager-isnotificationenabled-f.md#isnotificationenabled3) checks whether notification is enabled for a specified user.
 
 [openNotificationSettingsWithResult](arkts-notification-notificationmanager-opennotificationsettingswithresult-f.md) Opens the notification settings page of the application, which is presented in a semi-modal window and can be used to set notification switches, notification reminder methods, etc.
 

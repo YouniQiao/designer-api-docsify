@@ -6,13 +6,13 @@ export interface NdefTag extends TagSession
 
 提供对已格式化为NDEF的NFC标签的数据和操作的访问，继承自TagSession。
 
-TagSession是所有NFC Tag技术类型的基类，提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-tagsession-i.md)。
+TagSession是所有NFC Tag技术类型的基类，提供建立连接和发送数据等共同接口。具体请参见[TagSession](arkts-connectivity-tagsession-i.md)。
 
 NdefTag获取方式请参考[nfc-tag开发指南](../../../connectivity/nfc/nfc-tag-access-guide.md)。
 
 以下是NdefTag的独有接口。
 
-**继承/实现关系：** NdefTag extends [TagSession](arkts-connectivity-tagsession-tagsession-i.md)
+**继承/实现关系：** NdefTag extends [TagSession](arkts-connectivity-tagsession-i.md)
 
 **起始版本：** 9
 
@@ -207,6 +207,8 @@ let isWritable : boolean = ndefTag.isNdefWritable();
 console.info("ndef isNdefWritable: " + isWritable);
 ```
 
+<a id="readndef1"></a>
+
 ## readNdef
 
 ```TypeScript
@@ -296,7 +298,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="readndef-1"></a>
+<a id="readndef2"></a>
 
 ## readNdef
 
@@ -334,6 +336,8 @@ readNdef(callback: AsyncCallback<NdefMessage>): void
 **示例**
 
 参见 [readNdef](#readndef)
+
+<a id="setreadonly1"></a>
 
 ## setReadOnly
 
@@ -397,7 +401,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="setreadonly-1"></a>
+<a id="setreadonly2"></a>
 
 ## setReadOnly
 
@@ -462,6 +466,8 @@ function nfcTechDemo() {
     }
 }
 ```
+
+<a id="writendef1"></a>
 
 ## writeNdef
 
@@ -568,7 +574,7 @@ function nfcTechDemo() {
 }
 ```
 
-<a id="writendef-1"></a>
+<a id="writendef2"></a>
 
 ## writeNdef
 

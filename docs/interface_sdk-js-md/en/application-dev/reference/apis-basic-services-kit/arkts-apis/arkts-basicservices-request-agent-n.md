@@ -24,18 +24,18 @@ import { request } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-basicservices-agent-create-f.md#create) | Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. |
-| [create](arkts-basicservices-agent-create-f.md#create-1) | Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. |
+| [create](arkts-basicservices-agent-create-f.md#create1) | Creates an upload or download task and adds it to the queue. This API uses an asynchronous callback to return the result. HTTP/HTTPS is supported. |
+| [create](arkts-basicservices-agent-create-f.md#create2) | Creates an upload or download task and adds it to the queue. This API uses a promise to return the result. HTTP/ HTTPS is supported. |
 | [getTask](arkts-basicservices-agent-gettask-f.md) | Obtains task information based on the task ID. This API uses a promise to return the result. |
-| [remove](arkts-basicservices-agent-remove-f.md#remove) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released. |
-| [remove](arkts-basicservices-agent-remove-f.md#remove-1) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released. |
-| [show](arkts-basicservices-agent-show-f.md#show) | Queries the task details based on the task ID. This API uses an asynchronous callback to return the result. |
-| [show](arkts-basicservices-agent-show-f.md#show-1) | Queries the task details based on the task ID. This API uses a promise to return the result. |
-| [touch](arkts-basicservices-agent-touch-f.md#touch) | Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the result. |
-| [touch](arkts-basicservices-agent-touch-f.md#touch-1) | Queries the task details based on the task ID and token. This API uses a promise to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search-1) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses an asynchronous callback to return the result. |
-| [search](arkts-basicservices-agent-search-f.md#search-2) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses a promise to return the result. |
+| [remove](arkts-basicservices-agent-remove-f.md#remove1) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses an asynchronous callback to return the result. After this API is called, the **task** object and its callback function are released. |
+| [remove](arkts-basicservices-agent-remove-f.md#remove2) | Removes a specified task of the invoker. If the task is being executed, the task is forced to stop. This API uses a promise to return the result. After this API is called, the **task** object and its callback function are released. |
+| [show](arkts-basicservices-agent-show-f.md#show1) | Queries the task details based on the task ID. This API uses an asynchronous callback to return the result. |
+| [show](arkts-basicservices-agent-show-f.md#show2) | Queries the task details based on the task ID. This API uses a promise to return the result. |
+| [touch](arkts-basicservices-agent-touch-f.md#touch1) | Queries the task details based on the task ID and token. This API uses an asynchronous callback to return the result. |
+| [touch](arkts-basicservices-agent-touch-f.md#touch2) | Queries the task details based on the task ID and token. This API uses a promise to return the result. |
+| [search](arkts-basicservices-agent-search-f.md#search1) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). The IDs of all tasks from the invoking time to 24 hours ago are searched. This API uses an asynchronous callback to return the result. |
+| [search](arkts-basicservices-agent-search-f.md#search2) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses an asynchronous callback to return the result. |
+| [search](arkts-basicservices-agent-search-f.md#search3) | Searches for task IDs based on [Filter](arkts-basicservices-agent-filter-i.md). This API uses a promise to return the result. |
 | [createGroup](arkts-basicservices-agent-creategroup-f.md) | Creates a group based on [GroupConfig](arkts-basicservices-agent-groupconfig-i.md). This API uses a promise to return the result. |
 | [attachGroup](arkts-basicservices-agent-attachgroup-f.md) | Attaches multiple download task IDs to a specified group ID. This API uses a promise to return the result. |
 | [deleteGroup](arkts-basicservices-agent-deletegroup-f.md) | Deletes a specified group. No task ID can be added to the group. This API uses a promise to return the result. |
@@ -45,8 +45,8 @@ import { request } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [query](arkts-basicservices-agent-query-f-sys.md#query) | Queries specified task details. Creates a group based on GroupConfig |
-| [query](arkts-basicservices-agent-query-f-sys.md#query-1) | Queries specified task details. |
+| [query](arkts-basicservices-agent-query-f-sys.md#query1) | Queries specified task details. Creates a group based on GroupConfig |
+| [query](arkts-basicservices-agent-query-f-sys.md#query2) | Queries specified task details. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -63,7 +63,7 @@ import { request } from '@kit.BasicServicesKit';
 | [Filter](arkts-basicservices-agent-filter-i.md) | Defines the filter criteria. |
 | [TaskInfo](arkts-basicservices-agent-taskinfo-i.md) | Defines the data structure of the task information for query. The fields available vary depending on the query type. |
 | [HttpResponse](arkts-basicservices-agent-httpresponse-i.md) | Describes the data structure of the task response header. |
-| [Task](arkts-basicservices-agent-task-i.md) | Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md#create-1) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md). |
+| [Task](arkts-basicservices-agent-task-i.md) | Implements an upload or download task. Before using this API, you must obtain a **Task** object, from a promise through [request.agent.create](arkts-basicservices-agent-create-f.md#create2) or from a callback through [request.agent.create](arkts-basicservices-agent-create-f.md#create1). |
 | [GroupConfig](arkts-basicservices-agent-groupconfig-i.md) | Describes group configuration options for download tasks. |
 
 <!--Del-->

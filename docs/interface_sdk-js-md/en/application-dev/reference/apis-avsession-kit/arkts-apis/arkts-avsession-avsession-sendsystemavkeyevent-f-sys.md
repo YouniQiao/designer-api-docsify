@@ -6,6 +6,8 @@
 import { avSession } from '@kit.AVSessionKit';
 ```
 
+<a id="sendsystemavkeyevent1"></a>
+
 ## sendSystemAVKeyEvent
 
 ```TypeScript
@@ -55,7 +57,7 @@ avSession.sendSystemAVKeyEvent(event, () => {
 ```
 
 
-<a id="sendsystemavkeyevent-1"></a>
+<a id="sendsystemavkeyevent2"></a>
 
 ## sendSystemAVKeyEvent
 

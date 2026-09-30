@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="isdistributedenabledbybundle1"></a>
+
 ## isDistributedEnabledByBundle
 
 ```TypeScript
@@ -18,7 +20,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption, callback: AsyncCallb
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabledByBundle](#isdistributedenabledbybundle-2)(bundle: BundleOption, deviceType: string)
+**替代接口：** [isDistributedEnabledByBundle](#isdistributedenabledbybundle3)(bundle: BundleOption, deviceType: string)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -68,7 +70,7 @@ notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByB
 ```
 
 
-<a id="isdistributedenabledbybundle-1"></a>
+<a id="isdistributedenabledbybundle2"></a>
 
 ## isDistributedEnabledByBundle
 
@@ -82,7 +84,7 @@ function isDistributedEnabledByBundle(bundle: BundleOption): Promise<boolean>
 
 **废弃版本：** 26.0.0
 
-**替代接口：** [isDistributedEnabledByBundle](#isdistributedenabledbybundle-2)(bundle: BundleOption, deviceType: string)
+**替代接口：** [isDistributedEnabledByBundle](#isdistributedenabledbybundle3)(bundle: BundleOption, deviceType: string)
 
 **需要权限：** ohos.permission.NOTIFICATION_CONTROLLER
 
@@ -134,7 +136,7 @@ notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) =>
 ```
 
 
-<a id="isdistributedenabledbybundle-2"></a>
+<a id="isdistributedenabledbybundle3"></a>
 
 ## isDistributedEnabledByBundle
 

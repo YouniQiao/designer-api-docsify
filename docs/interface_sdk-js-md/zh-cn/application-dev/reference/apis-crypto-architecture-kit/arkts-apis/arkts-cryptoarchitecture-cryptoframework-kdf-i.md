@@ -20,6 +20,8 @@ interface Kdf
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 ```
 
+<a id="generatesecret1"></a>
+
 ## generateSecret
 
 ```TypeScript
@@ -100,7 +102,7 @@ kdf.generateSecret(spec, (err, secret) => {
 });
 ```
 
-<a id="generatesecret-1"></a>
+<a id="generatesecret2"></a>
 
 ## generateSecret
 

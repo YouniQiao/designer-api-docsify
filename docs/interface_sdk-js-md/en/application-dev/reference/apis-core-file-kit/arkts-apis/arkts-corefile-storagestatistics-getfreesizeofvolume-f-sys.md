@@ -6,6 +6,8 @@
 import { storageStatistics } from '@kit.CoreFileKit';
 ```
 
+<a id="getfreesizeofvolume1"></a>
+
 ## getFreeSizeOfVolume
 
 ```TypeScript
@@ -68,7 +70,7 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
 ```
 
 
-<a id="getfreesizeofvolume-1"></a>
+<a id="getfreesizeofvolume2"></a>
 
 ## getFreeSizeOfVolume
 

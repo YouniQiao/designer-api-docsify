@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="setpreferrednetwork1"></a>
+
 ## setPreferredNetwork
 
 ```TypeScript
@@ -61,7 +63,7 @@ radio.setPreferredNetwork(slotId, mode, (err: BusinessError) => {
 ```
 
 
-<a id="setpreferrednetwork-1"></a>
+<a id="setpreferrednetwork2"></a>
 
 ## setPreferredNetwork
 

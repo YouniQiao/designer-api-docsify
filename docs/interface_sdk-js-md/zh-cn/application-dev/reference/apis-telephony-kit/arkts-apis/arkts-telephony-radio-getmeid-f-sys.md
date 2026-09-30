@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="getmeid1"></a>
+
 ## getMEID
 
 ```TypeScript
@@ -59,7 +61,7 @@ radio.getMEID(slotId, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getmeid-1"></a>
+<a id="getmeid2"></a>
 
 ## getMEID
 
@@ -117,7 +119,7 @@ radio.getMEID(slotId).then((data: string) => {
 ```
 
 
-<a id="getmeid-2"></a>
+<a id="getmeid3"></a>
 
 ## getMEID
 

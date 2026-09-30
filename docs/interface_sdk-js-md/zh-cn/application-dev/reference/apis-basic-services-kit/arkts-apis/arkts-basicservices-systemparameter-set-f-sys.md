@@ -6,6 +6,8 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
+<a id="set1"></a>
+
 ## set
 
 ```TypeScript
@@ -18,7 +20,7 @@ function set(key: string, value: string, callback: AsyncCallback<void>): void
 
 **废弃版本：** 9
 
-**替代接口：** set
+**替代接口：** [set](arkts-basicservices-systemparameterenhance-set-f-sys.md)
 
 <!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -53,7 +55,7 @@ try {
 ```
 
 
-<a id="set-1"></a>
+<a id="set2"></a>
 
 ## set
 
@@ -67,7 +69,7 @@ function set(key: string, value: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** set
+**替代接口：** [set](arkts-basicservices-systemparameterenhance-set-f-sys.md)
 
 <!--Device-systemParameter-function set(key: string, value: string): Promise<void>--><!--Device-systemParameter-function set(key: string, value: string): Promise<void>-End-->
 

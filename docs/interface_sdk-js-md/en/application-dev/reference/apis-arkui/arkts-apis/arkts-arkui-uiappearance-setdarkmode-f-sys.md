@@ -6,6 +6,8 @@
 import { uiAppearance } from '@kit.ArkUI';
 ```
 
+<a id="setdarkmode1"></a>
+
 ## setDarkMode
 
 ```TypeScript
@@ -62,7 +64,7 @@ try {
 ```
 
 
-<a id="setdarkmode-1"></a>
+<a id="setdarkmode2"></a>
 
 ## setDarkMode
 

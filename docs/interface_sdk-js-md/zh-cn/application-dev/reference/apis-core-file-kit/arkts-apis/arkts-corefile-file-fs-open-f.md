@@ -68,7 +68,7 @@ declare function open(path: string, mode?: number): Promise<File>
 | 13900044 | Network is unreachable<br>**适用版本：** 12+ |
 
 
-<a id="open-1"></a>
+<a id="open2"></a>
 
 ## open
 
@@ -125,7 +125,7 @@ declare function open(path: string, callback: AsyncCallback<File>): void
 | 13900042 | Unknown error |
 
 
-<a id="open-2"></a>
+<a id="open3"></a>
 
 ## open
 

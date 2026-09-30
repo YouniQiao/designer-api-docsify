@@ -6,6 +6,8 @@
 import { batteryStats } from '@kit.BasicServicesKit';
 ```
 
+<a id="getbatterystats1"></a>
+
 ## getBatteryStats
 
 ```TypeScript
@@ -48,7 +50,7 @@ batteryStats.getBatteryStats()
 ```
 
 
-<a id="getbatterystats-1"></a>
+<a id="getbatterystats2"></a>
 
 ## getBatteryStats
 

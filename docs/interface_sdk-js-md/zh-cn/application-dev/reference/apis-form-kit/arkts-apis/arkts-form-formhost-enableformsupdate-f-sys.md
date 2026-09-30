@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="enableformsupdate1"></a>
+
 ## enableFormsUpdate
 
 ```TypeScript
@@ -62,7 +64,7 @@ try {
 ```
 
 
-<a id="enableformsupdate-1"></a>
+<a id="enableformsupdate2"></a>
 
 ## enableFormsUpdate
 

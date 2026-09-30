@@ -6,6 +6,8 @@
 import { zlib } from '@kit.BasicServicesKit';
 ```
 
+<a id="decompressfile1"></a>
+
 ## decompressFile
 
 ```TypeScript
@@ -75,7 +77,7 @@ try {
 ```
 
 
-<a id="decompressfile-1"></a>
+<a id="decompressfile2"></a>
 
 ## decompressFile
 
@@ -141,7 +143,7 @@ try {
 ```
 
 
-<a id="decompressfile-2"></a>
+<a id="decompressfile3"></a>
 
 ## decompressFile
 

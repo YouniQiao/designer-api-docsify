@@ -8,13 +8,15 @@ declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribu
 
 除支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)和[滚动组件通用事件](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#事件)外，还支持以下事件：
 
-**继承/实现关系：** WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>
+**继承/实现关系：** WaterFlowAttribute extends ScrollableCommonMethod&lt;WaterFlowAttribute&gt;
 
 **起始版本：** 9
 
 <!--Device-unnamed-declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>--><!--Device-unnamed-declare class WaterFlowAttribute extends ScrollableCommonMethod<WaterFlowAttribute>-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="cachedcount1"></a>
 
 ## cachedCount
 
@@ -42,7 +44,7 @@ cachedCount(value: number)
 | --- | --- | --- | --- |
 | value | number | 是 | 预加载的FlowItem的数量。<br>默认值：根据屏幕内显示的节点个数设置，最大值为16。<br>取值范围：[0, +∞)，设置为小于0的值时，按1处理。 |
 
-<a id="cachedcount-1"></a>
+<a id="cachedcount2"></a>
 
 ## cachedCount
 
@@ -52,7 +54,7 @@ cachedCount(count: number, show: boolean)
 
 设置预加载的FlowItem数量，并配置是否显示预加载节点。
 
-配合[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
+配合[clip](arkts-arkui-common-comp-commonmethod-c.md#clip1)或[clipContent](arkts-arkui-common-comp-scrollablecommonmethod-c.md#clipcontent)属性可以显示出预加载节点。
 
 只在[LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md)和开启了virtualScroll开关的[Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md)中生效，超出显示及缓存范围的FlowItem会被释放。
 
@@ -97,6 +99,8 @@ columnsGap(value: Length)
 | --- | --- | --- | --- |
 | value | [Length](../arkts-apis/arkts-arkui-length-t.md) | 是 | 列与列的间距。<br>默认值：0<br>单位：vp<br>取值范围：[0, +∞)，小于0时按0处理。 |
 
+<a id="columnstemplate1"></a>
+
 ## columnsTemplate
 
 ```TypeScript
@@ -129,7 +133,7 @@ columnsTemplate(value: string)
 | --- | --- | --- | --- |
 | value | string | 是 | 当前瀑布流组件布局列的数量。<br>默认值：'1fr' |
 
-<a id="columnstemplate-1"></a>
+<a id="columnstemplate2"></a>
 
 ## columnsTemplate
 
@@ -139,7 +143,7 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 设置当前瀑布流组件布局列的数量，不设置时默认1列。当[layoutDirection](#layoutdirection)设置为横向布局（FlexDirection.Row或FlexDirection.RowReverse）时，columnsTemplate不生效，由[rowsTemplate](#rowstemplate)控制布局。使用[sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md)分组混合布局时，此属性会被忽略。
 
-当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。
+当value设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate1)。
 
 当value设置为ItemFillPolicy类型时，将根据WaterFlow组件宽度对应[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数。
 
@@ -425,7 +429,7 @@ rowsGap(value: Length)
 rowsTemplate(value: string)
 ```
 
-设置当前瀑布流组件布局行的数量，不设置时默认1行。当[layoutDirection](#layoutdirection)设置为纵向布局（FlexDirection.Column或FlexDirection.ColumnReverse）或不设置时，rowsTemplate不生效，由[columnsTemplate](#columnstemplate)控制布局。使用[sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md)分组混合布局时，此属性会被忽略。
+设置当前瀑布流组件布局行的数量，不设置时默认1行。当[layoutDirection](#layoutdirection)设置为纵向布局（FlexDirection.Column或FlexDirection.ColumnReverse）或不设置时，rowsTemplate不生效，由[columnsTemplate](#columnstemplate1)控制布局。使用[sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md)分组混合布局时，此属性会被忽略。
 
 例如，'1fr 1fr 2fr'是将父组件分3行，将父组件允许的高分为4等份，第1行占1份，第2行占1份，第3行占2份。
 

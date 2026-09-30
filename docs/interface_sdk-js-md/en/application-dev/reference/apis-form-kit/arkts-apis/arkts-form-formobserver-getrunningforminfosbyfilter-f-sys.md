@@ -6,6 +6,8 @@
 import { formObserver } from '@kit.FormKit';
 ```
 
+<a id="getrunningforminfosbyfilter1"></a>
+
 ## getRunningFormInfosByFilter
 
 ```TypeScript
@@ -52,7 +54,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
 
-<a id="getrunningforminfosbyfilter-1"></a>
+<a id="getrunningforminfosbyfilter2"></a>
 
 ## getRunningFormInfosByFilter
 

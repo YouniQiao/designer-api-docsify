@@ -6,7 +6,7 @@ declare interface MenuItemConfiguration extends CommonConfiguration<MenuItemConf
 
 开发者需要自定义class实现ContentModifier接口。继承自[CommonConfiguration](arkts-arkui-common-comp-commonconfiguration-i.md)。
 
-**继承/实现关系：** MenuItemConfiguration extends CommonConfiguration<MenuItemConfiguration>
+**继承/实现关系：** MenuItemConfiguration extends CommonConfiguration&lt;MenuItemConfiguration&gt;
 
 **起始版本：** 12
 
@@ -24,7 +24,7 @@ triggerSelect(index: number, value: string): void
 
 <br>**说明：** 
 
-<br>index会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect)回调中的文本参数。
+<br>index会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect1)回调中的索引参数； value会返回给Select组件显示，同时会赋值给事件[onSelect](arkts-arkui-select-comp-attribute.md#onselect1)回调中的文本参数。
 
 **起始版本：** 12
 

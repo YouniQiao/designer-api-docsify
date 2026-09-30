@@ -6,6 +6,8 @@
 import { connection } from '@kit.ConnectivityKit';
 ```
 
+<a id="getremotedevicename1"></a>
+
 ## getRemoteDeviceName
 
 ```TypeScript
@@ -61,7 +63,7 @@ try {
 ```
 
 
-<a id="getremotedevicename-1"></a>
+<a id="getremotedevicename2"></a>
 
 ## getRemoteDeviceName
 

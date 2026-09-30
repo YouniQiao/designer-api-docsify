@@ -12,7 +12,7 @@ The component converts the coordinates of the event and then passes it to the la
 
 The following events are supported:
 
-**Inheritance/Implementation:** UIExtensionComponentAttribute extends CommonMethod<UIExtensionComponentAttribute>
+**Inheritance/Implementation:** UIExtensionComponentAttribute extends CommonMethod&lt;UIExtensionComponentAttribute&gt;
 
 **Since:** 10
 

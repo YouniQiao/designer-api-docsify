@@ -6,6 +6,8 @@
 import { bundle } from '@kit.AbilityKit';
 ```
 
+<a id="getapplicationinfos1"></a>
+
 ## getApplicationInfos
 
 ```TypeScript
@@ -18,7 +20,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -34,7 +36,7 @@ Obtains information about all installed apps for a specified user. This API uses
 | --- | --- | --- | --- |
 | bundleFlags | number | Yes | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -54,7 +56,7 @@ bundle.getApplicationInfos(bundleFlags, userId, (err, data) => {
 ```
 
 
-<a id="getapplicationinfos-1"></a>
+<a id="getapplicationinfos2"></a>
 
 ## getApplicationInfos
 
@@ -68,7 +70,7 @@ Obtains information about installed apps for the user to which the caller belong
 
 **Deprecated since:** 8
 
-**Substitutes:** getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -83,7 +85,7 @@ Obtains information about installed apps for the user to which the caller belong
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleFlags | number | Yes | Flag used to specify the information contained in the returned application information object. Value range: see the application information related flags in BundleFlag. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getApplicationInfos is successful, **err** is **undefined**, and the list of app information as the input parameter at program startup. Otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -102,7 +104,7 @@ bundle.getApplicationInfos(bundleFlags, (err, data) => {
 ```
 
 
-<a id="getapplicationinfos-2"></a>
+<a id="getapplicationinfos3"></a>
 
 ## getApplicationInfos
 
@@ -116,7 +118,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 **Deprecated since:** 8
 
-**Substitutes:** getAllApplicationInfo
+**Substitutes:** [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -137,7 +139,7 @@ Obtains information about all installed apps for a specified user. This API uses
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)&gt;&gt; | Promise used to return the list of app information when obtained successfully. |
+| Promise&lt;Array&lt;[ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)&gt;&gt; | Promise used to return the list of app information when obtained successfully. |
 
 **Examples**
 

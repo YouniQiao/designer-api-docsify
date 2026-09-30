@@ -6,7 +6,7 @@ declare class SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>
 
 Defines a swipe gesture handler object.
 
-**Inheritance/Implementation:** SwipeGestureHandler extends GestureHandler<SwipeGestureHandler>
+**Inheritance/Implementation:** SwipeGestureHandler extends GestureHandler&lt;SwipeGestureHandler&gt;
 
 **Since:** 12
 

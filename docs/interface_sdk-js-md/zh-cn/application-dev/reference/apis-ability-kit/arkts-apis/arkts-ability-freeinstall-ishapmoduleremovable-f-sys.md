@@ -6,6 +6,8 @@
 import { freeInstall } from '@kit.AbilityKit';
 ```
 
+<a id="ishapmoduleremovable1"></a>
+
 ## isHapModuleRemovable
 
 ```TypeScript
@@ -44,7 +46,7 @@ function isHapModuleRemovable(bundleName: string, moduleName: string, callback: 
 | [17700002](../errorcode-bundle.md#17700002-指定的modulename不存在) | The specified module name is not found. |
 
 
-<a id="ishapmoduleremovable-1"></a>
+<a id="ishapmoduleremovable2"></a>
 
 ## isHapModuleRemovable
 

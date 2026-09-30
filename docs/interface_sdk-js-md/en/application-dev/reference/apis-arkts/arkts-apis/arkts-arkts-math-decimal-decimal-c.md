@@ -18,6 +18,8 @@ An arbitrary-precision Decimal type
 import { Decimal } from '@kit.ArkTS';
 ```
 
+<a id="abs1"></a>
+
 ## abs
 
 ```TypeScript
@@ -40,7 +42,7 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="abs-1"></a>
+<a id="abs2"></a>
 
 ## abs
 
@@ -76,6 +78,8 @@ Return a new Decimal whose value is the absolute value of `n`.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="acos1"></a>
+
 ## acos
 
 ```TypeScript
@@ -104,7 +108,7 @@ Return a new Decimal whose value is the arccosine (inverse cosine) in radians of
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="acos-1"></a>
+<a id="acos2"></a>
 
 ## acos
 
@@ -141,6 +145,8 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="acosh1"></a>
+
 ## acosh
 
 ```TypeScript
@@ -169,7 +175,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine in radi
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="acosh-1"></a>
+<a id="acosh2"></a>
 
 ## acosh
 
@@ -206,6 +212,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="add1"></a>
+
 ## add
 
 ```TypeScript
@@ -240,7 +248,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="add-1"></a>
+<a id="add2"></a>
 
 ## add
 
@@ -277,6 +285,8 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="asin1"></a>
+
 ## asin
 
 ```TypeScript
@@ -305,7 +315,7 @@ Return a new Decimal whose value is the arcsine (inverse sine) in radians of the
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="asin-1"></a>
+<a id="asin2"></a>
 
 ## asin
 
@@ -342,6 +352,8 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="asinh1"></a>
+
 ## asinh
 
 ```TypeScript
@@ -370,7 +382,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine in radian
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="asinh-1"></a>
+<a id="asinh2"></a>
 
 ## asinh
 
@@ -407,6 +419,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="atan1"></a>
+
 ## atan
 
 ```TypeScript
@@ -435,7 +449,7 @@ Return a new Decimal whose value is the arctangent (inverse tangent) in radians 
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="atan-1"></a>
+<a id="atan2"></a>
 
 ## atan
 
@@ -508,6 +522,8 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="atanh1"></a>
+
 ## atanh
 
 ```TypeScript
@@ -536,7 +552,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent in rad
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="atanh-1"></a>
+<a id="atanh2"></a>
 
 ## atanh
 
@@ -573,6 +589,8 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="cbrt1"></a>
+
 ## cbrt
 
 ```TypeScript
@@ -595,7 +613,7 @@ Return a new Decimal whose value is the cube root of the value of this Decimal, 
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="cbrt-1"></a>
+<a id="cbrt2"></a>
 
 ## cbrt
 
@@ -631,6 +649,8 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="ceil1"></a>
+
 ## ceil
 
 ```TypeScript
@@ -653,7 +673,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="ceil-1"></a>
+<a id="ceil2"></a>
 
 ## ceil
 
@@ -688,6 +708,8 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+
+<a id="clamp1"></a>
 
 ## clamp
 
@@ -725,7 +747,7 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
-<a id="clamp-1"></a>
+<a id="clamp2"></a>
 
 ## clamp
 
@@ -826,6 +848,8 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="cos1"></a>
+
 ## cos
 
 ```TypeScript
@@ -848,7 +872,7 @@ Return a new Decimal whose value is the cosine of the value in radians of this D
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="cos-1"></a>
+<a id="cos2"></a>
 
 ## cos
 
@@ -884,6 +908,8 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="cosh1"></a>
+
 ## cosh
 
 ```TypeScript
@@ -906,7 +932,7 @@ Return a new Decimal whose value is the hyperbolic cosine of the value in radian
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="cosh-1"></a>
+<a id="cosh2"></a>
 
 ## cosh
 
@@ -964,6 +990,8 @@ Return the number of decimal places of the value of this Decimal.
 | --- | --- |
 | number | the number type |
 
+<a id="div1"></a>
+
 ## div
 
 ```TypeScript
@@ -998,7 +1026,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="div-1"></a>
+<a id="div2"></a>
 
 ## div
 
@@ -1103,6 +1131,8 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="exp1"></a>
+
 ## exp
 
 ```TypeScript
@@ -1131,7 +1161,7 @@ Return a new Decimal whose value is the natural exponential of the value of this
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="exp-1"></a>
+<a id="exp2"></a>
 
 ## exp
 
@@ -1168,6 +1198,8 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="floor1"></a>
+
 ## floor
 
 ```TypeScript
@@ -1190,7 +1222,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a whole
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="floor-1"></a>
+<a id="floor2"></a>
 
 ## floor
 
@@ -1528,6 +1560,8 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="ln1"></a>
+
 ## ln
 
 ```TypeScript
@@ -1556,7 +1590,7 @@ Return a new Decimal whose value is the natural logarithm of the value of this D
 | --- | --- |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="ln-1"></a>
+<a id="ln2"></a>
 
 ## ln
 
@@ -1593,6 +1627,8 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="log1"></a>
+
 ## log
 
 ```TypeScript
@@ -1628,7 +1664,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="log-1"></a>
+<a id="log2"></a>
 
 ## log
 
@@ -1804,6 +1840,8 @@ Return a new Decimal whose value is the minimum of the arguments.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="mod1"></a>
+
 ## mod
 
 ```TypeScript
@@ -1838,7 +1876,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="mod-1"></a>
+<a id="mod2"></a>
 
 ## mod
 
@@ -1875,6 +1913,8 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="mul1"></a>
+
 ## mul
 
 ```TypeScript
@@ -1909,7 +1949,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="mul-1"></a>
+<a id="mul2"></a>
 
 ## mul
 
@@ -1968,6 +2008,8 @@ Return a new Decimal whose value is the value of this Decimal negated, i.e. as i
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
+<a id="pow1"></a>
+
 ## pow
 
 ```TypeScript
@@ -2003,7 +2045,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
-<a id="pow-1"></a>
+<a id="pow2"></a>
 
 ## pow
 
@@ -2041,6 +2083,8 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
+<a id="precision1"></a>
+
 ## precision
 
 ```TypeScript
@@ -2063,7 +2107,7 @@ Return the number of significant digits of the value of this Decimal.
 | --- | --- |
 | number | the number type |
 
-<a id="precision-1"></a>
+<a id="precision2"></a>
 
 ## precision
 
@@ -2099,6 +2143,8 @@ Return the number of significant digits of the value of this Decimal, whether to
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `includeZeros` is out of range. |
 
+<a id="random1"></a>
+
 ## random
 
 ```TypeScript
@@ -2127,7 +2173,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 | --- | --- |
 | [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
-<a id="random-1"></a>
+<a id="random2"></a>
 
 ## random
 
@@ -2263,6 +2309,8 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="sin1"></a>
+
 ## sin
 
 ```TypeScript
@@ -2285,7 +2333,7 @@ Return a new Decimal whose value is the sine of the value in radians of this Dec
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="sin-1"></a>
+<a id="sin2"></a>
 
 ## sin
 
@@ -2321,6 +2369,8 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="sinh1"></a>
+
 ## sinh
 
 ```TypeScript
@@ -2343,7 +2393,7 @@ Return a new Decimal whose value is the hyperbolic sine of the value in radians 
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="sinh-1"></a>
+<a id="sinh2"></a>
 
 ## sinh
 
@@ -2379,6 +2429,8 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="sqrt1"></a>
+
 ## sqrt
 
 ```TypeScript
@@ -2401,7 +2453,7 @@ Return a new Decimal whose value is the square root of this Decimal, rounded to 
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="sqrt-1"></a>
+<a id="sqrt2"></a>
 
 ## sqrt
 
@@ -2437,6 +2489,8 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="sub1"></a>
+
 ## sub
 
 ```TypeScript
@@ -2471,7 +2525,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="sub-1"></a>
+<a id="sub2"></a>
 
 ## sub
 
@@ -2544,6 +2598,8 @@ Only the result is rounded, not the intermediate calculations.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="tan1"></a>
+
 ## tan
 
 ```TypeScript
@@ -2566,7 +2622,7 @@ Return a new Decimal whose value is the tangent of the value in radians of this 
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="tan-1"></a>
+<a id="tan2"></a>
 
 ## tan
 
@@ -2602,6 +2658,8 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="tanh1"></a>
+
 ## tanh
 
 ```TypeScript
@@ -2624,7 +2682,7 @@ Return a new Decimal whose value is the hyperbolic tangent of the value in radia
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="tanh-1"></a>
+<a id="tanh2"></a>
 
 ## tanh
 
@@ -2660,6 +2718,8 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="tobinary1"></a>
+
 ## toBinary
 
 ```TypeScript
@@ -2682,7 +2742,7 @@ Return a string representing the value of this Decimal in base 2.
 | --- | --- |
 | string | the string type |
 
-<a id="tobinary-1"></a>
+<a id="tobinary2"></a>
 
 ## toBinary
 
@@ -2718,7 +2778,7 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
-<a id="tobinary-2"></a>
+<a id="tobinary3"></a>
 
 ## toBinary
 
@@ -2755,6 +2815,8 @@ Return a string representing the value of this Decimal in base 2, round to `sign
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits &#124; rounding` is out of range. |
 
+<a id="todecimalplaces1"></a>
+
 ## toDecimalPlaces
 
 ```TypeScript
@@ -2777,7 +2839,7 @@ Return a new Decimal whose value is the value of this Decimal.
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="todecimalplaces-1"></a>
+<a id="todecimalplaces2"></a>
 
 ## toDecimalPlaces
 
@@ -2813,7 +2875,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
-<a id="todecimalplaces-2"></a>
+<a id="todecimalplaces3"></a>
 
 ## toDecimalPlaces
 
@@ -2850,6 +2912,8 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
+<a id="toexponential1"></a>
+
 ## toExponential
 
 ```TypeScript
@@ -2872,7 +2936,7 @@ Return a string representing the value of this Decimal in exponential notation.
 | --- | --- |
 | string | the string type |
 
-<a id="toexponential-1"></a>
+<a id="toexponential2"></a>
 
 ## toExponential
 
@@ -2908,7 +2972,7 @@ Return a string representing the value of this Decimal in exponential notation r
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
-<a id="toexponential-2"></a>
+<a id="toexponential3"></a>
 
 ## toExponential
 
@@ -2945,6 +3009,8 @@ Return a string representing the value of this Decimal in exponential notation r
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
+<a id="tofixed1"></a>
+
 ## toFixed
 
 ```TypeScript
@@ -2967,7 +3033,7 @@ Return a string representing the value of this Decimal in normal (fixed-point).
 | --- | --- |
 | string | the string type |
 
-<a id="tofixed-1"></a>
+<a id="tofixed2"></a>
 
 ## toFixed
 
@@ -3003,7 +3069,7 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces` is out of range. |
 
-<a id="tofixed-2"></a>
+<a id="tofixed3"></a>
 
 ## toFixed
 
@@ -3040,6 +3106,8 @@ Return a string representing the value of this Decimal in normal (fixed-point) n
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `decimalPlaces &#124; rounding` is out of range. |
 
+<a id="tofraction1"></a>
+
 ## toFraction
 
 ```TypeScript
@@ -3062,7 +3130,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md)[] | the Decimal[] type |
 
-<a id="tofraction-1"></a>
+<a id="tofraction2"></a>
 
 ## toFraction
 
@@ -3098,6 +3166,8 @@ Return an array representing the value of this Decimal as a simple fraction with
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
+<a id="tohexadecimal1"></a>
+
 ## toHexadecimal
 
 ```TypeScript
@@ -3120,7 +3190,7 @@ Return a string representing the value of this Decimal in base 16
 | --- | --- |
 | string | the string type |
 
-<a id="tohexadecimal-1"></a>
+<a id="tohexadecimal2"></a>
 
 ## toHexadecimal
 
@@ -3156,7 +3226,7 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
-<a id="tohexadecimal-2"></a>
+<a id="tohexadecimal3"></a>
 
 ## toHexadecimal
 
@@ -3193,6 +3263,8 @@ Return a string representing the value of this Decimal in base 16, round to `sig
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits &#124; rounding` is out of range. |
 
+<a id="tonearest1"></a>
+
 ## toNearest
 
 ```TypeScript
@@ -3227,7 +3299,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
 
-<a id="tonearest-1"></a>
+<a id="tonearest2"></a>
 
 ## toNearest
 
@@ -3287,6 +3359,8 @@ Return the value of this Decimal converted to a number primitive. Zero keeps its
 | --- | --- |
 | number | the number type |
 
+<a id="tooctal1"></a>
+
 ## toOctal
 
 ```TypeScript
@@ -3309,7 +3383,7 @@ Return a string representing the value of this Decimal in base 8.
 | --- | --- |
 | string | the string type |
 
-<a id="tooctal-1"></a>
+<a id="tooctal2"></a>
 
 ## toOctal
 
@@ -3345,7 +3419,7 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
-<a id="tooctal-2"></a>
+<a id="tooctal3"></a>
 
 ## toOctal
 
@@ -3382,6 +3456,8 @@ Return a string representing the value of this Decimal in base 8, round to `sign
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits &#124; rounding` is out of range. |
 
+<a id="toprecision1"></a>
+
 ## toPrecision
 
 ```TypeScript
@@ -3404,7 +3480,7 @@ Return a string representing the value of this Decimal.
 | --- | --- |
 | string | the string type |
 
-<a id="toprecision-1"></a>
+<a id="toprecision2"></a>
 
 ## toPrecision
 
@@ -3440,7 +3516,7 @@ Return a string representing the value of this Decimal rounded to `significantDi
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
-<a id="toprecision-2"></a>
+<a id="toprecision3"></a>
 
 ## toPrecision
 
@@ -3477,6 +3553,8 @@ Return a string representing the value of this Decimal rounded to `significantDi
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits &#124; rounding` is out of range. |
 
+<a id="tosignificantdigits1"></a>
+
 ## toSignificantDigits
 
 ```TypeScript
@@ -3499,7 +3577,7 @@ Return a new Decimal whose value is the value of this Decimal.
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="tosignificantdigits-1"></a>
+<a id="tosignificantdigits2"></a>
 
 ## toSignificantDigits
 
@@ -3535,7 +3613,7 @@ Return a new Decimal whose value is the value of this Decimal rounded to a maxim
 | --- | --- |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `significantDigits` is out of range. |
 
-<a id="tosignificantdigits-2"></a>
+<a id="tosignificantdigits3"></a>
 
 ## toSignificantDigits
 
@@ -3594,6 +3672,8 @@ Return a string representing the value of this Decimal. Return exponential notat
 | --- | --- |
 | string | the string type |
 
+<a id="trunc1"></a>
+
 ## trunc
 
 ```TypeScript
@@ -3616,7 +3696,7 @@ Return a new Decimal whose value is the value of this Decimal truncated to a who
 | --- | --- |
 | [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type |
 
-<a id="trunc-1"></a>
+<a id="trunc2"></a>
 
 ## trunc
 

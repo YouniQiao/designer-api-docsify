@@ -18,7 +18,7 @@ CommonMethod.
 advancedBlendMode(effect: BlendMode | Blender, type?: BlendApplyType): T
 ```
 
-Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode).
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. This API cannot be used with [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode1).
 
 **Since:** 13
 
@@ -103,7 +103,7 @@ Sets the edge light effect for the component.
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup-1) attribute of the ancestor component.
+Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup2) attribute of the ancestor component.
 
 Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance.
 
@@ -114,11 +114,11 @@ If this attribute is not set, the current component and its children are not rem
 > The drawing content of the component with **excludeFromRenderGroup** set to **true** and its children cannot the
 > component's own boundary range. Otherwise, the displayed content may be clipped. For example, if the child
 > component exceeds the boundary range of the current component due to attributes such as
-> [translate](arkts-arkui-common-comp-commonmethod-c.md#translate) or
-> [scale](arkts-arkui-common-comp-commonmethod-c.md#scale), or the drawing content extend beyond its boundaries
+> [translate](arkts-arkui-common-comp-commonmethod-c.md#translate1) or
+> [scale](arkts-arkui-common-comp-commonmethod-c.md#scale1), or the drawing content extend beyond its boundaries
 > because the current component has attributes such as
-> [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow) and
-> [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect), the displayed
+> [shadow](arkts-arkui-common-comp-commonmethod-c.md#shadow1) and
+> [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect1), the displayed
 > content may be clipped. In such scenarios, **excludeFromRenderGroup** should not be set to **true**.
 
 **Since:** 22
@@ -205,6 +205,8 @@ Applies a spatial effect to component.
 | --- | --- |
 | T |  |
 
+<a id="useunioneffect1"></a>
+
 ## useUnionEffect
 
 ```TypeScript
@@ -235,7 +237,7 @@ Specify whether the current component participates in the fusion effect of the a
 | --- | --- |
 | T | return the component attribute. |
 
-<a id="useunioneffect-1"></a>
+<a id="useunioneffect2"></a>
 
 ## useUnionEffect
 

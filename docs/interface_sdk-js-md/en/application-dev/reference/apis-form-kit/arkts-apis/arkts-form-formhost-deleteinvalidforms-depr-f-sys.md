@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="deleteinvalidforms1"></a>
+
 ## deleteInvalidForms
 
 ```TypeScript
@@ -35,7 +37,7 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
 
 
-<a id="deleteinvalidforms-1"></a>
+<a id="deleteinvalidforms2"></a>
 
 ## deleteInvalidForms
 

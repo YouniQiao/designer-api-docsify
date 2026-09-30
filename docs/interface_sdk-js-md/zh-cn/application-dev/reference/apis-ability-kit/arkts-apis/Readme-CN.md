@@ -1558,34 +1558,34 @@
   - [CheckPackageHasInstalledResponse](arkts-ability-system-package-checkpackagehasinstalledresponse-i.md)
 - ability<!--arkts-abilitykit-ability-->
   - [abilityResult](arkts-ability-abilityresult.md)
-    - [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md)
+    - [AbilityResult](arkts-ability-abilityresult-i.md)
   - [connectOptions](arkts-ability-connectoptions.md)
-    - [ConnectOptions](arkts-ability-connectoptions-connectoptions-i.md)
+    - [ConnectOptions](arkts-ability-connectoptions-i.md)
   - [dataAbilityHelper(DataAbilityHelper)](arkts-ability-dataabilityhelper.md)
-    - [DataAbilityHelper](arkts-ability-dataabilityhelper-dataabilityhelper-i.md)
+    - [DataAbilityHelper](arkts-ability-dataabilityhelper-i.md)
     - [PacMap](arkts-ability-dataabilityhelper-pacmap-i.md)
   - [dataAbilityOperation(DataAbilityOperation)](arkts-ability-dataabilityoperation.md)
-    - [DataAbilityOperation](arkts-ability-dataabilityoperation-dataabilityoperation-i.md)
+    - [DataAbilityOperation](arkts-ability-dataabilityoperation-i.md)
   - [dataAbilityResult(DataAbilityResult)](arkts-ability-dataabilityresult.md)
-    - [DataAbilityResult](arkts-ability-dataabilityresult-dataabilityresult-i.md)
+    - [DataAbilityResult](arkts-ability-dataabilityresult-i.md)
   - [startAbilityParameter](arkts-ability-startabilityparameter.md)
-    - [StartAbilityParameter](arkts-ability-startabilityparameter-startabilityparameter-i.md)
+    - [StartAbilityParameter](arkts-ability-startabilityparameter-i.md)
   - [want(Want)](arkts-ability-want.md)
-    - [Want](arkts-ability-want-want-i.md)
+    - [Want](arkts-ability-want-i.md)
 - app<!--arkts-abilitykit-app-->
   - [appVersionInfo(AppVersionInfo)](arkts-ability-appversioninfo.md)
-    - [AppVersionInfo](arkts-ability-appversioninfo-appversioninfo-depr-i.md)
+    - [AppVersionInfo](arkts-ability-appversioninfo-depr-i.md)
   - [context(FA模型的上下文基类)](arkts-ability-context.md)
-    - [Context](arkts-ability-context-context-depr-i.md)
+    - [Context](arkts-ability-context-depr-i.md)
     - [PermissionOptions](arkts-ability-context-permissionoptions-depr-i.md)
     - [PermissionRequestResult](arkts-ability-context-permissionrequestresult-depr-i.md)
   - [processInfo](arkts-ability-processinfo.md)
-    - [ProcessInfo](arkts-ability-processinfo-processinfo-depr-i.md)
+    - [ProcessInfo](arkts-ability-processinfo-depr-i.md)
 - application<!--arkts-abilitykit-application-->
   - [AbilityDelegator(AbilityDelegator)](arkts-ability-abilitydelegator.md)
     - [AbilityDelegator](arkts-ability-abilitydelegator-i.md)
   - [abilityDelegatorArgs(AbilityDelegatorArgs)](arkts-ability-abilitydelegatorargs.md)
-    - [AbilityDelegatorArgs](arkts-ability-abilitydelegatorargs-abilitydelegatorargs-i.md)
+    - [AbilityDelegatorArgs](arkts-ability-abilitydelegatorargs-i.md)
   <!--Del-->
   - [AbilityFirstFrameStateData(首帧绘制状态数据)](arkts-ability-abilityfirstframestatedata.md)<!--DelEnd-->
     <!--Del-->
@@ -1830,7 +1830,7 @@
     <!--Del-->
     - [ServiceExtensionContext(系统接口)](arkts-ability-serviceextensioncontext-c-sys.md)<!--DelEnd-->
   - [shellCmdResult(ShellCmdResult)](arkts-ability-shellcmdresult.md)
-    - [ShellCmdResult](arkts-ability-shellcmdresult-shellcmdresult-i.md)
+    - [ShellCmdResult](arkts-ability-shellcmdresult-i.md)
   - [ToolEventCallback(CLI工具事件回调)](arkts-ability-tooleventcallback.md)
     - [ToolEventCallback](arkts-ability-tooleventcallback-i.md)
     - [OnEventFn](arkts-ability-oneventfn-t.md)
@@ -1868,17 +1868,17 @@
     - [ViewData(系统接口)](arkts-ability-viewdata-i-sys.md)<!--DelEnd-->
 - bundle<!--arkts-abilitykit-bundle-->
   - [abilityInfo](arkts-ability-abilityinfo.md)
-    - [AbilityInfo](arkts-ability-abilityinfo-abilityinfo-depr-i.md)
+    - [AbilityInfo](arkts-ability-abilityinfo-depr-i.md)
   - [applicationInfo](arkts-ability-applicationinfo.md)
-    - [ApplicationInfo](arkts-ability-applicationinfo-applicationinfo-depr-i.md)
+    - [ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)
   - [bundleInfo](arkts-ability-bundleinfo.md)
-    - [BundleInfo](arkts-ability-bundleinfo-bundleinfo-depr-i.md)
+    - [BundleInfo](arkts-ability-bundleinfo-depr-i.md)
     - [ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)
     - [UsedScene](arkts-ability-bundleinfo-usedscene-depr-i.md)
   <!--Del-->
   - [bundleInstaller](arkts-ability-bundleinstaller.md)<!--DelEnd-->
     <!--Del-->
-    - [BundleInstaller(系统接口)](arkts-ability-bundleinstaller-bundleinstaller-depr-i-sys.md)<!--DelEnd-->
+    - [BundleInstaller(系统接口)](arkts-ability-bundleinstaller-depr-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [InstallParam(系统接口)](arkts-ability-bundleinstaller-installparam-depr-i-sys.md)<!--DelEnd-->
     <!--Del-->
@@ -1886,19 +1886,19 @@
   <!--Del-->
   - [bundleStatusCallback](arkts-ability-bundlestatuscallback.md)<!--DelEnd-->
     <!--Del-->
-    - [BundleStatusCallback(系统接口)](arkts-ability-bundlestatuscallback-bundlestatuscallback-depr-i-sys.md)<!--DelEnd-->
+    - [BundleStatusCallback(系统接口)](arkts-ability-bundlestatuscallback-depr-i-sys.md)<!--DelEnd-->
   - [customizeData](arkts-ability-customizedata.md)
-    - [CustomizeData](arkts-ability-customizedata-customizedata-depr-i.md)
+    - [CustomizeData](arkts-ability-customizedata-depr-i.md)
   - [elementName](arkts-ability-elementname.md)
-    - [ElementName](arkts-ability-elementname-elementname-depr-i.md)
+    - [ElementName](arkts-ability-elementname-depr-i.md)
   - [hapModuleInfo](arkts-ability-hapmoduleinfo.md)
-    - [HapModuleInfo](arkts-ability-hapmoduleinfo-hapmoduleinfo-depr-i.md)
+    - [HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)
   <!--Del-->
   - [launcherAbilityInfo](arkts-ability-launcherabilityinfo.md)<!--DelEnd-->
     <!--Del-->
-    - [LauncherAbilityInfo(系统接口)](arkts-ability-launcherabilityinfo-launcherabilityinfo-depr-i-sys.md)<!--DelEnd-->
+    - [LauncherAbilityInfo(系统接口)](arkts-ability-launcherabilityinfo-depr-i-sys.md)<!--DelEnd-->
   - [moduleInfo](arkts-ability-moduleinfo.md)
-    - [ModuleInfo](arkts-ability-moduleinfo-moduleinfo-depr-i.md)
+    - [ModuleInfo](arkts-ability-moduleinfo-depr-i.md)
   <!--Del-->
   - [PermissionDef](arkts-ability-permissiondef.md)<!--DelEnd-->
     <!--Del-->
@@ -1906,9 +1906,9 @@
   <!--Del-->
   - [remoteAbilityInfo](arkts-ability-remoteabilityinfo.md)<!--DelEnd-->
     <!--Del-->
-    - [RemoteAbilityInfo(系统接口)](arkts-ability-remoteabilityinfo-remoteabilityinfo-depr-i-sys.md)<!--DelEnd-->
+    - [RemoteAbilityInfo(系统接口)](arkts-ability-remoteabilityinfo-depr-i-sys.md)<!--DelEnd-->
   - [shortcutInfo](arkts-ability-shortcutinfo.md)
-    - [ShortcutInfo](arkts-ability-shortcutinfo-shortcutinfo-depr-i.md)
+    - [ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md)
     <!--Del-->
     - [ShortcutWant(系统接口)](arkts-ability-shortcutinfo-shortcutwant-depr-i-sys.md)<!--DelEnd-->
 - bundleManager<!--arkts-abilitykit-bundlemanager-->
@@ -2035,20 +2035,20 @@
     - [SkillType](arkts-ability-skillinfo-skilltype-e.md)
 - continuation<!--arkts-abilitykit-continuation-->
   - [continuationExtraParams](arkts-ability-continuationextraparams.md)
-    - [ContinuationExtraParams](arkts-ability-continuationextraparams-continuationextraparams-i.md)
+    - [ContinuationExtraParams](arkts-ability-continuationextraparams-i.md)
   - [continuationResult](arkts-ability-continuationresult.md)
-    - [ContinuationResult](arkts-ability-continuationresult-continuationresult-i.md)
+    - [ContinuationResult](arkts-ability-continuationresult-i.md)
 - security<!--arkts-abilitykit-security-->
   - [PermissionRequestResult](arkts-ability-permissionrequestresult.md)
     - [PermissionRequestResult](arkts-ability-permissionrequestresult-c.md)
 - wantAgent<!--arkts-abilitykit-wantagent-->
   - [triggerInfo(TriggerInfo)](arkts-ability-triggerinfo.md)
-    - [TriggerInfo](arkts-ability-triggerinfo-triggerinfo-i.md)
+    - [TriggerInfo](arkts-ability-triggerinfo-i.md)
     <!--Del-->
-    - [TriggerInfo(系统接口)](arkts-ability-triggerinfo-triggerinfo-i-sys.md)<!--DelEnd-->
+    - [TriggerInfo(系统接口)](arkts-ability-triggerinfo-i-sys.md)<!--DelEnd-->
   - [wantAgentInfo(WantAgentInfo)](arkts-ability-wantagentinfo.md)
     <!--Del-->
     - [LocalWantAgentInfo(系统接口)](arkts-ability-wantagentinfo-localwantagentinfo-i-sys.md)<!--DelEnd-->
-    - [WantAgentInfo](arkts-ability-wantagentinfo-wantagentinfo-i.md)
+    - [WantAgentInfo](arkts-ability-wantagentinfo-i.md)
     <!--Del-->
-    - [WantAgentInfo(系统接口)](arkts-ability-wantagentinfo-wantagentinfo-i-sys.md)<!--DelEnd-->
+    - [WantAgentInfo(系统接口)](arkts-ability-wantagentinfo-i-sys.md)<!--DelEnd-->

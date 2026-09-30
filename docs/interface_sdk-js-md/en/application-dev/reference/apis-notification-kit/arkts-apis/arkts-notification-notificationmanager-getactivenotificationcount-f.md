@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="getactivenotificationcount1"></a>
+
 ## getActiveNotificationCount
 
 ```TypeScript
@@ -22,7 +24,7 @@ This API is used to query the number of active notifications published by the cu
 
 **System capability:** SystemCapability.Notification.Notification
 
-**See also:** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md) sets the notification badge number.
+**See also:** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber1) sets the notification badge number.
 
 **Parameters:**
 
@@ -56,7 +58,7 @@ notificationManager.getActiveNotificationCount(getActiveNotificationCountCallbac
 ```
 
 
-<a id="getactivenotificationcount-1"></a>
+<a id="getactivenotificationcount2"></a>
 
 ## getActiveNotificationCount
 
@@ -74,7 +76,7 @@ This API is used to query the number of active notifications published by the cu
 
 **System capability:** SystemCapability.Notification.Notification
 
-**See also:** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber-1) sets the notification badge number.
+**See also:** [setBadgeNumber](arkts-notification-notificationmanager-setbadgenumber-f.md#setbadgenumber2) sets the notification badge number.
 
 **Return value:**
 

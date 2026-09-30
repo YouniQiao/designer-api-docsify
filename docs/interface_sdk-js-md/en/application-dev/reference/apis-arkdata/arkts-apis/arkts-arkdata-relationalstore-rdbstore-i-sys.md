@@ -6,9 +6,9 @@ interface RdbStore
 
 Provides APIs for managing data in an RDB store.
 
-Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore-1) method and then call the corresponding method through the instance.
+Before using the following APIs, you should obtain an **RdbStore** instance by calling the [getRdbStore](arkts-arkdata-relationalstore-getrdbstore-f.md#getrdbstore2) method and then call the corresponding method through the instance.
 
-In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
+In addition, use [execute](arkts-arkdata-relationalstore-rdbstore-i.md#execute1) to initialize the database table structure and related data first, ensuring that the prerequisites for related API calls are met.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ Cleans dirty data deleted in the cross-device sync. If a cursor is specified, da
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
 | 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported; 3. This is a read-only database. |
 
-<a id="cloudsync-4"></a>
+<a id="cloudsync5"></a>
 
 ## cloudSync
 
@@ -169,7 +169,7 @@ if (store != undefined) {
 };
 ```
 
-<a id="cloudsync-5"></a>
+<a id="cloudsync6"></a>
 
 ## cloudSync
 
@@ -214,7 +214,7 @@ Sync data to cloud.
 
 See [cloudSync](#cloudsync)
 
-<a id="delete-2"></a>
+<a id="delete3"></a>
 
 ## delete
 
@@ -298,7 +298,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="delete-3"></a>
+<a id="delete4"></a>
 
 ## delete
 
@@ -415,7 +415,7 @@ Lock cloud container before non-auto cloud sync.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="query-3"></a>
+<a id="query4"></a>
 
 ## query
 
@@ -542,7 +542,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="query-4"></a>
+<a id="query5"></a>
 
 ## query
 
@@ -675,7 +675,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="query-5"></a>
+<a id="query6"></a>
 
 ## query
 
@@ -812,6 +812,8 @@ if (store != undefined) {
 }
 ```
 
+<a id="querysharingresource1"></a>
+
 ## querySharingResource
 
 ```TypeScript
@@ -866,7 +868,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-<a id="querysharingresource-1"></a>
+<a id="querysharingresource2"></a>
 
 ## querySharingResource
 
@@ -916,7 +918,7 @@ Obtains sharing resource of rows corresponding to the predicates.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
-<a id="querysharingresource-2"></a>
+<a id="querysharingresource3"></a>
 
 ## querySharingResource
 
@@ -1006,7 +1008,7 @@ Requests full data donation for specified distributed tables.
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed. |
 | 14800043 | The database does not support this scenario. |
 
-<a id="restore-2"></a>
+<a id="restore3"></a>
 
 ## restore
 
@@ -1153,7 +1155,7 @@ Unlock cloud container.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
-<a id="update-4"></a>
+<a id="update5"></a>
 
 ## update
 
@@ -1371,7 +1373,7 @@ if (store != undefined) {
 }
 ```
 
-<a id="update-5"></a>
+<a id="update6"></a>
 
 ## update
 

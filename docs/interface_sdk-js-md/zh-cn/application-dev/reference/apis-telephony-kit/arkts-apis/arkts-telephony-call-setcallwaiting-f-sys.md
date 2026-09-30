@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="setcallwaiting1"></a>
+
 ## setCallWaiting
 
 ```TypeScript
@@ -59,7 +61,7 @@ call.setCallWaiting(0, true, (err: BusinessError) => {
 ```
 
 
-<a id="setcallwaiting-1"></a>
+<a id="setcallwaiting2"></a>
 
 ## setCallWaiting
 

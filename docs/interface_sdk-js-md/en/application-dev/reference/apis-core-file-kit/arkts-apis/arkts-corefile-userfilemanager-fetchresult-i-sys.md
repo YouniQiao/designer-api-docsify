@@ -68,6 +68,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="getallobject1"></a>
+
 ## getAllObject
 
 ```TypeScript
@@ -119,7 +121,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getallobject-1"></a>
+<a id="getallobject2"></a>
 
 ## getAllObject
 
@@ -213,6 +215,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="getfirstobject1"></a>
+
 ## getFirstObject
 
 ```TypeScript
@@ -264,7 +268,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getfirstobject-1"></a>
+<a id="getfirstobject2"></a>
 
 ## getFirstObject
 
@@ -311,6 +315,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   console.info('fileAsset displayName: ', fileAsset.displayName);
 }
 ```
+
+<a id="getlastobject1"></a>
 
 ## getLastObject
 
@@ -363,7 +369,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getlastobject-1"></a>
+<a id="getlastobject2"></a>
 
 ## getLastObject
 
@@ -410,6 +416,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   console.info('fileAsset displayName: ', fileAsset.displayName);
 }
 ```
+
+<a id="getnextobject1"></a>
 
 ## getNextObject
 
@@ -467,7 +475,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getnextobject-1"></a>
+<a id="getnextobject2"></a>
 
 ## getNextObject
 
@@ -519,6 +527,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<a id="getpositionobject1"></a>
 
 ## getPositionObject
 
@@ -578,7 +588,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="getpositionobject-1"></a>
+<a id="getpositionobject2"></a>
 
 ## getPositionObject
 

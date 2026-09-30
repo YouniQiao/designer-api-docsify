@@ -6,6 +6,8 @@
 import { dragController } from '@kit.ArkUI';
 ```
 
+<a id="executedrag1"></a>
+
 ## executeDrag
 
 ```TypeScript
@@ -19,7 +21,7 @@ Execute a drag event.
 
 **废弃版本：** 18
 
-**替代接口：** executeDrag
+**替代接口：** [executeDrag](arkts-arkui-arkui-uicontext-dragcontroller-c.md#executedrag)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -128,7 +130,7 @@ struct DragControllerPage {
 ```
 
 
-<a id="executedrag-1"></a>
+<a id="executedrag2"></a>
 
 ## executeDrag
 
@@ -148,7 +150,7 @@ function executeDrag(custom: CustomBuilder | DragItemInfo, dragInfo: DragInfo): 
 
 **废弃版本：** 18
 
-**替代接口：** executeDrag
+**替代接口：** [executeDrag](arkts-arkui-arkui-uicontext-dragcontroller-c.md#executedrag)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

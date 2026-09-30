@@ -8,7 +8,7 @@ Defines the attribute functions of WindowScene.
 
 @extends CommonMethod&lt;WindowSceneAttribute&gt;
 
-**Inheritance/Implementation:** WindowSceneAttribute extends CommonMethod<WindowSceneAttribute>
+**Inheritance/Implementation:** WindowSceneAttribute extends CommonMethod&lt;WindowSceneAttribute&gt;
 
 **Since:** 10
 

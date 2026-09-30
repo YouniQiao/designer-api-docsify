@@ -6,6 +6,8 @@
 import { window } from '@kit.ArkUI';
 ```
 
+<a id="getlastwindow1"></a>
+
 ## getLastWindow
 
 ```TypeScript
@@ -14,7 +16,7 @@ function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void
 
 Obtains the topmost layer child window of the current application. This API uses an asynchronous callback to return the result.
 
-If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow1), the main window of the application is returned.
 
 **Since:** 9
 
@@ -85,7 +87,7 @@ export default class EntryAbility extends UIAbility {
 ```
 
 
-<a id="getlastwindow-1"></a>
+<a id="getlastwindow2"></a>
 
 ## getLastWindow
 
@@ -95,7 +97,7 @@ function getLastWindow(ctx: BaseContext): Promise<Window>
 
 Obtains the topmost layer child window of the current application. This API uses a promise to return the result.
 
-If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow), the main window of the application is returned.
+If no child window exists or the child window is not displayed by calling [showWindow()](arkts-arkui-window-window-i.md#showwindow1), the main window of the application is returned.
 
 **Since:** 9
 

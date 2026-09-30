@@ -19,6 +19,8 @@ import { accessibility } from '@kit.AccessibilityKit';
 import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
 ```
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -55,7 +57,7 @@ let eventInfo = new accessibility.EventInfo({
 });
 ```
 
-<a id="constructor-2"></a>
+<a id="constructor3"></a>
 
 ## constructor
 
@@ -385,7 +387,7 @@ textResourceAnnouncedForAccessibility?: Resource
 
 Content for proactive announcement, which supports the Resource type. The Resource can only reference string resources (for example, $r('app.string.xxx')).
 
-**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-resource-i.md)
+**Type:** [Resource](../../apis-localization-kit/arkts-apis/arkts-localization-resource-i.md)
 
 **Since:** 18
 

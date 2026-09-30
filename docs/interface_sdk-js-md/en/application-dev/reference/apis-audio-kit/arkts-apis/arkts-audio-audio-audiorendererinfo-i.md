@@ -86,7 +86,7 @@ Audio content type.
 
 **Deprecated since:** 10
 
-**Substitutes:** usage
+**Substitutes:** [usage](#usage)
 
 <!--Device-AudioRendererInfo-content?: ContentType--><!--Device-AudioRendererInfo-content?: ContentType-End-->
 

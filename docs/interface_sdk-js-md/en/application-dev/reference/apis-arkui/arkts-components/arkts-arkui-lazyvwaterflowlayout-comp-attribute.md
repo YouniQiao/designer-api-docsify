@@ -6,7 +6,7 @@ export declare class LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAt
 
 Defines the lazy vertical waterflow layout attribute.
 
-**Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute<LazyVWaterFlowLayoutAttribute>
+**Inheritance/Implementation:** LazyVWaterFlowLayoutAttribute extends LazyWaterFlowLayoutAttribute&lt;LazyVWaterFlowLayoutAttribute&gt;
 
 **Since:** 26.0.0
 

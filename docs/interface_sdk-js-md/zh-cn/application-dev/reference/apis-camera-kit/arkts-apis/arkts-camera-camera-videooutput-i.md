@@ -592,6 +592,8 @@ function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Arra
 }
 ```
 
+<a id="start1"></a>
+
 ## start
 
 ```TypeScript
@@ -637,7 +639,7 @@ function startVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
-<a id="start-1"></a>
+<a id="start2"></a>
 
 ## start
 
@@ -682,6 +684,8 @@ function startVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
+<a id="stop1"></a>
+
 ## stop
 
 ```TypeScript
@@ -714,7 +718,7 @@ function stopVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
-<a id="stop-1"></a>
+<a id="stop2"></a>
 
 ## stop
 

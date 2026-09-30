@@ -18,7 +18,7 @@ export default class Animator
 import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
-<a id="create-1"></a>
+<a id="create2"></a>
 
 ## create
 
@@ -26,7 +26,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-创建animator动画结果对象（AnimatorResult）。与[create](#create)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
+创建animator动画结果对象（AnimatorResult）。与[create](#create1)相比，新增对[SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md)类型入参的支持。
 
 **起始版本：** 18
 
@@ -70,6 +70,8 @@ let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duratio
 animator.create(options); // 建议使用 UIContext.createAnimator()接口
 ```
 
+<a id="create1"></a>
+
 ## create
 
 ```TypeScript
@@ -86,7 +88,7 @@ static create(options: AnimatorOptions): AnimatorResult
 
 **废弃版本：** 18
 
-**替代接口：** createAnimator
+**替代接口：** [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -152,7 +154,7 @@ static createAnimator(options: AnimatorOptions): AnimatorResult
 
 **废弃版本：** 9
 
-**替代接口：** create
+**替代接口：** [create](#create)
 
 <!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult--><!--Device-Animator-static createAnimator(options: AnimatorOptions): AnimatorResult-End-->
 

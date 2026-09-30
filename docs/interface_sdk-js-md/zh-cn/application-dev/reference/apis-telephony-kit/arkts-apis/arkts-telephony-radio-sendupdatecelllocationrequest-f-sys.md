@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="sendupdatecelllocationrequest1"></a>
+
 ## sendUpdateCellLocationRequest
 
 ```TypeScript
@@ -59,7 +61,7 @@ radio.sendUpdateCellLocationRequest(slotId, (err: BusinessError) => {
 ```
 
 
-<a id="sendupdatecelllocationrequest-1"></a>
+<a id="sendupdatecelllocationrequest2"></a>
 
 ## sendUpdateCellLocationRequest
 
@@ -117,7 +119,7 @@ radio.sendUpdateCellLocationRequest(slotId).then(() => {
 ```
 
 
-<a id="sendupdatecelllocationrequest-2"></a>
+<a id="sendupdatecelllocationrequest3"></a>
 
 ## sendUpdateCellLocationRequest
 

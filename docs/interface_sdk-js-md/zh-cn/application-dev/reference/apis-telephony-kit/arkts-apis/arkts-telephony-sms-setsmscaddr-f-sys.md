@@ -6,6 +6,8 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
+<a id="setsmscaddr1"></a>
+
 ## setSmscAddr
 
 ```TypeScript
@@ -58,7 +60,7 @@ sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
 ```
 
 
-<a id="setsmscaddr-1"></a>
+<a id="setsmscaddr2"></a>
 
 ## setSmscAddr
 

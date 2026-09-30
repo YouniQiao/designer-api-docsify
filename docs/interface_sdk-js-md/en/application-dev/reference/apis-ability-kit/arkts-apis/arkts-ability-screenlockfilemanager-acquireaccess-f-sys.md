@@ -6,7 +6,7 @@
 import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
-<a id="acquireaccess-1"></a>
+<a id="acquireaccess2"></a>
 
 ## acquireAccess
 

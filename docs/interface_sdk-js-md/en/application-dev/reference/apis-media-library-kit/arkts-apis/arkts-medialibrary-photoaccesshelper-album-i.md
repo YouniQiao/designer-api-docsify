@@ -20,6 +20,8 @@ Provides APIs to manage albums.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="commitmodify1"></a>
+
 ## commitModify
 
 ```TypeScript
@@ -86,7 +88,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="commitmodify-1"></a>
+<a id="commitmodify2"></a>
 
 ## commitModify
 
@@ -152,6 +154,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<a id="addassets1"></a>
 
 ## addAssets
 
@@ -225,7 +229,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="addassets-1"></a>
+<a id="addassets2"></a>
 
 ## addAssets
 
@@ -303,6 +307,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="removeassets1"></a>
+
 ## removeAssets
 
 ```TypeScript
@@ -375,7 +381,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="removeassets-1"></a>
+<a id="removeassets2"></a>
 
 ## removeAssets
 

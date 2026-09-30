@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="deleteform1"></a>
+
 ## deleteForm
 
 ```TypeScript
@@ -65,7 +67,7 @@ try {
 ```
 
 
-<a id="deleteform-1"></a>
+<a id="deleteform2"></a>
 
 ## deleteForm
 

@@ -6,6 +6,8 @@
 import { screen } from '@kit.ArkUI';
 ```
 
+<a id="stopexpand1"></a>
+
 ## stopExpand
 
 ```TypeScript
@@ -58,7 +60,7 @@ screen.stopExpand(expandScreenIds, (err: BusinessError) => {
 ```
 
 
-<a id="stopexpand-1"></a>
+<a id="stopexpand2"></a>
 
 ## stopExpand
 

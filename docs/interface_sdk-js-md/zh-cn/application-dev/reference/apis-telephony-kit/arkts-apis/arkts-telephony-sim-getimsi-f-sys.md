@@ -6,6 +6,8 @@
 import { sim } from '@kit.TelephonyKit';
 ```
 
+<a id="getimsi1"></a>
+
 ## getIMSI
 
 ```TypeScript
@@ -56,7 +58,7 @@ sim.getIMSI(0, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getimsi-1"></a>
+<a id="getimsi2"></a>
 
 ## getIMSI
 

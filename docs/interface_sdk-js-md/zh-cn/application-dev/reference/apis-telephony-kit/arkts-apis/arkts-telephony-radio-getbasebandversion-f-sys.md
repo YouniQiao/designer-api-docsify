@@ -6,6 +6,8 @@
 import { radio } from '@kit.TelephonyKit';
 ```
 
+<a id="getbasebandversion1"></a>
+
 ## getBasebandVersion
 
 ```TypeScript
@@ -59,7 +61,7 @@ radio.getBasebandVersion(slotId, (err: BusinessError, data: string) => {
 ```
 
 
-<a id="getbasebandversion-1"></a>
+<a id="getbasebandversion2"></a>
 
 ## getBasebandVersion
 

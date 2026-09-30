@@ -6,11 +6,11 @@ interface ImageSource
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md) to create an ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource1) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
-Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+Images occupy a large amount of memory. When you finish using an ImageSource instance, call [release](#release1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
 **Since:** 6
 
@@ -186,6 +186,8 @@ async function CreatePictures(imageSourceObj : image.ImageSource) {
 }
 ```
 
+<a id="createpixelmap1"></a>
+
 ## createPixelMap
 
 ```TypeScript
@@ -240,7 +242,7 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="createpixelmap-2"></a>
+<a id="createpixelmap3"></a>
 
 ## createPixelMap
 
@@ -292,7 +294,7 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="createpixelmap-4"></a>
+<a id="createpixelmap5"></a>
 
 ## createPixelMap
 
@@ -355,6 +357,8 @@ async function CreatePixelMap(imageSourceObj : image.ImageSource) {
   })
 }
 ```
+
+<a id="createpixelmaplist1"></a>
 
 ## createPixelMapList
 
@@ -434,7 +438,7 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="createpixelmaplist-1"></a>
+<a id="createpixelmaplist2"></a>
 
 ## createPixelMapList
 
@@ -502,7 +506,7 @@ async function CreatePixelMapList(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="createpixelmaplist-2"></a>
+<a id="createpixelmaplist3"></a>
 
 ## createPixelMapList
 
@@ -947,6 +951,8 @@ async function CreateThumbnailSync(imageSource: image.ImageSource): Promise<imag
 }
 ```
 
+<a id="getdelaytimelist1"></a>
+
 ## getDelayTimeList
 
 ```TypeScript
@@ -994,7 +1000,7 @@ async function GetDelayTimeList(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getdelaytimelist-1"></a>
+<a id="getdelaytimelist2"></a>
 
 ## getDelayTimeList
 
@@ -1088,6 +1094,8 @@ async function GetDisposalTypeList(imageSourceObj : image.ImageSource) {
 }
 ```
 
+<a id="getframecount1"></a>
+
 ## getFrameCount
 
 ```TypeScript
@@ -1136,7 +1144,7 @@ async function GetFrameCount(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getframecount-1"></a>
+<a id="getframecount2"></a>
 
 ## getFrameCount
 
@@ -1188,6 +1196,8 @@ async function GetFrameCount(imageSourceObj : image.ImageSource) {
 }
 ```
 
+<a id="getimageinfo1"></a>
+
 ## getImageInfo
 
 ```TypeScript
@@ -1229,7 +1239,7 @@ async function GetImageInfo(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getimageinfo-2"></a>
+<a id="getimageinfo3"></a>
 
 ## getImageInfo
 
@@ -1271,7 +1281,7 @@ async function GetImageInfo(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getimageinfo-4"></a>
+<a id="getimageinfo5"></a>
 
 ## getImageInfo
 
@@ -1422,6 +1432,8 @@ async function GetImageProperties(imageSourceObj : image.ImageSource) {
 }
 ```
 
+<a id="getimageproperty1"></a>
+
 ## getImageProperty
 
 ```TypeScript
@@ -1484,7 +1496,7 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getimageproperty-1"></a>
+<a id="getimageproperty2"></a>
 
 ## getImageProperty
 
@@ -1500,7 +1512,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty1)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>--><!--Device-ImageSource-getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string>-End-->
 
@@ -1534,7 +1546,7 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getimageproperty-2"></a>
+<a id="getimageproperty3"></a>
 
 ## getImageProperty
 
@@ -1550,7 +1562,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty1)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, callback: AsyncCallback<string>): void-End-->
 
@@ -1579,7 +1591,7 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="getimageproperty-3"></a>
+<a id="getimageproperty4"></a>
 
 ## getImageProperty
 
@@ -1593,7 +1605,7 @@ Obtains the value of a property in this image. This API uses an asynchronous cal
 
 **Deprecated since:** 11
 
-**Substitutes:** [getImageProperty](#getimageproperty)(key: PropertyKey, options?: ImagePropertyOptions)
+**Substitutes:** [getImageProperty](#getimageproperty1)(key: PropertyKey, options?: ImagePropertyOptions)
 
 <!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void--><!--Device-ImageSource-getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void-End-->
 
@@ -1759,7 +1771,7 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource1) instance by passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 
@@ -1814,6 +1826,8 @@ async function ModifyImagePropertiesEnhanced(imageSourceObj : image.ImageSource)
   });
 }
 ```
+
+<a id="modifyimageproperty1"></a>
 
 ## modifyImageProperty
 
@@ -1878,7 +1892,7 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="modifyimageproperty-1"></a>
+<a id="modifyimageproperty2"></a>
 
 ## modifyImageProperty
 
@@ -1898,7 +1912,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
+**Substitutes:** [modifyImageProperty](#modifyimageproperty1)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>--><!--Device-ImageSource-modifyImageProperty(key: string, value: string): Promise<void>-End-->
 
@@ -1935,7 +1949,7 @@ async function ModifyImageProperty(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="modifyimageproperty-2"></a>
+<a id="modifyimageproperty3"></a>
 
 ## modifyImageProperty
 
@@ -1955,7 +1969,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 
 **Deprecated since:** 11
 
-**Substitutes:** [modifyImageProperty](#modifyimageproperty)(key: PropertyKey, value: string)
+**Substitutes:** [modifyImageProperty](#modifyimageproperty1)(key: PropertyKey, value: string)
 
 <!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-ImageSource-modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -2165,6 +2179,8 @@ async function ReadImageMetadataByType(imageSource : image.ImageSource, type: im
 }
 ```
 
+<a id="release1"></a>
+
 ## release
 
 ```TypeScript
@@ -2207,7 +2223,7 @@ async function Release(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="release-1"></a>
+<a id="release2"></a>
 
 ## release
 
@@ -2248,6 +2264,8 @@ async function Release(imageSourceObj : image.ImageSource) {
   })
 }
 ```
+
+<a id="updatedata1"></a>
 
 ## updateData
 
@@ -2293,7 +2311,7 @@ async function UpdateDatay(imageSourceObj : image.ImageSource) {
 }
 ```
 
-<a id="updatedata-1"></a>
+<a id="updatedata2"></a>
 
 ## updateData
 
@@ -2352,7 +2370,7 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource1) instance by passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 

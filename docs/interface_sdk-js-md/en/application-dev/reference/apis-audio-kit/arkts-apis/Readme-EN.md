@@ -307,7 +307,7 @@
     <!--Del-->
     - [RingtoneOptions(system api)](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [RingtonePlayer(system api)](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md)<!--DelEnd-->
+    - [RingtonePlayer(system api)](arkts-audio-ringtoneplayer-i-sys.md)<!--DelEnd-->
   - [SystemSoundPlayer(System Sound Player)](arkts-audio-systemsoundplayer.md)
     - [SystemSoundPlayer](arkts-audio-systemsoundplayer-i.md)
   <!--Del-->
@@ -315,4 +315,4 @@
     <!--Del-->
     - [SystemToneOptions(system api)](arkts-audio-systemtoneplayer-systemtoneoptions-i-sys.md)<!--DelEnd-->
     <!--Del-->
-    - [SystemTonePlayer(system api)](arkts-audio-systemtoneplayer-systemtoneplayer-i-sys.md)<!--DelEnd-->
+    - [SystemTonePlayer(system api)](arkts-audio-systemtoneplayer-i-sys.md)<!--DelEnd-->

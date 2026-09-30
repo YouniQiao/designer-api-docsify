@@ -29,6 +29,8 @@ import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
 import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
+<a id="createfrombuilder1"></a>
+
 ## createFromBuilder
 
 ```TypeScript
@@ -130,7 +132,7 @@ struct ComponentSnapshotExample {
 }
 ```
 
-<a id="createfrombuilder-1"></a>
+<a id="createfrombuilder2"></a>
 
 ## createFromBuilder
 
@@ -362,6 +364,8 @@ struct Index {
 }
 ```
 
+<a id="get1"></a>
+
 ## get
 
 ```TypeScript
@@ -444,7 +448,7 @@ struct SnapshotExample {
 }
 ```
 
-<a id="get-1"></a>
+<a id="get2"></a>
 
 ## get
 

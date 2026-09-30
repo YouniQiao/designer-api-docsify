@@ -6,6 +6,8 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
+<a id="notifysaveasresult1"></a>
+
 ## notifySaveAsResult
 
 ```TypeScript
@@ -34,7 +36,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
 | requestCode | number | 是 | DLP管理应用传入的请求代码。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当另存为结果通知成功，err为undefined，否则为错误对象。 |
 
@@ -48,7 +50,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callb
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 
-<a id="notifysaveasresult-1"></a>
+<a id="notifysaveasresult2"></a>
 
 ## notifySaveAsResult
 
@@ -74,7 +76,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
 | requestCode | number | 是 | DLP管理应用传入的请求代码。 |
 
 **返回值：**

@@ -429,6 +429,8 @@ PageTransition Method and it is migrated from class CustomComponent. Implement A
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+<a id="querynavdestinationinfo1"></a>
+
 ## queryNavDestinationInfo
 
 ```TypeScript
@@ -453,7 +455,7 @@ Queries the **NavDestination** information of this custom component. This API ha
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
 
-<a id="querynavdestinationinfo-1"></a>
+<a id="querynavdestinationinfo2"></a>
 
 ## queryNavDestinationInfo
 

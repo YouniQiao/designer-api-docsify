@@ -18,6 +18,8 @@ interface CameraManager
 import { camera } from '@kit.CameraKit';
 ```
 
+<a id="createcamerainput1"></a>
+
 ## createCameraInput
 
 ```TypeScript
@@ -76,7 +78,7 @@ function createCameraInput(camera: camera.CameraDevice, cameraManager: camera.Ca
 }
 ```
 
-<a id="createcamerainput-1"></a>
+<a id="createcamerainput2"></a>
 
 ## createCameraInput
 
@@ -159,7 +161,7 @@ createDeferredPreviewOutput(profile: Profile): PreviewOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。 |
 
 **返回值：**
 
@@ -214,7 +216,7 @@ createMetadataOutput(metadataObjectTypes: Array<MetadataObjectType>): MetadataOu
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 | metadata流类型信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。 |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | 是 | metadata流类型信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。 |
 
 **返回值：**
 
@@ -247,7 +249,7 @@ function createMetadataOutput(cameraManager: camera.CameraManager, cameraOutputC
 }
 ```
 
-<a id="createphotooutput-1"></a>
+<a id="createphotooutput2"></a>
 
 ## createPhotoOutput
 
@@ -269,7 +271,7 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。<br>API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。<br>API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
 
 **返回值：**
 
@@ -303,6 +305,8 @@ function createPhotoOutput(cameraOutputCapability: camera.CameraOutputCapability
 }
 ```
 
+<a id="createphotooutput1"></a>
+
 ## createPhotoOutput
 
 ```TypeScript
@@ -321,7 +325,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 **废弃版本：** 11
 
-**替代接口：** [createPhotoOutput](#createphotooutput-1)(profile?: Profile)
+**替代接口：** [createPhotoOutput](#createphotooutput2)(profile?: Profile)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -331,7 +335,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。 |
 | surfaceId | string | 是 | 从[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md)获取的surfaceId。 |
 
 **返回值：**
@@ -349,6 +353,8 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 **示例**
 
 参见 [createPhotoOutput](#createphotooutput)
+
+<a id="createpreviewoutput1"></a>
 
 ## createPreviewOutput
 
@@ -370,7 +376,7 @@ createPreviewOutput(profile: Profile, surfaceId: string): PreviewOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 是 | 支持的预览配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。 |
 | surfaceId | string | 是 | 从XComponent或者[ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md)组件获取的surfaceId。 |
 
 **返回值：**
@@ -405,7 +411,7 @@ function createPreviewOutput(cameraOutputCapability: camera.CameraOutputCapabili
 }
 ```
 
-<a id="createpreviewoutput-1"></a>
+<a id="createpreviewoutput2"></a>
 
 ## createPreviewOutput
 
@@ -513,6 +519,8 @@ function createSession(cameraManager: camera.CameraManager, mode: camera.SceneMo
 }
 ```
 
+<a id="createvideooutput1"></a>
+
 ## createVideoOutput
 
 ```TypeScript
@@ -540,7 +548,7 @@ createVideoOutput(profile: VideoProfile, surfaceId: string): VideoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | 是 | 支持的录像配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability-1)接口获取。 |
+| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | 是 | 支持的录像配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。 |
 | surfaceId | string | 是 | 从[AVRecorder](../../apis-media-kit/arkts-apis/arkts-media-media-avrecorder-i.md)获取的surfaceId。 |
 
 **返回值：**
@@ -575,7 +583,7 @@ function createVideoOutput(cameraOutputCapability: camera.CameraOutputCapability
 }
 ```
 
-<a id="createvideooutput-1"></a>
+<a id="createvideooutput2"></a>
 
 ## createVideoOutput
 
@@ -880,7 +888,7 @@ function getSupportedFullOutputCapability(camera: camera.CameraDevice, cameraMan
 }
 ```
 
-<a id="getsupportedoutputcapability-1"></a>
+<a id="getsupportedoutputcapability2"></a>
 
 ## getSupportedOutputCapability
 
@@ -920,6 +928,8 @@ function getSupportedOutputCapability(camera: camera.CameraDevice, cameraManager
 }
 ```
 
+<a id="getsupportedoutputcapability1"></a>
+
 ## getSupportedOutputCapability
 
 ```TypeScript
@@ -936,7 +946,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 **废弃版本：** 11
 
-**替代接口：** [getSupportedOutputCapability](#getsupportedoutputcapability-1)(camera: CameraDevice, mode: SceneMode)
+**替代接口：** [getSupportedOutputCapability](#getsupportedoutputcapability2)(camera: CameraDevice, mode: SceneMode)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 

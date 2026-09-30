@@ -6,7 +6,7 @@ interface RdbStore
 
 Provides APIs for managing data in an RDB store.
 
-Before using the APIs of this class, use [executeSql](#executesql) to initialize the database table structure and related data.
+Before using the APIs of this class, use [executeSql](#executesql1) to initialize the database table structure and related data.
 
 **Since:** 7
 
@@ -22,6 +22,8 @@ Before using the APIs of this class, use [executeSql](#executesql) to initialize
 
 ```TypeScript
 ```
+
+<a id="batchinsert1"></a>
 
 ## batchInsert
 
@@ -99,7 +101,7 @@ rdbStore.batchInsert("EMPLOYEE", valueBuckets, (status: number, insertNum: numbe
 })
 ```
 
-<a id="batchinsert-1"></a>
+<a id="batchinsert2"></a>
 
 ## batchInsert
 
@@ -275,6 +277,8 @@ data_rdb.getRdbStore(this.context, "RdbTest.db", 1, async (err: BusinessError, r
 })
 ```
 
+<a id="delete1"></a>
+
 ## delete
 
 ```TypeScript
@@ -314,7 +318,7 @@ rdbStore.delete(predicates, (err: BusinessError, rows: number) => {
 })
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -359,6 +363,8 @@ promise.then((rows: number) => {
 })
 ```
 
+<a id="executesql1"></a>
+
 ## executeSql
 
 ```TypeScript
@@ -398,7 +404,7 @@ rdbStore.executeSql(SQL_DELETE_TABLE, ['zhangsan'], (err: BusinessError) => {
 })
 ```
 
-<a id="executesql-1"></a>
+<a id="executesql2"></a>
 
 ## executeSql
 
@@ -442,6 +448,8 @@ promise.then(() => {
   console.error("ExecuteSql failed, err: " + err)
 })
 ```
+
+<a id="insert1"></a>
 
 ## insert
 
@@ -498,7 +506,7 @@ rdbStore.insert("EMPLOYEE", valueBucket, (status: number, rowId: number) => {
 })
 ```
 
-<a id="insert-1"></a>
+<a id="insert2"></a>
 
 ## insert
 
@@ -558,6 +566,8 @@ promise.then((rowId: BusinessError) => {
   console.error("Insert failed");
 })
 ```
+
+<a id="obtaindistributedtablename1"></a>
 
 ## obtainDistributedTableName
 
@@ -620,7 +630,7 @@ rdbStore.obtainDistributedTableName(deviceId, "EMPLOYEE", (err: BusinessError, t
 })
 ```
 
-<a id="obtaindistributedtablename-1"></a>
+<a id="obtaindistributedtablename2"></a>
 
 ## obtainDistributedTableName
 
@@ -771,6 +781,8 @@ try {
 }
 ```
 
+<a id="query1"></a>
+
 ## query
 
 ```TypeScript
@@ -812,7 +824,7 @@ rdbStore.query(predicates, ["ID", "NAME", "AGE", "SALARY", "CODES"], (err: Busin
 })
 ```
 
-<a id="query-1"></a>
+<a id="query2"></a>
 
 ## query
 
@@ -859,6 +871,8 @@ promise.then((resultSet: void) => {
 })
 ```
 
+<a id="querysql1"></a>
+
 ## querySql
 
 ```TypeScript
@@ -898,7 +912,7 @@ rdbStore.querySql("SELECT * FROM EMPLOYEE CROSS JOIN BOOK WHERE BOOK.NAME = ?", 
 })
 ```
 
-<a id="querysql-1"></a>
+<a id="querysql2"></a>
 
 ## querySql
 
@@ -995,6 +1009,8 @@ data_rdb.getRdbStore(this,context, "RdbTest.db", 1, async (err: BusinessError, r
 })
 ```
 
+<a id="setdistributedtables1"></a>
+
 ## setDistributedTables
 
 ```TypeScript
@@ -1034,7 +1050,7 @@ rdbStore.setDistributedTables(["EMPLOYEE"], (err: BusinessError) => {
 })
 ```
 
-<a id="setdistributedtables-1"></a>
+<a id="setdistributedtables2"></a>
 
 ## setDistributedTables
 
@@ -1078,6 +1094,8 @@ promise.then(() => {
   console.error("SetDistributedTables failed, err: " + err)
 })
 ```
+
+<a id="sync1"></a>
 
 ## sync
 
@@ -1140,7 +1158,7 @@ rdbStore.sync(data_rdb.SyncMode.SYNC_MODE_PUSH, predicates, (err: BusinessError,
 })
 ```
 
-<a id="sync-1"></a>
+<a id="sync2"></a>
 
 ## sync
 
@@ -1207,6 +1225,8 @@ promise.then((result: void) =>{
 })
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -1264,7 +1284,7 @@ rdbStore.update(valueBucket, predicates, (err: BusinessError, rows: number) => {
 })
 ```
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 

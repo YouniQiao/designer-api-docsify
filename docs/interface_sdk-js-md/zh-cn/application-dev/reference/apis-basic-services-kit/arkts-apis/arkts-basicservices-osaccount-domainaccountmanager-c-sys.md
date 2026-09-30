@@ -18,6 +18,8 @@ class DomainAccountManager
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
+<a id="auth1"></a>
+
 ## auth
 
 ```TypeScript
@@ -88,7 +90,7 @@ try {
 }
 ```
 
-<a id="auth-1"></a>
+<a id="auth2"></a>
 
 ## auth
 
@@ -171,6 +173,8 @@ try {
 }
 ```
 
+<a id="authwithpopup1"></a>
+
 ## authWithPopup
 
 ```TypeScript
@@ -234,7 +238,7 @@ try {
 }
 ```
 
-<a id="authwithpopup-1"></a>
+<a id="authwithpopup2"></a>
 
 ## authWithPopup
 
@@ -301,6 +305,8 @@ try {
 }
 ```
 
+<a id="getaccesstoken1"></a>
+
 ## getAccessToken
 
 ```TypeScript
@@ -364,7 +370,7 @@ try {
 }
 ```
 
-<a id="getaccesstoken-2"></a>
+<a id="getaccesstoken3"></a>
 
 ## getAccessToken
 
@@ -432,6 +438,8 @@ try {
 }
 ```
 
+<a id="getaccountinfo1"></a>
+
 ## getAccountInfo
 
 ```TypeScript
@@ -497,7 +505,7 @@ try {
 }
 ```
 
-<a id="getaccountinfo-1"></a>
+<a id="getaccountinfo2"></a>
 
 ## getAccountInfo
 
@@ -567,6 +575,8 @@ try {
 }
 ```
 
+<a id="hasaccount1"></a>
+
 ## hasAccount
 
 ```TypeScript
@@ -631,7 +641,7 @@ try {
 }
 ```
 
-<a id="hasaccount-1"></a>
+<a id="hasaccount2"></a>
 
 ## hasAccount
 
@@ -865,6 +875,8 @@ try {
 }
 ```
 
+<a id="updateaccounttoken1"></a>
+
 ## updateAccountToken
 
 ```TypeScript
@@ -931,7 +943,7 @@ try {
 }
 ```
 
-<a id="updateaccounttoken-1"></a>
+<a id="updateaccounttoken2"></a>
 
 ## updateAccountToken
 

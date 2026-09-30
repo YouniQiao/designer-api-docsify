@@ -85,6 +85,8 @@ function testGetSignSpec() {
 }
 ```
 
+<a id="init1"></a>
+
 ## init
 
 ```TypeScript
@@ -122,7 +124,7 @@ Initializes the **Sign** object using a private key. This API uses an asynchrono
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="init-1"></a>
+<a id="init2"></a>
 
 ## init
 
@@ -206,6 +208,8 @@ Initializes the **Sign** instance with a private key. This API returns the resul
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed. Possible causes:<br>1. Incorrect key type.<br>**Applicable version:** 26.0.0 and later |
 
+<a id="setsignspec1"></a>
+
 ## setSignSpec
 
 ```TypeScript
@@ -264,7 +268,7 @@ function testSetSignSpec() {
 }
 ```
 
-<a id="setsignspec-1"></a>
+<a id="setsignspec2"></a>
 
 ## setSignSpec
 
@@ -317,7 +321,7 @@ function testSetSignSpec() {
 }
 ```
 
-<a id="setsignspec-2"></a>
+<a id="setsignspec3"></a>
 
 ## setSignSpec
 
@@ -368,6 +372,8 @@ function testSetSignSpec() {
 }
 ```
 
+<a id="sign1"></a>
+
 ## sign
 
 ```TypeScript
@@ -403,7 +409,7 @@ Signs the data, including data added via the update interface. This API uses an 
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="sign-1"></a>
+<a id="sign2"></a>
 
 ## sign
 
@@ -440,7 +446,7 @@ Signs data. This API uses an asynchronous callback to return the result.
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="sign-2"></a>
+<a id="sign3"></a>
 
 ## sign
 
@@ -482,7 +488,7 @@ Signs the data, including data added via the update interface. This API uses a p
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620003](../errorcode-crypto-framework.md#17620003-parameter-check-failed) | Parameter check failed.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="sign-3"></a>
+<a id="sign4"></a>
 
 ## sign
 
@@ -756,6 +762,8 @@ function signBySync() {
 }
 ```
 
+<a id="update1"></a>
+
 ## update
 
 ```TypeScript
@@ -811,7 +819,7 @@ Updates data to be signed. This API uses an asynchronous callback to return the 
 | [17630001](../errorcode-crypto-framework.md#17630001-cryptographic-operation-error) | Crypto operation error. |
 | [17620004](../errorcode-crypto-framework.md#17620004-invalid-function-call) | Invalid function call.<br>**Applicable version:** 26.0.0 and later |
 
-<a id="update-1"></a>
+<a id="update2"></a>
 
 ## update
 
@@ -826,7 +834,7 @@ Updates data to be signed. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [sign](#sign-1) after
+> [sign](#sign2) after
 > [init](#init)), depending on the
 > data volume.
 > 

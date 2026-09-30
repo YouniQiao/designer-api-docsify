@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="getallformsinfo1"></a>
+
 ## getAllFormsInfo
 
 ```TypeScript
@@ -60,7 +62,7 @@ try {
 ```
 
 
-<a id="getallformsinfo-1"></a>
+<a id="getallformsinfo2"></a>
 
 ## getAllFormsInfo
 

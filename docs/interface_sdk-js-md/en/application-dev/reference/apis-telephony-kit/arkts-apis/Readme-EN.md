@@ -406,8 +406,6 @@
   - [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md)
   <!--Del-->
   - [getNrOptionMode(system api)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getNROptionMode(system api)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
   - [getOperatorName](arkts-telephony-radio-getoperatorname-f.md)
   - [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md)
   <!--Del-->
@@ -422,7 +420,6 @@
   <!--Del-->
   - [isManualNetworkScanning(system api)](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md)<!--DelEnd-->
   - [isNrSupported](arkts-telephony-radio-isnrsupported-f.md)
-  - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
   - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
   <!--Del-->
   - [off(system api)](arkts-telephony-radio-off-f-sys.md)<!--DelEnd-->
@@ -492,8 +489,6 @@
   - [NetworkType](arkts-telephony-radio-networktype-e.md)
   <!--Del-->
   - [NrOptionMode(system api)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NROptionMode(system api)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
   - [NsaState](arkts-telephony-radio-nsastate-e.md)
   <!--Del-->
   - [PreferredNetworkMode(system api)](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->

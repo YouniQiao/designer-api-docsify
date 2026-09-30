@@ -6,6 +6,8 @@
 import { distributedMissionManager } from '@kit.AbilityKit';
 ```
 
+<a id="startsyncremotemissions1"></a>
+
 ## startSyncRemoteMissions
 
 ```TypeScript
@@ -67,7 +69,7 @@ try {
 ```
 
 
-<a id="startsyncremotemissions-1"></a>
+<a id="startsyncremotemissions2"></a>
 
 ## startSyncRemoteMissions
 

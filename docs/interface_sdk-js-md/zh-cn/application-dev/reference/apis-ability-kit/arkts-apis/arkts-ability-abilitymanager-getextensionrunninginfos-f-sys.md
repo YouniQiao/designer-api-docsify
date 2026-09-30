@@ -6,6 +6,8 @@
 import { abilityManager } from '@kit.AbilityKit';
 ```
 
+<a id="getextensionrunninginfos1"></a>
+
 ## getExtensionRunningInfos
 
 ```TypeScript
@@ -45,7 +47,7 @@ function getExtensionRunningInfos(upperLimit: number): Promise<Array<ExtensionRu
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
 
-<a id="getextensionrunninginfos-1"></a>
+<a id="getextensionrunninginfos2"></a>
 
 ## getExtensionRunningInfos
 

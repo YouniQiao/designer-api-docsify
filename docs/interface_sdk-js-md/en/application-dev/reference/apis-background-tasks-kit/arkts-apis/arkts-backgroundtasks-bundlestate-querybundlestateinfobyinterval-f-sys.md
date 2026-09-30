@@ -6,6 +6,8 @@
 import { bundleState } from '@kit.BackgroundTasksKit';
 ```
 
+<a id="querybundlestateinfobyinterval1"></a>
+
 ## queryBundleStateInfoByInterval
 
 ```TypeScript
@@ -60,7 +62,7 @@ bundleState.queryBundleStateInfoByInterval(bundleState.IntervalType.BY_OPTIMIZED
 ```
 
 
-<a id="querybundlestateinfobyinterval-1"></a>
+<a id="querybundlestateinfobyinterval2"></a>
 
 ## queryBundleStateInfoByInterval
 

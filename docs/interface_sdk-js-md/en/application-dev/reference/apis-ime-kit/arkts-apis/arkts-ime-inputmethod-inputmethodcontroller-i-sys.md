@@ -18,7 +18,7 @@ In the following API examples, you must first use [getController](arkts-ime-inpu
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="hidesoftkeyboard-2"></a>
+<a id="hidesoftkeyboard3"></a>
 
 ## hideSoftKeyboard
 
@@ -77,7 +77,7 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
 });
 ```
 
-<a id="showsoftkeyboard-2"></a>
+<a id="showsoftkeyboard3"></a>
 
 ## showSoftKeyboard
 

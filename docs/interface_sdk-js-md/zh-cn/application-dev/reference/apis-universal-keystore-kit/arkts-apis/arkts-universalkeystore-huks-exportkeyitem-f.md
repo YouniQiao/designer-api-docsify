@@ -6,6 +6,8 @@
 import { huks } from '@kit.UniversalKeystoreKit';
 ```
 
+<a id="exportkeyitem1"></a>
+
 ## exportKeyItem
 
 ```TypeScript
@@ -81,7 +83,7 @@ huks.exportKeyItem(keyAlias, emptyOptions, (error, data) => {
 ```
 
 
-<a id="exportkeyitem-1"></a>
+<a id="exportkeyitem2"></a>
 
 ## exportKeyItem
 

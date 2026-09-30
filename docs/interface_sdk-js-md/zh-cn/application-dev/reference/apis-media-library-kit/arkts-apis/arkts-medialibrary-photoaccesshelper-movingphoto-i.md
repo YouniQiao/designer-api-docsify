@@ -95,6 +95,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+<a id="requestcontent1"></a>
+
 ## requestContent
 
 ```TypeScript
@@ -190,7 +192,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
-<a id="requestcontent-1"></a>
+<a id="requestcontent2"></a>
 
 ## requestContent
 
@@ -282,7 +284,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
-<a id="requestcontent-2"></a>
+<a id="requestcontent3"></a>
 
 ## requestContent
 

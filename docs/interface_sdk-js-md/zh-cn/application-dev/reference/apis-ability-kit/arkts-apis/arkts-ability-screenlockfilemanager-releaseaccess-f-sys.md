@@ -6,7 +6,7 @@
 import { screenLockFileManager } from '@kit.AbilityKit';
 ```
 
-<a id="releaseaccess-1"></a>
+<a id="releaseaccess2"></a>
 
 ## releaseAccess
 

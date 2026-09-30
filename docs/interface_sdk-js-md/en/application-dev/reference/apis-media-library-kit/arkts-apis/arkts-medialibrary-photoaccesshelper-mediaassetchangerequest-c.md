@@ -20,6 +20,8 @@ Represents a media asset change request.
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 ```
 
+<a id="addresource1"></a>
+
 ## addResource
 
 ```TypeScript
@@ -81,7 +83,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
-<a id="addresource-1"></a>
+<a id="addresource2"></a>
 
 ## addResource
 
@@ -189,7 +191,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="createassetrequest-2"></a>
+<a id="createassetrequest3"></a>
 
 ## createAssetRequest
 
@@ -372,6 +374,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+<a id="deleteassets1"></a>
+
 ## deleteAssets
 
 ```TypeScript
@@ -434,7 +438,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
-<a id="deleteassets-1"></a>
+<a id="deleteassets2"></a>
 
 ## deleteAssets
 
@@ -653,6 +657,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 ```
 
+<a id="savecameraphoto1"></a>
+
 ## saveCameraPhoto
 
 ```TypeScript
@@ -692,7 +698,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
 }
 ```
 
-<a id="savecameraphoto-1"></a>
+<a id="savecameraphoto2"></a>
 
 ## saveCameraPhoto
 

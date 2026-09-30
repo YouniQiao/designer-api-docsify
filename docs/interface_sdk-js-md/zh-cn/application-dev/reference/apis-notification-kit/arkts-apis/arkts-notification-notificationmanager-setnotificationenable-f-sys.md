@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="setnotificationenable1"></a>
+
 ## setNotificationEnable
 
 ```TypeScript
@@ -63,7 +65,7 @@ notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCa
 ```
 
 
-<a id="setnotificationenable-1"></a>
+<a id="setnotificationenable2"></a>
 
 ## setNotificationEnable
 

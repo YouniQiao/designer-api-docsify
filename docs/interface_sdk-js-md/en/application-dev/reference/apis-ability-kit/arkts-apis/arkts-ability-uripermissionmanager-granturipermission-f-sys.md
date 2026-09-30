@@ -6,6 +6,8 @@
 import { uriPermissionManager } from '@kit.AbilityKit';
 ```
 
+<a id="granturipermission1"></a>
+
 ## grantUriPermission
 
 ```TypeScript
@@ -86,7 +88,7 @@ fileIo.mkdir(path, (err) => {
 ```
 
 
-<a id="granturipermission-2"></a>
+<a id="granturipermission3"></a>
 
 ## grantUriPermission
 
@@ -168,7 +170,7 @@ fileIo.mkdir(path, (err) => {
 ```
 
 
-<a id="granturipermission-4"></a>
+<a id="granturipermission5"></a>
 
 ## grantUriPermission
 

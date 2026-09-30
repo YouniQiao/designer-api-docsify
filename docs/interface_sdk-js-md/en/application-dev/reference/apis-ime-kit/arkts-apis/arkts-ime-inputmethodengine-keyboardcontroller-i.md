@@ -18,6 +18,8 @@ You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodabi
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
+<a id="exitcurrentinputtype1"></a>
+
 ## exitCurrentInputType
 
 ```TypeScript
@@ -59,7 +61,7 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 });
 ```
 
-<a id="exitcurrentinputtype-1"></a>
+<a id="exitcurrentinputtype2"></a>
 
 ## exitCurrentInputType
 
@@ -99,6 +101,8 @@ keyboardController.exitCurrentInputType().then(() => {
   console.error(`Failed to exit current input type. Code:${err.code}, message:${err.message}`);
 });
 ```
+
+<a id="hide1"></a>
 
 ## hide
 
@@ -140,7 +144,7 @@ keyboardController.hide((err: BusinessError) => {
 });
 ```
 
-<a id="hide-1"></a>
+<a id="hide2"></a>
 
 ## hide
 
@@ -180,6 +184,8 @@ keyboardController.hide().then(() => {
 });
 ```
 
+<a id="hidekeyboard1"></a>
+
 ## hideKeyboard
 
 ```TypeScript
@@ -192,7 +198,7 @@ Hides the keyboard. This API uses an asynchronous callback to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [hide](#hide)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [hide](#hide1)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void--><!--Device-KeyboardController-hideKeyboard(callback: AsyncCallback<void>): void-End-->
 
@@ -218,7 +224,7 @@ keyboardController.hideKeyboard((err: BusinessError) => {
 });
 ```
 
-<a id="hidekeyboard-1"></a>
+<a id="hidekeyboard2"></a>
 
 ## hideKeyboard
 

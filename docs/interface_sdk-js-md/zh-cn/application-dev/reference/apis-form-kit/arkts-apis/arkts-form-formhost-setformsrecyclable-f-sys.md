@@ -6,6 +6,8 @@
 import { formHost } from '@kit.FormKit';
 ```
 
+<a id="setformsrecyclable1"></a>
+
 ## setFormsRecyclable
 
 ```TypeScript
@@ -68,7 +70,7 @@ try {
 ```
 
 
-<a id="setformsrecyclable-1"></a>
+<a id="setformsrecyclable2"></a>
 
 ## setFormsRecyclable
 

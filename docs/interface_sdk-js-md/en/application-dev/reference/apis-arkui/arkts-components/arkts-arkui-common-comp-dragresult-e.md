@@ -36,7 +36,7 @@ If the drag is not finished and the result is not set by receiver, return DragRe
 DRAG_SUCCESSFUL = 0
 ```
 
-The drag is successful. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop).
+The drag is successful. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop1).
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ The drag is successful. This value applies to [onDrop](arkts-arkui-common-comp-c
 DRAG_FAILED = 1
 ```
 
-The drag fails. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop).
+The drag fails. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop1).
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ The drag fails. This value applies to [onDrop](arkts-arkui-common-comp-commonmet
 DRAG_CANCELED = 2
 ```
 
-The drag is canceled. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop).
+The drag is canceled. This value applies to [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop1).
 
 **Since:** 10
 

@@ -5,6 +5,8 @@
 ```TypeScript
 ```
 
+<a id="notifyformsvisible1"></a>
+
 ## notifyFormsVisible
 
 ```TypeScript
@@ -36,7 +38,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
 
-<a id="notifyformsvisible-1"></a>
+<a id="notifyformsvisible2"></a>
 
 ## notifyFormsVisible
 

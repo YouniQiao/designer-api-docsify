@@ -69,6 +69,8 @@ try {
 }
 ```
 
+<a id="getphonebookaccessauthorization1"></a>
+
 ## getPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -121,7 +123,7 @@ try {
 }
 ```
 
-<a id="getphonebookaccessauthorization-1"></a>
+<a id="getphonebookaccessauthorization2"></a>
 
 ## getPhoneBookAccessAuthorization
 
@@ -180,6 +182,8 @@ try {
 }
 ```
 
+<a id="getsharetype1"></a>
+
 ## getShareType
 
 ```TypeScript
@@ -232,7 +236,7 @@ try {
 }
 ```
 
-<a id="getsharetype-1"></a>
+<a id="getsharetype2"></a>
 
 ## getShareType
 
@@ -291,6 +295,8 @@ try {
 }
 ```
 
+<a id="setphonebookaccessauthorization1"></a>
+
 ## setPhoneBookAccessAuthorization
 
 ```TypeScript
@@ -348,7 +354,7 @@ try {
 }
 ```
 
-<a id="setphonebookaccessauthorization-1"></a>
+<a id="setphonebookaccessauthorization2"></a>
 
 ## setPhoneBookAccessAuthorization
 
@@ -408,6 +414,8 @@ try {
 }
 ```
 
+<a id="setsharetype1"></a>
+
 ## setShareType
 
 ```TypeScript
@@ -461,7 +469,7 @@ try {
 }
 ```
 
-<a id="setsharetype-1"></a>
+<a id="setsharetype2"></a>
 
 ## setShareType
 

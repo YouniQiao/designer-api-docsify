@@ -1930,13 +1930,13 @@
 - common<!--arkts-arkui-common-->
   - [canvaspattern](arkts-arkui-canvaspattern.md)
     - [Matrix2D](arkts-arkui-canvaspattern-matrix2d-c.md)
-    - [CanvasPattern](arkts-arkui-canvaspattern-canvaspattern-i.md)
+    - [CanvasPattern](arkts-arkui-canvaspattern-i.md)
   - [console](arkts-arkui-console.md)
     - [console](arkts-arkui-console-c.md)
   - [dom](arkts-arkui-dom.md)
     - [dom](arkts-arkui-dom-c.md)
   - [featureability](arkts-arkui-featureability.md)
-    - [FeatureAbility](arkts-arkui-featureability-featureability-c.md)
+    - [FeatureAbility](arkts-arkui-featureability-c.md)
     - [CallAbilityParam](arkts-arkui-featureability-callabilityparam-i.md)
     - [FinishWithResultParams](arkts-arkui-featureability-finishwithresultparams-i.md)
     - [RequestParams](arkts-arkui-featureability-requestparams-i.md)
@@ -2010,7 +2010,7 @@
     - [TextMetrics](arkts-arkui-viewmodel-textmetrics-i.md)
     - [TransformObject](arkts-arkui-viewmodel-transformobject-i.md)
     - [VideoElement](arkts-arkui-viewmodel-videoelement-i.md)
-    - [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md)
+    - [ViewModel](arkts-arkui-viewmodel-i.md)
     - [WebElement](arkts-arkui-viewmodel-webelement-i.md)
     <!--Del-->
     - [CombinedOptions(system api)](arkts-arkui-combinedoptions-t-sys.md)<!--DelEnd-->
@@ -2020,7 +2020,7 @@
     - [console](arkts-arkui-console-c.md)
   - [featureability](arkts-arkui-featureability.md)
     <!--Del-->
-    - [FeatureAbility(system api)](arkts-arkui-featureability-featureability-c-sys.md)<!--DelEnd-->
+    - [FeatureAbility(system api)](arkts-arkui-featureability-c-sys.md)<!--DelEnd-->
     - [SendMessageOptions](arkts-arkui-featureability-sendmessageoptions-i.md)
     - [SubscribeMessageOptions](arkts-arkui-featureability-subscribemessageoptions-i.md)
     - [SubscribeMessageResponse](arkts-arkui-featureability-subscribemessageresponse-i.md)
@@ -2047,7 +2047,7 @@
     - [Options](arkts-arkui-viewmodel-options-i.md)
     - [PickerElement](arkts-arkui-viewmodel-pickerelement-i.md)
     - [SwiperElement](arkts-arkui-viewmodel-swiperelement-i.md)
-    - [ViewModel](arkts-arkui-viewmodel-viewmodel-i.md)
+    - [ViewModel](arkts-arkui-viewmodel-i.md)
     <!--Del-->
     - [CombinedOptions(system api)](arkts-arkui-combinedoptions-t-sys.md)<!--DelEnd-->
     <!--Del-->

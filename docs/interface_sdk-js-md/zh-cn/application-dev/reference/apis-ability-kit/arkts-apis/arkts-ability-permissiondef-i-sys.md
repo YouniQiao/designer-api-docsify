@@ -4,7 +4,7 @@
 export interface PermissionDef
 ```
 
-[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md)获取。
+[module.json5配置文件](../../../quick-start/module-configuration-file.md)中定义的权限详细信息，通过接口[bundleManager.getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef1)获取。
 
 > **说明：** 
 > 

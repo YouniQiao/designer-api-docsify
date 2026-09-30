@@ -6,6 +6,8 @@
 import { sms } from '@kit.TelephonyKit';
 ```
 
+<a id="updatesimmessage1"></a>
+
 ## updateSimMessage
 
 ```TypeScript
@@ -62,7 +64,7 @@ sms.updateSimMessage(updateSimMessageOptions, (err: BusinessError) => {
 ```
 
 
-<a id="updatesimmessage-1"></a>
+<a id="updatesimmessage2"></a>
 
 ## updateSimMessage
 

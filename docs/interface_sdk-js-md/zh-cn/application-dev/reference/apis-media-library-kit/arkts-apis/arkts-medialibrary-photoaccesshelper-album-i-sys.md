@@ -304,6 +304,8 @@ async function example1(phAccessHelper: photoAccessHelper.PhotoAccessHelper) : P
 }
 ```
 
+<a id="deleteassets1"></a>
+
 ## deleteAssets
 
 ```TypeScript
@@ -379,7 +381,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="deleteassets-1"></a>
+<a id="deleteassets2"></a>
 
 ## deleteAssets
 
@@ -460,6 +462,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="recoverassets1"></a>
+
 ## recoverAssets
 
 ```TypeScript
@@ -531,7 +535,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="recoverassets-1"></a>
+<a id="recoverassets2"></a>
 
 ## recoverAssets
 
@@ -608,6 +612,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<a id="setcoveruri1"></a>
+
 ## setCoverUri
 
 ```TypeScript
@@ -679,7 +685,7 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
-<a id="setcoveruri-1"></a>
+<a id="setcoveruri2"></a>
 
 ## setCoverUri
 

@@ -6,6 +6,8 @@
 import { cloudData } from '@kit.ArkData';
 ```
 
+<a id="queryparticipantsbyinvitation1"></a>
+
 ## queryParticipantsByInvitation
 
 ```TypeScript
@@ -55,7 +57,7 @@ cloudData.sharing.queryParticipantsByInvitation('sharing_invitation_code_test', 
 ```
 
 
-<a id="queryparticipantsbyinvitation-1"></a>
+<a id="queryparticipantsbyinvitation2"></a>
 
 ## queryParticipantsByInvitation
 

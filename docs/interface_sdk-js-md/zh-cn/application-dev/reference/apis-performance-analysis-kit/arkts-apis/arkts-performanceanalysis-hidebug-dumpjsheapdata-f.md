@@ -6,6 +6,8 @@
 import { hidebug } from '@kit.PerformanceAnalysisKit';
 ```
 
+<a id="dumpjsheapdata1"></a>
+
 ## dumpJsHeapData
 
 ```TypeScript
@@ -50,7 +52,7 @@ try {
 ```
 
 
-<a id="dumpjsheapdata-1"></a>
+<a id="dumpjsheapdata2"></a>
 
 ## dumpJsHeapData
 

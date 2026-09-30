@@ -6,6 +6,8 @@
 import { cooperate } from '@kit.DistributedServiceKit';
 ```
 
+<a id="activate1"></a>
+
 ## activate
 
 ```TypeScript
@@ -63,7 +65,7 @@ try {
 ```
 
 
-<a id="activate-1"></a>
+<a id="activate2"></a>
 
 ## activate
 

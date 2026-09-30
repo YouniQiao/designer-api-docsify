@@ -28,7 +28,7 @@ Creates and displays a toast.
 
 **废弃版本：** 18
 
-**替代接口：** showToast
+**替代接口：** [showToast](arkts-arkui-arkui-uicontext-promptaction-c.md#showtoast)
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

@@ -18,6 +18,8 @@ An image effect class used to add a specified effect to the effect chain through
 import { effectKit } from '@kit.ArkGraphics2D';
 ```
 
+<a id="blur1"></a>
+
 ## blur
 
 ```TypeScript
@@ -118,7 +120,7 @@ struct Index {
 }
 ```
 
-<a id="blur-1"></a>
+<a id="blur2"></a>
 
 ## blur
 
@@ -313,6 +315,8 @@ struct Index {
 }
 ```
 
+<a id="geteffectpixelmap1"></a>
+
 ## getEffectPixelMap
 
 ```TypeScript
@@ -371,7 +375,7 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
-<a id="geteffectpixelmap-1"></a>
+<a id="geteffectpixelmap2"></a>
 
 ## getEffectPixelMap
 

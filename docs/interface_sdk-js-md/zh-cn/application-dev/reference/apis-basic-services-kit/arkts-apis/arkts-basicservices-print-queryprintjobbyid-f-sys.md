@@ -6,6 +6,8 @@
 import { print } from '@kit.BasicServicesKit';
 ```
 
+<a id="queryprintjobbyid1"></a>
+
 ## queryPrintJobById
 
 ```TypeScript
@@ -56,7 +58,7 @@ print.queryPrintJobById(jobId, (error: BusinessError, printJob : print.PrintJob)
 ```
 
 
-<a id="queryprintjobbyid-1"></a>
+<a id="queryprintjobbyid2"></a>
 
 ## queryPrintJobById
 

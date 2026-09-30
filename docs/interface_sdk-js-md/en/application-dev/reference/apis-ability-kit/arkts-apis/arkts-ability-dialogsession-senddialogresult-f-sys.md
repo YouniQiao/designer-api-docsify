@@ -6,6 +6,8 @@
 import { dialogSession } from '@kit.AbilityKit';
 ```
 
+<a id="senddialogresult1"></a>
+
 ## sendDialogResult
 
 ```TypeScript
@@ -49,7 +51,7 @@ Sends a request for a dialog box. This API uses a promise to return the result.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
 
-<a id="senddialogresult-1"></a>
+<a id="senddialogresult2"></a>
 
 ## sendDialogResult
 

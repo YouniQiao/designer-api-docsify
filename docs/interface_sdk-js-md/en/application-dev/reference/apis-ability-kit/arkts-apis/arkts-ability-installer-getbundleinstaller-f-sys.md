@@ -6,6 +6,8 @@
 import { installer } from '@kit.AbilityKit';
 ```
 
+<a id="getbundleinstaller1"></a>
+
 ## getBundleInstaller
 
 ```TypeScript
@@ -36,7 +38,7 @@ Obtains a BundleInstaller object. This API uses an asynchronous callback to retu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 
-<a id="getbundleinstaller-1"></a>
+<a id="getbundleinstaller2"></a>
 
 ## getBundleInstaller
 

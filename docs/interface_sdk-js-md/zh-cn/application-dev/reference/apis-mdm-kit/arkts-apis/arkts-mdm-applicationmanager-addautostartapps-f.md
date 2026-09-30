@@ -6,6 +6,8 @@
 import { applicationManager } from '@kit.MDMKit';
 ```
 
+<a id="addautostartapps1"></a>
+
 ## addAutoStartApps
 
 ```TypeScript
@@ -73,7 +75,7 @@ try {
 ```
 
 
-<a id="addautostartapps-1"></a>
+<a id="addautostartapps2"></a>
 
 ## addAutoStartApps
 

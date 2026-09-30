@@ -175,6 +175,8 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
 });
 ```
 
+<a id="setaudioscene1"></a>
+
 ## setAudioScene
 
 ```TypeScript
@@ -212,7 +214,7 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: Busine
 });
 ```
 
-<a id="setaudioscene-1"></a>
+<a id="setaudioscene2"></a>
 
 ## setAudioScene
 

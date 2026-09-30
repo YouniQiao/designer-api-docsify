@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="postdialproceed1"></a>
+
 ## postDialProceed
 
 ```TypeScript
@@ -57,7 +59,7 @@ call.postDialProceed(1, true, (err: BusinessError) => {
 ```
 
 
-<a id="postdialproceed-1"></a>
+<a id="postdialproceed2"></a>
 
 ## postDialProceed
 

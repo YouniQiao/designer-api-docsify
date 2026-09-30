@@ -6,6 +6,8 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
+<a id="getsharingstate1"></a>
+
 ## getSharingState
 
 ```TypeScript
@@ -56,7 +58,7 @@ sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.Shari
 ```
 
 
-<a id="getsharingstate-1"></a>
+<a id="getsharingstate2"></a>
 
 ## getSharingState
 

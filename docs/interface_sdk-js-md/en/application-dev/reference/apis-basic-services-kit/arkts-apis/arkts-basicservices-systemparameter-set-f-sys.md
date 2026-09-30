@@ -6,6 +6,8 @@
 import { systemParameter } from '@kit.BasicServicesKit';
 ```
 
+<a id="set1"></a>
+
 ## set
 
 ```TypeScript
@@ -18,7 +20,7 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 
 **Deprecated since:** 9
 
-**Substitutes:** set
+**Substitutes:** [set](arkts-basicservices-systemparameterenhance-set-f-sys.md)
 
 <!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void--><!--Device-systemParameter-function set(key: string, value: string, callback: AsyncCallback<void>): void-End-->
 
@@ -53,7 +55,7 @@ try {
 ```
 
 
-<a id="set-1"></a>
+<a id="set2"></a>
 
 ## set
 
@@ -67,7 +69,7 @@ Sets a value of the specified key. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** set
+**Substitutes:** [set](arkts-basicservices-systemparameterenhance-set-f-sys.md)
 
 <!--Device-systemParameter-function set(key: string, value: string): Promise<void>--><!--Device-systemParameter-function set(key: string, value: string): Promise<void>-End-->
 

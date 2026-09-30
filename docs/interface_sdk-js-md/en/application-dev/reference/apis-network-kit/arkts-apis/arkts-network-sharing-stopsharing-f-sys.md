@@ -6,6 +6,8 @@
 import { sharing } from '@kit.NetworkKit';
 ```
 
+<a id="stopsharing1"></a>
+
 ## stopSharing
 
 ```TypeScript
@@ -59,7 +61,7 @@ sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
 ```
 
 
-<a id="stopsharing-1"></a>
+<a id="stopsharing2"></a>
 
 ## stopSharing
 

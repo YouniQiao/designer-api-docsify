@@ -6,6 +6,8 @@
 import { wifiManager } from '@kit.MDMKit';
 ```
 
+<a id="setwifiprofile1"></a>
+
 ## setWifiProfile
 
 ```TypeScript
@@ -76,7 +78,7 @@ wifiManager.setWifiProfile(wantTemp, profile, (err) => {
 ```
 
 
-<a id="setwifiprofile-1"></a>
+<a id="setwifiprofile2"></a>
 
 ## setWifiProfile
 

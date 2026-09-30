@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="cancelasbundle1"></a>
+
 ## cancelAsBundle
 
 ```TypeScript
@@ -73,7 +75,7 @@ notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBund
 ```
 
 
-<a id="cancelasbundle-1"></a>
+<a id="cancelasbundle2"></a>
 
 ## cancelAsBundle
 
@@ -138,7 +140,7 @@ notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
 ```
 
 
-<a id="cancelasbundle-2"></a>
+<a id="cancelasbundle3"></a>
 
 ## cancelAsBundle
 

@@ -6,6 +6,8 @@
 import { installer } from '@kit.AbilityKit';
 ```
 
+<a id="getbundleinstaller1"></a>
+
 ## getBundleInstaller
 
 ```TypeScript
@@ -36,7 +38,7 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types. |
 
 
-<a id="getbundleinstaller-1"></a>
+<a id="getbundleinstaller2"></a>
 
 ## getBundleInstaller
 

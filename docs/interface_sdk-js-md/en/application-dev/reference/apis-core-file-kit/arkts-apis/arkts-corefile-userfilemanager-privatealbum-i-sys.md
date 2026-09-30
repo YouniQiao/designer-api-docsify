@@ -28,6 +28,8 @@ This API will be deprecated. Use [Album](arkts-corefile-userfilemanager-album-i-
 import { userFileManager } from '@kit.CoreFileKit';
 ```
 
+<a id="delete1"></a>
+
 ## delete
 
 ```TypeScript
@@ -36,7 +38,7 @@ delete(uri: string, callback: AsyncCallback<void>): void
 
 Deletes a file from the system album. Only the files in the trash can be deleted. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets) instead.
+This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets1) instead.
 
 **Since:** 9
 
@@ -88,7 +90,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="delete-1"></a>
+<a id="delete2"></a>
 
 ## delete
 
@@ -98,7 +100,7 @@ delete(uri: string): Promise<void>
 
 Deletes a file from the system album. Only the files in the trash can be deleted. This API uses a promise to return the result.
 
-This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets) instead.
+This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#deletephotoassets1) instead.
 
 **Since:** 9
 
@@ -154,6 +156,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<a id="recover1"></a>
+
 ## recover
 
 ```TypeScript
@@ -162,7 +166,7 @@ recover(uri: string, callback: AsyncCallback<void>): void
 
 Recovers a file in the system album. Only the files in the trash can be recovered. This API uses an asynchronous callback to return the result.
 
-This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
+This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets1) instead.
 
 **Since:** 9
 
@@ -222,7 +226,7 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
-<a id="recover-1"></a>
+<a id="recover2"></a>
 
 ## recover
 
@@ -232,7 +236,7 @@ recover(uri: string): Promise<void>
 
 Recovers a file in the system album. Only the files in the trash can be recovered. This API uses a promise to return the result.
 
-This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets) instead.
+This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userfilemanager-album-i-sys.md#recoverphotoassets1) instead.
 
 **Since:** 9
 

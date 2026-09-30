@@ -20,6 +20,8 @@ interface CameraInput
 import { camera } from '@kit.CameraKit';
 ```
 
+<a id="close1"></a>
+
 ## close
 
 ```TypeScript
@@ -64,7 +66,7 @@ function closeCameraInput(cameraInput: camera.CameraInput): void {
 }
 ```
 
-<a id="close-1"></a>
+<a id="close2"></a>
 
 ## close
 
@@ -354,6 +356,8 @@ function registerCameraOcclusionDetection(cameraInput: camera.CameraInput): void
 }
 ```
 
+<a id="open1"></a>
+
 ## open
 
 ```TypeScript
@@ -400,7 +404,7 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
 }
 ```
 
-<a id="open-1"></a>
+<a id="open2"></a>
 
 ## open
 
@@ -447,7 +451,7 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
 }
 ```
 
-<a id="open-2"></a>
+<a id="open3"></a>
 
 ## open
 
@@ -499,7 +503,7 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
 }
 ```
 
-<a id="open-3"></a>
+<a id="open4"></a>
 
 ## open
 

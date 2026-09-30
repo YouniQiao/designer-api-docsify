@@ -8,13 +8,15 @@ The universal attributes are supported.
 
 In addition to the universal events, the following events are supported.
 
-**Inheritance/Implementation:** NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>
+**Inheritance/Implementation:** NavDestinationAttribute extends CommonMethod&lt;NavDestinationAttribute&gt;
 
 **Since:** 9
 
 <!--Device-unnamed-declare class NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>--><!--Device-unnamed-declare class NavDestinationAttribute extends CommonMethod<NavDestinationAttribute>-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+<a id="backbuttonicon1"></a>
 
 ## backButtonIcon
 
@@ -48,7 +50,7 @@ Sets the icon of the back button on the title bar.
 | --- | --- | --- | --- |
 | value | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [SymbolGlyphModifier](arkts-arkui-common-comp-symbolglyphmodifier-t.md) | Yes | Icon of the back button on the title bar.<br>**Since:** 12 |
 
-<a id="backbuttonicon-1"></a>
+<a id="backbuttonicon2"></a>
 
 ## backButtonIcon
 
@@ -297,6 +299,8 @@ Sets whether to hide the back button in the title bar.
 | --- | --- | --- | --- |
 | hide | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;boolean&gt; | Yes | Whether to hide the back button in the title bar.<br>Default value: **false**.<br>**true**: Hide the back button in the title bar.<br>**false**: Show the back button in the title bar. |
 
+<a id="hidetitlebar1"></a>
+
 ## hideTitleBar
 
 ```TypeScript
@@ -319,7 +323,7 @@ Specifies whether to hide the title bar.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to hide the title bar.<br>Default value: **false**.<br>**true**: Hide the title bar.<br>**false**: Show the title bar. |
 
-<a id="hidetitlebar-1"></a>
+<a id="hidetitlebar2"></a>
 
 ## hideTitleBar
 
@@ -327,7 +331,7 @@ Specifies whether to hide the title bar.
 hideTitleBar(hide: boolean, animated: boolean)
 ```
 
-Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar), this API adds the capability to control whether to animate the visibility change of the title bar.
+Specifies whether to hide the title bar. Compared with [hideTitleBar](#hidetitlebar1), this API adds the capability to control whether to animate the visibility change of the title bar.
 
 **Since:** 13
 
@@ -407,6 +411,8 @@ Ignores the layout safe area by allowing the component to extend into the non-sa
 | types | Array&lt;[LayoutSafeAreaType](arkts-arkui-common-comp-layoutsafeareatype-e.md)&gt; | No | Types of non-safe areas to extend into.<br>Default value:<br> [LayoutSafeAreaType.SYSTEM] |
 | edges | Array&lt;[LayoutSafeAreaEdge](arkts-arkui-common-comp-layoutsafeareaedge-e.md)&gt; | No | Edges for expanding the safe area.<br> Default value:<br> [LayoutSafeAreaEdge.TOP, LayoutSafeAreaEdge.BOTTOM] |
 
+<a id="menus1"></a>
+
 ## menus
 
 ```TypeScript
@@ -439,7 +445,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 | --- | --- | --- | --- |
 | value | Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt; &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Menu items in the upper right corner of the page. |
 
-<a id="menus-1"></a>
+<a id="menus2"></a>
 
 ## menus
 
@@ -447,7 +453,7 @@ Sets the menu items in the upper right corner of the page. If this attribute is 
 menus(items: Array<NavigationMenuItem> | CustomBuilder, options?: NavigationMenuOptions)
 ```
 
-Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
+Sets the menu items in the upper right corner of the page. If this attribute is not set, no menu item is displayed. Compared with [menus](#menus1), this API adds menu options. When the value type is Array&lt;[NavigationMenuItem](arkts-arkui-navigation-comp-navigationmenuitem-i.md)&gt;, the menu shows a maximum of three icons in portrait mode and a maximum of five icons in landscape mode, with excess icons (if any) placed under the automatically generated **More** icon.
 
 > **NOTE:** 
 
@@ -618,7 +624,7 @@ Triggered when a **NavDestination** page that already exists in the stack is mov
 
 > **NOTE:** 
 
-> - This callback is not triggered by [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath) or [replaceDestination](arkts-arkui-navigation-comp-navpathstack-c.md#replacedestination).
+> - This callback is not triggered by [replacePath](arkts-arkui-navigation-comp-navpathstack-c.md#replacepath1) or [replaceDestination](arkts-arkui-navigation-comp-navpathstack-c.md#replacedestination).
 > 
 > - This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 22.
 

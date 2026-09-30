@@ -6,6 +6,8 @@
 import { wifi } from '@kit.ConnectivityKit';
 ```
 
+<a id="getcurrentgroup1"></a>
+
 ## getCurrentGroup
 
 ```TypeScript
@@ -55,7 +57,7 @@ wifi.getCurrentGroup().then(data => {
 ```
 
 
-<a id="getcurrentgroup-1"></a>
+<a id="getcurrentgroup2"></a>
 
 ## getCurrentGroup
 

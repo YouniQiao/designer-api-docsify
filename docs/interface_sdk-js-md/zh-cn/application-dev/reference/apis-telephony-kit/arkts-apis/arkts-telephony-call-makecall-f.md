@@ -6,6 +6,8 @@
 import { call } from '@kit.TelephonyKit';
 ```
 
+<a id="makecall1"></a>
+
 ## makeCall
 
 ```TypeScript
@@ -54,7 +56,7 @@ call.makeCall("138xxxxxxxx", (err: BusinessError) => {
 ```
 
 
-<a id="makecall-1"></a>
+<a id="makecall2"></a>
 
 ## makeCall
 
@@ -107,7 +109,7 @@ call.makeCall("138xxxxxxxx").then(() => {
 ```
 
 
-<a id="makecall-2"></a>
+<a id="makecall3"></a>
 
 ## makeCall
 
@@ -168,7 +170,7 @@ call.makeCall("138xxxxxxxx", makeOptions).then(() => {
 ```
 
 
-<a id="makecall-3"></a>
+<a id="makecall4"></a>
 
 ## makeCall
 

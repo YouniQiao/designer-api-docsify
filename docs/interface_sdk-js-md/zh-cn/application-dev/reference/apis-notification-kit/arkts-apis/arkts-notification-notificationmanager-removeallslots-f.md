@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="removeallslots1"></a>
+
 ## removeAllSlots
 
 ```TypeScript
@@ -26,9 +28,9 @@ function removeAllSlots(callback: AsyncCallback<void>): void
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) 创建通知频道。
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md) 获取指定类型的通知渠道。
+[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot1) 获取指定类型的通知渠道。
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md) 删除所有通知渠道。
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot1) 删除所有通知渠道。
 
 **参数：**
 
@@ -61,7 +63,7 @@ notificationManager.removeAllSlots(removeAllSlotsCallback);
 ```
 
 
-<a id="removeallslots-1"></a>
+<a id="removeallslots2"></a>
 
 ## removeAllSlots
 
@@ -83,9 +85,9 @@ function removeAllSlots(): Promise<void>
 
 [addSlot](arkts-notification-notificationmanager-addslot-f.md) 创建通知频道。
 
-[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot-2) 获取指定类型的通知渠道。
+[getSlot](arkts-notification-notificationmanager-getslot-f.md#getslot3) 获取指定类型的通知渠道。
 
-[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot-1) 删除指定类型的通知渠道。
+[removeSlot](arkts-notification-notificationmanager-removeslot-f.md#removeslot2) 删除指定类型的通知渠道。
 
 **返回值：**
 

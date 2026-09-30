@@ -47,8 +47,8 @@ declare namespace distributedData
 
 | 名称 | 说明 |
 | --- | --- |
-| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) | 创建一个KVManager对象实例，用于管理数据库对象，使用callback异步回调。 |
-| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1) | 创建一个KVManager对象实例，用于管理数据库对象，使用Promise异步回调。 |
+| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager1) | 创建一个KVManager对象实例，用于管理数据库对象，使用callback异步回调。 |
+| [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager2) | 创建一个KVManager对象实例，用于管理数据库对象，使用Promise异步回调。 |
 
 ### 类
 
@@ -72,7 +72,7 @@ declare namespace distributedData
 | [KVStore](arkts-arkdata-distributeddata-kvstore-i.md) | KVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据同步完成的方法。在调用KVStore的方法前，需要先通过getKVStore构建一个KVStore实例。 |
 | [SingleKVStore](arkts-arkdata-distributeddata-singlekvstore-i.md) | 单版本数据库，继承自[KVStore](arkts-arkdata-distributeddata-kvstoretype-e.md)数据库，提供查询数据和同步数据的方法。单版本数据库，不对数据所属设备进行区分，不同设备使用相同键写入数据会互相覆盖。比如，可以使用单版本数据库实现个人日历、联系人数据在不同设备间的数据同步。在调用SingleKVStore的方法前，需要先通过getKVStore构建一个SingleKVStore实例。 |
 | [DeviceKVStore](arkts-arkdata-distributeddata-devicekvstore-i.md) | 设备协同数据库，继承自KVStore，提供查询数据和同步数据的方法。设备协同数据库，以设备维度对数据进行区分，每台设备仅能写入和修改本设备的数据，其它设备的数据对其是只读的，无法修改其它设备的数据。比如，可以使用设备协同数据库实现设备间的图片分享，可以查看其他设备的图片，但无法修改和删除其他设备的图片。在调用DeviceKVStore的方法前，需要先通过getKVStore构建一个DeviceKVStore实例。 |
-| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md)构建一个KVManager实例。 |
+| [KVManager](arkts-arkdata-distributeddata-kvmanager-i.md) | 数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager1)构建一个KVManager实例。 |
 
 ### 枚举
 

@@ -6,6 +6,8 @@
 import { notificationManager } from '@kit.NotificationKit';
 ```
 
+<a id="isdistributedenabled1"></a>
+
 ## isDistributedEnabled
 
 ```TypeScript
@@ -55,7 +57,7 @@ notificationManager.isDistributedEnabled(isDistributedEnabledCallback);
 ```
 
 
-<a id="isdistributedenabled-1"></a>
+<a id="isdistributedenabled2"></a>
 
 ## isDistributedEnabled
 

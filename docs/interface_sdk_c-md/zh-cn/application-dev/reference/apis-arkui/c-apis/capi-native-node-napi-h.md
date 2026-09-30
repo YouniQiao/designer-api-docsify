@@ -60,7 +60,7 @@ int32_t OH_ArkUI_GetNodeHandleFromNapiValue(napi_env env, napi_value frameNode, 
 | -- | -- |
 | napi_env env | Node-API的环境指针。 |
 | napi_value frameNode | ArkTS侧创建的FrameNode对象。 |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)* handle | ArkUI_NodeHandle指针。 |
+| ArkUI_NodeHandle* handle | ArkUI_NodeHandle指针。 |
 
 **返回值：**
 
@@ -188,7 +188,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavigationId(ArkUI_NodeHandle node, char* buffer, in
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，NavigationID写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
@@ -215,7 +215,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationName(ArkUI_NodeHandle node, char* buff
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，被查询的NavDestination名称写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
@@ -242,7 +242,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavStackLength(ArkUI_NodeHandle node, int32_t* lengt
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | int32_t* length | 栈的长度。查询成功后将结果写回该参数。 |
 
 **返回值：**
@@ -267,7 +267,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationNameByIndex(ArkUI_NodeHandle node, int
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | int32_t index | 被查询NavDestination在栈中的索引。 |
 | char* buffer | 缓冲区，被查询页面的名称写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
@@ -295,7 +295,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationId(ArkUI_NodeHandle node, char* buffer
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，NavDestinationID写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
@@ -322,7 +322,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationState(ArkUI_NodeHandle node, ArkUI_Nav
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | [ArkUI_NavDestinationState](capi-native-type-h.md#arkui_navdestinationstate)* state | NavDestination的状态值写回该参数中。 |
 
 **返回值：**
@@ -347,7 +347,7 @@ ArkUI_ErrorCode OH_ArkUI_GetNavDestinationIndex(ArkUI_NodeHandle node, int32_t* 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | int32_t* index | 索引值，从0开始计数。 |
 
 **返回值：**
@@ -372,7 +372,7 @@ napi_value OH_ArkUI_GetNavDestinationParam(ArkUI_NodeHandle node)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 
 **返回值：**
 
@@ -396,7 +396,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageIndex(ArkUI_NodeHandle node, int32_t* inde
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | int32_t* index | 索引值，从1开始计数。 |
 
 **返回值：**
@@ -421,7 +421,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageName(ArkUI_NodeHandle node, char* buffer, 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，页面名称写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
@@ -448,7 +448,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPagePath(ArkUI_NodeHandle node, char* buffer, 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，页面路径写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |
@@ -475,7 +475,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageState(ArkUI_NodeHandle node, ArkUI_RouterP
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | [ArkUI_RouterPageState](capi-native-type-h.md#arkui_routerpagestate)* state | Router页面的状态值写回该参数中。 |
 
 **返回值：**
@@ -500,7 +500,7 @@ ArkUI_ErrorCode OH_ArkUI_GetRouterPageId(ArkUI_NodeHandle node, char* buffer, in
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 指定的节点。 |
+| ArkUI_NodeHandle node | 指定的节点。 |
 | char* buffer | 缓冲区，页面ID写入该内存区域。 |
 | int32_t bufferSize | 缓冲区大小。 |
 | int32_t* writeLength | 在返回ARKUI_ERROR_CODE_NO_ERROR时表示实际写入到缓冲区的字符串长度。 <br>在返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示可以容纳目标的最小缓冲区大小。 |

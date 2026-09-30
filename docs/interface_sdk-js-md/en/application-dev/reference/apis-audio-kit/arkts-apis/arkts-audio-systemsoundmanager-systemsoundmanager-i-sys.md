@@ -20,6 +20,8 @@ System sound manager object.
 import { systemSoundManager } from '@kit.AudioKit';
 ```
 
+<a id="addcustomizedtone1"></a>
+
 ## addCustomizedTone
 
 ```TypeScript
@@ -92,7 +94,7 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, path).then((val
 });
 ```
 
-<a id="addcustomizedtone-1"></a>
+<a id="addcustomizedtone2"></a>
 
 ## addCustomizedTone
 
@@ -601,13 +603,15 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
 });
 ```
 
+<a id="getmockhapticringtoneplayer1"></a>
+
 ## getMockHapticRingtonePlayer
 
 ```TypeScript
 getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming hapticUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming hapticUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
@@ -640,7 +644,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
-<a id="getmockhapticringtoneplayer-1"></a>
+<a id="getmockhapticringtoneplayer2"></a>
 
 ## getMockHapticRingtonePlayer
 
@@ -648,7 +652,7 @@ Obtains a mock haptic ringtone player for playing vibration files and their corr
 getMockHapticRingtonePlayer(context: BaseContext, type: RingtoneType, ringtoneUri: string): Promise<RingtonePlayer | null>
 ```
 
-Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
+Obtains a mock haptic ringtone player for playing vibration files and their corresponding mock haptic sound files. This API uses a promise to return the result. Before calling this interface, ensure that the incoming ringtoneUri actually exists in the system. Otherwise, exceptions and errors will occur, such as failure to play the matched haptic sound file. After obtaining the instance through this interface, actively call [release](arkts-audio-ringtoneplayer-i-sys.md#release) method of the ringtone player to release player resources when the service is terminated.
 
 **Since:** 26.0.0
 
@@ -1642,6 +1646,8 @@ systemSoundManagerInstance.setToneHapticsSettings(context, type, toneHapticsSett
 });
 ```
 
+<a id="getsystemringtoneplayer1"></a>
+
 ## getSystemRingtonePlayer
 
 ```TypeScript
@@ -1692,7 +1698,7 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type, (err: Business
 });
 ```
 
-<a id="getsystemringtoneplayer-1"></a>
+<a id="getsystemringtoneplayer2"></a>
 
 ## getSystemRingtonePlayer
 
@@ -1747,6 +1753,8 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: s
 });
 ```
 
+<a id="getsystemringtoneuri1"></a>
+
 ## getSystemRingtoneUri
 
 ```TypeScript
@@ -1795,7 +1803,7 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type, (err: BusinessErr
 });
 ```
 
-<a id="getsystemringtoneuri-1"></a>
+<a id="getsystemringtoneuri2"></a>
 
 ## getSystemRingtoneUri
 
@@ -1848,6 +1856,8 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: stri
 });
 ```
 
+<a id="setsystemringtoneuri1"></a>
+
 ## setSystemRingtoneUri
 
 ```TypeScript
@@ -1898,7 +1908,7 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type, (err: Busine
 });
 ```
 
-<a id="setsystemringtoneuri-1"></a>
+<a id="setsystemringtoneuri2"></a>
 
 ## setSystemRingtoneUri
 

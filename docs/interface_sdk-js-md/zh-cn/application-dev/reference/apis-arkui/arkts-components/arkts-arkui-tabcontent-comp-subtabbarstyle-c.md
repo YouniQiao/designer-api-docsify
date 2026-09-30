@@ -42,6 +42,8 @@ board(value: BoardStyle): SubTabBarStyle
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
+<a id="constructor1"></a>
+
 ## constructor
 
 ```TypeScript
@@ -64,7 +66,7 @@ SubTabBarStyle的构造函数。
 | --- | --- | --- | --- |
 | content | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) | 是 | 页签内的文字内容。 |
 
-<a id="constructor-1"></a>
+<a id="constructor2"></a>
 
 ## constructor
 
@@ -120,6 +122,8 @@ id(value: string): SubTabBarStyle
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
+<a id="indicator1"></a>
+
 ## indicator
 
 ```TypeScript
@@ -150,7 +154,7 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身。 |
 
-<a id="indicator-1"></a>
+<a id="indicator2"></a>
 
 ## indicator
 
@@ -158,7 +162,7 @@ indicator(value: IndicatorStyle): SubTabBarStyle
 indicator(value: IndicatorStyle | DrawableTabBarIndicator): SubTabBarStyle
 ```
 
-设置选中子页签的下划线风格。与[indicator](#indicator)相比，新增了图片格式的下划线风格，图片的显示效果参照[ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
+设置选中子页签的下划线风格。与[indicator](#indicator1)相比，新增了图片格式的下划线风格，图片的显示效果参照[ImageFit.Cover](../arkts-apis/arkts-arkui-imagefit-e.md)。子页签的下划线风格仅在水平模式下有效。
 
 **起始版本：** 22
 
@@ -212,6 +216,8 @@ labelStyle(value: LabelStyle): SubTabBarStyle
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
+<a id="of1"></a>
+
 ## of
 
 ```TypeScript
@@ -242,7 +248,7 @@ SubTabBarStyle的静态构造函数。
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
 
-<a id="of-1"></a>
+<a id="of2"></a>
 
 ## of
 
@@ -274,6 +280,8 @@ SubTabBarStyle的静态构造函数。支持ComponentContent设置自定义内�
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回创建的SubTabBarStyle对象，用于设置子页签样式。 |
 
+<a id="padding1"></a>
+
 ## padding
 
 ```TypeScript
@@ -304,7 +312,7 @@ padding(value: Padding | Dimension): SubTabBarStyle
 | --- | --- |
 | [SubTabBarStyle](arkts-arkui-tabcontent-comp-subtabbarstyle-c.md) | 返回SubTabBarStyle对象本身，用于链式调用。 |
 
-<a id="padding-1"></a>
+<a id="padding2"></a>
 
 ## padding
 

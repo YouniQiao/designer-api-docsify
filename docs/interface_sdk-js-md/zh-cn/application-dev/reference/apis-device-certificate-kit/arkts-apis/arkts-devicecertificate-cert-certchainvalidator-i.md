@@ -18,6 +18,8 @@ interface CertChainValidator
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="validate1"></a>
+
 ## validate
 
 ```TypeScript
@@ -151,7 +153,7 @@ try {
 }
 ```
 
-<a id="validate-1"></a>
+<a id="validate2"></a>
 
 ## validate
 

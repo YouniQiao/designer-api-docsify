@@ -4,7 +4,7 @@
 interface PasteData
 ```
 
-Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata)** to create a **PasteData** object.
+Implements a **PasteData** object. PasteData contains one or more data records ([PasteDataRecord](arkts-basicservices-pasteboard-pastedatarecord-i.md)) and property description objects ([PasteDataProperty](arkts-basicservices-pasteboard-pastedataproperty-i.md)). Before calling any API in **PasteData**, you must use ** [createData()](arkts-basicservices-pasteboard-createdata-f.md#createdata1)** or ** [getData()](arkts-basicservices-pasteboard-systempasteboard-i.md#getdata1)** to create a **PasteData** object.
 
 **Since:** 6
 
@@ -17,6 +17,8 @@ Implements a **PasteData** object. PasteData contains one or more data records (
 ```TypeScript
 import { pasteboard } from '@kit.BasicServicesKit';
 ```
+
+<a id="addrecord1"></a>
 
 ## addRecord
 
@@ -53,7 +55,7 @@ pasteData.addRecord(textRecord);
 pasteData.addRecord(htmlRecord);
 ```
 
-<a id="addrecord-1"></a>
+<a id="addrecord2"></a>
 
 ## addRecord
 
@@ -737,7 +739,7 @@ Adds an HTML record to the PasteData, and adds **MIMETYPE_TEXT_HTML** to **mimeT
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord2)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addHtmlRecord(htmlText: string): void--><!--Device-PasteData-addHtmlRecord(htmlText: string): void-End-->
 
@@ -769,7 +771,7 @@ Adds a plain text record to the PasteData, and adds **MIMETYPE_TEXT_PLAIN** to *
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord2)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addTextRecord(text: string): void--><!--Device-PasteData-addTextRecord(text: string): void-End-->
 
@@ -800,7 +802,7 @@ Adds a URI record to the PasteData, and adds **MIMETYPE_TEXT_URI** to **mimeType
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord2)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addUriRecord(uri: string): void--><!--Device-PasteData-addUriRecord(uri: string): void-End-->
 
@@ -831,7 +833,7 @@ Adds a Want record to the PasteData, and adds **MIMETYPE_TEXT_WANT** to **mimeTy
 
 **Deprecated since:** 9
 
-**Substitutes:** [addRecord](#addrecord-1)(mimeType: string, value: ValueType)
+**Substitutes:** [addRecord](#addrecord2)(mimeType: string, value: ValueType)
 
 <!--Device-PasteData-addWantRecord(want: Want): void--><!--Device-PasteData-addWantRecord(want: Want): void-End-->
 

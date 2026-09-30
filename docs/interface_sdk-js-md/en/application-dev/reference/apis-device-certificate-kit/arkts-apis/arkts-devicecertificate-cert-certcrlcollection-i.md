@@ -18,6 +18,8 @@ Provides APIs for locating certificates or CRLs in a **CertCRLCollection** objec
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
+<a id="selectcerts1"></a>
+
 ## selectCerts
 
 ```TypeScript
@@ -119,7 +121,7 @@ async function selectCerts() {
 }
 ```
 
-<a id="selectcerts-1"></a>
+<a id="selectcerts2"></a>
 
 ## selectCerts
 
@@ -216,6 +218,8 @@ async function selectCerts() {
   });
 }
 ```
+
+<a id="selectcrls1"></a>
 
 ## selectCRLs
 
@@ -352,7 +356,7 @@ async function selectCRLs() {
 }
 ```
 
-<a id="selectcrls-1"></a>
+<a id="selectcrls2"></a>
 
 ## selectCRLs
 

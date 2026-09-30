@@ -6,7 +6,7 @@ declare class ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
 
 除支持[通用属性](arkts-arkui-common-comp.md)外，还支持以下属性：
 
-**继承/实现关系：** ScrollBarAttribute extends CommonMethod<ScrollBarAttribute>
+**继承/实现关系：** ScrollBarAttribute extends CommonMethod&lt;ScrollBarAttribute&gt;
 
 **起始版本：** 8
 
