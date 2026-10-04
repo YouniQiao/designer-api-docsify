@@ -376,7 +376,7 @@ Creates a pointer to the ArkUI_StyledString object.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
+| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
 | [OH_Drawing_FontCollection](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by [OH_Drawing_CreateFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createfontcollection). |
 
 **Returns**:
