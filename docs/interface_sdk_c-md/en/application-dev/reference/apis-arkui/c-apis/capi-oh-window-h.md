@@ -86,7 +86,7 @@ Sets whether to display the status bar in a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowStatusBarColor()
 
@@ -111,7 +111,7 @@ Sets the color of the status bar in a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowNavigationBarEnabled()
 
@@ -137,7 +137,7 @@ Sets whether to display the navigation bar in a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_GetWindowAvoidArea()
 
@@ -163,7 +163,7 @@ Obtains the avoid area of a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful, return avoid area ptr in avoidArea. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful, return avoid area ptr in avoidArea. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_IsWindowShown()
 
@@ -188,7 +188,7 @@ Checks whether a window is displayed.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
 
 ### OH_WindowManager_ShowWindow()
 
@@ -212,7 +212,7 @@ Shows a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowTouchable()
 
@@ -237,7 +237,7 @@ Sets whether a window is touchable.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowFocusable()
 
@@ -262,7 +262,7 @@ Sets whether a window is focusable.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowBackgroundColor()
 
@@ -287,7 +287,7 @@ Sets the background color of a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
 
 ### OH_WindowManager_SetWindowBrightness()
 
@@ -312,7 +312,7 @@ Sets the window brightness for the main window. The window brightness takes effe
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowKeepScreenOn()
 
@@ -337,7 +337,7 @@ Sets whether to always keep the screen on for a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_SetWindowPrivacyMode()
 
@@ -364,7 +364,7 @@ Sets whether to enable privacy mode for a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. [WINDOW_MANAGER_ERRORCODE_NO_PERMISSION](capi-oh-window-comm-h.md#windowmanager_errorcode) permission verification failed. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. [WINDOW_MANAGER_ERRORCODE_NO_PERMISSION](capi-oh-window-comm-h.md#windowmanager_errorcode) permission verification failed. |
 
 ### OH_WindowManager_GetWindowProperties()
 
@@ -389,7 +389,7 @@ Obtains the properties of a window.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful, return window properties ptr in windowProperties. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful, return window properties ptr in windowProperties. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. |
 
 ### OH_WindowManager_Snapshot()
 
@@ -408,13 +408,13 @@ Obtains the snapshot of a window.
 | Parameter | Description |
 | -- | -- |
 | int32_t windowId | Window ID. The default value is **0**. The value is an integer. If the window ID is invalid or the window has been destroyed, you cannot obtain the window snapshot. To successfully obtain a snapshot, a valid window ID is required. You can obtain a valid window ID by calling the ArkTS API getWindowProperties() on the window object |
-| [OH_PixelmapNative](../../apis-input-kit/c-apis/capi-input-oh-pixelmapnative.md)* pixelMap | Pointer to the snapshot. |
+| [OH_PixelmapNative](capi-windowmanager-oh-pixelmapnative.md)* pixelMap | Pointer to the snapshot. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful, return pixel map ptr in pixelMap. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful, return pixel map ptr in pixelMap. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_GetAllWindowLayoutInfoList()
 
@@ -440,7 +440,7 @@ Obtains the layout information array of all windows visible on a display. The la
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful, return Window layout info list. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful, return Window layout info list. [WINDOW_MANAGER_ERRORCODE_INVALID_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_ReleaseAllWindowLayoutInfoList()
 
@@ -485,7 +485,7 @@ Injects a multimodal touch event into the target window. This function is limite
 
 | Type | Description |
 | -- | -- |
-| int32_t | Returns the result code. [OK](capi-oh-key-code-h.md#input_keycode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
+| int32_t | Returns the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) this window state is abnormal. [WINDOW_MANAGER_ERRORCODE_SYSTEM_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the window manager service works abnormally. |
 
 ### OH_WindowManager_GetAllMainWindowInfo()
 
@@ -548,7 +548,7 @@ Defines the callback used for receiving the main window screenshot list.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_PixelmapNative](../../apis-input-kit/c-apis/capi-input-oh-pixelmapnative.md)** snapshotPixelMapList | Double pointer to the list of window screenshots. |
+| [const OH_PixelmapNative](capi-windowmanager-oh-pixelmapnative.md)** snapshotPixelMapList | Double pointer to the list of window screenshots. |
 | size_t snapshotListSize | Size of the window screenshot list. |
 
 ### OH_WindowManager_GetMainWindowSnapshot()
@@ -596,7 +596,7 @@ Releases the memory used by the main window screenshot list.
 
 | Parameter | Description |
 | -- | -- |
-| [const OH_PixelmapNative](../../apis-input-kit/c-apis/capi-input-oh-pixelmapnative.md)* snapshotPixelMapList | Pointer to the list of window screenshots. |
+| [const OH_PixelmapNative](capi-windowmanager-oh-pixelmapnative.md)* snapshotPixelMapList | Pointer to the list of window screenshots. |
 
 ### OH_WindowManager_LockCursor()
 
