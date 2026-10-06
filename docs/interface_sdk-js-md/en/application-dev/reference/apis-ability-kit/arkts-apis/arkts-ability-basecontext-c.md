@@ -18,7 +18,7 @@ BaseContext is an abstract class that specifies whether a child class Context is
 stageMode: boolean
 ```
 
-Indicates the context is FA Mode or Stage Mode.
+Whether the child class Context is used for the stage model. true: [Stage model](../../../application-models/ability-terminology.md#stage-model). false：[FA model](../../../application-models/ability-terminology.md#fa-model).
 
 **Type:** boolean
 

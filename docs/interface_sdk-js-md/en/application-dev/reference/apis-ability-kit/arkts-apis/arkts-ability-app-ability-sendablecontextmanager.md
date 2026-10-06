@@ -1,4 +1,4 @@
-# @ohos.app.ability.sendableContextManager
+# @ohos.app.ability.sendableContextManager(Sendable Context Management)
 
 The sendableContextManager module provides APIs for converting between Context and [SendableContext](arkts-ability-sendablecontext-i.md) objects.
 

@@ -18,7 +18,7 @@ Context type
 APPLICATION_CONTEXT = 0
 ```
 
-Application context type.
+Type of [ApplicationContext](arkts-ability-applicationcontext-c.md), which provides application-level resources and capabilities.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ Application context type.
 ABILITY_STAGE_CONTEXT = 1
 ```
 
-Ability stage context type.
+Type of [AbilityStageContext](arkts-ability-abilitystagecontext-c.md), which provides module-level resources and capabilities.
 
 **Since:** 26.0.0
 
@@ -54,7 +54,7 @@ Ability stage context type.
 UIABILITY_CONTEXT = 2
 ```
 
-UI ability context type.
+Type of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md), which provides capabilities such as UI interaction and component startup.
 
 **Since:** 26.0.0
 
@@ -72,7 +72,7 @@ UI ability context type.
 FORM_EXTENSION_CONTEXT = 3
 ```
 
-Form extension context type.
+Type of [FormExtensionContext](../../apis-form-kit/arkts-apis/arkts-form-formextensioncontext-c-sys.md), which provides card service capabilities.
 
 **Since:** 26.0.0
 
@@ -90,7 +90,7 @@ Form extension context type.
 APP_SERVICE_EXTENSION_CONTEXT = 4
 ```
 
-App service extension context type.
+Type of [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.md), which provides background service capabilities.
 
 **Since:** 26.0.0
 

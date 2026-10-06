@@ -345,7 +345,7 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
 instanceId: number
 ```
 
-意图实例唯一ID。用于通过[insightIntentProvider.sendExecuteResult接口] sendExecuteResult 和[insightIntentProvider.sendIntentResult接口] sendIntentResult返回指定意图的执行结果。
+意图实例唯一ID。用于通过[insightIntentProvider.sendExecuteResult接口] [sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md) 和[insightIntentProvider.sendIntentResult接口] [sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md)返回指定意图的执行结果。
 
 **类型：** number
 

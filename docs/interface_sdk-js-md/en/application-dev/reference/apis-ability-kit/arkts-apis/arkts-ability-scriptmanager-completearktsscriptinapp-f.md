@@ -12,7 +12,7 @@ import { scriptManager } from '@kit.AbilityKit';
 function completeArkTSScriptInApp(context: Context, requestCode: string, result: ExecuteResult): Promise<void>
 ```
 
-complete arkTS script for in-app skills.
+Completes the ArkTS script execution of an app and reports the execution result. This API uses a promise to return the result.
 
 **Since:** 26.0.0
 
@@ -36,7 +36,7 @@ complete arkTS script for in-app skills.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise object that returns no value. |
 
 **Error codes:**
 

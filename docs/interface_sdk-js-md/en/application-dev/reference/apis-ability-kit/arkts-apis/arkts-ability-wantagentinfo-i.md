@@ -36,7 +36,7 @@ Array of flags for using the WantAgent object.
 actionType?: abilityWantAgent.OperationType
 ```
 
-Operation type.
+Action execution attribute. If this parameter is not set, no execution attribute is used.
 
 **Type:** [abilityWantAgent.OperationType](../../apis-ability-kit/arkts-apis/arkts-ability-app-ability-wantagent.md)
 
@@ -54,7 +54,7 @@ Operation type.
 extraInfo?: { [key: string]: any }
 ```
 
-Extra information.
+Extra data used to pass custom extended information. This parameter is a key-value pair object, where key is a string key name and value is a value of any type. You are advised to use the type-safe extraInfos attribute instead. If both extraInfo and extraInfos are set, extraInfos takes effect and extraInfo is ignored.
 
 **Type:** { [key: string]: any }
 
@@ -72,7 +72,7 @@ Extra information.
 extraInfos?: Record<string, Object>
 ```
 
-Extra information. You are advised to use this property to replace **extraInfo**. When this property is set, **extraInfo** does not take effect.
+Extra data used to pass custom key-value pair information in a type-safe manner. You are advised to use this attribute instead of extraInfo. When both are set, this attribute takes precedence. Pass this parameter when you need to carry additional custom data when triggering the WantAgent. If this parameter is not passed, it defaults to null and no extra data is carried.
 
 **Type:** Record&lt;string, Object&gt;
 
@@ -90,7 +90,7 @@ Extra information. You are advised to use this property to replace **extraInfo**
 requestCode: number
 ```
 
-Custom request code, which is used to identify the operation to execute.
+Request code defined by the developer, used to identify the action to be executed.
 
 **Type:** number
 
@@ -108,7 +108,7 @@ Custom request code, which is used to identify the operation to execute.
 wants: Array<Want>
 ```
 
-Array of all Want objects. Currently, only one Want is supported. The array is reserved for future capability expansion. If multiple values are passed in, only the first member in the array is used.
+The wants array is a reserved capability. Currently, only one want is supported. If multiple wants are passed in, only the first member of the wants array is used.
 
 **Type:** Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt;
 
@@ -126,7 +126,7 @@ Array of all Want objects. Currently, only one Want is supported. The array is r
 operationType?: wantAgent.OperationType
 ```
 
-Operation type.
+Operation type. If this parameter is not set, no default operation type is used.
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionType&lt;sup&gt;11+&lt;/sup&gt; instead.
 
@@ -150,7 +150,7 @@ This attribute is supported since API version 7 and deprecated since API version
 wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 ```
 
-Array of flags for using the WantAgent object.
+Action execution attribute. If this parameter is not set, no execution attribute is used.
 
 This attribute is supported since API version 7 and deprecated since API version 11. You are advised to use actionFlags&lt;sup&gt;11+&lt;/sup&gt; instead.
 

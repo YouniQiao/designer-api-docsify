@@ -20,7 +20,7 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 LINK = '@InsightIntentLink'
 ```
 
-A decorator of the [@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink) type.
+A decorator of the [@InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-d.md#insightintentlink) type.
 
 **Since:** 20
 
@@ -38,7 +38,7 @@ A decorator of the [@InsightIntentLink](../../../reference/apis-ability-kit/js-a
 PAGE = '@InsightIntentPage'
 ```
 
-A decorator of the [@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage) type.
+A decorator of the [@InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-d.md#insightintentpage) type.
 
 **Since:** 20
 
@@ -56,7 +56,7 @@ A decorator of the [@InsightIntentPage](../../../reference/apis-ability-kit/js-a
 ENTRY = '@InsightIntentEntry'
 ```
 
-A decorator of the [@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry) type.
+A decorator of the [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md#insightintententry) type.
 
 **Since:** 20
 
@@ -74,7 +74,7 @@ A decorator of the [@InsightIntentEntry](../../../reference/apis-ability-kit/js-
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-A decorator of the [@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod) type.
+A decorator of the [@InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-d.md#insightintentfunctionmethod) type.
 
 **Since:** 20
 
@@ -92,7 +92,7 @@ A decorator of the [@InsightIntentFunctionMethod](../../../reference/apis-abilit
 FORM = '@InsightIntentForm'
 ```
 
-A decorator of the [@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform) type.
+A decorator of the [@InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-d.md#insightintentform) type.
 
 **Since:** 20
 

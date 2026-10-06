@@ -13,7 +13,7 @@
 function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void
 ```
 
-Checks whether two WantAgent objects are equal.
+Checks whether two WantAgent objects are equal to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -31,9 +31,9 @@ Checks whether two WantAgent objects are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | The first WantAgent object. |
 | otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback method for determining whether two WantAgent instances are equal. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. true if the two WantAgent objects are equal, false otherwise. |
 
 **Examples**
 
@@ -100,7 +100,7 @@ wantAgent.getWantAgent({
 function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>
 ```
 
-Checks whether two WantAgent objects are equal.
+Checks whether two WantAgent objects are equal to determine whether the same operation is from the same application. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -118,14 +118,14 @@ Checks whether two WantAgent objects are equal.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | to compare. |
+| agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | The first WantAgent object. |
 | otherAgent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent Object. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Returns `true` If the two objects are the same; returns `false` otherwise. |
+| Promise&lt;boolean&gt; | Promise used to return the result. true if the two WantAgent objects are equal, false otherwise. |
 
 **Examples**
 

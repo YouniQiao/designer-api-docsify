@@ -35,7 +35,7 @@ Called when the UIExtensionAbility fails to start.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | code | number | Yes | Result code returned when the UIExtensionAbility fails to start. |
-| name | string | Yes | Name returned when the UIExtensionAbility fails to start. |
+| name | string | Yes | Error name returned when the UIExtensionAbility fails to be started, used to identify the error type. |
 | message | string | Yes | Error information returned when the UIExtensionAbility fails to start. |
 
 ## onResult

@@ -12,7 +12,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>
 ```
 
-查询意图实体信息。
+根据[QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md)查询应用的动态意图实体信息。使用Promise异步回调。如果调用方应用的用户ID与目标用户ID不同，则需要申请权限ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS。
 
 **起始版本：** 26.0.0
 

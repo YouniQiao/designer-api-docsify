@@ -4,7 +4,7 @@
 interface ArkTSScriptInfo
 ```
 
-arkTS script info.
+The first parameter of the ArkTS script entry function of an app, used to receive the script context information passed by the system.
 
 **Since:** 26.0.0
 

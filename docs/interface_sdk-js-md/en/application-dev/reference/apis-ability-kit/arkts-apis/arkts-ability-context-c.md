@@ -4,7 +4,7 @@
 declare class Context extends BaseContext
 ```
 
-Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations. ../../../
+Context is the context base class of the stage model. It is used to access application-specific resources and perform callbacks for application-level operations.
 
 **Inheritance/Implementation:** Context extends [BaseContext](arkts-ability-basecontext-c.md)
 
@@ -20,7 +20,7 @@ Context is the context base class of the stage model. It is used to access appli
 createAreaModeContext(areaMode: contextConstant.AreaMode): Context
 ```
 
-Creates an application context with a specific data encryption level. You can call this API to create contexts with different encryption levels, thereby obtaining the corresponding sandbox paths.
+Creates the application context with a specific data encryption level. Developers can call this API to create contexts of different encryption levels to obtain the corresponding sandbox paths.
 
 **Since:** 18
 
@@ -131,7 +131,7 @@ export default class EntryAbility extends UIAbility {
 getApplicationContext(): ApplicationContext
 ```
 
-Obtains the application context.
+Obtains the current application context. It provides capabilities such as application-level event subscription and is shared by all UIAbilities in the application. For details, see [ApplicationContext](arkts-ability-applicationcontext-c.md).
 
 **Since:** 9
 
@@ -147,7 +147,7 @@ Obtains the application context.
 
 | Type | Description |
 | --- | --- |
-| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context. |
+| [ApplicationContext](arkts-ability-applicationcontext-c.md) | Application context, which provides application-level context capabilities, including application lifecycle management and environment variable configuration. |
 
 **Error codes:**
 
@@ -300,7 +300,7 @@ export default class EntryAbility extends UIAbility {
 isContextOf(contextType: contextConstant.ContextType): boolean
 ```
 
-Checks if the current instance is associated with the specified context type.
+Checks whether the current context is of the specified ContextType.
 
 **Since:** 26.0.0
 
@@ -316,13 +316,13 @@ Checks if the current instance is associated with the specified context type.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| contextType | [contextConstant.ContextType](arkts-ability-contextconstant-contexttype-e.md) | Yes | Indicates the context type. |
+| contextType | [contextConstant.ContextType](arkts-ability-contextconstant-contexttype-e.md) | Yes | Context type. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| boolean | Returns `true` if the contextType is matched; returns `false` otherwise. |
+| boolean | Whether the context is of the specified type. The value true indicates that the context is of the specified type, and false indicates the opposite. |
 
 **Examples**
 

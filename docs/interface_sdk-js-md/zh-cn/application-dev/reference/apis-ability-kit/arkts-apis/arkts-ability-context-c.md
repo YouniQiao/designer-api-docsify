@@ -131,7 +131,7 @@ export default class EntryAbility extends UIAbility {
 getApplicationContext(): ApplicationContext
 ```
 
-获取当前应用上下文。
+获取当前应用上下文。提供应用级事件订阅等能力，与应用内所有UIAbility共享。详情请参见[ApplicationContext (应用上下文)](arkts-ability-applicationcontext-c.md)。
 
 **起始版本：** 9
 
@@ -322,7 +322,7 @@ isContextOf(contextType: contextConstant.ContextType): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 是否为指定类型的上下文。返回true表示Context类型为指定类型，返回false表示Context类型匹配失败。 |
+| boolean | 是否为指定类型的上下文。返回true表示Context类型为指定类型，返回false表示当前Context不是指定类型。 |
 
 **示例**
 

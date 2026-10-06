@@ -18,7 +18,7 @@ The module defines the information required for triggering the WantAgent. The in
 startOptions?: StartOptions
 ```
 
-Start options in wantAgent used to start an ability.
+Specifies the startup parameters when the wantAgent is triggered to start an Ability.
 
 **Type:** [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)
 

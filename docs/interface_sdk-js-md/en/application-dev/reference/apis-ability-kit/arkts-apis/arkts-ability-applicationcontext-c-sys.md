@@ -24,15 +24,11 @@ ApplicationContext inherits from [Context](arkts-ability-context.md) and provide
 preloadUIExtensionAbility(want: Want): Promise<void>
 ```
 
-Preloads a UIExtensionAbility instance. This API uses a promise to return the result.
+Preloads a specified UIExtensionAbility instance. This API uses a promise to return the result.
 
-The preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility and waits to be loaded by the current application.
+The preloaded UIExtensionAbility instance runs to the onCreate lifecycle of UIExtensionAbility and then waits to be formally loaded by the current application.
 
-A UIExtensionAbility instance can be preloaded for multiple times. Each time a preloaded UIExtensionAbility instance is loaded, the next preloaded UIExtensionAbility instance is sent to the **onCreate** lifecycle of the UIExtensionAbility.
-
-| Name| Type| Mandatory| Description|  
-| -------- | -------- | -------- | -------- |  
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes| Want information of the UIExtensionAbility.|
+Multiple UIExtensionAbility instances can be preloaded. Each time a formal load is performed, a preloaded UIExtensionAbility instance continues from onCreate to complete the UIExtensionAbility lifecycle.
 
 **Since:** 12
 
@@ -259,7 +255,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 
 | Type | Description |
 | --- | --- |
-| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback](#unregisterabilitylifecyclecallback) |
+| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback](#unregisterabilitylifecyclecallback). |
 
 **Examples**
 
@@ -325,7 +321,7 @@ export default class EntryAbility extends UIAbility {
 registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 ```
 
-Register environment callback.
+Registers a listener for system environment changes. This API uses an asynchronous callback. Main Thread Only.
 
 **Since:** 9
 
@@ -351,7 +347,7 @@ Register environment callback.
 
 | Type | Description |
 | --- | --- |
-| number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback) |
+| number | ID of the callback registered this time. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback). |
 
 **Examples**
 

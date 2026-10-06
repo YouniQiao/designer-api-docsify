@@ -703,7 +703,7 @@
   <!--Del-->
   - [ArkTSScriptInfo(system api)](arkts-ability-scriptmanager-arktsscriptinfo-i-sys.md)<!--DelEnd-->
   - [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md)
-- [@ohos.app.ability.sendableContextManager](arkts-ability-app-ability-sendablecontextmanager.md)
+- [@ohos.app.ability.sendableContextManager(Sendable Context Management)](arkts-ability-app-ability-sendablecontextmanager.md)
   - [convertFromContext](arkts-ability-sendablecontextmanager-convertfromcontext-f.md)
   - [convertToAbilityStageContext](arkts-ability-sendablecontextmanager-converttoabilitystagecontext-f.md)
   - [convertToApplicationContext](arkts-ability-sendablecontextmanager-converttoapplicationcontext-f.md)

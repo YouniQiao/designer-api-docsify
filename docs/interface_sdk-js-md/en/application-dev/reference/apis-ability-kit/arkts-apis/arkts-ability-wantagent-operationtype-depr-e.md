@@ -22,7 +22,7 @@ Identifies the operation for using a WantAgent, such as starting an ability or s
 UNKNOWN_TYPE = 0
 ```
 
-Unknown operation.
+Unknown operation type.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ Starts multiple abilities with a UI.
 START_SERVICE
 ```
 
-Starts an ability without a UI.
+Starts an Ability without a page.
 
 **Since:** 7
 

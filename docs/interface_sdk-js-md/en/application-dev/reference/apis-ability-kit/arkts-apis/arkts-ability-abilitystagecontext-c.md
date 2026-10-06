@@ -20,7 +20,7 @@ The AbilityStageContext module implements the context of an ability stage. It in
 config: Configuration
 ```
 
-Environment variables.
+Configuration object.
 
 **Type:** [Configuration](arkts-ability-app-ability-configuration-configuration-i.md)
 
@@ -40,7 +40,7 @@ Environment variables.
 currentHapModuleInfo: HapModuleInfo
 ```
 
-ModuleInfo object corresponding to the ability stage.
+HapModuleInfo object corresponding to the AbilityStage, which can be used to obtain information such as the name and path of the current module.
 
 **Type:** [HapModuleInfo](arkts-ability-hapmoduleinfo-i.md)
 
@@ -60,7 +60,7 @@ ModuleInfo object corresponding to the ability stage.
 launchElement?: ElementName
 ```
 
-Indicates launch ElementName object of the abilityStage.
+Element name information when the AbilityStage is created.
 
 **Type:** [ElementName](arkts-ability-elementname-i.md)
 

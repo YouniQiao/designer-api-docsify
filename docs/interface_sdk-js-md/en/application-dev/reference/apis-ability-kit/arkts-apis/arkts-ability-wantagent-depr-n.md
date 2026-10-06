@@ -29,23 +29,23 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 | --- | --- |
 | [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename1) | Obtains the bundle name of a WantAgent. |
 | [getBundleName](arkts-ability-wantagent-getbundlename-depr-f.md#getbundlename2) | Obtains the bundle name of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid1) | Obtains the UID of a WantAgent. |
-| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid2) | Obtains the UID of a WantAgent. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel1) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel2) | Cancel a WantAgent. Only the application that creates the WantAgent can cancel it. |
-| [trigger](arkts-ability-wantagent-trigger-depr-f.md) | Triggers a WantAgent. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal1) | Checks whether two WantAgent objects are equal. |
-| [equal](arkts-ability-wantagent-equal-depr-f.md#equal2) | Checks whether two WantAgent objects are equal. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent1) | Obtains a WantAgent object. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent2) | Obtains a WantAgent object. |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid1) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel1) | Cancels a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [cancel](arkts-ability-wantagent-cancel-depr-f.md#cancel2) | Cancels a WantAgent object. This API uses a promise to return the result. |
+| [trigger](arkts-ability-wantagent-trigger-depr-f.md) | Triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal1) | Checks whether two WantAgent objects are equal to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
+| [equal](arkts-ability-wantagent-equal-depr-f.md#equal2) | Checks whether two WantAgent objects are equal to determine whether the same operation is from the same application. This API uses a promise to return the result. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent1) | Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses an asynchronous callback to return the result. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent2) | Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant1) | Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md). |
-| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant2) | Obtains the [Want](arkts-ability-app-ability-want-want-c.md) of an [WantAgent](arkts-ability-wantagent-depr-t.md). |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant1) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getWant](arkts-ability-wantagent-getwant-depr-f-sys.md#getwant2) | Obtains the Want in a WantAgent object. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces

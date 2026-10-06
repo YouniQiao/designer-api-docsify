@@ -121,7 +121,7 @@ Obtains the bundle name of a WantAgent.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;string&gt; | Returns the bundle name of the [WantAgent](arkts-ability-wantagent-depr-t.md) if any. |
+| Promise&lt;string&gt; | Promise used to return the bundle name. |
 
 **Examples**
 

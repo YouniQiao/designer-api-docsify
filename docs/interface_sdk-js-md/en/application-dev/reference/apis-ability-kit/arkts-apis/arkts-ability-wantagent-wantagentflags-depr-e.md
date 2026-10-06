@@ -22,7 +22,7 @@ Enumerates flags for using a WantAgent.
 ONE_TIME_FLAG = 0
 ```
 
-Indicates that the WantAgent can be used only once. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+The WantAgent object can be used only once.
 
 **Since:** 7
 
@@ -42,7 +42,7 @@ Indicates that the WantAgent can be used only once. This flag is valid only when
 NO_BUILD_FLAG
 ```
 
-Indicates that null is returned if the WantAgent does not exist. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+The WantAgent object does not exist and hence it is not created. In this case, null is returned.
 
 **Since:** 7
 
@@ -62,7 +62,7 @@ Indicates that null is returned if the WantAgent does not exist. This flag is va
 CANCEL_PRESENT_FLAG
 ```
 
-Indicates that the existing WantAgent should be canceled before a new object is generated. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+The existing WantAgent object should be canceled before a new object is generated.
 
 **Since:** 7
 
@@ -82,7 +82,7 @@ Indicates that the existing WantAgent should be canceled before a new object is 
 UPDATE_PRESENT_FLAG
 ```
 
-Indicates that the system only replaces the extra data of the existing WantAgent with that of the new object. This flag is valid only when OperationType is set to START_ABILITY, START_SERVICE, or SEND_COMMON_EVENT.
+Extra information of the existing WantAgent object is replaced with that of the new object.
 
 **Since:** 7
 
@@ -102,7 +102,7 @@ Indicates that the system only replaces the extra data of the existing WantAgent
 CONSTANT_FLAG
 ```
 
-Indicates that the created WantAgent should be immutable.
+The WantAgent object is immutable.
 
 **Since:** 7
 
@@ -122,7 +122,7 @@ Indicates that the created WantAgent should be immutable.
 REPLACE_ELEMENT
 ```
 
-Indicates that the current value of element can be replaced when the WantAgent is triggered.
+The element property in the current Want can be replaced by the element property in the Want passed in WantAgent.trigger().
 
 **Since:** 7
 
@@ -142,7 +142,7 @@ Indicates that the current value of element can be replaced when the WantAgent i
 REPLACE_ACTION
 ```
 
-Indicates that the current value of action can be replaced when the WantAgent is triggered.
+The action property in the current Want can be replaced by the action property in the Want passed in WantAgent.trigger().
 
 **Since:** 7
 
@@ -162,7 +162,7 @@ Indicates that the current value of action can be replaced when the WantAgent is
 REPLACE_URI
 ```
 
-Indicates that the current value of uri can be replaced when the WantAgent is triggered.
+The uri property in the current Want can be replaced by the uri property in the Want passed in WantAgent.trigger().
 
 **Since:** 7
 
@@ -182,7 +182,7 @@ Indicates that the current value of uri can be replaced when the WantAgent is tr
 REPLACE_ENTITIES
 ```
 
-Indicates that the current value of entities can be replaced when the WantAgent is triggered.
+The entities property in the current Want can be replaced by the entities property in the Want passed in WantAgent.trigger().
 
 **Since:** 7
 
@@ -202,7 +202,7 @@ Indicates that the current value of entities can be replaced when the WantAgent 
 REPLACE_BUNDLE
 ```
 
-Indicates that the current value of packageName can be replaced when the WantAgent is triggered.
+The bundleName property in the current Want can be replaced by the bundleName property in the Want passed in WantAgent.trigger().
 
 **Since:** 7
 

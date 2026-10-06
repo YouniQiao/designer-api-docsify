@@ -20,7 +20,7 @@ enum InsightIntentType
 LINK = '@InsightIntentLink'
 ```
 
-[@InsightIntentLink](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentlink)类型装饰器。
+[@InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-d.md#insightintentlink)类型装饰器。
 
 **起始版本：** 20
 
@@ -38,7 +38,7 @@ LINK = '@InsightIntentLink'
 PAGE = '@InsightIntentPage'
 ```
 
-[@InsightIntentPage](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentpage)类型装饰器。
+[@InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-d.md#insightintentpage)类型装饰器。
 
 **起始版本：** 20
 
@@ -56,7 +56,7 @@ PAGE = '@InsightIntentPage'
 ENTRY = '@InsightIntentEntry'
 ```
 
-[@InsightIntentEntry](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintententry)类型装饰器。
+[@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md#insightintententry)类型装饰器。
 
 **起始版本：** 20
 
@@ -74,7 +74,7 @@ ENTRY = '@InsightIntentEntry'
 FUNCTION = '@InsightIntentFunctionMethod'
 ```
 
-[@InsightIntentFunctionMethod](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentfunctionmethod)类型装饰器。
+[@InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-d.md#insightintentfunctionmethod)类型装饰器。
 
 **起始版本：** 20
 
@@ -92,7 +92,7 @@ FUNCTION = '@InsightIntentFunctionMethod'
 FORM = '@InsightIntentForm'
 ```
 
-[@InsightIntentForm](../../../reference/apis-ability-kit/js-apis-app-ability-InsightIntentDecorator.md#insightintentform)类型装饰器。
+[@InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-d.md#insightintentform)类型装饰器。
 
 **起始版本：** 20
 

@@ -129,6 +129,110 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+## disableDelayedProcessExit
+
+```TypeScript
+disableDelayedProcessExit(): Promise<void>
+```
+
+禁用当前进程延迟退出功能，使用Promise异步回调。仅支持主线程调用。调用此API将会取消[ApplicationContext.enableDelayedProcessExit](#enabledelayedprocessexit)的作用。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-disableDelayedProcessExit(): Promise<void>--><!--Device-ApplicationContext-disableDelayedProcessExit(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Fail to connect system service. |
+| [16000150](../errorcode-ability.md#16000150-发送请求失败) | The current process has no UIAbility, and this API cannot be called. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 禁用当前进程延迟退出功能
+      this.context.getApplicationContext().disableDelayedProcessExit().then(() => {
+        console.info('disableDelayedProcessExit succeed');
+      }).catch((error: BusinessError) => {
+        console.error(`disableDelayedProcessExit error, code: ${error.code}, error msg: ${error.message}`);
+      });
+    } catch(error) {
+      console.error('disableDelayedProcessExit failed. Code=%{public}d, Message=%{public}s', error.code, error.message);
+    }
+  }
+}
+```
+
+## enableDelayedProcessExit
+
+```TypeScript
+enableDelayedProcessExit(): Promise<void>
+```
+
+启用当前进程延迟退出功能，使用Promise异步回调。仅支持主线程调用。在正常情况下，应用进程中最后一个UIAbility退出后，进程将退出。调用此接口，在最后一个UIAbility退出后，进程将延迟10秒退出。如果在当前进程的10秒内启动该进程的新UIAbility，进程将不再退出。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>--><!--Device-ApplicationContext-enableDelayedProcessExit(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Fail to connect system service. |
+| [16000150](../errorcode-ability.md#16000150-发送请求失败) | The current process has no UIAbility, and this API cannot be called. |
+
+**示例**
+
+```TypeScript
+import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void {
+    try {
+      // 启用当前进程延迟退出功能
+      this.context.getApplicationContext().enableDelayedProcessExit().then(() => {
+        console.info('enableDelayedProcessExit succeed');
+      }).catch((error: BusinessError) => {
+        console.error(`enableDelayedProcessExit error, code: ${error.code}, error msg: ${error.message}`);
+      });
+    } catch(error) {
+      console.error('enableDelayedProcessExit failed. Code=%{public}d, Message=%{public}s', error.code, error.message);
+    }
+  }
+}
+```
+
 ## getAllRunningInstanceKeys
 
 ```TypeScript
@@ -447,13 +551,73 @@ export default class MyAbility extends UIAbility {
 }
 ```
 
+## getUIAbilityByInstanceId
+
+```TypeScript
+getUIAbilityByInstanceId(instanceId: string): UIAbility
+```
+
+在多实例场景中，根据实例ID获取特定的UIAbility实例。仅支持主线程调用。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-getUIAbilityByInstanceId(instanceId: string): UIAbility--><!--Device-ApplicationContext-getUIAbilityByInstanceId(instanceId: string): UIAbility-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| instanceId | string | 是 | UIAbility的实例ID。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | 返回与instanceId对应的UIAbility实例。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | The id does not exist. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. System service failed to communicate with dependency module. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    // 获取应用上下文
+    let applicationContext = this.context.getApplicationContext();
+    try {
+      let instanceId = 'xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx';
+      // 根据实例ID获取UIAbility实例
+      let uiAbility = applicationContext.getUIAbilityByInstanceId(instanceId);
+      console.info(`getUIAbilityByInstanceId succeed, ability: ${uiAbility}`);
+    } catch (error) {
+      let code = (error as BusinessError).code;
+      let message = (error as BusinessError).message;
+      console.error(`getUIAbilityByInstanceId fail, code: ${code}, message: ${message}`);
+    }
+  }
+}
+```
+
 ## getUIAbilityChildProcessInfos
 
 ```TypeScript
 getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 ```
 
-获取当前应用的UIAbility子进程信息。该接口使用了一个promise。来返回结果。返回的子进程是通过ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT通过startAbility创建的。
+获取当前应用的UIAbility子进程信息。使用Promise异步回调。返回通过startSelfUIAbilityInChildProcess接口启动的进程，以及通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability3)接口启动且[StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md)参数中[processMode](arkts-ability-contextconstant-processmode-e.md)设置为NEW_PROCESS_ATTACH_TO_PARENT模式启动的子进程。无子进程时返回空数组。
 
 **起始版本：** 26.0.1
 
@@ -474,7 +638,7 @@ getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
-| [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system service failed. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Fail to connect system service. |
 
 **示例**
 
@@ -978,8 +1142,6 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 取消监听系统环境[Configuration](arkts-ability-app-ability-configuration-configuration-i.md)的变化。仅支持主线程调用。
 
-<p>**NOTE:**  <br>It can be called only by the main thread. </p>
-
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -994,7 +1156,7 @@ offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): v
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](../../../reference/apis-ability-kit/js-apis-inner-application-applicationContext.md#applicationcontextonsystemconfigurationupdated24)方法注册的callback回调，也可以为空。<br>-&nbsp;如果传入已定义的回调，则取消该监听。 <br>-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | 否 | 回调函数。取值可以为使用[ApplicationContext.onSystemConfigurationUpdated](#onsystemconfigurationupdated)方法注册的callback回调，也可以为空。<br>-&nbsp;如果传入已定义的回调，则取消该监听。 <br>-&nbsp;如果未传入参数，则取消所有已注册的监听。 |
 
 **示例**
 
@@ -1456,7 +1618,7 @@ restartApp(want: Want): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-want-i.md) | 是 | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
+| want | [Want](arkts-ability-want-i.md) | 是 | Want类型参数，传入需要启动的UIAbility信息。系统仅校验abilityName字段的有效性，不校验bundleName字段。 |
 
 **错误码：**
 
@@ -1779,7 +1941,7 @@ setSupportedProcessCache(isSupported : boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSupported | boolean | 是 | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| isSupported | boolean | 是 | 表示应用是否支持进程资源的缓存。true表示支持，false表示不支持。 |
 
 **错误码：**
 
@@ -1808,6 +1970,98 @@ export default class MyAbilityStage extends AbilityStage {
       let message = (error as BusinessError).message;
       console.error(`setSupportedProcessCache fail, code: ${code}, msg: ${message}`);
     }
+  }
+}
+```
+
+## startSelfUIAbility
+
+```TypeScript
+startSelfUIAbility(want: Want): Promise<void>
+```
+
+当前进程延迟退出期间，在当前进程启动一个自身UIAbility，启动成功后，当前进程不再退出。仅支持主线程调用。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ApplicationContext-startSelfUIAbility(want: Want): Promise<void>--><!--Device-ApplicationContext-startSelfUIAbility(want: Want): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-want-i.md) | 是 | Want类型参数，传入需要启动的UIAbility信息。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | The promise returned by the function. |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Fail to connect system service. |
+| [16000122](../errorcode-ability.md#16000122-待启动的目标组件被系统管控模块拦截) | The target component is blocked by the system module and does not support startup. |
+| [16000123](../errorcode-ability.md#16000123-不支持隐式启动) | Implicit startup is not supported. |
+| [16000124](../errorcode-ability.md#16000124-不支持启动分布式uiability) | Starting a remote UIAbility is not supported. |
+| [16000125](../errorcode-ability.md#16000125-不支持启动插件uiability) | Starting a plugin UIAbility is not supported. |
+| [16000130](../errorcode-ability.md#16000130-uiability不属于调用方) | The UIAbility does not belong to the caller. |
+| [16000161](../errorcode-ability.md#16000161-当前进程延迟退出未处于等待状态无法调用此api) | Delayed process exit is not pending in the current process, and this API cannot be called. |
+| [16000162](../errorcode-ability.md#16000162-当前的进程中仍有其他uiability无法调用此api) | The current process still has another UIAbility, and this API cannot be called. |
+
+**示例**
+
+```TypeScript
+import { common, Want } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+@Entry
+@Component
+struct Index {
+  @State message: string = '延迟启动';
+  private context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+
+  build() {
+    Button(this.message)
+      .fontSize(50)
+      .align(Alignment.Center)
+      .onClick(() => {
+        try {
+          const newWant: Want = {
+            bundleName: 'com.example.myapplication',
+            abilityName: 'EntryAbility',
+            parameters: {
+              'pageName': 'IndexNew'  // 标记启动主页面
+            }
+          };
+          // 获取应用上下文
+          let applicationContext = this.context.getApplicationContext();
+          // 在延迟退出期间启动主界面
+          this.context.terminateSelf().then(() => {
+            // 设置延时2000 ms以确保主应用完全退出后再调用startSelfUIAbility接口。
+            setTimeout(() => {
+              applicationContext.getApplicationContext().startSelfUIAbility(newWant).then(() => {
+                hilog.info(0x0000, 'testTag', '启动主界面成功');
+              }).catch((error: BusinessError) => {
+                hilog.error(0x0000, 'testTag', `启动主界面失败, code: ${error.code}, error msg: ${error.message}`);
+              });
+            }, 2000);
+          });
+        } catch (error) {
+          hilog.error(0x0000, 'testTag', `启动主界面失败, code: ${error.code}, error msg: ${error.message}`);
+        }
+      });
   }
 }
 ```

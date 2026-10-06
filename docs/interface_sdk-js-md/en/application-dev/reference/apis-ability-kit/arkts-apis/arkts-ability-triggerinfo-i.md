@@ -18,7 +18,7 @@ The module defines the information required for triggering the WantAgent. The in
 code: number
 ```
 
-Common event code. This field is valid only when [OperationType](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#operationtype) of the WantAgent instance is **'SEND_COMMON_EVENT'**. The meaning of this field is the same as that of the **code** field set in [CommonEventPublishData](../../../reference/apis-basic-services-kit/js-apis-inner-commonEvent-commonEventPublishData.md#properties) when the publisher uses [commonEventManager.publish](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish2) to publish common events.
+Common event code to pass. This field takes effect only when the [OperationType](arkts-ability-wantagent-operationtype-e.md) of the WantAgent instance is'SEND_COMMON_EVENT'. It has the same meaning as the code field in the [CommonEventPublishData](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventpublishdata-i.md) passed by the publisher when publishing a common event through [commonEventManager.publish](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-commoneventmanager-publish-f.md#publish2). The value is determined by the common event type.
 
 **Type:** number
 
@@ -36,7 +36,7 @@ Common event code. This field is valid only when [OperationType](../../../refere
 extraInfo?: { [key: string]: any }
 ```
 
-Extra information.
+Extra data used to pass custom extension information. The parameter is a key-value pair object, where the key is a string and the value can be of any type. You are advised to use the type-safe extraInfos attribute instead. If both extraInfo and extraInfos are set, extraInfos takes effect and extraInfo is ignored.
 
 **Type:** { [key: string]: any }
 
@@ -54,7 +54,7 @@ Extra information.
 extraInfos?: Record<string, Object>
 ```
 
-Extra information. You are advised to use this property to replace **extraInfo**. When this property is set, **extraInfo** does not take effect.
+Extra data used to pass custom key-value pair information in a type-safe manner. You are advised to use this attribute instead of extraInfo. When both are set, this attribute takes precedence. Pass this parameter when you need to carry additional custom data when triggering the WantAgent. If it is not passed, the default value is null and no extra data is carried.
 
 **Type:** Record&lt;string, Object&gt;
 
@@ -72,7 +72,7 @@ Extra information. You are advised to use this property to replace **extraInfo**
 permission?: string
 ```
 
-Permission required for a subscriber to receive the common event. This field is valid only when [OperationType](../../../reference/apis-ability-kit/js-apis-app-ability-wantAgent.md#operationtype) of the WantAgent instance is **'SEND_COMMON_EVENT'**.
+Permission of the common event subscriber. This field takes effect only when the [OperationType](arkts-ability-wantagent-operationtype-e.md) of the WantAgent instance is'SEND_COMMON_EVENT'. If the permission is null, the receiver does not need any permission.
 
 **Type:** string
 

@@ -18,7 +18,7 @@ Context type
 SERVICE_EXTENSION_CONTEXT = 5
 ```
 
-Service extension context type.
+[ServiceExtensionContext](arkts-ability-serviceextensioncontext-c-sys.md) type.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Service extension context type.
 UI_SERVICE_EXTENSION_CONTEXT = 6
 ```
 
-UI service extension context type.
+[UIServiceExtensionContext](arkts-ability-uiserviceextensioncontext-c-sys.md) type.
 
 **Since:** 26.0.0
 
@@ -58,7 +58,7 @@ UI service extension context type.
 AUTO_FILL_EXTENSION_CONTEXT = 7
 ```
 
-Auto fill extension context type.
+[AutoFillExtensionContext](arkts-ability-autofillextensioncontext-c-sys.md) type.
 
 **Since:** 26.0.0
 

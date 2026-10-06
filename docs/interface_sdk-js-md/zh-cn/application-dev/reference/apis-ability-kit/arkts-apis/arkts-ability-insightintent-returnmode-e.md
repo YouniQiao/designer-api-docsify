@@ -36,7 +36,7 @@ CALLBACK = 0
 FUNCTION = 1
 ```
 
-表示意图执行结果会延迟返回，直到开发者主动调用意图提供方管理能力中的sendExecuteResult接口或sendIntentResult接口返回意图执行结果。
+表示意图执行结果会延迟返回，直到开发者主动调用[意图提供方管理能力](arkts-ability-app-ability-insightintentprovider.md)中的[sendExecuteResult](arkts-ability-insightintentprovider-sendexecuteresult-f.md)接口或[sendIntentResult](arkts-ability-insightintentprovider-sendintentresult-f.md)接口返回意图执行结果。
 
 **起始版本：** 23
 

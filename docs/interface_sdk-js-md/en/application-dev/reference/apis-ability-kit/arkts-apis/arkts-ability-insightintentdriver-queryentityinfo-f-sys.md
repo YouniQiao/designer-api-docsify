@@ -12,7 +12,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object>>>
 ```
 
-Query insight intent entity information.
+Queries the dynamic intent entity information of an application based on [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md). This API uses a promise to return the result asynchronously. If the user ID of the calling application is different from the target user ID, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS is required.
 
 **Since:** 26.0.0
 

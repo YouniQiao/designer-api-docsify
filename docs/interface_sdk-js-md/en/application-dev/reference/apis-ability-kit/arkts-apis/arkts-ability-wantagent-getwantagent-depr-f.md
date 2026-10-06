@@ -13,7 +13,7 @@
 function getWantAgent(info: WantAgentInfo, callback: AsyncCallback<WantAgent>): void
 ```
 
-Obtains a WantAgent object.
+Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses an asynchronous callback to return the result.
 
 **Since:** 7
 
@@ -86,7 +86,7 @@ wantAgent.getWantAgent({
 function getWantAgent(info: WantAgentInfo): Promise<WantAgent>
 ```
 
-Obtains a WantAgent object.
+Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses a promise to return the result.
 
 **Since:** 7
 
@@ -110,7 +110,7 @@ Obtains a WantAgent object.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Returns the created [WantAgent](arkts-ability-wantagent-depr-t.md) object. |
+| Promise&lt;[WantAgent](arkts-ability-wantagent-depr-t.md)&gt; | Promise object used to return the WantAgent instance for triggering the specified operation. |
 
 **Examples**
 

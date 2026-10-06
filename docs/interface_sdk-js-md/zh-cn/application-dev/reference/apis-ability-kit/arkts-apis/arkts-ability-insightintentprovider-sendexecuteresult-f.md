@@ -1,6 +1,6 @@
 # sendExecuteResult
 
-## Modules to Import
+## 导入模块
 
 ```TypeScript
 import { insightIntentProvider } from '@kit.AbilityKit';
@@ -12,43 +12,43 @@ import { insightIntentProvider } from '@kit.AbilityKit';
 function sendExecuteResult(instanceId: number, result: insightIntent.ExecuteResult): Promise<void>
 ```
 
-If an intent provider needs to proactively send the execution result of an intent at a specific point in the service process, it can first set the [return mode](arkts-ability-insightintent-returnmode-e.md) of the intent execution result to FUNCTION through [setReturnModeForUIAbilityForeground](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md#setreturnmodeforuiabilityforeground) or [setReturnModeForUIExtensionAbility](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md#setreturnmodeforuiextensionability), and then call this API to send the intent execution result. This API applies to [configuration-type intents](../../../application-models/insight-intent-config-development.md). This API uses a promise to return the result asynchronously.
+如果意图提供方需要在业务处理的特定流程中主动发送意图执行结果，可以先通过[setReturnModeForUIAbilityForeground接口](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md#setreturnmodeforuiabilityforeground)或[setReturnModeForUIExtensionAbility接口](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md#setreturnmodeforuiextensionability)将意图执行结果返回形式[ReturnMode](arkts-ability-insightintent-returnmode-e.md)设置为FUNCTION，然后调用该接口发送意图执行结果，适用于[配置类意图](../../../application-models/insight-intent-config-development.md)。使用Promise异步回调。
 
-After the [return mode](arkts-ability-insightintent-returnmode-e.md) of the intent execution result is set to FUNCTION, the application no longer needs to return the intent execution result through the return value of the [onExecuteInUIAbilityForegroundMode API](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode) or [onExecuteInUIExtensionAbility](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability).
+意图执行结果返回形式[ReturnMode](arkts-ability-insightintent-returnmode-e.md)设置为FUNCTION后，应用将无需再通过[onExecuteInUIAbilityForegroundMode接口](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiabilityforegroundmode)或[onExecuteInUIExtensionAbility接口](arkts-ability-app-ability-insightintentexecutor-insightintentexecutor-c.md#onexecuteinuiextensionability)的返回值返回意图执行结果。
 
-**Since:** 23
+**起始版本：** 23
 
-**Model restriction:** This API can be used only in the stage model.
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-insightIntentProvider-function sendExecuteResult(instanceId: int, result: insightIntent.ExecuteResult): Promise<void>--><!--Device-insightIntentProvider-function sendExecuteResult(instanceId: int, result: insightIntent.ExecuteResult): Promise<void>-End-->
 
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**Parameters:**
+**参数：**
 
-| Name | Type | Mandatory | Description |
+| 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| instanceId | number | Yes | Unique ID of an intent instance. |
-| result | [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | Yes | Intent execution result, representing the data returned to the system entry for this intent execution. |
+| instanceId | number | 是 | 意图实例唯一ID。 |
+| result | [insightIntent.ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | 是 | 返回意图执行结果，表示本次意图执行返回给系统入口的数据。 |
 
-**Return value:**
+**返回值：**
 
-| Type | Description |
+| 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
-**Error codes:**
+**错误码：**
 
-| Error Code ID | Error Message |
+| 错误码ID | 错误信息 |
 | --- | --- |
-| [16000003](../errorcode-ability.md#16000003-id-does-not-exist) | The specified ID does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
+| [16000003](../errorcode-ability.md#16000003-指定的id不存在) | The specified ID does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
-**Examples**
+**示例**
 
-Below is an example of setting the return mode of the intent execution result to FUNCTION.
+设置意图执行结果延迟返回示例：
 
 ```TypeScript
 import { InsightIntentExecutor, insightIntent } from '@kit.AbilityKit';
@@ -68,19 +68,19 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
       },
     };
     try {
-      // Set the return mode of the intent execution result to FUNCTION.
+      // 设置意图执行结果的返回形式为延迟返回
       this.context.setReturnModeForUIAbilityForeground(insightIntent.ReturnMode.FUNCTION);
     } catch (error) {
       let code = (error as BusinessError).code;
       let msg = (error as BusinessError).message;
       console.error(`testTag setReturnModeForUIAbilityForeground fail, error code: ${code}, error msg: ${msg}.`);
     }
-    // Pass the intent instance ID to the target page through localStorage.
+    // 将意图实例的id通过localStorage传入目标页面中
     let localStorageData: Record<string, number> = {
       'insightId': this.context.instanceId,
     };
     let storage: LocalStorage = new LocalStorage(localStorageData);
-    // Load the page through pageLoader.
+    // 通过pageLoader加载页面
     pageLoader.loadContent('pages/UIAbilityIndex', storage, (err, data) => {
       if (err.code) {
         hilog.error(0x0000, 'testTag', 'Failed to load the content. Cause: %{public}s', JSON.stringify(err));
@@ -93,7 +93,7 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 }
 ```
 
-Below is an example of proactively sending the intent execution result.
+主动发送意图执行结果示例：
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
@@ -107,7 +107,7 @@ struct Index {
 
   build() {
     Column() {
-      // Return the intent execution result using the sendExecuteResult API.
+      // 通过sendExecuteResult接口主动返回意图执行结果
       Button('insightIntentProvider sendExecuteResult')
         .onClick(() => {
           try {

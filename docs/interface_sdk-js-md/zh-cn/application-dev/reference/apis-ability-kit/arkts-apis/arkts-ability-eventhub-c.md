@@ -18,7 +18,7 @@ EventHub是系统提供的基于发布-订阅模式实现的事件通信机制�
 emit(event: string, ...args: Object[]): void
 ```
 
-触发指定事件。
+触发指定事件。使用前需先通过Context对象获取EventHub实例。
 
 **起始版本：** 9
 
@@ -149,7 +149,7 @@ export default class EntryAbility extends UIAbility {
 on(event: string, callback: Function): void
 ```
 
-订阅指定事件。
+订阅指定事件。使用前需先通过Context对象获取EventHub实例。
 
 > **说明：** 
 > 
@@ -170,7 +170,7 @@ on(event: string, callback: Function): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | event | string | 是 | 事件名称。 |
-| callback | Function | 是 | 事件回调，事件触发后调用。 |
+| callback | Function | 是 | 事件触发后的回调函数。回调函数无返回值，可接收由emit方法传递的参数。 |
 
 **错误码：**
 

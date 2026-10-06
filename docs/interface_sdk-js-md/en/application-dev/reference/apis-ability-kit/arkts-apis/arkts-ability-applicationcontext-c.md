@@ -141,9 +141,7 @@ export default class MyAbility extends UIAbility {
 disableDelayedProcessExit(): Promise<void>
 ```
 
-Disables delayed process exit for the current process.
-
-<p>&lt;b&gt;NOTE&lt;/b&gt;: <br>This API can be called only by the main thread. <br>Calling this API cancels the effect of [enableDelayedProcessExit](#enabledelayedprocessexit).</p>
+Disables the delayed process exit feature for the current process. This API uses an asynchronous callback to return the result. It can be called only from the main thread. Calling this API cancels the effect of [ApplicationContext.enableDelayedProcessExit](#enabledelayedprocessexit).
 
 **Since:** 26.0.0
 
@@ -157,7 +155,7 @@ Disables delayed process exit for the current process.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise object. No return result. |
 
 **Error codes:**
 
@@ -195,7 +193,7 @@ export default class EntryAbility extends UIAbility {
 enableDelayedProcessExit(): Promise<void>
 ```
 
-Enable delayed exit for the current process. <p>**NOTE:**  <br>It can be called only by the main thread. <br>Under normal circumstances, the process exits after the last UIAbility within the application process has exited. After calling this interface, the process will delay its exit for 10 seconds after the last UIAbility exits. If a new Ability is started within the 10 seconds in the current process, the process no longer exits.</p>
+Enables delayed exit of the current process. This API uses a Promise asynchronous callback. It can be called only on the main thread. Normally, after the last UIAbility in an application process exits, the process exits. After this API is called, the process exits 10 seconds after the last UIAbility exits. If a new UIAbility of the process is started within the 10 seconds, the process will not exit.
 
 **Since:** 26.0.0
 
@@ -209,7 +207,7 @@ Enable delayed exit for the current process. <p>**NOTE:**  <br>It can be called 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise object. No return result. |
 
 **Error codes:**
 
@@ -567,9 +565,7 @@ export default class MyAbility extends UIAbility {
 getUIAbilityByInstanceId(instanceId: string): UIAbility
 ```
 
-Get the UIAbility instance by the instance Id.
-
-<p>**NOTE:**  <br>It can be called only by the main thread. </p>
+Obtains a specific UIAbility instance by instance ID in a multi-instance scenario. This API can be called only from the main thread.
 
 **Since:** 26.0.0
 
@@ -583,13 +579,13 @@ Get the UIAbility instance by the instance Id.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceId | string | Yes | The instanceId of the UIAbility. |
+| instanceId | string | Yes | Instance ID of the UIAbility. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | The UIAbility instance. |
+| [UIAbility](arkts-ability-app-ability-uiability-uiability-c.md) | UIAbility instance corresponding to instanceId. |
 
 **Error codes:**
 
@@ -629,7 +625,9 @@ export default class EntryAbility extends UIAbility {
 getUIAbilityChildProcessInfos(): Promise<Array<ChildProcessInformation>>
 ```
 
-Obtains the information about the UIAbility child processes of the current application. This API uses a promise to return the result. The returned child processes are created via startAbility with ProcessMode.NEW_PROCESS_ATTACH_TO_PARENT.
+Obtains the UIAbility child process information of the current application. This API uses a promise to return the result asynchronously.
+
+Returns the processes started through the [startSelfUIAbilityInChildProcess](arkts-ability-uiabilitycontext-c.md#startselfuiabilityinchildprocess) API, as well as the child processes started through the [startAbility](arkts-ability-uiabilitycontext-c.md#startability3) API with [processMode](arkts-ability-contextconstant-processmode-e.md) in the [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) parameter set to NEW_PROCESS_ATTACH_TO_PARENT. An empty array is returned when there is no child process.
 
 **Since:** 26.0.1
 
@@ -650,7 +648,7 @@ Obtains the information about the UIAbility child processes of the current appli
 | Error Code ID | Error Message |
 | --- | --- |
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
-| [16000050](../errorcode-ability.md#16000050-internal-error) | Connect to system service failed. |
+| [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: Fail to connect system service. |
 
 **Examples**
 
@@ -1155,9 +1153,7 @@ export default class MyAbility extends UIAbility {
 offSystemConfigurationUpdated(callback?: systemConfiguration.UpdatedCallback): void
 ```
 
-unregisters a listener for system configuration updated.
-
-<p>**NOTE:**  <br>It can be called only by the main thread. </p>
+Unregisters the listener for changes to the system environment [Configuration](arkts-ability-app-ability-configuration-configuration-i.md). This API can be called only on the main thread.
 
 **Since:** 24
 
@@ -1173,7 +1169,7 @@ unregisters a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | No | The system configuration updated callback. If a defined callback is passed in, the listener for that callback is unregistered. If no value is passed in, all the listeners for the corresponding event are unregistered. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | No | Callback for the system environment change event. The value can be the callback registered by [ApplicationContext.onSystemConfigurationUpdated](#onsystemconfigurationupdated) or it can be empty.<br>-&nbsp;If a defined callback is passed in, the listener corresponding to this callback is unregistered. <br>-&nbsp;If no parameter is passed in, all registered listeners are unregistered. |
 
 **Examples**
 
@@ -1457,7 +1453,7 @@ Registers a listener for application process state changes. This API uses an asy
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'applicationStateChange' | Yes | Application process state change. The value is fixed at **'applicationStateChange'**. |
-| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback triggered when the application process state is changed. |
+| callback | [ApplicationStateChangeCallback](arkts-ability-app-ability-applicationstatechangecallback-applicationstatechangecallback-c.md) | Yes | Callback invoked when the current application process state changes. |
 
 **Error codes:**
 
@@ -1515,9 +1511,13 @@ export default class MyAbility extends UIAbility {
 onSystemConfigurationUpdated(callback: systemConfiguration.UpdatedCallback): void
 ```
 
-Registers a listener for system configuration updated.
+Registers a listener for changes in the system environment [Configuration](arkts-ability-app-ability-configuration-configuration-i.md). This API uses an asynchronous callback to return the result. This API can be called only on the main thread.
 
-<p>**NOTE:**  <br>It can be called only by the main thread. </p>
+> **NOTE:** 
+> 
+> Custom settings of the application do not affect the triggering of the callback function. For example,
+> if the application has customized the dark/light color mode, the registered callback function is still
+> triggered when the system dark/light color mode changes.
 
 **Since:** 24
 
@@ -1533,7 +1533,7 @@ Registers a listener for system configuration updated.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | Yes | The system configuration updated callback. |
+| callback | [systemConfiguration.UpdatedCallback](arkts-ability-systemconfiguration-updatedcallback-i.md) | Yes | Callback invoked when the system environment changes. |
 
 **Examples**
 
@@ -1636,7 +1636,7 @@ Restarts the application and starts the specified UIAbility. This API can be cal
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want information about the UIAbility to start. No verification is performed on the bundle name passed in. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want parameter, which carries the information about the UIAbility to start. The system only verifies the validity of the abilityName field, and does not verify the bundleName field. |
 
 **Error codes:**
 
@@ -1722,7 +1722,7 @@ Sets the dark/light color mode for the application. This API can be called only 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Dark/light color mode, which can be dark mode, light mode, or follow-system mode (default). |
+| colorMode | [ConfigurationConstant.ColorMode](arkts-ability-configurationconstant-colormode-e.md) | Yes | Dark or light color mode, including dark mode, light mode, and unset color mode (default). |
 
 **Error codes:**
 
@@ -1782,7 +1782,7 @@ Sets the font for this application. This API can be called only on the main thre
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | string | Yes | Font, which can be registered by calling [UIContext.registerFont](../../../reference/apis-arkui/arkts-apis-uicontext-font.md#registerfont). |
+| font | string | Yes | Font, which can be registered by calling UIContext.registerFont. |
 
 **Error codes:**
 
@@ -1965,7 +1965,7 @@ This API can be properly called only on phones and 2-in-1 devices. If it is call
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isSupported | boolean | Yes | Whether process cache is supported. The value &lt;code&gt;true&lt;/code&gt; means that process cache is supported, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| isSupported | boolean | Yes | Whether the application's process supports resource caching. true if supported, false otherwise. |
 
 **Error codes:**
 
@@ -2004,7 +2004,7 @@ export default class MyAbilityStage extends AbilityStage {
 startSelfUIAbility(want: Want): Promise<void>
 ```
 
-Starts a UIAbility of the current application during the delayed-exit window.
+During the delayed exit of the current process, starts a UIAbility of the current process. After the UIAbility is started successfully, the current process no longer exits. This API can be called only on the main thread.
 
 **Since:** 26.0.0
 
@@ -2018,13 +2018,13 @@ Starts a UIAbility of the current application during the delayed-exit window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Indicates the UIAbility to start. |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want parameter, which carries the information about the UIAbility to start. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | The promise returned by the function. |
+| Promise&lt;void&gt; | Promise object that returns no value. |
 
 **Error codes:**
 
