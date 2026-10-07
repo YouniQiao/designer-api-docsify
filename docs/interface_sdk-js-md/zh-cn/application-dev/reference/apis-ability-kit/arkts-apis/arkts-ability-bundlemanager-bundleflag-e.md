@@ -116,13 +116,13 @@ GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
 
 用于获取applicationInfo、moduleInfo、abilityInfo和extensionAbilityInfo中包含的metadata。单独使用不生效，它需要与GET_BUNDLE_INFO_WITH_APPLICATION、GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY配合使用，其中：
 
--?获取applicationInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。
+- 获取applicationInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_APPLICATION一起使用。
 
--?获取moduleInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
+- 获取moduleInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE一起使用。
 
--?获取abilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY一起使用。
+- 获取abilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_ABILITY一起使用。
 
--?获取extensionAbilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使用。
+- 获取extensionAbilityInfo中包含的metadata，需要与GET_BUNDLE_INFO_WITH_HAP_MODULE、GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY一起使用。
 
 **起始版本：** 9
 
@@ -218,7 +218,9 @@ GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
 GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 ```
 
-用于获取仅包含有桌面图标的应用的bundleInfo。
+用于获取仅包含有桌面图标的应用的bundleInfo。它仅在[getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md)接口中生效。
+
+**系统API：** 该标记仅支持在系统API中使用。
 
 **起始版本：** 26.1.0
 

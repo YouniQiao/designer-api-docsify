@@ -4,11 +4,11 @@
 export interface ElementName
 ```
 
-The module provides element name information, which can be obtained through [Context.getElementName](arkts-ability-context.md).
+ElementName information, which can be obtained through [Context.getElementName](arkts-ability-context-depr-i.md#getelementname).
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> Since API version 9, this module is no longer maintained. You are advised to use
 > [bundleManager-ElementName](arkts-ability-elementname-depr-i.md) instead.
 
 **Since:** 7

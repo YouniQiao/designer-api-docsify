@@ -14,7 +14,9 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string, callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
+Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses an asynchronous callback to return the result.
+
+No permission is required for obtaining the caller information.
 
 **Since:** 9
 
@@ -85,7 +87,9 @@ try {
 function getAbilityIcon(bundleName: string, moduleName: string, abilityName: string): Promise<image.PixelMap>
 ```
 
-Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
+Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result.
+
+No permission is required for obtaining the caller information.
 
 **Since:** 9
 

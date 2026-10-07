@@ -12,7 +12,7 @@ import { shortcutManager } from '@kit.AbilityKit';
 function updateDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Promise<void>
 ```
 
-Updates a shortcut for the given user. This API uses a promise to return the result.
+Updates the shortcut information of the specified user. This API uses a promise to return the result.
 
 **Since:** 26.0.1
 

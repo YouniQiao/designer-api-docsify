@@ -6,8 +6,6 @@ export interface WindowSize
 
 Describes the window size.
 
-**Atomic service API**: This API can be used in atomic services since API version 11.
-
 **Since:** 9
 
 <!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
@@ -38,7 +36,9 @@ Maximum height of the window in free window mode. The unit is vp.
 readonly maxWindowRatio: number
 ```
 
-Maximum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.12.
+Indicates the maximum aspect ratio (width/height) of the window in free-form window state.
+
+Value range: [0, 1]. For example, 0.62 indicates that the maximum window width is 0.62 times the height. This attribute is used to limit the display ratio of the window.
 
 **Type:** number
 
@@ -92,7 +92,9 @@ Minimum height of the window in free window mode. The unit is vp.
 readonly minWindowRatio: number
 ```
 
-Minimum aspect ratio of the window in free window mode. The value ranges from 0 to 1. An example value is 0.5.
+Indicates the minimum aspect ratio (width/height) of the window in free-form window state.
+
+Value range: [0, 1]. For example, 0.12 indicates that the minimum window width is 0.12 times the height. This attribute is used to limit the display ratio of the window.
 
 **Type:** number
 

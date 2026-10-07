@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo>>
 ```
 
-根据userId获取指定用户下所有应用的Provision配置文件信息。使用Promise异步回调。
+根据userId获取指定用户下所有应用的[Provision](arkts-ability-appprovisioninfo-i-sys.md)配置文件信息。使用Promise异步回调。
 
 **起始版本：** 23
 

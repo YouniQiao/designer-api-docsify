@@ -1,4 +1,4 @@
-# @ohos.bundle.bundleManager
+# @ohos.bundle.bundleManager(Bundle Management Module)
 
 The module provides APIs for obtaining application information, including bundle information, application information, ability information (information about a UIAbility), and [ExtensionAbility information](arkts-ability-extensionabilityinfo-i.md).
 
@@ -23,9 +23,9 @@ import { bundleManager } from '@kit.AbilityKit';
 | [canOpenLink](arkts-ability-bundlemanager-canopenlink-f.md) | Checks whether the target application can be accessed based on the provided link. The scheme specified in the link must be configured in the **querySchemes** field of the [module.json5](../../../quick-start/module-configuration-file.md) file. |
 | [cleanBundleCacheFilesForSelf](arkts-ability-bundlemanager-cleanbundlecachefilesforself-f.md) | Clears the application cache. This API uses a promise to return the result. |
 | [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md) | Obtains the ability information based on the given resource identifier and ability flag. This API uses a promise to return the result. |
-| [getAlternateIcons](arkts-ability-bundlemanager-getalternateicons-f.md) | Queries the alternate icon information configured in the alternateIcons in the app.json5 of the current application. This API uses a promise to return the result. |
+| [getAlternateIcons](arkts-ability-bundlemanager-getalternateicons-f.md) | Queries the alternate icon information configured in the [alternateIcons tag](../../../quick-start/app-configuration-file.md#alternateicons) in app.json5 of the current app. This API uses a promise to return the result. |
 | [getAppCloneIdentity](arkts-ability-bundlemanager-getappcloneidentity-f.md) | Obtains the bundle name and clone index of a cloned application based on the given UID. This API uses a promise to return the result. |
-| [getApplicationLabel](arkts-ability-bundlemanager-getapplicationlabel-f.md) | Obtains the name of an application with the specified package name and clone index. This API uses a promise to return the result. |
+| [getApplicationLabel](arkts-ability-bundlemanager-getapplicationlabel-f.md) | Obtains the app name based on the given bundle name and app index. This API uses a promise to return the result. |
 | [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo1) | Obtains the bundle information based on the given bundle name and bundle flags. This API uses an asynchronous callback to return the result. |
 | [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo2) | Obtains the BundleInfo based on the given bundle name, bundle flags, and user ID. This API uses an asynchronous callback to return the result. |
 | [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md#getbundleinfo3) | Obtains the bundle information based on the given bundle name, bundle flags, and user ID. This API uses a promise to return the result. |
@@ -38,9 +38,9 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid1) | Obtains the bundle name based on the given UID. This API uses an asynchronous callback to return the result. |
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid2) | Obtains the bundle name based on the given UID. This API uses a promise to return the result. |
 | [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md) | Obtains the bundle name based on the given UID. This API returns the result synchronously. |
-| [getInstalledBundleList](arkts-ability-bundlemanager-getinstalledbundlelist-f.md) | Obtains all the bundle information in the system based on the given bundle flags. This API uses a promise to return the result. |
-| [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md) | Obtains the **Want** parameters of the [entry UIAbility](../../../application-models/ability-terminology.md#uiability) of the current application. |
-| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md) | Obtains the Want used to launch the bundle based on the given bundle name and user ID. This API returns the result synchronously. |
+| [getInstalledBundleList](arkts-ability-bundlemanager-getinstalledbundlelist-f.md) | Obtains all **BundleInfo** objects in the system based on the given bundleFlags. This API uses a promise to return the result. |
+| [getLaunchWant](arkts-ability-bundlemanager-getlaunchwant-f.md) | Obtains the **Want** parameters of the [entry UIAbility](../../../quick-start/application-package-glossary.md#entry-uiability) of the current application. |
+| [getLaunchWantForBundleSync](arkts-ability-bundlemanager-getlaunchwantforbundlesync-f.md) | Obtains the **Want** parameters for starting an application based on the given bundle name and user ID. |
 | [getPluginBundlePathForSelf](arkts-ability-bundlemanager-getpluginbundlepathforself-f.md) | Obtains the installation path of a specified plugin in the current [application sandbox](../../../file-management/app-sandbox-directory.md). |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability1) | Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses an asynchronous callback to return the result. |
 | [getProfileByAbility](arkts-ability-bundlemanager-getprofilebyability-f.md#getprofilebyability2) | Obtains the JSON string array of the current application's configuration file based on the given module name, ability name, and metadata name (name configured under **metadata** in [abilities](../../../quick-start/module-configuration-file.md#abilities) of the **module.json5** file). This API uses a promise to return the result. |
@@ -48,7 +48,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getProfileByExtensionAbility](arkts-ability-bundlemanager-getprofilebyextensionability-f.md#getprofilebyextensionability1) | Obtains the JSON string array of the current application's configuration file based on the given module name, ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses an asynchronous callback to return the result. |
 | [getProfileByExtensionAbility](arkts-ability-bundlemanager-getprofilebyextensionability-f.md#getprofilebyextensionability2) | Obtains the JSON string array of the current application's configuration file based on the given module name, ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API uses a promise to return the result. |
 | [getProfileByExtensionAbilitySync](arkts-ability-bundlemanager-getprofilebyextensionabilitysync-f.md) | Obtains the JSON string array of the current application's configuration file based on the given module name, ExtensionAbility name, and metadata name (name configured in [metadata](../../../quick-start/module-configuration-file.md#metadata) of the **module.json5** file). This API returns the result synchronously. The result value is a string array. |
-| [getSignatureInfo](arkts-ability-bundlemanager-getsignatureinfo-f.md) | Obtains the [signature information](arkts-ability-bundleinfo-signatureinfo-i.md) of an application based on the given UID. |
+| [getSignatureInfo](arkts-ability-bundlemanager-getsignatureinfo-f.md) | Obtains the [signature information](../../../reference/apis-ability-kit/js-apis-bundleManager-bundleInfo.md#signatureinfo) of an application based on the given UID. |
 | [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md) | Sets the alternate icon of the caller based on the given alternate icon name. This API uses a promise to return the result. |
 
 <!--Del-->
@@ -65,9 +65,9 @@ import { bundleManager } from '@kit.AbilityKit';
 | [disableDynamicIcon](arkts-ability-bundlemanager-disabledynamicicon-f-sys.md#disabledynamicicon2) | Disables the dynamic icon based on the given bundle name and bundle options. This API uses a promise to return the result. |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon1) | Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the result. |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon2) | Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result. |
-| [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | Filters the bundle list by device mode distribution policies. This API uses a promise to return the result. |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | Obtains the PixelMap of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
+| [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | Filters the application list by device mode distribution policies. This API uses a promise to return the result. |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel1) | Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel2) | Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityLabelSync](arkts-ability-bundlemanager-getabilitylabelsync-f-sys.md) | Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the result synchronously. |
@@ -78,7 +78,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllApplicationInfo](arkts-ability-bundlemanager-getallapplicationinfo-f-sys.md#getallapplicationinfo3) | Obtains all the application information in the system based on the given application flags and user ID. This API uses a promise to return the result. |
 | [getAllAppProvisionInfo](arkts-ability-bundlemanager-getallappprovisioninfo-f-sys.md) | Obtains the provision configuration file information of all applications based on the given user ID. This API uses a promise to return the result. |
 | [getAllAppProvisionInfoInDevice](arkts-ability-bundlemanager-getallappprovisioninfoindevice-f-sys.md) | Obtains the provision configuration file information of all applications based in the device on the given user ID. This API uses a promise to return the result. |
-| [getAllBundleCacheSize](arkts-ability-bundlemanager-getallbundlecachesize-f-sys.md) | Obtains the global cache size. This API uses a promise to return the result. |
+| [getAllBundleCacheSize](arkts-ability-bundlemanager-getallbundlecachesize-f-sys.md) | Obtains the size of the global cache, in bytes. This API uses a promise to return the result. |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo1) | Obtains all the bundle information in the system based on the given bundle flags. This API uses an asynchronous callback to return the result. |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo2) | Obtains all the bundle information in the system based on the given bundle flags and user ID. This API uses an asynchronous callback to return the result. |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo3) | Obtains all the bundle information in the system based on the given bundle flags and user ID. This API uses a promise to return the result. |
@@ -86,14 +86,14 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllBundleInfoInstances](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md) | Obtains all the bundle information in the system based on the given bundle name and bundle flags. This API uses a type of promise to return the result. |
 | [getAllBundleInstallInfo](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md) | Obtains the extended install information about all applications in the system. This API uses a promise to return the result. |
 | [getAllDynamicIconInfo](arkts-ability-bundlemanager-getalldynamiciconinfo-f-sys.md) | Obtains the dynamic icon information of all applications and all application clones of a specified user. This API uses a promise to return the result. |
-| [getAllNewPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallnewpreinstalledapplicationinfo-f-sys.md) | Obtains PreinstalledApplicationInfo of all newly added preinstalled applications during device OTA upgrade. |
-| [getAllPluginInfo](arkts-ability-bundlemanager-getallplugininfo-f-sys.md) | Obtains all the plugin information in the system based on the given host bundle name and user ID. This API uses a promise to return the result. |
-| [getAllPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallpreinstalledapplicationinfo-f-sys.md) | Obtains information about all preinstalled applications. This API uses a promise to return the result. |
+| [getAllNewPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallnewpreinstalledapplicationinfo-f-sys.md) | Obtains information about all preinstalled applications added for the current user during OTA update. This API uses a promise to return the result. |
+| [getAllPluginInfo](arkts-ability-bundlemanager-getallplugininfo-f-sys.md) | Obtains all PluginBundleInfo based on the given hostBundleName and userId. This API uses a promise to return the result. An empty array may be returned if the API call fails. Verify the return value before using it. |
+| [getAllPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallpreinstalledapplicationinfo-f-sys.md) | Obtains the information about all preset applications. This API uses a promise to return the result. An empty array may be returned if the API call fails. Verify the return value before using it. |
 | [getAllSharedBundleInfo](arkts-ability-bundlemanager-getallsharedbundleinfo-f-sys.md#getallsharedbundleinfo1) | Obtains all the shared bundle information. This API uses an asynchronous callback to return the result. |
 | [getAllSharedBundleInfo](arkts-ability-bundlemanager-getallsharedbundleinfo-f-sys.md#getallsharedbundleinfo2) | Obtains all the shared bundle information. This API uses a promise to return the result. |
-| [getAppCloneBundleInfo](arkts-ability-bundlemanager-getappclonebundleinfo-f-sys.md) | Obtains the bundle information of an application or an application clone based on the given bundle name, app index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md), and user ID. This API uses a promise to return the result. |
+| [getAppCloneBundleInfo](arkts-ability-bundlemanager-getappclonebundleinfo-f-sys.md) | Queries the BundleInfo of the main application, clone application, or sandbox application based on the bundleName, clone index, [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md), and user ID. This API uses a promise to return the result. |
 | [getAppCloneIdentityBySandboxDataDir](arkts-ability-bundlemanager-getappcloneidentitybysandboxdatadir-f-sys.md) | Obtains the identity information of an application, including the bundle name and clone index, based on the given sandbox directory name. |
-| [getAppClonePreference](arkts-ability-bundlemanager-getappclonepreference-f-sys.md) | Obtains the application clone preference configuration based on the given bundle name. |
+| [getAppClonePreference](arkts-ability-bundlemanager-getappclonepreference-f-sys.md) | Queries the app clone preference settings based on the given bundleName. This API uses a promise to return the result asynchronously. |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo1) | Obtains the application information based on the given bundle name and application flags. This API uses an asynchronous callback to return the result. |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo2) | Obtains the application information based on the given bundle name, application flags, and user ID. This API uses an asynchronous callback to return the result. |
 | [getApplicationInfo](arkts-ability-bundlemanager-getapplicationinfo-f-sys.md#getapplicationinfo3) | Obtains the application information based on the given bundle name, application flags, and user ID. This API uses a promise to return the result. |
@@ -104,11 +104,11 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAppProvisionInfo](arkts-ability-bundlemanager-getappprovisioninfo-f-sys.md#getappprovisioninfo3) | Obtains the provision profile based on the given bundle name and user ID. This API uses a promise to return the result. |
 | [getAppProvisionInfoInDevice](arkts-ability-bundlemanager-getappprovisioninfoindevice-f-sys.md) | Obtains the provision profile based in device on the given bundle name and user ID. This API uses a promise to return the result. |
 | [getAppProvisionInfoSync](arkts-ability-bundlemanager-getappprovisioninfosync-f-sys.md) | Obtains the provision profile based on the given bundle name and user ID. This API returns the result synchronously. |
-| [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo1) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses an asynchronous callback to return the result. |
-| [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo2) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses a promise to return the result. |
+| [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo1) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses an asynchronous callback to return the result. Since API version 26.0.0, this API can process APP packages. |
+| [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo2) | Obtains the bundle information based on the given HAP file path and bundle flags. This API uses a promise to return the result. Since API version 26.0.0, this API can process APP packages. |
 | [getBundleArchiveInfoSync](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md) | Obtains the bundle information based on the given HAP file path and bundle flags. This API returns the result synchronously. |
 | [getBundleExtensionPolicyInfo](arkts-ability-bundlemanager-getbundleextensionpolicyinfo-f-sys.md) | Obtains the bundle extension policy information of a specified application. |
-| [getDeveloperIds](arkts-ability-bundlemanager-getdeveloperids-f-sys.md) | Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md). |
+| [getDeveloperIds](arkts-ability-bundlemanager-getdeveloperids-f-sys.md) | Obtains all developer ID lists of the current user based on the given application [appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md). An empty array may be returned if the API call fails. Verify the return value before using it. |
 | [getDynamicIcon](arkts-ability-bundlemanager-getdynamicicon-f-sys.md) | Obtains the module name corresponding to the dynamic icon based on the specified bundle name. This API uses a promise to return the result. |
 | [getDynamicIconInfo](arkts-ability-bundlemanager-getdynamiciconinfo-f-sys.md) | Obtains the dynamic icon information of all users and all application clones based on the given bundle name. This API uses a promise to return the result. |
 | [getExtResource](arkts-ability-bundlemanager-getextresource-f-sys.md) | Obtains the module names corresponding to the extended resources based on the given bundle name. This API uses a promise to return the result. |
@@ -120,16 +120,16 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getPermissionDef](arkts-ability-bundlemanager-getpermissiondef-f-sys.md#getpermissiondef2) | Obtains the PermissionDef struct based on the given permission name. This API uses a promise to return the result. |
 | [getPermissionDefSync](arkts-ability-bundlemanager-getpermissiondefsync-f-sys.md) | Obtains the **PermissionDef** struct based on the given permission name. This API returns the result synchronously. |
 | [getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getrecoverableapplicationinfo1) | Obtains information about all preinstalled applications that can be restored. This API uses an asynchronous callback to return the result. |
-| [getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getrecoverableapplicationinfo2) | Obtains information about all preinstalled applications that can be restored. This API uses a promise to return the result. |
+| [getRecoverableApplicationInfo](arkts-ability-bundlemanager-getrecoverableapplicationinfo-f-sys.md#getrecoverableapplicationinfo2) | Obtains the information about all recoverable preset applications. This API uses a promise to return the result. An empty array may be returned if the API call fails. Verify the return value before using it. |
 | [getSandboxDataDir](arkts-ability-bundlemanager-getsandboxdatadir-f-sys.md) | Obtains the sandbox directory of an application based on the given bundle name and clone index. |
 | [getSharedBundleInfo](arkts-ability-bundlemanager-getsharedbundleinfo-f-sys.md#getsharedbundleinfo1) | Obtains the shared bundle information based on the given bundle name. This API uses an asynchronous callback to return the result. |
 | [getSharedBundleInfo](arkts-ability-bundlemanager-getsharedbundleinfo-f-sys.md#getsharedbundleinfo2) | Obtains the shared bundle information based on the given bundle name. This API uses a promise to return the result. |
-| [getSpecifiedDistributionType](arkts-ability-bundlemanager-getspecifieddistributiontype-f-sys.md) | Obtains the [distribution type](../../../security/app-provision-structure.md) of a bundle in synchronous mode. The return value is the **specifiedDistributionType** field value in [InstallParam](arkts-ability-installer-installparam-i-sys.md) passed when **install** is called. |
+| [getSpecifiedDistributionType](arkts-ability-bundlemanager-getspecifieddistributiontype-f-sys.md) | Synchronously queries the [HarmonyAppProvision Configuration File](../../../security/app-provision-structure.md) of a specified bundle name. The return value is the specifiedDistributionType field in the [InstallParam](arkts-ability-installer-installparam-i-sys.md) passed when the install API is called. |
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled1) | Checks whether an ability of an application or an application clone is enabled. This API uses a promise to return the result. |
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled2) | Checks whether an ability is enabled. This API uses an asynchronous callback to return the result. |
 | [isAbilityEnabled](arkts-ability-bundlemanager-isabilityenabled-f-sys.md#isabilityenabled3) | Checks whether an ability is enabled. This API uses a promise to return the result. |
 | [isAbilityEnabledSync](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md) | Checks whether an ability is enabled. This API returns the result synchronously. |
-| [isApplicationDisableForbidden](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md) | Synchronously queries whether a specified application or application clone of a specified user is set to forbid being disabled. If you need to check whether an application is forbidden to be disabled under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for. If you need to check whether an application is forbidden to be disabled under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for. |
+| [isApplicationDisableForbidden](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md) | Synchronously queries whether a specified application or application clone of a specified user is set to forbid being disabled. |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled1) | Checks whether an application or an application clone is enabled. This API uses a promise to return the result. |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled2) | Checks whether an application is enabled. This API uses an asynchronous callback to return the result. |
 | [isApplicationEnabled](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md#isapplicationenabled3) | Checks whether an application is enabled. This API uses a promise to return the result. |
@@ -146,8 +146,8 @@ import { bundleManager } from '@kit.AbilityKit';
 | [queryExtensionAbilityInfoSync](arkts-ability-bundlemanager-queryextensionabilityinfosync-f-sys.md#queryextensionabilityinfosync1) | Obtains the ExtensionAbility information based on the given want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. |
 | [queryExtensionAbilityInfoSync](arkts-ability-bundlemanager-queryextensionabilityinfosync-f-sys.md#queryextensionabilityinfosync2) | Obtains the ExtensionAbility information based on the given Want, ExtensionAbility type, ExtensionAbility flags, and user ID. This API returns the result synchronously. |
 | [queryExtensionAbilityInfoSync](arkts-ability-bundlemanager-queryextensionabilityinfosync-f-sys.md#queryextensionabilityinfosync3) | Obtains the ExtensionAbility information based on the given ExtensionAbility type, ExtensionAbility flags, and user ID. |
-| [recoverBackupBundleData](arkts-ability-bundlemanager-recoverbackupbundledata-f-sys.md) | Restores the backup data for a specified application under a given user. This API uses a promise to return the result. |
-| [removeBackupBundleData](arkts-ability-bundlemanager-removebackupbundledata-f-sys.md) | Removes the backup data for a specified application under a given user. This API uses a promise to return the result. |
+| [recoverBackupBundleData](arkts-ability-bundlemanager-recoverbackupbundledata-f-sys.md) | Restores the backup data for a specified application or application clone under a specified user. This API uses a promise to return the result. |
+| [removeBackupBundleData](arkts-ability-bundlemanager-removebackupbundledata-f-sys.md) | Deletes the backup data for a specified application or application clone under a specified user. This API uses a promise to return the result. |
 | [setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled1) | Enables or disables an ability of an application or an application clone. This API uses a promise to return the result. |
 | [setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled2) | Enables or disables an ability. This API uses an asynchronous callback to return the result. |
 | [setAbilityEnabled](arkts-ability-bundlemanager-setabilityenabled-f-sys.md#setabilityenabled3) | Enables or disables an ability. This API uses a promise to return the result. |
@@ -155,13 +155,13 @@ import { bundleManager } from '@kit.AbilityKit';
 | [setAbilityFileTypesForSelf](arkts-ability-bundlemanager-setabilityfiletypesforself-f-sys.md) | Sets the file types that can be opened by the current application. |
 | [setAdditionalInfo](arkts-ability-bundlemanager-setadditionalinfo-f-sys.md) | Sets additional information for an application. This API can be called only by AppGallery. |
 | [setAdditionalInfoByIndex](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md) | Sets additional information for a specified application instance. This API can be called only by AppGallery. |
-| [setAppClonePreference](arkts-ability-bundlemanager-setappclonepreference-f-sys.md) | Sets the application clone preference configuration. |
+| [setAppClonePreference](arkts-ability-bundlemanager-setappclonepreference-f-sys.md) | Sets the app clone preference based on the given bundle name. This API uses a promise to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled1) | Enables or disables an application or an application clone. This API uses a promise to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled2) | Sets the enabled or disabled state of a specified application or application clone, and controls whether to exit the application process when the application is disabled. This API uses a promise to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled3) | Enables or disables an application. This API uses an asynchronous callback to return the result. |
 | [setApplicationEnabled](arkts-ability-bundlemanager-setapplicationenabled-f-sys.md#setapplicationenabled4) | Enables or disables an application. This API uses a promise to return the result. |
 | [setApplicationEnabledSync](arkts-ability-bundlemanager-setapplicationenabledsync-f-sys.md#setapplicationenabledsync1) | Enables or disables an application. This API returns the result synchronously. |
-| [setApplicationEnabledSync](arkts-ability-bundlemanager-setapplicationenabledsync-f-sys.md#setapplicationenabledsync2) | Set whether an application is enabled or disabled, with control over whether the process is killed when disabled. |
+| [setApplicationEnabledSync](arkts-ability-bundlemanager-setapplicationenabledsync-f-sys.md#setapplicationenabledsync2) | Sets the enabled or disabled state of a specified application or application clone in synchronous mode, and controls whether to exit the application process when the application is disabled. |
 | [switchUninstallState](arkts-ability-bundlemanager-switchuninstallstate-f-sys.md) | Switches the uninstall state of an application. This API is independent of EDM application interception control. |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc1) | Verifies an .abc file. This API uses an asynchronous callback to return the result. |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc2) | Verifies an .abc file. This API uses a promise to return the result. |
@@ -172,7 +172,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Defines the ability information. |
-| [AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md) | Describes the alternate icon information of an application. |
+| [AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md) | Alternate icon information of the app. |
 | [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | Describes the identity information of an application clone. |
 | [ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md) | Defines the application information. |
 | [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Defines the bundle information. |
@@ -187,7 +187,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [ReqPermissionDetail](arkts-ability-bundlemanager-reqpermissiondetail-t.md) | Defines the detailed information of the permissions to request from the system. |
 | [RouterItem](arkts-ability-bundlemanager-routeritem-t.md) | Defines the router table configuration of the module. |
 | [SignatureInfo](arkts-ability-bundlemanager-signatureinfo-t.md) | Defines the signature information of the bundle. |
-| [Skill](arkts-ability-bundlemanager-skill-t.md) | Defines the skill information. |
+| [Skill](arkts-ability-bundlemanager-skill-t.md) | Skill information. |
 | [SkillUrl](arkts-ability-bundlemanager-skillurl-t.md) | Defines the SkillUri information. |
 | [UsedScene](arkts-ability-bundlemanager-usedscene-t.md) | Defines the use scenario and timing for using the permission. |
 | [WindowSize](arkts-ability-bundlemanager-windowsize-t.md) | Defines the window size. |
@@ -197,7 +197,7 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AppClonePreference](arkts-ability-bundlemanager-appclonepreference-t-sys.md) | Defines the AppClonePreference information. |
+| [AppClonePreference](arkts-ability-bundlemanager-appclonepreference-t-sys.md) | App clone preference, used to configure the selection policy between the main app and the clone app at app startup. |
 | [AppProvisionInfo](arkts-ability-bundlemanager-appprovisioninfo-t-sys.md) | Defines the information in the [HarmonyAppProvision configuration file](../../../security/app-provision-structure.md). |
 | [BundleExtensionPolicyInfo](arkts-ability-bundlemanager-bundleextensionpolicyinfo-t-sys.md) | Describes the bundle extension policy information. |
 | [BundleOptions](arkts-ability-bundlemanager-bundleoptions-t-sys.md) | Describes the bundle options used to set or query application information. |
@@ -234,14 +234,14 @@ import { bundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AppClonePreferenceMode](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md) | Enumerates the application clone preference modes. |
-| [AppDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md) | Enumerates the application [distribution types](../../../security/app-provision-structure.md). |
+| [AppClonePreferenceMode](arkts-ability-bundlemanager-appclonepreferencemode-e-sys.md) | Enumerates the modes of the app clone preference. |
+| [AppDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md) | Identifies an application's [HarmonyAppProvision Configuration File](../../../security/app-provision-structure.md). |
 | [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md) | Enumerates the application flags, which indicate the type of application information to obtain. |
 | [ApplicationInfoFlag](arkts-ability-bundlemanager-applicationinfoflag-e-sys.md) | Enumerates the application information flag, which describes the status between an application and user. |
 | [ApplicationReservedFlag](arkts-ability-bundlemanager-applicationreservedflag-e-sys.md) | Each bit of this ApplicationReservedFlag value identifies relevant information. |
 | [AppSandboxPolicy](arkts-ability-bundlemanager-appsandboxpolicy-e-sys.md) | App sandbox policy for dual-mode (2in1/tablet) scenarios. |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | Enumerates the bundle flags, which indicate the type of bundle information to obtain. |
-| [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | Define the enumeration of device mode distribution policies, which is used to specify how an application is distributed on a device. |
+| [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | Enumerates the device mode distribution policies, which specify how applications are distributed to devices. |
 | [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md) | Enumerates the ExtensionAbility flags, which indicate the type of ExtensionAbility information to obtain. |
 | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | Enumerates the types of profiles (also called application files). |
 <!--DelEnd-->

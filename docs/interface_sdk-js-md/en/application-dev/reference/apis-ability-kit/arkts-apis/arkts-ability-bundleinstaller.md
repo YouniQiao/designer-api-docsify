@@ -1,8 +1,4 @@
-# bundleInstaller
-
-The module provides APIs for you to install, uninstall, and recover bundles on devices.
-
-
+# bundleInstaller(BundleInstaller)
 
 ## Summary
 
@@ -12,6 +8,6 @@ The module provides APIs for you to install, uninstall, and recover bundles on d
 | Name | Description |
 | --- | --- |
 | [BundleInstaller](arkts-ability-bundleinstaller-depr-i-sys.md) | The module provides APIs for you to install, uninstall, and recover bundles on devices. |
-| [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Describes the parameters required for bundle installation, recovery, or uninstall. |
+| [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) |  |
 | [InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md) | Describes the bundle installation or uninstall status. |
 <!--DelEnd-->

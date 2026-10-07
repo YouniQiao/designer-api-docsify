@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Array<PluginBundleInfo>>
 ```
 
-根据给定的hostBundleName和userId获取所有的PluginBundleInfo。使用Promise异步回调。
+根据给定的hostBundleName和userId获取所有的PluginBundleInfo。使用Promise异步回调。接口调用失败时可能返回空数组，需校验返回值后使用。
 
 **起始版本：** 19
 

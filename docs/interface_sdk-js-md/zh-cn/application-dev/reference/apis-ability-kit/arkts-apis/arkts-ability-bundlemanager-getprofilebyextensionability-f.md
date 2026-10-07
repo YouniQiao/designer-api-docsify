@@ -16,6 +16,9 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 
 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用callback异步回调。
 
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)的相关接
+> 口，来获取引用的资源。
+
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
@@ -77,6 +80,9 @@ function getProfileByExtensionAbility(moduleName: string, extensionAbilityName: 
 ```
 
 根据给定的moduleName、extensionAbilityName和metadataName（module.json5中[metadata标签](../../../quick-start/module-configuration-file.md#metadata标签)下的name）获取自身相应配置文件的json格式字符串。使用Promise异步回调。
+
+> 如果配置文件信息采用了资源引用格式，则返回值将保持资源引用格式（例如 $string:res_id），开发者可以通过[资源管理](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md)的相关接
+> 口，来获取引用的资源。
 
 **起始版本：** 9
 

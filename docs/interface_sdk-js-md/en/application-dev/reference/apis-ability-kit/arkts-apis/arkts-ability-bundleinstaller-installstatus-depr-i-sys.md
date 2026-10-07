@@ -44,45 +44,9 @@ Installation or uninstall error code. The value must be defined in [InstallError
 statusMessage: string
 ```
 
-Installation or uninstall status message.
+String result information indicating installation or uninstallation. The value range includes:
 
-**SUCCESS**: Installation succeeded.
-
-**STATUS_INSTALL_FAILURE**: Installation failed (no installation file exists).
-
-**STATUS_INSTALL_FAILURE_ABORTED**: Installation aborted.
-
-**STATUS_INSTALL_FAILURE_INVALID**: Invalid installation parameter.
-
-**STATUS_INSTALL_FAILURE_CONFLICT**: Installation conflict. (The basic information of the application to update is inconsistent with that of the existing application.)
-
-**STATUS_INSTALL_FAILURE_STORAGE**: Failed to store the bundle information.
-
-**STATUS_INSTALL_FAILURE_INCOMPATIBLE**: Installation incompatibility. (A downgrade occurs or the signature information is incorrect.)
-
-**STATUS_UNINSTALL_FAILURE**: Uninstallation failed. (The application to be uninstalled is not found.)
-
-**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation aborted. (This error code is not in use.)
-
-**STATUS_UNINSTALL_FAILURE_ABORTED**: Uninstallation conflict. (Failed to uninstall a system application or end the application process.)
-
-**STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT**: Installation failed. (Download timed out.)
-
-**STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED**: Installation failed. (Download failed.)
-
-**STATUS_RECOVER_FAILURE_INVALID**: Failed to restore the pre-installed application.
-
-**STATUS_ABILITY_NOT_FOUND**: Ability not found.
-
-**STATUS_BMS_SERVICE_ERROR**: BMS service error.
-
-**STATUS_FAILED_NO_SPACE_LEFT**: Insufficient device space.
-
-**STATUS_GRANT_REQUEST_PERMISSIONS_FAILED**: Application authorization failed.
-
-**STATUS_INSTALL_PERMISSION_DENIED**: No installation permission.
-
-**STATUS_UNINSTALL_PERMISSION_DENIED**: No uninstallation permission.
+"SUCCESS" : Installation succeeded.&lt;/br&gt; "STATUS_INSTALL_FAILURE": Installation failure (the installation file does not exist).&lt;/br&gt; "STATUS_INSTALL_FAILURE_ABORTED": Installation aborted. &lt;/br&gt; "STATUS_INSTALL_FAILURE_INVALID": Invalid installation parameter. &lt;/br&gt; "STATUS_INSTALL_FAILURE_CONFLICT": Installation conflict (commonly caused by inconsistent basic information between the upgrade and the existing application). &lt;/br&gt; "STATUS_INSTALL_FAILURE_STORAGE": Failed to store the bundle information. &lt;/br&gt; "STATUS_INSTALL_FAILURE_INCOMPATIBLE": Installation incompatible (commonly caused by a downgrade installation or incorrect signature information). &lt;/br &gt; "STATUS_UNINSTALL_FAILURE": Uninstallation failure (the application to uninstall does not exist). &lt;/br&gt; " STATUS_UNINSTALL_FAILURE_ABORTED": Uninstallation aborted (not used). &lt;/br&gt; "STATUS_UNINSTALL_FAILURE_CONFLICT":Uninstallation conflict (failed to uninstall a system application or failed to terminate the application process). &lt;/br&gt; "STATUS_INSTALL_FAILURE_DOWNLOAD_TIMEOUT": Installation failure (download timed out).&lt;/br&gt; "STATUS_INSTALL_FAILURE_DOWNLOAD_FAILED": Installation failure (download failed). &lt;/br&gt; "STATUS_RECOVER_FAILURE_INVALID": Failed to recover the preset application. &lt;/br&gt; "STATUS_ABILITY_NOT_FOUND":Ability not found.&lt;/br&gt; "STATUS_BMS_SERVICE_ERROR": BMS service error. &lt;/br&gt; "STATUS_FAILED_NO_SPACE_LEFT": Insufficient device space.&lt;/br&gt; "STATUS_GRANT_REQUEST_PERMISSIONS_FAILED": Failed to grant application permissions. &lt;/br&gt; "STATUS_INSTALL_PERMISSION_DENIED": Installation permission missing. &lt;/br&gt; "STATUS_UNINSTALL_PERMISSION_DENIED": Uninstallation permission missing.
 
 **Type:** string
 

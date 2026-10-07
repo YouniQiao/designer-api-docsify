@@ -176,7 +176,7 @@ WindowExtensionAbility: provides extended capabilities that allow system applica
 ENTERPRISE_ADMIN = 11
 ```
 
-[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md): provides extended capabilities for processing enterprise management events, such as application installation events on devices and events indicating too many incorrect screen-lock password attempts.
+[EnterpriseAdminExtensionAbility](../../apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-enterpriseadminextensionability-enterpriseadminextensionability-c.md): enterprise device management extension capability, which provides the ability to handle management events during enterprise management.
 
 **Since:** 9
 
@@ -316,7 +316,7 @@ EMBEDDED_UI = 21
 INSIGHT_INTENT_UI = 22
 ```
 
-InsightIntentUIExtensionAbility: provides extended capabilities that enable applications to be called by Celia intents so as to be displayed in windows.
+InsightIntentUIExtensionAbility: extension capability that allows developers to present content in a window form when invoked by a system entry.
 
 **Since:** 12
 
@@ -430,7 +430,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-SelectionExtensionAbility: provides extended capabilities for text selection popup.
+SelectionExtensionAbility:ExtensionAbility that provides developers with the word-selection pop-up capability.
 
 **Since:** 24
 
@@ -446,7 +446,7 @@ SelectionExtensionAbility: provides extended capabilities for text selection pop
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): provides extended capabilities for web native message communication.
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md): ExtensionAbility that provides developers with the Web message communication capability.
 
 **Since:** 21
 
@@ -502,7 +502,7 @@ CRYPTO = 35
 PARTNER_AGENT = 36
 ```
 
-[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md): provides the device discovery and device offline notification functions based on Bluetooth.
+[PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md): provides device discovery and device offline notification based on Bluetooth communication technology.
 
 **Since:** 23
 
@@ -518,7 +518,7 @@ PARTNER_AGENT = 36
 AGENT = 37
 ```
 
-AgentExtensionAbility: provides extended capabilities for agents, including lifecycle callback APIs for agent service creation, destruction, connection and disconnection, as well as callback APIs for receiving data sent by clients and security authentication.
+[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md): provides the agent extension capability, including lifecycle callback APIs for creating, destroying, connecting, and disconnecting an agent service, as well as callback APIs for receiving data sent by the client and for security authentication.
 
 **Since:** 24
 
@@ -534,7 +534,7 @@ AgentExtensionAbility: provides extended capabilities for agents, including life
 AGENT_UI = 38
 ```
 
-AgentUIExtensionAbility: provides the Agent UI display capability on the access device.
+[AgentUIExtensionAbility](../../../reference/apis-ability-kit/js-apis-agent-agentUIExtensionAbility.md): provides developers with the capability to access the on-device Agent UI display.
 
 **Since:** 24
 
@@ -550,7 +550,7 @@ AgentUIExtensionAbility: provides the Agent UI display capability on the access 
 MODULAR_OBJECT = 39
 ```
 
-Indicates extension info with type of the modular object extension.
+[modular_object_extension_ability](../../../reference/apis-ability-kit/capi-modular-object-extension-ability-h.md): provides the [modular object](../../../application-models/modular-object-extension-overview.md) extension capability, which can encapsulate an application's own functions into independent functional modules and open them to other applications.
 
 **Since:** 26.0.0
 

@@ -8,10 +8,8 @@ The module provides information about a remote ability.
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
-> [bundleManager-RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) instead.
-> 
-> The APIs provided by this module are system APIs.
+> This module is no longer maintained since API version 9. You are advised to use
+> [RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md) instead.
 
 **Since:** 8
 
@@ -31,7 +29,7 @@ The module provides information about a remote ability.
 readonly elementName: ElementName
 ```
 
-Element name information of the ability.
+Element resource information of the ability.
 
 **Type:** [ElementName](arkts-ability-elementname-depr-i.md)
 
@@ -55,7 +53,7 @@ Element name information of the ability.
 readonly icon: string
 ```
 
-Icon of the ability.
+Icon information of the ability.
 
 **Type:** string
 
@@ -79,7 +77,7 @@ Icon of the ability.
 readonly label: string
 ```
 
-Ability name.
+Name of the ability.
 
 **Type:** string
 

@@ -1,4 +1,4 @@
-# @ohos.distributedBundle
+# @ohos.distributedBundle(分布式包管理)
 
 本模块提供分布式包的管理。
 

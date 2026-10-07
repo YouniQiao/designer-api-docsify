@@ -35,7 +35,7 @@ function getBundleArchiveInfoSync(hapFilePath: string, bundleFlags: number): Bun
 
 | 类型 | 说明 |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | 返回BundleInfo对象。 |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | 返回查询到的应用包信息。 |
 
 **错误码：**
 

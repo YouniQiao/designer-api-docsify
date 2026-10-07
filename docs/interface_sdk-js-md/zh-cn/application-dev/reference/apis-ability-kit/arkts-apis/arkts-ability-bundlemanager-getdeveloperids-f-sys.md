@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
-根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。
+根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。接口调用失败时可能返回空数组，需校验返回值后使用。
 
 **起始版本：** 12
 

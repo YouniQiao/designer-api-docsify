@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getDeveloperIds(appDistributionType?: number): Array<string>
 ```
 
-Obtains all the developer IDs of the current user based on the given application [distribution type](arkts-ability-bundlemanager-appdistributiontype-e-sys.md).
+Obtains all developer ID lists of the current user based on the given application [appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md). An empty array may be returned if the API call fails. Verify the return value before using it.
 
 **Since:** 12
 

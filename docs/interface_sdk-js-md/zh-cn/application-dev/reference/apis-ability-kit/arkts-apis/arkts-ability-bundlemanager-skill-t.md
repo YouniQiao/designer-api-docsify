@@ -4,7 +4,7 @@
 export type Skill = _Skill.Skill
 ```
 
-skill信息。
+Skill信息。
 
 **起始版本：** 12
 

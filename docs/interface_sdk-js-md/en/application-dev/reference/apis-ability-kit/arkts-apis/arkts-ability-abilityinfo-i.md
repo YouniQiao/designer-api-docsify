@@ -4,7 +4,7 @@
 export interface AbilityInfo
 ```
 
-The module defines the ability information.
+The module defines the ability information. An application can obtain its own ability information through [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** passed in to [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 **Since:** 9
 
@@ -18,7 +18,7 @@ The module defines the ability information.
 readonly appIndex: number
 ```
 
-Index of an application clone. It takes effect only for [application clones](../../../quick-start/app-clone.md).
+Clone index identifier of the application package. The value is a natural number, where 0 indicates the primary application and a value greater than 0 indicates a clone application. This field takes effect only in [app clone](../../../quick-start/app-clone.md).
 
 **Type:** number
 
@@ -36,7 +36,7 @@ readonly applicationInfo: ApplicationInfo
 
 Application configuration information <!--Del-->. The information can be obtained by passing in **GET_ABILITY_INFO_WITH_APPLICATION** to the **abilityFlags** parameter of [queryAbilityInfo](arkts-ability-bundlemanager-queryabilityinfo-f-sys.md) <!--DelEnd-->.
 
-This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md).appInfo object.
+This field is not returned when the [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) or [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) is used to obtain ability information. You can obtain the related information by obtaining the [bundleInfo](arkts-ability-bundleinfo-i.md). appInfo object.
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 
@@ -90,7 +90,9 @@ Ability description, which describes the content and functions of the current ab
 readonly descriptionId: number
 ```
 
-Resource ID of the ability description. It is automatically generated during compilation and build based on the description configured in **abilities** of the application.
+Description resource ID of the ability, automatically generated during compilation based on the description configured under abilities in the application configuration.
+
+**Atomic service API:** This API supports use in atomic services since API version 11.
 
 **Type:** number
 
@@ -256,7 +258,9 @@ Resource ID of the ability label. It is automatically generated during compilati
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability launch mode, that is, whether it can be started in multiton mode. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md).
+Launch mode of the ability, indicating whether to start with multiple instances at startup. For details, see [LaunchType](arkts-ability-bundlemanager-launchtype-e.md).
+
+**Atomic service API:** This API supports use in atomic services since API version 11.
 
 **Type:** [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
 
@@ -310,7 +314,9 @@ Module name to which the ability belongs.
 readonly name: string
 ```
 
-Ability name.
+Ability name, corresponding to the name field configured under abilities in [module.json5](../../../quick-start/module-configuration-file.md).
+
+**Atomic service API:** This API supports use in atomic services since API version 11.
 
 **Type:** string
 
@@ -328,7 +334,9 @@ Ability name.
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability display orientation. It is derived from the **orientation** field under **abilities** in the [module.json5](../../../quick-start/module-configuration-file.md) file. If **orientation** in the file is set to an enumerated value, this property is a non-zero value. For details about the available values, see [displayOrientation](arkts-ability-bundlemanager-displayorientation-e.md). If **orientation** in the file is set to a resource index, the value of this property is **0**.
+Display mode of the ability. Derived from the orientation field configured under the abilities tag in [module.json5](../../../quick-start/module-configuration-file.md). If the orientation configured in the module.json5 configuration file is an enum, the orientation attribute has a non-zero value. For details about the value, see [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md). If a resource index is configured in the configuration file, the orientation attribute value is 0.
+
+**Atomic service API:** This API supports use in atomic services since API version 11.
 
 **Type:** [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
 

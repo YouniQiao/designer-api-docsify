@@ -4,7 +4,7 @@
 export type AppClonePreference = _BundleInfo.AppClonePreference
 ```
 
-Defines the AppClonePreference information.
+App clone preference, used to configure the selection policy between the main app and the clone app at app startup.
 
 **Since:** 26.0.0
 

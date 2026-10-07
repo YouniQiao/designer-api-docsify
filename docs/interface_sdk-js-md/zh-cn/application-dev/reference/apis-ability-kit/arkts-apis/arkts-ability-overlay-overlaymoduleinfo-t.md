@@ -4,7 +4,7 @@
 export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo
 ```
 
-OverlayModuleInfo信息。
+OverlayModuleInfo信息，包含overlay特征模块的名称、状态、目标模块等配置信息，用于描述和管理应用的资源覆盖配置。
 
 **起始版本：** 10
 

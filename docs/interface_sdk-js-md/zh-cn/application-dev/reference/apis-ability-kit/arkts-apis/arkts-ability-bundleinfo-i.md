@@ -4,7 +4,7 @@
 export interface BundleInfo
 ```
 
-应用包信息。
+应用包信息，可以通过[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取自身的应用包信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)指定所返回的[BundleInfo](arkts-ability-bundleinfo-i.md)中所包含的信息。
 
 **起始版本：** 9
 
@@ -52,7 +52,7 @@ readonly appInfo: ApplicationInfo
 readonly buildVersion?: string
 ```
 
-应用包的构建版本号，用于标识相同发布版本下的不同构建版本包，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的buildVersion字段。**模型约束：** 此接口仅可在Stage模型下使用。
+应用包的构建版本号，用于标识相同发布版本下的不同构建版本包，对应[app.json5](../../../quick-start/app-configuration-file.md)中配置的buildVersion字段。
 
 **类型：** string
 

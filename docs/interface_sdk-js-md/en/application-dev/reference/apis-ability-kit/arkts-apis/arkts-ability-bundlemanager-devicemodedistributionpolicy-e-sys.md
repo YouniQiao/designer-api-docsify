@@ -4,7 +4,7 @@
 export enum DeviceModeDistributionPolicy
 ```
 
-Define the enumeration of device mode distribution policies, which is used to specify how an application is distributed on a device.
+Enumerates the device mode distribution policies, which specify how applications are distributed to devices.
 
 **Since:** 26.0.1
 
@@ -20,7 +20,7 @@ Define the enumeration of device mode distribution policies, which is used to sp
 UNSPECIFIED = 0
 ```
 
-Unspecified device mode distribution policy.
+No device mode distribution policy is specified.
 
 **Since:** 26.0.1
 
@@ -38,7 +38,7 @@ Unspecified device mode distribution policy.
 MAIN_ONLY = 1
 ```
 
-The application is only available in primary mode.
+The application is available only in main mode.
 
 **Since:** 26.0.1
 
@@ -56,7 +56,7 @@ The application is only available in primary mode.
 SUB_ONLY = 2
 ```
 
-The application is only available in secondary mode.
+The application is available only in sub mode.
 
 **Since:** 26.0.1
 
@@ -74,7 +74,7 @@ The application is only available in secondary mode.
 UNIVERSAL_IDENTICAL_PACKAGE = 3
 ```
 
-The application is available in both modes with identical package body.
+The application is available in both modes with the same package.
 
 **Since:** 26.0.1
 
@@ -92,7 +92,7 @@ The application is available in both modes with identical package body.
 UNIVERSAL_DIFFERENT_PACKAGE = 4
 ```
 
-The application is available in both modes with different package body.
+The application is available in both modes with different packages.
 
 **Since:** 26.0.1
 
@@ -110,7 +110,7 @@ The application is available in both modes with different package body.
 PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5
 ```
 
-The application is partially compatible across modes with identical package body.
+The application is partially compatible between different modes with the same package.
 
 **Since:** 26.0.1
 
@@ -128,7 +128,7 @@ The application is partially compatible across modes with identical package body
 PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6
 ```
 
-The application is partially compatible across modes with different package body.
+The application is partially compatible between different modes with different packages.
 
 **Since:** 26.0.1
 
@@ -146,7 +146,7 @@ The application is partially compatible across modes with different package body
 FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7
 ```
 
-The application is fully compatible across modes with identical package body.
+The application is fully compatible between different modes with the same package.
 
 **Since:** 26.0.1
 
@@ -164,7 +164,7 @@ The application is fully compatible across modes with identical package body.
 FULL_COMPATIBLE_DIFFERENT_PACKAGE = 8
 ```
 
-The application is fully compatible across modes with different package body.
+The application is fully compatible between different modes with different packages.
 
 **Since:** 26.0.1
 

@@ -1,4 +1,4 @@
-# innerBundleManager
+# innerBundleManager(innerBundleManager Module)
 
 ```TypeScript
 declare namespace innerBundleManager

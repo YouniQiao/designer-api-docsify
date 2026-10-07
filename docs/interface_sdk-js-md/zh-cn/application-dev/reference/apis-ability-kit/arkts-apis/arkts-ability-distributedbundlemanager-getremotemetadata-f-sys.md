@@ -30,14 +30,14 @@ function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| deviceId | string | 是 | 远程设备ID（实为 networkId，分布式网络标识）。可以通过[getAvailableDeviceList](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#getavailabledevicelistsync)获取所有可信设备列表，取值为可信设备信息下networkId字段。 |
-| bundleName | string | 是 | 应用的包名。 |
+| deviceId | string | 是 | 远端设备ID。您可以通过getAvailableDeviceList获取。所有受信任的设备列表。取值为信任设备信息中的networkId字段。 |
+| bundleName | string | 是 | 包名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md)&gt;&gt; | Promise对象，调用成功返回ModuleMetadata数组（每个元素携带一个模块的metadata）；调用失败返回错误对象。 |
+| Promise&lt;Array&lt;[ModuleMetadata](arkts-ability-applicationinfo-modulemetadata-i.md)&gt;&gt; | Promise用于返回ModuleMetadata的数组。 |
 
 **错误码：**
 

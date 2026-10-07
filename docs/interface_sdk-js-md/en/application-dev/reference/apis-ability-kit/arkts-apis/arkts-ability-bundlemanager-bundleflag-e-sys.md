@@ -72,9 +72,11 @@ Used to obtain the bundle information of an application that has device-cloud fi
 GET_BUNDLE_INFO_WITH_COMMON_CLONE = 0x00080000
 ```
 
-Used to obtain the bundle information of common app clones (appIndex: 1-5). It is valid only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) API.
+Used to obtain the bundleInfo of common clone apps and the main app. It takes effect only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) API.
 
-**System API**: This flag can be used only in system APIs.
+**Model restriction:** This flag can be used only in the stage model.
+
+**System API:** This flag is supported only in system APIs.
 
 **Since:** 26.0.0
 
@@ -92,9 +94,11 @@ Used to obtain the bundle information of common app clones (appIndex: 1-5). It i
 GET_BUNDLE_INFO_WITH_SANDBOX_CLONE = 0x00100000
 ```
 
-Used to obtain the bundle information of sandbox app clones (appIndex: 2000-3000). It is valid only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) API.
+Used to obtain the bundleInfo of sandbox clone apps and the main app. It takes effect only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) API.
 
-**System API**: This flag can be used only in system APIs.
+**Model restriction:** This flag can be used only in the stage model.
+
+**System API:** This flag is supported only in system APIs.
 
 **Since:** 26.0.0
 

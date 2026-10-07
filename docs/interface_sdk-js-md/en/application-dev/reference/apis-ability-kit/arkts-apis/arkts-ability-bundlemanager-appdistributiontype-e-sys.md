@@ -4,7 +4,7 @@
 export enum AppDistributionType
 ```
 
-Enumerates the application [distribution types](../../../security/app-provision-structure.md).
+Identifies an application's [HarmonyAppProvision Configuration File](../../../security/app-provision-structure.md).
 
 **Since:** 12
 
@@ -68,7 +68,7 @@ Common enterprise application that can be installed on enterprise devices only t
 ENTERPRISE_MDM = 4
 ```
 
-Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [administrator privileges](../../apis-mdm-kit/arkts-apis/arkts-mdm-adminmanager-enableadmin-f-sys.md#enableadmin1).
+Enterprise MDM application that can be installed only on enterprise devices. To install a common enterprise application, you must have [adminManager.enableAdmin](../../../reference/apis-mdm-kit/js-apis-enterprise-adminManager-sys.md#adminmanagerenableadmin) activated.
 
 **Since:** 12
 

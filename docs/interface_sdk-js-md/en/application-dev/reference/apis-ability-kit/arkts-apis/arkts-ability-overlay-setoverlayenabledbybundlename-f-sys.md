@@ -35,7 +35,7 @@ No permission is required when the specified application is the caller itself.
 | bundleName | string | Yes | Bundle name of the application. |
 | moduleName | string | Yes | Name of the module with the overlay feature. |
 | isEnabled | boolean | Yes | Whether to enable the module with the overlay feature. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). Callback invoked when the disable/enable state of the overlay module of the specified application is set successfully. In this case, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -86,7 +86,7 @@ function setOverlayEnabledByBundleName(bundleName:string, moduleName:string, isE
 
 Enables or disables a module with the overlay feature in another application. This API uses a promise to return the result.
 
-No permission is required when the specified application is the caller itself.
+No permission is required when the specified application is the caller itself. If the API call fails, null may be returned. Verify the return value before using it.
 
 **Since:** 10
 

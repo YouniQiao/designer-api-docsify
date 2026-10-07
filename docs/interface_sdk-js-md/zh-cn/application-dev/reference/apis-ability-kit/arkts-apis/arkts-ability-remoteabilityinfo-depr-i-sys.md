@@ -8,9 +8,7 @@ remoteAbility信息。
 
 > **说明：** 
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-RemoteAbilityInfo](arkts-ability-remoteabilityinfo-depr-i-sys.md)替代。
-> 
-> 本模块为系统接口。
+> 从API version 9开始，该模块不再维护，
 
 **起始版本：** 8
 
@@ -54,7 +52,7 @@ ability元素资源信息。
 readonly icon: string
 ```
 
-指明的ability的图标信息。
+指明ability的图标信息。
 
 **类型：** string
 

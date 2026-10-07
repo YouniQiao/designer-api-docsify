@@ -1,6 +1,6 @@
-# @ohos.bundle.pluginBundleManager
+# @ohos.bundle.pluginBundleManager(pluginBundleManager module)
 
-This module is used to manage plugins for applications.
+This module provides the capability of managing self-distributed plugins for an app, including installing and uninstalling local plugins.
 
 **Since:** 26.0.0
 
@@ -22,13 +22,13 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | Obtains information about all local plugins installed on the current application. |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | Install the plugin for self application. |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | Uninstall the plugin for self application. |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | Queries the information about all self-distributed plugins in the current app. This API uses a promise to return the result. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | Installs a self-distributed plugin (that is, a plugin distributed and managed by the app through its own channels) for the current app. This API uses a promise to return the result. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | Uninstalls the specified plugin installed by the current app through self-distribution. This API uses a promise to return the result. |
 
 ### Types
 
 | Name | Description |
 | --- | --- |
-| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | Indicates the information about a plugin. |
-| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | Indicates the plugin module info. |
+| [PluginBundleInfo](arkts-ability-pluginbundlemanager-pluginbundleinfo-t.md) | Plugin information. |
+| [PluginModuleInfo](arkts-ability-pluginbundlemanager-pluginmoduleinfo-t.md) | Module information of the plugin. |

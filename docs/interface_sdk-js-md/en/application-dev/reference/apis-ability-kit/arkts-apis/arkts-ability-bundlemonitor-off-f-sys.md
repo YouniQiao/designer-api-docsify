@@ -12,7 +12,7 @@ import { bundleMonitor } from '@kit.AbilityKit';
 function off(type: BundleChangedEvent, callback?: Callback<BundleChangedInfo>): void
 ```
 
-Unregister to monitor the installation status
+Unsubscribes from bundle installation, uninstall, and update events. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -28,8 +28,8 @@ Unregister to monitor the installation status
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | type Indicates the command should be implement. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | Indicates the callback to be unregister. |
+| type | [BundleChangedEvent](arkts-ability-bundlemonitor-bundlechangedevent-t-sys.md) | Yes | Type of the event to unsubscribe from. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[BundleChangedInfo](arkts-ability-bundlemonitor-bundlechangedinfo-i-sys.md)&gt; | No | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md) used to return the result. If the operation is successful, err is undefined and data is the app change information obtained. Otherwise, err is an error object. |
 
 **Error codes:**
 

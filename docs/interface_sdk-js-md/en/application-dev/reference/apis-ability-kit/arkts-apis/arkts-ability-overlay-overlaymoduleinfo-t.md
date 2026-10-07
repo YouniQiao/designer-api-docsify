@@ -4,7 +4,7 @@
 export type OverlayModuleInfo = _OverlayModuleInfo.OverlayModuleInfo
 ```
 
-Defines the information about a module with the overlay feature.
+OverlayModuleInfo contains the configuration information of the overlay feature module, such as its name, state, and target module, and is used to describe and manage the resource overlay configuration of an application.
 
 **Since:** 10
 

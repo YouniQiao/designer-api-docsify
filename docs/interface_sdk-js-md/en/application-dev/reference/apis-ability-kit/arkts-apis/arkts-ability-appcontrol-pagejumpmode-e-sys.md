@@ -4,7 +4,7 @@
 export enum PageJumpMode
 ```
 
-Enumerates the page jump modes used when an application is blocked.
+Indicates whether to jump to a page when the target application is intercepted.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Enumerates the page jump modes used when an application is blocked.
 PAGE_JUMP_WINDOW_SHOW = 0
 ```
 
-A page is displayed when the target application is blocked.
+Jumps to a page when the target application is intercepted.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ A page is displayed when the target application is blocked.
 PAGE_JUMP_WINDOW_NOT_SHOW = 1
 ```
 
-No page is displayed when the target application is blocked.
+Does not jump to a page when the target application is intercepted.
 
 **Since:** 26.0.0
 

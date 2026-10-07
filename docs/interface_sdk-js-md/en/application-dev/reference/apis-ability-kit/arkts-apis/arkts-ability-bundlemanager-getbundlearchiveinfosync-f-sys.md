@@ -35,7 +35,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 
 | Type | Description |
 | --- | --- |
-| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Bundle information obtained. |
+| [BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md) | Returns the queried application bundle information. |
 
 **Error codes:**
 

@@ -4,11 +4,11 @@
 export interface AbilityInfo
 ```
 
-The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2).
+The module provides information about an ability. Unless otherwise specified, the information is obtained through [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> Since API version 9, this module is no longer maintained. You are advised to use
 > [bundleManager-AbilityInfo](arkts-ability-abilityinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -29,7 +29,7 @@ readonly applicationInfo: ApplicationInfo
 
 Application configuration information.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2).
+The value is obtained by passing in GET_ABILITY_INFO_WITH_APPLICATION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 **Type:** [ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)
 
@@ -183,7 +183,7 @@ Device types supported by the ability.
 readonly enabled: boolean
 ```
 
-Whether the ability is enabled. **true** if enabled, **false** otherwise.
+Whether the ability is available. The value true indicates that the ability is available, and the value false indicates that the ability is unavailable.
 
 **Type:** boolean
 
@@ -363,7 +363,7 @@ readonly metaData: Array<CustomizeData>
 
 Metadata of the ability.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_METADATA to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2).
+Obtained by calling the [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md) API and passing in GET_ABILITY_INFO_WITH_METADATA.
 
 **Type:** Array&lt;[CustomizeData](arkts-ability-customizedata-depr-i.md)&gt;
 
@@ -453,7 +453,7 @@ readonly permissions: Array<string>
 
 Permissions required for other applications to call the ability.
 
-The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2).
+The value is obtained by passing in GET_ABILITY_INFO_WITH_PERMISSION to [bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md).
 
 **Type:** Array&lt;string&gt;
 

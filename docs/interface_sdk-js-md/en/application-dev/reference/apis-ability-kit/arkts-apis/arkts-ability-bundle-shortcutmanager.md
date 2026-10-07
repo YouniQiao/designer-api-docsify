@@ -1,6 +1,6 @@
-# @ohos.bundle.shortcutManager
+# @ohos.bundle.shortcutManager(shortcutManager Module)
 
-This module provides the application's management capabilities for shortcuts, including setting whether a shortcut is displayed. Through shortcuts, users can quickly launch specific features of an app from the home screen, improving the app's ease of use and user retention. Typical usage scenarios include: providing users with quick access to frequently used features, dynamically adjusting the display of shortcuts based on user habits, etc.
+This module provides system applications with the capabilities of adding, deleting, and querying shortcuts, including adding, deleting, and querying [ShortcutInfo](arkts-ability-shortcutinfo-i.md) information.
 
 **Since:** 20
 
@@ -34,9 +34,9 @@ import { shortcutManager } from '@kit.AbilityKit';
 | [deleteDesktopShortcutInfo](arkts-ability-shortcutmanager-deletedesktopshortcutinfo-f-sys.md) | Deletes a shortcut for the given user. This API uses a promise to return the result. |
 | [deleteDynamicShortcutInfos](arkts-ability-shortcutmanager-deletedynamicshortcutinfos-f-sys.md) | Deletes dynamic shortcuts. |
 | [getAllDesktopShortcutInfo](arkts-ability-shortcutmanager-getalldesktopshortcutinfo-f-sys.md) | Obtains the information about all shortcuts of the given user. |
-| [getShortcutInfoByAbility](arkts-ability-shortcutmanager-getshortcutinfobyability-f-sys.md) | Obtains shortcut info by bundleName, moduleName, abilityName, userId and appIndex. If you need to obtains shortcut info under the current user, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED needs to be applied for. If you need to obtains shortcut info under other users, ohos.permission.GET_BUNDLE_INFO_PRIVILEGED and ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS need to be applied for. |
+| [getShortcutInfoByAbility](arkts-ability-shortcutmanager-getshortcutinfobyability-f-sys.md) | Queries the shortcut information of a specified UIAbility under a specified user. |
 | [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f-sys.md) | Enables or disables the specified static shortcuts. This API uses a promise to return the result. |
-| [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md) | Updates a shortcut for the given user. This API uses a promise to return the result. |
+| [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md) | Updates the shortcut information of the specified user. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

@@ -1,6 +1,6 @@
-# @ohos.bundle.shortcutManager
+# @ohos.bundle.shortcutManager(shortcutManager模块)
 
-本模块提供应用对于[快捷方式](../../../quick-start/typical-scenario-configuration.md)的管理能力，包括设置快捷方式是否显示等。
+本模块提供应用对于[快捷方式](../../../quick-start/typical-scenario-configuration.md)的管理能力，包括设置快捷方式是否显示等。通过快捷方式，用户可以从桌面快速启动应用的特定功能，提升应用的使用便捷性和用户粘性。典型使用场景包括：应用向用户提供常用功能的快速入口、根据用户使用习惯动态调整快捷方式的显示等。
 
 **起始版本：** 20
 
@@ -36,6 +36,7 @@ import { shortcutManager } from '@kit.AbilityKit';
 | [getAllDesktopShortcutInfo](arkts-ability-shortcutmanager-getalldesktopshortcutinfo-f-sys.md) | 查询指定用户的所有快捷方式信息。 |
 | [getShortcutInfoByAbility](arkts-ability-shortcutmanager-getshortcutinfobyability-f-sys.md) | 查询指定用户下指定UIAbility的快捷方式信息。 |
 | [setShortcutsEnabled](arkts-ability-shortcutmanager-setshortcutsenabled-f-sys.md) | 设置启用或禁用传入的静态快捷方式。使用Promise异步回调。 |
+| [updateDesktopShortcutInfo](arkts-ability-shortcutmanager-updatedesktopshortcutinfo-f-sys.md) | 更新指定用户的快捷方式信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 类型

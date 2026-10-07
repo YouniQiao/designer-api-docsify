@@ -4,7 +4,7 @@
 export enum BundleInstallStatus
 ```
 
-标识应用的安装状态。
+应用安装状态枚举。
 
 **起始版本：** 23
 

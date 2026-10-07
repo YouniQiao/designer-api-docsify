@@ -112,7 +112,7 @@ Enables or disables an ability. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | info | [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md) | Yes | Information about the target ability. |
 | isEnabled | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If setting the enabled or disabled state of the component is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

@@ -35,8 +35,8 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
-| extensionAbilityFlags | number | Yes | Type of the ExtensionAbility information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ExtensionAbility information obtained. Otherwise, **err** is an error object. |
+| extensionAbilityFlags | number | Yes | Flag used to specify the information to be included in the returned ExtensionAbilityInfo object. For details about the values and their meanings, see [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;ExtensionAbilityInfo&gt; obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -107,9 +107,9 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
-| extensionAbilityFlags | number | Yes | Type of the ExtensionAbility information to obtain. |
+| extensionAbilityFlags | number | Yes | Flag used to specify the information to be included in the returned ExtensionAbilityInfo object. For details about the values and their meanings, see [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md). |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ExtensionAbility information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;ExtensionAbilityInfo&gt; obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -182,7 +182,7 @@ No permission is required for obtaining the caller's own information.
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | Yes | Type of the ExtensionAbility. |
-| extensionAbilityFlags | number | Yes | Type of the ExtensionAbility information to obtain. |
+| extensionAbilityFlags | number | Yes | Flag used to specify the information to be included in the returned ExtensionAbilityInfo object. For details about the values and their meanings, see [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md). |
 | userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**

@@ -67,6 +67,12 @@ import { bundle } from '@kit.AbilityKit';
 | --- | --- |
 | [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanbundlecachefiles1) | 清除指定应用程序的缓存数据，使用callback异步回调。 |
 | [cleanBundleCacheFiles](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md#cleanbundlecachefiles2) | 清除指定应用程序的缓存数据，使用Promise异步回调。 |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos1) |  |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos2) |  |
+| [getApplicationInfos](arkts-ability-bundle-getapplicationinfos-f-sys.md#getapplicationinfos3) |  |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos1) |  |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos2) |  |
+| [getBundleInfos](arkts-ability-bundle-getbundleinfos-f-sys.md#getbundleinfos3) |  |
 | [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getbundleinstaller1) | 获取用于安装包的接口，使用callback异步回调。 |
 | [getBundleInstaller](arkts-ability-bundle-getbundleinstaller-f-sys.md#getbundleinstaller2) | 获取用于安装包的接口，使用Promise异步回调，返回安装接口对象。 |
 | [getPermissionDef](arkts-ability-bundle-getpermissiondef-f-sys.md#getpermissiondef1) | 按权限名称获取权限的详细信息，使用callback异步回调。 |
@@ -95,3 +101,14 @@ import { bundle } from '@kit.AbilityKit';
 | [GrantStatus](arkts-ability-bundle-grantstatus-e.md) |  |
 | [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md) |  |
 | [LaunchMode](arkts-ability-bundle-launchmode-e.md) |  |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [ModuleRemoveFlag](arkts-ability-bundle-moduleremoveflag-e-sys.md) | 模块移除时与卡片、快捷方式是否有关联的标志。 |
+| [QueryShortCutFlag](arkts-ability-bundle-queryshortcutflag-e-sys.md) | 用于指定快捷方式查询范围的标志。 |
+| [ShortcutExistence](arkts-ability-bundle-shortcutexistence-e-sys.md) | 查询快捷方式是否存在时返回的结果。 |
+| [SignatureCompareResult](arkts-ability-bundle-signaturecompareresult-e-sys.md) | 签名校验结果。 |
+<!--DelEnd-->

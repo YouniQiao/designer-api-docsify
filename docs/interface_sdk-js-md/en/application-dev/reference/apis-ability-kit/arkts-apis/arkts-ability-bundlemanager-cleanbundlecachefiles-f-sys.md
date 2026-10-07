@@ -33,7 +33,7 @@ No permission is required when the caller clears its own cache.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If clearing the application cache directory data is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ No permission is required when the caller clears its own cache.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -168,7 +168,7 @@ No permission is required when the caller clears its own cache.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. If clearing the cache files fails, an error object is thrown. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

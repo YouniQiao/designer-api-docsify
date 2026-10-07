@@ -33,7 +33,7 @@ function getBundlePackInfo(bundleName: string,
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 应用Bundle名称。 |
 | bundlePackFlag | [BundlePackFlag](arkts-ability-freeinstall-bundlepackflag-e-sys.md) | 是 | 指示要查询的应用包标志。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundlePackInfo](arkts-ability-freeinstall-bundlepackinfo-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)。当函数调用成功，err为undefined，data为获取到的BundlePackInfo信息。否则为错误对象。 |
 
 **错误码：**
 

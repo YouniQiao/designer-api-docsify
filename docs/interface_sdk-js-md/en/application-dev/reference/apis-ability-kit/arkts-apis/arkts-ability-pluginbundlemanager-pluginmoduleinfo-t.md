@@ -4,7 +4,7 @@
 export type PluginModuleInfo = _PluginModuleInfo
 ```
 
-Indicates the plugin module info.
+Module information of the plugin.
 
 **Since:** 26.0.0
 

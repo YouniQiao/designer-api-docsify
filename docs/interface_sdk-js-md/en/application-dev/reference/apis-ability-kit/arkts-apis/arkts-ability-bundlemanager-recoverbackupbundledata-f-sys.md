@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function recoverBackupBundleData(bundleName: string, userId: number, appIndex: number): Promise<void>
 ```
 
-Restores the backup data for a specified application under a given user. This API uses a promise to return the result.
+Restores the backup data for a specified application or application clone under a specified user. This API uses a promise to return the result.
 
 **Since:** 21
 

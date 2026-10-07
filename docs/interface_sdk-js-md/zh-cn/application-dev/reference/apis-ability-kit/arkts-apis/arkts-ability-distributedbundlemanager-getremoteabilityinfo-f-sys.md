@@ -31,7 +31,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | ElementName信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo对象；调用失败err为错误对象，data为undefined。 |
 
 **错误码：**
 
@@ -151,7 +151,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
+获取由elementNames指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -167,8 +167,8 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息,最大数组长度为10。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息，最大数组长度为10。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo数组对象；调用失败err为错误对象，data为undefined。 |
 
 **错误码：**
 
@@ -225,7 +225,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>
 ```
 
-获取由elementName指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
+获取由elementNames指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -247,7 +247,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
+| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象列表；调用失败返回错误对象。 |
 
 **错误码：**
 
@@ -320,7 +320,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | 是 | ElementName信息。 |
 | locale | string | 是 | 语言地区。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo对象；调用失败err为错误对象，data为undefined。 |
 
 **错误码：**
 
@@ -441,7 +441,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
+获取由elementNames和locale指定的远程设备上的应用的AbilityInfo数组信息。使用callback异步回调。
 
 **起始版本：** 9
 
@@ -457,9 +457,9 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息,最大数组长度为10。 |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息，最大数组长度为10。 |
 | locale | string | 是 | 语言地区。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo数组对象；调用失败err为错误对象, data为undefined。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，调用成功返回err为null，data为RemoteAbilityInfo数组对象；调用失败err为错误对象，data为undefined。 |
 
 **错误码：**
 
@@ -516,7 +516,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>
 ```
 
-获取由elementName和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
+获取由elementNames和locale指定的远程设备上的应用的AbilityInfo数组信息。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -532,14 +532,14 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息,最大数组长度为10。 |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | 是 | ElementName信息，最大数组长度为10。 |
 | locale | string | 是 | 语言地区。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象；调用失败返回错误对象。 |
+| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise对象，调用成功返回RemoteAbilityInfo对象列表；调用失败返回错误对象。 |
 
 **错误码：**
 

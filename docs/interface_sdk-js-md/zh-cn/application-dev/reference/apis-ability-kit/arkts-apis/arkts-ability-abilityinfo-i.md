@@ -4,7 +4,7 @@
 export interface AbilityInfo
 ```
 
-Ability信息。
+Ability信息，可以通过[bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取Ability信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)至少包含GET_BUNDLE_INFO_WITH_HAP_MODULE和GET_BUNDLE_INFO_WITH_ABILITY。
 
 **起始版本：** 9
 
@@ -18,7 +18,7 @@ Ability信息。
 readonly appIndex: number
 ```
 
-应用包的分身索引标识，仅在[分身应用](../../../quick-start/app-clone.md)中生效。
+应用包的分身索引标识。取值为自然数，0表示主应用，大于0的值表示分身应用。该字段仅在[分身应用](../../../quick-start/app-clone.md)中生效。
 
 **类型：** number
 
@@ -90,7 +90,7 @@ Ability的描述，对应[module.json5](../../../quick-start/module-configuratio
 readonly descriptionId: number
 ```
 
-Ability的描述资源id，是编译构建时根据应用配置abilities下的description自动生成的资源id。
+Ability的描述资源id，编译构建时根据应用配置abilities下的description自动生成。
 
 **类型：** number
 
@@ -256,7 +256,7 @@ Ability的标签资源id，是编译构建时根据应用配置abilities下的la
 readonly launchType: bundleManager.LaunchType
 ```
 
-Ability的启动模式，在启动的时候是否以多实例启动，详情参考[启动模式枚举](arkts-ability-bundlemanager-launchtype-e.md) 。
+Ability的启动模式，在启动的时候是否以多实例启动，详情参考[LaunchType](arkts-ability-bundlemanager-launchtype-e.md) 。
 
 **类型：** [bundleManager.LaunchType](arkts-ability-bundlemanager-launchtype-e.md)
 
@@ -310,7 +310,7 @@ Ability所属的模块名称。
 readonly name: string
 ```
 
-Ability名称。
+Ability名称，对应[module.json5](../../../quick-start/module-configuration-file.md)中abilities下配置的name字段。
 
 **类型：** string
 
@@ -328,7 +328,7 @@ Ability名称。
 readonly orientation: bundleManager.DisplayOrientation
 ```
 
-Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考[显示模式枚举](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
+Ability的显示模式。来源于[module.json5](../../../quick-start/module-configuration-file.md)中abilities标签下配置的orientation字段，如果module.json5配置文件中orientation配置枚举，orientation属性有值且非0，取值详情参考[DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)；如果配置文件中配置的是资源索引，orientation属性值为0。
 
 **类型：** [bundleManager.DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md)
 

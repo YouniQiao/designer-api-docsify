@@ -36,7 +36,7 @@ readonly applicationInfo: ApplicationInfo
 
 应用程序的配置信息<!--Del-->，可以通过调用[queryExtensionAbilityInfo](arkts-ability-bundlemanager-queryextensionabilityinfo-f-sys.md)接口，extensionAbilityFlags参数传入GET_EXTENSION_ABILITY_INFO_WITH_APPLICATION获取<!--DelEnd-->。
 
-[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或者[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md)接口获取ExtensionAbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-i.md).appInfo对象来获取相关信息。
+[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)或者[getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md)接口获取ExtensionAbilityInfo信息时不会返回该字段内容，可以通过获取[bundleInfo](arkts-ability-bundleinfo-depr-i.md).appInfo对象来获取相关信息。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-i.md)
 

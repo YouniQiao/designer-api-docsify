@@ -4,7 +4,7 @@
 export interface HapModuleInfo
 ```
 
-HAP信息。
+HAP信息，可以通过[getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)获取自身的HAP信息，其中参数[bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md)至少包含GET_BUNDLE_INFO_WITH_HAP_MODULE。
 
 **起始版本：** 9
 
@@ -162,7 +162,7 @@ readonly fileContextMenuConfig: string
 readonly hashValue: string
 ```
 
-模块的Hash值。
+模块的Hash值，唯一标识模块。Hash值根据模块内容计算生成，可校验模块完整性和比对版本。
 
 **类型：** string
 

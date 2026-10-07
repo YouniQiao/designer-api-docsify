@@ -80,7 +80,7 @@ try {
 function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: boolean, killProcess: boolean): Promise<void>
 ```
 
-设置应用程序是启用还是禁用，并控制在禁用时是否杀死进程。
+设置指定应用或分身应用的启用或禁用状态，并控制禁用时是否退出应用进程。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -98,16 +98,16 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 应用包名 |
-| appIndex | number | 是 | 应用的分身索引<br>取值范围为全体整数。 |
-| isEnabled | boolean | 是 | true表示启用应用程序，false表示禁用应用程序。 |
-| killProcess | boolean | 是 | true表示应用进程在禁用时会杀死应用进程，而值为false表示禁用时不会杀死应用程序进程 |
+| bundleName | string | 是 | 应用的包名。 |
+| appIndex | number | 是 | 应用索引。取值范围0~5的整数，取值为0表示主应用，取值1~5表示分身应用的索引。 |
+| isEnabled | boolean | 是 | 是否启用应用。值为true表示启用应用，值为false表示禁用应用。 |
+| killProcess | boolean | 是 | 禁用应用时是否退出应用进程。值为true表示禁用应用时将退出应用进程，值为false表示禁用应用时不退出应用进程。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | 无返回值 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

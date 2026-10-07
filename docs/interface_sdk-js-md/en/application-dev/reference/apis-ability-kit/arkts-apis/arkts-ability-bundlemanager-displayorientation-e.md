@@ -178,7 +178,7 @@ Switched-determined auto rotation.
 AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10
 ```
 
-Switched-determined auto rotation in the horizontal direction.
+Automatic landscape rotation mode controlled by the switch.
 
 **Since:** 9
 

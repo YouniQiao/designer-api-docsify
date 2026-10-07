@@ -1,12 +1,6 @@
-# @ohos.bundle.freeInstall
+# @ohos.bundle.freeInstall(freeInstall Module)
 
-The module provides APIs for setting and obtaining installation-free information and APIs for obtaining
- BundlePackInfo and DispatchInfo.
-
-> **NOTE**
- >
- > The APIs provided by this module are system APIs.
-
+The module provides APIs for setting and obtaining installation-free information and APIs for obtaining BundlePackInfo and DispatchInfo.
 
 **Since:** 9
 

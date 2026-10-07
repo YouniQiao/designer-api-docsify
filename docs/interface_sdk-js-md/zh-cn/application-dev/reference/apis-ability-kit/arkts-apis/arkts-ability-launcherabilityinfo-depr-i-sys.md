@@ -4,13 +4,11 @@
 export interface LauncherAbilityInfo
 ```
 
-LauncherAbilityInfo信息，通过接口[innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated)获取。
+LauncherAbilityInfo信息，通过接口[innerBundleManager.getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md)获取。
 
 > **说明：** 
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-LauncherAbilityInfo](arkts-ability-launcherabilityinfo-depr-i-sys.md)替代。
-> 
-> 本模块为系统接口。
+> 从API version 9开始，该模块不再维护，
 
 **起始版本：** 8
 

@@ -4,7 +4,7 @@
 export type LauncherAbilityInfo = _LauncherAbilityInfo
 ```
 
-LauncherAbilityInfo信息。
+桌面应用Ability的基础信息，包含应用标识、图标、名称等核心属性。详细信息请参见LauncherAbilityInfo。
 
 **起始版本：** 18
 

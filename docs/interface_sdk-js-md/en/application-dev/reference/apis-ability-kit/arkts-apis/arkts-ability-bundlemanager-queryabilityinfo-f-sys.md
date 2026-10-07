@@ -33,8 +33,8 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
-| abilityFlags | number | Yes | Type of the ability information to obtain. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
+| abilityFlags | number | Yes | Information contained in the returned AbilityInfo. For details about the values and their meanings, see [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md). |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;AbilityInfo&gt; obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -104,9 +104,9 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
-| abilityFlags | number | Yes | Type of the ability information to obtain. |
+| abilityFlags | number | Yes | Information contained in the returned AbilityInfo. For details about the values and their meanings, see [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md). |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of ability information obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;AbilityInfo&gt; obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -178,7 +178,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | Yes | Want containing the bundle name to query. |
-| abilityFlags | number | Yes | Type of the ability information to obtain. |
+| abilityFlags | number | Yes | Information contained in the returned AbilityInfo. For details about the values and their meanings, see [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md). |
 | userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**
@@ -278,8 +278,8 @@ No permission is required for obtaining the caller's own information.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wants | Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | List of want containing the bundle name to query. |
-| abilityFlags | number | Yes | Type of the ability information to obtain. |
+| wants | Array&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Set of Wants containing the bundle names of the applications to query. |
+| abilityFlags | number | Yes | Information contained in the returned AbilityInfo. For details about the values and their meanings, see [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md). |
 | userId | number | No | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. The value must be greater than or equal to 0. |
 
 **Return value:**

@@ -10,24 +10,18 @@ import { bundleManager } from '@kit.AbilityKit';
 
 ```TypeScript
 function filterBundleListByDeviceModeDistributionPolicies(
-    policies: Array<DeviceModeDistributionPolicy>
-  ): Promise<void>
+    policies: Array<DeviceModeDistributionPolicy>): Promise<void>
 ```
 
-支持按设备模式分发策略过滤应用列表。该接口使用promise返回结果。
-
-> **说明：** 
-> 
-> 入参不能为空。所有值必须在的枚举值范围内。
-> DeviceModeDistributePolicy，以及所有不同套餐的策略（通用差分包、部分兼容差分包和全兼容差分包）必须包含。
+支持按设备模式分发策略过滤应用列表。使用Promise异步回调。
 
 **起始版本：** 26.0.1
 
-**需要权限：** ohos.permission.SWITCH_MULTI_MODE_BUNDLE
+**需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-bundleManager-function filterBundleListByDeviceModeDistributionPolicies(    policies: Array<DeviceModeDistributionPolicy>  ): Promise<void>--><!--Device-bundleManager-function filterBundleListByDeviceModeDistributionPolicies(    policies: Array<DeviceModeDistributionPolicy>  ): Promise<void>-End-->
+<!--Device-bundleManager-function filterBundleListByDeviceModeDistributionPolicies(    policies: Array<DeviceModeDistributionPolicy>): Promise<void>--><!--Device-bundleManager-function filterBundleListByDeviceModeDistributionPolicies(    policies: Array<DeviceModeDistributionPolicy>): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -37,13 +31,13 @@ function filterBundleListByDeviceModeDistributionPolicies(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| policies | Array&lt;[DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)&gt; | 是 | DeviceModeDistributionPolicy值的数组。 |
+| policies | Array&lt;[DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)&gt; | 是 | DeviceModeDistributionPolicy值的数组。入参不能为空，所有值必须在DeviceModeDistributionPolicy的枚举值范围内，且必须包含所有不同包体的策略（UNIVERSAL_DIFFERENT_PACKAGE、PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE和FULL_COMPATIBLE_DIFFERENT_PACKAGE）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise 对象，无返回值。 |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 

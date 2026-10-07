@@ -36,7 +36,7 @@ Profile of the InsightIntent framework.
 CLOUD_PROFILE = 8
 ```
 
-Device-Cloud Sync configuration file.
+[Device-cloud sync](../../apis-core-file-kit/arkts-apis/arkts-corefile-file-cloudsync.md) configuration file.
 
 **Since:** 26.0.0
 

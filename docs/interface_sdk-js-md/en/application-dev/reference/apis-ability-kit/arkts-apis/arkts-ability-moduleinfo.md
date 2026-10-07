@@ -1,4 +1,4 @@
-# moduleInfo
+# moduleInfo(ModuleInfo)
 
 ## Summary
 

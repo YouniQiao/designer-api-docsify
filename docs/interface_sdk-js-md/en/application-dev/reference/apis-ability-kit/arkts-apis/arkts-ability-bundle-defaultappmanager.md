@@ -1,6 +1,11 @@
-# @ohos.bundle.defaultAppManager
+# @ohos.bundle.defaultAppManager(Default Application Management)
 
-The module provides APIs to query whether the current application is the default application of a specific type.
+The module provides APIs to query, set, and reset the default application of a specific type and check whether the current application is the default application.
+
+> **NOTE:** 
+> 
+> This topic describes only system APIs provided by the module. For details about its public APIs, see
+> [@ohos.bundle.defaultAppManager](arkts-ability-bundle-defaultappmanager.md).
 
 **Since:** 9
 

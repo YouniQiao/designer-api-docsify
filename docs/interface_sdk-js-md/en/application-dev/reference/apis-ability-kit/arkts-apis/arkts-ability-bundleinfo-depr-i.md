@@ -4,11 +4,12 @@
 export interface BundleInfo
 ```
 
+The module defines the bundle information, which can be obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 > **NOTE:** 
 > 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager-BundleInfo](arkts-ability-bundleinfo-depr-i.md) instead.
+> This module is deprecated since API version 9. You are advised to use
+> [bundleManager-BundleInfo](arkts-ability-bundleinfo.md) instead.
 
 **Since:** 7
 
@@ -28,7 +29,7 @@ readonly abilityInfos: Array<AbilityInfo>
 
 Ability configuration information.
 
-The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3).
+The value is obtained by passing in GET_BUNDLE_WITH_ABILITIES to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-i.md)&gt;
 
@@ -196,7 +197,7 @@ Module configuration information.
 readonly installTime: number
 ```
 
-Time when the HAP file was installed.
+HAP installation time, in milliseconds.
 
 **Type:** number
 
@@ -304,7 +305,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 Detailed information of the permissions to request from the system.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3).
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
@@ -328,7 +329,7 @@ readonly reqPermissions: Array<string>
 
 Permissions to request from the system for running the application.
 
-The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3).
+The value is obtained by passing in GET_BUNDLE_WITH_REQUESTED_PERMISSION to [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 **Type:** Array&lt;string&gt;
 
@@ -438,7 +439,7 @@ UID of the application to which the bundle belongs.
 readonly updateTime: number
 ```
 
-Time when the HAP file was updated.
+HAP update time, in milliseconds.
 
 **Type:** number
 

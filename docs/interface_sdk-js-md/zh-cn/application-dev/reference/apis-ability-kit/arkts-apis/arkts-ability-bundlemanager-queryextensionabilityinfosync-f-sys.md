@@ -35,14 +35,14 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: Extensi
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | [ExtensionAbilityType](arkts-ability-bundlemanager-extensionabilitytype-e.md) | 是 | 标识extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| extensionAbilityFlags | number | 是 | 表示用于指定将返回的ExtensionAbilityInfo对象中包含的信息的标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | Array&lt;ExtensionAbilityInfo&gt;信息。 |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | 返回查询到的ExtensionAbility信息列表。 |
 
 **错误码：**
 
@@ -135,7 +135,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 | --- | --- | --- | --- |
 | want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示包含要查询的应用Bundle名称的Want。 |
 | extensionAbilityType | string | 是 | 表示自定义extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示返回的ExtensionInfo对象中需要包含的信息标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| extensionAbilityFlags | number | 是 | 表示返回的ExtensionAbilityInfo对象中需要包含的信息标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，默认值：调用方所在用户，取值范围：大于等于0。 |
 
 **返回值：**
@@ -234,7 +234,7 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | extensionAbilityType | string | 是 | 表示自定义extensionAbility的类型。 |
-| extensionAbilityFlags | number | 是 | 表示返回的ExtensionInfo对象中需要包含的信息标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
+| extensionAbilityFlags | number | 是 | 表示返回的ExtensionAbilityInfo对象中需要包含的信息标志，具体取值及不同含义参考[ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md)。 |
 | userId | number | 否 | 表示用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，默认值：调用方所在用户ID。取值范围：大于等于0。 |
 
 **返回值：**

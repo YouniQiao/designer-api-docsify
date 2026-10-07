@@ -4,7 +4,11 @@
 export enum UpgradeFlag
 ```
 
-仅供内部系统使用标志位
+应用模块升级策略的标志。
+
+> **说明：** 
+> 
+> 不支持组合使用，如：let flag = UpgradeFlag.NOT_UPGRADE | UpgradeFlag.SINGLE_UPGRADE，只支持单个枚举类型传入。
 
 **起始版本：** 9
 

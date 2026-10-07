@@ -4,11 +4,12 @@
 export interface ShortcutInfo
 ```
 
+The module defines shortcut information configured in the configuration file. For the [FA model](../../../application-models/ability-terminology.md#fa-model), the information is configured in the [config.json](../../../quick-start/application-configuration-file-overview-fa.md) file. For the [stage model](../../../application-models/ability-terminology.md#stage-model), the information is configured in the configuration file under **resources/base/profile** in the development view.
 
 > **NOTE:** 
 > 
-> This API has been supported since API version 7 and deprecated since API version 9. You are advised to use
-> [bundleManager-ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md) instead.
+> This module is no longer maintained since API version 9. You are advised to use
+> [bundleManager-ShortcutInfo](arkts-ability-shortcutinfo.md) instead.
 
 **Since:** 7
 
@@ -166,7 +167,7 @@ Whether the shortcut is enabled. **true** if enabled, **false** otherwise.
 readonly isHomeShortcut?: boolean
 ```
 
-Whether the shortcut is static. **true** if static, **false** otherwise.
+Whether the shortcut is a home shortcut. **true** if the shortcut is a home shortcut, **false** otherwise.
 
 **Type:** boolean
 

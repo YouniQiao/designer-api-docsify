@@ -69,7 +69,7 @@ try {
 function getRecoverableApplicationInfo(): Promise<Array<RecoverableApplicationInfo>>
 ```
 
-获取所有可恢复的预置应用信息。使用Promise异步回调。
+获取所有可恢复的预置应用信息。使用Promise异步回调。接口调用失败时可能返回空数组，需校验返回值后使用。
 
 **起始版本：** 11
 

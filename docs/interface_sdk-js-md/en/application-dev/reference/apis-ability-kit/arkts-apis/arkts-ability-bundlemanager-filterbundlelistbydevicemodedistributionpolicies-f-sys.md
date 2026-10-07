@@ -13,18 +13,11 @@ function filterBundleListByDeviceModeDistributionPolicies(
     policies: Array<DeviceModeDistributionPolicy>): Promise<void>
 ```
 
-Filters the bundle list by device mode distribution policies. This API uses a promise to return the result.
-
-> **NOTE:** 
-> 
-> The input parameter cannot be empty. All values must be within the range of the enumerated values of
-> DeviceModeDistributionPolicy, and the policies for all different packages
-> (UNIVERSAL_DIFFERENT_PACKAGE, PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE, and FULL_COMPATIBLE_DIFFERENT_PACKAGE)
-> must be included.
+Filters the application list by device mode distribution policies. This API uses a promise to return the result.
 
 **Since:** 26.0.1
 
-**Required permissions:** ohos.permission.SWITCH_MULTI_MODE_BUNDLE
+**Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +31,7 @@ Filters the bundle list by device mode distribution policies. This API uses a pr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| policies | Array&lt;[DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)&gt; | Yes | Array of DeviceModeDistributionPolicy values. |
+| policies | Array&lt;[DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md)&gt; | Yes | Array of DeviceModeDistributionPolicy values. The input parameter cannot be empty. All values must be within the enum value range of DeviceModeDistributionPolicy, and must include the policies for all different package types (UNIVERSAL_DIFFERENT_PACKAGE, PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE, and FULL_COMPATIBLE_DIFFERENT_PACKAGE). |
 
 **Return value:**
 

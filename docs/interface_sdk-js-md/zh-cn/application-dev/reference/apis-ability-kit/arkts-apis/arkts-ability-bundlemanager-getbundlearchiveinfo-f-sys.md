@@ -14,7 +14,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback: AsyncCallback<BundleInfo>): void
 ```
 
-根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。
+根据给定的hapFilePath和bundleFlags获取BundleInfo。使用callback异步回调。从API版本26.0.0开始,该接口支持处理APP包。
 
 **起始版本：** 9
 
@@ -30,7 +30,7 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
+| hapFilePath | string | 是 | 表示存储HAP或APP的路径，路径应该是当前应用程序数据目录的相对路径。 |
 | bundleFlags | number | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInfo](arkts-ability-bundlemanager-bundleinfo-t.md)&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取成功时，err为undefined，data为获取到的BundleInfo；否则为错误对象。 |
 
@@ -76,7 +76,7 @@ try {
 function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promise<BundleInfo>
 ```
 
-根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。
+根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。从API版本26.0.0开始,该接口支持处理APP包。
 
 **起始版本：** 9
 
@@ -92,7 +92,7 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapFilePath | string | 是 | 表示存储HAP的路径，路径应该是当前应用程序数据目录的相对路径。 |
+| hapFilePath | string | 是 | 表示存储HAP或APP的路径，路径应该是当前应用程序数据目录的相对路径。 |
 | bundleFlags | number | 是 | 表示用于指定要返回的BundleInfo对象中包含的信息的标志。 |
 
 **返回值：**

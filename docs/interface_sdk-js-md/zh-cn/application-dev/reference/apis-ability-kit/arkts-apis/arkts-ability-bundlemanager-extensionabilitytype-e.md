@@ -318,7 +318,7 @@ EMBEDDED_UI = 21
 INSIGHT_INTENT_UI = 22
 ```
 
-InsightIntentUIExtensionAbility：为开发者提供能被小艺意图调用，以窗口形态呈现内容的扩展能力。
+InsightIntentUIExtensionAbility：为开发者提供能被系统入口调用，以窗口形态呈现内容的扩展能力。
 
 **起始版本：** 12
 
@@ -432,9 +432,7 @@ LIVE_FORM = 30
 SELECTION = 31
 ```
 
-SelectionExtensionAbility：为开发者提供划词弹窗能力的ExtensionAbility。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+[SelectionExtensionAbility](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-selectioninput-selectionextensionability-selectionextensionability-c.md)：为开发者提供划词弹窗能力的ExtensionAbility。
 
 **起始版本：** 24
 
@@ -450,7 +448,7 @@ SelectionExtensionAbility：为开发者提供划词弹窗能力的ExtensionAbil
 WEB_NATIVE_MESSAGING = 32
 ```
 
-[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)：为开发者提供Web原生消息通信能力的ExtensionAbility。
+[WebNativeMessagingExtensionAbility](../../apis-arkweb/arkts-apis/arkts-arkweb-web-webnativemessagingextensionability-webnativemessagingextensionability-c.md)：为开发者提供Web消息通信能力的ExtensionAbility。
 
 **起始版本：** 21
 
@@ -508,8 +506,6 @@ PARTNER_AGENT = 36
 
 [PartnerAgentExtensionAbility](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-fusionconnectivity-partneragentextensionability-partneragentextensionability-c.md)：基于蓝牙通信技术，提供设备发现与设备下线的通知功能。
 
-**模型约束**：此接口仅可在Stage模型下使用。
-
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -524,9 +520,7 @@ PARTNER_AGENT = 36
 AGENT = 37
 ```
 
-[AgentExtensionAbility](../../../reference/apis-ability-kit/js-apis-app-agent-agentExtensionAbility.md)：提供智能体扩展能力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。
-
-**模型约束**：此接口仅可在Stage模型下使用。
+[AgentExtensionAbility](arkts-ability-app-agent-agentextensionability-agentextensionability-c.md)：提供智能体扩展能力，包括智能体服务的创建、销毁、连接、断开的生命周期回调接口，以及接收客户端所发送数据和安全认证的回调接口。
 
 **起始版本：** 24
 
@@ -544,8 +538,6 @@ AGENT_UI = 38
 
 [AgentUIExtensionAbility](../../../reference/apis-ability-kit/js-apis-agent-agentUIExtensionAbility.md)：为开发者提供接入端侧Agent UI界面显示能力。
 
-**模型约束**：此接口仅可在Stage模型下使用。
-
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -560,7 +552,7 @@ AGENT_UI = 38
 MODULAR_OBJECT = 39
 ```
 
-[ModularObjectExtensionAbility](../../../application-models/modular-object-extension-overview.md)：提供应用自身能力开放功能。
+[modular_object_extension_ability](../../../reference/apis-ability-kit/capi-modular-object-extension-ability-h.md)：提供[模块化对象](../../../application-models/modular-object-extension-overview.md)扩展能力，可以将应用自身功能封装为独立的功能模块，开放给其他应用使用。
 
 **起始版本：** 26.0.0
 

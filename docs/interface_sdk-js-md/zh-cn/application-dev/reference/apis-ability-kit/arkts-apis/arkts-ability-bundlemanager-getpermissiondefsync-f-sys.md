@@ -34,7 +34,7 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 
 | 类型 | 说明 |
 | --- | --- |
-| [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | PermissionDef对象。 |
+| [PermissionDef](arkts-ability-bundlemanager-permissiondef-t-sys.md) | 返回查询到的权限定义结构体PermissionDef信息。 |
 
 **错误码：**
 

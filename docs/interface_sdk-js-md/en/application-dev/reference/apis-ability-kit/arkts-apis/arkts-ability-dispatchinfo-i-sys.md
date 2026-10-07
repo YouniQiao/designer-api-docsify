@@ -4,11 +4,7 @@
 export interface DispatchInfo
 ```
 
-The module provides version information about the dispatchInfo struct and dispatch API. The information can be obtained through [freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md#getdispatchinfo1).
-
-> **NOTE:** 
-> 
-> The APIs provided by this module are system APIs.
+The module provides version information about the dispatchInfo struct and dispatch API. The information can be obtained through [freeInstall.getDispatchInfo](arkts-ability-freeinstall-getdispatchinfo-f-sys.md).
 
 **Since:** 9
 
@@ -42,7 +38,7 @@ Version of the dispatch API.
 readonly version: string
 ```
 
-Version of the dispatchInfo struct.
+Version information of the DispatchInfo struct.
 
 **Type:** string
 

@@ -42,7 +42,7 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application to which extended resources are to be added. |
+| bundleName | string | Yes | Bundle name of the application to which extension resources are added. |
 | filePaths | Array&lt;string&gt; | Yes | Path of the extended resources to be added. |
 
 **Return value:**
@@ -108,7 +108,7 @@ Creates an application clone. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application for which a clone is to be created. |
-| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Other parameters required for creating the clone. For details about the default values of these parameters, see [createAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md). |
+| createAppCloneParam | [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md) | No | Specifies other parameters required for creating an app clone. Default value: refer to the default value of [CreateAppCloneParam](arkts-ability-installer-createappcloneparam-i-sys.md). |
 
 **Return value:**
 
@@ -165,7 +165,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>
 ```
 
-Destroys an application clone. This API uses a promise to return the result.
+Destroys an app clone or a CLI sandbox app. This API uses a promise to return the result.
 
 **Since:** 12
 
@@ -181,9 +181,9 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
-| appIndex | number | Yes | Index of the clone to destroy. |
-| userId | number | No | ID of the user for whom the clone is to be destroyed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The default value is the user ID of the caller. |
+| bundleName | string | Yes | Bundle name of the app clone or CLI sandbox app to be deleted. |
+| appIndex | number | Yes | Index of the app clone or CLI sandbox app to be deleted. Value range: [1, 5] and [2000, 3000]. 1 to 5 indicates an app clone, and 2000 to 3000 indicates a CLI sandbox app. Since API version 26.0.0, the value range [2000, 3000] is supported. |
+| userId | number | No | User ID to which the app clone or CLI sandbox app to be deleted belongs. It can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). Default value: the caller's user. |
 
 **Return value:**
 
@@ -237,7 +237,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>
 ```
 
-Destroys an application clone. This API uses a promise to return the result.
+Destroys an app clone or a CLI sandbox app. This API uses a promise to return the result.
 
 **Since:** 15
 
@@ -253,9 +253,9 @@ Destroys an application clone. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which a clone is to be destroyed. |
-| appIndex | number | Yes | Index of the clone to destroy. |
-| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for destroying the clone. For details about the default values of these parameters, see [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md). |
+| bundleName | string | Yes | Bundle name of the app clone or CLI sandbox app to be deleted. |
+| appIndex | number | Yes | Index of the app clone or CLI sandbox app to be deleted. Value range: [1, 5] and [2000, 3000]. 1 to 5 indicates an app clone, and 2000 to 3000 indicates a CLI sandbox app. Since API version 26.0.0, the value range [2000, 3000] is supported. |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | No | Other parameters required for deleting the app clone or CLI sandbox app. Default value: refer to the default value of [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md). |
 
 **Return value:**
 
@@ -318,12 +318,12 @@ try {
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
+Installs a specified app. This API uses an asynchronous callback to return the result. Since API version 26.0.0, installing an APP package is supported.
 
 > **NOTE:** 
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
+> To install apps of different distribution types, you need to apply for the corresponding permissions. For
+> details about the distribution types, see the description of the appDistributionType field in
 > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 9
@@ -345,9 +345,9 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
+| hapFilePaths | Array&lt;string&gt; | Yes | Path for storing the application package. The path should be the data directory where the HAP or APP of the current app is stored. When the path is a directory, the directory can contain only the HAPs of the same app or one APP. The signatures of the HAPs of the same app must be consistent. |
 | installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the app is installed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -421,12 +421,12 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-Installs an application. This API uses an asynchronous callback to return the result.
+Installs a specified app. This API uses an asynchronous callback to return the result. Since API version 26.0.0, installing an APP package is supported.
 
 > **NOTE:** 
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
+> To install apps of different distribution types, you need to apply for the corresponding permissions. For
+> details about the distribution types, see the description of the appDistributionType field in
 > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 9
@@ -448,8 +448,8 @@ Installs an application. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| hapFilePaths | Array&lt;string&gt; | Yes | Paths for storing the application packages. The path should be the data directory where the HAP or APP is stored in the current app. When the path passed in is a directory, the directory can contain only the HAPs of the same app or one APP. The signatures of the HAPs of the same app must be consistent. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the app is installed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -517,12 +517,12 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
+Installs a specified app. This API uses a promise to return the result. Since API version 26.0.0, installing an APP package is supported.
 
 > **NOTE:** 
 > 
-> To install applications of different distribution types, the appropriate permissions must be requested. For
-> details on distribution types, see the **appDistributionType** field in
+> To install apps of different distribution types, you need to apply for the corresponding permissions. For
+> details about the distribution types, see the description of the appDistributionType field in
 > [ApplicationInfo](arkts-ability-applicationinfo-i.md).
 
 **Since:** 9
@@ -544,7 +544,7 @@ Installs an application. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
+| hapFilePaths | Array&lt;string&gt; | Yes | Path for storing the application package. The path should be the data directory where the HAP or APP is stored in the current app. When the path passed in is a directory, the directory can contain only the HAPs of the same app or one APP. The signatures of the HAPs of the same app must be consistent. |
 | installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 12 |
 
 **Return value:**
@@ -706,13 +706,13 @@ try {
 installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 ```
 
-Installs an application. This API uses a promise to return the result.
+Installs the app with the specified bundleName for the specified user. This API uses a promise to return the result.
 
 > **NOTE:** 
 > 
-> This API does not support the installation of applications whose
-> [distribution type of the application signing certificate](arkts-ability-applicationinfo-i.md)
-> is set to **enterprise**, **enterprise_mdm**, or **enterprise_normal**.
+> This API does not support installing apps whose
+> [appDistributionType](arkts-ability-applicationinfo-i.md) is enterprise, enterprise_mdm, or
+> enterprise_normal.
 
 **Since:** 12
 
@@ -729,7 +729,7 @@ Installs an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application to install. |
-| userId | number | No | ID of the user for whom the bundle is to be installed. You can obtain the user ID by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The value must be greater than 0. The default value is the user ID of the caller. |
+| userId | number | No | User ID of the app to be installed. It can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). The value must be greater than 0. Default value: the user of the caller. |
 
 **Return value:**
 
@@ -800,8 +800,8 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Other parameters required for recovery. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) invoked to return the result. If the app rollback is successful, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -871,7 +871,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the app is rolled back successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -934,8 +934,8 @@ Rolls back an application to the initial installation state. This API uses a pro
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Name of the target bundle. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
+| bundleName | string | Yes | Bundle name of the application to be recovered. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Specifies other parameters required for recovery. Default value: refer to the default value of [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 
@@ -1007,7 +1007,7 @@ Removes extended resources based on the specified bundle name and module names. 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Bundle name of the application for which extended resources are to be removed. |
+| bundleName | string | Yes | Bundle name of the application whose extended resources are to be deleted. |
 | moduleNames | Array&lt;string&gt; | Yes | Names of the modules whose extended resources are to be removed. |
 
 **Return value:**
@@ -1075,8 +1075,8 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Specifies other parameters required for uninstallation. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the app is uninstalled successfully, **err** is undefined; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1150,7 +1150,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the app is uninstalled successfully, **err** is undefined; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1217,7 +1217,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Name of the target bundle. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 15 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Specifies other parameters required for uninstallation. Default value: refer to the default values of [InstallParam](arkts-ability-installer-installparam-i-sys.md).<br>**Since:** 15 |
 
 **Return value:**
 
@@ -1296,7 +1296,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | Yes | Parameters required for the uninstall. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md), which is used to return the result. If the app is uninstalled successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -1414,7 +1414,7 @@ try {
 uninstallNewPreinstalledApps(bundleNames: Array<string>): Promise<void>
 ```
 
-Uninstall new preinstalled applications. Only supports uninstalling pre installed applications added during device OTA upgrade. Asynchronous execution of application uninstallation tasks, the interface return value only indicates successful interface invocation and does not return uninstallation results.
+Uninstalls newly added preinstalled apps in batches. This API uses a promise to return the result.
 
 **Since:** 24
 
@@ -1432,13 +1432,13 @@ Uninstall new preinstalled applications. Only supports uninstalling pre installe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleNames | Array&lt;string&gt; | Yes | Indicates the bundle name list to be uninstalled. |
+| bundleNames | Array&lt;string&gt; | Yes | List of bundle names of the apps to be uninstalled. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | the promise returned by the function. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -1642,8 +1642,8 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Parameters required for the installation. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | Yes | Other parameters required for the update. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md), invoked when the application is updated successfully, in which case err is undefined; otherwise, an error object is returned. |
 
 **Error codes:**
 
@@ -1727,7 +1727,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md), invoked to return the result. If the application is updated successfully, err is undefined; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -1805,7 +1805,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | Yes | Paths where the HAP files of the bundle are stored, which are the data directories. If only one directory is passed, the HAP files in the directory must belong to the same bundle and have the same signature. |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Parameters required for the installation. For details about their default values, see [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | No | Other parameters required for the update. Default value: refer to the default values of [InstallParam](arkts-ability-installer-installparam-i-sys.md). |
 
 **Return value:**
 

@@ -33,7 +33,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| applicationFlags | number | Yes | Type of the application information to obtain. |
+| applicationFlags | number | Yes | Information contained in the ApplicationInfo object to be returned. For details about the values and meanings, see [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md). |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
 
 **Return value:**
@@ -101,7 +101,7 @@ No permission is required for obtaining the caller's own information.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name. |
-| applicationFlags | number | Yes | Type of the application information to obtain. |
+| applicationFlags | number | Yes | Information contained in the ApplicationInfo object to be returned. For details about the values and meanings, see [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md). |
 
 **Return value:**
 

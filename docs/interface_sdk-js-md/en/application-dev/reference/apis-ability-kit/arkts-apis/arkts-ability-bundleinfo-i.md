@@ -4,7 +4,7 @@
 export interface BundleInfo
 ```
 
-The module defines the bundle information.
+The module defines the bundle information. An application can obtain its own bundle information through [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md), with [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md) set to the information to be contained in the returned [BundleInfo](arkts-ability-bundleinfo-i.md).
 
 **Since:** 9
 
@@ -52,7 +52,7 @@ Application information. The information can be obtained by passing in **GET_BUN
 readonly buildVersion?: string
 ```
 
-Build version number of the application package, which identifies different build version packages under the same release version. It corresponds to the buildVersion field in the app.json5 file.
+Build version number of the application package, which identifies different build version packages under the same release version. It corresponds to the **buildVersion** field in the [app.json5](../../../quick-start/app-configuration-file.md) file.
 
 **Type:** string
 

@@ -68,7 +68,7 @@ GET_RESOURCE_INFO_WITH_ICON = 0x00000004
 GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
 ```
 
-用于获取根据label排序后的信息。它不能单独使用需要与GET_RESOURCE_INFO_ALL 或 GET_RESOURCE_INFO_WITH_LABEL一起使用。
+用于获取根据label排序后的信息。它不能单独使用，需要与GET_RESOURCE_INFO_ALL 或 GET_RESOURCE_INFO_WITH_LABEL一起使用。
 
 **起始版本：** 11
 
@@ -84,7 +84,7 @@ GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
 GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010
 ```
 
-用于获取应用图标的[drawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor.md)对象。
+用于获取应用图标的[drawableDescriptor](../../../reference/apis-arkui/js-apis-arkui-drawableDescriptor-sys.md)对象。
 
 **起始版本：** 12
 

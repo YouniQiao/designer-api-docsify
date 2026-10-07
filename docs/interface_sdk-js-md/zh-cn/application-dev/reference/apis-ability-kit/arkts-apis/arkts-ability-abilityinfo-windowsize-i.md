@@ -6,8 +6,6 @@ export interface WindowSize
 
 描述窗口尺寸。
 
-**原子化服务API：** 从API version 11开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 <!--Device-unnamed-export interface WindowSize--><!--Device-unnamed-export interface WindowSize-End-->
@@ -38,7 +36,9 @@ readonly maxWindowHeight: number
 readonly maxWindowRatio: number
 ```
 
-表示自由窗口状态下窗口的最大宽高比；取值范围0-1，例如：0.12。
+表示自由窗口状态下窗口的最大宽高比（宽度/高度）。
+
+取值范围：[0, 1]，例如，0.62表示窗口最大宽度为高度的0.62倍。该属性用于限制窗口的显示比例。
 
 **类型：** number
 
@@ -92,7 +92,9 @@ readonly minWindowHeight: number
 readonly minWindowRatio: number
 ```
 
-表示自由窗口状态下窗口的最小宽高比；取值范围0-1，例如：0.5。
+表示自由窗口状态下窗口的最小宽高比（宽度/高度）。
+
+取值范围：[0, 1]，例如，0.12表示窗口最小宽度为高度的0.12倍。该属性用于限制窗口的显示比例。
 
 **类型：** number
 

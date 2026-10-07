@@ -4,11 +4,11 @@
 export interface AbilityInfo
 ```
 
-Ability信息，未做特殊说明的属性，均通过[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2)获取。
+Ability信息，未做特殊说明的属性，均通过[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)获取。
 
 > **说明：** 
 > 
-> 从API version 9开始，该模块不再维护，建议使用[bundleManager-AbilityInfo](arkts-ability-abilityinfo-depr-i.md)替代。
+> 从API version 9开始，该模块不再维护。
 
 **起始版本：** 7
 
@@ -28,7 +28,7 @@ readonly applicationInfo: ApplicationInfo
 
 应用程序的配置信息。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)接口时，传入GET_ABILITY_INFO_WITH_APPLICATION获取。
 
 **类型：** [ApplicationInfo](arkts-ability-applicationinfo-depr-i.md)
 
@@ -362,7 +362,7 @@ readonly metaData: Array<CustomizeData>
 
 Ability的元信息。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)接口时，传入GET_ABILITY_INFO_WITH_METADATA获取。
 
 **类型：** Array&lt;[CustomizeData](arkts-ability-customizedata-depr-i.md)&gt;
 
@@ -452,7 +452,7 @@ readonly permissions: Array<string>
 
 被其他应用Ability调用时需要申请的权限集合。
 
-通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md#getabilityinfo2)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
+通过调用[bundle.getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)接口时，传入GET_ABILITY_INFO_WITH_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 

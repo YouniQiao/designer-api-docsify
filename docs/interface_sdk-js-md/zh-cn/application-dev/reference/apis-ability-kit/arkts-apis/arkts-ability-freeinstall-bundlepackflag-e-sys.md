@@ -4,7 +4,11 @@
 export enum BundlePackFlag
 ```
 
-要查询的应用包标志
+应用包pack.info的信息标志。
+
+> **说明：** 
+> 
+> 不支持组合使用，如：let flag = BundlePackFlag.GET_PACKAGES | BundlePackFlag.GET_BUNDLE_SUMMARY，只支持单个枚举类型传入。
 
 **起始版本：** 9
 

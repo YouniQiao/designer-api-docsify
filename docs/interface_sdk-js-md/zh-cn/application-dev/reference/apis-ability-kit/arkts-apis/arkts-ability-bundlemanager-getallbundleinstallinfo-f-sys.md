@@ -30,7 +30,7 @@ function getAllBundleInstallInfo(): Promise<Array<Record<string, Object>>>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | The install information. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Promise对象，返回所有应用的扩展安装信息集合列表。 |
 
 **错误码：**
 

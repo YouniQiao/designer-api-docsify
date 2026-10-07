@@ -42,7 +42,7 @@ addExtResource(bundleName: string, filePaths: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 要添加扩展资源的应用名称。 |
+| bundleName | string | 是 | 要添加扩展资源的应用包名。 |
 | filePaths | Array&lt;string&gt; | 是 | 要添加扩展资源的资源路径。 |
 
 **返回值：**
@@ -165,7 +165,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<void>
 ```
 
-删除应用分身。使用Promise异步回调。
+删除应用分身或CLI沙箱应用。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -181,9 +181,9 @@ destroyAppClone(bundleName: string, appIndex: number, userId?: number): Promise<
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 待删除应用分身的包名。 |
-| appIndex | number | 是 | 待删除应用分身的索引。 |
-| userId | number | 否 | 待删除应用分身所属用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。 |
+| bundleName | string | 是 | 待删除应用分身或CLI沙箱应用的包名。 |
+| appIndex | number | 是 | 待删除应用分身或CLI沙箱应用的索引。取值范围：[1, 5]，[2000, 3000]。1-5表示应用分身，2000-3000表示CLI沙箱应用。从API版本26.0.0开始，支持取值范围[2000, 3000]。 |
+| userId | number | 否 | 待删除应用分身或CLI沙箱应用所属用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。默认值：调用方所在用户。 |
 
 **返回值：**
 
@@ -237,7 +237,7 @@ try {
 destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: DestroyAppCloneParam): Promise<void>
 ```
 
-删除应用分身。使用Promise异步回调。
+删除应用分身或CLI沙箱应用。使用Promise异步回调。
 
 **起始版本：** 15
 
@@ -253,9 +253,9 @@ destroyAppClone(bundleName: string, appIndex: number, destroyAppCloneParam?: Des
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 待删除应用分身的包名。 |
-| appIndex | number | 是 | 待删除应用分身的索引。 |
-| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | 否 | 指定删除应用分身所需的其他参数，默认值：参照[DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md)的默认值。 |
+| bundleName | string | 是 | 待删除应用分身或CLI沙箱应用的包名。 |
+| appIndex | number | 是 | 待删除应用分身或CLI沙箱应用的索引。取值范围：[1, 5]，[2000, 3000]。1-5表示应用分身，2000-3000表示CLI沙箱应用。从API版本26.0.0开始，支持取值范围[2000, 3000]。 |
+| destroyAppCloneParam | [DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md) | 否 | 指定删除应用分身或CLI沙箱应用所需的其他参数，默认值：参照[DestroyAppCloneParam](arkts-ability-installer-destroyappcloneparam-i-sys.md)的默认值。 |
 
 **返回值：**
 
@@ -318,7 +318,7 @@ try {
 install(hapFilePaths: Array<string>, installParam: InstallParam, callback: AsyncCallback<void>): void
 ```
 
-安装指定应用。使用callback异步回调。
+安装指定应用。使用callback异步回调。从API版本26.0.0开始，支持安装APP包。
 
 > **说明：** 
 > 
@@ -344,9 +344,9 @@ install(hapFilePaths: Array<string>, installParam: InstallParam, callback: Async
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
+| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP或APP的数据目录。当传入的路径是一个目录时，该目录下只能放同一个应用的HAP或一个APP。同一个应用的HAP的签名需要保持一致。 |
 | installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -420,7 +420,7 @@ try {
 install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 ```
 
-安装指定应用。使用callback异步回调。
+安装指定应用。使用callback异步回调。从API版本26.0.0开始，支持安装APP包。
 
 > **说明：** 
 > 
@@ -446,8 +446,8 @@ install(hapFilePaths: Array<string>, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
+| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP或APP的数据目录。当传入的路径是一个目录时，该目录下只能放同一个应用的HAP或一个APP。同一个应用的HAP的签名需要保持一致。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -515,7 +515,7 @@ try {
 install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 ```
 
-安装指定应用。使用Promise异步回调。
+安装指定应用。使用Promise异步回调。从API版本26.0.0开始，支持安装APP包。
 
 > **说明：** 
 > 
@@ -541,7 +541,7 @@ install(hapFilePaths: Array<string>, installParam?: InstallParam): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
+| hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP或APP的数据目录。当传入的路径是一个目录时，该目录下只能放同一个应用的HAP或一个APP。同一个应用的HAP的签名需要保持一致。 |
 | installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。<br>**适用版本：** 12 |
 
 **返回值：**
@@ -707,7 +707,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 
 > **说明：** 
 > 
-> 该接口不支持安装[签名证书的分发类型](arkts-ability-applicationinfo-i.md)为enterprise，enterprise_mdm和
+> 该接口不支持安装appDistributionType为enterprise，enterprise_mdm和
 > enterprise_normal的应用。
 
 **起始版本：** 12
@@ -725,7 +725,7 @@ installPreexistingApp(bundleName: string, userId?: number): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 需要安装应用的包名。 |
-| userId | number | 否 | 需要安装应用的用户ID，可以通过[getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，userId需要大于0。默认值：调用方所在用户。 |
+| userId | number | 否 | 需要安装应用的用户ID，可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取，userId需要大于0。默认值：调用方所在用户。 |
 
 **返回值：**
 
@@ -796,8 +796,8 @@ recover(bundleName: string, installParam: InstallParam, callback: AsyncCallback<
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待恢复应用的包名。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定恢复所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -867,7 +867,7 @@ recover(bundleName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待恢复应用的包名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，回滚应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -930,8 +930,8 @@ recover(bundleName: string, installParam?: InstallParam): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 待卸载应用的包名。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
+| bundleName | string | 是 | 待恢复应用的包名。 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定恢复所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
 
 **返回值：**
 
@@ -1003,7 +1003,7 @@ removeExtResource(bundleName: string, moduleNames: Array<string>): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 要删除扩展资源的应用名称。 |
+| bundleName | string | 是 | 要删除扩展资源的应用包名。 |
 | moduleNames | Array&lt;string&gt; | 是 | 要删除扩展资源的moduleNames。 |
 
 **返回值：**
@@ -1071,8 +1071,8 @@ uninstall(bundleName: string, installParam: InstallParam, callback: AsyncCallbac
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定卸载所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1146,7 +1146,7 @@ uninstall(bundleName: string, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1213,7 +1213,7 @@ uninstall(bundleName: string, installParam?: InstallParam): Promise<void>
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 待卸载应用的包名。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。<br>**适用版本：** 15 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定卸载所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。<br>**适用版本：** 15 |
 
 **返回值：**
 
@@ -1292,7 +1292,7 @@ uninstall(uninstallParam: UninstallParam, callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | uninstallParam | [UninstallParam](arkts-ability-installer-uninstallparam-i-sys.md) | 是 | 共享包卸载需指定的参数信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，卸载应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1638,8 +1638,8 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam: InstallParam, cal
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定安装所需的其他参数。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 是 | 指定更新所需的其他参数。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，更新应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1723,7 +1723,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, callback: AsyncCallback<void>):
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，安装应用成功，err为undefined，否则为错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，更新应用成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -1801,7 +1801,7 @@ updateBundleForSelf(hapFilePaths: Array<string>, installParam?: InstallParam): P
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | hapFilePaths | Array&lt;string&gt; | 是 | 存储应用程序包的路径。路径应该是当前应用程序中存放HAP的数据目录。当传入的路径是一个目录时， 该目录下只能放同一个应用的HAP，且这些HAP的签名需要保持一致。 |
-| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定安装所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
+| installParam | [InstallParam](arkts-ability-installer-installparam-i-sys.md) | 否 | 指定更新所需的其他参数，默认值：参照[InstallParam](arkts-ability-installer-installparam-i-sys.md)的默认值。 |
 
 **返回值：**
 

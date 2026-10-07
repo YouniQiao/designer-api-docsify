@@ -14,7 +14,7 @@ import { bundleResourceManager } from '@kit.AbilityKit';
 function getBundleResourceInfo(bundleName: string, resourceFlags?: number): BundleResourceInfo
 ```
 
-以同步方法根据给定的bundleName和resourceFlags获取当前应用的BundleResourceInfo。
+以同步方法根据给定的bundleName和resourceFlags获取应用的BundleResourceInfo。
 
 **起始版本：** 11
 
@@ -94,7 +94,7 @@ try {
 function getBundleResourceInfo(bundleName: string, resourceFlags?: number, appIndex?: number): BundleResourceInfo
 ```
 
-以同步方法根据给定的bundleName、resourceFlags和appIndex获取当前应用或分身应用的BundleResourceInfo。
+以同步方法根据给定的bundleName、resourceFlags和appIndex获取应用或分身应用的BundleResourceInfo。
 
 **起始版本：** 12
 

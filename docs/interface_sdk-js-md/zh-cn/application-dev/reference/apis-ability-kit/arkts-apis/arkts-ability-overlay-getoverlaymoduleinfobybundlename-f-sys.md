@@ -34,7 +34,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundle名称。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中所有module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中所有module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -98,8 +98,8 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundle名称。 |
-| moduleName | string | 是 | 指定应用中的overlay module的名称。缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | 是 | [回调函数](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中指定module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
+| moduleName | string | 是 | 指定应用中的overlay特征module的名称。缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | 是 | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)，当获取指定应用中指定module的[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)信息成功时，err返回undefined。否则回调函数返回具体错误对象。 |
 
 **错误码：**
 
@@ -147,7 +147,7 @@ try {
 function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: string): Promise<Array<OverlayModuleInfo>>
 ```
 
-获取指定应用中指定module的OverlayModuleInfo信息。使用promise异步回调。
+获取指定应用中指定module的OverlayModuleInfo信息。使用Promise异步回调。
 
 指定应用是调用方自身时不需要权限。
 
@@ -166,7 +166,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | bundleName | string | 是 | 指定应用的bundle名称。 |
-| moduleName | string | 否 | 指定应用中的overlay module的名称。默认值：缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
+| moduleName | string | 否 | 指定应用中的overlay特征module的名称。缺省该字段时，查询接口将查询指定应用中所有module的OverlayModuleInfo信息。 |
 
 **返回值：**
 

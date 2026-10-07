@@ -19,14 +19,13 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 > **NOTE:** 
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo1)
-> instead.
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo1)(bundleName :string, callback: AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt;)
+**Substitutes:** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
@@ -57,14 +56,13 @@ Obtains an array of the shortcut information based on a given bundle name. This 
 > **NOTE:** 
 > 
 > This API has been supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo1)
-> instead.
+> [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo1)(bundleName :string, callback: AsyncCallback&lt;Array&lt;ShortcutInfo&gt;&gt;)
+**Substitutes:** [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md)
 
 **Required permissions:** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 

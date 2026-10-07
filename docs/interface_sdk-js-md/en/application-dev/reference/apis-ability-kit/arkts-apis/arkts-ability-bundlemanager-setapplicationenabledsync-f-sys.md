@@ -69,7 +69,7 @@ try {
 function setApplicationEnabledSync(bundleName: string, appIndex: number, isEnabled: boolean, killProcess: boolean): void
 ```
 
-Set whether an application is enabled or disabled, with control over whether the process is killed when disabled.
+Sets the enabled or disabled state of a specified application or application clone in synchronous mode, and controls whether to exit the application process when the application is disabled.
 
 **Since:** 26.0.0
 
@@ -87,10 +87,10 @@ Set whether an application is enabled or disabled, with control over whether the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| bundleName | string | Yes | Indicates the bundle name. |
-| appIndex | number | Yes | Indicates the index of clone app. |
-| isEnabled | boolean | Yes | The value true means to enable the application, and the value false means to disable the application. |
-| killProcess | boolean | Yes | The value true indicates that the application process will be killed when disabled, while the value false indicates that the application process will not be killed when disabled. |
+| bundleName | string | Yes | Bundle name of the application. |
+| appIndex | number | Yes | Application index. The value is an integer ranging from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the application clone indexes. |
+| isEnabled | boolean | Yes | Whether to enable the application. The value **true** indicates that the application is enabled, and **false** indicates that the application is disabled. |
+| killProcess | boolean | Yes | Whether to exit the application process when the application is disabled. The value **true** indicates that the application process exits when the application is disabled, and **false** indicates that the application process does not exit when the application is disabled. |
 
 **Error codes:**
 

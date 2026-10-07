@@ -538,7 +538,7 @@ getHapModuleInfo(callback: AsyncCallback<HapModuleInfo>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)&gt; | 是 | 回调函数，返回应用的ModuleInfo对象。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;HapModuleInfo&gt; | 是 | 回调函数，返回应用的ModuleInfo对象。 |
 
 <a id="gethapmoduleinfo2"></a>
 
@@ -562,7 +562,7 @@ getHapModuleInfo(): Promise<HapModuleInfo>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)&gt; | Promise对象，返回应用的ModuleInfo对象。 |
+| Promise&lt;HapModuleInfo&gt; | Promise对象，返回应用的ModuleInfo对象。 |
 
 <a id="getorcreatedistributeddir1"></a>
 

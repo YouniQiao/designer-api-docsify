@@ -666,7 +666,7 @@ NODE_LIST_ITEM_GROUP_SET_HEADER = MAX_NODE_SCOPE_NUM * ARKUI_NODE_LIST_ITEM_GROU
 
 **描述：**
 
-设置 ListItemGroup 头部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ListItemGroup头部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ListItemGroup头部组件。</li> </ul>
+设置 ListItemGroup 头部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ListItemGroup头部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ListItemGroup头部组件。</li> </ul>
 
 **起始版本：** 12
 
@@ -678,7 +678,7 @@ NODE_LIST_ITEM_GROUP_SET_FOOTER
 
 **描述：**
 
-设置 ListItemGroup 尾部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ListItemGroup尾部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ListItemGroup尾部组件。</li> </ul>
+设置 ListItemGroup 尾部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ListItemGroup尾部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ListItemGroup尾部组件。</li> </ul>
 
 **起始版本：** 12
 
@@ -738,7 +738,7 @@ NODE_REFRESH_CONTENT
 
 **描述：**
 
-设置下拉区域的自定义内容，支持属性设置和重置。 作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 参数类型[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)。</li> </ul>
+设置下拉区域的自定义内容，支持属性设置和重置。 作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)。</li> </ul>
 
 **起始版本：** 12
 
@@ -906,7 +906,7 @@ NODE_WATER_FLOW_FOOTER
 
 **描述：**
 
-设置瀑布流组件末尾的自定义显示组件。 作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 参数类型[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)。</li> </ul>
+设置瀑布流组件末尾的自定义显示组件。 作为属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 参数类型[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)。</li> </ul>
 
 **起始版本：** 12
 
@@ -1314,7 +1314,7 @@ NODE_ARC_LIST_SET_HEADER = 1019006
 
 **描述：**
 
-设置ArcList头部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ArcList头部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为ArcList头部组件。</li> </ul>
+设置ArcList头部组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ArcList头部组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为ArcList头部组件。</li> </ul>
 
 **起始版本：** 26.0.0
 
@@ -1434,7 +1434,7 @@ NODE_ARC_SCROLL_BAR_BIND_SCROLLABLE = MAX_NODE_SCOPE_NUM * ARKUI_NODE_ARC_SCROLL
 
 **描述：**
 
-设置ArcScrollBar绑定的可滚动组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为滚动条绑定的可滚动组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-accessibility-arkui-nodehandle.md)对象作为滚动条绑定的可滚动组件。</li> </ul>
+设置ArcScrollBar绑定的可滚动组件，支持属性设置，属性重置和属性获取接口。 作为属性设置方法参数、属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式如下。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为滚动条绑定的可滚动组件。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object 使用[ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md)对象作为滚动条绑定的可滚动组件。</li> </ul>
 
 **起始版本：** 26.0.0
 

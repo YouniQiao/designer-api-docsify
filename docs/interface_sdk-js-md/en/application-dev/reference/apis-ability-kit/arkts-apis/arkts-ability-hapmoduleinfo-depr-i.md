@@ -4,11 +4,11 @@
 export interface HapModuleInfo
 ```
 
-The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3).
+The HapModuleInfo module provides information about an HAP module. Unless otherwise specified, the information is obtained through [bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md).
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> This module is no longer maintained since API version 9. You are advised to use
 > [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md) instead.
 
 **Since:** 7

@@ -31,7 +31,7 @@ Obtains information about the remote ability that matches the given element name
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Target element name. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the call succeeds, err is null and data is the RemoteAbilityInfo object. If the call fails, err is an error object and data is undefined. |
 
 **Error codes:**
 
@@ -151,7 +151,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains information about the remote abilities that match the given element names. This API uses an asynchronous callback to return the result.
+Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -167,8 +167,8 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName information. The maximum array length is 10. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the call succeeds, err is null and data is an array of RemoteAbilityInfo objects. If the call fails, err is an error object and data is undefined. |
 
 **Error codes:**
 
@@ -225,7 +225,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains information about the remote abilities that match the given element names. This API uses a promise to return the result.
+Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -247,7 +247,7 @@ Obtains information about the remote abilities that match the given element name
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise used to return the result. If the call succeeds, it returns a list of RemoteAbilityInfo objects; if the call fails, it returns an error object. |
 
 **Error codes:**
 
@@ -320,7 +320,7 @@ Obtains information about the remote ability that matches the given element name
 | --- | --- | --- | --- |
 | elementName | [ElementName](arkts-ability-elementname-i.md) | Yes | Target element name. |
 | locale | string | Yes | Target locale. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the RemoteAbilityInfo object obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the call succeeds, err is null and data is the RemoteAbilityInfo object. If the call fails, err is an error object and data is undefined. |
 
 **Error codes:**
 
@@ -441,7 +441,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, callback: AsyncCallback<Array<RemoteAbilityInfo>>): void
 ```
 
-Obtains information about the remote abilities that match the given element names and locale. This API uses an asynchronous callback to return the result.
+Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames and locale. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -457,9 +457,9 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName information. The maximum array length is 10. |
 | locale | string | Yes | Target locale. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md) used to return the result. If the operation is successful, **err** is **null** and **data** is the array of RemoteAbilityInfo objects obtained. Otherwise, **err** is an error object and **data** is **undefined**. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the call succeeds, err is null and data is an array of RemoteAbilityInfo objects. If the call fails, err is an error object and data is undefined. |
 
 **Error codes:**
 
@@ -516,7 +516,7 @@ try {
 function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string): Promise<Array<RemoteAbilityInfo>>
 ```
 
-Obtains information about the remote abilities that match the given element names and locale. This API uses a promise to return the result.
+Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames and locale. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -532,14 +532,14 @@ Obtains information about the remote abilities that match the given element name
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | **ElementName** array, whose maximum length is 10. |
+| elementNames | Array&lt;[ElementName](arkts-ability-elementname-i.md)&gt; | Yes | ElementName information. The maximum array length is 10. |
 | locale | string | Yes | Target locale. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise used to return the result. If the operation is successful, an array of RemoteAbilityInfo objects is returned. Otherwise, an error object is returned. |
+| Promise&lt;Array&lt;[RemoteAbilityInfo](arkts-ability-distributedbundlemanager-remoteabilityinfo-t-sys.md)&gt;&gt; | Promise used to return the result. If the call succeeds, a list of RemoteAbilityInfo objects is returned; if the call fails, an error object is returned. |
 
 **Error codes:**
 

@@ -1,10 +1,6 @@
-# @ohos.bundle.appControl
+# @ohos.bundle.appControl(appControl模块)
 
 本模块提供应用拦截能力。对应用设置处置状态后，应用会被禁止运行；用户点击桌面图标时，会根据应用的处置状态，跳转到对应的页面。本模块支持对应用的处置状态进行设置、获取、删除。
-
-> **说明：** 
-> 
-> 本模块为系统接口。
 
 **起始版本：** 9
 
@@ -28,7 +24,7 @@ import { appControl } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus1) | 删除应用的处置状态。使用callback异步回调，成功返回null，失败返回对应错误信息。 |
-| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus2) | 删除应用的处置状态。使用promise异步回调，成功返回null，失败返回对应错误信息。 |
+| [deleteDisposedStatus](arkts-ability-appcontrol-deletedisposedstatus-f-sys.md#deletedisposedstatus2) | 删除应用的处置状态。使用Promise异步回调，成功返回null，失败返回对应错误信息。 |
 | [deleteDisposedStatusSync](arkts-ability-appcontrol-deletedisposedstatussync-f-sys.md) | 以同步方法删除指定应用或分身应用的处置状态。成功返回null，失败抛出对应异常。 |
 | [deleteUninstallDisposedRule](arkts-ability-appcontrol-deleteuninstalldisposedrule-f-sys.md) | 删除指定应用或分身应用的卸载处置规则。 |
 | [getAllDisposedRules](arkts-ability-appcontrol-getalldisposedrules-f-sys.md) | 获取当前用户下已设置的所有拦截规则。 |
@@ -53,6 +49,7 @@ import { appControl } from '@kit.AbilityKit';
 | --- | --- |
 | [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | 标识拦截规则。 |
 | [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | 标识批量设置拦截规则的配置。 |
+| [RecoverDisposedRule](arkts-ability-appcontrol-recoverdisposedrule-i-sys.md) | 描述应用程序恢复已处理的规则。 |
 | [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | 标识卸载处置规则。 |
 <!--DelEnd-->
 
@@ -64,5 +61,7 @@ import { appControl } from '@kit.AbilityKit';
 | [ComponentType](arkts-ability-appcontrol-componenttype-e-sys.md) | 标识功能组件类型。 |
 | [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | 标识拦截指定应用程序的不同策略。 |
 | [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | 标识拦截应用程序的方式，例如禁用应用的全部能力、禁用应用的指定能力、或者不禁用。 |
+| [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md) | 标识目标应用被拦截时是否跳转到页面。 |
+| [RecoverComponentType](arkts-ability-appcontrol-recovercomponenttype-e-sys.md) | 枚举恢复期间的能力类型。 |
 | [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | 标识卸载时功能组件类型。 |
 <!--DelEnd-->

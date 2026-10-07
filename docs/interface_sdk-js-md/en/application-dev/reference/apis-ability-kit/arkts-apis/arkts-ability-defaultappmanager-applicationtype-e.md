@@ -74,7 +74,7 @@ Default video player.
 PDF = "PDF Viewer"
 ```
 
-Default PDF reader.
+Default PDF viewer.
 
 **Since:** 9
 
@@ -116,7 +116,7 @@ Default Excel viewer.
 PPT = "PPT Viewer"
 ```
 
-Default PowerPoint viewer.
+Default PPT viewer.
 
 **Since:** 9
 

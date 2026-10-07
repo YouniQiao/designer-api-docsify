@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getAllPreinstalledApplicationInfo(): Promise<Array<PreinstalledApplicationInfo>>
 ```
 
-Obtains information about all preinstalled applications. This API uses a promise to return the result.
+Obtains the information about all preset applications. This API uses a promise to return the result. An empty array may be returned if the API call fails. Verify the return value before using it.
 
 **Since:** 12
 
@@ -28,7 +28,7 @@ Obtains information about all preinstalled applications. This API uses a promise
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[PreinstalledApplicationInfo](arkts-ability-bundlemanager-preinstalledapplicationinfo-t-sys.md)&gt;&gt; | Promise used to return the array of preinstalled applications obtained. |
+| Promise&lt;Array&lt;[PreinstalledApplicationInfo](arkts-ability-bundlemanager-preinstalledapplicationinfo-t-sys.md)&gt;&gt; | Promise used to return the result. If the call succeeds, it returns a list of PreinstalledApplicationInfo objects; if the call fails, it returns an error object. |
 
 **Error codes:**
 

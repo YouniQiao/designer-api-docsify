@@ -1,6 +1,6 @@
-# @ohos.bundle.launcherBundleManager
+# @ohos.bundle.launcherBundleManager(launcherBundleManager Module)
 
-The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the [launcher ability information](arkts-ability-launcherabilityinfo-i.md).
+The module providers APIs for launcher applications (applications with icons on the home screen) to obtain the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) and [shortcut information](arkts-ability-shortcutinfo-i.md).
 
 **Since:** 9
 
@@ -44,7 +44,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) | Defines the information about the launcher ability. |
+| [LauncherAbilityInfo](arkts-ability-launcherbundlemanager-launcherabilityinfo-t.md) | Basic information about the home screen application ability, including core attributes such as the application identifier, icon, and name. For details, see [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md). |
 | [ParameterItem](arkts-ability-launcherbundlemanager-parameteritem-t.md) | Defines the custom data in the shortcut configuration. |
 | [ShortcutInfo](arkts-ability-launcherbundlemanager-shortcutinfo-t.md) | Defines the shortcut information defined in the [module.json5](../../../quick-start/module-configuration-file.md#shortcuts) file of the application. |
 | [ShortcutWant](arkts-ability-launcherbundlemanager-shortcutwant-t.md) | Defines the target [wants](../../../quick-start/module-configuration-file.md#wants) defined in the shortcut configuration. |

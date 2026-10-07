@@ -84,7 +84,7 @@ The obtained information is sorted by label. It must be used together with **GET
 GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010
 ```
 
-The [drawableDescriptor](../../apis-arkui/arkts-apis/arkts-arkui-arkui-drawabledescriptor.md) object of the application icon is obtained.
+The [drawableDescriptor](../../../reference/apis-arkui/js-apis-arkui-drawableDescriptor-sys.md) object of the application icon is obtained.
 
 **Since:** 12
 

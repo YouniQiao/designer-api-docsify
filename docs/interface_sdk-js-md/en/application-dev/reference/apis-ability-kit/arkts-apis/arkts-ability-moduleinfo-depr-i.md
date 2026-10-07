@@ -8,7 +8,7 @@ The ModuleInfo module provides module information of an application.
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> This module is no longer maintained since API version 9. You are advised to use
 > [bundleManager-HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md) instead.
 
 **Since:** 7
@@ -27,7 +27,7 @@ The ModuleInfo module provides module information of an application.
 readonly moduleName: string
 ```
 
-The module name.
+Module name.
 
 **Type:** string
 
@@ -49,7 +49,7 @@ The module name.
 readonly moduleSourceDir: string
 ```
 
-The module source path.
+Installation directory. Do not concatenate paths to access resource files. Use [resourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) to access resources.
 
 **Type:** string
 

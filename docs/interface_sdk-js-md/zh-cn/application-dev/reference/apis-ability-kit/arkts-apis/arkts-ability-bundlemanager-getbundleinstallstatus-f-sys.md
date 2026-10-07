@@ -12,7 +12,7 @@ import { bundleManager } from '@kit.AbilityKit';
 function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 ```
 
-查询当前用户下指定应用的安装状态。
+获取指定应用的安装状态。
 
 **起始版本：** 23
 
@@ -28,13 +28,13 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| bundleName | string | 是 | 指定应用的包名。 |
+| bundleName | string | 是 | 表示应用包名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 应用的安装状态。 |
+| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 返回指定应用的安装状态。 |
 
 **错误码：**
 

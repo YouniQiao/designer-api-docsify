@@ -4,7 +4,7 @@
 export interface SkillUri
 ```
 
-Indicates the uris of the skill
+URI matched by Want.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Indicates the uris of the skill
 readonly host: string
 ```
 
-Indicates the host of the skillUri
+Host address of the URI. This parameter takes effect only when **scheme** is specified.
 
 **Type:** string
 
@@ -36,7 +36,7 @@ Indicates the host of the skillUri
 readonly linkFeature: string
 ```
 
-Indicates the linkFeature of the skillUri
+[Feature type](../../../application-models/app-uri-config.md#description-of-linkfeature) provided by the URI. It is used to implement redirection between applications and exists only in **AbilityInfo**.
 
 **Type:** string
 
@@ -54,7 +54,7 @@ Indicates the linkFeature of the skillUri
 readonly maxFileSupported: number
 ```
 
-Indicates the maxFileSupported of the skillUri
+Maximum number of files of a specified type that can be received or opened at a time. The value must be an integer greater than or equal to 0.
 
 **Type:** number
 
@@ -72,7 +72,7 @@ Indicates the maxFileSupported of the skillUri
 readonly path: string
 ```
 
-Indicates the path of the skillUri
+Path of the URI. This parameter takes effect only when both **scheme** and **host** are specified.
 
 **Type:** string
 
@@ -90,7 +90,7 @@ Indicates the path of the skillUri
 readonly pathRegex: string
 ```
 
-Indicates the pathRegex of the skillUri
+Regular expression of the path of the URI. This parameter takes effect only when both **scheme** and **host** are specified.
 
 **Type:** string
 
@@ -108,7 +108,7 @@ Indicates the pathRegex of the skillUri
 readonly pathStartWith: string
 ```
 
-Indicates the pathStartWith of the skillUri
+Prefix of the path of the URI. This parameter takes effect only when both **scheme** and **host** are specified.
 
 **Type:** string
 
@@ -126,7 +126,7 @@ Indicates the pathStartWith of the skillUri
 readonly port: number
 ```
 
-Indicates the port of the skillUri
+Port number of the URI. This parameter takes effect only when both **scheme** and **host** are specified.
 
 **Type:** number
 
@@ -144,7 +144,7 @@ Indicates the port of the skillUri
 readonly scheme: string
 ```
 
-Indicates the scheme of the skillUri
+Scheme of the URI, such as HTTP, HTTPS, file, and FTP.
 
 **Type:** string
 
@@ -162,7 +162,7 @@ Indicates the scheme of the skillUri
 readonly type: string
 ```
 
-Indicates the type of the skillUri
+Data type that matches the Want, using the MIME (Multipurpose Internet Mail Extensions) type specification and the [UniformDataType](../../apis-arkdata/arkts-apis/arkts-arkdata-uniformtypedescriptor-uniformdatatype-e.md) type specification.
 
 **Type:** string
 
@@ -180,7 +180,7 @@ Indicates the type of the skillUri
 readonly utd: string
 ```
 
-Indicates the utd of the skillUri
+Standard data type of the URI that matches Want. This parameter applies to sharing scenarios.
 
 **Type:** string
 

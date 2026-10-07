@@ -15,12 +15,6 @@ function on(type: 'BundleStatusChange',
 
 注册Callback。
 
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [on](arkts-ability-bundlemonitor-on-f-sys.md)
-> 替代。
-
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -51,12 +45,6 @@ function on(type: 'BundleStatusChange', bundleStatusCallback: BundleStatusCallba
 ```
 
 注册Callback。
-
-> **说明：** 
-> 
-> 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [on](arkts-ability-bundlemonitor-on-f-sys.md)
-> 替代。
 
 **起始版本：** 8
 

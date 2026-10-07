@@ -4,10 +4,11 @@
 export interface BundleInfo
 ```
 
+应用包的信息，通过[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)获取。
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-BundleInfo](arkts-ability-bundleinfo-depr-i.md)替代。
+> 从API version 9开始，该模块不再维护，
 
 **起始版本：** 7
 
@@ -27,7 +28,7 @@ readonly abilityInfos: Array<AbilityInfo>
 
 Ability的配置信息
 
-通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3)接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
+通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)接口时，传入GET_BUNDLE_WITH_ABILITIES获取。
 
 **类型：** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-depr-i.md)&gt;
 
@@ -175,7 +176,7 @@ readonly hapModuleInfos: Array<HapModuleInfo>
 
 模块的配置信息。
 
-**类型：** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)&gt;
+**类型：** Array&lt;HapModuleInfo&gt;
 
 **默认值：** Obtains configuration information about a module
 
@@ -303,7 +304,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 应用运行时需向系统申请的权限集合的详细信息
 
-通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;[ReqPermissionDetail](arkts-ability-bundleinfo-reqpermissiondetail-depr-i.md)&gt;
 
@@ -327,7 +328,7 @@ readonly reqPermissions: Array<string>
 
 应用运行时需向系统申请的权限集合
 
-通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md#getbundleinfo3)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
+通过调用[bundle.getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)接口时，传入GET_BUNDLE_WITH_REQUESTED_PERMISSION获取。
 
 **类型：** Array&lt;string&gt;
 

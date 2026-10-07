@@ -4,14 +4,14 @@
 export interface LauncherAbilityInfo
 ```
 
-The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through [innerBundleManager.getLauncherAbilityInfos](../../../reference/apis-ability-kit/js-apis-Bundle-InnerBundleManager-sys.md#innerbundlemanagergetlauncherabilityinfosdeprecated).
+The LauncherAbilityInfo module provides information about the launcher ability, which is obtained through [innerBundleManager.getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md).
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> This module is no longer maintained since API version 9. You are advised to use
 > [bundleManager-LauncherAbilityInfo](arkts-ability-launcherabilityinfo-depr-i-sys.md) instead.
 > 
-> The APIs provided by this module are system APIs.
+> This module is a system API.
 
 **Since:** 8
 

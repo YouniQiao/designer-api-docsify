@@ -34,7 +34,7 @@ Ability that has the UI. FA developed using the Page template to provide the cap
 SERVICE = 2
 ```
 
-Ability of the background service type, without the UI. PA developed using the Service template to provide the capability of running tasks in the background.
+Ability of the background service type, without a UI. It represents a [ParticleAbility](arkts-ability-ability-particleability.md) developed based on the Service template, used to provide the capability of running background tasks, such as background download or music playback.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ Ability of the background service type, without the UI. PA developed using the S
 DATA = 3
 ```
 
-PA developed using the Data template to provide unified data access for external systems.
+It represents a [ParticleAbility](arkts-ability-ability-particleability.md) developed based on the Data template, used to provide a unified data access object to the outside.
 
 **Since:** 9
 

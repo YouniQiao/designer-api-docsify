@@ -4,10 +4,11 @@
 export interface ShortcutInfo
 ```
 
+应用配置文件中定义的快捷方式信息，[FA模型](../../../application-models/ability-terminology.md#fa模型)配置在[config.json](../../../quick-start/application-configuration-file-overview-fa.md)文件中进行配置，[Stage模型](../../../application-models/ability-terminology.md#stage模型)配置在开发视图的resources/base/profile下面定义配置文件即可。
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[bundleManager-ShortcutInfo](arkts-ability-shortcutinfo-depr-i.md)替代。
+> 从API version 9开始，该模块不再维护。
 
 **起始版本：** 7
 
@@ -165,7 +166,7 @@ readonly isEnabled?: boolean
 readonly isHomeShortcut?: boolean
 ```
 
-快捷方式是否为静态，取值为true表示是静态的快捷方式，取值为false表示不是静态的快捷方式。
+快捷方式是否为主页面快捷方式，取值为true表示是主页面快捷方式，取值为false表示不是主页面快捷方式。
 
 **类型：** boolean
 

@@ -4,7 +4,7 @@
 export enum AppClonePreferenceMode
 ```
 
-Enumerates the application clone preference modes.
+Enumerates the modes of the app clone preference.
 
 **Since:** 26.0.0
 
@@ -20,7 +20,7 @@ Enumerates the application clone preference modes.
 ALWAYS_ASK = 0
 ```
 
-Always prompts the user to select an application.
+Asks the user to select the main app or clone app each time the app is started.
 
 **Since:** 26.0.0
 
@@ -38,7 +38,7 @@ Always prompts the user to select an application.
 MAIN_APP = 1
 ```
 
-Uses the main application by default.
+Uses the main app by default.
 
 **Since:** 26.0.0
 
@@ -56,7 +56,7 @@ Uses the main application by default.
 CLONE_APP = 2
 ```
 
-Uses the application clone by default.
+Uses the clone app by default.
 
 **Since:** 26.0.0
 

@@ -4,7 +4,7 @@
 export type BundleExtensionPolicyInfo = _BundleInfo.BundleExtensionPolicyInfo
 ```
 
-描述包扩展策略信息。
+描述套餐扩展策略信息。
 
 **起始版本：** 26.0.1
 

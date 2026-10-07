@@ -1,8 +1,4 @@
-# bundleInstaller
-
-The module provides APIs for you to install, uninstall, and recover bundles on devices.
-
-
+# bundleInstaller(BundleInstaller)
 
 ## 汇总
 

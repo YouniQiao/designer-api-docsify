@@ -4,7 +4,7 @@
 export interface ApplicationInfo
 ```
 
-The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo3).
+The module provides application information. Unless otherwise specified, the information is obtained through [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md).
 
 > **NOTE:** 
 > 
@@ -49,7 +49,7 @@ Access token ID of the application.
 readonly codePath: string
 ```
 
-Installation directory of the application. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) instead.
+Installation directory of the application. The path cannot be concatenated to access resource files. Please use [@ohos.resourceManager (resource management)](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) to access resources.
 
 **Type:** string
 
@@ -93,7 +93,7 @@ Application description.
 readonly descriptionId: number
 ```
 
-ID of the application description.
+Resource ID of the application description.
 
 **Type:** number
 
@@ -157,7 +157,7 @@ Type of the application, for example, gaming, social networking, movies, and new
 readonly entryDir: string
 ```
 
-Path for storing application files. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) instead.
+File storage path of the application. The path cannot be concatenated to access resource files. Please use [@ohos.resourceManager (resource management)](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) to access resources.
 
 **Type:** string
 
@@ -199,7 +199,7 @@ Application icon.
 readonly iconId: string
 ```
 
-ID of the application icon.
+Resource ID value of the application icon.
 
 **Type:** string
 
@@ -243,7 +243,7 @@ Application label.
 readonly labelId: string
 ```
 
-ID of the application label.
+Resource ID value of the application label.
 
 **Type:** string
 
@@ -267,7 +267,7 @@ readonly metaData: Map<string, Array<CustomizeData>>
 
 Custom metadata of the application.
 
-The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo3).
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_METADATA to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md).
 
 **Type:** Map&lt;string, Array&lt;[CustomizeData](arkts-ability-customizedata-depr-i.md)&gt;&gt;
 
@@ -311,7 +311,7 @@ Application module information.
 readonly moduleSourceDirs: Array<string>
 ```
 
-Relative paths for storing application resources. Do not access resource files using concatenated paths. Use [@ohos.resourceManager](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) instead.
+Relative path for storing application resources. The path cannot be concatenated to access resource files. Please use [@ohos.resourceManager (resource management)](../../apis-localization-kit/arkts-apis/arkts-localization-resourcemanager.md) to access resources.
 
 **Type:** Array&lt;string&gt;
 
@@ -355,7 +355,7 @@ readonly permissions: Array<string>
 
 Permissions required for accessing the application.
 
-The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md#getapplicationinfo3).
+The value is obtained by passing in GET_APPLICATION_INFO_WITH_PERMISSION to [bundle.getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md).
 
 **Type:** Array&lt;string&gt;
 

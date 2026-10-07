@@ -1,4 +1,4 @@
-# @ohos.bundle.pluginBundleManager
+# @ohos.bundle.pluginBundleManager(pluginBundleManager模块)
 
 本模块提供应用对自分发插件的管理能力，包括安装、卸载本地插件。
 

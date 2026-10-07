@@ -1,14 +1,14 @@
 # DeviceModeDistributionPolicy（系统接口）
 
 ```TypeScript
-enum DeviceModeDistributionPolicy
+export enum DeviceModeDistributionPolicy
 ```
 
-定义设备模式分发策略枚举，用于指定应用程序如何分发到设备上。
+设备模式分发策略枚举，用于指定应用程序如何分发到设备上。
 
 **起始版本：** 26.0.1
 
-<!--Device-bundleManager-enum DeviceModeDistributionPolicy--><!--Device-bundleManager-enum DeviceModeDistributionPolicy-End-->
+<!--Device-bundleManager-export enum DeviceModeDistributionPolicy--><!--Device-bundleManager-export enum DeviceModeDistributionPolicy-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -38,7 +38,7 @@ UNSPECIFIED = 0
 MAIN_ONLY = 1
 ```
 
-该应用程序仅在主模式下可用。
+应用程序仅在主模式下可用。
 
 **起始版本：** 26.0.1
 
@@ -56,7 +56,7 @@ MAIN_ONLY = 1
 SUB_ONLY = 2
 ```
 
-该应用程序仅在副模式下可用。
+应用程序仅在副模式下可用。
 
 **起始版本：** 26.0.1
 
@@ -110,7 +110,7 @@ UNIVERSAL_DIFFERENT_PACKAGE = 4
 PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5
 ```
 
-该应用程序在不同模式之间以相同包体方式部分兼容。
+应用程序在不同模式之间部分兼容，具有相同的包体。
 
 **起始版本：** 26.0.1
 
@@ -128,7 +128,7 @@ PARTIAL_COMPATIBLE_IDENTICAL_PACKAGE = 5
 PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6
 ```
 
-应用程序在不同模式之间以不同包体部分兼容。
+应用程序在不同模式之间部分兼容，具有不同的包体。
 
 **起始版本：** 26.0.1
 
@@ -146,7 +146,7 @@ PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE = 6
 FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7
 ```
 
-应用程序在不同模式之间以相同包体完全兼容。
+应用程序在不同模式之间完全兼容，具有相同的包体。
 
 **起始版本：** 26.0.1
 
@@ -164,7 +164,7 @@ FULL_COMPATIBLE_IDENTICAL_PACKAGE = 7
 FULL_COMPATIBLE_DIFFERENT_PACKAGE = 8
 ```
 
-应用程序在不同模式之间以不同的包体方式完全兼容。
+应用程序在不同模式之间完全兼容，具有不同的包体。
 
 **起始版本：** 26.0.1
 

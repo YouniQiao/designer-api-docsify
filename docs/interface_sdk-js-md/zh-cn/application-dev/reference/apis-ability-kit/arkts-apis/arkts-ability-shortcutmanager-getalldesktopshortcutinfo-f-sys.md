@@ -28,7 +28,7 @@ function getAllDesktopShortcutInfo(userId: number): Promise<Array<ShortcutInfo>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| userId | number | 是 | 被查询的用户id。可以通过[getOsAccountLocalId接口](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)获取。 |
+| userId | number | 是 | 被查询的用户ID。可以通过[getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid)接口获取。 |
 
 **返回值：**
 

@@ -1,14 +1,14 @@
-# @ohos.distributedBundle
+# @ohos.distributedBundle(Distributed Bundle Management)
 
 The distributedBundle module manages distributed bundles.
 
 > **NOTE:** 
 > 
-> The APIs of this module have been deprecated since API version 9. You are advised to use
+> This module is no longer maintained since API version 9. You are advised to use
 > [@ohos.bundle.distributedBundleManager](arkts-ability-bundle-distributedbundlemanager.md)
 > instead.
 > 
-> The APIs provided by this module are system APIs.
+> This module is a system API.
 
 **Since:** 8
 

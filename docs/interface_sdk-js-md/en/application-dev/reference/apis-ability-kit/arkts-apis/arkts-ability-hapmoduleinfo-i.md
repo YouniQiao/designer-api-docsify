@@ -4,7 +4,7 @@
 export interface HapModuleInfo
 ```
 
-The module defines the HAP module information.
+The module defines the HAP module information. An application can obtain its own HAP module information through [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md), with **GET_BUNDLE_INFO_WITH_HAP_MODULE** passed in for [bundleFlags](arkts-ability-bundlemanager-bundleflag-e.md).
 
 **Since:** 9
 
@@ -18,7 +18,9 @@ The module defines the HAP module information.
 readonly abilitiesInfo: Array<AbilityInfo>
 ```
 
-Information about all ability components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+Information about all abilities in the current module. Obtained by calling [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ABILITY** passed in as the **bundleFlags** parameter.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;[AbilityInfo](arkts-ability-abilityinfo-i.md)&gt;
 
@@ -38,6 +40,8 @@ readonly codePath: string
 
 Installation path of the module.
 
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
+
 **Type:** string
 
 **Since:** 12
@@ -54,7 +58,9 @@ Installation path of the module.
 readonly dependencies: Array<Dependency>
 ```
 
-Dynamic shared libraries on which the module depends.
+List of dynamic shared libraries that the module depends on at runtime.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;[Dependency](arkts-ability-hapmoduleinfo-dependency-i.md)&gt;
 
@@ -74,6 +80,8 @@ readonly description: string
 
 Module description.
 
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
+
 **Type:** string
 
 **Since:** 9
@@ -90,7 +98,9 @@ Module description.
 readonly descriptionId: number
 ```
 
-ID of the module description.
+Resource ID of the description.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** number
 
@@ -108,7 +118,9 @@ ID of the module description.
 readonly deviceTypes: Array<string>
 ```
 
-Array of [device types](../../../quick-start/module-configuration-file.md#devicetypes) that the module supports for installation and running.
+Set of [device types](../../../quick-start/module-configuration-file.md#devicetypes) on which the module can be installed and run.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;string&gt;
 
@@ -126,7 +138,9 @@ Array of [device types](../../../quick-start/module-configuration-file.md#device
 readonly extensionAbilitiesInfo: Array<ExtensionAbilityInfo>
 ```
 
-Information about all ExtensionAbility components of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+Information about all ExtensionAbilities in the current module. Obtained by calling [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY** passed in as the **bundleFlags** parameter.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;[ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)&gt;
 
@@ -144,7 +158,9 @@ Information about all ExtensionAbility components of the current module. The inf
 readonly fileContextMenuConfig: string
 ```
 
-File menu configuration of the module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+File menu configuration of the module. Obtained by calling [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_MENU** passed in as the **bundleFlags** parameter.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** string
 
@@ -162,7 +178,9 @@ File menu configuration of the module. The information can be obtained by passin
 readonly hashValue: string
 ```
 
-Hash value of the module.
+Hash value of the module, which uniquely identifies the module. The hash value is calculated based on the module content and can be used to verify module integrity and compare versions.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** string
 
@@ -180,7 +198,9 @@ Hash value of the module.
 readonly icon: string
 ```
 
-[Icon](../../../quick-start/layered-image.md) for the entry ability of the current module. It is the index of the icon resource file and should match the value of **icon** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
+[Icon](../../../quick-start/layered-image.md) of the entry ability of the current module. The value is the index of the icon resource file, which is the same as the value of the **icon** field of the [abilities tag](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities tag](../../../quick-start/module-configuration-file.md#extensionabilities) in the module configuration file. If no entry ability is configured, the value is empty.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** string
 
@@ -198,7 +218,9 @@ readonly icon: string
 readonly iconId: number
 ```
 
-[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the icon for the entry ability of the current module. If no entry ability is configured, this parameter is left empty.
+[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the icon of the entry ability of the current module. If no entry ability is configured, the value is **0**.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** number
 
@@ -216,7 +238,9 @@ readonly iconId: number
 readonly installationFree: boolean
 ```
 
-Whether the module supports the installation-free feature. Installation-free means that the module does not need to be explicitly installed through an app market. **true** if the module supports installation-free, **false** otherwise.
+Whether the module supports installation-free (without requiring the user to explicitly install it from the app market). The value **true** indicates that installation-free is supported, and **false** indicates the opposite.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** boolean
 
@@ -234,7 +258,9 @@ Whether the module supports the installation-free feature. Installation-free mea
 readonly label: string
 ```
 
-Label of the entry ability of the current module. It is the index of a string resource and should match the value of **label** in the [abilities](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities](../../../quick-start/module-configuration-file.md#extensionabilities) field in the module configuration file. If no entry ability is configured, this parameter is left empty.
+Name of the entry ability of the current module. The value is the index of the string resource, which is the same as the value of the **label** field of the [abilities tag](../../../quick-start/module-configuration-file.md#abilities) or [extensionAbilities tag](../../../quick-start/module-configuration-file.md#extensionabilities) in the module configuration file. If no entry ability is configured, the value is empty.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** string
 
@@ -252,7 +278,9 @@ Label of the entry ability of the current module. It is the index of a string re
 readonly labelId: number
 ```
 
-[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the label for the entry ability of the current module. If no entry ability is configured, this parameter is left empty.
+[Resource ID](../../../quick-start/resource-categories-and-access.md#resource-directories) of the name of the entry ability of the current module. If no entry ability is configured, the value is **0**.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** number
 
@@ -270,7 +298,9 @@ readonly labelId: number
 readonly mainElementName: string
 ```
 
-Name of the UIAbility or ExtensionAbility that serves as the entry of the current module.
+Name of the entry UIAbility or ExtensionAbility of the current module.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** string
 
@@ -288,7 +318,9 @@ Name of the UIAbility or ExtensionAbility that serves as the entry of the curren
 readonly metadata: Array<Metadata>
 ```
 
-Metadata of the current module. The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_METADATA** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+Metadata of the current module. Obtained by calling [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_METADATA** passed in as the **bundleFlags** parameter.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;[Metadata](arkts-ability-metadata-i.md)&gt;
 
@@ -308,6 +340,8 @@ readonly name: string
 
 Module name.
 
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
+
 **Type:** string
 
 **Since:** 9
@@ -324,7 +358,7 @@ Module name.
 readonly nativeLibraryPath: string
 ```
 
-Local library file path of the module in the application.
+Path of the local library file of the module in the application.
 
 **Type:** string
 
@@ -340,7 +374,9 @@ Local library file path of the module in the application.
 readonly preloads: Array<PreloadItem>
 ```
 
-Preloaded modules in the atomic service.
+Preload list of the modules in the atomic service.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** Array&lt;[PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)&gt;
 
@@ -358,7 +394,9 @@ Preloaded modules in the atomic service.
 readonly routerMap: Array<RouterItem>
 ```
 
-[Router table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). The information can be obtained by passing in **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** to the **bundleFlags** parameter of [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md).
+[Route table configuration of the module](../../../quick-start/module-configuration-file.md#routermap). Obtained by calling [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md) with **GET_BUNDLE_INFO_WITH_HAP_MODULE** and **GET_BUNDLE_INFO_WITH_ROUTER_MAP** passed in as the **bundleFlags** parameter.
+
+**Atomic service API:** Since API version 12, this API is supported in atomic services.
 
 **Type:** Array&lt;[RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)&gt;
 
@@ -376,7 +414,9 @@ readonly routerMap: Array<RouterItem>
 readonly type: bundleManager.ModuleType
 ```
 
-Type of the module.
+Identifies the type of the current module.
+
+**Atomic service API:** Since API version 11, this API is supported in atomic services.
 
 **Type:** [bundleManager.ModuleType](arkts-ability-bundlemanager-moduletype-e.md)
 

@@ -29,7 +29,7 @@ Obtains the sandbox directory of an application based on the given bundle name a
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the application. This API can be called only when the application or its clone is available for the current user. Otherwise, error code 17700001 is returned. |
-| appIndex | number | Yes | Index of the application. The value ranges from 0 to 5. The value **0** indicates the main application, and the values 1 to 5 indicate the indexes of application clones. |
+| appIndex | number | Yes | Application index, used to identify different application instances. The value is an integer.<br>Value range:<br>- 0: main application <br> - [1, 5]: clone application<br>- [2000, 3000]: sandbox application (supported since API version 26.0.0) |
 
 **Return value:**
 

@@ -4,11 +4,7 @@
 export interface RemoteAbilityInfo
 ```
 
-包含远程的ability信息，通过接口[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo1)获取。
-
-> **说明：** 
-> 
-> 本模块为系统接口。
+包含远程的ability信息，通过接口[distributedBundle.getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md)获取。
 
 **起始版本：** 9
 
@@ -42,7 +38,7 @@ readonly elementName: ElementName
 readonly icon: string
 ```
 
-指明的远程ability的图标信息。
+指明远程ability的图标信息。
 
 **类型：** string
 
