@@ -18,13 +18,13 @@ Enumerates the routing modes.
 Standard
 ```
 
-Multi-instance mode. It is the default routing mode.
+Multi-instance mode, which is also the default page navigation mode.
 
-The target page is added to the top of the page stack, regardless of whether a page with the same URL exists in the stack.
+The target page is added to the top of the page stack, regardless of whether a page with the same URL already exists in the stack. This mode is suitable for scenarios where multiple identical pages need to be retained, for example, when product detail pages are browsed, each product requires an independent page instance.
 
 **NOTE:** 
 
-If no routing mode is used, the navigation will be carried out according to the default multi-instance mode.
+If no routing mode is specified, the default multi-instance mode is used for page navigation.
 
 **Since:** 9
 
@@ -42,9 +42,9 @@ Single
 
 Singleton mode.
 
-If the URL of the target page already exists in the page stack, the page is moved to the top of the stack.
+If the URL of the target page already exists in the page stack, the page with that URL is moved to the top of the stack.
 
-If the URL of the target page does not exist in the page stack, the page is redirected to in multi-instance mode.
+If the URL of the target page has no matching page in the page stack, the default multi-instance mode is used for page navigation. This mode is suitable for scenarios where a unique page instance needs to be maintained, for example, pages such as the home page and login page that should not appear repeatedly in the stack.
 
 **Since:** 9
 

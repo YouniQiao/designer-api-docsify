@@ -28,7 +28,7 @@ import { SystemRouter, BackRouterOptions, DisableAlertBeforeBackPageOptions, Ena
 params?: Object
 ```
 
-Data that needs to be passed to the target page during redirection.
+Data to be passed to the target page when the page is returned.
 
 **Type:** Object
 

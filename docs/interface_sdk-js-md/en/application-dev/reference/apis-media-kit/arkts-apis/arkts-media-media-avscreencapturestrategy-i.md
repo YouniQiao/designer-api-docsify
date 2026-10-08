@@ -18,6 +18,24 @@ Provides the media AVScreenCaptureStrategy definition.
 import { media } from '@kit.MediaKit';
 ```
 
+## enableAEC
+
+```TypeScript
+enableAEC?: boolean
+```
+
+Specifies whether to enable echo detection and echo cancellation when microphone capture is enabled. Default value: The default value is false, indicating that echo cancellation is disabled.
+
+**Type:** boolean
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVScreenCaptureStrategy-enableAEC?: boolean--><!--Device-AVScreenCaptureStrategy-enableAEC?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
 ## enableBFrame
 
 ```TypeScript

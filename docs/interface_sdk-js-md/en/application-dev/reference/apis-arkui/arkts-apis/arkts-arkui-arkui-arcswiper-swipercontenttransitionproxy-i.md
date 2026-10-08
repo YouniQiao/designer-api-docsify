@@ -7,7 +7,7 @@ declare interface SwiperContentTransitionProxy
 Implements the proxy object returned during the execution of the custom page transition animation of the **ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom animation has finished playing.
 
 > **NOTE:** 
-
+> 
 > - For example, when the index of the currently selected child component is 0, during a transition animation from page 0 to page 1, the callback is triggered for all pages within the viewport on every frame. When pages 0 and 1are both in the viewport, the callback is triggered twice per frame. The first callback has **selectedIndex** as
 > **0**, **index** as **0**, **position** as the ratio of how much page 0 has moved relative to its position before
 > the animation started on the current frame, and **mainAxisLength** as the length of page 0 on the main axis. The
@@ -69,7 +69,7 @@ Index of a page in the viewport.
 mainAxisLength: number
 ```
 
-Length of the page specified by **index** along the main axis. Unit: vp.
+Length of the page corresponding to the index on the main axis. Unit: vp.
 
 **Type:** number
 

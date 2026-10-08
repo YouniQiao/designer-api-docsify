@@ -69,6 +69,7 @@
   - [kickOutFromConference(system api)](arkts-telephony-call-kickoutfromconference-f-sys.md)<!--DelEnd-->
   - [makeCall](arkts-telephony-call-makecall-f.md)
   - [makeCallWithToken](arkts-telephony-call-makecallwithtoken-f.md)
+  - [makeDirectCall](arkts-telephony-call-makedirectcall-f.md)
   <!--Del-->
   - [muteRinger(system api)](arkts-telephony-call-muteringer-f-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -14,7 +14,7 @@ import { router } from '@kit.ArkUI';
 function pushNamedRoute(options: NamedRouterOptions, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
+Navigates to a page using the named route.
 
 > **NOTE:** 
 > 
@@ -39,7 +39,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the page routing result.<br>When the page redirection is successful, the value of **error** is **undefined**. When the page redirection fails, the value of **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -94,7 +94,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
+Navigates to a page using the named route.
 
 > **NOTE:** 
 > 
@@ -124,7 +124,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -181,7 +181,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode, callback: AsyncCallback<void>): void
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
+Navigates to a page using the named route.
 
 > **NOTE:** 
 > 
@@ -207,7 +207,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 | --- | --- | --- | --- |
 | options | [NamedRouterOptions](arkts-arkui-router-namedrouteroptions-i.md) | Yes | Page routing parameters. |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the page routing result.<br>When the page redirection is successful, the value of **error** is **undefined**. When the page redirection fails, the value of **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -262,7 +262,7 @@ router.pushNamedRoute({
 function pushNamedRoute(options: NamedRouterOptions, mode: RouterMode): Promise<void>
 ```
 
-Navigates to a page using the named route. This API uses a promise to return the result.
+Navigates to a page using the named route.
 
 > **NOTE:** 
 > 
@@ -293,7 +293,7 @@ Navigates to a page using the named route. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

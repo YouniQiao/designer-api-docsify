@@ -1,6 +1,6 @@
 # @ohos.arkui.dragController(DragController)
 
-This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein.
+This module provides APIs for initiating drag actions. When receiving a gesture event, such as a touch or long-press event, an application can initiate a drag action and carry drag information therein. It is suitable for scenarios where the application needs to independently control the timing of drag initiation, drag preview effects, and drag data transfer, implementing more flexible custom drag interactions.
 
 > **NOTE:** 
 > 
@@ -28,7 +28,7 @@ import { dragController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
+| [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md) | Creates a drag action object for initiating drag and drop operations. You need to explicitly specify one or more drag previews, the drag data, and the drag handle point. If a drag operation initiated by an existing drag action object is not completed, no new object can be created, and calling the API will throw an exception. After the lifecycle of the drag action object ends, the callback functions registered on this object become invalid. Therefore, it is necessary to hold this object within a longer scope and replace the old value with a new object returned by **createDragAction** before each drag initiation. |
 | [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag1) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses an asynchronous callback to return the result. |
 | [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md#executedrag2) | Initiates a drag action, with the object to be dragged and the drag information passed in. This API uses a promise to return the result. |
 | [getDragPreview](arkts-arkui-dragcontroller-getdragpreview-f.md) | Obtains the **DragPreview** object, which represents the preview displayed during a drag operation. |

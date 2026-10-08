@@ -35,7 +35,7 @@ import { componentSnapshot } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md#createfrombuilder1) | Renders a custom component in the application background and outputs its snapshot. This API uses an asynchronous callback to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
-| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md#createfrombuilder2) | Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the callback. |
+| [createFromBuilder](arkts-arkui-componentsnapshot-createfrombuilder-f.md#createfrombuilder2) | Renders a custom component in the application background and outputs its snapshot. This API uses a promise to return the result. The coordinates and size of the offscreen component's drawing area can be obtained through the promise. |
 | [get](arkts-arkui-componentsnapshot-get-f.md#get1) | Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses an asynchronous callback to return the result. |
 | [get](arkts-arkui-componentsnapshot-get-f.md#get2) | Obtains the snapshot of a component that has been loaded based on the provided component ID. This API uses a promise to return the result. |
 | [getSync](arkts-arkui-componentsnapshot-getsync-f.md) | Obtains the snapshot of a component that has been loaded based on the provided component ID. This API synchronously waits for the snapshot to complete and returns a [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) object. |
@@ -55,4 +55,4 @@ import { componentSnapshot } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) | Defines the snapshot region rect type. |
+| [SnapshotRegionType](arkts-arkui-componentsnapshot-snapshotregiontype-t.md) | Represents the region of a component to be captured in a snapshot. It can take one of the following types: SnapshotRegion or LocalizedSnapshotRegion. |

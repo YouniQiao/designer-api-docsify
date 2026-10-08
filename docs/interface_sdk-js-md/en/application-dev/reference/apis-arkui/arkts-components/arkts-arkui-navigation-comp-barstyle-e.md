@@ -54,7 +54,7 @@ In this mode, the title bar or toolbar is overlaid on top of the content area.
 SAFE_AREA_PADDING = 2
 ```
 
-In this mode, the title bar or toolbar is configured to respect the [component-level safe area](arkts-arkui-common-comp-commonmethod-c.md#safeareapadding).
+In this mode, the title bar or toolbar is set to [safeAreaPadding](arkts-arkui-common-comp-commonmethod-c.md#safeareapadding).
 
 **Since:** 14
 

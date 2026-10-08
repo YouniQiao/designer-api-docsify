@@ -97,6 +97,7 @@ enum OH_AudioSession_Scene
 | AUDIO_SESSION_SCENE_MEDIA = 0 | 媒体音频会话场景。 |
 | AUDIO_SESSION_SCENE_GAME = 1 | 游戏音频会话场景。 |
 | AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2 | VoIP语音通话音频会话场景。 |
+| AUDIO_SESSION_SCENE_VOICE_MESSAGE = 3 | 语音消息音频会话场景。 |
 
 ### OH_AudioSession_StateChangeHint
 

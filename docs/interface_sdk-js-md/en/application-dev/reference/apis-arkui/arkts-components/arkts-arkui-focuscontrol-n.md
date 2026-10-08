@@ -4,7 +4,15 @@
 declare namespace focusControl
 ```
 
-Implements focus control.
+Focus control module, used to actively request focus for a specified component through APIs. It is suitable for scenarios where focus transfer needs to be actively controlled in code.
+
+> **NOTE:** 
+> 
+> Directly using **focusControl** can lead to the issue of
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
+> [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
+> **focusControl** bound to the instance using the
+> [getFocusController](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getfocuscontroller) API.
 
 **Since:** 9
 

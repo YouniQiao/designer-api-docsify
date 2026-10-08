@@ -4,7 +4,7 @@
 export type EditableTitleBarItemV2 = EditableTitleBarMenuItemV2
 ```
 
-Declaration of the image item.
+Defines the type alias of the left avatar item. The left avatar does not support configuring accessibility attributes.
 
 **Since:** 26.0.0
 

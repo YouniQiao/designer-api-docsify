@@ -178,7 +178,7 @@ Initiates a drag action, with the object to be dragged and the drag information 
 | Type | Description |
 | --- | --- |
 | Promise&lt;{ event: DragEvent, extraParams: string }&gt; | Promise used to return the result.<br>**Since:** 10 - 11 |
-| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | A Promise with the drag event information.<br>**Since:** 12 |
+| Promise&lt;[DragEventParam](arkts-arkui-dragcontroller-drageventparam-i.md)&gt; | Promise used to return the result when the drag ends.<br>**Since:** 12 |
 
 **Error codes:**
 

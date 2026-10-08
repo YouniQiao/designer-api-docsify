@@ -4,7 +4,7 @@
 export class ComponentSnapshot
 ```
 
-Provides APIs for obtaining component snapshots, including snapshots of components that have been loaded and snapshots of components that have not been loaded yet.
+Provides the capability of obtaining component screenshots, including screenshots of loaded and unloaded components. This is applicable to scenarios where the component rendering result needs to be obtained for display or subsequent processing.
 
 > **NOTE:** 
 > 

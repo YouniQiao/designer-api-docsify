@@ -4,7 +4,23 @@
 declare enum LayoutStyle
 ```
 
-Enumerates the tab layout styles of the tab bar when not scrolling in scrollable mode.
+Enumerates the tab layout modes when the tab bar is not scrolled in [Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode3) mode.
+
+| Name | Value | Description |  
+| ---------- | -- | ---------------------------------------- |  
+| ALWAYS_CENTER | 0 | When the tab content exceeds the tab bar width, the tab bar is scrollable.
+
+When the tab content does not exceed the tab bar width, the tab bar is not scrollable and the tabs are compactly centered.|
+
+| ALWAYS_AVERAGE_SPLIT | 1 | When the tab content exceeds the tab bar width, the tab bar is scrollable.
+
+When the tab content does not exceed the tab bar width, the tab bar is not scrollable and all tabs evenly share the tab bar width.|
+
+| SPACE_BETWEEN_OR_CENTER | 2 | When the tab content exceeds the tab bar width, the tab bar is scrollable.
+
+When the tab content does not exceed the tab bar width but exceeds half of the tab bar width, the tab bar is not scrollable and the tabs are compactly centered.
+
+When the tab content does not exceed half of the tab bar width, the tab bar is not scrollable, the tabs are centered, the spacing between tabs is equal, and the total width of all tabs occupies half of the tab bar width.|
 
 **Since:** 10
 

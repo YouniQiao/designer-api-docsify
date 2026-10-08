@@ -4,7 +4,7 @@
 enum GestureType
 ```
 
-Enumerates gesture recognizer types.
+Enumerates gesture types.
 
 **Since:** 11
 
@@ -162,7 +162,7 @@ Click.
 BOX_SELECT_GESTURE = 8
 ```
 
-Swipe gesture used to create a selection area by dragging with the mouse within a scroll container, enabling the batch selection of multiple elements.
+Mouse box selection gesture in a scrollable container. It is a special pan gesture used to create a selection area by dragging the mouse in a scrollable container to select multiple elements in batches.
 
 **Since:** 23
 
@@ -180,7 +180,7 @@ Swipe gesture used to create a selection area by dragging with the mouse within 
 WEB_SCROLL_GESTURE = 9
 ```
 
-Swipe gesture used to control the scrolling behavior of a **Web** component.
+Web component scroll gesture. It is a special pan gesture used to control the scrolling behavior within the **Web** component.
 
 **Since:** 23
 
@@ -198,7 +198,7 @@ Swipe gesture used to control the scrolling behavior of a **Web** component.
 TEXT_FIELD_SELECT_GESTURE = 10
 ```
 
-Swipe gesture used to select text content by dragging within an input box component.
+Text selection gesture. It is a special pan gesture used to select text content by dragging in an input box component.
 
 **Since:** 23
 

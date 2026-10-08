@@ -4,7 +4,13 @@
 export declare enum ToolBarV2ItemState
 ```
 
-Declare enum ToolBarV2ItemState
+Enumerates the states of the toolbar item.
+
+| Name | Value| Description |  
+| -------- | - | --------------- |  
+| ENABLE | 1 | The toolbar item is enabled. |
+| DISABLE | 2 | The toolbar item is disabled. |
+| ACTIVATE | 3 | The toolbar item is activated.|
 
 **Since:** 18
 

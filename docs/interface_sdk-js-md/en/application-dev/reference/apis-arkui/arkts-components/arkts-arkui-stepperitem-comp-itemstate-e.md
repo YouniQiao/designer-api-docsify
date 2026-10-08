@@ -74,7 +74,7 @@ The button on the right is not displayed, and a progress bar is displayed instea
 
 **NOTE:** 
 
-This API is supported since API version 8 and deprecated since API version 22. You are advised to use Swiper instead.
+This API is supported since API version 8 and deprecated since API version 22. You are advised to use [Swiper](arkts-arkui-swiper-comp.md) instead.
 
 **Since:** 8
 

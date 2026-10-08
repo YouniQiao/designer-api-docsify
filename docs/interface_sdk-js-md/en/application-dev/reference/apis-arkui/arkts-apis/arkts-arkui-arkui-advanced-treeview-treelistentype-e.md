@@ -36,7 +36,7 @@ Listens for click events of nodes.
 NODE_ADD = "NodeAdd"
 ```
 
-Listens for add events of nodes.
+Listens for the node addition event. Triggered after the **addNode** method is called to add a node.
 
 **Since:** 10
 
@@ -54,7 +54,7 @@ Listens for add events of nodes.
 NODE_DELETE = "NodeDelete"
 ```
 
-Listens for delete events of nodes.
+Listens for the node deletion event. Triggered after the **removeNode** method is called to delete a node.
 
 **Since:** 10
 
@@ -72,7 +72,7 @@ Listens for delete events of nodes.
 NODE_MODIFY = "NodeModify"
 ```
 
-Listens for modify events of nodes.
+Listens for the node modification event. Triggered after the **modifyNode** method is called to modify a node.
 
 **Since:** 10
 
@@ -90,7 +90,7 @@ Listens for modify events of nodes.
 NODE_MOVE = "NodeMove"
 ```
 
-Listens for move events of nodes.
+Listens for the node move event. Triggered after the node position changes.
 
 **Since:** 10
 

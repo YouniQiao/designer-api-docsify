@@ -6,8 +6,6 @@ type ParamsInterface = {
 }
 ```
 
-List of routing parameters.
-
 **Since:** 7
 
 **Deprecated since:** 8

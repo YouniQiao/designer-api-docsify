@@ -4,9 +4,9 @@
 declare class SideBarContainerAttribute extends CommonMethod<SideBarContainerAttribute>
 ```
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-In addition to the universal events, the following events are supported.
+In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
 **Inheritance/Implementation:** SideBarContainerAttribute extends CommonMethod&lt;SideBarContainerAttribute&gt;
 
@@ -22,9 +22,9 @@ In addition to the universal events, the following events are supported.
 autoHide(value: boolean)
 ```
 
-Specifies whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width. The value is subject to the **minSideBarWidth** attribute method. If it is not set in **minSideBarWidth**, the default value is used.
+Sets whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width. The value is subject to the **minSideBarWidth** attribute method. If the **minSideBarWidth** attribute method is not set, the default value is used. After the sidebar is automatically hidden, the **showSideBar** attribute value is synchronously updated to **false**, and the **onChange** event is triggered.
 
-Whether the sidebar should be hidden is determined when it is being dragged. When it is dragged to be smaller than the minimum width, the damping effect is required to trigger hiding (a distance out of range).
+Determines whether to automatically hide the sidebar during dragging. When the sidebar is dragged to be smaller than the minimum width, it must be dragged beyond the boundary by a certain distance (the specific distance is determined by the system implementation) to trigger automatic hiding, which provides a damping effect to avoid accidental operations.
 
 **Since:** 9
 
@@ -38,7 +38,7 @@ Whether the sidebar should be hidden is determined when it is being dragged. Whe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width.<br>**true**: The sidebar is automatically hidden.<br>**false**: The sidebar is not automatically hidden.<br>Default value: **true** |
+| value | boolean | Yes | Whether to automatically hide the sidebar when it is dragged to be smaller than the minimum width.<br>**true**: The sidebar is automatically hidden. <br>**false**: The sidebar is not automatically hidden. <br>Default value: **true** |
 
 ## controlButton
 
@@ -46,7 +46,7 @@ Whether the sidebar should be hidden is determined when it is being dragged. Whe
 controlButton(value: ButtonStyle)
 ```
 
-Sets the attributes of the sidebar control button.
+Sets the attributes of the sidebar control button. The control button is used to switch the sidebar between the shown and hidden states.
 
 **Since:** 8
 
@@ -60,7 +60,7 @@ Sets the attributes of the sidebar control button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ButtonStyle](arkts-arkui-sidebarcontainer-comp-buttonstyle-i.md) | Yes | Attributes of the sidebar control button. |
+| value | [ButtonStyle](arkts-arkui-sidebarcontainer-comp-buttonstyle-i.md) | Yes | Style of the sidebar control button, used to configure the position, size, and icon of the control button. |
 
 ## divider
 
@@ -84,7 +84,7 @@ Sets the divider style.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DividerStyle](arkts-arkui-sidebarcontainer-comp-dividerstyle-i.md) &#124; null | Yes | Divider style.<br>- **DividerStyle** (default): The divider is displayed.<br>- **null** or **undefined**: No action is taken, and the divider style remains consistent with the default.<br>**NOTE:** <br>In API version 11 and earlier versions, **null** results in the divider not being displayed. |
+| value | [DividerStyle](arkts-arkui-sidebarcontainer-comp-dividerstyle-i.md) &#124; null | Yes | Style of the divider.<br>The default value is **DividerStyle**, which displays the divider.<br>- **null** or **undefined**: The divider style remains the default value and is not changed.<br>**Note:** <br>In API version 11 and earlier, **null** means that the divider is not displayed. |
 
 <a id="maxsidebarwidth1"></a>
 
@@ -110,7 +110,7 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Maximum width of the sidebar.<br>Default value: **280vp**<br>Unit: vp<br>Value range: [0, +∞). |
+| value | number | Yes | Maximum width of the sidebar.<br>Default value: **280vp**<br>Unit: vp<br>Value range: [0, +∞)<br>The default value is used when an invalid value is set.<br>The value cannot exceed the width of the sidebar container itself. If it does, the width of the sidebar container itself is used. |
 
 <a id="maxsidebarwidth2"></a>
 
@@ -120,7 +120,7 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 maxSideBarWidth(value: Length)
 ```
 
-Sets the maximum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared with [maxSideBarWidth](#maxsidebarwidth1), this API supports percentage strings and other pixel units for the **value** parameter.
+Sets the maximum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared with [maxSideBarWidth](#maxsidebarwidth1), this API supports percentage strings and other [pixel units](arkts-arkui-common-comp.md) for the **value** parameter.
 
 **maxSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **maxWidth** of the sidebar child components.
 
@@ -136,7 +136,7 @@ Sets the maximum width of the sidebar. If a value less than 0 is set, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Maximum width of the sidebar.<br>Default value: **280vp**<br>Unit: vp<br>Value range: [0, +∞). |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Maximum width of the sidebar.<br>Default value: **280vp**<br>Unit: vp<br>Value range: [0, +∞)<br>The default value is used when an exception occurs.<br> The value cannot exceed the width of the sidebar container itself. If it does, the width of the sidebar container itself is used. |
 
 ## minContentWidth
 
@@ -174,7 +174,7 @@ width reaches the value defined by **minContentWidth**, the content area has its
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum content area width of the sidebar container.<br>Default value: **360vp**<br> Unit: vp |
+| value | [Dimension](../arkts-apis/arkts-arkui-dimension-t.md) | Yes | Minimum width of the content area of the **SideBarContainer** component.<br>Default value: **360vp**<br>Value range: [0, +∞)<br>If the value is less than 0, the default value is used. |
 
 <a id="minsidebarwidth1"></a>
 
@@ -200,7 +200,7 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum width of the sidebar.<br>Unit: vp. Value range: [0, +∞). Default value: In API version 9 and earlier versions, the default value is **200vp**. |
+| value | number | Yes | Minimum width of the sidebar.<br>Default value: **200vp** for API version 9 and earlier, and **240vp** for API version 10 and later.<br>Unit: vp<br>Value range: [0, +∞)<br>The default value is used when an invalid value is set. |
 
 <a id="minsidebarwidth2"></a>
 
@@ -210,7 +210,7 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 minSideBarWidth(value: Length)
 ```
 
-Sets the minimum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared to [minSideBarWidth](#minsidebarwidth1), this API supports percentage strings and other pixel units for the **value** parameter.
+Sets the minimum width of the sidebar. If a value less than 0 is set, the default value is used. The value cannot exceed the width of the sidebar container. If the specified value exceeds the sidebar container width, the container width is used instead. Compared to [minSideBarWidth](#minsidebarwidth1), this API supports percentage strings and other [pixel units](arkts-arkui-common-comp.md) for the **value** parameter.
 
 **minSideBarWidth**, whether it is specified or kept at the default value, takes precedence over **minWidth** of the sidebar child components.
 
@@ -226,7 +226,7 @@ Sets the minimum width of the sidebar. If a value less than 0 is set, the defaul
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Minimum width of the sidebar.<br>Default value: In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**.<br>Value range: [0, +∞). |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Minimum width of the sidebar.<br>Default value: **200vp** for API version 9 and earlier, and **240vp** for API version 10 and later.<br>Unit: vp<br>Value range: [0, +∞)<br>The default value is used when an invalid value is set. |
 
 ## onChange
 
@@ -262,7 +262,7 @@ This event is triggered when any of the following conditions is met:
 showControlButton(value: boolean)
 ```
 
-Specifies whether to display the sidebar control button.
+Sets whether to display the control button. The control button is used to toggle the **showSideBar** attribute. Tapping it shows or hides the sidebar and updates the **showSideBar** attribute value.
 
 **Since:** 8
 
@@ -276,7 +276,7 @@ Specifies whether to display the sidebar control button.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the sidebar control button.<br>**true**: The sidebar control button is displayed.<br>**false**: The sidebar control button is not displayed.<br>Default value: **true** |
+| value | boolean | Yes | Whether to display the sidebar control button.<br>**true**: The sidebar control button is displayed. <br>**false**: The sidebar control button is not displayed. <br>Default value: **true** |
 
 ## showSideBar
 
@@ -284,7 +284,9 @@ Specifies whether to display the sidebar control button.
 showSideBar(value: boolean)
 ```
 
-Specifies whether to display the sidebar.
+Sets whether to display the sidebar. Setting this attribute triggers the show/hide animation of the sidebar.
+
+When the **showSideBar** attribute is not set, the sidebar is automatically displayed based on the component size: it is hidden by default when the size is smaller than [minSideBarWidth](#minsidebarwidth1) + [minContentWidth](#mincontentwidth), and displayed by default when the size is greater than or equal to that value.
 
 Since API version 10, this attribute supports two-way binding through [$$](../../../ui/state-management/arkts-two-way-sync.md).
 
@@ -300,7 +302,7 @@ Since API version 10, this attribute supports two-way binding through [$$](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to display the sidebar.<br>**true**: The sidebar is displayed.<br>**false**: The sidebar is not displayed.<br>Default value: **true** |
+| value | boolean | Yes | Whether to display the sidebar.<br>**true**: The sidebar is displayed. <br>**false**: The sidebar is not displayed. <br>Default value: **true** |
 
 ## showSideBarWithGesture
 
@@ -308,7 +310,23 @@ Since API version 10, this attribute supports two-way binding through [$$](../..
 showSideBarWithGesture(value: boolean)
 ```
 
-Specifies whether sideBar can be presented or dismissed by gesture.
+Sets whether the sidebar can be displayed or hidden by swiping. If this API is not called, the sidebar cannot be displayed or hidden by swiping.
+
+> **NOTE:** 
+> 
+> - The swipe gesture takes effect on the sidebar and content area (excluding the divider). When the swiping distance reaches 100 vp, the sidebar is displayed or hidden. The maximum swiping distance is equal to the width of the sidebar.
+> 
+> - When the sidebar is on the left of the container:
+> 
+> - You can swipe right to expand the sidebar when it is hidden.
+> 
+> - You can swipe left to close the sidebar when it is displayed.
+> 
+> - When the sidebar is on the right of the container:
+> 
+> - You can swipe left to expand the sidebar when it is hidden.
+> 
+> - You can swipe right to close the sidebar when it is displayed.
 
 **Since:** 26.0.0
 
@@ -324,7 +342,7 @@ Specifies whether sideBar can be presented or dismissed by gesture.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Indicates whether the sidebar can be presented or dismissed by gesture.<br>Default value: **false**. **true**: Sidebar can be presented or dismissed by gesture. **false**: Sidebar cannot be presented or dismissed by gesture. |
+| value | boolean | Yes | Whether to support showing or hiding the sidebar through gesture swiping.<br>**true**: gesture swiping is supported.<br>**false**: gesture swiping is not supported.<br>Default value: **false** |
 
 ## sideBarPosition
 
@@ -356,7 +374,7 @@ Sets the position of the sidebar.
 sideBarWidth(value: number)
 ```
 
-Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value must comply with the width constraints. If it is not within the valid range, the valid value closest to the set one is used.
+Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value is subject to the **minSideBarWidth** and **maxSideBarWidth** constraints. If it is not within the valid range, the closest boundary value is used.
 
 Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
 
@@ -372,7 +390,7 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:** <br>In API version 9 and earlier versions, the default value is **200vp**. In API version 10, the default value is **240vp**. |
+| value | number | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞)<br>The default value is used when an invalid value is set.<br>**NOTE:** <br> The default value is **200vp** for API versions earlier than 10, and **240vp** for API version 10 and later. |
 
 <a id="sidebarwidth2"></a>
 
@@ -382,7 +400,7 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 sideBarWidth(value: Length)
 ```
 
-Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value must comply with the width constraints. If it is not within the valid range, the valid value closest to the set one is used. Compared to [sideBarWidth](#sidebarwidth1), this API supports percentage strings and other pixel units for the **value** parameter.
+Sets the width of the sidebar. If a value less than 0 is set, the default value is used. The value is subject to the **minSideBarWidth** and **maxSideBarWidth** constraints. If it is not within the valid range, the closest boundary value is used. Compared with [sideBarWidth](#sidebarwidth1), the **value** parameter additionally supports percentage strings and other [pixel units](arkts-arkui-common-comp.md).
 
 Since API version 18, this attribute supports two-way binding through [!!](../../../ui/state-management/arkts-new-binding.md).
 
@@ -398,4 +416,4 @@ Since API version 18, this attribute supports two-way binding through [!!](../..
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞).<br>**NOTE:** <br>The default value is **200vp** in API version 9 and **240vp** in API version 10. |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) | Yes | Width of the sidebar.<br>Default value: **240vp**<br>Unit: vp<br>Value range: [0, +∞)<br>If the value is abnormal, the default value is used.<br> **NOTE:** <br>The default value is **200vp** since API version 9, and **240vp** since API version 10. |

@@ -258,7 +258,7 @@ SYSTEM_SUSPEND_USB_NOT_USED = 20
 
 A continuous task of the **USB_CONNECTION** type is requested, but USB device is not in use.
 
-**Since:** 26.2.0
+**Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 

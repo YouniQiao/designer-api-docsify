@@ -81,7 +81,7 @@
   - [ReminderType](arkts-backgroundtasks-reminderagentmanager-remindertype-e.md)
   - [RingChannel](arkts-backgroundtasks-reminderagentmanager-ringchannel-e.md)
   - [TimeZoneType](arkts-backgroundtasks-reminderagentmanager-timezonetype-e.md)
-- [@ohos.resourceschedule.backgroundLoader](arkts-backgroundtasks-resourceschedule-backgroundloader.md)
+- [@ohos.resourceschedule.backgroundLoader(应用数据后台加载)](arkts-backgroundtasks-resourceschedule-backgroundloader.md)
   - [finishTask](arkts-backgroundtasks-backgroundloader-finishtask-f.md)
   - [getTaskInfo](arkts-backgroundtasks-backgroundloader-gettaskinfo-f.md)
   - [registerTask](arkts-backgroundtasks-backgroundloader-registertask-f.md)

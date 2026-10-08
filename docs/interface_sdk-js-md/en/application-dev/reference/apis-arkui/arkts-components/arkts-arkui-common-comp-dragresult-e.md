@@ -4,7 +4,7 @@
 declare enum DragResult
 ```
 
-Defines the result of a drag operation and the drop-selection state of a component.
+Enumerates the results of drag operations and the drop-enabled states of components.
 
 **Since:** 10
 
@@ -18,7 +18,7 @@ Defines the result of a drag operation and the drop-selection state of a compone
 UNKNOWN = -1
 ```
 
-If the drag is not finished and the result is not set by receiver, return DragResult.UNKNOWN.
+The drag result has not been set. This value applies to [onDragStart](arkts-arkui-common-comp-commonmethod-c.md#ondragstart), [onDragEnter](arkts-arkui-common-comp-commonmethod-c.md#ondragenter), [onDragMove](arkts-arkui-common-comp-commonmethod-c.md#ondragmove), [onDragLeave](arkts-arkui-common-comp-commonmethod-c.md#ondragleave), and [onDrop](arkts-arkui-common-comp-commonmethod-c.md#ondrop1).
 
 **Since:** 24
 

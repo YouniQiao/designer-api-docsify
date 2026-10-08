@@ -18,7 +18,7 @@ Enumerates the display modes of selected subtabs.
 INDICATOR
 ```
 
-Indicator mode.
+Indicator mode. This mode is applicable to scenarios where the selected state needs to be clearly indicated, such as news apps.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Indicator mode.
 BOARD
 ```
 
-Board mode.
+Board mode. This mode is applicable to scenarios where the selected tab needs to be clearly distinguished, such as function navigation apps.
 
 **Since:** 10
 

@@ -40,7 +40,7 @@ Provides database transaction related functions and enumerations.
 | [int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_update) | Updates data in the database based on specified conditions. |
 | [int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH_VBucket *row, const OH_Predicates *predicates, Rdb_ConflictResolution resolution, int64_t *changes)](#oh_rdbtrans_updatewithconflictresolution) | Updates data in the database based on specified conditions and support conflict resolution. |
 | [int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, int64_t *changes)](#oh_rdbtrans_delete) | Deletes data from the database based on specified conditions |
-| [OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char * const columns[], int len)](#oh_rdbtrans_querywithoutrowcount) | Queries data in the database based on specified conditions without row count. |
+| [OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)](#oh_rdbtrans_querywithoutrowcount) | Queries data in the database based on specified conditions without row count. |
 | [OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *columns[], int len)](#oh_rdbtrans_query) | Queries data in the database based on specified conditions. |
 | [OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysql) | Queries data in the database based on SQL statement. |
 | [OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const char *sql, const OH_Data_Values *args)](#oh_rdbtrans_querysqlwithoutrowcount) | Queries data in the database based on SQL statement without row count. |
@@ -361,7 +361,7 @@ Deletes data from the database based on specified conditions
 ### OH_RdbTrans_QueryWithoutRowCount()
 
 ```c
-OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char * const columns[], int len)
+OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_Predicates *predicates, const char *const columns[], int len)
 ```
 
 **Description**
@@ -376,7 +376,7 @@ Queries data in the database based on specified conditions without row count.
 | -- | -- |
 | [OH_Rdb_Transaction](capi-rdb-oh-rdb-transaction.md) *trans | Represents a pointer to an instance of OH_Rdb_Transaction. |
 | [const OH_Predicates](capi-rdb-oh-predicates.md) *predicates | Represents the specified update condition by the instance object of OH_Predicates. |
-| const char * const columns[] | Represents the columns to query. If the value is empty array, the query applies to all columns. |
+| const char *const columns[] | Represents the columns to query. If the value is empty array, the query applies to all columns. |
 | int len | Represents the number of columns elements. |
 
 **Returns**:

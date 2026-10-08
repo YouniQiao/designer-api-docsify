@@ -4,7 +4,7 @@
 declare class PanGestureHandler extends GestureHandler<PanGestureHandler>
 ```
 
-Defines a pan gesture handler object.
+Defines the pan gesture handler object type, which is used to recognize drag or slide interactions on a component. It is suitable for scenarios where the state needs to be updated as the finger moves, and supports configuring the number of triggering fingers, the pan direction, the minimum drag distance, and the trigger distance for different input sources.
 
 **Inheritance/Implementation:** PanGestureHandler extends GestureHandler&lt;PanGestureHandler&gt;
 
@@ -36,7 +36,7 @@ Constructor used to create a pan gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [PanGestureHandlerOptions](arkts-arkui-tapgesture-comp-pangesturehandleroptions-i.md) | No | Parameters of the pan gesture handler. |
+| options | [PanGestureHandlerOptions](arkts-arkui-tapgesture-comp-pangesturehandleroptions-i.md) | No | Configuration options of the pan gesture handler. Pass this parameter when you need to customize the minimum number of fingers to trigger dragging, the trigger direction, the minimum drag distance, the minimum drag distance for different input sources, or finger count validation. If this parameter is not passed, the default configuration of the pan gesture handler is used, for example, the number of fingers to trigger is 1, the direction is **PanDirection.All**, the minimum drag distance uses the default value based on the input source, and the number of fingers touching the screen is not checked by default. |
 
 <a id="onactioncancel1"></a>
 

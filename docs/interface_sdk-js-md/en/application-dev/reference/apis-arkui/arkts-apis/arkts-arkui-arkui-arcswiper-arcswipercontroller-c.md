@@ -40,7 +40,7 @@ A constructor used to create an **ArcSwiperController** instance.
 finishAnimation(handler?: FinishAnimationHandler)
 ```
 
-Stops an animation.
+Stops the animation. When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
 
 **Since:** 18
 
@@ -54,7 +54,7 @@ Stops an animation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback invoked when the animation stops.<br>If no value is provided, no callback is performed. |
+| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback triggered when an animation stops.<br>Default value: No callback when not passed. |
 
 ## showNext
 
@@ -62,7 +62,7 @@ Stops an animation.
 showNext()
 ```
 
-Turns to the next page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
+Swipes to the next page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
 
 **Since:** 18
 
@@ -78,7 +78,7 @@ Turns to the next page. Page turning occurs with the animation, whose duration i
 showPrevious()
 ```
 
-Turns to the previous page. Page turning occurs with the animation, whose duration is specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration).
+Swipes to the previous page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
 
 **Since:** 18
 

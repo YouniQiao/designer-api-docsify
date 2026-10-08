@@ -1,5 +1,5 @@
 - [Ability Kit (1486)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability-ability.md)
-- [Accessibility Kit (127)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibility.md)
+- [Accessibility Kit (133)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-accessibility-kit/arkts-apis/arkts-accessibility-accessibility.md)
 - [Ads Kit (27)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-ads-kit/arkts-apis/arkts-ads-advertising.md)
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-api10lessdeprecatedmodules-bytrace.md)
 - [Arkdata (465)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability.md)

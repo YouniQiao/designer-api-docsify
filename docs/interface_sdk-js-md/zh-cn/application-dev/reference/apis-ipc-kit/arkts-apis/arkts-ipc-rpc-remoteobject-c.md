@@ -326,7 +326,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Sets an entry for receiving requests. <p>This method is implemented by the remote service provider. You need to override this method with your own service logic when you are using IPC.
+sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果。
+
+> **说明：** 
+> 
+> 开发者应优先选择重写onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 9
 
@@ -340,16 +346,16 @@ Sets an entry for receiving requests. <p>This method is implemented by the remot
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Service request code sent by the remote end. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object that holds the parameters called by the client. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object to which the result is written. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Whether the operation is synchronous or asynchronous. |
+| code | number | 是 | 对端发送的服务请求码。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean &#124; Promise&lt;boolean&gt; | If the request is processed synchronously in **onRemoteMessageRequest**, a Boolean value is returned. The value **true** means that the operation is successful, and **false** means the opposite.<br>- If the request is processed asynchronously in **onRemoteMessageRequest**, a promise object is returned. The value **true** means that the operation is successful, and **false** means the opposite. |
+| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 **示例**
 
@@ -449,7 +455,13 @@ onRemoteMessageRequest(
     ): boolean | Promise<boolean>
 ```
 
-Sets an entry for receiving requests. <p>This method is implemented by the remote service provider. You need to override this method with your own service logic when you are using IPC.
+sendMessageRequest请求的响应处理函数，服务端在该函数里同步或异步地处理请求，回复结果，该接口可从入参callingInfo中获取IPC上下文信息。
+
+> **说明：** 
+> 
+> 开发者应优先选择重写带有CallingInfo参数的onRemoteMessageRequest方法，其中可以自由实现同步和异步的消息处理。
+> 
+> 开发者同时重写onRemoteRequest和onRemoteMessageRequest方法时，仅onRemoteMessageRequest方法生效。
 
 **起始版本：** 23
 
@@ -463,17 +475,17 @@ Sets an entry for receiving requests. <p>This method is implemented by the remot
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Service request code sent by the remote end. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object that holds the parameters called by the client. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object to which the result is written. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Whether the operation is synchronous or asynchronous. |
-| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | 否 | IPC context. If this parameter is not specified, it defaults to **undefined**. Pass this parameter when you need to obtain information such as the caller's PID, UID, token ID, or device ID. You can obtain this information via **callingInfo.callerPid** and similar properties. If this parameter is not passed, IPC context information cannot be obtained directly, and you need to use other methods of **rpc.IPCSkeleton**, such as **getCallingPid** and **getCallingUid** |
+| code | number | 是 | 对端发送的服务请求码。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 携带客户端调用参数的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 写入结果的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 指示操作是同步还是异步。 |
+| callingInfo | [CallingInfo](arkts-ipc-rpc-callinginfo-c.md) | 否 | 获取IPC上下文信息。不传此参数时，默认为undefined。当需要获取调用者的PID、UID、TokenId或设备ID等信息时传入此参数，可通过callingInfo.callerPid等方式获取。不传入时无法直接获取IPC上下文信息，需通过rpc.IPCSkeleton其他方法（如getCallingPid、getCallingUid等）获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean &#124; Promise&lt;boolean&gt; | 同步模式成功时返回true，失败返回false；异步模式返回promise对象 |
+| boolean &#124; Promise&lt;boolean&gt; | 若在onRemoteMessageRequest中同步处理请求，则返回一个布尔值。返回true表示操作成功，返回false表示操作失败。<br>- 若在onRemoteMessageRequest中异步处理请求，则返回一个Promise对象。返回true表示操作成功，返回false表示操作失败。 |
 
 **示例**
 
@@ -575,7 +587,7 @@ sendMessageRequest(
     ): Promise<RequestResult>
 ```
 
-Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the peer process in synchronous or asynchronous mode. <p>If options indicates the asynchronous mode, a promise will be fulfilled immediately and the reply message does not contain any content. If options indicates the synchronous mode, a promise will be fulfilled when the response to sendMessageRequest is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageSequence消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendMessageRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -587,16 +599,16 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object holding the data to send. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object that receives the response. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Promise used to return the response to the request. |
+| Promise&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
 
 **错误码：**
 
@@ -664,7 +676,7 @@ sendMessageRequest(
     ): void
 ```
 
-Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the peer process in synchronous or asynchronous mode. <p>If options indicates the asynchronous mode, a callback will be invoked immediately and the reply message does not contain any content. If options indicates the synchronous mode, a callback will be invoked when the response to sendMessageRequest is returned, and the reply message contains the returned information.
+以同步或异步方式向对端进程发送MessageSequence消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendMessageRequest返回时收到回调，回复内容在reply报文里。
 
 **起始版本：** 9
 
@@ -676,11 +688,11 @@ Sends a [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) message to the pee
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object holding the data to send. |
-| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | **MessageSequence** object that receives the response. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | 是 | Callback used to return the result. When the message is sent successfully, the data returned by the server can be read from **RequestResult**. |
+| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存待发送数据的MessageSequence对象。 |
+| reply | [MessageSequence](arkts-ipc-rpc-messagesequence-c.md) | 是 | 接收应答数据的MessageSequence对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestResult](arkts-ipc-rpc-requestresult-i.md)&gt; | 是 | 回调函数。当消息发送成功时，可从RequestResult中读取服务端返回的数据。 |
 
 **错误码：**
 
@@ -1030,6 +1042,8 @@ sendRequest(
     ): Promise<SendRequestResult>
 ```
 
+以同步或异步方式向对端进程发送MessageParcel消息。如果为选项设置了异步模式，则发送请求的响应结果立即返回，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则发送请求的响应结果将在sendRequest返回时返回，回复内容在reply报文里。使用Promise异步回调。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -1044,16 +1058,16 @@ sendRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | **MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | **MessageParcel** object that receives the response. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Request sending mode, which can be synchronous (default) or asynchronous. |
+| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise used to return the response to the request. |
+| Promise&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | Promise对象，返回发送请求的响应结果。 |
 
 **示例**
 
@@ -1115,6 +1129,8 @@ sendRequest(
     ): void
 ```
 
+以同步或异步方式向对端进程发送MessageParcel消息。使用callback异步回调。如果为选项设置了异步模式，则立即收到回调，reply报文里没有内容，具体回复需要在业务侧的回调中获取。如果为选项设置了同步模式，则将在sendRequest返回时收到回调，回复内容在reply报文里。
+
 **起始版本：** 8
 
 **废弃版本：** 9
@@ -1129,11 +1145,11 @@ sendRequest(
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| code | number | 是 | Message code [1-16777215] called by the request, which is determined by the communication parties. If the method is generated by an IDL tool, the message code is automatically generated by the IDL tool. |
-| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | **MessageParcel** object holding the data to send. |
-| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | **MessageParcel** object that receives the response. |
-| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | Request sending mode, which can be synchronous (default) or asynchronous. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | Callback for receiving the sending result. |
+| code | number | 是 | 本次请求调用的消息码[1-16777215]，由通信双方确定。如果接口由IDL工具生成，则消息代码由IDL自动生成。 |
+| data | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 保存待发送数据的MessageParcel对象。 |
+| reply | [MessageParcel](arkts-ipc-rpc-messageparcel-c.md) | 是 | 接收应答数据的MessageParcel对象。 |
+| options | [MessageOption](arkts-ipc-rpc-messageoption-c.md) | 是 | 本次请求的同异步模式，默认同步调用。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[SendRequestResult](arkts-ipc-rpc-sendrequestresult-i.md)&gt; | 是 | 接收发送结果的回调。 |
 
 **示例**
 

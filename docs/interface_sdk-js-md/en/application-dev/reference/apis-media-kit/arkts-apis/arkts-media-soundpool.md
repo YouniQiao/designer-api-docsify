@@ -1,4 +1,4 @@
-# soundPool
+# soundPool(SoundPool)
 
 The module provides APIs for loading, unloading, playing, and stopping playing sounds, setting the volume,
  and setting the number of loops. The module is applicable to scenarios that require quick response and

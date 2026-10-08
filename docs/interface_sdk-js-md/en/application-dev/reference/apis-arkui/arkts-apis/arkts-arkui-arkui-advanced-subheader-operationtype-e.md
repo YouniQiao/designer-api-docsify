@@ -72,7 +72,7 @@ Icon-attached button (A maximum of three icons can be configured.)
 LOADING = 3
 ```
 
-Loading animation.
+Loading animation. When **operationType** is set to **LOADING**, **operationItem** does not need to be configured.
 
 **Since:** 10
 

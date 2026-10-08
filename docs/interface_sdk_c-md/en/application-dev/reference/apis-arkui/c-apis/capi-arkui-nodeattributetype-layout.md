@@ -18,7 +18,7 @@ NODE_WIDTH = 0
 
 **Description**
 
-Defines the width attribute, which can be set, reset, and obtained as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].f32: width, in vp.</li> </ul> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].f32: width, in vp.</li> </ul>
+Width attribute, which can be set, reset, and obtained as required through APIs. The format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute and the format of the return value **ArkUI_AttributeItem** are as follows.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].f32: width, in vp, used to set the component width.</li> </ul> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].f32: width, in vp.</li> </ul>
 
 **Since**: 12
 
@@ -30,7 +30,7 @@ NODE_HEIGHT
 
 **Description**
 
-Defines the height attribute, which can be set, reset, and obtained as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].f32: height, in vp.</li> </ul> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].f32: height, in vp.</li> </ul>
+Height attribute, which can be set, reset, and obtained as required through APIs. The format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute and the format of the return value **ArkUI_AttributeItem** are as follows.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].f32: height, in vp, used to set the height of the component. Negative values are not supported.</li> </ul> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].f32: height, in vp.</li> </ul>
 
 **Since**: 12
 
@@ -390,7 +390,7 @@ NODE_EXPAND_SAFE_AREA = 92
 
 **Description**
 
-defines control components to extend their security zones, supporting property setting, property reset, and property fetching.<br> **Attribute setting method [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) Parameter format:**<br><ul> <li>.value[0]? .u32: Set of extended security zone enumerated values [ArkUI_SafeAreaType](capi-native-type-h.md#arkui_safeareatype), For example, ARKUI_SAFE_AREA_TYPE_SYSTEM \| ARKUI_SAFE_AREA_TYPE_CUTOUT.</li> <li>.value[1]? .u32: set of directional enum values for extended security zones [ArkUI_SafeAreaEdge](capi-layout-h.md#arkui_safeareaedge); For example: ARKUI_SAFE_AREA_EDGE_TOP \| ARKUI_SAFE_AREA_EDGE_BOTTOM.</li> </ul> **Attribute fetch method return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) format:**<br><ul> <li>.value[0].u32: extends the security zone. .</li> <li>.value[1].u32: indicates the direction to extend the security zone. .</li> </ul>
+Safe area to be expanded to. This attribute can be set, reset, and obtained as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0]?.u32: Types of the expanded safe area, which are enumerated values of [ArkUI_SafeAreaType](capi-native-type-h.md#arkui_safeareatype). Example: **ARKUI_SAFE_AREA_TYPE_SYSTEM \| ARKUI_SAFE_AREA_TYPE_CUTOUT**.</li> <li>.value[1]?.u32: Types of the expanded safe area edge, which are enumerated values of [ArkUI_SafeAreaEdge](capi-layout-h.md#arkui_safeareaedge). Example: **ARKUI_SAFE_AREA_EDGE_TOP \| ARKUI_SAFE_AREA_EDGE_BOTTOM**.</li> </ul> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].u32: Types of the expanded safe area.</li> <li>.value[1].u32: Edges for expanding the safe area.</li> </ul>
 
 **Since**: 12
 

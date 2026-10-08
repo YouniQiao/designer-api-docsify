@@ -18,7 +18,7 @@ Enumerates the types of pages in **MultiNavigation**.
 HOME_PAGE = 0
 ```
 
-Home page. Displayed in full-screen mode.
+Home page type. Displayed in full-screen mode. Used as the navigation start page of an app.
 
 **Since:** 14
 
@@ -36,7 +36,7 @@ Home page. Displayed in full-screen mode.
 DETAIL_PAGE = 1
 ```
 
-Detail page. Displayed in split-screen mode.
+Detail page type. Displayed in split-screen mode. Used for detail pages, forming a left-right split-screen layout with the home page on large-screen devices.
 
 **Since:** 14
 
@@ -54,7 +54,7 @@ Detail page. Displayed in split-screen mode.
 FULL_PAGE = 2
 ```
 
-Full-screen page. Displayed in full-screen mode.
+Full-screen page type. Displayed in full-screen mode. Used for pages that require full-screen display, such as video playback and image browsing.
 
 **Since:** 14
 

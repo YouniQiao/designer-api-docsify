@@ -17,7 +17,8 @@ The data type used to describe a rectangular area.
 > 
 > - **width** and **height** can only be set to positive percentage values. When **width** is set to **'100%'**, the width of the touch target is equal to that of the component. For example, if the width of a component is 100 vp,
 > **'100%'** indicates that the width of the touch target is also 100 vp. When **height** is set to **'100%'**, the
-> height of the touch target is equal to that of the component.
+> height of the touch target is equal to that of the component. When set to **0** or a negative percentage, the
+> default value **'100%'** is used.
 > 
 > - The percentage is measured relative to the component itself.
 > 

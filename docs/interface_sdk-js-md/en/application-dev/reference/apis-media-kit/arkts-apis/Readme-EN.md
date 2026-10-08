@@ -167,7 +167,7 @@
   - [VideoProcessorStatus](arkts-media-videoprocessing-videoprocessorstatus-i.md)
   - [VideoProcessorStatusCallback](arkts-media-videoprocessing-videoprocessorstatuscallback-t.md)
 - multimedia<!--arkts-mediakit-multimedia-->
-  - [soundPool](arkts-media-soundpool.md)
+  - [soundPool(SoundPool)](arkts-media-soundpool.md)
     - [ErrorInfo](arkts-media-soundpool-errorinfo-i.md)
     - [PlayParameters](arkts-media-soundpool-playparameters-i.md)
     <!--Del-->

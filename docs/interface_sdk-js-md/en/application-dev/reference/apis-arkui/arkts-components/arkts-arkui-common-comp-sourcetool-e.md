@@ -4,7 +4,7 @@
 declare enum SourceTool
 ```
 
-Enumerates the input source tool types.
+Enumerates the tool types corresponding to the input sources.
 
 **Since:** 9
 
@@ -34,7 +34,7 @@ Unknown input source.
 Finger
 ```
 
-Finger.
+Finger input.
 
 **Since:** 9
 
@@ -50,7 +50,7 @@ Finger.
 Pen
 ```
 
-Stylus.
+Stylus input.
 
 **Since:** 9
 
@@ -66,7 +66,7 @@ Stylus.
 MOUSE
 ```
 
-Mouse device.
+Mouse input.
 
 **Since:** 12
 
@@ -84,7 +84,7 @@ Mouse device.
 TOUCHPAD
 ```
 
-Touchpad. Single-finger input on the touchpad is treated as a mouse input operation.
+Touchpad input. A single-finger input on the touchpad is treated as a mouse input operation.
 
 **Since:** 12
 
@@ -102,7 +102,7 @@ Touchpad. Single-finger input on the touchpad is treated as a mouse input operat
 JOYSTICK
 ```
 
-Joystick.
+Joystick input.
 
 **Since:** 12
 

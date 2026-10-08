@@ -4,7 +4,7 @@
 export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options
 ```
 
-Indicates the options of the image item.
+Defines the type alias of the left avatar item configuration options.
 
 **Since:** 26.0.0
 

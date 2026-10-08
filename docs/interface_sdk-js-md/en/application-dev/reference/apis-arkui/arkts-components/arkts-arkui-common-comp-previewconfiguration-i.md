@@ -18,9 +18,9 @@ Configures the style of the preview image during custom drag operations.
 delayCreating?: boolean
 ```
 
-Whether the preview builder is loaded at the time of setting.
+Whether the component preview builder is created with a delay.
 
-The default value is **false**. The value **true** means that the preview builder is loaded at the time of setting, and **false** means the opposite.
+The default value is **false**. The value **true** means that the component preview builder is created only when the drag preview needs to be generated, and **false** means that the component preview builder is created when it is set.
 
 **Type:** boolean
 

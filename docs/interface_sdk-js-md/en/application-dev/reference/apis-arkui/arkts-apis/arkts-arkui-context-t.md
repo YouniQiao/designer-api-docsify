@@ -4,7 +4,7 @@
 export type Context = common.Context
 ```
 
-The base context of an ability or an application. It allows access to application-specific resources.
+Context of the Ability (app component) where the current component resides.
 
 @typedef { common.Context } Context
 

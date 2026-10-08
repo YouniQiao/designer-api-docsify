@@ -38,7 +38,7 @@ Creates an **ArcSwiper** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | Controller bound to the component to control the page turning. |
+| controller | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | No | Controller bound to the component for controlling page swiping. If this parameter is not passed, pages can still be switched by swiping gestures, but the page swiping method cannot be called through the controller. |
 
 **Return value:**
 

@@ -40,18 +40,14 @@ import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionPropos
 addLocalInputEventMonitor(eventMask: number, listener: InputEventListener): InputEventMonitor
 ```
 
-Registers a local input event monitor.
+Registers a local input event listener.
 
-The "Local" in the interface name indicates that the monitor is only valid within the current UIContext, and does not affect other UIContext instances. Each UIContext maintains its own independent list of monitors.
-
-Performance Warning: Do not perform time-consuming operations in the callback!
-
-Monitor Object Notes:
-
-- The returned Monitor object is a unique identifier created by the system.  
-- Developers cannot actively construct or forge this object.  
-- Must save the returned monitor object reference for subsequent cancellation.  
-- It is recommended to use a variable to save it to avoid losing the reference.
+> **NOTE:** 
+> 
+> - Do not perform time-consuming operations (such as complex calculations or network requests) in the callback. Otherwise, stuttering may occur.
+> - This listener is valid only in the current UIContext (that is, the current window) and does not respond to other UIContext instances.
+> - The returned **InputEventMonitor** object is a unique identifier created by the system. You cannot construct or forge this object. You must retain its reference for subsequent unregistration.
+> - If an invalid parameter is passed, **undefined** is returned, indicating that the listener fails to be registered.
 
 Usage Examples:
 
@@ -59,7 +55,8 @@ Usage Examples:
 // Monitor a single event type
 const monitor1 = uiContext.addLocalInputEventMonitor(
 InputEventSubTypeMask.LEFT_MOUSE_DOWN,
-(wrapper: RawInputEventWrapper) =&gt; {
+(wrapper: RawInputEventWrapper) =
+> {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent();
 console.log(`Mouse: (${mouseEvent.windowX}, ${mouseEvent.windowY})`);
@@ -71,7 +68,8 @@ return { action: InputEventInterceptAction.BLOCK }; // Block event
 // Monitor multiple event types (using bitwise operations)
 const monitor2 = uiContext.addLocalInputEventMonitor(
 InputEventSubTypeMask.LEFT_MOUSE_DOWN | InputEventSubTypeMask.RIGHT_MOUSE_DOWN,
-(wrapper: RawInputEventWrapper) =&gt; {
+(wrapper: RawInputEventWrapper) =
+> {
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent()!;
 console.log(`Mouse button: ${mouseEvent.button}`);
@@ -99,14 +97,14 @@ uiContext.removeLocalInputEventMonitor(monitor2);
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventMask | number | Yes | Event type mask, specifying the types of events to monitor through bitwise operations. |
-| listener | [InputEventListener](../arkts-components/arkts-arkui-common-comp-inputeventlistener-t.md) | Yes | Event listener callback function. |
+| eventMask | number | Yes | Event type mask, which specifies event types to listen for via bitwise operations. For details about the values and their meanings, see [InputEventSubTypeMask](arkts-arkui-inputeventsubtypemask-e.md). |
+| listener | [InputEventListener](../arkts-components/arkts-arkui-common-comp-inputeventlistener-t.md) | Yes | Callback function of the event listener. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [InputEventMonitor](../arkts-components/arkts-arkui-common-comp-inputeventmonitor-i.md) | Unique identifier object for the monitor, used for subsequent cancellation of registration. |
+| [InputEventMonitor](../arkts-components/arkts-arkui-common-comp-inputeventmonitor-i.md) | Unique identifier object of the listener, which is used for subsequent unregistration. |
 
 **Examples**
 
@@ -3961,13 +3959,13 @@ struct MatrixExample {
 removeLocalInputEventMonitor(monitor: InputEventMonitor): void
 ```
 
-Removes a local input event monitor.
+Removes the local input event listener.
 
-**Important Notes**:
-
-- Only Monitor objects returned by addLocalInputEventMonitor can be removed.  
-- Cannot unregister a monitor by manually constructing an object.  
-- If an invalid object is passed, the system silently ignores it.
+> **NOTE:** 
+> 
+> - Only the **InputEventMonitor** object returned by addLocalInputEventMonitor can be removed.
+> - You cannot manually construct an object to unregister the listener.
+> - If an invalid object is passed, the system ignores it silently.
 
 **Since:** 26.0.0
 
@@ -3983,7 +3981,7 @@ Removes a local input event monitor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-common-comp-inputeventmonitor-i.md) | Yes | Monitor identifier object (returned by addLocalInputEventMonitor). |
+| monitor | [InputEventMonitor](../arkts-components/arkts-arkui-common-comp-inputeventmonitor-i.md) | Yes | Listener identifier object, which is returned by addLocalInputEventMonitor. |
 
 **Examples**
 

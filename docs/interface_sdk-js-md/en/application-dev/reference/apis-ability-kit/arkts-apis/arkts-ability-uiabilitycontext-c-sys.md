@@ -2331,7 +2331,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-Stops a ServiceExtensionAbility in the same application. This API uses a promise to return the result.
+Stops a ServiceExtensionAbility. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -2413,7 +2413,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses an asynchronous callback to return the result.
+Stops a ServiceExtensionAbility with the account ID specified. This API uses an asynchronous callback to return the result.
 
 > **NOTE:** 
 > 
@@ -2498,7 +2498,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-Stops a ServiceExtensionAbility with the account ID specified in the same application. This API uses a promise to return the result.
+Stops a ServiceExtensionAbility with the account ID specified. This API uses a promise to return the result.
 
 > **NOTE:** 
 > 

@@ -1622,7 +1622,7 @@ Extra information of the element. The value is a JSON string.
 focusable?: boolean
 ```
 
-Whether the element can gain focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element can gain focus, and **false** indicates the opposite.
+Whether the element is focusable. The value **true** indicates that the element is focusable, and **false** indicates the opposite.
 
 Default value: **false**.
 
@@ -1776,7 +1776,7 @@ Whether the element is essential to the user. The value **true** indicates that 
 isFocused?: boolean
 ```
 
-Whether the element has gained focus (here it refers to accessibility focus, which is different from input focus). The value **true** indicates that the element has gained focus, and **false** indicates the opposite.
+Whether the element is focused. The value **true** indicates that the element is focused, and **false** indicates the opposite.
 
 Default value: **false**.
 

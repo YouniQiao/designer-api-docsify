@@ -4,7 +4,7 @@
 declare enum AnimationMode
 ```
 
-Enumerates the animation modes for switching between tabs.
+Enumerates the animation forms for switching **TabContent** when a [TabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar1) tab is tapped.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Enumerates the animation modes for switching between tabs.
 CONTENT_FIRST = 0
 ```
 
-Loads the content of the target page before starting the switching animation.
+Loads the content of the target page first, and then starts the switching animation. This is suitable for scenarios where the content must be loaded before the animation is displayed, avoiding blank content during the animation. It is recommended for scenarios where content loads quickly and a smooth transition is required.
 
 **Since:** 12
 
@@ -36,7 +36,7 @@ Loads the content of the target page before starting the switching animation.
 ACTION_FIRST = 1
 ```
 
-Starts the switching animation before loading the content of the target page. This mode works only when neither the height or width of tabs is set to **auto**.
+Starts the switching animation first, and then loads the content of the target page. For this to take effect, both the height and width of **Tabs** must not be set to **auto**. This is suitable for scenarios where the user operation must be responded to immediately and the animation starts quickly. It is recommended for scenarios where content loads slowly but quick visual feedback is desired.
 
 **Since:** 12
 
@@ -54,9 +54,9 @@ Starts the switching animation before loading the content of the target page. Th
 NO_ANIMATION = 2
 ```
 
-Disables the default switching animation. Note that this mode is ineffective when the **changeIndex** API of **TabsController** is used to switch content.
+Disables the default animation. This enum value does not take effect when the [changeIndex](arkts-arkui-tabs-comp-tabscontroller-c.md#changeindex) API of **TabsController** is called to switch **TabContent**.
 
-To disable the animation under this scenario, set **animationDuration** to **0**.
+You can set [animationDuration](arkts-arkui-tabs-comp-attribute.md#animationduration) to **0** to switch without animation when calling the **changeIndex** API of **TabsController**.
 
 **Since:** 12
 
@@ -92,7 +92,7 @@ Loads the content of the target page first, then jumps to the vicinity of the ta
 ACTION_FIRST_WITH_JUMP = 4
 ```
 
-Jumps to the vicinity of the target page without animation first, then jumps to the target page with animation, and finally loads the content of the target page. This mode works only when neither the height or width of tabs is set to **auto**.
+Jumps to the vicinity of the target page without animation first, then jumps to the target page with animation, and finally loads the content of the target page. For this to take effect, both the **height** and **width** of **Tabs** must not be set to **auto**.
 
 **Since:** 15
 

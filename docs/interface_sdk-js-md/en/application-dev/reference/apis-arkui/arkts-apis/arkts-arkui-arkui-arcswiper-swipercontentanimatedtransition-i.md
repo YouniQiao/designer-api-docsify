@@ -24,7 +24,11 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 timeout?: number
 ```
 
-Timeout for the custom page transition animation. The timeout timer starts when the default animation (page scrolling) reaches the point where the first frame is moved out of the viewport. If you do not call the [finishTransition](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#finishtransition) API of [SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md) before the timer expires, the component considers that the custom animation of the page ends and immediately removes the page node from the render tree. The unit is ms. The default value is **0**.
+Timeout for the **ArcSwiper** custom swipe animation. The timer starts from the first frame when the page performs the default animation (page swipe) and moves out of the viewport. If the developer has not called the [finishTransition](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md#finishtransition) API of [SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md) to notify the **ArcSwiper** component that the custom animation of this page has ended after this time is reached, the component will forcibly end the custom animation of this page and immediately render the tree under this page node.
+
+Unit: ms
+
+Default value: **0**.
 
 **Type:** number
 

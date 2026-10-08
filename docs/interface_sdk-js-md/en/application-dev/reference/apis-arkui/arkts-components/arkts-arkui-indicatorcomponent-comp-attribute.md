@@ -6,8 +6,6 @@ declare class IndicatorComponentAttribute extends CommonMethod<IndicatorComponen
 
 Defines the IndicatorComponent attribute functions.
 
-@extends CommonMethod&lt;IndicatorComponentAttribute&gt;
-
 **Inheritance/Implementation:** IndicatorComponentAttribute extends CommonMethod&lt;IndicatorComponentAttribute&gt;
 
 **Since:** 15

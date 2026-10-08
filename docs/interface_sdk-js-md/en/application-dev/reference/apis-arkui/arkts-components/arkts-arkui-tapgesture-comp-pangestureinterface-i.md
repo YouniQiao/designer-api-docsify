@@ -6,6 +6,8 @@ interface PanGestureInterface extends GestureInterface<PanGestureInterface>
 
 PanGesture is used to trigger a pan gesture when the movement distance of a finger on the screen reaches the minimum value.
 
+A pan gesture can be triggered by a finger or stylus swipe, a left-mouse-button swipe, mouse-wheel scrolling, or a two-finger touchpad gesture. For mouse-wheel and two-finger touchpad input, the vertical or horizontal axis value must be non-zero.
+
 **Inheritance/Implementation:** PanGestureInterface extends GestureInterface&lt;PanGestureInterface&gt;
 
 **Since:** 7

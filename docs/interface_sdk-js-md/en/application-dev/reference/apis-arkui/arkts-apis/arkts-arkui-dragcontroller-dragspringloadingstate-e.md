@@ -18,7 +18,7 @@ Enumerates hover detection states during drag operations. Under default system c
 BEGIN
 ```
 
-Initial state when a dragged item enters the component boundary and remains stationary for the specified duration. This state enables preparation operations.
+Initial state when a dragged item enters the component boundary and remains stationary for the duration specified by **stillTimeLimit**. This state enables preparation operations such as data preparation and state recording required for hover detection.
 
 **Since:** 20
 

@@ -110,6 +110,26 @@ Note: The enabling behavior of an application takes effect only in its current l
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## publishOnNextLaunch
+
+```TypeScript
+publishOnNextLaunch?: boolean
+```
+
+Policy for the APP_CRASH event the value true means the application will receive the APP_CRASH event upon its next startup. the value false means the system will deliver the APP_CRASH event as soon as possible. the policy only takes effect when using the **onTrigger** and **onReceive** callbacks. <br>Default value:false.
+
+**Type:** boolean
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
+<!--Device-AppCrashPolicy-publishOnNextLaunch?: boolean--><!--Device-AppCrashPolicy-publishOnNextLaunch?: boolean-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
 ## simplifyVmaPrinting
 
 ```TypeScript

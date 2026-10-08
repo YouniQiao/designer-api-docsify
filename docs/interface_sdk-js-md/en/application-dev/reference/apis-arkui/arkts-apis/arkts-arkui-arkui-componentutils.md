@@ -1,6 +1,10 @@
 # @ohos.arkui.componentUtils(ComponentUtils)
 
-The **componentUtils** module provides API for obtaining the coordinates and size of the drawing area of a component.
+The **componentUtils** module provides API for obtaining the coordinates and size of the drawing area of a component. It is applicable to scenarios where the actual drawing area information of a component needs to be queried after the component layout is complete, helping you obtain layout results such as component sizes and positions.
+
+> **NOTE:** 
+> 
+> - The functionality of this module depends on UI context. This means that the APIs of this module cannot be used where [the UI context is ambiguous](../../../ui/arkts-global-interface.md#ambiguous-ui-context). For details, see [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md).
 
 **Since:** 10
 
@@ -57,7 +61,7 @@ import { componentUtils } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md) | The matrix is column-first fourth-order matrix. |
+| [Matrix4Result](arkts-arkui-componentutils-matrix4result-t.md) | Number array whose length is 16 (4 x 4). The matrix is column-first. |
 
 ## Examples
 

@@ -2313,7 +2313,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbility(want: Want): Promise<void>
 ```
 
-停止同一应用程序内的服务。使用Promise异步回调。
+停止指定的服务。使用Promise异步回调。
 
 **起始版本：** 9
 
@@ -2395,7 +2395,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<void>): void
 ```
 
-停止同一应用程序内指定账户的服务。使用callback异步回调。
+停止指定账户的服务。使用callback异步回调。
 
 > **说明：** 
 > 
@@ -2480,7 +2480,7 @@ export default class EntryAbility extends UIAbility {
 stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<void>
 ```
 
-停止同一应用程序内指定账户的服务。使用Promise异步回调。
+停止指定账户的服务。使用Promise异步回调。
 
 > **说明：** 
 > 

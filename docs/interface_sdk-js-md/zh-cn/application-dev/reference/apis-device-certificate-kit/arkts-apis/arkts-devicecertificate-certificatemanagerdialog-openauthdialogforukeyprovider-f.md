@@ -48,5 +48,5 @@ function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthR
 | [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | The authentication operation failed, such as: The USB key certificate does not exist. The USB key status is abnormal, Please ask the user to check the status of the Ukey. |
 | [29700005](../errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) | The operation does not comply with the device security policy. Only the PC/2in1 device can open the dialog box of the UkeyAuthExtensionAbility type. |
 | [29700006](../errorcode-certManagerDialog.md#29700006-入参校验失败) | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
-| 29700009 | The operation in the Ukey authentication dialog box timed out. |
-| 29700010 | The Ukey authentication dialog box cannot be opened concurrently. Please try again later. |
+| [29700009](../errorcode-certManagerDialog.md#29700009-证书管理对话框操作超时) | The operation in the Ukey authentication dialog box timed out. |
+| [29700010](../errorcode-certManagerDialog.md#29700010-不支持并发调用) | The Ukey authentication dialog box cannot be opened concurrently. Please try again later. |

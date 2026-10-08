@@ -4,7 +4,7 @@
 declare type IndexChangedHandler = (index: number) => void
 ```
 
-Defines the callback to notify the application when the index of the currently displayed element changes.
+Notifies the app when the index of the currently displayed element changes. The index sequence starts from 0.
 
 **Since:** 18
 

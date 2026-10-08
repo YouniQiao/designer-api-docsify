@@ -878,7 +878,7 @@ The alignment mode of the child component along the cross axis (the direction pe
 allowDrop(value: Array<UniformDataType>  | null | Array<string>): T
 ```
 
-Sets the types of data that can be dropped to the component. If **allowDrop** is not set, the component accepts all data types by default.
+Sets the data types allowed to be dropped on this component. If **allowDrop** is not set, the component accepts all data types by default. If **allowDrop** is set, only dropped data that matches the specified data types is allowed to be dropped on this component; data that does not match the specified data types is rejected and does not trigger the [onDrop](#ondrop) event.
 
 **Since:** 10
 
@@ -894,7 +894,7 @@ Sets the types of data that can be dropped to the component. If **allowDrop** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | Yes | Types of data that can be dropped to the component. Since API version 12, this parameter can be set to **null** to make the component reject all data types. Starting from API version 23, this parameter can be set to an application-defined data type string array Array&lt;string&gt; is supported. While there is no strict format requirement for the string, it should not duplicate the format of standard types in **UniformDataType**. You are advised to define them based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
+| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | Yes | Sets the data types allowed to be dropped on this component. Since API version 12, **null** can be set so that this component does not accept any data type. Since API version 23, custom data types **Array&lt;string&gt;** can be set. A custom data type is a data type string defined by the application. The string has no explicit format requirements, but it should not duplicate the standard type format of **UniformDataType** to avoid confusion with standard types. It is recommended to define it based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -3215,7 +3215,7 @@ Specifies whether to set this component as the default focus of the current [hie
 > **NOTE:** 
 > 
 > This setting applies to pages that support routing or modal-type container components, such as **Page**,
-> **NaviDestination**, **NavBar**, **PopUp**, and **Dialog**.
+> **NavDestination**, **NavBar**, **PopUp**, and **Dialog**.
 
 **Since:** 9
 
@@ -3229,7 +3229,7 @@ Specifies whether to set this component as the default focus of the current [hie
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether to set the component as the default focus of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). This parameter takes effect only when the hierarchical page is new and accessed for the first time.<br>**NOTE:** <br>The value **true** means to set the component as the default focus, and the value **false** has no effect.<br>If no component on the hierarchical page has **defaultFocus(true)** set:<br>For API version 11 and earlier, the default focus is on the first focusable non-container component.<br>For API version versions later than 11, the default focus is on the hierarchical page's root container.<br>If **defaultFocus(true)** is set for multiple components on the hierarchical page, the first component found in the component tree depth-first traversal is used as the default focus. |
+| value | boolean | Yes | Whether to set the component as the default focus of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts). This parameter takes effect only when the hierarchical page is new and accessed for the first time.<br>**NOTE:** <br>The value **true** indicates that the component is the default focus, and **false** indicates that it is not.<br>If no component on the hierarchical page has **defaultFocus(true)** set:<br>Before API version 11, the default focus is on the first focusable non-container component on the current hierarchical page.<br>From API version 11 onward, the default focus is on the root container of the hierarchical page.<br>If **defaultFocus(true)** is set for multiple components on the hierarchical page, the first component found in the component tree depth-first traversal is used as the default focus. |
 
 **Return value:**
 
@@ -3373,6 +3373,12 @@ dragPreview(value: CustomBuilder | DragItemInfo | string): T
 
 Sets the preview image displayed during component drag operations.
 
+> **NOTE:** 
+> 
+> When this API is called in [attributeModifier](#attributemodifier), passing a value of the
+> **CustomBuilder** type to the **value** parameter is not supported, nor is setting the **builder** field in
+> [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md).
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -3403,11 +3409,13 @@ Sets the preview image displayed during component drag operations.
 dragPreview(preview: CustomBuilder | DragItemInfo | string, config?: PreviewConfiguration): T
 ```
 
-Sets the drag preview for the component. This API specifically configures or disables the lift animation effect.
+Sets the preview image displayed during the component float and drag process. The **config** parameter can be used to configure whether the preview image is used only for the float effect and whether its creation is delayed.
 
 > **NOTE:** 
 > 
-> This API cannot be called within [attributeModifier](#attributemodifier).
+> When this API is called in [attributeModifier](#attributemodifier), passing a value of the
+> **CustomBuilder** type to the **preview** parameter is not supported, nor is setting the **builder** field in
+> [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md).
 
 **Since:** 15
 
@@ -3424,7 +3432,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | preview | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) &#124; string | Yes | Preview image displayed during component drag operations. It only applies to [onDragStart](#ondragstart) drag mode.<br>If the component supports drag and drop and a preview is specified through [bindContextMenu](#bindcontextmenu1), that specified preview is displayed when the component is dragged. The priority of the background image returned in [onDragStart](#ondragstart) is lower than that of the preview set in [dragPreview](#dragpreview). This means that, once set, the latter will be used in place of the former. Using [CustomBuilder](../../../reference/apis-arkui/arkui-ts/ts-types.md#custombuilder8) requires offline rendering and may increase performance overhead and latency. In light of this, you are advised to use [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) in [DragItemInfo](arkts-arkui-common-comp-dragiteminfo-i.md) instead.<br> When an ID of the string type is passed in, the snapshot of the component assigned the ID is used as the preview image. If the component assigned the ID cannot be found or its Visibility attribute is set to **None** or **Hidden**, a snapshot of the current component is used as the preview image. Currently, snapshots do not support visual effects, such as brightness, shadow, blur, and rotation. |
-| config | [PreviewConfiguration](arkts-arkui-common-comp-previewconfiguration-i.md) | No | Additional settings for the drag preview.<br>This parameter is effective only for previews set using [dragPreview](#dragpreview). |
+| config | [PreviewConfiguration](arkts-arkui-common-comp-previewconfiguration-i.md) | No | Configures the preview image during the custom drag process. This parameter takes effect only for the preview in [dragPreview](#dragpreview). Pass this parameter when you need to configure custom preview behaviors such as whether the preview image is used only for the float effect and whether to delay creation. If this parameter is not passed, the system default drag preview behavior is used, that is, the preview image is not restricted to the float effect only and is not created with a delay. |
 
 **Return value:**
 
@@ -3438,7 +3446,7 @@ Sets the drag preview for the component. This API specifically configures or dis
 dragPreviewOptions(value: DragPreviewOptions, options?: DragInteractionOptions): T
 ```
 
-Sets the preview image processing mode, badge count, and interaction behavior during drag operations. The **onItemDragStart** drag mode is not supported.
+Sets the preview image processing mode, the display of the number badge, and the interaction mode of preview image floating during the drag process. Dragging a GridItem through the Grid **onItemDragStart** and dragging a ListItem through the List **onItemDragStart** are not supported.
 
 > **NOTE:** 
 > 
@@ -3458,8 +3466,8 @@ Sets the preview image processing mode, badge count, and interaction behavior du
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | Yes | Preview image processing mode and badge count during dragging. |
-| options | [DragInteractionOptions](arkts-arkui-common-comp-draginteractionoptions-i.md) | No | Interaction behavior for the floating preview image.<br>Default value: empty<br>**Since:** 12 |
+| value | [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | Yes | Preview image handling mode, number badge display, backdrop image style, and the transition effect between float and drag preview images during the drag process. |
+| options | [DragInteractionOptions](arkts-arkui-common-comp-draginteractionoptions-i.md) | No | Interaction mode for the preview image float during the drag process. Pass this parameter when interaction capabilities such as multi-selection aggregation, default tap effect, disabling float, edge auto-scrolling, or vibration feedback need to be enabled. If this parameter is not passed, the drag interaction is handled according to the default values of the fields in [DragInteractionOptions](arkts-arkui-common-comp-draginteractionoptions-i.md).<br>**Since:** 12 |
 
 **Return value:**
 
@@ -3507,7 +3515,7 @@ Creates a drawing modifier.
 enableClickSoundEffect(enabled: boolean | undefined): T
 ```
 
-Sets whether to enable the default click sound effect for a component. Whether the sound can be played depends on the sound settings of the device. For example, the sound effect is not played in mute mode.
+Sets whether to enable the default click sound effect for a component. This API is applicable to scenarios where you need to control the component click feedback sound effect or customize the playback of the click sound effect. Whether the sound can be played also depends on the sound-related settings of the device. For example, no sound effect is played in silent mode. After the default click sound effect is disabled, you can call audio-related APIs in the **onClick** callback to customize the sound playback.
 
 **Since:** 24
 
@@ -3537,7 +3545,7 @@ Sets whether to enable the default click sound effect for a component. Whether t
 enabled(value: boolean): T
 ```
 
-If the value is true, the component is available and can respond to operations such as clicking. If it is set to false, click operations are not responded.
+Sets whether a component is interactive. When a component is interactive, it can respond to click, touch, drag, key, focus, mouse, axis, hover, accessibility hover, gesture, focus axis, and crown events. When a component is not interactive, it does not respond to these operations.
 
 **Since:** 7
 
@@ -3555,13 +3563,13 @@ If the value is true, the component is available and can respond to operations s
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes |  |
+| value | boolean | Yes | Whether the component is interactive. **true** indicates that the component is interactive and responds to interaction operations.<br>**false** indicates that the component is not interactive and does not respond to interaction operations. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## expandSafeArea
 
@@ -3725,7 +3733,7 @@ When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-att
 focusable(value: boolean): T
 ```
 
-Sets whether the component is focusable.
+Sets whether the component can obtain focus. This attribute is applicable to keyboard, remote control, and other non-touch interaction scenarios.
 
 **Since:** 8
 
@@ -3797,7 +3805,7 @@ Sets whether the component is focusable on touch. If **focusOnTouch** is not set
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | boolean | Yes | Whether the component is focusable on touch.<br>**true**: The component is focusable on touch.<br>**false**: The component is not focusable on touch.<br>**NOTE:** <br>This setting requires the component to be touchable. |
+| value | boolean | Yes | Whether the current component supports the tap-to-focus capability. **true** indicates that the component supports tap-to-focus, and **false** indicates the opposite.<br>**NOTE:** <br>The component can gain focus only when it is tappable and focusable. |
 
 **Return value:**
 
@@ -3813,7 +3821,7 @@ Sets whether the component is focusable on touch. If **focusOnTouch** is not set
 focusScopeId(id: string, isGroup?: boolean): T
 ```
 
-Set container as a focus group with a specific identifier.
+Assigns an ID to this container component and specifies whether the container is a focus group.
 
 **Since:** 12
 
@@ -3829,14 +3837,14 @@ Set container as a focus group with a specific identifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | focus scope identifier. |
-| isGroup | boolean | No | whether this scope is a focus group, the default value is false |
+| id | string | Yes | ID of the current container component.<br>**NOTE:** <br>Within a single [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts), the ID must be globally unique. If IDs are duplicated, the later-set ID does not take effect, the later-set component cannot become the focus scope or focus group corresponding to that ID, and the focus priority set for that ID inside it does not take effect either. |
+| isGroup | boolean | No | Whether the current container component is a focus group. The value **true** means that the container component is a focus group, and **false** means that it is not. The default value is **false**.<br>**NOTE:** <br>Focus groups cannot be nested. When nested, the inner focus group does not take effect independently, and focus navigation mainly follows the rules of the outer focus group.<br>The same component cannot have both **focusScopeId** and **tabIndex** set. Mixing them does not throw an exception, but Tab key focus navigation is affected by the **tabIndex** rule. When **tabIndex** is greater than 0, the focus group may be selected by the Tab key and cannot jump out as expected.<br>The purpose of configuring a focus group is to enable the container and the elements inside it to navigate focus according to the focus group rules. The focus group navigation rules are as follows:<br>1. Within a focus group container, focus can be navigated only by using the arrow keys. The Tab key moves focus out of the focus group container.<br>2. When focus is switched from outside the focus group container to inside it by using the arrow keys, if there is a component with the priority **PREVIOUS** inside the focus group container, that component gains focus; otherwise, the component that last gained focus inside the focus group container gains focus. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 <a id="focusscopeid2"></a>
 
@@ -3846,7 +3854,7 @@ Set container as a focus group with a specific identifier.
 focusScopeId(id: string, isGroup?: boolean, arrowStepOut?: boolean): T
 ```
 
-Set container as a focus group with a specific identifier.
+Sets the ID of the current container component and whether it is a focus group. The new parameter **arrowStepOut** sets whether the arrow keys can be used to navigate focus out of the current focus group.
 
 **Since:** 14
 
@@ -3862,15 +3870,15 @@ Set container as a focus group with a specific identifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| id | string | Yes | focus scope identifier. |
-| isGroup | boolean | No | whether this scope is a focus group, the default value is false. |
-| arrowStepOut | boolean | No | whether the arrow keys can move focus from inside the focus group to outside, only effective when isGroup is true, the default value is true. |
+| id | string | Yes | ID of the current container component.<br>**NOTE:** <br>Within a single [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts), the ID must be globally unique. If IDs are duplicated, the later-set ID does not take effect, the later-set component cannot become the focus scope or focus group corresponding to that ID, and the focus priority set for that ID inside it does not take effect either. |
+| isGroup | boolean | No | Whether the current container component is a focus group. The value **true** means that the container component is a focus group, and **false** means that it is not. The default value is **false**.<br>**NOTE:** <br>Focus groups cannot be nested. When nested, the inner focus group does not take effect independently, and focus navigation mainly follows the rules of the outer focus group.<br>The same component cannot have both **focusScopeId** and **tabIndex** set. Mixing them does not throw an exception, but Tab key focus navigation is affected by the **tabIndex** rule. When **tabIndex** is greater than 0, the focus group may be selected by the Tab key and cannot jump out as expected.<br>The purpose of configuring a focus group is to enable the container and the elements inside it to navigate focus according to the focus group rules. The focus group navigation rules are as follows:<br>1. Within a focus group container, focus can be navigated only by using the arrow keys. The Tab key moves focus out of the focus group container.<br>2. When focus is switched from outside the focus group container to inside it by using the arrow keys, if there is a component with the priority **PREVIOUS** inside the focus group container, that component gains focus; otherwise, the component that last gained focus inside the focus group container gains focus. |
+| arrowStepOut | boolean | No | Whether the focus can be moved out of the current focus group using arrow keys.<br>**true**: The focus can be moved out of the current focus group using arrow keys.<br>**false**: The focus cannot be moved out of the current focus group using arrow keys.<br>The default value is **true**. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## focusScopePriority
 
@@ -3878,7 +3886,7 @@ Set container as a focus group with a specific identifier.
 focusScopePriority(scopeId: string, priority?: FocusPriority): T
 ```
 
-Set the focus priority of component in a specific focus scope.
+Sets the focus priority of this component in a specified container. It must be used together with [focusScopeId](#focusscopeid1).
 
 **Since:** 12
 
@@ -3894,14 +3902,14 @@ Set the focus priority of component in a specific focus scope.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| scopeId | string | Yes |  |
-| priority | [FocusPriority](../arkts-apis/arkts-arkui-focuspriority-e.md) | No | the default value is AUTO |
+| scopeId | string | Yes | ID of the container component in which the focus priority set for the current component takes effect.<br>**NOTE:** <br>1. The current component must be inside the container identified by **scopeId**, or its owning container must be inside the container identified by **scopeId**.<br>2. A component cannot be set with multiple priorities repeatedly. Repeated setting may cause the container to select an unexpected priority component when gaining focus.<br>3. A container component with **focusScopeId** set cannot be set with a priority; otherwise, the set priority does not take effect. |
+| priority | [FocusPriority](../arkts-apis/arkts-arkui-focuspriority-e.md) | No | Focus priority.<br>**NOTE:** <br>If **priority** is not set, the AUTO priority is used by default.<br>Impact of priority on focus navigation and the focused component:<br>1. When the container gains focus as a whole (switching of hierarchical pages/focus switching to a focus group/**requestFocus** called by a container component), if a component with the **PREVIOUS** priority exists in the container, that component gains focus; otherwise, the component that last gained focus in the container gains focus.<br>2. When the container does not gain focus as a whole (focus navigation using the Tab key or arrow keys in a non-focus-group scenario), if the container gains focus for the first time, the component with the highest priority in the container gains focus; if the container does not gain focus for the first time, focus navigation follows the preset focus navigation algorithm of the container without considering priority. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 <a id="foregroundblurstyle1"></a>
 
@@ -4276,7 +4284,7 @@ Implements an implicit shared element transition.
 gesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture to bind.
+Binds a gesture.
 
 > **NOTE:** 
 > 
@@ -4295,7 +4303,7 @@ Gesture to bind.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | GestureType | Yes | Type of the gesture to bind. |
-| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Event response setting. Pass this parameter when you need to set whether to block child component gestures when the parent component recognizes a gesture first: **GestureMask.Normal** indicates that child component gestures are not blocked, which applies to the scenario where the parent component recognizes the gesture first but child component gestures are still allowed to participate in recognition according to the default rules; **GestureMask.IgnoreInternal** indicates that child component gestures are blocked, which applies to the scenario where you want the gesture bound by the parent component's **priorityGesture** to respond first and ignore child component gestures.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -4309,7 +4317,7 @@ Gesture to bind.
 gestureModifier(modifier: GestureModifier): T
 ```
 
-Creates a gesture modifier.
+Dynamically sets the gestures bound to a component. The **if/else** syntax is supported during attribute setting, allowing a single gesture or gesture group binding to be switched based on the component state or user operation. If gesture switching is triggered on the component during an active gesture operation, the change takes effect in the next gesture operation after the current gesture ends (when all fingers are lifted).
 
 > **NOTE:** 
 > 
@@ -4331,13 +4339,13 @@ Creates a gesture modifier.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| modifier | [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | Yes | for dynamically setting gestures bound to the current component. The if/else syntax is supported. modifier: gesture modifier. You need a custom class to implement the GestureModifier API. |
+| modifier | [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | Yes | Dynamically sets the gesture binding of the current component, supporting the if/else syntax.<br>This parameter is a gesture modifier. Developers need to customize a class to implement the GestureModifier interface. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 <a id="grayscale1"></a>
 
@@ -4511,7 +4519,7 @@ Sets the height of the component itself or its vertical layout policy. By defaul
 hitTestBehavior(value: HitTestMode): T
 ```
 
-Sets the hit test mode for a component. If **hitTestBehavior** is not set, the component defaults to **HitTestMode.Default**.
+Sets the hit testing mode for a component. Before a touch or mouse event is triggered, the framework performs hit testing between the press point and the component response area to collect the components that need to respond. This attribute controls the hit test collection result and subsequent event dispatch. If **hitTestBehavior** is not set, the component defaults to **HitTestMode.Default**.
 
 **Since:** 9
 
@@ -4545,7 +4553,7 @@ Sets the hit test mode for a component. If **hitTestBehavior** is not set, the c
 hoverEffect(value: HoverEffect): T
 ```
 
-Sets the hover effect for the component. When no hover effect is specified, the component uses the default **HoverEffect.Auto** effect. For components with hover effects applied, the hover effect is hidden when the mouse hovers and presses down on the component, and restored when the mouse button is released.
+Sets the mouse hover display effect of a component. It supports multiple hover effect types such as scaling, fade-in/fade-out, and the system default, providing visual feedback when the mouse pointer hovers over a component to help users identify the current interaction area and improve the UI interaction experience. When no hover effect is specified, the component uses the default **HoverEffect.Auto** effect. For components with hover effects applied, the hover effect is hidden when the mouse hovers and presses down on the component, and restored when the mouse button is released.
 
 **Since:** 8
 
@@ -4840,7 +4848,7 @@ Key. User can set an key to the component to identify it.
 keyboardShortcut(value: string | FunctionKey, keys: Array<ModifierKey>, action?: () => void): T
 ```
 
-Sets a keyboard shortcut for the component.
+Sets custom key combinations for a component.
 
 **Since:** 10
 
@@ -4856,9 +4864,9 @@ Sets a keyboard shortcut for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; [FunctionKey](../arkts-apis/arkts-arkui-functionkey-e.md) | Yes | Character key (which can be entered through the keyboard) or function key.<br>An empty string means to disable the keyboard shortcut.<br> |
-| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | Modifier keys.<br>This parameter can be left empty only when **value** is set to a function key.<br> |
-| action | () =&gt; void | No | Callback for a custom event after the keyboard shortcut is triggered. |
+| value | string &#124; [FunctionKey](../arkts-apis/arkts-arkui-functionkey-e.md) | Yes | Single character of the hotkey (a character that can be entered through the keyboard) or function key.<br>An empty string means to cancel the keyboard shortcut binding; a component with multiple keyboard shortcuts bound cannot unbind a keyboard shortcut.<br>When **value** contains multiple characters, the key combination is not bound, and the previously bound key combination remains valid.<br> |
+| keys | Array&lt;[ModifierKey](../arkts-apis/arkts-arkui-modifierkey-e.md)&gt; | Yes | Key combination.<br>The value of **keys** can be empty only when **value** is a function key.<br>When **keys** contains duplicate modifier keys, the key combination is not bound, and the previously bound key combination remains valid.<br> |
+| action | () =&gt; void | No | Callback for the custom event triggered after the key combination shortcut is successfully triggered. If this parameter is not set, the behavior of the key combination shortcut is the same as that of click. |
 
 **Return value:**
 
@@ -5406,13 +5414,13 @@ Sets whether the component exclusively handles events.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| monopolize | boolean | Yes | Whether the component exclusively handles events. true: The component exclusively handles events. false: The component does not exclusively handle events. Default value: false. NOTE 1. If a component is exclusively handling events after a finger is pressed on it, and another finger is pressed before the first finger is lifted, the component continues to exclusively handle events while interacting with the second finger. The same case applies to a third and more fingers. 2. If a component is bound through [parallelGesture](#parallelgesture) to a gesture, for example, pan gesture, that can also be triggered by its child component, and the child component has event monopolization and is the first to respond, then the parent will not respond to the gesture. |
+| monopolize | boolean | Yes | Whether the component monopolizes events. The value **true** means the component monopolizes events, and **false** means the opposite.<br>Default value: **false**<br>**NOTE:** <br>1. If the first finger triggers event monopolization of the component, and another finger is pressed before the first finger is lifted, the interaction of the second finger remains in the component monopolization state, and so on.<br>2. If the developer binds a gesture that is triggered simultaneously with the child component through [parallelGesture](#parallelgesture), such as **PanGesture**, and the child component has monopolization control enabled and responds to the event first, the gesture of the parent component will not respond. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 <a id="motionblur1"></a>
 
@@ -5543,7 +5551,7 @@ Sets a path animation for the component.
 mouseResponseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-Sets one or more mouse response regions.
+Sets one or more mouse touch targets. When the [responseRegionList](#responseregionlist) API is called, this API no longer takes effect.
 
 **Since:** 10
 
@@ -5559,7 +5567,7 @@ Sets one or more mouse response regions.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[Rectangle](arkts-arkui-common-comp-rectangle-i.md)&gt; &#124; [Rectangle](arkts-arkui-common-comp-rectangle-i.md) | Yes | Mouse response regions, defining the position and size.<br>The default touch target is the entire component. Default value:<br>{<br>x: 0,<br>y: 0,<br>width: '100%',<br> height: '100%'<br>} |
+| value | Array&lt;[Rectangle](arkts-arkui-common-comp-rectangle-i.md)&gt; &#124; [Rectangle](arkts-arkui-common-comp-rectangle-i.md) | Yes | Mouse touch target, including the position and size.<br>The default touch target is the entire component. Default value:<br>{<br>x: 0,<br>y: 0,<br>width: '100%',<br> height: '100%'<br>} |
 
 **Return value:**
 
@@ -5573,7 +5581,7 @@ Sets one or more mouse response regions.
 nextFocus(nextStep: Optional<FocusMovement>): T
 ```
 
-Set nextFocus.
+Sets the custom focus navigation logic of the component, suitable for scenarios where the focus flow needs to be precisely controlled.
 
 **Since:** 18
 
@@ -5589,13 +5597,13 @@ Set nextFocus.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| nextStep | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[FocusMovement](arkts-arkui-common-comp-focusmovement-i.md)&gt; | Yes |  |
+| nextStep | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[FocusMovement](arkts-arkui-common-comp-focusmovement-i.md)&gt; | Yes | Custom focus navigation rule for the current component.<br>**NOTE:** <br>The default value resets **nextStep** to empty.<br>If no custom focus navigation rule is set, or if the target component specified in the custom focus navigation rule does not exist, the default focus navigation rule is still used for focus navigation. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## obscured
 
@@ -5846,7 +5854,7 @@ This event is not triggered for render attribute changes caused by re-rendering,
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (oldValue: Area, newValue: Area) =&gt; void | Yes | Position information of the target element. **oldValue** indicates the width and height of the target element as well as its coordinates relative to the parent element and the upper left corner of the page before the change. **newValue** indicates these dimensions and coordinates after the change. |
+| event | (oldValue: Area, newValue: Area) =&gt; void | Yes | Callback invoked when the component area changes. **oldValue** indicates the width and height of the target element before the change, as well as the coordinates of the target element relative to the upper left corner of the parent element and the page. **newValue** indicates the width and height of the target element after the change, as well as the coordinates of the target element relative to the upper left corner of the parent element and the page. |
 
 **Return value:**
 
@@ -5862,7 +5870,14 @@ This event is not triggered for render attribute changes caused by re-rendering,
 onAreaChange(event: AreaChangeCallback, options?: AreaChangeOptions): T
 ```
 
-Triggered when the component area changes. The interval at which the callback is triggered can be set using expectedUpdateInterval in [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md). This event is triggered only in response to changes in component size or position caused by layout updates.
+Triggered when the component area changes. The interval for triggering the callback can be set through **expectedUpdateInterval** in [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md). This callback responds only to changes in the component size and position caused by layout changes. Rendering attribute changes caused by drawing changes do not trigger the callback, such as [translate](#translate1), [offset](#offset), [markAnchor](#markanchor), [scale](#scale1), and [transform](#transform1). If the position of the component itself is determined by drawing changes, the callback is not triggered either, such as [bindSheet](#bindsheet).
+
+> **NOTE:** 
+> 
+> When a component is bound to both the **onAreaChange** event and the [position](#position)
+> attribute, the **onAreaChange** event responds to changes in the **position** attribute of type
+> Position, but does not respond to changes in the **position** attribute of type
+> Edges or [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md).
 
 **Since:** 26.0.0
 
@@ -5879,7 +5894,7 @@ Triggered when the component area changes. The interval at which the callback is
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | event | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | Yes | Callback function for the **onAreaChange** event. Triggered when the component's size or position changes. |
-| options | [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | No | Parameters related to the area change. If not specified, **expectedUpdateInterval** is treated as **0**. |
+| options | [AreaChangeOptions](arkts-arkui-common-comp-areachangeoptions-i.md) | No | Configuration parameters related to area changes, used to set the calculation interval of the area change callback. The callback trigger interval can be set through **expectedUpdateInterval**, in ms. If **options** is not passed in, **expectedUpdateInterval** is processed as **0**. |
 
 **Return value:**
 
@@ -5929,7 +5944,7 @@ Triggered when this component is mounted to the component tree. Due to the follo
 onAxisEvent(event: Callback<AxisEvent>): T
 ```
 
-Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch gesture on the touchpad.
+Triggered when the pointer from a device like a mouse or touchpad is within a component's area, and the mouse wheel is scrolled or two fingers on the touchpad slide or pinch.
 
 **Since:** 17
 
@@ -5945,7 +5960,7 @@ Triggered by mouse wheel scrolling, a two-finger sliding gesture, or a pinch ges
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[AxisEvent](arkts-arkui-common-comp-axisevent-i.md)&gt; | Yes | [AxisEvent](arkts-arkui-common-comp-axisevent-i.md) object. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[AxisEvent](arkts-arkui-common-comp-axisevent-i.md)&gt; | Yes | Callback invoked when an axis event is triggered. It is used to receive the [AxisEvent](arkts-arkui-common-comp-axisevent-i.md) object, which contains information such as the action type, coordinates, and scroll step of the axis event. |
 
 **Return value:**
 
@@ -6012,7 +6027,7 @@ Allows the current component to customize the hit test and control child compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (value: Array&lt;[TouchTestInfo](arkts-arkui-common-comp-touchtestinfo-c.md)&gt;) =&gt; TouchResult | Yes | Touch event information. **value**: array of child node information. |
+| event | (value: Array&lt;[TouchTestInfo](arkts-arkui-common-comp-touchtestinfo-c.md)&gt;) =&gt; TouchResult | Yes | Callback invoked for the custom touch test. It receives an array **value** that contains the touch test information of child nodes. The array contains only the information of named nodes whose IDs are set through the **id** attribute. It returns a **TouchResult** to control the event dispatch policy of child nodes. |
 
 **Return value:**
 
@@ -6028,7 +6043,7 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-Called when a click event occurs.
+A click action triggers this callback. For click scenarios without a finger movement distance limit, it is recommended to use this API. If you need to limit the finger movement range during a click, it is recommended to use the [onClick](#onclick2) API.
 
 When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-common-comp-sourcetype-e.md) is **KEY** or **JOYSTICK**.
 
@@ -6054,7 +6069,7 @@ When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unk
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: ClickEvent) =&gt; void | Yes | Callback for the click event. |
+| event | (event: ClickEvent) =&gt; void | Yes | Callback for the click event, invoked when a click action is triggered to receive the **ClickEvent** object, through which the click position, trigger source, and other click event information can be obtained. |
 
 **Return value:**
 
@@ -6087,6 +6102,9 @@ For scenarios where there is no restriction on the finger movement distance duri
 > 2. Click events will not be triggered if the finger moves more than 20 px after pressing down.
 > 
 > - This API cannot be called within [attributeModifier](#attributemodifier).
+> 
+> If finger movement during a swipe exceeds the threshold but remains within the touch target boundaries upon
+> release, the click event is still triggered.
 
 **Since:** 12
 
@@ -6104,7 +6122,7 @@ For scenarios where there is no restriction on the finger movement distance duri
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[ClickEvent](arkts-arkui-common-comp-clickevent-i.md)&gt; | Yes | Callback for the click event. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[ClickEvent](arkts-arkui-common-comp-clickevent-i.md)&gt; | Yes | Callback invoked to receive the **ClickEvent** object when a click action is triggered. You can obtain click event information such as the click position and trigger source through this object. |
 | distanceThreshold | number | Yes | Finger movement threshold for click events. If the value specified is less than or equal to 0, it will be converted to the default value.<br>Default value: 2^31-1<br>Unit: vp<br>**NOTE:** <br>If the finger movement exceeds the preset movement threshold, the gesture recognition fails. If the default threshold is used during initialization and the finger moves beyond the component's touch target, the gesture recognition fails. |
 
 **Return value:**
@@ -6119,7 +6137,7 @@ For scenarios where there is no restriction on the finger movement distance duri
 onDetach(callback: Callback<void>): T
 ```
 
-Triggered when this component is unmounted from the component tree. You are advised to use [onDisAppear](#ondisappear) instead.
+Triggered when this component is detached from the component tree.
 
 **Since:** 12
 
@@ -6213,7 +6231,7 @@ Triggered when this component disappears.
 onDragEnd(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when the dragging of the component bound to the event ends.
+Triggered when the drag operation initiated by the component bound to this event ends.
 
 **Since:** 10
 
@@ -6243,7 +6261,7 @@ Triggered when the dragging of the component bound to the event ends.
 onDragEnter(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item enters a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
+Triggered when a drag enters the component area. This event is valid only when [onDrop](#ondrop) is listened for.
 
 **Since:** 8
 
@@ -6271,7 +6289,7 @@ Triggered when a dragged item enters a valid drop target. This event takes effec
 onDragLeave(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item leaves a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
+Triggered when a drag leaves the component scope. This event is valid only when [onDrop](#ondrop) is listened for.
 
 **Since:** 8
 
@@ -6299,7 +6317,7 @@ Triggered when a dragged item leaves a valid drop target. This event takes effec
 onDragMove(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-Triggered when a dragged item moves in a valid drop target. This event takes effect only when a listener for the [onDrop](#ondrop1) event is enabled.
+Triggered when a drag moves within the component scope. This event is valid only when [onDrop](#ondrop) is listened for.
 
 **Since:** 8
 
@@ -6327,7 +6345,7 @@ Triggered when a dragged item moves in a valid drop target. This event takes eff
 onDragSpringLoading(callback: Callback<SpringLoadingContext> | null, configuration?: DragSpringLoadingConfiguration): T
 ```
 
-The component bound to this event can be used as a drag-response target with hover detection capability. When the dragged object hovers over the target, the callback is triggered. Only one target can become the responder at any time, and child components always have higher response priority.
+A component bound with this event can serve as a drag response target with hover detection. When a dragged object hovers over the target, the callback is triggered to notify the application. Only one target can become the responder at a time, and child components always have higher response priority.
 
 For details about the hover detection triggering mechanism and usage, see [Spring Loading (Hover Detection) Support](../../../ui/arkts-common-events-drag-event.md#spring-loading-hover-detection-support).
 
@@ -6346,7 +6364,7 @@ For details about the hover detection triggering mechanism and usage, see [Sprin
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[SpringLoadingContext](arkts-arkui-common-comp-springloadingcontext-t.md)&gt; &#124; null | Yes | Hover detection callback. If the value is **null**, hover detection is disabled. |
-| configuration | [DragSpringLoadingConfiguration](arkts-arkui-common-comp-dragspringloadingconfiguration-t.md) | No | Hover detection configuration. If the value is **undefined**, the default value of [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) is used. |
+| configuration | [DragSpringLoadingConfiguration](arkts-arkui-common-comp-dragspringloadingconfiguration-t.md) | No | Hover detection configuration. Pass this parameter when you need to customize the trigger duration, update interval, or notification count of hover detection. If it is not passed or is **undefined**, the default value of [DragSpringLoadingConfiguration](../arkts-apis/arkts-arkui-dragcontroller-dragspringloadingconfiguration-i.md) is used. |
 
 **Return value:**
 
@@ -6368,6 +6386,8 @@ For components that provide drag and drop capabilities by default, a custom **on
 - If drag data is set, it is used in place of the default drag data.
 
 The custom drag preview is not supported for dragging selected text in the following components: Text, Search, TextInput, TextArea, RichEditor When **onDragStart** is used with menu preview or any component that provides default drag and drop capabilities, custom content on menu items and the preview cannot be dragged.
+
+**Event priority**: When the long press event trigger time is less than 500 ms, the long press event is responded to before the drag event. When the long press event trigger time is greater than or equal to 500 ms, the drag event is responded to before the long press event.
 
 > **NOTE:** 
 > 
@@ -6401,7 +6421,7 @@ The custom drag preview is not supported for dragging selected text in the follo
 onDrop(event: (event: DragEvent, extraParams?: string) => void): T
 ```
 
-A component bound with this event can serve as a drop target. This callback is triggered when the drag-and-drop action stops within the bounds of this component If **event.setResult()** is not explicitly called in the **onDrop** callback to set the drag-and-drop result, then: For supported components, the result is determined based on the actual data processed; for other components, the system considers the data as successfully received.
+The component bound with this event can serve as a drop target. When the drag-and-drop behavior stops within the scope of this component, the callback is triggered. If **event.setResult()** is not proactively called in the **onDrop** callback to set the drag-and-drop result, then: For supported components, the result is determined based on the actual data processed; for other components, the system considers the data as successfully received.
 
 **Since:** 8
 
@@ -6431,7 +6451,7 @@ A component bound with this event can serve as a drop target. This callback is t
 onDrop(eventCallback: OnDragEventCallback, dropOptions?: DropOptions): T
 ```
 
-Triggered when a dragged item is dropped on a valid drop target. If you do not explicitly call event. [setResult](arkts-arkui-common-comp-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
+A component bound with this event can serve as a drop target. When the drag behavior stops within the scope of this component, the callback is triggered. If you do not proactively call event. [setResult](arkts-arkui-common-comp-dragevent-i.md#setresult)() in **onDrop** to set the result of the drag reception, the system handles it as follows:
 
 - If the component being dragged is one that supports drop actions by default, the system's actual data processing  
 result is used.  
@@ -6451,8 +6471,8 @@ result is used.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| eventCallback | [OnDragEventCallback](arkts-arkui-common-comp-ondrageventcallback-t.md) | Yes | Callback function. |
-| dropOptions | [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | No | Parameters for the drop process. |
+| eventCallback | [OnDragEventCallback](arkts-arkui-common-comp-ondrageventcallback-t.md) | Yes | Callback function for the drag release event, used to receive drag event information when the component serves as the drop target and **onDrop** is triggered. |
+| dropOptions | [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | No | Parameters for the drop process. Pass this parameter when you need to configure the behavior of the drag drop process (for example, disabling data prefetching). If it is not passed, the default drop configuration is used, and the drag data is prefetched by default. |
 
 **Return value:**
 
@@ -6494,7 +6514,7 @@ Triggered when the current component obtains focus.
 onFocusAxisEvent(event: Callback<FocusAxisEvent>): T
 ```
 
-Binds a focus axis event callback to the component. Triggered when any operation is performed with the game controller's directional pad or joystick on the bound component.
+Binds a focus axis event callback to the component. After the component bound with this method is focused, operations on the joystick, d-pad, and other controls of the game controller trigger this callback. If the component is not focusable by default, set the [focusable](#focusable) attribute to **true** to enable the focus axis event.
 
 **Since:** 15
 
@@ -6510,7 +6530,7 @@ Binds a focus axis event callback to the component. Triggered when any operation
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md)&gt; | Yes | Focus axis event callback. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md)&gt; | Yes | Focus axis event callback. Triggered when the component bound to this method is focused. |
 
 **Return value:**
 
@@ -6524,7 +6544,7 @@ Binds a focus axis event callback to the component. Triggered when any operation
 onGestureCollectIntercept(callback: GestureCollectInterceptCallback): T
 ```
 
-Triggered after events and gestures on the current node and higher-priority nodes are collected. This callback can be used to intervene in the collection results of events and gestures. This callback uses an asynchronous callback.
+Triggered after events and gestures on the current node and higher-priority nodes are collected. It can be used to intervene in the collection results of events and gestures.
 
 **Since:** 26.0.0
 
@@ -6542,7 +6562,7 @@ Triggered after events and gestures on the current node and higher-priority node
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | Yes | A callback instance used when the component does a touch test. |
+| callback | [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | Yes | Callback used when the component performs a touch test. It is executed after the collection of events and gestures on the current node and higher-priority nodes is complete, to intervene in the collection result. |
 
 **Return value:**
 
@@ -6558,6 +6578,10 @@ onGestureJudgeBegin(callback: (gestureInfo: GestureInfo, event: BaseGestureEvent
 
 Binds a custom gesture determination callback to the component. When the gesture is about to succeed, the user- defined callback is triggered to obtain the result.
 
+> **NOTE:** 
+> 
+> When this API is used in the **Text** component, custom gesture judgment cannot be performed on click events.
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -6572,7 +6596,7 @@ Binds a custom gesture determination callback to the component. When the gesture
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) =&gt; GestureJudgeResult | Yes | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | (gestureInfo: GestureInfo, event: BaseGestureEvent) =&gt; GestureJudgeResult | Yes | Custom gesture judgment callback. This callback is triggered when a gesture is about to succeed, and is used to determine whether to continue to respond to the gesture based on the gesture information and basic gesture event. gestureInfo indicates the type and ID of the current gesture, and event indicates the current gesture event information. GestureJudgeResult is returned to specify the gesture judgment result. |
 
 **Return value:**
 
@@ -6604,7 +6628,7 @@ Binds a custom gesture recognizer judgment callback to the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Yes | A callback instance used when a gesture bound to this component will be accepted. |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Yes | Custom gesture recognizer judgment callback. When a gesture bound to this component is about to succeed, the custom callback is triggered to obtain the result. |
 
 **Return value:**
 
@@ -6640,8 +6664,8 @@ For scenarios where exposure of internal gestures is not required, use the origi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Yes | A callback instance used when a gesture bound to this component will be accepted. |
-| exposeInnerGesture | boolean | Yes | This parameter is a flag. This flag determines whether to expose internal gestures. |
+| callback | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Yes | Custom gesture recognizer judgment callback to bind to the component. When the gesture bound to the component is about to succeed, the user-defined callback is triggered to obtain the result. |
+| exposeInnerGesture | boolean | Yes | Whether to expose the internal gesture identifier.<br>Default value: **false**<br>**NOTE:** <br>If the target component is a combination component, when this parameter is set to **true**, the **current** parameter in the callback contains the gesture recognizers inside the combination component.<br>Currently, only the **Tabs** component is supported. Do not set this parameter for other components.<br>When this parameter is set to **false**, the behavior is the same as that of the original **onGestureRecognizerJudgeBegin** API. |
 
 **Return value:**
 
@@ -6715,7 +6739,7 @@ Triggered when a stylus hovers over the component.
 onKeyEvent(event: (event: KeyEvent) => void): T
 ```
 
-Triggered when a key event occurs.
+After the component bound to this API obtains focus, a key action triggers this callback. The **onKeyEvent** event bubbles by default. You can call the **stopPropagation** method of [KeyEvent](arkts-arkui-common-comp-keyevent-i.md) to prevent event bubbling.
 
 **Since:** 7
 
@@ -6729,7 +6753,7 @@ Triggered when a key event occurs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: KeyEvent) =&gt; void | Yes | **KeyEvent** object. |
+| event | (event: KeyEvent) =&gt; void | Yes | Key event callback, used to receive the **KeyEvent** object and process the key event after the component gains focus. |
 
 **Return value:**
 
@@ -6745,7 +6769,7 @@ Triggered when a key event occurs.
 onKeyEvent(event: Callback<KeyEvent, boolean>): T
 ```
 
-Triggered when a key operation is performed on the bound component after it obtains focus. If the callback returns **true**, the key event is considered handled.
+After the component bound to this API obtains focus, a key action triggers this callback. If the callback returns **true**, the key event is considered consumed and event bubbling is prevented, which is equivalent to calling **stopPropagation**. If the callback returns **false**, the key event is considered not consumed and can continue to bubble.
 
 **Since:** 15
 
@@ -6761,7 +6785,7 @@ Triggered when a key operation is performed on the bound component after it obta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Callback for handling the key event. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Callback invoked to receive the **KeyEvent** object and process the key event. |
 
 **Return value:**
 
@@ -6775,9 +6799,9 @@ Triggered when a key operation is performed on the bound component after it obta
 onKeyEventDispatch(event: Callback<KeyEvent, boolean>): T
 ```
 
-Triggered when the bound component receives a key event. The key event will not be dispatched to its child components. Only existing key events can be intercepted; creating new **KeyEvent** objects for dispatch is not supported.
+Triggered when the bound component receives a key event. The key event will not be dispatched to its child components. This is suitable for scenarios where the parent component needs to handle key events in a unified manner and avoid duplicate responses to key actions by child components. Since API version 23, constructing a **KeyEvent** for dispatch is supported. In API version 22 and earlier, constructing a **KeyEvent** for dispatch is not supported, and only existing key events can be dispatched.
 
-If the callback returns **true**, the key event is marked as consumed and will not [bubble up](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) to parent components.
+If the callback returns **true**, the key event is marked as consumed and will not [bubble up](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) to parent components. If the callback returns **false**, the key event is considered not consumed and can continue to bubble up to parent components.
 
 **Since:** 15
 
@@ -6793,7 +6817,7 @@ If the callback returns **true**, the key event is marked as consumed and will n
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Callback for handling key event dispatch. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Key event dispatch callback function, used to receive the **KeyEvent** object and process the key event received by the current component. |
 
 **Return value:**
 
@@ -6809,7 +6833,7 @@ onKeyPreIme(event: Callback<KeyEvent, boolean>): T
 
 Triggered before other callbacks when a key operation is performed on the bound component after it obtains focus.
 
-If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered.
+If the return value of this callback is **true**, the key event is considered consumed, and subsequent event callbacks (**keyboardShortcut**, input method events, **onKeyEventDispatch**, and **onKeyEvent**) will be intercepted and no longer triggered. If the return value is **false**, the key event is considered not consumed, and subsequent event callbacks can continue to be triggered.
 
 **Since:** 12
 
@@ -6825,7 +6849,7 @@ If the return value of this callback is **true**, the key event is considered co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Callback for handling the key event. |
+| event | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[KeyEvent](arkts-arkui-common-comp-keyevent-i.md), boolean&gt; | Yes | Callback used to preprocess key events. It receives the **KeyEvent** object and processes the key event before the input method event. |
 
 **Return value:**
 
@@ -6839,7 +6863,7 @@ If the return value of this callback is **true**, the key event is considered co
 onMouse(event: (event: MouseEvent) => void): T
 ```
 
-Triggered when the component is clicked by a mouse button or the mouse pointer moves on the component.
+Triggered when the current component is clicked by a mouse button, the mouse is hovered over or moved on the component, or the same mouse operation is triggered by the touchpad.
 
 **Since:** 8
 
@@ -6917,7 +6941,7 @@ Triggered when the component enters a state prior to a gesture-based drag operat
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[PreDragStatus](arkts-arkui-common-comp-predragstatus-e.md)&gt; | Yes | Callback function. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[PreDragStatus](arkts-arkui-common-comp-predragstatus-e.md)&gt; | Yes | Callback invoked when the state before drag initiation changes, used to receive the current stage before the drag gesture is triggered. The callback parameter is [PreDragStatus](arkts-arkui-common-comp-predragstatus-e.md), which indicates the stages before drag initiation. |
 
 **Return value:**
 
@@ -6956,7 +6980,7 @@ Triggered when the component size changes due to layout updates.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | [SizeChangeCallback](arkts-arkui-common-comp-sizechangecallback-t.md) | Yes | Size of the component before and after the change. |
+| event | [SizeChangeCallback](arkts-arkui-common-comp-sizechangecallback-t.md) | Yes | Callback invoked when the component size changes, used to obtain the size of the target element before and after the change. |
 
 **Return value:**
 
@@ -6970,7 +6994,7 @@ Triggered when the component size changes due to layout updates.
 onTouch(event: (event: TouchEvent) => void): T
 ```
 
-Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-common-comp-touchevent-i.md). Mouse left-click events are converted to touch events and will also trigger this callback.
+Triggered by a finger or stylus touch action. Touch events [bubble](../../../ui/arkts-interaction-basic-principles.md#event-bubbling) by default and can be consumed by multiple components. To prevent event bubbling, use the **stopPropagation** API of [TouchEvent](arkts-arkui-common-comp-touchevent-i.md). Mouse left-click events are converted to touch events and will also trigger this callback.
 
 **Since:** 7
 
@@ -6984,7 +7008,7 @@ Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | (event: TouchEvent) =&gt; void | Yes | **TouchEvent** object. |
+| event | (event: TouchEvent) =&gt; void | Yes | Callback invoked when a touch event is triggered, used to receive and process the **TouchEvent** object. The callback parameter **event** indicates the detailed information about the current touch event. |
 
 **Return value:**
 
@@ -6998,7 +7022,11 @@ Invoked when a touch event is triggered. Touch events [bubble](../../../ui/arkts
 onTouchIntercept(callback: Callback<TouchEvent, HitTestMode>): T
 ```
 
-Binds a custom event interception callback to a component.
+Provides components with a custom event interception capability. The callback can dynamically determine the **HitTestMode** of a component based on event information such as the pressed position and input source, thereby controlling hit testing and event response behavior.
+
+> **NOTE:** 
+> 
+> This API can be called in [attributeModifier](#attributemodifier) since API version 20.
 
 **Since:** 12
 
@@ -7016,7 +7044,7 @@ Binds a custom event interception callback to a component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchEvent](arkts-arkui-common-comp-touchevent-i.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes | Custom event interception callback. Triggered during hit testing and sets the hit test behavior for the component based on the return value. |
+| callback | [Callback](arkts-arkui-common-comp-callback-i.md)&lt;[TouchEvent](arkts-arkui-common-comp-touchevent-i.md), [HitTestMode](../arkts-apis/arkts-arkui-hittestmode-e.md)&gt; | Yes | Custom event interception callback. Triggered during hit testing and sets the hit test behavior for the component based on the return value. Before using the **touches** attribute in **TouchEvent**, verify that it is not empty. |
 
 **Return value:**
 
@@ -7064,7 +7092,24 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 
 > **NOTE:** 
 > 
-> This API can be called within [attributeModifier](#attributemodifier) since API version 23.
+> - This API can be called within [attributeModifier](#attributemodifier) since API version 23.
+> 
+> - This API differs from [onVisibleAreaChange](#onvisibleareachange1)as follows: **onVisibleAreaChange** calculates the visible area ratio in every frame. If too many nodes are registered, the system power consumption may deteriorate. This API reduces the frequency of visible area ratio calculation, and the calculation interval is determined by the **expectedUpdateInterval** parameter of [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md).
+> 
+> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor nodes (up to the window boundary) and its own area.
+> 
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any ancestor node, window-level occlusion, and component rotation. Examples include layouts using [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and [rotate](#rotate1) transformations.
+> 
+> - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](#overlay) capability.
+> 
+> - The visible area callback threshold of this API includes **0** by default. For example, if the callback threshold is set to **[0.5]**, the effective threshold is **[0.0, 0.5]**.
+> 
+> - Since API version 18, this API can be called in custom components.
+> 
+> - This API does not support the [scale](#scale1) attribute. Since API version 22, to enable support for the [scale](#scale1) attribute, set
+> **measureFromViewport** of [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) to **true**.
+> 
+> - Since API version 21, the return value type is changed from **void** to **T**.
 
 **Since:** 17
 
@@ -7080,8 +7125,8 @@ Configures a callback for the **onVisibleAreaApproximateChange** event, with opt
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Yes | Visible area change configuration options. |
-| event | [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) &#124; undefined | Yes | Callback for the **onVisibleAreaChange** event. This callback is triggered when the ratio of the component's visible area to its total area approaches the threshold set in **options**. |
+| options | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Yes | Configuration parameters related to visible area change, used to set the visible area callback threshold, expected calculation interval, and visible area calculation mode. |
+| event | [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) &#124; undefined | Yes | Callback for the **onVisibleAreaApproximateChange** event. This callback is invoked when the ratio of the component's visible area to its total area approaches the threshold set in **options**. The visible area ratio calculation interval is determined by the **expectedUpdateInterval** parameter in **options**. Passing **undefined** means that this callback is not set. |
 
 **Return value:**
 
@@ -7141,6 +7186,14 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback, mea
 ```
 
 Called when the visible area of the component changes. You can use **measureFromViewport** to set the visible area calculation mode. For details about the development guidelines and FAQs, see [Detecting Component Visibility](../../../ui/arkts-manage-components-visibility.md).
+
+> **NOTE:** 
+> 
+> - This API only takes into account the relative clipped area ratio of the component with respect to all ancestor nodes (up to the window boundary) and its own area.
+> 
+> - The following calculation scenarios are not supported: clipping by sibling nodes, clipping by siblings of any ancestor node, window-level occlusion, and component rotation. Examples include layouts using [Stack](../../apis-default/arkts-apis/arkts-lib-es5-error-i.md#stack), [z-order control](#zindex), and [rotate](#rotate1) transformations.
+> 
+> - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](#overlay) capability.
 
 **Since:** 22
 
@@ -7588,6 +7641,12 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 > and apply **.hitTestBehavior(HitTestMode.Transparent)** to the outermost component in the overlay builder. This
 > configuration is particularly crucial for watermark implementations, where the overlay must not interfere with
 > user interaction with the underlying content.
+> 
+> When the overlay API is called multiple times, if both the string type and the **CustomBuilder** type are passed
+> in, or both the string type and the **ComponentContent** type are passed in, the overlay content is displayed in
+> a stacked manner.
+> 
+> The overlay node does not support mount/unmount events, such as **onAppear** and **onDisAppear**.
 
 **Since:** 7
 
@@ -7603,8 +7662,8 @@ Adds an overlay to this component, which can be text, a custom component, or [Co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | Yes | Content of the overlay, which can be text or a custom component.<br>**NOTE:** <br>When the overlay is a custom component, it cannot obtain focus through sequential keyboard navigation. Using **CustomBuilder** will cause the overlay content to be destroyed and recreated on page refresh, which may incur performance overhead. For scenarios with frequent page updates, using **ComponentContent** is recommended.<br>**Since:** 12 |
-| options | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | No | Options for positioning the overlay.<br>**NOTE:** <br>In versions earlier than API version 12, **options** is defined as follows:<br>{<br>align?: [Alignment](../arkts-apis/arkts-arkui-alignment-e.md), <br>offset?: {x?: number, y?: number}<br>}<br>**Since:** 12 |
+| value | string &#124; [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | Yes | Entity encapsulation of the mask text content, custom component constructor, or component content.<br>**NOTE:** <br>When a custom component is used as an overlay, keyboard focus cannot move into the custom component. When the overlay is set through **CustomBuilder**, the content in the overlay is destroyed and recreated on page refresh, causing performance loss. For scenarios with frequent page refresh, it is recommended that you set the overlay using **ComponentContent**.<br>**Since:** 12 |
+| options | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | No | Positioning of the overlay. Pass in this parameter when you need to customize the overlay relative to the component after positioning, then based on the current position's top-left corner for offset. If this parameter is not passed in, the overlay is positioned at the top-left corner of the component by default, using the default value **TopStart** of **align** and the default offset **offset: { x: 0, y: 0 }**.<br>**NOTE:** <br>Before API version 12, **options** is defined as follows:<br>{<br> align?: [Alignment](../arkts-apis/arkts-arkui-alignment-e.md), <br>offset?: {x?: number, y?: number}<br>}<br>**Since:** 12 |
 
 **Return value:**
 
@@ -7648,7 +7707,7 @@ Sets the padding attribute of the component. After the setting, extra space is c
 parallelGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture that can be recognized at once by the component and its child component. The gesture event is not a bubbling event. When **parallelGesture** is set for a component, both it and its child component can respond to the same gesture events, thereby implementing a quasi-bubbling effect.
+Binds a gesture that can be triggered together with the child component gesture. Gesture events are non-bubbling events. When the parent component sets **parallelGesture**, the same gesture events of both the parent and child components can be triggered, achieving an effect similar to bubbling.
 
 > **NOTE:** 
 > 
@@ -7667,7 +7726,7 @@ Gesture that can be recognized at once by the component and its child component.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | gesture | GestureType | Yes | Gesture object to bind. |
-| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Event response setting. When the parent and child component gestures need to be triggered simultaneously, you can pass this parameter to control whether to block the child component gesture. **GestureMask.Normal** indicates that the child component gesture is not blocked, which applies to scenarios where both the parent and child component gestures need to respond; **GestureMask.IgnoreInternal** indicates that the child component gesture is blocked, which applies to scenarios where only the gesture bound by the parent component **parallelGesture** needs to respond.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -7832,7 +7891,7 @@ Sets the absolute positioning, which determines the position of a child componen
 priorityGesture(gesture: GestureType, mask?: GestureMask): T
 ```
 
-Gesture to preferentially recognize.
+Binds a gesture that is recognized with priority.
 
 1. By default, the child component preferentially recognizes the gesture specified by **gesture**, and the parent
 component preferentially recognizes the gesture specified by **priorityGesture** (if set).
@@ -7855,8 +7914,8 @@ component preferentially recognizes the gesture specified by **priorityGesture**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gesture | GestureType | Yes | Gesture object to bind. |
-| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Mask for gesture events.<br>Default value: **GestureMask.Normal**. |
+| gesture | GestureType | Yes | Gesture object to bind. When a long press gesture is bound, the component with a smaller minimum long press duration takes precedence in responding and ignores the **priorityGesture** setting. |
+| mask | [GestureMask](arkts-arkui-tapgesture-comp-gesturemask-e.md) | No | Event response setting.<br>Default value: **GestureMask.Normal**. |
 
 **Return value:**
 
@@ -8076,7 +8135,7 @@ Composite the contents of this view and its children into an offscreen cache bef
 responseRegion(value: Array<Rectangle> | Rectangle): T
 ```
 
-Sets one or more touch targets.
+Sets the touch target of a component. In the ArkUI development framework, when touch events and mouse events are processed, hit testing is performed on the pressed point and the component response region before the event is triggered, to collect the components that need to respond to the event. This affects the distribution of click, touch, drag and drop, mouse, axis, hover, and gesture events. When the [responseRegionList](#responseregionlist) API is called, this API no longer takes effect. Since API version 26.0.0, when not actively set, the default minimum height of the touch target of the **Button**, **Toggle** in Button mode, **Select**, **Chip**, and **ChipGroup** components changes from 28 vp to 32 vp. This change affects only the touch hit range, not the actual displayed height of the component.
 
 **Since:** 8
 
@@ -8136,7 +8195,7 @@ Sets the touch target list for the component. When this API is called, the [resp
 restoreId(value: number): T
 ```
 
-id for distribute identification.
+Sets the distributed migration identifier of a component. The identifier is used to identify the component in distributed migration scenarios and restore the component to a specific state on the remote device.
 
 **Since:** 11
 
@@ -8150,13 +8209,13 @@ id for distribute identification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes |  |
+| value | number | Yes | ID of the component that supports distributed migration, used for pairing components on the two devices. The value is an integer, and the specific range is subject to the interface implementation constraints. The IDs of all components that support distributed migration in the same application must be different; otherwise, the components on the two devices may fail to pair correctly, affecting state restoration during distributed migration. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## reuse
 
@@ -8676,6 +8735,8 @@ shouldBuiltInRecognizerParallelWith(callback: ShouldBuiltInRecognizerParallelWit
 
 Provides a callback to set the parallel relationship between built-in gestures and gestures of other components in the response chain. The corresponding C API is [setInnerGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-1.md#setinnergestureparallelto).
 
+Currently, this API does not support setting a parallel relationship between built-in gestures in system combination components (such as the **Tabs** component) and other gestures.
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
@@ -8686,13 +8747,11 @@ Provides a callback to set the parallel relationship between built-in gestures a
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This API is used only in automated test scripts.
-
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldbuiltinrecognizerparallelwithcallback-t.md) | Yes | A callback instance used when a component is doing touch test. |
+| callback | [ShouldBuiltInRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldbuiltinrecognizerparallelwithcallback-t.md) | Yes | Callback event for setting the parallel relationship between the built-in gestures of the system and the gestures of other components in the response chain. When this component undergoes [hit testing](../../../ui/arkts-interaction-basic-principles.md#hit-testing), the user-defined callback is triggered to form the gesture parallel relationship. |
 
 **Return value:**
 
@@ -8706,7 +8765,7 @@ Provides a callback to set the parallel relationship between built-in gestures a
 shouldRecognizerParallelWith(callback: ShouldRecognizerParallelWithCallback): T
 ```
 
-Provides a callback to set the parallel relationship between gestures of the current component and gestures of other components in the response chain. This callback uses an asynchronous callback. The corresponding C API is [setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto).
+Provides a callback event for setting the parallel relationship between non-built-in gestures and gestures of other components in the response chain. This API uses an asynchronous callback to return the result. The corresponding C API is [setGestureParallelTo](../../../reference/apis-arkui/capi-arkui-nativemodule-arkui-nativegestureapi-3.md#setgestureparallelto).
 
 **Since:** 26.0.0
 
@@ -8718,13 +8777,11 @@ Provides a callback to set the parallel relationship between gestures of the cur
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-**Test API:** This API is used only in automated test scripts.
-
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [ShouldRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldrecognizerparallelwithcallback-t.md) | Yes | A callback instance used when a component is doing touch test. |
+| callback | [ShouldRecognizerParallelWithCallback](arkts-arkui-common-comp-shouldrecognizerparallelwithcallback-t.md) | Yes | Callback event for setting a parallel relationship between the gesture and the gestures of other components on the response chain. When the component performs a [hit testing](../../../ui/arkts-interaction-basic-principles.md#hit-testing), the user-defined callback is triggered to form the gesture parallel relationship. |
 
 **Return value:**
 
@@ -8768,7 +8825,7 @@ Sets the width and height of the component itself. After the setting, the layout
 smartGestureShortcut(options?: SmartGestureShortcutOptions): T
 ```
 
-Enable or disable specific smart gesture shortcuts, and set response priorities for them.
+Sets the smart gesture response behavior of the component. This attribute is only used to declare whether the component responds to smart gestures, and does not directly trigger actions such as tap, scroll, page turning, or back.
 
 **Since:** 26.0.0
 
@@ -8784,13 +8841,13 @@ Enable or disable specific smart gesture shortcuts, and set response priorities 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md) | No | Options for configuring smart gesture shortcuts. In SmartGestureShortcutOptions: enabled is used to configure whether the component responds to smart gestures. selectable is used to set whether the component displays and retains a selected state after being selected by a smart gesture operation. action is used to set the smart gesture response priority. Currently, only GestureShortcut.PRIMARY is supported, which makes the component the primary response target for smart gesture operations such as swiping and tapping. It is recommended to explicitly pass these parameters to avoid inconsistencies caused by default configurations. For default configuration handling, please refer to [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md). |
+| options | [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md) | No | Configuration for the smart gesture response of the component. In **SmartGestureShortcutOptions**: **enabled** is used to configure whether the component responds to smart gestures. **selectable** is used to set whether to show and retain the selected state after the component is selected by a smart gesture operation. **action** is used to set the smart gesture response priority. Currently, only **GestureShortcut.PRIMARY** is supported, which makes the component the preferred response target in operations supported by smart gestures, such as swipe and tap. It is recommended to pass this parameter explicitly to avoid unexpected behavior due to default configuration. For default configuration handling, see [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md). |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T | return component instance who call the method. |
+| T | Current component, used for chaining attribute methods. |
 
 <a id="sphericaleffect1"></a>
 
@@ -8882,7 +8939,7 @@ Sets the state-specific styles for the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [StateStyles](arkts-arkui-common-comp-statestyles-i.md) | Yes |  |
+| value | [StateStyles](arkts-arkui-common-comp-statestyles-i.md) | Yes | State-specific styles for the component. |
 
 **Return value:**
 
@@ -9052,7 +9109,7 @@ Sets the tab navigation order of the component in sequential focus navigation wi
 tabStop(isTabStop: boolean): T
 ```
 
-Set TabStop on component focus
+Sets the **tabStop** of the current container component, which determines whether the focus stays at the current container during focus traversal. When not set, **tabStop** defaults to **false**, and the focus does not stay at the current container due to **tabStop** during focus traversal.
 
 **Since:** 14
 
@@ -9068,13 +9125,13 @@ Set TabStop on component focus
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isTabStop | boolean | Yes |  |
+| isTabStop | boolean | Yes | Whether the current container component is a focus-stay container. The value **true** means that the current container component is a focus-stay container, and **false** means the opposite.<br>**NOTE:** <br>1. To configure **tabStop**, ensure that the component is a container component with focusable child components. By default, a container component cannot directly gain focus.<br>2. When focus is requested through [requestFocus](../arkts-apis/arkts-arkui-arkui-uicontext-focuscontroller-c.md#requestfocus), if the component is a container component with **tabStop** configured, the focus can stay on the container component. If the target container component does not have **tabStop** configured, the target component can still gain focus even if there is a component with **tabStop** configured on the entire focus chain.<br>3. Containers with **tabStop** configured cannot be nested more than two levels.<br>**tabStop** focus navigation rules:<br>1. When navigating focus with the Tab key and arrow keys, the focus stays on the component with **tabStop** configured. If the focus stays inside a container with **tabStop** configured, it can navigate to the next focusable component inside the container. If the focus stays outside a container with **tabStop** configured, it can navigate to the next focusable component outside the container.<br>2. When the focus stays on **tabStop**, pressing Enter navigates the focus to the first focusable component inside, pressing ESC returns the focus to the previous component with **tabStop** configured that does not exceed the root container of the current [hierarchical page](../../../ui/arkts-common-events-focus-event.md#basic-concepts), and pressing the spacebar triggers the **onClick** event of the container.<br>3. Configuring **tabStop** on the root container is not recommended. If the root container has **tabStop** configured, after the focus is cleared to the root container through **clearFocus**, pressing Enter navigates the focus back to the last focused component inside, and after the focus is cleared to the root container through the ESC key, pressing Enter navigates the focus to the first focusable component inside. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## toolbar
 
@@ -9505,7 +9562,7 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 visibility(value: Visibility): T
 ```
 
-Sets the visibility of the component. If **visibility** is not set, the component is displayed by default.
+Controls whether a component is visible. If **visibility** is not set, the component is displayed by default.
 
 **Since:** 7
 
@@ -9644,7 +9701,7 @@ Sets the width of the component itself or its horizontal layout policy. By defau
 zIndex(value: number): T
 ```
 
-Sets the stacking order of the component.
+A component's z-order determines its stacking order relative to its sibling components within the same container.
 
 **Since:** 7
 
@@ -9662,7 +9719,7 @@ Sets the stacking order of the component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Stacking order of the component relative to its sibling components in a container. The components with a larger **zIndex** value cover those with a smaller one. When dynamically changing zIndex does not involve adding or removing sibling nodes, the components are sorted stably based on their previous stack level. |
+| value | number | Yes | Display level relationship of sibling components in the same container. The larger the **zIndex** value, the higher the display level, that is, a component with a larger **zIndex** value is displayed above a component with a smaller **zIndex** value. Components in different containers cannot change the cross-container display level based on the **zIndex** value. When no sibling nodes are added or removed, dynamically modifying **zIndex** performs stable sorting based on the level order before the **zIndex** change. When sibling nodes are added or removed, the larger the **zIndex** value, the higher the display level; when the **zIndex** values are equal, components are displayed in declaration order, that is, a component declared later is displayed above a component declared earlier. |
 
 **Return value:**
 
@@ -9752,7 +9809,7 @@ Default column count, which refers to the grid column count occupied when the us
 touchable(value: boolean): T
 ```
 
-Whether the component can respond to finger interactions such as click and touch events.
+Sets the interaction response capability of the current component.
 
 **Since:** 7
 

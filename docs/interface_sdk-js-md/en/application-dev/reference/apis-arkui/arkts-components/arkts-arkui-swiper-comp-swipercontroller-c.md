@@ -20,7 +20,13 @@ Implements the controller for the **Swiper** component. Bind this object to a **
 changeIndex(index: number, useAnimation?: boolean)
 ```
 
-Goes to a specified page.
+Switches to the specified page. The page switching process is animated, and the duration is set by the [duration](arkts-arkui-swiper-comp-attribute.md#duration) attribute of **Swiper**.
+
+> **NOTE:** 
+> 
+> This API itself provides the capability of switching pages without animation (by setting **useAnimation** to
+> **false**). It is not recommended to start an animation with the **changeIndex** API and then directly interrupt
+> it with the **finishAnimation** API to switch pages without animation.
 
 **Since:** 12
 
@@ -49,13 +55,14 @@ Goes to a specified page.
 changeIndex(index: number, animationMode?: SwiperAnimationMode | boolean)
 ```
 
-Moves to a specific page.
+Switches to the specified page. The page switching process is animated, and the duration is set by the [duration](arkts-arkui-swiper-comp-attribute.md#duration) attribute of **Swiper**.
 
 > **NOTE:** 
 > 
-> This API itself supports jumping without animation (set **animationMode** to **false** or
-> **SwiperAnimationMode.NO_ANIMATION**). Avoid starting an animation with **changeIndex** and then interrupt it
-> with **finishAnimation** to achieve animation-free jumping.
+> This API itself provides the capability of switching pages without animation (by setting **animationMode** to
+> **false** or **SwiperAnimationMode.NO_ANIMATION**). It is not recommended to start an animation with the
+> **changeIndex** API and then directly interrupt it with the **finishAnimation** API to switch pages without
+> animation.
 
 **Since:** 15
 
@@ -74,7 +81,7 @@ Moves to a specific page.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the target page in the **Swiper** component.<br>**NOTE:** <br>If the value specified is less than 0 or greater than the maximum page index, the value **0** is used. |
-| animationMode | [SwiperAnimationMode](arkts-arkui-swiper-comp-swiperanimationmode-e.md) &#124; boolean | No | Animation mode for moving to the specified page.<br> Default value: **SwiperAnimationMode.NO_ANIMATION**<br> **NOTE:** <br>The value **true** is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**, which means to use the default animation. The value **false** is equivalent to **SwiperAnimationMode.NO_ANIMATION**, which means to use no animation. |
+| animationMode | [SwiperAnimationMode](arkts-arkui-swiper-comp-swiperanimationmode-e.md) &#124; boolean | No | Sets the animation mode for turning to a specified page.<br>Default value: **SwiperAnimationMode.NO_ANIMATION**<br> **Note:** <br>When **true** is passed in, the animation is enabled, which is equivalent to **SwiperAnimationMode.DEFAULT_ANIMATION**; when **false** is passed in, the animation is disabled, which is equivalent to **SwiperAnimationMode.NO_ANIMATION**. |
 
 ## constructor
 
@@ -126,7 +133,7 @@ Sets the drag distance of drag simulation.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| offset | number | Yes | The drag distance to simulate the drag.<br> A positive number indicates that the layout is dragged to the start point. A negative number indicates dragging towards the end point of the layout. <br>Unit: vp.   - Drag distance of drag simulation.<br>A positive number indicates dragging towards the   start point of the layout, and a negative number indicates dragging towards the end point of the layout. |
+| offset | number | Yes | Drag distance to be simulated.<br>A positive value indicates dragging toward the start of the main axis (leftward in horizontal layout and upward in vertical layout); a negative value indicates dragging toward the end of the main axis (rightward in horizontal layout and downward in vertical layout).<br>. <br>Unit: vp<br>. Value range: (-∞, +∞). |
 
 **Return value:**
 

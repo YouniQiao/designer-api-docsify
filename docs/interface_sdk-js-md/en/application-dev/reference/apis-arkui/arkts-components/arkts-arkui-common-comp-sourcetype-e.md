@@ -4,7 +4,7 @@
 declare enum SourceType
 ```
 
-Enumerates the input source device types.
+Defines the device types corresponding to the input sources.
 
 **Since:** 8
 

@@ -7,12 +7,16 @@ declare enum NavigationSystemTransitionType
 Type of the system transition animation.
 
 > **NOTE:** 
-
+> 
 > System transition animations for the title bar and content area can be configured separately.
-
+> 
 > The system transition animation of the title bar is only available for the push and pop animations of navigation
 > destination pages in STANDARD mode, with the following constraints:
-
+> 
+> 1. When **NavigationSystemTransitionType** is set to **TITLE**, only the system transition animation of the title bar is displayed.
+> 
+> 2. When **NavigationSystemTransitionType** is set to **CONTENT**, only the system transition animation of the content area is displayed.
+> 
 > When **NONE** or **TITLE** is set, no system transition animation is displayed. When **CONTENT** or **DEFAULT** is
 > set, the system transition animation is displayed by default.
 

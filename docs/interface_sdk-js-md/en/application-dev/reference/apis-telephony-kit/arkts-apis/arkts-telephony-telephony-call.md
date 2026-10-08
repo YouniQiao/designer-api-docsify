@@ -48,6 +48,7 @@ import { call } from '@kit.TelephonyKit';
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall3) | Launches the call screen and displays the dialed number. This API uses a promise to return the result. This API can be called only in a UIAbility. |
 | [makeCall](arkts-telephony-call-makecall-f.md#makecall4) | Launches the call screen and displays the dialed number. This API uses a promise to return the result. You need to declare the **ohos.permission.START_ABILITIES_FROM_BACKGROUND** permission if you want to call the API in the background. |
 | [makeCallWithToken](arkts-telephony-call-makecallwithtoken-f.md) | Go to the dial screen and the called number is displayed.The authentication challenge value is returned. |
+| [makeDirectCall](arkts-telephony-call-makedirectcall-f.md) | Application make calls with one tap. |
 | [rejectCall](arkts-telephony-call-rejectcall-f.md#rejectcall4) | Rejects a call. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->

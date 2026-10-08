@@ -4,6 +4,16 @@
 declare namespace cursorControl
 ```
 
+Mouse cursor control is used to set the display style of the mouse cursor. It supports setting multiple preset cursor styles and restoring the default arrow style. It is applicable to scenarios where the cursor style needs to be switched based on the component state or interaction area, resolving the issue that the default cursor style cannot match the interaction intent, and helping improve the user's interaction recognition and operation feedback experience.
+
+> **NOTE:** 
+> 
+> Directly using **cursorControl** can lead to the issue of
+> [ambiguous UI context](../../../ui/arkts-global-interface.md#ambiguous-ui-context). To avoid this, obtain the
+> [UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md) object using the **getUIContext()** API and then obtain the
+> **cursorControl** bound to the instance using the
+> getCursorController API.
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -18,8 +28,8 @@ declare namespace cursorControl
 
 | Name | Description |
 | --- | --- |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | Sets the current mouse cursor style. This API can be used globally in method statements. |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | Restores the mouse cursor to the default arrow style. This API can be used globally in method statements. |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | A global API that can be used in component methods or event callbacks. Calling this API sets the current mouse cursor style, for example, displaying an I-beam cursor when hovering over a text editing area, displaying a move cursor on a draggable element, or displaying a pointing-hand cursor when hovering over a map marker. |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | A global API that can be used in component methods or event callbacks. Calling this API restores the mouse cursor to the default arrow style, for example, restoring the default cursor when the mouse leaves a hover area, when a component loses focus, or when an interaction ends. |
 
 ## Examples
 

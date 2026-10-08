@@ -4,7 +4,7 @@
 declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme
 ```
 
-Defines a custom theme.
+Customizes the color scheme of components within the **WithTheme** scope. The specific color items are configured through the **CustomColors** interface.
 
 **Since:** 12
 

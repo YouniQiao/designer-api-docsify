@@ -4,7 +4,7 @@
 export declare type CustomColors = Partial<Colors>
 ```
 
-Defines the struct of CustomColors.
+Defines the type for custom theme color resources.
 
 **Since:** 12
 

@@ -36,7 +36,7 @@ Only the last gesture in a sequentially recognized gesture group can trigger **o
 Parallel
 ```
 
-Parallel recognition. Registered gestures are recognized concurrently until all gestures are recognized. The recognition result of each gesture does not affect each other.
+Parallel recognition. Registered gestures are recognized concurrently until all gestures are recognized. The recognition result of each gesture does not affect each other. This mode is suitable for interaction scenarios where multiple gestures need to respond simultaneously without blocking each other.
 
 **Since:** 7
 
@@ -52,7 +52,7 @@ Parallel recognition. Registered gestures are recognized concurrently until all 
 Exclusive
 ```
 
-Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized.
+Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized. This mode is suitable for interaction scenarios where multiple gestures may trigger simultaneously but only one is allowed to take effect.
 
 **Since:** 7
 

@@ -21,7 +21,7 @@ type Matrix4Result = [
   ]
 ```
 
-The matrix is column-first fourth-order matrix.
+Number array whose length is 16 (4 x 4). The matrix is column-first.
 
 **Since:** 10
 

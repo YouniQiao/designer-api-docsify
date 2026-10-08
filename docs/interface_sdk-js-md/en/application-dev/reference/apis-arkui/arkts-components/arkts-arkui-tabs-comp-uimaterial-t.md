@@ -4,7 +4,7 @@
 declare type UIMaterial = import('../api/@ohos.arkui.uiMaterial').uiMaterial
 ```
 
-UIMaterial
+Defines the system material module. Use the **ImmersiveMaterial** type in it when setting the system material attribute of the tab bar floating style.
 
 **Since:** 26.0.0
 

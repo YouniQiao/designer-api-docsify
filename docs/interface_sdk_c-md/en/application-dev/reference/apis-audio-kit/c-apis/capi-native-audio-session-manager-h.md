@@ -97,6 +97,7 @@ Declare the audio session scene.
 | AUDIO_SESSION_SCENE_MEDIA = 0 | scene for media |
 | AUDIO_SESSION_SCENE_GAME = 1 | scene for game |
 | AUDIO_SESSION_SCENE_VOICE_COMMUNICATION = 2 | scene for voice communication |
+| AUDIO_SESSION_SCENE_VOICE_MESSAGE = 3 | scene for voice message<br>**Since**: 26.0.1 |
 
 ### OH_AudioSession_StateChangeHint
 

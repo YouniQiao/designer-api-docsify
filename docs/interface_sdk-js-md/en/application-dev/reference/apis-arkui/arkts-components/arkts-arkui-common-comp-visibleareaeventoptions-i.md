@@ -4,7 +4,7 @@
 declare interface VisibleAreaEventOptions
 ```
 
-Describes visible area change configuration options.
+Parameters related to the visible area change.
 
 **Since:** 12
 
@@ -18,7 +18,7 @@ Describes visible area change configuration options.
 expectedUpdateInterval?: number
 ```
 
-Expected calculation interval, in ms. If the value is less than 100 or set to **NaN**, the default value **100** is used. If the value is greater than 2^31-1, the default value **2^31-1** is used.
+Expected calculation interval, in ms, used to control the calculation frequency of the visible area ratio. When more timely perception of visible area changes is required, a smaller interval can be set; when many nodes are registered or more attention is paid to reducing the calculation frequency and power consumption, a larger interval is recommended. If not set, the default value **1000** is used. If the value is less than 100 or set to **NaN**, the default value **100** is used. If the value is greater than 2^31-1, the default value **2^31-1** is used.
 
 Default value: **1000**.
 

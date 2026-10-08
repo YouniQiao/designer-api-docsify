@@ -16,7 +16,7 @@ declare namespace accessibility
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType, UIRect, UIAccessibilityElement } from '@kit.AccessibilityKit';
 ```
 
 ## 汇总
@@ -70,6 +70,9 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 | [offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) | 取消监听应用自身“长辈模式”变化事件。使用callback异步回调。 |
 | [getSeniorModeStateForSelf](arkts-accessibility-accessibility-getseniormodestateforself-f.md) | 判断应用是否开启“长辈模式”。使用Promise异步回调。 |
 | [setSeniorModeStateForSelf](arkts-accessibility-accessibility-setseniormodestateforself-f.md) | 设置应用是否开启“长辈模式”。使用Promise异步回调。 |
+| [getFocusedUIAccessibilityElement](arkts-accessibility-accessibility-getfocuseduiaccessibilityelement-f.md) | 获取应用内的无障碍焦点元素。使用Promise异步回调。 |
+| [onUIAccessibilityFocusChanged](arkts-accessibility-accessibility-onuiaccessibilityfocuschanged-f.md) | 监听应用内无障碍焦点变化事件。 |
+| [offUIAccessibilityFocusChanged](arkts-accessibility-accessibility-offuiaccessibilityfocuschanged-f.md) | 取消监听应用内无障碍焦点变化事件。 |
 
 ### 类
 
@@ -84,6 +87,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 | [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | 字幕配置管理。调用CaptionsManager的方法前，先调用[accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md)获取CaptionsManager实例。 |
 | [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | 字幕风格。 |
 | [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | 辅助应用信息。 |
+| [UIAccessibilityFocusChangeInfo](arkts-accessibility-accessibility-uiaccessibilityfocuschangeinfo-i.md) | 应用内无障碍焦点变化信息。 |
 
 ### 类型
 

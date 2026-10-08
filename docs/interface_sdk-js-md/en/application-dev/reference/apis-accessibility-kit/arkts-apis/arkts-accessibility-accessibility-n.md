@@ -16,7 +16,7 @@ This module provides accessibility features, including obtaining the accessibili
 
 ```TypeScript
 import { accessibility } from '@kit.AccessibilityKit';
-import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType } from '@kit.AccessibilityKit';
+import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, InjectActionType, AccessibilityFocusScene, FocusRuleType, OperateVirtualNodeResult, AccessibilitySourceType, UIRect, UIAccessibilityElement } from '@kit.AccessibilityKit';
 ```
 
 ## Summary
@@ -70,6 +70,9 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 | [offSeniorModeStateChangeForSelf](arkts-accessibility-accessibility-offseniormodestatechangeforself-f.md) | Unsubscribes from the "senior mode" change event of the app itself. This API uses an asynchronous callback to return the result. |
 | [getSeniorModeStateForSelf](arkts-accessibility-accessibility-getseniormodestateforself-f.md) | Checks whether the app has "senior mode" enabled. This API uses a promise to return the result. |
 | [setSeniorModeStateForSelf](arkts-accessibility-accessibility-setseniormodestateforself-f.md) | Sets whether the app has "senior mode" enabled. This API uses a promise to return the result. |
+| [getFocusedUIAccessibilityElement](arkts-accessibility-accessibility-getfocuseduiaccessibilityelement-f.md) | Obtain the accessibility focus elements within the application. This API uses a promise to return the result. |
+| [onUIAccessibilityFocusChanged](arkts-accessibility-accessibility-onuiaccessibilityfocuschanged-f.md) | Subscribes to accessibility focus change events in the app. |
+| [offUIAccessibilityFocusChanged](arkts-accessibility-accessibility-offuiaccessibilityfocuschanged-f.md) | Unsubscribes from accessibility focus change events in the app. |
 
 ### Classes
 
@@ -81,6 +84,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 
 | Name | Description |
 | --- | --- |
+| [UIAccessibilityFocusChangeInfo](arkts-accessibility-accessibility-uiaccessibilityfocuschangeinfo-i.md) | Accessibility focus change information in an app. |
 | [CaptionsManager](arkts-accessibility-accessibility-captionsmanager-i.md) | Manages captions configuration. Before calling any method of **CaptionsManager**, call [accessibility.getCaptionsManager()](arkts-accessibility-accessibility-getcaptionsmanager-f.md) to obtain a **CaptionsManager** instance. |
 | [CaptionsStyle](arkts-accessibility-accessibility-captionsstyle-i.md) | Describes the style of captions. |
 | [AccessibilityAbilityInfo](arkts-accessibility-accessibility-accessibilityabilityinfo-i.md) | Provides information about an accessibility application. |

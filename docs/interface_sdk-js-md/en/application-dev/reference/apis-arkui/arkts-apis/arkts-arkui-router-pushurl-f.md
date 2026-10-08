@@ -37,7 +37,7 @@ Navigates to a specified page in the application.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the page routing result.<br>When the page redirection is successful, the value of **error** is **undefined**. When the page redirection fails, the value of **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -120,7 +120,7 @@ Navigates to a specified page in the application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 
@@ -201,7 +201,7 @@ Navigates to a specified page in the application.
 | --- | --- | --- | --- |
 | options | [RouterOptions](arkts-arkui-router-routeroptions-i.md) | Yes | Page routing parameters. |
 | mode | [RouterMode](arkts-arkui-router-routermode-e.md) | Yes | Routing mode. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the page navigation result.<br>When the page navigation is successful, **error** is **undefined**. When the page navigation fails, **error** is the error object returned by the system. |
 
 **Error codes:**
 
@@ -285,7 +285,7 @@ Navigates to a specified page in the application.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise that returns no value. |
 
 **Error codes:**
 

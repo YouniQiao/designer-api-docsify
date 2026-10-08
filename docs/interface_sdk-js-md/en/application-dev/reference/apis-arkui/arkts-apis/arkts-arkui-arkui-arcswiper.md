@@ -13,7 +13,7 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 | Name | Description |
 | --- | --- |
 | [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Describes the properties and behavior of the arc dot navigation indicator. |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | In addition to the universal attributes, the following attributes are supported. |
+| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | In addition to the [universal attributes](../arkts-components/arkts-arkui-common-comp.md), the following attributes are supported. |
 | [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and use it to control page switching. |
 
 ### Interfaces
@@ -32,7 +32,7 @@ import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiper
 | [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) | Defines the callback triggered when the page transition animation starts. |
 | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | Defines the callback to notify the application when the animation stops playing. |
 | [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) | Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn. |
-| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | Defines the callback to notify the application when the index of the currently displayed element changes. |
+| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | Notifies the app when the index of the currently displayed element changes. The index sequence starts from 0. |
 
 ### Enums
 

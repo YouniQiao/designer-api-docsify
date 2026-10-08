@@ -4,7 +4,7 @@
 declare class RotationGestureHandler extends GestureHandler<RotationGestureHandler>
 ```
 
-Defines a rotation gesture handler object.
+Defines the rotation gesture handler object type, which is used to recognize multi-finger rotation interactions on a component. It is suitable for scenarios where an object needs to be rotated or an angle needs to be adjusted, and supports configuring recognition conditions such as the number of triggering fingers, the minimum angle change, and the finger count limit.
 
 **Inheritance/Implementation:** RotationGestureHandler extends GestureHandler&lt;RotationGestureHandler&gt;
 
@@ -36,7 +36,7 @@ Constructor used to create a rotation gesture handler instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [RotationGestureHandlerOptions](arkts-arkui-tapgesture-comp-rotationgesturehandleroptions-i.md) | No | Parameters of the rotation gesture handler. |
+| options | [RotationGestureHandlerOptions](arkts-arkui-tapgesture-comp-rotationgesturehandleroptions-i.md) | No | Rotation gesture handler configuration options. Pass this parameter when you need to customize the minimum number of fingers to trigger rotation, the minimum angle change to trigger the rotation gesture, or the finger count check. If this parameter is not passed, the default configuration of the rotation gesture handler is used, for example, two fingers to trigger, a minimum angle change of 1deg, and no check on the number of fingers touching the screen by default. |
 
 <a id="onactioncancel1"></a>
 

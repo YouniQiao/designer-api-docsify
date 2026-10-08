@@ -8,7 +8,7 @@ Provides C APIs for the Ethernet NIC module.
 
 **Since**: 26.0.0
 
-**Related module**: [netmanager_ext](capi-netmanager-ext.md)
+**Related module**: [NetEthernet](capi-netethernet.md)
 
 ## Summary
 
@@ -39,7 +39,7 @@ Obtains the MAC address list of Ethernet NICs.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) *macAddrList | Pointer to the MAC address list of NICs. |
+| [Ethernet_MacAddrInfoList](capi-netethernet-ethernet-macaddrinfolist.md) *macAddrList | Pointer to the MAC address list of NICs. |
 
 **Returns**:
 
@@ -65,7 +65,7 @@ Obtains the IP address list of Ethernet NICs.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) *netAddrList | Pointer to the IP address list of NICs. |
+| [Ethernet_NetAddrList](capi-netethernet-ethernet-netaddrlist.md) *netAddrList | Pointer to the IP address list of NICs. |
 
 **Returns**:
 

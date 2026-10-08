@@ -4,7 +4,7 @@
 declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
 ```
 
-Defines the pointer style.
+Defines the mouse cursor style.
 
 > **NOTE:** 
 > 

@@ -1,4 +1,4 @@
-# @ohos.resourceschedule.backgroundLoader
+# @ohos.resourceschedule.backgroundLoader(应用数据后台加载)
 
 后台预取接口
 

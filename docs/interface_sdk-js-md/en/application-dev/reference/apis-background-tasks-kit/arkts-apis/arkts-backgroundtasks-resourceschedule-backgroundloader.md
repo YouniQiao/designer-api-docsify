@@ -1,4 +1,4 @@
-# @ohos.resourceschedule.backgroundLoader
+# @ohos.resourceschedule.backgroundLoader(Application data background loading)
 
 The **BackgroundLoader** module provides the APIs for registering, unregistering and querying tasks. You can use these APIs to register tasks that need to be loaded in the background. The system schedules and executes these deferred tasks at an appropriate time, subject to the storage space, power consumption.
 
