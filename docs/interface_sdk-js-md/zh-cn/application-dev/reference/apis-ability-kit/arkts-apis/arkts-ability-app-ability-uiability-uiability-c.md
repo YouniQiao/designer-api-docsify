@@ -1101,6 +1101,26 @@ UIAbility的上下文。
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
+## isDestroyed
+
+```TypeScript
+isDestroyed: boolean
+```
+
+表示UIAbility是否已被销毁。默认值为**false**。
+
+在[onDestroy](#ondestroy)回调执行后，该属性被设置为**true**。
+
+**类型：** boolean
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbility-isDestroyed: boolean--><!--Device-UIAbility-isDestroyed: boolean-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
 ## lastRequestWant
 
 ```TypeScript

@@ -1476,6 +1476,84 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+## revokeDelegator
+
+```TypeScript
+revokeDelegator(): Promise<void>
+```
+
+当一个模块下首个启动的UIAbility需要跳转到另一个UIAbility时，目标UIAbility被称为DelegatorAbility。关于如何设置DelegatorAbility的详细信息，请参阅本API示例中的步骤1。当DelegatorAbility完成其特定操作后，可以使用此接口恢复到第一个UIAbility。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 该接口成功调用后，DelegatorAbility内的[Window](../../apis-arkui/arkts-apis/arkts-arkui-window-n.md)接口将变为不可用。
+
+**起始版本：** 17
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-revokeDelegator(): Promise<void>--><!--Device-UIAbilityContext-revokeDelegator(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not support. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000065](../errorcode-ability.md#16000065-接口只支持ability在前台时调用) | The API can be called only when the ability is running in the foreground. |
+| [16000084](../errorcode-ability.md#16000084-只允许delegatorability单次调用) | Only DelegatorAbility is allowed to call this API, and only once. |
+| [16000085](../errorcode-ability.md#16000085-元能力与窗口的交互流程发生错误) | An error occurred during the interaction between the ability and window. |
+
+**示例**
+
+设置DelegatorAbility。
+
+在[module.json5](../../../quick-start/module-configuration-file.md)配置文件标签中配置abilitySrcEntryDelegator和abilityStageSrcEntryDelegator。当Module下首个UIAbility冷启动时，系统优先启动abilitySrcEntryDelegator指向的UIAbility。
+
+> 说明：
+> 
+> 当UIAbility是通过[startAbilityByCall](#startabilitybycall)启动时，系统会忽略在[module.json5](../../../quick-start/module-configuration-file.md)配置文件标签中配置的abilitySrcEntryDelegator和abilityStageSrcEntryDelegator。
+> 
+> abilityStageSrcEntryDelegator指定的ModuleName不能与当前ModuleName相同。
+
+```TypeScript
+{
+  "module": {
+    // ...
+    "abilityStageSrcEntryDelegator": "xxxModuleName",
+    "abilitySrcEntryDelegator": "xxxAbilityName",
+    // ...
+  }
+}
+```
+
+取消DelegatorAbility。
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class DelegatorAbility extends UIAbility {
+  onForeground() {
+    // DelegatorAbility完成特定操作后，调用revokeDelegator回到首个UIAbility
+    this.context.revokeDelegator().then(() => {
+      console.info('revokeDelegator success');
+    }).catch((err: BusinessError) => {
+      console.error(`revokeDelegator failed, code is ${err.code}, message is ${err.message}`);
+    });
+  }
+}
+```
+
 <a id="setabilityinstanceinfo1"></a>
 
 ## setAbilityInstanceInfo
@@ -3276,6 +3354,142 @@ export default class EntryAbility extends UIAbility {
       let code = (err as BusinessError).code;
       let message = (err as BusinessError).message;
       console.error(`startAppServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+## startSelf
+
+```TypeScript
+startSelf(): Promise<void>
+```
+
+将当前UIAbility实例拉到前台。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-startSelf(): Promise<void>--><!--Device-UIAbilityContext-startSelf(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 接口返回的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported, because starting self to foreground from background is not supported in current device or current UIAbility is a non-native UIAbility. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Connect to system service failed. |
+| [16000082](../errorcode-ability.md#16000082-uiability正在启动中) | The UIAbility is being started. The UIAbility has not completed onCreate or onWindowStageCreate. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onCreate() {
+    try {
+      setTimeout((): void => {
+        // 启动当前UIAbility实例，将UIAbility切换至前台
+        this.context.startSelf()
+          .then((): void => {
+            console.info('startSelf succeed');
+          })
+          .catch((err: BusinessError): void => {
+            console.error(`startSelf failed, code is ${err.code}, message is ${err.message}`);
+          });
+      }, 100);
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startSelf failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+## startSelfUIAbilityInChildProcess
+
+```TypeScript
+startSelfUIAbilityInChildProcess(want: Want, specifiedFlag: string): Promise<void>
+```
+
+在子进程中拉起应用自身的UIAbility。如果UIAbility的launchMode为specified，可以设置specifiedFlag。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-startSelfUIAbilityInChildProcess(want: Want, specifiedFlag: string): Promise<void>--><!--Device-UIAbilityContext-startSelfUIAbilityInChildProcess(want: Want, specifiedFlag: string): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 表示要启动的ability。 |
+| specifiedFlag | string | 是 | 如果目标UIAbility的launchType为specified，可以通过此参数设置specifiedFlag，系统将不会调用onAcceptWant。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 接口返回的Promise对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires. |
+| [16000009](../errorcode-ability.md#16000009-wukong模式不允许启动停止ability) | An ability cannot be started or stopped in Wukong mode. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Connect to system service failed. |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
+| [16000122](../errorcode-ability.md#16000122-待启动的目标组件被系统管控模块拦截) | The target component is blocked by the system module and does not support startup. |
+| [16000123](../errorcode-ability.md#16000123-不支持隐式启动) | Implicit startup is not supported. |
+| [16000124](../errorcode-ability.md#16000124-不支持启动分布式uiability) | Starting a remote UIAbility is not supported. |
+| [16000130](../errorcode-ability.md#16000130-uiability不属于调用方) | The UIAbility not belong to caller. |
+| [16000131](../errorcode-ability.md#16000131-uiability已启动) | The UIAbility is already exist, can not start again. |
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ChildProcessAbility'
+    };
+    let instanceFlag = 'instance1';
+    try {
+      // 在子进程中启动当前应用的UIAbility
+      this.context.startSelfUIAbilityInChildProcess(want, instanceFlag)
+        .then(() => {
+          console.info('startSelfUIAbilityInChildProcess succeed');
+        })
+        .catch((err: BusinessError) => {
+          console.error(`startSelfUIAbilityInChildProcess failed, code is ${err.code}, message is ${err.message}`);
+        });
+    } catch (err) {
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`startSelfUIAbilityInChildProcess failed, code is ${code}, message is ${message}`);
     }
   }
 }

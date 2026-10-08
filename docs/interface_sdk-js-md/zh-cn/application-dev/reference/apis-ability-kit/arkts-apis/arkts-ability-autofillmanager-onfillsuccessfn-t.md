@@ -20,4 +20,4 @@ type OnFillSuccessFn = (viewData: ViewData) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| viewData | [ViewData](arkts-ability-viewdata-i.md) | 是 | AutoFill的视图数据信息。 |
+| viewData | [ViewData](arkts-ability-autofillmanager-viewdata-t.md) | 是 | AutoFill的视图数据信息。 |

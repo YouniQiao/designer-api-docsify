@@ -2561,3 +2561,258 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+## connectAbilityWithAccount
+
+```TypeScript
+connectAbilityWithAccount(want: Want, accountId: number, options: ConnectOptions): number
+```
+
+将当前UIAbility连接到一个指定account的ServiceExtensionAbility。仅支持在主线程调用。该接口在Phone、Tablet中可正常调用，在其他设备类型中返回16000006错误码。
+
+> **说明：** 
+> 
+> 组件启动规则详见：[组件启动规则（Stage模型）](../../../application-models/component-startup-rules.md)。
+> 
+> 当accountId为当前用户时，无需进行权限校验。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [connectServiceExtensionAbilityWithAccount](#connectserviceextensionabilitywithaccount)(want: Want, accountId: number, options: ConnectOptions)
+
+**需要权限：** ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-connectAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long--><!--Device-UIAbilityContext-connectAbilityWithAccount(want: Want, accountId: int, options: ConnectOptions): long-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| want | [Want](arkts-ability-app-ability-want-want-c.md) | 是 | 启动UIAbility的Want信息。 |
+| accountId | number | 是 | 系统账号的账号ID，可以通过[getCreatedOsAccountsCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)接口获取。 |
+| options | [ConnectOptions](arkts-ability-connectoptions-i.md) | 是 | 与ServiceExtensionAbility建立连接后回调函数的实例。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| number | 返回Ability连接的结果code。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
+| [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
+| [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 10+ |
+| [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
+| [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed.<br>**适用版本：** 10+ |
+| [16000008](../errorcode-ability.md#16000008-众测应用到期) | The crowdtesting application expires.<br>**适用版本：** 10+ |
+| [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI.<br>**适用版本：** 10+ |
+| [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10+ |
+
+**示例**
+
+```TypeScript
+import { UIAbility, Want, common } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    let want: Want = {
+      deviceId: '',
+      bundleName: 'com.example.myapplication',
+      abilityName: 'ServiceExtensionAbility'
+    };
+    let accountId = 100;
+    let commRemote: rpc.IRemoteObject;
+    let options: common.ConnectOptions = {
+      onConnect(elementName, remote) {
+        commRemote = remote;
+        console.info('onConnect...');
+      },
+      onDisconnect(elementName) {
+        console.info('onDisconnect...');
+      },
+      onFailed(code) {
+        console.info('onFailed...');
+      }
+    };
+    let connection: number;
+
+    try {
+      connection = this.context.connectAbilityWithAccount(want, accountId, options);
+    } catch (err) {
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`connectAbilityWithAccount failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+<a id="disconnectability1"></a>
+
+## disconnectAbility
+
+```TypeScript
+disconnectAbility(connection: number, callback: AsyncCallback<void>): void
+```
+
+断开与[ServiceExtensionAbility](../../../application-models/extensionability-overview.md)的连接，断开连接之后开发者需要将连接成功时返回的remote对象置空。使用callback异步回调。仅支持在主线程调用。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectserviceextensionability)(connection: number, callback: AsyncCallback&lt;void&gt;)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-disconnectAbility(connection: long, callback: AsyncCallback<void>): void--><!--Device-UIAbilityContext-disconnectAbility(connection: long, callback: AsyncCallback<void>): void-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| connection | number | 是 | 连接的ServiceExtensionAbility的标识id，即[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)返回的connectionId。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当断开与ServiceExtensionAbility的连接成功，err为undefined；否则为错误对象。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed. 2.System service failed to communicate with dependency module. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // connection为connectAbilityWithAccount中的返回值
+    let connection = 1;
+    let commRemote: rpc.IRemoteObject | null;
+
+    try {
+      this.context.disconnectAbility(connection, (err: BusinessError) => {
+        commRemote = null;
+        if (err.code) {
+          // 处理业务逻辑错误
+          console.error(`disconnectAbility failed, code is ${err.code}, message is ${err.message}`);
+          return;
+        }
+        // 执行正常业务
+        console.info('disconnectAbility succeed');
+      });
+    } catch (err) {
+      commRemote = null;
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`disconnectAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```
+
+<a id="disconnectability2"></a>
+
+## disconnectAbility
+
+```TypeScript
+disconnectAbility(connection: number): Promise<void>
+```
+
+断开与[ServiceExtensionAbility](../../../application-models/extensionability-overview.md)的连接，断开连接之后开发者需要将连接成功时返回的remote对象置空。使用Promise异步回调。仅支持在主线程调用。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [disconnectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#disconnectserviceextensionability)(connection: number)
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UIAbilityContext-disconnectAbility(connection: long): Promise<void>--><!--Device-UIAbilityContext-disconnectAbility(connection: long): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| connection | number | 是 | 连接的ServiceExtensionAbility的标识id，即[connectServiceExtensionAbility](arkts-ability-uiabilitycontext-c.md#connectserviceextensionability)返回的connectionId。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
+| [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
+| [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed. 2.System service failed to communicate with dependency module. |
+
+**示例**
+
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { rpc } from '@kit.IPCKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+export default class EntryAbility extends UIAbility {
+  onForeground() {
+    // connection为connectAbilityWithAccount中的返回值
+    let connection = 1;
+    let commRemote: rpc.IRemoteObject | null;
+
+    try {
+      this.context.disconnectAbility(connection).then(() => {
+        commRemote = null;
+        // 执行正常业务
+        console.info('disconnectAbility succeed');
+      }).catch((err: BusinessError) => {
+        // 处理业务逻辑错误
+        console.error(`disconnectAbility failed, code is ${err.code}, message is ${err.message}`);
+      });
+    } catch (err) {
+      commRemote = null;
+      // 处理入参错误异常
+      let code = (err as BusinessError).code;
+      let message = (err as BusinessError).message;
+      console.error(`disconnectServiceExtensionAbility failed, code is ${code}, message is ${message}`);
+    }
+  }
+}
+```

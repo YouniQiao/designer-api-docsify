@@ -20,4 +20,4 @@ type OnFillFailureFn = (result: FillFailureResult) => void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| result | [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md) | 是 | AutoFill失败结果。 |
+| result | [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md) | 是 | AutoFill失败结果。 |

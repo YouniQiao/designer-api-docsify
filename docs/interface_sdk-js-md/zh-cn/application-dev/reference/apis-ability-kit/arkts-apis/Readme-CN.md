@@ -342,14 +342,16 @@
   <!--Del-->
   - [AutoFillExtensionAbility(系统接口)](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.autoFillManager(自动填充框架)](arkts-ability-app-ability-autofillmanager.md)
+  - [requestAutoFill](arkts-ability-autofillmanager-requestautofill-f.md)
   - [requestAutoSave](arkts-ability-autofillmanager-requestautosave-f.md)
+  - [AutoFillCallback](arkts-ability-autofillmanager-autofillcallback-i.md)
   - [AutoSaveCallback](arkts-ability-autofillmanager-autosavecallback-i.md)
   <!--Del-->
   - [AutoFillPopupConfig(系统接口)](arkts-ability-autofillmanager-autofillpopupconfig-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillRect(系统接口)](arkts-ability-autofillmanager-autofillrect-t-sys.md)<!--DelEnd-->
+  - [AutoFillRect](arkts-ability-autofillmanager-autofillrect-t.md)
   <!--Del-->
   - [CustomData(系统接口)](arkts-ability-autofillmanager-customdata-t-sys.md)<!--DelEnd-->
+  - [FillFailureResult](arkts-ability-autofillmanager-fillfailureresult-t.md)
   - [FillRequest](arkts-ability-autofillmanager-fillrequest-t.md)
   <!--Del-->
   - [FillRequestCallback(系统接口)](arkts-ability-autofillmanager-fillrequestcallback-t-sys.md)<!--DelEnd-->
@@ -357,8 +359,7 @@
   - [FillResponse(系统接口)](arkts-ability-autofillmanager-fillresponse-t-sys.md)<!--DelEnd-->
   - [OnFillFailureFn](arkts-ability-autofillmanager-onfillfailurefn-t.md)
   - [OnFillSuccessFn](arkts-ability-autofillmanager-onfillsuccessfn-t.md)
-  <!--Del-->
-  - [PageNodeInfo(系统接口)](arkts-ability-autofillmanager-pagenodeinfo-t-sys.md)<!--DelEnd-->
+  - [PageNodeInfo](arkts-ability-autofillmanager-pagenodeinfo-t.md)
   <!--Del-->
   - [PopupSize(系统接口)](arkts-ability-autofillmanager-popupsize-t-sys.md)<!--DelEnd-->
   - [SaveRequest](arkts-ability-autofillmanager-saverequest-t.md)
@@ -366,8 +367,7 @@
   - [SaveRequestCallback(系统接口)](arkts-ability-autofillmanager-saverequestcallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateRequest(系统接口)](arkts-ability-autofillmanager-updaterequest-t-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ViewData(系统接口)](arkts-ability-autofillmanager-viewdata-t-sys.md)<!--DelEnd-->
+  - [ViewData](arkts-ability-autofillmanager-viewdata-t.md)
 - [@ohos.app.ability.autoStartupManager(开机自启管理能力)](arkts-ability-app-ability-autostartupmanager.md)
   <!--Del-->
   - [cancelApplicationAutoStartup(系统接口)](arkts-ability-autostartupmanager-cancelapplicationautostartup-f-sys.md)<!--DelEnd-->
@@ -1696,30 +1696,26 @@
     - [PopupSize(系统接口)](arkts-ability-autofillpopupconfig-popupsize-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [PopupPlacement(系统接口)](arkts-ability-autofillpopupconfig-popupplacement-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillRect(自动填充矩形区域)](arkts-ability-autofillrect.md)<!--DelEnd-->
-    <!--Del-->
-    - [AutoFillRect(系统接口)](arkts-ability-autofillrect-i-sys.md)<!--DelEnd-->
+  - [AutoFillRect(自动填充矩形区域)](arkts-ability-autofillrect.md)
+    - [AutoFillRect](arkts-ability-autofillrect-i.md)
   - [AutoFillRequest(AutoFillRequest)](arkts-ability-autofillrequest.md)
     - [FillFailureResult](arkts-ability-autofillrequest-fillfailureresult-i.md)
+    - [FillRequest](arkts-ability-autofillrequest-fillrequest-i.md)
     <!--Del-->
     - [FillRequest(系统接口)](arkts-ability-autofillrequest-fillrequest-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillRequestCallback(系统接口)](arkts-ability-autofillrequest-fillrequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [FillResponse(系统接口)](arkts-ability-autofillrequest-fillresponse-i-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [SaveRequest(系统接口)](arkts-ability-autofillrequest-saverequest-i-sys.md)<!--DelEnd-->
+    - [SaveRequest](arkts-ability-autofillrequest-saverequest-i.md)
     <!--Del-->
     - [SaveRequestCallback(系统接口)](arkts-ability-autofillrequest-saverequestcallback-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [UpdateRequest(系统接口)](arkts-ability-autofillrequest-updaterequest-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillTriggerType(自动填充拉起类型)](arkts-ability-autofilltriggertype.md)<!--DelEnd-->
-    <!--Del-->
-    - [AutoFillTriggerType(系统接口)](arkts-ability-autofilltriggertype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AutoFillType(自动填充类型)](arkts-ability-autofilltype.md)<!--DelEnd-->
+  - [AutoFillTriggerType(自动填充拉起类型)](arkts-ability-autofilltriggertype.md)
+    - [AutoFillTriggerType](arkts-ability-autofilltriggertype-e.md)
+  - [AutoFillType(自动填充类型)](arkts-ability-autofilltype.md)
+    - [AutoFillType](arkts-ability-autofilltype-e.md)
     <!--Del-->
     - [AutoFillType(系统接口)](arkts-ability-autofilltype-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1842,8 +1838,8 @@
   - [MultiAppMode(应用多开模式)](arkts-ability-multiappmode.md)<!--DelEnd-->
     <!--Del-->
     - [MultiAppMode(系统接口)](arkts-ability-multiappmode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PageNodeInfo(页面节点信息)](arkts-ability-pagenodeinfo.md)<!--DelEnd-->
+  - [PageNodeInfo(页面节点信息)](arkts-ability-pagenodeinfo.md)
+    - [PageNodeInfo](arkts-ability-pagenodeinfo-i.md)
     <!--Del-->
     - [PageNodeInfo(系统接口)](arkts-ability-pagenodeinfo-i-sys.md)<!--DelEnd-->
   - [ProcessData(ProcessData)](arkts-ability-processdata.md)

@@ -20,7 +20,7 @@
 - [Connectivity Kit (913)](interface_sdk-js-md/en/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-connectivity-bluetooth.md)
 - [Contacts Kit (53)](interface_sdk-js-md/en/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contacts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/en/application-dev/reference/apis-content-embed-kit/c-apis/capi-contentembed.md)
-- [Core File Kit (529)](interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md)
+- [Core File Kit (530)](interface_sdk-js-md/en/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md)
 - [Crypto Architecture Kit (141)](interface_sdk-js-md/en/application-dev/reference/apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-security-cryptoframework.md)
 - [Cstandard Library (9)](interface_sdk_c-md/en/application-dev/reference/apis-cstandard-library/c-apis/capi-muslmalloc.md)
 - [Data Protection Kit (79)](interface_sdk-js-md/en/application-dev/reference/apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)

@@ -1,4 +1,4 @@
-# SaveRequest（系统接口）
+# SaveRequest
 
 ```TypeScript
 export interface SaveRequest
@@ -6,13 +6,11 @@ export interface SaveRequest
 
 保存自动填充的请求。
 
-**起始版本：** 11
+**起始版本：** 26.0.0
 
 <!--Device-unnamed-export interface SaveRequest--><!--Device-unnamed-export interface SaveRequest-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**系统接口：** 此接口为系统接口。
 
 ## viewData
 
@@ -24,12 +22,12 @@ viewData: ViewData
 
 **类型：** [ViewData](arkts-ability-viewdata-i.md)
 
-**起始版本：** 11
+**起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SaveRequest-viewData: ViewData--><!--Device-SaveRequest-viewData: ViewData-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**系统接口：** 此接口为系统接口。

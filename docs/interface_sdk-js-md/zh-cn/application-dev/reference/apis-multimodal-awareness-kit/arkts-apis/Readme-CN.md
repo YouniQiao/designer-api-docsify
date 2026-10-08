@@ -36,7 +36,7 @@
   <!--Del-->
   - [DeviceRotationRadian(系统接口)](arkts-multimodalawareness-devicestatus-devicerotationradian-i-sys.md)<!--DelEnd-->
   - [SteadyStandingStatus](arkts-multimodalawareness-devicestatus-steadystandingstatus-e.md)
-- [@ohos.multimodalAwareness.metadataBinding(记忆链接)](arkts-multimodalawareness-multimodalawareness-metadatabinding.md)
+- [@ohos.multimodalAwareness.metadataBinding(元数据绑定)](arkts-multimodalawareness-multimodalawareness-metadatabinding.md)
   <!--Del-->
   - [decodeImage(系统接口)](arkts-multimodalawareness-metadatabinding-decodeimage-f-sys.md)<!--DelEnd-->
   <!--Del-->
