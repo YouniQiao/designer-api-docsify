@@ -52,9 +52,9 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback |  |
-| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback |  |
-| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback |  |
+| [typedef void (\*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textcreatemenucallback) | ArkUI_TextCreateMenuCallback | 文本菜单创建事件回调函数，在文本菜单创建时会触发此回调函数，开发者可在此函数中设置菜单数据。 |
+| [typedef void (\*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, void* userData)](#arkui_textpreparemenucallback) | ArkUI_TextPrepareMenuCallback | 文本菜单准备事件回调函数，当文本选择区域变化后显示菜单之前会触发此回调函数，开发者可在此函数中配置菜单数据。 |
+| [typedef bool (\*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData)](#arkui_textmenuitemclickcallback) | ArkUI_TextMenuItemClickCallback | 文本菜单项点击事件回调函数，在菜单项被点击时触发此回调函数，开发者可在此函数中对系统默认处理行为进行拦截。 |
 | [ArkUI_ShowCounterConfig* OH_ArkUI_ShowCounterConfig_Create()](#oh_arkui_showcounterconfig_create) | - | 创建文本输入框计数器的配置对象。当该对象不再使用时，请调用[OH_ArkUI_ShowCounterConfig_Dispose](capi-text-common-h.md#oh_arkui_showcounterconfig_dispose)销毁。 |
 | [void OH_ArkUI_ShowCounterConfig_Dispose(ArkUI_ShowCounterConfig* config)](#oh_arkui_showcounterconfig_dispose) | - | 销毁由[OH_ArkUI_ShowCounterConfig_Create](capi-text-common-h.md#oh_arkui_showcounterconfig_create)创建的文本输入框计数器的配置对象。 |
 | [void OH_ArkUI_ShowCounterConfig_SetCounterTextColor(ArkUI_ShowCounterConfig* config, uint32_t color)](#oh_arkui_showcounterconfig_setcountertextcolor) | - | 设置文本输入框未达到最大字符数时计数器的颜色。未通过该接口设置时，默认颜色为0x66182431，显示为灰色。 |
@@ -73,6 +73,14 @@
 | [void OH_ArkUI_TextContentBaseController_ScrollToVisible(ArkUI_TextContentBaseController *controller, int32_t start, int32_t end)](#oh_arkui_textcontentbasecontroller_scrolltovisible) | - | 将起始索引与结束索引传递给与其绑定的输入框组件，并将此范围内的文字滚动到可视区域。 |
 | [OH_ArkUI_DecorationStyleOptions* OH_ArkUI_DecorationStyleOptions_Create()](#oh_arkui_decorationstyleoptions_create) | - | 创建一个装饰线样式对象，用于设置文本装饰线的类型、样式和颜色。适用于需要为文本添加下划线、删除线等装饰效果的场景，如富文本编辑器、超链接文本、价格标记等。当该对象不再使用时，请调用 [OH_ArkUI_DecorationStyleOptions_Destroy](capi-text-common-h.md#oh_arkui_decorationstyleoptions_destroy)销毁。 |
 | [void OH_ArkUI_DecorationStyleOptions_Destroy(OH_ArkUI_DecorationStyleOptions* options)](#oh_arkui_decorationstyleoptions_destroy) | - | 销毁由[OH_ArkUI_DecorationStyleOptions_Create](capi-text-common-h.md#oh_arkui_decorationstyleoptions_create)创建的装饰线样式对象。 |
+
+### 变量
+
+| 名称 | 描述 |
+| -- | -- |
+| void (*ArkUI_TextCreateMenuCallback)( ArkUI_TextMenuItemArray* items, void* userData ) | 文本菜单创建事件回调函数，在文本菜单创建时会触发此回调函数，开发者可在此函数中设置菜单数据。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
+| void (*ArkUI_TextPrepareMenuCallback)( ArkUI_TextMenuItemArray* items, void* userData ) | 文本菜单准备事件回调函数，当文本选择区域变化后显示菜单之前会触发此回调函数，开发者可在此函数中配置菜单数据。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
+| bool (*ArkUI_TextMenuItemClickCallback)( const ArkUI_TextMenuItem* item, int32_t start, int32_t end, void* userData ) | 文本菜单项点击事件回调函数，在菜单项被点击时触发此回调函数，开发者可在此函数中对系统默认处理行为进行拦截。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.ArkUI.ArkUI.Full |
 
 ## 枚举类型说明
 
@@ -448,6 +456,8 @@ typedef void (*ArkUI_TextCreateMenuCallback)(ArkUI_TextMenuItemArray* items, voi
 
 **描述：**
 
+文本菜单创建事件回调函数，在文本菜单创建时会触发此回调函数，开发者可在此函数中设置菜单数据。
+
 **起始版本：** 22
 
 **参数：**
@@ -465,6 +475,8 @@ typedef void (*ArkUI_TextPrepareMenuCallback)(ArkUI_TextMenuItemArray* items, vo
 
 **描述：**
 
+文本菜单准备事件回调函数，当文本选择区域变化后显示菜单之前会触发此回调函数，开发者可在此函数中配置菜单数据。
+
 **起始版本：** 22
 
 **参数：**
@@ -481,6 +493,8 @@ typedef bool (*ArkUI_TextMenuItemClickCallback)(const ArkUI_TextMenuItem* item, 
 ```
 
 **描述：**
+
+文本菜单项点击事件回调函数，在菜单项被点击时触发此回调函数，开发者可在此函数中对系统默认处理行为进行拦截。
 
 **起始版本：** 22
 

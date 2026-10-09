@@ -39,3 +39,19 @@ The tag value is an integer.
 <!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_INT = 1 << 28-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
+
+## HUKS_EXT_CRYPTO_TAG_TYPE_UINT
+
+```TypeScript
+HUKS_EXT_CRYPTO_TAG_TYPE_UINT = 2 << 28
+```
+
+The tag value is an unsigned integer.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_UINT = 2 << 28--><!--Device-HuksExternalCryptoTagType-HUKS_EXT_CRYPTO_TAG_TYPE_UINT = 2 << 28-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension

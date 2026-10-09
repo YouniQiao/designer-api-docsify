@@ -116,6 +116,22 @@ HUKS_EXT_CRYPTO_TAG_RESOURCE_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TA
 
 **系统能力：** SystemCapability.Security.Huks.CryptoExtension
 
+## HUKS_EXT_CRYPTO_TAG_TIMEOUT
+
+```TypeScript
+HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006
+```
+
+表示异步超时时间，单位为秒，可由业务逻辑自定义。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006-End-->
+
+**系统能力：** SystemCapability.Security.Huks.CryptoExtension
+
 ## HUKS_EXT_CRYPTO_TAG_UID
 
 ```TypeScript

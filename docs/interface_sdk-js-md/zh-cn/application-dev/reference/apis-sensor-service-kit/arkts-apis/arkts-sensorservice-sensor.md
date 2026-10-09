@@ -164,8 +164,8 @@ import { sensor } from '@kit.SensorServiceKit';
 | [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md#createrotationmatrix4) | 根据重力矢量和地磁矢量计算旋转矩阵。使用Promise异步回调。 |
 | [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude1) | 根据气压值获取设备所在的海拔高度。使用callback异步回调。 |
 | [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md#getaltitude2) | 根据气压值获取设备所在的海拔高度。使用Promise异步回调。 |
-| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify1) | Obtains the angle change between two rotation matrices. This API uses an asynchronous callback to return the result. |
-| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify2) | Obtains the angle change between two rotation matrices. This API uses a promise to return the result. |
+| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify1) | 获取两个旋转矩阵之间的角度变化。使用callback异步回调。 |
+| [getAngleModify](arkts-sensorservice-sensor-getanglemodify-f.md#getanglemodify2) | 获取两个旋转矩阵之间的角度变化。使用Promise异步回调。 |
 | [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection1) | 根据旋转矩阵计算设备的方向。使用callback异步回调。 |
 | [getDirection](arkts-sensorservice-sensor-getdirection-f.md#getdirection2) | 根据旋转矩阵计算设备的方向。使用Promise异步回调。 |
 | [getGeomagneticDip](arkts-sensorservice-sensor-getgeomagneticdip-f.md#getgeomagneticdip1) | 根据倾斜矩阵计算地磁倾斜角。使用callback异步回调。 |

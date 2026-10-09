@@ -180,6 +180,31 @@ minWindowWidth?: number
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## preferDefaultBrowser
+
+```TypeScript
+preferDefaultBrowser?: boolean
+```
+
+当目标URI为**http**或**https**链接时，是否优先使用默认浏览器打开该链接。取值为**true**时表示使用默认浏览器，取值为**false**时表示使用正常的startAbility流程。
+
+**约束：**
+
+1. 该功能仅在目标URI以**http**或**https**开头时生效。
+2. 若无默认浏览器可用，则使用正常的startAbility流程。
+
+**类型：** boolean
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-StartOptions-preferDefaultBrowser?: boolean--><!--Device-StartOptions-preferDefaultBrowser?: boolean-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 ## processMode
 
 ```TypeScript

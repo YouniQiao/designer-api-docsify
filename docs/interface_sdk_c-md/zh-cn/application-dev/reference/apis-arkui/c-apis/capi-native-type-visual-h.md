@@ -49,7 +49,7 @@
 | [ArkUI_RenderFit](#arkui_renderfit) | ArkUI_RenderFit | 定义动画终态内容大小与位置的枚举值。 |
 | [ArkUI_AnimationFillMode](#arkui_animationfillmode) | ArkUI_AnimationFillMode | 定义帧动画组件在动画开始前和结束后的状态。 |
 | [ArkUI_AnimationDirection](#arkui_animationdirection) | ArkUI_AnimationDirection | 动画播放方向。 |
-| [OH_ArkUI_AnimationPropertyType](#oh_arkui_animationpropertytype) | OH_ArkUI_AnimationPropertyType | 枚举属性动画和关键帧动画的可动画属性类型。 |
+| [OH_ArkUI_AnimationPropertyType](#oh_arkui_animationpropertytype) | OH_ArkUI_AnimationPropertyType | 枚举属性动画、关键帧动画和路径动画的可动画属性类型。 |
 | [OH_ArkUI_AnimationGroupState](#oh_arkui_animationgroupstate) | OH_ArkUI_AnimationGroupState | 枚举动画组的播放状态。 |
 | [OH_ArkUI_AnimationFinishMode](#oh_arkui_animationfinishmode) | OH_ArkUI_AnimationFinishMode | 枚举动画组的结束模式。 |
 
@@ -538,30 +538,30 @@ enum OH_ArkUI_AnimationPropertyType
 
 **描述：**
 
-枚举属性动画和关键帧动画的可动画属性类型。
+枚举属性动画、关键帧动画和路径动画的可动画属性类型。
 
 **起始版本：** 26.0.1
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION = 0 | 在x和y方向上的平移。 value参数需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x, y]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_X = 1 | 在x方向上的平移。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Y = 2 | 在y方向上的平移。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[y]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Z = 3 | 在z方向上的平移。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[z]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE = 4 | 在x和y方向上的缩放。 value参数需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x, y]。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE_X = 5 | 在x方向上的缩放。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x]。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE_Y = 6 | 在y方向上的缩放。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[y]。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION = 7 | 所有轴的旋转角度。 value参数需要三个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[angleX, angleY, angleZ]，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_X = 8 | 围绕x轴的旋转角度。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[angle]，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Y = 9 | 围绕y轴的旋转角度。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[angle]，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Z = 10 | 围绕z轴的旋转角度。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[angle]，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_OPACITY = 11 | 组件的不透明度。 value参数需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[opacity]。 取值范围：[0, 1]。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS = 12 | 边界（位置和大小）。 value参数需要四个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x, y, width, height]，单位为px。其中width和height需大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_X = 13 | 边界左上角的x坐标位置。 value参数需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[x]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_Y = 14 | 边界左上角的y坐标位置。 value参数需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[y]，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_WIDTH = 15 | 边界的宽度。 value参数需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[width]，单位为px。该值需大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_HEIGHT = 16 | 边界的高度。 value参数需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[height]，单位为px。该值需大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BACKGROUND_COLOR = 17 | 组件的背景颜色。 value参数需要一个u32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素：[color]。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION = 0 | 在x和y方向上的平移。 设置或获取该属性值时，需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y方向的平移量，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_X = 1 | 在x方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Y = 2 | 在y方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Z = 3 | 在z方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE = 4 | 在x和y方向上的缩放。 设置或获取该属性值时，需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y方向的缩放比例。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE_X = 5 | 在x方向上的缩放。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_SCALE_Y = 6 | 在y方向上的缩放。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION = 7 | 所有轴的旋转角度。 设置或获取该属性值时，需要三个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y、z轴的旋转角度，单位为度。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_X = 8 | 围绕x轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Y = 9 | 围绕y轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Z = 10 | 围绕z轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_OPACITY = 11 | 组件的不透明度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。 取值范围：[0, 1]。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS = 12 | 边界（位置和大小）。 设置或获取该属性值时，需要四个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x坐标、y坐标、宽度、高度，单位为px。 其中宽度和高度的取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_X = 13 | 边界左上角的x坐标位置。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_Y = 14 | 边界左上角的y坐标位置。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_WIDTH = 15 | 边界的宽度。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_HEIGHT = 16 | 边界的高度。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
+| OH_ARKUI_ANIMATION_PROPERTY_BACKGROUND_COLOR = 17 | 组件的背景颜色。 设置或获取该属性值时，需要一个u32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
 
 ### OH_ArkUI_AnimationGroupState
 

@@ -1424,7 +1424,7 @@ on(type: 'discoverFail', callback: Callback<{ subscribeId: number, reason: numbe
 
 **废弃版本：** 11
 
-**替代接口：** [on](arkts-distributedservice-distributeddevicemanager-devicemanager-i.md#ondiscoverfailure)(type: 'discoverFailure', callback: Callback&lt;{ reason: number; }&gt;)
+**替代接口：** on(type: 'discoverFailure', callback: Callback&lt;{ reason: number; }&gt;)
 
 **需要权限：** ohos.permission.ACCESS_SERVICE_DM
 

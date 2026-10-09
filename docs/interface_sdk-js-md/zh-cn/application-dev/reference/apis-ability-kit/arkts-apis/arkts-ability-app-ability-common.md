@@ -4,7 +4,8 @@
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**模型约束：** 
+- API版本11+：此接口可在Stage模型和FA模型下使用。
 
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 
@@ -61,7 +62,12 @@ import { common } from '@kit.AbilityKit';
 | [AutoFillExtensionContext](arkts-ability-common-autofillextensioncontext-t-sys.md) | AutoFillExtensionContext二级模块。 |
 | [AutoStartupCallback](arkts-ability-common-autostartupcallback-t-sys.md) | AutoStartupCallback二级模块。 |
 | [AutoStartupInfo](arkts-ability-common-autostartupinfo-t-sys.md) | AutoStartupInfo二级模块。 |
+| [CliToolEvent](arkts-ability-common-clitoolevent-t-sys.md) | 用于描述CLI工具进程运行期间产生的会话事件信息。 |
+| [FunctionInfo](arkts-ability-common-functioninfo-t-sys.md) | 用于描述Function的基本信息。 |
 | [ServiceExtensionContext](arkts-ability-common-serviceextensioncontext-t-sys.md) | ServiceExtensionContext二级模块。 |
+| [ToolEventCallback](arkts-ability-common-tooleventcallback-t-sys.md) | 用于接收CLI工具进程运行期间产生的会话事件。 |
+| [ToolInfo](arkts-ability-common-toolinfo-t-sys.md) | 用于描述系统命令行工具（CLI）的基本信息。 |
+| [ToolSummary](arkts-ability-common-toolsummary-t-sys.md) | 用于描述系统命令行工具（CLI）的摘要信息。 |
 | [UIServiceExtensionContext](arkts-ability-common-uiserviceextensioncontext-t-sys.md) | UIServiceExtensionContext二级模块。 |
 | [UIServiceHostProxy](arkts-ability-common-uiservicehostproxy-t-sys.md) | UIServiceHostProxy二级模块。 |
 <!--DelEnd-->

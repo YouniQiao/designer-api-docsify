@@ -179,6 +179,31 @@ This function takes effect only in the [freeform window](../../../windowmanager/
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## preferDefaultBrowser
+
+```TypeScript
+preferDefaultBrowser?: boolean
+```
+
+Whether to prefer using the default browser to open the URL when the target is an **http** or **https** URL. The value **true** means to use the default browser, and **false** means to use the normal startAbility flow.
+
+**Constraints**:
+
+1. This property takes effect only when the target URI starts with **http** or **https**.
+2. If no default browser is available, the normal startAbility flow is used.
+
+**Type:** boolean
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-StartOptions-preferDefaultBrowser?: boolean--><!--Device-StartOptions-preferDefaultBrowser?: boolean-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## processMode
 
 ```TypeScript

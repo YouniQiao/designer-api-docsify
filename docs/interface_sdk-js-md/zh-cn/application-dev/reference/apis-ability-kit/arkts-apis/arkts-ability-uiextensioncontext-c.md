@@ -8,7 +8,7 @@ UIExtensionContext是[UIExtensionAbility](arkts-ability-app-ability-uiextensiona
 
 **继承/实现关系：** UIExtensionContext extends [ExtensionContext](arkts-ability-extensioncontext-c.md)
 
-**起始版本：** 12
+**起始版本：** 10
 
 <!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class UIExtensionContext extends ExtensionContext-End-->
 

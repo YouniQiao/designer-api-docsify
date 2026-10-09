@@ -44,6 +44,6 @@ function registerCliHook(hook: CliHook): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied, interface caller does not have permission"ohos.permission.REGISTER_AGENT_HOOK". |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. Interface caller is not a system app. |
-| 35600034 | The device is not in developer mode. |
-| 35600035 | A hook is already registered; unregister it first. |
+| [35600034](../errorcode-ability.md#35600034-设备未处于开发者模式) | The device is not in developer mode. |
+| [35600035](../errorcode-ability.md#35600035-hook已注册) | A hook is already registered; unregister it first. |
 | [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2.System service failed to communicate with dependency module. |

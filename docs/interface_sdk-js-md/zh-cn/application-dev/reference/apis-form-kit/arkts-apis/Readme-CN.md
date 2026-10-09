@@ -7,6 +7,8 @@
   <!--Del-->
   - [requestPublishForm（系统接口）](arkts-form-formagent-requestpublishform-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [requestPublishFormCrossDevice（系统接口）](arkts-form-formagent-requestpublishformcrossdevice-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [updateFormCrossBundle（系统接口）](arkts-form-formagent-updateformcrossbundle-f-sys.md)<!--DelEnd-->
 - [@ohos.app.form.formBindingData（卡片数据绑定-FormBindingData）](arkts-form-app-form-formbindingdata.md)
   - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-f.md)

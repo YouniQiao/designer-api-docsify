@@ -18,7 +18,7 @@ Creates an **Animator** object.
 import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from '@kit.ArkUI';
 ```
 
-<a id="create2"></a>
+<a id="create1"></a>
 
 ## create
 
@@ -26,7 +26,7 @@ import { Animator, AnimatorOptions, AnimatorResult, SimpleAnimatorOptions } from
 static create(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared with [create](#create1), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared with [create](#create2), this API accepts parameters of the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -70,7 +70,7 @@ let options: SimpleAnimatorOptions = new SimpleAnimatorOptions(100, 200).duratio
 animator.create(options); // You are advised to use UIContext.createAnimator().
 ```
 
-<a id="create1"></a>
+<a id="create2"></a>
 
 ## create
 
@@ -82,6 +82,8 @@ Creates an **AnimatorResult** object for animations.
 
 > **NOTE:** 
 > 
+> - Supported since API version 9, deprecated since API version 18. It is recommended to use [createAnimator](arkts-arkui-arkui-uicontext-uicontext-c.md#createanimator) instead.
+
 > - Since API version 10, you can use the [createAnimator](../../../reference/apis-arkui/arkts-apis-uicontext-uicontext.md#createanimator) API in [UIContext](arkts-arkui-arkui-uicontext-uicontext-c.md), which ensures that the object is created in the intended UI instance.
 
 **Since:** 9

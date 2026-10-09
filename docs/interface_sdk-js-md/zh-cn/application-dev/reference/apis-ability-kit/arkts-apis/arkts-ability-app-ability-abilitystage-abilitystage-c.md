@@ -28,7 +28,7 @@ import { AbilityStage } from '@kit.AbilityKit';
 onAboutToCreateAbility(): void
 ```
 
-无
+当AbilityStage即将创建第一个Ability时调用。
 
 **起始版本：** 24
 
@@ -47,6 +47,48 @@ export default class MyAbilityStage extends AbilityStage {
   onAboutToCreateAbility(): void {
     console.info('About to create first ability, preparing...');
     // 在此添加创建第一个Ability前的准备工作
+  }
+}
+```
+
+## onAboutToCreateAbilityAsync
+
+```TypeScript
+onAboutToCreateAbilityAsync(): Promise<void>
+```
+
+当AbilityStage即将创建第一个Ability时调用。使用Promise异步回调。此方法返回的Promise成功resolve后，后续的生命周期回调才会继续执行，否则将被挂起。若同时实现[onAboutToCreateAbility](#onabouttocreateability)和此方法，仅此方法生效。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>--><!--Device-AbilityStage-onAboutToCreateAbilityAsync(): Promise<void>-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;void&gt; | 无返回值的Promise。 |
+
+**示例**
+
+```TypeScript
+import { AbilityStage } from '@kit.AbilityKit';
+
+export default class MyAbilityStage extends AbilityStage {
+  async onAboutToCreateAbilityAsync(): Promise<void> {
+    console.info('About to create first ability, preparing...');
+    // 执行异步初始化操作
+    await new Promise<void>((resolve) => {
+      setTimeout(() => {
+        console.info('Async preparation completed');
+        resolve();
+      }, 1000);
+    });
+    // 初始化完成后，才会继续创建Ability
   }
 }
 ```

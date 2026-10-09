@@ -65,6 +65,7 @@ Enumerates the error codes.
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND = 106213 | The animation group is not found on the UIContext.<br>**Since**: 26.0.1 |
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL = 106214 | A re-entrant call to the animation group API is detected on the same thread.<br>**Since**: 26.0.1 |
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE = 106215 | The animation group is not in the state required by the operation.<br>**Since**: 26.0.1 |
+| ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT = 106216 | The resolved target node does not belong to the same UIContext as the context parameter.<br>**Since**: 26.0.1 |
 | ARKUI_ERROR_CODE_NOT_CUSTOM_NODE = 106401 |  |
 | ARKUI_ERROR_CODE_CHILD_EXISTED = 106402 |  |
 | ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED = 106403 |  |

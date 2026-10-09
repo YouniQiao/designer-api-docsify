@@ -4438,7 +4438,7 @@ Input_Result OH_Input_GetPointerStyle(int32_t windowId, int32_t *pointerStyle)
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t windowId | [in] 窗口ID。取值范围为大于等于-1的整数，取值为-1时表示全局窗口。 <br>仅支持传入当前窗口和全局窗口的ID，传入其他ID返回全局窗口的默认光标样式，当前窗口ID可以通过getWindowProperties获取。 |
+| int32_t windowId | [in] 窗口ID。取值范围为大于等于-1的整数，取值为-1时表示全局窗口。 <br>仅支持传入当前窗口和全局窗口的ID，传入其他ID返回全局窗口的默认光标样式。 |
 | int32_t *pointerStyle | [out] 鼠标光标样式，取值为[Input_PointerStyle](capi-oh-pointer-style-h.md#input_pointerstyle)的枚举值。 |
 
 **返回值：**
@@ -4463,7 +4463,7 @@ Input_Result OH_Input_SetPointerStyle(int32_t windowId, int32_t pointerStyle)
 
 | 参数项 | 描述 |
 | -- | -- |
-| int32_t windowId | [in] 窗口ID。取值范围为大于等于0的整数。 <br>仅支持传入当前窗口的光标样式，传入其他窗口ID本接口可以运行成功但设置不生效，当前窗口ID可以通过getWindowProperties获取。 |
+| int32_t windowId | [in] 窗口ID。取值范围为大于等于0的整数。 <br>仅支持传入当前窗口的光标样式，传入其他窗口ID本接口可以运行成功但设置不生效。 |
 | int32_t pointerStyle | [in] 鼠标光标样式，取值为[Input_PointerStyle](capi-oh-pointer-style-h.md#input_pointerstyle)的枚举值。 |
 
 **返回值：**
@@ -4587,7 +4587,7 @@ Input_CursorConfig* OH_Input_CursorConfig_Create(bool followSystem)
 
 | 参数项 | 描述 |
 | -- | -- |
-| bool followSystem | [in] 是否根据系统设置调整鼠标光标大小。false表示使用自定义鼠标光标样式大小，true表示根据系统设置调整鼠标光标大小，可调整范围为：[光标资源图大小， 256×256]，单位为像素（px）。 |
+| bool followSystem | [in] 是否根据系统设置调整鼠标光标大小。false表示使用自定义鼠标光标样式大小，true表示根据系统设置调整鼠标光标大小，可调整范围为：[光标资源图大小, 256×256]，单位为像素（px）。 |
 
 **返回值：**
 

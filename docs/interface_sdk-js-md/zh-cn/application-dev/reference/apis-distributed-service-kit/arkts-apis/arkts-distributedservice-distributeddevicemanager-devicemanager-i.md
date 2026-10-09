@@ -994,7 +994,7 @@ on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void
 
 **需要权限：** ohos.permission.DISTRIBUTED_DATASYNC
 
-<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: number; }>): void-End-->
+<!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void--><!--Device-DeviceManager-on(type: 'discoverFailure', callback: Callback<{ reason: int; }>): void-End-->
 
 **系统能力：** SystemCapability.DistributedHardware.DeviceManager
 

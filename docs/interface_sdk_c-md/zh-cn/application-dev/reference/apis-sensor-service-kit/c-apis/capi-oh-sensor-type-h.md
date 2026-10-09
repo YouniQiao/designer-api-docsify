@@ -45,7 +45,7 @@
 | [int32_t OH_SensorEvent_GetType(Sensor_Event* sensorEvent, Sensor_Type *sensorType)](#oh_sensorevent_gettype) | - | 获取传感器类型。 |
 | [int32_t OH_SensorEvent_GetTimestamp(Sensor_Event* sensorEvent, int64_t *timestamp)](#oh_sensorevent_gettimestamp) | - | 获取传感器数据的时间戳。 |
 | [int32_t OH_SensorEvent_GetAccuracy(Sensor_Event* sensorEvent, Sensor_Accuracy *accuracy)](#oh_sensorevent_getaccuracy) | - | 获取传感器数据的精度。 |
-| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | 数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
+| [int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t *length)](#oh_sensorevent_getdata) | - | 获取传感器数据。数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
 \| --- \| --- \|
 \| SENSOR_TYPE_ACCELEROMETER \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的加速度分量，单位：m/s² \|
 \| SENSOR_TYPE_GYROSCOPE \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的旋转角速度，单位：rad/s（弧度/秒） \|
@@ -439,7 +439,7 @@ int32_t OH_SensorEvent_GetData(Sensor_Event* sensorEvent, float **data, uint32_t
 
 **描述：**
 
-数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
+获取传感器数据。数据的长度和内容依赖于监听的传感器类型，传感器上报的数据格式如下表所示：<br>\| 传感器类型 \| 数据元素及描述 \|
 \| --- \| --- \|
 \| SENSOR_TYPE_ACCELEROMETER \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的加速度分量，单位：m/s² \|
 \| SENSOR_TYPE_GYROSCOPE \| data[0]、data[1]、data[2]分别表示设备x、y、z轴的旋转角速度，单位：rad/s（弧度/秒） \|

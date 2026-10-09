@@ -102,6 +102,22 @@ Specify the information required to obtain the resource ID. The format and conte
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## HUKS_EXT_CRYPTO_TAG_TIMEOUT
+
+```TypeScript
+HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006
+```
+
+Asynchronous timeout duration in seconds, customizable by business logic.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_TIMEOUT = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_UINT | 200006-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension
+
 ## HUKS_EXT_CRYPTO_TAG_UID
 
 ```TypeScript

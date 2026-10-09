@@ -364,7 +364,7 @@ addInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling InteropAbilityMonitor failed. |
+| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling AddInteropAbilityMonitorSync failed. |
 
 <a id="doabilitybackground1"></a>
 
@@ -1513,7 +1513,7 @@ removeInteropAbilityMonitorSync(monitor: InteropAbilityMonitor): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling removeInteropAbilityMonitorSync failed. |
+| [16000100](../errorcode-ability.md#16000100-监听ability生命周期变化的abilitymonitor方法执行失败) | Calling RemoveInteropAbilityMonitorSync failed. |
 
 ## setMockList
 

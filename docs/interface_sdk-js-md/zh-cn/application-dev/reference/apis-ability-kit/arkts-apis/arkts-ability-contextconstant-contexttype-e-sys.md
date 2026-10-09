@@ -68,6 +68,6 @@ UI服务扩展上下文类型。
 
 <!--Device-ContextType-UI_SERVICE_EXTENSION_CONTEXT = 6--><!--Device-ContextType-UI_SERVICE_EXTENSION_CONTEXT = 6-End-->
 
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core\
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
 **系统接口：** 此接口为系统接口。

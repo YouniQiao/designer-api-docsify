@@ -8,6 +8,9 @@ export type PacMap = _PacMap
 
 **起始版本：** 9
 
+**模型约束：** 
+- API版本11+：此接口可在Stage模型和FA模型下使用。
+
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-common-export type PacMap = _PacMap--><!--Device-common-export type PacMap = _PacMap-End-->

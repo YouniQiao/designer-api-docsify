@@ -3618,7 +3618,7 @@ Obtains the modified key.
 
 | Type | Description |
 | -- | -- |
-| [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of the OH_Input_GetFinalKey function. <ul> <li>If obtained successfully, returns [INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) .</li> <li>If failed, returns [INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) .</li> </ul> |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of the OH_Input_GetFinalKey function. <ul> <li>If obtained successfully, returns [INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result).</li> <li>If failed, returns [INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result).</li> </ul> |
 
 ### OH_Input_CreateAllSystemHotkeys()
 
@@ -3757,7 +3757,7 @@ Subscribes to hotkey events. <br> > **NOTE**<br>> > When subscribing to hotkey e
 
 | Type | Description |
 | -- | -- |
-| [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of the OH_Input_AddHotkeyMonitor function. <ul> <li>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) indicates that the hotkey subscription is successful.</li> <li>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) indicates that the parameter check failed.</li> <li>[INPUT_OCCUPIED_BY_SYSTEM](capi-oh-input-manager-h.md#input_result) indicates that the hotkey is occupied by the system. You can query all system hotkeys through the API [OH_Input_GetAllSystemHotkeys](capi-oh-input-manager-h.md#oh_input_getallsystemhotkeys) .</li> <li>[INPUT_OCCUPIED_BY_OTHER](capi-oh-input-manager-h.md#input_result) indicates that the subscription has been preempted.</li> <li>[INPUT_DEVICE_NOT_SUPPORTED](capi-oh-input-manager-h.md#input_result) indicates that the feature is not supported.</li> </ul> |
+| [Input_Result](capi-oh-input-manager-h.md#input_result) | Return value of the OH_Input_AddHotkeyMonitor function. <ul> <li>[INPUT_SUCCESS](capi-oh-input-manager-h.md#input_result) indicates that the hotkey subscription is successful.</li> <li>[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result) indicates that the parameter check failed.</li> <li>[INPUT_OCCUPIED_BY_SYSTEM](capi-oh-input-manager-h.md#input_result) indicates that the hotkey is occupied by the system. You can query all system hotkeys through the API [OH_Input_GetAllSystemHotkeys](capi-oh-input-manager-h.md#oh_input_getallsystemhotkeys).</li> <li>[INPUT_OCCUPIED_BY_OTHER](capi-oh-input-manager-h.md#input_result) indicates that the subscription has been preempted.</li> <li>[INPUT_DEVICE_NOT_SUPPORTED](capi-oh-input-manager-h.md#input_result) indicates that the feature is not supported.</li> </ul> |
 
 ### OH_Input_RemoveHotkeyMonitor()
 
@@ -4438,7 +4438,7 @@ Obtains the mouse cursor style of a specified window. This API only supports get
 
 | Parameter | Description |
 | -- | -- |
-| int32_t windowId | [in] Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>Only the ID of the current window or global window can be specified. If any other ID is specified, the default pointer style of the global window is returned. You can obtain the ID of the current window through getWindowProperties. |
+| int32_t windowId | [in] Window ID. The value is an integer greater than or equal to **-1**. The value **-1** indicates the global window. <br>Only the ID of the current window or global window can be specified. If any other ID is specified, the default pointer style of the global window is returned. |
 | int32_t *pointerStyle | [out] Mouse cursor style, which is an enum value of [Input_PointerStyle](capi-oh-pointer-style-h.md#input_pointerstyle). |
 
 **Returns**:
@@ -4463,7 +4463,7 @@ Sets the mouse cursor style for a specified window. This API only supports setti
 
 | Parameter | Description |
 | -- | -- |
-| int32_t windowId | [in] Window ID. The value is an integer greater than or equal to 0. <br>Only the ID of the current window can be specified. If any other ID is specified, the API call is successful, but the setting does not take effect. You can obtain the ID of the current window through getWindowProperties. |
+| int32_t windowId | [in] Window ID. The value is an integer greater than or equal to 0. <br>Only the ID of the current window can be specified. If any other ID is specified, the API call is successful, but the setting does not take effect. |
 | int32_t pointerStyle | [in] Mouse pointer style. The value is an enumerated value of [Input_PointerStyle](capi-oh-pointer-style-h.md#input_pointerstyle). |
 
 **Returns**:

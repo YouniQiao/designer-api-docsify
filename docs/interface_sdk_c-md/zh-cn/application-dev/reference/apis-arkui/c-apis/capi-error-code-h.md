@@ -65,6 +65,7 @@ enum ArkUI_ErrorCode
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND = 106213 | 在[ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-contexthandle.md)上未找到指定的动画组。<br>**起始版本：** 26.0.1 |
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL = 106214 | 检测到同一线程上对动画组接口的重入调用。<br>**起始版本：** 26.0.1 |
 | ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE = 106215 | 动画组未处于操作所需的状态。<br>**起始版本：** 26.0.1 |
+| ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT = 106216 | 解析的目标节点不属于注册动画组时传入的context所在的UIContext。<br>**起始版本：** 26.0.1 |
 | ARKUI_ERROR_CODE_NOT_CUSTOM_NODE = 106401 | 当前节点不是自定义节点。错误码的详细介绍请参见渲染节点错误码。<br>**起始版本：** 20 |
 | ARKUI_ERROR_CODE_CHILD_EXISTED = 106402 | 当前节点已存在子节点。错误码的详细介绍请参见渲染节点错误码。<br>**起始版本：** 20 |
 | ARKUI_ERROR_CODE_RENDER_PARENT_EXISTED = 106403 | 当前渲染节点存在父组件。错误码的详细介绍请参见渲染节点错误码。<br>**起始版本：** 20 |

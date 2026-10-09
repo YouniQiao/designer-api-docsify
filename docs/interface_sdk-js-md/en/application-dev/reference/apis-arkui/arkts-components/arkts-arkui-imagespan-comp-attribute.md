@@ -148,11 +148,11 @@ When `top + bottom` is greater than the height of the original image or `left + 
 
 When the parameter type of the component is an animated image, [AnimatedDrawableDescriptor](../arkts-apis/arkts-arkui-arkui-drawabledescriptor-animateddrawabledescriptor-c.md), or SVG, this attribute does not take effect.
 
-**Since:** 26.0.1
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute--><!--Device-ImageSpanAttribute-resizable(value: ResizableOptions): ImageSpanAttribute-End-->
 

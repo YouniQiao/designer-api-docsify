@@ -29,8 +29,8 @@ import { inputEventClient } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | Injects keys (including single keys and combination keys). Since API version 26.0.1, the caller can specify the display ID for injecting a key event. If the specified display ID does not exist, the operation will not take effect. |
-| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md) | Injects key events (for both single keys and combination keys). Since API version 26.0.1, the caller can specify the display ID for injecting a key event. If the specified display ID does not exist, the operation will not take effect. |
+| [injectEvent](arkts-input-inputeventclient-injectevent-f-sys.md) | Injects keys (including single keys and combination keys). Since API version 26.0.1, the caller can specify the display ID for injecting a key event. If the specified display ID does not exist, the operation will not take effect. If displayId is not specified, the operation will take effect on the display group of the same user as the caller. |
+| [injectKeyEvent](arkts-input-inputeventclient-injectkeyevent-f-sys.md) | Injects key events (for both single keys and combination keys). Since API version 26.0.1, the caller can specify the display ID for injecting a key event. If the specified display ID does not exist, the operation will not take effect. If displayId is not specified, the operation will take effect on the display group of the same user as the caller. |
 | [injectMouseEvent](arkts-input-inputeventclient-injectmouseevent-f-sys.md) | Injects a mouse/touchpad event. |
 | [injectTouchEvent](arkts-input-inputeventclient-injecttouchevent-f-sys.md) | Injects a touch event. |
 | [permitInjection](arkts-input-inputeventclient-permitinjection-f-sys.md) | Specifies whether to authorize event injection. |

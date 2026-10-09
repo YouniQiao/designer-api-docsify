@@ -420,6 +420,8 @@
   <!--Del-->
   - [AutoStartupInfo（系统接口）](arkts-ability-common-autostartupinfo-t-sys.md)<!--DelEnd-->
   - [BaseContext](arkts-ability-common-basecontext-t.md)
+  <!--Del-->
+  - [CliToolEvent（系统接口）](arkts-ability-common-clitoolevent-t-sys.md)<!--DelEnd-->
   - [ConnectOptions](arkts-ability-common-connectoptions-t.md)
   - [Context](arkts-ability-common-context-t.md)
   - [EmbeddableUIAbilityContext](arkts-ability-common-embeddableuiabilitycontext-t.md)
@@ -427,11 +429,19 @@
   - [ExtensionContext](arkts-ability-common-extensioncontext-t.md)
   - [FormEditExtensionContext](arkts-ability-common-formeditextensioncontext-t.md)
   - [FormExtensionContext](arkts-ability-common-formextensioncontext-t.md)
+  <!--Del-->
+  - [FunctionInfo（系统接口）](arkts-ability-common-functioninfo-t-sys.md)<!--DelEnd-->
   - [LiveFormExtensionContext](arkts-ability-common-liveformextensioncontext-t.md)
   - [PacMap](arkts-ability-common-pacmap-t.md)
   - [PhotoEditorExtensionContext](arkts-ability-common-photoeditorextensioncontext-t.md)
   <!--Del-->
   - [ServiceExtensionContext（系统接口）](arkts-ability-common-serviceextensioncontext-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolEventCallback（系统接口）](arkts-ability-common-tooleventcallback-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolInfo（系统接口）](arkts-ability-common-toolinfo-t-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ToolSummary（系统接口）](arkts-ability-common-toolsummary-t-sys.md)<!--DelEnd-->
   - [UIAbilityContext](arkts-ability-common-uiabilitycontext-t.md)
   - [UIExtensionContext](arkts-ability-common-uiextensioncontext-t.md)
   - [UIServiceExtensionConnectCallback](arkts-ability-common-uiserviceextensionconnectcallback-t.md)
@@ -763,6 +773,7 @@
     - [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md)
   - [WantAgent](arkts-ability-wantagent-t.md)
 - [@ohos.app.ability.wantConstant（Want常量）](arkts-ability-app-ability-wantconstant.md)
+  - [Action](arkts-ability-wantconstant-action-e.md)
   - [Flags](arkts-ability-wantconstant-flags-e.md)
   - [Params](arkts-ability-wantconstant-params-e.md)
   <!--Del-->

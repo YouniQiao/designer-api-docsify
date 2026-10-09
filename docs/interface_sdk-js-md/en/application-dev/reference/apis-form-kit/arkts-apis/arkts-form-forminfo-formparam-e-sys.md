@@ -28,6 +28,24 @@ Device ID.
 
 **System API:** This is a system API.
 
+## FORM_EDIT_COLOR_MODE_KEY
+
+```TypeScript
+FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'
+```
+
+Indicates the key specifying the color mode of the form edit ability, which is represented as want: {"parameters": {FORM_EDIT_COLOR_MODE_KEY: -1}} Value: -1 for automatic, 0 for dark mode, 1 for light mode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FormParam-FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'--><!--Device-FormParam-FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+**System API:** This is a system API.
+
 ## FORM_FONT_SIZE_SCALE_KEY
 
 ```TypeScript

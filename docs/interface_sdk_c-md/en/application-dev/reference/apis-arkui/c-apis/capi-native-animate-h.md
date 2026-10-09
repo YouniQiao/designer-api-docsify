@@ -128,7 +128,7 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [int32_t OH_ArkUI_TransitionEffect_SetAnimation(ArkUI_TransitionEffect* effect, ArkUI_AnimateOption* animation)](#oh_arkui_transitioneffect_setanimation) | Sets transition effect animation settings. |
 | [OH_ArkUI_PropertyAnimationHandle OH_ArkUI_NativeModule_PropertyAnimation_Create(OH_ArkUI_AnimationPropertyType propertyType)](#oh_arkui_nativemodule_propertyanimation_create) | Creates a property animation for a specific animatable property.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype); otherwise, this API returns <b>NULL</b>. |
 | [void OH_ArkUI_NativeModule_PropertyAnimation_Destroy(OH_ArkUI_PropertyAnimationHandle animation)](#oh_arkui_nativemodule_propertyanimation_destroy) | Destroys a property animation. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetFromValue(OH_ArkUI_PropertyAnimationHandle animation, const ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_propertyanimation_setfromvalue) | Sets the start value of a property animation. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetFromValue(OH_ArkUI_PropertyAnimationHandle animation, const ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_propertyanimation_setfromvalue) | Sets the start value of a property animation.<br> It is recommended to set the start value. If not set, the animation starts from the current property value by default. If the property animation does not set the start value of the property and the corresponding property has never been assigned, the property animation cannot be produced due to the lack of a valid start state. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetFromValue(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_propertyanimation_getfromvalue) | Obtains the start value of a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetToValue(OH_ArkUI_PropertyAnimationHandle animation, const ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_propertyanimation_settovalue) | Sets the end value of a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetToValue(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_propertyanimation_gettovalue) | Obtains the end value of a property animation. |
@@ -137,7 +137,7 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetDelay(OH_ArkUI_PropertyAnimationHandle animation, int32_t delay)](#oh_arkui_nativemodule_propertyanimation_setdelay) | Sets the delay for a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetDelay(OH_ArkUI_PropertyAnimationHandle animation, int32_t *delay)](#oh_arkui_nativemodule_propertyanimation_getdelay) | Obtains the delay of a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetCurve(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_CurveHandle curve)](#oh_arkui_nativemodule_propertyanimation_setcurve) | Sets the animation curve for a property animation.<br> The actual effective animation curve is determined by priority: if the curve is set via this API, that value is used; otherwise, the curve set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. Spring curves (<b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b>) are supported. When a spring curve is set, the duration set via [OH_ArkUI_NativeModule_PropertyAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setduration) does not take effect; the animation duration is determined by the spring curve. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetCurve(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_propertyanimation_getcurve) | Obtains the animation curve of a property animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetCurve(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_propertyanimation_getcurve) | Obtains the animation curve of a property animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetTempo(OH_ArkUI_PropertyAnimationHandle animation, float tempo)](#oh_arkui_nativemodule_propertyanimation_settempo) | Sets the tempo for a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetTempo(OH_ArkUI_PropertyAnimationHandle animation, float *tempo)](#oh_arkui_nativemodule_propertyanimation_gettempo) | Obtains the tempo of a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetAutoReverse(OH_ArkUI_PropertyAnimationHandle animation, bool autoReverse)](#oh_arkui_nativemodule_propertyanimation_setautoreverse) | Sets whether to auto-reverse a property animation.<br> When auto-reverse is enabled, the animation plays forward and then backward alternately across iterations. The default value is <b>false</b>. |
@@ -146,17 +146,17 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetIterations(OH_ArkUI_PropertyAnimationHandle animation, int32_t *iterations)](#oh_arkui_nativemodule_propertyanimation_getiterations) | Obtains the number of iterations of a property animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetTargetNode(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_RenderNodeHandle targetNode)](#oh_arkui_nativemodule_propertyanimation_settargetnode) | Sets the target render node for a property animation.<br> The target node is the render node animated by this property animation. If <b>NULL</b> (the default), the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). A non-NULL target must belong to the same UIContext that the group is registered on; the check is performed when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup). |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetTargetNode(OH_ArkUI_PropertyAnimationHandle animation, ArkUI_RenderNodeHandle *outBorrowedTargetNode)](#oh_arkui_nativemodule_propertyanimation_gettargetnode) | Obtains the target render node of a property animation. |
-| [OH_ArkUI_KeyframeAnimationHandle OH_ArkUI_NativeModule_KeyframeAnimation_Create(OH_ArkUI_AnimationPropertyType propertyType, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_create) | Creates a keyframe animation for a specific animatable property.<br> The key time of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). Use [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytimes) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytime) to customize the key time points.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype), and <b>size</b> must be at least 2; otherwise, this API returns <b>NULL</b>. |
+| [OH_ArkUI_KeyframeAnimationHandle OH_ArkUI_NativeModule_KeyframeAnimation_Create(OH_ArkUI_AnimationPropertyType propertyType, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_create) | Creates a keyframe animation for a specific animatable property.<br> The keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). Use [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytimes) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytime) to customize the keyframe time points.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype), and <b>size</b> must be at least 2; otherwise, this API returns <b>NULL</b>. |
 | [void OH_ArkUI_NativeModule_KeyframeAnimation_Destroy(OH_ArkUI_KeyframeAnimationHandle animation)](#oh_arkui_nativemodule_keyframeanimation_destroy) | Destroys a keyframe animation. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes(OH_ArkUI_KeyframeAnimationHandle animation, const float *keyTimes, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setkeytimes) | Sets the keyframe key time points.<br> If this API is not called, the key time of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).<br> The elements in <b>keyTimes</b> must be non-decreasing, and <b>size</b> must equal the number of keyframes of the keyframe animation (the <b>size</b> value specified when the animation was created via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create)). |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetKeyTime(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, float *keyTime)](#oh_arkui_nativemodule_keyframeanimation_getkeytime) | Obtains the key time point of a keyframe at the specified index. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, float keyTime)](#oh_arkui_nativemodule_keyframeanimation_setkeytime) | Sets the key time point of a keyframe at the specified index.<br> If this API is not called for a keyframe, its key time defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes(OH_ArkUI_KeyframeAnimationHandle animation, const float *keyTimes, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setkeytimes) | Sets the keyframe time points.<br> If this API is not called, the keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).<br> The elements in <b>keyTimes</b> must be non-decreasing, and <b>size</b> must equal the number of keyframes of the keyframe animation (the <b>size</b> value specified when the animation was created via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create)). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetKeyTime(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, float *keyTime)](#oh_arkui_nativemodule_keyframeanimation_getkeytime) | Obtains the keyframe time point of a keyframe at the specified index. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, float keyTime)](#oh_arkui_nativemodule_keyframeanimation_setkeytime) | Sets the keyframe time point of a keyframe at the specified index.<br> If this API is not called for a keyframe, its keyframe time point defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValue(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, const ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setvalue) | Sets the value of a keyframe at the specified index. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValues(OH_ArkUI_KeyframeAnimationHandle animation, const ArkUI_NumberValue *values, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setvalues) | Sets the values for all keyframes at once.<br> The values are provided as a flat array. The number of elements per keyframe depends on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 value per keyframe, and TRANSLATION requires 2 values per keyframe. The total number of elements must equal the number of keyframes multiplied by the number of values per keyframe. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValues(OH_ArkUI_KeyframeAnimationHandle animation, const ArkUI_NumberValue *values, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setvalues) | Sets the values for all keyframes at once.<br> The values are provided as a flat array. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetValue(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, ArkUI_NumberValue *value, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_getvalue) | Obtains the value of a keyframe at the specified index. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves(OH_ArkUI_KeyframeAnimationHandle animation, const ArkUI_CurveHandle *value, int32_t size)](#oh_arkui_nativemodule_keyframeanimation_setcurves) | Sets the animation curves for keyframes. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, ArkUI_CurveHandle curve)](#oh_arkui_nativemodule_keyframeanimation_setcurve) | Sets the animation curve for a keyframe at the specified index. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetCurve(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_keyframeanimation_getcurve) | Obtains the curve of a keyframe at the specified index.<br> This API returns only the curve explicitly set for the keyframe; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set for the keyframe, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set for the keyframe via [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetCurve(OH_ArkUI_KeyframeAnimationHandle animation, int32_t index, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_keyframeanimation_getcurve) | Obtains the curve of a keyframe at the specified index.<br> This API returns only the curve explicitly set for the keyframe; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set for the keyframe, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set for the keyframe via [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration(OH_ArkUI_KeyframeAnimationHandle animation, int32_t duration)](#oh_arkui_nativemodule_keyframeanimation_setduration) | Sets the duration for a keyframe animation.<br> The actual effective animation duration is determined by priority: if the duration is set via this API, that value is used; otherwise, the duration set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetDuration(OH_ArkUI_KeyframeAnimationHandle animation, int32_t *duration)](#oh_arkui_nativemodule_keyframeanimation_getduration) | Obtains the duration of a keyframe animation.<br> This API returns only the duration explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the duration has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation duration used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setduration), that value is used; otherwise, the group's duration via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetDelay(OH_ArkUI_KeyframeAnimationHandle animation, int32_t delay)](#oh_arkui_nativemodule_keyframeanimation_setdelay) | Sets the delay for a keyframe animation. |
@@ -175,15 +175,13 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetDuration(OH_ArkUI_PathAnimationHandle animation, int32_t *duration)](#oh_arkui_nativemodule_pathanimation_getduration) | Obtains the duration of a path animation.<br> This API returns only the duration explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the duration has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation duration used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PathAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setduration), that value is used; otherwise, the group's duration via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetDelay(OH_ArkUI_PathAnimationHandle animation, int32_t delay)](#oh_arkui_nativemodule_pathanimation_setdelay) | Sets the delay for a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetDelay(OH_ArkUI_PathAnimationHandle animation, int32_t *delay)](#oh_arkui_nativemodule_pathanimation_getdelay) | Obtains the delay of a path animation. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetCurve(OH_ArkUI_PathAnimationHandle animation, ArkUI_CurveHandle curve)](#oh_arkui_nativemodule_pathanimation_setcurve) | Sets the animation curve for a path animation. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetCurve(OH_ArkUI_PathAnimationHandle animation, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_pathanimation_getcurve) | Obtains the animation curve of a path animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PathAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetTempo(OH_ArkUI_PathAnimationHandle animation, float tempo)](#oh_arkui_nativemodule_pathanimation_settempo) | Sets the tempo for a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetTempo(OH_ArkUI_PathAnimationHandle animation, float *tempo)](#oh_arkui_nativemodule_pathanimation_gettempo) | Obtains the tempo of a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoReverse(OH_ArkUI_PathAnimationHandle animation, bool autoReverse)](#oh_arkui_nativemodule_pathanimation_setautoreverse) | Sets whether to auto-reverse a path animation.<br> When auto-reverse is enabled, the animation plays forward and then backward alternately across iterations. The default value is <b>false</b>. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetAutoReverse(OH_ArkUI_PathAnimationHandle animation, bool *autoReverse)](#oh_arkui_nativemodule_pathanimation_getautoreverse) | Obtains whether auto-reverse is enabled for a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetIterations(OH_ArkUI_PathAnimationHandle animation, int32_t iterations)](#oh_arkui_nativemodule_pathanimation_setiterations) | Sets the number of iterations for a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetIterations(OH_ArkUI_PathAnimationHandle animation, int32_t *iterations)](#oh_arkui_nativemodule_pathanimation_getiterations) | Obtains the number of iterations of a path animation. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoRotation(OH_ArkUI_PathAnimationHandle animation, bool autoRotation)](#oh_arkui_nativemodule_pathanimation_setautorotation) | Sets whether the component auto-rotates to align with the path tangent during a path animation.<br> When auto-rotation is enabled, the component rotates so that its heading direction aligns with the tangent of the path at the current position. The default value is <b>false</b>. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoRotation(OH_ArkUI_PathAnimationHandle animation, bool autoRotation)](#oh_arkui_nativemodule_pathanimation_setautorotation) | Sets whether the component auto-rotates to align with the path tangent during a path animation.<br> When auto-rotation is enabled, the component rotates so that its orientation aligns with the tangent of the path at the current position. The default value is <b>false</b>. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetAutoRotation(OH_ArkUI_PathAnimationHandle animation, bool *autoRotation)](#oh_arkui_nativemodule_pathanimation_getautorotation) | Obtains whether auto-rotation is enabled for a path animation. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetTargetNode(OH_ArkUI_PathAnimationHandle animation, ArkUI_RenderNodeHandle targetNode)](#oh_arkui_nativemodule_pathanimation_settargetnode) | Sets the target render node for a path animation.<br> The target node is the render node animated by this path animation. If <b>NULL</b> (the default), the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). A non-NULL target must belong to the same UIContext that the group is registered on; the check is performed when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup). |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetTargetNode(OH_ArkUI_PathAnimationHandle animation, ArkUI_RenderNodeHandle *outBorrowedTargetNode)](#oh_arkui_nativemodule_pathanimation_gettargetnode) | Obtains the target render node of a path animation. |
@@ -193,8 +191,8 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetDuration(OH_ArkUI_AnimationGroupHandle group, int32_t *duration)](#oh_arkui_nativemodule_animationgroup_getduration) | Obtains the duration of an animation group.<br> This API returns only the duration explicitly set on this animation group, and is not affected by the duration of child animations. If the duration has not been set on this group, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. At runtime, an unset group duration defaults to **1000** ms. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetDelay(OH_ArkUI_AnimationGroupHandle group, int32_t delay)](#oh_arkui_nativemodule_animationgroup_setdelay) | Sets the delay for an animation group. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetDelay(OH_ArkUI_AnimationGroupHandle group, int32_t *delay)](#oh_arkui_nativemodule_animationgroup_getdelay) | Obtains the delay of an animation group. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetCurve(OH_ArkUI_AnimationGroupHandle group, ArkUI_CurveHandle curve)](#oh_arkui_nativemodule_animationgroup_setcurve) | Sets the animation curve for an animation group.<br> The group's curve serves as the default curve for child animations that do not set their own curve via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve), or [OH_ArkUI_NativeModule_PathAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setcurve). The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetCurve(OH_ArkUI_AnimationGroupHandle group, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_animationgroup_getcurve) | Obtains the animation curve of an animation group.<br> This API returns only the curve explicitly set on this animation group, and is not affected by the curve of child animations. If the curve has not been set on this group, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. At runtime, an unset group curve defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetCurve(OH_ArkUI_AnimationGroupHandle group, ArkUI_CurveHandle curve)](#oh_arkui_nativemodule_animationgroup_setcurve) | Sets the animation curve for an animation group.<br> The group's curve serves as the default curve for child animations that do not set their own curve via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve). The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetCurve(OH_ArkUI_AnimationGroupHandle group, ArkUI_CurveHandle *outBorrowedCurve)](#oh_arkui_nativemodule_animationgroup_getcurve) | Obtains the animation curve of an animation group.<br> This API returns only the curve explicitly set on this animation group, and is not affected by the curve of child animations. If the curve has not been set on this group, <b>NULL</b> is written to <b>outBorrowedCurve</b>. At runtime, an unset group curve defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve). |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetTempo(OH_ArkUI_AnimationGroupHandle group, float tempo)](#oh_arkui_nativemodule_animationgroup_settempo) | Sets the tempo for an animation group. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetTempo(OH_ArkUI_AnimationGroupHandle group, float *tempo)](#oh_arkui_nativemodule_animationgroup_gettempo) | Obtains the tempo of an animation group. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetAutoReverse(OH_ArkUI_AnimationGroupHandle group, bool autoReverse)](#oh_arkui_nativemodule_animationgroup_setautoreverse) | Sets whether to auto-reverse an animation group.<br> When auto-reverse is enabled, the animation group plays forward and then backward alternately across iterations. The default value is <b>false</b>. |
@@ -209,13 +207,13 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation(OH_ArkUI_AnimationGroupHandle group, OH_ArkUI_PropertyAnimationHandle animation)](#oh_arkui_nativemodule_animationgroup_addpropertyanimation) | Adds a property animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_PropertyAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation(OH_ArkUI_AnimationGroupHandle group, OH_ArkUI_KeyframeAnimationHandle animation)](#oh_arkui_nativemodule_animationgroup_addkeyframeanimation) | Adds a keyframe animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_KeyframeAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation(OH_ArkUI_AnimationGroupHandle group, OH_ArkUI_PathAnimationHandle animation)](#oh_arkui_nativemodule_animationgroup_addpathanimation) | Adds a path animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_PathAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AddAnimationGroup(ArkUI_ContextHandle context, OH_ArkUI_AnimationGroupHandle group, const char *key)](#oh_arkui_nativemodule_addanimationgroup) | Registers an animation group on a UIContext with a specified key and starts playback.<br> The UIContext owns the group by <b>key</b>: once registered, the UIContext holds the group's backend (runtime) objects, and the caller may destroy the frontend group handle (and child animation handles) after registration since the backend runs independently by (UIContext, key). Keys are scoped per UIContext (instance): the same key in different UIContexts does not collide. Within one UIContext, if a group is already registered with the same key, the system removes the previous group first (releasing its backend objects) and then registers the new group. The group is later identified and managed by the same (UIContext, key) pair.<br> Each child animation added via [OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpropertyanimation), [OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addkeyframeanimation), or [OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpathanimation) animates the target node set by its own <b>SetTargetNode</b> API; if that target is not set (or is <b>NULL</b>), it inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). At registration, every child must resolve to a non-NULL target node (its own, or the group default), and every resolved target node must belong to the same UIContext as <b>context</b>; otherwise, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned.<br> Playback control and lifecycle APIs ([OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup), [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate), [OH_ArkUI_NativeModule_HasAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_hasanimationgroup), [OH_ArkUI_NativeModule_PauseAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_pauseanimationgroup), [OH_ArkUI_NativeModule_ResumeAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_resumeanimationgroup), [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup) are all keyed by the (UIContext, key) pair.<br> The finish callback (see [OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_registeronfinishcallback)) is invoked exactly once after natural completion, [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup), or destruction of a target node. If [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) returns an error, the finish callback is not invoked. After the callback returns, the system automatically removes the group from the UIContext and releases the backend (runtime) objects of the group and its child animations; the frontend handles (the group and its child animations) must still be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_AddAnimationGroup(ArkUI_ContextHandle context, OH_ArkUI_AnimationGroupHandle group, const char *key)](#oh_arkui_nativemodule_addanimationgroup) | Registers an animation group on a UIContext with a specified key and starts playback.<br> The UIContext owns the group by <b>key</b>: once registered, the UIContext holds the group's backend (runtime) objects, and the caller may destroy the frontend group handle (and child animation handles) after registration since the backend runs independently by (UIContext, key). Keys are scoped per UIContext (instance): the same key in different UIContexts does not collide. Within one UIContext, if a group is already registered with the same key, the system removes the previous group first (releasing its backend objects) and then registers the new group. The group is later identified and managed by the same (UIContext, key) pair.<br> Each child animation added via [OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpropertyanimation), [OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addkeyframeanimation), or [OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpathanimation) animates the target node set by its own <b>SetTargetNode</b> API; if that target is not set (or is <b>NULL</b>), it inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). At registration, every child must resolve to a non-NULL target node (its own, or the group default); if a child has no resolvable target node, ARKUI_ERROR_CODE_SUB_ANIMATION_INVALID is returned. Every resolved target node must belong to the same UIContext as <b>context</b>; otherwise, the error code ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT is returned.<br> Playback control and lifecycle APIs ([OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup), [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate), [OH_ArkUI_NativeModule_HasAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_hasanimationgroup), [OH_ArkUI_NativeModule_PauseAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_pauseanimationgroup), [OH_ArkUI_NativeModule_ResumeAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_resumeanimationgroup), [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup) are all keyed by the (UIContext, key) pair.<br> The finish callback (see [OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_registeronfinishcallback)) is invoked exactly once after natural completion, [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup), or destruction of a target node. If [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) returns an error, the finish callback is not invoked. After the callback returns, the system automatically removes the group from the UIContext and releases the backend (runtime) objects of the group and its child animations; the frontend handles (the group and its child animations) must still be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy). |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_RemoveAnimationGroup(ArkUI_ContextHandle context, const char *key)](#oh_arkui_nativemodule_removeanimationgroup) | Removes the animation group identified by the specified key from the UIContext.<br> Stops the group (if still running) and releases the backend (runtime) objects of the group and its child animations. The animated target nodes are restored to their state at the start of the animation. The frontend handles (the group and its child animations) are not freed by this call and must be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy). Use this only for a group that has not stopped on its own (for example, a paused group); once the finish callback is invoked, the group is removed automatically. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetAnimationGroupState(ArkUI_ContextHandle context, const char *key, OH_ArkUI_AnimationGroupState *state)](#oh_arkui_nativemodule_getanimationgroupstate) | Obtains the playback state of an animation group identified by the specified key on the UIContext. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_HasAnimationGroup(ArkUI_ContextHandle context, const char *key, bool *exists)](#oh_arkui_nativemodule_hasanimationgroup) | Checks whether an animation group with the specified key exists on the UIContext. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PauseAnimationGroup(ArkUI_ContextHandle context, const char *key)](#oh_arkui_nativemodule_pauseanimationgroup) | Pauses the animation group identified by the specified key on the UIContext.<br> The animation group must be in the RUNNING state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ResumeAnimationGroup(ArkUI_ContextHandle context, const char *key)](#oh_arkui_nativemodule_resumeanimationgroup) | Resumes the animation group identified by the specified key on the UIContext.<br> The animation group must be in the PAUSED state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_FinishAnimationGroup(ArkUI_ContextHandle context, const char *key, OH_ArkUI_AnimationFinishMode mode)](#oh_arkui_nativemodule_finishanimationgroup) | Finishes the animation group identified by the specified key on the UIContext.<br> The animation group is finished according to the specified finish mode: jump to the end state, jump to the start state, or stay at the current value. The animation group must be in the RUNNING or PAUSED state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_PauseAnimationGroup(ArkUI_ContextHandle context, const char *key)](#oh_arkui_nativemodule_pauseanimationgroup) | Pauses the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_ResumeAnimationGroup(ArkUI_ContextHandle context, const char *key)](#oh_arkui_nativemodule_resumeanimationgroup) | Resumes the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate). |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_FinishAnimationGroup(ArkUI_ContextHandle context, const char *key, OH_ArkUI_AnimationFinishMode mode)](#oh_arkui_nativemodule_finishanimationgroup) | Finishes the animation group identified by the specified key on the UIContext.<br> The animation group is finished according to the specified finish mode: jump to the end state, jump to the start state, or stay at the current value. The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) or [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate). |
 
 ## Function description
 
@@ -2441,7 +2439,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetFromValue(OH_ArkUI_Pr
 
 **Description**
 
-Sets the start value of a property animation.
+Sets the start value of a property animation.<br> It is recommended to set the start value. If not set, the animation starts from the current property value by default. If the property animation does not set the start value of the property and the corresponding property has never been assigned, the property animation cannot be produced due to the lack of a valid start state.
 
 **Since**: 26.0.1
 
@@ -2450,7 +2448,7 @@ Sets the start value of a property animation.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| const ArkUI_NumberValue *value | [in] Indicates the start value. The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). |
+| const ArkUI_NumberValue *value | [in] Indicates the start value. The number and type of elements depend on the <b>propertyType</b> specified when creating the property animation via [OH_ArkUI_NativeModule_PropertyAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. |
 | int32_t size | [in] Indicates the number of elements in the value array. |
 
 **Returns**:
@@ -2476,7 +2474,7 @@ Obtains the start value of a property animation.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the start value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
+| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the start value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on the <b>propertyType</b> specified when creating the property animation via [OH_ArkUI_NativeModule_PropertyAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
 | int32_t size | [in] Indicates the size of the output array. It must equal the number of elements required by [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype); otherwise, the error code ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
 
 **Returns**:
@@ -2502,7 +2500,7 @@ Sets the end value of a property animation.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| const ArkUI_NumberValue *value | [in] Indicates the end value. The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). |
+| const ArkUI_NumberValue *value | [in] Indicates the end value. The number and type of elements depend on the <b>propertyType</b> specified when creating the property animation via [OH_ArkUI_NativeModule_PropertyAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. |
 | int32_t size | [in] Indicates the number of elements in the value array. |
 
 **Returns**:
@@ -2528,7 +2526,7 @@ Obtains the end value of a property animation.
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the end value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
+| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the end value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on the <b>propertyType</b> specified when creating the property animation via [OH_ArkUI_NativeModule_PropertyAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
 | int32_t size | [in] Indicates the size of the output array. It must equal the number of elements required by [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype); otherwise, the error code ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
 
 **Returns**:
@@ -2654,7 +2652,7 @@ Sets the animation curve for a property animation.<br> The actual effective anim
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. <b>NULL</b> means inheriting the group's curve set by [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve). This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. |
 
 **Returns**:
 
@@ -2670,7 +2668,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetCurve(OH_ArkUI_Proper
 
 **Description**
 
-Obtains the animation curve of a property animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
+Obtains the animation curve of a property animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
 
 **Since**: 26.0.1
 
@@ -2679,13 +2677,13 @@ Obtains the animation curve of a property animation.<br> This API returns only t
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. <b>NULL</b> means the curve has not been set on this animation and will inherit the group's curve at runtime. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND if the curve has not been set.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_PropertyAnimation_SetTempo()
 
@@ -2754,7 +2752,7 @@ Sets whether to auto-reverse a property animation.<br> When auto-reverse is enab
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PropertyAnimationHandle animation | [in] Indicates the property animation handle. |
-| bool autoReverse | [in] Indicates whether to enable auto-reverse. The default value is <b>false</b>. |
+| bool autoReverse | [in] Indicates whether to enable auto-reverse. <b>true</b> means enabling auto-reverse, where the animation alternates between forward and backward playback across iterations; <b>false</b> means disabling it, where the animation plays forward only. The default value is <b>false</b>. |
 
 **Returns**:
 
@@ -2895,7 +2893,7 @@ OH_ArkUI_KeyframeAnimationHandle OH_ArkUI_NativeModule_KeyframeAnimation_Create(
 
 **Description**
 
-Creates a keyframe animation for a specific animatable property.<br> The key time of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). Use [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytimes) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytime) to customize the key time points.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype), and <b>size</b> must be at least 2; otherwise, this API returns <b>NULL</b>.
+Creates a keyframe animation for a specific animatable property.<br> The keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). Use [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytimes) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytime) to customize the keyframe time points.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype), and <b>size</b> must be at least 2; otherwise, this API returns <b>NULL</b>.
 
 **Since**: 26.0.1
 
@@ -2940,7 +2938,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes(OH_ArkUI_Key
 
 **Description**
 
-Sets the keyframe key time points.<br> If this API is not called, the key time of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).<br> The elements in <b>keyTimes</b> must be non-decreasing, and <b>size</b> must equal the number of keyframes of the keyframe animation (the <b>size</b> value specified when the animation was created via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create)).
+Sets the keyframe time points.<br> If this API is not called, the keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).<br> The elements in <b>keyTimes</b> must be non-decreasing, and <b>size</b> must equal the number of keyframes of the keyframe animation (the <b>size</b> value specified when the animation was created via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create)).
 
 **Since**: 26.0.1
 
@@ -2949,8 +2947,8 @@ Sets the keyframe key time points.<br> If this API is not called, the key time o
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
-| const float *keyTimes | [in] Indicates the array of key time points. Value range of each element: [0, 1]. |
-| int32_t size | [in] Indicates the number of key time points. |
+| const float *keyTimes | [in] Indicates the array of keyframe time points, as a normalized time ratio. Value range of each element: [0, 1]. |
+| int32_t size | [in] Indicates the number of keyframe time points. |
 
 **Returns**:
 
@@ -2966,7 +2964,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetKeyTime(OH_ArkUI_Keyf
 
 **Description**
 
-Obtains the key time point of a keyframe at the specified index.
+Obtains the keyframe time point of a keyframe at the specified index.
 
 **Since**: 26.0.1
 
@@ -2976,7 +2974,7 @@ Obtains the key time point of a keyframe at the specified index.
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| float *keyTime | [out] Indicates the pointer to receive the key time point. |
+| float *keyTime | [out] Indicates the pointer to receive the keyframe time point, as a normalized time ratio, with a value range of [0, 1]. |
 
 **Returns**:
 
@@ -2992,7 +2990,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime(OH_ArkUI_Keyf
 
 **Description**
 
-Sets the key time point of a keyframe at the specified index.<br> If this API is not called for a keyframe, its key time defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).
+Sets the keyframe time point of a keyframe at the specified index.<br> If this API is not called for a keyframe, its keyframe time point defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).
 
 **Since**: 26.0.1
 
@@ -3002,7 +3000,7 @@ Sets the key time point of a keyframe at the specified index.<br> If this API is
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| float keyTime | [in] Indicates the key time point. Value range: [0, 1]. |
+| float keyTime | [in] Indicates the keyframe time point, as a normalized time ratio. Value range: [0, 1]. |
 
 **Returns**:
 
@@ -3028,7 +3026,7 @@ Sets the value of a keyframe at the specified index.
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| const ArkUI_NumberValue *value | [in] Indicates the array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). |
+| const ArkUI_NumberValue *value | [in] Indicates the array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on the <b>propertyType</b> specified when creating the keyframe animation via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. |
 | int32_t size | [in] Indicates the number of elements in the value array. |
 
 **Returns**:
@@ -3045,7 +3043,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValues(OH_ArkUI_Keyfr
 
 **Description**
 
-Sets the values for all keyframes at once.<br> The values are provided as a flat array. The number of elements per keyframe depends on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 value per keyframe, and TRANSLATION requires 2 values per keyframe. The total number of elements must equal the number of keyframes multiplied by the number of values per keyframe.
+Sets the values for all keyframes at once.<br> The values are provided as a flat array.
 
 **Since**: 26.0.1
 
@@ -3054,7 +3052,7 @@ Sets the values for all keyframes at once.<br> The values are provided as a flat
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
-| const ArkUI_NumberValue *values | [in] Indicates the flat array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) for all keyframes. |
+| const ArkUI_NumberValue *values | [in] Indicates the flat array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md) for all keyframes. The number and type of elements per keyframe depend on the <b>propertyType</b> specified when creating the keyframe animation via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 value per keyframe. The total number of elements must equal the number of keyframes multiplied by the number of values per keyframe. |
 | int32_t size | [in] Indicates the total number of elements in the values array. |
 
 **Returns**:
@@ -3081,7 +3079,7 @@ Obtains the value of a keyframe at the specified index.
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, OPACITY requires 1 f32 value, and TRANSLATION requires 2 f32 values (x, y). The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
+| ArkUI_NumberValue *value | [out] Indicates the pointer to receive the value array of [ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md). The number and type of elements depend on the <b>propertyType</b> specified when creating the keyframe animation via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create). For details, see [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype). For example, [OH_ARKUI_ANIMATION_PROPERTY_OPACITY](capi-native-type-visual-h.md#oh_arkui_animationpropertytype) requires 1 f32 value. The values are written into the memory pointed to by this pointer. <br>This pointer must not be **NULL**. If **value** is set to **NULL**, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned. |
 | int32_t size | [in] Indicates the size of the output array. It must equal the number of elements required by [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype); otherwise, the error code ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR is returned. |
 
 **Returns**:
@@ -3134,7 +3132,7 @@ Sets the animation curve for a keyframe at the specified index.
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings. The actual effective animation curve is determined by priority: if the curve is set for the keyframe (via this API or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves)), that value is used; otherwise, the curve set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. <b>NULL</b> means inheriting the group's curve set by [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve). This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings. The actual effective animation curve is determined by priority: if the curve is set for the keyframe (via this API or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves)), that value is used; otherwise, the curve set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
 
 **Returns**:
 
@@ -3150,7 +3148,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetCurve(OH_ArkUI_Keyfra
 
 **Description**
 
-Obtains the curve of a keyframe at the specified index.<br> This API returns only the curve explicitly set for the keyframe; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set for the keyframe, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set for the keyframe via [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
+Obtains the curve of a keyframe at the specified index.<br> This API returns only the curve explicitly set for the keyframe; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set for the keyframe, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set for the keyframe via [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
 
 **Since**: 26.0.1
 
@@ -3160,13 +3158,13 @@ Obtains the curve of a keyframe at the specified index.<br> This API returns onl
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
 | int32_t index | [in] Indicates the keyframe index. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. <b>NULL</b> means the curve has not been set for the keyframe and will inherit the group's curve at runtime. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND if the curve has not been set.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration()
 
@@ -3335,7 +3333,7 @@ Sets whether to auto-reverse a keyframe animation.<br> When auto-reverse is enab
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_KeyframeAnimationHandle animation | [in] Indicates the keyframe animation handle. |
-| bool autoReverse | [in] Indicates whether to enable auto-reverse. The default value is <b>false</b>. |
+| bool autoReverse | [in] Indicates whether to enable auto-reverse. <b>true</b> means enabling auto-reverse, where the animation alternates between forward and backward playback across iterations; <b>false</b> means disabling it, where the animation plays forward only. The default value is <b>false</b>. |
 
 **Returns**:
 
@@ -3612,56 +3610,6 @@ Obtains the delay of a path animation.
 | -- | -- |
 | ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
 
-### OH_ArkUI_NativeModule_PathAnimation_SetCurve()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetCurve(OH_ArkUI_PathAnimationHandle animation, ArkUI_CurveHandle curve)
-```
-
-**Description**
-
-Sets the animation curve for a path animation.
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| OH_ArkUI_PathAnimationHandle animation | [in] Indicates the path animation handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve that controls the rate of motion along the path. This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings. The actual effective animation curve is determined by priority: if the curve is set via this API, that value is used; otherwise, the curve set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
-
-### OH_ArkUI_NativeModule_PathAnimation_GetCurve()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetCurve(OH_ArkUI_PathAnimationHandle animation, ArkUI_CurveHandle *outBorrowedCurve)
-```
-
-**Description**
-
-Obtains the animation curve of a path animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PathAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| OH_ArkUI_PathAnimationHandle animation | [in] Indicates the path animation handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND if the curve has not been set.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
-
 ### OH_ArkUI_NativeModule_PathAnimation_SetTempo()
 
 ```c
@@ -3729,7 +3677,7 @@ Sets whether to auto-reverse a path animation.<br> When auto-reverse is enabled,
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PathAnimationHandle animation | [in] Indicates the path animation handle. |
-| bool autoReverse | [in] Indicates whether to enable auto-reverse. The default value is <b>false</b>. |
+| bool autoReverse | [in] Indicates whether to enable auto-reverse. <b>true</b> means enabling auto-reverse, where the animation alternates between forward and backward playback across iterations; <b>false</b> means disabling it, where the animation plays forward only. The default value is <b>false</b>. |
 
 **Returns**:
 
@@ -3820,7 +3768,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoRotation(OH_ArkUI_Pat
 
 **Description**
 
-Sets whether the component auto-rotates to align with the path tangent during a path animation.<br> When auto-rotation is enabled, the component rotates so that its heading direction aligns with the tangent of the path at the current position. The default value is <b>false</b>.
+Sets whether the component auto-rotates to align with the path tangent during a path animation.<br> When auto-rotation is enabled, the component rotates so that its orientation aligns with the tangent of the path at the current position. The default value is <b>false</b>.
 
 **Since**: 26.0.1
 
@@ -3829,7 +3777,7 @@ Sets whether the component auto-rotates to align with the path tangent during a 
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_PathAnimationHandle animation | [in] Indicates the path animation handle. |
-| bool autoRotation | [in] Indicates whether to enable auto-rotation. The default value is <b>false</b>. |
+| bool autoRotation | [in] Indicates whether to enable auto-rotation. <b>true</b> means enabling auto-rotation, where the component rotates to align its orientation with the path tangent at the current position; <b>false</b> means disabling it, where the component does not rotate with the path tangent. The default value is <b>false</b>. |
 
 **Returns**:
 
@@ -4058,7 +4006,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetCurve(OH_ArkUI_Animation
 
 **Description**
 
-Sets the animation curve for an animation group.<br> The group's curve serves as the default curve for child animations that do not set their own curve via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve), or [OH_ArkUI_NativeModule_PathAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setcurve). The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings.
+Sets the animation curve for an animation group.<br> The group's curve serves as the default curve for child animations that do not set their own curve via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve). The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings.
 
 **Since**: 26.0.1
 
@@ -4067,7 +4015,7 @@ Sets the animation curve for an animation group.<br> The group's curve serves as
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_AnimationGroupHandle group | [in] Indicates the animation group handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) curve | [in] Indicates the animation curve. <b>NULL</b> means the group uses the default [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) at runtime. This API does not take ownership of the curve handle; the caller must ensure the curve remains valid when using this handle. |
 
 **Returns**:
 
@@ -4083,7 +4031,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetCurve(OH_ArkUI_Animation
 
 **Description**
 
-Obtains the animation curve of an animation group.<br> This API returns only the curve explicitly set on this animation group, and is not affected by the curve of child animations. If the curve has not been set on this group, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. At runtime, an unset group curve defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve).
+Obtains the animation curve of an animation group.<br> This API returns only the curve explicitly set on this animation group, and is not affected by the curve of child animations. If the curve has not been set on this group, <b>NULL</b> is written to <b>outBorrowedCurve</b>. At runtime, an unset group curve defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve).
 
 **Since**: 26.0.1
 
@@ -4092,13 +4040,13 @@ Obtains the animation curve of an animation group.<br> This API returns only the
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_AnimationGroupHandle group | [in] Indicates the animation group handle. |
-| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. |
+| [ArkUI_CurveHandle](capi-arkui-nativemodule-arkui-curvehandle.md) *outBorrowedCurve | [out] Receives a borrowed curve handle; the caller must not destroy it. <b>NULL</b> means the curve has not been set on this group and defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) at runtime. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND if the curve has not been set.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_AnimationGroup_SetTempo()
 
@@ -4167,7 +4115,7 @@ Sets whether to auto-reverse an animation group.<br> When auto-reverse is enable
 | Parameter | Description |
 | -- | -- |
 | OH_ArkUI_AnimationGroupHandle group | [in] Indicates the animation group handle. |
-| bool autoReverse | [in] Indicates whether to enable auto-reverse. The default value is <b>false</b>. |
+| bool autoReverse | [in] Indicates whether to enable auto-reverse. <b>true</b> means enabling auto-reverse, where the animation group alternates between forward and backward playback across iterations; <b>false</b> means disabling it, where the animation group plays forward only. The default value is <b>false</b>. |
 
 **Returns**:
 
@@ -4459,7 +4407,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AddAnimationGroup(ArkUI_ContextHandle cont
 
 **Description**
 
-Registers an animation group on a UIContext with a specified key and starts playback.<br> The UIContext owns the group by <b>key</b>: once registered, the UIContext holds the group's backend (runtime) objects, and the caller may destroy the frontend group handle (and child animation handles) after registration since the backend runs independently by (UIContext, key). Keys are scoped per UIContext (instance): the same key in different UIContexts does not collide. Within one UIContext, if a group is already registered with the same key, the system removes the previous group first (releasing its backend objects) and then registers the new group. The group is later identified and managed by the same (UIContext, key) pair.<br> Each child animation added via [OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpropertyanimation), [OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addkeyframeanimation), or [OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpathanimation) animates the target node set by its own <b>SetTargetNode</b> API; if that target is not set (or is <b>NULL</b>), it inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). At registration, every child must resolve to a non-NULL target node (its own, or the group default), and every resolved target node must belong to the same UIContext as <b>context</b>; otherwise, the error code ARKUI_ERROR_CODE_PARAM_INVALID is returned.<br> Playback control and lifecycle APIs ([OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup), [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate), [OH_ArkUI_NativeModule_HasAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_hasanimationgroup), [OH_ArkUI_NativeModule_PauseAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_pauseanimationgroup), [OH_ArkUI_NativeModule_ResumeAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_resumeanimationgroup), [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup) are all keyed by the (UIContext, key) pair.<br> The finish callback (see [OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_registeronfinishcallback)) is invoked exactly once after natural completion, [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup), or destruction of a target node. If [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) returns an error, the finish callback is not invoked. After the callback returns, the system automatically removes the group from the UIContext and releases the backend (runtime) objects of the group and its child animations; the frontend handles (the group and its child animations) must still be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy).
+Registers an animation group on a UIContext with a specified key and starts playback.<br> The UIContext owns the group by <b>key</b>: once registered, the UIContext holds the group's backend (runtime) objects, and the caller may destroy the frontend group handle (and child animation handles) after registration since the backend runs independently by (UIContext, key). Keys are scoped per UIContext (instance): the same key in different UIContexts does not collide. Within one UIContext, if a group is already registered with the same key, the system removes the previous group first (releasing its backend objects) and then registers the new group. The group is later identified and managed by the same (UIContext, key) pair.<br> Each child animation added via [OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpropertyanimation), [OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addkeyframeanimation), or [OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpathanimation) animates the target node set by its own <b>SetTargetNode</b> API; if that target is not set (or is <b>NULL</b>), it inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). At registration, every child must resolve to a non-NULL target node (its own, or the group default); if a child has no resolvable target node, ARKUI_ERROR_CODE_SUB_ANIMATION_INVALID is returned. Every resolved target node must belong to the same UIContext as <b>context</b>; otherwise, the error code ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT is returned.<br> Playback control and lifecycle APIs ([OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup), [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate), [OH_ArkUI_NativeModule_HasAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_hasanimationgroup), [OH_ArkUI_NativeModule_PauseAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_pauseanimationgroup), [OH_ArkUI_NativeModule_ResumeAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_resumeanimationgroup), [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup) are all keyed by the (UIContext, key) pair.<br> The finish callback (see [OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_registeronfinishcallback)) is invoked exactly once after natural completion, [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup), or destruction of a target node. If [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) returns an error, the finish callback is not invoked. After the callback returns, the system automatically removes the group from the UIContext and releases the backend (runtime) objects of the group and its child animations; the frontend handles (the group and its child animations) must still be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy).
 
 **Since**: 26.0.1
 
@@ -4469,13 +4417,13 @@ Registers an animation group on a UIContext with a specified key and starts play
 | -- | -- |
 | ArkUI_ContextHandle context | [in] Indicates the [ArkUI_ContextHandle](capi-arkui-nativemodule-arkui-contexthandle.md) (UIContext) on which the animation group is registered and played. |
 | OH_ArkUI_AnimationGroupHandle group | [in] Indicates the animation group handle. |
-| const char *key | [in] Indicates the key used to identify the animation group on the UIContext. |
+| const char *key | [in] Indicates the key used to identify the animation group on the UIContext. The key is a user-defined string that must be unique within the same UIContext. If an animation group has already been registered with the same key, the system removes the previous one before registering the new one. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs, or a resolved target node does not belong to the same UIContext as <b>context</b>.</li> <li>ARKUI_ERROR_CODE_SUB_ANIMATION_INVALID if a child animation has no resolvable target node.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT if a resolved target node does not belong to the same UIContext as <b>context</b>.</li> <li>ARKUI_ERROR_CODE_SUB_ANIMATION_INVALID if a child animation has no resolvable target node.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_RemoveAnimationGroup()
 
@@ -4562,7 +4510,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PauseAnimationGroup(ArkUI_ContextHandle co
 
 **Description**
 
-Pauses the animation group identified by the specified key on the UIContext.<br> The animation group must be in the RUNNING state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned.
+Pauses the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
 
 **Since**: 26.0.1
 
@@ -4577,7 +4525,7 @@ Pauses the animation group identified by the specified key on the UIContext.<br>
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the RUNNING state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_ResumeAnimationGroup()
 
@@ -4587,7 +4535,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_ResumeAnimationGroup(ArkUI_ContextHandle c
 
 **Description**
 
-Resumes the animation group identified by the specified key on the UIContext.<br> The animation group must be in the PAUSED state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned.
+Resumes the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
 
 **Since**: 26.0.1
 
@@ -4602,7 +4550,7 @@ Resumes the animation group identified by the specified key on the UIContext.<br
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the PAUSED state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
 
 ### OH_ArkUI_NativeModule_FinishAnimationGroup()
 
@@ -4612,7 +4560,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_FinishAnimationGroup(ArkUI_ContextHandle c
 
 **Description**
 
-Finishes the animation group identified by the specified key on the UIContext.<br> The animation group is finished according to the specified finish mode: jump to the end state, jump to the start state, or stay at the current value. The animation group must be in the RUNNING or PAUSED state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned.
+Finishes the animation group identified by the specified key on the UIContext.<br> The animation group is finished according to the specified finish mode: jump to the end state, jump to the start state, or stay at the current value. The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) or [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
 
 **Since**: 26.0.1
 
@@ -4628,6 +4576,6 @@ Finishes the animation group identified by the specified key on the UIContext.<b
 
 | Type | Description |
 | -- | -- |
-| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs, for example when <b>context</b> or <b>key</b> is invalid, or <b>mode</b> is not a valid value of [OH_ArkUI_AnimationFinishMode](capi-native-type-visual-h.md#oh_arkui_animationfinishmode).</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the RUNNING or PAUSED state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
+| ArkUI_ErrorCode | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs, for example when <b>context</b> or <b>key</b> is invalid, or <b>mode</b> is not a valid value of [OH_ArkUI_AnimationFinishMode](capi-native-type-visual-h.md#oh_arkui_animationfinishmode).</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_NOT_FOUND if the animation group identified by <b>key</b> is not found on the UIContext.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE if the animation group is not in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) or [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state.</li> <li>ARKUI_ERROR_CODE_ANIMATION_GROUP_REENTRANT_CALL if a re-entrant call is detected on the same thread.</li> </ul> |
 
 
