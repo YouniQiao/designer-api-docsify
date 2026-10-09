@@ -28,19 +28,35 @@ The authentication fails. This state occurs because the user's biometric feature
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## TIMEOUT
+## COMPARE_FAILURE_WITH_FROZEN
 
 ```TypeScript
-TIMEOUT = 2
+COMPARE_FAILURE_WITH_FROZEN = 7
 ```
 
-The authentication has timed out. This state usually occurs because the user has not completed the authentication interaction within the specified time (for example, the user has not entered the password in time or has not looked straight at the camera lens).
+The authentication fails and authentication freezing is triggered. This state indicates that the number of authentication failures reaches the threshold and the authenticator is locked. This state contains both authentication failure and freezing information. Your application can prompt the user with the corresponding unlock method based on the lockout type (temporary or permanent).
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
+<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## PERMANENTLY_LOCKED
+
+```TypeScript
+PERMANENTLY_LOCKED = 4
+```
+
+The authentication is permanently locked. When this state occurs, automatic unlocking is unavailable. Users must use PIN authentication to unlock the authenticator before using the authentication type. The permanent lockout status is usually triggered by failed authentication attempts during the temporary lockout period.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -60,19 +76,19 @@ The authentication is temporarily locked. When this state occurs, users can atte
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## PERMANENTLY_LOCKED
+## TIMEOUT
 
 ```TypeScript
-PERMANENTLY_LOCKED = 4
+TIMEOUT = 2
 ```
 
-The authentication is permanently locked. When this state occurs, automatic unlocking is unavailable. Users must use PIN authentication to unlock the authenticator before using the authentication type. The permanent lockout status is usually triggered by failed authentication attempts during the temporary lockout period.
+The authentication has timed out. This state usually occurs because the user has not completed the authentication interaction within the specified time (for example, the user has not entered the password in time or has not looked straight at the camera lens).
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
+<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -105,21 +121,5 @@ The current identity authentication page is switched to another authentication p
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
 <!--Device-UserAuthTipCode-WIDGET_RELEASED = 6--><!--Device-UserAuthTipCode-WIDGET_RELEASED = 6-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## COMPARE_FAILURE_WITH_FROZEN
-
-```TypeScript
-COMPARE_FAILURE_WITH_FROZEN = 7
-```
-
-The authentication fails and authentication freezing is triggered. This state indicates that the number of authentication failures reaches the threshold and the authenticator is locked. This state contains both authentication failure and freezing information. Your application can prompt the user with the corresponding unlock method based on the lockout type (temporary or permanent).
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

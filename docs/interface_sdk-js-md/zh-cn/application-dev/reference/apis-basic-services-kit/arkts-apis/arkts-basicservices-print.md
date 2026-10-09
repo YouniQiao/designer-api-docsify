@@ -86,8 +86,6 @@ import { print } from '@kit.BasicServicesKit';
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos1) | 查询所有已安装的打印机扩展服务，使用callback异步回调。 |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos2) | 查询所有已安装的打印机扩展服务，使用Promise异步回调。 |
 | [queryAllPrinterPpds](arkts-basicservices-print-queryallprinterppds-f-sys.md) | 查询所有打印机ppd。 |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs1) | 查询所有打印任务，使用callback异步回调。 |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs2) | 查询所有打印任务，使用Promise异步回调。 |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability1) | 查询打印机能力，使用callback异步回调。 |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability2) | 查询打印机能力，使用Promise异步回调。 |
 | [queryPrinterCapabilityByUri](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md) | 使用打印机的uri查询打印机能力，使用Promise异步回调。 |
@@ -114,6 +112,8 @@ import { print } from '@kit.BasicServicesKit';
 | [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updateprinters2) | 更新特定打印机的信息，使用Promise异步回调。 |
 | [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate1) | 更新打印机状态，使用callback异步回调。 |
 | [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate2) | 更新打印机状态，使用Promise异步回调。 |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs1) | 查询所有打印任务，使用callback异步回调。 |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs2) | 查询所有打印任务，使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 接口

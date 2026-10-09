@@ -12,19 +12,21 @@ Enumerates the identity authentication types. This enum defines the authenticati
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## PIN
+## COMPANION_DEVICE
 
 ```TypeScript
-PIN = 1
+COMPANION_DEVICE = 64
 ```
 
-PIN authentication. It indicates that the user enters the PIN to complete authentication. PIN authentication has a high security level of ATL4. It is applicable to scenarios requiring high security, such as payment and confirmation of important operations. However, users need to manually enter information, which is not as convenient as biometric authentication.
+Companion device authentication. It indicates that the user completes the authentication through the companion device. Companion device authentication supports multiple trust levels. For details about the classification principles, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels).
 
-**Since:** 10
+**Since:** 26.0.0
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-UserAuthType-PIN = 1--><!--Device-UserAuthType-PIN = 1-End-->
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-UserAuthType-COMPANION_DEVICE = 64--><!--Device-UserAuthType-COMPANION_DEVICE = 64-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -60,20 +62,18 @@ Fingerprint authentication. It indicates that the user is authenticated through 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## COMPANION_DEVICE
+## PIN
 
 ```TypeScript
-COMPANION_DEVICE = 64
+PIN = 1
 ```
 
-Companion device authentication. It indicates that the user completes the authentication through the companion device. Companion device authentication supports multiple trust levels. For details about the classification principles, see [Principles for Classifying Biometric Authentication Trust Levels](../../../security/UserAuthenticationKit/user-authentication-overview.md#principles-for-classifying-biometric-authentication-trust-levels).
+PIN authentication. It indicates that the user enters the PIN to complete authentication. PIN authentication has a high security level of ATL4. It is applicable to scenarios requiring high security, such as payment and confirmation of important operations. However, users need to manually enter information, which is not as convenient as biometric authentication.
 
-**Since:** 26.0.0
+**Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-UserAuthType-COMPANION_DEVICE = 64--><!--Device-UserAuthType-COMPANION_DEVICE = 64-End-->
+<!--Device-UserAuthType-PIN = 1--><!--Device-UserAuthType-PIN = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

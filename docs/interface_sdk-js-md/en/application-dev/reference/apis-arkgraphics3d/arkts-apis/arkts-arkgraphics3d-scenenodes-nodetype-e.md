@@ -14,17 +14,31 @@ Enumerates the node types.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## NODE
+## CAMERA
 
 ```TypeScript
-NODE = 1
+CAMERA = 3
 ```
 
-The node is an empty node.
+Camera type node.
 
 **Since:** 12
 
-<!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
+<!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## CUSTOM
+
+```TypeScript
+CUSTOM = 255
+```
+
+Custom node, which is usually defined in an extension plugin.
+
+**Since:** 21
+
+<!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -42,20 +56,6 @@ Geometric type node.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## CAMERA
-
-```TypeScript
-CAMERA = 3
-```
-
-Camera type node.
-
-**Since:** 12
-
-<!--Device-NodeType-CAMERA = 3--><!--Device-NodeType-CAMERA = 3-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
 ## LIGHT
 
 ```TypeScript
@@ -70,16 +70,16 @@ Light type node.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## CUSTOM
+## NODE
 
 ```TypeScript
-CUSTOM = 255
+NODE = 1
 ```
 
-Custom node, which is usually defined in an extension plugin.
+The node is an empty node.
 
-**Since:** 21
+**Since:** 12
 
-<!--Device-NodeType-CUSTOM = 255--><!--Device-NodeType-CUSTOM = 255-End-->
+<!--Device-NodeType-NODE = 1--><!--Device-NodeType-NODE = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

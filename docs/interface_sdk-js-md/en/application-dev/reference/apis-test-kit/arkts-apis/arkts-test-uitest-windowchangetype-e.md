@@ -14,24 +14,6 @@ Enumerates the window change event types that can be listened for.
 
 **Test API:** This API is used only in automated test scripts.
 
-## WINDOW_UNDEFINED
-
-```TypeScript
-WINDOW_UNDEFINED = 0
-```
-
-Non-window change event. <br>Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
-
-**Since:** 22
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## WINDOW_ADDED
 
 ```TypeScript
@@ -45,6 +27,24 @@ Window adding event.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## WINDOW_BOUNDS_CHANGED
+
+```TypeScript
+WINDOW_BOUNDS_CHANGED = 3
+```
+
+Window bounds change event.
+
+**Since:** 22
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -68,19 +68,19 @@ Window removing event.
 
 **Test API:** This API is used only in automated test scripts.
 
-## WINDOW_BOUNDS_CHANGED
+## WINDOW_UNDEFINED
 
 ```TypeScript
-WINDOW_BOUNDS_CHANGED = 3
+WINDOW_UNDEFINED = 0
 ```
 
-Window bounds change event.
+Non-window change event. <br>Note: This value can only be used as a return value. If it is passed in an API, an exception will be thrown.
 
 **Since:** 22
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
+<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

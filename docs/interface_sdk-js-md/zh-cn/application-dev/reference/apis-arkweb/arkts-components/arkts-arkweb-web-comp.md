@@ -46,7 +46,6 @@ Sets Value.
 | [BlankScreenDetectionEventInfo](arkts-arkweb-web-comp-blankscreendetectioneventinfo-i.md) | 提供检测到白屏时的事件信息，包括URL、原因和细节。适用于需要监控页面白屏问题的场景，提升白屏诊断的准确性和用户体验。 |
 | [CameraCaptureStateChangeInfo](arkts-arkweb-web-comp-cameracapturestatechangeinfo-i.md) | 提供摄像头触发回调时的状态变化信息，包括改变前的状态和新状态。适用于需要监控摄像头状态变化的场景，提升摄像头管理的可见性和用户体验。 |
 | [EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md) | Web同层渲染的配置。用于配置Web同层渲染选项，包括支持固定大小和CSS显示属性。适用于需要优化同层元素渲染效果的场景，提升渲染的兼容性和灵活性。 |
-| [ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md) | 自定义菜单扩展项。 |
 | [FirstMeaningfulPaint](arkts-arkweb-web-comp-firstmeaningfulpaint-i.md) | 提供网页绘制页面主要内容的详细信息，包括导航时间和绘制时间。适用于需要监控页面渲染性能的场景，提升性能优化的准确性和用户体验。 |
 | [FirstScreenPaint](arkts-arkweb-web-comp-firstscreenpaint-i.md) | 提供首屏渲染事件的信息，包括URL和绘制时间。适用于需要监控页面首屏渲染性能的场景，提升性能优化的准确性和用户体验。 |
 | [FullScreenEnterEvent](arkts-arkweb-web-comp-fullscreenenterevent-i.md) | 提供 Web 组件进入全屏的回调信息，包括视频尺寸和退出句柄。适用于需要处理全屏视频的场景，提升视频播放的沉浸式体验和可控性。 |
@@ -120,6 +119,7 @@ Sets Value.
 | [WebMediaOptions](arkts-arkweb-web-comp-webmediaoptions-i.md) | 用于配置 Web 组件的媒体策略，包括音频续播有效期、音频独占模式等。适用于需要优化音频播放体验和多实例音频管理的场景，提升媒体播放的稳定性和用户体验。 |
 | [WebOptions](arkts-arkweb-web-comp-weboptions-i.md) | 通过[接口](../../../reference/apis-arkweb/arkts-basic-components-web.md#接口)定义Web选项，包括网页资源地址、控制器、渲染方式等。 |
 | [WindowFeatures](arkts-arkweb-web-comp-windowfeatures-i.md) | 提供网页请求创建的新窗口特征信息，包括大小和位置。适用于需要精确控制新窗口属性的场景，提升窗口布局的准确性和用户体验。 |
+| [ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md) | 自定义菜单扩展项。 |
 
 ### 类型
 
@@ -178,7 +178,6 @@ Sets Value.
 | [DetectedBlankScreenReason](arkts-arkweb-web-comp-detectedblankscreenreason-e.md) | 白屏的具体原因，用于标识页面白屏现象的底层原因，帮助开发者快速定位问题来源，提升页面加载问题的排查效率和用户体验。 |
 | [FileSelectorMode](arkts-arkweb-web-comp-fileselectormode-e.md) | 文件选择器的模式，用于控制文件选择器的打开方式和行为，帮助开发者实现文件上传等文件操作场景。 |
 | [GestureFocusMode](arkts-arkweb-web-comp-gesturefocusmode-e.md) | 手势获焦的模式。 |
-| [HitTestType](arkts-arkweb-web-comp-hittesttype-e.md) | 点击事件检测结果类型。 |
 | [MessageLevel](arkts-arkweb-web-comp-messagelevel-e.md) | ConsoleMessage的信息级别。 |
 | [MicrophoneCaptureState](arkts-arkweb-web-comp-microphonecapturestate-e.md) | 定义麦克风使用状态的值，用于标识麦克风的当前工作状态，帮助开发者实时监控麦克风资源使用情况，优化资源管理和用户隐私保护。 |
 | [MixedMode](arkts-arkweb-web-comp-mixedmode-e.md) | 混合内容模式。 |
@@ -207,3 +206,4 @@ Sets Value.
 | [WebNavigationType](arkts-arkweb-web-comp-webnavigationtype-e.md) | 定义navigation类型。 |
 | [WebResponseType](arkts-arkweb-web-comp-webresponsetype-e.md) | 菜单的响应类型。 |
 | [WebRotateEffect](arkts-arkweb-web-comp-webrotateeffect-e.md) | 组件旋转时，宽高动画过程中组件内容如何填充以适应新尺寸的方式。 |
+| [HitTestType](arkts-arkweb-web-comp-hittesttype-e.md) | 点击事件检测结果类型。 |

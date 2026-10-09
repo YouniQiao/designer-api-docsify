@@ -34,24 +34,6 @@ Message digest algorithm used with the PKCS1_OAEP padding mode in RSA.
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
 - API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
-## OAEP_MGF_NAME_STR
-
-```TypeScript
-OAEP_MGF_NAME_STR = 101
-```
-
-Mask generation algorithm used with the PKCS1_OAEP padding mode in RSA. Currently, only MGF1 is supported.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
-- API versions 10 to 11: SystemCapability.Security.CryptoFramework
-
 ## OAEP_MGF1_MD_STR
 
 ```TypeScript
@@ -83,6 +65,24 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103--><!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
+
+## OAEP_MGF_NAME_STR
+
+```TypeScript
+OAEP_MGF_NAME_STR = 101
+```
+
+Mask generation algorithm used with the PKCS1_OAEP padding mode in RSA. Currently, only MGF1 is supported.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Cipher

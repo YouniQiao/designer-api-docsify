@@ -36,6 +36,22 @@ DEVICE_COLLABORATION = 0
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## MULTI_VERSION
+
+```TypeScript
+MULTI_VERSION = 2
+```
+
+表示多版本数据库。当前暂不支持使用此接口。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+<!--Device-KVStoreType-MULTI_VERSION = 2--><!--Device-KVStoreType-MULTI_VERSION = 2-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
 ## SINGLE_VERSION
 
 ```TypeScript
@@ -55,19 +71,3 @@ SINGLE_VERSION = 1
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-## MULTI_VERSION
-
-```TypeScript
-MULTI_VERSION = 2
-```
-
-表示多版本数据库。当前暂不支持使用此接口。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-<!--Device-KVStoreType-MULTI_VERSION = 2--><!--Device-KVStoreType-MULTI_VERSION = 2-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

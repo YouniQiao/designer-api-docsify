@@ -28,22 +28,6 @@ Image.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## VIDEO_TYPE
-
-```TypeScript
-VIDEO_TYPE = 'video/*'
-```
-
-Video.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## IMAGE_VIDEO_TYPE
 
 ```TypeScript
@@ -73,5 +57,21 @@ Moving photo.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'--><!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## VIDEO_TYPE
+
+```TypeScript
+VIDEO_TYPE = 'video/*'
+```
+
+Video.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

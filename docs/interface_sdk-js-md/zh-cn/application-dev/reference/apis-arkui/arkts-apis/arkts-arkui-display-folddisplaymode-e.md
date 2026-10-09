@@ -18,19 +18,19 @@ enum FoldDisplayMode
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## FOLD_DISPLAY_MODE_UNKNOWN
+## FOLD_DISPLAY_MODE_COORDINATION
 
 ```TypeScript
-FOLD_DISPLAY_MODE_UNKNOWN = 0
+FOLD_DISPLAY_MODE_COORDINATION
 ```
 
-表示设备当前折叠显示模式未知。
+表示设备当前双屏协同显示。
 
 **起始版本：** 10
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
+<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -82,18 +82,18 @@ FOLD_DISPLAY_MODE_SUB = 3
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## FOLD_DISPLAY_MODE_COORDINATION
+## FOLD_DISPLAY_MODE_UNKNOWN
 
 ```TypeScript
-FOLD_DISPLAY_MODE_COORDINATION
+FOLD_DISPLAY_MODE_UNKNOWN = 0
 ```
 
-表示设备当前双屏协同显示。
+表示设备当前折叠显示模式未知。
 
 **起始版本：** 10
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
+<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

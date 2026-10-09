@@ -60,12 +60,12 @@ Creates a **Swiper** component.
 | [AutoPlayOptions](arkts-arkui-swiper-comp-autoplayoptions-i.md) | Defines the properties for controlling the automatic playback behavior. |
 | [CachedCountOptions](arkts-arkui-swiper-comp-cachedcountoptions-i.md) | Describes the configuration options for child components to be preloaded. |
 | [IndicatorIconInfo](arkts-arkui-swiper-comp-indicatoriconinfo-i.md) | Set the indicator item's icon for a specified index. |
-| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | Defines the style of the navigation indicator. |
 | [SwiperAnimationEvent](arkts-arkui-swiper-comp-swiperanimationevent-i.md) | Describes the animation information of the **Swiper** component. |
 | [SwiperAutoFill](arkts-arkui-swiper-comp-swiperautofill-i.md) | Describes the auto-fill attribute. |
 | [SwiperContentAnimatedTransition](arkts-arkui-swiper-comp-swipercontentanimatedtransition-i.md) | Provides the information about the custom page transition animation. |
 | [SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom page transition animation of the **Swiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **Swiper** component that the custom animation has finished playing. |
 | [SwiperContentWillScrollResult](arkts-arkui-swiper-comp-swipercontentwillscrollresult-i.md) | Provides information related to the upcoming scroll action, including the index of the current page, the index of the page that will be displayed in the scroll direction, and the displacement of the scroll action. |
+| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | Defines the style of the navigation indicator. |
 
 ### Types
 

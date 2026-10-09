@@ -20,22 +20,6 @@ Enumerates the fold statuses of a foldable device. For dual-fold axis devices, w
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## FOLD_STATUS_UNKNOWN
-
-```TypeScript
-FOLD_STATUS_UNKNOWN = 0
-```
-
-The fold status of the device is unknown or the device cannot be folded.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0--><!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
 ## FOLD_STATUS_EXPANDED
 
 ```TypeScript
@@ -49,38 +33,6 @@ The device is fully open. For dual-fold axis devices, the first fold axis is ful
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-FoldStatus-FOLD_STATUS_EXPANDED = 1--><!--Device-FoldStatus-FOLD_STATUS_EXPANDED = 1-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## FOLD_STATUS_FOLDED
-
-```TypeScript
-FOLD_STATUS_FOLDED = 2
-```
-
-The device is folded (completely closed). For dual-fold axis devices, both the first and second fold axes are folded.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2--><!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## FOLD_STATUS_HALF_FOLDED
-
-```TypeScript
-FOLD_STATUS_HALF_FOLDED = 3
-```
-
-The device is half-folded, somehow between fully open and completely closed. For dual-fold axis devices, the first fold axis is half-folded, and the second fold axis is folded.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -116,35 +68,19 @@ For dual-fold axis devices, the first fold axis is fully open, and the second fo
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED
+## FOLD_STATUS_FOLDED
 
 ```TypeScript
-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22
+FOLD_STATUS_FOLDED = 2
 ```
 
-For dual-fold axis devices, the first fold axis is folded, and the second fold axis is fully folded.
+The device is folded (completely closed). For dual-fold axis devices, both the first and second fold axes are folded.
 
-**Since:** 15
+**Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22--><!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
-## FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED
-
-```TypeScript
-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23
-```
-
-For dual-fold axis devices, both the first and second fold axes are half-folded.
-
-**Since:** 15
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
-
-<!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23-End-->
+<!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2--><!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -164,6 +100,38 @@ For dual-fold axis devices, the first fold axis is folded, and the second fold a
 
 **System capability:** SystemCapability.Window.SessionManager
 
+## FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED
+
+```TypeScript
+FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22
+```
+
+For dual-fold axis devices, the first fold axis is folded, and the second fold axis is fully folded.
+
+**Since:** 15
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22--><!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## FOLD_STATUS_HALF_FOLDED
+
+```TypeScript
+FOLD_STATUS_HALF_FOLDED = 3
+```
+
+The device is half-folded, somehow between fully open and completely closed. For dual-fold axis devices, the first fold axis is half-folded, and the second fold axis is folded.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
 ## FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED
 
 ```TypeScript
@@ -177,5 +145,37 @@ For dual-fold axis devices, the first fold axis is half-folded, and the second f
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED
+
+```TypeScript
+FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23
+```
+
+For dual-fold axis devices, both the first and second fold axes are half-folded.
+
+**Since:** 15
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## FOLD_STATUS_UNKNOWN
+
+```TypeScript
+FOLD_STATUS_UNKNOWN = 0
+```
+
+The fold status of the device is unknown or the device cannot be folded.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0--><!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

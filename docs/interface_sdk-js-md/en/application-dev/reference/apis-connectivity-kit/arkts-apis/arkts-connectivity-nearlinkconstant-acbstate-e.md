@@ -12,22 +12,6 @@ Enumerates the logical link connection states with a remote device.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## DISCONNECTED
-
-```TypeScript
-DISCONNECTED = 0
-```
-
-Disconnected.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-AcbState-DISCONNECTED = 0--><!--Device-AcbState-DISCONNECTED = 0-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
 ## CONNECTED
 
 ```TypeScript
@@ -41,6 +25,22 @@ Connected.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-AcbState-CONNECTED = 1--><!--Device-AcbState-CONNECTED = 1-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## DISCONNECTED
+
+```TypeScript
+DISCONNECTED = 0
+```
+
+Disconnected.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AcbState-DISCONNECTED = 0--><!--Device-AcbState-DISCONNECTED = 0-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

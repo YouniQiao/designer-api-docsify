@@ -12,38 +12,6 @@ enum SeekMode
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## SEEK_NEXT_SYNC
-
-```TypeScript
-SEEK_NEXT_SYNC = 0
-```
-
-表示跳转到指定时间点的下一个关键帧，建议向后快进的时候用这个枚举值。
-
-**起始版本：** 8
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
-## SEEK_PREV_SYNC
-
-```TypeScript
-SEEK_PREV_SYNC = 1
-```
-
-表示跳转到指定时间点的上一个关键帧，建议向前快进的时候用这个枚举值。
-
-**起始版本：** 8
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 ## SEEK_CLOSEST
 
 ```TypeScript
@@ -81,5 +49,37 @@ SEEK_CONTINUOUS = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-SeekMode-SEEK_CONTINUOUS = 3--><!--Device-SeekMode-SEEK_CONTINUOUS = 3-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
+## SEEK_NEXT_SYNC
+
+```TypeScript
+SEEK_NEXT_SYNC = 0
+```
+
+表示跳转到指定时间点的下一个关键帧，建议向后快进的时候用这个枚举值。
+
+**起始版本：** 8
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
+## SEEK_PREV_SYNC
+
+```TypeScript
+SEEK_PREV_SYNC = 1
+```
+
+表示跳转到指定时间点的上一个关键帧，建议向前快进的时候用这个枚举值。
+
+**起始版本：** 8
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

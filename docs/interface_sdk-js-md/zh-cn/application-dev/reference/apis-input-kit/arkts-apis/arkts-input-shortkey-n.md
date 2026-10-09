@@ -1,4 +1,4 @@
-# shortKey(系统预置全局快捷键)
+# shortKey（系统预置全局快捷键）
 
 ```TypeScript
 declare namespace shortKey

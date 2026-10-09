@@ -12,6 +12,22 @@ Enumerates the types of ability components.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## DATA
+
+```TypeScript
+DATA = 3
+```
+
+It represents a [ParticleAbility](arkts-ability-ability-particleability.md) developed based on the Data template, used to provide a unified data access object to the outside.
+
+**Since:** 9
+
+**Model restriction:** This API can be used only in the FA model.
+
+<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## PAGE
 
 ```TypeScript
@@ -41,21 +57,5 @@ Ability of the background service type, without a UI. It represents a [ParticleA
 **Model restriction:** This API can be used only in the FA model.
 
 <!--Device-AbilityType-SERVICE = 2--><!--Device-AbilityType-SERVICE = 2-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## DATA
-
-```TypeScript
-DATA = 3
-```
-
-It represents a [ParticleAbility](arkts-ability-ability-particleability.md) developed based on the Data template, used to provide a unified data access object to the outside.
-
-**Since:** 9
-
-**Model restriction:** This API can be used only in the FA model.
-
-<!--Device-AbilityType-DATA = 3--><!--Device-AbilityType-DATA = 3-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

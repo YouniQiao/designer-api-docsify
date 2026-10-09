@@ -14,35 +14,19 @@ Enumeration of dialog type.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## NORMAL
+## ERROR
 
 ```TypeScript
-NORMAL = 0
+ERROR = 6
 ```
 
-Normal dialog box.
+Error dialog box.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DialogType-NORMAL = 0--><!--Device-DialogType-NORMAL = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## INTERNET
-
-```TypeScript
-INTERNET = 1
-```
-
-Internet dialog box.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
+<!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -62,35 +46,19 @@ Flow dialog box.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## PAID
+## INTERNET
 
 ```TypeScript
-PAID = 3
+INTERNET = 1
 ```
 
-Paid dialog box.
+Internet dialog box.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## VIP
-
-```TypeScript
-VIP = 4
-```
-
-Vip dialog box.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DialogType-VIP = 4--><!--Device-DialogType-VIP = 4-End-->
+<!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -110,19 +78,35 @@ Login dialog box.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## ERROR
+## NORMAL
 
 ```TypeScript
-ERROR = 6
+NORMAL = 0
 ```
 
-Error dialog box.
+Normal dialog box.
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
+<!--Device-DialogType-NORMAL = 0--><!--Device-DialogType-NORMAL = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## PAID
+
+```TypeScript
+PAID = 3
+```
+
+Paid dialog box.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -139,5 +123,21 @@ Unknown dialog box.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-DialogType-UNKNOWN = 7--><!--Device-DialogType-UNKNOWN = 7-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## VIP
+
+```TypeScript
+VIP = 4
+```
+
+Vip dialog box.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DialogType-VIP = 4--><!--Device-DialogType-VIP = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate

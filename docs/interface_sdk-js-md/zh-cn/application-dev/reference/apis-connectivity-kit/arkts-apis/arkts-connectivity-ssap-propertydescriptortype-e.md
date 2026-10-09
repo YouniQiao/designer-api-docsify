@@ -12,22 +12,6 @@ enum PropertyDescriptorType
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## PROPERTY
-
-```TypeScript
-PROPERTY = 1
-```
-
-表示Property。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
-
-**系统能力：** SystemCapability.Communication.NearLink.Base
-
 ## CLIENT_PROPERTY_CONFIG
 
 ```TypeScript
@@ -44,19 +28,19 @@ CLIENT_PROPERTY_CONFIG = 2
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## SERVER_PROPERTY_CONFIG
+## PROPERTY
 
 ```TypeScript
-SERVER_PROPERTY_CONFIG = 3
+PROPERTY = 1
 ```
 
-表示服务端Property配置。
+表示Property。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
+<!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -73,6 +57,22 @@ PROPERTY_FORMAT = 4
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
+
+**系统能力：** SystemCapability.Communication.NearLink.Base
+
+## SERVER_PROPERTY_CONFIG
+
+```TypeScript
+SERVER_PROPERTY_CONFIG = 3
+```
+
+表示服务端Property配置。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 

@@ -65,8 +65,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon1) | 根据给定的bundleName、moduleName使能动态图标。使用Promise异步回调。 |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon2) | 根据给定的bundleName、moduleName和option使能动态图标。使用Promise异步回调。 |
 | [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | 支持按设备模式分发策略过滤应用列表。使用Promise异步回调。 |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md)，使用callback异步回调。 |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md)，使用Promise异步回调。 |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel1) | 获取指定bundleName、moduleName和abilityName的label。使用callback异步回调。 |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel2) | 获取指定bundleName、moduleName和abilityName的label。使用Promise异步回调。 |
 | [getAbilityLabelSync](arkts-ability-bundlemanager-getabilitylabelsync-f-sys.md) | 以同步的方法获取指定bundleName、moduleName和abilityName的label。 |
@@ -166,6 +164,8 @@ import { bundleManager } from '@kit.AbilityKit';
 | [switchUninstallState](arkts-ability-bundlemanager-switchuninstallstate-f-sys.md) | 切换指定应用的可卸载状态，此接口与EDM应用拦截管控机制不互相影响。 |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc1) | 根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用callback异步回调。 |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc2) | 根据给定的abcPaths和deleteOriginalFiles校验.abc文件。使用Promise异步回调。 |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md)，使用callback异步回调。 |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | 通过bundleName、moduleName和abilityName获取对应Icon的[PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md)，使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 类型

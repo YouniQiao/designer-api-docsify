@@ -12,6 +12,24 @@ export enum GridLevel
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## COMPACT
+
+```TypeScript
+COMPACT = 2
+```
+
+紧密宫格档位。该挡位为标准宫格的列数加1。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridLevel-COMPACT = 2--><!--Device-GridLevel-COMPACT = 2-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## SPACIOUS
 
 ```TypeScript
@@ -45,23 +63,5 @@ STANDARD = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-GridLevel-STANDARD = 1--><!--Device-GridLevel-STANDARD = 1-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## COMPACT
-
-```TypeScript
-COMPACT = 2
-```
-
-紧密宫格档位。该挡位为标准宫格的列数加1。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
-
-<!--Device-GridLevel-COMPACT = 2--><!--Device-GridLevel-COMPACT = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

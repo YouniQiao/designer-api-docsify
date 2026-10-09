@@ -14,22 +14,6 @@ Enumeration of MemberPurchaseType.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## NORMAL
-
-```TypeScript
-NORMAL = 'normal'
-```
-
-normal.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-MemberPurchaseType-NORMAL = 'normal'--><!--Device-MemberPurchaseType-NORMAL = 'normal'-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
 ## BANNER
 
 ```TypeScript
@@ -43,5 +27,21 @@ banner.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-MemberPurchaseType-BANNER = 'banner'--><!--Device-MemberPurchaseType-BANNER = 'banner'-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## NORMAL
+
+```TypeScript
+NORMAL = 'normal'
+```
+
+normal.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-MemberPurchaseType-NORMAL = 'normal'--><!--Device-MemberPurchaseType-NORMAL = 'normal'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate

@@ -12,24 +12,6 @@ Enum for automotive camera position.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER
-
-```TypeScript
-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0
-```
-
-Exterior other position.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT
 
 ```TypeScript
@@ -48,24 +30,6 @@ Exterior front position.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR
-
-```TypeScript
-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2
-```
-
-Exterior rear position.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT
 
 ```TypeScript
@@ -81,6 +45,42 @@ Exterior left position.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER
+
+```TypeScript
+AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0
+```
+
+Exterior other position.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR
+
+```TypeScript
+AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2
+```
+
+Exterior rear position.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -120,24 +120,6 @@ Interior other position.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT
-
-```TypeScript
-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6
-```
-
-Interior left side position of the first row.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER
 
 ```TypeScript
@@ -153,6 +135,24 @@ Interior center side position of the first row.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT
+
+```TypeScript
+AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6
+```
+
+Interior left side position of the first row.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -174,24 +174,6 @@ Interior right side position of the first row.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT
-
-```TypeScript
-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9
-```
-
-Interior left side position of the second row.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER
 
 ```TypeScript
@@ -207,6 +189,24 @@ Interior center side position of the second row.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT
+
+```TypeScript
+AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9
+```
+
+Interior left side position of the second row.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -228,24 +228,6 @@ Interior right side position of the second row.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT
-
-```TypeScript
-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12
-```
-
-Interior left side position of the third row.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER
 
 ```TypeScript
@@ -261,6 +243,24 @@ Interior center side position of the third row.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT
+
+```TypeScript
+AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12
+```
+
+Interior left side position of the third row.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 

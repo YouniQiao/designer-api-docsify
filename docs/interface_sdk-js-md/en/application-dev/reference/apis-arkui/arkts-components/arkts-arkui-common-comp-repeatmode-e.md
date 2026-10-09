@@ -32,24 +32,6 @@ The source image's slices are tiled. Tiles beyond the border box will be clipped
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Stretch
-
-```TypeScript
-Stretch
-```
-
-The source image's slices are stretched to fill the border box.
-
-**Since:** 11
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-**Widget capability:** This API can be used in ArkTS widgets since API version 11.
-
-<!--Device-RepeatMode-Stretch--><!--Device-RepeatMode-Stretch-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## Round
 
 ```TypeScript
@@ -83,5 +65,23 @@ The source image's slices are tiled to fill the border box. Extra space will be 
 **Widget capability:** This API can be used in ArkTS widgets since API version 11.
 
 <!--Device-RepeatMode-Space--><!--Device-RepeatMode-Space-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Stretch
+
+```TypeScript
+Stretch
+```
+
+The source image's slices are stretched to fill the border box.
+
+**Since:** 11
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+**Widget capability:** This API can be used in ArkTS widgets since API version 11.
+
+<!--Device-RepeatMode-Stretch--><!--Device-RepeatMode-Stretch-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -22,7 +22,7 @@ Circle(value?: CircleOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CircleInterface-new (value?: CircleOptions): CircleAttribute--><!--Device-CircleInterface-new (value?: CircleOptions): CircleAttribute-End-->
+<!--Device-CircleInterface-(value?: CircleOptions): CircleAttribute--><!--Device-CircleInterface-(value?: CircleOptions): CircleAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +48,7 @@ Circle(value?: CircleOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-CircleInterface-(value?: CircleOptions): CircleAttribute--><!--Device-CircleInterface-(value?: CircleOptions): CircleAttribute-End-->
+<!--Device-CircleInterface-new (value?: CircleOptions): CircleAttribute--><!--Device-CircleInterface-new (value?: CircleOptions): CircleAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

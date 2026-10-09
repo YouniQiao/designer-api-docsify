@@ -52,9 +52,6 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices1) | 获取P2P对端设备列表信息。使用Promise异步回调。 |
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices2) | 获取P2P对端设备列表信息。使用callback异步回调。 |
 | [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md) | 获取包含当前时间点前30s内的缓存扫描结果。 |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults1) | 获取扫描结果，使用Promise异步回调。 |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults2) | 获取扫描结果，使用callback异步回调。 |
-| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md) | 获取扫描结果，使用同步方式返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。 |
 | [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md) | 查询Wi-Fi信号强度。 |
 | [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md) | 判断当前频段是否支持。 |
 | [isConnected](arkts-connectivity-wifimanager-isconnected-f.md) | 查询Wi-Fi是否已连接。 |
@@ -91,10 +88,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig2) | 移除指定的候选网络配置，使用callback异步回调。 |
 | [removeDevice](arkts-connectivity-wifimanager-removedevice-f.md) | 移除网络配置。 |
 | [removeGroup](arkts-connectivity-wifimanager-removegroup-f.md) | 移除群组。 |
-| [scan](arkts-connectivity-wifimanager-scan-f.md) | 启动Wi-Fi扫描，使用前先开启Wi-Fi。 |
 | [startDiscoverDevices](arkts-connectivity-wifimanager-startdiscoverdevices-f.md) | 开始发现设备。调用此方法后，可调用[stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md)停止发现设备以释放资源。 |
 | [startScan](arkts-connectivity-wifimanager-startscan-f.md) | 启动Wi-Fi扫描。 |
 | [stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md) | 停止发现设备。 |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults1) | 获取扫描结果，使用Promise异步回调。 |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults2) | 获取扫描结果，使用callback异步回调。 |
+| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md) | 获取扫描结果，使用同步方式返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。 |
+| [scan](arkts-connectivity-wifimanager-scan-f.md) | 启动Wi-Fi扫描，使用前先开启Wi-Fi。 |
 
 <!--Del-->
 ### 函数（系统接口）

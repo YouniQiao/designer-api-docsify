@@ -12,17 +12,19 @@ Enumerates the tags used to invoke parameters.
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
-## HUKS_EXT_CRYPTO_TAG_UKEY_PIN
+## HUKS_EXT_CRYPTO_TAG_ABILITY_INFO
 
 ```TypeScript
-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001
+HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008
 ```
 
-Tag of the PIN.
+Specifies the ability configuration for the custom PIN dialog.
 
-**Since:** 22
+**Since:** 26.0.0
 
-<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001-End-->
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -40,6 +42,22 @@ Name of [CryptoExtensionAbility](arkts-universalkeystore-security-cryptoextensio
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
+## HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME
+
+```TypeScript
+HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009
+```
+
+Specifies the hap bundle name of the crypto extension ability.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension
+
 ## HUKS_EXT_CRYPTO_TAG_EXTRA_DATA
 
 ```TypeScript
@@ -51,20 +69,6 @@ External data, which indicates the return data in the common query scenario.
 **Since:** 22
 
 <!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_EXTRA_DATA = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200003-End-->
-
-**System capability:** SystemCapability.Security.Huks.CryptoExtension
-
-## HUKS_EXT_CRYPTO_TAG_UID
-
-```TypeScript
-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004
-```
-
-UID of the caller.
-
-**Since:** 22
-
-<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
@@ -98,34 +102,30 @@ Specify the information required to obtain the resource ID. The format and conte
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
-## HUKS_EXT_CRYPTO_TAG_ABILITY_INFO
+## HUKS_EXT_CRYPTO_TAG_UID
 
 ```TypeScript
-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008
+HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004
 ```
 
-Specifies the ability configuration for the custom PIN dialog.
+UID of the caller.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_ABILITY_INFO = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200008-End-->
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UID = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_INT | 200004-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension
 
-## HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME
+## HUKS_EXT_CRYPTO_TAG_UKEY_PIN
 
 ```TypeScript
-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009
+HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001
 ```
 
-Specifies the hap bundle name of the crypto extension ability.
+Tag of the PIN.
 
-**Since:** 26.0.0
+**Since:** 22
 
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_BUNDLE_NAME = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200009-End-->
+<!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001--><!--Device-HuksExternalCryptoTag-HUKS_EXT_CRYPTO_TAG_UKEY_PIN = HuksExternalCryptoTagType.HUKS_EXT_CRYPTO_TAG_TYPE_BYTES | 200001-End-->
 
 **System capability:** SystemCapability.Security.Huks.CryptoExtension

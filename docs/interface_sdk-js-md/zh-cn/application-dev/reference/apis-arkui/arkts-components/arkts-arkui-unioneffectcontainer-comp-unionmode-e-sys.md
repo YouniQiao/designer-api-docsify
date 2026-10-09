@@ -14,28 +14,6 @@ declare enum UnionMode
 
 **系统接口：** 此接口为系统接口。
 
-## SMOOTH_UNION
-
-```TypeScript
-SMOOTH_UNION = 0
-```
-
-平滑的融合形变效果，适用于需要平滑过渡和自然连接的融合场景。
-
-**说明：** 
-
-设置该类型时，需后代组件设置[useUnionEffect](arkts-arkui-common-comp-commonmethod-c-sys.md#useunioneffect2)属性才能产生融合效果。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-UnionMode-SMOOTH_UNION = 0--><!--Device-UnionMode-SMOOTH_UNION = 0-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**系统接口：** 此接口为系统接口。
-
 ## GRAVITY_UNION
 
 ```TypeScript
@@ -53,6 +31,28 @@ GRAVITY_UNION = 1
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-UnionMode-GRAVITY_UNION = 1--><!--Device-UnionMode-GRAVITY_UNION = 1-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+## SMOOTH_UNION
+
+```TypeScript
+SMOOTH_UNION = 0
+```
+
+平滑的融合形变效果，适用于需要平滑过渡和自然连接的融合场景。
+
+**说明：** 
+
+设置该类型时，需后代组件设置[useUnionEffect](arkts-arkui-common-comp-commonmethod-c-sys.md#useunioneffect2)属性才能产生融合效果。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-UnionMode-SMOOTH_UNION = 0--><!--Device-UnionMode-SMOOTH_UNION = 0-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -30,13 +30,13 @@ BEGIN
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## UPDATE
+## CANCEL
 
 ```TypeScript
-UPDATE
+CANCEL
 ```
 
-Already in the spring loading state. The system periodically checks the user's hover status. If the user remains stationary, it triggers an UPDATE state notification at regular intervals. This state allows for UI effect refreshes to emphasize the hover state.
+After entering the BEGIN state, if the user moves out of the component range, exceeds the displacement threshold, lifts the finger, or switches windows (pull out), the CANCEL state is triggered. The application should restore the UI style and cancel any pending navigation or view switching actions.
 
 **起始版本：** 20
 
@@ -44,7 +44,7 @@ Already in the spring loading state. The system periodically checks the user's h
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-DragSpringLoadingState-UPDATE--><!--Device-DragSpringLoadingState-UPDATE-End-->
+<!--Device-DragSpringLoadingState-CANCEL--><!--Device-DragSpringLoadingState-CANCEL-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,13 +66,13 @@ The entire spring loading state ends. The application can perform cleanup operat
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## CANCEL
+## UPDATE
 
 ```TypeScript
-CANCEL
+UPDATE
 ```
 
-After entering the BEGIN state, if the user moves out of the component range, exceeds the displacement threshold, lifts the finger, or switches windows (pull out), the CANCEL state is triggered. The application should restore the UI style and cancel any pending navigation or view switching actions.
+Already in the spring loading state. The system periodically checks the user's hover status. If the user remains stationary, it triggers an UPDATE state notification at regular intervals. This state allows for UI effect refreshes to emphasize the hover state.
 
 **起始版本：** 20
 
@@ -80,6 +80,6 @@ After entering the BEGIN state, if the user moves out of the component range, ex
 
 **原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-DragSpringLoadingState-CANCEL--><!--Device-DragSpringLoadingState-CANCEL-End-->
+<!--Device-DragSpringLoadingState-UPDATE--><!--Device-DragSpringLoadingState-UPDATE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

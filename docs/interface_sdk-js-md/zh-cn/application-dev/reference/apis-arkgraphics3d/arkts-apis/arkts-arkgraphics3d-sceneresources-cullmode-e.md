@@ -14,17 +14,17 @@ export enum CullMode
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## NONE
+## BACK
 
 ```TypeScript
-NONE = 0
+BACK = 2
 ```
 
-禁用剔除。
+剔除背面几何面片。
 
 **起始版本：** 20
 
-<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
+<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -42,16 +42,16 @@ FRONT = 1
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## BACK
+## NONE
 
 ```TypeScript
-BACK = 2
+NONE = 0
 ```
 
-剔除背面几何面片。
+禁用剔除。
 
 **起始版本：** 20
 
-<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
+<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

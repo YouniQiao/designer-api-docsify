@@ -12,22 +12,6 @@ enum WindowEventType
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## WINDOW_SHOWN
-
-```TypeScript
-WINDOW_SHOWN = 1
-```
-
-切到前台。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
 ## WINDOW_ACTIVE
 
 ```TypeScript
@@ -41,6 +25,38 @@ WINDOW_ACTIVE = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowEventType-WINDOW_ACTIVE = 2--><!--Device-WindowEventType-WINDOW_ACTIVE = 2-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## WINDOW_DESTROYED
+
+```TypeScript
+WINDOW_DESTROYED = 7
+```
+
+窗口销毁。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## WINDOW_HIDDEN
+
+```TypeScript
+WINDOW_HIDDEN = 4
+```
+
+切到后台。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,34 +76,18 @@ WINDOW_INACTIVE = 3
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## WINDOW_HIDDEN
+## WINDOW_SHOWN
 
 ```TypeScript
-WINDOW_HIDDEN = 4
+WINDOW_SHOWN = 1
 ```
 
-切到后台。
+切到前台。
 
 **起始版本：** 10
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
+<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-## WINDOW_DESTROYED
-
-```TypeScript
-WINDOW_DESTROYED = 7
-```
-
-窗口销毁。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager

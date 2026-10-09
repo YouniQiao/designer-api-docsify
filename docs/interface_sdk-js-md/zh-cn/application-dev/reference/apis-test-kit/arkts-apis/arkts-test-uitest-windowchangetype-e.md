@@ -14,26 +14,6 @@ declare enum WindowChangeType
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## WINDOW_UNDEFINED
-
-```TypeScript
-WINDOW_UNDEFINED = 0
-```
-
-非窗口变化事件。
-
-**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
-
-**起始版本：** 22
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## WINDOW_ADDED
 
 ```TypeScript
@@ -47,6 +27,24 @@ WINDOW_ADDED = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+## WINDOW_BOUNDS_CHANGED
+
+```TypeScript
+WINDOW_BOUNDS_CHANGED = 3
+```
+
+窗口边框变化事件。
+
+**起始版本：** 22
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -70,19 +68,21 @@ WINDOW_REMOVED = 2
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## WINDOW_BOUNDS_CHANGED
+## WINDOW_UNDEFINED
 
 ```TypeScript
-WINDOW_BOUNDS_CHANGED = 3
+WINDOW_UNDEFINED = 0
 ```
 
-窗口边框变化事件。
+非窗口变化事件。
+
+**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
 
 **起始版本：** 22
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-<!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
+<!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

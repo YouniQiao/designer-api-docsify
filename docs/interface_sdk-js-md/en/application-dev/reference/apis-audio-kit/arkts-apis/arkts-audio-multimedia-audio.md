@@ -59,10 +59,8 @@ import { audio } from '@kit.AudioKit';
 | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | Describes an audio device. |
 | [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | Provides enhanced audio device management capabilities. |
 | [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | Describes an audio device pair including both input and output devices. |
-| [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Describes input parameters of audio interruption events. |
 | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | This interface provides APIs for audio monitoring. |
 | [AudioManager](arkts-audio-audio-audiomanager-i.md) | This interface implements audio volume and device management. |
-| [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md) | Defines configuration for capturing played audio. |
 | [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | Provides recording strategy management, including collaborative recording and recording control capabilities. |
 | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | This interface provides APIs for audio rendering. |
 | [AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md) | Describes the audio renderer change event. |
@@ -80,17 +78,19 @@ import { audio } from '@kit.AudioKit';
 | [AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md) | Describes the information about the audio stream timestamp and the current data frame position. |
 | [AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md) | This interface implements volume management for an audio group. |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | This interface implements audio volume management. |
-| [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md) | Defines the options for filtering the played audio streams to be recorded. |
 | [CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md) | Describes the event indicating that the input device changes. |
 | [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md) | Describes the event indicating that the output device changes. |
 | [DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md) | Describes the audio device blocked status and device information. |
 | [DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md) | Describes the device connection status and device information. |
-| [InterruptAction](arkts-audio-audio-interruptaction-i.md) | Describes the callback invoked for audio interruption or focus gain events.When the audio of an application is interrupted by another application, the callback is invoked to notify the former application. |
 | [InterruptEvent](arkts-audio-audio-interruptevent-i.md) | Describes the interruption event received by the application when the audio is interrupted. |
 | [MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md) | Describes the event received by the application when the microphone mute status is changed. |
 | [StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md) | Describes the event received by the application when the audio stream volume is changed. |
 | [SystemRecordControllerConfig](arkts-audio-audio-systemrecordcontrollerconfig-i.md) | Defines the configuration for the system recording controller panel. |
 | [VolumeEvent](arkts-audio-audio-volumeevent-i.md) | Describes the event received by the application when the volume is changed. |
+| [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | Describes input parameters of audio interruption events. |
+| [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md) | Defines configuration for capturing played audio. |
+| [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md) | Defines the options for filtering the played audio streams to be recorded. |
+| [InterruptAction](arkts-audio-audio-interruptaction-i.md) | Describes the callback invoked for audio interruption or focus gain events.When the audio of an application is interrupted by another application, the callback is invoked to notify the former application. |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -165,7 +165,6 @@ import { audio } from '@kit.AudioKit';
 
 | Name | Description |
 | --- | --- |
-| [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Enumerates the active device types. |
 | [AudioChannel](arkts-audio-audio-audiochannel-e.md) | Enumerates the audio channels. |
 | [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md) | Audio AudioChannel Layout. A 64-bit integer indicates that the appearance and order of the speakers for recording or playback. |
 | [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md) | Enumerates the audio concurrency modes. |
@@ -196,14 +195,12 @@ import { audio } from '@kit.AudioKit';
 | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | Enumerates the preferred device categories available for recording with Bluetooth or NearLink. |
 | [ChannelBlendMode](arkts-audio-audio-channelblendmode-e.md) | Enumerates the audio channel blending modes. |
 | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | Enumerates the available device types for communication. @enum { int } |
-| [ContentType](arkts-audio-audio-contenttype-e.md) | Enumerates the audio content types. |
 | [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md) | Enumerates the blocked statuses of audio devices. |
 | [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md) | Enumerates the device connection statuses. |
 | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | Enumerates the audio device flags. |
 | [DeviceRole](arkts-audio-audio-devicerole-e.md) | Enumerates the device roles. |
 | [DeviceType](arkts-audio-audio-devicetype-e.md) | Enumerates the device types. |
 | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | Enumerates the audio device types by usage. |
-| [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md) | Enumerates the returned event types for audio interruption events. |
 | [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | Enumerates the types of force that causes audio interruption. |
 | [InterruptHint](arkts-audio-audio-interrupthint-e.md) | Enumerates the hints provided along with audio interruption. |
 | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | Enumerates the audio interruption modes. |
@@ -213,6 +210,9 @@ import { audio } from '@kit.AudioKit';
 | [PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md) | Defines the playback capture start state, which is returned asynchronously after calling [requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart) function. |
 | [SourceType](arkts-audio-audio-sourcetype-e.md) | Enumerates the types of audio streams captured. |
 | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Enumerates the types of audio streams played. |
+| [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Enumerates the active device types. |
+| [ContentType](arkts-audio-audio-contenttype-e.md) | Enumerates the audio content types. |
+| [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md) | Enumerates the returned event types for audio interruption events. |
 
 <!--Del-->
 ### Enums(System API)

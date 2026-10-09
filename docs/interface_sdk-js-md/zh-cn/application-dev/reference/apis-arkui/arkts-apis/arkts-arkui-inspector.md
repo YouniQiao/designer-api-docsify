@@ -17,7 +17,7 @@ inspector的性能分析（Profiler）工具。
 
 | 名称 | 说明 |
 | --- | --- |
+| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | 设置应用背景颜色。 |
 | [getInspectorNodeById](arkts-arkui-inspector-getinspectornodebyid-f-sys.md) | 根据节点id获取inspector节点信息。 |
 | [getInspectorNodes](arkts-arkui-inspector-getinspectornodes-f-sys.md) | 获取inspector节点信息。 |
-| [setAppBgColor](arkts-arkui-inspector-setappbgcolor-f-sys.md) | 设置应用背景颜色。 |
 <!--DelEnd-->

@@ -30,22 +30,6 @@ Network of any type.
 
 **System capability:** SystemCapability.Request.FileTransferAgent
 
-## WIFI
-
-```TypeScript
-WIFI
-```
-
-Wi-Fi network.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Network-WIFI--><!--Device-Network-WIFI-End-->
-
-**System capability:** SystemCapability.Request.FileTransferAgent
-
 ## CELLULAR
 
 ```TypeScript
@@ -59,5 +43,21 @@ Cellular data network.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-Network-CELLULAR--><!--Device-Network-CELLULAR-End-->
+
+**System capability:** SystemCapability.Request.FileTransferAgent
+
+## WIFI
+
+```TypeScript
+WIFI
+```
+
+Wi-Fi network.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Network-WIFI--><!--Device-Network-WIFI-End-->
 
 **System capability:** SystemCapability.Request.FileTransferAgent

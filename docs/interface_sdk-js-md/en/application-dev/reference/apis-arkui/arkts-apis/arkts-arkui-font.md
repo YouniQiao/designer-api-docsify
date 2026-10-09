@@ -26,9 +26,9 @@ import { font } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | Obtains the UI font configuration in the system font configuration file. This API is commonly used in scenarios where the system font configuration needs to be analyzed or viewed, such as font management tools, font debugging and diagnosis, and font configuration information display. |
 | [getFontByName](arkts-arkui-font-getfontbyname-f.md) | Obtains information about a system font based on the font name. |
 | [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md) | Obtains this system font list. |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | Obtains the UI font configuration in the system font configuration file. This API is commonly used in scenarios where the system font configuration needs to be analyzed or viewed, such as font management tools, font debugging and diagnosis, and font configuration information display. |
 | [registerFont](arkts-arkui-font-registerfont-f.md) | Registers a custom font with the font manager. |
 
 ### Interfaces

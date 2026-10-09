@@ -14,6 +14,24 @@ Enumerates the chain styles in relative container.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## PACKED
+
+```TypeScript
+PACKED
+```
+
+There is no gap between child components in the chain.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ChainStyle-PACKED--><!--Device-ChainStyle-PACKED-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## SPREAD
 
 ```TypeScript
@@ -47,23 +65,5 @@ All child components except the first and last ones are evenly distributed among
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ChainStyle-SPREAD_INSIDE--><!--Device-ChainStyle-SPREAD_INSIDE-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## PACKED
-
-```TypeScript
-PACKED
-```
-
-There is no gap between child components in the chain.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ChainStyle-PACKED--><!--Device-ChainStyle-PACKED-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

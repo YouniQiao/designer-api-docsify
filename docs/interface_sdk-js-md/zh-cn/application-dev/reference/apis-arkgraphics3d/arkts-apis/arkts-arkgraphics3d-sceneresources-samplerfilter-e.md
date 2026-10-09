@@ -14,20 +14,6 @@ export enum SamplerFilter
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## NEAREST
-
-```TypeScript
-NEAREST = 0
-```
-
-使用最近邻插值进行采样，速度快但边缘可能锯齿明显。
-
-**起始版本：** 20
-
-<!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
 ## LINEAR
 
 ```TypeScript
@@ -39,5 +25,19 @@ LINEAR = 1
 **起始版本：** 20
 
 <!--Device-SamplerFilter-LINEAR = 1--><!--Device-SamplerFilter-LINEAR = 1-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## NEAREST
+
+```TypeScript
+NEAREST = 0
+```
+
+使用最近邻插值进行采样，速度快但边缘可能锯齿明显。
+
+**起始版本：** 20
+
+<!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

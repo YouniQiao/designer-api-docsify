@@ -60,6 +60,10 @@ import { networkManager } from '@kit.MDMKit';
 | --- | --- |
 | [addIptablesFilterRule](arkts-mdm-networkmanager-addiptablesfilterrule-f-sys.md#addiptablesfilterrule1) | Adds a network packet filtering rule for the device. Only IPv4 is supported. This API uses an asynchronous callback to return the result. |
 | [addIptablesFilterRule](arkts-mdm-networkmanager-addiptablesfilterrule-f-sys.md#addiptablesfilterrule2) | Adds a network packet filtering rule for the device. Only IPv4 is supported. This API uses a promise to return the result. |
+| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules1) | Obtains the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result. |
+| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules2) | Obtains the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result. |
+| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule1) | Removes the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result. |
+| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule2) | Removes the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result. |
 | [getAllNetworkInterfaces](arkts-mdm-networkmanager-getallnetworkinterfaces-f-sys.md#getallnetworkinterfaces1) | Obtains all activated wired network interfaces. This API uses an asynchronous callback to return the result. |
 | [getAllNetworkInterfaces](arkts-mdm-networkmanager-getallnetworkinterfaces-f-sys.md#getallnetworkinterfaces2) | Obtains all activated wired network interfaces. This API uses a promise to return the result. |
 | [getGlobalProxy](arkts-mdm-networkmanager-getglobalproxy-f-sys.md#getglobalproxy1) | Obtains the global network proxy. This API uses an asynchronous callback to return the result. |
@@ -70,10 +74,6 @@ import { networkManager } from '@kit.MDMKit';
 | [getMac](arkts-mdm-networkmanager-getmac-f-sys.md#getmac2) | Obtains the MAC address of a device based on the network interface. This API uses a promise to return the result. |
 | [isNetworkInterfaceDisabled](arkts-mdm-networkmanager-isnetworkinterfacedisabled-f-sys.md#isnetworkinterfacedisabled1) | Queries whether a specified network interface is disabled. This API uses an asynchronous callback to return the result. |
 | [isNetworkInterfaceDisabled](arkts-mdm-networkmanager-isnetworkinterfacedisabled-f-sys.md#isnetworkinterfacedisabled2) | Queries whether a specified network interface is disabled. This API uses a promise to return the result. |
-| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules1) | Obtains the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result. |
-| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules2) | Obtains the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result. |
-| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule1) | Removes the network packet filtering rule. Only IPv4 is supported. This API uses an asynchronous callback to return the result. |
-| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule2) | Removes the network packet filtering rule. Only IPv4 is supported. This API uses a promise to return the result. |
 | [setGlobalProxy](arkts-mdm-networkmanager-setglobalproxy-f-sys.md#setglobalproxy1) | Sets the global network proxy. This API uses an asynchronous callback to return the result. |
 | [setGlobalProxy](arkts-mdm-networkmanager-setglobalproxy-f-sys.md#setglobalproxy2) | Sets the global network proxy. This API uses a promise to return the result. |
 | [setNetworkInterfaceDisabled](arkts-mdm-networkmanager-setnetworkinterfacedisabled-f-sys.md#setnetworkinterfacedisabled1) | Disables a network interface. This API uses an asynchronous callback to return the result. |

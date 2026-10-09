@@ -27,9 +27,9 @@ import { sms } from '@kit.TelephonyKit';
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid1) | 获取发送短信的默认SIM卡槽ID。使用callback异步回调。 |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid2) | 获取发送短信的默认SIM卡槽ID。使用Promise异步回调。 |
 | [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md) | 检查当前设备是否具备短信发送和接收能力，该方法是同步方法。 |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md) | 发送短信。 |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage1) | 发送短信。使用callback异步回调。 |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage2) | 发送短信。使用Promise异步回调。 |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md) | 发送短信。 |
 
 <!--Del-->
 ### 函数（系统接口）

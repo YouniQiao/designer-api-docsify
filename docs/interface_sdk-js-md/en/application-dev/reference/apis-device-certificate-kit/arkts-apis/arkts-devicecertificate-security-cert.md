@@ -37,13 +37,13 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain1) | Creates an **X509CertChain** instance. This API uses a promise to return the result. |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain2) | Creates an **X509CertChain** instance. This API uses an asynchronous callback to return the result. |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain3) | Creates an X.509 certificate chain object based on the specified certificates. This API returns the result synchronously. |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl1) | Creates an **X509Crl** instance. This API uses an asynchronous callback to return the result. |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl2) | Creates an **X509Crl** instance. This API uses a promise to return the result. |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl1) | Creates an **X509CRL** instance. This API uses an asynchronous callback to return the result. |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl2) | Creates an **X509CRL** instance. This API uses a promise to return the result. |
 | [generateCsr](arkts-devicecertificate-cert-generatecsr-f.md) | Generates a CSR. |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs121) | Parses P12. |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs122) | Parses P12. This API uses a promise to return the result. |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl1) | Creates an **X509Crl** instance. This API uses an asynchronous callback to return the result. |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl2) | Creates an **X509Crl** instance. This API uses a promise to return the result. |
 
 ### Interfaces
 
@@ -85,12 +85,12 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | Provides APIs for managing the X.509 certificate chain. |
 | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | Defines the parameters used to match a certificate. If no parameter is specified, all certificates are matched. |
 | [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) | Parameters for checking certificate revocation status. |
-| [X509Crl](arkts-devicecertificate-cert-x509crl-depr-i.md) | Provides APIs for X.509 CRL operations. |
 | [X509CRL](arkts-devicecertificate-cert-x509crl-i.md) | Provides APIs for X.509 CRL operations. |
-| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-depr-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. |
 | [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. |
 | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | Represents the parameters used to match a certificate revocation list (CRL). If no parameter is specified, all CRLs are matched. |
 | [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md) | Represents an X.509 trust anchor, which is used to verify the certificate chain. The certificate or public key in the trust anchor is used as the trusted root to verify the certificate chain. |
+| [X509Crl](arkts-devicecertificate-cert-x509crl-depr-i.md) | Provides APIs for X.509 CRL operations. |
+| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-depr-i.md) | Provides APIs for operating on a revoked certificate entry in a CRL. |
 
 ### Enums
 

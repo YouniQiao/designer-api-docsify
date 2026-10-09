@@ -22,30 +22,6 @@ Shape组件的两种使用方式：
 ## Shape
 
 ```TypeScript
-Shape(value?: PixelMap)
-```
-
-用于绘制Shape组件的构造函数。调用后创建一个Shape对象，可设置视口、填充、边框等属性。
-
-**起始版本：** 7
-
-**模型约束：** 此接口可在Stage模型和FA模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute--><!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数:**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | 否 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
-
-## Shape
-
-```TypeScript
 Shape(value: PixelMap)
 ```
 
@@ -88,6 +64,30 @@ Shape()
 <!--Device-ShapeInterface-(): ShapeAttribute--><!--Device-ShapeInterface-(): ShapeAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## Shape
+
+```TypeScript
+Shape(value?: PixelMap)
+```
+
+用于绘制Shape组件的构造函数。调用后创建一个Shape对象，可设置视口、填充、边框等属性。
+
+**起始版本：** 7
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute--><!--Device-ShapeInterface-new (value?: PixelMap): ShapeAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数:**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | 否 | 绘制目标，可将图形绘制在指定的PixelMap对象中，若未设置，则默认在当前绘制目标中进行绘制。<br>异常值undefined和null按照无效值处理，本次设置不生效。 |
 
 ## 汇总
 

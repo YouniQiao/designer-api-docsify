@@ -14,34 +14,6 @@ export enum OperationMode
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
-## READ_MODE
-
-```TypeScript
-READ_MODE = 0b1
-```
-
-读权限。
-
-**起始版本：** 11
-
-<!--Device-OperationMode-READ_MODE = 0b1--><!--Device-OperationMode-READ_MODE = 0b1-End-->
-
-**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-
-## WRITE_MODE
-
-```TypeScript
-WRITE_MODE = 0b10
-```
-
-写权限。
-
-**起始版本：** 11
-
-<!--Device-OperationMode-WRITE_MODE = 0b10--><!--Device-OperationMode-WRITE_MODE = 0b10-End-->
-
-**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-
 ## CREATE_MODE
 
 ```TypeScript
@@ -70,6 +42,20 @@ DELETE_MODE = 0b1000
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
+## READ_MODE
+
+```TypeScript
+READ_MODE = 0b1
+```
+
+读权限。
+
+**起始版本：** 11
+
+<!--Device-OperationMode-READ_MODE = 0b1--><!--Device-OperationMode-READ_MODE = 0b1-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
 ## RENAME_MODE
 
 ```TypeScript
@@ -81,5 +67,19 @@ RENAME_MODE = 0b10000
 **起始版本：** 20
 
 <!--Device-OperationMode-RENAME_MODE = 0b10000--><!--Device-OperationMode-RENAME_MODE = 0b10000-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
+## WRITE_MODE
+
+```TypeScript
+WRITE_MODE = 0b10
+```
+
+写权限。
+
+**起始版本：** 11
+
+<!--Device-OperationMode-WRITE_MODE = 0b10--><!--Device-OperationMode-WRITE_MODE = 0b10-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

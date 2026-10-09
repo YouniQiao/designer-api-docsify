@@ -12,22 +12,6 @@ export enum LocationRequestPriority
 
 **系统能力：** SystemCapability.Location.Location.Core
 
-## UNSET
-
-```TypeScript
-UNSET = 0x200
-```
-
-表示未设置优先级，表示[LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)无效。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 ## ACCURACY
 
 ```TypeScript
@@ -43,6 +27,24 @@ ACCURACY = 0x201
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestPriority-ACCURACY = 0x201--><!--Device-LocationRequestPriority-ACCURACY = 0x201-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+## FIRST_FIX
+
+```TypeScript
+FIRST_FIX = 0x203
+```
+
+表示快速获取位置优先，如果应用希望快速拿到一个位置，可以将优先级设置为该字段。
+
+快速定位优先策略会同时使用GNSS定位和网络定位技术，以便在室内和户外场景下均可以快速获取到位置结果；当各种定位技术都有提供位置结果时，系统会选择其中精度较好的结果返回给应用。因为对各种定位技术同时使用，对设备的硬件资源消耗较大，功耗也较大。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LocationRequestPriority-FIRST_FIX = 0x203--><!--Device-LocationRequestPriority-FIRST_FIX = 0x203-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -64,20 +66,18 @@ LOW_POWER = 0x202
 
 **系统能力：** SystemCapability.Location.Location.Core
 
-## FIRST_FIX
+## UNSET
 
 ```TypeScript
-FIRST_FIX = 0x203
+UNSET = 0x200
 ```
 
-表示快速获取位置优先，如果应用希望快速拿到一个位置，可以将优先级设置为该字段。
-
-快速定位优先策略会同时使用GNSS定位和网络定位技术，以便在室内和户外场景下均可以快速获取到位置结果；当各种定位技术都有提供位置结果时，系统会选择其中精度较好的结果返回给应用。因为对各种定位技术同时使用，对设备的硬件资源消耗较大，功耗也较大。
+表示未设置优先级，表示[LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)无效。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-LocationRequestPriority-FIRST_FIX = 0x203--><!--Device-LocationRequestPriority-FIRST_FIX = 0x203-End-->
+<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

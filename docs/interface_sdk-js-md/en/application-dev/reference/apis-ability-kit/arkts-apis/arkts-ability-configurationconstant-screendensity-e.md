@@ -14,6 +14,38 @@ The font size is positively correlated with the screen pixel density. By monitor
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## SCREEN_DENSITY_LDPI
+
+```TypeScript
+SCREEN_DENSITY_LDPI = 240
+```
+
+The pixel density of the screen is 'LDPI'.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240--><!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SCREEN_DENSITY_MDPI
+
+```TypeScript
+SCREEN_DENSITY_MDPI = 160
+```
+
+The pixel density of the screen is 'MDPI'.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160--><!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
 ## SCREEN_DENSITY_NOT_SET
 
 ```TypeScript
@@ -43,38 +75,6 @@ The pixel density of the screen is 'SDPI'.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-ScreenDensity-SCREEN_DENSITY_SDPI = 120--><!--Device-ScreenDensity-SCREEN_DENSITY_SDPI = 120-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SCREEN_DENSITY_MDPI
-
-```TypeScript
-SCREEN_DENSITY_MDPI = 160
-```
-
-The pixel density of the screen is 'MDPI'.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160--><!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SCREEN_DENSITY_LDPI
-
-```TypeScript
-SCREEN_DENSITY_LDPI = 240
-```
-
-The pixel density of the screen is 'LDPI'.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240--><!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 

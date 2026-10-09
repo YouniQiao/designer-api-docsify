@@ -24,15 +24,11 @@ import { display } from '@kit.ArkUI';
 | [convertRelativeToGlobalCoordinate](arkts-arkui-display-convertrelativetoglobalcoordinate-f.md) | 将指定屏幕左上角为原点的相对坐标转换成主屏左上角为原点的全局坐标，仅支持主屏和扩展屏的坐标转换。 |
 | [createVirtualScreen](arkts-arkui-display-createvirtualscreen-f.md) | 创建虚拟屏幕，使用Promise异步回调。 |
 | [destroyVirtualScreen](arkts-arkui-display-destroyvirtualscreen-f.md) | 销毁虚拟屏幕，使用Promise异步回调。 |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay1) | 获取当前所有的Display对象，使用callback异步回调。 |
-| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay2) | 获取当前所有的Display对象，使用Promise异步回调。 |
 | [getAllDisplayPhysicalResolution](arkts-arkui-display-getalldisplayphysicalresolution-f.md) | 获取当前设备支持的所有显示模式及其对应的物理屏幕分辨率信息对象。使用Promise异步回调。 |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays1) | 获取当前所有的Display对象，使用callback异步回调。 |
 | [getAllDisplays](arkts-arkui-display-getalldisplays-f.md#getalldisplays2) | 获取当前所有的Display对象，使用Promise异步回调。 |
 | [getBrightnessInfo](arkts-arkui-display-getbrightnessinfo-f.md) | 获取指定displayId对应屏幕的亮度信息。如果屏幕不支持HDR，返回的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [getCurrentFoldCreaseRegion](arkts-arkui-display-getcurrentfoldcreaseregion-f.md) | 在当前显示模式下获取折叠折痕区域。 |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay1) | 获取当前默认的Display对象，使用callback异步回调。 |
-| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay2) | 获取当前默认的Display对象，使用Promise异步回调。 |
 | [getDefaultDisplaySync](arkts-arkui-display-getdefaultdisplaysync-f.md) | 返回应用所在屏幕的Display对象。若应用内多个Ability在不同屏幕，返回主屏的Display对象，若应用内多个Ability在同一屏幕，返回所在屏幕的Display对象。 |
 | [getDisplayByIdSync](arkts-arkui-display-getdisplaybyidsync-f.md) | 根据displayId获取对应的Display对象。 |
 | [getFoldDisplayMode](arkts-arkui-display-getfolddisplaymode-f.md) | 获取可折叠设备当前的显示模式。 |
@@ -60,6 +56,10 @@ import { display } from '@kit.ArkUI';
 | [on](arkts-arkui-display-on-f.md#onbrightnessinfochange) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md) | 开启显示设备指定属性变化的监听。 |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md) | 设置虚拟屏幕的surfaceId。使用Promise异步回调。 |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay1) | 获取当前所有的Display对象，使用callback异步回调。 |
+| [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay2) | 获取当前所有的Display对象，使用Promise异步回调。 |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay1) | 获取当前默认的Display对象，使用callback异步回调。 |
+| [getDefaultDisplay](arkts-arkui-display-getdefaultdisplay-f.md#getdefaultdisplay2) | 获取当前默认的Display对象，使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

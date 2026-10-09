@@ -14,20 +14,6 @@ export enum PolicyErrorCode
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
 
-## PERSISTENCE_FORBIDDEN
-
-```TypeScript
-PERSISTENCE_FORBIDDEN = 1
-```
-
-URI禁止被持久化。
-
-**起始版本：** 11
-
-<!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
-
-**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
-
 ## INVALID_MODE
 
 ```TypeScript
@@ -67,5 +53,19 @@ PERMISSION_NOT_PERSISTED = 4
 **起始版本：** 12
 
 <!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4--><!--Device-PolicyErrorCode-PERMISSION_NOT_PERSISTED = 4-End-->
+
+**系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization
+
+## PERSISTENCE_FORBIDDEN
+
+```TypeScript
+PERSISTENCE_FORBIDDEN = 1
+```
+
+URI禁止被持久化。
+
+**起始版本：** 11
+
+<!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1--><!--Device-PolicyErrorCode-PERSISTENCE_FORBIDDEN = 1-End-->
 
 **系统能力：** SystemCapability.FileManagement.AppFileService.FolderAuthorization

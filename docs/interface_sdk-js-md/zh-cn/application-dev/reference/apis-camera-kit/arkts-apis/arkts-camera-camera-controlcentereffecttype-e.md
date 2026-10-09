@@ -12,38 +12,6 @@ enum ControlCenterEffectType
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## BEAUTY
-
-```TypeScript
-BEAUTY = 0
-```
-
-美颜。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-ControlCenterEffectType-BEAUTY = 0--><!--Device-ControlCenterEffectType-BEAUTY = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## PORTRAIT
-
-```TypeScript
-PORTRAIT = 1
-```
-
-人像虚化。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## AUTO_FRAMING
 
 ```TypeScript
@@ -57,6 +25,22 @@ AUTO_FRAMING = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-ControlCenterEffectType-AUTO_FRAMING = 2--><!--Device-ControlCenterEffectType-AUTO_FRAMING = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## BEAUTY
+
+```TypeScript
+BEAUTY = 0
+```
+
+美颜。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-BEAUTY = 0--><!--Device-ControlCenterEffectType-BEAUTY = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -75,5 +59,21 @@ COLOR_EFFECT = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ControlCenterEffectType-COLOR_EFFECT = 3--><!--Device-ControlCenterEffectType-COLOR_EFFECT = 3-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## PORTRAIT
+
+```TypeScript
+PORTRAIT = 1
+```
+
+人像虚化。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-ControlCenterEffectType-PORTRAIT = 1--><!--Device-ControlCenterEffectType-PORTRAIT = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

@@ -12,24 +12,6 @@ Enumerates the intent execution modes. It specifies the mode of execution passed
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## UI_ABILITY_FOREGROUND
-
-```TypeScript
-UI_ABILITY_FOREGROUND = 0
-```
-
-Display a UIAbility in the foreground.
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0--><!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## UI_ABILITY_BACKGROUND
 
 ```TypeScript
@@ -45,6 +27,24 @@ Start a UIAbility in the background.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1--><!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## UI_ABILITY_FOREGROUND
+
+```TypeScript
+UI_ABILITY_FOREGROUND = 0
+```
+
+Display a UIAbility in the foreground.
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0--><!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

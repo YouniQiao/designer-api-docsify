@@ -68,8 +68,8 @@ import { securityManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getDeviceEncryptionStatus](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md) | 查询设备文件系统加密状态。 |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f-sys.md#getpasswordpolicy3) | 获取设备锁屏口令策略。 |
+| [getDeviceEncryptionStatus](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md) | 查询设备文件系统加密状态。 |
 | [getSecurityPatchTag](arkts-mdm-securitymanager-getsecuritypatchtag-f-sys.md) | 查询设备安全补丁Tag。 |
 <!--DelEnd-->
 

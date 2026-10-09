@@ -32,6 +32,24 @@ COMMON_PARAMS_SPEC = 0
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API版本10-11：SystemCapability.Security.CryptoFramework
 
+## KEY_PAIR_SPEC
+
+```TypeScript
+KEY_PAIR_SPEC = 3
+```
+
+表示公私钥中包含的全量参数。使用此类型的参数可以调用[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair1)生成指定的密钥对。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
+
+**系统能力：** 
+- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API版本10-11：SystemCapability.Security.CryptoFramework
+
 ## PRIVATE_KEY_SPEC
 
 ```TypeScript
@@ -63,24 +81,6 @@ PUBLIC_KEY_SPEC = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
-
-**系统能力：** 
-- API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API版本10-11：SystemCapability.Security.CryptoFramework
-
-## KEY_PAIR_SPEC
-
-```TypeScript
-KEY_PAIR_SPEC = 3
-```
-
-表示公私钥中包含的全量参数。使用此类型的参数可以调用[generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair1)生成指定的密钥对。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
 **系统能力：** 
 - API版本12+：SystemCapability.Security.CryptoFramework.Key.AsymKey

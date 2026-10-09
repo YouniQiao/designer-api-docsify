@@ -12,13 +12,13 @@ Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, 
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## UNKNOWN
+## APP_RECOVERY
 
 ```TypeScript
-UNKNOWN = 0
+APP_RECOVERY = 4
 ```
 
-未知原因。
+设置应用恢复后，应用故障时自动恢复启动Ability。
 
 **起始版本：** 9
 
@@ -26,25 +26,23 @@ UNKNOWN = 0
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-LaunchReason-UNKNOWN = 0--><!--Device-LaunchReason-UNKNOWN = 0-End-->
+<!--Device-LaunchReason-APP_RECOVERY = 4--><!--Device-LaunchReason-APP_RECOVERY = 4-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## START_ABILITY
+## AUTO_STARTUP
 
 ```TypeScript
-START_ABILITY = 1
+AUTO_STARTUP = 8
 ```
 
-通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability1)接口启动Ability。
+通过设置开机自启动来启动Ability。
 
-**起始版本：** 9
+**起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-LaunchReason-START_ABILITY = 1--><!--Device-LaunchReason-START_ABILITY = 1-End-->
+<!--Device-LaunchReason-AUTO_STARTUP = 8--><!--Device-LaunchReason-AUTO_STARTUP = 8-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -84,58 +82,6 @@ CONTINUATION = 3
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## APP_RECOVERY
-
-```TypeScript
-APP_RECOVERY = 4
-```
-
-设置应用恢复后，应用故障时自动恢复启动Ability。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-LaunchReason-APP_RECOVERY = 4--><!--Device-LaunchReason-APP_RECOVERY = 4-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## SHARE
-
-```TypeScript
-SHARE = 5
-```
-
-通过原子化服务分享启动Ability。
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-LaunchReason-SHARE = 5--><!--Device-LaunchReason-SHARE = 5-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## AUTO_STARTUP
-
-```TypeScript
-AUTO_STARTUP = 8
-```
-
-通过设置开机自启动来启动Ability。
-
-**起始版本：** 11
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LaunchReason-AUTO_STARTUP = 8--><!--Device-LaunchReason-AUTO_STARTUP = 8-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 ## INSIGHT_INTENT
 
 ```TypeScript
@@ -151,6 +97,24 @@ INSIGHT_INTENT = 9
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LaunchReason-INSIGHT_INTENT = 9--><!--Device-LaunchReason-INSIGHT_INTENT = 9-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## PRELOAD
+
+```TypeScript
+PRELOAD = 11
+```
+
+表明该UIAbility是通过预加载机制启动的。
+
+**起始版本：** 20
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -172,20 +136,56 @@ PREPARE_CONTINUATION = 10
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## PRELOAD
+## SHARE
 
 ```TypeScript
-PRELOAD = 11
+SHARE = 5
 ```
 
-表明该UIAbility是通过预加载机制启动的。
+通过原子化服务分享启动Ability。
 
-**起始版本：** 20
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-LaunchReason-PRELOAD = 11--><!--Device-LaunchReason-PRELOAD = 11-End-->
+<!--Device-LaunchReason-SHARE = 5--><!--Device-LaunchReason-SHARE = 5-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## START_ABILITY
+
+```TypeScript
+START_ABILITY = 1
+```
+
+通过[startAbility](arkts-ability-uiabilitycontext-c.md#startability1)接口启动Ability。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-START_ABILITY = 1--><!--Device-LaunchReason-START_ABILITY = 1-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+未知原因。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LaunchReason-UNKNOWN = 0--><!--Device-LaunchReason-UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -12,6 +12,20 @@ enum WifiChannelWidth
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 
+## WIDTH_160MHZ
+
+```TypeScript
+WIDTH_160MHZ = 3
+```
+
+160MHZ。
+
+**起始版本：** 9
+
+<!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
+
+**系统能力：** SystemCapability.Communication.WiFi.STA
+
 ## WIDTH_20MHZ
 
 ```TypeScript
@@ -51,20 +65,6 @@ WIDTH_80MHZ = 2
 **起始版本：** 9
 
 <!--Device-WifiChannelWidth-WIDTH_80MHZ = 2--><!--Device-WifiChannelWidth-WIDTH_80MHZ = 2-End-->
-
-**系统能力：** SystemCapability.Communication.WiFi.STA
-
-## WIDTH_160MHZ
-
-```TypeScript
-WIDTH_160MHZ = 3
-```
-
-160MHZ。
-
-**起始版本：** 9
-
-<!--Device-WifiChannelWidth-WIDTH_160MHZ = 3--><!--Device-WifiChannelWidth-WIDTH_160MHZ = 3-End-->
 
 **系统能力：** SystemCapability.Communication.WiFi.STA
 

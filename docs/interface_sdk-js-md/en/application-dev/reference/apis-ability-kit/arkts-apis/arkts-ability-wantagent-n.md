@@ -26,31 +26,31 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename1) | Obtains the bundle name of a WantAgent object. This API uses an asynchronous callback to return the result. |
-| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename2) | Obtains the bundle name of a WantAgent object. This API uses a promise to return the result. |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid1) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
-| [getUid](arkts-ability-wantagent-getuid-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
 | [cancel](arkts-ability-wantagent-cancel-f.md#cancel1) | Cancels a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [cancel](arkts-ability-wantagent-cancel-f.md#cancel2) | Cancels a WantAgent object. This API uses a promise to return the result. |
-| [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md#equal1) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses an asynchronous callback to return the result. |
 | [equal](arkts-ability-wantagent-equal-f.md#equal2) | Checks whether two WantAgent objects are equal, so as to determine whether the same operation is from the same application. This API uses a promise to return the result. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename1) | Obtains the bundle name of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getBundleName](arkts-ability-wantagent-getbundlename-f.md#getbundlename2) | Obtains the bundle name of a WantAgent object. This API uses a promise to return the result. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype1) | Obtains the operation type of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype2) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getuid1) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [getUid](arkts-ability-wantagent-getuid-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. |
+| [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) | Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process. |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant1) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant2) | Obtains the Want in a WantAgent object. This API uses a promise to return the result. |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | Enables or disables the WantAgent multithreading feature. |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) | Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process. |
 | [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md) | Checks whether the specified WantAgent is local. |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | Enables or disables the WantAgent multithreading feature. |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -78,8 +78,8 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
 | [OperationType](arkts-ability-wantagent-operationtype-e.md) | Enumerates the operation types of the WantAgent objects. |
+| [WantAgentFlags](arkts-ability-wantagent-wantagentflags-e.md) | Enumerates the flags used by the WantAgent objects. |
 
 <!--Del-->
 ### Enums(System API)

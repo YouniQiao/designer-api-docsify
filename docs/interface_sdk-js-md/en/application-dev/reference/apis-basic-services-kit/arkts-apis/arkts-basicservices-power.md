@@ -22,9 +22,9 @@ import { power } from '@kit.BasicServicesKit';
 | --- | --- |
 | [getPowerMode](arkts-basicservices-power-getpowermode-f.md) | Obtains the power mode of this device. |
 | [isActive](arkts-basicservices-power-isactive-f.md) | Checks whether the current device is active. |
+| [isStandby](arkts-basicservices-power-isstandby-f.md) | Checks whether the device is in standby mode. |
 | [isScreenOn](arkts-basicservices-power-isscreenon-f.md#isscreenon1) | Checks the screen status of the current device. This API uses an asynchronous callback to return the result. |
 | [isScreenOn](arkts-basicservices-power-isscreenon-f.md#isscreenon2) | Checks the screen status of the current device. This API uses a promise to return the result. |
-| [isStandby](arkts-basicservices-power-isstandby-f.md) | Checks whether the device is in standby mode. |
 | [rebootDevice](arkts-basicservices-power-rebootdevice-f.md) | Restarts the system. |
 
 <!--Del-->

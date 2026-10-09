@@ -42,8 +42,6 @@ import { inputMethod } from '@kit.IMEKit';
 | [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod1) | 使用同步方法获取当前输入法。<br> <br>含义/功能：获取当前正在使用的输入法属性信息。<br> <br>使用场景：当应用需要知道当前活跃的输入法是哪个（如判断输入法名称、获取输入法id用于后续切换操作）时使用。<br> <br>使用后效果：返回当前输入法的InputMethodProperty对象。 |
 | [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md#getcurrentinputmethodsubtype1) | 获取当前输入法的子类型。 |
 | [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getdefaultinputmethod1) | 获取默认输入法。 |
-| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md) | 获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。 |
-| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md) | 获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。 |
 | [getSetting](arkts-ime-inputmethod-getsetting-f.md) | 获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。<br> <br>含义/功能：获取输入法设置实例，用于查询输入法列表、订阅输入法变化事件、查询面板可见性等配置管理操作。<br> <br>使用场景：当应用需要查询已安装/已激活输入法列表、订阅输入法切换事件、或显示输入法选择对话框时，必须先通过此接口获取InputMethodSetting实例。<br> <br>使用后效果：返回一个InputMethodSetting实例，后续可通过该实例调用getInputMethods、listInputMethodSubtype、on('imeChange')等接口。 |
 | [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getsysteminputmethodconfigability1) | 获取系统输入法设置界面Ability信息。 |
 | [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md) | 取消订阅绑定失败事件。使用callback异步回调。 |
@@ -55,6 +53,8 @@ import { inputMethod } from '@kit.IMEKit';
 | [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype2) | 切换当前输入法的子类型。使用promise异步回调。 |
 | [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod1) | 切换输入法，使用callback异步回调。<br> <br>含义/功能：将当前输入法切换为指定的目标输入法。<br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用（如用户在输入法设置中选择了新的输入法）。<br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法，目标输入法成为新的当前输入法；失败时当前输入法不变。 |
 | [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod2) | 切换输入法，使用promise异步回调。<br> <br>含义/功能：将当前输入法切换为指定的目标输入法。<br> <br>使用场景：当前输入法应用需要切换到另一个输入法时使用。<br> <br>使用后效果：成功时系统将当前输入法切换为目标输入法；失败时当前输入法不变。 |
+| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md) | 获取客户端实例[InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md)。 |
+| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md) | 获取客户端设置实例[InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md)。 |
 
 <!--Del-->
 ### 函数（系统接口）

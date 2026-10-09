@@ -12,42 +12,6 @@ Define the resource types of the application.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## PSS_MEMORY
-
-```TypeScript
-PSS_MEMORY = 1
-```
-
-Indicates that it is an pss resource.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
-
-<!--Device-ResourceType-PSS_MEMORY = 1--><!--Device-ResourceType-PSS_MEMORY = 1-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-## ION_MEMORY
-
-```TypeScript
-ION_MEMORY = 2
-```
-
-Indicates that it is a ion resource.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
-
-<!--Device-ResourceType-ION_MEMORY = 2--><!--Device-ResourceType-ION_MEMORY = 2-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
 ## ASHMEM_MEMORY
 
 ```TypeScript
@@ -63,6 +27,24 @@ Indicates that it is a ashmem resource.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
 <!--Device-ResourceType-ASHMEM_MEMORY = 3--><!--Device-ResourceType-ASHMEM_MEMORY = 3-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## FD
+
+```TypeScript
+FD = 5
+```
+
+Indicates that it is an FD resource.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-ResourceType-FD = 5--><!--Device-ResourceType-FD = 5-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -84,13 +66,13 @@ Indicates that it is an GPU resource.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## FD
+## ION_MEMORY
 
 ```TypeScript
-FD = 5
+ION_MEMORY = 2
 ```
 
-Indicates that it is an FD resource.
+Indicates that it is a ion resource.
 
 **Since:** 24
 
@@ -98,7 +80,25 @@ Indicates that it is an FD resource.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
-<!--Device-ResourceType-FD = 5--><!--Device-ResourceType-FD = 5-End-->
+<!--Device-ResourceType-ION_MEMORY = 2--><!--Device-ResourceType-ION_MEMORY = 2-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## PSS_MEMORY
+
+```TypeScript
+PSS_MEMORY = 1
+```
+
+Indicates that it is an pss resource.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-ResourceType-PSS_MEMORY = 1--><!--Device-ResourceType-PSS_MEMORY = 1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

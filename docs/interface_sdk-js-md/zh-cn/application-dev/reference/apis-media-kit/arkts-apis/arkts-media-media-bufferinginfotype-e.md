@@ -12,22 +12,6 @@ enum BufferingInfoType
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## BUFFERING_START
-
-```TypeScript
-BUFFERING_START = 1
-```
-
-表示开始缓冲。当上报BUFFERING_START时，播放器会暂停播放。
-
-**起始版本：** 8
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 ## BUFFERING_END
 
 ```TypeScript
@@ -57,6 +41,22 @@ BUFFERING_PERCENT = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BufferingInfoType-BUFFERING_PERCENT = 3--><!--Device-BufferingInfoType-BUFFERING_PERCENT = 3-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
+## BUFFERING_START
+
+```TypeScript
+BUFFERING_START = 1
+```
+
+表示开始缓冲。当上报BUFFERING_START时，播放器会暂停播放。
+
+**起始版本：** 8
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 

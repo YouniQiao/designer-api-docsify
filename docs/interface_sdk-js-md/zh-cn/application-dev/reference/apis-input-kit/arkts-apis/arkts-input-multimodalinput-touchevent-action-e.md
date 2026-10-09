@@ -54,20 +54,6 @@ MOVE = 2
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-## UP
-
-```TypeScript
-UP = 3
-```
-
-触屏抬起。
-
-**起始版本：** 9
-
-<!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Core
-
 ## PULL_DOWN
 
 ```TypeScript
@@ -113,5 +99,19 @@ PULL_UP = 6
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-Action-PULL_UP = 6--><!--Device-Action-PULL_UP = 6-End-->
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
+## UP
+
+```TypeScript
+UP = 3
+```
+
+触屏抬起。
+
+**起始版本：** 9
+
+<!--Device-Action-UP = 3--><!--Device-Action-UP = 3-End-->
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core

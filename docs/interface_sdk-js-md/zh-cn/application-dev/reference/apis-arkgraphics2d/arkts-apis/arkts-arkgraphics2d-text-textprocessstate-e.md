@@ -12,13 +12,13 @@ enum TextProcessState
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## INIT
+## FORMATTED
 
 ```TypeScript
-INIT = 0
+FORMATTED = 4
 ```
 
-初始状态，文本处理尚未开始。
+已格式化状态，文本已完成格式化。
 
 **起始版本：** 26.0.0
 
@@ -26,7 +26,7 @@ INIT = 0
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
+<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -48,13 +48,13 @@ INDEXED = 1
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## SHAPED
+## INIT
 
 ```TypeScript
-SHAPED = 2
+INIT = 0
 ```
 
-已塑形状态，文本已完成塑形。
+初始状态，文本处理尚未开始。
 
 **起始版本：** 26.0.0
 
@@ -62,7 +62,7 @@ SHAPED = 2
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
+<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -84,24 +84,6 @@ LINE_BROKEN = 3
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## FORMATTED
-
-```TypeScript
-FORMATTED = 4
-```
-
-已格式化状态，文本已完成格式化。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
 ## PAINT
 
 ```TypeScript
@@ -117,6 +99,24 @@ PAINT = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+## SHAPED
+
+```TypeScript
+SHAPED = 2
+```
+
+已塑形状态，文本已完成塑形。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -20,10 +20,6 @@ import { inputDevice } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice1) | Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result. |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice2) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result. |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids1) | Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result. |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids2) | Obtains the IDs of all input devices. This API uses a promise to return the result. |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo1) | Obtains information about the specified input device. This API uses an asynchronous callback to return the result. |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo2) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result. |
 | [getDeviceInfoSync](arkts-input-inputdevice-getdeviceinfosync-f.md) | Obtains information about the specified input device. |
@@ -40,6 +36,10 @@ import { inputDevice } from '@kit.InputKit';
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys1) | Queries whether a specified input device supports specified keys. This API uses an asynchronous callback to return the result. |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys2) | Checks whether the input device supports the specified keys. This API uses a promise to return the result. |
 | [supportKeysSync](arkts-input-inputdevice-supportkeyssync-f.md) | Checks whether the input device supports the specified keys. |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice1) | Obtains the information about the input device with the specified ID. This API uses an asynchronous callback to return the result. |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice2) | Obtains the information about the input device with the specified ID. This API uses a promise to return the result. |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids1) | Obtains the IDs of all input devices. This API uses an asynchronous callback to return the result. |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids2) | Obtains the IDs of all input devices. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

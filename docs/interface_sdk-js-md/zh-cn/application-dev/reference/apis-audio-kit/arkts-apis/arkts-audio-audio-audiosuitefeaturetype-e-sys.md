@@ -14,24 +14,6 @@ enum AudioSuiteFeatureType
 
 **系统接口：** 此接口为系统接口。
 
-## AUDIO_DIALOG_ENHANCEMENT
-
-```TypeScript
-AUDIO_DIALOG_ENHANCEMENT = 0
-```
-
-音频中人声对话部分增强。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureType-AUDIO_DIALOG_ENHANCEMENT = 0--><!--Device-AudioSuiteFeatureType-AUDIO_DIALOG_ENHANCEMENT = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
 ## AUDIO_CENTER_VOICE_ENHANCEMENT
 
 ```TypeScript
@@ -50,19 +32,19 @@ AUDIO_CENTER_VOICE_ENHANCEMENT = 1
 
 **系统接口：** 此接口为系统接口。
 
-## AUDIO_VOICE_ENHANCEMENT
+## AUDIO_DIALOG_ENHANCEMENT
 
 ```TypeScript
-AUDIO_VOICE_ENHANCEMENT = 2
+AUDIO_DIALOG_ENHANCEMENT = 0
 ```
 
-音频中的人声部分增强。
+音频中人声对话部分增强。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureType-AUDIO_VOICE_ENHANCEMENT = 2--><!--Device-AudioSuiteFeatureType-AUDIO_VOICE_ENHANCEMENT = 2-End-->
+<!--Device-AudioSuiteFeatureType-AUDIO_DIALOG_ENHANCEMENT = 0--><!--Device-AudioSuiteFeatureType-AUDIO_DIALOG_ENHANCEMENT = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
@@ -99,6 +81,24 @@ AUDIO_SOURCE_SEPARATION = 4
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioSuiteFeatureType-AUDIO_SOURCE_SEPARATION = 4--><!--Device-AudioSuiteFeatureType-AUDIO_SOURCE_SEPARATION = 4-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## AUDIO_VOICE_ENHANCEMENT
+
+```TypeScript
+AUDIO_VOICE_ENHANCEMENT = 2
+```
+
+音频中的人声部分增强。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureType-AUDIO_VOICE_ENHANCEMENT = 2--><!--Device-AudioSuiteFeatureType-AUDIO_VOICE_ENHANCEMENT = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 

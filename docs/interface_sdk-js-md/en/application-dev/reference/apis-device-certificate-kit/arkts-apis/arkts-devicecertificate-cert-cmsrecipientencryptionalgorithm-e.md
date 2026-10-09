@@ -28,38 +28,6 @@ AES_128_CBC.
 
 **System capability:** SystemCapability.Security.Cert
 
-## AES_192_CBC
-
-```TypeScript
-AES_192_CBC = 1
-```
-
-AES_192_CBC.
-
-**Since:** 22
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-## AES_256_CBC
-
-```TypeScript
-AES_256_CBC = 2
-```
-
-AES_256_CBC.
-
-**Since:** 22
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
 ## AES_128_GCM
 
 ```TypeScript
@@ -76,6 +44,22 @@ AES_128_GCM.
 
 **System capability:** SystemCapability.Security.Cert
 
+## AES_192_CBC
+
+```TypeScript
+AES_192_CBC = 1
+```
+
+AES_192_CBC.
+
+**Since:** 22
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
 ## AES_192_GCM
 
 ```TypeScript
@@ -89,6 +73,22 @@ AES_192_GCM.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
+## AES_256_CBC
+
+```TypeScript
+AES_256_CBC = 2
+```
+
+AES_256_CBC.
+
+**Since:** 22
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
 **System capability:** SystemCapability.Security.Cert
 

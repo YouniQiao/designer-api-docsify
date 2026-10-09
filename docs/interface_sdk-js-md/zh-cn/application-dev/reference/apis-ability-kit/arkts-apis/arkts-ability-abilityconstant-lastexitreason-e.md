@@ -12,61 +12,21 @@ Ability上次退出原因，该类型为枚举，可配合UIAbility的[onCreate(
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## UNKNOWN
+## APP_FREEZE
 
 ```TypeScript
-UNKNOWN = 0
+APP_FREEZE = 5
 ```
 
-未知原因。
+[应用冻屏](../../../dfx/appfreeze-guidelines.md)导致的应用程序退出。
 
-**起始版本：** 9
+**起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-LastExitReason-UNKNOWN = 0--><!--Device-LastExitReason-UNKNOWN = 0-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## ABILITY_NOT_RESPONDING
-
-```TypeScript
-ABILITY_NOT_RESPONDING = 1
-```
-
-Ability组件未响应。
-
-**起始版本：** 9
-
-**废弃版本：** 10
-
-**替代接口：** [APP_FREEZE](#app_freeze)
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1--><!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## NORMAL
-
-```TypeScript
-NORMAL = 2
-```
-
-用户主动关闭应用，应用程序正常退出。
-
-**说明：** 当开发者直接调用[process.exit()](../../apis-arkts/arkts-apis/arkts-arkts-process-exit-f.md)、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-LastExitReason-NORMAL = 2--><!--Device-LastExitReason-NORMAL = 2-End-->
+<!--Device-LastExitReason-APP_FREEZE = 5--><!--Device-LastExitReason-APP_FREEZE = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -106,21 +66,23 @@ JS_ERROR = 4
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## APP_FREEZE
+## NORMAL
 
 ```TypeScript
-APP_FREEZE = 5
+NORMAL = 2
 ```
 
-[应用冻屏](../../../dfx/appfreeze-guidelines.md)导致的应用程序退出。
+用户主动关闭应用，应用程序正常退出。
 
-**起始版本：** 10
+**说明：** 当开发者直接调用[process.exit()](../../apis-arkts/arkts-apis/arkts-arkts-process-exit-f.md)、内核kill命令等非Ability Kit提供的能力强制退出应用进程时，也会返回NORMAL。
+
+**起始版本：** 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-LastExitReason-APP_FREEZE = 5--><!--Device-LastExitReason-APP_FREEZE = 5-End-->
+<!--Device-LastExitReason-NORMAL = 2--><!--Device-LastExitReason-NORMAL = 2-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -169,6 +131,42 @@ RESOURCE_CONTROL = 7
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## SIGNAL
+
+```TypeScript
+SIGNAL = 10
+```
+
+应用程序因收到系统kill指令信号而退出。
+
+**起始版本：** 18
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+未知原因。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-LastExitReason-UNKNOWN = 0--><!--Device-LastExitReason-UNKNOWN = 0-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 ## UPGRADE
 
 ```TypeScript
@@ -205,20 +203,22 @@ USER_REQUEST = 9
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## SIGNAL
+## ABILITY_NOT_RESPONDING
 
 ```TypeScript
-SIGNAL = 10
+ABILITY_NOT_RESPONDING = 1
 ```
 
-应用程序因收到系统kill指令信号而退出。
+Ability组件未响应。
 
-**起始版本：** 18
+**起始版本：** 9
+
+**废弃版本：** 10
+
+**替代接口：** [APP_FREEZE](#app_freeze)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
+<!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1--><!--Device-LastExitReason-ABILITY_NOT_RESPONDING = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -56,8 +56,8 @@ import { deviceSettings } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CertBlob](arkts-mdm-devicesettings-certblob-i-sys.md) | 证书信息。 |
 | [PowerPolicy](arkts-mdm-devicesettings-powerpolicy-i-sys.md) | 电源策略。 |
+| [CertBlob](arkts-mdm-devicesettings-certblob-i-sys.md) | 证书信息。 |
 <!--DelEnd-->
 
 ### 枚举

@@ -28,22 +28,6 @@ IMAGE_TYPE = 'image/*'
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## VIDEO_TYPE
-
-```TypeScript
-VIDEO_TYPE = 'video/*'
-```
-
-视频类型。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
-
-**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## IMAGE_VIDEO_TYPE
 
 ```TypeScript
@@ -73,5 +57,21 @@ MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'--><!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## VIDEO_TYPE
+
+```TypeScript
+VIDEO_TYPE = 'video/*'
+```
+
+视频类型。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core

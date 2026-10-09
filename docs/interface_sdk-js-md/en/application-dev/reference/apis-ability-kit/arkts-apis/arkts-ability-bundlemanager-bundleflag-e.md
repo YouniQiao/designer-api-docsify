@@ -28,35 +28,19 @@ Used to obtain the default bundle information. The obtained information does not
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_BUNDLE_INFO_WITH_APPLICATION
+## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
 
 ```TypeScript
-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
+GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
 ```
 
-Used to obtain the bundle information with application information. The obtained information does not contain information about the signature, HAP module, ability, ExtensionAbility, or permission.
+Used to obtain the bundle information of the application that has only a home screen icon. It is valid only in the [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) API.
 
-**Since:** 9
+**System API**: This flag can be used only in system APIs.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Since:** 26.1.0
 
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_BUNDLE_INFO_WITH_HAP_MODULE
-
-```TypeScript
-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
-```
-
-Used to obtain the bundle information with HAP module information. The obtained information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002-End-->
+<!--Device-BundleFlag-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000--><!--Device-BundleFlag-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -76,6 +60,54 @@ Used to obtain the bundle information with ability information. The obtained inf
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## GET_BUNDLE_INFO_WITH_APPLICATION
+
+```TypeScript
+GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
+```
+
+Used to obtain the bundle information with application information. The obtained information does not contain information about the signature, HAP module, ability, ExtensionAbility, or permission.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_BUNDLE_INFO_WITH_DISABLE
+
+```TypeScript
+GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
+```
+
+Used to obtain the information about disabled bundles and abilities of a bundle. The obtained information does not contain information about the signature, application, HAP module, ability, ExtensionAbility, or permission.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_BUNDLE_INFO_WITH_ENTRY_MODULE
+
+```TypeScript
+GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000
+```
+
+Used to obtain the bundle information with the HAP module information. It is valid only for bundleInfo.hapModulesInfo corresponding to the entry module. If the entry module does not exist, the bundleInfo.hapModulesInfo list is empty. The obtained bundle information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
+
+**Since:** 23
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY
 
 ```TypeScript
@@ -92,19 +124,35 @@ Used to obtain the bundle information with ExtensionAbility information. The obt
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION
+## GET_BUNDLE_INFO_WITH_HAP_MODULE
 
 ```TypeScript
-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
+GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
 ```
 
-Used to obtain the bundle information with permission information. The obtained information does not contain information about the signature, application, HAP module, ability, or ExtensionAbility.
+Used to obtain the bundle information with HAP module information. The obtained information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_BUNDLE_INFO_WITH_MENU
+
+```TypeScript
+GET_BUNDLE_INFO_WITH_MENU = 0x00000100
+```
+
+Used to obtain the bundle information with the file context menu configuration. It must be used together with **GET_BUNDLE_INFO_WITH_HAP_MODULE**.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -133,51 +181,19 @@ Used to obtain the metadata contained in the application, module, ability, or Ex
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_BUNDLE_INFO_WITH_DISABLE
+## GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION
 
 ```TypeScript
-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
+GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
 ```
 
-Used to obtain the information about disabled bundles and abilities of a bundle. The obtained information does not contain information about the signature, application, HAP module, ability, ExtensionAbility, or permission.
+Used to obtain the bundle information with permission information. The obtained information does not contain information about the signature, application, HAP module, ability, or ExtensionAbility.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_BUNDLE_INFO_WITH_SIGNATURE_INFO
-
-```TypeScript
-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
-```
-
-Used to obtain the bundle information with signature information. The obtained information does not contain information about the application, HAP module, ability, ExtensionAbility, or permission.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_BUNDLE_INFO_WITH_MENU
-
-```TypeScript
-GET_BUNDLE_INFO_WITH_MENU = 0x00000100
-```
-
-Used to obtain the bundle information with the file context menu configuration. It must be used together with **GET_BUNDLE_INFO_WITH_HAP_MODULE**.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100-End-->
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -197,6 +213,22 @@ Used to obtain the bundle information with the router map. It must be used toget
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## GET_BUNDLE_INFO_WITH_SIGNATURE_INFO
+
+```TypeScript
+GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
+```
+
+Used to obtain the bundle information with signature information. The obtained information does not contain information about the application, HAP module, ability, ExtensionAbility, or permission.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## GET_BUNDLE_INFO_WITH_SKILL
 
 ```TypeScript
@@ -210,37 +242,5 @@ Used to obtain the bundle information with the skills. It must be used together 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SKILL = 0x00000800--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SKILL = 0x00000800-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY
-
-```TypeScript
-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000
-```
-
-Used to obtain the bundle information of the application that has only a home screen icon. It is valid only in the [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) API.
-
-**System API**: This flag can be used only in system APIs.
-
-**Since:** 26.1.0
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000--><!--Device-BundleFlag-GET_BUNDLE_INFO_ONLY_WITH_LAUNCHER_ABILITY = 0x00001000-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_BUNDLE_INFO_WITH_ENTRY_MODULE
-
-```TypeScript
-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000
-```
-
-Used to obtain the bundle information with the HAP module information. It is valid only for bundleInfo.hapModulesInfo corresponding to the entry module. If the entry module does not exist, the bundleInfo.hapModulesInfo list is empty. The obtained bundle information does not contain information about the signature, application, ability, ExtensionAbility, or permission.
-
-**Since:** 23
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

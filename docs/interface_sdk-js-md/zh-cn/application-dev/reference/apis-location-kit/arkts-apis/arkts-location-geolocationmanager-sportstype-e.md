@@ -12,38 +12,6 @@ export enum SportsType
 
 **系统能力：** SystemCapability.Location.Location.Core
 
-## RUNNING
-
-```TypeScript
-RUNNING = 1
-```
-
-表示跑步。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-SportsType-RUNNING = 1--><!--Device-SportsType-RUNNING = 1-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
-## WALKING
-
-```TypeScript
-WALKING = 2
-```
-
-表示步行。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 ## CYCLING
 
 ```TypeScript
@@ -57,6 +25,22 @@ CYCLING = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-SportsType-CYCLING = 3--><!--Device-SportsType-CYCLING = 3-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+## RUNNING
+
+```TypeScript
+RUNNING = 1
+```
+
+表示跑步。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-RUNNING = 1--><!--Device-SportsType-RUNNING = 1-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 
@@ -75,5 +59,21 @@ SKIING = 4
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SportsType-SKIING = 4--><!--Device-SportsType-SKIING = 4-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+## WALKING
+
+```TypeScript
+WALKING = 2
+```
+
+表示步行。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-SportsType-WALKING = 2--><!--Device-SportsType-WALKING = 2-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

@@ -12,6 +12,20 @@ enum AudioSourceType
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
+## AUDIO_SOURCE_TYPE_CAMCORDER
+
+```TypeScript
+AUDIO_SOURCE_TYPE_CAMCORDER = 13
+```
+
+表示相机录像的音频源。
+
+**起始版本：** 12
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
 ## AUDIO_SOURCE_TYPE_DEFAULT
 
 ```TypeScript
@@ -44,20 +58,6 @@ AUDIO_SOURCE_TYPE_MIC = 1
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
-## AUDIO_SOURCE_TYPE_VOICE_RECOGNITION
-
-```TypeScript
-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
-```
-
-表示语音识别场景的音频源。
-
-**起始版本：** 12
-
-<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 ## AUDIO_SOURCE_TYPE_VOICE_COMMUNICATION
 
 ```TypeScript
@@ -86,16 +86,16 @@ AUDIO_SOURCE_TYPE_VOICE_MESSAGE = 10
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
-## AUDIO_SOURCE_TYPE_CAMCORDER
+## AUDIO_SOURCE_TYPE_VOICE_RECOGNITION
 
 ```TypeScript
-AUDIO_SOURCE_TYPE_CAMCORDER = 13
+AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
 ```
 
-表示相机录像的音频源。
+表示语音识别场景的音频源。
 
 **起始版本：** 12
 
-<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.AVRecorder

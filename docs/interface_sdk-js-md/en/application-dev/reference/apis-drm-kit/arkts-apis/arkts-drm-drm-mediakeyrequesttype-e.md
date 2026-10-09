@@ -12,22 +12,6 @@ Enumerates the types of media key requests.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_UNKNOWN
-
-```TypeScript
-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
-```
-
-Unknown type.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
 ## MEDIA_KEY_REQUEST_TYPE_INITIAL
 
 ```TypeScript
@@ -44,19 +28,19 @@ Initial request.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_RENEWAL
+## MEDIA_KEY_REQUEST_TYPE_NONE
 
 ```TypeScript
-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
+MEDIA_KEY_REQUEST_TYPE_NONE = 4
 ```
 
-Renewal request.
+No request.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
@@ -76,19 +60,35 @@ Release request.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_NONE
+## MEDIA_KEY_REQUEST_TYPE_RENEWAL
 
 ```TypeScript
-MEDIA_KEY_REQUEST_TYPE_NONE = 4
+MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
 ```
 
-No request.
+Renewal request.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
+## MEDIA_KEY_REQUEST_TYPE_UNKNOWN
+
+```TypeScript
+MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
+```
+
+Unknown type.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 

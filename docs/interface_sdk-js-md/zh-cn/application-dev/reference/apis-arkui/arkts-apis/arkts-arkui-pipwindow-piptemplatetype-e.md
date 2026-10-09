@@ -12,22 +12,6 @@ enum PiPTemplateType
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## VIDEO_PLAY
-
-```TypeScript
-VIDEO_PLAY = 0
-```
-
-表示将要切换为画中画播放的媒体类型是视频，系统依此加载视频播放模板，该模板默认存在播放/暂停控件。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-PiPTemplateType-VIDEO_PLAY = 0--><!--Device-PiPTemplateType-VIDEO_PLAY = 0-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 ## VIDEO_CALL
 
 ```TypeScript
@@ -41,6 +25,22 @@ VIDEO_CALL = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPTemplateType-VIDEO_CALL = 1--><!--Device-PiPTemplateType-VIDEO_CALL = 1-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## VIDEO_LIVE
+
+```TypeScript
+VIDEO_LIVE = 3
+```
+
+表示将要切换为画中画播放的媒体类型是直播，系统依此加载直播模板。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPTemplateType-VIDEO_LIVE = 3--><!--Device-PiPTemplateType-VIDEO_LIVE = 3-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -60,18 +60,18 @@ VIDEO_MEETING = 2
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## VIDEO_LIVE
+## VIDEO_PLAY
 
 ```TypeScript
-VIDEO_LIVE = 3
+VIDEO_PLAY = 0
 ```
 
-表示将要切换为画中画播放的媒体类型是直播，系统依此加载直播模板。
+表示将要切换为画中画播放的媒体类型是视频，系统依此加载视频播放模板，该模板默认存在播放/暂停控件。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-PiPTemplateType-VIDEO_LIVE = 3--><!--Device-PiPTemplateType-VIDEO_LIVE = 3-End-->
+<!--Device-PiPTemplateType-VIDEO_PLAY = 0--><!--Device-PiPTemplateType-VIDEO_PLAY = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

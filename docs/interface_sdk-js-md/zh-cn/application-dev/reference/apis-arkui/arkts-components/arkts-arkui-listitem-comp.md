@@ -84,12 +84,12 @@ ListItem(value?: string)
 
 | 名称 | 说明 |
 | --- | --- |
-| [EditMode](arkts-arkui-listitem-comp-editmode-e.md) | ListItem元素编辑模式枚举。 |
 | [ListItemStyle](arkts-arkui-listitem-comp-listitemstyle-e.md) | ListItem组件卡片样式枚举。 |
 | [ListItemSwipeActionDirection](arkts-arkui-listitem-comp-listitemswipeactiondirection-e.md) | ListItem划出菜单的展开方向。 |
-| [Sticky](arkts-arkui-listitem-comp-sticky-e.md) | ListItem吸顶效果枚举。 |
 | [SwipeActionState](arkts-arkui-listitem-comp-swipeactionstate-e.md) | 列表项滑动状态枚举。 |
 | [SwipeEdgeEffect](arkts-arkui-listitem-comp-swipeedgeeffect-e.md) | 滑动效果枚举。 |
+| [EditMode](arkts-arkui-listitem-comp-editmode-e.md) | ListItem元素编辑模式枚举。 |
+| [Sticky](arkts-arkui-listitem-comp-sticky-e.md) | ListItem吸顶效果枚举。 |
 
 ## 示例
 

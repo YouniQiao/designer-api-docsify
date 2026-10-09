@@ -32,6 +32,22 @@ Indicates the default wallpaper resource.
 
 **System API:** This is a system API.
 
+## PACKAGE
+
+```TypeScript
+PACKAGE
+```
+
+Indicates the package wallpaper resource.
+
+**Since:** 10
+
+<!--Device-WallpaperResourceType-PACKAGE--><!--Device-WallpaperResourceType-PACKAGE-End-->
+
+**System capability:** SystemCapability.MiscServices.Wallpaper
+
+**System API:** This is a system API.
+
 ## PICTURE
 
 ```TypeScript
@@ -59,22 +75,6 @@ Indicates the video wallpaper resource.
 **Since:** 10
 
 <!--Device-WallpaperResourceType-VIDEO--><!--Device-WallpaperResourceType-VIDEO-End-->
-
-**System capability:** SystemCapability.MiscServices.Wallpaper
-
-**System API:** This is a system API.
-
-## PACKAGE
-
-```TypeScript
-PACKAGE
-```
-
-Indicates the package wallpaper resource.
-
-**Since:** 10
-
-<!--Device-WallpaperResourceType-PACKAGE--><!--Device-WallpaperResourceType-PACKAGE-End-->
 
 **System capability:** SystemCapability.MiscServices.Wallpaper
 

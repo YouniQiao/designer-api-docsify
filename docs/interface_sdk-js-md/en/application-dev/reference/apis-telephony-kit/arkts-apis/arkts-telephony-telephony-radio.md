@@ -39,13 +39,13 @@ import { radio } from '@kit.TelephonyKit';
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation1) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result. |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation2) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result. |
 | [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. |
-| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported1) | Checks whether the current device supports NR. |
-| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported2) | Checks whether the SIM card in the specified slot supports NR. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported1) | Checks whether the current device supports NR. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported2) | Checks whether the SIM card in the specified slot supports NR. |
 | [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon1) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon2) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses a promise to return the result. |
 | [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon3) | Checks whether the radio service is enabled on the primary SIM card. This API uses an asynchronous callback to return the result. |
+| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported1) | Checks whether the current device supports NR. |
+| [isNrSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported2) | Checks whether the SIM card in the specified slot supports NR. |
 
 <!--Del-->
 ### Functions(System API)
@@ -71,9 +71,6 @@ import { radio } from '@kit.TelephonyKit';
 | [getNetworkCapability](arkts-telephony-radio-getnetworkcapability-f-sys.md#getnetworkcapability2) | Get the network capability state according to the specified capability type. |
 | [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getnetworksearchinformation1) | Get network search information. |
 | [getNetworkSearchInformation](arkts-telephony-radio-getnetworksearchinformation-f-sys.md#getnetworksearchinformation2) | Get network search information. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode1) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode2) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md) | Get the option mode of NR. |
 | [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode1) | Get the option mode of NR. |
 | [getNROptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode2) | Get the option mode of NR. |
 | [getPreferredNetwork](arkts-telephony-radio-getpreferrednetwork-f-sys.md#getpreferrednetwork1) | Get the preferred network for the specified SIM card slot. |
@@ -105,6 +102,9 @@ import { radio } from '@kit.TelephonyKit';
 | [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio1) | Turn on the radio service. |
 | [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio2) | Turn on the radio service. |
 | [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio3) | Turn on the radio service. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode1) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode2) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md) | Get the option mode of NR. |
 <!--DelEnd-->
 
 ### Interfaces
@@ -156,7 +156,7 @@ import { radio } from '@kit.TelephonyKit';
 | [NetworkCapabilityState](arkts-telephony-radio-networkcapabilitystate-e-sys.md) | Enum for network capability state. |
 | [NetworkCapabilityType](arkts-telephony-radio-networkcapabilitytype-e-sys.md) | Enum for network capability type. |
 | [NetworkInformationState](arkts-telephony-radio-networkinformationstate-e-sys.md) | Obtains network information status. |
-| [NrOptionMode](arkts-telephony-radio-nroptionmode-e-sys.md) | Obtains the option mode of NR. |
 | [NROptionMode](arkts-telephony-radio-nroptionmode-e-sys.md) | Obtains the option mode of NR. |
 | [PreferredNetworkMode](arkts-telephony-radio-preferrednetworkmode-e-sys.md) | Indicates the preferred network. |
+| [NrOptionMode](arkts-telephony-radio-nroptionmode-e-sys.md) | Obtains the option mode of NR. |
 <!--DelEnd-->

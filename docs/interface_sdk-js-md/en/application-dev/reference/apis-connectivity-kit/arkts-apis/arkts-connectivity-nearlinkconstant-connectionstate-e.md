@@ -12,22 +12,6 @@ Enumerates the connection states with a remote device.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## STATE_CONNECTING
-
-```TypeScript
-STATE_CONNECTING = 0
-```
-
-Connecting.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
 ## STATE_CONNECTED
 
 ```TypeScript
@@ -44,19 +28,19 @@ Connected.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## STATE_DISCONNECTING
+## STATE_CONNECTING
 
 ```TypeScript
-STATE_DISCONNECTING = 2
+STATE_CONNECTING = 0
 ```
 
-Disconnecting.
+Connecting.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-ConnectionState-STATE_DISCONNECTING = 2--><!--Device-ConnectionState-STATE_DISCONNECTING = 2-End-->
+<!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -73,5 +57,21 @@ Disconnected.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionState-STATE_DISCONNECTED = 3--><!--Device-ConnectionState-STATE_DISCONNECTED = 3-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## STATE_DISCONNECTING
+
+```TypeScript
+STATE_DISCONNECTING = 2
+```
+
+Disconnecting.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionState-STATE_DISCONNECTING = 2--><!--Device-ConnectionState-STATE_DISCONNECTING = 2-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base

@@ -14,17 +14,17 @@ Enumerates the culling modes of PBR materials. You can improve rendering perform
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## NONE
+## BACK
 
 ```TypeScript
-NONE = 0
+BACK = 2
 ```
 
-Culling is disabled.
+Culls the back faces of geometric objects.
 
 **Since:** 20
 
-<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
+<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -42,16 +42,16 @@ Culls the front faces of geometric objects.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## BACK
+## NONE
 
 ```TypeScript
-BACK = 2
+NONE = 0
 ```
 
-Culls the back faces of geometric objects.
+Culling is disabled.
 
 **Since:** 20
 
-<!--Device-CullMode-BACK = 2--><!--Device-CullMode-BACK = 2-End-->
+<!--Device-CullMode-NONE = 0--><!--Device-CullMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

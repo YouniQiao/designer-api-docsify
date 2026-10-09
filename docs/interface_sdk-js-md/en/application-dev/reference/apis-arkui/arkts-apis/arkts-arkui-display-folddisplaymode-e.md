@@ -22,19 +22,19 @@ Enumerates the display modes of a foldable device.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## FOLD_DISPLAY_MODE_UNKNOWN
+## FOLD_DISPLAY_MODE_COORDINATION
 
 ```TypeScript
-FOLD_DISPLAY_MODE_UNKNOWN = 0
+FOLD_DISPLAY_MODE_COORDINATION
 ```
 
-The display mode of the device is unknown.
+Both screens of the device are displayed in collaborative mode.
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
+<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -86,18 +86,18 @@ The secondary screen of the device is displayed.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## FOLD_DISPLAY_MODE_COORDINATION
+## FOLD_DISPLAY_MODE_UNKNOWN
 
 ```TypeScript
-FOLD_DISPLAY_MODE_COORDINATION
+FOLD_DISPLAY_MODE_UNKNOWN = 0
 ```
 
-Both screens of the device are displayed in collaborative mode.
+The display mode of the device is unknown.
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_COORDINATION-End-->
+<!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0--><!--Device-FoldDisplayMode-FOLD_DISPLAY_MODE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

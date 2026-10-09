@@ -14,24 +14,6 @@ Enumerates output type of hilog.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-DEFAULT Default output type, equivalent to CONSOLE_ONLY.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-OutputType-DEFAULT = 0--><!--Device-OutputType-DEFAULT = 0-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiLog
-
 ## CONSOLE_ONLY
 
 ```TypeScript
@@ -47,6 +29,24 @@ CONSOLE_ONLY Hilog is output to the console only, equivalent to DEFAULT.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-OutputType-CONSOLE_ONLY = 0--><!--Device-OutputType-CONSOLE_ONLY = 0-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiLog
+
+## DEFAULT
+
+```TypeScript
+DEFAULT = 0
+```
+
+DEFAULT Default output type, equivalent to CONSOLE_ONLY.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-OutputType-DEFAULT = 0--><!--Device-OutputType-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
@@ -68,24 +68,6 @@ PRIVATE_SANDBOX_ONLY Hilog is output to files in its own private sandbox.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
-## SHARE_SANDBOX_ONLY
-
-```TypeScript
-SHARE_SANDBOX_ONLY = 2
-```
-
-SHARE_SANDBOX_ONLY Hilog is output to files in its own sandbox, accessible to itself and the hiview service.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-OutputType-SHARE_SANDBOX_ONLY = 2--><!--Device-OutputType-SHARE_SANDBOX_ONLY = 2-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiLog
-
 ## PRIVATE_SANDBOX_WITH_CONSOLE
 
 ```TypeScript
@@ -101,6 +83,24 @@ PRIVATE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and PRIVATE_SANDBOX_ONLY a
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3--><!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiLog
+
+## SHARE_SANDBOX_ONLY
+
+```TypeScript
+SHARE_SANDBOX_ONLY = 2
+```
+
+SHARE_SANDBOX_ONLY Hilog is output to files in its own sandbox, accessible to itself and the hiview service.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-OutputType-SHARE_SANDBOX_ONLY = 2--><!--Device-OutputType-SHARE_SANDBOX_ONLY = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 

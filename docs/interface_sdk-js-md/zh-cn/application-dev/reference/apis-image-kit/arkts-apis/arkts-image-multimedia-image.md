@@ -67,10 +67,8 @@ import { image } from '@kit.ImageKit';
 | [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) | 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。 |
 | [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) | 使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 |
 | [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) | Creates an empty PixelMap. |
-| [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator1) | 通过宽、高、图片格式、容量创建ImageCreator实例。 |
 | [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator2) | 通过图片大小、图片格式、容量创建ImageCreator实例。 |
 | [createImagePacker](arkts-image-image-createimagepacker-f.md) | 创建ImagePacker实例。 |
-| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver1) | 通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver2) | 通过图片大小、图片格式、容量创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver4) | 通过ImageReceiverOptions创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 | [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource1) | 通过传入的uri创建ImageSource实例。 |
@@ -106,6 +104,8 @@ import { image } from '@kit.ImageKit';
 | [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap2) | Transforms pixelmap from premultiplied alpha format to unpremultiplied alpha format. |
 | [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md) | 获取支持编码的图片格式，图片格式以mime type表示。 |
 | [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md) | 获取支持解码的图片格式，图片格式以mime type表示。 |
+| [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator1) | 通过宽、高、图片格式、容量创建ImageCreator实例。 |
+| [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver1) | 通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -145,7 +145,6 @@ import { image } from '@kit.ImageKit';
 | [DecodingOptionsForPicture](arkts-image-image-decodingoptionsforpicture-i.md) | 图像解码设置选项。 |
 | [DecodingOptionsForThumbnail](arkts-image-image-decodingoptionsforthumbnail-i.md) | 缩略图解码参数选项。 |
 | [GainmapChannel](arkts-image-image-gainmapchannel-i.md) | Gainmap图单个通道的数据内容，参考ISO 21496-1。 |
-| [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 表示查询图片属性的索引。 |
 | [HdrComposeOptions](arkts-image-image-hdrcomposeoptions-i.md) | Picture合成HDR时可配置的参数选项。 |
 | [HdrGainmapMetadata](arkts-image-image-hdrgainmapmetadata-i.md) | Gainmap使用的元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_GAINMAP_METADATA关键字对应的值，参考ISO 21496-1。 |
 | [HdrStaticMetadata](arkts-image-image-hdrstaticmetadata-i.md) | 静态元数据值，[HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md)中HDR_STATIC_METADATA关键字对应的值。 |
@@ -175,6 +174,7 @@ import { image } from '@kit.ImageKit';
 | [XMPEnumerateOptions](arkts-image-image-xmpenumerateoptions-i.md) | 表示XMP枚举选项。 |
 | [XMPNamespace](arkts-image-image-xmpnamespace-i.md) | 表示XMP命名空间。 |
 | [XMPTag](arkts-image-image-xmptag-i.md) | 表示XMP标签信息。 |
+| [GetImagePropertyOptions](arkts-image-image-getimagepropertyoptions-i.md) | 表示查询图片属性的索引。 |
 
 <!--Del-->
 ### 接口（系统接口）

@@ -1,4 +1,4 @@
-# fileIo(文件管理)
+# fileIo（文件管理）
 
 ```TypeScript
 declare namespace fileIo

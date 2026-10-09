@@ -12,38 +12,6 @@ Enumerates the response codes for an HTTP request.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## OK
-
-```TypeScript
-OK = 200
-```
-
-The request is successful. This return code is generally used for GET and POST requests.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## CREATED
-
-```TypeScript
-CREATED = 201
-```
-
-"Created." The request has been successfully sent and a new resource is created.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-CREATED = 201--><!--Device-ResponseCode-CREATED = 201-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
 ## ACCEPTED
 
 ```TypeScript
@@ -60,243 +28,19 @@ ACCEPTED = 202
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## NOT_AUTHORITATIVE
+## BAD_GATEWAY
 
 ```TypeScript
-NOT_AUTHORITATIVE = 203
+BAD_GATEWAY = 502
 ```
 
-"Non-Authoritative Information." The request is successful.
+"Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-NOT_AUTHORITATIVE = 203--><!--Device-ResponseCode-NOT_AUTHORITATIVE = 203-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## NO_CONTENT
-
-```TypeScript
-NO_CONTENT = 204
-```
-
-"No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-NO_CONTENT = 204--><!--Device-ResponseCode-NO_CONTENT = 204-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## RESET
-
-```TypeScript
-RESET = 205
-```
-
-"Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-RESET = 205--><!--Device-ResponseCode-RESET = 205-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## PARTIAL
-
-```TypeScript
-PARTIAL = 206
-```
-
-"Partial Content." The server has successfully fulfilled the partial GET request for a given resource.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-PARTIAL = 206--><!--Device-ResponseCode-PARTIAL = 206-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## MULT_CHOICE
-
-```TypeScript
-MULT_CHOICE = 300
-```
-
-"Multiple Choices." The requested resource corresponds to any one of a set of representations.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## MOVED_PERM
-
-```TypeScript
-MOVED_PERM = 301
-```
-
-"Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-MOVED_PERM = 301--><!--Device-ResponseCode-MOVED_PERM = 301-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## MOVED_TEMP
-
-```TypeScript
-MOVED_TEMP = 302
-```
-
-"Moved Temporarily." The requested resource is moved temporarily to a different URI.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-MOVED_TEMP = 302--><!--Device-ResponseCode-MOVED_TEMP = 302-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## SEE_OTHER
-
-```TypeScript
-SEE_OTHER = 303
-```
-
-"See Other." The response to the request can be found under a different URI.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-SEE_OTHER = 303--><!--Device-ResponseCode-SEE_OTHER = 303-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## NOT_MODIFIED
-
-```TypeScript
-NOT_MODIFIED = 304
-```
-
-"Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-NOT_MODIFIED = 304--><!--Device-ResponseCode-NOT_MODIFIED = 304-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## USE_PROXY
-
-```TypeScript
-USE_PROXY = 305
-```
-
-"Use Proxy." The requested resource can only be accessed through the proxy.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-USE_PROXY = 305--><!--Device-ResponseCode-USE_PROXY = 305-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## BAD_REQUEST
-
-```TypeScript
-BAD_REQUEST = 400
-```
-
-"Bad Request." The request could not be understood by the server due to incorrect syntax.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## UNAUTHORIZED
-
-```TypeScript
-UNAUTHORIZED = 401
-```
-
-"Unauthorized." The request requires user authentication.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-UNAUTHORIZED = 401--><!--Device-ResponseCode-UNAUTHORIZED = 401-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## PAYMENT_REQUIRED
-
-```TypeScript
-PAYMENT_REQUIRED = 402
-```
-
-"Payment Required." This code is reserved for future use.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-PAYMENT_REQUIRED = 402--><!--Device-ResponseCode-PAYMENT_REQUIRED = 402-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## FORBIDDEN
-
-```TypeScript
-FORBIDDEN = 403
-```
-
-"Forbidden." The server understands the request but refuses to process it.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-FORBIDDEN = 403--><!--Device-ResponseCode-FORBIDDEN = 403-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## NOT_FOUND
-
-```TypeScript
-NOT_FOUND = 404
-```
-
-"Not Found." The server does not find anything matching the Request-URI.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-NOT_FOUND = 404--><!--Device-ResponseCode-NOT_FOUND = 404-End-->
+<!--Device-ResponseCode-BAD_GATEWAY = 502--><!--Device-ResponseCode-BAD_GATEWAY = 502-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -316,35 +60,19 @@ BAD_METHOD = 405
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## NOT_ACCEPTABLE
+## BAD_REQUEST
 
 ```TypeScript
-NOT_ACCEPTABLE = 406
+BAD_REQUEST = 400
 ```
 
-"Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request.
+"Bad Request." The request could not be understood by the server due to incorrect syntax.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-NOT_ACCEPTABLE = 406--><!--Device-ResponseCode-NOT_ACCEPTABLE = 406-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## PROXY_AUTH
-
-```TypeScript
-PROXY_AUTH = 407
-```
-
-"Proxy Authentication Required." The request requires user authentication with the proxy.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-PROXY_AUTH = 407--><!--Device-ResponseCode-PROXY_AUTH = 407-End-->
+<!--Device-ResponseCode-BAD_REQUEST = 400--><!--Device-ResponseCode-BAD_REQUEST = 400-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -380,51 +108,19 @@ CONFLICT = 409
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## GONE
+## CREATED
 
 ```TypeScript
-GONE = 410
+CREATED = 201
 ```
 
-"Gone." The requested resource has been deleted permanently and is no longer available.
+"Created." The request has been successfully sent and a new resource is created.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-GONE = 410--><!--Device-ResponseCode-GONE = 410-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## LENGTH_REQUIRED
-
-```TypeScript
-LENGTH_REQUIRED = 411
-```
-
-"Length Required." The server refuses to process the request without a defined Content-Length.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-LENGTH_REQUIRED = 411--><!--Device-ResponseCode-LENGTH_REQUIRED = 411-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## PRECON_FAILED
-
-```TypeScript
-PRECON_FAILED = 412
-```
-
-"Precondition Failed." The precondition in the request is incorrect.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ResponseCode-PRECON_FAILED = 412--><!--Device-ResponseCode-PRECON_FAILED = 412-End-->
+<!--Device-ResponseCode-CREATED = 201--><!--Device-ResponseCode-CREATED = 201-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -444,51 +140,51 @@ ENTITY_TOO_LARGE = 413
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## REQ_TOO_LONG
+## FORBIDDEN
 
 ```TypeScript
-REQ_TOO_LONG = 414
+FORBIDDEN = 403
 ```
 
-"Request-URI Too Long." The Request-URI is too long for the server to process.
+"Forbidden." The server understands the request but refuses to process it.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-REQ_TOO_LONG = 414--><!--Device-ResponseCode-REQ_TOO_LONG = 414-End-->
+<!--Device-ResponseCode-FORBIDDEN = 403--><!--Device-ResponseCode-FORBIDDEN = 403-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## UNSUPPORTED_TYPE
+## GATEWAY_TIMEOUT
 
 ```TypeScript
-UNSUPPORTED_TYPE = 415
+GATEWAY_TIMEOUT = 504
 ```
 
-"Unsupported Media Type." The server is unable to process the media format in the request.
+"Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-UNSUPPORTED_TYPE = 415--><!--Device-ResponseCode-UNSUPPORTED_TYPE = 415-End-->
+<!--Device-ResponseCode-GATEWAY_TIMEOUT = 504--><!--Device-ResponseCode-GATEWAY_TIMEOUT = 504-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## RANGE_NOT_SATISFIABLE
+## GONE
 
 ```TypeScript
-RANGE_NOT_SATISFIABLE = 416
+GONE = 410
 ```
 
-"Range Not Satisfiable." The server cannot serve the requested ranges.
+"Gone." The requested resource has been deleted permanently and is no longer available.
 
-**Since:** 12
+**Since:** 6
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416-End-->
+<!--Device-ResponseCode-GONE = 410--><!--Device-ResponseCode-GONE = 410-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -508,6 +204,134 @@ INTERNAL_ERROR = 500
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## LENGTH_REQUIRED
+
+```TypeScript
+LENGTH_REQUIRED = 411
+```
+
+"Length Required." The server refuses to process the request without a defined Content-Length.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-LENGTH_REQUIRED = 411--><!--Device-ResponseCode-LENGTH_REQUIRED = 411-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## MOVED_PERM
+
+```TypeScript
+MOVED_PERM = 301
+```
+
+"Moved Permanently." The requested resource has been assigned a new permanent URI and any future references to this resource will be redirected to this URI.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-MOVED_PERM = 301--><!--Device-ResponseCode-MOVED_PERM = 301-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## MOVED_TEMP
+
+```TypeScript
+MOVED_TEMP = 302
+```
+
+"Moved Temporarily." The requested resource is moved temporarily to a different URI.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-MOVED_TEMP = 302--><!--Device-ResponseCode-MOVED_TEMP = 302-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## MULT_CHOICE
+
+```TypeScript
+MULT_CHOICE = 300
+```
+
+"Multiple Choices." The requested resource corresponds to any one of a set of representations.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-MULT_CHOICE = 300--><!--Device-ResponseCode-MULT_CHOICE = 300-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## NO_CONTENT
+
+```TypeScript
+NO_CONTENT = 204
+```
+
+"No Content." The server has successfully fulfilled the request but there is no additional content to send in the response payload body.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-NO_CONTENT = 204--><!--Device-ResponseCode-NO_CONTENT = 204-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## NOT_ACCEPTABLE
+
+```TypeScript
+NOT_ACCEPTABLE = 406
+```
+
+"Not Acceptable." The server cannot fulfill the request according to the content characteristics of the request.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-NOT_ACCEPTABLE = 406--><!--Device-ResponseCode-NOT_ACCEPTABLE = 406-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## NOT_AUTHORITATIVE
+
+```TypeScript
+NOT_AUTHORITATIVE = 203
+```
+
+"Non-Authoritative Information." The request is successful.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-NOT_AUTHORITATIVE = 203--><!--Device-ResponseCode-NOT_AUTHORITATIVE = 203-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## NOT_FOUND
+
+```TypeScript
+NOT_FOUND = 404
+```
+
+"Not Found." The server does not find anything matching the Request-URI.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-NOT_FOUND = 404--><!--Device-ResponseCode-NOT_FOUND = 404-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## NOT_IMPLEMENTED
 
 ```TypeScript
@@ -524,19 +348,179 @@ NOT_IMPLEMENTED = 501
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## BAD_GATEWAY
+## NOT_MODIFIED
 
 ```TypeScript
-BAD_GATEWAY = 502
+NOT_MODIFIED = 304
 ```
 
-"Bad Gateway." The server acting as a gateway or proxy receives an invalid response from the upstream server.
+"Not Modified." The client has performed a conditional GET request and access is allowed, but the content has not been modified.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-BAD_GATEWAY = 502--><!--Device-ResponseCode-BAD_GATEWAY = 502-End-->
+<!--Device-ResponseCode-NOT_MODIFIED = 304--><!--Device-ResponseCode-NOT_MODIFIED = 304-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## OK
+
+```TypeScript
+OK = 200
+```
+
+The request is successful. This return code is generally used for GET and POST requests.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-OK = 200--><!--Device-ResponseCode-OK = 200-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## PARTIAL
+
+```TypeScript
+PARTIAL = 206
+```
+
+"Partial Content." The server has successfully fulfilled the partial GET request for a given resource.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-PARTIAL = 206--><!--Device-ResponseCode-PARTIAL = 206-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## PAYMENT_REQUIRED
+
+```TypeScript
+PAYMENT_REQUIRED = 402
+```
+
+"Payment Required." This code is reserved for future use.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-PAYMENT_REQUIRED = 402--><!--Device-ResponseCode-PAYMENT_REQUIRED = 402-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## PRECON_FAILED
+
+```TypeScript
+PRECON_FAILED = 412
+```
+
+"Precondition Failed." The precondition in the request is incorrect.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-PRECON_FAILED = 412--><!--Device-ResponseCode-PRECON_FAILED = 412-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## PROXY_AUTH
+
+```TypeScript
+PROXY_AUTH = 407
+```
+
+"Proxy Authentication Required." The request requires user authentication with the proxy.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-PROXY_AUTH = 407--><!--Device-ResponseCode-PROXY_AUTH = 407-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## RANGE_NOT_SATISFIABLE
+
+```TypeScript
+RANGE_NOT_SATISFIABLE = 416
+```
+
+"Range Not Satisfiable." The server cannot serve the requested ranges.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416--><!--Device-ResponseCode-RANGE_NOT_SATISFIABLE = 416-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## REQ_TOO_LONG
+
+```TypeScript
+REQ_TOO_LONG = 414
+```
+
+"Request-URI Too Long." The Request-URI is too long for the server to process.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-REQ_TOO_LONG = 414--><!--Device-ResponseCode-REQ_TOO_LONG = 414-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## RESET
+
+```TypeScript
+RESET = 205
+```
+
+"Reset Content." The server has successfully fulfilled the request and desires that the user agent reset the content.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-RESET = 205--><!--Device-ResponseCode-RESET = 205-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## SEE_OTHER
+
+```TypeScript
+SEE_OTHER = 303
+```
+
+"See Other." The response to the request can be found under a different URI.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-SEE_OTHER = 303--><!--Device-ResponseCode-SEE_OTHER = 303-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## UNAUTHORIZED
+
+```TypeScript
+UNAUTHORIZED = 401
+```
+
+"Unauthorized." The request requires user authentication.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-UNAUTHORIZED = 401--><!--Device-ResponseCode-UNAUTHORIZED = 401-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -556,19 +540,35 @@ UNAVAILABLE = 503
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## GATEWAY_TIMEOUT
+## UNSUPPORTED_TYPE
 
 ```TypeScript
-GATEWAY_TIMEOUT = 504
+UNSUPPORTED_TYPE = 415
 ```
 
-"Gateway Timeout." The server acting as a gateway or proxy does not receive requests from the remote server within the timeout period.
+"Unsupported Media Type." The server is unable to process the media format in the request.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-ResponseCode-GATEWAY_TIMEOUT = 504--><!--Device-ResponseCode-GATEWAY_TIMEOUT = 504-End-->
+<!--Device-ResponseCode-UNSUPPORTED_TYPE = 415--><!--Device-ResponseCode-UNSUPPORTED_TYPE = 415-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## USE_PROXY
+
+```TypeScript
+USE_PROXY = 305
+```
+
+"Use Proxy." The requested resource can only be accessed through the proxy.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ResponseCode-USE_PROXY = 305--><!--Device-ResponseCode-USE_PROXY = 305-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 

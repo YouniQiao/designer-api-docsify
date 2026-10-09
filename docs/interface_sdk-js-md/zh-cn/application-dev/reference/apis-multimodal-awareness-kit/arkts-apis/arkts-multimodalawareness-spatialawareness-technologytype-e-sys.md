@@ -34,19 +34,19 @@ BLE_RSSI = 0
 
 **系统接口：** 此接口为系统接口。
 
-## WIFI_RSSI
+## NEAR_LINK
 
 ```TypeScript
-WIFI_RSSI = 1
+NEAR_LINK = 3
 ```
 
-表示WIFI强度。
+表示星闪强度。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-TechnologyType-WIFI_RSSI = 1--><!--Device-TechnologyType-WIFI_RSSI = 1-End-->
+<!--Device-TechnologyType-NEAR_LINK = 3--><!--Device-TechnologyType-NEAR_LINK = 3-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -70,24 +70,6 @@ ULTRASOUND = 2
 
 **系统接口：** 此接口为系统接口。
 
-## NEAR_LINK
-
-```TypeScript
-NEAR_LINK = 3
-```
-
-表示星闪强度。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TechnologyType-NEAR_LINK = 3--><!--Device-TechnologyType-NEAR_LINK = 3-End-->
-
-**系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
-
-**系统接口：** 此接口为系统接口。
-
 ## WIFI_BLE_RSSI
 
 ```TypeScript
@@ -101,6 +83,24 @@ WIFI_BLE_RSSI = 4
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TechnologyType-WIFI_BLE_RSSI = 4--><!--Device-TechnologyType-WIFI_BLE_RSSI = 4-End-->
+
+**系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**系统接口：** 此接口为系统接口。
+
+## WIFI_RSSI
+
+```TypeScript
+WIFI_RSSI = 1
+```
+
+表示WIFI强度。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TechnologyType-WIFI_RSSI = 1--><!--Device-TechnologyType-WIFI_RSSI = 1-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

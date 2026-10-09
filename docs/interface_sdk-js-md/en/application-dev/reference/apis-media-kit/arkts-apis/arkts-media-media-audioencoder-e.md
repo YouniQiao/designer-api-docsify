@@ -16,15 +16,13 @@ Enumerates the audio encoding formats.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-## DEFAULT
+## AAC_LC
 
 ```TypeScript
-DEFAULT = 0
+AAC_LC = 3
 ```
 
-Default encoding format.
-
-This API is defined but not implemented yet.
+Advanced Audio Coding Low Complexity (AAC-LC).
 
 Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AAC** in [CodecMimeType](arkts-media-media-codecmimetype-e.md) instead.
 
@@ -32,7 +30,9 @@ Note: It is supported since API version 6 and deprecated since API version 8. Yo
 
 **Deprecated since:** 8
 
-<!--Device-AudioEncoder-DEFAULT = 0--><!--Device-AudioEncoder-DEFAULT = 0-End-->
+**Substitutes:** [AUDIO_AAC](arkts-media-media-codecmimetype-e.md#audio_aac)
+
+<!--Device-AudioEncoder-AAC_LC = 3--><!--Device-AudioEncoder-AAC_LC = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -80,13 +80,15 @@ Note: It is supported since API version 6 and deprecated since API version 8. Yo
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-## AAC_LC
+## DEFAULT
 
 ```TypeScript
-AAC_LC = 3
+DEFAULT = 0
 ```
 
-Advanced Audio Coding Low Complexity (AAC-LC).
+Default encoding format.
+
+This API is defined but not implemented yet.
 
 Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **AUDIO_AAC** in [CodecMimeType](arkts-media-media-codecmimetype-e.md) instead.
 
@@ -94,9 +96,7 @@ Note: It is supported since API version 6 and deprecated since API version 8. Yo
 
 **Deprecated since:** 8
 
-**Substitutes:** [AUDIO_AAC](arkts-media-media-codecmimetype-e.md#audio_aac)
-
-<!--Device-AudioEncoder-AAC_LC = 3--><!--Device-AudioEncoder-AAC_LC = 3-End-->
+<!--Device-AudioEncoder-DEFAULT = 0--><!--Device-AudioEncoder-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 

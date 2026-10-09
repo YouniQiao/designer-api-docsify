@@ -12,22 +12,6 @@ Enumerates the reasons for audio stream device changes.
 
 **System capability:** SystemCapability.Multimedia.Audio.Device
 
-## REASON_UNKNOWN
-
-```TypeScript
-REASON_UNKNOWN = 0
-```
-
-Unknown reason.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0--><!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Device
-
 ## REASON_NEW_DEVICE_AVAILABLE
 
 ```TypeScript
@@ -101,5 +85,21 @@ An audio stream with higher priority appears.
 **Since:** 20
 
 <!--Device-AudioStreamDeviceChangeReason-REASON_STREAM_PRIORITY_CHANGED = 5--><!--Device-AudioStreamDeviceChangeReason-REASON_STREAM_PRIORITY_CHANGED = 5-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Device
+
+## REASON_UNKNOWN
+
+```TypeScript
+REASON_UNKNOWN = 0
+```
+
+Unknown reason.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0--><!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Device

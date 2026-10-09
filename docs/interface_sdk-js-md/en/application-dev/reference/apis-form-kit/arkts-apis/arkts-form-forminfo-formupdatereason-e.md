@@ -12,24 +12,6 @@ Form update reason.
 
 **System capability:** SystemCapability.Ability.Form
 
-## UNKNOWN
-
-```TypeScript
-UNKNOWN = -1
-```
-
-The reason for the form update is unknown.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
-
-<!--Device-FormUpdateReason-UNKNOWN = -1--><!--Device-FormUpdateReason-UNKNOWN = -1-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
 ## FORM_NODE_REUSE
 
 ```TypeScript
@@ -45,5 +27,23 @@ The reason for the form update is node reuse.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
 <!--Device-FormUpdateReason-FORM_NODE_REUSE = 0--><!--Device-FormUpdateReason-FORM_NODE_REUSE = 0-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = -1
+```
+
+The reason for the form update is unknown.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-FormUpdateReason-UNKNOWN = -1--><!--Device-FormUpdateReason-UNKNOWN = -1-End-->
 
 **System capability:** SystemCapability.Ability.Form

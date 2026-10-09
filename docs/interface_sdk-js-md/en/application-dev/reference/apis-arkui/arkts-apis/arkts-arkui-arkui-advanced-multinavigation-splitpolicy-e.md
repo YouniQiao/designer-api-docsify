@@ -12,24 +12,6 @@ Enumerates the types of pages in **MultiNavigation**.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## HOME_PAGE
-
-```TypeScript
-HOME_PAGE = 0
-```
-
-Home page type. Displayed in full-screen mode. Used as the navigation start page of an app.
-
-**Since:** 14
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 14.
-
-<!--Device-SplitPolicy-HOME_PAGE = 0--><!--Device-SplitPolicy-HOME_PAGE = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## DETAIL_PAGE
 
 ```TypeScript
@@ -63,5 +45,23 @@ Full-screen page type. Displayed in full-screen mode. Used for pages that requir
 **Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-SplitPolicy-FULL_PAGE = 2--><!--Device-SplitPolicy-FULL_PAGE = 2-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## HOME_PAGE
+
+```TypeScript
+HOME_PAGE = 0
+```
+
+Home page type. Displayed in full-screen mode. Used as the navigation start page of an app.
+
+**Since:** 14
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 14.
+
+<!--Device-SplitPolicy-HOME_PAGE = 0--><!--Device-SplitPolicy-HOME_PAGE = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

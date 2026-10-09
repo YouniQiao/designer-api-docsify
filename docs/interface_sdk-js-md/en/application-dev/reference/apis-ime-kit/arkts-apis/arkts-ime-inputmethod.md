@@ -30,8 +30,6 @@ import { inputMethod } from '@kit.IMEKit';
 | [getCurrentInputMethod](arkts-ime-inputmethod-getcurrentinputmethod-f.md#getcurrentinputmethod1) | Obtains the current input method. This API returns the result synchronously. |
 | [getCurrentInputMethodSubtype](arkts-ime-inputmethod-getcurrentinputmethodsubtype-f.md#getcurrentinputmethodsubtype1) | Obtains the current input method subtype. |
 | [getDefaultInputMethod](arkts-ime-inputmethod-getdefaultinputmethod-f.md#getdefaultinputmethod1) | Obtains the default input method. |
-| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md) | Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance. |
-| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md) | Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance. |
 | [getSetting](arkts-ime-inputmethod-getsetting-f.md) | Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance. |
 | [getSystemInputMethodConfigAbility](arkts-ime-inputmethod-getsysteminputmethodconfigability-f.md#getsysteminputmethodconfigability1) | Obtains the information about the input method configuration page ability. |
 | [offAttachmentDidFail](arkts-ime-inputmethod-offattachmentdidfail-f.md) | Unsubscribes from attachment failure events. This API uses an asynchronous callback to return the result. |
@@ -43,6 +41,8 @@ import { inputMethod } from '@kit.IMEKit';
 | [switchCurrentInputMethodSubtype](arkts-ime-inputmethod-switchcurrentinputmethodsubtype-f.md#switchcurrentinputmethodsubtype2) | Switches to another subtype of this input method. This API uses a promise to return the result.<br> <br> |
 | [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod1) | Switches to another input method. This API uses an asynchronous callback to return the result.<br> <br> |
 | [switchInputMethod](arkts-ime-inputmethod-switchinputmethod-f.md#switchinputmethod2) | Switches to another input method. This API uses a promise to return the result.<br> <br> |
+| [getInputMethodController](arkts-ime-inputmethod-getinputmethodcontroller-f.md) | Obtains an [InputMethodController](arkts-ime-inputmethod-inputmethodcontroller-i.md) instance. |
+| [getInputMethodSetting](arkts-ime-inputmethod-getinputmethodsetting-f.md) | Obtains an [InputMethodSetting](arkts-ime-inputmethod-inputmethodsetting-i.md) instance. |
 
 <!--Del-->
 ### Functions(System API)

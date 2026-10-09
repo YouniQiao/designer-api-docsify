@@ -1,6 +1,6 @@
 # ArkTS API<!--arkts-sensorservicekit-->
 
-- [@ohos.sensor(传感器模块)](arkts-sensorservice-sensor.md)
+- [@ohos.sensor（传感器模块）](arkts-sensorservice-sensor.md)
   - [createQuaternion](arkts-sensorservice-sensor-createquaternion-f.md)
   - [createRotationMatrix](arkts-sensorservice-sensor-createrotationmatrix-f.md)
   - [getAltitude](arkts-sensorservice-sensor-getaltitude-f.md)
@@ -23,10 +23,10 @@
   - [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md)
   - [off](arkts-sensorservice-sensor-off-f.md)
   <!--Del-->
-  - [off(系统接口)](arkts-sensorservice-sensor-off-f-sys.md)<!--DelEnd-->
+  - [off（系统接口）](arkts-sensorservice-sensor-off-f-sys.md)<!--DelEnd-->
   - [on](arkts-sensorservice-sensor-on-f.md)
   <!--Del-->
-  - [on(系统接口)](arkts-sensorservice-sensor-on-f-sys.md)<!--DelEnd-->
+  - [on（系统接口）](arkts-sensorservice-sensor-on-f-sys.md)<!--DelEnd-->
   - [once](arkts-sensorservice-sensor-once-f.md)
   - [transformCoordinateSystem](arkts-sensorservice-sensor-transformcoordinatesystem-f.md)
   - [transformRotationMatrix](arkts-sensorservice-sensor-transformrotationmatrix-f.md)
@@ -35,7 +35,7 @@
   - [AmbientTemperatureResponse](arkts-sensorservice-sensor-ambienttemperatureresponse-i.md)
   - [BarometerResponse](arkts-sensorservice-sensor-barometerresponse-i.md)
   <!--Del-->
-  - [ColorResponse(系统接口)](arkts-sensorservice-sensor-colorresponse-i-sys.md)<!--DelEnd-->
+  - [ColorResponse（系统接口）](arkts-sensorservice-sensor-colorresponse-i-sys.md)<!--DelEnd-->
   - [CoordinatesOptions](arkts-sensorservice-sensor-coordinatesoptions-i.md)
   - [FusionPressureResponse](arkts-sensorservice-sensor-fusionpressureresponse-i.md)
   - [GeomagneticResponse](arkts-sensorservice-sensor-geomagneticresponse-i.md)
@@ -59,7 +59,7 @@
   - [RotationMatrixResponse](arkts-sensorservice-sensor-rotationmatrixresponse-i.md)
   - [RotationVectorResponse](arkts-sensorservice-sensor-rotationvectorresponse-i.md)
   <!--Del-->
-  - [SarResponse(系统接口)](arkts-sensorservice-sensor-sarresponse-i-sys.md)<!--DelEnd-->
+  - [SarResponse（系统接口）](arkts-sensorservice-sensor-sarresponse-i-sys.md)<!--DelEnd-->
   - [Sensor](arkts-sensorservice-sensor-sensor-i.md)
   - [SensorInfoParam](arkts-sensorservice-sensor-sensorinfoparam-i.md)
   - [SensorStatusEvent](arkts-sensorservice-sensor-sensorstatusevent-i.md)
@@ -69,9 +69,9 @@
   - [SensorAccuracy](arkts-sensorservice-sensor-sensoraccuracy-e.md)
   - [SensorId](arkts-sensorservice-sensor-sensorid-e.md)
   <!--Del-->
-  - [SensorId(系统接口)](arkts-sensorservice-sensor-sensorid-e-sys.md)<!--DelEnd-->
+  - [SensorId（系统接口）](arkts-sensorservice-sensor-sensorid-e-sys.md)<!--DelEnd-->
   - [SensorType](arkts-sensorservice-sensor-sensortype-e.md)
-- [@ohos.vibrator(振动控制模块)](arkts-sensorservice-vibrator.md)
+- [@ohos.vibrator（振动控制模块）](arkts-sensorservice-vibrator.md)
   - [getEffectInfoSync](arkts-sensorservice-vibrator-geteffectinfosync-f.md)
   - [getVibratorInfoSync](arkts-sensorservice-vibrator-getvibratorinfosync-f.md)
   - [isHdHapticSupported](arkts-sensorservice-vibrator-ishdhapticsupported-f.md)
@@ -91,7 +91,7 @@
   - [TransientParam](arkts-sensorservice-vibrator-transientparam-i.md)
   - [VibrateAttribute](arkts-sensorservice-vibrator-vibrateattribute-i.md)
   <!--Del-->
-  - [VibrateAttribute(系统接口)](arkts-sensorservice-vibrator-vibrateattribute-i-sys.md)<!--DelEnd-->
+  - [VibrateAttribute（系统接口）](arkts-sensorservice-vibrator-vibrateattribute-i-sys.md)<!--DelEnd-->
   - [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md)
   - [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md)
   - [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md)
@@ -108,7 +108,7 @@
   - [HapticFeedback](arkts-sensorservice-vibrator-hapticfeedback-e.md)
   - [VibratorEventType](arkts-sensorservice-vibrator-vibratoreventtype-e.md)
   - [VibratorStopMode](arkts-sensorservice-vibrator-vibratorstopmode-e.md)
-- [@system.sensor(传感器模块)](arkts-sensorservice-system-sensor.md)
+- [@system.sensor（传感器模块）](arkts-sensorservice-system-sensor.md)
   - [Sensor](arkts-sensorservice-system-sensor-sensor-c.md)
   - [AccelerometerResponse](arkts-sensorservice-system-sensor-accelerometerresponse-i.md)
   - [BarometerResponse](arkts-sensorservice-system-sensor-barometerresponse-i.md)
@@ -131,6 +131,6 @@
   - [SubscribeOnBodyStateOptions](arkts-sensorservice-system-sensor-subscribeonbodystateoptions-i.md)
   - [SubscribeProximityOptions](arkts-sensorservice-system-sensor-subscribeproximityoptions-i.md)
   - [SubscribeStepCounterOptions](arkts-sensorservice-system-sensor-subscribestepcounteroptions-i.md)
-- [@system.vibrator(振动控制模块)](arkts-sensorservice-system-vibrator.md)
+- [@system.vibrator（振动控制模块）](arkts-sensorservice-system-vibrator.md)
   - [Vibrator](arkts-sensorservice-system-vibrator-vibrator-c.md)
   - [VibrateOptions](arkts-sensorservice-system-vibrator-vibrateoptions-i.md)

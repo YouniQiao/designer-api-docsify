@@ -28,6 +28,22 @@ ALL = 0x0
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## DISABLE_ALL
+
+```TypeScript
+DISABLE_ALL = 0x1 | 0x2
+```
+
+高度修饰符设置为禁止段落中第一行上升、最后一行下降。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
 ## DISABLE_FIRST_ASCENT
 
 ```TypeScript
@@ -57,21 +73,5 @@ DISABLE_LAST_ASCENT = 0x2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2--><!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-## DISABLE_ALL
-
-```TypeScript
-DISABLE_ALL = 0x1 | 0x2
-```
-
-高度修饰符设置为禁止段落中第一行上升、最后一行下降。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

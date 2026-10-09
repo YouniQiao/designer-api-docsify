@@ -19,13 +19,13 @@ declare enum SeekMode
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## PreviousKeyframe
+## Accurate
 
 ```TypeScript
-PreviousKeyframe
+Accurate
 ```
 
-Seek to the nearest previous keyframe.
+Seek to a specific frame, regardless of whether the frame is a keyframe.
 
 **起始版本：** 8
 
@@ -33,25 +33,7 @@ Seek to the nearest previous keyframe.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-SeekMode-PreviousKeyframe--><!--Device-SeekMode-PreviousKeyframe-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## NextKeyframe
-
-```TypeScript
-NextKeyframe
-```
-
-Seek to the nearest next keyframe.
-
-**起始版本：** 8
-
-**模型约束：** 此接口可在Stage模型和FA模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-SeekMode-NextKeyframe--><!--Device-SeekMode-NextKeyframe-End-->
+<!--Device-SeekMode-Accurate--><!--Device-SeekMode-Accurate-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -73,13 +55,13 @@ Seek to the nearest keyframe.
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## Accurate
+## NextKeyframe
 
 ```TypeScript
-Accurate
+NextKeyframe
 ```
 
-Seek to a specific frame, regardless of whether the frame is a keyframe.
+Seek to the nearest next keyframe.
 
 **起始版本：** 8
 
@@ -87,6 +69,24 @@ Seek to a specific frame, regardless of whether the frame is a keyframe.
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-SeekMode-Accurate--><!--Device-SeekMode-Accurate-End-->
+<!--Device-SeekMode-NextKeyframe--><!--Device-SeekMode-NextKeyframe-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## PreviousKeyframe
+
+```TypeScript
+PreviousKeyframe
+```
+
+Seek to the nearest previous keyframe.
+
+**起始版本：** 8
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SeekMode-PreviousKeyframe--><!--Device-SeekMode-PreviousKeyframe-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

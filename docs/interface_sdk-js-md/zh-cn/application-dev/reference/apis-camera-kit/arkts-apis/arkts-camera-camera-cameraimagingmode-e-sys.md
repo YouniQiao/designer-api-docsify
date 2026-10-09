@@ -32,24 +32,6 @@ Auto imaging mode.
 
 **系统接口：** 此接口为系统接口。
 
-## RGB
-
-```TypeScript
-RGB = 1
-```
-
-RGB imaging mode.
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-CameraImagingMode-RGB = 1--><!--Device-CameraImagingMode-RGB = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-**系统接口：** 此接口为系统接口。
-
 ## IR
 
 ```TypeScript
@@ -63,6 +45,24 @@ IR imaging mode.
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-CameraImagingMode-IR = 2--><!--Device-CameraImagingMode-IR = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+## RGB
+
+```TypeScript
+RGB = 1
+```
+
+RGB imaging mode.
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CameraImagingMode-RGB = 1--><!--Device-CameraImagingMode-RGB = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

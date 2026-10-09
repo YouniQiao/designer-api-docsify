@@ -12,19 +12,19 @@ enum QualityLevel
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
-## NONE
+## HIGH
 
 ```TypeScript
-NONE = 0
+HIGH = 3
 ```
 
-不进行细节增强。
+高质量等级的细节增强，处理速度相对较慢。
 
 **起始版本：** 18
 
 **卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-QualityLevel-NONE = 0--><!--Device-QualityLevel-NONE = 0-End-->
+<!--Device-QualityLevel-HIGH = 3--><!--Device-QualityLevel-HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
@@ -60,18 +60,18 @@ MEDIUM = 2
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
-## HIGH
+## NONE
 
 ```TypeScript
-HIGH = 3
+NONE = 0
 ```
 
-高质量等级的细节增强，处理速度相对较慢。
+不进行细节增强。
 
 **起始版本：** 18
 
 **卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-QualityLevel-HIGH = 3--><!--Device-QualityLevel-HIGH = 3-End-->
+<!--Device-QualityLevel-NONE = 0--><!--Device-QualityLevel-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.VideoProcessingEngine

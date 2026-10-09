@@ -12,20 +12,6 @@ Enumerates the audio session scenes.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
-## AUDIO_SESSION_SCENE_MEDIA
-
-```TypeScript
-AUDIO_SESSION_SCENE_MEDIA = 0
-```
-
-Scene for media.
-
-**Since:** 20
-
-<!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Audio.Core
-
 ## AUDIO_SESSION_SCENE_GAME
 
 ```TypeScript
@@ -37,6 +23,20 @@ Scene for game.
 **Since:** 20
 
 <!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_GAME = 1--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_GAME = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## AUDIO_SESSION_SCENE_MEDIA
+
+```TypeScript
+AUDIO_SESSION_SCENE_MEDIA = 0
+```
+
+Scene for media.
+
+**Since:** 20
+
+<!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0--><!--Device-AudioSessionScene-AUDIO_SESSION_SCENE_MEDIA = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 

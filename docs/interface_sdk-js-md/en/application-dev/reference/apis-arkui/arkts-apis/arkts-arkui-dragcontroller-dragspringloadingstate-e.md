@@ -30,13 +30,13 @@ Initial state when a dragged item enters the component boundary and remains stat
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## UPDATE
+## CANCEL
 
 ```TypeScript
-UPDATE
+CANCEL
 ```
 
-Periodic notification state during sustained hover detection. In this state, periodic updates refresh UI effects to highlight the hover state.
+Interruption state of hover detection triggered by termination events, which include the following: finger or mouse release, window switching, screen off, exiting the component boundary, entering child components, or exceeding the movement threshold within the component. The application will restore the UI style and cancel pending navigation and view switching operations.
 
 **Since:** 20
 
@@ -44,7 +44,7 @@ Periodic notification state during sustained hover detection. In this state, per
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-DragSpringLoadingState-UPDATE--><!--Device-DragSpringLoadingState-UPDATE-End-->
+<!--Device-DragSpringLoadingState-CANCEL--><!--Device-DragSpringLoadingState-CANCEL-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,13 +66,13 @@ Final state indicating completion of the hover detection cycle, which is trigger
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## CANCEL
+## UPDATE
 
 ```TypeScript
-CANCEL
+UPDATE
 ```
 
-Interruption state of hover detection triggered by termination events, which include the following: finger or mouse release, window switching, screen off, exiting the component boundary, entering child components, or exceeding the movement threshold within the component. The application will restore the UI style and cancel pending navigation and view switching operations.
+Periodic notification state during sustained hover detection. In this state, periodic updates refresh UI effects to highlight the hover state.
 
 **Since:** 20
 
@@ -80,6 +80,6 @@ Interruption state of hover detection triggered by termination events, which inc
 
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
-<!--Device-DragSpringLoadingState-CANCEL--><!--Device-DragSpringLoadingState-CANCEL-End-->
+<!--Device-DragSpringLoadingState-UPDATE--><!--Device-DragSpringLoadingState-UPDATE-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

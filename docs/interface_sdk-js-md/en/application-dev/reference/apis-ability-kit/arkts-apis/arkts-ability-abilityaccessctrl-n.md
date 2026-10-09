@@ -47,9 +47,9 @@ import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from
 | Name | Description |
 | --- | --- |
 | [GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md) | Enumerates the permission grant states. |
-| [SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md) | Enumerates the results of the dialog box for redirection to the settings page. |
 | [PermissionStateChangeType](arkts-ability-abilityaccessctrl-permissionstatechangetype-e.md) | Enumerates the operations that trigger permission state changes. |
 | [PermissionStatus](arkts-ability-abilityaccessctrl-permissionstatus-e.md) | Enumerates the permission states. |
+| [SelectedResult](arkts-ability-abilityaccessctrl-selectedresult-e.md) | Enumerates the results of the dialog box for redirection to the settings page. |
 | [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md) | Enumerates the global switch types. |
 
 <!--Del-->

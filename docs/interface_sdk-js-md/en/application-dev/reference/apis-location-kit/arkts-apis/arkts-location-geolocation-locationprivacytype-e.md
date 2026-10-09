@@ -18,6 +18,22 @@ Enum for location privacy type
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## CORE_LOCATION
+
+```TypeScript
+CORE_LOCATION
+```
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
+
+<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
 ## OTHERS
 
 ```TypeScript
@@ -47,21 +63,5 @@ STARTUP
 **Substitutes:** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#startup)
 
 <!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## CORE_LOCATION
-
-```TypeScript
-CORE_LOCATION
-```
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
-
-<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

@@ -14,26 +14,6 @@ declare enum ComponentEventType
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## COMPONENT_UNDEFINED
-
-```TypeScript
-COMPONENT_UNDEFINED = 0
-```
-
-非控件操作事件。
-
-**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
-
-**起始版本：** 22
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0--><!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## COMPONENT_CLICKED
 
 ```TypeScript
@@ -70,24 +50,6 @@ COMPONENT_LONG_CLICKED = 2
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## COMPONENT_SCROLL_START
-
-```TypeScript
-COMPONENT_SCROLL_START = 3
-```
-
-控件滚动开始事件。
-
-**起始版本：** 22
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3--><!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## COMPONENT_SCROLL_END
 
 ```TypeScript
@@ -106,6 +68,24 @@ COMPONENT_SCROLL_END = 4
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
+## COMPONENT_SCROLL_START
+
+```TypeScript
+COMPONENT_SCROLL_START = 3
+```
+
+控件滚动开始事件。
+
+**起始版本：** 22
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3--><!--Device-ComponentEventType-COMPONENT_SCROLL_START = 3-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
 ## COMPONENT_TEXT_CHANGED
 
 ```TypeScript
@@ -119,6 +99,26 @@ COMPONENT_TEXT_CHANGED = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5--><!--Device-ComponentEventType-COMPONENT_TEXT_CHANGED = 5-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+## COMPONENT_UNDEFINED
+
+```TypeScript
+COMPONENT_UNDEFINED = 0
+```
+
+非控件操作事件。
+
+**说明：** 该枚举值仅支持作为返回值，如果作为接口入参会抛出异常。
+
+**起始版本：** 22
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0--><!--Device-ComponentEventType-COMPONENT_UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

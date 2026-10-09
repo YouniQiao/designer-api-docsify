@@ -31,8 +31,6 @@ import { screen } from '@kit.ArkUI';
 | [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens2) | 获取所有的屏幕，使用Promise异步回调。 |
 | [isScreenRotationLocked](arkts-arkui-screen-isscreenrotationlocked-f-sys.md#isscreenrotationlocked1) | 查询当前自动转屏是否锁定，使用callback异步回调。 |
 | [isScreenRotationLocked](arkts-arkui-screen-isscreenrotationlocked-f-sys.md#isscreenrotationlocked2) | 查询当前自动转屏是否锁定，使用Promise异步回调。 |
-| [makeExpand](arkts-arkui-screen-makeexpand-f-sys.md#makeexpand1) | 将屏幕设置为扩展模式，使用callback异步回调。 |
-| [makeExpand](arkts-arkui-screen-makeexpand-f-sys.md#makeexpand2) | 将屏幕设置为扩展模式，使用Promise异步回调。 |
 | [makeMirror](arkts-arkui-screen-makemirror-f-sys.md#makemirror1) | 将屏幕设置为镜像模式，使用callback异步回调。 |
 | [makeMirror](arkts-arkui-screen-makemirror-f-sys.md#makemirror2) | 将屏幕设置为镜像模式，使用Promise异步回调。 |
 | [makeMirrorWithRegion](arkts-arkui-screen-makemirrorwithregion-f-sys.md) | 将屏幕的某一矩形区域设置为镜像模式，使用Promise异步回调。调用该接口后，不建议再进行屏幕的旋转/折叠，否则可能导致镜像内容异常。 |
@@ -51,10 +49,12 @@ import { screen } from '@kit.ArkUI';
 | [setScreenRotationLocked](arkts-arkui-screen-setscreenrotationlocked-f-sys.md#setscreenrotationlocked2) | 设置自动转屏开关是否锁定，使用Promise异步回调。 |
 | [setVirtualScreenSurface](arkts-arkui-screen-setvirtualscreensurface-f-sys.md#setvirtualscreensurface1) | 设置虚拟屏幕的surface，使用callback异步回调。 |
 | [setVirtualScreenSurface](arkts-arkui-screen-setvirtualscreensurface-f-sys.md#setvirtualscreensurface2) | 设置虚拟屏幕的surface，使用Promise异步回调。 |
-| [stopExpand](arkts-arkui-screen-stopexpand-f-sys.md#stopexpand1) | 停止屏幕的扩展模式，使用callback异步回调。 |
-| [stopExpand](arkts-arkui-screen-stopexpand-f-sys.md#stopexpand2) | 停止屏幕的扩展模式，使用Promise异步回调。 |
 | [stopMirror](arkts-arkui-screen-stopmirror-f-sys.md#stopmirror1) | 停止屏幕的镜像模式，使用callback异步回调。 |
 | [stopMirror](arkts-arkui-screen-stopmirror-f-sys.md#stopmirror2) | 停止屏幕的镜像模式，使用Promise异步回调。 |
+| [makeExpand](arkts-arkui-screen-makeexpand-f-sys.md#makeexpand1) | 将屏幕设置为扩展模式，使用callback异步回调。 |
+| [makeExpand](arkts-arkui-screen-makeexpand-f-sys.md#makeexpand2) | 将屏幕设置为扩展模式，使用Promise异步回调。 |
+| [stopExpand](arkts-arkui-screen-stopexpand-f-sys.md#stopexpand1) | 停止屏幕的扩展模式，使用callback异步回调。 |
+| [stopExpand](arkts-arkui-screen-stopexpand-f-sys.md#stopexpand2) | 停止屏幕的扩展模式，使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

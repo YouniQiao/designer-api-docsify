@@ -12,6 +12,22 @@ enum DecoderType
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
+## OH_AVCODEC_MIMETYPE_AUDIO_VIVID
+
+```TypeScript
+OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'
+```
+
+Defination of audio vivid codec type.
+
+**起始版本：** 19
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
 ## OH_AVCODEC_MIMETYPE_VIDEO_AVC
 
 ```TypeScript
@@ -41,21 +57,5 @@ Defination of hevc codec type.
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
-## OH_AVCODEC_MIMETYPE_AUDIO_VIVID
-
-```TypeScript
-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'
-```
-
-Defination of audio vivid codec type.
-
-**起始版本：** 19
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

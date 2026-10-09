@@ -48,24 +48,6 @@ Disables the system's scaling behavior for the drag preview.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## ENABLE_DEFAULT_SHADOW
-
-```TypeScript
-ENABLE_DEFAULT_SHADOW = 3
-```
-
-Enables the default shadow effect for non-text components.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-DragPreviewMode-ENABLE_DEFAULT_SHADOW = 3--><!--Device-DragPreviewMode-ENABLE_DEFAULT_SHADOW = 3-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## ENABLE_DEFAULT_RADIUS
 
 ```TypeScript
@@ -81,6 +63,24 @@ Enables a unified rounded corner effect for non-text components, with the defaul
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DragPreviewMode-ENABLE_DEFAULT_RADIUS = 4--><!--Device-DragPreviewMode-ENABLE_DEFAULT_RADIUS = 4-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## ENABLE_DEFAULT_SHADOW
+
+```TypeScript
+ENABLE_DEFAULT_SHADOW = 3
+```
+
+Enables the default shadow effect for non-text components.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-DragPreviewMode-ENABLE_DEFAULT_SHADOW = 3--><!--Device-DragPreviewMode-ENABLE_DEFAULT_SHADOW = 3-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -12,19 +12,35 @@ Enumerates the states of a display.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_UNKNOWN
+## STATE_DOZE
 
 ```TypeScript
-STATE_UNKNOWN = 0
+STATE_DOZE = 3
 ```
 
-Unknown.
+The display is in sleep mode.
 
 **Since:** 7
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-DisplayState-STATE_UNKNOWN = 0--><!--Device-DisplayState-STATE_UNKNOWN = 0-End-->
+<!--Device-DisplayState-STATE_DOZE = 3--><!--Device-DisplayState-STATE_DOZE = 3-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## STATE_DOZE_SUSPEND
+
+```TypeScript
+STATE_DOZE_SUSPEND = 4
+```
+
+The display is in sleep mode, and the CPU is suspended.
+
+**Since:** 7
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-DisplayState-STATE_DOZE_SUSPEND = 4--><!--Device-DisplayState-STATE_DOZE_SUSPEND = 4-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,35 +76,35 @@ The display is powered on.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_DOZE
+## STATE_ON_SUSPEND
 
 ```TypeScript
-STATE_DOZE = 3
+STATE_ON_SUSPEND = 6
 ```
 
-The display is in sleep mode.
+The display is powered on, and the CPU is suspended.
 
 **Since:** 7
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-DisplayState-STATE_DOZE = 3--><!--Device-DisplayState-STATE_DOZE = 3-End-->
+<!--Device-DisplayState-STATE_ON_SUSPEND = 6--><!--Device-DisplayState-STATE_ON_SUSPEND = 6-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_DOZE_SUSPEND
+## STATE_UNKNOWN
 
 ```TypeScript
-STATE_DOZE_SUSPEND = 4
+STATE_UNKNOWN = 0
 ```
 
-The display is in sleep mode, and the CPU is suspended.
+Unknown.
 
 **Since:** 7
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-DisplayState-STATE_DOZE_SUSPEND = 4--><!--Device-DisplayState-STATE_DOZE_SUSPEND = 4-End-->
+<!--Device-DisplayState-STATE_UNKNOWN = 0--><!--Device-DisplayState-STATE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -105,21 +121,5 @@ The display is in VR mode.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-DisplayState-STATE_VR = 5--><!--Device-DisplayState-STATE_VR = 5-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-## STATE_ON_SUSPEND
-
-```TypeScript
-STATE_ON_SUSPEND = 6
-```
-
-The display is powered on, and the CPU is suspended.
-
-**Since:** 7
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-DisplayState-STATE_ON_SUSPEND = 6--><!--Device-DisplayState-STATE_ON_SUSPEND = 6-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

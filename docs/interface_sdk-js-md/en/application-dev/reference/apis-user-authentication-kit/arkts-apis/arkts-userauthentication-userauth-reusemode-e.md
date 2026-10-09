@@ -12,24 +12,6 @@ Enumerates the modes for reusing authentication results. This enum defines four 
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## AUTH_TYPE_RELEVANT
-
-```TypeScript
-AUTH_TYPE_RELEVANT = 1
-```
-
-The device unlock authentication result can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication.
-
-For example, after a user uses face authentication to unlock the device, the authentication result can be reused within the validity period if the user initiates a service operation that requires face authentication. However, if the user initiates a service operation that requires fingerprint authentication, the authentication result cannot be reused.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1--><!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
 ## AUTH_TYPE_IRRELEVANT
 
 ```TypeScript
@@ -48,21 +30,21 @@ For example, after a user uses face authentication to unlock the device, the aut
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT
+## AUTH_TYPE_RELEVANT
 
 ```TypeScript
-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3
+AUTH_TYPE_RELEVANT = 1
 ```
 
-Any identity authentication result (including device unlock authentication result) can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication.
+The device unlock authentication result can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication.
 
-For example, after a user uses face authentication to complete payment in an application, the authentication result can be reused within the validity period if the user initiates an operation that requires face authentication in another application. However, if the user initiates an operation that requires fingerprint authentication, the authentication result cannot be reused.
+For example, after a user uses face authentication to unlock the device, the authentication result can be reused within the validity period if the user initiates a service operation that requires face authentication. However, if the user initiates a service operation that requires fingerprint authentication, the authentication result cannot be reused.
 
-**Since:** 14
+**Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3-End-->
+<!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1--><!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -81,5 +63,23 @@ For example, after a user uses face authentication to complete an operation in a
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
 
 <!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT
+
+```TypeScript
+CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3
+```
+
+Any identity authentication result (including device unlock authentication result) can be reused within the validity period if the authentication type matches any of the authentication types specified for this authentication.
+
+For example, after a user uses face authentication to complete payment in an application, the authentication result can be reused within the validity period if the user initiates an operation that requires face authentication in another application. However, if the user initiates an operation that requires fingerprint authentication, the authentication result cannot be reused.
+
+**Since:** 14
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

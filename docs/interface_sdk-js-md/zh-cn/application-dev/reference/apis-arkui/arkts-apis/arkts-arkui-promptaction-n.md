@@ -1,4 +1,4 @@
-# promptAction(弹窗)
+# promptAction（弹窗）
 
 ```TypeScript
 declare namespace promptAction
@@ -32,15 +32,15 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [showToast](arkts-arkui-promptaction-showtoast-f.md) | Creates and displays a toast. |
-| [openToast](arkts-arkui-promptaction-opentoast-f.md) | 显示即时反馈并通过Promise返回其id。 |
 | [closeToast](arkts-arkui-promptaction-closetoast-f.md) | 关闭即时反馈。 |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog1) | 创建并显示对话框，对话框响应结果使用callback异步回调返回。 |
-| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog2) | 创建并显示对话框，对话框通过Promise返回结果。 |
-| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | 打开自定义弹窗。通过Promise返回结果。 |
+| [openToast](arkts-arkui-promptaction-opentoast-f.md) | 显示即时反馈并通过Promise返回其id。 |
 | [closeCustomDialog](arkts-arkui-promptaction-closecustomdialog-f.md) | 关闭自定义弹窗。 |
+| [openCustomDialog](arkts-arkui-promptaction-opencustomdialog-f.md) | 打开自定义弹窗。通过Promise返回结果。 |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu1) | 创建并显示操作菜单，菜单响应结果使用callback异步回调返回。 |
 | [showActionMenu](arkts-arkui-promptaction-showactionmenu-f.md#showactionmenu2) | 创建并显示操作菜单，菜单响应后通过Promise返回结果。 |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog1) | 创建并显示对话框，对话框响应结果使用callback异步回调返回。 |
+| [showDialog](arkts-arkui-promptaction-showdialog-f.md#showdialog2) | 创建并显示对话框，对话框通过Promise返回结果。 |
+| [showToast](arkts-arkui-promptaction-showtoast-f.md) | Creates and displays a toast. |
 
 ### 类
 
@@ -53,42 +53,42 @@ import { promptAction, LevelMode, ImmersiveMode, LevelOrder } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Toast的选项。 |
-| [Button](arkts-arkui-promptaction-button-i.md) | 菜单中的菜单项按钮。 |
-| [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md) | 对话框的响应结果。 |
-| [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 对话框的选项。 |
+| [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 操作菜单的选项。 |
+| [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 操作菜单的响应结果。 |
 | [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md) | 弹窗的选项。 |
+| [Button](arkts-arkui-promptaction-button-i.md) | 菜单中的菜单项按钮。 |
 | [CustomDialogOptions](arkts-arkui-promptaction-customdialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)。 |
 | [DialogOptions](arkts-arkui-promptaction-dialogoptions-i.md) | 自定义弹窗的内容，继承自[BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i.md)，用于配置自定义弹窗的显示参数和行为。 |
-| [ActionMenuSuccessResponse](arkts-arkui-promptaction-actionmenusuccessresponse-i.md) | 操作菜单的响应结果。 |
-| [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i.md) | 操作菜单的选项。 |
+| [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i.md) | 对话框的选项。 |
+| [ShowDialogSuccessResponse](arkts-arkui-promptaction-showdialogsuccessresponse-i.md) | 对话框的响应结果。 |
+| [ShowToastOptions](arkts-arkui-promptaction-showtoastoptions-i.md) | Toast的选项。 |
 
 <!--Del-->
 ### 接口（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i-sys.md) | 对话框的选项。 |
-| [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i-sys.md) | 弹窗的选项。 |
 | [ActionMenuOptions](arkts-arkui-promptaction-actionmenuoptions-i-sys.md) | 操作菜单的选项。 |
+| [BaseDialogOptions](arkts-arkui-promptaction-basedialogoptions-i-sys.md) | 弹窗的选项。 |
+| [ShowDialogOptions](arkts-arkui-promptaction-showdialogoptions-i-sys.md) | 对话框的选项。 |
 <!--DelEnd-->
 
 ### 类型
 
 | 名称 | 说明 |
 | --- | --- |
-| [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md) | 表示弹窗背板的圆角半径允许的数据字段类型。 |
-| [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md) | 表示弹窗背板的边框宽度允许的数据字段类型。 |
 | [DialogOptionsBorderColor](arkts-arkui-promptaction-dialogoptionsbordercolor-t.md) | 表示弹窗背板的边框颜色允许的数据字段类型。 |
 | [DialogOptionsBorderStyle](arkts-arkui-promptaction-dialogoptionsborderstyle-t.md) | 表示弹窗背板的边框样式允许的数据字段类型。 |
+| [DialogOptionsBorderWidth](arkts-arkui-promptaction-dialogoptionsborderwidth-t.md) | 表示弹窗背板的边框宽度允许的数据字段类型。 |
+| [DialogOptionsCornerRadius](arkts-arkui-promptaction-dialogoptionscornerradius-t.md) | 表示弹窗背板的圆角半径允许的数据字段类型。 |
 | [DialogOptionsShadow](arkts-arkui-promptaction-dialogoptionsshadow-t.md) | 表示弹窗背板的阴影允许的数据字段类型。 |
 
 ### 枚举
 
 | 名称 | 说明 |
 | --- | --- |
-| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md) | 设置Toast的显示模式，默认显示在应用内，支持显示在子窗。 |
 | [CommonState](arkts-arkui-promptaction-commonstate-e.md) | 自定义弹窗的状态。 |
+| [ToastShowMode](arkts-arkui-promptaction-toastshowmode-e.md) | 设置Toast的显示模式，默认显示在应用内，支持显示在子窗。 |
 
 <!--Del-->
 ### 枚举（系统接口）

@@ -18,6 +18,24 @@ export enum LocationPrivacyType
 
 **系统能力：** SystemCapability.Location.Location.Core
 
+## CORE_LOCATION
+
+```TypeScript
+CORE_LOCATION
+```
+
+开启网络定位时弹出的隐私协议。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
+
+<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
 ## OTHERS
 
 ```TypeScript
@@ -51,23 +69,5 @@ STARTUP
 **替代接口：** [STARTUP](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#startup)
 
 <!--Device-LocationPrivacyType-STARTUP--><!--Device-LocationPrivacyType-STARTUP-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
-## CORE_LOCATION
-
-```TypeScript
-CORE_LOCATION
-```
-
-开启网络定位时弹出的隐私协议。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [CORE_LOCATION](arkts-location-geolocationmanager-locationprivacytype-e-sys.md#core_location)
-
-<!--Device-LocationPrivacyType-CORE_LOCATION--><!--Device-LocationPrivacyType-CORE_LOCATION-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core

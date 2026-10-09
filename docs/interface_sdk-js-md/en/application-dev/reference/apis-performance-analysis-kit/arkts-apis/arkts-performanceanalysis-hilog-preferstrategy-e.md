@@ -12,22 +12,6 @@ Enumerates the preference strategies.
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
-## UNSET_LOGLEVEL
-
-```TypeScript
-UNSET_LOGLEVEL = 0
-```
-
-The setting is cleared. The system-controlled minimum log level takes effect.
-
-**Since:** 21
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
-
-<!--Device-PreferStrategy-UNSET_LOGLEVEL = 0--><!--Device-PreferStrategy-UNSET_LOGLEVEL = 0-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiLog
-
 ## PREFER_CLOSE_LOG
 
 ```TypeScript
@@ -57,5 +41,21 @@ The smaller value of the new log level and the system-controlled minimum log lev
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
 
 <!--Device-PreferStrategy-PREFER_OPEN_LOG = 2--><!--Device-PreferStrategy-PREFER_OPEN_LOG = 2-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiLog
+
+## UNSET_LOGLEVEL
+
+```TypeScript
+UNSET_LOGLEVEL = 0
+```
+
+The setting is cleared. The system-controlled minimum log level takes effect.
+
+**Since:** 21
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
+
+<!--Device-PreferStrategy-UNSET_LOGLEVEL = 0--><!--Device-PreferStrategy-UNSET_LOGLEVEL = 0-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog

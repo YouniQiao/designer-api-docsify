@@ -50,60 +50,6 @@ Connection interval of 4.875 ms.
 
 **System API:** This is a system API.
 
-## MID_SPEED_INTERVAL_11_25
-
-```TypeScript
-MID_SPEED_INTERVAL_11_25 = 2
-```
-
-Connection interval of 11.25 ms.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
-**System API:** This is a system API.
-
-## MID_SPEED_INTERVAL_15
-
-```TypeScript
-MID_SPEED_INTERVAL_15 = 3
-```
-
-Connection interval of 15 ms.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
-**System API:** This is a system API.
-
-## MID_SPEED_INTERVAL_50
-
-```TypeScript
-MID_SPEED_INTERVAL_50 = 4
-```
-
-Connection interval of 50 ms.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
-**System API:** This is a system API.
-
 ## LOW_SPEED_INTERVAL_100
 
 ```TypeScript
@@ -189,6 +135,60 @@ Connection interval of 500 ms.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_500 = 9--><!--Device-ConnectionInterval-LOW_SPEED_INTERVAL_500 = 9-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+**System API:** This is a system API.
+
+## MID_SPEED_INTERVAL_11_25
+
+```TypeScript
+MID_SPEED_INTERVAL_11_25 = 2
+```
+
+Connection interval of 11.25 ms.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_11_25 = 2-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+**System API:** This is a system API.
+
+## MID_SPEED_INTERVAL_15
+
+```TypeScript
+MID_SPEED_INTERVAL_15 = 3
+```
+
+Connection interval of 15 ms.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_15 = 3-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+**System API:** This is a system API.
+
+## MID_SPEED_INTERVAL_50
+
+```TypeScript
+MID_SPEED_INTERVAL_50 = 4
+```
+
+Connection interval of 50 ms.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4--><!--Device-ConnectionInterval-MID_SPEED_INTERVAL_50 = 4-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

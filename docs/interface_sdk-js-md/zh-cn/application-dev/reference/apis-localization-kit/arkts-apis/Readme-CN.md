@@ -1,24 +1,24 @@
 # ArkTS API<!--arkts-localizationkit-->
 
-- [@ohos.fontManager(字体管理)](arkts-localization-fontmanager.md)
+- [@ohos.fontManager（字体管理）](arkts-localization-fontmanager.md)
   <!--Del-->
-  - [dataMigration(系统接口)](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
+  - [dataMigration（系统接口）](arkts-localization-fontmanager-datamigration-f-sys.md)<!--DelEnd-->
   - [getFontScope](arkts-localization-fontmanager-getfontscope-f.md)
   <!--Del-->
-  - [installFont(系统接口)](arkts-localization-fontmanager-installfont-f-sys.md)<!--DelEnd-->
+  - [installFont（系统接口）](arkts-localization-fontmanager-installfont-f-sys.md)<!--DelEnd-->
   - [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md)
   - [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md)
   - [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md)
   <!--Del-->
-  - [uninstallFont(系统接口)](arkts-localization-fontmanager-uninstallfont-f-sys.md)<!--DelEnd-->
+  - [uninstallFont（系统接口）](arkts-localization-fontmanager-uninstallfont-f-sys.md)<!--DelEnd-->
   - [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md)
   <!--Del-->
-  - [DataMigrationCallback(系统接口)](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd-->
+  - [DataMigrationCallback（系统接口）](arkts-localization-fontmanager-datamigrationcallback-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [DataMigrationProgress(系统接口)](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
+  - [DataMigrationProgress（系统接口）](arkts-localization-fontmanager-datamigrationprogress-i-sys.md)<!--DelEnd-->
   - [FontClientObserver](arkts-localization-fontmanager-fontclientobserver-i.md)
   - [FontScope](arkts-localization-fontmanager-fontscope-e.md)
-- [@ohos.i18n(国际化-I18n)](arkts-localization-i18n.md)
+- [@ohos.i18n（国际化-I18n）](arkts-localization-i18n.md)
   - [addPreferredLanguage](arkts-localization-i18n-addpreferredlanguage-f.md)
   - [getCalendar](arkts-localization-i18n-getcalendar-f.md)
   - [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md)
@@ -59,9 +59,9 @@
   - [SymbolNumberFormat](arkts-localization-i18n-symbolnumberformat-c.md)
   - [System](arkts-localization-i18n-system-c.md)
   <!--Del-->
-  - [System(系统接口)](arkts-localization-i18n-system-c-sys.md)<!--DelEnd-->
+  - [System（系统接口）](arkts-localization-i18n-system-c-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [SystemLocaleManager(系统接口)](arkts-localization-i18n-systemlocalemanager-c-sys.md)<!--DelEnd-->
+  - [SystemLocaleManager（系统接口）](arkts-localization-i18n-systemlocalemanager-c-sys.md)<!--DelEnd-->
   - [TimeZone](arkts-localization-i18n-timezone-c.md)
   - [Transliterator](arkts-localization-i18n-transliterator-c.md)
   - [Unicode](arkts-localization-i18n-unicode-c.md)
@@ -75,27 +75,27 @@
   - [HolidayLocalName](arkts-localization-i18n-holidaylocalname-i.md)
   - [ISO8601DateTimeFormatOptions](arkts-localization-i18n-iso8601datetimeformatoptions-i.md)
   <!--Del-->
-  - [LocaleItem(系统接口)](arkts-localization-i18n-localeitem-i-sys.md)<!--DelEnd-->
+  - [LocaleItem（系统接口）](arkts-localization-i18n-localeitem-i-sys.md)<!--DelEnd-->
   - [PhoneNumberFormatOptions](arkts-localization-i18n-phonenumberformatoptions-i.md)
   - [ResolvedSymbolDateTimeFormatOptions](arkts-localization-i18n-resolvedsymboldatetimeformatoptions-i.md)
   - [ResolvedSymbolNumberFormatOptions](arkts-localization-i18n-resolvedsymbolnumberformatoptions-i.md)
   <!--Del-->
-  - [SortOptions(系统接口)](arkts-localization-i18n-sortoptions-i-sys.md)<!--DelEnd-->
+  - [SortOptions（系统接口）](arkts-localization-i18n-sortoptions-i-sys.md)<!--DelEnd-->
   - [StyledDateTimeFormatOptions](arkts-localization-i18n-styleddatetimeformatoptions-i.md)
   - [StyledNumberFormatOptions](arkts-localization-i18n-stylednumberformatoptions-i.md)
   - [SymbolDateTimeFormatOptions](arkts-localization-i18n-symboldatetimeformatoptions-i.md)
   - [SymbolNumberFormatOptions](arkts-localization-i18n-symbolnumberformatoptions-i.md)
   <!--Del-->
-  - [TimeZoneCityItem(系统接口)](arkts-localization-i18n-timezonecityitem-i-sys.md)<!--DelEnd-->
+  - [TimeZoneCityItem（系统接口）](arkts-localization-i18n-timezonecityitem-i-sys.md)<!--DelEnd-->
   - [UnitInfo](arkts-localization-i18n-unitinfo-i.md)
   - [Util](arkts-localization-i18n-util-i.md)
   - [NormalizerMode](arkts-localization-i18n-normalizermode-e.md)
   <!--Del-->
-  - [SuggestionType(系统接口)](arkts-localization-i18n-suggestiontype-e-sys.md)<!--DelEnd-->
+  - [SuggestionType（系统接口）](arkts-localization-i18n-suggestiontype-e-sys.md)<!--DelEnd-->
   - [TemperatureType](arkts-localization-i18n-temperaturetype-e.md)
   - [UnitUsage](arkts-localization-i18n-unitusage-e.md)
   - [WeekDay](arkts-localization-i18n-weekday-e.md)
-- [@ohos.intl(国际化-Intl)](arkts-localization-intl.md)
+- [@ohos.intl（国际化-Intl）](arkts-localization-intl.md)
   - [Collator](arkts-localization-intl-collator-c.md)
   - [DateTimeFormat](arkts-localization-intl-datetimeformat-c.md)
   - [Locale](arkts-localization-intl-locale-c.md)
@@ -109,7 +109,7 @@
   - [PluralRulesOptions](arkts-localization-intl-pluralrulesoptions-i.md)
   - [RelativeTimeFormatInputOptions](arkts-localization-intl-relativetimeformatinputoptions-i.md)
   - [RelativeTimeFormatResolvedOptions](arkts-localization-intl-relativetimeformatresolvedoptions-i.md)
-- [@ohos.resourceManager(资源管理)](arkts-localization-resourcemanager.md)
+- [@ohos.resourceManager（资源管理）](arkts-localization-resourcemanager.md)
   - [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md)
   - [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md)
   - [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md)
@@ -123,7 +123,7 @@
   - [DeviceType](arkts-localization-resourcemanager-devicetype-e.md)
   - [Direction](arkts-localization-resourcemanager-direction-e.md)
   - [ScreenDensity](arkts-localization-resourcemanager-screendensity-e.md)
-- [@ohos.sendableResourceManager(资源管理)](arkts-localization-sendableresourcemanager.md)
+- [@ohos.sendableResourceManager（资源管理）](arkts-localization-sendableresourcemanager.md)
   - [resourceToSendableResource](arkts-localization-sendableresourcemanager-resourcetosendableresource-f.md)
   - [sendableResourceToResource](arkts-localization-sendableresourcemanager-sendableresourcetoresource-f.md)
   - [Resource](arkts-localization-sendableresourcemanager-resource-t.md)

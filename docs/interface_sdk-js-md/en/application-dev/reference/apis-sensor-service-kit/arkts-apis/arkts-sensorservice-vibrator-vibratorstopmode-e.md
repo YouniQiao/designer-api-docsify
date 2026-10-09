@@ -12,20 +12,6 @@ Enumerates vibration stop modes. This type is used to specify the vibration stop
 
 **System capability:** SystemCapability.Sensors.MiscDevice
 
-## VIBRATOR_STOP_MODE_TIME
-
-```TypeScript
-VIBRATOR_STOP_MODE_TIME = 'time'
-```
-
-The vibration to stop is in **duration** mode.
-
-**Since:** 8
-
-<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
-
-**System capability:** SystemCapability.Sensors.MiscDevice
-
 ## VIBRATOR_STOP_MODE_PRESET
 
 ```TypeScript
@@ -37,5 +23,19 @@ The vibration to stop is in **EffectId** mode.
 **Since:** 8
 
 <!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'-End-->
+
+**System capability:** SystemCapability.Sensors.MiscDevice
+
+## VIBRATOR_STOP_MODE_TIME
+
+```TypeScript
+VIBRATOR_STOP_MODE_TIME = 'time'
+```
+
+The vibration to stop is in **duration** mode.
+
+**Since:** 8
+
+<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
 
 **System capability:** SystemCapability.Sensors.MiscDevice

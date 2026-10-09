@@ -37,13 +37,13 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain1) | 表示创建X.509证书链对象。使用Promise方式返回结果。 |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain2) | 表示创建X.509证书链对象。使用Callback异步回调。 |
 | [createX509CertChain](arkts-devicecertificate-cert-createx509certchain-f.md#createx509certchain3) | 表示使用X509Cert数组方式创建X.509证书链对象，并同步返回结果。 |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl1) | 表示创建X.509证书吊销列表对象。使用Callback异步回调。 |
-| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl2) | 表示创建X.509证书吊销列表对象。使用Promise方式返回结果。 |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl1) | 表示创建X.509证书吊销列表对象。使用Callback异步回调。 |
 | [createX509CRL](arkts-devicecertificate-cert-createx509crl-f.md#createx509crl2) | 表示创建X.509证书吊销列表对象。使用Promise方式返回结果。 |
 | [generateCsr](arkts-devicecertificate-cert-generatecsr-f.md) | 表示使用指定的私钥，传入主体、扩展、摘要算法、输出格式等配置参数去生成CSR。 |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs121) | 解析P12。 |
 | [parsePkcs12](arkts-devicecertificate-cert-parsepkcs12-f.md#parsepkcs122) | 解析P12。使用Promise方式返回结果。 |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl1) | 表示创建X.509证书吊销列表对象。使用Callback异步回调。 |
+| [createX509Crl](arkts-devicecertificate-cert-createx509crl-depr-f.md#createx509crl2) | 表示创建X.509证书吊销列表对象。使用Promise方式返回结果。 |
 
 ### 接口
 
@@ -85,12 +85,12 @@ import { cert } from '@kit.DeviceCertificateKit';
 | [X509CertChain](arkts-devicecertificate-cert-x509certchain-i.md) | X.509证书链对象。 |
 | [X509CertMatchParameters](arkts-devicecertificate-cert-x509certmatchparameters-i.md) | 用于匹配证书的过滤参数。如果参数中任一项都未指定，则匹配所有证书。 |
 | [X509CertRevokedParams](arkts-devicecertificate-cert-x509certrevokedparams-i.md) | 表示证书吊销检查参数。 |
-| [X509Crl](arkts-devicecertificate-cert-x509crl-depr-i.md) | 提供用于X.509证书吊销列表操作的API。 |
 | [X509CRL](arkts-devicecertificate-cert-x509crl-i.md) | 提供用于X.509证书吊销列表操作的API。 |
-| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-depr-i.md) | 证书吊销条目。 |
 | [X509CRLEntry](arkts-devicecertificate-cert-x509crlentry-i.md) | 证书吊销条目。 |
 | [X509CRLMatchParameters](arkts-devicecertificate-cert-x509crlmatchparameters-i.md) | 用于匹配证书吊销列表的过滤参数。如果参数中任一项都未指定，则匹配所有证书吊销列表。 |
 | [X509TrustAnchor](arkts-devicecertificate-cert-x509trustanchor-i.md) | 表示X.509信任锚，用于校验证书链。使用信任锚中的证书或者公钥作为可信根，对证书链进行校验。 |
+| [X509Crl](arkts-devicecertificate-cert-x509crl-depr-i.md) | 提供用于X.509证书吊销列表操作的API。 |
+| [X509CrlEntry](arkts-devicecertificate-cert-x509crlentry-depr-i.md) | 证书吊销条目。 |
 
 ### 枚举
 

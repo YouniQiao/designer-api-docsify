@@ -12,86 +12,6 @@ The event types represented by XML elements.
 
 **System capability:** SystemCapability.Utils.Lang
 
-## START_DOCUMENT
-
-```TypeScript
-START_DOCUMENT
-```
-
-Start a document.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## END_DOCUMENT
-
-```TypeScript
-END_DOCUMENT
-```
-
-End a document.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## START_TAG
-
-```TypeScript
-START_TAG
-```
-
-Start a tag.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## END_TAG
-
-```TypeScript
-END_TAG
-```
-
-End a tag.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
-## TEXT
-
-```TypeScript
-TEXT
-```
-
-Character data.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
-
-**System capability:** SystemCapability.Utils.Lang
-
 ## CDSECT
 
 ```TypeScript
@@ -140,19 +60,35 @@ An XML document type declaration.
 
 **System capability:** SystemCapability.Utils.Lang
 
-## INSTRUCTION
+## END_DOCUMENT
 
 ```TypeScript
-INSTRUCTION
+END_DOCUMENT
 ```
 
-An XML processing instruction declaration.
+End a document.
 
 **Since:** 8
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
+<!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## END_TAG
+
+```TypeScript
+END_TAG
+```
+
+End a tag.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 
@@ -169,6 +105,70 @@ An entity reference.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-EventType-ENTITY_REFERENCE--><!--Device-EventType-ENTITY_REFERENCE-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## INSTRUCTION
+
+```TypeScript
+INSTRUCTION
+```
+
+An XML processing instruction declaration.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## START_DOCUMENT
+
+```TypeScript
+START_DOCUMENT
+```
+
+Start a document.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## START_TAG
+
+```TypeScript
+START_TAG
+```
+
+Start a tag.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
+
+**System capability:** SystemCapability.Utils.Lang
+
+## TEXT
+
+```TypeScript
+TEXT
+```
+
+Character data.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
 
 **System capability:** SystemCapability.Utils.Lang
 

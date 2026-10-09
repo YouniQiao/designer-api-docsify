@@ -22,8 +22,8 @@ import { ArkTSUtils } from '@kit.ArkTS';
 
 | Name | Description |
 | --- | --- |
-| [locks](arkts-arkts-utils-locks-n.md) | Asynchronous lock. |
 | [ASON](arkts-arkts-utils-ason-n.md) | ArkTS JSON utils. |
+| [locks](arkts-arkts-utils-locks-n.md) | Asynchronous lock. |
 
 ### Functions
 

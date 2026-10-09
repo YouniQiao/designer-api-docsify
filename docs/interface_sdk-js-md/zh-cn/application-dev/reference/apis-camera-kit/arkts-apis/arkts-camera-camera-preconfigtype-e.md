@@ -12,22 +12,6 @@ enum PreconfigType
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## PRECONFIG_720P
-
-```TypeScript
-PRECONFIG_720P = 0
-```
-
-720P预配置。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-PreconfigType-PRECONFIG_720P = 0--><!--Device-PreconfigType-PRECONFIG_720P = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## PRECONFIG_1080P
 
 ```TypeScript
@@ -57,6 +41,22 @@ PRECONFIG_4K = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreconfigType-PRECONFIG_4K = 2--><!--Device-PreconfigType-PRECONFIG_4K = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## PRECONFIG_720P
+
+```TypeScript
+PRECONFIG_720P = 0
+```
+
+720P预配置。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-PreconfigType-PRECONFIG_720P = 0--><!--Device-PreconfigType-PRECONFIG_720P = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

@@ -28,22 +28,6 @@ CAMERA_STATUS_APPEAR = 0
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_STATUS_DISAPPEAR
-
-```TypeScript
-CAMERA_STATUS_DISAPPEAR = 1
-```
-
-相机被移除。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1--><!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## CAMERA_STATUS_AVAILABLE
 
 ```TypeScript
@@ -57,6 +41,22 @@ CAMERA_STATUS_AVAILABLE = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2--><!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_STATUS_DISAPPEAR
+
+```TypeScript
+CAMERA_STATUS_DISAPPEAR = 1
+```
+
+相机被移除。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1--><!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

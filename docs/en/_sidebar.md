@@ -16,7 +16,7 @@
 - [Background Tasks Kit (205)](interface_sdk-js-md/en/application-dev/reference/apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-backgroundtaskmanager.md)
 - [Basic Services Kit (982)](interface_sdk-js-md/en/application-dev/reference/apis-basic-services-kit/arkts-apis/arkts-basicservices-account-appaccount.md)
 - [Calendar Kit (19)](interface_sdk-js-md/en/application-dev/reference/apis-calendar-kit/arkts-apis/arkts-calendar-calendarmanager.md)
-- [Camera Kit (301)](interface_sdk-js-md/en/application-dev/reference/apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md)
+- [Camera Kit (304)](interface_sdk-js-md/en/application-dev/reference/apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md)
 - [Connectivity Kit (913)](interface_sdk-js-md/en/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-connectivity-bluetooth.md)
 - [Contacts Kit (53)](interface_sdk-js-md/en/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contacts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/en/application-dev/reference/apis-content-embed-kit/c-apis/capi-contentembed.md)

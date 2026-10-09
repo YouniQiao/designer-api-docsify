@@ -16,37 +16,19 @@ Enum for distance rank.
 
 **System API:** This is a system API.
 
-## RANK_ULTRA_SHORT_RANGE
+## RANK_MEDIUM_RANGE
 
 ```TypeScript
-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
+RANK_MEDIUM_RANGE = 'rankMedium'
 ```
 
-indicates ultra-short range
+indicates medium range
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'--><!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'-End-->
-
-**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
-
-**System API:** This is a system API.
-
-## RANK_SHORT_RANGE
-
-```TypeScript
-RANK_SHORT_RANGE = 'rankShort'
-```
-
-indicates short range
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'--><!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'-End-->
+<!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'--><!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 
@@ -70,19 +52,37 @@ indicates medium-short range
 
 **System API:** This is a system API.
 
-## RANK_MEDIUM_RANGE
+## RANK_SHORT_RANGE
 
 ```TypeScript
-RANK_MEDIUM_RANGE = 'rankMedium'
+RANK_SHORT_RANGE = 'rankShort'
 ```
 
-indicates medium range
+indicates short range
 
 **Since:** 23
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'--><!--Device-DistanceRank-RANK_MEDIUM_RANGE = 'rankMedium'-End-->
+<!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'--><!--Device-DistanceRank-RANK_SHORT_RANGE = 'rankShort'-End-->
+
+**System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
+
+**System API:** This is a system API.
+
+## RANK_ULTRA_SHORT_RANGE
+
+```TypeScript
+RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'
+```
+
+indicates ultra-short range
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'--><!--Device-DistanceRank-RANK_ULTRA_SHORT_RANGE = 'rankUltraShort'-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DistanceMeasurement
 

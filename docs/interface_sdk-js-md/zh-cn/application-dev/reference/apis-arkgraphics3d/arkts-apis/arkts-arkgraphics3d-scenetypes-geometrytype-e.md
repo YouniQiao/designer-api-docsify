@@ -14,6 +14,20 @@ export enum GeometryType
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
+## CUBE
+
+```TypeScript
+CUBE = 1
+```
+
+立方体类型。
+
+**起始版本：** 18
+
+<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
 ## CUSTOM
 
 ```TypeScript
@@ -28,17 +42,17 @@ CUSTOM = 0
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## CUBE
+## CYLINDER
 
 ```TypeScript
-CUBE = 1
+CYLINDER = 4
 ```
 
-立方体类型。
+圆柱体类型。
 
-**起始版本：** 18
+**起始版本：** 23
 
-<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
@@ -67,19 +81,5 @@ SPHERE = 3
 **起始版本：** 18
 
 <!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
-## CYLINDER
-
-```TypeScript
-CYLINDER = 4
-```
-
-圆柱体类型。
-
-**起始版本：** 23
-
-<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

@@ -42,8 +42,6 @@ import { abilityManager } from '@kit.AbilityKit';
 | [getTopAbility](arkts-ability-abilitymanager-gettopability-f-sys.md#gettopability2) | 获取窗口焦点所在的Ability。使用callback异步回调。 |
 | [isEmbeddedOpenAllowed](arkts-ability-abilitymanager-isembeddedopenallowed-f-sys.md) | 判断是否允许嵌入式拉起[EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md)。使用Promise异步回调。 |
 | [notifyDebugAssertResult](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md) | 将断言调试结果通知应用程序。使用Promise异步回调。 |
-| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult1) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用callback异步回调。 |
-| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult2) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用Promise异步回调。 |
 | [off](arkts-ability-abilitymanager-off-f-sys.md#offabilityforegroundstate) | 取消注册Ability启动和退出的观测器。 |
 | [offPreloadedUIExtensionAbilityDestroyed](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md) | 注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的销毁监听。 |
 | [offPreloadedUIExtensionAbilityLoaded](arkts-ability-abilitymanager-offpreloadeduiextensionabilityloaded-f-sys.md) | 注销当前进程中预加载的[UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uiextensionability-c.md)实例的加载监听。 |
@@ -55,6 +53,8 @@ import { abilityManager } from '@kit.AbilityKit';
 | [setResidentProcessEnabled](arkts-ability-abilitymanager-setresidentprocessenabled-f-sys.md) | 常驻进程支持按需启停。 |
 | [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration1) | 通过传入修改的配置项来更新配置。使用callback异步回调。 |
 | [updateConfiguration](arkts-ability-abilitymanager-updateconfiguration-f-sys.md#updateconfiguration2) | 通过修改配置来更新配置。使用Promise异步回调。 |
+| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult1) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用callback异步回调。 |
+| [notifySaveAsResult](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md#notifysaveasresult2) | 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

@@ -26,8 +26,6 @@ import { formProvider } from '@kit.FormKit';
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo1) | Obtains the application's widget information that meets a filter criterion on the device. This API uses an asynchronous callback to return the result. |
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo2) | Obtains the application's widget information on the device. This API uses an asynchronous callback to return the result. |
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo3) | Obtains information about widgets that meet the criteria of the current application. This API uses a promise to return the result. |
-| [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md) | Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result. |
-| [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md) | Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result. |
 | [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md) | Obtains the information of a specified widget that has been added to the home screen. This API uses a promise to return the result. |
 | [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) | Obtains information about all widgets that have been added to the home screen. This API uses a promise to return the result. |
 | [openFormEditAbility](arkts-form-formprovider-openformeditability-f.md) | Opens the widget editing page. |
@@ -39,6 +37,8 @@ import { formProvider } from '@kit.FormKit';
 | [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime2) | Sets the next refresh time for a widget. This API uses a promise to return the result. |
 | [updateForm](arkts-form-formprovider-updateform-f.md#updateform1) | Updates a widget. This API uses an asynchronous callback to return the result. |
 | [updateForm](arkts-form-formprovider-updateform-f.md#updateform2) | Updates a widget. This API uses a promise to return the result. |
+| [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md) | Obtains the information of the widget that has been added to the home screen on the device. This API uses a promise to return the result. |
+| [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md) | Obtains the information of all widgets that have been added to the home screen on the device. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

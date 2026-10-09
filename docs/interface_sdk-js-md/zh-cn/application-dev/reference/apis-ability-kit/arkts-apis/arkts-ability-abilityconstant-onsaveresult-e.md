@@ -30,13 +30,13 @@ ALL_AGREE = 0
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## CONTINUATION_REJECT
+## ALL_REJECT
 
 ```TypeScript
-CONTINUATION_REJECT = 1
+ALL_REJECT = 5
 ```
 
-拒绝迁移保存状态。
+Always rejected to save the status.
 
 **起始版本：** 9
 
@@ -44,7 +44,7 @@ CONTINUATION_REJECT = 1
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-OnSaveResult-CONTINUATION_REJECT = 1--><!--Device-OnSaveResult-CONTINUATION_REJECT = 1-End-->
+<!--Device-OnSaveResult-ALL_REJECT = 5--><!--Device-OnSaveResult-ALL_REJECT = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -63,6 +63,24 @@ CONTINUATION_MISMATCH = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-OnSaveResult-CONTINUATION_MISMATCH = 2--><!--Device-OnSaveResult-CONTINUATION_MISMATCH = 2-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## CONTINUATION_REJECT
+
+```TypeScript
+CONTINUATION_REJECT = 1
+```
+
+拒绝迁移保存状态。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-OnSaveResult-CONTINUATION_REJECT = 1--><!--Device-OnSaveResult-CONTINUATION_REJECT = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -99,23 +117,5 @@ RECOVERY_REJECT = 4
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-OnSaveResult-RECOVERY_REJECT = 4--><!--Device-OnSaveResult-RECOVERY_REJECT = 4-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## ALL_REJECT
-
-```TypeScript
-ALL_REJECT = 5
-```
-
-Always rejected to save the status.
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-OnSaveResult-ALL_REJECT = 5--><!--Device-OnSaveResult-ALL_REJECT = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

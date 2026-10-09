@@ -12,6 +12,22 @@ Enumerates the window modes supported by the ability.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
+## FLOATING
+
+```TypeScript
+FLOATING = 2
+```
+
+A floating window is supported.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SupportWindowMode-FLOATING = 2--><!--Device-SupportWindowMode-FLOATING = 2-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
 ## FULL_SCREEN
 
 ```TypeScript
@@ -41,21 +57,5 @@ A window in split-screen mode is supported.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-SupportWindowMode-SPLIT = 1--><!--Device-SupportWindowMode-SPLIT = 1-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## FLOATING
-
-```TypeScript
-FLOATING = 2
-```
-
-A floating window is supported.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-SupportWindowMode-FLOATING = 2--><!--Device-SupportWindowMode-FLOATING = 2-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

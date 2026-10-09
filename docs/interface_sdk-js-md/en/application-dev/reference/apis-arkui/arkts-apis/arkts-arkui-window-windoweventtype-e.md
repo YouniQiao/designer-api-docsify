@@ -12,22 +12,6 @@ Enumerates the window lifecycle states.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## WINDOW_SHOWN
-
-```TypeScript
-WINDOW_SHOWN = 1
-```
-
-The window is running in the foreground.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## WINDOW_ACTIVE
 
 ```TypeScript
@@ -41,6 +25,38 @@ The window gains focus.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-WindowEventType-WINDOW_ACTIVE = 2--><!--Device-WindowEventType-WINDOW_ACTIVE = 2-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## WINDOW_DESTROYED
+
+```TypeScript
+WINDOW_DESTROYED = 7
+```
+
+The window is destroyed.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## WINDOW_HIDDEN
+
+```TypeScript
+WINDOW_HIDDEN = 4
+```
+
+The window is running in the background.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,34 +76,18 @@ The window loses focus.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## WINDOW_HIDDEN
+## WINDOW_SHOWN
 
 ```TypeScript
-WINDOW_HIDDEN = 4
+WINDOW_SHOWN = 1
 ```
 
-The window is running in the background.
+The window is running in the foreground.
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-WindowEventType-WINDOW_HIDDEN = 4--><!--Device-WindowEventType-WINDOW_HIDDEN = 4-End-->
+<!--Device-WindowEventType-WINDOW_SHOWN = 1--><!--Device-WindowEventType-WINDOW_SHOWN = 1-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-## WINDOW_DESTROYED
-
-```TypeScript
-WINDOW_DESTROYED = 7
-```
-
-The window is destroyed.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-WindowEventType-WINDOW_DESTROYED = 7--><!--Device-WindowEventType-WINDOW_DESTROYED = 7-End-->
-
-**System capability:** SystemCapability.Window.SessionManager

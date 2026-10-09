@@ -28,6 +28,22 @@ Allows the first line of the paragraph to rise and the last line to drop.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## DISABLE_ALL
+
+```TypeScript
+DISABLE_ALL = 0x1 | 0x2
+```
+
+Prevents the first line of the paragraph to rise and the last line to drop.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
 ## DISABLE_FIRST_ASCENT
 
 ```TypeScript
@@ -57,21 +73,5 @@ Prevents the last line of a paragraph from dropping.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2--><!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## DISABLE_ALL
-
-```TypeScript
-DISABLE_ALL = 0x1 | 0x2
-```
-
-Prevents the first line of the paragraph to rise and the last line to drop.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

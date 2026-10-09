@@ -12,38 +12,6 @@ Enumerates network types.
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
-## BEARER_CELLULAR
-
-```TypeScript
-BEARER_CELLULAR = 0
-```
-
-Cellular network.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
-## BEARER_WIFI
-
-```TypeScript
-BEARER_WIFI = 1
-```
-
-Wi-Fi network.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
-
-**System capability:** SystemCapability.Communication.NetManager.Core
-
 ## BEARER_BLUETOOTH
 
 ```TypeScript
@@ -57,6 +25,22 @@ Bluetooth network.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-NetBearType-BEARER_BLUETOOTH = 2--><!--Device-NetBearType-BEARER_BLUETOOTH = 2-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+## BEARER_CELLULAR
+
+```TypeScript
+BEARER_CELLULAR = 0
+```
+
+Cellular network.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core
 
@@ -87,5 +71,21 @@ VPN.
 **Since:** 12
 
 <!--Device-NetBearType-BEARER_VPN = 4--><!--Device-NetBearType-BEARER_VPN = 4-End-->
+
+**System capability:** SystemCapability.Communication.NetManager.Core
+
+## BEARER_WIFI
+
+```TypeScript
+BEARER_WIFI = 1
+```
+
+Wi-Fi network.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
 
 **System capability:** SystemCapability.Communication.NetManager.Core

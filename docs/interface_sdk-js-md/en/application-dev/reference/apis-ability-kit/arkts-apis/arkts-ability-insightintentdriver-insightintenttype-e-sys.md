@@ -14,6 +14,60 @@ Enumerates the intent types defined by the intent decorator. You can obtain the 
 
 **System API:** This is a system API.
 
+## ENTRY
+
+```TypeScript
+ENTRY = '@InsightIntentEntry'
+```
+
+A decorator of the [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md#insightintententry) type.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'--><!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## FORM
+
+```TypeScript
+FORM = '@InsightIntentForm'
+```
+
+A decorator of the [@InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-d.md#insightintentform) type.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InsightIntentType-FORM = '@InsightIntentForm'--><!--Device-InsightIntentType-FORM = '@InsightIntentForm'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## FUNCTION
+
+```TypeScript
+FUNCTION = '@InsightIntentFunctionMethod'
+```
+
+A decorator of the [@InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-d.md#insightintentfunctionmethod) type.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'--><!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
 ## LINK
 
 ```TypeScript
@@ -45,60 +99,6 @@ A decorator of the [@InsightIntentPage](arkts-ability-app-ability-insightintentd
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-InsightIntentType-PAGE = '@InsightIntentPage'--><!--Device-InsightIntentType-PAGE = '@InsightIntentPage'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-## ENTRY
-
-```TypeScript
-ENTRY = '@InsightIntentEntry'
-```
-
-A decorator of the [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md#insightintententry) type.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'--><!--Device-InsightIntentType-ENTRY = '@InsightIntentEntry'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-## FUNCTION
-
-```TypeScript
-FUNCTION = '@InsightIntentFunctionMethod'
-```
-
-A decorator of the [@InsightIntentFunctionMethod](arkts-ability-app-ability-insightintentdecorator-insightintentfunctionmethod-d.md#insightintentfunctionmethod) type.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'--><!--Device-InsightIntentType-FUNCTION = '@InsightIntentFunctionMethod'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
-## FORM
-
-```TypeScript
-FORM = '@InsightIntentForm'
-```
-
-A decorator of the [@InsightIntentForm](arkts-ability-app-ability-insightintentdecorator-insightintentform-d.md#insightintentform) type.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-InsightIntentType-FORM = '@InsightIntentForm'--><!--Device-InsightIntentType-FORM = '@InsightIntentForm'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

@@ -21,8 +21,6 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | 同步方式创建音频播放实例。 |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | 创建音频录制的实例来控制音频的录制。一台设备只允许创建一个录制实例。 |
 | [createAVAdsController](arkts-media-media-createavadscontroller-f.md) | 创建一个与播放器实例关联的广告播放控制器。使用Promise异步回调。 |
 | [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md) | 创建一个离线下载任务管理器实例。使用Promise异步回调。 |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator1) | 创建AVImageGenerator对象。使用Promise异步回调。 |
@@ -42,6 +40,8 @@ import { media } from '@kit.MediaKit';
 | [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) | 创建流媒体预下载媒体来源实例方法。 |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool1) | 创建音频池实例。使用callback异步回调。 |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool3) | 创建音频池实例。使用Promise异步回调。 |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | 同步方式创建音频播放实例。 |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | 创建音频录制的实例来控制音频的录制。一台设备只允许创建一个录制实例。 |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) | 异步方式创建视频播放实例，使用callback异步回调。 |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer2) | 异步方式创建视频播放实例，通过Promise获取返回值。 |
 
@@ -62,9 +62,6 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AudioPlayer](arkts-media-media-audioplayer-i.md) |  |
-| [AudioRecorder](arkts-media-media-audiorecorder-i.md) |  |
-| [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) |  |
 | [AVAdsController](arkts-media-media-avadscontroller-i.md) | 广告内容控制接口，用于管理广告播放控制器中的广告资源及监听广告事件，支持添加和移除广告源、跳过当前广告、禁用剩余广告等，适用于需要在视频播放过程中插入和管理广告内容的场景。通过[createAVAdsController](arkts-media-media-createavadscontroller-f.md)创建实例。 |
 | [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md) | 定义音频和视频文件的描述符，用于DataSource播放模式。使用场景：一个应用可以在下载完音频和视频资源之前创建播放实例并开始播放。 |
 | [AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md) | 离线下载任务管理接口，用于管理媒体资源的离线下载任务，包括创建、暂停、恢复、移除下载任务以及监听下载状态和进度变化事件。适用于需要在应用内支持流媒体资源离线缓存、实现无网络环境下播放等场景，可帮助用户节省流量并提升弱网或离线场景下的媒体播放体验。通过[createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md)创建实例。 |
@@ -99,9 +96,12 @@ import { media } from '@kit.MediaKit';
 | [SeiMessage](arkts-media-media-seimessage-i.md) | 描述 SEI 消息的信息。 |
 | [SubtitleInfo](arkts-media-media-subtitleinfo-i.md) | 提供字幕信息。当订阅了字幕更新事件时，关于外部字幕的信息会通过回调返回。可以同步到AVPlayer#timeUpdate事件报告的时间 |
 | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | Describes the filter conditions for track selection. |
-| [VideoPlayer](arkts-media-media-videoplayer-i.md) | 视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer1)构建一个VideoPlayer实例。 |
 | [VideoSize](arkts-media-media-videosize-i.md) | Describes the video Dimensions. |
 | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | 添加水印的配置参数。水印位置以视频左上角为原点计算。 |
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) |  |
+| [AudioRecorder](arkts-media-media-audiorecorder-i.md) |  |
+| [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) |  |
+| [VideoPlayer](arkts-media-media-videoplayer-i.md) | 视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer1)构建一个VideoPlayer实例。 |
 
 <!--Del-->
 ### 接口（系统接口）
@@ -128,7 +128,6 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AudioState](arkts-media-media-audiostate-t.md) | 音频播放的状态机。可通过state属性获取当前状态。 |
 | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | 离线下载任务状态枚举。 |
 | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | [AVPlayer](arkts-media-multimedia-media.md)的状态机，可通过state属性主动获取当前状态，也可通过监听[stateChange](arkts-media-media-avplayer-i.md#onstatechange)事件上报当前状态，状态机之间的切换规则，可参考[音频播放开发指导](../../../media/media/using-avplayer-for-playback.md)。 |
 | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | 音视频录制的状态机。可通过state属性获取当前状态。 |
@@ -151,6 +150,7 @@ import { media } from '@kit.MediaKit';
 | [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md) | 由应用实现此回调函数，应用应释放相关资源。 |
 | [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md) | 由应用实现此回调函数，应用需处理传入的资源打开请求，并返回所打开资源对应的唯一句柄。 |
 | [SourceReadCallback](arkts-media-media-sourcereadcallback-t.md) | 由应用实现此回调函数，应用需记录读取请求，并在数据充足时通过对应的MediaSourceLoadingRequest对象的[respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata)方法推送数据。 |
+| [AudioState](arkts-media-media-audiostate-t.md) | 音频播放的状态机。可通过state属性获取当前状态。 |
 | [VideoPlayState](arkts-media-media-videoplaystate-t.md) | 视频播放的状态机，可通过state属性获取当前状态。 |
 
 <!--Del-->
@@ -166,8 +166,6 @@ import { media } from '@kit.MediaKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AacProfile](arkts-media-media-aacprofile-e.md) | 高级音频编码（AAC）类型枚举。 |
-| [AudioEncoder](arkts-media-media-audioencoder-e.md) |  |
-| [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) |  |
 | [AudioSourceType](arkts-media-media-audiosourcetype-e.md) | 表示视频录制中音频源类型的枚举。 |
 | [AVErrorCode](arkts-media-media-averrorcode-e.md) | [Media错误码](../../../reference/apis-media-kit/errorcode-media.md)类型枚举。 |
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 需要获取的缩略图时间点与视频帧的对应关系。 |
@@ -184,7 +182,6 @@ import { media } from '@kit.MediaKit';
 | [HdrType](arkts-media-media-hdrtype-e.md) | 表示视频HDR类型的枚举。 |
 | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | 枚举，数据加载过程中状态变化的原因。 |
 | [MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md) | 媒体信息描述枚举。 |
-| [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md) | 媒体服务错误类型枚举。 |
 | [MediaType](arkts-media-media-mediatype-e.md) | 媒体类型枚举。 |
 | [PickerMode](arkts-media-media-pickermode-e.md) | 表示屏幕录制Picker模式的枚举。 |
 | [PlaybackInfoKey](arkts-media-media-playbackinfokey-e.md) | 播放信息描述枚举。 |
@@ -197,6 +194,9 @@ import { media } from '@kit.MediaKit';
 | [SwitchMode](arkts-media-media-switchmode-e.md) | 表示视频播放的selectTrack模式枚举。 |
 | [VideoScaleType](arkts-media-media-videoscaletype-e.md) | 枚举，视频缩放模式。 |
 | [VideoSourceType](arkts-media-media-videosourcetype-e.md) | 表示视频录制中视频源类型的枚举。 |
+| [AudioEncoder](arkts-media-media-audioencoder-e.md) |  |
+| [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) |  |
+| [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md) | 媒体服务错误类型枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）

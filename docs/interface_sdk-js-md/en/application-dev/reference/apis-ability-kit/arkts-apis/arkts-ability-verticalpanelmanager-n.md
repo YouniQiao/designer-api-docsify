@@ -56,9 +56,9 @@ import { verticalPanelManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
+| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_ability_name) | export the const string of abilityName and provide it for sourceAppInfo. |
 | [SOURCE_APP_BUNDLE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_bundle_name) | export the const string of bundleName and provide it for sourceAppInfo. |
 | [SOURCE_APP_MODULE_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_module_name) | export the const string of moduleName and provide it for sourceAppInfo. |
-| [SOURCE_APP_ABILITY_NAME](arkts-ability-verticalpanelmanager-con-sys.md#source_app_ability_name) | export the const string of abilityName and provide it for sourceAppInfo. |
-| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#source_app_window_id) | export the const string of windowId and provide it for sourceAppInfo. |
 | [SOURCE_APP_SCREEN_MODE](arkts-ability-verticalpanelmanager-con-sys.md#source_app_screen_mode) | export the const string of screenMode and provide it for sourceAppInfo. |
+| [SOURCE_APP_WINDOW_ID](arkts-ability-verticalpanelmanager-con-sys.md#source_app_window_id) | export the const string of windowId and provide it for sourceAppInfo. |
 <!--DelEnd-->

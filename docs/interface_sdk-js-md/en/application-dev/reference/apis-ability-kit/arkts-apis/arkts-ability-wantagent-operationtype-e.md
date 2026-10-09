@@ -12,35 +12,19 @@ Enumerates the operation types of the WantAgent objects.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## UNKNOWN_TYPE
+## SEND_COMMON_EVENT
 
 ```TypeScript
-UNKNOWN_TYPE = 0
+SEND_COMMON_EVENT
 ```
 
-Unknown operation type.
+Sends a common event.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-OperationType-UNKNOWN_TYPE = 0--><!--Device-OperationType-UNKNOWN_TYPE = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## START_ABILITY
-
-```TypeScript
-START_ABILITY
-```
-
-Starts an ability with a UI.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-OperationType-START_ABILITY--><!--Device-OperationType-START_ABILITY-End-->
+<!--Device-OperationType-SEND_COMMON_EVENT--><!--Device-OperationType-SEND_COMMON_EVENT-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,6 +44,22 @@ Starts multiple abilities with a UI.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## START_ABILITY
+
+```TypeScript
+START_ABILITY
+```
+
+Starts an ability with a UI.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-OperationType-START_ABILITY--><!--Device-OperationType-START_ABILITY-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## START_SERVICE
 
 ```TypeScript
@@ -76,18 +76,18 @@ Starts an ability without a UI (valid only in the FA model).
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## SEND_COMMON_EVENT
+## UNKNOWN_TYPE
 
 ```TypeScript
-SEND_COMMON_EVENT
+UNKNOWN_TYPE = 0
 ```
 
-Sends a common event.
+Unknown operation type.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-OperationType-SEND_COMMON_EVENT--><!--Device-OperationType-SEND_COMMON_EVENT-End-->
+<!--Device-OperationType-UNKNOWN_TYPE = 0--><!--Device-OperationType-UNKNOWN_TYPE = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

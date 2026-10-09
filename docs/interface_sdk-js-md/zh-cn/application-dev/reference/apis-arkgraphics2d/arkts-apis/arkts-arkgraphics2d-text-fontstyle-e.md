@@ -12,22 +12,6 @@ enum FontStyle
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## NORMAL
-
-```TypeScript
-NORMAL = 0
-```
-
-常规样式。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-FontStyle-NORMAL = 0--><!--Device-FontStyle-NORMAL = 0-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
 ## ITALIC
 
 ```TypeScript
@@ -41,6 +25,22 @@ ITALIC = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontStyle-ITALIC = 1--><!--Device-FontStyle-ITALIC = 1-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
+## NORMAL
+
+```TypeScript
+NORMAL = 0
+```
+
+常规样式。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-FontStyle-NORMAL = 0--><!--Device-FontStyle-NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

@@ -67,9 +67,9 @@ import { zlib } from '@kit.BasicServicesKit';
 | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) | [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md) |
 | [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md) | The deflate compression method (the only one supported in this version). |
 | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) | [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md) |
-| [ErrorCode](arkts-basicservices-zlib-errorcode-e.md) | ErrorCode |
 | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) | [MemLevel](arkts-basicservices-zlib-memlevel-e.md) |
 | [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md) | Defines the reference point for the offset. |
 | [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md) | [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md) |
 | [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md) | Defines **PathSeparatorStrategy**, a property of [Options](arkts-basicservices-zlib-options-i.md), used to specify the separator strategy for the file path in the compressed package specified for decompression. |
 | [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md) | Return codes for the compression/decompression functions. |
+| [ErrorCode](arkts-basicservices-zlib-errorcode-e.md) | ErrorCode |

@@ -12,6 +12,22 @@ enum TxPowerMode
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
+## ADV_TX_POWER_HIGH
+
+```TypeScript
+ADV_TX_POWER_HIGH = 3
+```
+
+表示高功耗模式。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3--><!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3-End-->
+
+**系统能力：** SystemCapability.Communication.NearLink.Base
+
 ## ADV_TX_POWER_LOW
 
 ```TypeScript
@@ -41,21 +57,5 @@ ADV_TX_POWER_MEDIUM = 2
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-TxPowerMode-ADV_TX_POWER_MEDIUM = 2--><!--Device-TxPowerMode-ADV_TX_POWER_MEDIUM = 2-End-->
-
-**系统能力：** SystemCapability.Communication.NearLink.Base
-
-## ADV_TX_POWER_HIGH
-
-```TypeScript
-ADV_TX_POWER_HIGH = 3
-```
-
-表示高功耗模式。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3--><!--Device-TxPowerMode-ADV_TX_POWER_HIGH = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

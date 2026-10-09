@@ -30,49 +30,17 @@ GET_RESOURCE_INFO_ALL = 0x00000001
 
 **系统接口：** 此接口为系统接口。
 
-## GET_RESOURCE_INFO_WITH_LABEL
+## GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY
 
 ```TypeScript
-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002
+GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
-用于获取仅包含label信息，icon信息为空。
+用于获取仅在桌面上展示图标的Ability资源，它仅在[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md)和[getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md)接口中生效。
 
-**起始版本：** 11
+**起始版本：** 20
 
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
-
-**系统接口：** 此接口为系统接口。
-
-## GET_RESOURCE_INFO_WITH_ICON
-
-```TypeScript
-GET_RESOURCE_INFO_WITH_ICON = 0x00000004
-```
-
-用于获取仅包含icon信息，label信息为空。
-
-**起始版本：** 11
-
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
-
-**系统接口：** 此接口为系统接口。
-
-## GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL
-
-```TypeScript
-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
-```
-
-用于获取根据label排序后的信息。它不能单独使用，需要与GET_RESOURCE_INFO_ALL 或 GET_RESOURCE_INFO_WITH_LABEL一起使用。
-
-**起始版本：** 11
-
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -94,17 +62,49 @@ GET_RESOURCE_INFO_WITH_DRAWABLE_DESCRIPTOR = 0x00000010
 
 **系统接口：** 此接口为系统接口。
 
-## GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY
+## GET_RESOURCE_INFO_WITH_ICON
 
 ```TypeScript
-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
+GET_RESOURCE_INFO_WITH_ICON = 0x00000004
 ```
 
-用于获取仅在桌面上展示图标的Ability资源，它仅在[getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md)和[getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md)接口中生效。
+用于获取仅包含icon信息，label信息为空。
 
-**起始版本：** 20
+**起始版本：** 11
 
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
+
+**系统接口：** 此接口为系统接口。
+
+## GET_RESOURCE_INFO_WITH_LABEL
+
+```TypeScript
+GET_RESOURCE_INFO_WITH_LABEL = 0x00000002
+```
+
+用于获取仅包含label信息，icon信息为空。
+
+**起始版本：** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
+
+**系统接口：** 此接口为系统接口。
+
+## GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL
+
+```TypeScript
+GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
+```
+
+用于获取根据label排序后的信息。它不能单独使用，需要与GET_RESOURCE_INFO_ALL 或 GET_RESOURCE_INFO_WITH_LABEL一起使用。
+
+**起始版本：** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Resource
 

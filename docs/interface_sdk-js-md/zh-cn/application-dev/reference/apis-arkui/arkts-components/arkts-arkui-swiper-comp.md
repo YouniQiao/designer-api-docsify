@@ -58,12 +58,12 @@ Swiper(controller?: SwiperController)
 | [AutoPlayOptions](arkts-arkui-swiper-comp-autoplayoptions-i.md) | 自动播放属性。 |
 | [CachedCountOptions](arkts-arkui-swiper-comp-cachedcountoptions-i.md) | 预加载子组件的配置选项。 |
 | [IndicatorIconInfo](arkts-arkui-swiper-comp-indicatoriconinfo-i.md) | 为指定的导航点索引设置的图标。 |
-| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | 导航点样式。 |
 | [SwiperAnimationEvent](arkts-arkui-swiper-comp-swiperanimationevent-i.md) | Swiper组件动画相关信息集合。 |
 | [SwiperAutoFill](arkts-arkui-swiper-comp-swiperautofill-i.md) | 自适应属性。 |
 | [SwiperContentAnimatedTransition](arkts-arkui-swiper-comp-swipercontentanimatedtransition-i.md) | Swiper自定义切换动画相关信息。 |
 | [SwiperContentTransitionProxy](arkts-arkui-swiper-comp-swipercontenttransitionproxy-i.md) | Swiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知Swiper组件页面自定义动画已结束。 |
 | [SwiperContentWillScrollResult](arkts-arkui-swiper-comp-swipercontentwillscrollresult-i.md) | 滑动的相关信息，主要包括：当前页面对应的index、滑动方向上即将显示的页面index和此次滑动的位移。 |
+| [IndicatorStyle](arkts-arkui-swiper-comp-indicatorstyle-i.md) | 导航点样式。 |
 
 ### 类型
 

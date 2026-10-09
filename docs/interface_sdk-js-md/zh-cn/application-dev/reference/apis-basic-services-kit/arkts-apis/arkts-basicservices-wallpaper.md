@@ -46,13 +46,10 @@ import { wallpaper } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md) | 获取指定类型壁纸的主要颜色信息。<br> |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage1) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用callback异步回调。 |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage2) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用Promise异步回调。 |
 | [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md) | 获取壁纸的最小高度值。 |
 | [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md) | 获取壁纸的最小宽度值。 |
-| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap1) | 获取壁纸图片的像素图。使用callback异步回调。<br> |
-| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap2) | 获取壁纸图片的像素图。使用Promise异步回调。<br> |
 | [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -&gt; unfolded-port -&gt;normal-port。使用Promise异步回调。 |
 | [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
@@ -65,6 +62,9 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage2) | 将指定资源设置为指定类型的壁纸。使用Promise异步回调。 |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo1) | 将视频资源设置为桌面或锁屏的动态壁纸。使用callback异步回调。 |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo2) | 将视频资源设置为桌面或锁屏的动态壁纸。使用Promise异步回调。 |
+| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md) | 获取指定类型壁纸的主要颜色信息。<br> |
+| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap1) | 获取壁纸图片的像素图。使用callback异步回调。<br> |
+| [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap2) | 获取壁纸图片的像素图。使用Promise异步回调。<br> |
 <!--DelEnd-->
 
 ### 接口

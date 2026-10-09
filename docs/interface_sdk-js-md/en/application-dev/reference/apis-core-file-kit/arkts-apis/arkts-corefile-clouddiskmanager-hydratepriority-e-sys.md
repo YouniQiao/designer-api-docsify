@@ -14,6 +14,24 @@ Enumerates the priority levels of the hydrate task.
 
 **System API:** This is a system API.
 
+## HIGH
+
+```TypeScript
+HIGH = 2
+```
+
+High priority.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HydratePriority-HIGH = 2--><!--Device-HydratePriority-HIGH = 2-End-->
+
+**System capability:** SystemCapability.FileManagement.CloudDiskManager
+
+**System API:** This is a system API.
+
 ## LOW
 
 ```TypeScript
@@ -45,24 +63,6 @@ Normal priority.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-HydratePriority-NORMAL = 1--><!--Device-HydratePriority-NORMAL = 1-End-->
-
-**System capability:** SystemCapability.FileManagement.CloudDiskManager
-
-**System API:** This is a system API.
-
-## HIGH
-
-```TypeScript
-HIGH = 2
-```
-
-High priority.
-
-**Since:** 26.0.1
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HydratePriority-HIGH = 2--><!--Device-HydratePriority-HIGH = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

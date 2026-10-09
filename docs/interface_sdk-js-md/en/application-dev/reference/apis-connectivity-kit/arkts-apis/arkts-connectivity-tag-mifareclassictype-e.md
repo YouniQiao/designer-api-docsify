@@ -12,22 +12,6 @@ Enumerates the MIFARE Classic tag types.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-## TYPE_UNKNOWN
-
-```TypeScript
-TYPE_UNKNOWN = 0
-```
-
-Unknown type.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-MifareClassicType-TYPE_UNKNOWN = 0--><!--Device-MifareClassicType-TYPE_UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
 ## TYPE_CLASSIC
 
 ```TypeScript
@@ -73,5 +57,21 @@ MIFARE Pro.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-MifareClassicType-TYPE_PRO = 3--><!--Device-MifareClassicType-TYPE_PRO = 3-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## TYPE_UNKNOWN
+
+```TypeScript
+TYPE_UNKNOWN = 0
+```
+
+Unknown type.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MifareClassicType-TYPE_UNKNOWN = 0--><!--Device-MifareClassicType-TYPE_UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag

@@ -12,70 +12,6 @@ export enum WeekDay
 
 **系统能力：** SystemCapability.Global.I18n
 
-## MON
-
-```TypeScript
-MON = 1
-```
-
-周一。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## TUE
-
-```TypeScript
-TUE = 2
-```
-
-周二。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## WED
-
-```TypeScript
-WED = 3
-```
-
-周三。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## THU
-
-```TypeScript
-THU = 4
-```
-
-周四。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
 ## FRI
 
 ```TypeScript
@@ -89,6 +25,22 @@ FRI = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-WeekDay-FRI = 5--><!--Device-WeekDay-FRI = 5-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## MON
+
+```TypeScript
+MON = 1
+```
+
+周一。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -121,5 +73,53 @@ SUN = 7
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-WeekDay-SUN = 7--><!--Device-WeekDay-SUN = 7-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## THU
+
+```TypeScript
+THU = 4
+```
+
+周四。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## TUE
+
+```TypeScript
+TUE = 2
+```
+
+周二。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## WED
+
+```TypeScript
+WED = 3
+```
+
+周三。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
 
 **系统能力：** SystemCapability.Global.I18n

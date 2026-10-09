@@ -12,22 +12,6 @@ Enumerates the display modes of an [EmbeddableUIAbility](arkts-ability-app-abili
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-## WINDOW
-
-```TypeScript
-WINDOW = 0
-```
-
-An independent window is used to show the ability startup.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
 ## EMBEDDED_FULL
 
 ```TypeScript
@@ -59,5 +43,21 @@ An embedded half-screen is used to show the ability startup.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
 <!--Device-ShowMode-EMBEDDED_HALF = 2--><!--Device-ShowMode-EMBEDDED_HALF = 2-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## WINDOW
+
+```TypeScript
+WINDOW = 0
+```
+
+An independent window is used to show the ability startup.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase

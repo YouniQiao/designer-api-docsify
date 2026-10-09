@@ -30,49 +30,17 @@ Both the application icon and label are obtained.
 
 **System API:** This is a system API.
 
-## GET_RESOURCE_INFO_WITH_LABEL
+## GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY
 
 ```TypeScript
-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002
+GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
 ```
 
-Only the application label is obtained.
+The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md) and [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md) APIs.
 
-**Since:** 11
+**Since:** 20
 
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Resource
-
-**System API:** This is a system API.
-
-## GET_RESOURCE_INFO_WITH_ICON
-
-```TypeScript
-GET_RESOURCE_INFO_WITH_ICON = 0x00000004
-```
-
-Only the application icon is obtained.
-
-**Since:** 11
-
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Resource
-
-**System API:** This is a system API.
-
-## GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL
-
-```TypeScript
-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
-```
-
-The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or **GET_RESOURCE_INFO_WITH_LABEL**.
-
-**Since:** 11
-
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 
@@ -94,17 +62,49 @@ The [drawableDescriptor](../../../reference/apis-arkui/js-apis-arkui-drawableDes
 
 **System API:** This is a system API.
 
-## GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY
+## GET_RESOURCE_INFO_WITH_ICON
 
 ```TypeScript
-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020
+GET_RESOURCE_INFO_WITH_ICON = 0x00000004
 ```
 
-The resource information about abilities that show icons only on the home screen is obtained. It is valid only in the [getLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getlauncherabilityresourceinfo-f-sys.md) and [getAllLauncherAbilityResourceInfo](arkts-ability-bundleresourcemanager-getalllauncherabilityresourceinfo-f-sys.md) APIs.
+Only the application icon is obtained.
 
-**Since:** 20
+**Since:** 11
 
-<!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020--><!--Device-ResourceFlag-GET_RESOURCE_INFO_ONLY_WITH_MAIN_ABILITY = 0x00000020-End-->
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_ICON = 0x00000004-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Resource
+
+**System API:** This is a system API.
+
+## GET_RESOURCE_INFO_WITH_LABEL
+
+```TypeScript
+GET_RESOURCE_INFO_WITH_LABEL = 0x00000002
+```
+
+Only the application label is obtained.
+
+**Since:** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_LABEL = 0x00000002-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Resource
+
+**System API:** This is a system API.
+
+## GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL
+
+```TypeScript
+GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008
+```
+
+The obtained information is sorted by label. It must be used together with **GET_RESOURCE_INFO_ALL** or **GET_RESOURCE_INFO_WITH_LABEL**.
+
+**Since:** 11
+
+<!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008--><!--Device-ResourceFlag-GET_RESOURCE_INFO_WITH_SORTED_BY_LABEL = 0x00000008-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Resource
 

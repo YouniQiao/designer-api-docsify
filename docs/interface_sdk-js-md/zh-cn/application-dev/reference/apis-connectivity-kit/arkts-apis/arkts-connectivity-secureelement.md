@@ -29,9 +29,9 @@ import { omapi } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [createService](arkts-connectivity-omapi-createservice-f.md) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式。使用Promise异步回调。 |
-| [newSEService](arkts-connectivity-omapi-newseservice-f.md) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。 |
 | [off](arkts-connectivity-omapi-off-f.md#offstatechanged) | 取消订阅服务状态更改事件。 |
 | [on](arkts-connectivity-omapi-on-f.md#onstatechanged) | 注册监听服务状态变化事件。 |
+| [newSEService](arkts-connectivity-omapi-newseservice-f.md) | 建立一个可用于连接到系统中所有可用SE的新连接（服务）。连接过程较为耗时，所以此方法仅提供异步方式进行的。使用callback异步回调。 |
 
 ### 接口
 

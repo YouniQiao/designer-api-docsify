@@ -24,10 +24,10 @@ import { matrix4 } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [combine](arkts-arkui-matrix4-combine-f.md) | Matrix的叠加函数，可以将两个矩阵的效果叠加起来作用于当前矩阵。会改变调用该函数的原始矩阵。 |
-| [copy](arkts-arkui-matrix4-copy-f.md) | Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。 |
 | [identity](arkts-arkui-matrix4-identity-f.md) | Matrix的初始化函数，可以返回一个初始的单位矩阵对象，可作为后续矩阵变换操作的基础。 |
 | [init](arkts-arkui-matrix4-init-f.md) | Matrix的构造函数，可以通过传入的参数创建一个四阶矩阵，矩阵为列优先，即输入数组的16个值按列依次填充至矩阵：array[0]~array[3]为第1列，array[4]~array[7]为第2列，array[8]~array [11]为第3列，array[12]~array[15]为第4列。当仅需单位矩阵时，推荐使用matrix4.identity()。 |
+| [combine](arkts-arkui-matrix4-combine-f.md) | Matrix的叠加函数，可以将两个矩阵的效果叠加起来作用于当前矩阵。会改变调用该函数的原始矩阵。 |
+| [copy](arkts-arkui-matrix4-copy-f.md) | Matrix的拷贝函数，可以拷贝一份当前的矩阵对象。 |
 | [invert](arkts-arkui-matrix4-invert-f.md) | Matrix的逆函数，可以返回一个当前矩阵对象的逆矩阵，即效果正好相反。会改变调用该函数的原始矩阵。 |
 | [rotate](arkts-arkui-matrix4-rotate-f.md) | Matrix的旋转函数，可以为当前矩阵增加x轴/y轴/z轴旋转效果。会改变调用该函数的原始矩阵。 |
 | [scale](arkts-arkui-matrix4-scale-f.md) | Matrix的缩放函数，可以为当前矩阵增加x轴/y轴/z轴缩放效果。会改变调用该函数的原始矩阵。 |

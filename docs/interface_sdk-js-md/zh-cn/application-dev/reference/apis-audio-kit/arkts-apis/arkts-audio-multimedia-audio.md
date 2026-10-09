@@ -58,10 +58,8 @@ import { audio } from '@kit.AudioKit';
 | [AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md) | 描述音频设备。 |
 | [AudioDeviceEnhanceManager](arkts-audio-audio-audiodeviceenhancemanager-i.md) | 音频设备增强管理功能，用于应用级音频设备选择及流维度音频设备选择。在使用AudioDeviceEnhanceManager的接口之前，需要先通过getDeviceEnhanceManager获取AudioDeviceEnhanceManager实例。 |
 | [AudioDevicePair](arkts-audio-audio-audiodevicepair-i.md) | 描述返听使用的音频设备对，包含输入设备和输出设备。 |
-| [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 音频监听事件传入的参数。 |
 | [AudioLoopback](arkts-audio-audio-audioloopback-i.md) | 提供音频返听的相关接口。在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md)获取AudioLoopback实例。当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。输入/输出设备由系统自动选择。如果当前输入/输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入/输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。 |
 | [AudioManager](arkts-audio-audio-audiomanager-i.md) | 管理音频音量和音频设备。在调用AudioManager的接口前，需要先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)创建实例。 |
-| [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md) | 音频内录的配置信息。 |
 | [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md) | 录音策略管理，提供协同录音和录音控制能力。通过[getRecordingManager](arkts-audio-audio-audiomanager-i.md#getrecordingmanager)获取AudioRecordingManager实例。 |
 | [AudioRenderer](arkts-audio-audio-audiorenderer-i.md) | 音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer1)获取AudioRenderer实例。 |
 | [AudioRendererChangeInfo](arkts-audio-audio-audiorendererchangeinfo-i.md) | 描述音频渲染器更改信息。 |
@@ -79,17 +77,19 @@ import { audio } from '@kit.AudioKit';
 | [AudioTimestampInfo](arkts-audio-audio-audiotimestampinfo-i.md) | 音频流时间戳和当前数据帧位置信息。 |
 | [AudioVolumeGroupManager](arkts-audio-audio-audiovolumegroupmanager-i.md) | 管理音频组音量，支持设置和调节指定音量流、控制静音状态、设置铃声模式等。适用于需要对特定音量组进行独立管理、实现铃声模式切换、调节系统音量的场景。在调用AudioVolumeGroupManager的接口前，需要先通过[getVolumeGroupManager](arkts-audio-audio-audiovolumemanager-i.md#getvolumegroupmanager)创建实例。 |
 | [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md) | 音量管理，提供音量组信息查询、应用级音量控制、系统音量百分比管理等功能。适用于需要对音量进行精细化控制、监听音量变化、管理应用级音量的场景。在使用AudioVolumeManager的接口前，需要使用[getVolumeManager](arkts-audio-audio-audiomanager-i.md#getvolumemanager)获取AudioVolumeManager实例。 |
-| [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md) | 待录制的播放音频流的筛选信息。 |
 | [CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md) | 应用接收到输入设备的变更事件。 |
 | [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md) | 应用接收到输出设备的变更事件。 |
 | [DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md) | 描述音频设备被堵塞状态和设备信息。 |
 | [DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md) | 描述设备连接状态变化和设备信息。 |
-| [InterruptAction](arkts-audio-audio-interruptaction-i.md) | 音频打断/获取焦点事件的回调方法。 |
 | [InterruptEvent](arkts-audio-audio-interruptevent-i.md) | 音频中断时，应用接收的中断事件。 |
 | [MicStateChangeEvent](arkts-audio-audio-micstatechangeevent-i.md) | 麦克风状态变化时，应用接收到的事件。 |
 | [StreamVolumeEvent](arkts-audio-audio-streamvolumeevent-i.md) | 音频流音量变化时，应用接收到的事件。 |
 | [SystemRecordControllerConfig](arkts-audio-audio-systemrecordcontrollerconfig-i.md) | 系统录音控制面板的配置信息。 |
 | [VolumeEvent](arkts-audio-audio-volumeevent-i.md) | 音量改变时，应用接收的事件。 |
+| [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 音频监听事件传入的参数。 |
+| [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md) | 音频内录的配置信息。 |
+| [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md) | 待录制的播放音频流的筛选信息。 |
+| [InterruptAction](arkts-audio-audio-interruptaction-i.md) | 音频打断/获取焦点事件的回调方法。 |
 
 <!--Del-->
 ### 接口（系统接口）
@@ -163,7 +163,6 @@ import { audio } from '@kit.AudioKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 表示活跃设备类型的枚举。 |
 | [AudioChannel](arkts-audio-audio-audiochannel-e.md) | 表示音频声道的枚举。 |
 | [AudioChannelLayout](arkts-audio-audio-audiochannellayout-e.md) | 表示音频文件声道布局类型的枚举。 |
 | [AudioConcurrencyMode](arkts-audio-audio-audioconcurrencymode-e.md) | 表示音频并发模式的枚举。 |
@@ -194,14 +193,12 @@ import { audio } from '@kit.AudioKit';
 | [BluetoothAndNearlinkPreferredRecordCategory](arkts-audio-audio-bluetoothandnearlinkpreferredrecordcategory-e.md) | 表示在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类枚举。 |
 | [ChannelBlendMode](arkts-audio-audio-channelblendmode-e.md) | 表示声道混合模式类型的枚举。 |
 | [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md) | 表示用于通信的可用设备类型的枚举。 |
-| [ContentType](arkts-audio-audio-contenttype-e.md) | 表示音频内容类型的枚举。 |
 | [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md) | 表示音频设备是否被堵塞的枚举。 |
 | [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md) | 表示设备连接状态变化的枚举。 |
 | [DeviceFlag](arkts-audio-audio-deviceflag-e.md) | 枚举，可获取的设备种类。 |
 | [DeviceRole](arkts-audio-audio-devicerole-e.md) | 表示设备角色的枚举。 |
 | [DeviceType](arkts-audio-audio-devicetype-e.md) | 表示设备类型的枚举。 |
 | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 表示音频设备类型的枚举（根据用途分类）。 |
-| [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md) | 表示中断事件返回类型的枚举。 |
 | [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | 表示音频打断类型的枚举。当用户监听到音频中断（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示音频打断是否已由系统强制执行，具体操作信息（如音频暂停、停止等）可通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)获取。关于音频打断策略的详细说明可参考文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptHint](arkts-audio-audio-interrupthint-e.md) | 表示中断提示的枚举。当用户监听到音频中断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示根据焦点策略，对音频流执行的具体操作（如暂停、调整音量等）。可以结合InterruptEvent中的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)信息，判断该操作是否已由系统强制执行。详情请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | 表示焦点模型的枚举。 |
@@ -211,6 +208,9 @@ import { audio } from '@kit.AudioKit';
 | [PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md) | 表示调用[requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart)后异步返回的内录启动状态的枚举。 |
 | [SourceType](arkts-audio-audio-sourcetype-e.md) | 枚举，音源类型。 |
 | [StreamUsage](arkts-audio-audio-streamusage-e.md) | 枚举，音频流使用类型。 |
+| [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | 表示活跃设备类型的枚举。 |
+| [ContentType](arkts-audio-audio-contenttype-e.md) | 表示音频内容类型的枚举。 |
+| [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md) | 表示中断事件返回类型的枚举。 |
 
 <!--Del-->
 ### 枚举（系统接口）

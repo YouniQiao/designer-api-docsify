@@ -56,6 +56,24 @@ NONE = 0
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
 
+## PERSIST
+
+```TypeScript
+PERSIST = 3
+```
+
+表示持久化文件的权限。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-UriPermission-PERSIST = 3--><!--Device-UriPermission-PERSIST = 3-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
+
 ## READ
 
 ```TypeScript
@@ -89,23 +107,5 @@ WRITE = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UriPermission-WRITE = 2--><!--Device-UriPermission-WRITE = 2-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
-
-## PERSIST
-
-```TypeScript
-PERSIST = 3
-```
-
-表示持久化文件的权限。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-UriPermission-PERSIST = 3--><!--Device-UriPermission-PERSIST = 3-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core

@@ -12,38 +12,6 @@ Enumeration of current call state
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-## CALL_STATE_IDLE
-
-```TypeScript
-CALL_STATE_IDLE = 0
-```
-
-Idle state.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
-## CALL_STATE_INCOMING
-
-```TypeScript
-CALL_STATE_INCOMING = 1
-```
-
-Incoming state.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
 ## CALL_STATE_ACTIVE
 
 ```TypeScript
@@ -76,19 +44,19 @@ Dialing state.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-## CALL_STATE_WAITING
+## CALL_STATE_DISCONNECTING
 
 ```TypeScript
-CALL_STATE_WAITING = 4
+CALL_STATE_DISCONNECTING = 6
 ```
 
-Waiting state.
+Disconnecting state.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-CallState-CALL_STATE_WAITING = 4--><!--Device-CallState-CALL_STATE_WAITING = 4-End-->
+<!--Device-CallState-CALL_STATE_DISCONNECTING = 6--><!--Device-CallState-CALL_STATE_DISCONNECTING = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
@@ -108,18 +76,50 @@ Holding state.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-## CALL_STATE_DISCONNECTING
+## CALL_STATE_IDLE
 
 ```TypeScript
-CALL_STATE_DISCONNECTING = 6
+CALL_STATE_IDLE = 0
 ```
 
-Disconnecting state.
+Idle state.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-CallState-CALL_STATE_DISCONNECTING = 6--><!--Device-CallState-CALL_STATE_DISCONNECTING = 6-End-->
+<!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## CALL_STATE_INCOMING
+
+```TypeScript
+CALL_STATE_INCOMING = 1
+```
+
+Incoming state.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## CALL_STATE_WAITING
+
+```TypeScript
+CALL_STATE_WAITING = 4
+```
+
+Waiting state.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-CallState-CALL_STATE_WAITING = 4--><!--Device-CallState-CALL_STATE_WAITING = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core

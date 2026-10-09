@@ -12,6 +12,34 @@ Describes the wifi security type. @enum { int }
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
+## WIFI_SEC_TYPE_EAP
+
+```TypeScript
+WIFI_SEC_TYPE_EAP = 5
+```
+
+EAP authentication.
+
+**Since:** 9
+
+<!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.Core
+
+## WIFI_SEC_TYPE_EAP_SUITE_B
+
+```TypeScript
+WIFI_SEC_TYPE_EAP_SUITE_B = 6
+```
+
+SUITE_B_192 192 bit level.
+
+**Since:** 9
+
+<!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP_SUITE_B = 6--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP_SUITE_B = 6-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.Core
+
 ## WIFI_SEC_TYPE_INVALID
 
 ```TypeScript
@@ -42,17 +70,17 @@ Open
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
-## WIFI_SEC_TYPE_WEP
+## WIFI_SEC_TYPE_OWE
 
 ```TypeScript
-WIFI_SEC_TYPE_WEP = 2
+WIFI_SEC_TYPE_OWE = 7
 ```
 
-Wired Equivalent Privacy (WEP)
+Opportunistic Wireless Encryption.
 
 **Since:** 9
 
-<!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
+<!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
@@ -84,48 +112,6 @@ Simultaneous Authentication of Equals (SAE)
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
-## WIFI_SEC_TYPE_EAP
-
-```TypeScript
-WIFI_SEC_TYPE_EAP = 5
-```
-
-EAP authentication.
-
-**Since:** 9
-
-<!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP = 5-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.Core
-
-## WIFI_SEC_TYPE_EAP_SUITE_B
-
-```TypeScript
-WIFI_SEC_TYPE_EAP_SUITE_B = 6
-```
-
-SUITE_B_192 192 bit level.
-
-**Since:** 9
-
-<!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP_SUITE_B = 6--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_EAP_SUITE_B = 6-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.Core
-
-## WIFI_SEC_TYPE_OWE
-
-```TypeScript
-WIFI_SEC_TYPE_OWE = 7
-```
-
-Opportunistic Wireless Encryption.
-
-**Since:** 9
-
-<!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OWE = 7-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.Core
-
 ## WIFI_SEC_TYPE_WAPI_CERT
 
 ```TypeScript
@@ -151,5 +137,19 @@ WAPI pre-shared key to be specified.
 **Since:** 9
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_PSK = 9--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WAPI_PSK = 9-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.Core
+
+## WIFI_SEC_TYPE_WEP
+
+```TypeScript
+WIFI_SEC_TYPE_WEP = 2
+```
+
+Wired Equivalent Privacy (WEP)
+
+**Since:** 9
+
+<!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core

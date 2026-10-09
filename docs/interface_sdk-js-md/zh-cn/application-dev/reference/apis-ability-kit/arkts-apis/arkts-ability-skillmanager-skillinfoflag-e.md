@@ -50,24 +50,6 @@ GET_SKILL_INFO_WITH_DESCRIPTION = 0x00000001
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_SKILL_INFO_WITH_SRC_ENTRIES
-
-```TypeScript
-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002
-```
-
-用于获取包含srcEntries的技能信息。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 ## GET_SKILL_INFO_WITH_PERMISSIONS
 
 ```TypeScript
@@ -101,5 +83,23 @@ GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008
 **原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_SKILL_INFO_WITH_SRC_ENTRIES
+
+```TypeScript
+GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002
+```
+
+用于获取包含srcEntries的技能信息。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core

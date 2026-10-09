@@ -1,6 +1,6 @@
 # ArkTS Components<!--arkts-components-arkweb-->
 
-- [Web(Web控制器)](arkts-arkweb-web-comp.md)
+- [Web（Web控制器）](arkts-arkweb-web-comp.md)
   - [Web属性/事件](arkts-arkweb-web-comp-attribute.md)
   - [ClientAuthenticationHandler](arkts-arkweb-web-comp-clientauthenticationhandler-c.md)
   - [ConsoleMessage](arkts-arkweb-web-comp-consolemessage-c.md)

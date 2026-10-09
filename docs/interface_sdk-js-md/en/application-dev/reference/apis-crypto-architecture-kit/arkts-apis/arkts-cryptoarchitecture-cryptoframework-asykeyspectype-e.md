@@ -32,6 +32,24 @@ Common parameters of the public and private keys. You can use [generateKeyPair](
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
 - API versions 10 to 11: SystemCapability.Security.CryptoFramework
 
+## KEY_PAIR_SPEC
+
+```TypeScript
+KEY_PAIR_SPEC = 3
+```
+
+Full parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair1) to generate a key pair based on the parameters of this type.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
+
+**System capability:** 
+- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
+- API versions 10 to 11: SystemCapability.Security.CryptoFramework
+
 ## PRIVATE_KEY_SPEC
 
 ```TypeScript
@@ -63,24 +81,6 @@ Parameter of the public key. You can use [generatePubKey](arkts-cryptoarchitectu
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
-
-**System capability:** 
-- API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey
-- API versions 10 to 11: SystemCapability.Security.CryptoFramework
-
-## KEY_PAIR_SPEC
-
-```TypeScript
-KEY_PAIR_SPEC = 3
-```
-
-Full parameters of the public and private keys. You can use [generateKeyPair](arkts-cryptoarchitecture-cryptoframework-asykeygeneratorbyspec-i.md#generatekeypair1) to generate a key pair based on the parameters of this type.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
 **System capability:** 
 - API version 12 and later: SystemCapability.Security.CryptoFramework.Key.AsymKey

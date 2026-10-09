@@ -12,20 +12,6 @@ Device type of the touch input source. Currently the touchscreen, stylus, and to
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
-## TOUCH_SCREEN
-
-```TypeScript
-TOUCH_SCREEN = 0
-```
-
-Touchscreen.
-
-**Since:** 9
-
-<!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
 ## PEN
 
 ```TypeScript
@@ -51,5 +37,19 @@ Touchpad.
 **Since:** 9
 
 <!--Device-SourceType-TOUCH_PAD = 2--><!--Device-SourceType-TOUCH_PAD = 2-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## TOUCH_SCREEN
+
+```TypeScript
+TOUCH_SCREEN = 0
+```
+
+Touchscreen.
+
+**Since:** 9
+
+<!--Device-SourceType-TOUCH_SCREEN = 0--><!--Device-SourceType-TOUCH_SCREEN = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core

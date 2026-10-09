@@ -55,7 +55,6 @@ import { camera } from '@kit.CameraKit';
 | [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md) | 相机管理器回调返回的接口实例，该实例表示相机状态信息。 |
 | [CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md) | 拍照停止信息。 |
 | [CapturePhoto](arkts-camera-camera-capturephoto-i.md) | 获取全质量图和未压缩图的对象。 |
-| [CaptureSession](arkts-camera-camera-capturesession-i.md) | 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。 |
 | [CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md) | 拍照开始信息。 |
 | [ColorManagement](arkts-camera-camera-colormanagement-i.md) | ColorManagement继承自[ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md)。 |
 | [ColorManagementQuery](arkts-camera-camera-colormanagementquery-i.md) | 色彩管理类，用于查询色彩空间参数。 |
@@ -119,6 +118,7 @@ import { camera } from '@kit.CameraKit';
 | [ZoomPointInfo](arkts-camera-camera-zoompointinfo-i.md) | 等效焦距信息。 |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i.md) | 提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。 |
 | [ZoomRange](arkts-camera-camera-zoomrange-i.md) | 变焦范围。 |
+| [CaptureSession](arkts-camera-camera-capturesession-i.md) | 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。 |
 
 <!--Del-->
 ### 接口（系统接口）
@@ -135,7 +135,6 @@ import { camera } from '@kit.CameraKit';
 | [CameraInput](arkts-camera-camera-camerainput-i-sys.md) | 相机设备输入对象。 |
 | [CameraManager](arkts-camera-camera-cameramanager-i-sys.md) | 相机管理器类，使用前需要通过[getCameraManager](arkts-camera-camera-getcameramanager-f.md)接口获取相机管理实例。 |
 | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i-sys.md) | 相机输出能力项。 |
-| [CaptureSession](arkts-camera-camera-capturesession-i-sys.md) | 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。 |
 | [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md) | ColorEffect extends [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) Provides the APIs to obtain and set the lens color effect. |
 | [ColorEffectQuery](arkts-camera-camera-coloreffectquery-i-sys.md) | Provides the API to obtain the color effects supported. |
 | [ColorReservation](arkts-camera-camera-colorreservation-i-sys.md) | ColorReservation extends [ColorReservationQuery](arkts-camera-camera-colorreservationquery-i-sys.md) Provides API for obtaining and setting a color reservation type. |
@@ -206,6 +205,7 @@ import { camera } from '@kit.CameraKit';
 | [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i-sys.md) | 提供了查询设备对指定的白平衡模式是否支持，以及获取设备支持的白平衡模式范围的方法。 |
 | [Zoom](arkts-camera-camera-zoom-i-sys.md) | Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。 |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i-sys.md) | 提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。 |
+| [CaptureSession](arkts-camera-camera-capturesession-i-sys.md) | 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。 |
 <!--DelEnd-->
 
 ### 类型

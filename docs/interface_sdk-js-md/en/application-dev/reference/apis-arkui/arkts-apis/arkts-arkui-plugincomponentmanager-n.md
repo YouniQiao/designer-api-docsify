@@ -24,9 +24,9 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
+| [on](arkts-arkui-plugincomponentmanager-on-f.md) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 | [push](arkts-arkui-plugincomponentmanager-push-f.md#push1) | Pushes the component and data to the component user. This API is applicable to scenarios where the provider needs to proactively notify the user to refresh the display after data is updated. <br>Cooperation method: The user must first call [on('push', callback)](../../../reference/apis-arkui/js-apis-plugincomponent.md#plugincomponentmanageron) to register a push event listener before receiving the components and data pushed through this API. If the user does not register the listener, the pushed data cannot be received. |
 | [request](arkts-arkui-plugincomponentmanager-request-f.md#request1) | Requests the component from the component provider. This API is applicable to scenarios where the user needs to obtain the provider's components and data on demand. <br>Cooperation method: The provider must first call [on('request', callback)](../../../reference/apis-arkui/js-apis-plugincomponent.md#plugincomponentmanageron) to register a request event listener before receiving the request initiated by the user through this API and returning data. If the provider does not register the listener, the request cannot be responded to. |
-| [on](arkts-arkui-plugincomponentmanager-on-f.md) | Listens for events of the request type and returns the requested data, or listens for events of the push type and receives the data pushed by the provider. |
 
 <!--Del-->
 ### Functions(System API)
@@ -42,9 +42,9 @@ import { pluginComponentManager, PluginComponentTemplate } from '@kit.ArkUI';
 | Name | Description |
 | --- | --- |
 | [PushParameters](arkts-arkui-plugincomponentmanager-pushparameters-i.md) | Defines the parameters required when using the **pluginComponentManager.push** API. |
-| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Defines the parameters required when using the **pluginComponentManager.request** API. |
 | [RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md) | Provides the result returned after the **pluginComponentManager.request** API is called. |
 | [RequestEventResult](arkts-arkui-plugincomponentmanager-requesteventresult-i.md) | Provides the data type used to respond to a request event after the request listener is registered. |
+| [RequestParameters](arkts-arkui-plugincomponentmanager-requestparameters-i.md) | Defines the parameters required when using the **pluginComponentManager.request** API. |
 
 <!--Del-->
 ### Interfaces(System API)

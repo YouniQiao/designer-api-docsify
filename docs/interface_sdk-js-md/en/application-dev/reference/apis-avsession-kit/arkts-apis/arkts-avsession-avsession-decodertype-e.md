@@ -12,6 +12,22 @@ The defination of decoder type.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast
 
+## OH_AVCODEC_MIMETYPE_AUDIO_VIVID
+
+```TypeScript
+OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'
+```
+
+Defination of audio vivid codec type.
+
+**Since:** 19
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVCast
+
 ## OH_AVCODEC_MIMETYPE_VIDEO_AVC
 
 ```TypeScript
@@ -41,21 +57,5 @@ Defination of hevc codec type.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
 <!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVCast
-
-## OH_AVCODEC_MIMETYPE_AUDIO_VIVID
-
-```TypeScript
-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'
-```
-
-Defination of audio vivid codec type.
-
-**Since:** 19
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVCast

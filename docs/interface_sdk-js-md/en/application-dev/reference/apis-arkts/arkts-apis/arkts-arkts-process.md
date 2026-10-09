@@ -21,18 +21,18 @@ import { process } from '@kit.ArkTS';
 | Name | Description |
 | --- | --- |
 | [abort](arkts-arkts-process-abort-f.md) | Aborts a process and generates a core file. This method will cause a process to exit immediately. Exercise caution when using this method. |
-| [exit](arkts-arkts-process-exit-f.md) | Terminates this process. |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | Obtains the value of an environment variable. |
 | [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md) | Obtains the CPU time (in milliseconds) from the time the process starts to the current time. |
 | [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md) | Obtains the duration (excluding the system sleep time), in milliseconds, from the time the system starts to the time the process starts. |
+| [is64Bit](arkts-arkts-process-is64bit-f.md) | Checks whether this process is running in a 64-bit environment. |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md) | Checks whether this process is isolated. |
+| [uptime](arkts-arkts-process-uptime-f.md) | Obtains the running time of the current system, in seconds. |
+| [exit](arkts-arkts-process-exit-f.md) | Terminates this process. |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | Obtains the value of an environment variable. |
 | [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md) | Obtains the system configuration. |
 | [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md) | Obtains the thread priority based on the specified TID. |
 | [getUidForName](arkts-arkts-process-getuidforname-f.md) | Obtains the UID of a user from the user database of the system based on the specified user name. |
-| [is64Bit](arkts-arkts-process-is64bit-f.md) | Checks whether this process is running in a 64-bit environment. |
 | [isAppUid](arkts-arkts-process-isappuid-f.md) | Checks whether a UID belongs to this application. |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md) | Checks whether this process is isolated. |
 | [kill](arkts-arkts-process-kill-f.md) | Sends a signal to a specified process to terminate it. |
-| [uptime](arkts-arkts-process-uptime-f.md) | Obtains the running time of the current system, in seconds. |
 
 <!--Del-->
 ### Functions(System API)

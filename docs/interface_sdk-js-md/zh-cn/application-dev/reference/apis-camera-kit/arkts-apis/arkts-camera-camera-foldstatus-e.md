@@ -12,22 +12,6 @@ enum FoldStatus
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## NON_FOLDABLE
-
-```TypeScript
-NON_FOLDABLE = 0
-```
-
-表示当前设备不可折叠。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-FoldStatus-NON_FOLDABLE = 0--><!--Device-FoldStatus-NON_FOLDABLE = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## EXPANDED
 
 ```TypeScript
@@ -57,5 +41,21 @@ FOLDED = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FoldStatus-FOLDED = 2--><!--Device-FoldStatus-FOLDED = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## NON_FOLDABLE
+
+```TypeScript
+NON_FOLDABLE = 0
+```
+
+表示当前设备不可折叠。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-FoldStatus-NON_FOLDABLE = 0--><!--Device-FoldStatus-NON_FOLDABLE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

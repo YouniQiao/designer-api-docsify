@@ -30,14 +30,14 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) | Enables listening for vibrator status changes. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration1) | Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration2) | Starts vibration based on a specified effect and attribute. This API uses a promise to return the result. |
-| [stop](arkts-sensorservice-vibrator-stop-f.md#stop1) | Stops vibration in the specified mode. This API uses a promise to return the result. |
-| [stop](arkts-sensorservice-vibrator-stop-f.md#stop2) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration1) | Stops vibration in the specified mode. This API uses a promise to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration2) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration3) | Stops vibration in all modes. This API uses an asynchronous callback to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration4) | Stops vibration in all modes. This API uses a promise to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration5) | Stops vibration based on the specified vibrator parameters. If no parameters are passed, this API stops all vibrators of the local device by default. This API uses a promise to return the result. |
 | [stopVibrationSync](arkts-sensorservice-vibrator-stopvibrationsync-f.md) | Stops any form of vibration. |
+| [stop](arkts-sensorservice-vibrator-stop-f.md#stop1) | Stops vibration in the specified mode. This API uses a promise to return the result. |
+| [stop](arkts-sensorservice-vibrator-stop-f.md#stop2) | Stops vibration in the specified mode. This API uses an asynchronous callback to return the result. |
 | [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate1) | Triggers vibration based on a specified duration. This API uses an asynchronous callback to return the result. |
 | [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate2) | Triggers vibration based on a specified duration. This API uses a promise to return the result. |
 | [vibrate](arkts-sensorservice-vibrator-vibrate-f.md#vibrate3) | Triggers vibration based on a specified effect. This API uses a promise to return the result. |

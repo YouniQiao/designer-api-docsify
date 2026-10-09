@@ -11,30 +11,6 @@ Not supported
 ## XComponent
 
 ```TypeScript
-XComponent(value: { id: string; type: string; libraryname?: string; controller?: XComponentController })
-```
-
-Constructor parameters
-
-**Since:** 8
-
-**Deprecated since:** 12
-
-**Substitutes:** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
-
-<!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Parameters:**
-
-| Name | Type | Mandatory | Description |
-| --- | --- | --- | --- |
-| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | Yes | Indicates the options of the xcomponent. |
-
-## XComponent
-
-```TypeScript
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
@@ -105,6 +81,30 @@ Obtains an **XComponent** node instance on the native side, and registers the li
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | params | [NativeXComponentParameters](arkts-arkui-xcomponent-comp-nativexcomponentparameters-i.md) | Yes | Configuration parameters of the XComponent, used to obtain the XComponent node instance on the native side and register the Surface lifecycle callback and component event callback. |
+
+## XComponent
+
+```TypeScript
+XComponent(value: { id: string; type: string; libraryname?: string; controller?: XComponentController })
+```
+
+Constructor parameters
+
+**Since:** 8
+
+**Deprecated since:** 12
+
+**Substitutes:** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
+
+<!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | Yes | Indicates the options of the xcomponent. |
 
 ## Summary
 

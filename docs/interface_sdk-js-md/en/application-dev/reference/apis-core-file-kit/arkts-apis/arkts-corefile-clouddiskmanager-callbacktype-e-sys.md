@@ -14,24 +14,6 @@ Enumerates the callback types for cloud file data fetching.
 
 **System API:** This is a system API.
 
-## FETCH_DATA
-
-```TypeScript
-FETCH_DATA = 0
-```
-
-Fetch cloud file data (hydrate).
-
-**Since:** 26.0.1
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-CallbackType-FETCH_DATA = 0--><!--Device-CallbackType-FETCH_DATA = 0-End-->
-
-**System capability:** SystemCapability.FileManagement.CloudDiskManager
-
-**System API:** This is a system API.
-
 ## CANCEL_FETCH_DATA
 
 ```TypeScript
@@ -63,6 +45,24 @@ Authorization for dehydrate.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-CallbackType-DEHYDRATE = 2--><!--Device-CallbackType-DEHYDRATE = 2-End-->
+
+**System capability:** SystemCapability.FileManagement.CloudDiskManager
+
+**System API:** This is a system API.
+
+## FETCH_DATA
+
+```TypeScript
+FETCH_DATA = 0
+```
+
+Fetch cloud file data (hydrate).
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-CallbackType-FETCH_DATA = 0--><!--Device-CallbackType-FETCH_DATA = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

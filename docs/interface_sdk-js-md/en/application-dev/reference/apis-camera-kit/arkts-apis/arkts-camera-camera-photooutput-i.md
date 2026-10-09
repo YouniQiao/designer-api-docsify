@@ -235,6 +235,41 @@ function capture(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
+## configureC2PASignature
+
+```TypeScript
+configureC2PASignature(enableC2PA: boolean, config?: C2PASignatureConfig): void
+```
+
+Configures the C2PA signature settings. This API enables or disables C2PA signature and optionally sets the author information for the C2PA signature.
+
+Before calling this API, check whether C2PA signature is supported by calling [isC2PASignatureSupported](#isc2pasignaturesupported).
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-PhotoOutput-configureC2PASignature(enableC2PA: boolean, config?: C2PASignatureConfig): void--><!--Device-PhotoOutput-configureC2PASignature(enableC2PA: boolean, config?: C2PASignatureConfig): void-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enableC2PA | boolean | Yes | Whether to enable C2PA signature. **true** to enable, **false** to disable. |
+| config | [C2PASignatureConfig](arkts-camera-camera-c2pasignatureconfig-i.md) | No | C2PA signature configuration, which includes the author name and author ID. This parameter is optional. If not provided, the C2PA signature will be generated without author information. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| 7400113 | An exception occurred in the session currently in use. |
+| 7400116 | The session does not have camerainput information. |
+| [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
+
 ## enableAutoExtendedGainmapDelivery
 
 ```TypeScript
@@ -615,6 +650,30 @@ function isAutoExtendedGainmapDeliverySupported(photoOutput: camera.PhotoOutput)
   return isSupported;
 }
 ```
+
+## isC2PASignatureSupported
+
+```TypeScript
+isC2PASignatureSupported(): boolean
+```
+
+Checks whether C2PA signature is supported.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-PhotoOutput-isC2PASignatureSupported(): boolean--><!--Device-PhotoOutput-isC2PASignatureSupported(): boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Check result for the support of C2PA signature. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
 ## isMirrorSupported
 

@@ -17,24 +17,6 @@ Enumerates the nested scrolling modes of the **Swiper** component and its parent
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## SELF_ONLY
-
-```TypeScript
-SELF_ONLY = 0
-```
-
-The scrolling is contained within the **Swiper** component, and no scroll chaining occurs, that is, the parent container does not scroll when the component scrolling reaches the boundary.
-
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SwiperNestedScrollMode-SELF_ONLY = 0--><!--Device-SwiperNestedScrollMode-SELF_ONLY = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## SELF_FIRST
 
 ```TypeScript
@@ -50,5 +32,23 @@ The **Swiper** component scrolls first, and when it hits the boundary, the paren
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SwiperNestedScrollMode-SELF_FIRST = 1--><!--Device-SwiperNestedScrollMode-SELF_FIRST = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## SELF_ONLY
+
+```TypeScript
+SELF_ONLY = 0
+```
+
+The scrolling is contained within the **Swiper** component, and no scroll chaining occurs, that is, the parent container does not scroll when the component scrolling reaches the boundary.
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SwiperNestedScrollMode-SELF_ONLY = 0--><!--Device-SwiperNestedScrollMode-SELF_ONLY = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

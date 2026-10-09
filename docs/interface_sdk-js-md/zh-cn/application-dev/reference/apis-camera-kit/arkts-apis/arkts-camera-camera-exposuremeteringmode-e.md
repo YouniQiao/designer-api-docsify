@@ -12,22 +12,6 @@ enum ExposureMeteringMode
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## MATRIX
-
-```TypeScript
-MATRIX = 0
-```
-
-矩阵测光模式。对画面广泛区域进行测光，适合拍摄自然风光。
-
-**起始版本：** 24
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
-
-<!--Device-ExposureMeteringMode-MATRIX = 0--><!--Device-ExposureMeteringMode-MATRIX = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## CENTER
 
 ```TypeScript
@@ -41,6 +25,22 @@ CENTER = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExposureMeteringMode-CENTER = 1--><!--Device-ExposureMeteringMode-CENTER = 1-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## MATRIX
+
+```TypeScript
+MATRIX = 0
+```
+
+矩阵测光模式。对画面广泛区域进行测光，适合拍摄自然风光。
+
+**起始版本：** 24
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ExposureMeteringMode-MATRIX = 0--><!--Device-ExposureMeteringMode-MATRIX = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

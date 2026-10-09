@@ -12,24 +12,6 @@ Enumerates the bundle flags, which indicate the type of bundle information to ob
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_BUNDLE_INFO_OF_ANY_USER
-
-```TypeScript
-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
-```
-
-Used to obtain the bundle information of an application installed by any user. It must be used together with **GET_BUNDLE_INFO_WITH_APPLICATION**. It is valid only in the [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) and [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) APIs.
-
-**System API**: This flag can be used only in system APIs.
-
-**Since:** 12
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000--><!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
 ## GET_BUNDLE_INFO_EXCLUDE_CLONE
 
 ```TypeScript
@@ -43,6 +25,44 @@ Used to obtain the bundle information of a main application (excluding its clone
 **Since:** 12
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000--><!--Device-BundleFlag-GET_BUNDLE_INFO_EXCLUDE_CLONE = 0x00004000-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE
+
+```TypeScript
+GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000
+```
+
+Used to obtain the bundle information of an application installed by any device. It is valid only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) and [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) and [getAllBundleInfoInstances](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md) APIs.
+
+**System API**: This flag can be used only in system APIs.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000--><!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## GET_BUNDLE_INFO_OF_ANY_USER
+
+```TypeScript
+GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000
+```
+
+Used to obtain the bundle information of an application installed by any user. It must be used together with **GET_BUNDLE_INFO_WITH_APPLICATION**. It is valid only in the [getBundleInfo](arkts-ability-bundlemanager-getbundleinfo-f.md) and [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) APIs.
+
+**System API**: This flag can be used only in system APIs.
+
+**Since:** 12
+
+<!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000--><!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ANY_USER = 0x00002000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -105,26 +125,6 @@ Used to obtain the bundleInfo of sandbox clone apps and the main app. It takes e
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SANDBOX_CLONE = 0x00100000--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SANDBOX_CLONE = 0x00100000-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
-## GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE
-
-```TypeScript
-GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000
-```
-
-Used to obtain the bundle information of an application installed by any device. It is valid only in the [getAllAppCloneBundleInfo](arkts-ability-bundlemanager-getallappclonebundleinfo-f-sys.md) and [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md) and [getAllBundleInfoInstances](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md) APIs.
-
-**System API**: This flag can be used only in system APIs.
-
-**Since:** 26.0.1
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000--><!--Device-BundleFlag-GET_BUNDLE_INFO_OF_ALL_DEVICE_MODE = 0x00200000-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

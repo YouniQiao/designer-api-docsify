@@ -66,6 +66,24 @@ AREA_LAND_RESIDNTL = 3
 
 **系统能力：** SystemCapability.Global.I18n
 
+## ELAPSED_TIME_SECOND
+
+```TypeScript
+ELAPSED_TIME_SECOND = 21
+```
+
+过去的时间。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 ## LENGTH_PERSON
 
 ```TypeScript
@@ -84,6 +102,24 @@ LENGTH_PERSON = 4
 
 **系统能力：** SystemCapability.Global.I18n
 
+## LENGTH_PERSON_INFORMAL
+
+```TypeScript
+LENGTH_PERSON_INFORMAL = 13
+```
+
+口语化身高。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
 ## LENGTH_PERSON_SMALL
 
 ```TypeScript
@@ -99,6 +135,24 @@ LENGTH_PERSON_SMALL = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5--><!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## LENGTH_PERSON_SMALL_INFORMAL
+
+```TypeScript
+LENGTH_PERSON_SMALL_INFORMAL = 14
+```
+
+高精度的口语化身高。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -135,6 +189,24 @@ LENGTH_ROAD = 7
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_ROAD = 7--><!--Device-UnitUsage-LENGTH_ROAD = 7-End-->
+
+**系统能力：** SystemCapability.Global.I18n
+
+## LENGTH_ROAD_INFORMAL
+
+```TypeScript
+LENGTH_ROAD_INFORMAL = 15
+```
+
+口语化道路长度。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+
+<!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -228,13 +300,13 @@ LENGTH_VISIBLTY_SMALL = 12
 
 **系统能力：** SystemCapability.Global.I18n
 
-## LENGTH_PERSON_INFORMAL
+## SIZE_FILE_BYTE
 
 ```TypeScript
-LENGTH_PERSON_INFORMAL = 13
+SIZE_FILE_BYTE = 22
 ```
 
-口语化身高。
+文件大小。
 
 **起始版本：** 23
 
@@ -242,17 +314,17 @@ LENGTH_PERSON_INFORMAL = 13
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-<!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
+<!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
-## LENGTH_PERSON_SMALL_INFORMAL
+## SIZE_SHORTFILE_BYTE
 
 ```TypeScript
-LENGTH_PERSON_SMALL_INFORMAL = 14
+SIZE_SHORTFILE_BYTE = 23
 ```
 
-高精度的口语化身高。
+简短的文件大小。
 
 **起始版本：** 23
 
@@ -260,25 +332,7 @@ LENGTH_PERSON_SMALL_INFORMAL = 14
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-<!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## LENGTH_ROAD_INFORMAL
-
-```TypeScript
-LENGTH_ROAD_INFORMAL = 15
-```
-
-口语化道路长度。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
-
-<!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
+<!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
 **系统能力：** SystemCapability.Global.I18n
 
@@ -369,59 +423,5 @@ VOLUME_VEHICLE_FUEL = 20
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20--><!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## ELAPSED_TIME_SECOND
-
-```TypeScript
-ELAPSED_TIME_SECOND = 21
-```
-
-过去的时间。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
-
-<!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## SIZE_FILE_BYTE
-
-```TypeScript
-SIZE_FILE_BYTE = 22
-```
-
-文件大小。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
-
-<!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
-
-**系统能力：** SystemCapability.Global.I18n
-
-## SIZE_SHORTFILE_BYTE
-
-```TypeScript
-SIZE_SHORTFILE_BYTE = 23
-```
-
-简短的文件大小。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
-
-<!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
 **系统能力：** SystemCapability.Global.I18n

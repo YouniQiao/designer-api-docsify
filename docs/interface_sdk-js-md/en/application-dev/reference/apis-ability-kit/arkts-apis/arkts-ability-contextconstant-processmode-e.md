@@ -12,6 +12,26 @@ Enumerates the process modes of the UIAbility after it is started. As a property
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## ATTACH_TO_STATUS_BAR_ITEM
+
+```TypeScript
+ATTACH_TO_STATUS_BAR_ITEM = 3
+```
+
+The UIAbility is started, and the process of the UIAbility is bound to the status bar icon.
+
+**Constraints**:
+
+In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3--><!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## NEW_PROCESS_ATTACH_TO_PARENT
 
 ```TypeScript
@@ -49,25 +69,5 @@ In this mode, the target UIAbility and caller must be in the same application, a
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ProcessMode-NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2--><!--Device-ProcessMode-NEW_PROCESS_ATTACH_TO_STATUS_BAR_ITEM = 2-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## ATTACH_TO_STATUS_BAR_ITEM
-
-```TypeScript
-ATTACH_TO_STATUS_BAR_ITEM = 3
-```
-
-The UIAbility is started, and the process of the UIAbility is bound to the status bar icon.
-
-**Constraints**:
-
-In this mode, the target UIAbility and caller must be in the same application, and the application must have an icon in the status bar.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3--><!--Device-ProcessMode-ATTACH_TO_STATUS_BAR_ITEM = 3-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

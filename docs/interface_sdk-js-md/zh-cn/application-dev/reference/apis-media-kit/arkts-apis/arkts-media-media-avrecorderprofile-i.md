@@ -6,6 +6,12 @@ interface AVRecorderProfile
 
 音视频录制配置参数。
 
+**起始版本：** 9
+
+<!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
+
 ## 音频参数配置对照表
 
 此处提供音频参数配置的对照表，每项的具体释义，可查看下述字段解释。
@@ -17,12 +23,6 @@ interface AVRecorderProfile
 |AUDIO_G711MU|WAV|[8000]|[64000]|[1]|
 |AUDIO_AMR_NB&lt;sup&gt;18+&lt;/sup&gt; |AMR|[8000]|[4750, 5150, 5900, 6700, 7400, 7950, 10200, 12200]|[1]|
 |AUDIO_AMR_WB&lt;sup&gt;18+&lt;/sup&gt; |AMR|[16000]|[6600, 8850, 12650, 14250, 15850, 18250, 19850, 23050, 23850]|[1]|
-
-**起始版本：** 9
-
-<!--Device-media-interface AVRecorderProfile--><!--Device-media-interface AVRecorderProfile-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 ## 导入模块
 

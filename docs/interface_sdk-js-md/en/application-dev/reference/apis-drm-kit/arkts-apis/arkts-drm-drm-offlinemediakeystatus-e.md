@@ -12,6 +12,22 @@ Enumerates the statuses of offline media keys.
 
 **System capability:** SystemCapability.Multimedia.Drm.Core
 
+## OFFLINE_MEDIA_KEY_STATUS_INACTIVE
+
+```TypeScript
+OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2
+```
+
+The media key is inactive.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Drm.Core
+
 ## OFFLINE_MEDIA_KEY_STATUS_UNKNOWN
 
 ```TypeScript
@@ -41,21 +57,5 @@ The media key is available.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
 
 <!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_USABLE = 1--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_USABLE = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Drm.Core
-
-## OFFLINE_MEDIA_KEY_STATUS_INACTIVE
-
-```TypeScript
-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2
-```
-
-The media key is inactive.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
-
-<!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2--><!--Device-OfflineMediaKeyStatus-OFFLINE_MEDIA_KEY_STATUS_INACTIVE = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Drm.Core

@@ -6,17 +6,17 @@ declare class VideoController
 
 一个VideoController对象可以控制一个或多个Video。
 
-## 导入对象
-
-```ts
-let controller: VideoController = new VideoController();
-```
-
 **起始版本：** 7
 
 <!--Device-unnamed-declare class VideoController--><!--Device-unnamed-declare class VideoController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入对象
+
+```ts
+let controller: VideoController = new VideoController();
+```
 
 ## constructor
 

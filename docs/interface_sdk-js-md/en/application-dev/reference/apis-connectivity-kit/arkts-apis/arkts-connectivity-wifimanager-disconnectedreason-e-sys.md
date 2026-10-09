@@ -14,6 +14,22 @@ Wi-Fi disconnected reason. @enum { int }
 
 **System API:** This is a system API.
 
+## DISC_REASON_CONNECTION_FULL
+
+```TypeScript
+DISC_REASON_CONNECTION_FULL = 2
+```
+
+The number of router's connection reaches the maximum number limit
+
+**Since:** 10
+
+<!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2--><!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
 ## DISC_REASON_DEFAULT
 
 ```TypeScript
@@ -41,22 +57,6 @@ Password is wrong
 **Since:** 10
 
 <!--Device-DisconnectedReason-DISC_REASON_WRONG_PWD = 1--><!--Device-DisconnectedReason-DISC_REASON_WRONG_PWD = 1-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
-**System API:** This is a system API.
-
-## DISC_REASON_CONNECTION_FULL
-
-```TypeScript
-DISC_REASON_CONNECTION_FULL = 2
-```
-
-The number of router's connection reaches the maximum number limit
-
-**Since:** 10
-
-<!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2--><!--Device-DisconnectedReason-DISC_REASON_CONNECTION_FULL = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

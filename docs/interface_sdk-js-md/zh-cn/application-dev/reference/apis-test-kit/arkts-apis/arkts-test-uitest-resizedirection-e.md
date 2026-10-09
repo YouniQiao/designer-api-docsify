@@ -14,60 +14,6 @@ declare enum ResizeDirection
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## LEFT
-
-```TypeScript
-LEFT = 0
-```
-
-左方。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ResizeDirection-LEFT = 0--><!--Device-ResizeDirection-LEFT = 0-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-## RIGHT
-
-```TypeScript
-RIGHT = 1
-```
-
-右方。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ResizeDirection-RIGHT = 1--><!--Device-ResizeDirection-RIGHT = 1-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-## UP
-
-```TypeScript
-UP = 2
-```
-
-上方。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ResizeDirection-UP = 2--><!--Device-ResizeDirection-UP = 2-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## DOWN
 
 ```TypeScript
@@ -86,19 +32,19 @@ DOWN = 3
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## LEFT_UP
+## LEFT
 
 ```TypeScript
-LEFT_UP = 4
+LEFT = 0
 ```
 
-左上方。
+左方。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ResizeDirection-LEFT_UP = 4--><!--Device-ResizeDirection-LEFT_UP = 4-End-->
+<!--Device-ResizeDirection-LEFT = 0--><!--Device-ResizeDirection-LEFT = 0-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -122,19 +68,37 @@ LEFT_DOWN = 5
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
-## RIGHT_UP
+## LEFT_UP
 
 ```TypeScript
-RIGHT_UP = 6
+LEFT_UP = 4
 ```
 
-右上方。
+左上方。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ResizeDirection-RIGHT_UP = 6--><!--Device-ResizeDirection-RIGHT_UP = 6-End-->
+<!--Device-ResizeDirection-LEFT_UP = 4--><!--Device-ResizeDirection-LEFT_UP = 4-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+## RIGHT
+
+```TypeScript
+RIGHT = 1
+```
+
+右方。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResizeDirection-RIGHT = 1--><!--Device-ResizeDirection-RIGHT = 1-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 
@@ -153,6 +117,42 @@ RIGHT_DOWN = 7
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-RIGHT_DOWN = 7--><!--Device-ResizeDirection-RIGHT_DOWN = 7-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+## RIGHT_UP
+
+```TypeScript
+RIGHT_UP = 6
+```
+
+右上方。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResizeDirection-RIGHT_UP = 6--><!--Device-ResizeDirection-RIGHT_UP = 6-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
+## UP
+
+```TypeScript
+UP = 2
+```
+
+上方。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResizeDirection-UP = 2--><!--Device-ResizeDirection-UP = 2-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -12,13 +12,13 @@ Enumerates text processing states.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## INIT
+## FORMATTED
 
 ```TypeScript
-INIT = 0
+FORMATTED = 4
 ```
 
-Initial state, indicating that text processing has not started.
+Formatted state, indicating that the text has been formatted.
 
 **Since:** 26.0.0
 
@@ -26,7 +26,7 @@ Initial state, indicating that text processing has not started.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
-<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
+<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -48,13 +48,13 @@ Index generated state, indicating that the text index has been generated.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## SHAPED
+## INIT
 
 ```TypeScript
-SHAPED = 2
+INIT = 0
 ```
 
-Shaped state, indicating that the text has been shaped.
+Initial state, indicating that text processing has not started.
 
 **Since:** 26.0.0
 
@@ -62,7 +62,7 @@ Shaped state, indicating that the text has been shaped.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
-<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
+<!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -84,24 +84,6 @@ Line-wrapped state. The text has been line-wrapped.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## FORMATTED
-
-```TypeScript
-FORMATTED = 4
-```
-
-Formatted state, indicating that the text has been formatted.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
 ## PAINT
 
 ```TypeScript
@@ -117,6 +99,24 @@ Drawn state, indicating that the text has been drawn.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## SHAPED
+
+```TypeScript
+SHAPED = 2
+```
+
+Shaped state, indicating that the text has been shaped.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 

@@ -57,8 +57,8 @@ import { deviceSettings } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [CertBlob](arkts-mdm-devicesettings-certblob-i-sys.md) | Represents the certificate information. |
 | [PowerPolicy](arkts-mdm-devicesettings-powerpolicy-i-sys.md) | Represents the power policy. |
+| [CertBlob](arkts-mdm-devicesettings-certblob-i-sys.md) | Represents the certificate information. |
 <!--DelEnd-->
 
 ### Enums

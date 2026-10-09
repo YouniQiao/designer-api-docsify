@@ -12,22 +12,6 @@ Enumerates the orientations of a display.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## PORTRAIT
-
-```TypeScript
-PORTRAIT = 0
-```
-
-The display is in portrait mode.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Orientation-PORTRAIT = 0--><!--Device-Orientation-PORTRAIT = 0-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## LANDSCAPE
 
 ```TypeScript
@@ -44,22 +28,6 @@ The display is in landscape mode.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## PORTRAIT_INVERTED
-
-```TypeScript
-PORTRAIT_INVERTED = 2
-```
-
-The display is in reverse portrait mode.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Orientation-PORTRAIT_INVERTED = 2--><!--Device-Orientation-PORTRAIT_INVERTED = 2-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## LANDSCAPE_INVERTED
 
 ```TypeScript
@@ -73,5 +41,37 @@ The display is in reverse landscape mode.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-Orientation-LANDSCAPE_INVERTED = 3--><!--Device-Orientation-LANDSCAPE_INVERTED = 3-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## PORTRAIT
+
+```TypeScript
+PORTRAIT = 0
+```
+
+The display is in portrait mode.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Orientation-PORTRAIT = 0--><!--Device-Orientation-PORTRAIT = 0-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
+
+## PORTRAIT_INVERTED
+
+```TypeScript
+PORTRAIT_INVERTED = 2
+```
+
+The display is in reverse portrait mode.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Orientation-PORTRAIT_INVERTED = 2--><!--Device-Orientation-PORTRAIT_INVERTED = 2-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core

@@ -12,34 +12,6 @@ export enum EnvironmentBackgroundType
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## BACKGROUND_NONE
-
-```TypeScript
-BACKGROUND_NONE = 0
-```
-
-无背景。
-
-**起始版本：** 12
-
-<!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
-## BACKGROUND_IMAGE
-
-```TypeScript
-BACKGROUND_IMAGE = 1
-```
-
-图片背景。
-
-**起始版本：** 12
-
-<!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
 ## BACKGROUND_CUBEMAP
 
 ```TypeScript
@@ -65,5 +37,33 @@ BACKGROUND_EQUIRECTANGULAR = 3
 **起始版本：** 12
 
 <!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3--><!--Device-EnvironmentBackgroundType-BACKGROUND_EQUIRECTANGULAR = 3-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## BACKGROUND_IMAGE
+
+```TypeScript
+BACKGROUND_IMAGE = 1
+```
+
+图片背景。
+
+**起始版本：** 12
+
+<!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1--><!--Device-EnvironmentBackgroundType-BACKGROUND_IMAGE = 1-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## BACKGROUND_NONE
+
+```TypeScript
+BACKGROUND_NONE = 0
+```
+
+无背景。
+
+**起始版本：** 12
+
+<!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0--><!--Device-EnvironmentBackgroundType-BACKGROUND_NONE = 0-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

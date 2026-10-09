@@ -12,6 +12,22 @@ Enumerates the NFC Forum tag types.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
+## MIFARE_CLASSIC
+
+```TypeScript
+MIFARE_CLASSIC = 101
+```
+
+MIFARE Classic.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-NfcForumType-MIFARE_CLASSIC = 101--><!--Device-NfcForumType-MIFARE_CLASSIC = 101-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
 ## NFC_FORUM_TYPE_1
 
 ```TypeScript
@@ -73,21 +89,5 @@ NFC Forum tag type 4.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4--><!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
-## MIFARE_CLASSIC
-
-```TypeScript
-MIFARE_CLASSIC = 101
-```
-
-MIFARE Classic.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-NfcForumType-MIFARE_CLASSIC = 101--><!--Device-NfcForumType-MIFARE_CLASSIC = 101-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag

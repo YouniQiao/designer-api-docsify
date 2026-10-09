@@ -12,24 +12,6 @@ declare enum ColoringStrategy
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## INVERT
-
-```TypeScript
-INVERT = 'invert'
-```
-
-设置前景色为控件背景色的反色。仅支持在[foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor1)中设置该枚举。
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ColoringStrategy-INVERT = 'invert'--><!--Device-ColoringStrategy-INVERT = 'invert'-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 ## AVERAGE
 
 ```TypeScript
@@ -45,6 +27,24 @@ AVERAGE = 'average'
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ColoringStrategy-AVERAGE = 'average'--><!--Device-ColoringStrategy-AVERAGE = 'average'-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## INVERT
+
+```TypeScript
+INVERT = 'invert'
+```
+
+设置前景色为控件背景色的反色。仅支持在[foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor1)中设置该枚举。
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ColoringStrategy-INVERT = 'invert'--><!--Device-ColoringStrategy-INVERT = 'invert'-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

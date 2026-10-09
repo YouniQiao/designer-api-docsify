@@ -27,19 +27,41 @@ APP_START_COMPLETE_TIME**):
 
 **Test API:** This API is used only in automated test scripts.
 
-## DURATION
+## APP_START_COMPLETE_TIME
 
 ```TypeScript
-DURATION = 0
+APP_START_COMPLETE_TIME = 6
 ```
 
-Execution duration of a code segment, in milliseconds.
+Completion latency of application startup, in milliseconds.
+
+Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after the application is started. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first start of specified application can be collected.
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-PerfMetric-DURATION = 0--><!--Device-PerfMetric-DURATION = 0-End-->
+<!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6--><!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6-End-->
+
+**System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## APP_START_RESPONSE_TIME
+
+```TypeScript
+APP_START_RESPONSE_TIME = 5
+```
+
+Response latency of application startup, in milliseconds.
+
+Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the response delay is the time when the system responds to the first frame after the click. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first startup of the specified application can be collected.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 
@@ -81,19 +103,39 @@ CPU usage of the application process, in percentage.
 
 **Test API:** This API is used only in automated test scripts.
 
-## MEMORY_RSS
+## DURATION
 
 ```TypeScript
-MEMORY_RSS = 3
+DURATION = 0
 ```
 
-Physical memory (including the shared library) occupied by the application process when a code segment is executed, in KB.
+Execution duration of a code segment, in milliseconds.
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
+<!--Device-PerfMetric-DURATION = 0--><!--Device-PerfMetric-DURATION = 0-End-->
+
+**System capability:** SystemCapability.Test.PerfTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## LIST_SWIPE_FPS
+
+```TypeScript
+LIST_SWIPE_FPS = 8
+```
+
+List scrolling frame rate in an application, in frames per second (fps).
+
+Mark: 1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding. Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected. 2) During the test, only the data of the first sliding of the component in specified application can be collected.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-PerfMetric-LIST_SWIPE_FPS = 8--><!--Device-PerfMetric-LIST_SWIPE_FPS = 8-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 
@@ -117,41 +159,19 @@ Physical memory (the proportionally allocated memory occupied by shared librarie
 
 **Test API:** This API is used only in automated test scripts.
 
-## APP_START_RESPONSE_TIME
+## MEMORY_RSS
 
 ```TypeScript
-APP_START_RESPONSE_TIME = 5
+MEMORY_RSS = 3
 ```
 
-Response latency of application startup, in milliseconds.
-
-Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the response delay is the time when the system responds to the first frame after the click. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first startup of the specified application can be collected.
+Physical memory (including the shared library) occupied by the application process when a code segment is executed, in KB.
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
-
-**System capability:** SystemCapability.Test.PerfTest
-
-**Test API:** This API is used only in automated test scripts.
-
-## APP_START_COMPLETE_TIME
-
-```TypeScript
-APP_START_COMPLETE_TIME = 6
-```
-
-Completion latency of application startup, in milliseconds.
-
-Marks: 1) Delay calculation is restricted by system dotting reporting. The start time is the time when the click event is reported, and the end time of the completion delay is the time when the first frame is displayed after the application is started. It is different from the end-to-end user-perceived delay. 2) Application start delay can be collected in the following scenarios: clicking the application icon on the desktop; clicking the application on the Multi-Task Center; clicking the application icon on the Dock; clicking the application icon on the application center. 3) This metric does not support the test of current application. 4) During the test, only the data of the first start of specified application can be collected.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6--><!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6-End-->
+<!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 
@@ -172,26 +192,6 @@ Marks: 1) Delay calculation is restricted by system dotting and reporting. The s
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
 <!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7--><!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7-End-->
-
-**System capability:** SystemCapability.Test.PerfTest
-
-**Test API:** This API is used only in automated test scripts.
-
-## LIST_SWIPE_FPS
-
-```TypeScript
-LIST_SWIPE_FPS = 8
-```
-
-List scrolling frame rate in an application, in frames per second (fps).
-
-Mark: 1) List sliding frame rate: refers to the frequency at which the screen can be refreshed when the list is sliding. Only the sliding frame rate of the List, grid, scroll, and waterflow scroll components of ArkUI subsystems can be collected. 2) During the test, only the data of the first sliding of the component in specified application can be collected.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-PerfMetric-LIST_SWIPE_FPS = 8--><!--Device-PerfMetric-LIST_SWIPE_FPS = 8-End-->
 
 **System capability:** SystemCapability.Test.PerfTest
 

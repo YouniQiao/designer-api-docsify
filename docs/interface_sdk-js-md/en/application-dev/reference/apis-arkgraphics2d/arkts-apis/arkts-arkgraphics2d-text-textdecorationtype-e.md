@@ -12,6 +12,22 @@ Enumerates the text decoration types.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## LINE_THROUGH
+
+```TypeScript
+LINE_THROUGH = 4
+```
+
+A strikethrough is used for decoration.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
 ## NONE
 
 ```TypeScript
@@ -25,22 +41,6 @@ No decoration is used.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-TextDecorationType-NONE = 0--><!--Device-TextDecorationType-NONE = 0-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## UNDERLINE
-
-```TypeScript
-UNDERLINE = 1
-```
-
-An underline is used for decoration.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,18 +60,18 @@ An overline is used for decoration.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## LINE_THROUGH
+## UNDERLINE
 
 ```TypeScript
-LINE_THROUGH = 4
+UNDERLINE = 1
 ```
 
-A strikethrough is used for decoration.
+An underline is used for decoration.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
+<!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

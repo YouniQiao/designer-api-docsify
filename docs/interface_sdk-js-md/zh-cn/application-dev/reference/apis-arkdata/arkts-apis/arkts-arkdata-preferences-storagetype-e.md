@@ -22,24 +22,6 @@ Preferences的存储模式枚举。
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
-## XML
-
-```TypeScript
-XML = 0
-```
-
-表示[XML存储模式](../../../database/data-persistence-by-preferences.md#xml存储)，这是Preferences的默认存储模式。
-
-**特点：** 数据以XML格式进行存储。对数据的操作发生在内存中，需要调用[flush](arkts-arkdata-preferences-preferences-i.md#flush1)接口进行落盘。
-
-**起始版本：** 18
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
-
-<!--Device-StorageType-XML = 0--><!--Device-StorageType-XML = 0-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 ## GSKV
 
 ```TypeScript
@@ -55,5 +37,23 @@ GSKV
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-StorageType-GSKV--><!--Device-StorageType-GSKV-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
+
+## XML
+
+```TypeScript
+XML = 0
+```
+
+表示[XML存储模式](../../../database/data-persistence-by-preferences.md#xml存储)，这是Preferences的默认存储模式。
+
+**特点：** 数据以XML格式进行存储。对数据的操作发生在内存中，需要调用[flush](arkts-arkdata-preferences-preferences-i.md#flush1)接口进行落盘。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+
+<!--Device-StorageType-XML = 0--><!--Device-StorageType-XML = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.Preferences.Core

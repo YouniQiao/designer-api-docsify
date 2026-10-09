@@ -12,24 +12,6 @@ Enumerates the listening types of tree view nodes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## NODE_CLICK
-
-```TypeScript
-NODE_CLICK = "NodeClick"
-```
-
-Listens for click events of nodes.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-TreeListenType-NODE_CLICK = "NodeClick"--><!--Device-TreeListenType-NODE_CLICK = "NodeClick"-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## NODE_ADD
 
 ```TypeScript
@@ -45,6 +27,24 @@ Listens for the node addition event. Triggered after the **addNode** method is c
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-TreeListenType-NODE_ADD = "NodeAdd"--><!--Device-TreeListenType-NODE_ADD = "NodeAdd"-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## NODE_CLICK
+
+```TypeScript
+NODE_CLICK = "NodeClick"
+```
+
+Listens for click events of nodes.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-TreeListenType-NODE_CLICK = "NodeClick"--><!--Device-TreeListenType-NODE_CLICK = "NodeClick"-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

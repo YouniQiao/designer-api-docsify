@@ -55,7 +55,7 @@ Publishes a notification through the reminder agent. This API uses an asynchrono
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
+| [1600009](../errorcode-notification.md#1600009-notification-sending-frequency-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
@@ -149,7 +149,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
+| [1600009](../errorcode-notification.md#1600009-notification-sending-frequency-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |
@@ -238,7 +238,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 | [1600005](../errorcode-notification.md#1600005-notification-slot-disabled) | Notification slot disabled. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [1600008](../errorcode-notification.md#1600008-user-not-found) | The user does not exist. |
-| [1600009](../errorcode-notification.md#1600009-notification-sending-limit-reached) | The notification sending frequency reaches the upper limit. |
+| [1600009](../errorcode-notification.md#1600009-notification-sending-frequency-limit-reached) | The notification sending frequency reaches the upper limit. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 | [1600014](../errorcode-notification.md#1600014-no-related-permission) | The right of liveView is not enabled.<br>**Applicable version:** 26.0.0 and later |
 | [1600015](../errorcode-notification.md#1600015-duplicate-configurations-not-allowed-for-the-current-notification-status) | The current notification status does not support duplicate configurations. |

@@ -14,6 +14,22 @@ enum DownloadStatus
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## DOWNLOAD_FAIL
+
+```TypeScript
+DOWNLOAD_FAIL = 2
+```
+
+下载失败。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DownloadStatus-DOWNLOAD_FAIL = 2--><!--Device-DownloadStatus-DOWNLOAD_FAIL = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
 ## DOWNLOAD_SUCCESS
 
 ```TypeScript
@@ -43,21 +59,5 @@ DOWNLOADING = 1
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DownloadStatus-DOWNLOADING = 1--><!--Device-DownloadStatus-DOWNLOADING = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## DOWNLOAD_FAIL
-
-```TypeScript
-DOWNLOAD_FAIL = 2
-```
-
-下载失败。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DownloadStatus-DOWNLOAD_FAIL = 2--><!--Device-DownloadStatus-DOWNLOAD_FAIL = 2-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

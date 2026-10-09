@@ -30,21 +30,21 @@ HIGH = 0
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## MEDIUM
+## IDLE
 
 ```TypeScript
-MEDIUM = 1
+IDLE = 3
 ```
 
-任务为中优先级。
+任务为后台任务。
 
-从API version 11开始，该接口支持在原子化服务中使用。
+从API version 12开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 9
+**起始版本：** 12
 
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
+<!--Device-Priority-IDLE = 3--><!--Device-Priority-IDLE = 3-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
 
@@ -66,20 +66,20 @@ LOW = 2
 
 **系统能力：** SystemCapability.Utils.Lang
 
-## IDLE
+## MEDIUM
 
 ```TypeScript
-IDLE = 3
+MEDIUM = 1
 ```
 
-任务为后台任务。
+任务为中优先级。
 
-从API version 12开始，该接口支持在原子化服务中使用。
+从API version 11开始，该接口支持在原子化服务中使用。
 
-**起始版本：** 12
+**起始版本：** 9
 
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-Priority-IDLE = 3--><!--Device-Priority-IDLE = 3-End-->
+<!--Device-Priority-MEDIUM = 1--><!--Device-Priority-MEDIUM = 1-End-->
 
 **系统能力：** SystemCapability.Utils.Lang

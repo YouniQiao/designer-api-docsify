@@ -27,10 +27,9 @@ Polygon(options?: PolygonOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute-End-->
+<!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute-End-->
 
-**系统能力：** 
-- API版本9+：SystemCapability.ArkUI.ArkUI.Full
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 
@@ -54,9 +53,10 @@ Polygon(options?: PolygonOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-(options?: PolygonOptions): PolygonAttribute-End-->
+<!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute--><!--Device-PolygonInterface-new (options?: PolygonOptions): PolygonAttribute-End-->
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+**系统能力：** 
+- API版本9+：SystemCapability.ArkUI.ArkUI.Full
 
 **参数:**
 

@@ -14,37 +14,19 @@ Enumerates the states of the hydrate progress.
 
 **System API:** This is a system API.
 
-## PENDING
+## CANCELLED
 
 ```TypeScript
-PENDING = 0
+CANCELLED = 3
 ```
 
-The hydrate task has been created, but the FFRT worker has not been dispatched yet.
+The hydrate is cancelled by the user, a crash, or the application giving up.
 
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HydrateProgressState-PENDING = 0--><!--Device-HydrateProgressState-PENDING = 0-End-->
-
-**System capability:** SystemCapability.FileManagement.CloudDiskManager
-
-**System API:** This is a system API.
-
-## IN_PROGRESS
-
-```TypeScript
-IN_PROGRESS = 1
-```
-
-The hydrate is in progress.
-
-**Since:** 26.0.1
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-HydrateProgressState-IN_PROGRESS = 1--><!--Device-HydrateProgressState-IN_PROGRESS = 1-End-->
+<!--Device-HydrateProgressState-CANCELLED = 3--><!--Device-HydrateProgressState-CANCELLED = 3-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 
@@ -68,19 +50,37 @@ The hydrate is completed.
 
 **System API:** This is a system API.
 
-## CANCELLED
+## IN_PROGRESS
 
 ```TypeScript
-CANCELLED = 3
+IN_PROGRESS = 1
 ```
 
-The hydrate is cancelled by the user, a crash, or the application giving up.
+The hydrate is in progress.
 
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-HydrateProgressState-CANCELLED = 3--><!--Device-HydrateProgressState-CANCELLED = 3-End-->
+<!--Device-HydrateProgressState-IN_PROGRESS = 1--><!--Device-HydrateProgressState-IN_PROGRESS = 1-End-->
+
+**System capability:** SystemCapability.FileManagement.CloudDiskManager
+
+**System API:** This is a system API.
+
+## PENDING
+
+```TypeScript
+PENDING = 0
+```
+
+The hydrate task has been created, but the FFRT worker has not been dispatched yet.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-HydrateProgressState-PENDING = 0--><!--Device-HydrateProgressState-PENDING = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.CloudDiskManager
 

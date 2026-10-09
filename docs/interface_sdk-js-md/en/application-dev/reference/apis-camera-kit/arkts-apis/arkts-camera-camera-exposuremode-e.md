@@ -12,42 +12,6 @@ Enumerates the exposure modes.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## EXPOSURE_MODE_UNSPECIFIED
-
-```TypeScript
-EXPOSURE_MODE_UNSPECIFIED = -1
-```
-
-Unspecified exposure.
-
-**Since:** 24
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
-
-<!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1--><!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## EXPOSURE_MODE_LOCKED
-
-```TypeScript
-EXPOSURE_MODE_LOCKED = 0
-```
-
-Exposure locked. The metering point cannot be set.
-
-After this mode is used, the exposure will be locked by default for each photo capture.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0--><!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## EXPOSURE_MODE_AUTO
 
 ```TypeScript
@@ -84,6 +48,24 @@ After this mode is used, the camera system automatically adjusts the exposure ba
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
+## EXPOSURE_MODE_LOCKED
+
+```TypeScript
+EXPOSURE_MODE_LOCKED = 0
+```
+
+Exposure locked. The metering point cannot be set.
+
+After this mode is used, the exposure will be locked by default for each photo capture.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0--><!--Device-ExposureMode-EXPOSURE_MODE_LOCKED = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
 ## EXPOSURE_MODE_MANUAL
 
 ```TypeScript
@@ -99,5 +81,23 @@ In this mode, you can set the exposure duration by calling [ManualExposure.setEx
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
 <!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3--><!--Device-ExposureMode-EXPOSURE_MODE_MANUAL = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## EXPOSURE_MODE_UNSPECIFIED
+
+```TypeScript
+EXPOSURE_MODE_UNSPECIFIED = -1
+```
+
+Unspecified exposure.
+
+**Since:** 24
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+
+<!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1--><!--Device-ExposureMode-EXPOSURE_MODE_UNSPECIFIED = -1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

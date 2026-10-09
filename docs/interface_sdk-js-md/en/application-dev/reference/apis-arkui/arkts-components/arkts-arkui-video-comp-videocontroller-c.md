@@ -6,17 +6,17 @@ declare class VideoController
 
 A **VideoController** object can control one or more **Video** components.
 
-## Objects to Import
-
-```ts
-let controller: VideoController = new VideoController();
-```
-
 **Since:** 7
 
 <!--Device-unnamed-declare class VideoController--><!--Device-unnamed-declare class VideoController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Objects to Import
+
+```ts
+let controller: VideoController = new VideoController();
+```
 
 ## constructor
 

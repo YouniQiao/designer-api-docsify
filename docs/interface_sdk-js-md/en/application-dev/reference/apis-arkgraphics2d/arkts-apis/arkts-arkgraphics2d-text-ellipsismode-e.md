@@ -14,19 +14,19 @@ Enumerates the ellipsis styles.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## START
+## END
 
 ```TypeScript
-START = 0
+END = 2
 ```
 
-Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
+Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-EllipsisMode-START = 0--><!--Device-EllipsisMode-START = 0-End-->
+<!--Device-EllipsisMode-END = 2--><!--Device-EllipsisMode-END = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -46,19 +46,19 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## END
+## MULTILINE_MIDDLE
 
 ```TypeScript
-END = 2
+MULTILINE_MIDDLE = 4
 ```
 
-Ellipsis at the end. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
+Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
-**Since:** 12
+**Since:** 24
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
-<!--Device-EllipsisMode-END = 2--><!--Device-EllipsisMode-END = 2-End-->
+<!--Device-EllipsisMode-MULTILINE_MIDDLE = 4--><!--Device-EllipsisMode-MULTILINE_MIDDLE = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -78,18 +78,18 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## MULTILINE_MIDDLE
+## START
 
 ```TypeScript
-MULTILINE_MIDDLE = 4
+START = 0
 ```
 
-Ellipsis in the middle. This enumerated value is valid when **maxLines** is set to any value in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
+Ellipsis at the beginning. This enumerated value is valid only when **maxLines** is set to **1** in [ParagraphStyle](arkts-arkgraphics2d-text-paragraphstyle-i.md).
 
-**Since:** 24
+**Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-EllipsisMode-MULTILINE_MIDDLE = 4--><!--Device-EllipsisMode-MULTILINE_MIDDLE = 4-End-->
+<!--Device-EllipsisMode-START = 0--><!--Device-EllipsisMode-START = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

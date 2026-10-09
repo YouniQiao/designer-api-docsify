@@ -12,19 +12,35 @@ Defines an HTTP request method.
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## OPTIONS
+## CONNECT
 
 ```TypeScript
-OPTIONS = "OPTIONS"
+CONNECT = "CONNECT"
 ```
 
-Describes the communication options of the target resource.
+Establishes a tunnel to the server identified by the target resource.
 
 **Since:** 6
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
+<!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## DELETE
+
+```TypeScript
+DELETE = "DELETE"
+```
+
+Deletes the specified resource.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
 **System capability:** SystemCapability.Communication.NetStack
 
@@ -60,6 +76,40 @@ Requests the same response (but does not have a response body) as the GET reques
 
 **System capability:** SystemCapability.Communication.NetStack
 
+## OPTIONS
+
+```TypeScript
+OPTIONS = "OPTIONS"
+```
+
+Describes the communication options of the target resource.
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
+## PATCH
+
+```TypeScript
+PATCH = "PATCH"
+```
+
+Modifies a resource partially.
+
+**Since**: 26.0.0
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-RequestMethod-PATCH = "PATCH"--><!--Device-RequestMethod-PATCH = "PATCH"-End-->
+
+**System capability:** SystemCapability.Communication.NetStack
+
 ## POST
 
 ```TypeScript
@@ -92,22 +142,6 @@ Replaces all current representations of the target resource with the requested c
 
 **System capability:** SystemCapability.Communication.NetStack
 
-## DELETE
-
-```TypeScript
-DELETE = "DELETE"
-```
-
-Deletes the specified resource.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
 ## TRACE
 
 ```TypeScript
@@ -125,37 +159,3 @@ Performs a message loopback test along the path to the target resource.
 **System capability:** SystemCapability.Communication.NetStack
 
 **Test API:** This API is used only in automated test scripts.
-
-## CONNECT
-
-```TypeScript
-CONNECT = "CONNECT"
-```
-
-Establishes a tunnel to the server identified by the target resource.
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
-
-**System capability:** SystemCapability.Communication.NetStack
-
-## PATCH
-
-```TypeScript
-PATCH = "PATCH"
-```
-
-Modifies a resource partially.
-
-**Since**: 26.0.0
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-RequestMethod-PATCH = "PATCH"--><!--Device-RequestMethod-PATCH = "PATCH"-End-->
-
-**System capability:** SystemCapability.Communication.NetStack

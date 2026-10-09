@@ -44,19 +44,19 @@ CLOUDY = 1
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## INCANDESCENT
+## DAYLIGHT
 
 ```TypeScript
-INCANDESCENT =2
+DAYLIGHT = 4
 ```
 
-白炽光
+日光
 
 **起始版本：** 20
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
+<!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -76,35 +76,19 @@ FLUORESCENT =3
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## DAYLIGHT
+## INCANDESCENT
 
 ```TypeScript
-DAYLIGHT = 4
+INCANDESCENT =2
 ```
 
-日光
+白炽光
 
 **起始版本：** 20
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## MANUAL
-
-```TypeScript
-MANUAL = 5
-```
-
-手动
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
+<!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -121,5 +105,21 @@ LOCKED = 6
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-LOCKED = 6--><!--Device-WhiteBalanceMode-LOCKED = 6-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## MANUAL
+
+```TypeScript
+MANUAL = 5
+```
+
+手动
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

@@ -30,6 +30,22 @@ Application installed from AppGallery.
 
 **System API:** This is a system API.
 
+## CROWDTESTING
+
+```TypeScript
+CROWDTESTING = 6
+```
+
+Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
+
+**Since:** 12
+
+<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
 ## ENTERPRISE
 
 ```TypeScript
@@ -41,22 +57,6 @@ Enterprise application that can be installed on personal devices.
 **Since:** 12
 
 <!--Device-AppDistributionType-ENTERPRISE = 2--><!--Device-AppDistributionType-ENTERPRISE = 2-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
-## ENTERPRISE_NORMAL
-
-```TypeScript
-ENTERPRISE_NORMAL = 3
-```
-
-Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
-
-**Since:** 12
-
-<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -78,33 +78,17 @@ Enterprise MDM application that can be installed only on enterprise devices. To 
 
 **System API:** This is a system API.
 
-## OS_INTEGRATION
+## ENTERPRISE_NORMAL
 
 ```TypeScript
-OS_INTEGRATION = 5
+ENTERPRISE_NORMAL = 3
 ```
 
-Preinstalled system application.
+Common enterprise application that can be installed on enterprise devices only through an enterprise mobile device management (MDM) application.
 
 **Since:** 12
 
-<!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**System API:** This is a system API.
-
-## CROWDTESTING
-
-```TypeScript
-CROWDTESTING = 6
-```
-
-Application under crowdtesting, which is distributed by AppGallery to a limited number of users and come with a set expiration date. When the system detects that the validity period of the application expires, it prompts the user to update to the release version available on AppGallery.
-
-**Since:** 12
-
-<!--Device-AppDistributionType-CROWDTESTING = 6--><!--Device-AppDistributionType-CROWDTESTING = 6-End-->
+<!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3--><!--Device-AppDistributionType-ENTERPRISE_NORMAL = 3-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
@@ -121,6 +105,22 @@ Other.
 **Since:** 12
 
 <!--Device-AppDistributionType-NONE = 7--><!--Device-AppDistributionType-NONE = 7-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+**System API:** This is a system API.
+
+## OS_INTEGRATION
+
+```TypeScript
+OS_INTEGRATION = 5
+```
+
+Preinstalled system application.
+
+**Since:** 12
+
+<!--Device-AppDistributionType-OS_INTEGRATION = 5--><!--Device-AppDistributionType-OS_INTEGRATION = 5-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

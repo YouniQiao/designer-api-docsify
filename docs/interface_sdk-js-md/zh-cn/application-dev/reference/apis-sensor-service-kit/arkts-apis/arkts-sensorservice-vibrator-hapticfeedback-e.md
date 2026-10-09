@@ -18,20 +18,6 @@ enum HapticFeedback
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
-## EFFECT_SOFT
-
-```TypeScript
-EFFECT_SOFT = 'haptic.effect.soft'
-```
-
-较松散的振动效果，频率偏低。适用于轻柔触觉反馈场景。
-
-**起始版本：** 12
-
-<!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'--><!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'-End-->
-
-**系统能力：** SystemCapability.Sensors.MiscDevice
-
 ## EFFECT_HARD
 
 ```TypeScript
@@ -43,34 +29,6 @@ EFFECT_HARD = 'haptic.effect.hard'
 **起始版本：** 12
 
 <!--Device-HapticFeedback-EFFECT_HARD = 'haptic.effect.hard'--><!--Device-HapticFeedback-EFFECT_HARD = 'haptic.effect.hard'-End-->
-
-**系统能力：** SystemCapability.Sensors.MiscDevice
-
-## EFFECT_SHARP
-
-```TypeScript
-EFFECT_SHARP = 'haptic.effect.sharp'
-```
-
-较尖锐的振动效果，频率偏高。适用于警示触觉反馈场景。
-
-**起始版本：** 12
-
-<!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'--><!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'-End-->
-
-**系统能力：** SystemCapability.Sensors.MiscDevice
-
-## EFFECT_NOTICE_SUCCESS
-
-```TypeScript
-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
-```
-
-表达成功通知的振动效果。适用于操作成功提醒场景。
-
-**起始版本：** 18
-
-<!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'--><!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
@@ -88,6 +46,20 @@ EFFECT_NOTICE_FAILURE = 'haptic.notice.fail'
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
+## EFFECT_NOTICE_SUCCESS
+
+```TypeScript
+EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'
+```
+
+表达成功通知的振动效果。适用于操作成功提醒场景。
+
+**起始版本：** 18
+
+<!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'--><!--Device-HapticFeedback-EFFECT_NOTICE_SUCCESS = 'haptic.notice.success'-End-->
+
+**系统能力：** SystemCapability.Sensors.MiscDevice
+
 ## EFFECT_NOTICE_WARNING
 
 ```TypeScript
@@ -99,5 +71,33 @@ EFFECT_NOTICE_WARNING = 'haptic.notice.warning'
 **起始版本：** 18
 
 <!--Device-HapticFeedback-EFFECT_NOTICE_WARNING = 'haptic.notice.warning'--><!--Device-HapticFeedback-EFFECT_NOTICE_WARNING = 'haptic.notice.warning'-End-->
+
+**系统能力：** SystemCapability.Sensors.MiscDevice
+
+## EFFECT_SHARP
+
+```TypeScript
+EFFECT_SHARP = 'haptic.effect.sharp'
+```
+
+较尖锐的振动效果，频率偏高。适用于警示触觉反馈场景。
+
+**起始版本：** 12
+
+<!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'--><!--Device-HapticFeedback-EFFECT_SHARP = 'haptic.effect.sharp'-End-->
+
+**系统能力：** SystemCapability.Sensors.MiscDevice
+
+## EFFECT_SOFT
+
+```TypeScript
+EFFECT_SOFT = 'haptic.effect.soft'
+```
+
+较松散的振动效果，频率偏低。适用于轻柔触觉反馈场景。
+
+**起始版本：** 12
+
+<!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'--><!--Device-HapticFeedback-EFFECT_SOFT = 'haptic.effect.soft'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

@@ -30,6 +30,24 @@ loops all items in the playlist
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
+## PLAYLIST_LOOP_MODE_NONE
+
+```TypeScript
+PLAYLIST_LOOP_MODE_NONE = 4
+```
+
+No looping
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_NONE = 4--><!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_NONE = 4-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
 ## PLAYLIST_LOOP_MODE_ONE
 
 ```TypeScript
@@ -63,23 +81,5 @@ Loops shuffle playback item.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_SHUFFLE = 3--><!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_SHUFFLE = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## PLAYLIST_LOOP_MODE_NONE
-
-```TypeScript
-PLAYLIST_LOOP_MODE_NONE = 4
-```
-
-No looping
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_NONE = 4--><!--Device-PlaylistLoopMode-PLAYLIST_LOOP_MODE_NONE = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

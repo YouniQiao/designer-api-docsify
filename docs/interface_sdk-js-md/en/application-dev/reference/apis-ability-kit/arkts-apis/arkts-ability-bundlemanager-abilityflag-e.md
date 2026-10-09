@@ -28,70 +28,6 @@ Used to obtain the default ability information, which does not contain permissio
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_ABILITY_INFO_WITH_PERMISSION
-
-```TypeScript
-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
-```
-
-Used to obtain the ability information containing permissions.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_APPLICATION
-
-```TypeScript
-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
-```
-
-Used to obtain the ability information containing application information.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_METADATA
-
-```TypeScript
-GET_ABILITY_INFO_WITH_METADATA = 0x00000004
-```
-
-Used to obtain the ability information containing metadata.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_DISABLE
-
-```TypeScript
-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
-```
-
-Used to obtain the ability information of disabled abilities.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
 ## GET_ABILITY_INFO_ONLY_SYSTEM_APP
 
 ```TypeScript
@@ -121,6 +57,70 @@ Used to obtain the ability information that passes <!--RP3--> [domain name verif
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_APPLICATION
+
+```TypeScript
+GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
+```
+
+Used to obtain the ability information containing application information.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_DISABLE
+
+```TypeScript
+GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
+```
+
+Used to obtain the ability information of disabled abilities.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_METADATA
+
+```TypeScript
+GET_ABILITY_INFO_WITH_METADATA = 0x00000004
+```
+
+Used to obtain the ability information containing metadata.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_PERMISSION
+
+```TypeScript
+GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
+```
+
+Used to obtain the ability information containing permissions.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 

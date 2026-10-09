@@ -12,22 +12,6 @@ Enumerates file aggregation types.
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-默认模式，表示该参数不生效。
-
-**起始版本：** 15
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
-
-<!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
-
-**系统能力：** SystemCapability.FileManagement.UserFileService
-
 ## AUDIO
 
 ```TypeScript
@@ -44,19 +28,19 @@ AUDIO = 1
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
-## VIDEO
+## DEFAULT
 
 ```TypeScript
-VIDEO = 2
+DEFAULT = 0
 ```
 
-视频文件模式。
+默认模式，表示该参数不生效。
 
 **起始版本：** 15
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
 
-<!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
+<!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService
 
@@ -89,5 +73,21 @@ PICTURE = 4
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 <!--Device-MergeTypeMode-PICTURE = 4--><!--Device-MergeTypeMode-PICTURE = 4-End-->
+
+**系统能力：** SystemCapability.FileManagement.UserFileService
+
+## VIDEO
+
+```TypeScript
+VIDEO = 2
+```
+
+视频文件模式。
+
+**起始版本：** 15
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+
+<!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService

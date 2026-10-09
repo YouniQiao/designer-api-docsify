@@ -10,11 +10,11 @@
 | [clearInterval](arkts-arkui-global-clearinterval-f.md) | Cancels the interval set by " setInterval()". |
 | [clearMonitorForCrownEvents](arkts-arkui-global-clearmonitorforcrownevents-f.md) | Clears the rotating crown event monitor for the page. |
 | [clearTimeout](arkts-arkui-global-cleartimeout-f.md) | Cancels the timer set by " setTimeout()". |
-| [createLocalParticleAbility](arkts-arkui-global-createlocalparticleability-f.md) | Get the java interface instance. The java instance needs to register, otherwise it cannot be obtained. After obtaining the instance, you can call the function with the same name on the Java side. |
 | [getApp](arkts-arkui-global-getapp-f.md) | Obtain the objects exposed in app.js |
 | [setInterval](arkts-arkui-global-setinterval-f.md) | Sets the interval for repeatedly calling a function. |
 | [setMonitorForCrownEvents](arkts-arkui-global-setmonitorforcrownevents-f.md) | Sets a rotary crown event monitor for the page. When a rotating crown event is triggered, the monitor triggers a callback. |
 | [setTimeout](arkts-arkui-global-settimeout-f.md) | Sets a timer after which a function will be executed. |
+| [createLocalParticleAbility](arkts-arkui-global-createlocalparticleability-f.md) | Get the java interface instance. The java instance needs to register, otherwise it cannot be obtained. After obtaining the instance, you can call the function with the same name on the Java side. |
 
 ### Constants
 

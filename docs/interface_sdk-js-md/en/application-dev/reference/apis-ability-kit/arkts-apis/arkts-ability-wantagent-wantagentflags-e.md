@@ -12,38 +12,6 @@ Enumerates the flags used by the WantAgent objects.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## ONE_TIME_FLAG
-
-```TypeScript
-ONE_TIME_FLAG = 0
-```
-
-The WantAgent object can be used only once.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-WantAgentFlags-ONE_TIME_FLAG = 0--><!--Device-WantAgentFlags-ONE_TIME_FLAG = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## NO_BUILD_FLAG
-
-```TypeScript
-NO_BUILD_FLAG
-```
-
-The WantAgent object does not exist and hence it is not created. In this case, &lt;code&gt;null&lt;/code&gt; is returned.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-WantAgentFlags-NO_BUILD_FLAG--><!--Device-WantAgentFlags-NO_BUILD_FLAG-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## CANCEL_PRESENT_FLAG
 
 ```TypeScript
@@ -57,22 +25,6 @@ The existing WantAgent object should be canceled before a new object is generate
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG--><!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## UPDATE_PRESENT_FLAG
-
-```TypeScript
-UPDATE_PRESENT_FLAG
-```
-
-Extra information of the existing WantAgent object is replaced with that of the new object.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG--><!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -92,19 +44,35 @@ The WantAgent object is immutable.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## REPLACE_ELEMENT
+## NO_BUILD_FLAG
 
 ```TypeScript
-REPLACE_ELEMENT
+NO_BUILD_FLAG
 ```
 
-The element property in the current Want can be replaced by the element property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+The WantAgent object does not exist and hence it is not created. In this case, &lt;code&gt;null&lt;/code&gt; is returned.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-WantAgentFlags-REPLACE_ELEMENT--><!--Device-WantAgentFlags-REPLACE_ELEMENT-End-->
+<!--Device-WantAgentFlags-NO_BUILD_FLAG--><!--Device-WantAgentFlags-NO_BUILD_FLAG-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## ONE_TIME_FLAG
+
+```TypeScript
+ONE_TIME_FLAG = 0
+```
+
+The WantAgent object can be used only once.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-WantAgentFlags-ONE_TIME_FLAG = 0--><!--Device-WantAgentFlags-ONE_TIME_FLAG = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -124,19 +92,35 @@ The action property in the current Want can be replaced by the action property i
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## REPLACE_URI
+## REPLACE_BUNDLE
 
 ```TypeScript
-REPLACE_URI
+REPLACE_BUNDLE
 ```
 
-The uri property in the current Want can be replaced by the uri property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+The &lt;code&gt;bundleName&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;bundleName&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-WantAgentFlags-REPLACE_URI--><!--Device-WantAgentFlags-REPLACE_URI-End-->
+<!--Device-WantAgentFlags-REPLACE_BUNDLE--><!--Device-WantAgentFlags-REPLACE_BUNDLE-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## REPLACE_ELEMENT
+
+```TypeScript
+REPLACE_ELEMENT
+```
+
+The element property in the current Want can be replaced by the element property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-WantAgentFlags-REPLACE_ELEMENT--><!--Device-WantAgentFlags-REPLACE_ELEMENT-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -156,18 +140,34 @@ The &lt;code&gt;entities&lt;/code&gt; property in the current Want can be replac
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## REPLACE_BUNDLE
+## REPLACE_URI
 
 ```TypeScript
-REPLACE_BUNDLE
+REPLACE_URI
 ```
 
-The &lt;code&gt;bundleName&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;bundleName&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+The uri property in the current Want can be replaced by the uri property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-WantAgentFlags-REPLACE_BUNDLE--><!--Device-WantAgentFlags-REPLACE_BUNDLE-End-->
+<!--Device-WantAgentFlags-REPLACE_URI--><!--Device-WantAgentFlags-REPLACE_URI-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## UPDATE_PRESENT_FLAG
+
+```TypeScript
+UPDATE_PRESENT_FLAG
+```
+
+Extra information of the existing WantAgent object is replaced with that of the new object.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG--><!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

@@ -16,24 +16,6 @@ export enum BackgroundMode
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## DATA_TRANSFER
-
-```TypeScript
-DATA_TRANSFER = 1
-```
-
-数据传输。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [DATA_TRANSFER](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#data_transfer)
-
-<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
-
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## AUDIO_PLAYBACK
 
 ```TypeScript
@@ -70,24 +52,6 @@ AUDIO_RECORDING = 3
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## LOCATION
-
-```TypeScript
-LOCATION = 4
-```
-
-定位导航。
-
-**起始版本：** 8
-
-**废弃版本：** 9
-
-**替代接口：** [LOCATION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#location)
-
-<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
-
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## BLUETOOTH_INTERACTION
 
 ```TypeScript
@@ -103,6 +67,42 @@ BLUETOOTH_INTERACTION = 5
 **替代接口：** [BLUETOOTH_INTERACTION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#bluetooth_interaction)
 
 <!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## DATA_TRANSFER
+
+```TypeScript
+DATA_TRANSFER = 1
+```
+
+数据传输。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [DATA_TRANSFER](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#data_transfer)
+
+<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## LOCATION
+
+```TypeScript
+LOCATION = 4
+```
+
+定位导航。
+
+**起始版本：** 8
+
+**废弃版本：** 9
+
+**替代接口：** [LOCATION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#location)
+
+<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

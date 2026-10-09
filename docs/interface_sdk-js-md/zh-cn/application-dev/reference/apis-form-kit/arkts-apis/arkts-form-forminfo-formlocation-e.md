@@ -12,6 +12,22 @@ enum FormLocation
 
 **系统能力：** SystemCapability.Ability.Form
 
+## AI_SUGGESTION
+
+```TypeScript
+AI_SUGGESTION = 7
+```
+
+表示卡片位于AI智慧助手推荐区。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-FormLocation-AI_SUGGESTION = 7--><!--Device-FormLocation-AI_SUGGESTION = 7-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
 ## DESKTOP
 
 ```TypeScript
@@ -89,22 +105,6 @@ SCREEN_LOCK = 6
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-SCREEN_LOCK = 6--><!--Device-FormLocation-SCREEN_LOCK = 6-End-->
-
-**系统能力：** SystemCapability.Ability.Form
-
-## AI_SUGGESTION
-
-```TypeScript
-AI_SUGGESTION = 7
-```
-
-表示卡片位于AI智慧助手推荐区。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-FormLocation-AI_SUGGESTION = 7--><!--Device-FormLocation-AI_SUGGESTION = 7-End-->
 
 **系统能力：** SystemCapability.Ability.Form
 

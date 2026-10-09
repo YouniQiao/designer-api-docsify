@@ -66,6 +66,24 @@ Area land residntl scenario.
 
 **System capability:** SystemCapability.Global.I18n
 
+## ELAPSED_TIME_SECOND
+
+```TypeScript
+ELAPSED_TIME_SECOND = 21
+```
+
+Elapsed time second scenario.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
 ## LENGTH_PERSON
 
 ```TypeScript
@@ -84,6 +102,24 @@ Length person scenario.
 
 **System capability:** SystemCapability.Global.I18n
 
+## LENGTH_PERSON_INFORMAL
+
+```TypeScript
+LENGTH_PERSON_INFORMAL = 13
+```
+
+Length person informal scenario.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
 ## LENGTH_PERSON_SMALL
 
 ```TypeScript
@@ -99,6 +135,24 @@ Length person small scenario.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
 <!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5--><!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+## LENGTH_PERSON_SMALL_INFORMAL
+
+```TypeScript
+LENGTH_PERSON_SMALL_INFORMAL = 14
+```
+
+Length person small informal scenario.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -135,6 +189,24 @@ Length road scenario.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
 <!--Device-UnitUsage-LENGTH_ROAD = 7--><!--Device-UnitUsage-LENGTH_ROAD = 7-End-->
+
+**System capability:** SystemCapability.Global.I18n
+
+## LENGTH_ROAD_INFORMAL
+
+```TypeScript
+LENGTH_ROAD_INFORMAL = 15
+```
+
+Length road informal scenario.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -228,13 +300,13 @@ Length visiblty small scenario.
 
 **System capability:** SystemCapability.Global.I18n
 
-## LENGTH_PERSON_INFORMAL
+## SIZE_FILE_BYTE
 
 ```TypeScript
-LENGTH_PERSON_INFORMAL = 13
+SIZE_FILE_BYTE = 22
 ```
 
-Length person informal scenario.
+Size file byte scenario.
 
 **Since:** 23
 
@@ -242,17 +314,17 @@ Length person informal scenario.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
-<!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
+<!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
-## LENGTH_PERSON_SMALL_INFORMAL
+## SIZE_SHORTFILE_BYTE
 
 ```TypeScript
-LENGTH_PERSON_SMALL_INFORMAL = 14
+SIZE_SHORTFILE_BYTE = 23
 ```
 
-Length person small informal scenario.
+Size shortfile byte scenario.
 
 **Since:** 23
 
@@ -260,25 +332,7 @@ Length person small informal scenario.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
-<!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-## LENGTH_ROAD_INFORMAL
-
-```TypeScript
-LENGTH_ROAD_INFORMAL = 15
-```
-
-Length road informal scenario.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
+<!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
 **System capability:** SystemCapability.Global.I18n
 
@@ -369,59 +423,5 @@ Volume vehicle fuel scenario.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
 <!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20--><!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-## ELAPSED_TIME_SECOND
-
-```TypeScript
-ELAPSED_TIME_SECOND = 21
-```
-
-Elapsed time second scenario.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-## SIZE_FILE_BYTE
-
-```TypeScript
-SIZE_FILE_BYTE = 22
-```
-
-Size file byte scenario.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
-
-**System capability:** SystemCapability.Global.I18n
-
-## SIZE_SHORTFILE_BYTE
-
-```TypeScript
-SIZE_SHORTFILE_BYTE = 23
-```
-
-Size shortfile byte scenario.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
 **System capability:** SystemCapability.Global.I18n

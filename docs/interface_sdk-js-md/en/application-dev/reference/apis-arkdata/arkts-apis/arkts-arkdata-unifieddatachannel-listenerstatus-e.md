@@ -12,42 +12,6 @@ Enumerates the status codes returned when data is obtained from the UDMF.
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-## FINISHED
-
-```TypeScript
-FINISHED = 0
-```
-
-The task is completed.
-
-**Since:** 15
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
-
-<!--Device-ListenerStatus-FINISHED = 0--><!--Device-ListenerStatus-FINISHED = 0-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## PROCESSING
-
-```TypeScript
-PROCESSING = 1
-```
-
-The task is being processed.
-
-**Since:** 15
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
-
-<!--Device-ListenerStatus-PROCESSING = 1--><!--Device-ListenerStatus-PROCESSING = 1-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
 ## CANCELED
 
 ```TypeScript
@@ -63,6 +27,60 @@ The task is canceled.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
 
 <!--Device-ListenerStatus-CANCELED = 2--><!--Device-ListenerStatus-CANCELED = 2-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## COPY_FILE_FAILED
+
+```TypeScript
+COPY_FILE_FAILED = 204
+```
+
+Failed to copy data.
+
+**Since:** 15
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-ListenerStatus-COPY_FILE_FAILED = 204--><!--Device-ListenerStatus-COPY_FILE_FAILED = 204-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## DATA_NOT_FOUND
+
+```TypeScript
+DATA_NOT_FOUND = 202
+```
+
+No data is obtained.
+
+**Since:** 15
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-ListenerStatus-DATA_NOT_FOUND = 202--><!--Device-ListenerStatus-DATA_NOT_FOUND = 202-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
+
+## FINISHED
+
+```TypeScript
+FINISHED = 0
+```
+
+The task is completed.
+
+**Since:** 15
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+
+<!--Device-ListenerStatus-FINISHED = 0--><!--Device-ListenerStatus-FINISHED = 0-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -102,13 +120,13 @@ INVALID_PARAMETERS = 201
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
-## DATA_NOT_FOUND
+## PROCESSING
 
 ```TypeScript
-DATA_NOT_FOUND = 202
+PROCESSING = 1
 ```
 
-No data is obtained.
+The task is being processed.
 
 **Since:** 15
 
@@ -116,7 +134,7 @@ No data is obtained.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
 
-<!--Device-ListenerStatus-DATA_NOT_FOUND = 202--><!--Device-ListenerStatus-DATA_NOT_FOUND = 202-End-->
+<!--Device-ListenerStatus-PROCESSING = 1--><!--Device-ListenerStatus-PROCESSING = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
 
@@ -135,23 +153,5 @@ Failed to sync data.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
 
 <!--Device-ListenerStatus-SYNC_FAILED = 203--><!--Device-ListenerStatus-SYNC_FAILED = 203-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.UDMF.Core
-
-## COPY_FILE_FAILED
-
-```TypeScript
-COPY_FILE_FAILED = 204
-```
-
-Failed to copy data.
-
-**Since:** 15
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
-
-<!--Device-ListenerStatus-COPY_FILE_FAILED = 204--><!--Device-ListenerStatus-COPY_FILE_FAILED = 204-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core

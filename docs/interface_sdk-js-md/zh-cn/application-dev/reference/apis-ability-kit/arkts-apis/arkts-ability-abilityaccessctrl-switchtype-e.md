@@ -12,6 +12,12 @@ export enum SwitchType
 - 在权限未授予时，拉起运行时权限弹窗或权限设置页面，请求用户授权。  
 - 订阅当前应用的权限状态变化事件，在权限状态变化后及时调整业务流程。
 
+**起始版本：** 12
+
+<!--Device-abilityAccessCtrl-export enum SwitchType--><!--Device-abilityAccessCtrl-export enum SwitchType-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
 ## 核心枚举类型
 
 - **[GrantStatus](arkts-ability-abilityaccessctrl-grantstatus-e.md)：** 权限授权状态枚举，用于表示当前权限的授权状态。  
@@ -32,12 +38,6 @@ export enum SwitchType
 
 ![image_abilityAccessCtrl](../../../reference/apis-ability-kit/figures/abilityAccessCtrl.png)
 
-**起始版本：** 12
-
-<!--Device-abilityAccessCtrl-export enum SwitchType--><!--Device-abilityAccessCtrl-export enum SwitchType-End-->
-
-**系统能力：** SystemCapability.Security.AccessToken
-
 ## CAMERA
 
 ```TypeScript
@@ -56,24 +56,6 @@ CAMERA = 0
 
 **系统能力：** SystemCapability.Security.AccessToken
 
-## MICROPHONE
-
-```TypeScript
-MICROPHONE = 1
-```
-
-表示麦克风全局开关。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-SwitchType-MICROPHONE = 1--><!--Device-SwitchType-MICROPHONE = 1-End-->
-
-**系统能力：** SystemCapability.Security.AccessToken
-
 ## LOCATION
 
 ```TypeScript
@@ -89,5 +71,23 @@ LOCATION = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SwitchType-LOCATION = 2--><!--Device-SwitchType-LOCATION = 2-End-->
+
+**系统能力：** SystemCapability.Security.AccessToken
+
+## MICROPHONE
+
+```TypeScript
+MICROPHONE = 1
+```
+
+表示麦克风全局开关。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-SwitchType-MICROPHONE = 1--><!--Device-SwitchType-MICROPHONE = 1-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken

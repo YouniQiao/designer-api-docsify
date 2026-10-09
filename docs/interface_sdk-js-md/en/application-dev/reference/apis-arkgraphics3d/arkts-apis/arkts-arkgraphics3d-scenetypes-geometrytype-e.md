@@ -14,6 +14,20 @@ Enumerates the geometry types.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
+## CUBE
+
+```TypeScript
+CUBE = 1
+```
+
+Cube.
+
+**Since:** 18
+
+<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
 ## CUSTOM
 
 ```TypeScript
@@ -28,17 +42,17 @@ Custom geometry type.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## CUBE
+## CYLINDER
 
 ```TypeScript
-CUBE = 1
+CYLINDER = 4
 ```
 
-Cube.
+Cylinder.
 
-**Since:** 18
+**Since:** 23
 
-<!--Device-GeometryType-CUBE = 1--><!--Device-GeometryType-CUBE = 1-End-->
+<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -67,19 +81,5 @@ Sphere.
 **Since:** 18
 
 <!--Device-GeometryType-SPHERE = 3--><!--Device-GeometryType-SPHERE = 3-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
-## CYLINDER
-
-```TypeScript
-CYLINDER = 4
-```
-
-Cylinder.
-
-**Since:** 23
-
-<!--Device-GeometryType-CYLINDER = 4--><!--Device-GeometryType-CYLINDER = 4-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

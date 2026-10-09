@@ -23,17 +23,17 @@ import { particleAbility } from '@kit.AbilityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md) | 获取dataAbilityHelper对象。 |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning1) | 向系统申请取消长时任务。使用callback异步回调。 |
-| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning2) | 向系统申请取消长时任务。使用Promise异步回调。 |
 | [connectAbility](arkts-ability-particleability-connectability-f.md) | 将当前ability与指定的ServiceAbility进行连接。 |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability1) | 断开当前ability与指定ServiceAbility的连接。使用callback异步回调。 |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability2) | 断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。 |
 | [startAbility](arkts-ability-particleability-startability-f.md#startability1) | 启动指定的particleAbility。使用callback异步回调。 |
 | [startAbility](arkts-ability-particleability-startability-f.md#startability2) | 启动指定的particleAbility。使用Promise异步回调。 |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning1) | 向系统申请长时任务。使用callback异步回调。 |
-| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning2) | 向系统申请长时任务。使用Promise异步回调。 |
 | [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself1) | 销毁当前particleAbility。使用callback异步回调。 |
 | [terminateSelf](arkts-ability-particleability-terminateself-f.md#terminateself2) | 销毁当前particleAbility。使用Promise异步回调。 |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning1) | 向系统申请取消长时任务。使用callback异步回调。 |
+| [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md#cancelbackgroundrunning2) | 向系统申请取消长时任务。使用Promise异步回调。 |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning1) | 向系统申请长时任务。使用callback异步回调。 |
+| [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md#startbackgroundrunning2) | 向系统申请长时任务。使用Promise异步回调。 |
 
 ### 枚举
 

@@ -12,20 +12,6 @@ Enumerates the playback description keys.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## SERVER_IP_ADDRESS
-
-```TypeScript
-SERVER_IP_ADDRESS = 'server_ip_address'
-```
-
-IP address of the server. The corresponding key value type is string.
-
-**Since:** 12
-
-<!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'--><!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
 ## AVG_DOWNLOAD_RATE
 
 ```TypeScript
@@ -37,6 +23,20 @@ Average download rate. The corresponding key value type is number, measured in b
 **Since:** 12
 
 <!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'--><!--Device-PlaybackInfoKey-AVG_DOWNLOAD_RATE = 'average_download_rate'-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## BUFFER_DURATION
+
+```TypeScript
+BUFFER_DURATION = 'buffer_duration'
+```
+
+Duration that the cached data can be played. The corresponding key value type is number, measured in seconds.
+
+**Since:** 12
+
+<!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'--><!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -68,16 +68,16 @@ Download status. The corresponding key value type is number. The value **1** mea
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## BUFFER_DURATION
+## SERVER_IP_ADDRESS
 
 ```TypeScript
-BUFFER_DURATION = 'buffer_duration'
+SERVER_IP_ADDRESS = 'server_ip_address'
 ```
 
-Duration that the cached data can be played. The corresponding key value type is number, measured in seconds.
+IP address of the server. The corresponding key value type is string.
 
 **Since:** 12
 
-<!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'--><!--Device-PlaybackInfoKey-BUFFER_DURATION = 'buffer_duration'-End-->
+<!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'--><!--Device-PlaybackInfoKey-SERVER_IP_ADDRESS = 'server_ip_address'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

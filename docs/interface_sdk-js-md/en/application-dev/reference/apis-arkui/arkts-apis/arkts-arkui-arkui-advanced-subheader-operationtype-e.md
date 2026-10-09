@@ -12,24 +12,6 @@ Defines the style of elements in the subheader operation area.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## TEXT_ARROW
-
-```TypeScript
-TEXT_ARROW = 0
-```
-
-Text button with a right arrow.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-OperationType-TEXT_ARROW = 0--><!--Device-OperationType-TEXT_ARROW = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## BUTTON
 
 ```TypeScript
@@ -81,5 +63,23 @@ Loading animation. When **operationType** is set to **LOADING**, **operationItem
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-OperationType-LOADING = 3--><!--Device-OperationType-LOADING = 3-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## TEXT_ARROW
+
+```TypeScript
+TEXT_ARROW = 0
+```
+
+Text button with a right arrow.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-OperationType-TEXT_ARROW = 0--><!--Device-OperationType-TEXT_ARROW = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

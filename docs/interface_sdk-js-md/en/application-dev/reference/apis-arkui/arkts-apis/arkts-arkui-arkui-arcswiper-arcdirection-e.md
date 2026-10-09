@@ -12,19 +12,19 @@ Declare the direction of arc indicator.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
-## THREE_CLOCK_DIRECTION
+## NINE_CLOCK_DIRECTION
 
 ```TypeScript
-THREE_CLOCK_DIRECTION = 0
+NINE_CLOCK_DIRECTION = 2
 ```
 
-3 o'clock direction.
+9 o'clock direction.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0--><!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0-End-->
+<!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2--><!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
@@ -44,18 +44,18 @@ SIX_CLOCK_DIRECTION = 1
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle
 
-## NINE_CLOCK_DIRECTION
+## THREE_CLOCK_DIRECTION
 
 ```TypeScript
-NINE_CLOCK_DIRECTION = 2
+THREE_CLOCK_DIRECTION = 0
 ```
 
-9 o'clock direction.
+3 o'clock direction.
 
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.
 
-<!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2--><!--Device-ArcDirection-NINE_CLOCK_DIRECTION = 2-End-->
+<!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0--><!--Device-ArcDirection-THREE_CLOCK_DIRECTION = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Circle

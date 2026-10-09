@@ -11,30 +11,6 @@
 ## XComponent
 
 ```TypeScript
-XComponent(value: { id: string; type: string; libraryname?: string; controller?: XComponentController })
-```
-
-构造参数
-
-**起始版本：** 8
-
-**废弃版本：** 12
-
-**替代接口：** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
-
-<!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**参数:**
-
-| 参数名 | 类型 | 必填 | 说明 |
-| --- | --- | --- | --- |
-| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。 |
-
-## XComponent
-
-```TypeScript
 XComponent(value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
 ```
 
@@ -105,6 +81,30 @@ XComponent(params: NativeXComponentParameters)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | params | [NativeXComponentParameters](arkts-arkui-xcomponent-comp-nativexcomponentparameters-i.md) | 是 | 表示用于native开发的XComponent构造参数。 |
+
+## XComponent
+
+```TypeScript
+XComponent(value: { id: string; type: string; libraryname?: string; controller?: XComponentController })
+```
+
+构造参数
+
+**起始版本：** 8
+
+**废弃版本：** 12
+
+**替代接口：** (value: { id: string; type: XComponentType; libraryname?: string; controller?: XComponentController })
+
+<!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute--><!--Device-XComponentInterface-(value: { id: string; type: string; libraryname?: string; controller?: XComponentController }): XComponentAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数:**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | { id: string; type: string; libraryname?: string; controller?: XComponentController } | 是 | 表示XComponent的选项。 |
 
 ## 汇总
 

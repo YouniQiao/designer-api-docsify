@@ -28,22 +28,6 @@ The image rotates 0 degrees.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## ROTATION_90
-
-```TypeScript
-ROTATION_90 = 90
-```
-
-The image rotates 90 degrees.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## ROTATION_180
 
 ```TypeScript
@@ -73,5 +57,21 @@ The image rotates 270 degrees.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
 <!--Device-ImageRotation-ROTATION_270 = 270--><!--Device-ImageRotation-ROTATION_270 = 270-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## ROTATION_90
+
+```TypeScript
+ROTATION_90 = 90
+```
+
+The image rotates 90 degrees.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

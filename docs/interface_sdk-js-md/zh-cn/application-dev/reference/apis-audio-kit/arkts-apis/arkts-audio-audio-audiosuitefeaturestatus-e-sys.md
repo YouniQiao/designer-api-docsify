@@ -14,109 +14,19 @@ enum AudioSuiteFeatureStatus
 
 **系统接口：** 此接口为系统接口。
 
-## INVALID
+## DOWNLOAD_FAILED
 
 ```TypeScript
-INVALID = -1
+DOWNLOAD_FAILED = 22
 ```
 
-无效的状态。
+下载失败状态。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureStatus-INVALID = -1--><!--Device-AudioSuiteFeatureStatus-INVALID = -1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
-## INITIALIZED
-
-```TypeScript
-INITIALIZED = 0
-```
-
-初始化状态。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-INITIALIZED = 0--><!--Device-AudioSuiteFeatureStatus-INITIALIZED = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
-## VERSION_CHECKING
-
-```TypeScript
-VERSION_CHECKING = 10
-```
-
-云ROM状态正在检查版本。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-VERSION_CHECKING = 10--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECKING = 10-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
-## VERSION_CHECK_FAILED
-
-```TypeScript
-VERSION_CHECK_FAILED = 11
-```
-
-查看版本失败状态。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_FAILED = 11--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_FAILED = 11-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
-## VERSION_CHECK_SUCCEEDED
-
-```TypeScript
-VERSION_CHECK_SUCCEEDED = 12
-```
-
-查看版本成功状态。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_SUCCEEDED = 12--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_SUCCEEDED = 12-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
-## DOWNLOADING
-
-```TypeScript
-DOWNLOADING = 20
-```
-
-正在下载状态。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-DOWNLOADING = 20--><!--Device-AudioSuiteFeatureStatus-DOWNLOADING = 20-End-->
+<!--Device-AudioSuiteFeatureStatus-DOWNLOAD_FAILED = 22--><!--Device-AudioSuiteFeatureStatus-DOWNLOAD_FAILED = 22-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
@@ -140,24 +50,6 @@ DOWNLOAD_PAUSED = 21
 
 **系统接口：** 此接口为系统接口。
 
-## DOWNLOAD_FAILED
-
-```TypeScript
-DOWNLOAD_FAILED = 22
-```
-
-下载失败状态。
-
-**起始版本：** 26.0.1
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-AudioSuiteFeatureStatus-DOWNLOAD_FAILED = 22--><!--Device-AudioSuiteFeatureStatus-DOWNLOAD_FAILED = 22-End-->
-
-**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
-
-**系统接口：** 此接口为系统接口。
-
 ## DOWNLOAD_SUCCEEDED
 
 ```TypeScript
@@ -176,37 +68,37 @@ DOWNLOAD_SUCCEEDED = 23
 
 **系统接口：** 此接口为系统接口。
 
-## INSTALLING
+## DOWNLOADING
 
 ```TypeScript
-INSTALLING = 30
+DOWNLOADING = 20
 ```
 
-安装状态。
+正在下载状态。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureStatus-INSTALLING = 30--><!--Device-AudioSuiteFeatureStatus-INSTALLING = 30-End-->
+<!--Device-AudioSuiteFeatureStatus-DOWNLOADING = 20--><!--Device-AudioSuiteFeatureStatus-DOWNLOADING = 20-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **系统接口：** 此接口为系统接口。
 
-## WAITING_FOR_INSTALLATION
+## INITIALIZED
 
 ```TypeScript
-WAITING_FOR_INSTALLATION = 31
+INITIALIZED = 0
 ```
 
-等待安装状态。
+初始化状态。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureStatus-WAITING_FOR_INSTALLATION = 31--><!--Device-AudioSuiteFeatureStatus-WAITING_FOR_INSTALLATION = 31-End-->
+<!--Device-AudioSuiteFeatureStatus-INITIALIZED = 0--><!--Device-AudioSuiteFeatureStatus-INITIALIZED = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
@@ -248,37 +140,37 @@ INSTALLATION_SUCCEEDED = 36
 
 **系统接口：** 此接口为系统接口。
 
-## UNINSTALLING
+## INSTALLING
 
 ```TypeScript
-UNINSTALLING = 40
+INSTALLING = 30
 ```
 
-卸载状态。
+安装状态。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureStatus-UNINSTALLING = 40--><!--Device-AudioSuiteFeatureStatus-UNINSTALLING = 40-End-->
+<!--Device-AudioSuiteFeatureStatus-INSTALLING = 30--><!--Device-AudioSuiteFeatureStatus-INSTALLING = 30-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **系统接口：** 此接口为系统接口。
 
-## WAITING_FOR_UNINSTALLATION
+## INVALID
 
 ```TypeScript
-WAITING_FOR_UNINSTALLATION = 41
+INVALID = -1
 ```
 
-等待卸载状态。
+无效的状态。
 
 **起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AudioSuiteFeatureStatus-WAITING_FOR_UNINSTALLATION = 41--><!--Device-AudioSuiteFeatureStatus-WAITING_FOR_UNINSTALLATION = 41-End-->
+<!--Device-AudioSuiteFeatureStatus-INVALID = -1--><!--Device-AudioSuiteFeatureStatus-INVALID = -1-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
@@ -315,6 +207,114 @@ UNINSTALLATION_SUCCEEDED = 43
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-AudioSuiteFeatureStatus-UNINSTALLATION_SUCCEEDED = 43--><!--Device-AudioSuiteFeatureStatus-UNINSTALLATION_SUCCEEDED = 43-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## UNINSTALLING
+
+```TypeScript
+UNINSTALLING = 40
+```
+
+卸载状态。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-UNINSTALLING = 40--><!--Device-AudioSuiteFeatureStatus-UNINSTALLING = 40-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## VERSION_CHECK_FAILED
+
+```TypeScript
+VERSION_CHECK_FAILED = 11
+```
+
+查看版本失败状态。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_FAILED = 11--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_FAILED = 11-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## VERSION_CHECK_SUCCEEDED
+
+```TypeScript
+VERSION_CHECK_SUCCEEDED = 12
+```
+
+查看版本成功状态。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_SUCCEEDED = 12--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECK_SUCCEEDED = 12-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## VERSION_CHECKING
+
+```TypeScript
+VERSION_CHECKING = 10
+```
+
+云ROM状态正在检查版本。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-VERSION_CHECKING = 10--><!--Device-AudioSuiteFeatureStatus-VERSION_CHECKING = 10-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## WAITING_FOR_INSTALLATION
+
+```TypeScript
+WAITING_FOR_INSTALLATION = 31
+```
+
+等待安装状态。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-WAITING_FOR_INSTALLATION = 31--><!--Device-AudioSuiteFeatureStatus-WAITING_FOR_INSTALLATION = 31-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
+**系统接口：** 此接口为系统接口。
+
+## WAITING_FOR_UNINSTALLATION
+
+```TypeScript
+WAITING_FOR_UNINSTALLATION = 41
+```
+
+等待卸载状态。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-AudioSuiteFeatureStatus-WAITING_FOR_UNINSTALLATION = 41--><!--Device-AudioSuiteFeatureStatus-WAITING_FOR_UNINSTALLATION = 41-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 

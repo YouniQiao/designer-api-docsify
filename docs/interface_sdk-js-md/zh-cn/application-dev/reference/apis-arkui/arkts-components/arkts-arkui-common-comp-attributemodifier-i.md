@@ -10,6 +10,12 @@ declare interface AttributeModifier<T>
 > 
 > 在以下回调函数中，当对instance对象的同一个属性重复设置相同的值或对象时，不会触发该属性的更新。
 
+**起始版本：** 11
+
+<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## Attribute类型支持范围
 
 | 名称 | 说明 |  
@@ -127,12 +133,6 @@ declare interface AttributeModifier<T>
 > 7. 不支持系统组件属性。<!--DelEnd-->不支持或者未实现的属性在使用时会抛出"Method not implemented."、"is not callable"、"Builder is not supported."等异常信息。具体Modifier支持范围可参考[属性或事件对attributeModifier的支持情况](../../../ui/arkts-user-defined-extension-attributeModifier.md#属性或事件对attributemodifier的支持情况)。
 
 @interface AttributeModifier&lt;T&gt;
-
-**起始版本：** 11
-
-<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyDisabledAttribute
 

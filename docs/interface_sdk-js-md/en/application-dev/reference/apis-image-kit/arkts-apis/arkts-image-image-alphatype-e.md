@@ -12,24 +12,6 @@ Enumerates the alpha types of images.
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-## UNKNOWN
-
-```TypeScript
-UNKNOWN = 0
-```
-
-Unknown alpha type.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
-
-<!--Device-AlphaType-UNKNOWN = 0--><!--Device-AlphaType-UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
 ## OPAQUE
 
 ```TypeScript
@@ -63,6 +45,24 @@ Premultiplied alpha.
 **Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
 
 <!--Device-AlphaType-PREMUL = 2--><!--Device-AlphaType-PREMUL = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+Unknown alpha type.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+
+<!--Device-AlphaType-UNKNOWN = 0--><!--Device-AlphaType-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

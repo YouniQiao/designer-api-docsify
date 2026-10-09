@@ -12,13 +12,13 @@ The enum of gatt disconnection reasons.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-## CONN_TIMEOUT
+## CONN_TERMINATE_LOCAL_HOST
 
 ```TypeScript
-CONN_TIMEOUT = 1
+CONN_TERMINATE_LOCAL_HOST = 3
 ```
 
-Disconnection due to timeout.
+The connection is disconnected due to the local host.
 
 **Since:** 20
 
@@ -26,7 +26,7 @@ Disconnection due to timeout.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-GattDisconnectReason-CONN_TIMEOUT = 1--><!--Device-GattDisconnectReason-CONN_TIMEOUT = 1-End-->
+<!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3--><!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,13 +48,13 @@ The connection is disconnected due to the peer.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-## CONN_TERMINATE_LOCAL_HOST
+## CONN_TIMEOUT
 
 ```TypeScript
-CONN_TERMINATE_LOCAL_HOST = 3
+CONN_TIMEOUT = 1
 ```
 
-The connection is disconnected due to the local host.
+Disconnection due to timeout.
 
 **Since:** 20
 
@@ -62,7 +62,7 @@ The connection is disconnected due to the local host.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3--><!--Device-GattDisconnectReason-CONN_TERMINATE_LOCAL_HOST = 3-End-->
+<!--Device-GattDisconnectReason-CONN_TIMEOUT = 1--><!--Device-GattDisconnectReason-CONN_TIMEOUT = 1-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 

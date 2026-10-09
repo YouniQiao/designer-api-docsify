@@ -20,6 +20,7 @@ import { cameraPicker } from '@kit.CameraKit';
 
 | Name | Description |
 | --- | --- |
+| [isC2PASignatureSupported](arkts-camera-camerapicker-isc2pasignaturesupported-f.md) | Checks whether C2PA signature is supported. |
 | [pick](arkts-camera-camerapicker-pick-f.md) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
@@ -28,6 +29,12 @@ import { cameraPicker } from '@kit.CameraKit';
 | --- | --- |
 | [PickerProfile](arkts-camera-camerapicker-pickerprofile-c.md) | Defines the configuration information about the camera picker. |
 | [PickerResult](arkts-camera-camerapicker-pickerresult-c.md) | Defines the processing result of the camera picker. |
+
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [C2PASignatureConfig](arkts-camera-camerapicker-c2pasignatureconfig-i.md) | Describes the C2PA signature configuration, which includes the author name and author ID for C2PA signature generation. |
 
 ### Enums
 

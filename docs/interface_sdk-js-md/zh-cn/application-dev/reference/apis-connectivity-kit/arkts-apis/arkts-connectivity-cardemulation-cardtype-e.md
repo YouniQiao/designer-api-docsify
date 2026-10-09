@@ -12,24 +12,6 @@ enum CardType
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
-## PAYMENT
-
-```TypeScript
-PAYMENT = "payment"
-```
-
-卡模拟应用所使用的业务是支付类型。
-
-**起始版本：** 9
-
-**模型约束：** 此接口可在Stage模型和FA模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
-
-**系统能力：** SystemCapability.Communication.NFC.CardEmulation
-
 ## OTHER
 
 ```TypeScript
@@ -45,5 +27,23 @@ OTHER = "other"
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
+
+**系统能力：** SystemCapability.Communication.NFC.CardEmulation
+
+## PAYMENT
+
+```TypeScript
+PAYMENT = "payment"
+```
+
+卡模拟应用所使用的业务是支付类型。
+
+**起始版本：** 9
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation

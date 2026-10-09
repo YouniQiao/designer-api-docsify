@@ -17,19 +17,19 @@ see [modifyImageProperty](arkts-image-image-imagesource-i.md#modifyimageproperty
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-## XTSTYLE_TEMPLATE_NAME
+## XTSTYLE_CUSTOM_HUE
 
 ```TypeScript
-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
+XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 ```
 
-Describes xtstyle template name.
+Describes xtstyle custom hue.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'--><!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'-End-->
+<!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
@@ -71,24 +71,6 @@ Describes xtstyle custom saturation.
 
 **System API:** This is a system API.
 
-## XTSTYLE_CUSTOM_HUE
-
-```TypeScript
-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
-```
-
-Describes xtstyle custom hue.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
-**System API:** This is a system API.
-
 ## XTSTYLE_EXPOSURE_PARAM
 
 ```TypeScript
@@ -102,6 +84,24 @@ Describes xtstyle exposure param.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'--><!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+**System API:** This is a system API.
+
+## XTSTYLE_TEMPLATE_NAME
+
+```TypeScript
+XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
+```
+
+Describes xtstyle template name.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'--><!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 

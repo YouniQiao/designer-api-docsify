@@ -21,18 +21,18 @@ import { process } from '@kit.ArkTS';
 | 名称 | 说明 |
 | --- | --- |
 | [abort](arkts-arkts-process-abort-f.md) | 该方法会导致进程立即退出并生成一个核心文件，谨慎使用。 |
-| [exit](arkts-arkts-process-exit-f.md) | 终止程序。 |
-| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | 获取环境变量名对应的值。如果环境变量不存在，返回undefined。 |
 | [getPastCpuTime](arkts-arkts-process-getpastcputime-f.md) | 获取进程启动到当前时间的 CPU 时间（以毫秒为单位）。 |
 | [getStartRealtime](arkts-arkts-process-getstartrealtime-f.md) | 获取系统启动到进程启动的实时时间（以毫秒为单位，不包含系统休眠时间）。 |
+| [is64Bit](arkts-arkts-process-is64bit-f.md) | 检查运行环境是否为 64 位。 |
+| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md) | 检查进程是否已被隔离。 |
+| [uptime](arkts-arkts-process-uptime-f.md) | 获取当前系统已运行的时间（以秒为单位）。 |
+| [exit](arkts-arkts-process-exit-f.md) | 终止程序。 |
+| [getEnvironmentVar](arkts-arkts-process-getenvironmentvar-f.md) | 获取环境变量名对应的值。如果环境变量不存在，返回undefined。 |
 | [getSystemConfig](arkts-arkts-process-getsystemconfig-f.md) | 获取系统配置信息。 |
 | [getThreadPriority](arkts-arkts-process-getthreadpriority-f.md) | 根据指定的 tid 获取线程优先级，优先级顺序取决于当前操作系统。 |
 | [getUidForName](arkts-arkts-process-getuidforname-f.md) | 根据指定的用户名，从系统的用户数据库中获取该用户的 uid。 |
-| [is64Bit](arkts-arkts-process-is64bit-f.md) | 检查运行环境是否为 64 位。 |
 | [isAppUid](arkts-arkts-process-isappuid-f.md) | 判断 uid 是否属于应用程序。 |
-| [isIsolatedProcess](arkts-arkts-process-isisolatedprocess-f.md) | 检查进程是否已被隔离。 |
 | [kill](arkts-arkts-process-kill-f.md) | 发送信号到指定进程，结束该进程。 |
-| [uptime](arkts-arkts-process-uptime-f.md) | 获取当前系统已运行的时间（以秒为单位）。 |
 
 <!--Del-->
 ### 函数（系统接口）

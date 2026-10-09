@@ -12,24 +12,6 @@ Enumerates text display states. Native result after text typesetting, which is i
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## UNKNOWN
-
-```TypeScript
-UNKNOWN = 0
-```
-
-Unknown display state, which is the default state.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-TextDisplayState-UNKNOWN = 0--><!--Device-TextDisplayState-UNKNOWN = 0-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
 ## ALL
 
 ```TypeScript
@@ -81,5 +63,23 @@ Ellipsized display state, in which part of the content is replaced by specified 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
 <!--Device-TextDisplayState-OMITTED = 3--><!--Device-TextDisplayState-OMITTED = 3-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## UNKNOWN
+
+```TypeScript
+UNKNOWN = 0
+```
+
+Unknown display state, which is the default state.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-TextDisplayState-UNKNOWN = 0--><!--Device-TextDisplayState-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

@@ -12,22 +12,6 @@ Enumerates the screen directions.
 
 **System capability:** SystemCapability.Global.ResourceManager
 
-## DIRECTION_VERTICAL
-
-```TypeScript
-DIRECTION_VERTICAL = 0
-```
-
-Portrait
-
-**Since:** 6
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Direction-DIRECTION_VERTICAL = 0--><!--Device-Direction-DIRECTION_VERTICAL = 0-End-->
-
-**System capability:** SystemCapability.Global.ResourceManager
-
 ## DIRECTION_HORIZONTAL
 
 ```TypeScript
@@ -41,5 +25,21 @@ Landscape
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-Direction-DIRECTION_HORIZONTAL = 1--><!--Device-Direction-DIRECTION_HORIZONTAL = 1-End-->
+
+**System capability:** SystemCapability.Global.ResourceManager
+
+## DIRECTION_VERTICAL
+
+```TypeScript
+DIRECTION_VERTICAL = 0
+```
+
+Portrait
+
+**Since:** 6
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Direction-DIRECTION_VERTICAL = 0--><!--Device-Direction-DIRECTION_VERTICAL = 0-End-->
 
 **System capability:** SystemCapability.Global.ResourceManager

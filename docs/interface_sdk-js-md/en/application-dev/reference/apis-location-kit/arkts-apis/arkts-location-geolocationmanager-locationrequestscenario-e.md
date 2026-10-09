@@ -12,54 +12,6 @@ Enum for location scenario.
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## UNSET
-
-```TypeScript
-UNSET = 0x300
-```
-
-Default scenario.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## NAVIGATION
-
-```TypeScript
-NAVIGATION = 0x301
-```
-
-Navigation scenario. High positioning precision and real-time performance are required.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LocationRequestScenario-NAVIGATION = 0x301--><!--Device-LocationRequestScenario-NAVIGATION = 0x301-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## TRAJECTORY_TRACKING
-
-```TypeScript
-TRAJECTORY_TRACKING = 0x302
-```
-
-Trajectory tracking scenario. High positioning precision is required.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
 ## CAR_HAILING
 
 ```TypeScript
@@ -92,6 +44,22 @@ Daily life scenarios. Low requirements on positioning precision and real-time pe
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## NAVIGATION
+
+```TypeScript
+NAVIGATION = 0x301
+```
+
+Navigation scenario. High positioning precision and real-time performance are required.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LocationRequestScenario-NAVIGATION = 0x301--><!--Device-LocationRequestScenario-NAVIGATION = 0x301-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
 ## NO_POWER
 
 ```TypeScript
@@ -105,5 +73,37 @@ Power saving scenarios.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-LocationRequestScenario-NO_POWER = 0x305--><!--Device-LocationRequestScenario-NO_POWER = 0x305-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## TRAJECTORY_TRACKING
+
+```TypeScript
+TRAJECTORY_TRACKING = 0x302
+```
+
+Trajectory tracking scenario. High positioning precision is required.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## UNSET
+
+```TypeScript
+UNSET = 0x300
+```
+
+Default scenario.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

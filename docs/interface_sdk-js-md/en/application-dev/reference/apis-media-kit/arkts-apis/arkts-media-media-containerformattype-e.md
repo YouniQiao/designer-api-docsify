@@ -12,6 +12,48 @@ Enumerates the container format types (CFTs).
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
+## CFT_AAC
+
+```TypeScript
+CFT_AAC = 'aac'
+```
+
+Audio container format AAC. The default format is ADTS frame header.
+
+**Since:** 20
+
+<!--Device-ContainerFormatType-CFT_AAC = 'aac'--><!--Device-ContainerFormatType-CFT_AAC = 'aac'-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## CFT_AMR
+
+```TypeScript
+CFT_AMR = 'amr'
+```
+
+Audio container format AMR.
+
+**Since:** 18
+
+<!--Device-ContainerFormatType-CFT_AMR = 'amr'--><!--Device-ContainerFormatType-CFT_AMR = 'amr'-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## CFT_MP3
+
+```TypeScript
+CFT_MP3 = 'mp3'
+```
+
+Audio container format MP3.
+
+**Since:** 12
+
+<!--Device-ContainerFormatType-CFT_MP3 = 'mp3'--><!--Device-ContainerFormatType-CFT_MP3 = 'mp3'-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
 ## CFT_MPEG_4
 
 ```TypeScript
@@ -44,20 +86,6 @@ Audio container format M4A.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## CFT_MP3
-
-```TypeScript
-CFT_MP3 = 'mp3'
-```
-
-Audio container format MP3.
-
-**Since:** 12
-
-<!--Device-ContainerFormatType-CFT_MP3 = 'mp3'--><!--Device-ContainerFormatType-CFT_MP3 = 'mp3'-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
 ## CFT_WAV
 
 ```TypeScript
@@ -69,33 +97,5 @@ Audio container format WAV.
 **Since:** 12
 
 <!--Device-ContainerFormatType-CFT_WAV = 'wav'--><!--Device-ContainerFormatType-CFT_WAV = 'wav'-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## CFT_AMR
-
-```TypeScript
-CFT_AMR = 'amr'
-```
-
-Audio container format AMR.
-
-**Since:** 18
-
-<!--Device-ContainerFormatType-CFT_AMR = 'amr'--><!--Device-ContainerFormatType-CFT_AMR = 'amr'-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## CFT_AAC
-
-```TypeScript
-CFT_AAC = 'aac'
-```
-
-Audio container format AAC. The default format is ADTS frame header.
-
-**Since:** 20
-
-<!--Device-ContainerFormatType-CFT_AAC = 'aac'--><!--Device-ContainerFormatType-CFT_AAC = 'aac'-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

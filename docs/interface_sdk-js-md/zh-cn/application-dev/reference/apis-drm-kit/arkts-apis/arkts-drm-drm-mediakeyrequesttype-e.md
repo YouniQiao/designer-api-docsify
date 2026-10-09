@@ -12,22 +12,6 @@ enum MediaKeyRequestType
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_UNKNOWN
-
-```TypeScript
-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
-```
-
-未知请求类型。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 ## MEDIA_KEY_REQUEST_TYPE_INITIAL
 
 ```TypeScript
@@ -44,19 +28,19 @@ MEDIA_KEY_REQUEST_TYPE_INITIAL = 1
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_RENEWAL
+## MEDIA_KEY_REQUEST_TYPE_NONE
 
 ```TypeScript
-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
+MEDIA_KEY_REQUEST_TYPE_NONE = 4
 ```
 
-续订请求。
+无请求。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
@@ -76,19 +60,35 @@ MEDIA_KEY_REQUEST_TYPE_RELEASE = 3
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
-## MEDIA_KEY_REQUEST_TYPE_NONE
+## MEDIA_KEY_REQUEST_TYPE_RENEWAL
 
 ```TypeScript
-MEDIA_KEY_REQUEST_TYPE_NONE = 4
+MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
 ```
 
-无请求。
+续订请求。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## MEDIA_KEY_REQUEST_TYPE_UNKNOWN
+
+```TypeScript
+MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
+```
+
+未知请求类型。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 

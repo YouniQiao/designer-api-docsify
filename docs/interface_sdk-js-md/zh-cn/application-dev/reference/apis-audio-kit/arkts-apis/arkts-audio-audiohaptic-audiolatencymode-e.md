@@ -12,20 +12,6 @@ enum AudioLatencyMode
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
 
-## AUDIO_LATENCY_MODE_NORMAL
-
-```TypeScript
-AUDIO_LATENCY_MODE_NORMAL = 0
-```
-
-普通时延模式。
-
-**起始版本：** 11
-
-<!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0--><!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
-
 ## AUDIO_LATENCY_MODE_FAST
 
 ```TypeScript
@@ -37,5 +23,19 @@ AUDIO_LATENCY_MODE_FAST = 1
 **起始版本：** 11
 
 <!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_FAST = 1--><!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_FAST = 1-End-->
+
+**系统能力：** SystemCapability.Multimedia.AudioHaptic.Core
+
+## AUDIO_LATENCY_MODE_NORMAL
+
+```TypeScript
+AUDIO_LATENCY_MODE_NORMAL = 0
+```
+
+普通时延模式。
+
+**起始版本：** 11
+
+<!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0--><!--Device-AudioLatencyMode-AUDIO_LATENCY_MODE_NORMAL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AudioHaptic.Core

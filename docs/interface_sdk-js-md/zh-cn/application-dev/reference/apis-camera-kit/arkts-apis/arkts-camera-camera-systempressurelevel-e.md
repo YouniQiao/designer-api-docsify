@@ -12,19 +12,19 @@ enum SystemPressureLevel
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## SYSTEM_PRESSURE_NORMAL
+## SYSTEM_PRESSURE_CRITICAL
 
 ```TypeScript
-SYSTEM_PRESSURE_NORMAL = 0
+SYSTEM_PRESSURE_CRITICAL = 3
 ```
 
-系统压力正常。
+系统压力对图像质量、性能产生显著影响。
 
 **起始版本：** 20
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-SystemPressureLevel-SYSTEM_PRESSURE_NORMAL = 0--><!--Device-SystemPressureLevel-SYSTEM_PRESSURE_NORMAL = 0-End-->
+<!--Device-SystemPressureLevel-SYSTEM_PRESSURE_CRITICAL = 3--><!--Device-SystemPressureLevel-SYSTEM_PRESSURE_CRITICAL = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -44,6 +44,22 @@ SYSTEM_PRESSURE_MILD = 1
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
+## SYSTEM_PRESSURE_NORMAL
+
+```TypeScript
+SYSTEM_PRESSURE_NORMAL = 0
+```
+
+系统压力正常。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemPressureLevel-SYSTEM_PRESSURE_NORMAL = 0--><!--Device-SystemPressureLevel-SYSTEM_PRESSURE_NORMAL = 0-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 ## SYSTEM_PRESSURE_SEVERE
 
 ```TypeScript
@@ -57,22 +73,6 @@ SYSTEM_PRESSURE_SEVERE = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-SystemPressureLevel-SYSTEM_PRESSURE_SEVERE = 2--><!--Device-SystemPressureLevel-SYSTEM_PRESSURE_SEVERE = 2-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
-## SYSTEM_PRESSURE_CRITICAL
-
-```TypeScript
-SYSTEM_PRESSURE_CRITICAL = 3
-```
-
-系统压力对图像质量、性能产生显著影响。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-SystemPressureLevel-SYSTEM_PRESSURE_CRITICAL = 3--><!--Device-SystemPressureLevel-SYSTEM_PRESSURE_CRITICAL = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

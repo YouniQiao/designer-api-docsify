@@ -14,22 +14,6 @@ Enumeration of button type.
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## NORMAL
-
-```TypeScript
-NORMAL = 0
-```
-
-Normal button.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-ButtonType-NORMAL = 0--><!--Device-ButtonType-NORMAL = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
 ## EMPHASIZE
 
 ```TypeScript
@@ -43,5 +27,21 @@ Emphasize button.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-ButtonType-EMPHASIZE = 1--><!--Device-ButtonType-EMPHASIZE = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## NORMAL
+
+```TypeScript
+NORMAL = 0
+```
+
+Normal button.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ButtonType-NORMAL = 0--><!--Device-ButtonType-NORMAL = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate

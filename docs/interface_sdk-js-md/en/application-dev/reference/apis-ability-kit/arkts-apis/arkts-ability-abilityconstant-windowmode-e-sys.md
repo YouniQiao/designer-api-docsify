@@ -12,24 +12,6 @@ Enumerates the window modes in which a UIAbility can be displayed at startup. It
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## WINDOW_MODE_UNDEFINED
-
-```TypeScript
-WINDOW_MODE_UNDEFINED = 0
-```
-
-Undefined window mode.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0--><!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**System API:** This is a system API.
-
 ## WINDOW_MODE_FLOATING
 
 ```TypeScript
@@ -43,6 +25,24 @@ The ability is displayed in a floating window.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-WindowMode-WINDOW_MODE_FLOATING = 102--><!--Device-WindowMode-WINDOW_MODE_FLOATING = 102-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**System API:** This is a system API.
+
+## WINDOW_MODE_UNDEFINED
+
+```TypeScript
+WINDOW_MODE_UNDEFINED = 0
+```
+
+Undefined window mode.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0--><!--Device-WindowMode-WINDOW_MODE_UNDEFINED = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

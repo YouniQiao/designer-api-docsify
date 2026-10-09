@@ -16,17 +16,17 @@ Indicates the strong authentication reason flags used to request.
 
 **System API:** This is a system API.
 
-## NONE
+## ACTIVE_REQUEST
 
 ```TypeScript
-NONE = 0x00000000
+ACTIVE_REQUEST = 0x00000004
 ```
 
-Indicates that there are no strong authentication reason flags.
+Indicates the strong authentication reason requested by active request.
 
 **Since:** 12
 
-<!--Device-StrongAuthReasonFlags-NONE = 0x00000000--><!--Device-StrongAuthReasonFlags-NONE = 0x00000000-End-->
+<!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004--><!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 
@@ -64,17 +64,17 @@ Indicates the strong authentication reason requested after timeout.
 
 **System API:** This is a system API.
 
-## ACTIVE_REQUEST
+## NONE
 
 ```TypeScript
-ACTIVE_REQUEST = 0x00000004
+NONE = 0x00000000
 ```
 
-Indicates the strong authentication reason requested by active request.
+Indicates that there are no strong authentication reason flags.
 
 **Since:** 12
 
-<!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004--><!--Device-StrongAuthReasonFlags-ACTIVE_REQUEST = 0x00000004-End-->
+<!--Device-StrongAuthReasonFlags-NONE = 0x00000000--><!--Device-StrongAuthReasonFlags-NONE = 0x00000000-End-->
 
 **System capability:** SystemCapability.MiscServices.ScreenLock
 

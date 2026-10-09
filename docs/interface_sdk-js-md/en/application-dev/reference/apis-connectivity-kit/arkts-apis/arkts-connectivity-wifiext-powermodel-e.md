@@ -18,24 +18,6 @@ The power model enumeration.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
-## SLEEPING
-
-```TypeScript
-SLEEPING = 0
-```
-
-Sleeping model.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
-
-<!--Device-PowerModel-SLEEPING = 0--><!--Device-PowerModel-SLEEPING = 0-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.AP.Extension
-
 ## GENERAL
 
 ```TypeScript
@@ -51,6 +33,24 @@ General model.
 **Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
 
 <!--Device-PowerModel-GENERAL = 1--><!--Device-PowerModel-GENERAL = 1-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.AP.Extension
+
+## SLEEPING
+
+```TypeScript
+SLEEPING = 0
+```
+
+Sleeping model.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [PowerMode](arkts-connectivity-wifimanagerext-powermode-e.md)
+
+<!--Device-PowerModel-SLEEPING = 0--><!--Device-PowerModel-SLEEPING = 0-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 

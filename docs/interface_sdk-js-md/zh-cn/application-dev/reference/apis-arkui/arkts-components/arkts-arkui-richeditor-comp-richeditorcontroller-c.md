@@ -12,12 +12,6 @@ RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-r
 > [addImageSpan](#addimagespan)、[addBuilderSpan](#addbuilderspan)
 > 、[addSymbolSpan](#addsymbolspan)），组件会自动滚动内容使得插入内容末尾可见。
 
-## 导入对象
-
-```ts
-controller: RichEditorController = new RichEditorController();
-```
-
 **继承/实现关系：** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md)
 
 **起始版本：** 10
@@ -25,6 +19,12 @@ controller: RichEditorController = new RichEditorController();
 <!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController--><!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入对象
+
+```ts
+controller: RichEditorController = new RichEditorController();
+```
 
 ## addBuilderSpan
 

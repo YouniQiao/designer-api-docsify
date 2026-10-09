@@ -12,22 +12,6 @@ Enumerates the sizes of a MIFARE Classic tag.
 
 **System capability:** SystemCapability.Communication.NFC.Tag
 
-## MC_SIZE_MINI
-
-```TypeScript
-MC_SIZE_MINI = 320
-```
-
-Each tag has 5 sectors, and each sector has 4 blocks.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-MifareClassicSize-MC_SIZE_MINI = 320--><!--Device-MifareClassicSize-MC_SIZE_MINI = 320-End-->
-
-**System capability:** SystemCapability.Communication.NFC.Tag
-
 ## MC_SIZE_1K
 
 ```TypeScript
@@ -73,5 +57,21 @@ Each tag has 40 sectors, and each sector has 4 blocks.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-MifareClassicSize-MC_SIZE_4K = 4096--><!--Device-MifareClassicSize-MC_SIZE_4K = 4096-End-->
+
+**System capability:** SystemCapability.Communication.NFC.Tag
+
+## MC_SIZE_MINI
+
+```TypeScript
+MC_SIZE_MINI = 320
+```
+
+Each tag has 5 sectors, and each sector has 4 blocks.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-MifareClassicSize-MC_SIZE_MINI = 320--><!--Device-MifareClassicSize-MC_SIZE_MINI = 320-End-->
 
 **System capability:** SystemCapability.Communication.NFC.Tag

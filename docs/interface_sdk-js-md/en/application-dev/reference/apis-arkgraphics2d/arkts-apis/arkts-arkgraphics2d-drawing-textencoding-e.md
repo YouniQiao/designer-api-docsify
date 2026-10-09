@@ -12,19 +12,19 @@ Enumerates the text encoding types.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## TEXT_ENCODING_UTF8
+## TEXT_ENCODING_GLYPH_ID
 
 ```TypeScript
-TEXT_ENCODING_UTF8 = 0
+TEXT_ENCODING_GLYPH_ID = 3
 ```
 
-One byte is used to indicate UTF-8 or ASCII characters.
+Two bytes are used to indicate the glyph index.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-TextEncoding-TEXT_ENCODING_UTF8 = 0--><!--Device-TextEncoding-TEXT_ENCODING_UTF8 = 0-End-->
+<!--Device-TextEncoding-TEXT_ENCODING_GLYPH_ID = 3--><!--Device-TextEncoding-TEXT_ENCODING_GLYPH_ID = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -60,18 +60,18 @@ Four bytes are used to indicate all Unicode characters.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## TEXT_ENCODING_GLYPH_ID
+## TEXT_ENCODING_UTF8
 
 ```TypeScript
-TEXT_ENCODING_GLYPH_ID = 3
+TEXT_ENCODING_UTF8 = 0
 ```
 
-Two bytes are used to indicate the glyph index.
+One byte is used to indicate UTF-8 or ASCII characters.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-TextEncoding-TEXT_ENCODING_GLYPH_ID = 3--><!--Device-TextEncoding-TEXT_ENCODING_GLYPH_ID = 3-End-->
+<!--Device-TextEncoding-TEXT_ENCODING_UTF8 = 0--><!--Device-TextEncoding-TEXT_ENCODING_UTF8 = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

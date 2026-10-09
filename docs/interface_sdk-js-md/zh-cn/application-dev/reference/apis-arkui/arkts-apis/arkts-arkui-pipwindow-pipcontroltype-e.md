@@ -12,67 +12,19 @@ enum PiPControlType
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## VIDEO_PLAY_PAUSE
+## CAMERA_SWITCH
 
 ```TypeScript
-VIDEO_PLAY_PAUSE = 0
+CAMERA_SWITCH = 7
 ```
 
-播放/暂停直播控件组。
+打开/关闭摄像头控件。
 
 **起始版本：** 12
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-## VIDEO_PREVIOUS
-
-```TypeScript
-VIDEO_PREVIOUS = 1
-```
-
-视频上一个控件。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-## VIDEO_NEXT
-
-```TypeScript
-VIDEO_NEXT = 2
-```
-
-视频下一个控件。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
-## FAST_FORWARD
-
-```TypeScript
-FAST_FORWARD = 3
-```
-
-视频快进控件
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
+<!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -89,6 +41,22 @@ FAST_BACKWARD = 4
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-FAST_BACKWARD = 4--><!--Device-PiPControlType-FAST_BACKWARD = 4-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## FAST_FORWARD
+
+```TypeScript
+FAST_FORWARD = 3
+```
+
+视频快进控件
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -124,22 +92,6 @@ MICROPHONE_SWITCH = 6
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## CAMERA_SWITCH
-
-```TypeScript
-CAMERA_SWITCH = 7
-```
-
-打开/关闭摄像头控件。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 ## MUTE_SWITCH
 
 ```TypeScript
@@ -153,5 +105,53 @@ MUTE_SWITCH = 8
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-MUTE_SWITCH = 8--><!--Device-PiPControlType-MUTE_SWITCH = 8-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## VIDEO_NEXT
+
+```TypeScript
+VIDEO_NEXT = 2
+```
+
+视频下一个控件。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## VIDEO_PLAY_PAUSE
+
+```TypeScript
+VIDEO_PLAY_PAUSE = 0
+```
+
+播放/暂停直播控件组。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## VIDEO_PREVIOUS
+
+```TypeScript
+VIDEO_PREVIOUS = 1
+```
+
+视频上一个控件。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

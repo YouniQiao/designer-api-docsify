@@ -16,22 +16,6 @@ Wi-Fi IP type enumeration.
 
 **System API:** This is a system API.
 
-## STATIC
-
-```TypeScript
-STATIC
-```
-
-Use statically configured IP settings
-
-**Since:** 9
-
-<!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
-**System API:** This is a system API.
-
 ## DHCP
 
 ```TypeScript
@@ -43,6 +27,22 @@ Use dynamically configured IP settings
 **Since:** 9
 
 <!--Device-IpType-DHCP--><!--Device-IpType-DHCP-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
+**System API:** This is a system API.
+
+## STATIC
+
+```TypeScript
+STATIC
+```
+
+Use statically configured IP settings
+
+**Since:** 9
+
+<!--Device-IpType-STATIC--><!--Device-IpType-STATIC-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 

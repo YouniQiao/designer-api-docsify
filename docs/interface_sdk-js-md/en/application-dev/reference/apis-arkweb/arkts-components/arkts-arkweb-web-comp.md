@@ -42,7 +42,6 @@ Sets Value.
 | [BlankScreenDetectionEventInfo](arkts-arkweb-web-comp-blankscreendetectioneventinfo-i.md) | Provides the event information when a blank screen is detected, including the URL, reason, and details. It is suitable for scenarios where monitoring page blank screen issues is required, improving blank screen diagnosis accuracy and user experience. |
 | [CameraCaptureStateChangeInfo](arkts-arkweb-web-comp-cameracapturestatechangeinfo-i.md) | Provides the state change information of the camera when the callback is triggered, including the state before the change and the new state. It is suitable for scenarios where monitoring camera state changes is required, improving camera management visibility and user experience. |
 | [EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md) | Configuration for Web same-layer rendering. Configures Web same-layer rendering options, including support for fixed size and CSS display properties. It is suitable for scenarios where same-layer element rendering optimization is required, improving rendering compatibility and flexibility. |
-| [ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md) | Custom menu extension item. |
 | [FirstMeaningfulPaint](arkts-arkweb-web-comp-firstmeaningfulpaint-i.md) | Provides detailed information about the first meaningful paint on the web page, including the navigation time and paint time. It is suitable for scenarios where monitoring page rendering performance is required, improving performance optimization accuracy and user experience. |
 | [FirstScreenPaint](arkts-arkweb-web-comp-firstscreenpaint-i.md) | Provides the event information when the first screen paint is detected, including the URL and paint time. It is suitable for scenarios where monitoring page first screen rendering performance is required, improving performance optimization accuracy and user experience. |
 | [FullScreenEnterEvent](arkts-arkweb-web-comp-fullscreenenterevent-i.md) | Provides the callback information for the **Web** component to enter the full-screen mode, including the video size and exit handler. It is suitable for scenarios where handling full-screen video is required, improving video playback immersive experience and controllability. |
@@ -116,6 +115,7 @@ Sets Value.
 | [WebMediaOptions](arkts-arkweb-web-comp-webmediaoptions-i.md) | Configures the media policy of the **Web** component, including the audio playback continuation validity period, audio exclusive mode, and more. It is suitable for scenarios where audio playback experience optimization and multi- instance audio management are required, improving media playback stability and user experience. |
 | [WebOptions](arkts-arkweb-web-comp-weboptions-i.md) | Defines Web options through the [API](../../../reference/apis-arkweb/arkts-basic-components-web.md#api), including the web page resource URL, controller, rendering mode, and more. |
 | [WindowFeatures](arkts-arkweb-web-comp-windowfeatures-i.md) | Provides the feature information of the new window requested to be created by the web page, including the size and location. It is suitable for scenarios where precise control of new window attributes is required, improving window layout accuracy and user experience. |
+| [ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md) | Custom menu extension item. |
 
 ### Types
 
@@ -174,7 +174,6 @@ Sets Value.
 | [DetectedBlankScreenReason](arkts-arkweb-web-comp-detectedblankscreenreason-e.md) | Defines the specific reasons for the blank screen, which identify the underlying causes of page blank screen phenomena and help developers quickly locate the source of issues, improving the efficiency of troubleshooting page loading problems and user experience. |
 | [FileSelectorMode](arkts-arkweb-web-comp-fileselectormode-e.md) | Defines the file selector mode, which controls how the file selector is opened and behaves, helping developers implement file operation scenarios such as file upload. |
 | [GestureFocusMode](arkts-arkweb-web-comp-gesturefocusmode-e.md) | Enumerates the focus modes. |
-| [HitTestType](arkts-arkweb-web-comp-hittesttype-e.md) | Enumerates the test result types of the click event. |
 | [MessageLevel](arkts-arkweb-web-comp-messagelevel-e.md) | Enumerates the information levels of the console messages. |
 | [MicrophoneCaptureState](arkts-arkweb-web-comp-microphonecapturestate-e.md) | Defines the microphone capture states, which identify the current working status of the microphone and help developers monitor microphone resource usage in real time, optimizing resource management and user privacy protection. |
 | [MixedMode](arkts-arkweb-web-comp-mixedmode-e.md) | Enumerates the mixed content modes. |
@@ -203,3 +202,4 @@ Sets Value.
 | [WebNavigationType](arkts-arkweb-web-comp-webnavigationtype-e.md) | Enumerates the navigation types. |
 | [WebResponseType](arkts-arkweb-web-comp-webresponsetype-e.md) | Enumerates the response types of the menu. |
 | [WebRotateEffect](arkts-arkweb-web-comp-webrotateeffect-e.md) | Enumerates the modes in which the component's content is rendered to fit the new size during its width and height animation process when the component is rotated. |
+| [HitTestType](arkts-arkweb-web-comp-hittesttype-e.md) | Enumerates the test result types of the click event. |

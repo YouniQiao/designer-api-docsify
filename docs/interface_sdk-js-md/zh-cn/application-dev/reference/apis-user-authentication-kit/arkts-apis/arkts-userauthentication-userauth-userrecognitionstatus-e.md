@@ -12,13 +12,13 @@ enum UserRecognitionStatus
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## UNCERTAIN
+## MATCH
 
 ```TypeScript
-UNCERTAIN = 0
+MATCH = 2
 ```
 
-不确定机主。
+识别的用户与前台用户匹配。
 
 **起始版本：** 26.0.1
 
@@ -26,7 +26,7 @@ UNCERTAIN = 0
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
-<!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
+<!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -48,13 +48,13 @@ MISMATCH = 1
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## MATCH
+## UNCERTAIN
 
 ```TypeScript
-MATCH = 2
+UNCERTAIN = 0
 ```
 
-识别的用户与前台用户匹配。
+不确定机主。
 
 **起始版本：** 26.0.1
 
@@ -62,6 +62,6 @@ MATCH = 2
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
-<!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
+<!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

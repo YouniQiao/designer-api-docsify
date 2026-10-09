@@ -12,19 +12,19 @@ Enumerates the ability lifecycle states. It can be used in [getAbilityState(abil
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## UNINITIALIZED
+## BACKGROUND
 
 ```TypeScript
-UNINITIALIZED = 0
+BACKGROUND = 3
 ```
 
-The ability is in an invalid state.
+The ability is running in the background.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
+<!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,6 +44,22 @@ The ability is created.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## DESTROY
+
+```TypeScript
+DESTROY = 4
+```
+
+The ability is destroyed.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## FOREGROUND
 
 ```TypeScript
@@ -60,34 +76,18 @@ The ability is running in the foreground.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## BACKGROUND
+## UNINITIALIZED
 
 ```TypeScript
-BACKGROUND = 3
+UNINITIALIZED = 0
 ```
 
-The ability is running in the background.
+The ability is in an invalid state.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## DESTROY
-
-```TypeScript
-DESTROY = 4
-```
-
-The ability is destroyed.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
+<!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

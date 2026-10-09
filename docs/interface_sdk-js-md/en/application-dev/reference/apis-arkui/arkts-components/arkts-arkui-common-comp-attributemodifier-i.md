@@ -11,6 +11,12 @@ You need a custom class to implement the **AttributeModifier** API.
 > In the following APIs, setting the same value or object for the same attribute of the **instance** object will not
 > trigger an update.
 
+**Since:** 11
+
+<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## Attribute Type Support Scope
 
 | Name | Description |  
@@ -138,12 +144,6 @@ supported, specifically the following attribute methods: [attributeModifier](ark
 When unsupported or unimplemented attributes are used, exceptions such as "Method not implemented.", "is not callable", or "Builder is not supported." are thrown. For details about the supported scope of modifiers, see[attributeModifier Support for Attributes and Events](../../../ui/arkts-user-defined-extension-attributeModifier.md#attributemodifier-support-for-attributes-and-events).
 
 @interface AttributeModifier&lt;T&gt;
-
-**Since:** 11
-
-<!--Device-unnamed-declare interface AttributeModifier<T>--><!--Device-unnamed-declare interface AttributeModifier<T>-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 ## applyDisabledAttribute
 

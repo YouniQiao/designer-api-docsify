@@ -50,24 +50,6 @@ Used to obtain the SkillInfo containing description.
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_SKILL_INFO_WITH_SRC_ENTRIES
-
-```TypeScript
-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002
-```
-
-Used to obtain the SkillInfo containing srcEntries.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002-End-->
-
-**System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
 ## GET_SKILL_INFO_WITH_PERMISSIONS
 
 ```TypeScript
@@ -101,5 +83,23 @@ Used to obtain the permissions declared under requestPermissions in the module m
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_REQUEST_PERMISSIONS = 0x00000008-End-->
+
+**System capability:** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_SKILL_INFO_WITH_SRC_ENTRIES
+
+```TypeScript
+GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002
+```
+
+Used to obtain the SkillInfo containing srcEntries.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002--><!--Device-SkillInfoFlag-GET_SKILL_INFO_WITH_SRC_ENTRIES = 0x00000002-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core

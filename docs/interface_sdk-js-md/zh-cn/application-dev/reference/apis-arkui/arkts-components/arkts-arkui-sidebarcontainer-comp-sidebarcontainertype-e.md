@@ -12,6 +12,46 @@ declare enum SideBarContainerType
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## AUTO
+
+```TypeScript
+AUTO = 2
+```
+
+组件尺寸大于等于minSideBarWidth + minContentWidth时，采用Embed模式显示。
+
+组件尺寸小于minSideBarWidth + minContentWidth时，采用Overlay模式显示。适用于需要响应式布局或多设备适配的场景。
+
+未设置minSideBarWidth或minContentWidth时，会使用未设置接口的默认值进行计算，若计算的值小于600vp，则使用600vp作为模式切换的临界值。
+
+**起始版本：** 10
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerType-AUTO = 2--><!--Device-SideBarContainerType-AUTO = 2-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## DISPLACE
+
+```TypeScript
+DISPLACE = 3
+```
+
+侧边栏和内容区并列显示，内容区超出部分移出组件外。侧边栏展开时，内容区显示灰色蒙层（颜色为#33000000）并被禁用事件，点击内容区可收起侧边栏。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-SideBarContainerType-DISPLACE = 3--><!--Device-SideBarContainerType-DISPLACE = 3-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## Embed
 
 ```TypeScript
@@ -51,45 +91,5 @@ Overlay = 1
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SideBarContainerType-Overlay = 1--><!--Device-SideBarContainerType-Overlay = 1-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## AUTO
-
-```TypeScript
-AUTO = 2
-```
-
-组件尺寸大于等于minSideBarWidth + minContentWidth时，采用Embed模式显示。
-
-组件尺寸小于minSideBarWidth + minContentWidth时，采用Overlay模式显示。适用于需要响应式布局或多设备适配的场景。
-
-未设置minSideBarWidth或minContentWidth时，会使用未设置接口的默认值进行计算，若计算的值小于600vp，则使用600vp作为模式切换的临界值。
-
-**起始版本：** 10
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-SideBarContainerType-AUTO = 2--><!--Device-SideBarContainerType-AUTO = 2-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## DISPLACE
-
-```TypeScript
-DISPLACE = 3
-```
-
-侧边栏和内容区并列显示，内容区超出部分移出组件外。侧边栏展开时，内容区显示灰色蒙层（颜色为#33000000）并被禁用事件，点击内容区可收起侧边栏。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-SideBarContainerType-DISPLACE = 3--><!--Device-SideBarContainerType-DISPLACE = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

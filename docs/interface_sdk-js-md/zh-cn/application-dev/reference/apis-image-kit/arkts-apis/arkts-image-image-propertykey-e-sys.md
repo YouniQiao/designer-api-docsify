@@ -15,19 +15,19 @@ enum PropertyKey
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## XTSTYLE_TEMPLATE_NAME
+## XTSTYLE_CUSTOM_HUE
 
 ```TypeScript
-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
+XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
 ```
 
-个性色卡模板名称。
+个性色卡自定义色调。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'--><!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'-End-->
+<!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -69,24 +69,6 @@ XTSTYLE_CUSTOM_SATURATION = 'HwMnoteXtStyleCustomSaturation'
 
 **系统接口：** 此接口为系统接口。
 
-## XTSTYLE_CUSTOM_HUE
-
-```TypeScript
-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'
-```
-
-个性色卡自定义色调。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'--><!--Device-PropertyKey-XTSTYLE_CUSTOM_HUE = 'HwMnoteXtStyleCustomHue'-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**系统接口：** 此接口为系统接口。
-
 ## XTSTYLE_EXPOSURE_PARAM
 
 ```TypeScript
@@ -100,6 +82,24 @@ XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'--><!--Device-PropertyKey-XTSTYLE_EXPOSURE_PARAM = 'HwMnoteXtStyleExposureParam'-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
+## XTSTYLE_TEMPLATE_NAME
+
+```TypeScript
+XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'
+```
+
+个性色卡模板名称。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'--><!--Device-PropertyKey-XTSTYLE_TEMPLATE_NAME = 'HwMnoteXtStyleTemplateName'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

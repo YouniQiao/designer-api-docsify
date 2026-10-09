@@ -14,20 +14,6 @@ The power Mode enumeration.
 
 **System capability:** SystemCapability.Communication.WiFi.AP.Extension
 
-## SLEEPING
-
-```TypeScript
-SLEEPING = 0
-```
-
-Sleeping Mode.
-
-**Since:** 9
-
-<!--Device-PowerMode-SLEEPING = 0--><!--Device-PowerMode-SLEEPING = 0-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## GENERAL
 
 ```TypeScript
@@ -39,6 +25,20 @@ General Mode.
 **Since:** 9
 
 <!--Device-PowerMode-GENERAL = 1--><!--Device-PowerMode-GENERAL = 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## SLEEPING
+
+```TypeScript
+SLEEPING = 0
+```
+
+Sleeping Mode.
+
+**Since:** 9
+
+<!--Device-PowerMode-SLEEPING = 0--><!--Device-PowerMode-SLEEPING = 0-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 

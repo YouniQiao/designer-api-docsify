@@ -47,12 +47,12 @@ import { missionManager } from '@kit.AbilityKit';
 | [moveMissionToFront](arkts-ability-missionmanager-movemissiontofront-f-sys.md#movemissiontofront3) | Switches a given mission to the foreground, with the startup parameters for the switching specified. This API uses a promise to return the result. |
 | [off](arkts-ability-missionmanager-off-f-sys.md#offmission) | Deregisters a mission status listener. This API uses an asynchronous callback to return the result. |
 | [off](arkts-ability-missionmanager-off-f-sys.md#offmission) | Unregisters a mission status listener. This API uses a promise to return the result. |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) | Deregisters a mission status listener. This API uses an asynchronous callback to return the result. |
-| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) | Unregisters a mission status listener. This API uses a promise to return the result. |
 | [on](arkts-ability-missionmanager-on-f-sys.md#onmission) | Registers a listener to observe the mission status. |
-| [on](arkts-ability-missionmanager-on-f-sys.md#onmissionevent) | Registers a listener to observe the mission status. |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission1) | Unlocks a given mission. This API is applicable to scenarios where a locked mission is allowed to be cleaned up by the system, such as when a system management application no longer needs to keep a mission running in the background. This API uses an asynchronous callback to return the result. |
 | [unlockMission](arkts-ability-missionmanager-unlockmission-f-sys.md#unlockmission2) | Unlocks a given mission. This API is applicable to scenarios where a locked mission is allowed to be cleaned up by the system, such as when a system management application no longer needs to keep a mission running in the background. This API uses a promise to return the result. |
+| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) | Deregisters a mission status listener. This API uses an asynchronous callback to return the result. |
+| [off](arkts-ability-missionmanager-off-f-sys.md#offmissionevent) | Unregisters a mission status listener. This API uses a promise to return the result. |
+| [on](arkts-ability-missionmanager-on-f-sys.md#onmissionevent) | Registers a listener to observe the mission status. |
 <!--DelEnd-->
 
 <!--Del-->

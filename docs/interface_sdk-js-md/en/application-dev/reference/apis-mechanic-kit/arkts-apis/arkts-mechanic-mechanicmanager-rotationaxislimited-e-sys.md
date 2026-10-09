@@ -14,22 +14,6 @@ Enumerates the rotation axis limit states. @enum { int }
 
 **System API:** This is a system API.
 
-## NOT_LIMITED
-
-```TypeScript
-NOT_LIMITED = 0
-```
-
-Not limited.
-
-**Since:** 20
-
-<!--Device-RotationAxisLimited-NOT_LIMITED = 0--><!--Device-RotationAxisLimited-NOT_LIMITED = 0-End-->
-
-**System capability:** SystemCapability.Mechanic.Core
-
-**System API:** This is a system API.
-
 ## NEGATIVE_LIMITED
 
 ```TypeScript
@@ -41,6 +25,22 @@ Negative limited.
 **Since:** 20
 
 <!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1--><!--Device-RotationAxisLimited-NEGATIVE_LIMITED = 1-End-->
+
+**System capability:** SystemCapability.Mechanic.Core
+
+**System API:** This is a system API.
+
+## NOT_LIMITED
+
+```TypeScript
+NOT_LIMITED = 0
+```
+
+Not limited.
+
+**Since:** 20
+
+<!--Device-RotationAxisLimited-NOT_LIMITED = 0--><!--Device-RotationAxisLimited-NOT_LIMITED = 0-End-->
 
 **System capability:** SystemCapability.Mechanic.Core
 

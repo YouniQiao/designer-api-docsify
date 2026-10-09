@@ -12,42 +12,6 @@ export enum ResourceType
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## PSS_MEMORY
-
-```TypeScript
-PSS_MEMORY = 1
-```
-
-表示应用当前超基线的资源是PSS的内存。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
-
-<!--Device-ResourceType-PSS_MEMORY = 1--><!--Device-ResourceType-PSS_MEMORY = 1-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-## ION_MEMORY
-
-```TypeScript
-ION_MEMORY = 2
-```
-
-表示应用当前超基线的资源是ION的内存。
-
-**起始版本：** 24
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
-
-<!--Device-ResourceType-ION_MEMORY = 2--><!--Device-ResourceType-ION_MEMORY = 2-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
 ## ASHMEM_MEMORY
 
 ```TypeScript
@@ -63,6 +27,24 @@ ASHMEM_MEMORY = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceType-ASHMEM_MEMORY = 3--><!--Device-ResourceType-ASHMEM_MEMORY = 3-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## FD
+
+```TypeScript
+FD = 5
+```
+
+表示应用当前超基线的资源是FD的数量。
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResourceType-FD = 5--><!--Device-ResourceType-FD = 5-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
@@ -84,13 +66,13 @@ GPU_MEMORY = 4
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 
-## FD
+## ION_MEMORY
 
 ```TypeScript
-FD = 5
+ION_MEMORY = 2
 ```
 
-表示应用当前超基线的资源是FD的数量。
+表示应用当前超基线的资源是ION的内存。
 
 **起始版本：** 24
 
@@ -98,7 +80,25 @@ FD = 5
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
-<!--Device-ResourceType-FD = 5--><!--Device-ResourceType-FD = 5-End-->
+<!--Device-ResourceType-ION_MEMORY = 2--><!--Device-ResourceType-ION_MEMORY = 2-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
+
+## PSS_MEMORY
+
+```TypeScript
+PSS_MEMORY = 1
+```
+
+表示应用当前超基线的资源是PSS的内存。
+
+**起始版本：** 24
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+
+<!--Device-ResourceType-PSS_MEMORY = 1--><!--Device-ResourceType-PSS_MEMORY = 1-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
 

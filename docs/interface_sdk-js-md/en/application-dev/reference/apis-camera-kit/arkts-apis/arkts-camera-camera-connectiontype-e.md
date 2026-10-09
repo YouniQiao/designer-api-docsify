@@ -28,22 +28,6 @@ Built-in camera.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_CONNECTION_USB_PLUGIN
-
-```TypeScript
-CAMERA_CONNECTION_USB_PLUGIN = 1
-```
-
-Camera connected using USB.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1--><!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## CAMERA_CONNECTION_REMOTE
 
 ```TypeScript
@@ -57,5 +41,21 @@ Remote camera.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
 <!--Device-ConnectionType-CAMERA_CONNECTION_REMOTE = 2--><!--Device-ConnectionType-CAMERA_CONNECTION_REMOTE = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_CONNECTION_USB_PLUGIN
+
+```TypeScript
+CAMERA_CONNECTION_USB_PLUGIN = 1
+```
+
+Camera connected using USB.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1--><!--Device-ConnectionType-CAMERA_CONNECTION_USB_PLUGIN = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

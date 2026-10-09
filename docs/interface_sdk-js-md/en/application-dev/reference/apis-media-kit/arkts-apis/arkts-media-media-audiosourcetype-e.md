@@ -12,6 +12,20 @@ Enumerates the audio source types for video recording.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
+## AUDIO_SOURCE_TYPE_CAMCORDER
+
+```TypeScript
+AUDIO_SOURCE_TYPE_CAMCORDER = 13
+```
+
+Audio source in camera recording scenarios.
+
+**Since:** 12
+
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVRecorder
+
 ## AUDIO_SOURCE_TYPE_DEFAULT
 
 ```TypeScript
@@ -39,20 +53,6 @@ Microphone audio input source.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_MIC = 1--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_MIC = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
-## AUDIO_SOURCE_TYPE_VOICE_RECOGNITION
-
-```TypeScript
-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
-```
-
-Audio source in speech recognition scenarios.
-
-**Since:** 12
-
-<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
@@ -84,16 +84,16 @@ Voice message source.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
-## AUDIO_SOURCE_TYPE_CAMCORDER
+## AUDIO_SOURCE_TYPE_VOICE_RECOGNITION
 
 ```TypeScript
-AUDIO_SOURCE_TYPE_CAMCORDER = 13
+AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2
 ```
 
-Audio source in camera recording scenarios.
+Audio source in speech recognition scenarios.
 
 **Since:** 12
 
-<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_CAMCORDER = 13-End-->
+<!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2--><!--Device-AudioSourceType-AUDIO_SOURCE_TYPE_VOICE_RECOGNITION = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

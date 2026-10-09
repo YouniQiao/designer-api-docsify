@@ -12,19 +12,19 @@ enum NearlinkState
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## STATE_TURNING_ON
+## STATE_OFF
 
 ```TypeScript
-STATE_TURNING_ON = 0
+STATE_OFF = 3
 ```
 
-表示星闪正在打开。
+表示星闪已关闭。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NearlinkState-STATE_TURNING_ON = 0--><!--Device-NearlinkState-STATE_TURNING_ON = 0-End-->
+<!--Device-NearlinkState-STATE_OFF = 3--><!--Device-NearlinkState-STATE_OFF = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
@@ -60,18 +60,18 @@ STATE_TURNING_OFF = 2
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
 
-## STATE_OFF
+## STATE_TURNING_ON
 
 ```TypeScript
-STATE_OFF = 3
+STATE_TURNING_ON = 0
 ```
 
-表示星闪已关闭。
+表示星闪正在打开。
 
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-NearlinkState-STATE_OFF = 3--><!--Device-NearlinkState-STATE_OFF = 3-End-->
+<!--Device-NearlinkState-STATE_TURNING_ON = 0--><!--Device-NearlinkState-STATE_TURNING_ON = 0-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base

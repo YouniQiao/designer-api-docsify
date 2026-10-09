@@ -14,20 +14,6 @@ export enum MaterialType
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## SHADER
-
-```TypeScript
-SHADER = 1
-```
-
-材质由着色器定义。
-
-**起始版本：** 12
-
-<!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
 ## METALLIC_ROUGHNESS
 
 ```TypeScript
@@ -42,20 +28,6 @@ METALLIC_ROUGHNESS = 2
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D
 
-## UNLIT
-
-```TypeScript
-UNLIT = 3
-```
-
-不受光照影响的材质。
-
-**起始版本：** 23
-
-<!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
-
-**系统能力：** SystemCapability.ArkUi.Graphics3D
-
 ## OCCLUSION
 
 ```TypeScript
@@ -67,5 +39,33 @@ OCCLUSION = 4
 **起始版本：** 23
 
 <!--Device-MaterialType-OCCLUSION = 4--><!--Device-MaterialType-OCCLUSION = 4-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## SHADER
+
+```TypeScript
+SHADER = 1
+```
+
+材质由着色器定义。
+
+**起始版本：** 12
+
+<!--Device-MaterialType-SHADER = 1--><!--Device-MaterialType-SHADER = 1-End-->
+
+**系统能力：** SystemCapability.ArkUi.Graphics3D
+
+## UNLIT
+
+```TypeScript
+UNLIT = 3
+```
+
+不受光照影响的材质。
+
+**起始版本：** 23
+
+<!--Device-MaterialType-UNLIT = 3--><!--Device-MaterialType-UNLIT = 3-End-->
 
 **系统能力：** SystemCapability.ArkUi.Graphics3D

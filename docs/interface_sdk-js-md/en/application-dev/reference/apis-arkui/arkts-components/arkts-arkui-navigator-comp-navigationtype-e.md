@@ -16,30 +16,6 @@ Navigation type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Push
-
-```TypeScript
-Push
-```
-
-Navigates to the specified page in the application.
-
-**NOTE:** 
-
-This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath1) instead.
-
-**Since:** 7
-
-**Deprecated since:** 13
-
-**Substitutes:** [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath)
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-NavigationType-Push--><!--Device-NavigationType-Push-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## Back
 
 ```TypeScript
@@ -61,6 +37,30 @@ This API is supported since API version 7 and deprecated since API version 13. Y
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NavigationType-Back--><!--Device-NavigationType-Back-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Push
+
+```TypeScript
+Push
+```
+
+Navigates to the specified page in the application.
+
+**NOTE:** 
+
+This API is supported since API version 7 and deprecated since API version 13. You are advised to use [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath1) instead.
+
+**Since:** 7
+
+**Deprecated since:** 13
+
+**Substitutes:** [pushPath](arkts-arkui-navigation-comp-navpathstack-c.md#pushpath)
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-NavigationType-Push--><!--Device-NavigationType-Push-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

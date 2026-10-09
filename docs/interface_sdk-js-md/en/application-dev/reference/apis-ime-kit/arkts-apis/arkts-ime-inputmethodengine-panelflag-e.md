@@ -18,6 +18,20 @@ Enumerates the state types of the input method panel.<br> <br>
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework
 
+## FLAG_CANDIDATE
+
+```TypeScript
+FLAG_CANDIDATE
+```
+
+Candidate style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.</p>
+
+**Since:** 15
+
+<!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
+
+**System capability:** SystemCapability.MiscServices.InputMethodFramework
+
 ## FLG_FIXED
 
 ```TypeScript
@@ -43,19 +57,5 @@ Floating style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOA
 **Since:** 10
 
 <!--Device-PanelFlag-FLG_FLOATING--><!--Device-PanelFlag-FLG_FLOATING-End-->
-
-**System capability:** SystemCapability.MiscServices.InputMethodFramework
-
-## FLAG_CANDIDATE
-
-```TypeScript
-FLAG_CANDIDATE
-```
-
-Candidate style. <br> <br><p>It's provided for the panel with type of SOFT_KEYBOARD. When the flag is set, the soft keyboard is a candidate window which will show the possible characters when user types a input code. Panel with candidate style will not be automatically shown or hidden by input method service. Input method application developers are supposed to control the panel status on their own.</p>
-
-**Since:** 15
-
-<!--Device-PanelFlag-FLAG_CANDIDATE--><!--Device-PanelFlag-FLAG_CANDIDATE-End-->
 
 **System capability:** SystemCapability.MiscServices.InputMethodFramework

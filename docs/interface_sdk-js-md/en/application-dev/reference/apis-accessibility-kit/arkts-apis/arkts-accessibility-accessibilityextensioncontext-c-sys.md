@@ -8,6 +8,14 @@ The **AccessibilityExtensionContext** module, inherited from **ExtensionContext*
 
 The Accessibility Extension Context module provides capabilities related to the accessibility extension, including configuring concerned information types, querying node information, and gesture injection.
 
+**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
+
+**Since:** 9
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+
+**System capability:** SystemCapability.BarrierFree.Accessibility.Core
+
 ## Usage
 
 Before using AccessibilityExtensionContext, obtain an AccessibilityExtensionContext instance through an AccessibilityExtensionAbility subclass instance.
@@ -20,14 +28,6 @@ class EntryAbility extends AccessibilityExtensionAbility {
   } 
 }
 ```
-
-**Inheritance/Implementation:** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
-
-**Since:** 9
-
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
-
-**System capability:** SystemCapability.BarrierFree.Accessibility.Core
 
 ## addAccessibilityVirtualNodes
 

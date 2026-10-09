@@ -16,24 +16,6 @@ Provides stream output result type definition.
 
 **System API:** This is a system API.
 
-## PARTIAL
-
-```TypeScript
-PARTIAL = 0
-```
-
-Indicates the action for partial result.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PartialResultType-PARTIAL = 0--><!--Device-PartialResultType-PARTIAL = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
 ## COMPLETED
 
 ```TypeScript
@@ -47,6 +29,24 @@ Indicates the action for complete result.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PartialResultType-COMPLETED = 1--><!--Device-PartialResultType-COMPLETED = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## PARTIAL
+
+```TypeScript
+PARTIAL = 0
+```
+
+Indicates the action for partial result.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PartialResultType-PARTIAL = 0--><!--Device-PartialResultType-PARTIAL = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

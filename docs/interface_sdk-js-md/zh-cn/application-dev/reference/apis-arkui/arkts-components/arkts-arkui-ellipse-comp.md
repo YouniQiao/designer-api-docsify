@@ -22,7 +22,7 @@ Ellipse(options?: EllipseOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute-End-->
+<!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,7 +48,7 @@ Ellipse(options?: EllipseOptions)
 
 **卡片能力：** 从API版本9开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-(options?: EllipseOptions): EllipseAttribute-End-->
+<!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute--><!--Device-EllipseInterface-new (options?: EllipseOptions): EllipseAttribute-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

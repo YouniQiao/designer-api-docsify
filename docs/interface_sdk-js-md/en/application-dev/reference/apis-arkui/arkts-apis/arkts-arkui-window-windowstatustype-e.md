@@ -12,19 +12,19 @@ Enumerates the window modes.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## UNDEFINED
+## FLOATING
 
 ```TypeScript
-UNDEFINED = 0
+FLOATING = 4
 ```
 
-The window mode is not defined by the application.
+The application is displayed in a floating window.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
+<!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -84,22 +84,6 @@ The application window is minimized.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## FLOATING
-
-```TypeScript
-FLOATING = 4
-```
-
-The application is displayed in a floating window.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
 ## SPLIT_SCREEN
 
 ```TypeScript
@@ -113,5 +97,21 @@ The application is displayed in split-screen mode.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-WindowStatusType-SPLIT_SCREEN = 5--><!--Device-WindowStatusType-SPLIT_SCREEN = 5-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## UNDEFINED
+
+```TypeScript
+UNDEFINED = 0
+```
+
+The window mode is not defined by the application.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

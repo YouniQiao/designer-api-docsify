@@ -12,19 +12,35 @@ HTTP 请求方法。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-## OPTIONS
+## CONNECT
 
 ```TypeScript
-OPTIONS = "OPTIONS"
+CONNECT = "CONNECT"
 ```
 
-OPTIONS方法描述了目标资源的通信选项。
+CONNECT方法建立到由目标资源标识的服务器的隧道。
 
 **起始版本：** 6
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
+<!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+## DELETE
+
+```TypeScript
+DELETE = "DELETE"
+```
+
+DELETE方法用于删除指定的资源。
+
+**起始版本：** 6
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack
 
@@ -60,6 +76,38 @@ HEAD方法请求与GET请求相同的响应，但没有响应主体。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
+## OPTIONS
+
+```TypeScript
+OPTIONS = "OPTIONS"
+```
+
+OPTIONS方法描述了目标资源的通信选项。
+
+**起始版本：** 6
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
+## PATCH
+
+```TypeScript
+PATCH = "PATCH"
+```
+
+PATCH方法对资源进行部分修改。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-RequestMethod-PATCH = "PATCH"--><!--Device-RequestMethod-PATCH = "PATCH"-End-->
+
+**系统能力：** SystemCapability.Communication.NetStack
+
 ## POST
 
 ```TypeScript
@@ -92,22 +140,6 @@ PUT方法将目标资源的所有当前表示替换为请求内容。
 
 **系统能力：** SystemCapability.Communication.NetStack
 
-## DELETE
-
-```TypeScript
-DELETE = "DELETE"
-```
-
-DELETE方法用于删除指定的资源。
-
-**起始版本：** 6
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
 ## TRACE
 
 ```TypeScript
@@ -121,37 +153,5 @@ TRACE方法沿到达目标资源的路径执行消息环回测试。
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RequestMethod-TRACE = "TRACE"--><!--Device-RequestMethod-TRACE = "TRACE"-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-## CONNECT
-
-```TypeScript
-CONNECT = "CONNECT"
-```
-
-CONNECT方法建立到由目标资源标识的服务器的隧道。
-
-**起始版本：** 6
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
-
-**系统能力：** SystemCapability.Communication.NetStack
-
-## PATCH
-
-```TypeScript
-PATCH = "PATCH"
-```
-
-PATCH方法对资源进行部分修改。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-RequestMethod-PATCH = "PATCH"--><!--Device-RequestMethod-PATCH = "PATCH"-End-->
 
 **系统能力：** SystemCapability.Communication.NetStack

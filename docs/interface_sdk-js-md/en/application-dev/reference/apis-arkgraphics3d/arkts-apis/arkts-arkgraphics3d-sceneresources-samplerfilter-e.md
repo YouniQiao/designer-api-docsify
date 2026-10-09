@@ -14,20 +14,6 @@ Enumerates the filtering modes of a sampler. The filtering mode determines the i
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## NEAREST
-
-```TypeScript
-NEAREST = 0
-```
-
-Uses nearest-neighbor interpolation, which is fast but can result in jagged edges.
-
-**Since:** 20
-
-<!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
 ## LINEAR
 
 ```TypeScript
@@ -39,5 +25,19 @@ Uses linear interpolation, providing a smoother appearance but with a slight per
 **Since:** 20
 
 <!--Device-SamplerFilter-LINEAR = 1--><!--Device-SamplerFilter-LINEAR = 1-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## NEAREST
+
+```TypeScript
+NEAREST = 0
+```
+
+Uses nearest-neighbor interpolation, which is fast but can result in jagged edges.
+
+**Since:** 20
+
+<!--Device-SamplerFilter-NEAREST = 0--><!--Device-SamplerFilter-NEAREST = 0-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

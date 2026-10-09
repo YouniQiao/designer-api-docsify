@@ -14,28 +14,6 @@ Enumerates the union effect modes.
 
 **System API:** This is a system API.
 
-## SMOOTH_UNION
-
-```TypeScript
-SMOOTH_UNION = 0
-```
-
-Smooth union deformation effect, suitable for union scenarios that require smooth transitions and natural connections.
-
-**NOTE:** 
-
-When this type is set, the union effect is produced only when descendant components set the [useUnionEffect](arkts-arkui-common-comp-commonmethod-c-sys.md#useunioneffect1) attribute.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-UnionMode-SMOOTH_UNION = 0--><!--Device-UnionMode-SMOOTH_UNION = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**System API:** This is a system API.
-
 ## GRAVITY_UNION
 
 ```TypeScript
@@ -53,6 +31,28 @@ When this type is set, it takes effect only when used together with [useUnionEff
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-UnionMode-GRAVITY_UNION = 1--><!--Device-UnionMode-GRAVITY_UNION = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+## SMOOTH_UNION
+
+```TypeScript
+SMOOTH_UNION = 0
+```
+
+Smooth union deformation effect, suitable for union scenarios that require smooth transitions and natural connections.
+
+**NOTE:** 
+
+When this type is set, the union effect is produced only when descendant components set the [useUnionEffect](arkts-arkui-common-comp-commonmethod-c-sys.md#useunioneffect1) attribute.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-UnionMode-SMOOTH_UNION = 0--><!--Device-UnionMode-SMOOTH_UNION = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

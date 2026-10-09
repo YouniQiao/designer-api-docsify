@@ -20,10 +20,6 @@ import { inputDevice } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice1) | 获取指定id的输入设备信息，使用callback异步回调。 |
-| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice2) | 获取指定id的输入设备信息，使用Promise异步回调。 |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids1) | 获取所有输入设备的ID列表，使用callback异步回调。 |
-| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids2) | 获取所有输入设备的ID列表，使用Promise异步回调。 |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo1) | 获取指定输入设备的信息，使用callback异步回调。 |
 | [getDeviceInfo](arkts-input-inputdevice-getdeviceinfo-f.md#getdeviceinfo2) | 获取指定id的输入设备信息，使用Promise异步回调。 |
 | [getDeviceInfoSync](arkts-input-inputdevice-getdeviceinfosync-f.md) | 获取指定输入设备的信息。 |
@@ -40,6 +36,10 @@ import { inputDevice } from '@kit.InputKit';
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys1) | 查询指定输入设备是否支持指定按键，使用callback异步回调。 |
 | [supportKeys](arkts-input-inputdevice-supportkeys-f.md#supportkeys2) | 查询指定输入设备是否支持指定按键，使用Promise异步回调。 |
 | [supportKeysSync](arkts-input-inputdevice-supportkeyssync-f.md) | 查询指定id的输入设备对指定键值的支持情况。 |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice1) | 获取指定id的输入设备信息，使用callback异步回调。 |
+| [getDevice](arkts-input-inputdevice-getdevice-f.md#getdevice2) | 获取指定id的输入设备信息，使用Promise异步回调。 |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids1) | 获取所有输入设备的ID列表，使用callback异步回调。 |
+| [getDeviceIds](arkts-input-inputdevice-getdeviceids-f.md#getdeviceids2) | 获取所有输入设备的ID列表，使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

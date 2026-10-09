@@ -12,6 +12,24 @@ Enumerates the accessibility hover action types.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## HOVER_CANCEL
+
+```TypeScript
+HOVER_CANCEL = 3
+```
+
+The current event is interrupted and canceled.
+
+**Since:** 12
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-AccessibilityHoverType-HOVER_CANCEL = 3--><!--Device-AccessibilityHoverType-HOVER_CANCEL = 3-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## HOVER_ENTER
 
 ```TypeScript
@@ -27,24 +45,6 @@ A finger is pressed.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AccessibilityHoverType-HOVER_ENTER = 0--><!--Device-AccessibilityHoverType-HOVER_ENTER = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## HOVER_MOVE
-
-```TypeScript
-HOVER_MOVE = 1
-```
-
-The touch moves.
-
-**Since:** 12
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-AccessibilityHoverType-HOVER_MOVE = 1--><!--Device-AccessibilityHoverType-HOVER_MOVE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -66,13 +66,13 @@ A finger is lifted.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## HOVER_CANCEL
+## HOVER_MOVE
 
 ```TypeScript
-HOVER_CANCEL = 3
+HOVER_MOVE = 1
 ```
 
-The current event is interrupted and canceled.
+The touch moves.
 
 **Since:** 12
 
@@ -80,6 +80,6 @@ The current event is interrupted and canceled.
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-AccessibilityHoverType-HOVER_CANCEL = 3--><!--Device-AccessibilityHoverType-HOVER_CANCEL = 3-End-->
+<!--Device-AccessibilityHoverType-HOVER_MOVE = 1--><!--Device-AccessibilityHoverType-HOVER_MOVE = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

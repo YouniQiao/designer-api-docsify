@@ -12,22 +12,6 @@ Enumerates the buffering event types.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## BUFFERING_START
-
-```TypeScript
-BUFFERING_START = 1
-```
-
-Buffering starts. When this event is triggered, the player pauses the playback.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
 ## BUFFERING_END
 
 ```TypeScript
@@ -57,6 +41,22 @@ Buffering percentage. You can use this event to monitor the buffering status.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-BufferingInfoType-BUFFERING_PERCENT = 3--><!--Device-BufferingInfoType-BUFFERING_PERCENT = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## BUFFERING_START
+
+```TypeScript
+BUFFERING_START = 1
+```
+
+Buffering starts. When this event is triggered, the player pauses the playback.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 

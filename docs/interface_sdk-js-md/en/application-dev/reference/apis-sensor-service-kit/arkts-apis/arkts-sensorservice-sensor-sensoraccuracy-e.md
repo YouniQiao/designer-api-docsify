@@ -14,19 +14,19 @@ Enumerates the accuracy levels of sensor data.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## ACCURACY_UNRELIABLE
+## ACCURACY_HIGH
 
 ```TypeScript
-ACCURACY_UNRELIABLE = 0
+ACCURACY_HIGH = 3
 ```
 
-Unreliable sensor data, which has the lowest accuracy level. The data reliability cannot be ensured.
+High-accuracy sensor data, which is of high accuracy and is applicable to scenarios that require high precision.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
+<!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -62,18 +62,18 @@ Medium-accuracy sensor data, which is of medium accuracy and is applicable to co
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## ACCURACY_HIGH
+## ACCURACY_UNRELIABLE
 
 ```TypeScript
-ACCURACY_HIGH = 3
+ACCURACY_UNRELIABLE = 0
 ```
 
-High-accuracy sensor data, which is of high accuracy and is applicable to scenarios that require high precision.
+Unreliable sensor data, which has the lowest accuracy level. The data reliability cannot be ensured.
 
 **Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
+<!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

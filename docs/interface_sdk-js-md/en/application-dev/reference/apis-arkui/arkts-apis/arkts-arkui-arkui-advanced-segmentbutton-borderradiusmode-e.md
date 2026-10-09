@@ -17,24 +17,6 @@ Enumerates the border radius modes for the **SegmentButton** component, which ar
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-Default mode, where the framework automatically calculates the border radius.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-BorderRadiusMode-DEFAULT = 0--><!--Device-BorderRadiusMode-DEFAULT = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## CUSTOM
 
 ```TypeScript
@@ -50,5 +32,23 @@ Custom mode, where the border radius is set by the developer.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-BorderRadiusMode-CUSTOM = 1--><!--Device-BorderRadiusMode-CUSTOM = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## DEFAULT
+
+```TypeScript
+DEFAULT = 0
+```
+
+Default mode, where the framework automatically calculates the border radius.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-BorderRadiusMode-DEFAULT = 0--><!--Device-BorderRadiusMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,20 +12,6 @@ Wi-Fi band type. @enum { int }
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
-## WIFI_BAND_NONE
-
-```TypeScript
-WIFI_BAND_NONE
-```
-
-Default.
-
-**Since:** 10
-
-<!--Device-WifiBandType-WIFI_BAND_NONE--><!--Device-WifiBandType-WIFI_BAND_NONE-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.STA
-
 ## WIFI_BAND_2G
 
 ```TypeScript
@@ -54,6 +40,20 @@ Band 5G.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
+## WIFI_BAND_60G
+
+```TypeScript
+WIFI_BAND_60G
+```
+
+Band 60G.
+
+**Since:** 10
+
+<!--Device-WifiBandType-WIFI_BAND_60G--><!--Device-WifiBandType-WIFI_BAND_60G-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.STA
+
 ## WIFI_BAND_6G
 
 ```TypeScript
@@ -68,16 +68,16 @@ Band 6G.
 
 **System capability:** SystemCapability.Communication.WiFi.STA
 
-## WIFI_BAND_60G
+## WIFI_BAND_NONE
 
 ```TypeScript
-WIFI_BAND_60G
+WIFI_BAND_NONE
 ```
 
-Band 60G.
+Default.
 
 **Since:** 10
 
-<!--Device-WifiBandType-WIFI_BAND_60G--><!--Device-WifiBandType-WIFI_BAND_60G-End-->
+<!--Device-WifiBandType-WIFI_BAND_NONE--><!--Device-WifiBandType-WIFI_BAND_NONE-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.STA

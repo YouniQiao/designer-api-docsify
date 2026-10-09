@@ -12,21 +12,21 @@ Defines sheet size type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## MEDIUM
+## FIT_CONTENT
 
 ```TypeScript
-MEDIUM = 0
+FIT_CONTENT = 2
 ```
 
-Defines the sheet size medium height type. The height is half the screen height
+Defines the sheet size fit content height type. The height fit content.
 
-**Since:** 10
+**Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
-<!--Device-SheetSize-MEDIUM = 0--><!--Device-SheetSize-MEDIUM = 0-End-->
+<!--Device-SheetSize-FIT_CONTENT = 2--><!--Device-SheetSize-FIT_CONTENT = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -48,20 +48,20 @@ Defines the sheet size large height type. The height is almost screen height.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## FIT_CONTENT
+## MEDIUM
 
 ```TypeScript
-FIT_CONTENT = 2
+MEDIUM = 0
 ```
 
-Defines the sheet size fit content height type. The height fit content.
+Defines the sheet size medium height type. The height is half the screen height
 
-**Since:** 11
+**Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SheetSize-FIT_CONTENT = 2--><!--Device-SheetSize-FIT_CONTENT = 2-End-->
+<!--Device-SheetSize-MEDIUM = 0--><!--Device-SheetSize-MEDIUM = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

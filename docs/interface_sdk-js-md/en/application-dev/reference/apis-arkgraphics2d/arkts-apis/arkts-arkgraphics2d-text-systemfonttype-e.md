@@ -28,6 +28,22 @@ All font types, including the system font type, style font type, and user-instal
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## CUSTOMIZED
+
+```TypeScript
+CUSTOMIZED = 1 << 4
+```
+
+Custom font type.
+
+**Since:** 18
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
 ## GENERIC
 
 ```TypeScript
@@ -41,22 +57,6 @@ System font type.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-SystemFontType-GENERIC = 1 << 1--><!--Device-SystemFontType-GENERIC = 1 << 1-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## STYLISH
-
-```TypeScript
-STYLISH = 1 << 2
-```
-
-Style font type. The style font type is designed for 2-in-1 devices.
-
-**Since:** 14
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -76,18 +76,18 @@ Font type that has been installed.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## CUSTOMIZED
+## STYLISH
 
 ```TypeScript
-CUSTOMIZED = 1 << 4
+STYLISH = 1 << 2
 ```
 
-Custom font type.
+Style font type. The style font type is designed for 2-in-1 devices.
 
-**Since:** 18
+**Since:** 14
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
+<!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

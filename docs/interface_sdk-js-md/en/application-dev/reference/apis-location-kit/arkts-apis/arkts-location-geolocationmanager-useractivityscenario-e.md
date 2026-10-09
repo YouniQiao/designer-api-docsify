@@ -12,6 +12,22 @@ Enum for user activity scenario.
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## DAILY_LIFE_SERVICE
+
+```TypeScript
+DAILY_LIFE_SERVICE = 0x404
+```
+
+Daily life scenarios. Low requirements on positioning precision.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
 ## NAVIGATION
 
 ```TypeScript
@@ -57,21 +73,5 @@ Transport scenario. High positioning precision and real-time performance are req
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## DAILY_LIFE_SERVICE
-
-```TypeScript
-DAILY_LIFE_SERVICE = 0x404
-```
-
-Daily life scenarios. Low requirements on positioning precision.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

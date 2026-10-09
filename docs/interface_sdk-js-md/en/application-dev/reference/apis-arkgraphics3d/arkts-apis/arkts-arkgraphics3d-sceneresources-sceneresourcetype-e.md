@@ -14,31 +14,31 @@ Enumerates the scene resource types, which are used to classify resources in a s
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## UNKNOWN
+## ANIMATION
 
 ```TypeScript
-UNKNOWN = 0
+ANIMATION = 5
 ```
 
-Unknown.
+Animation resource.
 
 **Since:** 12
 
-<!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
+<!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## NODE
+## EFFECT
 
 ```TypeScript
-NODE = 1
+EFFECT = 9
 ```
 
-Node type.
+Post-processing effect resource.
 
-**Since:** 12
+**Since:** 21
 
-<!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
+<!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -53,6 +53,20 @@ Environment resource.
 **Since:** 12
 
 <!--Device-SceneResourceType-ENVIRONMENT = 2--><!--Device-SceneResourceType-ENVIRONMENT = 2-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## IMAGE
+
+```TypeScript
+IMAGE = 7
+```
+
+Image resource.
+
+**Since:** 12
+
+<!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -84,17 +98,31 @@ Mesh resource.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## ANIMATION
+## MESH_RESOURCE
 
 ```TypeScript
-ANIMATION = 5
+MESH_RESOURCE = 8
 ```
 
-Animation resource.
+Mesh resource.
+
+**Since:** 18
+
+<!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## NODE
+
+```TypeScript
+NODE = 1
+```
+
+Node type.
 
 **Since:** 12
 
-<!--Device-SceneResourceType-ANIMATION = 5--><!--Device-SceneResourceType-ANIMATION = 5-End-->
+<!--Device-SceneResourceType-NODE = 1--><!--Device-SceneResourceType-NODE = 1-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
@@ -112,44 +140,16 @@ Shader resource.
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## IMAGE
+## UNKNOWN
 
 ```TypeScript
-IMAGE = 7
+UNKNOWN = 0
 ```
 
-Image resource.
+Unknown.
 
 **Since:** 12
 
-<!--Device-SceneResourceType-IMAGE = 7--><!--Device-SceneResourceType-IMAGE = 7-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
-## MESH_RESOURCE
-
-```TypeScript
-MESH_RESOURCE = 8
-```
-
-Mesh resource.
-
-**Since:** 18
-
-<!--Device-SceneResourceType-MESH_RESOURCE = 8--><!--Device-SceneResourceType-MESH_RESOURCE = 8-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
-## EFFECT
-
-```TypeScript
-EFFECT = 9
-```
-
-Post-processing effect resource.
-
-**Since:** 21
-
-<!--Device-SceneResourceType-EFFECT = 9--><!--Device-SceneResourceType-EFFECT = 9-End-->
+<!--Device-SceneResourceType-UNKNOWN = 0--><!--Device-SceneResourceType-UNKNOWN = 0-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

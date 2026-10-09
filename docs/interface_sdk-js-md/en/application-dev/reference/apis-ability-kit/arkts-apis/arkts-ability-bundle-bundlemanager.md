@@ -66,8 +66,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon1) | Enables the dynamic icon based on the given bundle name and module name. This API uses a promise to return the result. |
 | [enableDynamicIcon](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md#enabledynamicicon2) | Enables the dynamic icon based on the given bundle name, module name, and bundle options. This API uses a promise to return the result. |
 | [filterBundleListByDeviceModeDistributionPolicies](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md) | Filters the application list by device mode distribution policies. This API uses a promise to return the result. |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
-| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel1) | Obtains the ability label based on the given bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
 | [getAbilityLabel](arkts-ability-bundlemanager-getabilitylabel-f-sys.md#getabilitylabel2) | Obtains the ability label based on the given bundle name, module name, and ability name. This API uses a promise to return the result. |
 | [getAbilityLabelSync](arkts-ability-bundlemanager-getabilitylabelsync-f-sys.md) | Obtains the ability label based on the given bundle name, module name, and ability name. This API returns the result synchronously. |
@@ -165,6 +163,8 @@ import { bundleManager } from '@kit.AbilityKit';
 | [switchUninstallState](arkts-ability-bundlemanager-switchuninstallstate-f-sys.md) | Switches the uninstall state of an application. This API is independent of EDM application interception control. |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc1) | Verifies an .abc file. This API uses an asynchronous callback to return the result. |
 | [verifyAbc](arkts-ability-bundlemanager-verifyabc-f-sys.md#verifyabc2) | Verifies an .abc file. This API uses a promise to return the result. |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon1) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses an asynchronous callback to return the result. |
+| [getAbilityIcon](arkts-ability-bundlemanager-getabilityicon-f-sys.md#getabilityicon2) | Obtains the [PixelMap](../../../reference/apis-image-kit/arkts-apis-image-PixelMap.md) of an icon based on the bundle name, module name, and ability name. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

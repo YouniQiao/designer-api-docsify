@@ -12,22 +12,6 @@ Enumerates the options for checking the certificate revocation status.
 
 **System capability:** SystemCapability.Security.Cert
 
-## REVOCATION_CHECK_OPTION_PREFER_OCSP
-
-```TypeScript
-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
-```
-
-Use OCSP over CRL (default).
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
 ## REVOCATION_CHECK_OPTION_ACCESS_NETWORK
 
 ```TypeScript
@@ -41,38 +25,6 @@ Obtain the CRL/OCSP response over the network. By default, it is disabled. Only 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-## REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER
-
-```TypeScript
-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2
-```
-
-This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the alternative solution to be used to obtain the certificate revocation status if the preferred solution cannot be used due to network problems.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2-End-->
-
-**System capability:** SystemCapability.Security.Cert
-
-## REVOCATION_CHECK_OPTION_FALLBACK_LOCAL
-
-```TypeScript
-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
-```
-
-This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the locally configured CRL/OCSP response to be used to check the certificate revocation status if the online CRL/OCSP response cannot be used due to network problems.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -97,6 +49,54 @@ This parameter is valid when the **ACCESS_NETWORK** option is enabled. If this c
 
 **System capability:** SystemCapability.Security.Cert
 
+## REVOCATION_CHECK_OPTION_FALLBACK_LOCAL
+
+```TypeScript
+REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
+```
+
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the locally configured CRL/OCSP response to be used to check the certificate revocation status if the online CRL/OCSP response cannot be used due to network problems.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
+## REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER
+
+```TypeScript
+REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2
+```
+
+This parameter is valid when the **ACCESS_NETWORK** option is enabled. It allows the alternative solution to be used to obtain the certificate revocation status if the preferred solution cannot be used due to network problems.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
+## REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR
+
+```TypeScript
+REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6
+```
+
+If this capability is enabled, the system ignores the network unreachable error when obtaining the CRL or OCSP response over the network for revocation status check. This capability is disabled by default. By default, the network unreachable error may cause certificate chain validation failure.
+
+**Since:** 23
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6-End-->
+
+**System capability:** SystemCapability.Security.Cert
+
 ## REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT
 
 ```TypeScript
@@ -118,18 +118,18 @@ If this capability is enabled, the system checks the revocation status of the le
 
 **System capability:** SystemCapability.Security.Cert
 
-## REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR
+## REVOCATION_CHECK_OPTION_PREFER_OCSP
 
 ```TypeScript
-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6
+REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
 ```
 
-If this capability is enabled, the system ignores the network unreachable error when obtaining the CRL or OCSP response over the network for revocation status check. This capability is disabled by default. By default, the network unreachable error may cause certificate chain validation failure.
+Use OCSP over CRL (default).
 
-**Since:** 23
+**Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6-End-->
+<!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0-End-->
 
 **System capability:** SystemCapability.Security.Cert

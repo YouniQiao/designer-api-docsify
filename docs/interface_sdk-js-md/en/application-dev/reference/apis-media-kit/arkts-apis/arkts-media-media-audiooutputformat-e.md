@@ -16,43 +16,23 @@ Enumerates the audio output formats.
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-## DEFAULT
+## AAC_ADTS
 
 ```TypeScript
-DEFAULT = 0
+AAC_ADTS = 6
 ```
 
-Default output format.
+Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio.
 
-This API is defined but not implemented yet.
-
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to select one from [ContainerFormatType](arkts-media-media-containerformattype-e.md) as required.
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-<!--Device-AudioOutputFormat-DEFAULT = 0--><!--Device-AudioOutputFormat-DEFAULT = 0-End-->
+**Substitutes:** [CFT_AAC](arkts-media-media-containerformattype-e.md#cft_aac)
 
-**System capability:** SystemCapability.Multimedia.Media.AudioRecorder
-
-## MPEG_4
-
-```TypeScript
-MPEG_4 = 2
-```
-
-MPEG-4.
-
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_MPEG_4** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
-
-**Since:** 6
-
-**Deprecated since:** 8
-
-**Substitutes:** [CFT_MPEG_4](arkts-media-media-containerformattype-e.md#cft_mpeg_4)
-
-<!--Device-AudioOutputFormat-MPEG_4 = 2--><!--Device-AudioOutputFormat-MPEG_4 = 2-End-->
+<!--Device-AudioOutputFormat-AAC_ADTS = 6--><!--Device-AudioOutputFormat-AAC_ADTS = 6-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
@@ -100,22 +80,42 @@ Note: It is supported since API version 6 and deprecated since API version 8. Yo
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder
 
-## AAC_ADTS
+## DEFAULT
 
 ```TypeScript
-AAC_ADTS = 6
+DEFAULT = 0
 ```
 
-Audio Data Transport Stream (ADTS), which is a transport stream format of AAC-based audio.
+Default output format.
 
-Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_AAC** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
+This API is defined but not implemented yet.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to select one from [ContainerFormatType](arkts-media-media-containerformattype-e.md) as required.
 
 **Since:** 6
 
 **Deprecated since:** 8
 
-**Substitutes:** [CFT_AAC](arkts-media-media-containerformattype-e.md#cft_aac)
+<!--Device-AudioOutputFormat-DEFAULT = 0--><!--Device-AudioOutputFormat-DEFAULT = 0-End-->
 
-<!--Device-AudioOutputFormat-AAC_ADTS = 6--><!--Device-AudioOutputFormat-AAC_ADTS = 6-End-->
+**System capability:** SystemCapability.Multimedia.Media.AudioRecorder
+
+## MPEG_4
+
+```TypeScript
+MPEG_4 = 2
+```
+
+MPEG-4.
+
+Note: It is supported since API version 6 and deprecated since API version 8. You are advised to use **CFT_MPEG_4** in [ContainerFormatType](arkts-media-media-containerformattype-e.md) instead.
+
+**Since:** 6
+
+**Deprecated since:** 8
+
+**Substitutes:** [CFT_MPEG_4](arkts-media-media-containerformattype-e.md#cft_mpeg_4)
+
+<!--Device-AudioOutputFormat-MPEG_4 = 2--><!--Device-AudioOutputFormat-MPEG_4 = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AudioRecorder

@@ -18,24 +18,6 @@ Defines the selected state types that can be specified for **ChipV2**. This API 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## CLICKED
-
-```TypeScript
-CLICKED = 0
-```
-
-Default type.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
-
-<!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0--><!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## CHECKED
 
 ```TypeScript
@@ -51,6 +33,24 @@ Checked type.
 **Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ChipV2AccessibilitySelectedType-CHECKED = 1--><!--Device-ChipV2AccessibilitySelectedType-CHECKED = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## CLICKED
+
+```TypeScript
+CLICKED = 0
+```
+
+Default type.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
+
+<!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0--><!--Device-ChipV2AccessibilitySelectedType-CLICKED = 0-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

@@ -32,24 +32,6 @@ The device display is not rotated and is in its original vertical orientation.
 
 **Test API:** This API is used only in automated test scripts.
 
-## ROTATION_90
-
-```TypeScript
-ROTATION_90 = 1
-```
-
-The device display rotates 90° clockwise and is in landscape orientation.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-DisplayRotation-ROTATION_90 = 1--><!--Device-DisplayRotation-ROTATION_90 = 1-End-->
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## ROTATION_180
 
 ```TypeScript
@@ -81,6 +63,24 @@ The device display rotates 270° clockwise and is in reverse landscape orientati
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-DisplayRotation-ROTATION_270 = 3--><!--Device-DisplayRotation-ROTATION_270 = 3-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## ROTATION_90
+
+```TypeScript
+ROTATION_90 = 1
+```
+
+The device display rotates 90° clockwise and is in landscape orientation.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-DisplayRotation-ROTATION_90 = 1--><!--Device-DisplayRotation-ROTATION_90 = 1-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

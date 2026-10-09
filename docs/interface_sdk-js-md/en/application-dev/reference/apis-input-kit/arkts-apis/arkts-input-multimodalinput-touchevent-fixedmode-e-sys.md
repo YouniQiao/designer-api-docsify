@@ -14,22 +14,6 @@ Coordinate correction mode. The default value is NONE.
 
 **System API:** This is a system API.
 
-## NONE
-
-```TypeScript
-NONE = 0
-```
-
-Normal mode.
-
-**Since:** 19
-
-<!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-**System API:** This is a system API.
-
 ## AUTO
 
 ```TypeScript
@@ -41,6 +25,22 @@ One-handed mode.
 **Since:** 19
 
 <!--Device-FixedMode-AUTO = 1--><!--Device-FixedMode-AUTO = 1-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+**System API:** This is a system API.
+
+## NONE
+
+```TypeScript
+NONE = 0
+```
+
+Normal mode.
+
+**Since:** 19
+
+<!--Device-FixedMode-NONE = 0--><!--Device-FixedMode-NONE = 0-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 

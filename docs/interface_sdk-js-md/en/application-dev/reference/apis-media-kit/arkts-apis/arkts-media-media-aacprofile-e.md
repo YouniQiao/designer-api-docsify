@@ -12,22 +12,6 @@ Enumerates the supported Advanced Audio Coding (AAC) formats.
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder
 
-## AAC_LC
-
-```TypeScript
-AAC_LC = 0
-```
-
-Standard AAC Low Complexity profile.
-
-**Since:** 22
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVRecorder
-
 ## AAC_HE
 
 ```TypeScript
@@ -57,5 +41,21 @@ AAC High Efficiency Version 2 profile (also known as HE-AAC v2).
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVRecorder
+
+## AAC_LC
+
+```TypeScript
+AAC_LC = 0
+```
+
+Standard AAC Low Complexity profile.
+
+**Since:** 22
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVRecorder

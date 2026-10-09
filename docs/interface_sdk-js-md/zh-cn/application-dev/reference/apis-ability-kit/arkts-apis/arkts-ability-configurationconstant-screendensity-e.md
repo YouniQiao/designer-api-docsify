@@ -14,6 +14,38 @@ export enum ScreenDensity
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
+## SCREEN_DENSITY_LDPI
+
+```TypeScript
+SCREEN_DENSITY_LDPI = 240
+```
+
+表示屏幕像素密度为'LDPI'。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240--><!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityBase
+
+## SCREEN_DENSITY_MDPI
+
+```TypeScript
+SCREEN_DENSITY_MDPI = 160
+```
+
+表示屏幕像素密度为'MDPI'。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160--><!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityBase
+
 ## SCREEN_DENSITY_NOT_SET
 
 ```TypeScript
@@ -43,38 +75,6 @@ SCREEN_DENSITY_SDPI = 120
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ScreenDensity-SCREEN_DENSITY_SDPI = 120--><!--Device-ScreenDensity-SCREEN_DENSITY_SDPI = 120-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityBase
-
-## SCREEN_DENSITY_MDPI
-
-```TypeScript
-SCREEN_DENSITY_MDPI = 160
-```
-
-表示屏幕像素密度为'MDPI'。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160--><!--Device-ScreenDensity-SCREEN_DENSITY_MDPI = 160-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityBase
-
-## SCREEN_DENSITY_LDPI
-
-```TypeScript
-SCREEN_DENSITY_LDPI = 240
-```
-
-表示屏幕像素密度为'LDPI'。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240--><!--Device-ScreenDensity-SCREEN_DENSITY_LDPI = 240-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 

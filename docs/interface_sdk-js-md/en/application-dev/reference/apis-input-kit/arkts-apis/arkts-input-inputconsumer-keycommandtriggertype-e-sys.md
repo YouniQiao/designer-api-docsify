@@ -14,6 +14,24 @@ Enumerates the key command trigger types, which are used to specify the trigger 
 
 **System API:** This is a system API.
 
+## ALL_RELEASED
+
+```TypeScript
+ALL_RELEASED = 3
+```
+
+The callback is triggered both when a key is pressed and when it is released, including automatically repeated key presses.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-KeyCommandTriggerType-ALL_RELEASED = 3--><!--Device-KeyCommandTriggerType-ALL_RELEASED = 3-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
+
+**System API:** This is a system API.
+
 ## PRESSED
 
 ```TypeScript
@@ -45,24 +63,6 @@ Triggered on repeated press. The callback is triggered each time the final key i
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2--><!--Device-KeyCommandTriggerType-REPEAT_PRESSED = 2-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
-
-**System API:** This is a system API.
-
-## ALL_RELEASED
-
-```TypeScript
-ALL_RELEASED = 3
-```
-
-The callback is triggered both when a key is pressed and when it is released, including automatically repeated key presses.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-KeyCommandTriggerType-ALL_RELEASED = 3--><!--Device-KeyCommandTriggerType-ALL_RELEASED = 3-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.InputConsumer
 

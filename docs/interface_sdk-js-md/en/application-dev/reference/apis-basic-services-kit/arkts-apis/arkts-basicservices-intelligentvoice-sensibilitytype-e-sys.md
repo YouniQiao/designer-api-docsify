@@ -14,6 +14,22 @@ Enumerates sensibility type. @enum {number}
 
 **System API:** This is a system API.
 
+## HIGH_SENSIBILITY
+
+```TypeScript
+HIGH_SENSIBILITY = 3
+```
+
+High sensibility.
+
+**Since:** 10
+
+<!--Device-SensibilityType-HIGH_SENSIBILITY = 3--><!--Device-SensibilityType-HIGH_SENSIBILITY = 3-End-->
+
+**System capability:** SystemCapability.AI.IntelligentVoice.Core
+
+**System API:** This is a system API.
+
 ## LOW_SENSIBILITY
 
 ```TypeScript
@@ -41,22 +57,6 @@ Middle sensibility.
 **Since:** 10
 
 <!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2--><!--Device-SensibilityType-MIDDLE_SENSIBILITY = 2-End-->
-
-**System capability:** SystemCapability.AI.IntelligentVoice.Core
-
-**System API:** This is a system API.
-
-## HIGH_SENSIBILITY
-
-```TypeScript
-HIGH_SENSIBILITY = 3
-```
-
-High sensibility.
-
-**Since:** 10
-
-<!--Device-SensibilityType-HIGH_SENSIBILITY = 3--><!--Device-SensibilityType-HIGH_SENSIBILITY = 3-End-->
 
 **System capability:** SystemCapability.AI.IntelligentVoice.Core
 

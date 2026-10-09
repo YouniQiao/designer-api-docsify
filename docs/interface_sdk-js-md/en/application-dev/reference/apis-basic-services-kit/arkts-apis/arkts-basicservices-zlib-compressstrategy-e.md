@@ -44,6 +44,22 @@ Filtered compression strategy.
 
 **System capability:** SystemCapability.BundleManager.Zlib
 
+## COMPRESS_STRATEGY_FIXED
+
+```TypeScript
+COMPRESS_STRATEGY_FIXED = 4
+```
+
+Fixed compression strategy.
+
+**Since:** 7
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-CompressStrategy-COMPRESS_STRATEGY_FIXED = 4--><!--Device-CompressStrategy-COMPRESS_STRATEGY_FIXED = 4-End-->
+
+**System capability:** SystemCapability.BundleManager.Zlib
+
 ## COMPRESS_STRATEGY_HUFFMAN_ONLY
 
 ```TypeScript
@@ -73,21 +89,5 @@ RLE compression strategy.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-CompressStrategy-COMPRESS_STRATEGY_RLE = 3--><!--Device-CompressStrategy-COMPRESS_STRATEGY_RLE = 3-End-->
-
-**System capability:** SystemCapability.BundleManager.Zlib
-
-## COMPRESS_STRATEGY_FIXED
-
-```TypeScript
-COMPRESS_STRATEGY_FIXED = 4
-```
-
-Fixed compression strategy.
-
-**Since:** 7
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-CompressStrategy-COMPRESS_STRATEGY_FIXED = 4--><!--Device-CompressStrategy-COMPRESS_STRATEGY_FIXED = 4-End-->
 
 **System capability:** SystemCapability.BundleManager.Zlib

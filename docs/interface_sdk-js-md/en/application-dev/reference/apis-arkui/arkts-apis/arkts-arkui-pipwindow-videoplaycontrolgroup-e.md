@@ -12,24 +12,6 @@ Enumerates the video playback component groups. They are used only when [PiPTemp
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## VIDEO_PREVIOUS_NEXT
-
-```TypeScript
-VIDEO_PREVIOUS_NEXT = 101
-```
-
-Previous/Next component group for video playback.
-
-This component group is mutually exclusive with the fast-forward/rewind component group. It cannot be added if the fast-forward/rewind component group is added.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
 ## FAST_FORWARD_BACKWARD
 
 ```TypeScript
@@ -45,5 +27,23 @@ This component group is mutually exclusive with the previous/next component grou
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102--><!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## VIDEO_PREVIOUS_NEXT
+
+```TypeScript
+VIDEO_PREVIOUS_NEXT = 101
+```
+
+Previous/Next component group for video playback.
+
+This component group is mutually exclusive with the fast-forward/rewind component group. It cannot be added if the fast-forward/rewind component group is added.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

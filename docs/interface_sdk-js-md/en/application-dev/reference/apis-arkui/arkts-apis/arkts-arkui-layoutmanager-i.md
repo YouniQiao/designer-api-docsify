@@ -11,6 +11,12 @@ Implements a layout manager object.
 > After the text content is changed, you must wait for the layout to be completed before you can obtain the most up-
 > to-date layout information.
 
+**Since:** 12
+
+<!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## Objects to Import
 
 Take the Text component as an example. For a complete example, see [Example 10: Obtaining Text Information](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md) of the Text component.
@@ -19,12 +25,6 @@ Take the Text component as an example. For a complete example, see [Example 10: 
 controller: TextController = new TextController();
 let layoutManager: LayoutManager = this.controller.getLayoutManager();
 ```
-
-**Since:** 12
-
-<!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 <a id="getcharacterpositionatcoordinate1"></a>
 

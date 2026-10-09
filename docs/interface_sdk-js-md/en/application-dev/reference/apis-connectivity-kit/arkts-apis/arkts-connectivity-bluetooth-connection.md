@@ -61,10 +61,10 @@ import { connection } from '@kit.ConnectivityKit';
 | [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md) | Sets the confirmation of pairing with a certain device. |
 | [setDevicePinCode](arkts-connectivity-connection-setdevicepincode-f.md#setdevicepincode1) | Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE. |
 | [setDevicePinCode](arkts-connectivity-connection-setdevicepincode-f.md#setdevicepincode2) | Set the pin during pairing when the pin type is PIN_TYPE_ENTER_PIN_CODE. |
-| [setLocalName](arkts-connectivity-connection-setlocalname-f.md) | Sets the Bluetooth friendly name of a device. It is used only by system applications for security. If a non-system application invokes the interface, exception 801 is thrown. |
 | [setRemoteDeviceName](arkts-connectivity-connection-setremotedevicename-f.md) | Modify remote device name. |
 | [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md) | Starts scanning Bluetooth devices. |
 | [stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md) | Stops Bluetooth device scanning. |
+| [setLocalName](arkts-connectivity-connection-setlocalname-f.md) | Sets the Bluetooth friendly name of a device. It is used only by system applications for security. If a non-system application invokes the interface, exception 801 is thrown. |
 
 <!--Del-->
 ### Functions(System API)

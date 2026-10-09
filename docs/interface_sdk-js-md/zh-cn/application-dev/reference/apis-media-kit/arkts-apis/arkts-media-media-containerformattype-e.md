@@ -12,6 +12,48 @@ enum ContainerFormatType
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
+## CFT_AAC
+
+```TypeScript
+CFT_AAC = 'aac'
+```
+
+音频的容器格式，AAC。默认为ADTS帧头格式。
+
+**起始版本：** 20
+
+<!--Device-ContainerFormatType-CFT_AAC = 'aac'--><!--Device-ContainerFormatType-CFT_AAC = 'aac'-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
+## CFT_AMR
+
+```TypeScript
+CFT_AMR = 'amr'
+```
+
+音频的容器格式，AMR。
+
+**起始版本：** 18
+
+<!--Device-ContainerFormatType-CFT_AMR = 'amr'--><!--Device-ContainerFormatType-CFT_AMR = 'amr'-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
+## CFT_MP3
+
+```TypeScript
+CFT_MP3 = 'mp3'
+```
+
+音频的容器格式，MP3。
+
+**起始版本：** 12
+
+<!--Device-ContainerFormatType-CFT_MP3 = 'mp3'--><!--Device-ContainerFormatType-CFT_MP3 = 'mp3'-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.Core
+
 ## CFT_MPEG_4
 
 ```TypeScript
@@ -44,20 +86,6 @@ CFT_MPEG_4A = 'm4a'
 
 **系统能力：** SystemCapability.Multimedia.Media.Core
 
-## CFT_MP3
-
-```TypeScript
-CFT_MP3 = 'mp3'
-```
-
-音频的容器格式，MP3。
-
-**起始版本：** 12
-
-<!--Device-ContainerFormatType-CFT_MP3 = 'mp3'--><!--Device-ContainerFormatType-CFT_MP3 = 'mp3'-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
 ## CFT_WAV
 
 ```TypeScript
@@ -69,33 +97,5 @@ CFT_WAV = 'wav'
 **起始版本：** 12
 
 <!--Device-ContainerFormatType-CFT_WAV = 'wav'--><!--Device-ContainerFormatType-CFT_WAV = 'wav'-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
-## CFT_AMR
-
-```TypeScript
-CFT_AMR = 'amr'
-```
-
-音频的容器格式，AMR。
-
-**起始版本：** 18
-
-<!--Device-ContainerFormatType-CFT_AMR = 'amr'--><!--Device-ContainerFormatType-CFT_AMR = 'amr'-End-->
-
-**系统能力：** SystemCapability.Multimedia.Media.Core
-
-## CFT_AAC
-
-```TypeScript
-CFT_AAC = 'aac'
-```
-
-音频的容器格式，AAC。默认为ADTS帧头格式。
-
-**起始版本：** 20
-
-<!--Device-ContainerFormatType-CFT_AAC = 'aac'--><!--Device-ContainerFormatType-CFT_AAC = 'aac'-End-->
 
 **系统能力：** SystemCapability.Multimedia.Media.Core

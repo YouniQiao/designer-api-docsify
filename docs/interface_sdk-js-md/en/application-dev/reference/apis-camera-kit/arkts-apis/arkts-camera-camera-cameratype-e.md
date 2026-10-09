@@ -28,38 +28,6 @@ Default camera type.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_TYPE_WIDE_ANGLE
-
-```TypeScript
-CAMERA_TYPE_WIDE_ANGLE = 1
-```
-
-Wide camera.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1--><!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## CAMERA_TYPE_ULTRA_WIDE
-
-```TypeScript
-CAMERA_TYPE_ULTRA_WIDE = 2
-```
-
-Ultra-wide camera.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2--><!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## CAMERA_TYPE_TELEPHOTO
 
 ```TypeScript
@@ -89,5 +57,37 @@ Camera with depth of field information.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_TRUE_DEPTH = 4--><!--Device-CameraType-CAMERA_TYPE_TRUE_DEPTH = 4-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_TYPE_ULTRA_WIDE
+
+```TypeScript
+CAMERA_TYPE_ULTRA_WIDE = 2
+```
+
+Ultra-wide camera.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2--><!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_TYPE_WIDE_ANGLE
+
+```TypeScript
+CAMERA_TYPE_WIDE_ANGLE = 1
+```
+
+Wide camera.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1--><!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

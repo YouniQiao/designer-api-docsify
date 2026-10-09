@@ -26,20 +26,6 @@ The image is decoded based on the format. If the image is in HDR format, it is d
 
 **System capability:** SystemCapability.Multimedia.Image.Core
 
-## SDR
-
-```TypeScript
-SDR = 1
-```
-
-The image is decoded according to the standard dynamic range.
-
-**Since:** 12
-
-<!--Device-DecodingDynamicRange-SDR = 1--><!--Device-DecodingDynamicRange-SDR = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Image.Core
-
 ## HDR
 
 ```TypeScript
@@ -51,5 +37,19 @@ The image is decoded according to the high dynamic range. The image source creat
 **Since:** 12
 
 <!--Device-DecodingDynamicRange-HDR = 2--><!--Device-DecodingDynamicRange-HDR = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Image.Core
+
+## SDR
+
+```TypeScript
+SDR = 1
+```
+
+The image is decoded according to the standard dynamic range.
+
+**Since:** 12
+
+<!--Device-DecodingDynamicRange-SDR = 1--><!--Device-DecodingDynamicRange-SDR = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Image.Core

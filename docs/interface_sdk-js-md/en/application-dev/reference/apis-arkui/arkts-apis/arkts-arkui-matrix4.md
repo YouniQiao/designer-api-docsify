@@ -24,10 +24,10 @@ import { matrix4 } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [combine](arkts-arkui-matrix4-combine-f.md) | Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be changed. |
-| [copy](arkts-arkui-matrix4-copy-f.md) | Copies this matrix object. |
 | [identity](arkts-arkui-matrix4-identity-f.md) | Initializes a matrix and returns an identity matrix object, which can serve as the basis for subsequent matrix transformation operations. |
 | [init](arkts-arkui-matrix4-init-f.md) | Constructor of **Matrix4**. It is used to create a 4 x 4 matrix based on the input parameters. The matrix is column -major, that is, the 16 values in the input array are filled into the matrix column by column: array[0] to array[3] form the first column, array[4] to array[7] form the second column, array[8] to array[11] form the third column, and array[12] to array[15] form the fourth column. When only an identity matrix is required, you are advised to use **matrix4.identity()**. |
+| [combine](arkts-arkui-matrix4-combine-f.md) | Combines the effects of two matrices to generate a new matrix object. The matrix that calls this API will be changed. |
+| [copy](arkts-arkui-matrix4-copy-f.md) | Copies this matrix object. |
 | [invert](arkts-arkui-matrix4-invert-f.md) | Inverts this matrix object. The matrix that calls this API will be changed. |
 | [rotate](arkts-arkui-matrix4-rotate-f.md) | Rotates this matrix object along the x, y, and z axes. The matrix that calls this API will be changed. |
 | [scale](arkts-arkui-matrix4-scale-f.md) | Scales this matrix object along the x, y, and z axes. The matrix that calls this API will be changed. |

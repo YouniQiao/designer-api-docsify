@@ -61,10 +61,10 @@ import { connection } from '@kit.ConnectivityKit';
 | [setDevicePairingConfirmation](arkts-connectivity-connection-setdevicepairingconfirmation-f.md) | 收到对端蓝牙设备的配对请求事件后，确认请求结果。 |
 | [setDevicePinCode](arkts-connectivity-connection-setdevicepincode-f.md#setdevicepincode1) | 蓝牙配对时，弹框提示用户输入个人身份识别码（Personal identification number，PIN），调用此接口设置PIN码，完成蓝牙配对。使用Callback异步回调。 |
 | [setDevicePinCode](arkts-connectivity-connection-setdevicepincode-f.md#setdevicepincode2) | 蓝牙配对时，弹框提示用户输入PIN码，调用此接口设置PIN码，完成蓝牙配对。使用Promise异步回调。 |
-| [setLocalName](arkts-connectivity-connection-setlocalname-f.md) | 设置本机蓝牙设备名称，不能设置为空字符串。如果设为空字符串会失败。 |
 | [setRemoteDeviceName](arkts-connectivity-connection-setremotedevicename-f.md) | 设置对端蓝牙设备的名称，不能设置为空字符串。如果设为空字符串会失败。使用Promise异步回调。 |
 | [startBluetoothDiscovery](arkts-connectivity-connection-startbluetoothdiscovery-f.md) | 开启蓝牙扫描，发现对端蓝牙设备。 |
 | [stopBluetoothDiscovery](arkts-connectivity-connection-stopbluetoothdiscovery-f.md) | 关闭蓝牙扫描。 |
+| [setLocalName](arkts-connectivity-connection-setlocalname-f.md) | 设置本机蓝牙设备名称，不能设置为空字符串。如果设为空字符串会失败。 |
 
 <!--Del-->
 ### 函数（系统接口）

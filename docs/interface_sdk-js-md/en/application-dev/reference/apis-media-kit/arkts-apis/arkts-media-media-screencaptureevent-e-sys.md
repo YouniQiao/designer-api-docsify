@@ -14,6 +14,22 @@ Enumerates the states available for the system screen recorder.
 
 **System API:** This is a system API.
 
+## SCREENCAPTURE_DIED
+
+```TypeScript
+SCREENCAPTURE_DIED = 2
+```
+
+The system screen recorder died.
+
+**Since:** 23
+
+<!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**System API:** This is a system API.
+
 ## SCREENCAPTURE_STARTED
 
 ```TypeScript
@@ -41,22 +57,6 @@ The system screen recorder stops screen capture.
 **Since:** 18
 
 <!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_STOPPED = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
-
-**System API:** This is a system API.
-
-## SCREENCAPTURE_DIED
-
-```TypeScript
-SCREENCAPTURE_DIED = 2
-```
-
-The system screen recorder died.
-
-**Since:** 23
-
-<!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2--><!--Device-ScreenCaptureEvent-SCREENCAPTURE_DIED = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 

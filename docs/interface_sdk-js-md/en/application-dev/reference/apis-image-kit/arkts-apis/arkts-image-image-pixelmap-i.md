@@ -753,7 +753,7 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
@@ -797,7 +797,7 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 | [62980102](../errorcode-image.md#62980102-memory-allocation-error-for-images) | Image malloc abnormal. This status code is thrown when an error occurs during the process of copying data. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | Image YUV And ASTC types are not supported. |
 | [62980104](../errorcode-image.md#62980104-image-initialization-error) | Image initialization abnormal. This status code is thrown when an error occurs during the process of creating empty pixelmap. |
@@ -986,7 +986,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1161,7 +1161,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1212,7 +1212,7 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1356,7 +1356,7 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1608,7 +1608,7 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsyn
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1846,7 +1846,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1895,7 +1895,7 @@ Obtains the value of the metadata with a given key in this PixelMap.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
@@ -2237,7 +2237,7 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitys
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -2538,7 +2538,7 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readp
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -2866,7 +2866,7 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3101,7 +3101,7 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotat
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3260,7 +3260,7 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3310,7 +3310,7 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3363,7 +3363,7 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3456,7 +3456,7 @@ Sets a memory name for this PixelMap.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.The length of the input parameter is too long. 2.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 | [62980286](../errorcode-image.md#62980286-failed-to-set-a-memory-identifier-for-a-pixelmap) | Memory format not supported. |
 
 **Examples**
@@ -3507,7 +3507,7 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 | [62980173](../errorcode-image.md#62980173-dma-memory-space-error) | The DMA memory does not exist. |
 | [62980302](../errorcode-image.md#62980302-memory-copy-failed) | Memory copy failed. Possibly caused by invalid metadata value. |
 
@@ -3673,7 +3673,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -3907,7 +3907,7 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytr
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -4283,7 +4283,7 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -4696,7 +4696,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 

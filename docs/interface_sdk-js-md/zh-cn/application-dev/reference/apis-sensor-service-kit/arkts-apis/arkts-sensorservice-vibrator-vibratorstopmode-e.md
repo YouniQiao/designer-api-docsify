@@ -12,20 +12,6 @@ enum VibratorStopMode
 
 **系统能力：** SystemCapability.Sensors.MiscDevice
 
-## VIBRATOR_STOP_MODE_TIME
-
-```TypeScript
-VIBRATOR_STOP_MODE_TIME = 'time'
-```
-
-停止[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)类型（duration模式）的振动。需与startVibration时使用的VibrateTime类型对应。
-
-**起始版本：** 8
-
-<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
-
-**系统能力：** SystemCapability.Sensors.MiscDevice
-
 ## VIBRATOR_STOP_MODE_PRESET
 
 ```TypeScript
@@ -37,5 +23,19 @@ VIBRATOR_STOP_MODE_PRESET = 'preset'
 **起始版本：** 8
 
 <!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_PRESET = 'preset'-End-->
+
+**系统能力：** SystemCapability.Sensors.MiscDevice
+
+## VIBRATOR_STOP_MODE_TIME
+
+```TypeScript
+VIBRATOR_STOP_MODE_TIME = 'time'
+```
+
+停止[VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md)类型（duration模式）的振动。需与startVibration时使用的VibrateTime类型对应。
+
+**起始版本：** 8
+
+<!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'--><!--Device-VibratorStopMode-VIBRATOR_STOP_MODE_TIME = 'time'-End-->
 
 **系统能力：** SystemCapability.Sensors.MiscDevice

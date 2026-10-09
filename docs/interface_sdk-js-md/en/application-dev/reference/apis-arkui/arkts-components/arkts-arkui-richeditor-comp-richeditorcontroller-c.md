@@ -14,12 +14,6 @@ Implements the **RichEditor** component controller. Inherits from [RichEditorBas
 > [addSymbolSpan](#addsymbolspan)) are called. The component automatically scrolls to keep
 > the end of the inserted content visible.
 
-## Objects to Import
-
-```ts
-controller: RichEditorController = new RichEditorController();
-```
-
 **Inheritance/Implementation:** RichEditorController extends [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md)
 
 **Since:** 10
@@ -27,6 +21,12 @@ controller: RichEditorController = new RichEditorController();
 <!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController--><!--Device-unnamed-declare class RichEditorController extends RichEditorBaseController-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## Objects to Import
+
+```ts
+controller: RichEditorController = new RichEditorController();
+```
 
 ## addBuilderSpan
 

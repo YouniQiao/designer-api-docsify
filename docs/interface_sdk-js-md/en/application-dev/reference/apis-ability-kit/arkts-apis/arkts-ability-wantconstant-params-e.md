@@ -46,121 +46,21 @@ Whether the ability has been restarted due to a fault.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-## CONTENT_TITLE_KEY
+## ABILITY_UNIFIED_DATA_KEY
 
 ```TypeScript
-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
+ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
 ```
 
-Title for sharing in an atomic service.
+Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-arkdata-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.
 
-You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
 
-**Since:** 10
+**Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'--><!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SHARE_ABSTRACT_KEY
-
-```TypeScript
-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
-```
-
-Content abstract for sharing in an atomic service.
-
-You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'--><!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SHARE_URL_KEY
-
-```TypeScript
-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
-```
-
-URL link for sharing in an atomic service.
-
-You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'--><!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SUPPORT_CONTINUE_PAGE_STACK_KEY
-
-```TypeScript
-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'
-```
-
-Whether to migrate the page stack information during cross-device migration. The default value is **true**, indicating that the page stack information is automatically migrated during cross-device migration.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'--><!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SUPPORT_CONTINUE_SOURCE_EXIT_KEY
-
-```TypeScript
-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'
-```
-
-Whether the source application exits during cross-device migration. The default value is** true**, indicating that the source application automatically exits during cross-device migration.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'--><!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SHOW_MODE_KEY
-
-```TypeScript
-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
-```
-
-Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'--><!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## PARAMS_STREAM
-
-```TypeScript
-PARAMS_STREAM = 'ability.params.stream'
-```
-
-List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md).
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-PARAMS_STREAM = 'ability.params.stream'--><!--Device-Params-PARAMS_STREAM = 'ability.params.stream'-End-->
+<!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'--><!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -180,114 +80,6 @@ Index of an application clone.
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-## CALLER_REQUEST_CODE
-
-```TypeScript
-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
-```
-
-Request code
-
-that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'--><!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## PAGE_PATH
-
-```TypeScript
-PAGE_PATH = 'ohos.param.atomicservice.pagePath'
-```
-
-Page path for an atomic service.
-
-If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'--><!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## ROUTER_NAME
-
-```TypeScript
-ROUTER_NAME = 'ohos.param.atomicservice.routerName'
-```
-
-Router name for page redirection in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'--><!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## PAGE_SOURCE_FILE
-
-```TypeScript
-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
-```
-
-Source file for the page in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'--><!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## BUILD_FUNCTION
-
-```TypeScript
-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
-```
-
-Build function for the page in an atomic service.
-
-If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'--><!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## SUB_PACKAGE_NAME
-
-```TypeScript
-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
-```
-
-Sub-package name for an atomic service. Application packages can be developed with multiple modules, and each package may include one or multiple HAPs or HSPs. To enhance the launch speed, atomic services restrict the size of HAP and HSP files and optimize the startup process. This modular development approach is known as sub- packaging.
-
-When you open an atomic service, you can use this parameter to activate the specific sub-package.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'--><!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
 ## APP_INSTANCE_KEY
 
 ```TypeScript
@@ -301,50 +93,6 @@ When you create [multiple instances](../../../quick-start/multiInstance.md) of a
 **Since:** 14
 
 <!--Device-Params-APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'--><!--Device-Params-APP_INSTANCE_KEY = 'ohos.extra.param.key.appInstance'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## CREATE_APP_INSTANCE_KEY
-
-```TypeScript
-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
-```
-
-Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.
-
-You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
-
-**Since:** 14
-
-<!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'--><!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## CALLER_APP_CLONE_INDEX
-
-```TypeScript
-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'
-```
-
-Clone index of the caller.
-
-**Since:** 14
-
-<!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'--><!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
-## DESTINATION_PLUGIN_ABILITY
-
-```TypeScript
-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'
-```
-
-The target ability is a plugin ability.
-
-**Since:** 19
-
-<!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'--><!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
@@ -384,6 +132,104 @@ For example, if an atomic service contains a home page and a second page, and yo
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
+## BUILD_FUNCTION
+
+```TypeScript
+BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'
+```
+
+Build function for the page in an atomic service.
+
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'--><!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## CALLER_APP_CLONE_INDEX
+
+```TypeScript
+CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'
+```
+
+Clone index of the caller.
+
+**Since:** 14
+
+<!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'--><!--Device-Params-CALLER_APP_CLONE_INDEX = 'ohos.param.callerAppCloneIndex'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## CALLER_REQUEST_CODE
+
+```TypeScript
+CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'
+```
+
+Request code
+
+that uniquely identifies the caller of startAbilityForResult or [openLink](arkts-ability-uiabilitycontext-c.md#openlink). When either of the APIs is called to start an ability, the target ability returns the result to the caller based on the request code.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'--><!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## CONTENT_TITLE_KEY
+
+```TypeScript
+CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'
+```
+
+Title for sharing in an atomic service.
+
+You can set the sharing title using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'--><!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## CREATE_APP_INSTANCE_KEY
+
+```TypeScript
+CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'
+```
+
+Whether to create an application instance. The default value is **false**, indicating that no new application instance is created.
+
+You can set this parameter to **true** to launch a new application instance. Note that the application to be launched must support multiple instances. For details, see [Creating an Application Multi-Instance](../../../quick-start/multiInstance.md).
+
+**Since:** 14
+
+<!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'--><!--Device-Params-CREATE_APP_INSTANCE_KEY = 'ohos.extra.param.key.createAppInstance'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## DESTINATION_PLUGIN_ABILITY
+
+```TypeScript
+DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'
+```
+
+The target ability is a plugin ability.
+
+**Since:** 19
+
+<!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'--><!--Device-Params-DESTINATION_PLUGIN_ABILITY = 'ohos.params.pluginAbility'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
 ## LAUNCH_REASON_MESSAGE
 
 ```TypeScript
@@ -408,20 +254,174 @@ The caller must be a system application and must request the ohos.permission.SET
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-## ABILITY_UNIFIED_DATA_KEY
+## PAGE_PATH
 
 ```TypeScript
-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'
+PAGE_PATH = 'ohos.param.atomicservice.pagePath'
 ```
 
-Unique identifier for file sharing based on [UDMF](../../apis-arkdata/arkts-apis/arkts-arkdata-data-unifieddatachannel.md). This field can only be set by system applications, but third-party applications can read it.
+Page path for an atomic service.
 
-If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md) or [FLAG_AUTH_WRITE_URI_PERMISSION](arkts-ability-wantconstant-flags-e.md)) and the **PARAMS_STREAM** field is also present, this field does not take effect.
+If page redirection in an atomic service is implemented using [router](../../../ui/arkts-routing.md), you can use this parameter to specify the target page, for example, **library/ets/pages/menu**.
 
-**Since:** 20
+**Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'--><!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'-End-->
+<!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'--><!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## PAGE_SOURCE_FILE
+
+```TypeScript
+PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'
+```
+
+Source file for the page in an atomic service.
+
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'--><!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## PARAMS_STREAM
+
+```TypeScript
+PARAMS_STREAM = 'ability.params.stream'
+```
+
+List of file URIs authorized to the target. The value must be an array of file URIs of the string type. For details about how to obtain the file URI, see [fileUri](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md). This field must be used in conjunction with file URI [read/write flag](arkts-ability-wantconstant-flags-e.md).
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-PARAMS_STREAM = 'ability.params.stream'--><!--Device-Params-PARAMS_STREAM = 'ability.params.stream'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## ROUTER_NAME
+
+```TypeScript
+ROUTER_NAME = 'ohos.param.atomicservice.routerName'
+```
+
+Router name for page redirection in an atomic service.
+
+If page redirection in an atomic service is implemented using [Navigation](../../../ui/arkts-navigation-architecture.md), you can use **ROUTER_NAME**, **PAGE_SOURCE_FILE**, and **BUILD_FUNCTION** together to specify the target page.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'--><!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SHARE_ABSTRACT_KEY
+
+```TypeScript
+SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'
+```
+
+Content abstract for sharing in an atomic service.
+
+You can set the sharing abstract using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'--><!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SHARE_URL_KEY
+
+```TypeScript
+SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'
+```
+
+URL link for sharing in an atomic service.
+
+You can set the URL link using this field in the [onShare](arkts-ability-app-ability-uiability-uiability-c.md#onshare) callback.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'--><!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SHOW_MODE_KEY
+
+```TypeScript
+SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'
+```
+
+Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableuiability-embeddableuiability-c.md). The value is an enumerated value of [ShowMode](arkts-ability-wantconstant-showmode-e.md).
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'--><!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SUB_PACKAGE_NAME
+
+```TypeScript
+SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'
+```
+
+Sub-package name for an atomic service. Application packages can be developed with multiple modules, and each package may include one or multiple HAPs or HSPs. To enhance the launch speed, atomic services restrict the size of HAP and HSP files and optimize the startup process. This modular development approach is known as sub- packaging.
+
+When you open an atomic service, you can use this parameter to activate the specific sub-package.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'--><!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SUPPORT_CONTINUE_PAGE_STACK_KEY
+
+```TypeScript
+SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'
+```
+
+Whether to migrate the page stack information during cross-device migration. The default value is **true**, indicating that the page stack information is automatically migrated during cross-device migration.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'--><!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## SUPPORT_CONTINUE_SOURCE_EXIT_KEY
+
+```TypeScript
+SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'
+```
+
+Whether the source application exits during cross-device migration. The default value is** true**, indicating that the source application automatically exits during cross-device migration.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'--><!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase

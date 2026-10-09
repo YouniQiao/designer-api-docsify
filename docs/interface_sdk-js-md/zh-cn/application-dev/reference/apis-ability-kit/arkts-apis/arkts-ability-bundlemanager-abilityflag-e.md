@@ -28,70 +28,6 @@ GET_ABILITY_INFO_DEFAULT = 0x00000000
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 
-## GET_ABILITY_INFO_WITH_PERMISSION
-
-```TypeScript
-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
-```
-
-获取包含permissions的AbilityInfo。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_APPLICATION
-
-```TypeScript
-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
-```
-
-获取包含applicationInfo的AbilityInfo。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_METADATA
-
-```TypeScript
-GET_ABILITY_INFO_WITH_METADATA = 0x00000004
-```
-
-获取包含metadata的AbilityInfo。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-## GET_ABILITY_INFO_WITH_DISABLE
-
-```TypeScript
-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
-```
-
-获取被禁用Ability对应的AbilityInfo。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
 ## GET_ABILITY_INFO_ONLY_SYSTEM_APP
 
 ```TypeScript
@@ -121,6 +57,70 @@ GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APP_LINKING = 0x00000040-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_APPLICATION
+
+```TypeScript
+GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002
+```
+
+获取包含applicationInfo的AbilityInfo。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_APPLICATION = 0x00000002-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_DISABLE
+
+```TypeScript
+GET_ABILITY_INFO_WITH_DISABLE = 0x00000008
+```
+
+获取被禁用Ability对应的AbilityInfo。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_DISABLE = 0x00000008-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_METADATA
+
+```TypeScript
+GET_ABILITY_INFO_WITH_METADATA = 0x00000004
+```
+
+获取包含metadata的AbilityInfo。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_METADATA = 0x00000004-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework.Core
+
+## GET_ABILITY_INFO_WITH_PERMISSION
+
+```TypeScript
+GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001
+```
+
+获取包含permissions的AbilityInfo。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001--><!--Device-AbilityFlag-GET_ABILITY_INFO_WITH_PERMISSION = 0x00000001-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
 

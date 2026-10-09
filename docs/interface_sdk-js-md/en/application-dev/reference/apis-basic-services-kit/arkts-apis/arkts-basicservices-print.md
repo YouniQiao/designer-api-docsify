@@ -29,8 +29,6 @@ import { print } from '@kit.BasicServicesKit';
 | [notifyWatermarkComplete](arkts-basicservices-print-notifywatermarkcomplete-f.md) | Notify watermark complete. |
 | [off](arkts-basicservices-print-off-f.md#offprinterchange) | Unregisters the listener for printer state change events. This API uses a callback to return the result. |
 | [on](arkts-basicservices-print-on-f.md#onprinterchange) | Registers a listener for the printer change events. This API uses a callback to return the result. |
-| [print](arkts-basicservices-print-f.md#print1) | Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print4) API and pass in context. |
-| [print](arkts-basicservices-print-f.md#print2) | Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print4) API and pass in context. |
 | [print](arkts-basicservices-print-f.md#print3) | Prints files. This API uses an asynchronous callback to return the result. |
 | [print](arkts-basicservices-print-f.md#print4) | Prints files. This API uses a promise to return the result. |
 | [print](arkts-basicservices-print-f.md#print5) | Prints a file. This API uses a promise to return the result. |
@@ -46,6 +44,8 @@ import { print } from '@kit.BasicServicesKit';
 | [updatePrinterInformation](arkts-basicservices-print-updateprinterinformation-f.md) | Updates the information of a printer in the system. This API uses a promise to return the result. Currently, only the **alias** and **options** fields of [PrinterInformation](arkts-basicservices-print-printerinformation-i.md) can be updated. |
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate1) | Updates the print job state. This API uses an asynchronous callback to return the result. |
 | [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md#updateprintjobstate2) | Updates the print job state. This API uses a promise to return the result. |
+| [print](arkts-basicservices-print-f.md#print1) | Prints files. This API uses an asynchronous callback to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print4) API and pass in context. |
+| [print](arkts-basicservices-print-f.md#print2) | Prints files. This API uses a promise to return the result. To start the system print preview page, call the [print](arkts-basicservices-print-f.md#print4) API and pass in context. |
 
 <!--Del-->
 ### Functions(System API)
@@ -86,8 +86,6 @@ import { print } from '@kit.BasicServicesKit';
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos1) | Obtains the information of all installed printer extensions. This API uses an asynchronous callback to return the result. |
 | [queryAllPrinterExtensionInfos](arkts-basicservices-print-queryallprinterextensioninfos-f-sys.md#queryallprinterextensioninfos2) | Obtains the information of all installed printer extensions. This API uses a promise to return the result. |
 | [queryAllPrinterPpds](arkts-basicservices-print-queryallprinterppds-f-sys.md) | Query all printer ppds. |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs1) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
-| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs2) | Queries all print jobs. This API uses a promise to return the result. |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability1) | Queries the printer capability. This API uses an asynchronous callback to return the result. |
 | [queryPrinterCapability](arkts-basicservices-print-queryprintercapability-f-sys.md#queryprintercapability2) | Queries the printer capability. This API uses a promise to return the result. |
 | [queryPrinterCapabilityByUri](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md) | Query printer capabilityies by printer uri. |
@@ -114,6 +112,8 @@ import { print } from '@kit.BasicServicesKit';
 | [updatePrinters](arkts-basicservices-print-updateprinters-f-sys.md#updateprinters2) | Updates information about the specified printers. This API uses a promise to return the result. |
 | [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate1) | Updates the printer state. This API uses an asynchronous callback to return the result. |
 | [updatePrinterState](arkts-basicservices-print-updateprinterstate-f-sys.md#updateprinterstate2) | Updates the printer state. This API uses a promise to return the result. |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs1) | Queries all print jobs. This API uses an asynchronous callback to return the result. |
+| [queryAllPrintJobs](arkts-basicservices-print-queryallprintjobs-f-sys.md#queryallprintjobs2) | Queries all print jobs. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces

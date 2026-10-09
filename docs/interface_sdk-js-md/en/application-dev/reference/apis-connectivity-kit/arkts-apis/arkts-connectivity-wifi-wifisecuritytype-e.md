@@ -54,24 +54,6 @@ Open
 
 **System capability:** SystemCapability.Communication.WiFi.Core
 
-## WIFI_SEC_TYPE_WEP
-
-```TypeScript
-WIFI_SEC_TYPE_WEP = 2
-```
-
-Wired Equivalent Privacy (WEP)
-
-**Since:** 6
-
-**Deprecated since:** 9
-
-**Substitutes:** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_wep)
-
-<!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
-
-**System capability:** SystemCapability.Communication.WiFi.Core
-
 ## WIFI_SEC_TYPE_PSK
 
 ```TypeScript
@@ -105,5 +87,23 @@ Simultaneous Authentication of Equals (SAE)
 **Substitutes:** [WIFI_SEC_TYPE_SAE](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_sae)
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_SAE = 4-End-->
+
+**System capability:** SystemCapability.Communication.WiFi.Core
+
+## WIFI_SEC_TYPE_WEP
+
+```TypeScript
+WIFI_SEC_TYPE_WEP = 2
+```
+
+Wired Equivalent Privacy (WEP)
+
+**Since:** 6
+
+**Deprecated since:** 9
+
+**Substitutes:** [WIFI_SEC_TYPE_WEP](arkts-connectivity-wifimanager-wifisecuritytype-e.md#wifi_sec_type_wep)
+
+<!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_WEP = 2-End-->
 
 **System capability:** SystemCapability.Communication.WiFi.Core

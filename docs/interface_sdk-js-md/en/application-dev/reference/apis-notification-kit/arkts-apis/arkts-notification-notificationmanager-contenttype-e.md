@@ -28,38 +28,6 @@ Normal text notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
-## NOTIFICATION_CONTENT_LONG_TEXT
-
-```TypeScript
-NOTIFICATION_CONTENT_LONG_TEXT
-```
-
-Long text notification.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
-## NOTIFICATION_CONTENT_PICTURE
-
-```TypeScript
-NOTIFICATION_CONTENT_PICTURE
-```
-
-Picture-attached notification.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
 ## NOTIFICATION_CONTENT_CONVERSATION
 
 ```TypeScript
@@ -73,6 +41,38 @@ Conversation notification.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## NOTIFICATION_CONTENT_LIVE_VIEW
+
+```TypeScript
+NOTIFICATION_CONTENT_LIVE_VIEW
+```
+
+Common live view notification. Available only to system applications.
+
+**Since:** 11
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
+## NOTIFICATION_CONTENT_LONG_TEXT
+
+```TypeScript
+NOTIFICATION_CONTENT_LONG_TEXT
+```
+
+Long text notification.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
 **System capability:** SystemCapability.Notification.Notification
 
@@ -92,6 +92,22 @@ Multi-line text notification.
 
 **System capability:** SystemCapability.Notification.Notification
 
+## NOTIFICATION_CONTENT_PICTURE
+
+```TypeScript
+NOTIFICATION_CONTENT_PICTURE
+```
+
+Picture-attached notification.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
+
+**System capability:** SystemCapability.Notification.Notification
+
 ## NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW
 
 ```TypeScript
@@ -105,21 +121,5 @@ System live view notification. A third-party application cannot directly create 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW-End-->
-
-**System capability:** SystemCapability.Notification.Notification
-
-## NOTIFICATION_CONTENT_LIVE_VIEW
-
-```TypeScript
-NOTIFICATION_CONTENT_LIVE_VIEW
-```
-
-Common live view notification. Available only to system applications.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW-End-->
 
 **System capability:** SystemCapability.Notification.Notification

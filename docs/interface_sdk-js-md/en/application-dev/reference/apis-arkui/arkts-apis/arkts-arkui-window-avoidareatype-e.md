@@ -14,22 +14,6 @@ When adapting window content for an [immersive layout](../../../windowmanager/wi
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_SYSTEM
-
-```TypeScript
-TYPE_SYSTEM = 0
-```
-
-Default area of the system. <!--RP11-->It contains the status bar and three-button navigation bar.<!--RP11End-->
-
-**Since:** 7
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
-
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
-
 ## TYPE_CUTOUT
 
 ```TypeScript
@@ -46,21 +30,23 @@ Cutout area.
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_SYSTEM_GESTURE
+## TYPE_FLOAT_NAVIGATION
 
 ```TypeScript
-TYPE_SYSTEM_GESTURE = 2
+TYPE_FLOAT_NAVIGATION = 5
 ```
 
-Side return gesture area. Currently, no devices support this type of avoid area.
+Area for float navigation
 
-**Since:** 9
+**Since:** 26.0.0
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
-**System capability:** SystemCapability.WindowManager.WindowManager.Core
+<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
 
 ## TYPE_KEYBOARD
 
@@ -94,20 +80,34 @@ Bottom navigation bar. <!--RP12-->OpenHarmony devices do not support this capabi
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_FLOAT_NAVIGATION
+## TYPE_SYSTEM
 
 ```TypeScript
-TYPE_FLOAT_NAVIGATION = 5
+TYPE_SYSTEM = 0
 ```
 
-Area for float navigation
+Default area of the system. <!--RP11-->It contains the status bar and three-button navigation bar.<!--RP11End-->
 
-**Since:** 26.0.0
+**Since:** 7
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
 
-<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
+**System capability:** SystemCapability.WindowManager.WindowManager.Core
 
-**System capability:** SystemCapability.Window.SessionManager
+## TYPE_SYSTEM_GESTURE
+
+```TypeScript
+TYPE_SYSTEM_GESTURE = 2
+```
+
+Side return gesture area. Currently, no devices support this type of avoid area.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
+
+**System capability:** SystemCapability.WindowManager.WindowManager.Core

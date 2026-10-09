@@ -28,6 +28,24 @@ When the tab content does not exceed half of the tab bar width, the tab bar is n
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## ALWAYS_AVERAGE_SPLIT
+
+```TypeScript
+ALWAYS_AVERAGE_SPLIT = 1
+```
+
+If the tab content exceeds the tab bar width, the tabs are scrollable. If not, the tabs are not scrollable, and the width of the tab bar is evenly distributed among all tabs.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-LayoutStyle-ALWAYS_AVERAGE_SPLIT = 1--><!--Device-LayoutStyle-ALWAYS_AVERAGE_SPLIT = 1-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## ALWAYS_CENTER
 
 ```TypeScript
@@ -45,24 +63,6 @@ If not, the tabs are compactly centered on the tab bar and not scrollable.
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LayoutStyle-ALWAYS_CENTER = 0--><!--Device-LayoutStyle-ALWAYS_CENTER = 0-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## ALWAYS_AVERAGE_SPLIT
-
-```TypeScript
-ALWAYS_AVERAGE_SPLIT = 1
-```
-
-If the tab content exceeds the tab bar width, the tabs are scrollable. If not, the tabs are not scrollable, and the width of the tab bar is evenly distributed among all tabs.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-LayoutStyle-ALWAYS_AVERAGE_SPLIT = 1--><!--Device-LayoutStyle-ALWAYS_AVERAGE_SPLIT = 1-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

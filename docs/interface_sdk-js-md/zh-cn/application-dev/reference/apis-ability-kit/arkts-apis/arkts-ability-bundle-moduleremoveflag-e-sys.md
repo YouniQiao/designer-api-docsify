@@ -34,24 +34,6 @@ FLAG_MODULE_NOT_USED_BY_FORM = 0
 
 **系统接口：** 此接口为系统接口。
 
-## FLAG_MODULE_USED_BY_FORM
-
-```TypeScript
-FLAG_MODULE_USED_BY_FORM = 1
-```
-
-已被卡片使用。
-
-**起始版本：** 9
-
-**废弃版本：** 10
-
-<!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1--><!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1-End-->
-
-**系统能力：** SystemCapability.BundleManager.BundleFramework
-
-**系统接口：** 此接口为系统接口。
-
 ## FLAG_MODULE_NOT_USED_BY_SHORTCUT
 
 ```TypeScript
@@ -65,6 +47,24 @@ FLAG_MODULE_NOT_USED_BY_SHORTCUT = 2
 **废弃版本：** 10
 
 <!--Device-ModuleRemoveFlag-FLAG_MODULE_NOT_USED_BY_SHORTCUT = 2--><!--Device-ModuleRemoveFlag-FLAG_MODULE_NOT_USED_BY_SHORTCUT = 2-End-->
+
+**系统能力：** SystemCapability.BundleManager.BundleFramework
+
+**系统接口：** 此接口为系统接口。
+
+## FLAG_MODULE_USED_BY_FORM
+
+```TypeScript
+FLAG_MODULE_USED_BY_FORM = 1
+```
+
+已被卡片使用。
+
+**起始版本：** 9
+
+**废弃版本：** 10
+
+<!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1--><!--Device-ModuleRemoveFlag-FLAG_MODULE_USED_BY_FORM = 1-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework
 

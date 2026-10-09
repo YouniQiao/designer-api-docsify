@@ -16,57 +16,21 @@ enum ValueType
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## STRING
+## BOOLEAN
 
 ```TypeScript
-STRING = 0
+BOOLEAN = 4
 ```
 
-表示值类型为字符串。
+表示值类型为布尔值。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [STRING](arkts-arkdata-distributedkvstore-valuetype-e.md#string)
+**替代接口：** [BOOLEAN](arkts-arkdata-distributedkvstore-valuetype-e.md#boolean)
 
-<!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-## INTEGER
-
-```TypeScript
-INTEGER = 1
-```
-
-表示值类型为整数。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [INTEGER](arkts-arkdata-distributedkvstore-valuetype-e.md#integer)
-
-<!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
-## FLOAT
-
-```TypeScript
-FLOAT = 2
-```
-
-表示值类型为浮点数。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [FLOAT](arkts-arkdata-distributedkvstore-valuetype-e.md#float)
-
-<!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
+<!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
@@ -88,24 +52,6 @@ BYTE_ARRAY = 3
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
 
-## BOOLEAN
-
-```TypeScript
-BOOLEAN = 4
-```
-
-表示值类型为布尔值。
-
-**起始版本：** 7
-
-**废弃版本：** 9
-
-**替代接口：** [BOOLEAN](arkts-arkdata-distributedkvstore-valuetype-e.md#boolean)
-
-<!--Device-ValueType-BOOLEAN = 4--><!--Device-ValueType-BOOLEAN = 4-End-->
-
-**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
-
 ## DOUBLE
 
 ```TypeScript
@@ -121,5 +67,59 @@ DOUBLE = 5
 **替代接口：** [DOUBLE](arkts-arkdata-distributedkvstore-valuetype-e.md#double)
 
 <!--Device-ValueType-DOUBLE = 5--><!--Device-ValueType-DOUBLE = 5-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## FLOAT
+
+```TypeScript
+FLOAT = 2
+```
+
+表示值类型为浮点数。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [FLOAT](arkts-arkdata-distributedkvstore-valuetype-e.md#float)
+
+<!--Device-ValueType-FLOAT = 2--><!--Device-ValueType-FLOAT = 2-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## INTEGER
+
+```TypeScript
+INTEGER = 1
+```
+
+表示值类型为整数。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [INTEGER](arkts-arkdata-distributedkvstore-valuetype-e.md#integer)
+
+<!--Device-ValueType-INTEGER = 1--><!--Device-ValueType-INTEGER = 1-End-->
+
+**系统能力：** SystemCapability.DistributedDataManager.KVStore.Core
+
+## STRING
+
+```TypeScript
+STRING = 0
+```
+
+表示值类型为字符串。
+
+**起始版本：** 7
+
+**废弃版本：** 9
+
+**替代接口：** [STRING](arkts-arkdata-distributedkvstore-valuetype-e.md#string)
+
+<!--Device-ValueType-STRING = 0--><!--Device-ValueType-STRING = 0-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.KVStore.Core

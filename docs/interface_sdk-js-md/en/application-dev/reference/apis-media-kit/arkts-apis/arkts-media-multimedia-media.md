@@ -21,8 +21,6 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | Creates an AudioPlayer instance in synchronous mode. |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per device. |
 | [createAVAdsController](arkts-media-media-createavadscontroller-f.md) | Creates an ad playback controller associated with a player instance. This API uses a promise to return the result. |
 | [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md) | Creates an offline download task manager instance. This API uses a promise to return the result. |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator1) | Creates an AVImageGenerator instance. This API uses a promise to return the result. |
@@ -42,6 +40,8 @@ import { media } from '@kit.MediaKit';
 | [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) | Creates a media source for streaming media to be pre-downloaded. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool1) | Creates a SoundPool instance. This API uses an asynchronous callback to return the result. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool3) | Creates a SoundPool instance. This API uses a promise to return the result. |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | Creates an AudioPlayer instance in synchronous mode. |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per device. |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) | Creates a **VideoPlayer** instance. This API uses an asynchronous callback to return the result. |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer2) | Creates a VideoPlayer instance. This API uses a promise to return the result. |
 
@@ -62,9 +62,6 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [AudioPlayer](arkts-media-media-audioplayer-i.md) | AudioPlayer is a class for audio playback management. It provides APIs to manage and play audio. Before calling any API in AudioPlayer, you must use [createAudioPlayer()](arkts-media-media-createaudioplayer-f.md) to create an AudioPlayer instance. |
-| [AudioRecorder](arkts-media-media-audiorecorder-i.md) | AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md) to create an AudioRecorder instance. |
-| [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) | Provides the audio recorder configuration definitions. |
 | [AVAdsController](arkts-media-media-avadscontroller-i.md) | Provides APIs for controlling ad content, including managing ad resources in the ad playback controller and listening for ad events. You can add and remove ad sources, skip the current ad, and disable remaining ads. This module can be used to insert and manage ad content during video playback. Use [createAVAdsController()](arkts-media-media-createavadscontroller-f.md) to create an instance. |
 | [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md) | Defines the descriptor of an audio and video file, which is used in DataSource playback mode. Use scenario: An application can create a playback instance and start playback before it finishes downloading the audio and video resources. |
 | [AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md) | This module provides APIs for managing offline download tasks of media resources, including creating, pausing, resuming, and removing download tasks, as well as listening for download status and progress change events. This module is applicable to scenarios where streaming media resources need to be cached offline in an app and played without network access. It helps users save traffic and improves media playback experience in poor network connection or offline scenarios. You can call [createAVDownloaderManager()](arkts-media-media-createavdownloadermanager-f.md) to create an instance. |
@@ -99,9 +96,12 @@ import { media } from '@kit.MediaKit';
 | [SeiMessage](arkts-media-media-seimessage-i.md) | Describes the information of an SEI message. |
 | [SubtitleInfo](arkts-media-media-subtitleinfo-i.md) | Provides subtitle information. When a subtitle update event is subscribed to, the information about the external subtitle is returned through a callback. Can be synchronized to the time reported by AVPlayer#timeUpdate event |
 | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | Describes the filter conditions for track selection. |
-| [VideoPlayer](arkts-media-media-videoplayer-i.md) | VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) to create a VideoPlayer instance. |
 | [VideoSize](arkts-media-media-videosize-i.md) | Describes the video Dimensions. |
 | [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md) | Set configuration of a watermark. The position starts at top left corner. |
+| [AudioPlayer](arkts-media-media-audioplayer-i.md) | AudioPlayer is a class for audio playback management. It provides APIs to manage and play audio. Before calling any API in AudioPlayer, you must use [createAudioPlayer()](arkts-media-media-createaudioplayer-f.md) to create an AudioPlayer instance. |
+| [AudioRecorder](arkts-media-media-audiorecorder-i.md) | AudioRecorder is a class for audio recording management. It provides APIs to record audio. Before calling any API in AudioRecorder, you must use [createAudioRecorder()](arkts-media-media-createaudiorecorder-f.md) to create an AudioRecorder instance. |
+| [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md) | Provides the audio recorder configuration definitions. |
+| [VideoPlayer](arkts-media-media-videoplayer-i.md) | VideoPlayer is a class for video playback management. It provides APIs to manage and play videos. Before calling any API in VideoPlayer, you must use [createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) to create a VideoPlayer instance. |
 
 <!--Del-->
 ### Interfaces(System API)
@@ -127,7 +127,6 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [AudioState](arkts-media-media-audiostate-t.md) | Describes the audio playback state. You can obtain the state through the **state** property. |
 | [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md) | Enumerates the states of the download task. |
 | [AVPlayerState](arkts-media-media-avplayerstate-t.md) | Describes the state of the [AVPlayer](arkts-media-multimedia-media.md). Your application can proactively obtain the AVPlayer state through the **state** property or obtain the reported AVPlayer state by subscribing to the [stateChange](arkts-media-media-avplayer-i.md#onstatechange) event. For details about the rules for state transition, see [Audio Playback](../../../media/media/using-avplayer-for-playback.md). |
 | [AVRecorderState](arkts-media-media-avrecorderstate-t.md) | Enumerates the AVRecorder states. You can obtain the state through the **state** property. |
@@ -150,6 +149,7 @@ import { media } from '@kit.MediaKit';
 | [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md) | This callback function is implemented by applications to release related resources. |
 | [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md) | This callback function is implemented by applications to handle resource open requests and return a unique handle for the opened resource. |
 | [SourceReadCallback](arkts-media-media-sourcereadcallback-t.md) | This callback function is implemented by applications to handle resource read requests. When data is available, applications should push it to the player using the [respondData](arkts-media-media-mediasourceloadingrequest-i.md#responddata) API of the corresponding MediaSourceLoadingRequest object. |
+| [AudioState](arkts-media-media-audiostate-t.md) | Describes the audio playback state. You can obtain the state through the **state** property. |
 | [VideoPlayState](arkts-media-media-videoplaystate-t.md) | Describes the video playback state. You can obtain the state through the **state** property. |
 
 <!--Del-->
@@ -165,8 +165,6 @@ import { media } from '@kit.MediaKit';
 | Name | Description |
 | --- | --- |
 | [AacProfile](arkts-media-media-aacprofile-e.md) | Enumerates the supported Advanced Audio Coding (AAC) formats. |
-| [AudioEncoder](arkts-media-media-audioencoder-e.md) | Enumerates the audio encoding formats. |
-| [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) | Enumerates the audio output formats. |
 | [AudioSourceType](arkts-media-media-audiosourcetype-e.md) | Enumerates the audio source types for video recording. |
 | [AVErrorCode](arkts-media-media-averrorcode-e.md) | Enumerates the types of [Media error codes](../../../reference/apis-media-kit/errorcode-media.md). |
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained. |
@@ -183,7 +181,6 @@ import { media } from '@kit.MediaKit';
 | [HdrType](arkts-media-media-hdrtype-e.md) | Enumerates the HDR types. |
 | [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md) | Enumerates the reasons for data loading status changes. |
 | [MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md) | Enumerates the media description keys. |
-| [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md) | Enumerates the media error codes. |
 | [MediaType](arkts-media-media-mediatype-e.md) | Enumerates the media types. |
 | [PickerMode](arkts-media-media-pickermode-e.md) | Enumerates the display mode for the screen capture picker. |
 | [PlaybackInfoKey](arkts-media-media-playbackinfokey-e.md) | Enumerates the playback description keys. |
@@ -196,6 +193,9 @@ import { media } from '@kit.MediaKit';
 | [SwitchMode](arkts-media-media-switchmode-e.md) | Enumerates the **selectTrack** modes for video playback. |
 | [VideoScaleType](arkts-media-media-videoscaletype-e.md) | Enumerates the video scale modes. |
 | [VideoSourceType](arkts-media-media-videosourcetype-e.md) | Enumerates the video source types for video recording. |
+| [AudioEncoder](arkts-media-media-audioencoder-e.md) | Enumerates the audio encoding formats. |
+| [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md) | Enumerates the audio output formats. |
+| [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md) | Enumerates the media error codes. |
 
 <!--Del-->
 ### Enums(System API)

@@ -12,18 +12,18 @@ Enumerates the certificate revocation flags.
 
 **System capability:** SystemCapability.Security.Cert
 
-## CERT_REVOCATION_PREFER_OCSP
+## CERT_REVOCATION_CHECK_ALL_CERT
 
 ```TypeScript
-CERT_REVOCATION_PREFER_OCSP = 0
+CERT_REVOCATION_CHECK_ALL_CERT = 3
 ```
 
-OCSP check is preferred. This flag is valid only when CERT_REVOCATION_CRL_CHECK and CERT_REVOCATION_OCSP_CHECK are both set.
+Checks the revocation status of all certificates.
 
-- If this flag is set, OCSP check is performed first, and CRL check is performed if no OCSP response is found or  
-a timeout occurs;  
-- If this flag is not set, CRL check is performed first, and OCSP check is performed if no CRL is found or a  
-timeout occurs.
+- If this flag is set, revocation check is performed on all certificates in the certificate chain  
+(skips self-signed certificates);  
+- If this flag is not set, only the end-entity certificate (the first certificate in the certificate chain) is  
+checked.
 
 **Since:** 26.0.0
 
@@ -31,7 +31,7 @@ timeout occurs.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
-<!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0--><!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0-End-->
+<!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3--><!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3-End-->
 
 **System capability:** SystemCapability.Security.Cert
 
@@ -81,18 +81,18 @@ Enables OCSP check. Checks the certificate status using the Online Certificate S
 
 **System capability:** SystemCapability.Security.Cert
 
-## CERT_REVOCATION_CHECK_ALL_CERT
+## CERT_REVOCATION_PREFER_OCSP
 
 ```TypeScript
-CERT_REVOCATION_CHECK_ALL_CERT = 3
+CERT_REVOCATION_PREFER_OCSP = 0
 ```
 
-Checks the revocation status of all certificates.
+OCSP check is preferred. This flag is valid only when CERT_REVOCATION_CRL_CHECK and CERT_REVOCATION_OCSP_CHECK are both set.
 
-- If this flag is set, revocation check is performed on all certificates in the certificate chain  
-(skips self-signed certificates);  
-- If this flag is not set, only the end-entity certificate (the first certificate in the certificate chain) is  
-checked.
+- If this flag is set, OCSP check is performed first, and CRL check is performed if no OCSP response is found or  
+a timeout occurs;  
+- If this flag is not set, CRL check is performed first, and OCSP check is performed if no CRL is found or a  
+timeout occurs.
 
 **Since:** 26.0.0
 
@@ -100,6 +100,6 @@ checked.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
 
-<!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3--><!--Device-CertRevocationFlag-CERT_REVOCATION_CHECK_ALL_CERT = 3-End-->
+<!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0--><!--Device-CertRevocationFlag-CERT_REVOCATION_PREFER_OCSP = 0-End-->
 
 **System capability:** SystemCapability.Security.Cert

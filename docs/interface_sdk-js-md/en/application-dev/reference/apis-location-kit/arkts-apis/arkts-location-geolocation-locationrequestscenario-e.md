@@ -18,54 +18,6 @@ Enum for location scenario
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## UNSET
-
-```TypeScript
-UNSET = 0x300
-```
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
-
-<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## NAVIGATION
-
-```TypeScript
-NAVIGATION
-```
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#navigation)
-
-<!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
-## TRAJECTORY_TRACKING
-
-```TypeScript
-TRAJECTORY_TRACKING
-```
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
-
-<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
 ## CAR_HAILING
 
 ```TypeScript
@@ -98,6 +50,22 @@ DAILY_LIFE_SERVICE
 
 **System capability:** SystemCapability.Location.Location.Core
 
+## NAVIGATION
+
+```TypeScript
+NAVIGATION
+```
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [NAVIGATION](arkts-location-geolocationmanager-locationrequestscenario-e.md#navigation)
+
+<!--Device-LocationRequestScenario-NAVIGATION--><!--Device-LocationRequestScenario-NAVIGATION-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
 ## NO_POWER
 
 ```TypeScript
@@ -111,5 +79,37 @@ NO_POWER
 **Substitutes:** [NO_POWER](arkts-location-geolocationmanager-locationrequestscenario-e.md#no_power)
 
 <!--Device-LocationRequestScenario-NO_POWER--><!--Device-LocationRequestScenario-NO_POWER-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## TRAJECTORY_TRACKING
+
+```TypeScript
+TRAJECTORY_TRACKING
+```
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [TRAJECTORY_TRACKING](arkts-location-geolocationmanager-locationrequestscenario-e.md#trajectory_tracking)
+
+<!--Device-LocationRequestScenario-TRAJECTORY_TRACKING--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## UNSET
+
+```TypeScript
+UNSET = 0x300
+```
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+**Substitutes:** [UNSET](arkts-location-geolocationmanager-locationrequestscenario-e.md#unset)
+
+<!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

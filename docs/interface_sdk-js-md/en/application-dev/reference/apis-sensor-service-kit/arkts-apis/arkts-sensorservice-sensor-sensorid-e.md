@@ -28,19 +28,17 @@ Accelerometer sensor, which is used to measure the acceleration of the device. <
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## GYROSCOPE
+## ACCELEROMETER_UNCALIBRATED
 
 ```TypeScript
-GYROSCOPE = 2
+ACCELEROMETER_UNCALIBRATED = 281
 ```
 
-Gyroscope sensor, which is used to measure the angular velocity of the device. <br>**Atomic service API**: This API can be used in atomic services since API version 11.
+Uncalibrated acceleration sensor, which is used to measure the uncalibrated acceleration of the device and its bias.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
+<!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -58,17 +56,17 @@ Ambient light sensor, which is used to measure the ambient light intensity.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## MAGNETIC_FIELD
+## AMBIENT_TEMPERATURE
 
 ```TypeScript
-MAGNETIC_FIELD = 6
+AMBIENT_TEMPERATURE = 260
 ```
 
-Magnetic field sensor, which is used to measure the ambient magnetic field strength around the device.
+Ambient temperature sensor, which is used to measure the ambient temperature.
 
 **Since:** 9
 
-<!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
+<!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -86,6 +84,64 @@ Barometric pressure sensor, which is used to measure atmospheric pressure.
 
 **System capability:** SystemCapability.Sensors.Sensor
 
+## FUSION_PRESSURE
+
+```TypeScript
+FUSION_PRESSURE = 283
+```
+
+Fused pressure sensor, which is used to measure the fusion pressure value. This sensor is available only on smart watches.
+
+**Since:** 22
+
+<!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## GRAVITY
+
+```TypeScript
+GRAVITY = 257
+```
+
+Gravity sensor, which is used to measure the gravity acceleration of the device.
+
+**Since:** 9
+
+<!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## GYROSCOPE
+
+```TypeScript
+GYROSCOPE = 2
+```
+
+Gyroscope sensor, which is used to measure the angular velocity of the device. <br>**Atomic service API**: This API can be used in atomic services since API version 11.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## GYROSCOPE_UNCALIBRATED
+
+```TypeScript
+GYROSCOPE_UNCALIBRATED = 263
+```
+
+Uncalibrated gyroscope sensor, which is used to measure the uncalibrated angular velocity of the device and its bias.
+
+**Since:** 9
+
+<!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
 ## HALL
 
 ```TypeScript
@@ -100,17 +156,17 @@ Hall effect sensor, which is used to detect whether there is a magnetic force ar
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## PROXIMITY
+## HEART_RATE
 
 ```TypeScript
-PROXIMITY = 12
+HEART_RATE = 278
 ```
 
-Proximity sensor, which is used to detect the proximity between an object and the device display.
+Heart rate sensor, which is used to measure the heart rate of a user.
 
 **Since:** 9
 
-<!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
+<!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -125,6 +181,48 @@ Humidity sensor, which is used to measure the relative humidity of the environme
 **Since:** 9
 
 <!--Device-SensorId-HUMIDITY = 13--><!--Device-SensorId-HUMIDITY = 13-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## LINEAR_ACCELEROMETER
+
+```TypeScript
+LINEAR_ACCELEROMETER = 258
+```
+
+Linear acceleration sensor, which is used to measure the linear acceleration of the device excluding the effect of gravity.
+
+**Since:** 9
+
+<!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## MAGNETIC_FIELD
+
+```TypeScript
+MAGNETIC_FIELD = 6
+```
+
+Magnetic field sensor, which is used to measure the ambient magnetic field strength around the device.
+
+**Since:** 9
+
+<!--Device-SensorId-MAGNETIC_FIELD = 6--><!--Device-SensorId-MAGNETIC_FIELD = 6-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## MAGNETIC_FIELD_UNCALIBRATED
+
+```TypeScript
+MAGNETIC_FIELD_UNCALIBRATED = 261
+```
+
+Uncalibrated magnetic field sensor, which is used to measure the uncalibrated ambient magnetic field strength and its bias.
+
+**Since:** 9
+
+<!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -144,101 +242,17 @@ Orientation sensor, which is used to measure the rotation angle of the device. <
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## GRAVITY
+## PEDOMETER
 
 ```TypeScript
-GRAVITY = 257
+PEDOMETER = 266
 ```
 
-Gravity sensor, which is used to measure the gravity acceleration of the device.
+Step counter sensor, which is used to count the number of steps a user has taken.
 
 **Since:** 9
 
-<!--Device-SensorId-GRAVITY = 257--><!--Device-SensorId-GRAVITY = 257-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## LINEAR_ACCELEROMETER
-
-```TypeScript
-LINEAR_ACCELEROMETER = 258
-```
-
-Linear acceleration sensor, which is used to measure the linear acceleration of the device excluding the effect of gravity.
-
-**Since:** 9
-
-<!--Device-SensorId-LINEAR_ACCELEROMETER = 258--><!--Device-SensorId-LINEAR_ACCELEROMETER = 258-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## ROTATION_VECTOR
-
-```TypeScript
-ROTATION_VECTOR = 259
-```
-
-Rotation vector sensor type, which is used to describe the rotation status of the device relative to a reference direction.
-
-**Since:** 9
-
-<!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## AMBIENT_TEMPERATURE
-
-```TypeScript
-AMBIENT_TEMPERATURE = 260
-```
-
-Ambient temperature sensor, which is used to measure the ambient temperature.
-
-**Since:** 9
-
-<!--Device-SensorId-AMBIENT_TEMPERATURE = 260--><!--Device-SensorId-AMBIENT_TEMPERATURE = 260-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## MAGNETIC_FIELD_UNCALIBRATED
-
-```TypeScript
-MAGNETIC_FIELD_UNCALIBRATED = 261
-```
-
-Uncalibrated magnetic field sensor, which is used to measure the uncalibrated ambient magnetic field strength and its bias.
-
-**Since:** 9
-
-<!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261--><!--Device-SensorId-MAGNETIC_FIELD_UNCALIBRATED = 261-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## GYROSCOPE_UNCALIBRATED
-
-```TypeScript
-GYROSCOPE_UNCALIBRATED = 263
-```
-
-Uncalibrated gyroscope sensor, which is used to measure the uncalibrated angular velocity of the device and its bias.
-
-**Since:** 9
-
-<!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263--><!--Device-SensorId-GYROSCOPE_UNCALIBRATED = 263-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## SIGNIFICANT_MOTION
-
-```TypeScript
-SIGNIFICANT_MOTION = 264
-```
-
-Significant motion sensor, which is used to detect whether the device is moving significantly.
-
-**Since:** 9
-
-<!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
+<!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -256,31 +270,45 @@ Pedometer detection sensor, which is used to detect the step counting action of 
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## PEDOMETER
+## PROXIMITY
 
 ```TypeScript
-PEDOMETER = 266
+PROXIMITY = 12
 ```
 
-Step counter sensor, which is used to count the number of steps a user has taken.
+Proximity sensor, which is used to detect the proximity between an object and the device display.
 
 **Since:** 9
 
-<!--Device-SensorId-PEDOMETER = 266--><!--Device-SensorId-PEDOMETER = 266-End-->
+<!--Device-SensorId-PROXIMITY = 12--><!--Device-SensorId-PROXIMITY = 12-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
-## HEART_RATE
+## ROTATION_VECTOR
 
 ```TypeScript
-HEART_RATE = 278
+ROTATION_VECTOR = 259
 ```
 
-Heart rate sensor, which is used to measure the heart rate of a user.
+Rotation vector sensor type, which is used to describe the rotation status of the device relative to a reference direction.
 
 **Since:** 9
 
-<!--Device-SensorId-HEART_RATE = 278--><!--Device-SensorId-HEART_RATE = 278-End-->
+<!--Device-SensorId-ROTATION_VECTOR = 259--><!--Device-SensorId-ROTATION_VECTOR = 259-End-->
+
+**System capability:** SystemCapability.Sensors.Sensor
+
+## SIGNIFICANT_MOTION
+
+```TypeScript
+SIGNIFICANT_MOTION = 264
+```
+
+Significant motion sensor, which is used to detect whether the device is moving significantly.
+
+**Since:** 9
+
+<!--Device-SensorId-SIGNIFICANT_MOTION = 264--><!--Device-SensorId-SIGNIFICANT_MOTION = 264-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor
 
@@ -295,33 +323,5 @@ Wear detection sensor, which is used to detect whether the device is being worn.
 **Since:** 9
 
 <!--Device-SensorId-WEAR_DETECTION = 280--><!--Device-SensorId-WEAR_DETECTION = 280-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## ACCELEROMETER_UNCALIBRATED
-
-```TypeScript
-ACCELEROMETER_UNCALIBRATED = 281
-```
-
-Uncalibrated acceleration sensor, which is used to measure the uncalibrated acceleration of the device and its bias.
-
-**Since:** 9
-
-<!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281--><!--Device-SensorId-ACCELEROMETER_UNCALIBRATED = 281-End-->
-
-**System capability:** SystemCapability.Sensors.Sensor
-
-## FUSION_PRESSURE
-
-```TypeScript
-FUSION_PRESSURE = 283
-```
-
-Fused pressure sensor, which is used to measure the fusion pressure value. This sensor is available only on smart watches.
-
-**Since:** 22
-
-<!--Device-SensorId-FUSION_PRESSURE = 283--><!--Device-SensorId-FUSION_PRESSURE = 283-End-->
 
 **System capability:** SystemCapability.Sensors.Sensor

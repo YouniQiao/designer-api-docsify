@@ -12,6 +12,22 @@ Enumerates event types.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
+## BEHAVIOR
+
+```TypeScript
+BEHAVIOR = 4
+```
+
+Behavior event.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiAppEvent
+
 ## FAULT
 
 ```TypeScript
@@ -25,22 +41,6 @@ Fault event.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiAppEvent
-
-## STATISTIC
-
-```TypeScript
-STATISTIC = 2
-```
-
-Statistic event.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
@@ -60,18 +60,18 @@ Security event.
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent
 
-## BEHAVIOR
+## STATISTIC
 
 ```TypeScript
-BEHAVIOR = 4
+STATISTIC = 2
 ```
 
-Behavior event.
+Statistic event.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
+<!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiAppEvent

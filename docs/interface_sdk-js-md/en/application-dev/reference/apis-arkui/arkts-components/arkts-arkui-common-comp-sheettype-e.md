@@ -48,6 +48,24 @@ Defines center sheet type.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## CONTENT_COVER
+
+```TypeScript
+CONTENT_COVER = 4
+```
+
+Defines content cover type.
+
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 20.
+
+<!--Device-SheetType-CONTENT_COVER = 4--><!--Device-SheetType-CONTENT_COVER = 4-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## POPUP
 
 ```TypeScript
@@ -81,23 +99,5 @@ Defines side sheet type.
 **Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-SheetType-SIDE = 3--><!--Device-SheetType-SIDE = 3-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## CONTENT_COVER
-
-```TypeScript
-CONTENT_COVER = 4
-```
-
-Defines content cover type.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 20.
-
-<!--Device-SheetType-CONTENT_COVER = 4--><!--Device-SheetType-CONTENT_COVER = 4-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -8,6 +8,14 @@ AccessibilityExtensionContext是AccessibilityExtensionAbility上下文环境，�
 
 辅助功能扩展上下文模块提供辅助功能扩展的相关能力，包括配置关注信息类型、查询节点信息、手势注入等。
 
+**继承/实现关系：** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
+
+**起始版本：** 9
+
+<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
+
+**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
+
 ## 使用说明
 
 使用AccessibilityExtensionContext功能前，通过AccessibilityExtensionAbility子类实例获取AccessibilityExtensionContext实例。
@@ -20,14 +28,6 @@ class EntryAbility extends AccessibilityExtensionAbility {
   } 
 }
 ```
-
-**继承/实现关系：** AccessibilityExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
-
-**起始版本：** 9
-
-<!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext--><!--Device-unnamed-declare class AccessibilityExtensionContext extends ExtensionContext-End-->
-
-**系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
 ## addAccessibilityVirtualNodes
 

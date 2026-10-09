@@ -26,9 +26,9 @@ import { font } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
+| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | 获取系统字体配置文件的UI字体配置信息。常用于需要分析或查看系统字体配置的场景，例如：字体管理工具、字体调试与诊断、字体配置信息展示等。 |
 | [getFontByName](arkts-arkui-font-getfontbyname-f.md) | 根据传入的系统字体名称获取系统字体的相关信息。 |
 | [getSystemFontList](arkts-arkui-font-getsystemfontlist-f.md) | 获取系统字体列表。 |
-| [getUIFontConfig](arkts-arkui-font-getuifontconfig-f.md) | 获取系统字体配置文件的UI字体配置信息。常用于需要分析或查看系统字体配置的场景，例如：字体管理工具、字体调试与诊断、字体配置信息展示等。 |
 | [registerFont](arkts-arkui-font-registerfont-f.md) | 在字体管理中注册自定义字体。 |
 
 ### 接口

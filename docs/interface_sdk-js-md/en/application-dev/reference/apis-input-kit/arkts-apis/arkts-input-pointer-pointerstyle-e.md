@@ -12,185 +12,31 @@ Mouse pointer style types.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-## DEFAULT
+## AECH_DEVELOPER_DEFINED_ICON
 
 ```TypeScript
-DEFAULT = 0
+AECH_DEVELOPER_DEFINED_ICON = 47
 ```
 
-Default
+Custom circular pointer
 
-**Since:** 9
+**Since:** 22
 
-<!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
+<!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-## EAST
+## COLOR_SUCKER
 
 ```TypeScript
-EAST = 1
+COLOR_SUCKER = 16
 ```
 
-East arrow
+Color picker
 
 **Since:** 9
 
-<!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## WEST
-
-```TypeScript
-WEST = 2
-```
-
-West arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SOUTH
-
-```TypeScript
-SOUTH = 3
-```
-
-South arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH
-
-```TypeScript
-NORTH = 4
-```
-
-North arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## WEST_EAST
-
-```TypeScript
-WEST_EAST = 5
-```
-
-West-east arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH_SOUTH
-
-```TypeScript
-NORTH_SOUTH = 6
-```
-
-North-south arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH_EAST
-
-```TypeScript
-NORTH_EAST = 7
-```
-
-North-east arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH_WEST
-
-```TypeScript
-NORTH_WEST = 8
-```
-
-North-west arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SOUTH_EAST
-
-```TypeScript
-SOUTH_EAST = 9
-```
-
-South-east arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SOUTH_WEST
-
-```TypeScript
-SOUTH_WEST = 10
-```
-
-South-west arrow
-
-**Since:** 9
-
-<!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH_EAST_SOUTH_WEST
-
-```TypeScript
-NORTH_EAST_SOUTH_WEST = 11
-```
-
-North-east and south-west adjustment
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## NORTH_WEST_SOUTH_EAST
-
-```TypeScript
-NORTH_WEST_SOUTH_EAST = 12
-```
-
-North-west and south-east adjustment
-
-**Since:** 9
-
-<!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
+<!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -208,6 +54,20 @@ Cross (accurate selection)
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
+## CURSOR_CIRCLE
+
+```TypeScript
+CURSOR_CIRCLE = 41
+```
+
+Circle
+
+**Since:** 10
+
+<!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
 ## CURSOR_COPY
 
 ```TypeScript
@@ -219,6 +79,20 @@ Copy
 **Since:** 9
 
 <!--Device-PointerStyle-CURSOR_COPY = 14--><!--Device-PointerStyle-CURSOR_COPY = 14-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## CURSOR_CROSS
+
+```TypeScript
+CURSOR_CROSS = 40
+```
+
+Cross
+
+**Since:** 10
+
+<!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -236,17 +110,45 @@ Forbid
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-## COLOR_SUCKER
+## DEFAULT
 
 ```TypeScript
-COLOR_SUCKER = 16
+DEFAULT = 0
 ```
 
-Color picker
+Default
 
 **Since:** 9
 
-<!--Device-PointerStyle-COLOR_SUCKER = 16--><!--Device-PointerStyle-COLOR_SUCKER = 16-End-->
+<!--Device-PointerStyle-DEFAULT = 0--><!--Device-PointerStyle-DEFAULT = 0-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## DEVELOPER_DEFINED_ICON
+
+```TypeScript
+DEVELOPER_DEFINED_ICON = -100
+```
+
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md).
+
+**Since:** 22
+
+<!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## EAST
+
+```TypeScript
+EAST = 1
+```
+
+East arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-EAST = 1--><!--Device-PointerStyle-EAST = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -306,258 +208,6 @@ Help
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-## MOVE
-
-```TypeScript
-MOVE = 21
-```
-
-Move
-
-**Since:** 9
-
-<!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## RESIZE_LEFT_RIGHT
-
-```TypeScript
-RESIZE_LEFT_RIGHT = 22
-```
-
-Left and right resizing
-
-**Since:** 9
-
-<!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## RESIZE_UP_DOWN
-
-```TypeScript
-RESIZE_UP_DOWN = 23
-```
-
-Up and down resizing
-
-**Since:** 9
-
-<!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SCREENSHOT_CHOOSE
-
-```TypeScript
-SCREENSHOT_CHOOSE = 24
-```
-
-Screenshot crosshair
-
-**Since:** 9
-
-<!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SCREENSHOT_CURSOR
-
-```TypeScript
-SCREENSHOT_CURSOR = 25
-```
-
-Screenshot
-
-**Since:** 9
-
-<!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## TEXT_CURSOR
-
-```TypeScript
-TEXT_CURSOR = 26
-```
-
-Text selection
-
-**Since:** 9
-
-<!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## ZOOM_IN
-
-```TypeScript
-ZOOM_IN = 27
-```
-
-Zoom in
-
-**Since:** 9
-
-<!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## ZOOM_OUT
-
-```TypeScript
-ZOOM_OUT = 28
-```
-
-Zoom out
-
-**Since:** 9
-
-<!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_EAST
-
-```TypeScript
-MIDDLE_BTN_EAST = 29
-```
-
-Scrolling east
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_WEST
-
-```TypeScript
-MIDDLE_BTN_WEST = 30
-```
-
-Scrolling west
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_SOUTH
-
-```TypeScript
-MIDDLE_BTN_SOUTH = 31
-```
-
-Scrolling south
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_NORTH
-
-```TypeScript
-MIDDLE_BTN_NORTH = 32
-```
-
-Scrolling north
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_NORTH_SOUTH
-
-```TypeScript
-MIDDLE_BTN_NORTH_SOUTH = 33
-```
-
-Scrolling north-south
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_NORTH_EAST
-
-```TypeScript
-MIDDLE_BTN_NORTH_EAST = 34
-```
-
-Scrolling north-east
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_NORTH_WEST
-
-```TypeScript
-MIDDLE_BTN_NORTH_WEST = 35
-```
-
-Scrolling north-west
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_SOUTH_EAST
-
-```TypeScript
-MIDDLE_BTN_SOUTH_EAST = 36
-```
-
-Scrolling south-east
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_SOUTH_WEST
-
-```TypeScript
-MIDDLE_BTN_SOUTH_WEST = 37
-```
-
-Scrolling south-west
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
-
-```TypeScript
-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
-```
-
-Moving as a cone in four directions
-
-**Since:** 9
-
-<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
 ## HORIZONTAL_TEXT_CURSOR
 
 ```TypeScript
@@ -569,136 +219,6 @@ Selecting text horizontally
 **Since:** 10
 
 <!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39--><!--Device-PointerStyle-HORIZONTAL_TEXT_CURSOR = 39-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## CURSOR_CROSS
-
-```TypeScript
-CURSOR_CROSS = 40
-```
-
-Cross
-
-**Since:** 10
-
-<!--Device-PointerStyle-CURSOR_CROSS = 40--><!--Device-PointerStyle-CURSOR_CROSS = 40-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## CURSOR_CIRCLE
-
-```TypeScript
-CURSOR_CIRCLE = 41
-```
-
-Circle
-
-**Since:** 10
-
-<!--Device-PointerStyle-CURSOR_CIRCLE = 41--><!--Device-PointerStyle-CURSOR_CIRCLE = 41-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## LOADING
-
-```TypeScript
-LOADING = 42
-```
-
-Animated cursor for loading
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PointerStyle-LOADING = 42--><!--Device-PointerStyle-LOADING = 42-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## RUNNING
-
-```TypeScript
-RUNNING = 43
-```
-
-Animated cursor for background loading
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## MIDDLE_BTN_EAST_WEST
-
-```TypeScript
-MIDDLE_BTN_EAST_WEST = 44
-```
-
-Scrolling east-west
-
-**Since:** 18
-
-<!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## RUNNING_LEFT
-
-```TypeScript
-RUNNING_LEFT = 45
-```
-
-Animated cursor for background running (extension 1)
-
-**Since:** 22
-
-<!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## RUNNING_RIGHT
-
-```TypeScript
-RUNNING_RIGHT = 46
-```
-
-Animated cursor for background running (extension 2)
-
-**Since:** 22
-
-<!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## AECH_DEVELOPER_DEFINED_ICON
-
-```TypeScript
-AECH_DEVELOPER_DEFINED_ICON = 47
-```
-
-Custom circular pointer
-
-**Since:** 22
-
-<!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47--><!--Device-PointerStyle-AECH_DEVELOPER_DEFINED_ICON = 47-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Pointer
-
-## SCREENRECORDER_CURSOR
-
-```TypeScript
-SCREENRECORDER_CURSOR = 48
-```
-
-Screen recording
-
-**Since:** 20
-
-<!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
@@ -744,16 +264,496 @@ Laser pointer cursor. This cursor is used when the stylus enters air mouse mode 
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer
 
-## DEVELOPER_DEFINED_ICON
+## LOADING
 
 ```TypeScript
-DEVELOPER_DEFINED_ICON = -100
+LOADING = 42
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md).
+Animated cursor for loading
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PointerStyle-LOADING = 42--><!--Device-PointerStyle-LOADING = 42-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_EAST
+
+```TypeScript
+MIDDLE_BTN_EAST = 29
+```
+
+Scrolling east
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_EAST = 29--><!--Device-PointerStyle-MIDDLE_BTN_EAST = 29-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_EAST_WEST
+
+```TypeScript
+MIDDLE_BTN_EAST_WEST = 44
+```
+
+Scrolling east-west
+
+**Since:** 18
+
+<!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44--><!--Device-PointerStyle-MIDDLE_BTN_EAST_WEST = 44-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_NORTH
+
+```TypeScript
+MIDDLE_BTN_NORTH = 32
+```
+
+Scrolling north
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32--><!--Device-PointerStyle-MIDDLE_BTN_NORTH = 32-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_NORTH_EAST
+
+```TypeScript
+MIDDLE_BTN_NORTH_EAST = 34
+```
+
+Scrolling north-east
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_EAST = 34-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_NORTH_SOUTH
+
+```TypeScript
+MIDDLE_BTN_NORTH_SOUTH = 33
+```
+
+Scrolling north-south
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH = 33-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_NORTH_SOUTH_WEST_EAST
+
+```TypeScript
+MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38
+```
+
+Moving as a cone in four directions
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_SOUTH_WEST_EAST = 38-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_NORTH_WEST
+
+```TypeScript
+MIDDLE_BTN_NORTH_WEST = 35
+```
+
+Scrolling north-west
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35--><!--Device-PointerStyle-MIDDLE_BTN_NORTH_WEST = 35-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_SOUTH
+
+```TypeScript
+MIDDLE_BTN_SOUTH = 31
+```
+
+Scrolling south
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH = 31-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_SOUTH_EAST
+
+```TypeScript
+MIDDLE_BTN_SOUTH_EAST = 36
+```
+
+Scrolling south-east
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_EAST = 36-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_SOUTH_WEST
+
+```TypeScript
+MIDDLE_BTN_SOUTH_WEST = 37
+```
+
+Scrolling south-west
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37--><!--Device-PointerStyle-MIDDLE_BTN_SOUTH_WEST = 37-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MIDDLE_BTN_WEST
+
+```TypeScript
+MIDDLE_BTN_WEST = 30
+```
+
+Scrolling west
+
+**Since:** 9
+
+<!--Device-PointerStyle-MIDDLE_BTN_WEST = 30--><!--Device-PointerStyle-MIDDLE_BTN_WEST = 30-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## MOVE
+
+```TypeScript
+MOVE = 21
+```
+
+Move
+
+**Since:** 9
+
+<!--Device-PointerStyle-MOVE = 21--><!--Device-PointerStyle-MOVE = 21-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH
+
+```TypeScript
+NORTH = 4
+```
+
+North arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH = 4--><!--Device-PointerStyle-NORTH = 4-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH_EAST
+
+```TypeScript
+NORTH_EAST = 7
+```
+
+North-east arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH_EAST = 7--><!--Device-PointerStyle-NORTH_EAST = 7-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH_EAST_SOUTH_WEST
+
+```TypeScript
+NORTH_EAST_SOUTH_WEST = 11
+```
+
+North-east and south-west adjustment
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11--><!--Device-PointerStyle-NORTH_EAST_SOUTH_WEST = 11-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH_SOUTH
+
+```TypeScript
+NORTH_SOUTH = 6
+```
+
+North-south arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH_SOUTH = 6--><!--Device-PointerStyle-NORTH_SOUTH = 6-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH_WEST
+
+```TypeScript
+NORTH_WEST = 8
+```
+
+North-west arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH_WEST = 8--><!--Device-PointerStyle-NORTH_WEST = 8-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## NORTH_WEST_SOUTH_EAST
+
+```TypeScript
+NORTH_WEST_SOUTH_EAST = 12
+```
+
+North-west and south-east adjustment
+
+**Since:** 9
+
+<!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12--><!--Device-PointerStyle-NORTH_WEST_SOUTH_EAST = 12-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## RESIZE_LEFT_RIGHT
+
+```TypeScript
+RESIZE_LEFT_RIGHT = 22
+```
+
+Left and right resizing
+
+**Since:** 9
+
+<!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22--><!--Device-PointerStyle-RESIZE_LEFT_RIGHT = 22-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## RESIZE_UP_DOWN
+
+```TypeScript
+RESIZE_UP_DOWN = 23
+```
+
+Up and down resizing
+
+**Since:** 9
+
+<!--Device-PointerStyle-RESIZE_UP_DOWN = 23--><!--Device-PointerStyle-RESIZE_UP_DOWN = 23-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## RUNNING
+
+```TypeScript
+RUNNING = 43
+```
+
+Animated cursor for background loading
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## RUNNING_LEFT
+
+```TypeScript
+RUNNING_LEFT = 45
+```
+
+Animated cursor for background running (extension 1)
 
 **Since:** 22
 
-<!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100--><!--Device-PointerStyle-DEVELOPER_DEFINED_ICON = -100-End-->
+<!--Device-PointerStyle-RUNNING_LEFT = 45--><!--Device-PointerStyle-RUNNING_LEFT = 45-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## RUNNING_RIGHT
+
+```TypeScript
+RUNNING_RIGHT = 46
+```
+
+Animated cursor for background running (extension 2)
+
+**Since:** 22
+
+<!--Device-PointerStyle-RUNNING_RIGHT = 46--><!--Device-PointerStyle-RUNNING_RIGHT = 46-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SCREENRECORDER_CURSOR
+
+```TypeScript
+SCREENRECORDER_CURSOR = 48
+```
+
+Screen recording
+
+**Since:** 20
+
+<!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48--><!--Device-PointerStyle-SCREENRECORDER_CURSOR = 48-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SCREENSHOT_CHOOSE
+
+```TypeScript
+SCREENSHOT_CHOOSE = 24
+```
+
+Screenshot crosshair
+
+**Since:** 9
+
+<!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24--><!--Device-PointerStyle-SCREENSHOT_CHOOSE = 24-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SCREENSHOT_CURSOR
+
+```TypeScript
+SCREENSHOT_CURSOR = 25
+```
+
+Screenshot
+
+**Since:** 9
+
+<!--Device-PointerStyle-SCREENSHOT_CURSOR = 25--><!--Device-PointerStyle-SCREENSHOT_CURSOR = 25-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SOUTH
+
+```TypeScript
+SOUTH = 3
+```
+
+South arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-SOUTH = 3--><!--Device-PointerStyle-SOUTH = 3-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SOUTH_EAST
+
+```TypeScript
+SOUTH_EAST = 9
+```
+
+South-east arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-SOUTH_EAST = 9--><!--Device-PointerStyle-SOUTH_EAST = 9-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## SOUTH_WEST
+
+```TypeScript
+SOUTH_WEST = 10
+```
+
+South-west arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-SOUTH_WEST = 10--><!--Device-PointerStyle-SOUTH_WEST = 10-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## TEXT_CURSOR
+
+```TypeScript
+TEXT_CURSOR = 26
+```
+
+Text selection
+
+**Since:** 9
+
+<!--Device-PointerStyle-TEXT_CURSOR = 26--><!--Device-PointerStyle-TEXT_CURSOR = 26-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## WEST
+
+```TypeScript
+WEST = 2
+```
+
+West arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-WEST = 2--><!--Device-PointerStyle-WEST = 2-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## WEST_EAST
+
+```TypeScript
+WEST_EAST = 5
+```
+
+West-east arrow
+
+**Since:** 9
+
+<!--Device-PointerStyle-WEST_EAST = 5--><!--Device-PointerStyle-WEST_EAST = 5-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## ZOOM_IN
+
+```TypeScript
+ZOOM_IN = 27
+```
+
+Zoom in
+
+**Since:** 9
+
+<!--Device-PointerStyle-ZOOM_IN = 27--><!--Device-PointerStyle-ZOOM_IN = 27-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Pointer
+
+## ZOOM_OUT
+
+```TypeScript
+ZOOM_OUT = 28
+```
+
+Zoom out
+
+**Since:** 9
+
+<!--Device-PointerStyle-ZOOM_OUT = 28--><!--Device-PointerStyle-ZOOM_OUT = 28-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Pointer

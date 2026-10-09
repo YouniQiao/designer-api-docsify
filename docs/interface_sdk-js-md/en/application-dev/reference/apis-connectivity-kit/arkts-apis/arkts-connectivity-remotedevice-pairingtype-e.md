@@ -28,22 +28,6 @@ Pairing type that does not require a passkey. Users do not need to check the pai
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## PAIRING_TYPE_PASSCODE
-
-```TypeScript
-PAIRING_TYPE_PASSCODE = 1
-```
-
-Pairing type with passcode authentication. Users need to enter the pairing code displayed on one device into the other device.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1--><!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
 ## PAIRING_TYPE_NUMBER_COMPARE
 
 ```TypeScript
@@ -57,5 +41,21 @@ Pairing type with authentication based on digit comparison. Users must ensure th
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2--><!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## PAIRING_TYPE_PASSCODE
+
+```TypeScript
+PAIRING_TYPE_PASSCODE = 1
+```
+
+Pairing type with passcode authentication. Users need to enter the pairing code displayed on one device into the other device.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1--><!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base

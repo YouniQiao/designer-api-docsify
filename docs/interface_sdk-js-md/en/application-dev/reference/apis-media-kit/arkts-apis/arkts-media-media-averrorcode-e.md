@@ -12,35 +12,19 @@ Enumerates the types of [Media error codes](../../../reference/apis-media-kit/er
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_OK
+## AVERR_AUDIO_INTERRUPTED
 
 ```TypeScript
-AVERR_OK = 0
+AVERR_AUDIO_INTERRUPTED = 5400107
 ```
 
-The operation is successful.
+The audio focus is interrupted.
 
-**Since:** 9
+**Since:** 11
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-AVErrorCode-AVERR_OK = 0--><!--Device-AVErrorCode-AVERR_OK = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_NO_PERMISSION
-
-```TypeScript
-AVERR_NO_PERMISSION = 201
-```
-
-No permission to perform the operation.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201--><!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201-End-->
+<!--Device-AVErrorCode-AVERR_AUDIO_INTERRUPTED = 5400107--><!--Device-AVErrorCode-AVERR_AUDIO_INTERRUPTED = 5400107-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -60,54 +44,6 @@ Invalid input parameter.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_UNSUPPORT_CAPABILITY
-
-```TypeScript
-AVERR_UNSUPPORT_CAPABILITY = 801
-```
-
-Unsupported API.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801--><!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_NO_MEMORY
-
-```TypeScript
-AVERR_NO_MEMORY = 5400101
-```
-
-The system memory is insufficient or the number of services reaches the upper limit.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_NO_MEMORY = 5400101--><!--Device-AVErrorCode-AVERR_NO_MEMORY = 5400101-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_OPERATE_NOT_PERMIT
-
-```TypeScript
-AVERR_OPERATE_NOT_PERMIT = 5400102
-```
-
-The operation is not allowed in the current state or you do not have the permission to perform the operation.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102--><!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
 ## AVERR_IO
 
 ```TypeScript
@@ -124,83 +60,19 @@ The data stream is abnormal.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_TIMEOUT
+## AVERR_IO_CLEARTEXT_NOT_PERMITTED
 
 ```TypeScript
-AVERR_TIMEOUT = 5400104
+AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012
 ```
 
-The system or network response times out.
+HTTP plaintext access is not allowed.
 
-**Since:** 9
+**Since:** 23
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
-<!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104--><!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_SERVICE_DIED
-
-```TypeScript
-AVERR_SERVICE_DIED = 5400105
-```
-
-The service process is dead.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_SERVICE_DIED = 5400105--><!--Device-AVErrorCode-AVERR_SERVICE_DIED = 5400105-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_UNSUPPORT_FORMAT
-
-```TypeScript
-AVERR_UNSUPPORT_FORMAT = 5400106
-```
-
-The format of the media asset is not supported.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106--><!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_AUDIO_INTERRUPTED
-
-```TypeScript
-AVERR_AUDIO_INTERRUPTED = 5400107
-```
-
-The audio focus is interrupted.
-
-**Since:** 11
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-AVErrorCode-AVERR_AUDIO_INTERRUPTED = 5400107--><!--Device-AVErrorCode-AVERR_AUDIO_INTERRUPTED = 5400107-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## AVERR_IO_HOST_NOT_FOUND
-
-```TypeScript
-AVERR_IO_HOST_NOT_FOUND = 5411001
-```
-
-Failed to parse the server address or connect to the server.
-
-**Since:** 14
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
-
-<!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001--><!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001-End-->
+<!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012--><!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -217,6 +89,22 @@ Network connection times out.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
 
 <!--Device-AVErrorCode-AVERR_IO_CONNECTION_TIMEOUT = 5411002--><!--Device-AVErrorCode-AVERR_IO_CONNECTION_TIMEOUT = 5411002-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_IO_HOST_NOT_FOUND
+
+```TypeScript
+AVERR_IO_HOST_NOT_FOUND = 5411001
+```
+
+Failed to parse the server address or connect to the server.
+
+**Since:** 14
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001--><!--Device-AVErrorCode-AVERR_IO_HOST_NOT_FOUND = 5411001-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -364,6 +252,86 @@ The request is not supported due to a network protocol error.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
+## AVERR_NO_MEMORY
+
+```TypeScript
+AVERR_NO_MEMORY = 5400101
+```
+
+The system memory is insufficient or the number of services reaches the upper limit.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_NO_MEMORY = 5400101--><!--Device-AVErrorCode-AVERR_NO_MEMORY = 5400101-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_NO_PERMISSION
+
+```TypeScript
+AVERR_NO_PERMISSION = 201
+```
+
+No permission to perform the operation.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201--><!--Device-AVErrorCode-AVERR_NO_PERMISSION = 201-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_OK
+
+```TypeScript
+AVERR_OK = 0
+```
+
+The operation is successful.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_OK = 0--><!--Device-AVErrorCode-AVERR_OK = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_OPERATE_NOT_PERMIT
+
+```TypeScript
+AVERR_OPERATE_NOT_PERMIT = 5400102
+```
+
+The operation is not allowed in the current state or you do not have the permission to perform the operation.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102--><!--Device-AVErrorCode-AVERR_OPERATE_NOT_PERMIT = 5400102-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_PARAMETER_OUT_OF_RANGE
+
+```TypeScript
+AVERR_PARAMETER_OUT_OF_RANGE = 5400108
+```
+
+The parameter value is out of range.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-AVErrorCode-AVERR_PARAMETER_OUT_OF_RANGE = 5400108--><!--Device-AVErrorCode-AVERR_PARAMETER_OUT_OF_RANGE = 5400108-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
 ## AVERR_SEEK_CONTINUOUS_UNSUPPORTED
 
 ```TypeScript
@@ -380,19 +348,19 @@ The seek operation in SEEK_CONTINUOUS mode is not supported.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_SUPER_RESOLUTION_UNSUPPORTED
+## AVERR_SERVICE_DIED
 
 ```TypeScript
-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003
+AVERR_SERVICE_DIED = 5400105
 ```
 
-Super resolution is not supported.
+The service process is dead.
 
-**Since:** 18
+**Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003--><!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003-End-->
+<!--Device-AVErrorCode-AVERR_SERVICE_DIED = 5400105--><!--Device-AVErrorCode-AVERR_SERVICE_DIED = 5400105-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -412,34 +380,66 @@ Super resolution is not enabled.
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_IO_CLEARTEXT_NOT_PERMITTED
+## AVERR_SUPER_RESOLUTION_UNSUPPORTED
 
 ```TypeScript
-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012
+AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003
 ```
 
-HTTP plaintext access is not allowed.
+Super resolution is not supported.
 
-**Since:** 23
+**Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
 
-<!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012--><!--Device-AVErrorCode-AVERR_IO_CLEARTEXT_NOT_PERMITTED = 5411012-End-->
+<!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003--><!--Device-AVErrorCode-AVERR_SUPER_RESOLUTION_UNSUPPORTED = 5410003-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## AVERR_PARAMETER_OUT_OF_RANGE
+## AVERR_TIMEOUT
 
 ```TypeScript
-AVERR_PARAMETER_OUT_OF_RANGE = 5400108
+AVERR_TIMEOUT = 5400104
 ```
 
-The parameter value is out of range.
+The system or network response times out.
 
-**Since:** 20
+**Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-AVErrorCode-AVERR_PARAMETER_OUT_OF_RANGE = 5400108--><!--Device-AVErrorCode-AVERR_PARAMETER_OUT_OF_RANGE = 5400108-End-->
+<!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104--><!--Device-AVErrorCode-AVERR_TIMEOUT = 5400104-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_UNSUPPORT_CAPABILITY
+
+```TypeScript
+AVERR_UNSUPPORT_CAPABILITY = 801
+```
+
+Unsupported API.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801--><!--Device-AVErrorCode-AVERR_UNSUPPORT_CAPABILITY = 801-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## AVERR_UNSUPPORT_FORMAT
+
+```TypeScript
+AVERR_UNSUPPORT_FORMAT = 5400106
+```
+
+The format of the media asset is not supported.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106--><!--Device-AVErrorCode-AVERR_UNSUPPORT_FORMAT = 5400106-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

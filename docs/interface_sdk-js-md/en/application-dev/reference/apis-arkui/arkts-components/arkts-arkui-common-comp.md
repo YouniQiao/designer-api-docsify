@@ -148,9 +148,6 @@ Constructor
 | [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | Provides animation configuration options. |
 | [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | Provides keyframe configuration options. |
 | [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | Provides layout information of a child component. The **Layoutable** object is created and passed in by the ArkUI framework when **onPlaceChildren** is called. It contains the measurement result and unique identifier of the child component. Developers set the position of the child component through the **layout** method of **Layoutable**, and obtain the margin information of the child component through the **getMargin**, **getPadding**, and **getBorderWidth** methods for precise layout calculation. |
-| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | Provides the border information of the child component. |
-| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | Provides the child component layout information. |
-| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | Provides the child component layout information. |
 | [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | Each component allows for one light source. |
 | [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
 | [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) | Linear Gradient Blur Interface |
@@ -218,7 +215,6 @@ Constructor
 | [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | Defines the parameters of the tooltip. |
 | [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). In non-event injection scenarios, **changedTouches** contains points resampled at the screen refresh rate, while **touches** contains points reported at the device's refresh rate. As such, **changedTouches** data may differ from **touches**. |
 | [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | Type of the touch event. |
-| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | Defines the transition effect by setting parameters in the struct. |
 | [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | Defines the options of translate. |
 | [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | Used to set the basic event callbacks of a component, covering events such as click, touch, show/hide, key, focus, floating, component area change, and visible area change. When the input parameter is undefined, the corresponding event callback is reset. This is suitable for scenarios where the basic event processing logic of a component is configured and cleared in a centralized manner. |
 | [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | Used to set the gestures bound to a component. It supports dynamically adding normal gestures or parallel gestures to a component, and removing or clearing bound gestures by gesture tag. This is suitable for scenarios where component gesture interactions are adjusted at runtime. |
@@ -226,6 +222,10 @@ Constructor
 | [VersionCondition](arkts-arkui-common-comp-versioncondition-i.md) | Defines VersionCondition interface |
 | [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | Defines the vertical align rule of relative container. |
 | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | Parameters related to the visible area change. |
+| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | Provides the border information of the child component. |
+| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | Provides the child component layout information. |
+| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | Provides the child component layout information. |
+| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | Defines the transition effect by setting parameters in the struct. |
 
 ### Types
 

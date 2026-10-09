@@ -12,35 +12,19 @@ Enumerates intention codes.
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
-## INTENTION_UNKNOWN
+## INTENTION_BACK
 
 ```TypeScript
-INTENTION_UNKNOWN = -1
+INTENTION_BACK = 7
 ```
 
-Unknown intent
+Back
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-IntentionCode-INTENTION_UNKNOWN = -1--><!--Device-IntentionCode-INTENTION_UNKNOWN = -1-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_UP
-
-```TypeScript
-INTENTION_UP = 1
-```
-
-Up
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
+<!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -60,6 +44,38 @@ Down
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
+## INTENTION_ESCAPE
+
+```TypeScript
+INTENTION_ESCAPE = 6
+```
+
+Escape
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_ESCAPE = 6--><!--Device-IntentionCode-INTENTION_ESCAPE = 6-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## INTENTION_FORWARD
+
+```TypeScript
+INTENTION_FORWARD = 8
+```
+
+Forward
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_FORWARD = 8--><!--Device-IntentionCode-INTENTION_FORWARD = 8-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
 ## INTENTION_LEFT
 
 ```TypeScript
@@ -73,6 +89,54 @@ Left
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-IntentionCode-INTENTION_LEFT = 3--><!--Device-IntentionCode-INTENTION_LEFT = 3-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## INTENTION_MENU
+
+```TypeScript
+INTENTION_MENU = 9
+```
+
+Menu
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## INTENTION_PAGE_DOWN
+
+```TypeScript
+INTENTION_PAGE_DOWN = 12
+```
+
+Page down
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## INTENTION_PAGE_UP
+
+```TypeScript
+INTENTION_PAGE_UP = 11
+```
+
+Page up
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_PAGE_UP = 11--><!--Device-IntentionCode-INTENTION_PAGE_UP = 11-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -108,115 +172,35 @@ Select
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
-## INTENTION_ESCAPE
+## INTENTION_UNKNOWN
 
 ```TypeScript
-INTENTION_ESCAPE = 6
+INTENTION_UNKNOWN = -1
 ```
 
-Escape
+Unknown intent
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-IntentionCode-INTENTION_ESCAPE = 6--><!--Device-IntentionCode-INTENTION_ESCAPE = 6-End-->
+<!--Device-IntentionCode-INTENTION_UNKNOWN = -1--><!--Device-IntentionCode-INTENTION_UNKNOWN = -1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
-## INTENTION_BACK
+## INTENTION_UP
 
 ```TypeScript
-INTENTION_BACK = 7
+INTENTION_UP = 1
 ```
 
-Back
+Up
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_FORWARD
-
-```TypeScript
-INTENTION_FORWARD = 8
-```
-
-Forward
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_FORWARD = 8--><!--Device-IntentionCode-INTENTION_FORWARD = 8-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_MENU
-
-```TypeScript
-INTENTION_MENU = 9
-```
-
-Menu
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_PAGE_UP
-
-```TypeScript
-INTENTION_PAGE_UP = 11
-```
-
-Page up
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_PAGE_UP = 11--><!--Device-IntentionCode-INTENTION_PAGE_UP = 11-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_PAGE_DOWN
-
-```TypeScript
-INTENTION_PAGE_DOWN = 12
-```
-
-Page down
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
-
-**System capability:** SystemCapability.MultimodalInput.Input.Core
-
-## INTENTION_ZOOM_OUT
-
-```TypeScript
-INTENTION_ZOOM_OUT = 13
-```
-
-Zoom out
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
+<!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core
 
@@ -233,5 +217,21 @@ Zoom in
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-IntentionCode-INTENTION_ZOOM_IN = 14--><!--Device-IntentionCode-INTENTION_ZOOM_IN = 14-End-->
+
+**System capability:** SystemCapability.MultimodalInput.Input.Core
+
+## INTENTION_ZOOM_OUT
+
+```TypeScript
+INTENTION_ZOOM_OUT = 13
+```
+
+Zoom out
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
 
 **System capability:** SystemCapability.MultimodalInput.Input.Core

@@ -12,22 +12,6 @@ Enumerates the tool types corresponding to the input sources.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Unknown
-
-```TypeScript
-Unknown
-```
-
-Unknown input source.
-
-**Since:** 9
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SourceTool-Unknown--><!--Device-SourceTool-Unknown-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## Finger
 
 ```TypeScript
@@ -44,19 +28,21 @@ Finger input.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Pen
+## JOYSTICK
 
 ```TypeScript
-Pen
+JOYSTICK
 ```
 
-Stylus input.
+Joystick input.
 
-**Since:** 9
+**Since:** 12
 
-**Atomic service API:** This API can be used in atomic services since API version 11.
+**Model restriction:** This API can be used only in the stage model.
 
-<!--Device-SourceTool-Pen--><!--Device-SourceTool-Pen-End-->
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-SourceTool-JOYSTICK--><!--Device-SourceTool-JOYSTICK-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -78,6 +64,22 @@ Mouse input.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## Pen
+
+```TypeScript
+Pen
+```
+
+Stylus input.
+
+**Since:** 9
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SourceTool-Pen--><!--Device-SourceTool-Pen-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## TOUCHPAD
 
 ```TypeScript
@@ -96,20 +98,18 @@ Touchpad input. A single-finger input on the touchpad is treated as a mouse inpu
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## JOYSTICK
+## Unknown
 
 ```TypeScript
-JOYSTICK
+Unknown
 ```
 
-Joystick input.
+Unknown input source.
 
-**Since:** 12
+**Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-SourceTool-JOYSTICK--><!--Device-SourceTool-JOYSTICK-End-->
+<!--Device-SourceTool-Unknown--><!--Device-SourceTool-Unknown-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

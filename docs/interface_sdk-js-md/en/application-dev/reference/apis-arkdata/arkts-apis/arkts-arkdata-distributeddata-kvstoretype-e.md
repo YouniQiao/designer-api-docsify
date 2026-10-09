@@ -36,6 +36,22 @@ The device KV store manages data by device, which eliminates conflicts. Data can
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
 
+## MULTI_VERSION
+
+```TypeScript
+MULTI_VERSION = 2
+```
+
+Multi-version KV store. This type is not supported currently.
+
+**Since:** 7
+
+**Deprecated since:** 9
+
+<!--Device-KVStoreType-MULTI_VERSION = 2--><!--Device-KVStoreType-MULTI_VERSION = 2-End-->
+
+**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
+
 ## SINGLE_VERSION
 
 ```TypeScript
@@ -55,19 +71,3 @@ The single KV store does not differentiate data by device. If the same key is mo
 <!--Device-KVStoreType-SINGLE_VERSION = 1--><!--Device-KVStoreType-SINGLE_VERSION = 1-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.Core
-
-## MULTI_VERSION
-
-```TypeScript
-MULTI_VERSION = 2
-```
-
-Multi-version KV store. This type is not supported currently.
-
-**Since:** 7
-
-**Deprecated since:** 9
-
-<!--Device-KVStoreType-MULTI_VERSION = 2--><!--Device-KVStoreType-MULTI_VERSION = 2-End-->
-
-**System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore

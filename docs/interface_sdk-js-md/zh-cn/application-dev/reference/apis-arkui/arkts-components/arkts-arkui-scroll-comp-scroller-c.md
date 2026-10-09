@@ -16,17 +16,17 @@ declare class Scroller
 
 > 4. 以[onAppear](arkts-arkui-common-comp-commonmethod-c.md#onappear)为例，组件挂载显示后触发此回调。因此在滚动组件的onAppear回调执行时，滚动组件已经创建并已经和Scroller绑定成功，是可以正常调用Scroller方法的。
 
-## 导入对象
-
-```ts
-scroller: Scroller = new Scroller();
-```
-
 **起始版本：** 7
 
 <!--Device-unnamed-declare class Scroller--><!--Device-unnamed-declare class Scroller-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+## 导入对象
+
+```ts
+scroller: Scroller = new Scroller();
+```
 
 ## constructor
 

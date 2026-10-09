@@ -12,6 +12,22 @@ Enumerates the results of obtaining thumbnails in batches.
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
+## FETCH_CANCELED
+
+```TypeScript
+FETCH_CANCELED = 2
+```
+
+The operation of obtaining the thumbnail from the video is canceled.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FetchResult-FETCH_CANCELED = 2--><!--Device-FetchResult-FETCH_CANCELED = 2-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
+
 ## FETCH_FAILED
 
 ```TypeScript
@@ -41,21 +57,5 @@ Succeeded in obtaining the thumbnail from the video.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-FetchResult-FETCH_SUCCEEDED = 1--><!--Device-FetchResult-FETCH_SUCCEEDED = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor
-
-## FETCH_CANCELED
-
-```TypeScript
-FETCH_CANCELED = 2
-```
-
-The operation of obtaining the thumbnail from the video is canceled.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-FetchResult-FETCH_CANCELED = 2--><!--Device-FetchResult-FETCH_CANCELED = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVMetadataExtractor

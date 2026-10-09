@@ -14,35 +14,19 @@ enum DialogType
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## NORMAL
+## ERROR
 
 ```TypeScript
-NORMAL = 0
+ERROR = 6
 ```
 
-普通对话框。
+错误对话框。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DialogType-NORMAL = 0--><!--Device-DialogType-NORMAL = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## INTERNET
-
-```TypeScript
-INTERNET = 1
-```
-
-联网对话框。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
+<!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -62,35 +46,19 @@ FLOW = 2
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## PAID
+## INTERNET
 
 ```TypeScript
-PAID = 3
+INTERNET = 1
 ```
 
-付费对话框。
+联网对话框。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
-
-## VIP
-
-```TypeScript
-VIP = 4
-```
-
-VIP对话框。
-
-**起始版本：** 23
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-DialogType-VIP = 4--><!--Device-DialogType-VIP = 4-End-->
+<!--Device-DialogType-INTERNET = 1--><!--Device-DialogType-INTERNET = 1-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -110,19 +78,35 @@ LOGIN = 5
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
-## ERROR
+## NORMAL
 
 ```TypeScript
-ERROR = 6
+NORMAL = 0
 ```
 
-错误对话框。
+普通对话框。
 
 **起始版本：** 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-DialogType-ERROR = 6--><!--Device-DialogType-ERROR = 6-End-->
+<!--Device-DialogType-NORMAL = 0--><!--Device-DialogType-NORMAL = 0-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## PAID
+
+```TypeScript
+PAID = 3
+```
+
+付费对话框。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-PAID = 3--><!--Device-DialogType-PAID = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
@@ -139,5 +123,21 @@ UNKNOWN = 7
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-DialogType-UNKNOWN = 7--><!--Device-DialogType-UNKNOWN = 7-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
+## VIP
+
+```TypeScript
+VIP = 4
+```
+
+VIP对话框。
+
+**起始版本：** 23
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DialogType-VIP = 4--><!--Device-DialogType-VIP = 4-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate

@@ -12,19 +12,19 @@ export enum ScreenDensity
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## SCREEN_SDPI
+## SCREEN_LDPI
 
 ```TypeScript
-SCREEN_SDPI = 120
+SCREEN_LDPI = 240
 ```
 
-低屏幕密度。
+高屏幕密度。
 
 **起始版本：** 6
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ScreenDensity-SCREEN_SDPI = 120--><!--Device-ScreenDensity-SCREEN_SDPI = 120-End-->
+<!--Device-ScreenDensity-SCREEN_LDPI = 240--><!--Device-ScreenDensity-SCREEN_LDPI = 240-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
@@ -44,19 +44,19 @@ SCREEN_MDPI = 160
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-## SCREEN_LDPI
+## SCREEN_SDPI
 
 ```TypeScript
-SCREEN_LDPI = 240
+SCREEN_SDPI = 120
 ```
 
-高屏幕密度。
+低屏幕密度。
 
 **起始版本：** 6
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-ScreenDensity-SCREEN_LDPI = 240--><!--Device-ScreenDensity-SCREEN_LDPI = 240-End-->
+<!--Device-ScreenDensity-SCREEN_SDPI = 120--><!--Device-ScreenDensity-SCREEN_SDPI = 120-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
 

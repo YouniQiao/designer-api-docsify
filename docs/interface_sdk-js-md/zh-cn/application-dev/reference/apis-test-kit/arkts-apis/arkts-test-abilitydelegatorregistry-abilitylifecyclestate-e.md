@@ -12,19 +12,19 @@ Ability生命周期状态，该类型为枚举，可配合[AbilityDelegator](../
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## UNINITIALIZED
+## BACKGROUND
 
 ```TypeScript
-UNINITIALIZED = 0
+BACKGROUND = 3
 ```
 
-表示Ability处于无效状态。
+表示Ability处于后台状态。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
+<!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -44,6 +44,22 @@ CREATE = 1
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
+## DESTROY
+
+```TypeScript
+DESTROY = 4
+```
+
+表示Ability处于已销毁状态。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
 ## FOREGROUND
 
 ```TypeScript
@@ -60,34 +76,18 @@ FOREGROUND = 2
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## BACKGROUND
+## UNINITIALIZED
 
 ```TypeScript
-BACKGROUND = 3
+UNINITIALIZED = 0
 ```
 
-表示Ability处于后台状态。
+表示Ability处于无效状态。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-AbilityLifecycleState-BACKGROUND = 3--><!--Device-AbilityLifecycleState-BACKGROUND = 3-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## DESTROY
-
-```TypeScript
-DESTROY = 4
-```
-
-表示Ability处于已销毁状态。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-AbilityLifecycleState-DESTROY = 4--><!--Device-AbilityLifecycleState-DESTROY = 4-End-->
+<!--Device-AbilityLifecycleState-UNINITIALIZED = 0--><!--Device-AbilityLifecycleState-UNINITIALIZED = 0-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

@@ -78,8 +78,8 @@ import { securityManager } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getDeviceEncryptionStatus](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md) | Queries the encryption status of the device file system. |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f-sys.md#getpasswordpolicy3) | Obtains the device screen lock password policy. |
+| [getDeviceEncryptionStatus](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md) | Queries the encryption status of the device file system. |
 | [getSecurityPatchTag](arkts-mdm-securitymanager-getsecuritypatchtag-f-sys.md) | Queries the security patch tag of a device. |
 <!--DelEnd-->
 

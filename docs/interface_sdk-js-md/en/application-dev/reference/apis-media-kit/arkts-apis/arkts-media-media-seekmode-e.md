@@ -12,38 +12,6 @@ Enumerates the video playback seek modes, which can be passed in the **seek** AP
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## SEEK_NEXT_SYNC
-
-```TypeScript
-SEEK_NEXT_SYNC = 0
-```
-
-Seeks to the next key frame at the specified position. You are advised to use this value for the rewind operation.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
-## SEEK_PREV_SYNC
-
-```TypeScript
-SEEK_PREV_SYNC = 1
-```
-
-Seeks to the previous key frame at the specified position. You are advised to use this value for the fast-forward operation.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.Core
-
 ## SEEK_CLOSEST
 
 ```TypeScript
@@ -81,5 +49,37 @@ To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTI
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
 
 <!--Device-SeekMode-SEEK_CONTINUOUS = 3--><!--Device-SeekMode-SEEK_CONTINUOUS = 3-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## SEEK_NEXT_SYNC
+
+```TypeScript
+SEEK_NEXT_SYNC = 0
+```
+
+Seeks to the next key frame at the specified position. You are advised to use this value for the rewind operation.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.Core
+
+## SEEK_PREV_SYNC
+
+```TypeScript
+SEEK_PREV_SYNC = 1
+```
+
+Seeks to the previous key frame at the specified position. You are advised to use this value for the fast-forward operation.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

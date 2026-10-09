@@ -12,22 +12,6 @@ export enum ChargingType
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 
-## CHARGING_PLUGGED_ANY
-
-```TypeScript
-CHARGING_PLUGGED_ANY = 0
-```
-
-表示这个触发条件是任何类型的充电器连接。
-
-**起始版本：** 9
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-<!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0--><!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0-End-->
-
-**系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
-
 ## CHARGING_PLUGGED_AC
 
 ```TypeScript
@@ -41,6 +25,22 @@ CHARGING_PLUGGED_AC = 1
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-ChargingType-CHARGING_PLUGGED_AC = 1--><!--Device-ChargingType-CHARGING_PLUGGED_AC = 1-End-->
+
+**系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
+
+## CHARGING_PLUGGED_ANY
+
+```TypeScript
+CHARGING_PLUGGED_ANY = 0
+```
+
+表示这个触发条件是任何类型的充电器连接。
+
+**起始版本：** 9
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0--><!--Device-ChargingType-CHARGING_PLUGGED_ANY = 0-End-->
 
 **系统能力：** SystemCapability.ResourceSchedule.WorkScheduler
 

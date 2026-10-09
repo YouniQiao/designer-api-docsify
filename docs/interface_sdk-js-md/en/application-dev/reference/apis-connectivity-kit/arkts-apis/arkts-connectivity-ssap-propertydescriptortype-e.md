@@ -12,22 +12,6 @@ Enumerates the property descriptor types.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## PROPERTY
-
-```TypeScript
-PROPERTY = 1
-```
-
-Property.
-
-**Since:** 26.0.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
-
-**System capability:** SystemCapability.Communication.NearLink.Base
-
 ## CLIENT_PROPERTY_CONFIG
 
 ```TypeScript
@@ -44,19 +28,19 @@ Property configuration on the client.
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-## SERVER_PROPERTY_CONFIG
+## PROPERTY
 
 ```TypeScript
-SERVER_PROPERTY_CONFIG = 3
+PROPERTY = 1
 ```
 
-Property configuration on the server.
+Property.
 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
+<!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
@@ -73,6 +57,22 @@ Property format.
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
+
+**System capability:** SystemCapability.Communication.NearLink.Base
+
+## SERVER_PROPERTY_CONFIG
+
+```TypeScript
+SERVER_PROPERTY_CONFIG = 3
+```
+
+Property configuration on the server.
+
+**Since:** 26.0.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 

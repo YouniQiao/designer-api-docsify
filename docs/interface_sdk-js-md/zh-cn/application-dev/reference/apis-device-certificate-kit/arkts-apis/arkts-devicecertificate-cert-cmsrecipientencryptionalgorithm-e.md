@@ -28,38 +28,6 @@ AES_128_CBC算法。
 
 **系统能力：** SystemCapability.Security.Cert
 
-## AES_192_CBC
-
-```TypeScript
-AES_192_CBC = 1
-```
-
-AES_192_CBC算法。
-
-**起始版本：** 22
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
-
-**系统能力：** SystemCapability.Security.Cert
-
-## AES_256_CBC
-
-```TypeScript
-AES_256_CBC = 2
-```
-
-AES_256_CBC算法。
-
-**起始版本：** 22
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
-
-**系统能力：** SystemCapability.Security.Cert
-
 ## AES_128_GCM
 
 ```TypeScript
@@ -76,6 +44,22 @@ AES_128_GCM算法。
 
 **系统能力：** SystemCapability.Security.Cert
 
+## AES_192_CBC
+
+```TypeScript
+AES_192_CBC = 1
+```
+
+AES_192_CBC算法。
+
+**起始版本：** 22
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
+
+**系统能力：** SystemCapability.Security.Cert
+
 ## AES_192_GCM
 
 ```TypeScript
@@ -89,6 +73,22 @@ AES_192_GCM算法。
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
+
+**系统能力：** SystemCapability.Security.Cert
+
+## AES_256_CBC
+
+```TypeScript
+AES_256_CBC = 2
+```
+
+AES_256_CBC算法。
+
+**起始版本：** 22
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
 **系统能力：** SystemCapability.Security.Cert
 

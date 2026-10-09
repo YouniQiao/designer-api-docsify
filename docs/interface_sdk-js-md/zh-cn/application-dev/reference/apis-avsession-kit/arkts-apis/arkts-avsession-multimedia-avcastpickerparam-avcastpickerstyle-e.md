@@ -14,22 +14,6 @@ export declare enum AVCastPickerStyle
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast
 
-## STYLE_PANEL
-
-```TypeScript
-STYLE_PANEL = 0
-```
-
-The picker shows in a panel style.
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-AVCastPickerStyle-STYLE_PANEL = 0--><!--Device-AVCastPickerStyle-STYLE_PANEL = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
-
 ## STYLE_MENU
 
 ```TypeScript
@@ -43,5 +27,21 @@ The picker shows in a menu style.
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVCastPickerStyle-STYLE_MENU = 1--><!--Device-AVCastPickerStyle-STYLE_MENU = 1-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+## STYLE_PANEL
+
+```TypeScript
+STYLE_PANEL = 0
+```
+
+The picker shows in a panel style.
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVCastPickerStyle-STYLE_PANEL = 0--><!--Device-AVCastPickerStyle-STYLE_PANEL = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVCast

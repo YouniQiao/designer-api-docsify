@@ -44,19 +44,19 @@ Cloudy.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## INCANDESCENT
+## DAYLIGHT
 
 ```TypeScript
-INCANDESCENT =2
+DAYLIGHT = 4
 ```
 
-Incandescent light.
+Daylight.
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
+<!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -76,35 +76,19 @@ Fluorescence light.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## DAYLIGHT
+## INCANDESCENT
 
 ```TypeScript
-DAYLIGHT = 4
+INCANDESCENT =2
 ```
 
-Daylight.
+Incandescent light.
 
 **Since:** 20
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
-<!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## MANUAL
-
-```TypeScript
-MANUAL = 5
-```
-
-Manual.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
+<!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -121,5 +105,21 @@ Locked.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
 <!--Device-WhiteBalanceMode-LOCKED = 6--><!--Device-WhiteBalanceMode-LOCKED = 6-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## MANUAL
+
+```TypeScript
+MANUAL = 5
+```
+
+Manual.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

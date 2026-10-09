@@ -12,13 +12,13 @@ The enum of bond state.
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-## BOND_STATE_INVALID
+## BOND_STATE_BONDED
 
 ```TypeScript
-BOND_STATE_INVALID = 0
+BOND_STATE_BONDED = 2
 ```
 
-Indicate the bond state is invalid
+Indicate the bond state is bonded
 
 **Since:** 10
 
@@ -26,7 +26,7 @@ Indicate the bond state is invalid
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
+<!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
@@ -48,13 +48,13 @@ Indicate the bond state is bonding
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
 
-## BOND_STATE_BONDED
+## BOND_STATE_INVALID
 
 ```TypeScript
-BOND_STATE_BONDED = 2
+BOND_STATE_INVALID = 0
 ```
 
-Indicate the bond state is bonded
+Indicate the bond state is invalid
 
 **Since:** 10
 
@@ -62,6 +62,6 @@ Indicate the bond state is bonded
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-BondState-BOND_STATE_BONDED = 2--><!--Device-BondState-BOND_STATE_BONDED = 2-End-->
+<!--Device-BondState-BOND_STATE_INVALID = 0--><!--Device-BondState-BOND_STATE_INVALID = 0-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core

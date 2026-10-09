@@ -14,10 +14,6 @@ export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyD
 
 Defines LazyDynamicLayout Component.
 
-### Child Components
-
-Child components are supported.
-
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -27,6 +23,10 @@ Child components are supported.
 <!--Device-unnamed-export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyDynamicLayoutAttribute--><!--Device-unnamed-export declare function LazyDynamicLayout(algorithm: LazyLayoutAlgorithm): LazyDynamicLayoutAttribute-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+### Child Components
+
+Child components are supported.
 
 **Parameters:**
 

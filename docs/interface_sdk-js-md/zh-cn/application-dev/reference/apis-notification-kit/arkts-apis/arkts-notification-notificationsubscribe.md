@@ -35,14 +35,14 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 | [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall3) | 删除指定用户下的所有通知。使用callback异步回调。 |
 | [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall4) | 删除指定用户下的所有通知。使用Promise异步回调。 |
 | [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall5) | 删除指定应用的所有通知。使用Promise异步回调。 |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe1) | 订阅当前用户下所有应用的通知。使用callback异步回调。 |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe2) | 订阅通知并指定订阅信息。使用callback异步回调。 |
-| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe3) | 订阅通知并指定订阅信息。使用Promise异步回调。 |
 | [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification1) | 订阅通知；订阅后，通过订阅者中的回调函数接收新消息。使用Promise异步回调。 |
 | [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification2) | 订阅通知；订阅后，通过订阅者中的回调函数接收新消息。使用Promise异步回调。 |
 | [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md) | 订阅本应用的通知并指定订阅信息。使用Promise异步回调。 |
 | [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe1) | 取消订阅。使用callback异步回调。 |
 | [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe2) | 取消订阅。使用Promise异步回调。 |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe1) | 订阅当前用户下所有应用的通知。使用callback异步回调。 |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe2) | 订阅通知并指定订阅信息。使用callback异步回调。 |
+| [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe3) | 订阅通知并指定订阅信息。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

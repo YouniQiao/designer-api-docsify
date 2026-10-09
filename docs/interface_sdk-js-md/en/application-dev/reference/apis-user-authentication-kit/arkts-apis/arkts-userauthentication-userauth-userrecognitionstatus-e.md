@@ -12,13 +12,13 @@ Enumerates the user recognition status.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## UNCERTAIN
+## MATCH
 
 ```TypeScript
-UNCERTAIN = 0
+MATCH = 2
 ```
 
-Uncertain recognition status. It indicates that recognition is in progress or has not reached a conclusion.
+The recognized user matches the active OS user.
 
 **Since:** 26.0.1
 
@@ -26,7 +26,7 @@ Uncertain recognition status. It indicates that recognition is in progress or ha
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
 
-<!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
+<!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -48,13 +48,13 @@ The recognized user does not match the active OS user.
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## MATCH
+## UNCERTAIN
 
 ```TypeScript
-MATCH = 2
+UNCERTAIN = 0
 ```
 
-The recognized user matches the active OS user.
+Uncertain recognition status. It indicates that recognition is in progress or has not reached a conclusion.
 
 **Since:** 26.0.1
 
@@ -62,6 +62,6 @@ The recognized user matches the active OS user.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
 
-<!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
+<!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core

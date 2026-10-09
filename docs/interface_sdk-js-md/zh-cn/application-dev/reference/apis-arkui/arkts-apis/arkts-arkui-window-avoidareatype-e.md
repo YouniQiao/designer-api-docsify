@@ -18,22 +18,6 @@ enum AvoidAreaType
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_SYSTEM
-
-```TypeScript
-TYPE_SYSTEM = 0
-```
-
-表示系统默认区域。<!--RP11-->包含状态栏和三键导航栏区域。<!--RP11End-->
-
-**起始版本：** 7
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
 ## TYPE_CUTOUT
 
 ```TypeScript
@@ -50,21 +34,23 @@ TYPE_CUTOUT = 1
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_SYSTEM_GESTURE
+## TYPE_FLOAT_NAVIGATION
 
 ```TypeScript
-TYPE_SYSTEM_GESTURE = 2
+TYPE_FLOAT_NAVIGATION = 5
 ```
 
-表示侧边返回手势区域。当前所有设备均无此类型避让区域。
+表示三键导航区域。<!--RP12-->OpenHarmony各设备不支持此能力。<!--RP12End-->
 
-**起始版本：** 9
+**起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
 
 ## TYPE_KEYBOARD
 
@@ -98,20 +84,34 @@ TYPE_NAVIGATION_INDICATOR = 4
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## TYPE_FLOAT_NAVIGATION
+## TYPE_SYSTEM
 
 ```TypeScript
-TYPE_FLOAT_NAVIGATION = 5
+TYPE_SYSTEM = 0
 ```
 
-表示三键导航区域。<!--RP12-->OpenHarmony各设备不支持此能力。<!--RP12End-->
+表示系统默认区域。<!--RP11-->包含状态栏和三键导航栏区域。<!--RP11End-->
 
-**起始版本：** 26.0.0
+**起始版本：** 7
 
-**模型约束：** 此接口仅可在Stage模型下使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+<!--Device-AvoidAreaType-TYPE_SYSTEM = 0--><!--Device-AvoidAreaType-TYPE_SYSTEM = 0-End-->
 
-<!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5--><!--Device-AvoidAreaType-TYPE_FLOAT_NAVIGATION = 5-End-->
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-**系统能力：** SystemCapability.Window.SessionManager
+## TYPE_SYSTEM_GESTURE
+
+```TypeScript
+TYPE_SYSTEM_GESTURE = 2
+```
+
+表示侧边返回手势区域。当前所有设备均无此类型避让区域。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2--><!--Device-AvoidAreaType-TYPE_SYSTEM_GESTURE = 2-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core

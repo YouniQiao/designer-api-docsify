@@ -14,66 +14,6 @@ enum PictureLightDegree
 
 **系统接口：** 此接口为系统接口。
 
-## UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE
-
-```TypeScript
-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
-```
-
-未知明亮度的图片。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**系统接口：** 此接口为系统接口。
-
-## EXTREMELY_LIGHT_COLOR_PICTURE
-
-```TypeScript
-EXTREMELY_LIGHT_COLOR_PICTURE = 1
-```
-
-极亮色图片。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**系统接口：** 此接口为系统接口。
-
-## LIGHT_COLOR_PICTURE
-
-```TypeScript
-LIGHT_COLOR_PICTURE = 2
-```
-
-亮色图片。
-
-**起始版本：** 26.0.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
-
-<!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
-
-**系统能力：** SystemCapability.Multimedia.Image.Core
-
-**系统接口：** 此接口为系统接口。
-
 ## DARK_COLOR_PICTURE
 
 ```TypeScript
@@ -114,6 +54,46 @@ EXTREMELY_DARK_COLOR_PICTURE = 4
 
 **系统接口：** 此接口为系统接口。
 
+## EXTREMELY_FLOWERY_PICTURE
+
+```TypeScript
+EXTREMELY_FLOWERY_PICTURE = 6
+```
+
+极花色图片。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
+## EXTREMELY_LIGHT_COLOR_PICTURE
+
+```TypeScript
+EXTREMELY_LIGHT_COLOR_PICTURE = 1
+```
+
+极亮色图片。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
 ## FLOWERY_PICTURE
 
 ```TypeScript
@@ -134,13 +114,13 @@ FLOWERY_PICTURE = 5
 
 **系统接口：** 此接口为系统接口。
 
-## EXTREMELY_FLOWERY_PICTURE
+## LIGHT_COLOR_PICTURE
 
 ```TypeScript
-EXTREMELY_FLOWERY_PICTURE = 6
+LIGHT_COLOR_PICTURE = 2
 ```
 
-极花色图片。
+亮色图片。
 
 **起始版本：** 26.0.0
 
@@ -148,7 +128,27 @@ EXTREMELY_FLOWERY_PICTURE = 6
 
 **卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
+<!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
+**系统接口：** 此接口为系统接口。
+
+## UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE
+
+```TypeScript
+UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
+```
+
+未知明亮度的图片。
+
+**起始版本：** 26.0.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+
+<!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 

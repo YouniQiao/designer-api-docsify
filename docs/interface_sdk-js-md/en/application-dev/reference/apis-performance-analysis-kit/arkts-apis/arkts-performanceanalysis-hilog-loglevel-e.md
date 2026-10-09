@@ -28,6 +28,38 @@ Log level used to record more detailed process information than INFO logs to hel
 
 **System capability:** SystemCapability.HiviewDFX.HiLog
 
+## ERROR
+
+```TypeScript
+ERROR = 6
+```
+
+Log level used to record program or functional errors that affect the normal running or use of the functionality and can be fixed at a high cost, for example, by resetting data.
+
+**Since:** 7
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LogLevel-ERROR = 6--><!--Device-LogLevel-ERROR = 6-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiLog
+
+## FATAL
+
+```TypeScript
+FATAL = 7
+```
+
+Log level used to record program or functionality crashes that cannot be rectified.
+
+**Since:** 7
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LogLevel-FATAL = 7--><!--Device-LogLevel-FATAL = 7-End-->
+
+**System capability:** SystemCapability.HiviewDFX.HiLog
+
 ## INFO
 
 ```TypeScript
@@ -61,37 +93,5 @@ Log level used to record severe, unexpected faults that have little impact on us
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-LogLevel-WARN = 5--><!--Device-LogLevel-WARN = 5-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiLog
-
-## ERROR
-
-```TypeScript
-ERROR = 6
-```
-
-Log level used to record program or functional errors that affect the normal running or use of the functionality and can be fixed at a high cost, for example, by resetting data.
-
-**Since:** 7
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LogLevel-ERROR = 6--><!--Device-LogLevel-ERROR = 6-End-->
-
-**System capability:** SystemCapability.HiviewDFX.HiLog
-
-## FATAL
-
-```TypeScript
-FATAL = 7
-```
-
-Log level used to record program or functionality crashes that cannot be rectified.
-
-**Since:** 7
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LogLevel-FATAL = 7--><!--Device-LogLevel-FATAL = 7-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiLog

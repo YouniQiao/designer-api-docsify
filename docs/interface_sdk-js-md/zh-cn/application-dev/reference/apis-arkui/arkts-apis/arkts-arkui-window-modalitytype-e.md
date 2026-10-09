@@ -12,22 +12,6 @@ enum ModalityType
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## WINDOW_MODALITY
-
-```TypeScript
-WINDOW_MODALITY = 0
-```
-
-当仅需要其父级窗口不响应用户操作时，可选此参数。
-
-**起始版本：** 14
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
-
-<!--Device-ModalityType-WINDOW_MODALITY = 0--><!--Device-ModalityType-WINDOW_MODALITY = 0-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 ## APPLICATION_MODALITY
 
 ```TypeScript
@@ -43,5 +27,21 @@ APPLICATION_MODALITY = 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-ModalityType-APPLICATION_MODALITY = 1--><!--Device-ModalityType-APPLICATION_MODALITY = 1-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## WINDOW_MODALITY
+
+```TypeScript
+WINDOW_MODALITY = 0
+```
+
+当仅需要其父级窗口不响应用户操作时，可选此参数。
+
+**起始版本：** 14
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-ModalityType-WINDOW_MODALITY = 0--><!--Device-ModalityType-WINDOW_MODALITY = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

@@ -12,19 +12,19 @@ enum WindowStatusType
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## UNDEFINED
+## FLOATING
 
 ```TypeScript
-UNDEFINED = 0
+FLOATING = 4
 ```
 
-表示APP未定义窗口模式。
+表示APP自由悬浮形式窗口模式。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
+<!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager
 
@@ -84,22 +84,6 @@ MINIMIZE = 3
 
 **系统能力：** SystemCapability.Window.SessionManager
 
-## FLOATING
-
-```TypeScript
-FLOATING = 4
-```
-
-表示APP自由悬浮形式窗口模式。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
-
-**系统能力：** SystemCapability.Window.SessionManager
-
 ## SPLIT_SCREEN
 
 ```TypeScript
@@ -113,5 +97,21 @@ SPLIT_SCREEN = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-SPLIT_SCREEN = 5--><!--Device-WindowStatusType-SPLIT_SCREEN = 5-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+## UNDEFINED
+
+```TypeScript
+UNDEFINED = 0
+```
+
+表示APP未定义窗口模式。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
 
 **系统能力：** SystemCapability.Window.SessionManager

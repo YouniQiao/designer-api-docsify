@@ -12,6 +12,22 @@ Enumerates the text break strategies.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
+## BALANCED
+
+```TypeScript
+BALANCED = 2
+```
+
+Ensures consistent line width in a paragraph, adding hyphens if needed.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-BreakStrategy-BALANCED = 2--><!--Device-BreakStrategy-BALANCED = 2-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
 ## GREEDY
 
 ```TypeScript
@@ -41,21 +57,5 @@ Optimizes layout and may add hyphens when necessary.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-BreakStrategy-HIGH_QUALITY = 1--><!--Device-BreakStrategy-HIGH_QUALITY = 1-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## BALANCED
-
-```TypeScript
-BALANCED = 2
-```
-
-Ensures consistent line width in a paragraph, adding hyphens if needed.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-BreakStrategy-BALANCED = 2--><!--Device-BreakStrategy-BALANCED = 2-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

@@ -12,22 +12,6 @@ Enum for location priority.
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## UNSET
-
-```TypeScript
-UNSET = 0x200
-```
-
-Default priority.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
-
-**System capability:** SystemCapability.Location.Location.Core
-
 ## ACCURACY
 
 ```TypeScript
@@ -41,6 +25,22 @@ Preferentially ensure the locating accuracy.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-LocationRequestPriority-ACCURACY = 0x201--><!--Device-LocationRequestPriority-ACCURACY = 0x201-End-->
+
+**System capability:** SystemCapability.Location.Location.Core
+
+## FIRST_FIX
+
+```TypeScript
+FIRST_FIX = 0x203
+```
+
+Preferentially ensure that the first location is time-consuming.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-LocationRequestPriority-FIRST_FIX = 0x203--><!--Device-LocationRequestPriority-FIRST_FIX = 0x203-End-->
 
 **System capability:** SystemCapability.Location.Location.Core
 
@@ -60,18 +60,18 @@ Preferentially ensure low power consumption for locating.
 
 **System capability:** SystemCapability.Location.Location.Core
 
-## FIRST_FIX
+## UNSET
 
 ```TypeScript
-FIRST_FIX = 0x203
+UNSET = 0x200
 ```
 
-Preferentially ensure that the first location is time-consuming.
+Default priority.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-LocationRequestPriority-FIRST_FIX = 0x203--><!--Device-LocationRequestPriority-FIRST_FIX = 0x203-End-->
+<!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 
 **System capability:** SystemCapability.Location.Location.Core

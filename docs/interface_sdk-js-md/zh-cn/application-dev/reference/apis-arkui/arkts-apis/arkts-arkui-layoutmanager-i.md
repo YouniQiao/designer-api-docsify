@@ -10,6 +10,12 @@ declare interface LayoutManager
 > 
 > 文本内容变更后，需等待布局完成才可获取到最新的布局信息。
 
+**起始版本：** 12
+
+<!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## 导入对象
 
 以Text组件为例，完整示例请参考Text组件的[示例10（获取文本信息）](../../../reference/apis-arkui/arkui-ts/ts-basic-components-text.md#示例10获取文本信息)。
@@ -18,12 +24,6 @@ declare interface LayoutManager
 controller: TextController = new TextController();
 let layoutManager: LayoutManager = this.controller.getLayoutManager();
 ```
-
-**起始版本：** 12
-
-<!--Device-unnamed-declare interface LayoutManager--><!--Device-unnamed-declare interface LayoutManager-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 <a id="getcharacterpositionatcoordinate1"></a>
 

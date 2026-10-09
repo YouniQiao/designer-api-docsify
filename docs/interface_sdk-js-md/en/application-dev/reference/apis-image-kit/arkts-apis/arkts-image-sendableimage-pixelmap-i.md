@@ -143,7 +143,7 @@ Obtains new pixelmap with alpha information.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -231,7 +231,7 @@ Crop the image.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -324,7 +324,7 @@ Image flipping.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -512,7 +512,7 @@ Get image information from image source.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -719,7 +719,7 @@ Set the transparent rate of pixelmap.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -813,7 +813,7 @@ Reads image pixelmap data in an area.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -907,7 +907,7 @@ Reads image pixelmap data and writes the data to an ArrayBuffer.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1035,7 +1035,7 @@ Image rotation.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1127,7 +1127,7 @@ Image zoom in width and height.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1263,7 +1263,7 @@ Image position transformation.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1450,7 +1450,7 @@ Reads image data in an ArrayBuffer and writes the data to a PixelMap object.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 
@@ -1553,7 +1553,7 @@ Writes image pixelmap data to the specified area.
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
-| [501](../../errorcode-universal.md#501) | The resource is unavailable as it is occupied by another thread. |
+| [501](../errorcode-image.md#501-api-call-failed) | The resource is unavailable as it is occupied by another thread. |
 
 **Examples**
 

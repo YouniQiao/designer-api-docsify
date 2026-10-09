@@ -28,22 +28,6 @@ ROTATION_0 = 0
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## ROTATION_90
-
-```TypeScript
-ROTATION_90 = 90
-```
-
-图片旋转90度。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## ROTATION_180
 
 ```TypeScript
@@ -73,5 +57,21 @@ ROTATION_270 = 270
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImageRotation-ROTATION_270 = 270--><!--Device-ImageRotation-ROTATION_270 = 270-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## ROTATION_90
+
+```TypeScript
+ROTATION_90 = 90
+```
+
+图片旋转90度。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

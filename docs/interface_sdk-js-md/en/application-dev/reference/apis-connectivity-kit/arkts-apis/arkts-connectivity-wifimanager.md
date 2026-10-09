@@ -54,9 +54,6 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices1) | Obtain the information about the found devices. |
 | [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices2) | Obtain the information about the found devices. |
 | [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md) | Obtain the scanned station list. If does't have the permission of ohos.permission.GET_WIFI_PEERS_MAC, return random bssid. |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults1) | Obtain the scanned sta list. |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults2) | Obtain the scanned sta list. |
-| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md) | Obtain the scanned sta list. |
 | [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md) | Calculate the Wi-Fi signal level based on the Wi-Fi RSSI and frequency band. |
 | [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md) | Check whether the current device supports the specified band. |
 | [isConnected](arkts-connectivity-wifimanager-isconnected-f.md) | Check whether the Wi-Fi connection has been set up. |
@@ -93,10 +90,13 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [removeDevice](arkts-connectivity-wifimanager-removedevice-f.md) | Remove a Wi-Fi DeviceConfig with networkId. After a Wi-Fi DeviceConfig is removed, its configuration will be deleted from the list of Wi-Fi configurations. If the Wi-Fi DeviceConfig is being connected, the connection will be interrupted. The application can only delete Wi-Fi DeviceConfig it has created. |
 | [removeGroup](arkts-connectivity-wifimanager-removegroup-f.md) | Remove a P2P group. |
 | [removeLocalP2pService](arkts-connectivity-wifimanager-removelocalp2pservice-f.md) | Remove a registered local P2P service added with the [addDnsSdLocalP2pService](arkts-connectivity-wifimanager-adddnssdlocalp2pservice-f.md) or [addUpnpLocalP2pService](arkts-connectivity-wifimanager-addupnplocalp2pservice-f.md). |
-| [scan](arkts-connectivity-wifimanager-scan-f.md) | Scan Wi-Fi hotspot. |
 | [startDiscoverDevices](arkts-connectivity-wifimanager-startdiscoverdevices-f.md) | Start discover Wi-Fi P2P devices. |
 | [startScan](arkts-connectivity-wifimanager-startscan-f.md) | Scan Wi-Fi hotspot. |
 | [stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md) | Stop discover Wi-Fi P2P devices. |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults1) | Obtain the scanned sta list. |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults2) | Obtain the scanned sta list. |
+| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md) | Obtain the scanned sta list. |
+| [scan](arkts-connectivity-wifimanager-scan-f.md) | Scan Wi-Fi hotspot. |
 
 <!--Del-->
 ### Functions(System API)

@@ -12,6 +12,54 @@ Enumerates the video playback speeds, which can be passed in the **setSpeed** AP
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
+## SPEED_FORWARD_0_125_X
+
+```TypeScript
+SPEED_FORWARD_0_125_X = 9
+```
+
+Plays the video at 0.125 times the normal speed.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
+
+## SPEED_FORWARD_0_25_X
+
+```TypeScript
+SPEED_FORWARD_0_25_X = 8
+```
+
+Plays the video at 0.25 times the normal speed.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
+
+## SPEED_FORWARD_0_50_X
+
+```TypeScript
+SPEED_FORWARD_0_50_X = 5
+```
+
+Plays the video at 0.50 times the normal speed.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
+
 ## SPEED_FORWARD_0_75_X
 
 ```TypeScript
@@ -60,6 +108,22 @@ Plays the video at 1.25 times the normal speed.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
+## SPEED_FORWARD_1_50_X
+
+```TypeScript
+SPEED_FORWARD_1_50_X = 6
+```
+
+Plays the video at 1.50 times the normal speed.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
+
 ## SPEED_FORWARD_1_75_X
 
 ```TypeScript
@@ -92,38 +156,6 @@ Plays the video at 2.00 times the normal speed.
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer
 
-## SPEED_FORWARD_0_50_X
-
-```TypeScript
-SPEED_FORWARD_0_50_X = 5
-```
-
-Plays the video at 0.50 times the normal speed.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
-
-## SPEED_FORWARD_1_50_X
-
-```TypeScript
-SPEED_FORWARD_1_50_X = 6
-```
-
-Plays the video at 1.50 times the normal speed.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
-
 ## SPEED_FORWARD_3_00_X
 
 ```TypeScript
@@ -137,37 +169,5 @@ Plays the video at 3.00 times the normal speed.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
-
-## SPEED_FORWARD_0_25_X
-
-```TypeScript
-SPEED_FORWARD_0_25_X = 8
-```
-
-Plays the video at 0.25 times the normal speed.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.VideoPlayer
-
-## SPEED_FORWARD_0_125_X
-
-```TypeScript
-SPEED_FORWARD_0_125_X = 9
-```
-
-Plays the video at 0.125 times the normal speed.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.VideoPlayer

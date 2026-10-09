@@ -12,22 +12,6 @@ Enumerates the camera output formats.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_FORMAT_RGBA_8888
-
-```TypeScript
-CAMERA_FORMAT_RGBA_8888 = 3
-```
-
-RGBA_8888 image.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3--><!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
 ## CAMERA_FORMAT_DNG
 
 ```TypeScript
@@ -44,19 +28,35 @@ Digital Negative (DNG) image.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_FORMAT_YUV_420_SP
+## CAMERA_FORMAT_DNG_XDRAW
 
 ```TypeScript
-CAMERA_FORMAT_YUV_420_SP = 1003
+CAMERA_FORMAT_DNG_XDRAW = 5
 ```
 
-YUV_420_SP image, which corresponds to the NV21 image.
+Enhanced image in DNG format.
 
-**Since:** 10
+**Since:** 26.0.0
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5--><!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_FORMAT_HEIC
+
+```TypeScript
+CAMERA_FORMAT_HEIC = 2003
+```
+
+HEIF image.
+
+**Since:** 13
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
-<!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003--><!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003-End-->
+<!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003--><!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -73,6 +73,22 @@ JPEG image.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
 <!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000--><!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## CAMERA_FORMAT_RGBA_8888
+
+```TypeScript
+CAMERA_FORMAT_RGBA_8888 = 3
+```
+
+RGBA_8888 image.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3--><!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -108,34 +124,18 @@ YCRCB_P010 image.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## CAMERA_FORMAT_HEIC
+## CAMERA_FORMAT_YUV_420_SP
 
 ```TypeScript
-CAMERA_FORMAT_HEIC = 2003
+CAMERA_FORMAT_YUV_420_SP = 1003
 ```
 
-HEIF image.
+YUV_420_SP image, which corresponds to the NV21 image.
 
-**Since:** 13
+**Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
-<!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003--><!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## CAMERA_FORMAT_DNG_XDRAW
-
-```TypeScript
-CAMERA_FORMAT_DNG_XDRAW = 5
-```
-
-Enhanced image in DNG format.
-
-**Since:** 26.0.0
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5--><!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5-End-->
+<!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003--><!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

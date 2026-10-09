@@ -12,22 +12,6 @@ enum HostDeviceType
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
-## UNKNOWN_TYPE
-
-```TypeScript
-UNKNOWN_TYPE = 0
-```
-
-未知设备类型。
-
-**起始版本：** 15
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
-
-<!--Device-HostDeviceType-UNKNOWN_TYPE = 0--><!--Device-HostDeviceType-UNKNOWN_TYPE = 0-End-->
-
-**系统能力：** SystemCapability.Multimedia.Camera.Core
-
 ## PHONE
 
 ```TypeScript
@@ -57,5 +41,21 @@ TABLET = 0x11
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HostDeviceType-TABLET = 0x11--><!--Device-HostDeviceType-TABLET = 0x11-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+## UNKNOWN_TYPE
+
+```TypeScript
+UNKNOWN_TYPE = 0
+```
+
+未知设备类型。
+
+**起始版本：** 15
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+
+<!--Device-HostDeviceType-UNKNOWN_TYPE = 0--><!--Device-HostDeviceType-UNKNOWN_TYPE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core

@@ -12,21 +12,19 @@ Defines the recognition mode of a gesture group.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Sequence
+## Exclusive
 
 ```TypeScript
-Sequence
+Exclusive
 ```
 
-Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized.
-
-Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
+Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized. This mode is suitable for interaction scenarios where multiple gestures may trigger simultaneously but only one is allowed to take effect.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GestureMode-Sequence--><!--Device-GestureMode-Sequence-End-->
+<!--Device-GestureMode-Exclusive--><!--Device-GestureMode-Exclusive-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -46,18 +44,20 @@ Parallel recognition. Registered gestures are recognized concurrently until all 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Exclusive
+## Sequence
 
 ```TypeScript
-Exclusive
+Sequence
 ```
 
-Exclusive recognition. All registered gestures are processed simultaneously. Once any gesture is recognized successfully, the recognition process ends, and all other gestures are deemed unrecognized. This mode is suitable for interaction scenarios where multiple gestures may trigger simultaneously but only one is allowed to take effect.
+Sequential recognition. Gestures are recognized in the registration sequence until all gestures are recognized successfully. If any gesture in the sequence fails recognition, subsequent gestures will not be recognized.
+
+Only the last gesture in a sequentially recognized gesture group can trigger **onActionEnd**.
 
 **Since:** 7
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-GestureMode-Exclusive--><!--Device-GestureMode-Exclusive-End-->
+<!--Device-GestureMode-Sequence--><!--Device-GestureMode-Sequence-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,38 +12,6 @@ Enumerates the processes states.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## STATE_CREATE
-
-```TypeScript
-STATE_CREATE
-```
-
-The process is created.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ProcessState-STATE_CREATE--><!--Device-ProcessState-STATE_CREATE-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-## STATE_FOREGROUND
-
-```TypeScript
-STATE_FOREGROUND
-```
-
-The process is running in the foreground.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ProcessState-STATE_FOREGROUND--><!--Device-ProcessState-STATE_FOREGROUND-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## STATE_ACTIVE
 
 ```TypeScript
@@ -76,6 +44,22 @@ The process is running in the background.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## STATE_CREATE
+
+```TypeScript
+STATE_CREATE
+```
+
+The process is created.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ProcessState-STATE_CREATE--><!--Device-ProcessState-STATE_CREATE-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
 ## STATE_DESTROY
 
 ```TypeScript
@@ -89,5 +73,21 @@ The process is destroyed.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-ProcessState-STATE_DESTROY--><!--Device-ProcessState-STATE_DESTROY-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## STATE_FOREGROUND
+
+```TypeScript
+STATE_FOREGROUND
+```
+
+The process is running in the foreground.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ProcessState-STATE_FOREGROUND--><!--Device-ProcessState-STATE_FOREGROUND-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

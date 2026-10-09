@@ -12,22 +12,6 @@ The enum of model type @enum { number }
 
 **System capability:** SystemCapability.ArkUi.Graphics3D
 
-## TEXTURE
-
-```TypeScript
-TEXTURE = 0
-```
-
-Render to texture, gpu would compose this texture to screen.
-
-**Since:** 12
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-ModelType-TEXTURE = 0--><!--Device-ModelType-TEXTURE = 0-End-->
-
-**System capability:** SystemCapability.ArkUi.Graphics3D
-
 ## SURFACE
 
 ```TypeScript
@@ -41,5 +25,21 @@ Render to surface, special hardware would compose this surface to screen.
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ModelType-SURFACE = 1--><!--Device-ModelType-SURFACE = 1-End-->
+
+**System capability:** SystemCapability.ArkUi.Graphics3D
+
+## TEXTURE
+
+```TypeScript
+TEXTURE = 0
+```
+
+Render to texture, gpu would compose this texture to screen.
+
+**Since:** 12
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-ModelType-TEXTURE = 0--><!--Device-ModelType-TEXTURE = 0-End-->
 
 **System capability:** SystemCapability.ArkUi.Graphics3D

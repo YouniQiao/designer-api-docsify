@@ -21,22 +21,6 @@ Enumerates the vertical alignment modes of a placeholder relative to the surroun
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## OFFSET_AT_BASELINE
-
-```TypeScript
-OFFSET_AT_BASELINE = 0
-```
-
-Aligns the baseline of the placeholder to the baseline of the text.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0--><!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
 ## ABOVE_BASELINE
 
 ```TypeScript
@@ -66,22 +50,6 @@ Aligns the top edge of the placeholder to the baseline of the text.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-PlaceholderAlignment-BELOW_BASELINE = 2--><!--Device-PlaceholderAlignment-BELOW_BASELINE = 2-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## TOP_OF_ROW_BOX
-
-```TypeScript
-TOP_OF_ROW_BOX = 3
-```
-
-Aligns the top edge of the placeholder to the top edge of the text.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3--><!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -130,5 +98,37 @@ Aligns with the text baseline.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-PlaceholderAlignment-FOLLOW_PARAGRAPH = 6--><!--Device-PlaceholderAlignment-FOLLOW_PARAGRAPH = 6-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## OFFSET_AT_BASELINE
+
+```TypeScript
+OFFSET_AT_BASELINE = 0
+```
+
+Aligns the baseline of the placeholder to the baseline of the text.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0--><!--Device-PlaceholderAlignment-OFFSET_AT_BASELINE = 0-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## TOP_OF_ROW_BOX
+
+```TypeScript
+TOP_OF_ROW_BOX = 3
+```
+
+Aligns the top edge of the placeholder to the top edge of the text.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3--><!--Device-PlaceholderAlignment-TOP_OF_ROW_BOX = 3-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

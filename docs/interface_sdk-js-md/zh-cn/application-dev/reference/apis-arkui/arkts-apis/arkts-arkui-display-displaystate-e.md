@@ -12,19 +12,35 @@ enum DisplayState
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_UNKNOWN
+## STATE_DOZE
 
 ```TypeScript
-STATE_UNKNOWN = 0
+STATE_DOZE = 3
 ```
 
-表示显示设备状态未知。
+表示显示设备为低电耗模式。
 
 **起始版本：** 7
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-DisplayState-STATE_UNKNOWN = 0--><!--Device-DisplayState-STATE_UNKNOWN = 0-End-->
+<!--Device-DisplayState-STATE_DOZE = 3--><!--Device-DisplayState-STATE_DOZE = 3-End-->
+
+**系统能力：** SystemCapability.WindowManager.WindowManager.Core
+
+## STATE_DOZE_SUSPEND
+
+```TypeScript
+STATE_DOZE_SUSPEND = 4
+```
+
+表示显示设备为睡眠模式，CPU为挂起状态。
+
+**起始版本：** 7
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-DisplayState-STATE_DOZE_SUSPEND = 4--><!--Device-DisplayState-STATE_DOZE_SUSPEND = 4-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -60,35 +76,35 @@ STATE_ON = 2
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_DOZE
+## STATE_ON_SUSPEND
 
 ```TypeScript
-STATE_DOZE = 3
+STATE_ON_SUSPEND = 6
 ```
 
-表示显示设备为低电耗模式。
+表示显示设备为开启状态，CPU为挂起状态。
 
 **起始版本：** 7
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-DisplayState-STATE_DOZE = 3--><!--Device-DisplayState-STATE_DOZE = 3-End-->
+<!--Device-DisplayState-STATE_ON_SUSPEND = 6--><!--Device-DisplayState-STATE_ON_SUSPEND = 6-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
-## STATE_DOZE_SUSPEND
+## STATE_UNKNOWN
 
 ```TypeScript
-STATE_DOZE_SUSPEND = 4
+STATE_UNKNOWN = 0
 ```
 
-表示显示设备为睡眠模式，CPU为挂起状态。
+表示显示设备状态未知。
 
 **起始版本：** 7
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-DisplayState-STATE_DOZE_SUSPEND = 4--><!--Device-DisplayState-STATE_DOZE_SUSPEND = 4-End-->
+<!--Device-DisplayState-STATE_UNKNOWN = 0--><!--Device-DisplayState-STATE_UNKNOWN = 0-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core
 
@@ -105,21 +121,5 @@ STATE_VR = 5
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_VR = 5--><!--Device-DisplayState-STATE_VR = 5-End-->
-
-**系统能力：** SystemCapability.WindowManager.WindowManager.Core
-
-## STATE_ON_SUSPEND
-
-```TypeScript
-STATE_ON_SUSPEND = 6
-```
-
-表示显示设备为开启状态，CPU为挂起状态。
-
-**起始版本：** 7
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-DisplayState-STATE_ON_SUSPEND = 6--><!--Device-DisplayState-STATE_ON_SUSPEND = 6-End-->
 
 **系统能力：** SystemCapability.WindowManager.WindowManager.Core

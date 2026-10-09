@@ -28,19 +28,35 @@ COMPARE_FAILURE = 1
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## TIMEOUT
+## COMPARE_FAILURE_WITH_FROZEN
 
 ```TypeScript
-TIMEOUT = 2
+COMPARE_FAILURE_WITH_FROZEN = 7
 ```
 
-认证超时。表示认证操作超时，通常是由于用户在规定时间内未完成认证交互（如未及时输入密码、未正视摄像头等）导致。
+认证不通过并触发了认证冻结。表示当前认证不通过，并且失败次数已达到阈值，认证器进入冻结状态。此状态同时包含认证不通过和冻结两个信息，应用可根据冻结类型（临时或永久）提示用户相应的解锁方式。
 
 **起始版本：** 20
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
+<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
+
+**系统能力：** SystemCapability.UserIAM.UserAuth.Core
+
+## PERMANENTLY_LOCKED
+
+```TypeScript
+PERMANENTLY_LOCKED = 4
+```
+
+永久冻结。表示认证器进入永久冻结状态，用户无法通过等待自动解锁，必须使用PIN认证解锁后才能继续使用该认证类型。永久冻结通常由临时冻结期间继续尝试认证不通过触发。
+
+**起始版本：** 20
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+
+<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -60,19 +76,19 @@ TEMPORARILY_LOCKED = 3
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
-## PERMANENTLY_LOCKED
+## TIMEOUT
 
 ```TypeScript
-PERMANENTLY_LOCKED = 4
+TIMEOUT = 2
 ```
 
-永久冻结。表示认证器进入永久冻结状态，用户无法通过等待自动解锁，必须使用PIN认证解锁后才能继续使用该认证类型。永久冻结通常由临时冻结期间继续尝试认证不通过触发。
+认证超时。表示认证操作超时，通常是由于用户在规定时间内未完成认证交互（如未及时输入密码、未正视摄像头等）导致。
 
 **起始版本：** 20
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
-<!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
+<!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core
 
@@ -105,21 +121,5 @@ WIDGET_RELEASED = 6
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-WIDGET_RELEASED = 6--><!--Device-UserAuthTipCode-WIDGET_RELEASED = 6-End-->
-
-**系统能力：** SystemCapability.UserIAM.UserAuth.Core
-
-## COMPARE_FAILURE_WITH_FROZEN
-
-```TypeScript
-COMPARE_FAILURE_WITH_FROZEN = 7
-```
-
-认证不通过并触发了认证冻结。表示当前认证不通过，并且失败次数已达到阈值，认证器进入冻结状态。此状态同时包含认证不通过和冻结两个信息，应用可根据冻结类型（临时或永久）提示用户相应的解锁方式。
-
-**起始版本：** 20
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
-
-<!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
 
 **系统能力：** SystemCapability.UserIAM.UserAuth.Core

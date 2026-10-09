@@ -149,9 +149,6 @@ Common()
 | [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | 动画选项设置。 |
 | [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | 关键帧状态设置。 |
 | [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | 子组件布局信息。Layoutable对象由ArkUI框架在onPlaceChildren调用时创建并传入，包含子组件的测量结果和唯一标识。开发者通过Layoutable的layout方法设置子组件位置，通过getMargin、getPadding、getBorderWidth方法获取子组件的边距信息用于精确布局计算。 |
-| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息 |
-| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
-| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息 |
 | [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
 | [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
 | [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) |  |
@@ -218,13 +215,16 @@ Common()
 | [TipsOptions](arkts-arkui-common-comp-tipsoptions-i.md) | 悬浮气泡自定义参数。 |
 | [TouchEvent](arkts-arkui-common-comp-touchevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。在非事件注入场景下，changedTouches是按屏幕刷新率重采样的点，而touches是按器件刷新率上报的点，因此changedTouches与touches的数据可能不同。 |
 | [TouchObject](arkts-arkui-common-comp-touchobject-i.md) | 触摸事件类型。 |
-| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
 | [TranslateOptions](arkts-arkui-common-comp-translateoptions-i.md) | 定义平移选项。 |
 | [UICommonEvent](arkts-arkui-common-comp-uicommonevent-i.md) | 用于设置基础事件回调。方法入参为undefined的时候，重置对应的事件回调。 |
 | [UIGestureEvent](arkts-arkui-common-comp-uigestureevent-i.md) | 用于设置组件绑定的手势。 |
 | [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | 用于设置滚动事件回调。 |
 | [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | 定义相对容器的垂直对齐规则。 |
 | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | 关于区域变化相关的参数。 |
+| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息 |
+| [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
+| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息 |
+| [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
 
 ### 类型
 

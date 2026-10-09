@@ -12,35 +12,19 @@ Enumerates the rectangle height styles.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## TIGHT
+## INCLUDE_LINE_SPACE_BOTTOM
 
 ```TypeScript
-TIGHT = 0
+INCLUDE_LINE_SPACE_BOTTOM = 4
 ```
 
-Tight style.
+Includes the line spacing to the bottom of the rectangle.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-RectHeightStyle-TIGHT = 0--><!--Device-RectHeightStyle-TIGHT = 0-End-->
-
-**System capability:** SystemCapability.Graphics.Drawing
-
-## MAX
-
-```TypeScript
-MAX = 1
-```
-
-Extends the height to match the highest rectangle in all lines.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
-
-<!--Device-RectHeightStyle-MAX = 1--><!--Device-RectHeightStyle-MAX = 1-End-->
+<!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -76,19 +60,19 @@ Includes the line spacing to the top of the rectangle.
 
 **System capability:** SystemCapability.Graphics.Drawing
 
-## INCLUDE_LINE_SPACE_BOTTOM
+## MAX
 
 ```TypeScript
-INCLUDE_LINE_SPACE_BOTTOM = 4
+MAX = 1
 ```
 
-Includes the line spacing to the bottom of the rectangle.
+Extends the height to match the highest rectangle in all lines.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
-<!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4-End-->
+<!--Device-RectHeightStyle-MAX = 1--><!--Device-RectHeightStyle-MAX = 1-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing
 
@@ -105,5 +89,21 @@ Sets the height according to the strut style.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
 
 <!--Device-RectHeightStyle-STRUT = 5--><!--Device-RectHeightStyle-STRUT = 5-End-->
+
+**System capability:** SystemCapability.Graphics.Drawing
+
+## TIGHT
+
+```TypeScript
+TIGHT = 0
+```
+
+Tight style.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+
+<!--Device-RectHeightStyle-TIGHT = 0--><!--Device-RectHeightStyle-TIGHT = 0-End-->
 
 **System capability:** SystemCapability.Graphics.Drawing

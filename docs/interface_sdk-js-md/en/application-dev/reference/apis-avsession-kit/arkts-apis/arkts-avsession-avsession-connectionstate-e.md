@@ -12,22 +12,6 @@ Define the device connection state.
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 
-## STATE_CONNECTING
-
-```TypeScript
-STATE_CONNECTING = 0
-```
-
-A connection state indicating the device is in the process of connecting.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
-
-**System capability:** SystemCapability.Multimedia.AVSession.Core
-
 ## STATE_CONNECTED
 
 ```TypeScript
@@ -41,6 +25,22 @@ A connection state indicating the device is connected.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-ConnectionState-STATE_CONNECTED = 1--><!--Device-ConnectionState-STATE_CONNECTED = 1-End-->
+
+**System capability:** SystemCapability.Multimedia.AVSession.Core
+
+## STATE_CONNECTING
+
+```TypeScript
+STATE_CONNECTING = 0
+```
+
+A connection state indicating the device is in the process of connecting.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.Core
 

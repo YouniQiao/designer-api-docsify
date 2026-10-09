@@ -28,6 +28,22 @@ ALL = 1 << 0
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
+## CUSTOMIZED
+
+```TypeScript
+CUSTOMIZED = 1 << 4
+```
+
+自定义字体类型。
+
+**起始版本：** 18
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+
+<!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
+
+**系统能力：** SystemCapability.Graphics.Drawing
+
 ## GENERIC
 
 ```TypeScript
@@ -41,22 +57,6 @@ GENERIC = 1 << 1
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-SystemFontType-GENERIC = 1 << 1--><!--Device-SystemFontType-GENERIC = 1 << 1-End-->
-
-**系统能力：** SystemCapability.Graphics.Drawing
-
-## STYLISH
-
-```TypeScript
-STYLISH = 1 << 2
-```
-
-风格字体类型。风格字体类型是专为2in1设备设计的字体类型。
-
-**起始版本：** 14
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
-
-<!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
@@ -76,18 +76,18 @@ INSTALLED = 1 << 3
 
 **系统能力：** SystemCapability.Graphics.Drawing
 
-## CUSTOMIZED
+## STYLISH
 
 ```TypeScript
-CUSTOMIZED = 1 << 4
+STYLISH = 1 << 2
 ```
 
-自定义字体类型。
+风格字体类型。风格字体类型是专为2in1设备设计的字体类型。
 
-**起始版本：** 18
+**起始版本：** 14
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-<!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
+<!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing

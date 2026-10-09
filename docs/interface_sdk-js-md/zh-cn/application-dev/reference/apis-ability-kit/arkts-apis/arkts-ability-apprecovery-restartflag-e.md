@@ -28,19 +28,19 @@ ALWAYS_RESTART = 0
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## RESTART_WHEN_JS_CRASH
+## NO_RESTART
 
 ```TypeScript
-RESTART_WHEN_JS_CRASH = 0x0001
+NO_RESTART = 0xFFFF
 ```
 
-发生JS_CRASH时重启应用。
+总是不重启应用。
 
 **起始版本：** 9
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-<!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
+<!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -57,22 +57,6 @@ RESTART_WHEN_APP_FREEZE = 0x0002
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002--><!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-## NO_RESTART
-
-```TypeScript
-NO_RESTART = 0xFFFF
-```
-
-总是不重启应用。
-
-**起始版本：** 9
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -93,5 +77,21 @@ RESTART_WHEN_CPP_CRASH = 0x0004
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004--><!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004-End-->
+
+**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
+
+## RESTART_WHEN_JS_CRASH
+
+```TypeScript
+RESTART_WHEN_JS_CRASH = 0x0001
+```
+
+发生JS_CRASH时重启应用。
+
+**起始版本：** 9
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

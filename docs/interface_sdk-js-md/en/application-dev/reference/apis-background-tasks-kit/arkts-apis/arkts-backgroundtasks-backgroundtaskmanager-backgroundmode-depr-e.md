@@ -16,24 +16,6 @@ Defines the type of a continuous task.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## DATA_TRANSFER
-
-```TypeScript
-DATA_TRANSFER = 1
-```
-
-Data transfer.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [DATA_TRANSFER](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#data_transfer)
-
-<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## AUDIO_PLAYBACK
 
 ```TypeScript
@@ -70,24 +52,6 @@ Audio recording.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## LOCATION
-
-```TypeScript
-LOCATION = 4
-```
-
-Positioning and navigation.
-
-**Since:** 8
-
-**Deprecated since:** 9
-
-**Substitutes:** [LOCATION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#location)
-
-<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## BLUETOOTH_INTERACTION
 
 ```TypeScript
@@ -103,6 +67,42 @@ Bluetooth-related task.
 **Substitutes:** [BLUETOOTH_INTERACTION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#bluetooth_interaction)
 
 <!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## DATA_TRANSFER
+
+```TypeScript
+DATA_TRANSFER = 1
+```
+
+Data transfer.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [DATA_TRANSFER](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#data_transfer)
+
+<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## LOCATION
+
+```TypeScript
+LOCATION = 4
+```
+
+Positioning and navigation.
+
+**Since:** 8
+
+**Deprecated since:** 9
+
+**Substitutes:** [LOCATION](arkts-backgroundtasks-backgroundtaskmanager-backgroundmode-e.md#location)
+
+<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 

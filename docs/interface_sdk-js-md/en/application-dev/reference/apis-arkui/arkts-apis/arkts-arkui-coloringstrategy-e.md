@@ -12,24 +12,6 @@ Enumerates the coloring strategies.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## INVERT
-
-```TypeScript
-INVERT = 'invert'
-```
-
-The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the [foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor1) attribute.
-
-**Since:** 10
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-ColoringStrategy-INVERT = 'invert'--><!--Device-ColoringStrategy-INVERT = 'invert'-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 ## AVERAGE
 
 ```TypeScript
@@ -45,6 +27,24 @@ The shadow colors of the component are the average color obtained from the compo
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColoringStrategy-AVERAGE = 'average'--><!--Device-ColoringStrategy-AVERAGE = 'average'-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## INVERT
+
+```TypeScript
+INVERT = 'invert'
+```
+
+The foreground colors are the inverse of the component background colors. This strategy is only applicable when set within the [foregroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#foregroundcolor1) attribute.
+
+**Since:** 10
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-ColoringStrategy-INVERT = 'invert'--><!--Device-ColoringStrategy-INVERT = 'invert'-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 

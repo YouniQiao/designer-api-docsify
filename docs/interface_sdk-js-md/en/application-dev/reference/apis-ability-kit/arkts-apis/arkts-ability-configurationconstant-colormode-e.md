@@ -12,22 +12,6 @@ Enumerates the dark/light color modes, which are used in the [Configuration.colo
 
 **System capability:** SystemCapability.Ability.AbilityBase
 
-## COLOR_MODE_NOT_SET
-
-```TypeScript
-COLOR_MODE_NOT_SET = -1
-```
-
-Unspecified color mode.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
-
-**System capability:** SystemCapability.Ability.AbilityBase
-
 ## COLOR_MODE_DARK
 
 ```TypeScript
@@ -57,5 +41,21 @@ Light mode.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
+
+**System capability:** SystemCapability.Ability.AbilityBase
+
+## COLOR_MODE_NOT_SET
+
+```TypeScript
+COLOR_MODE_NOT_SET = -1
+```
+
+Unspecified color mode.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 
 **System capability:** SystemCapability.Ability.AbilityBase

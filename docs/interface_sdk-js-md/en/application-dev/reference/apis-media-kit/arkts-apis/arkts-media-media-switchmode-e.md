@@ -14,19 +14,19 @@ SwitchMode can be passed as a parameter through the **selectTrack** method. Curr
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## SMOOTH
+## CLOSEST
 
 ```TypeScript
-SMOOTH = 0
+CLOSEST = 2
 ```
 
-Smooth playback is ensured after the switching. This mode has a delay, that is, the switching does not take effect immediately.
+The playback starts from the frame closest to the current playback time. In this mode, the switching takes effect immediately, and the playback is suspended for 3s to 5s and then resumed.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-SwitchMode-SMOOTH = 0--><!--Device-SwitchMode-SMOOTH = 0-End-->
+<!--Device-SwitchMode-CLOSEST = 2--><!--Device-SwitchMode-CLOSEST = 2-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
@@ -46,18 +46,18 @@ The playback starts from the start position of the current segment after the swi
 
 **System capability:** SystemCapability.Multimedia.Media.Core
 
-## CLOSEST
+## SMOOTH
 
 ```TypeScript
-CLOSEST = 2
+SMOOTH = 0
 ```
 
-The playback starts from the frame closest to the current playback time. In this mode, the switching takes effect immediately, and the playback is suspended for 3s to 5s and then resumed.
+Smooth playback is ensured after the switching. This mode has a delay, that is, the switching does not take effect immediately.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-SwitchMode-CLOSEST = 2--><!--Device-SwitchMode-CLOSEST = 2-End-->
+<!--Device-SwitchMode-SMOOTH = 0--><!--Device-SwitchMode-SMOOTH = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core

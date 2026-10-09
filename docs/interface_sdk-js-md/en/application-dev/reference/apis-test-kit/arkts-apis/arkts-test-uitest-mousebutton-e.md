@@ -32,24 +32,6 @@ Left button on the mouse.
 
 **Test API:** This API is used only in automated test scripts.
 
-## MOUSE_BUTTON_RIGHT
-
-```TypeScript
-MOUSE_BUTTON_RIGHT = 1
-```
-
-Right button on the mouse.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## MOUSE_BUTTON_MIDDLE
 
 ```TypeScript
@@ -63,6 +45,24 @@ MIDDLE button on the mouse.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2--><!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## MOUSE_BUTTON_RIGHT
+
+```TypeScript
+MOUSE_BUTTON_RIGHT = 1
+```
+
+Right button on the mouse.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

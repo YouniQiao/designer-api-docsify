@@ -12,26 +12,6 @@ Defines the type of a continuous task.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## DATA_TRANSFER
-
-```TypeScript
-DATA_TRANSFER = 1
-```
-
-Data transfer.
-
-Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser.
-
-Note: During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled.
-
-The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning3).
-
-**Since:** 9
-
-<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## AUDIO_PLAYBACK
 
 ```TypeScript
@@ -74,22 +54,6 @@ Note: No notification is displayed if a system application requests or updates a
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## LOCATION
-
-```TypeScript
-LOCATION = 4
-```
-
-Positioning and navigation.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
-
-<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## BLUETOOTH_INTERACTION
 
 ```TypeScript
@@ -103,6 +67,42 @@ Use scenario: An application moves to the background while transferring files vi
 **Since:** 9
 
 <!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5--><!--Device-BackgroundMode-BLUETOOTH_INTERACTION = 5-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## DATA_TRANSFER
+
+```TypeScript
+DATA_TRANSFER = 1
+```
+
+Data transfer.
+
+Use scenario: upload and download in non-hosting mode, for example, uploading or downloading data in the background of a browser.
+
+Note: During data transfer, the application needs to update the progress. If the progress is not updated for more than 10 minutes, the continuous task of the **DATA_TRANSFER** type will be canceled.
+
+The notification type of the progress update must be live view. For details, see the example in [startBackgroundRunning()](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning3).
+
+**Since:** 9
+
+<!--Device-BackgroundMode-DATA_TRANSFER = 1--><!--Device-BackgroundMode-DATA_TRANSFER = 1-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## LOCATION
+
+```TypeScript
+LOCATION = 4
+```
+
+Positioning and navigation.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+
+<!--Device-BackgroundMode-LOCATION = 4--><!--Device-BackgroundMode-LOCATION = 4-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
@@ -124,24 +124,6 @@ Use scenario: distributed service connection and casting.
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
 
-## VOIP
-
-```TypeScript
-VOIP = 8
-```
-
-Audio and video calls.
-
-Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls.<!--Del-->
-
-Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
-
-**Since:** 13
-
-<!--Device-BackgroundMode-VOIP = 8--><!--Device-BackgroundMode-VOIP = 8-End-->
-
-**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
-
 ## TASK_KEEPING
 
 ```TypeScript
@@ -157,5 +139,23 @@ Use scenario: antivirus software.
 **Since:** 9
 
 <!--Device-BackgroundMode-TASK_KEEPING = 9--><!--Device-BackgroundMode-TASK_KEEPING = 9-End-->
+
+**System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask
+
+## VOIP
+
+```TypeScript
+VOIP = 8
+```
+
+Audio and video calls.
+
+Use scenario: Chat applications (with audio and video services) transition into the background during audio and video calls.<!--Del-->
+
+Note: No notification is displayed if a system application requests or updates a continuous task.<!--DelEnd-->
+
+**Since:** 13
+
+<!--Device-BackgroundMode-VOIP = 8--><!--Device-BackgroundMode-VOIP = 8-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.BackgroundTaskManager.ContinuousTask

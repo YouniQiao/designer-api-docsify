@@ -30,22 +30,6 @@ RGB_565.
 
 **System API:** This is a system API.
 
-## RGBA_8888
-
-```TypeScript
-RGBA_8888 = 3
-```
-
-RGBA_8888.
-
-**Since:** 11
-
-<!--Device-PixelFormat-RGBA_8888 = 3--><!--Device-PixelFormat-RGBA_8888 = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
-
-**System API:** This is a system API.
-
 ## RGB_888
 
 ```TypeScript
@@ -57,6 +41,22 @@ RGB_888.
 **Since:** 11
 
 <!--Device-PixelFormat-RGB_888 = 5--><!--Device-PixelFormat-RGB_888 = 5-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
+
+**System API:** This is a system API.
+
+## RGBA_8888
+
+```TypeScript
+RGBA_8888 = 3
+```
+
+RGBA_8888.
+
+**Since:** 11
+
+<!--Device-PixelFormat-RGBA_8888 = 3--><!--Device-PixelFormat-RGBA_8888 = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVImageGenerator
 

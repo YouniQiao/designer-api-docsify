@@ -28,22 +28,6 @@ ERROR_UNKNOWN = 24700101
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 
-## MAX_SYSTEM_NUM_REACHED
-
-```TypeScript
-MAX_SYSTEM_NUM_REACHED = 24700103
-```
-
-MediaKeySystem实例数量超过上限（64个）。请调用[destroy](arkts-drm-drm-mediakeysystem-i.md#destroy)方法销毁不需要的MediaKeySystem实例后重试。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
-
-<!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103--><!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103-End-->
-
-**系统能力：** SystemCapability.Multimedia.Drm.Core
-
 ## MAX_SESSION_NUM_REACHED
 
 ```TypeScript
@@ -57,6 +41,22 @@ MediaKeySession实例数量超过上限（64个）。请调用[destroy](arkts-dr
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104--><!--Device-DrmErrorCode-MAX_SESSION_NUM_REACHED = 24700104-End-->
+
+**系统能力：** SystemCapability.Multimedia.Drm.Core
+
+## MAX_SYSTEM_NUM_REACHED
+
+```TypeScript
+MAX_SYSTEM_NUM_REACHED = 24700103
+```
+
+MediaKeySystem实例数量超过上限（64个）。请调用[destroy](arkts-drm-drm-mediakeysystem-i.md#destroy)方法销毁不需要的MediaKeySystem实例后重试。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+
+<!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103--><!--Device-DrmErrorCode-MAX_SYSTEM_NUM_REACHED = 24700103-End-->
 
 **系统能力：** SystemCapability.Multimedia.Drm.Core
 

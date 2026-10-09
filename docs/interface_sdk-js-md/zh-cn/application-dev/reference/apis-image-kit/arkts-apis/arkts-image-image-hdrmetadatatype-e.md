@@ -12,17 +12,17 @@ enum HdrMetadataType
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## NONE
+## ALTERNATE
 
 ```TypeScript
-NONE = 0
+ALTERNATE = 3
 ```
 
-无元数据内容。
+表示用于合成后HDR图的元数据。
 
 **起始版本：** 12
 
-<!--Device-HdrMetadataType-NONE = 0--><!--Device-HdrMetadataType-NONE = 0-End-->
+<!--Device-HdrMetadataType-ALTERNATE = 3--><!--Device-HdrMetadataType-ALTERNATE = 3-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
@@ -54,16 +54,16 @@ GAINMAP = 2
 
 **系统能力：** SystemCapability.Multimedia.Image.Core
 
-## ALTERNATE
+## NONE
 
 ```TypeScript
-ALTERNATE = 3
+NONE = 0
 ```
 
-表示用于合成后HDR图的元数据。
+无元数据内容。
 
 **起始版本：** 12
 
-<!--Device-HdrMetadataType-ALTERNATE = 3--><!--Device-HdrMetadataType-ALTERNATE = 3-End-->
+<!--Device-HdrMetadataType-NONE = 0--><!--Device-HdrMetadataType-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Multimedia.Image.Core

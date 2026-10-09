@@ -26,8 +26,6 @@ import { formProvider } from '@kit.FormKit';
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo1) | 获取设备上当前应用程序的卡片信息，并筛选符合条件的信息，使用callback异步回调。 |
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo2) | 获取设备上当前应用程序的卡片信息，使用callback异步回调。适用于卡片管理、调试、统计等场景，例如查看应用所有卡片配置信息、统计卡片数量等。 |
 | [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md#getformsinfo3) | 获取设备上当前应用符合条件的卡片信息，使用Promise异步回调。 |
-| [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md) | 获取设备上当前应用程序已添加到桌面的指定卡片信息，使用Promise异步回调。 |
-| [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md) | 获取设备上当前应用所有已添加到桌面的卡片信息，使用Promise异步回调。 |
 | [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md) | 获取当前应用已加桌的指定卡片信息，使用Promise异步回调。适用于卡片管理、调试等场景，例如查看指定卡片的位置信息和尺寸信息。 |
 | [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md) | 获取所有已加桌的卡片信息，使用Promise异步回调。适用于卡片管理、批量操作、统计等场景，例如查看应用所有已添加到桌面的卡片信息、批量更新卡片状态等。 |
 | [openFormEditAbility](arkts-form-formprovider-openformeditability-f.md) | 打开卡片编辑页。适用于需要用户配置卡片参数的场景，例如设置卡片显示内容、选择数据源、配置更新频率等。 |
@@ -39,6 +37,8 @@ import { formProvider } from '@kit.FormKit';
 | [setFormNextRefreshTime](arkts-form-formprovider-setformnextrefreshtime-f.md#setformnextrefreshtime2) | 设置指定卡片的下一次刷新时间，使用Promise异步回调。适用于需要精确控制卡片刷新时机的场景，例如定时任务等。 |
 | [updateForm](arkts-form-formprovider-updateform-f.md#updateform1) | 更新指定的卡片，使用callback异步回调。适用于卡片数据变化时主动更新卡片内容的场景，例如天气数据变化、股票价格更新、任务进度更新等。 |
 | [updateForm](arkts-form-formprovider-updateform-f.md#updateform2) | 更新指定的卡片，使用Promise异步回调。适用于卡片数据变化时主动更新卡片内容的场景，例如天气数据变化、股票价格更新、任务进度更新等。 |
+| [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md) | 获取设备上当前应用程序已添加到桌面的指定卡片信息，使用Promise异步回调。 |
+| [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md) | 获取设备上当前应用所有已添加到桌面的卡片信息，使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

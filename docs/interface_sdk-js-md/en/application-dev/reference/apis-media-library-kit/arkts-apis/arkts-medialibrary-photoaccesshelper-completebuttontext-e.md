@@ -12,6 +12,22 @@ Enumerates the text displayed on the complete button.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## TEXT_ADD
+
+```TypeScript
+TEXT_ADD = 2
+```
+
+The text "Add" is displayed.
+
+**Since:** 14
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+
+<!--Device-CompleteButtonText-TEXT_ADD = 2--><!--Device-CompleteButtonText-TEXT_ADD = 2-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## TEXT_DONE
 
 ```TypeScript
@@ -41,21 +57,5 @@ The text "Send" is displayed.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
 
 <!--Device-CompleteButtonText-TEXT_SEND = 1--><!--Device-CompleteButtonText-TEXT_SEND = 1-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
-## TEXT_ADD
-
-```TypeScript
-TEXT_ADD = 2
-```
-
-The text "Add" is displayed.
-
-**Since:** 14
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
-
-<!--Device-CompleteButtonText-TEXT_ADD = 2--><!--Device-CompleteButtonText-TEXT_ADD = 2-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

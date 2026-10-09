@@ -12,19 +12,35 @@ Enumerates the video stabilization modes.
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## OFF
+## AUTO
 
 ```TypeScript
-OFF = 0
+AUTO = 4
 ```
 
-Video stabilization is disabled.
+The system automatically selects a video stabilization algorithm.
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
-<!--Device-VideoStabilizationMode-OFF = 0--><!--Device-VideoStabilizationMode-OFF = 0-End-->
+<!--Device-VideoStabilizationMode-AUTO = 4--><!--Device-VideoStabilizationMode-AUTO = 4-End-->
+
+**System capability:** SystemCapability.Multimedia.Camera.Core
+
+## HIGH
+
+```TypeScript
+HIGH = 3
+```
+
+A video stabilization algorithm with a stabilization effect better than that of the **MIDDLE** type is used.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+
+<!--Device-VideoStabilizationMode-HIGH = 3--><!--Device-VideoStabilizationMode-HIGH = 3-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
@@ -60,34 +76,18 @@ A video stabilization algorithm with a stabilization effect better than that of 
 
 **System capability:** SystemCapability.Multimedia.Camera.Core
 
-## HIGH
+## OFF
 
 ```TypeScript
-HIGH = 3
+OFF = 0
 ```
 
-A video stabilization algorithm with a stabilization effect better than that of the **MIDDLE** type is used.
+Video stabilization is disabled.
 
 **Since:** 10
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
 
-<!--Device-VideoStabilizationMode-HIGH = 3--><!--Device-VideoStabilizationMode-HIGH = 3-End-->
-
-**System capability:** SystemCapability.Multimedia.Camera.Core
-
-## AUTO
-
-```TypeScript
-AUTO = 4
-```
-
-The system automatically selects a video stabilization algorithm.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
-
-<!--Device-VideoStabilizationMode-AUTO = 4--><!--Device-VideoStabilizationMode-AUTO = 4-End-->
+<!--Device-VideoStabilizationMode-OFF = 0--><!--Device-VideoStabilizationMode-OFF = 0-End-->
 
 **System capability:** SystemCapability.Multimedia.Camera.Core

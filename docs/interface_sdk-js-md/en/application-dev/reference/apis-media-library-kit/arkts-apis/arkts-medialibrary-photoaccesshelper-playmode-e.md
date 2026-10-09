@@ -12,24 +12,6 @@ Enumerates whether to support automatic playback of the moving photo.
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
-## DEFAULT
-
-```TypeScript
-DEFAULT = 0
-```
-
-The automatic playback of the moving photo is not supported.
-
-**Since:** 23
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
-
-<!--Device-PlayMode-DEFAULT = 0--><!--Device-PlayMode-DEFAULT = 0-End-->
-
-**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 ## AUTO_PLAY
 
 ```TypeScript
@@ -45,5 +27,23 @@ The automatic playback of the moving photo is supported.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
 
 <!--Device-PlayMode-AUTO_PLAY = 1--><!--Device-PlayMode-AUTO_PLAY = 1-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
+## DEFAULT
+
+```TypeScript
+DEFAULT = 0
+```
+
+The automatic playback of the moving photo is not supported.
+
+**Since:** 23
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+
+<!--Device-PlayMode-DEFAULT = 0--><!--Device-PlayMode-DEFAULT = 0-End-->
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core

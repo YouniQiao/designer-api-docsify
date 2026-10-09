@@ -14,24 +14,6 @@ Enumerates the match patterns supported for component attributes.
 
 **Test API:** This API is used only in automated test scripts.
 
-## EQUALS
-
-```TypeScript
-EQUALS = 0
-```
-
-Equals the given value.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-MatchPattern-EQUALS = 0--><!--Device-MatchPattern-EQUALS = 0-End-->
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## CONTAINS
 
 ```TypeScript
@@ -50,24 +32,6 @@ Contains the given value.
 
 **Test API:** This API is used only in automated test scripts.
 
-## STARTS_WITH
-
-```TypeScript
-STARTS_WITH = 2
-```
-
-Starts with the given value.
-
-**Since:** 8
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-MatchPattern-STARTS_WITH = 2--><!--Device-MatchPattern-STARTS_WITH = 2-End-->
-
-**System capability:** SystemCapability.Test.UiTest
-
-**Test API:** This API is used only in automated test scripts.
-
 ## ENDS_WITH
 
 ```TypeScript
@@ -81,6 +45,24 @@ Ends with the given value.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
 <!--Device-MatchPattern-ENDS_WITH = 3--><!--Device-MatchPattern-ENDS_WITH = 3-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## EQUALS
+
+```TypeScript
+EQUALS = 0
+```
+
+Equals the given value.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-MatchPattern-EQUALS = 0--><!--Device-MatchPattern-EQUALS = 0-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 
@@ -117,6 +99,24 @@ Uses case-insensitive regular expression matching.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
 
 <!--Device-MatchPattern-REG_EXP_ICASE = 5--><!--Device-MatchPattern-REG_EXP_ICASE = 5-End-->
+
+**System capability:** SystemCapability.Test.UiTest
+
+**Test API:** This API is used only in automated test scripts.
+
+## STARTS_WITH
+
+```TypeScript
+STARTS_WITH = 2
+```
+
+Starts with the given value.
+
+**Since:** 8
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-MatchPattern-STARTS_WITH = 2--><!--Device-MatchPattern-STARTS_WITH = 2-End-->
 
 **System capability:** SystemCapability.Test.UiTest
 

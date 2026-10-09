@@ -20,13 +20,13 @@ Enumerates video seek modes.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## PreviousKeyframe
+## Accurate
 
 ```TypeScript
-PreviousKeyframe
+Accurate
 ```
 
-Seek to the nearest previous keyframe.
+Seek to a specific frame, regardless of whether the frame is a keyframe.
 
 **Since:** 8
 
@@ -34,25 +34,7 @@ Seek to the nearest previous keyframe.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SeekMode-PreviousKeyframe--><!--Device-SeekMode-PreviousKeyframe-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-## NextKeyframe
-
-```TypeScript
-NextKeyframe
-```
-
-Seek to the nearest next keyframe.
-
-**Since:** 8
-
-**Model restriction:** This API can be used in both the stage model and FA model.
-
-**Atomic service API:** This API can be used in atomic services since API version 11.
-
-<!--Device-SeekMode-NextKeyframe--><!--Device-SeekMode-NextKeyframe-End-->
+<!--Device-SeekMode-Accurate--><!--Device-SeekMode-Accurate-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
@@ -74,13 +56,13 @@ Seek to the nearest keyframe.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-## Accurate
+## NextKeyframe
 
 ```TypeScript
-Accurate
+NextKeyframe
 ```
 
-Seek to a specific frame, regardless of whether the frame is a keyframe.
+Seek to the nearest next keyframe.
 
 **Since:** 8
 
@@ -88,6 +70,24 @@ Seek to a specific frame, regardless of whether the frame is a keyframe.
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
-<!--Device-SeekMode-Accurate--><!--Device-SeekMode-Accurate-End-->
+<!--Device-SeekMode-NextKeyframe--><!--Device-SeekMode-NextKeyframe-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## PreviousKeyframe
+
+```TypeScript
+PreviousKeyframe
+```
+
+Seek to the nearest previous keyframe.
+
+**Since:** 8
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+**Atomic service API:** This API can be used in atomic services since API version 11.
+
+<!--Device-SeekMode-PreviousKeyframe--><!--Device-SeekMode-PreviousKeyframe-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

@@ -12,67 +12,35 @@ HDR格式枚举。
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
-## NONE
+## IMAGE_HDR_ISO_DUAL
 
 ```TypeScript
-NONE = 0
+IMAGE_HDR_ISO_DUAL = 6
 ```
 
-不支持HDR类型。
+支持图片的HDR_ISO格式，以dual JPEG格式存储。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-HDRFormat-NONE = 0--><!--Device-HDRFormat-NONE = 0-End-->
+<!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6--><!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
-## VIDEO_HLG
+## IMAGE_HDR_ISO_SINGLE
 
 ```TypeScript
-VIDEO_HLG = 1
+IMAGE_HDR_ISO_SINGLE = 7
 ```
 
-支持视频的HLG格式。
+支持图片的HDR_ISO格式，以single HEIF格式存储。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-HDRFormat-VIDEO_HLG = 1--><!--Device-HDRFormat-VIDEO_HLG = 1-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
-## VIDEO_HDR10
-
-```TypeScript
-VIDEO_HDR10 = 2
-```
-
-支持视频的HDR10格式。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-HDRFormat-VIDEO_HDR10 = 2--><!--Device-HDRFormat-VIDEO_HDR10 = 2-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
-## VIDEO_HDR_VIVID
-
-```TypeScript
-VIDEO_HDR_VIVID = 3
-```
-
-支持视频的HDR_VIVID格式。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-HDRFormat-VIDEO_HDR_VIVID = 3--><!--Device-HDRFormat-VIDEO_HDR_VIVID = 3-End-->
+<!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7--><!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -108,35 +76,19 @@ IMAGE_HDR_VIVID_SINGLE = 5
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
-## IMAGE_HDR_ISO_DUAL
+## NONE
 
 ```TypeScript
-IMAGE_HDR_ISO_DUAL = 6
+NONE = 0
 ```
 
-支持图片的HDR_ISO格式，以dual JPEG格式存储。
+不支持HDR类型。
 
 **起始版本：** 11
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6--><!--Device-HDRFormat-IMAGE_HDR_ISO_DUAL = 6-End-->
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
-## IMAGE_HDR_ISO_SINGLE
-
-```TypeScript
-IMAGE_HDR_ISO_SINGLE = 7
-```
-
-支持图片的HDR_ISO格式，以single HEIF格式存储。
-
-**起始版本：** 11
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7--><!--Device-HDRFormat-IMAGE_HDR_ISO_SINGLE = 7-End-->
+<!--Device-HDRFormat-NONE = 0--><!--Device-HDRFormat-NONE = 0-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
@@ -155,5 +107,53 @@ VIDEO_AIHDR = 8
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-HDRFormat-VIDEO_AIHDR = 8--><!--Device-HDRFormat-VIDEO_AIHDR = 8-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## VIDEO_HDR10
+
+```TypeScript
+VIDEO_HDR10 = 2
+```
+
+支持视频的HDR10格式。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HDR10 = 2--><!--Device-HDRFormat-VIDEO_HDR10 = 2-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## VIDEO_HDR_VIVID
+
+```TypeScript
+VIDEO_HDR_VIVID = 3
+```
+
+支持视频的HDR_VIVID格式。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HDR_VIVID = 3--><!--Device-HDRFormat-VIDEO_HDR_VIVID = 3-End-->
+
+**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
+
+## VIDEO_HLG
+
+```TypeScript
+VIDEO_HLG = 1
+```
+
+支持视频的HLG格式。
+
+**起始版本：** 11
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-HDRFormat-VIDEO_HLG = 1--><!--Device-HDRFormat-VIDEO_HLG = 1-End-->
 
 **系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core

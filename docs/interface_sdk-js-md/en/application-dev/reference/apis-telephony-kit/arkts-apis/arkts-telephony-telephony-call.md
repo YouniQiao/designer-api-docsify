@@ -23,9 +23,6 @@ import { call } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [answerCall](arkts-telephony-call-answercall-f.md#answercall3) | Answers a call. This API uses an asynchronous callback to return the result. |
-| [dial](arkts-telephony-call-dial-f.md#dial1) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. |
-| [dial](arkts-telephony-call-dial-f.md#dial2) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. |
-| [dial](arkts-telephony-call-dial-f.md#dial3) | Initiates a call. This API uses an asynchronous callback to return the result. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md#formatphonenumber1) | Formats a phone number based on specified formatting options. This API uses an asynchronous callback to return the result. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md#formatphonenumber2) | Formats a phone number based on specified formatting options. This API uses a promise to return the result. |
 | [formatPhoneNumber](arkts-telephony-call-formatphonenumber-f.md#formatphonenumber3) | Formats a phone number. This API uses an asynchronous callback to return the result. |
@@ -50,6 +47,9 @@ import { call } from '@kit.TelephonyKit';
 | [makeCallWithToken](arkts-telephony-call-makecallwithtoken-f.md) | Go to the dial screen and the called number is displayed.The authentication challenge value is returned. |
 | [makeDirectCall](arkts-telephony-call-makedirectcall-f.md) | Application make calls with one tap. |
 | [rejectCall](arkts-telephony-call-rejectcall-f.md#rejectcall4) | Rejects a call. This API uses an asynchronous callback to return the result. |
+| [dial](arkts-telephony-call-dial-f.md#dial1) | Initiates a call. You can set call options as needed. This API uses an asynchronous callback to return the result. |
+| [dial](arkts-telephony-call-dial-f.md#dial2) | Initiates a call. You can set call options as needed. This API uses a promise to return the result. |
+| [dial](arkts-telephony-call-dial-f.md#dial3) | Initiates a call. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)

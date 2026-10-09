@@ -12,22 +12,6 @@ Enumerates the video meeting component groups. They are used only when [PiPTempl
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## HANG_UP_BUTTON
-
-```TypeScript
-HANG_UP_BUTTON = 301
-```
-
-Hang-up component group.
-
-**Since:** 12
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
-
-**System capability:** SystemCapability.Window.SessionManager
-
 ## CAMERA_SWITCH
 
 ```TypeScript
@@ -44,19 +28,19 @@ Camera on/off component group.
 
 **System capability:** SystemCapability.Window.SessionManager
 
-## MUTE_SWITCH
+## HANG_UP_BUTTON
 
 ```TypeScript
-MUTE_SWITCH = 303
+HANG_UP_BUTTON = 301
 ```
 
-Mute/Unmute component group.
+Hang-up component group.
 
 **Since:** 12
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
+<!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
 
 **System capability:** SystemCapability.Window.SessionManager
 
@@ -73,5 +57,21 @@ Microphone on/off component group.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304--><!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304-End-->
+
+**System capability:** SystemCapability.Window.SessionManager
+
+## MUTE_SWITCH
+
+```TypeScript
+MUTE_SWITCH = 303
+```
+
+Mute/Unmute component group.
+
+**Since:** 12
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
 
 **System capability:** SystemCapability.Window.SessionManager

@@ -28,19 +28,19 @@ The application is restarted in all cases.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## RESTART_WHEN_JS_CRASH
+## NO_RESTART
 
 ```TypeScript
-RESTART_WHEN_JS_CRASH = 0x0001
+NO_RESTART = 0xFFFF
 ```
 
-The application is restarted in the case of JS_CRASH.
+The application is not restarted in any case.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
 
-<!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
+<!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
@@ -60,22 +60,6 @@ The application is restarted in the case of APP_FREEZE.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## NO_RESTART
-
-```TypeScript
-NO_RESTART = 0xFFFF
-```
-
-The application is not restarted in any case.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
-
-<!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## RESTART_WHEN_CPP_CRASH
 
 ```TypeScript
@@ -91,5 +75,21 @@ Restart if the current app process encounters a cppcrash
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
 
 <!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004--><!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## RESTART_WHEN_JS_CRASH
+
+```TypeScript
+RESTART_WHEN_JS_CRASH = 0x0001
+```
+
+The application is restarted in the case of JS_CRASH.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+
+<!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

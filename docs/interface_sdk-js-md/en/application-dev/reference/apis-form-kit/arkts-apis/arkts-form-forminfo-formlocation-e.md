@@ -12,6 +12,22 @@ Enumerates the widget locations.
 
 **System capability:** SystemCapability.Ability.Form
 
+## AI_SUGGESTION
+
+```TypeScript
+AI_SUGGESTION = 7
+```
+
+The widget is located in the area of AI Suggestions.
+
+**Since:** 20
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+
+<!--Device-FormLocation-AI_SUGGESTION = 7--><!--Device-FormLocation-AI_SUGGESTION = 7-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
 ## DESKTOP
 
 ```TypeScript
@@ -89,22 +105,6 @@ The widget is located on the locked screen.
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
 
 <!--Device-FormLocation-SCREEN_LOCK = 6--><!--Device-FormLocation-SCREEN_LOCK = 6-End-->
-
-**System capability:** SystemCapability.Ability.Form
-
-## AI_SUGGESTION
-
-```TypeScript
-AI_SUGGESTION = 7
-```
-
-The widget is located in the area of AI Suggestions.
-
-**Since:** 20
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
-
-<!--Device-FormLocation-AI_SUGGESTION = 7--><!--Device-FormLocation-AI_SUGGESTION = 7-End-->
 
 **System capability:** SystemCapability.Ability.Form
 

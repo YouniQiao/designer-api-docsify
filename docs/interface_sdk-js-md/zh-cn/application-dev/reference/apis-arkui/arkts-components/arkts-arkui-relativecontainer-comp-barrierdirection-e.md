@@ -14,6 +14,24 @@ declare enum BarrierDirection
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
+## BOTTOM
+
+```TypeScript
+BOTTOM = 3
+```
+
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最下方。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-BarrierDirection-BOTTOM = 3--><!--Device-BarrierDirection-BOTTOM = 3-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## LEFT
 
 ```TypeScript
@@ -65,23 +83,5 @@ TOP = 2
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BarrierDirection-TOP = 2--><!--Device-BarrierDirection-TOP = 2-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## BOTTOM
-
-```TypeScript
-BOTTOM = 3
-```
-
-屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最下方。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-BarrierDirection-BOTTOM = 3--><!--Device-BarrierDirection-BOTTOM = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

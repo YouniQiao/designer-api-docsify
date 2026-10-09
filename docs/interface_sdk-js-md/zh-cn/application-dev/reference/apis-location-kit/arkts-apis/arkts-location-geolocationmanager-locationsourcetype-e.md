@@ -28,22 +28,6 @@ GNSS = 1
 
 **系统能力：** SystemCapability.Location.Location.Core
 
-## NETWORK
-
-```TypeScript
-NETWORK = 2
-```
-
-表示定位结果来自于网络定位技术。
-
-**起始版本：** 12
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-LocationSourceType-NETWORK = 2--><!--Device-LocationSourceType-NETWORK = 2-End-->
-
-**系统能力：** SystemCapability.Location.Location.Core
-
 ## INDOOR
 
 ```TypeScript
@@ -57,6 +41,22 @@ INDOOR = 3
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationSourceType-INDOOR = 3--><!--Device-LocationSourceType-INDOOR = 3-End-->
+
+**系统能力：** SystemCapability.Location.Location.Core
+
+## NETWORK
+
+```TypeScript
+NETWORK = 2
+```
+
+表示定位结果来自于网络定位技术。
+
+**起始版本：** 12
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LocationSourceType-NETWORK = 2--><!--Device-LocationSourceType-NETWORK = 2-End-->
 
 **系统能力：** SystemCapability.Location.Location.Core
 

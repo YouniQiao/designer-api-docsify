@@ -59,6 +59,10 @@ import { networkManager } from '@kit.MDMKit';
 | --- | --- |
 | [addIptablesFilterRule](arkts-mdm-networkmanager-addiptablesfilterrule-f-sys.md#addiptablesfilterrule1) | 为设备添加网络包过滤规则，仅支持IPv4。使用callback异步回调。 |
 | [addIptablesFilterRule](arkts-mdm-networkmanager-addiptablesfilterrule-f-sys.md#addiptablesfilterrule2) | 为设备添加网络包过滤规则，仅支持IPv4。使用Promise异步回调。 |
+| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules1) | 获取网络包过滤规则，仅支持IPv4。使用callback异步回调。 |
+| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules2) | 获取网络包过滤规则，仅支持IPv4。使用Promise异步回调。 |
+| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule1) | 移除网络包过滤规则，仅支持IPv4。使用callback异步回调。 |
+| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule2) | 移除网络包过滤规则，仅支持IPv4。使用Promise异步回调。 |
 | [getAllNetworkInterfaces](arkts-mdm-networkmanager-getallnetworkinterfaces-f-sys.md#getallnetworkinterfaces1) | 获取所有激活的有线网络接口。使用callback异步回调。 |
 | [getAllNetworkInterfaces](arkts-mdm-networkmanager-getallnetworkinterfaces-f-sys.md#getallnetworkinterfaces2) | 获取所有激活的有线网络接口。使用Promise异步回调。 |
 | [getGlobalProxy](arkts-mdm-networkmanager-getglobalproxy-f-sys.md#getglobalproxy1) | 获取网络全局代理，使用callback异步回调。 |
@@ -69,10 +73,6 @@ import { networkManager } from '@kit.MDMKit';
 | [getMac](arkts-mdm-networkmanager-getmac-f-sys.md#getmac2) | 根据网络接口获取设备MAC地址。使用Promise异步回调。 |
 | [isNetworkInterfaceDisabled](arkts-mdm-networkmanager-isnetworkinterfacedisabled-f-sys.md#isnetworkinterfacedisabled1) | 查询指定网络接口是否被禁用。使用callback异步回调。 |
 | [isNetworkInterfaceDisabled](arkts-mdm-networkmanager-isnetworkinterfacedisabled-f-sys.md#isnetworkinterfacedisabled2) | 查询指定网络接口是否被禁用。使用Promise异步回调。 |
-| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules1) | 获取网络包过滤规则，仅支持IPv4。使用callback异步回调。 |
-| [listIptablesFilterRules](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md#listiptablesfilterrules2) | 获取网络包过滤规则，仅支持IPv4。使用Promise异步回调。 |
-| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule1) | 移除网络包过滤规则，仅支持IPv4。使用callback异步回调。 |
-| [removeIptablesFilterRule](arkts-mdm-networkmanager-removeiptablesfilterrule-f-sys.md#removeiptablesfilterrule2) | 移除网络包过滤规则，仅支持IPv4。使用Promise异步回调。 |
 | [setGlobalProxy](arkts-mdm-networkmanager-setglobalproxy-f-sys.md#setglobalproxy1) | 设置网络全局代理，使用callback异步回调。 |
 | [setGlobalProxy](arkts-mdm-networkmanager-setglobalproxy-f-sys.md#setglobalproxy2) | 设置网络全局代理，使用Promise异步回调。 |
 | [setNetworkInterfaceDisabled](arkts-mdm-networkmanager-setnetworkinterfacedisabled-f-sys.md#setnetworkinterfacedisabled1) | 禁止设备使用指定网络。使用callback异步回调。 |

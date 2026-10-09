@@ -14,6 +14,24 @@ declare enum UiDirection
 
 **测试接口：** 此接口仅在自动化测试脚本中使用。
 
+## DOWN
+
+```TypeScript
+DOWN = 3
+```
+
+向下。
+
+**起始版本：** 10
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+
+<!--Device-UiDirection-DOWN = 3--><!--Device-UiDirection-DOWN = 3-End-->
+
+**系统能力：** SystemCapability.Test.UiTest
+
+**测试接口：** 此接口仅在自动化测试脚本中使用。
+
 ## LEFT
 
 ```TypeScript
@@ -63,24 +81,6 @@ UP = 2
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UiDirection-UP = 2--><!--Device-UiDirection-UP = 2-End-->
-
-**系统能力：** SystemCapability.Test.UiTest
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
-## DOWN
-
-```TypeScript
-DOWN = 3
-```
-
-向下。
-
-**起始版本：** 10
-
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
-
-<!--Device-UiDirection-DOWN = 3--><!--Device-UiDirection-DOWN = 3-End-->
 
 **系统能力：** SystemCapability.Test.UiTest
 

@@ -19,13 +19,13 @@ declare enum LocalizedBarrierDirection
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-## START
+## BOTTOM
 
 ```TypeScript
-START = 0
+BOTTOM = 3
 ```
 
-屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的最下方。
 
 **起始版本：** 12
 
@@ -33,7 +33,7 @@ START = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-LocalizedBarrierDirection-START = 0--><!--Device-LocalizedBarrierDirection-START = 0-End-->
+<!--Device-LocalizedBarrierDirection-BOTTOM = 3--><!--Device-LocalizedBarrierDirection-BOTTOM = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -55,6 +55,24 @@ END = 1
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## START
+
+```TypeScript
+START = 0
+```
+
+屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的起始侧，LTR模式时为最左侧，RTL模式时为最右侧。
+
+**起始版本：** 12
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
+
+<!--Device-LocalizedBarrierDirection-START = 0--><!--Device-LocalizedBarrierDirection-START = 0-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## TOP
 
 ```TypeScript
@@ -70,23 +88,5 @@ TOP = 2
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocalizedBarrierDirection-TOP = 2--><!--Device-LocalizedBarrierDirection-TOP = 2-End-->
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-## BOTTOM
-
-```TypeScript
-BOTTOM = 3
-```
-
-屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-localizedbarrierstyle-i.md)的最下方。
-
-**起始版本：** 12
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
-
-<!--Device-LocalizedBarrierDirection-BOTTOM = 3--><!--Device-LocalizedBarrierDirection-BOTTOM = 3-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

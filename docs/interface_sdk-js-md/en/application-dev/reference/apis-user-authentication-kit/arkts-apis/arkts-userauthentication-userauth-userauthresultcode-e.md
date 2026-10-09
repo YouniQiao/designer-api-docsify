@@ -12,19 +12,51 @@ Enumerates the authentication result codes. They include all success codes and e
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## SUCCESS
+## BUSY
 
 ```TypeScript
-SUCCESS = 12500000
+BUSY = 12500007
 ```
 
-The operation is successful. It indicates that the user authentication is successful and the authentication token is valid. The application can use the returned token to perform subsequent security operations.
+The system is busy. It indicates that the authentication service is busy processing other requests. You are advised to try again later.
 
 **Since:** 9
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-UserAuthResultCode-SUCCESS = 12500000--><!--Device-UserAuthResultCode-SUCCESS = 12500000-End-->
+<!--Device-UserAuthResultCode-BUSY = 12500007--><!--Device-UserAuthResultCode-BUSY = 12500007-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## CANCELED
+
+```TypeScript
+CANCELED = 12500003
+```
+
+The authentication is canceled. It indicates that the user or the system cancels the authentication. The application can determine whether to initiate the authentication again based on the service logic.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-CANCELED = 12500003--><!--Device-UserAuthResultCode-CANCELED = 12500003-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## CANCELED_FROM_WIDGET
+
+```TypeScript
+CANCELED_FROM_WIDGET = 12500011
+```
+
+The user cancels the system authentication and selects a custom authentication of the application. It indicates that the user taps the navigation button on the authentication screen and chooses to use the custom authentication type provided by the application. The application needs to launch the custom authentication page.
+
+**Since:** 10
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011--><!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -57,86 +89,6 @@ A general operation error occurred. It indicates that an unknown error occurs du
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002--><!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## CANCELED
-
-```TypeScript
-CANCELED = 12500003
-```
-
-The authentication is canceled. It indicates that the user or the system cancels the authentication. The application can determine whether to initiate the authentication again based on the service logic.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-CANCELED = 12500003--><!--Device-UserAuthResultCode-CANCELED = 12500003-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## TIMEOUT
-
-```TypeScript
-TIMEOUT = 12500004
-```
-
-The authentication has timed out. It indicates that the user does not complete the authentication interaction within the specified time (for example, the user does not enter the password in time or does not look at the camera). You are advised to prompt the user to try again and pay attention to the operation time limit.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-TIMEOUT = 12500004--><!--Device-UserAuthResultCode-TIMEOUT = 12500004-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## TYPE_NOT_SUPPORT
-
-```TypeScript
-TYPE_NOT_SUPPORT = 12500005
-```
-
-The authentication type is not supported. It indicates that the current device does not support the specified authentication type. For example, the device does not have a fingerprint sensor but the fingerprint authentication is requested. You are advised to check the device capability or change the authentication type.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005--><!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## TRUST_LEVEL_NOT_SUPPORT
-
-```TypeScript
-TRUST_LEVEL_NOT_SUPPORT = 12500006
-```
-
-The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006--><!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
-## BUSY
-
-```TypeScript
-BUSY = 12500007
-```
-
-The system is busy. It indicates that the authentication service is busy processing other requests. You are advised to try again later.
-
-**Since:** 9
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-BUSY = 12500007--><!--Device-UserAuthResultCode-BUSY = 12500007-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
@@ -188,22 +140,6 @@ The user has not enrolled the specified system identity authentication credentia
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
 
-## CANCELED_FROM_WIDGET
-
-```TypeScript
-CANCELED_FROM_WIDGET = 12500011
-```
-
-The user cancels the system authentication and selects a custom authentication of the application. It indicates that the user taps the navigation button on the authentication screen and chooses to use the custom authentication type provided by the application. The application needs to launch the custom authentication page.
-
-**Since:** 10
-
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
-
-<!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011--><!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011-End-->
-
-**System capability:** SystemCapability.UserIAM.UserAuth.Core
-
 ## PIN_EXPIRED
 
 ```TypeScript
@@ -217,5 +153,69 @@ The PIN has expired. It indicates that the system PIN has expired. For example, 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
 <!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013--><!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## SUCCESS
+
+```TypeScript
+SUCCESS = 12500000
+```
+
+The operation is successful. It indicates that the user authentication is successful and the authentication token is valid. The application can use the returned token to perform subsequent security operations.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-SUCCESS = 12500000--><!--Device-UserAuthResultCode-SUCCESS = 12500000-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## TIMEOUT
+
+```TypeScript
+TIMEOUT = 12500004
+```
+
+The authentication has timed out. It indicates that the user does not complete the authentication interaction within the specified time (for example, the user does not enter the password in time or does not look at the camera). You are advised to prompt the user to try again and pay attention to the operation time limit.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-TIMEOUT = 12500004--><!--Device-UserAuthResultCode-TIMEOUT = 12500004-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## TRUST_LEVEL_NOT_SUPPORT
+
+```TypeScript
+TRUST_LEVEL_NOT_SUPPORT = 12500006
+```
+
+The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006--><!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006-End-->
+
+**System capability:** SystemCapability.UserIAM.UserAuth.Core
+
+## TYPE_NOT_SUPPORT
+
+```TypeScript
+TYPE_NOT_SUPPORT = 12500005
+```
+
+The authentication type is not supported. It indicates that the current device does not support the specified authentication type. For example, the device does not have a fingerprint sensor but the fingerprint authentication is requested. You are advised to check the device capability or change the authentication type.
+
+**Since:** 9
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+
+<!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005--><!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005-End-->
 
 **System capability:** SystemCapability.UserIAM.UserAuth.Core
