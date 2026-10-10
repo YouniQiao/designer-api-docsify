@@ -48,10 +48,10 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
     motion.off('operatingHandChanged');
-    console.info("off succeeded");
+    console.info('off succeeded');
 } catch (err) {
     let error = err as BusinessError;
-    console.error("Failed off and err code is " + error.code);
+    console.error(`Failed to unsubscribe operatingHandChanged. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -98,6 +98,6 @@ try {
   console.info('off succeeded');
 } catch (err) {
   let error = err as BusinessError;
-  console.error('Failed off; err code = ' + error.code);
+  console.error(`Failed to unsubscribe holdingHandChanged. Code: ${error.code}, message: ${error.message}`);
 }
 ```

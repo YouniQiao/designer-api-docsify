@@ -69,18 +69,18 @@ try {
          };
       }
    }).catch((err: BusinessError) => {
-      console.error("get page content failed, errCode = " + err.code);
+      console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
    });
 } catch (err) {
-   console.error('invoke failed, errCode = ' + err.code);
+   console.error(`invoke failed, Code: ${err.code}, message: ${err.message}`);
 }
 if (event != undefined) {
    try {
       onScreen.sendControlEvent(event).catch((err: BusinessError) => {
-         console.error("send control event failed, errCode =" + err.code);
+         console.error(`send control event failed, Code: ${err.code}, message: ${err.message}`);
       })
    } catch (err) {
-      console.error('invoke failed, errCode = ' + err.code);
+      console.error(`invoke failed, Code: ${err.code}, message: ${err.message}`);
    }
 }
 ```

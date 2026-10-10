@@ -183,7 +183,7 @@ console.info("retStr = " + retStr);
 // 输出结果：retStr = abc
 let retJson = JSON.stringify(retStr)
 console.info("retJson = " + retJson);
-// 输出结果：retJson = ab/u0000c
+// 输出结果：retJson = "ab\u0000c"
 ```
 
 ## decode

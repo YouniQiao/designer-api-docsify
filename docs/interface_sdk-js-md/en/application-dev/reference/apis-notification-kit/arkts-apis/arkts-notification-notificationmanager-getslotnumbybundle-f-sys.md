@@ -60,7 +60,7 @@ let getSlotNumByBundleCallback = (err: BusinessError, data: number): void => {
 }
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle, getSlotNumByBundleCallback);
@@ -118,7 +118,7 @@ Obtains the number of notification slots of a specified application. This API us
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.getSlotNumByBundle(bundle).then((data: number) => {

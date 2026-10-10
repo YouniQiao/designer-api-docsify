@@ -52,7 +52,7 @@ Sets the enabling state of the **Allow access to notifications on this device** 
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =
 {
-  // Use the actual target application information.
+  // Change to the target application information that the developer needs to set.
   bundle: 'com.example.testnotification',
 };
 notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then(() => {

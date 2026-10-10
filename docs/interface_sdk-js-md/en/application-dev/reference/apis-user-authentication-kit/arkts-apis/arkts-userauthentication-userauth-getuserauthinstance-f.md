@@ -84,6 +84,6 @@ try {
   console.info('get userAuth instance successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`auth failed. Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to auth. Code: ${err?.code}, message: ${err?.message}`);
 }
 ```

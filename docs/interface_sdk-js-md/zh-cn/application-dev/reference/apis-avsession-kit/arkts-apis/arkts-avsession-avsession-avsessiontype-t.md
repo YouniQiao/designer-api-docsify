@@ -20,6 +20,6 @@ type AVSessionType = 'audio' | 'video' | 'voice_call' | 'video_call' | 'photo'
 | --- | --- |
 | 'audio' | 音频 |
 | 'video' | 视频 |
-| 'voice_call' | 音频通话。 [since 11] |
-| 'video_call' | 视频通话。 [since 12] |
-| 'photo' | 图片。 [since 22] |
+| 'voice_call' | 音频通话。<br>**起始版本：** 11 |
+| 'video_call' | 视频通话。<br>**起始版本：** 12 |
+| 'photo' | 图片。<br>**起始版本：** 22 |

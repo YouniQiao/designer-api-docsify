@@ -24,6 +24,48 @@ Enumerates gesture competition results.
 
 ## Examples
 
+This example demonstrates the recognition of a two-finger rotation gesture using RotationGesture.
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct RotationGestureExample {
+  @State angle: number = 0;
+  @State rotateValue: number = 0;
+
+  build() {
+    Column() {
+      Column() {
+        Text('RotationGesture angle:' + this.angle)
+      }
+      .height(200)
+      .width(300)
+      .padding(20)
+      .border({ width: 3 })
+      .margin(80)
+      .rotate({ angle: this.angle })
+      // The gesture event is triggered by rotating with two fingers.
+      .gesture(
+      RotationGesture()
+        .onActionStart((event: GestureEvent) => {
+          console.info('Rotation start')
+        })
+        .onActionUpdate((event: GestureEvent) => {
+          if (event) {
+            this.angle = this.rotateValue + event.angle
+          }
+        })
+        .onActionEnd((event: GestureEvent) => {
+          this.rotateValue = this.angle
+          console.info('Rotation end')
+        })
+      )
+    }.width('100%')
+  }
+}
+```
+
 This example demonstrates the recognition of a long press gesture using LongPressGesture. Since API version 22, the allowableMovement attribute in [LongPressGestureHandlerOptions](./ts-gesturehandler.md#longpressgesturehandleroptions) can be used to set the maximum movement distance of a gesture to be recognized.
 
 ```TypeScript
@@ -221,48 +263,6 @@ struct SwipeGestureExample {
             this.speed = event.speed
             this.rotateAngle = event.angle
           }
-        })
-      )
-    }.width('100%')
-  }
-}
-```
-
-This example demonstrates the recognition of a two-finger rotation gesture using RotationGesture.
-
-```TypeScript
-// xxx.ets
-@Entry
-@Component
-struct RotationGestureExample {
-  @State angle: number = 0;
-  @State rotateValue: number = 0;
-
-  build() {
-    Column() {
-      Column() {
-        Text('RotationGesture angle:' + this.angle)
-      }
-      .height(200)
-      .width(300)
-      .padding(20)
-      .border({ width: 3 })
-      .margin(80)
-      .rotate({ angle: this.angle })
-      // The gesture event is triggered by rotating with two fingers.
-      .gesture(
-      RotationGesture()
-        .onActionStart((event: GestureEvent) => {
-          console.info('Rotation start')
-        })
-        .onActionUpdate((event: GestureEvent) => {
-          if (event) {
-            this.angle = this.rotateValue + event.angle
-          }
-        })
-        .onActionEnd((event: GestureEvent) => {
-          this.rotateValue = this.angle
-          console.info('Rotation end')
         })
       )
     }.width('100%')

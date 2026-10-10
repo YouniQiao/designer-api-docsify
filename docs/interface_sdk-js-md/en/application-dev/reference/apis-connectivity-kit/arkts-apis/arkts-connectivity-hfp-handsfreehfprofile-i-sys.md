@@ -58,6 +58,17 @@ Initiate the HFP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Internal system error. For example, IPC error. |
 
+**Examples**
+
+```TypeScript
+try {
+    let hf = hfp.createHfpHfProfile();
+    hf.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -95,3 +106,14 @@ Disconnect the HFP connection with the remote device.
 | 2900003 | Bluetooth disabled. |
 | 2900004 | Profile not supported. |
 | 2900099 | Internal system error. For example, IPC error. |
+
+**Examples**
+
+```TypeScript
+try {
+    let hf = hfp.createHfpHfProfile();
+    hf.disconnect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```

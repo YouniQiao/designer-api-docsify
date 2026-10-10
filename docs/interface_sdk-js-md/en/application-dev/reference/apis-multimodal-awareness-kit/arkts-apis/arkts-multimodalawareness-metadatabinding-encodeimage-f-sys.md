@@ -50,12 +50,13 @@ import { image } from '@kit.ImageKit';
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let captureImage: image.PixelMap | undefined = undefined;
-let metadata: string = "";
+let encodedImage: image.PixelMap | undefined = undefined;
+let metadata: string = '';
+// Obtain a valid PixelMap object for srcImage through the APIs in image.
 let srcImage: image.PixelMap | undefined = undefined;
 metadataBinding.encodeImage(srcImage, metadata).then((pixelMap: image.PixelMap) => {
-  captureImage = pixelMap;
+  encodedImage = pixelMap;
 }).catch((error: BusinessError) => {
-  console.error("encode image error" + error);
+  console.error(`Failed to encode image. Code: ${error.code}, message: ${error.message}`);
 });
 ```

@@ -43,14 +43,14 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onBadgeChanged: (data) => {
-    console.info("bundle: ", data.bundle);
-    console.info("uid: ", data.uid);
-    console.info("badgeNumber: ", data.badgeNumber);
+    console.info('bundle: ', data.bundle);
+    console.info('uid: ', data.uid);
+    console.info('badgeNumber: ', data.badgeNumber);
   }
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -94,7 +94,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -138,7 +138,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -174,7 +174,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -218,7 +218,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -254,7 +254,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -285,7 +285,7 @@ let unsubscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`unsubscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("unsubscribeCallback");
+    console.info('unsubscribeCallback');
   }
 };
 
@@ -303,7 +303,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 
 // The onConnect callback is invoked when subscription to the notification is complete.
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -348,7 +348,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -382,9 +382,9 @@ Listens for the notification enabled state changes.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let onEnabledNotificationChangedCallback = (callbackData: notificationSubscribe.EnabledNotificationCallbackData) => {
-  console.info("bundle: ", callbackData.bundle);
-  console.info("uid: ", callbackData.uid);
-  console.info("enable: ", callbackData.enable);
+  console.info('bundle: ', callbackData.bundle);
+  console.info('uid: ', callbackData.uid);
+  console.info('enable: ', callbackData.enable);
 };
 
 let subscriber: notificationSubscribe.NotificationSubscriber = {
@@ -392,7 +392,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -431,7 +431,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   }
 };
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -470,7 +470,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   }
 };
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -564,7 +564,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 
 notificationSubscribe.subscribeNotification(subscriber).then(() => {
-  console.info("subscribeNotification success");
+  console.info('subscribeNotification success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -606,7 +606,7 @@ let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribeCallback");
+    console.info('subscribeCallback');
   }
 };
 

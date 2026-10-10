@@ -61,11 +61,11 @@ let setDistributedEnableByBundleCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setDistributedEnableByBundle success");
+        console.info('setDistributedEnableByBundle success');
     }
 };
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 let enable: boolean = true;
 notificationManager.setDistributedEnableByBundle(bundle, enable, setDistributedEnableByBundleCallback);
@@ -129,11 +129,11 @@ Sets whether to enable distributed notification for a specified application. Thi
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 let enable: boolean = true;
 notificationManager.setDistributedEnableByBundle(bundle, enable).then(() => {
-    console.info("setDistributedEnableByBundle success");
+    console.info('setDistributedEnableByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`setDistributedEnableByBundle failed, code is ${err.code}, message is ${err.message}`);
 });

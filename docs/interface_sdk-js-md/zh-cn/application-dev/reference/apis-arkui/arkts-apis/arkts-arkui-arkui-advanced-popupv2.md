@@ -33,8 +33,7 @@ import { PopupV2, PopupV2InitInfo, PopupV2Button } from '@kit.ArkUI';
 
 ```TypeScript
 // xxx.ets
-import { PopupV2, PopupV2Button } from '@kit.ArkUI';
-import { ImageModifier, TextModifier } from '@kit.ArkUI';
+import { PopupV2, PopupV2Button, ImageModifier, TextModifier } from '@kit.ArkUI';
 
 @Entry
 @ComponentV2
@@ -89,8 +88,7 @@ struct PopupExample {
 
 ```TypeScript
 // xxx.ets
-import { PopupV2, PopupV2Button } from '@kit.ArkUI';
-import { ImageModifier, TextModifier } from '@kit.ArkUI';
+import { PopupV2, PopupV2Button, ImageModifier, TextModifier } from '@kit.ArkUI';
 
 @Entry
 @ComponentV2
@@ -143,8 +141,7 @@ struct PopupExample {
 
 ```TypeScript
 // xxx.ets
-import { PopupV2, PopupV2Button } from '@kit.ArkUI';
-import { ImageModifier, TextModifier } from '@kit.ArkUI';
+import { PopupV2, PopupV2Button, ImageModifier, TextModifier } from '@kit.ArkUI';
 
 @Entry
 @ComponentV2

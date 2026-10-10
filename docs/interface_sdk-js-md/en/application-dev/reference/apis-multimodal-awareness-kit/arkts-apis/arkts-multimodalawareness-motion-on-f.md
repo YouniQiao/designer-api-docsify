@@ -46,18 +46,19 @@ If the device does not support this function, error code 801 is returned.
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
+import { BusinessError, Callback } from '@kit.BasicServicesKit';
+import { motion } from '@kit.MultimodalAwarenessKit';
 
 let callback:Callback<motion.OperatingHandStatus> = (data:motion.OperatingHandStatus) => {
-    console.info('callback succeeded' + data);
+    console.info('operatingHandStatus: ' + data);
 };
 
 try {
     motion.on('operatingHandChanged', callback);  
-    console.info("on succeeded");
+    console.info('on succeeded');
 } catch (err) {
     let error = err as BusinessError;
-    console.error("Failed on and err code is " + error.code);
+    console.error(`Failed to subscribe operatingHandChanged. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 
@@ -100,7 +101,7 @@ Subscribes to the holding hand status change awareness event. The system uses se
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let callback:Callback<motion.HoldingHandStatus> = (data:motion.HoldingHandStatus) => {
-  console.info('callback succeeded: ' + data);
+  console.info('holdingHandStatus: ' + data);
 };
 
 try {
@@ -108,6 +109,6 @@ try {
   console.info('on succeeded');
 } catch (err) {
   let error = err as BusinessError;
-  console.error('Failed on; err code = ' + error.code);
+  console.error(`Failed to subscribe holdingHandChanged. Code: ${error.code}, message: ${error.message}`);
 }
 ```

@@ -44,12 +44,12 @@ Enables the screen content access permission monitoring and returns the permissi
 **Examples**
 
 ```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 try {
    onScreen.onReadingScreenPermissionListener((info: onScreen.ReadingScreenPermissionStatus) => {
       console.info(`onReadingScreenPermissionListener succeeded, readingState: ${info.readingState}`);
    });
 } catch (err) {
-   console.error('onReadingScreenPermissionListener failed, errCode = ' + err.code);
+   console.error(`onReadingScreenPermissionListener failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```

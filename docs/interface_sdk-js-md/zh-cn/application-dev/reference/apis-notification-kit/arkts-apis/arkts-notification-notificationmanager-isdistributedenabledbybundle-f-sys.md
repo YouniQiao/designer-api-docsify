@@ -193,7 +193,7 @@ let bundle: notificationManager.BundleOption = {
     bundle: 'bundleName1',
     uid: 1
 };
-let deviceType: string = 'phone';
+let deviceType: string = 'wearable';
 notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {

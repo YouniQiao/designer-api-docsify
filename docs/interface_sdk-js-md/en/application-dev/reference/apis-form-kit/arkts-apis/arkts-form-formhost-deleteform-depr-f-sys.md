@@ -36,6 +36,19 @@ Deletes a widget. After this API is called, the application can no longer use th
 | formId | string | Yes | Widget ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is deleted, **error** is undefined; otherwise, **error** is an error object. |
 
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.deleteForm(formId, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost deleteForm, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
 
 <a id="deleteform2"></a>
 
@@ -72,3 +85,16 @@ Deletes a widget. After this API is called, the application can no longer use th
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formId: string = '12400633174999288';
+formHost.deleteForm(formId).then(() => {
+  console.info('formHost deleteForm success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost deleteForm, error: ${JSON.stringify(error)}`);
+});
+```

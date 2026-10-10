@@ -56,7 +56,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
+    bundle: 'bundleName',
 };
 notificationManager.setSilentReminderEnabled(bundle, true).then(() => {
     hilog.info(0x0000, 'testTag', '%{public}s', `setSilentReminderEnabled success.`);

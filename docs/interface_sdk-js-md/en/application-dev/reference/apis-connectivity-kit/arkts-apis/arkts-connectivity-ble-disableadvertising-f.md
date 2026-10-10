@@ -65,7 +65,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -89,7 +90,7 @@ try {
         advertisingSettings: setting,
         advertisingData: advData,
         advertisingResponse: advResponse,
-        duration: 0
+        duration: 300
     }
     let advHandle = 0xFF;
     ble.startAdvertising(advertisingParams, (err, outAdvHandle) => {
@@ -101,10 +102,13 @@ try {
         }
     });
 
-    let advertisingDisableParams: ble.AdvertisingDisableParams = {
-        advertisingId: advHandle
+    let advertisingEnableParams: ble.AdvertisingEnableParams = {
+        advertisingId: advHandle,
+        duration: 0
     }
-    ble.disableAdvertising(advertisingDisableParams, (err) => {
+
+    // after 3s, advertising disabled, then enable the advertising
+    ble.enableAdvertising(advertisingEnableParams, (err) => {
         if (err) {
             return;
         }
@@ -179,7 +183,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -203,7 +208,7 @@ try {
         advertisingSettings: setting,
         advertisingData: advData,
         advertisingResponse: advResponse,
-        duration: 0
+        duration: 300
     }
     let advHandle = 0xFF;
     ble.startAdvertising(advertisingParams, (err, outAdvHandle) => {
@@ -215,10 +220,13 @@ try {
         }
     });
 
-    let advertisingDisableParams: ble.AdvertisingDisableParams = {
-        advertisingId: advHandle
+    let advertisingEnableParams: ble.AdvertisingEnableParams = {
+        advertisingId: advHandle,
+        duration: 0
     }
-    ble.disableAdvertising(advertisingDisableParams)
+
+    // after 3s, advertising disabled, then enable the advertising
+    ble.enableAdvertising(advertisingEnableParams)
         .then(() => {
             console.info("enable success");
     });

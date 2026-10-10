@@ -788,8 +788,7 @@ onKeyEvent(keyEvent: systemManager.KeyEvent): void
 **示例**
 
 ```TypeScript
-import { EnterpriseAdminExtensionAbility } from '@kit.MDMKit';
-import { systemManager } from '@kit.MDMKit';
+import { EnterpriseAdminExtensionAbility, systemManager } from '@kit.MDMKit';
 
 export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbility {
 

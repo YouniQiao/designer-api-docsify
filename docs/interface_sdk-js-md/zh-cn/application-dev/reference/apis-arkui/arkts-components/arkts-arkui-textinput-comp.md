@@ -69,7 +69,7 @@ TextInput(value?: TextInputOptions)
 
 ### 示例1（设置与获取光标位置）
 
-从API version 8开始，该示例通过[controller](arkts-arkui-textinput-comp-textinputcontroller-c.md)实现了光标位置的设置与获取的功能，同时，可以使用!!实现text参数的双向数据绑定（从API version 18开始）。
+从API version 8开始，该示例通过[controller](arkts-arkui-textinput-comp-textinputcontroller-c.md)实现了光标位置的设置，从API version 11开始支持获取光标位置（[getCaretOffset](ts-universal-attributes-text-style.md#getcaretoffset11)），同时，可以使用!!实现text参数的双向数据绑定（从API version 18开始）。
 
 
 
@@ -80,8 +80,8 @@ TextInput(value?: TextInputOptions)
 struct TextInputExample {
   @State text: string = '';
   // index：光标所在位置的索引值
-  // x：光标相对输入框的x坐标位值，单位px
-  // y：光标相对输入框的y坐标位值，单位px
+  // x：光标相对输入框的x坐标值，单位px
+  // y：光标相对输入框的y坐标值，单位px
   @State positionInfo: CaretOffset = { index: 0, x: 0, y: 0 }; 
   @State passwordState: boolean = false;
   controller: TextInputController = new TextInputController();
@@ -379,9 +379,9 @@ struct TextInputExample {
         .showUnderline(true)
         .showCounter(true,
           { thresholdPercentage: 50, highlightBorder: true })
-          // 计数器显示效果为用户当前输入字符数/最大字符限制数。最大字符限制数通过maxLength()接口设置。
-          // 如果用户当前输入字符数达到最大字符限制乘50%（thresholdPercentage）。字符计数器显示。
-          // 用户设置highlightBorder为false时，配置取消红色边框。不设置此参数时，默认为true。
+          // 计数器显示效果为当前输入字符数/最大输入字符数。最大输入字符数通过maxLength()接口设置。
+          // 当输入字符数大于最大输入字符数的50%（thresholdPercentage）时，显示字符计数器。
+          // 设置highlightBorder为false时，不显示红色边框。不设置此参数时，默认为true。
         .onChange((value: string) => {
           this.text = value;
         })
@@ -419,7 +419,7 @@ struct TextInputExample {
     let isRule: RegExp = new RegExp('^\\+.*');
 
     if (isSpace.test(numText)) {
-      // 如果电话号码里有特殊字符，就不加空格
+      // 如果电话号码中包含特殊字符，则不添加空格
       if (isRule.test(numText)) {
         return true;
       } else {
@@ -468,7 +468,7 @@ struct TextInputExample {
       if (this.lastCaretPosition === this.text.length) {
         console.info('Caret at last, no need to change');
       } else if (this.lastCaretPosition === this.lastCaretPositionEnd) {
-        // 按键盘上回退键一个一个删的情况
+        // 按键盘上回退键逐个删除字符的场景
         for (let i = this.lastCaretPosition; i < this.text.length; i++) {
           if (this.text[i] != ' ') {
             this.actualCh += 1;
@@ -484,7 +484,7 @@ struct TextInputExample {
           }
         }
       } else {
-        // 剪切/手柄选择 一次删多个字符
+        // 剪切或通过手柄选择，一次删除多个字符
         this.nextCaret = this.lastCaretPosition; // 保持光标位置
       }
     }
@@ -518,7 +518,7 @@ struct TextInputExample {
             }
             console.info('onChange Triggered:' + this.text + '|' + nextText + '|' + value);
             if (this.text === nextText && nextText === value) {
-              // 此时说明数字已经格式化完成了 在这个时候改变光标位置不会被重置掉
+              // 此时说明数字已完成格式化，此时改变光标位置不会被重置
               this.setCaret();
             } else {
               this.calcCaretPosition(nextText);
@@ -680,7 +680,7 @@ struct TextInputExample {
 
 ### 示例10（自定义键盘避让）
 
-该示例通过[customKeyboard](#customkeyboard10)（从API version 10开始）属性配置[KeyboardOptions](ts-basic-components-richeditor.md#keyboardoptions12)（从API version 12开始）接口实现了自定义键盘避让的效果。
+该示例通过[customKeyboard](#customkeyboard10)（从API version 10开始）属性配置[KeyboardOptions](ts-basic-components-richeditor.md#keyboardoptions12)（从API version 12开始）参数，实现了自定义键盘避让的效果。
 
 
 
@@ -847,7 +847,7 @@ struct TextInputExample {
 
 ### 示例13（支持插入和删除回调）
 
-从API version 12开始，该示例通过[onWillInsert](#onwillinsert12)、[onDidInsert](#ondidinsert12)、[onWillDelete](#onwilldelete12)、[onDidDelete](#ondiddelete12)接口实现了插入和删除的效果。
+从API version 12开始，该示例通过[onWillInsert](#onwillinsert12)、[onDidInsert](#ondidinsert12)、[onWillDelete](#onwilldelete12)、[onDidDelete](#ondiddelete12)接口实现了插入和删除的效果，同时，通过[onWillChange](#onwillchange15)（从API version 15开始）接口获取文本变化内容。
 
 
 
@@ -1004,9 +1004,9 @@ struct TextInputExample {
 
 
 ```TypeScript
+// xxx.ets
 import { SymbolGlyphModifier } from '@kit.ArkUI';
 
-// xxx.ets
 @Entry
 @Component
 struct TextInputExample {
@@ -1096,7 +1096,7 @@ struct EllipsisModeExample {
 
 ### 示例17（输入框支持输入状态变化等回调）
 
-从API version 8开始，该示例通过[onEditChange](#oneditchange8)、[onCopy](#oncopy8)、[onCut](#oncut8)、[onPaste](#onpaste8)、[onContentScroll](#oncontentscroll10)（从API version 10开始）、[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口实现了输入框监测输入状态变化、复制、剪切、粘贴、文本内容滚动回调的效果、如何屏蔽系统复制功能，以及如何屏蔽系统剪切功能，同时，可以通过设置[selectAll](#selectall11)（从API version 11开始）属性，输入框初始状态下是否全选文本。
+从API version 8开始，该示例通过[onEditChange](#oneditchange8)、[onCopy](#oncopy8)、[onCut](#oncut8)、[onPaste](#onpaste8)、[onContentScroll](#oncontentscroll10)（从API version 10开始）、[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口实现了输入框监测输入状态变化、复制、剪切、粘贴、文本内容滚动等回调，并展示了如何屏蔽系统复制功能和系统剪切功能。同时，代码中使用了[selectedBackgroundColor](#selectedbackgroundcolor10)、[caretStyle](#caretstyle10)、[caretPosition](#caretposition10)、[selectionMenuHidden](#selectionmenuhidden10)、[enableKeyboardOnFocus](#enablekeyboardonfocus10)属性（均从API version 10开始），并可通过设置[selectAll](#selectall11)（从API version 11开始）属性，控制输入框初始状态下是否全选文本。
 
 从API版本26.0.0开始，新增[onWillCopy](#onwillcopy)、[onWillCut](#onwillcut)接口。
 
@@ -1281,13 +1281,13 @@ struct TextInputExample {
       Column({ space: 30 }) {
         Text('通过minFontScale、maxFontScale调整文本显示的最大和最小字体缩放倍数。')
         TextInput({
-          placeholder: 'The text area can hold an unlimited amount of text. input your word...',
+          placeholder: 'input your word...',
           text: '通过minFontScale、maxFontScale调整文本显示的最大和最小字体缩放倍数。'
         })
           .minFontScale(this.minFontScale) // 设置最小字体缩放倍数，参数为undefined则跟随系统默认倍数缩放
           .maxFontScale(this.maxFontScale) // 设置最大字体缩放倍数，参数为undefined则跟随系统默认倍数缩放
       }.width('100%')
-      // 以下按钮只用做字体大小倍数调整，不在示例图中呈现
+      // 以下按钮仅用于调整字体大小倍数，不在示例图中呈现
       Column() {
         Row() {
           Button('1倍').onClick(() => {
@@ -1434,9 +1434,9 @@ struct TextInputExample {
 
 
 ```TypeScript
+// xxx.ets
 import { ColorMetrics } from '@kit.ArkUI';
 
-// xxx.ets
 @Entry
 @Component
 struct TextInputExample {
@@ -1473,6 +1473,7 @@ struct TextInputExample {
 ```TypeScript
 // xxx.ets
 import { LengthMetrics } from '@kit.ArkUI';
+
 @Entry
 @Component
 struct TextInputExample  {
@@ -1564,6 +1565,7 @@ struct TextInputExample {
 
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct TextInputBarStateDemo {
@@ -1595,13 +1597,14 @@ struct TextInputBarStateDemo {
 
 文本自动换行后，剩余内容（含标点符号）需要能够放入上一行，标点符号悬挂才生效。
 
-从API版本23开始，新增compressLeadingPunctuation接口。
+从API version 23开始，新增compressLeadingPunctuation接口。
 
 从API版本26.0.0开始，新增punctuationOverflow接口。
 
 
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct PunctuationDemo {
@@ -1714,6 +1717,7 @@ struct Index {
 
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct TextInputTest {
@@ -1732,15 +1736,16 @@ struct TextInputTest {
 }
 ```
 
-### 示例29（删除文本框内的最后一个字符）
+### 示例29（删除光标前的字符）
 
-该示例通过调用[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口删除文本框内最后一个字符。
+该示例通过调用[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口删除光标前的一个字符；若已选中部分文本，则删除选中文本（光标在文本末尾时，即删除输入框内最后一个字符）。
 
 从API version 23开始，新增[deleteBackward](ts-universal-attributes-text-style.md#deletebackward23)接口。
 
 
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct Page {
@@ -1751,7 +1756,7 @@ struct Page {
       TextInput({ text: 'TextInput输入框Deletebackward示例', controller: this.controller })
       Button('Delete backward')
         .onClick(() => {
-          // 删除文本框内最后一个字符
+          // 删除光标前的一个字符；若已选中部分文本，则删除选中文本
           this.controller.deleteBackward();
         })
     }
@@ -1839,7 +1844,7 @@ struct TextInputExample {
 
 ### 示例32（设置文本排版时是否使能孤字优化）
 
-该示例通过[orphanCharOptimization](#orphancharoptimization)接口设置使能孤字优化，确保段落最后一行不出现孤字。
+该示例通过[orphanCharOptimization](#orphancharoptimization)接口使能孤字优化，确保段落最后一行不出现孤字。
 
 从API版本26.0.0开始，新增orphanCharOptimization接口。
 
@@ -1886,13 +1891,14 @@ struct TextExample {
 
 ### 示例33（设置文本着色器效果）
 
-该示例通过[shaderStyle](#shaderstyle)接口实现对TextInput组件内文本着色效果。
+该示例通过[shaderStyle](#shaderstyle)接口实现TextInput组件内文本的着色效果。
 
 从API版本26.0.0开始，新增shaderStyle接口。
 
 
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct ShaderColorStyle {
@@ -1961,6 +1967,7 @@ struct ShaderColorStyle {
 从API version 22开始，新增enableSelectedDataDetector。
 
 ```TypeScript
+// xxx.ets
 @Entry
 @Component
 struct Demo34 {

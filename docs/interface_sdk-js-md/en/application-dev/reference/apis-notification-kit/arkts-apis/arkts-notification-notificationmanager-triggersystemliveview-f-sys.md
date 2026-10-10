@@ -59,16 +59,16 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Bundle information
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 // Notification ID
 let notificationId = 1;
 // Button information
 let buttonOptions: notificationManager.ButtonOptions = {
-    buttonName: "buttonName1",
+    buttonName: 'buttonName1',
 }
 notificationManager.triggerSystemLiveView(bundle, notificationId, buttonOptions).then(() => {
-  console.info("triggerSystemLiveView success");
+  console.info('triggerSystemLiveView success');
 }).catch((err: BusinessError) => {
   console.error(`triggerSystemLiveView failed, code is ${err.code}, message is ${err.message}`);
 });

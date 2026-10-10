@@ -6,7 +6,7 @@ const enum ParseReturnType
 
 枚举解析返回结果的类型。
 
-当parseReturnType为MAP时，解析结果为Sendable Map（JSSharedMap）而非Sendable对象（JSSharedObject）。仅对[parseSendable](arkts-arkts-json-parsesendable-f.md)生效；[parse](arkts-arkts-json-parse-f.md)会忽略该字段。
+当parseReturnType为MAP时，解析结果为collection.Map而非Sendable对象。仅对[parseSendable](arkts-arkts-json-parsesendable-f.md)生效；[parse](arkts-arkts-json-parse-f.md)会忽略该字段。
 
 **起始版本：** 26.0.1
 
@@ -20,7 +20,7 @@ const enum ParseReturnType
 MAP = 1
 ```
 
-解析结果为Sendable Map，支持任意条数的增删操作。
+解析结果为collections.Map，支持任意条数的增删操作。
 
 **起始版本：** 26.0.1
 

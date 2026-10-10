@@ -63,7 +63,7 @@ authenticator.execute('FACE_ONLY', 'S2', (error, code) => {
     console.info('auth successfully.');
     return;
   }
-  console.error(`auth failed, code = ${code}`);
+  console.error(`Failed to auth. Code: ${code}`);
 });
 ```
 
@@ -111,8 +111,8 @@ try {
   let authenticator = userAuth.getAuthenticator();
   authenticator.execute('FACE_ONLY', 'S2').then((code) => {
     console.info('auth successfully.');
-  })
+  });
 } catch (error) {
-  console.error(`auth failed, Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to auth. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```

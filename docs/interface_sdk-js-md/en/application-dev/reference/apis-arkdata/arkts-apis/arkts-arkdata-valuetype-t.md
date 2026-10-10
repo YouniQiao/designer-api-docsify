@@ -18,7 +18,7 @@ Defines the value types allowed in a **ValuesBucket** instance.
 
 | Type | Description |
 | --- | --- |
-| long | [since 20] |
-| double | [since 20] |
-| string | The value is a string. [since 12] |
-| boolean | The value is **true** or **false**. [since 12] |
+| long | <br>**Since:** 20 |
+| double | <br>**Since:** 20 |
+| string | The value is a string.<br>**Since:** 12 |
+| boolean | The value is **true** or **false**.<br>**Since:** 12 |

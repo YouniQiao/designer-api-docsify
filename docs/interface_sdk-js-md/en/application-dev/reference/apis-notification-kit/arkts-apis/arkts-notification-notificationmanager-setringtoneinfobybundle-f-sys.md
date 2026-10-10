@@ -60,13 +60,13 @@ export default class EntryAbility extends UIAbility {
   onForeground(): void {
     try {
       let bundle: notificationManager.BundleOption = {
-        bundle: "bundleName",
+        bundle: 'bundleName',
       };
       let ringtoneInfo: notificationManager.RingtoneInfo = {
         ringtoneType: notificationManager.RingtoneType.RINGTONE_TYPE_SYSTEM,
-        ringtoneTitle: "ringtoneName",
-        ringtoneFileName: "ringtonePath",
-        ringtoneUri: "ringtoneUri",
+        ringtoneTitle: 'ringtoneName',
+        ringtoneFileName: 'ringtonePath',
+        ringtoneUri: 'ringtoneUri',
       }
       notificationManager.setRingtoneInfoByBundle(bundle, ringtoneInfo).then(() => {
         console.info(`setRingtoneInfoByBundle bundle: ${JSON.stringify(bundle)}', ringtoneInfoJSON: ' ${JSON.stringify(ringtoneInfo)}`);

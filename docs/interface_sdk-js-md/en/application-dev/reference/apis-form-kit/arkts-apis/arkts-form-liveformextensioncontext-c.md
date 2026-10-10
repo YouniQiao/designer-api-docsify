@@ -88,7 +88,7 @@ struct MyLiveFormPage {
     this.liveFormContext = this.storageForMyLiveFormPage?.get<common.LiveFormExtensionContext>('context');
   }
 
-   private startAbilityByLiveForm(): void {
+  private startAbilityByLiveForm(): void {
     try {
       // Replace the Want information with the actual one.
       this.liveFormContext?.startAbilityByLiveForm({

@@ -59,7 +59,7 @@ let isBadgeDisplayedCallback = (err: BusinessError, data: boolean): void => {
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isBadgeDisplayed(bundle, isBadgeDisplayedCallback);
 ```
@@ -116,7 +116,7 @@ Checks whether the notification badge is enabled for a specified application. Th
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 
 notificationManager.isBadgeDisplayed(bundle).then((data: boolean) => {

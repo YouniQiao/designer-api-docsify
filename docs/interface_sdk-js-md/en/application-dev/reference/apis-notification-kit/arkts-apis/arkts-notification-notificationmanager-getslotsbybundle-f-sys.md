@@ -59,7 +59,7 @@ let getSlotsByBundleCallback = (err: BusinessError, data: Array<notificationMana
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.getSlotsByBundle(bundle, getSlotsByBundleCallback);
 ```
@@ -116,7 +116,7 @@ Obtains the notification slots of a specified application. This API uses a promi
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 notificationManager.getSlotsByBundle(bundle).then((data: Array<notificationManager.NotificationSlot>) => {

@@ -181,27 +181,24 @@ let bleScanner: ble.BleScanner = ble.createBleScanner();
 function onReceiveEvent(scanReport: ble.ScanReport) {
     console.info('BLE scan device find result = '+ JSON.stringify(scanReport));
 }
-async function startscan() {
-    try {
-        bleScanner.on("BLEDeviceFind", onReceiveEvent);
-        let scanFilter: ble.ScanFilter = {
+try {
+    bleScanner.on("BLEDeviceFind", onReceiveEvent);
+    let scanFilter: ble.ScanFilter = {
             deviceId:"XX:XX:XX:XX:XX:XX",
             name:"test",
             serviceUuid:"00001888-0000-1000-8000-00805f9b34fb"
         };
-        let scanOptions: ble.ScanOptions = {
-            interval: 500,
-            dutyMode: ble.ScanDuty.SCAN_MODE_LOW_POWER,
-            matchMode: ble.MatchMode.MATCH_MODE_AGGRESSIVE,
-            reportMode: ble.ScanReportMode.FENCE_SENSITIVITY_LOW
-        }
-        await bleScanner.startScan([scanFilter],scanOptions);
-        console.info('startScan success');
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
+    let scanOptions: ble.ScanOptions = {
+        interval: 500,
+        dutyMode: ble.ScanDuty.SCAN_MODE_LOW_POWER,
+        matchMode: ble.MatchMode.MATCH_MODE_AGGRESSIVE,
+        reportMode: ble.ScanReportMode.FENCE_SENSITIVITY_LOW
     }
+    bleScanner.startScan([scanFilter],scanOptions);
+    console.info('startScan success');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
-startscan();
 ```
 
 ## stopScan
@@ -246,13 +243,10 @@ Stops BLE scanning.
 import { AsyncCallback, BusinessError } from '@kit.BasicServicesKit';
 import { ble } from '@kit.ConnectivityKit';
 let bleScanner: ble.BleScanner = ble.createBleScanner();
-async function stopScan() {
-    try {
-        await bleScanner.stopScan();
-        console.info('stopScan success');
-    } catch (err) {
-        console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-    }
+try {
+    bleScanner.stopScan();
+    console.info('stopScan success');
+} catch (err) {
+    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
-stopScan();
 ```

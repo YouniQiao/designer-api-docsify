@@ -49,16 +49,17 @@ function on(type: 'error', observer: ErrorObserver): number
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let observer: errorManager.ErrorObserver = {
   onUnhandledException(errorMsg) {
-    console.info('onUnhandledException, errorMsg: ', errorMsg);
+    hilog.info(0x0000, 'testTag', `onUnhandledException, errorMsg: ${errorMsg}`);
   },
   onException(errorObj) {
-    console.info('onException, name: ', errorObj.name);
-    console.info('onException, message: ', errorObj.message);
+    hilog.info(0x0000, 'testTag', `onException, name: ${errorObj.name}`);
+    hilog.info(0x0000, 'testTag', `onException, message: ${errorObj.message}`);
     if (typeof(errorObj.stack) === 'string') {
-      console.info('onException, stack: ', errorObj.stack);
+      hilog.info(0x0000, 'testTag', `onException, stack: ${errorObj.stack}`);
     }
   }
 };
@@ -69,7 +70,7 @@ try {
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
+  hilog.error(0x0000, 'testTag', `error: ${code}, ${message}`);
 }
 ```
 
@@ -111,10 +112,11 @@ function on(type: 'loopObserver', timeout: number, observer: LoopObserver): void
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let observer: errorManager.LoopObserver = {
   onLoopTimeOut(timeout: number) {
-    console.info('Duration timeout: ' + timeout);
+    hilog.info(0x0000, 'testTag', `Duration timeout: ${timeout}`);
   }
 };
 
@@ -123,7 +125,7 @@ try {
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
+  hilog.error(0x0000, 'testTag', `error: ${code}, ${message}`);
 }
 ```
 
@@ -164,15 +166,16 @@ function on(type: 'unhandledRejection', observer: UnhandledRejectionObserver): v
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let observer: errorManager.UnhandledRejectionObserver = (reason: Error, promise: Promise<void>) => {
   if (promise === promise1) {
-    console.info('promise1 is rejected');
+    hilog.info(0x0000, 'testTag', `promise1 is rejected`);
   }
-  console.info('reason.name: ', reason.name);
-  console.info('reason.message: ', reason.message);
+  hilog.info(0x0000, 'testTag', `reason.name: ${reason.name}`);
+  hilog.info(0x0000, 'testTag', `reason.message: ${reason.message}`);
   if (reason.stack) {
-    console.info('reason.stack: ', reason.stack);
+    hilog.info(0x0000, 'testTag', `reason.stack: ${reason.stack}`);
   }
 };
 
@@ -218,13 +221,14 @@ function on(type: 'globalUnhandledRejectionDetected', observer: GlobalObserver):
 
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 const promiseFunc = (observer: errorManager.GlobalError) => {
-  console.info('result name :' + observer.name);
-  console.info('result message :' + observer.message);
-  console.info('result stack :' + observer.stack);
-  console.info('result instanceName :' + observer.instanceName);
-  console.info('result instanceType :' + observer.instanceType);
+  hilog.info(0x0000, 'testTag', `result name :${observer.name}`);
+  hilog.info(0x0000, 'testTag', `result message :${observer.message}`);
+  hilog.info(0x0000, 'testTag', `result stack :${observer.stack}`);
+  hilog.info(0x0000, 'testTag', `result instanceName :${observer.instanceName}`);
+  hilog.info(0x0000, 'testTag', `result instanceType :${observer.instanceType}`);
 };
 
 errorManager.on('globalUnhandledRejectionDetected', promiseFunc);
@@ -281,16 +285,17 @@ function on(type: 'freeze', observer: FreezeObserver): void
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 const freezeCallback = () => {
-  console.info('freezecallback');
+  hilog.info(0x0000, 'testTag', 'freezecallback');
 };
 try {
   errorManager.on('freeze', freezeCallback);
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
+  hilog.error(0x0000, 'testTag', `error: ${code}, ${message}`);
 }
 ```
 
@@ -330,13 +335,14 @@ function on(type: 'globalErrorOccurred', observer: GlobalObserver): void
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 const errorFunc = (observer: errorManager.GlobalError) => {
-  console.info('result name :' + observer.name);
-  console.info('result message :' + observer.message);
-  console.info('result stack :' + observer.stack);
-  console.info('result instanceName :' + observer.instanceName);
-  console.info('result instanceType :' + observer.instanceType);
+  hilog.info(0x0000, 'testTag', `result name :${observer.name}`);
+  hilog.info(0x0000, 'testTag', `result message :${observer.message}`);
+  hilog.info(0x0000, 'testTag', `result stack :${observer.stack}`);
+  hilog.info(0x0000, 'testTag', `result instanceName :${observer.instanceName}`);
+  hilog.info(0x0000, 'testTag', `result instanceType :${observer.instanceType}`);
 };
 
 try {
@@ -344,6 +350,6 @@ try {
 } catch (paramError) {
   let code = (paramError as BusinessError).code;
   let message = (paramError as BusinessError).message;
-  console.error(`error: ${code}, ${message}`);
+  hilog.error(0x0000, 'testTag', `error: ${code}, ${message}`);
 }
 ```

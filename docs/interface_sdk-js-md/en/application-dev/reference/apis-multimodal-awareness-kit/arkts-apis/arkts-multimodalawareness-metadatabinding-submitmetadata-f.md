@@ -37,12 +37,14 @@ A third-party application passes the content to be encoded to the API service, w
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 
-let metadata: string = "";
+let metadata: string = 'sample metadata';
 try {
   metadataBinding.submitMetadata(metadata);
 } catch (error) {
-  console.error("submit metadata error" + error);
+  const err: BusinessError = error as BusinessError;
+  console.error(`Failed to submit metadata. Code: ${err.code}, message: ${err.message}`);
 }
 ```

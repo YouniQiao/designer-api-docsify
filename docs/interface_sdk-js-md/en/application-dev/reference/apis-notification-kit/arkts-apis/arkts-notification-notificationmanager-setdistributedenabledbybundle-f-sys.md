@@ -61,13 +61,13 @@ This API can be properly called on devices other than wearables and TVs. If it i
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
 let enable: boolean = true;
-let deviceType: string = "phone";
+let deviceType: string = 'wearable';
 notificationManager.setDistributedEnabledByBundle(bundle, deviceType, enable).then(() => {
-    console.info("setDistributedEnabledByBundle success");
+    console.info('setDistributedEnabledByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`setDistributedEnabledByBundle failed, code is ${err.code}, message is ${err.message}`);
 });

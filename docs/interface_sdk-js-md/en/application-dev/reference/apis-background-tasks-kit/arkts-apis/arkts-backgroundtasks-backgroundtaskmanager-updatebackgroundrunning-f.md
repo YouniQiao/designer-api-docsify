@@ -68,15 +68,15 @@ This API can only be used to update continuous tasks that were requested via the
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     try {
       // You must call startBackgroundRunning before updateBackgroundRunning. Here it is assumed that you have called startBackgroundRunning.
-      let list: Array<string> = ["audioPlayback"];
-      backgroundTaskManager.updateBackgroundRunning(this.context, list).then(() => {
-        console.info("Operation updateBackgroundRunning succeeded");
+      let list: Array<string> = ['audioPlayback'];
+      backgroundTaskManager.updateBackgroundRunning(this.context, list).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
+        console.info('Operation updateBackgroundRunning succeeded. Data: ' + JSON.stringify(res));
       }).catch((error: BusinessError) => {
         console.error(`Operation updateBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
       });
@@ -146,7 +146,7 @@ a failure message is returned.
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 // In atomic services, please remove the WantAgent import.
@@ -154,13 +154,13 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 export default class EntryAbility extends UIAbility {
   notificationId: number = 0; // Save the notification ID.
   continuousTaskId: number | undefined = -1; // Continuous task ID.
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let wantAgentInfo: wantAgent.WantAgentInfo = {
       // Add the bundleName and abilityName of the application to be started. Replace them with the actual ones.
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Set the operation type after the notification is tapped.
@@ -179,6 +179,7 @@ export default class EntryAbility extends UIAbility {
           // You must call startBackgroundRunning before updateBackgroundRunning. Apply for a continuous task in advance.
           let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
           let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
+          // Create a continuous task request object.
           let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
           continuousTaskRequest.backgroundTaskModes = modeList;
           continuousTaskRequest.backgroundTaskSubmodes = subModeList;
@@ -186,7 +187,7 @@ export default class EntryAbility extends UIAbility {
           continuousTaskRequest.combinedTaskNotification = false;
           continuousTaskRequest.continuousTaskId = this.continuousTaskId; // For the update API, the continuous task ID must be passed and the ID must exist. Otherwise, the update fails.
           backgroundTaskManager.updateBackgroundRunning(this.context, continuousTaskRequest).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info("Operation updateBackgroundRunning succeeded");
+            console.info('Operation updateBackgroundRunning succeeded. Data: ' + JSON.stringify(res));
             this.notificationId = res.notificationId;
           }).catch((error: BusinessError) => {
             console.error(`Operation updateBackgroundRunning failed. code is ${error.code} message is ${error.message}`);

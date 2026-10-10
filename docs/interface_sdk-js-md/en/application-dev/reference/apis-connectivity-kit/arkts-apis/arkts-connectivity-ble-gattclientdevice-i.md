@@ -1434,6 +1434,19 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device. The 
 | 2900099 | Operation failed. |
 | 2901003 | The connection is not established. |
 
+**Examples**
+
+```TypeScript
+try {
+    let device: ble.GattClientDevice = ble.createGattClientDevice('XX:XX:XX:XX:XX:XX');
+    device.setBLEMtu(128).then(outMtuSize => {
+        console.info('Actual MTU: ' + outMtuSize);
+    });
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
 ## setBLEMtuSize
 
 ```TypeScript

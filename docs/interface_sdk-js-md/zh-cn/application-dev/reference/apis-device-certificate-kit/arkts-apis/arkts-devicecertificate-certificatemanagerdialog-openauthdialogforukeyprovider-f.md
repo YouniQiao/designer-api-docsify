@@ -50,3 +50,42 @@ function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthR
 | [29700006](../errorcode-certManagerDialog.md#29700006-入参校验失败) | Indicates that the input parameters validation failed. For example, the parameter format is incorrect or the value range is invalid. |
 | [29700009](../errorcode-certManagerDialog.md#29700009-证书管理对话框操作超时) | The operation in the Ukey authentication dialog box timed out. |
 | [29700010](../errorcode-certManagerDialog.md#29700010-不支持并发调用) | The Ukey authentication dialog box cannot be opened concurrently. Please try again later. |
+
+**示例**
+
+```TypeScript
+import { certificateManagerDialog } from '@kit.DeviceCertificateKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+/* abilityType为Ukey认证对话框的Ability类型，此处赋值UKEY_AUTH_EXTENSION_ABILITY */
+let abilityType: certificateManagerDialog.AbilityType =
+  certificateManagerDialog.AbilityType.UKEY_AUTH_EXTENSION_ABILITY;
+/* abilityName为UKey驱动应用实现的UkeyAuthExtensionAbility名称，此处仅为示例 */
+let abilityName: string = 'com.example.ukeydriver.UkeyAuthExtensionAbility';
+let dialogInfo: certificateManagerDialog.UkeyAuthDialogInfo = {
+  abilityType: abilityType,
+  abilityName: abilityName
+};
+/* keyUri为USB Key证书凭据的唯一标识符，调用方自行获取，此处仅为示例 */
+let keyUri: string = 'test';
+/* 传入Ukey鉴权对话框的自定义数据，此处仅为示例 */
+let customData: Uint8Array = new Uint8Array([0x01, 0x02, 0x03]);
+/* Ukey认证对话框的操作超时时间，单位为秒，取值范围为[180, 600]内的整数 */
+let timeoutDuration: number = 300;
+let ukeyAuthRequest: certificateManagerDialog.UkeyAuthRequest = {
+  keyUri: keyUri,
+  customData: customData,
+  timeoutDuration: timeoutDuration
+};
+try {
+  certificateManagerDialog.openAuthDialogForUkeyProvider(dialogInfo, ukeyAuthRequest).then(() => {
+    console.info(`Succeeded in opening ukey auth dialog`);
+  }).catch((error: Error) => {
+    let err = error as BusinessError;
+    console.error(`Failed to open ukey auth dialog. Code: ${err.code}, message: ${err.message}`);
+  });
+} catch (err) {
+  let error = err as BusinessError;
+  console.error(`Failed to open ukey auth dialog. Code: ${error.code}, message: ${error.message}`);
+}
+```

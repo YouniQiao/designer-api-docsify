@@ -45,15 +45,15 @@ Obtains the information a deferred task. This API uses an asynchronous callback 
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 
-  workScheduler.getWorkStatus(50, (error: BusinessError, res: workScheduler.WorkInfo) => {
-    if (error) {
-      console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-    } else {
-      console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-    }
-  });
+workScheduler.getWorkStatus(50, (error: BusinessError, res: workScheduler.WorkInfo) => {
+  if (error) {
+    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
+  } else {
+    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
+  }
+});
 ```
 
 
@@ -101,11 +101,11 @@ Obtains the information a deferred task. This API uses a promise to return the r
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 
-  workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
-    console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
-  }).catch((error: BusinessError) => {
-    console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
-  })
+workScheduler.getWorkStatus(50).then((res: workScheduler.WorkInfo) => {
+  console.info(`workschedulerLog getWorkStatus success, ${JSON.stringify(res)}`);
+}).catch((error: BusinessError) => {
+  console.error(`workschedulerLog getWorkStatus failed. code is ${error.code} message is ${error.message}`);
+})
 ```

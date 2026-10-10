@@ -96,7 +96,7 @@ import { wifiManagerExt } from '@kit.ConnectivityKit';
 
   wifiManagerExt.getPowerMode((err, data:wifiManagerExt.PowerMode) => {
       if (err) {
-          console.error("Failed to get linked information");
+          console.error("getPowerMode failed");
           return;
       }
       console.info("get power mode info: " + JSON.stringify(data));

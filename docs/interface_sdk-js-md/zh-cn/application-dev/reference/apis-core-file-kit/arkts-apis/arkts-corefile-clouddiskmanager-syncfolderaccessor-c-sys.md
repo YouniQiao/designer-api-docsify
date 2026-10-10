@@ -127,6 +127,9 @@ try {
             if (syncFolders[i].customAlias) {
                 console.info(`${TAG}syncFolders[${i}].customAlias: ${syncFolders[i].customAlias}`);
             }
+            if (syncFolders[i].isSupportPlaceHolder) {
+                console.info(`${TAG}syncFolders[${i}].isSupportPlaceHolder: ${syncFolders[i].isSupportPlaceHolder}`);
+            }
         }
     }).catch((err: BusinessError<object>) => {
         console.error(`${TAG}Failed to getAllSyncFolders. Code: ${err.code}, message: ${err.message}`);

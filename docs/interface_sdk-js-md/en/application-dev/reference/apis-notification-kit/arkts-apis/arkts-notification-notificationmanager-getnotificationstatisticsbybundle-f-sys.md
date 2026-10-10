@@ -52,8 +52,8 @@ Obtains notification statistics of a specified list of applications in batches. 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundles: notificationManager.BundleOption[] = [
-  { bundle:"com.example.test01" },
-  { bundle:"com.example.test02" }
+  { bundle:'com.example.test01' },
+  { bundle:'com.example.test02' }
 ];
 notificationManager.getNotificationStatisticsByBundle(bundles).then(
   (data: notificationManager.BundleNotificationStatistics[]) => {

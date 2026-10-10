@@ -78,7 +78,7 @@ struct SpanExample {
           .fontFamily('HarmonyOS Sans')
       }.margin({ top: 12 })
 
-      // 文本横线添加
+      // 文本装饰线设置
       Text('Text Decoration').fontSize(9).fontColor(0xCCCCCC).margin({ top: 12 })
       Text() {
         Span('I am Underline-WAVY-span')

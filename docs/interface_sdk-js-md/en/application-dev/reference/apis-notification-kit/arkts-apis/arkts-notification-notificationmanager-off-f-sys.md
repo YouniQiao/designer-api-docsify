@@ -48,7 +48,7 @@ Unsubscribes from notification events.
 import { BusinessError } from '@kit.BasicServicesKit';
 
 try{
-    notificationManager.off("checkNotification");
+    notificationManager.off('checkNotification');
 } catch (err){
     console.error(`notificationManager.off failed, code is ${err.code}, message is ${err.message}`);
 }

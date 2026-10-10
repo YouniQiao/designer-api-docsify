@@ -168,8 +168,7 @@ static canBeObserved<T extends object>(source: T): ObservedResult
 **示例**
 
 ```TypeScript
-import { UIUtils } from '@kit.ArkUI';
-import { DecoratorInfo, ElementInfo } from '@ohos.arkui.StateManagement';
+import { UIUtils, DecoratorInfo, ElementInfo } from '@kit.ArkUI';
 import { hilog } from '@kit.PerformanceAnalysisKit';
 
 const TAG = 'CanBeObserved';

@@ -2132,6 +2132,10 @@ struct TabsExample {
 
 从API版本26.0.0开始，新增barFloatingStyle接口。
 
+该示例配图为高算力设备强档效果：
+
+
+
 ```TypeScript
 // xxx.ets
 import { uiMaterial } from '@kit.ArkUI';
@@ -2169,6 +2173,186 @@ struct TabsFloatingStyleExample {
       })
       .barOverlap(true)
       .height('100%')
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
+### 示例25（设置侧边页签栏样式）
+
+本示例展示了通过[barStyle](#barstyle)接口设置页签栏的显示样式，包括固定底部页签栏样式、固定侧边页签栏样式、自适应侧边页签栏样式；通过[sidebarPosition](#sidebarposition)接口设置侧边页签栏的显示位置；通过[sidebarHeader](#sidebarheader)接口在侧边页签栏头部设置自定义内容；通过[sidebarSearchable](#sidebarsearchable)接口开启侧边页签栏的搜索功能；通过[onBarDisplayModeChange](#onbardisplaymodechange)接口注册显示模式切换的监听函数。
+
+从API版本26.2.0开始，新增barStyle、sidebarPosition、sidebarHeader、sidebarSearchable、onBarDisplayModeChange接口。
+
+
+
+```TypeScript
+// xxx.ets
+import { ComponentContent } from '@kit.ArkUI';
+
+@Builder
+function TestHeaderBuilder() {
+  Stack({alignContent: Alignment.Center}) {
+    Stack({alignContent: Alignment.Center}) {
+    }
+    .width(64)
+    .height(64)
+    .backgroundColor('#ff2787d9')
+  }
+  .width('100%')
+  .height(128)
+  .border({width: 1, color: '#ffd9d9d9' })
+}
+
+@Entry
+@Component
+struct TabsSidebarExample {
+  @State myBarStyle: TabBarStyle = TabBarStyle.BOTTOM;
+  @State tabsWidth: number = 550;
+  @State searchText: string = '';
+  @State currentIndex: number = 0;
+
+  build() {
+    Column() {
+      Column() {
+        Row() {
+          Text('barStyle: ').fontSize(25)
+          Button('BOTTOM').onClick(() => {
+            this.myBarStyle = TabBarStyle.BOTTOM;
+          }).margin({right: 10}).fontSize(15).backgroundColor('#ff2787d9')
+          Button('SIDEBAR').onClick(() => {
+            this.myBarStyle = TabBarStyle.SIDEBAR;
+          }).margin({right: 10}).fontSize(15).backgroundColor('#ff2787d9')
+          Button('SIDEBAR_ADAPTABLE').onClick(() => {
+            this.myBarStyle = TabBarStyle.SIDEBAR_ADAPTABLE;
+          }).fontSize(15).backgroundColor('#ff2787d9')
+        }.width('100%')
+        .justifyContent(FlexAlign.Center)
+        Row() {
+          Text('Tabs width: ').fontSize(25)
+          Button('550').onClick(() => {
+            this.tabsWidth = 550;
+          }).margin({right: 20}).backgroundColor('#ff2787d9')
+          Button('700').onClick(() => {
+            this.tabsWidth = 700;
+          }).margin({right: 20}).backgroundColor('#ff2787d9')
+          Button('850').onClick(() => {
+            this.tabsWidth = 850;
+          }).backgroundColor('#ff2787d9')
+        }.width('100%').margin({top: 5})
+        .justifyContent(FlexAlign.Center)
+      }.width('100%')
+      .height('18%')
+      Tabs() {
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text('TabContent1').fontSize(25)
+          }.width('100%').height('100%')
+        }.tabBar({icon: $r('app.media.startIcon'), text: 'tab1'})
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text('TabContent2').fontSize(25)
+          }.width('100%').height('100%')
+        }.tabBar({icon: $r('app.media.startIcon'), text: 'tab2'})
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text('TabContent3').fontSize(25)
+          }.width('100%').height('100%')
+        }
+        .tabBar({icon: $r('app.media.startIcon'), text: 'tab3'})
+      }
+      .height('65%')
+      .width(this.tabsWidth)
+      .vertical(false)
+      .barPosition(BarPosition.End)
+      .barBackgroundColor('#fff7f7f7')
+      .border({width: 1, color: '#ffd9d9d9'})
+      // 设置Tabs显示样式
+      .barStyle(this.myBarStyle)
+      // 设置侧边栏显示在起始侧
+      .sidebarPosition(BarPosition.Start)
+      // 设置侧边栏头部内容
+      .sidebarHeader(new ComponentContent(this.getUIContext(), wrapBuilder(TestHeaderBuilder)))
+      // 设置侧边栏搜索选项
+      .sidebarSearchable({
+        placeholder: 'Search tabs',
+        searchCallback: (text: string) => {
+          this.searchText = text;
+          console.info(`search text: ${text}`);
+        }
+      })
+      // 可以通过onBarDisplayModeChange接口监听显示模式切换的事件
+      .onBarDisplayModeChange((mode: TabBarDisplayMode) => {
+        console.info(`testTag TabBarDisplayMode change to ${mode}`)
+      })
+    }
+    .width('100%')
+    .height(600)
+  }
+}
+```
+
+### 示例26（设置侧边栏展示模式）
+
+本示例展示了如何通过[sidebarDisplayStyle](#sidebardisplaystyle)接口设置Tabs的侧边栏展示模式，切换嵌入模式（EMBED）和推挤模式（DISPLACE）。
+
+从API版本26.2.0开始，新增sidebarDisplayStyle接口。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TabsSideBarDemo {
+  @State isDisplace: boolean = false;
+
+  build() {
+    Column() {
+      // sidebarDisplayStyle切换
+      Row({ space: 12 }) {
+        Text('EMBED')
+          .fontSize(14)
+          .fontColor('#FFFFFF')
+          .backgroundColor(!this.isDisplace ? '#409EFF' : '#C0C4CC')
+          .padding({ top: 6, bottom: 6, left: 16, right: 16 })
+          .borderRadius(20)
+          .onClick(() => {
+            this.isDisplace = false;
+          })
+
+        Text('DISPLACE')
+          .fontSize(14)
+          .fontColor('#FFFFFF')
+          .backgroundColor(this.isDisplace ? '#67C23A' : '#C0C4CC')
+          .padding({ top: 6, bottom: 6, left: 16, right: 16 })
+          .borderRadius(20)
+          .onClick(() => {
+            this.isDisplace = true;
+          })
+      }
+      .padding({ top: 8, bottom: 8 })
+
+      Tabs() {
+        TabContent() {
+          Column() {
+            Text('首页内容')
+              .fontSize(24)
+              .fontColor('#409EFF')
+          }
+          .width('100%')
+          .height('100%')
+          .justifyContent(FlexAlign.Center)
+          .backgroundColor('#EBF5FF')
+        }
+        .tabBar('首页')
+      }
+      .barStyle(TabBarStyle.SIDEBAR)
+      .sidebarDisplayStyle(this.isDisplace ? TabsSidebarDisplayStyle.DISPLACE : TabsSidebarDisplayStyle.EMBED)
+      .scrollable(true)
+      .animationDuration(300)
+      .width('100%')
+      .layoutWeight(1)
     }
     .width('100%')
     .height('100%')

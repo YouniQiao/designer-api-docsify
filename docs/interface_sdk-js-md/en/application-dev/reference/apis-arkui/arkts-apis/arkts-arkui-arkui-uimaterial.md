@@ -90,103 +90,6 @@ import { uiMaterial } from '@kit.ArkUI';
 
 ## Examples
 
-### Example 1: Setting the System Material
-
-This example shows how to apply the Material object of a semi-transparent material to a component using the [systemMaterial](../arkui-ts/ts-universal-attributes-image-effect-sys.md#systemmaterial23) attribute.
-
-
-
-```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct SystemMaterialPage {
-  build() {
-    Column() {
-      Stack() {
-        Image($r('app.media.bg1')) // Replace $r('app.media.bg1') with the image resource file you use.
-          .width('100%')
-          .height('100%')
-
-        Column()
-          .width(100)
-          .height(50)
-          .position({ x: 50, y: 350 })
-          .systemMaterial(new uiMaterial.Material({ type: uiMaterial.MaterialType.SEMI_TRANSPARENT })) // Use the semi-transparent system material effect.
-      }
-      .height('90%')
-      .width('90%')
-    }
-    .height('100%')
-    .width('100%')
-    .alignItems(HorizontalAlign.Center)
-    .justifyContent(FlexAlign.Center)
-  }
-}
-```
-
-### Example 2 (Setting the System Material Using EffectComponent)
-
-This example shows how to set [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) on [EffectComponent](../arkui-ts/ts-container-effectcomponent-sys.md) and its child components, including directly using EC-style materials and applying the materials after conversion through [uiMaterial.convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) and [uiMaterial.convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md).
-
-Since API version 26.0.0, the uiMaterial.convertToECMaterial and uiMaterial.convertToECSubMaterial APIs are added.
-
-```TypeScript
-import { uiMaterial } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct Index {
-  @State myMaterialBase: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
-    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
-  });
-  @State myMaterialEC: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
-    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC,
-  });
-  @State myMaterialECSub: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
-    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC_SUB,
-  });
-
-  build() {
-    Stack() {
-      // Replace $r('app.media.startIcon') with the actual resource file.
-      Image($r('app.media.startIcon'))
-      Row() {
-        // It is recommended to use different styles to set materials for EffectComponent and its child components.
-        EffectComponent() {
-          Row() {
-            Column()
-              .width(100)
-              .height(100)
-              .systemMaterial(this.myMaterialECSub)
-              .margin(5)
-          }
-        }
-        .systemMaterial(this.myMaterialEC)
-
-        EffectComponent() {
-          Row() {
-            Column()
-              .width(100)
-              .height(100)
-              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
-              .margin(5)
-
-            Column()
-              .width(100)
-              .height(100)
-              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
-              .margin(5)
-          }
-        }
-        .systemMaterial(uiMaterial.convertToECMaterial(this.myMaterialBase))
-      }.height('100%').width('100%').justifyContent(FlexAlign.Center)
-    }
-  }
-}
-```
-
 ### Example 1: Configuring the Immersive System Material
 
 This example shows how to set the [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) object to a component through [systemMaterial](../arkui-ts/ts-universal-attributes-image-effect.md#systemmaterial).
@@ -534,6 +437,103 @@ struct MaterialLevelPage {
     .width('100%')
     .height('100%')
     .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+### Example 1: Setting the System Material
+
+This example shows how to apply the Material object of a semi-transparent material to a component using the [systemMaterial](../arkui-ts/ts-universal-attributes-image-effect-sys.md#systemmaterial23) attribute.
+
+
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct SystemMaterialPage {
+  build() {
+    Column() {
+      Stack() {
+        Image($r('app.media.bg1')) // Replace $r('app.media.bg1') with the image resource file you use.
+          .width('100%')
+          .height('100%')
+
+        Column()
+          .width(100)
+          .height(50)
+          .position({ x: 50, y: 350 })
+          .systemMaterial(new uiMaterial.Material({ type: uiMaterial.MaterialType.SEMI_TRANSPARENT })) // Use the semi-transparent system material effect.
+      }
+      .height('90%')
+      .width('90%')
+    }
+    .height('100%')
+    .width('100%')
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
+  }
+}
+```
+
+### Example 2 (Setting the System Material Using EffectComponent)
+
+This example shows how to set [uiMaterial.ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) on [EffectComponent](../arkui-ts/ts-container-effectcomponent-sys.md) and its child components, including directly using EC-style materials and applying the materials after conversion through [uiMaterial.convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) and [uiMaterial.convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md).
+
+Since API version 26.0.0, the uiMaterial.convertToECMaterial and uiMaterial.convertToECSubMaterial APIs are added.
+
+```TypeScript
+import { uiMaterial } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct Index {
+  @State myMaterialBase: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN,
+  });
+  @State myMaterialEC: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC,
+  });
+  @State myMaterialECSub: uiMaterial.ImmersiveMaterial | undefined = new uiMaterial.ImmersiveMaterial({
+    style: uiMaterial.ImmersiveStyle.ULTRA_THIN_EC_SUB,
+  });
+
+  build() {
+    Stack() {
+      // Replace $r('app.media.startIcon') with the actual resource file.
+      Image($r('app.media.startIcon'))
+      Row() {
+        // It is recommended to use different styles to set materials for EffectComponent and its child components.
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(this.myMaterialECSub)
+              .margin(5)
+          }
+        }
+        .systemMaterial(this.myMaterialEC)
+
+        EffectComponent() {
+          Row() {
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+
+            Column()
+              .width(100)
+              .height(100)
+              .systemMaterial(uiMaterial.convertToECSubMaterial(this.myMaterialBase))
+              .margin(5)
+          }
+        }
+        .systemMaterial(uiMaterial.convertToECMaterial(this.myMaterialBase))
+      }.height('100%').width('100%').justifyContent(FlexAlign.Center)
+    }
   }
 }
 ```

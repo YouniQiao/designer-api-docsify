@@ -56,13 +56,13 @@ Sets the slot flags for a specified application. This API uses a promise to retu
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 let slotFlags: number = 1;
 
 notificationManager.setSlotFlagsByBundle(bundle, slotFlags).then(() => {
-    console.info("setSlotFlagsByBundle success");
+    console.info('setSlotFlagsByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`setSlotFlagsByBundle failed, code is ${err.code}, message is ${err.message}`);
 });

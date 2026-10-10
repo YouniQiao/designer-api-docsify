@@ -46,7 +46,7 @@ hiAppEvent.configure(config1);
 
 // Set the maximum size of the file storage directory to 100 MB.
 let config2: hiAppEvent.ConfigOption = {
-  maxStorage: '100M',
+  maxStorage: '100MB',
 };
 hiAppEvent.configure(config2);
 ```

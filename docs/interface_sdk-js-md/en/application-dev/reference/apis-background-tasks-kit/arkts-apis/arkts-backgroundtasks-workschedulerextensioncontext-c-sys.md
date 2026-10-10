@@ -80,11 +80,11 @@ let want : Want = {
 export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtensionAbility {
   onWorkStart(workInfo: workScheduler.WorkInfo) {
     console.info(`onWorkStart, workInfo = ${JSON.stringify(workInfo)}`);
-      // Start the corresponding service.
+      // Start the corresponding Service.
       this.context.startServiceExtensionAbility(want).then(() => {
         console.info('succeeded in starting ServiceExtensionAbility.');
-      }).catch ((err: BusinessError) => {
-        console.error('failed to start ServiceExtensionAbility.');
+      }).catch((err: BusinessError) => {
+        console.error(`failed to start ServiceExtensionAbility. Code: ${err.code}, message: ${err.message}`);
       });
   }
 
@@ -163,7 +163,7 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
       this.context.stopServiceExtensionAbility(want).then(() => {
         console.info('succeeded in stopping ServiceExtensionAbility.');
       }).catch ((err: BusinessError) => {
-        console.error('failed to stop ServiceExtensionAbility.');
+        console.error(`failed to stop ServiceExtensionAbility. Code: ${err.code}, message: ${err.message}`);
       });
   }
 }

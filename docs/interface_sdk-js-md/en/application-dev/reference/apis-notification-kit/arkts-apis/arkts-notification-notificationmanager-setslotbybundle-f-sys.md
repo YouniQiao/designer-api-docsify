@@ -58,11 +58,11 @@ let setSlotByBundleCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setSlotByBundle success");
+        console.info('setSlotByBundle success');
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
@@ -125,7 +125,7 @@ Before setting a notification slot, create a slot through [addSlot](arkts-notifi
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 let notificationSlot: notificationManager.NotificationSlot = {
@@ -133,7 +133,7 @@ let notificationSlot: notificationManager.NotificationSlot = {
 };
 
 notificationManager.setSlotByBundle(bundle, notificationSlot).then(() => {
-    console.info("setSlotByBundle success");
+    console.info('setSlotByBundle success');
 }).catch((err: BusinessError) => {
     console.error(`setSlotByBundle failed, code is ${err.code}, message is ${err.message}`);
 });

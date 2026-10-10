@@ -27,3 +27,17 @@ Creates an offline download task manager instance. This API uses a promise to re
 | Type | Description |
 | --- | --- |
 | Promise&lt;[AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)&gt; | Promise used to return an offline download task manager instance. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  media.createAVDownloaderManager().then((downloaderManager: media.AVDownloaderManager) => {
+    console.info('Succeeded in creating AVDownloaderManager');
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create AVDownloaderManager, error: ${error}`);
+  });
+}
+```

@@ -175,7 +175,7 @@ export default class EntryAbility extends UIAbility {
         console.error(`disableDelayedProcessExit error, code: ${error.code}, error msg: ${error.message}`);
       });
     } catch(error) {
-      console.error('disableDelayedProcessExit failed. Code=%{public}d, Message=%{public}s', error.code, error.message);
+      console.error(`disableDelayedProcessExit failed. Code: ${error.code}, message: ${error.message}`);
     }
   }
 }
@@ -227,7 +227,7 @@ export default class EntryAbility extends UIAbility {
         console.error(`enableDelayedProcessExit error, code: ${error.code}, error msg: ${error.message}`);
       });
     } catch(error) {
-      console.error('enableDelayedProcessExit failed. Code=%{public}d, Message=%{public}s', error.code, error.message);
+      console.error(`enableDelayedProcessExit failed. Code: ${error.code}, message: ${error.message}`);
     }
   }
 }

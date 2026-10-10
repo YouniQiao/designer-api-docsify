@@ -135,6 +135,8 @@ struct BlurBubblesRiseExample {
         let imageSource: image.ImageSource = image.createImageSource(buffer);
         imageSource.createPixelMap().then((pixelmap: image.PixelMap) => {
           this.maskImage = pixelmap as PixelMap;
+        }).finally(() => {
+          imageSource.release();
         });
       });
   }
@@ -810,6 +812,8 @@ struct MaskDispersion {
       let imageSource = image.createImageSource(buffer);
       imageSource.createPixelMap().then(pixelMap => {
         this.pixelMap = pixelMap;
+      }).finally(() => {
+        imageSource.release();
       })
     })
   }

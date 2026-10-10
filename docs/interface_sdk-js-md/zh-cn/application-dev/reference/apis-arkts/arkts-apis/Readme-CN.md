@@ -96,6 +96,7 @@
   - [URL](arkts-arkts-url-url-c.md)
   - [URLParams](arkts-arkts-url-urlparams-c.md)
   - [URLSearchParams](arkts-arkts-url-urlsearchparams-c.md)
+  - [URLUtil](arkts-arkts-url-urlutil-c.md)
 - [@ohos.util（工具函数）](arkts-arkts-util.md)
   - [callbackWrapper](arkts-arkts-util-callbackwrapper-f.md)
   - [errnoToString](arkts-arkts-util-errnotostring-f.md)

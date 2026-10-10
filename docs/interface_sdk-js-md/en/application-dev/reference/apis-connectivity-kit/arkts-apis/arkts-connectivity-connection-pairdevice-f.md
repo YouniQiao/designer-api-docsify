@@ -174,8 +174,8 @@ import { common } from '@kit.ConnectivityKit';
 // promise
 try {
     let btAddr: common.BluetoothAddress = {
-        "address": '11:22:33:44:55:66', // Actual or virtual MAC address of the target device.
-        "addressType": common.BluetoothAddressType.REAL, // Address type of the target device.
+        "address": '11:22:33:44:55:66', // Actual MAC address or virtual MAC address of the target device.
+        "addressType": common.BluetoothAddressType.REAL, // Corresponding address type.
     }
     connection.pairDevice(btAddr).then(() => {
         console.info('pairDevice');

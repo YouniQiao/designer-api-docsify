@@ -71,7 +71,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 import { media } from '@kit.MediaKit';
 
-let watermark: image.PixelMap | undefined = undefined; // You can obtain a local resource file and convert it into a pixel map. The watermark image cannot be empty.
+let watermark: image.PixelMap | undefined = undefined; // Create an ImageSource object using image.createImageSource and call the createPixelMap API of the Image Kit to obtain a pixel map. The watermark image cannot be empty.
 let watermarkConfig: media.WatermarkConfiguration = { top: 100, left: 100, width: 100, height: 100 };
 
 if (watermark) {
@@ -319,14 +319,14 @@ This API can be called only after [prepare()](#prepare1) is called.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let avConfig: media.AVRecorderConfig;
+let avRecorderConfig: media.AVRecorderConfig;
 
 avRecorder.getAVRecorderConfig((err: BusinessError, config: media.AVRecorderConfig) => {
   if (err) {
-    console.error(`Failed to get avConfig and error is: Code: ${err.code}, message: ${err.message}`);
+    console.error(`Failed to get avRecorderConfig and error is: Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('Succeeded in getting AVRecorderConfig');
-    avConfig = config;
+    avRecorderConfig = config;
   }
 });
 ```
@@ -368,11 +368,11 @@ This API can be called only after [prepare()](#prepare2) is called.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let avConfig: media.AVRecorderConfig;
+let avRecorderConfig: media.AVRecorderConfig;
 
 avRecorder.getAVRecorderConfig().then((config: media.AVRecorderConfig) => {
   console.info('Succeeded in getting AVRecorderConfig');
-  avConfig = config;
+  avRecorderConfig = config;
 }).catch((err: Error) => {
   let error: BusinessError = err as BusinessError;
   console.error(`Failed to get AVRecorderConfig and error is: Code: ${error.code}, message: ${error.message}`);
@@ -519,14 +519,14 @@ This API can be called only after the [prepare()](#prepare1) API is called.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let surfaceID: string; // The surfaceID is transferred to the camera API to create a videoOutput instance.
+let inputSurfaceId: string; // The inputSurfaceId is transferred to the camera API to create a videoOutput instance.
 
 avRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
   if (err) {
     console.error(`Failed to do getInputSurface and error is: Code: ${err.code}, message: ${err.message}`);
   } else {
     console.info('Succeeded in doing getInputSurface');
-    surfaceID = surfaceId;
+    inputSurfaceId = surfaceId;
   }
 });
 ```
@@ -572,11 +572,11 @@ This API can be called only after the [prepare()](#prepare2) API is called.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let surfaceID: string; // The surfaceID is transferred to the camera API to create a videoOutput instance.
+let inputSurfaceId: string; // The inputSurfaceId is transferred to the camera API to create a videoOutput instance.
 
 avRecorder.getInputSurface().then((surfaceId: string) => {
   console.info('Succeeded in getting InputSurface');
-  surfaceID = surfaceId;
+  inputSurfaceId = surfaceId;
 }).catch((err: Error) => {
   let error: BusinessError = err as BusinessError;
   console.error(`Failed to get InputSurface and error is: Code: ${error.code}, message: ${error.message}`);
@@ -727,11 +727,11 @@ When the application initiates multiple subscriptions to this event, the last su
 **Examples**
 
 ```TypeScript
-import { audio } from '@kit.AudioKit'
+import { audio } from '@kit.AudioKit';
 
 let capturerChangeInfo: audio.AudioCapturerChangeInfo;
 
-avRecorder.on('audioCapturerChange',  (audioCapturerChangeInfo: audio.AudioCapturerChangeInfo) => {
+avRecorder.on('audioCapturerChange', (audioCapturerChangeInfo: audio.AudioCapturerChangeInfo) => {
   console.info('audioCapturerChange called');
   capturerChangeInfo = audioCapturerChangeInfo;
 });
@@ -770,20 +770,22 @@ When the application initiates multiple subscriptions to this event, the last su
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
 import { photoAccessHelper } from '@kit.MediaLibraryKit';
 let photoAsset: photoAccessHelper.PhotoAsset;
 
 // Example: Process the photoAsset callback and save the video.
 async function saveVideo(context: Context, asset: photoAccessHelper.PhotoAsset) {
-  console.info("saveVideo called");
+  console.info('saveVideo called');
   try {
-    let phAccessHelper = photoAccessHelper.getPhotoAccessHelper(context);
+    let photoHelper = photoAccessHelper.getPhotoAccessHelper(context);
     let assetChangeRequest: photoAccessHelper.MediaAssetChangeRequest = new photoAccessHelper.MediaAssetChangeRequest(asset);
     assetChangeRequest.saveCameraPhoto();
-    await phAccessHelper.applyChanges(assetChangeRequest);
+    await photoHelper.applyChanges(assetChangeRequest);
     console.info('apply saveVideo successfully');
   } catch (err) {
-    console.error(`apply saveVideo failed with error: ${err.code}, ${err.message}`);
+    let error: BusinessError = err as BusinessError;
+    console.error(`Failed to apply saveVideo. Code: ${error.code}, message: ${error.message}`);
   }
 }
 // Subscribe to the photoAsset event.
@@ -832,7 +834,7 @@ Subscribes to AVRecorder state changes. An application can subscribe to only one
 **Examples**
 
 ```TypeScript
-avRecorder.on('stateChange', async (state: media.AVRecorderState, reason: media.StateChangeReason) => {
+avRecorder.on('stateChange', (state: media.AVRecorderState, reason: media.StateChangeReason) => {
   console.info('case state has changed, new state is: ' + state + ', and reason is: ' + reason);
 });
 ```
@@ -883,7 +885,7 @@ An application can subscribe to only one AVRecorder error event. When the applic
 import { BusinessError } from '@kit.BasicServicesKit';
 
 avRecorder.on('error', (err: BusinessError) => {
-  console.error(`case avRecorder.on(error) called. Code: ${err.code}, message: ${err.message}`);
+  console.error(`Failed to record. Code: ${err.code}, message: ${err.message}`);
 });
 ```
 
@@ -1039,7 +1041,7 @@ let avRecorderConfig: media.AVRecorderConfig = {
   audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
   videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
   profile : avRecorderProfile,
-  url : 'fd://', // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions.
+  url: 'fd://', // Open the file using fs.open(@kit.FileKit) to obtain the file descriptor (FD), assign read and write permissions, and pass the FD to this parameter. For details, see the file management development guideline.
   metadata: videoMetaData,
   location : { latitude : 30, longitude : 130 }
 };
@@ -1119,7 +1121,7 @@ let avRecorderConfig: media.AVRecorderConfig = {
   audioSourceType : media.AudioSourceType.AUDIO_SOURCE_TYPE_MIC,
   videoSourceType : media.VideoSourceType.VIDEO_SOURCE_TYPE_SURFACE_YUV,
   profile : avRecorderProfile,
-  url : 'fd://',  // Before passing an FD to this parameter, the file must be created by the caller and granted with the read and write permissions.
+  url: 'fd://', // Open the file using the fileIo.open API of Core File Kit to obtain the file descriptor (FD), assign read and write permissions, and pass the FD to this parameter.
   metadata : videoMetaData,
   location : { latitude : 30, longitude : 130 }
 };
@@ -1437,6 +1439,8 @@ This API can be called only after the prepare() event is successfully triggered 
 **Examples**
 
 ```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
 let metadata: Record<string, string> = {
   'com.openharmony.userdefine': '10',
   'com.openharmony.userdefine2': '20'
@@ -1446,7 +1450,8 @@ try {
   avRecorder.setMetadata(metadata);
   console.info('set metadata successfully');
 } catch (err) {
-  console.error(`set metadata failed with error: ${err.code}, ${err.message}`);
+  let error: BusinessError = err as BusinessError;
+  console.error(`Failed to set metadata. Code: ${error.code}, message: ${error.message}`);
 }
 ```
 

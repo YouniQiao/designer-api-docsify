@@ -95,10 +95,12 @@ struct DragControllerPage {
                 data: unifiedData,
                 extraParams: ''
               }
-              let eve: DragInfo = new DragInfo();
               this.getUIContext().getDragController().executeDrag(() => {
                 this.DraggingBuilder()
               }, dragInfo, (err, eve) => { // 建议使用 this.getUIContext().getDragController().executeDrag()接口
+                if (err || !eve?.event) {
+                  return;
+                }
                 if (eve.event) {
                   if (eve.event.getResult() == DragResult.DRAG_SUCCESSFUL) {
                     // ...
@@ -259,7 +261,6 @@ struct DragControllerPage {
                 },
                 extraInfo: "DragItemInfoTest"
               }
-              let eve: DragInfo = new DragInfo();
               this.getUIContext()
                 .getDragController()
                 .executeDrag(dragItemInfo, dragInfo) // 建议使用 this.getUIContext().getDragController().executeDrag()接口

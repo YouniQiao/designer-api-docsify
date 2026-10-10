@@ -44,9 +44,8 @@ function setDisposedStatusSync(appId: string, disposedWant: Want): void
 **示例**
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { Want, appControl } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
 
 let appId: string = "com.example.myapplication_xxxxx";
 let want: Want = { bundleName: 'com.example.myapplication' };

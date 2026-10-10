@@ -51,7 +51,7 @@ function subscribeSelf(subscriber: NotificationSubscriber): Promise<void>
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback:  ${JSON.stringify(data)}`);
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback

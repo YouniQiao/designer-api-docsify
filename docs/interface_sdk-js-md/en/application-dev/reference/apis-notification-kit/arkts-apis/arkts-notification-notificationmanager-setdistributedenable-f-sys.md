@@ -59,7 +59,7 @@ let setDistributedEnableCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setDistributedEnable success");
+        console.info('setDistributedEnable success');
     }
 };
 let enable: boolean = true;
@@ -123,7 +123,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let enable: boolean = true;
 notificationManager.setDistributedEnable(enable).then(() => {
-    console.info("setDistributedEnable success");
+    console.info('setDistributedEnable success');
 }).catch((err: BusinessError) => {
     console.error(`setDistributedEnable failed, code is ${err.code}, message is ${err.message}`);
 });

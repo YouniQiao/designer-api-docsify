@@ -241,7 +241,7 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 flush(callback: AsyncCallback<void>): void
 
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses an asynchronous callback to return the result. Cached data includes the response header (header), response body (result), cookies, request time (requestTime), and response time (responseTime).
+Writes the data in the cache to the file system so that all cached data can be accessed in the next HTTP request. This API uses an asynchronous callback to return the result. The cached data includes the response header, response body (result), cookies, request time (requestTime), and response time (responseTime).
 
 Atomic service API: This API can be used in atomic services since API version 11.
 
@@ -302,7 +302,7 @@ Flushes data in the cache to the file system so that the cached data can be acce
 
 flush(): Promise<void>
 
-Flushes data in the cache to the file system so that the cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
+Writes the data in the cache to the file system so that all cached data can be accessed in the next HTTP request. This API uses a promise to return the result.
 
 Atomic service API: This API can be used in atomic services since API version 11.
 
@@ -320,7 +320,7 @@ let promise = httpRequest.request("EXAMPLE_URL");
 
 promise.then((data: http.HttpResponse) => {
   httpResponseCache.flush().then(() => {
-    console.error('flush success');
+    console.info('flush success');
   }).catch((err: BusinessError) => {
     console.error('flush fail');
   });

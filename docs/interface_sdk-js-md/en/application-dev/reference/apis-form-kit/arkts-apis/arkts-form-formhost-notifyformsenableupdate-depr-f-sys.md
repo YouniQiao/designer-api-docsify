@@ -41,6 +41,19 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | isEnableUpdate | boolean | Yes | Whether to make the widgets updatable. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
+  if (error.code) {
+    console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
+  }
+});
+```
+
 
 <a id="notifyformsenableupdate2"></a>
 
@@ -78,3 +91,16 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let formIds: string[] = new Array('12400633174999288', '12400633174999289');
+formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
+  console.info('formHost notifyFormsEnableUpdate success');
+}).catch((error: Base.BusinessError) => {
+  console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
+});
+```

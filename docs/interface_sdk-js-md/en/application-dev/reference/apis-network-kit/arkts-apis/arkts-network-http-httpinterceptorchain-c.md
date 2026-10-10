@@ -81,7 +81,7 @@ Return value
 
 Error codes
 
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html)
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';
@@ -196,7 +196,7 @@ Return value
 
 Error codes
 
-For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html).
+For details about the error codes, see [Common Error Codes](../../errorcode-universal.md) and [HTTP Error Codes](../errorcode-net-http.md).The HTTP error code mapping is in the format of 2300000 + Curl error code. For more common error codes, see [Curl Error Codes](https://curl.se/libcurl/c/libcurl-errors.html)
 
 ```TypeScript
 import { http } from '@kit.NetworkKit';

@@ -60,7 +60,7 @@ export default class EntryAbility extends UIAbility {
   onForeground(): void {
     try {
       let bundle: notificationManager.BundleOption = {
-        bundle: "bundleName",
+        bundle: 'bundleName',
       };
       notificationManager.getRingtoneInfoByBundle(bundle)
         .then((ringtoneInfo: notificationManager.RingtoneInfo) => {

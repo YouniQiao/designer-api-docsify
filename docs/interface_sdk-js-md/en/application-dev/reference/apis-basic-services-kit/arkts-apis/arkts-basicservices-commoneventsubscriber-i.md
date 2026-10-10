@@ -539,7 +539,7 @@ Obtains the data of an ordered common event. This API uses an asynchronous callb
 **Examples**
 
 ```TypeScript
-// Obtain the data callback for ordered common event delivery.
+// Obtain the result data of an ordered common event.
 subscriber.getData((err: BusinessError, data: string) => {
   if (err) {
     console.error(`Failed to get data. Code is ${err.code}, message is ${err.message}`);

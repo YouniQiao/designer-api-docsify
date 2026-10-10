@@ -52,7 +52,7 @@ Enables proactive awareness on screen content and subscribes to a screen awarene
 **Examples**
 
 ```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
    groupId: 'SmartEdge',
 }
@@ -69,6 +69,6 @@ try {
       console.info(`subscribe resultCode: ${info[0].resultCode}`);
    }, onscreenAwarenessOptions);
 } catch (err) {
-   console.error('subscribe failed, errCode = ' + err.code);
+   console.error(`subscribe failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```

@@ -50,6 +50,7 @@ import {
   BackPressActionProposal,
   BaseGestureHandlingProposal,
   GestureHandlingResolution,
+  GestureShortcut,
 } from '@kit.ArkUI';
 
 @Entry

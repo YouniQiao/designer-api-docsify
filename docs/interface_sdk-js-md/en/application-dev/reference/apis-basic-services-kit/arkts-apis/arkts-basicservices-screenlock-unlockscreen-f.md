@@ -32,6 +32,8 @@ Unlock the screen.
 
 **Examples**
 
+ArkTS Example:
+
 ```TypeScript
 import { BusinessError } from '@ohos.base';
 
@@ -42,6 +44,64 @@ screenLock.unlockScreen((err: BusinessError) => {
   }
   console.info(`Succeeded unlocking the screen.`);
 });
+```
+
+JS Example:
+
+```TypeScript
+<!-- xxx.hml -->
+<div class="container">
+    <text class="text-content" on:click="unlockScreen">Tap to call unlockScreen</text>
+    <text class="text-content">result: "{{ test_val }}"</text>
+</div>
+```
+
+```TypeScript
+/* xxx.css */
+.container {
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: aqua;
+}
+.text-content {
+    color: black;
+    font-size: 28fp;
+    width: 100%;
+    text-align: left;
+    margin-top: 20px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+```
+
+```TypeScript
+// xxx.js
+import screenLock from '@ohos.screenLock';
+
+export default {
+    data: {
+        test_val: 'not called'
+    },
+    unlockScreen() {
+        this.test_val = 'start calling unlockScreen';
+        try {
+            screenLock.unlockScreen((err) => {
+                if (err) {
+                    this.test_val = `unlockScreen error: ${err.code}, message: ${err.message}`;
+                    console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
+                    return;
+                }
+                this.test_val = `unlockScreen success`;
+                console.info(`Succeeded unlocking the screen.`);
+            });
+        } catch (err) {
+            this.test_val = `unlockScreen exception: ${err.code} ${err.message}`;
+        }
+    }
+}
 ```
 
 
@@ -70,6 +130,8 @@ Unlock the screen.
 | Promise&lt;void&gt; | the promise returned by the function. |
 
 **Examples**
+
+ArkTS Example:
 
 ```TypeScript
 import { BusinessError } from '@ohos.base';

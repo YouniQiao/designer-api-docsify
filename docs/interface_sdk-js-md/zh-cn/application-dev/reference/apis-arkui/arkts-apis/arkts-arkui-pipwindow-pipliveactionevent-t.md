@@ -17,4 +17,4 @@ type PiPLiveActionEvent = 'playbackStateChanged' | 'voiceStateChanged'
 | 类型 | 说明 |
 | --- | --- |
 | 'playbackStateChanged' | 播放或暂停直播。 |
-| 'voiceStateChanged' | 静音或解除静音。 [since 12] |
+| 'voiceStateChanged' | 静音或解除静音。<br>**起始版本：** 12 |

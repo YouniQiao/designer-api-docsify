@@ -223,6 +223,6 @@ let context = this.getUIContext().getHostContext() as Context;
 call.makeCall(context, "138xxxxxxxx").then(() => {
     console.info(`makeCall success`);
 }).catch((err: BusinessError) => {
-    console.error(`makeCall fail, promise: err->${err.code)},message:${err.message}`);
+    console.error(`makeCall fail, promise: err->${err.code},message:${err.message}`);
 });
 ```

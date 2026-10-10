@@ -55,11 +55,11 @@ let setNotificationEnableCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setNotificationEnable success");
+        console.info('setNotificationEnable success');
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false, setNotificationEnableCallback);
 ```
@@ -116,10 +116,10 @@ Sets whether to enable notification for a specified application. This API uses a
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.setNotificationEnable(bundle, false).then(() => {
-    console.info("setNotificationEnable success");
+    console.info('setNotificationEnable success');
 }).catch((err: BusinessError) => {
     console.error(`setNotificationEnable failed, code is ${err.code}, message is ${err.message}`);
 });

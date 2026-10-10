@@ -44,11 +44,11 @@ Disables the screen content access permission monitoring.
 **Examples**
 
 ```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 try {
   onScreen.offReadingScreenPermissionListener();
   console.info(`offReadingScreenPermissionListener succeeded.`);
 } catch (err) {
-  console.error('offReadingScreenPermissionListener failed, errCode = ' + err.code);
+  console.error(`offReadingScreenPermissionListener failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```

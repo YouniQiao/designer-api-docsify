@@ -50,12 +50,21 @@ struct Index {
     RelativeContainer() {
       Text()
         .onClick(() => {
-          try {
-            // 设置红外频率及红外电平信号模式
-            infraredEmitter.transmitInfrared(38000, [100, 200, 300, 400]);
-          } catch (error) {
-            console.error(`Failed to transmit infrared signal, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
-          }
+          // 查询是否有红外发射器
+          infraredEmitter.hasIrEmitter().then((result: boolean) => {
+            if (result) {
+              try {
+                // 设置红外频率及红外电平信号模式
+                infraredEmitter.transmitInfrared(38000, [100, 200, 300, 400]);
+              } catch (error) {
+                console.error(`Failed to transmit infrared signal, Code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}.`);
+              }
+            } else {
+              console.info('The current device does not support IR emitter.');
+            }
+          }).catch((error: BusinessError) => {
+            console.error(`Failed to query infrared emitter, Code: ${error.code}, message: ${error.message}.`);
+          });
         })
     }
   }

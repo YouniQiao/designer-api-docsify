@@ -58,7 +58,7 @@ let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -129,7 +129,7 @@ let subscribeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("subscribe success");
+    console.info('subscribe success');
   }
 }
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
@@ -140,7 +140,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 };
 // Bundle names are not verified. You need to determine the target bundle names.
 let info: notificationSubscribe.NotificationSubscribeInfo = {
-  bundleNames: ["bundleName1","bundleName2"]
+  bundleNames: ['bundleName1','bundleName2']
 };
 notificationSubscribe.subscribe(subscriber, info, subscribeCallback);
 ```
@@ -207,7 +207,7 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribe(subscriber).then(() => {
-  console.info("subscribe success");
+  console.info('subscribe success');
 }).catch((err: BusinessError) => {
   console.error(`subscribe failed, code is ${err.code}, message is ${err.message}`);
 });

@@ -47,9 +47,8 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 **示例**
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { Want, appControl } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
 
 let appId = "com.example.myapplication_xxxxx";
 let want: Want = { bundleName: 'com.example.myapplication' };
@@ -117,8 +116,7 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { appControl } from '@kit.AbilityKit';
+import { Want, appControl } from '@kit.AbilityKit';
 
 let appId = "com.example.myapplication_xxxxx";
 let want: Want = { bundleName: 'com.example.myapplication' };

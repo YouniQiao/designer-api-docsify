@@ -18,7 +18,7 @@ export type ValueType = number | number | string | boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| long | [since 20] |
-| double | [since 20] |
-| string | The value is a string. [since 12] |
-| boolean | The value is **true** or **false**. [since 12] |
+| long | <br>**起始版本：** 20 |
+| double | <br>**起始版本：** 20 |
+| string | The value is a string.<br>**起始版本：** 12 |
+| boolean | The value is **true** or **false**.<br>**起始版本：** 12 |

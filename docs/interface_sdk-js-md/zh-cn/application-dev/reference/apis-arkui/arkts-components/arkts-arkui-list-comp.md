@@ -210,7 +210,7 @@ struct ListExample {
       .listDirection(Axis.Vertical) // 排列方向
       .scrollBar(BarState.Off)
       .friction(0.6)
-      .divider({ strokeWidth: 2, color: 0xFFFFFF, startMargin: 20, endMargin: 20 }) // 每行之间的分界线
+      .divider({ strokeWidth: 2, color: 0xFFFFFF, startMargin: 20, endMargin: 20 }) // 每行之间的分割线
       .edgeEffect(EdgeEffect.Spring) // 边缘效果设置为Spring
       .onScrollIndex((firstIndex: number, lastIndex: number, centerIndex: number) => {
         console.info('first' + firstIndex);
@@ -226,7 +226,7 @@ struct ListExample {
                     ' end index in group: ' + end.itemIndexInGroup);
       })
       .onDidScroll((scrollOffset: number, scrollState: ScrollState) => {
-        console.info(`onScroll scrollState = ScrollState` + scrollState + `, scrollOffset = ` + scrollOffset);
+         console.info(`onDidScroll scrollState = ` + scrollState + `, scrollOffset = ` + scrollOffset);
       })
       .width('90%')
     }
@@ -605,11 +605,11 @@ struct ListItemGroupExample {
                   .height(100)
                   .fontSize(20)
                   .textAlign(TextAlign.Center)
-                  .backgroundColor(this.itemBackgroundColorArr[index * 3 +subIndex] ? 0x68B4FF: 0xFFFFFF)
+                  .backgroundColor(this.itemBackgroundColorArr[index * 3 + subIndex] ? 0x68B4FF : 0xFFFFFF)
               }
             }, (item: string) => item)
           }
-          .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分界线
+          .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分割线
         }, (item: TimeTable) => item.title)
       }
       .width('90%')
@@ -667,7 +667,7 @@ ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示�
 
 
 ```TypeScript
-import { LengthMetrics } from '@kit.ArkUI'
+import { LengthMetrics } from '@kit.ArkUI';
 import { ListDataSource } from './ListDataSource';
 @Entry
 @Component
@@ -1151,13 +1151,13 @@ struct Index {
 
 ### 示例16（实现ListItemGroup中点击项的居中效果）
 
-该示例使用[scrollToItemInGroup](arkts-arkui-list-comp-listscroller-c.md#scrolltoitemingroup)接口，实现了点击[ListItemGroup](./ts-container-listitemgroup.md)中的[ListItem](./ts-container-listitem.md)时将其居中的效果。
+该示例使用[scrollToItemInGroup](arkts-arkui-list-comp-listscroller-c.md#scrolltoitemingroup)接口，实现了单击[ListItemGroup](./ts-container-listitemgroup.md)中的[ListItem](./ts-container-listitem.md)时将其居中的效果。
 
 
 
 ```TypeScript
 import { util } from '@kit.ArkTS';
-
+import { BusinessError } from '@kit.BasicServicesKit';
 class Contact {
   key: string = util.generateRandomUUID(true);
   name: string;
@@ -1232,10 +1232,15 @@ struct ContactsList {
               TapGesture({ count: 1 })
                 .onAction((event: GestureEvent) => {
                   if (event) {
-                    const itemRect = this.scroller.getItemRectInGroup(index, subIndex);
-                    console.info('第', index + 1, '个ListItemGroup的第', subIndex + 1, '个ListItem的 x:', itemRect.x,
-                      ' y:', itemRect.y, ' width:', itemRect.width, ' height:', itemRect.height)
-                    this.scroller.scrollToItemInGroup(index, subIndex, true, ScrollAlign.CENTER);
+                    try {
+                      const itemRect = this.scroller.getItemRectInGroup(index, subIndex);
+                      console.info('第', index + 1, '个ListItemGroup的第', subIndex + 1, '个ListItem的 x:', itemRect.x,
+                        ' y:', itemRect.y, ' width:', itemRect.width, ' height:', itemRect.height)
+                      this.scroller.scrollToItemInGroup(index, subIndex, true, ScrollAlign.CENTER);
+                    } catch (err) {
+                      let error: BusinessError = err as BusinessError;
+                      console.error(`getItemRectInGroup or scrollToItemInGroup failed, error code: ${error.code}, message: ${error.message}`);
+                    }
                   }
                 })
             )

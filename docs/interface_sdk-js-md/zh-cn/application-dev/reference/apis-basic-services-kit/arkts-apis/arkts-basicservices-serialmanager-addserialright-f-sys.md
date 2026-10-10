@@ -52,8 +52,7 @@ ohos.permission.MANAGE_USB_CONFIG）来识别是否允许静默授权，跳过�
 
 ```TypeScript
 import { bundleManager } from '@kit.AbilityKit';
-import { BusinessError } from '@kit.BasicServicesKit';
-import { serialManager } from '@kit.BasicServicesKit';
+import { serialManager, BusinessError } from '@kit.BasicServicesKit';
 
 
 function addSerialRight() {

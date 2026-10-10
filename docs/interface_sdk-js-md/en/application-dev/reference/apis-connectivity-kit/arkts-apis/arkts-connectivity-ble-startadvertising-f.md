@@ -80,7 +80,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -181,6 +182,7 @@ try {
         interval:150,
         txPower:0,
         connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -299,7 +301,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,

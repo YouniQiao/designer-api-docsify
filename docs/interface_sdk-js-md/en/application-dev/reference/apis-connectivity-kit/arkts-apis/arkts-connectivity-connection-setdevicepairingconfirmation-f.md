@@ -46,8 +46,8 @@ Sets the confirmation of pairing with a certain device.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-// Subscribe to the pinRequired event and configure the pairing confirmation after receiving a pairing request from the peer device.
-function onReceivePinRequiredEvent(data: connection.PinRequiredParam) { // data is the input parameter for the pairing request.
+// Subscribe to the "pinRequired" pairing request event and set the pairing confirmation after receiving the peer pairing request.
+function onReceivePinRequiredEvent(data: connection.PinRequiredParam) { // data is the input parameter of the pairing request, that is, the pairing request parameter.
     console.info('pin required  = '+ JSON.stringify(data));
     connection.setDevicePairingConfirmation(data.deviceId, true);
 }

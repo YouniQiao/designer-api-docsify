@@ -47,7 +47,7 @@ import { formInfo, formProvider } from '@kit.FormKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const filter: formInfo.FormInfoFilter = {
-  // Obtain the widget information of the specified module.
+  // Obtain widget information of the specified module.
   moduleName: 'entry'
 };
 try {
@@ -163,7 +163,7 @@ import { formInfo, formProvider } from '@kit.FormKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 const filter: formInfo.FormInfoFilter = {
-  // Obtain the widget information of the specified module.
+  // Obtain widget information of the specified module.
   moduleName: 'entry'
 };
 try {

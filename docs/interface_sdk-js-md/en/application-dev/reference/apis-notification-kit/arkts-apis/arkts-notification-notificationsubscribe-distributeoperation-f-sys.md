@@ -52,15 +52,15 @@ Triggers a notification for cross-device operations, such as tap-to-redirect and
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let hashcode: string = 'hashcode';
+let hashCode: string = 'hashCode';
 let operationInfo: notificationSubscribe.OperationInfo = {
-  actionName: "actionName",
-  userInput: "userInput",
+  actionName: 'actionName',
+  userInput: 'userInput',
   operationType: 1,
   buttonIndex: 1,
 };
-notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
-  console.info("distributeOperation success");
+notificationSubscribe.distributeOperation(hashCode, operationInfo).then(() => {
+  console.info('distributeOperation success');
 }).catch((err: BusinessError) => {
   console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);
 });

@@ -54,7 +54,8 @@ Sets traffic calibration data. You can use this API to set traffic data during t
 **Examples**
 
 ```TypeScript
-import { connection, statistics } from '@kit.NetworkKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { statistics } from '@kit.NetworkKit';
 
 let simId:number = 1;
 let remainData:number = 600*1024*1024;   // The remaining traffic is 600 MB.
@@ -62,6 +63,6 @@ let totalData:number = 1024*1024*1024;   // The total traffic is 1 GB.
 statistics.setCalibrationTraffic(simId, remainData, totalData).then(() => {
   console.info(`setCalibrationTraffic succ`);
 }).catch((error: BusinessError) => {
-  console.info(`setCalibrationTraffic error. code:${error.code}, message:${error.message}`);
+  console.error(`setCalibrationTraffic error. code:${error.code}, message:${error.message}`);
 });
 ```

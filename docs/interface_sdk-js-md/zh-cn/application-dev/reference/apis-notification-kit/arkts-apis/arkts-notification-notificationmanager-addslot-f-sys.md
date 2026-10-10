@@ -51,7 +51,7 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlot回调
-let addSlotCallBack = (err: BusinessError): void => {
+let addSlotCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -62,7 +62,7 @@ let addSlotCallBack = (err: BusinessError): void => {
 let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
 };
-notificationManager.addSlot(notificationSlot, addSlotCallBack);
+notificationManager.addSlot(notificationSlot, addSlotCallback);
 ```
 
 

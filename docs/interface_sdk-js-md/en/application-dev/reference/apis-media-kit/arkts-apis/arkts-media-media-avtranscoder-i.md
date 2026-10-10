@@ -65,19 +65,37 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { media } from '@kit.MediaKit';
 import { image } from '@kit.ImageKit';
 
-async function test() {
+async function test(context: Context) {
   // Create an AVTranscoder instance.
   let avTranscoder = await media.createAVTranscoder();
   
   // Set watermark parameters.
   let watermarkConfig: media.WatermarkConfiguration = {
       // Set watermark parameters as required. The unit is pixel.
-      top : 40,
-      left : 40,
+      top: 40,
+      left: 40,
       width: 200,
       height: 300,
   };
 
+  // Obtain a resource manager.
+  let resourceManager = context.resourceManager;
+  // Obtain the descriptor of the watermark image in the raw file. Replace 'img.png' with the actual watermark image file name.
+  let rawFileDescriptor = resourceManager.getRawFdSync('img.png');
+  // Create an ImageSource based on the file descriptor.
+  let watermarkImageSource = image.createImageSource(rawFileDescriptor.fd);
+
+  // Create a PixelMap for the watermark.
+  const decodingOptions: image.DecodingOptions = {
+    // Editable pixels
+    editable: true,
+    // Pixel format
+    desiredPixelFormat: image.PixelMapFormat.RGBA_8888,
+  };
+  const watermarkPixelMap = await watermarkImageSource.createPixelMap(decodingOptions);
+  console.info('PixelMap created for watermark');
+
+  // Add a watermark.
   avTranscoder.addWatermark(watermarkPixelMap, watermarkConfig).then((watermarkId: number) => {
     console.info('addWatermark success, watermarkId: ' + watermarkId);
   }).catch((err: BusinessError) => {
@@ -322,7 +340,7 @@ async function test() {
   // Create an AVTranscoder instance.
   let avTranscoder = await media.createAVTranscoder();
   avTranscoder.on('error', (err: BusinessError) => {
-    console.info('case avTranscoder.on(error) called, errMessage is ' + err.message);
+    console.error('case avTranscoder.on(error) called, errMessage is ' + err.message);
   });
 }
 ```

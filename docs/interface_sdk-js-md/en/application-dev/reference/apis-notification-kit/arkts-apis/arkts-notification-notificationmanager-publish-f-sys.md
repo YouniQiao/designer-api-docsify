@@ -73,7 +73,7 @@ let publishCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("publish success");
+        console.info('publish success');
     }
 }
 // Use the actual user ID when calling the API.
@@ -84,9 +84,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
     content: {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
         }
     }
 };
@@ -166,9 +166,9 @@ let notificationRequest: notificationManager.NotificationRequest = {
     content: {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
         }
     }
 };
@@ -177,7 +177,7 @@ let notificationRequest: notificationManager.NotificationRequest = {
 let userId: number = 1;
 
 notificationManager.publish(notificationRequest, userId).then(() => {
-    console.info("publish success");
+    console.info('publish success');
 }).catch((err: BusinessError) => {
     console.error(`publish failed, code is ${err.code}, message is ${err.message}`);
 });

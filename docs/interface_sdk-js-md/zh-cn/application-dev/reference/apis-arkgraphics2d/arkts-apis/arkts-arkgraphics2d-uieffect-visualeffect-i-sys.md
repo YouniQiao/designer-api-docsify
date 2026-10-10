@@ -321,6 +321,74 @@ glassMarbleEffect(material: GlassMarbleMaterialParam, marbleShell: GlassMarbleSp
 | --- | --- |
 | [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md) | 返回附加了玻璃弹珠效果的VisualEffect。 |
 
+**示例**
+
+```TypeScript
+import { image } from '@kit.ImageKit';
+import { uiEffect } from '@kit.ArkGraphics2D';
+import { common } from '@kit.AbilityKit';
+
+@Entry
+@Component
+struct GlassMarbleEffectExample {
+  @State reflectionMap: image.PixelMap | null = null;
+  @State contentMask: image.PixelMap | null = null;
+
+  aboutToAppear(): void {
+    let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
+    context.resourceManager.getMediaContent($r('app.media.reflection').id).then((val: Uint8Array) => {
+      let buffer: ArrayBuffer = val.buffer.slice(0, val.buffer.byteLength);
+      let imageSource: image.ImageSource = image.createImageSource(buffer);
+      imageSource.createPixelMap().then((pixelMap: image.PixelMap) => {
+        this.reflectionMap = pixelMap;
+      });
+    });
+    context.resourceManager.getMediaContent($r('app.media.content_mask').id).then((val: Uint8Array) => {
+      let buffer: ArrayBuffer = val.buffer.slice(0, val.buffer.byteLength);
+      let imageSource: image.ImageSource = image.createImageSource(buffer);
+      imageSource.createPixelMap().then((pixelMap: image.PixelMap) => {
+        this.contentMask = pixelMap;
+      });
+    });
+  }
+
+  build() {
+    Column() {
+      Image($r('app.media.bg'))
+        .width('100%')
+        .height('100%')
+        // 为组件添加玻璃弹珠效果。
+        .visualEffect(uiEffect.createEffect().glassMarbleEffect(
+          {
+            averageBgColor: { red: 0.5, green: 0.5, blue: 0.5, alpha: 1.0 },
+            opacity: 0.8,
+            shadowOffset: 0.1,
+            shadowRadius: 0.5,
+            shadowEdgeSoftness: 0.5,
+            shadowOpacity: 0.5,
+            causticOffset: 0.0,
+            causticRadius: 0.5,
+            causticEdgeSoftness: 0.5,
+            causticOpacity: 0.5,
+            shapeScale: 0.9,
+            reflectionMap: this.reflectionMap!
+          },
+          { center: [0.5, 0.5], radius: 0.5 },
+          {
+            contentMask: uiEffect.Mask.createPixelMapMask(this.contentMask!),
+            contentTintColor: { red: 1.0, green: 1.0, blue: 1.0, alpha: 0.5 },
+            contentScale: 0.8,
+            contentSaturation: 0.8,
+            contentDispersion: 0.2
+          }
+        ))
+    }
+    .width('100%')
+    .height('100%')
+  }
+}
+```
+
 ## liquidMaterial
 
 ```TypeScript

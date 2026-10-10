@@ -48,9 +48,9 @@ try {
    deviceStatus.getDeviceRotationRadian().then((radian: deviceStatus.DeviceRotationRadian) => {
       console.info('x:' + radian.x + ' y:' + radian.y + ' z:' + radian.z);
    }).catch((err: BusinessError) => {
-      console.error('get device rotation radian failed, errmsg:' + err);
-   })
+      console.error(`Failed to get device rotation radians. Code: ${err.code}, message: ${err.message}`);
+   });
 } catch (err) {
-   console.error('invoke failed, errmsg:' + err)
+   console.error(`Failed to invoke. Code: ${err.code}, message: ${err.message}`);
 }
 ```

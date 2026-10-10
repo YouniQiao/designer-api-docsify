@@ -50,7 +50,7 @@ Obtains some information about the **wantAgent** field in [NotificationRequest](
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let id: number = 0;
-let label: string = "";
+let label: string = '';
 notificationManager.getNotificationParameters(id, label).then((data: notificationManager.NotificationParameters) => {
   console.info(`Succeeded in getting notification parameters, data is ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {

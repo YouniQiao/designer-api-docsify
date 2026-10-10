@@ -55,14 +55,14 @@ The notification slot NotificationSlot defines the reminder type (such as alert 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlot callback
-let addSlotCallBack = (err: BusinessError): void => {
+let addSlotCallback = (err: BusinessError): void => {
   if (err) {
     console.error(`Failed to add slot. Code is ${err.code}, message is ${err.message}`);
   } else {
     console.info(`Succeeded in adding slot.`);
   }
 }
-notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallBack);
+notificationManager.addSlot(notificationManager.SlotType.SOCIAL_COMMUNICATION, addSlotCallback);
 ```
 
 

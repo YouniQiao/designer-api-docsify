@@ -63,15 +63,15 @@ let removeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("remove success");
+    console.info('remove success');
   }
 }
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 let notificationKey: notificationSubscribe.NotificationKey = {
   id: 0,
-  label: "label",
+  label: 'label',
 };
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
 notificationSubscribe.remove(bundle, notificationKey, reason, removeCallback);
@@ -132,15 +132,15 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { notificationManager } from '@kit.NotificationKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 let notificationKey: notificationSubscribe.NotificationKey = {
   id: 0,
-  label: "label",
+  label: 'label',
 };
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
 notificationSubscribe.remove(bundle, notificationKey, reason).then(() => {
-  console.info("remove success");
+  console.info('remove success');
 }).catch((err: BusinessError) => {
   console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -197,7 +197,7 @@ let removeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("remove success");
+    console.info('remove success');
   }
 }
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
@@ -254,7 +254,7 @@ let removeCallback = (err: BusinessError) => {
   if (err) {
     console.error(`remove failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("remove success");
+    console.info('remove success');
   }
 }
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CANCEL_REASON_REMOVE;
@@ -315,7 +315,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let hashCode: string = 'hashCode';
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
 notificationSubscribe.remove(hashCode, reason).then(() => {
-  console.info("remove success");
+  console.info('remove success');
 }).catch((err: BusinessError) => {
   console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -374,7 +374,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 let hashCodes: string[] = ['hashCode1','hashCode2'];
 let reason: notificationSubscribe.RemoveReason = notificationSubscribe.RemoveReason.CLICK_REASON_REMOVE;
 notificationSubscribe.remove(hashCodes, reason).then(() => {
-  console.info("remove success");
+  console.info('remove success');
 }).catch((err: BusinessError) => {
   console.error(`remove fail, code is ${err.code}, message is ${err.message}`);
 });

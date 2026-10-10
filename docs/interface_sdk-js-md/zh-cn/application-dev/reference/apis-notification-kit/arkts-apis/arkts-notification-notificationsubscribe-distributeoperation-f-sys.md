@@ -52,14 +52,14 @@ function distributeOperation(hashcode: string, operationInfo?: OperationInfo): P
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let hashcode: string = 'hashcode';
+let hashCode: string = 'hashCode';
 let operationInfo: notificationSubscribe.OperationInfo = {
   actionName: 'actionName',
   userInput: 'userInput',
   operationType: 1,
   buttonIndex: 1,
 };
-notificationSubscribe.distributeOperation(hashcode, operationInfo).then(() => {
+notificationSubscribe.distributeOperation(hashCode, operationInfo).then(() => {
   console.info('distributeOperation success');
 }).catch((err: BusinessError) => {
   console.error(`distributeOperation fail, code is ${err.code}, message is ${err.message}`);

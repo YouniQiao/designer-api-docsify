@@ -1062,6 +1062,15 @@ measureTextWithFallback(text: string, encoding: TextEncoding): number
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
 
+**示例**
+
+```TypeScript
+import { drawing } from '@kit.ArkGraphics2D';
+
+let font = new drawing.Font();
+font.measureTextWithFallback("drawing", drawing.TextEncoding.TEXT_ENCODING_UTF8);
+```
+
 ## setBaselineSnap
 
 ```TypeScript
@@ -1544,3 +1553,31 @@ textToGlyphsWithFallback(text: string, glyphCount?: number): Array<TypefaceFallb
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
+
+**示例**
+
+```TypeScript
+import { RenderNode, DrawContext } from '@kit.ArkUI';
+import { common2D, drawing } from '@kit.ArkGraphics2D';
+
+class DrawingRenderNode extends RenderNode {
+  draw(context : DrawContext) {
+    const canvas = context.canvas;
+    let font : drawing.Font = new drawing.Font();
+    let text : string = 'hello world';
+    let infos : Array<drawing.TypefaceFallbackInfo> = font.textToGlyphsWithFallback(text);
+    console.info("drawing textToGlyphsWithFallback infos length = " + infos.length );
+    let offset = 0;
+    for (let run of infos) {
+      font.setTypeface(run.typeface);
+      let positions: Array<common2D.Point> = [];
+      let glyphWidths = font.getWidths(run.glyphIds);
+      for (let j = 0; j < run.glyphIds.length; j++) {
+        positions.push({x: offset, y: 80});
+        offset += glyphWidths[j];
+      }
+      canvas.drawGlyphs(run.glyphIds, 0, positions, 0, run.glyphIds.length, font);
+    }
+  }
+}
+```

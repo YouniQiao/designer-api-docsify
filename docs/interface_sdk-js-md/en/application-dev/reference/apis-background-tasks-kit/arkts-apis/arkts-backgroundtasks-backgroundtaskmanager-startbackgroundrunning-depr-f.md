@@ -46,33 +46,33 @@ import featureAbility from '@ohos.ability.featureAbility';
 import wantAgent, { WantAgent } from '@ohos.app.ability.wantAgent';
 import { BusinessError } from '@ohos.base';
 
-function callback(err: BusinessError, data: void) {
+const callback = (err: BusinessError, data: void) => {
   if (err) {
-    console.error("Operation startBackgroundRunning failed Cause: " + err);
+    console.error(`Operation startBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
   } else {
-    console.info("Operation startBackgroundRunning succeeded");
+    console.info('Operation startBackgroundRunning succeeded');
   }
 }
 
 let wantAgentInfo : wantAgent.WantAgentInfo = {
   wants: [
     {
-      bundleName: "com.example.myapplication",
-      abilityName: "EntryAbility"
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
     }
   ],
-  operationType: wantAgent.OperationType.START_ABILITY,
+  actionType: wantAgent.OperationType.START_ABILITY,
   requestCode: 0,
   wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
 };
 
 wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj : WantAgent) => {
   backgroundTaskManager.startBackgroundRunning(featureAbility.getContext(),
-    backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj, callback)
+    backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj, callback);
 });
 ```
 
-Stage model:
+stage model example:
 
 ```TypeScript
 import UIAbility from '@ohos.app.ability.UIAbility';
@@ -82,11 +82,11 @@ import Want from '@ohos.app.ability.Want';
 import AbilityConstant from '@ohos.app.ability.AbilityConstant';
 import { BusinessError } from '@ohos.base';
 
-function callback(err: BusinessError, data: void) {
+const callback = (err: BusinessError, data: void) => {
   if (err) {
-    console.error("Operation startBackgroundRunning failed Cause: " + err);
+    console.error(`Operation startBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
   } else {
-    console.info("Operation startBackgroundRunning succeeded");
+    console.info('Operation startBackgroundRunning succeeded');
   }
 }
 
@@ -95,18 +95,18 @@ export default class EntryAbility extends UIAbility {
     let wantAgentInfo : wantAgent.WantAgentInfo = {
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
-      operationType: wantAgent.OperationType.START_ABILITY,
+      actionType: wantAgent.OperationType.START_ABILITY,
       requestCode: 0,
       wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
     };
 
     wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj : WantAgent) => {
       backgroundTaskManager.startBackgroundRunning(this.context,
-        backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj, callback)
+        backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj, callback);
     });
   }
 };
@@ -162,11 +162,11 @@ import { BusinessError } from '@ohos.base';
 let wantAgentInfo : wantAgent.WantAgentInfo = {
   wants: [
     {
-      bundleName: "com.example.myapplication",
-      abilityName: "EntryAbility"
+      bundleName: 'com.example.myapplication',
+      abilityName: 'EntryAbility'
     }
   ],
-  operationType: wantAgent.OperationType.START_ABILITY,
+  actionType: wantAgent.OperationType.START_ABILITY,
   requestCode: 0,
   wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
 };
@@ -174,14 +174,14 @@ let wantAgentInfo : wantAgent.WantAgentInfo = {
 wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
   backgroundTaskManager.startBackgroundRunning(featureAbility.getContext(),
     backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj).then(() => {
-    console.info("Operation startBackgroundRunning succeeded");
+    console.info('Operation startBackgroundRunning succeeded');
   }).catch((err: BusinessError) => {
-    console.error("Operation startBackgroundRunning failed Cause: " + err);
+    console.error(`Operation startBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
   });
 });
 ```
 
-Stage model:
+stage model example:
 
 ```TypeScript
 import UIAbility from '@ohos.app.ability.UIAbility';
@@ -196,12 +196,12 @@ export default class EntryAbility extends UIAbility {
     let wantAgentInfo : wantAgent.WantAgentInfo = {
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Type of the operation to perform after the notification is clicked.
-      operationType: wantAgent.OperationType.START_ABILITY,
+      actionType: wantAgent.OperationType.START_ABILITY,
       requestCode: 0,
       // Execution attribute of the operation to perform after the notification is clicked.
       wantAgentFlags: [wantAgent.WantAgentFlags.UPDATE_PRESENT_FLAG]
@@ -210,9 +210,9 @@ export default class EntryAbility extends UIAbility {
     wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj : WantAgent) => {
       backgroundTaskManager.startBackgroundRunning(this.context,
         backgroundTaskManager.BackgroundMode.LOCATION, wantAgentObj).then(() => {
-        console.info("Operation startBackgroundRunning succeeded");
+        console.info('Operation startBackgroundRunning succeeded');
       }).catch((err: BusinessError) => {
-        console.error("Operation startBackgroundRunning failed Cause: " + err);
+        console.error(`Operation startBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
       });
     });
   }

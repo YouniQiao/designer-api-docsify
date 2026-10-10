@@ -107,6 +107,10 @@ async function example(context: Context) {
     console.info('Succeeded in getting assets');
     // 获取查询结果中的第一个资产。
     let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+    if (photoAsset === undefined) {
+      console.error('photoAsset is undefined');
+      return;
+    }
     try {
       // 请求复合图中的辅助图的数据，返回的requestId可用于cancelRequest接口取消该请求。
       let requestId: string = await photoAccessHelper.MediaAssetManager.requestCompositeAuxiliaryImageData(context, photoAsset, handler);

@@ -59,9 +59,9 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
    console.info('call onDistanceMeasure start');
    try {
       spatialAwareness.onDistanceMeasure(configParams, (data:spatialAwareness.DistanceMeasurementResponse) => {
-         console.info('result = ${data.distance}');
+         console.info(`result = ${data.distance}`);
       });
    } catch (err) {
-      console.error('call onDistanceMeasure failed, errCode = ' + err.code);
+      console.error(`call onDistanceMeasure failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```

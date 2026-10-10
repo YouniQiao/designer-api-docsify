@@ -187,6 +187,15 @@ static getGlobalHandleCount(): number
 | --- | --- |
 | number | 返回当前虚拟机正在使用的全局 handle 数量，该值大于等于 0。 |
 
+**示例**
+
+```TypeScript
+import { util } from '@kit.ArkTS';
+
+let count: number = util.ArkTSVM.getGlobalHandleCount();
+console.info(`current global handle count: ${count}`);
+```
+
 ## offVMHeapMemoryPressure
 
 ```TypeScript

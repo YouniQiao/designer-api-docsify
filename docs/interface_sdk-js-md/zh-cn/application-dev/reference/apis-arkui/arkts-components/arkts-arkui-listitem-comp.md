@@ -275,13 +275,14 @@ struct ListItemExample3 {
 
 ### 示例4（通过ComponentContent设置划出组件）
 
-该示例通过ComponentContent设置ListItem中的划出组件操作时显示的操作项。
+该示例通过ComponentContent设置ListItem划出组件时显示的操作项。
 
 
 
 ```TypeScript
 // xxx.ets
 import { ComponentContent } from '@kit.ArkUI';
+import { BusinessError } from '@kit.BasicServicesKit';
 
 class BuilderParams {
   text: string | Resource;
@@ -298,7 +299,12 @@ function itemBuilder(params: BuilderParams) {
   Row() {
     Button(params.text).margin(4)
     Button('Set').margin(4).onClick(() => {
-      params.scroller.closeAllSwipeActions();
+      try {
+        params.scroller.closeAllSwipeActions();
+      } catch (err) {
+        let error: BusinessError = err as BusinessError;
+        console.error(`closeAllSwipeActions failed, error code: ${error.code}, message: ${error.message}`);
+      }
     })
   }.padding(4).justifyContent(FlexAlign.SpaceEvenly)
 }
@@ -395,6 +401,7 @@ struct ListItemExample {
 ```TypeScript
 // xxx.ets
 import { BusinessError } from '@kit.BasicServicesKit';
+import { FrameNode } from '@kit.ArkUI';
 
 @Entry
 @Component

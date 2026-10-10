@@ -52,7 +52,7 @@ function setUserGrantedState(targetBundle: BundleOption, enabled: boolean): Prom
 ```TypeScript
 let targetBundle: notificationExtensionSubscription.BundleOption =
 {
-  // 应改为开发者需要查询的目标应用信息
+  // 应改为开发者需要设置的目标应用信息
   bundle: 'com.example.testnotification',
 };
 notificationExtensionSubscription.setUserGrantedState(targetBundle, true).then(() => {

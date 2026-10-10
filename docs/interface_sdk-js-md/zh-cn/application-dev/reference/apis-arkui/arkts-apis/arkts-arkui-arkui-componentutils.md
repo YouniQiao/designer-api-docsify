@@ -94,7 +94,7 @@ struct Utils {
         })
         .width(300)
         .height(100)
-        .key('image_01')
+        .id('image_01')
       Button('getRectangleById')
         .onClick(() => {
           this.value = JSON.stringify(this.getUIContext()

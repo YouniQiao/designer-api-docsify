@@ -387,7 +387,6 @@ onExecutionFailed(callback: CallbackFunctionWithError): void
 ```TypeScript
 import { taskpool } from '@kit.ArkTS';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { HashMap } from '@kit.ArkTS';
 
 @Concurrent
 function hashMapFunc(args: number) {

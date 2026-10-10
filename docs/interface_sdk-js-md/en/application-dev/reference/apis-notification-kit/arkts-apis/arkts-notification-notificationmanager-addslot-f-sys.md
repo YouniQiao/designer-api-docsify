@@ -51,18 +51,18 @@ Adds a notification slot. This API uses an asynchronous callback to return the r
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlot callback
-let addSlotCallBack = (err: BusinessError): void => {
+let addSlotCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("addSlot success");
+        console.info('addSlot success');
     }
 }
 // NotificationSlot object
 let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
 };
-notificationManager.addSlot(notificationSlot, addSlotCallBack);
+notificationManager.addSlot(notificationSlot, addSlotCallback);
 ```
 
 
@@ -120,7 +120,7 @@ let notificationSlot: notificationManager.NotificationSlot = {
     notificationType: notificationManager.SlotType.SOCIAL_COMMUNICATION
 };
 notificationManager.addSlot(notificationSlot).then(() => {
-    console.info("addSlot success");
+    console.info('addSlot success');
 }).catch((err: BusinessError) => {
     console.error(`addSlot failed, code is ${err.code}, message is ${err.message}`);
 });

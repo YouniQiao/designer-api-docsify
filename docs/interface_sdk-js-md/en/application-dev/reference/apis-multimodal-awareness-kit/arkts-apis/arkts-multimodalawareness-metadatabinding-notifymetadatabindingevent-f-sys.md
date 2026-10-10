@@ -47,10 +47,11 @@ Transfers metadata to the application or service that calls the encoding API. Th
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
+// bundleName must be the bundle name of an installed application.
 let bundleName: string = '';
-metadataBinding.notifyMetadataBindingEvent(bundleName).then((appLink:string)=>{
-  console.info("notify metadata:" + appLink);
+metadataBinding.notifyMetadataBindingEvent(bundleName).then((appLink:string) => {
+  console.info('notify metadata:' + appLink);
 }).catch((error: BusinessError) => {
-  console.error("notify metadata error" + error);
+  console.error(`Failed to notify metadata. Code: ${error.code}, message: ${error.message}`);
 });
 ```

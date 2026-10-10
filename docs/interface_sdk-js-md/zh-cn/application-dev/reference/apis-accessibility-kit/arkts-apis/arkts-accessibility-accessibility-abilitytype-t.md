@@ -23,4 +23,4 @@ type AbilityType = 'audible' | 'generic' | 'haptic' | 'spoken' | 'visual' | 'all
 | 'haptic' | 表示具有触觉反馈。 |
 | 'spoken' | 表示具有语音反馈。 |
 | 'visual' | 表示具有视觉反馈。 |
-| 'all' | 表示以上所有类别。 [since 9] |
+| 'all' | 表示以上所有类别。<br>**起始版本：** 9 |

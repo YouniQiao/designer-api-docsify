@@ -23,4 +23,4 @@ Enumerates the types of accessibility applications.
 | 'haptic' | The accessibility application provides haptic feedback. |
 | 'spoken' | The accessibility application provides spoken feedback. |
 | 'visual' | The accessibility application provides visual feedback. |
-| 'all' | All the preceding types. [since 9] |
+| 'all' | All the preceding types.<br>**Since:** 9 |

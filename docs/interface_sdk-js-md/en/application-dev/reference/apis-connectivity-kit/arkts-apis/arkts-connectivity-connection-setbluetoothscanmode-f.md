@@ -47,7 +47,7 @@ Sets the Bluetooth scan mode for a device.
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 try {
-    // The device can be discovered and connected only when the discoverable and connectable mode is used.
+    // Set the device to connectable and discoverable so that it can be scanned and connected by the peer device.
     connection.setBluetoothScanMode(connection.ScanMode.SCAN_MODE_CONNECTABLE_GENERAL_DISCOVERABLE, 100);
 } catch (err) {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);

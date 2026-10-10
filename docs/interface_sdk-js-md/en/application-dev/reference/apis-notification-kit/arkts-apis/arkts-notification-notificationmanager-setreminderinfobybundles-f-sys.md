@@ -53,7 +53,7 @@ Batch sets reminders for specified applications. This API uses a promise to retu
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName",
+    bundle: 'bundleName',
 };
 let reminderInfos: Array<notificationManager.NotificationReminderInfo> = [
     {

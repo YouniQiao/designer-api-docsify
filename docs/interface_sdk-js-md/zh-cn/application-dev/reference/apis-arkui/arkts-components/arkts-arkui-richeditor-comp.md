@@ -4789,7 +4789,9 @@ struct ScrollToVisibleDemo {
 
 该示例通过设置[RichEditorImageSpanStyle](arkts-arkui-richeditor-comp-richeditorimagespanstyle-i.md)的resizable属性，对图片不同方向进行拉伸。
 
-从API版本26.1.0开始，RichEditorImageSpanStyle新增resizable属性。
+从API版本26.0.1开始，RichEditorImageSpanStyle新增resizable属性。
+
+
 
 ```TypeScript
 @Entry
@@ -4848,6 +4850,120 @@ struct RichEditorResizablePage {
     .height('100%')
     .padding(20)
     .alignItems(HorizontalAlign.Center)
+  }
+}
+```
+
+### 示例45（添加带身份标识的BuilderSpan）
+
+该示例演示通过[addRichEditorBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addricheditorbuilderspan)添加带身份标识的BuilderSpan，并通过[getRichEditorBuilderSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getricheditorbuilderspans)获取BuilderSpan信息，在日志中打印返回结果。
+
+从API版本26.2.0开始，新增addRichEditorBuilderSpan和getRichEditorBuilderSpans接口。
+
+```TypeScript
+@Entry
+@Component
+struct RichEditorBuilderSpanPage {
+  @State logMessages: string[] = [];
+  private controller: RichEditorController = new RichEditorController();
+  private spanCount: number = 0;
+
+  addLog(msg: string, isCallback: boolean = false) {
+    let prefix = isCallback ? '<<<----- ' : '';
+    this.logMessages = [...this.logMessages, prefix + msg];
+  }
+
+  @Builder
+  myBuilder() {
+    Row() {
+      Text(`span${this.spanCount}`)
+        .fontSize(14)
+        .margin(5)
+        .fontColor(Color.White)
+    }
+    .borderRadius(12)
+    .backgroundColor(Color.Blue)
+  }
+
+  build() {
+    Column() {
+      Text('BuilderSpanInfo Demo')
+        .fontSize(20)
+        .fontWeight(FontWeight.Bold)
+        .margin({ bottom: 10 })
+
+      RichEditor({ controller: this.controller })
+        .id("rich_editor_inspector_demo")
+        .width('100%')
+        .height(50)
+        .borderWidth(1)
+        .borderColor(Color.Gray)
+        .margin({ bottom: 10 })
+
+      Divider()
+        .margin({ bottom: 5 })
+
+      Text('Log:')
+        .fontSize(14)
+        .fontWeight(FontWeight.Bold)
+        .margin({ bottom: 5 })
+
+      List() {
+        ForEach(this.logMessages, (msg: string, index: number) => {
+          ListItem() {
+            Scroll() {
+              Text(msg).fontSize(11)
+            }
+            .scrollable(ScrollDirection.Horizontal)
+            .scrollBar(BarState.Off)
+            .fadingEdge(true)
+          }
+        }, (msg: string, index: number) => msg + index.toString())
+      }
+      .height(150)
+      .borderWidth(1)
+      .borderColor(Color.Gray)
+      .stackFromEnd(true)
+
+      Button('addRichEditorBuilderSpan')
+        .margin(5)
+        .clickEffect({ level: ClickEffectLevel.HEAVY })
+        .onClick(() => {
+          this.spanCount++;
+          let idVal = 'testId';
+          let offVal = 1;
+          let span: RichEditorBuilderSpan = {
+            builder: this.myBuilder,
+            onAttach: (info: BuilderSpanInfo) => {
+              this.addLog('[onAttach] info=' + JSON.stringify(info), true);
+            },
+            onDetach: (info: BuilderSpanInfo) => {
+              this.addLog('[onDetach] info=' + JSON.stringify(info), true);
+            }
+          }
+          let info: BuilderSpanInfo = { id: idVal, offset: offVal };
+          let idx = this.controller.addRichEditorBuilderSpan(span, info);
+          this.addLog(`{builder,onAttach+onDetach},{id:${info.id}, offset: ${info.offset}} => idx: ${idx}`);
+        })
+
+      Button('getRichEditorBuilderSpans')
+        .margin(5)
+        .clickEffect({ level: ClickEffectLevel.HEAVY })
+        .onClick(() => {
+          let spans = this.controller.getRichEditorBuilderSpans();
+          if (spans) {
+            this.addLog('getRichEditorBuilderSpans() count: ' + spans.length);
+            for (let i = 0; i < spans.length; i++) {
+              this.addLog('  span[' + i + ']: id=' + (spans[i].id ?? 'undefined') + ', offset=' +
+                (spans[i].offset ?? 'undefined'), true);
+            }
+          } else {
+            this.addLog('getRichEditorBuilderSpans() => undefined');
+          }
+        })
+    }
+    .width('100%')
+    .padding(15)
   }
 }
 ```

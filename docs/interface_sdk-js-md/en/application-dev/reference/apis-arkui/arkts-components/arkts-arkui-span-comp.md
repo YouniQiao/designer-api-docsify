@@ -54,7 +54,7 @@ Defines the constructor of Span.
 
 ### Example 1: Setting the Text Style
 
-This example demonstrates how to apply different text styles and configure click events for the Span.
+This example demonstrates how to apply different text styles and configure click events for the Span component.
 
 
 
@@ -178,7 +178,7 @@ struct SpanExample {
           })
       }
 
-      // Text font configuration settings. Starting from API version 24, the fontConfigs attribute is supported.
+      // Sets text font configurations. The fontConfigs attribute is supported since API version 24.
       Text('Font with FontConfigs').fontSize(9).fontColor(0xCCCCCC).margin({ top: 12 })
       Text() {
         Span('span font with configs')
@@ -194,7 +194,7 @@ struct SpanExample {
           })
       }
 
-      // Text font weight configuration settings. Starting from API version 24, the fontWeightConfigs attribute is supported.
+      // Sets text font weight configurations. The fontWeightConfigs attribute is supported since API version 24.
       Text('FontWeight with FontWeightConfigs').fontSize(9).fontColor(0xCCCCCC).margin({ top: 12 })
       Text() {
         Span('span fontWeight 850 with configs')
@@ -340,11 +340,11 @@ struct SpanExample {
 }
 ```
 
-### Example 5 (Set the Variable Font Attribute)
+### Example 5: Setting Text Font Variations
 
-This example sets the variable font attribute through the [fontVariations](#fontvariations) attribute.
+This example demonstrates how to set text font variations using [fontVariations](#fontvariations).
 
-Since API version 26.0.0, the [fontVariations](#fontvariations) API is added.
+The [fontVariations](#fontvariations) API is added since API version 26.0.0.
 
 ```TypeScript
 // xxx.ets
@@ -357,11 +357,11 @@ struct SpanExample {
     Column() {
       Text() {
         Span('Hello World !')
-          // wght represents the font weight attribute of a variable font.
+          // wght indicates the weight of the variable font.
           .fontVariations([{ axis: 'wght', value: this.weightValue }])
       }
 
-      Button('Font weight: ' + this.weightValue)
+      Button('Weight: ' + this.weightValue)
         .margin(10)
         .onClick(() => {
           this.weightValue += 100;

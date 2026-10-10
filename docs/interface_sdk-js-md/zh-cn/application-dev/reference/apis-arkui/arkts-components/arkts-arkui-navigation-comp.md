@@ -1714,7 +1714,7 @@ struct PageOne {
         this.paramNum = (ctx?.pathInfo?.param as PageParam)?.num;
         this.stack = ctx.pathStack;
       } catch (err) {
-        console.error(`testTag onReady catch exception.Code:${err.Code}, message: ${err.message}`);
+        console.error(`testTag onReady catch exception.code:${err.code}, message: ${err.message}`);
       }
     })
   }
@@ -1836,7 +1836,7 @@ struct PageOneComponent {
         this.eventStr += '<onReady>';
         this.stack = ctx.pathStack;
       } catch (err) {
-        console.error(`testTag onReady catch exception.Code:${err.code}, message:${err.message}`);
+        console.error(`testTag onReady catch exception.code:${err.code}, message:${err.message}`);
       }
     })
   }
@@ -1908,7 +1908,7 @@ struct NavigationExample {
           Scroll(this.scrollerForScroll) {
             Column() {
               // $r('app.media.image_1')需要替换为开发者所需的资源文件
-              Image($r('app.media.image_1'))// 设置与标题栏高度一致，以便观察STACK效果
+              Image($r('app.media.image_1')) // 设置与标题栏高度一致，以便观察STACK效果
                 .height(138)
                 .width('100%')
               Button('BarStyle.STANDARD')
@@ -3570,6 +3570,8 @@ struct NavigationExample {
 
 从API版本26.0.0开始，[NavigationTitleOptions](arkts-arkui-navigation-comp-navigationtitleoptions-i.md)新增了systemMaterial属性。
 
+该示例配图为高算力设备强档效果：
+
 
 
 ```TypeScript
@@ -3706,7 +3708,7 @@ struct NavigationTitleMaterialDemo {
 
 该示例演示如何使用clearContentStackOnPrimaryNavigation属性，开启Navigation左起右清栈效果。
 
-从API版本26.1.0开始，[NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md)新增了clearContentStackOnPrimaryNavigation属性。
+从API版本26.0.1开始，[NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md)新增了clearContentStackOnPrimaryNavigation属性。
 
 ```TypeScript
 // xxx.ets

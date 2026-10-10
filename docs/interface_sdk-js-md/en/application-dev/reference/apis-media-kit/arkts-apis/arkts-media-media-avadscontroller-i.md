@@ -53,6 +53,21 @@ Adds an ad media source to the ad controller and specifies the position where th
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | Insert a media asset whose start value exceeds the value of the main content. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+    let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/ad.mp4', headers);
+    let adsId: string = await adsController.addAdsMediaSource(mediaSource, 5000);
+    console.info(`Succeeded in adding ads media source, adsId: ${adsId}`);
+  }
+}
+```
+
 ## disableAllAdsMediaSource
 
 ```TypeScript
@@ -68,6 +83,18 @@ Disables the playback of remaining ad content in the current session. Subsequent
 <!--Device-AVAdsController-disableAllAdsMediaSource(): void--><!--Device-AVAdsController-disableAllAdsMediaSource(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.disableAllAdsMediaSource();
+  }
+}
+```
 
 ## offAdsEventListenerLoadingError
 
@@ -91,6 +118,18 @@ Unregisters the callback for handling ad content loading failures.
 | --- | --- | --- | --- |
 | callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | No | Callback for handling ad content loading failures.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.offAdsEventListenerLoadingError();
+  }
+}
+```
+
 ## offAdsListenerAdsCompleted
 
 ```TypeScript
@@ -112,6 +151,18 @@ Unregisters the callback triggered when the ad content playback is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback invoked when the ad playback is complete.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.offAdsListenerAdsCompleted();
+  }
+}
+```
 
 ## offAdsListenerAdsSkipped
 
@@ -135,6 +186,18 @@ Unregisters the callback triggered when an ad is skipped.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback for ad skipping.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.offAdsListenerAdsSkipped();
+  }
+}
+```
+
 ## offAdsListenerAdsStarted
 
 ```TypeScript
@@ -156,6 +219,18 @@ Unregisters the callback triggered when a new ad is played.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | No | Callback triggered when the ad starts playing. It is usually used when the main content playback screen is switched to the ad playback screen.<br>If this parameter is specified, only the specified callback is unregistered. If this parameter is not specified, all callbacks for the event are unregistered by default. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.offAdsListenerAdsStarted();
+  }
+}
+```
 
 ## onAdsEventListenerLoadingError
 
@@ -179,6 +254,22 @@ Registers a callback for handling ad content loading failures.
 | --- | --- | --- | --- |
 | callback | [OnAdsEventLoadingErrorHandle](arkts-media-media-onadseventloadingerrorhandle-t.md) | Yes | Callback for handling ad content loading failures, which is implemented by the user.<br>The first parameter is used to pass the ad ID, and the second parameter is used to pass the failure cause. |
 
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.onAdsEventListenerLoadingError((adsId: string, reason: BusinessError) => {
+      console.error(`Failed to load ads, adsId: ${adsId}, Code: ${reason.code}, message: ${reason.message}`);
+    });
+  }
+}
+```
+
 ## onAdsListenerAdsCompleted
 
 ```TypeScript
@@ -200,6 +291,20 @@ Registers a callback triggered when the ad content playback is complete.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback invoked when the ad playback is complete. It is usually used to resume the playback of the main content. The parameter is the ID of the ad that has been played. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.onAdsListenerAdsCompleted((adsId: string) => {
+      console.info(`Ads completed, adsId: ${adsId}`);
+    });
+  }
+}
+```
 
 ## onAdsListenerAdsSkipped
 
@@ -223,6 +328,20 @@ Registers a callback triggered when an ad is skipped.
 | --- | --- | --- | --- |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | Yes | Callback for ad skipping. It is usually used to resume the playback of the main content. The parameter is the ID of the ad that is skipped. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.onAdsListenerAdsSkipped((adsId: string) => {
+      console.info(`Ads skipped, adsId: ${adsId}`);
+    });
+  }
+}
+```
+
 ## onAdsListenerAdsStarted
 
 ```TypeScript
@@ -245,6 +364,20 @@ Registers a callback triggered when a new ad is played.
 | --- | --- | --- | --- |
 | callback | [OnAdsEventAdsStartedHandle](arkts-media-media-onadseventadsstartedhandle-t.md) | Yes | Callback triggered when the ad starts playing. It is usually used when the main content playback screen is switched to the ad playback screen.<br>The first parameter indicates the ID of the ad being played, and the second parameter indicates the ad duration, in milliseconds |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.onAdsListenerAdsStarted((adsId: string, duration: number) => {
+      console.info(`Ads started, adsId: ${adsId}, duration: ${duration}ms`);
+    });
+  }
+}
+```
+
 ## release
 
 ```TypeScript
@@ -260,6 +393,18 @@ Releases the **AVAdsController** object. After the release, the registered callb
 <!--Device-AVAdsController-release(): void--><!--Device-AVAdsController-release(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.release();
+  }
+}
+```
 
 ## removeAdsMediaSource
 
@@ -289,6 +434,21 @@ Removes the specified ad media source from the ad controller. If the ad is being
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the AdsController. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+    let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/ad.mp4', headers);
+    let adsId: string = await adsController.addAdsMediaSource(mediaSource, 5000);
+    adsController.removeAdsMediaSource(adsId);
+  }
+}
+```
+
 ## skipCurrentAdsMediaSource
 
 ```TypeScript
@@ -304,3 +464,15 @@ Skips the ad that is being played. After the ad is skipped, the playback of the 
 <!--Device-AVAdsController-skipCurrentAdsMediaSource(): void--><!--Device-AVAdsController-skipCurrentAdsMediaSource(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  let adsController: media.AVAdsController | undefined = await media.createAVAdsController(player);
+  if (adsController) {
+    adsController.skipCurrentAdsMediaSource();
+  }
+}
+```

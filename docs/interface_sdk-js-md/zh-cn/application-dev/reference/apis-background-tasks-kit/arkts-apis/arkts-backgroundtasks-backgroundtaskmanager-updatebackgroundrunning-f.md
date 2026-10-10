@@ -135,9 +135,8 @@ function updateBackgroundRunning(context: Context, request: ContinuousTaskReques
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { UIAbility, wantAgent, WantAgent } from '@kit.AbilityKit';
 // 在原子化服务中，请删除WantAgent导入
 
 export default class EntryAbility extends UIAbility {

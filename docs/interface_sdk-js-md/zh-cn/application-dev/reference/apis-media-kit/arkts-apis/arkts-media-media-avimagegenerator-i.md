@@ -64,6 +64,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 import { media } from '@kit.MediaKit';
+import { common } from '@kit.AbilityKit';
 
 let avImageGenerator: media.AVImageGenerator | undefined = undefined;
 let pixel_map: image.PixelMap | undefined = undefined;
@@ -141,6 +142,7 @@ fetchFrameByTime(timeUs: number, options: AVImageQueryOptions, param: PixelMapPa
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 import { media } from '@kit.MediaKit';
+import { common } from '@kit.AbilityKit';
 
 let avImageGenerator: media.AVImageGenerator | undefined = undefined;
 let pixel_map: image.PixelMap | undefined = undefined;
@@ -215,6 +217,7 @@ fetchScaledFrameByTime(timeUs: number, queryMode: AVImageQueryOptions, outputSiz
 import { BusinessError } from '@kit.BasicServicesKit';
 import { image } from '@kit.ImageKit';
 import { media } from '@kit.MediaKit';
+import { common } from '@kit.AbilityKit';
 
 let avImageGenerator: media.AVImageGenerator | undefined = undefined;
 let pixel_map: image.PixelMap | undefined = undefined;

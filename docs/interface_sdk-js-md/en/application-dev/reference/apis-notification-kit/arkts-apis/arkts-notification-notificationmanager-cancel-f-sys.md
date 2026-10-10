@@ -58,11 +58,11 @@ The current application must have a proxy relationship with another application,
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-  bundle: "bundleName"
+  bundle: 'bundleName'
 };
 let id: number = 1;
 notificationManager.cancel(bundle, id).then(() => {
-  console.info("cancel success");
+  console.info('cancel success');
 }).catch((err: BusinessError) => {
   console.error(`cancel failed, code is ${err.code}, message is ${err.message}`);
 });

@@ -58,7 +58,7 @@ let subscriber: notificationManager.SystemLiveViewSubscriber  = {
     onResponse: onResponseCallback,
 };
 notificationManager.subscribeSystemLiveView(subscriber).then(() => {
-    console.info("subscribeSystemLiveView success");
+    console.info('subscribeSystemLiveView success');
 }).catch((err: BusinessError) => {
     console.error(`subscribeSystemLiveView failed, code is ${err.code}, message is ${err.message}`);
 });

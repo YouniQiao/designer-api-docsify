@@ -34,12 +34,12 @@ type Action = 'accessibilityFocus' | 'clearAccessibilityFocus' | 'focus' | 'clea
 | 'scrollForward' | 表示向前滚动操作，需配置参数scrollType，参数值为'fullScreen'或'halfScreen'。 |
 | 'scrollBackward' | 表示向后滚动操作，需配置参数scrollType，参数值为'fullScreen'或'halfScreen'。 |
 | 'setSelection' | 表示设置文本选择范围操作，需配置参数selectTextBegin、selectTextEnd、selectTextInForWard，参数值为选定文本的起始坐标、结束坐标及是否向前选择。 |
-| 'setCursorPosition' | 表示设置光标位置操作，需配置参数offset，参数值为光标的字符偏移量。 [since 12] |
-| 'home' | 表示返回桌面操作。 [since 12] |
-| 'back' | 表示返回上一级操作。 [since 12] |
-| 'recentTask' | 表示打开最近任务操作。 [since 12] |
-| 'notificationCenter' | 表示打开通知栏操作。 [since 12] |
-| 'controlCenter' | 表示打开控制中心操作。 [since 12] |
-| 'common' | 表示没有特定操作，用于主动聚焦、主动播报等场景。 [since 12] |
-| 'injectAction' | 表示注入动作，需配置参数injectActionType，参数值为注入动作类型。 [since 26.0.0] |
-| 'executeCustomAction' | 表示执行自定义操作，需配置参数customAction，参数值为自定义操作的名称。 [since 26.0.0] |
+| 'setCursorPosition' | 表示设置光标位置操作，需配置参数offset，参数值为光标的字符偏移量。<br>**起始版本：** 12 |
+| 'home' | 表示返回桌面操作。<br>**起始版本：** 12 |
+| 'back' | 表示返回上一级操作。<br>**起始版本：** 12 |
+| 'recentTask' | 表示打开最近任务操作。<br>**起始版本：** 12 |
+| 'notificationCenter' | 表示打开通知栏操作。<br>**起始版本：** 12 |
+| 'controlCenter' | 表示打开控制中心操作。<br>**起始版本：** 12 |
+| 'common' | 表示没有特定操作，用于主动聚焦、主动播报等场景。<br>**起始版本：** 12 |
+| 'injectAction' | 表示注入动作，需配置参数injectActionType，参数值为注入动作类型。<br>**起始版本：** 26.0.0 |
+| 'executeCustomAction' | 表示执行自定义操作，需配置参数customAction，参数值为自定义操作的名称。<br>**起始版本：** 26.0.0 |

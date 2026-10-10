@@ -43,26 +43,27 @@ Stops a deferred task.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-  import { workScheduler } from '@kit.BackgroundTasksKit';
+import { workScheduler } from '@kit.BackgroundTasksKit';
 
-  let workInfo: workScheduler.WorkInfo = {
-      workId: 1,
-      batteryStatus:workScheduler.BatteryStatus.BATTERY_STATUS_LOW,
-      isRepeat: false,
-      isPersisted: true,
-      bundleName: "com.example.myapplication",
-      abilityName: "MyExtension",
-      parameters: {
-          mykey0: 1,
-          mykey1: "string value",
-          mykey2: true,
-          mykey3: 1.5
-      }
-     }
-  try{
-    workScheduler.stopWork(workInfo, false);
-    console.info('workschedulerLog stopWork success');
-  } catch (error) {
-    console.error(`workschedulerLog stopWork failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+let workInfo: workScheduler.WorkInfo = {
+  workId: 1,
+  batteryStatus: workScheduler.BatteryStatus.BATTERY_STATUS_LOW,
+  isRepeat: false,
+  isPersisted: true,
+  bundleName: 'com.example.myapplication',
+  abilityName: 'MyExtension',
+  parameters: {
+    intValue: 1,
+    stringValue: 'string value',
+    booleanValue: true,
+    floatValue: 1.5
   }
+}
+try {
+  // Stop the deferred task. The value false indicates that the task is stopped but not removed.
+  workScheduler.stopWork(workInfo, false);
+  console.info('workschedulerLog stopWork success');
+} catch (error) {
+  console.error(`workschedulerLog stopWork failed. code is ${(error as BusinessError).code} message is ${(error as BusinessError).message}`);
+}
 ```

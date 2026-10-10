@@ -512,7 +512,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 async function test(){
   let avPlayer = await media.createAVPlayer();
-  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
+  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared状态后才能调用。
   avPlayer.play().then(() => {
     console.info('Succeeded in playing');
     let currentPresentation: number = avPlayer.getCurrentPresentationTimestamp();
@@ -672,6 +672,7 @@ getPlaybackInfo(): Promise<PlaybackInfo>
 **示例**
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avPlayer: media.AVPlayer | undefined;
@@ -685,7 +686,7 @@ media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
         playbackInfo = await avPlayer.getPlaybackInfo();
         console.info(`AVPlayer getPlaybackInfo = ${JSON.stringify(playbackInfo)}`); // 打印整个PlaybackInfo的值。
       } catch (error) {
-        console.error(`error = ${error}`);
+        console.error(`Failed to getPlaybackInfo. Code: ${error.code}, message: ${error.message}`);
       }
     }
   } else {
@@ -794,6 +795,7 @@ getPlaybackStatisticMetrics(): Promise<PlaybackMetrics>
 **示例**
 
 ```TypeScript
+import { media } from '@kit.MediaKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let avPlayer: media.AVPlayer | undefined;
@@ -807,7 +809,7 @@ media.createAVPlayer(async (err: BusinessError, player: media.AVPlayer) => {
         playbackMetrics = await avPlayer.getPlaybackStatisticMetrics();
         console.info(`AVPlayer getPlaybackStatisticMetrics = ${JSON.stringify(playbackMetrics)}`); // 打印整个playbackMetrics的值。
       } catch (error) {
-        console.error(`error = ${error}`);
+        console.error(`Failed to getPlaybackStatisticMetrics. Code: ${error.code}, message: ${error.message}`);
       }
     }
   } else {
@@ -943,7 +945,7 @@ async function test(){
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至prepared/playing/paused状态后才能调用。
   avPlayer.getTrackDescription((error: BusinessError, arrList: Array<media.MediaDescription>) => {
     if (error) {
-      console.error(`Failed to do getTrackDescription, error:${error}`);
+      console.error(`Failed to getTrackDescription. Code: ${error.code}, message: ${error.message}`);
     } else {
       console.info('Succeeded in doing getTrackDescription');
     }
@@ -1035,7 +1037,7 @@ async function test() {
   player.getTrackSelectionFilter().then((selectionFilter: media.TrackSelectionFilter) => {
     console.info(`Succeeded in getting TrackSelectionFilter: ${selectionFilter}`);
   }).catch((err: BusinessError) => {
-    console.error('Failed to getTrackSelectionFilter, error message is:' + err.message);
+    console.error(`Failed to getTrackSelectionFilter. Code: ${err.code}, message: ${err.message}`);
   });
 }
 ```
@@ -2557,8 +2559,7 @@ async function test(){
   let avPlayer = await media.createAVPlayer();
   // 监听AVPlayer的错误事件，该事件仅用于错误提示，不需要用户停止播控动作。
   avPlayer.on('error', (error: BusinessError) => {
-    console.info('error happened,and error message is :' + error.message);
-    console.info('error happened,and error code is :' + error.code);
+    console.error(`error happened, Code: ${error.code}, message: ${error.message}`);
   });
 }
 ```
@@ -3823,6 +3824,7 @@ async function test(){
   // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
   avPlayer.prepare().then(() => {
     console.info('Succeeded in preparing');
+    // setMediaMuted应在stateChange事件触发至prepared/playing/paused/completed状态后调用。
     avPlayer.setMediaMuted(media.MediaType.MEDIA_TYPE_AUD, true);
   }, (err: BusinessError) => {
     console.error(`Failed to prepare. Code:${err.code},message:${err.message}`);
@@ -3932,7 +3934,7 @@ async function test(){
   avPlayer.setPlaybackRange(0, 6000, media.SeekMode.SEEK_CLOSEST).then(() => {
     console.info('Succeeded setPlaybackRange');
   }).catch((err: BusinessError) => {
-    console.error('Failed to setPlaybackRange' + err.message);
+    console.error(`Failed to setPlaybackRange. Code: ${err.code}, message: ${err.message}`);
   });
 }
 ```
@@ -4021,6 +4023,7 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 import { common } from '@kit.AbilityKit';
 
 let player = await media.createAVPlayer();
+// this为组件实例，通过getUIContext()获取UI上下文，再通过getHostContext()获取UIAbilityContext。
 let context = this.getUIContext().getHostContext() as common.UIAbilityContext;
 let fileDescriptor = await context.resourceManager.getRawFd('xxx.mp4');
 player.fdSrc = fileDescriptor;
@@ -4185,7 +4188,7 @@ async function test() {
   player.setTrackSelectionFilter(selectionFilter).then(() => {
     console.info('Succeeded in setting TrackSelectionFilter');
   }).catch((err: BusinessError) => {
-    console.error('Failed to setTrackSelectionFilter, error message is:' + err.message);
+    console.error(`Failed to setTrackSelectionFilter. Code: ${err.code}, message: ${err.message}`);
   });
 }
 ```

@@ -77,11 +77,11 @@ let callback = (err: BusinessError): void => {
     if (err) {
         console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("publishAsBundle success");
+        console.info('publishAsBundle success');
     }
 }
 // Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
+let representativeBundle: string = 'com.example.demo';
 // Use the actual user ID when calling the API.
 let userId: number = 100;
 // NotificationRequest object
@@ -90,9 +90,9 @@ let request: notificationManager.NotificationRequest = {
     content: {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
         }
     }
 };
@@ -167,7 +167,7 @@ Publishes a notification through the reminder agent. This API uses a promise to 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
+let representativeBundle: string = 'com.example.demo';
 // Use the actual user ID when calling the API.
 let userId: number = 100;
 // NotificationRequest object
@@ -176,14 +176,14 @@ let request: notificationManager.NotificationRequest = {
     content: {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
         }
     }
 };
 notificationManager.publishAsBundle(request, representativeBundle, userId).then(() => {
-    console.info("publishAsBundle success");
+    console.info('publishAsBundle success');
 }).catch((err: BusinessError) => {
     console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -257,7 +257,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // Bundle information of the application whose notification function is taken over by the reminder agent.
 let representativeBundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 // NotificationRequest object
 let request: notificationManager.NotificationRequest = {
@@ -265,14 +265,14 @@ let request: notificationManager.NotificationRequest = {
     content: {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_BASIC_TEXT,
         normal: {
-            title: "test_title",
-            text: "test_text",
-            additionalText: "test_additionalText"
+            title: 'test_title',
+            text: 'test_text',
+            additionalText: 'test_additionalText'
         }
     }
 };
 notificationManager.publishAsBundle(representativeBundle, request).then(() => {
-    console.info("publishAsBundle success");
+    console.info('publishAsBundle success');
 }).catch((err: BusinessError) => {
     console.error(`publishAsBundle failed, code is ${err.code}, message is ${err.message}`);
 });

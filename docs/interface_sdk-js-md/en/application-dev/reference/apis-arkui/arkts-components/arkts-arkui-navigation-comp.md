@@ -3712,7 +3712,7 @@ struct NavigationTitleMaterialDemo {
 
 This example demonstrates how to use the clearContentStackOnPrimaryNavigation attribute to enable the stack clearing effect from left to right on the navigation page.
 
-The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md) since API version 26.1.0.
+The clearContentStackOnPrimaryNavigation attribute is added to [NavigationConfiguration](arkts-arkui-navigation-comp-navigationconfiguration-i.md) since API version 26.0.1.
 
 ```TypeScript
 // xxx.ets

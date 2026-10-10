@@ -38,8 +38,6 @@ create the instance of pan profile.
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
-
 try {
     let panProfile : pan.PanProfile= pan.createPanProfile();
     console.info('pan success');

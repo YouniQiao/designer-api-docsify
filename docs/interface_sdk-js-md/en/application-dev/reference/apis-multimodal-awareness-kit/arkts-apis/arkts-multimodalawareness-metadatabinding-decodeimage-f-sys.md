@@ -49,11 +49,13 @@ import { image } from '@kit.ImageKit';
 import { metadataBinding } from '@kit.MultimodalAwarenessKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let encodeImage: image.PixelMap | undefined = undefined;
-let captureMetadata: string = "";
-metadataBinding.decodeImage(encodeImage).then((metadata: string) => {
+// encodedImage must be obtained from an image processed by the encodeImage API.
+let encodedImage: image.PixelMap | undefined = undefined;
+let captureMetadata: string = '';
+metadataBinding.decodeImage(encodedImage).then((metadata: string) => {
+  // Save the metadata parsed from the image to the captureMetadata variable for later use.
   captureMetadata = metadata;
 }).catch((error: BusinessError) => {
-  console.error("decode image error" + error);
+  console.error(`Failed to decode image. Code: ${error.code}, message: ${error.message}`);
 });
 ```

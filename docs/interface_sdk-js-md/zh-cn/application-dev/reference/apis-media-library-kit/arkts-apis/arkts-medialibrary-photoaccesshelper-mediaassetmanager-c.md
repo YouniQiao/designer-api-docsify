@@ -207,6 +207,10 @@ async function example(context: Context) {
     }
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset === undefined) {
+        console.error('photoAsset is undefined');
+        return;
+      }
       await photoAccessHelper.MediaAssetManager.quickRequestImage(context, photoAsset, requestOptions, handler);
       console.info('quickRequestImage successfully');
   });
@@ -554,6 +558,10 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
     }
       console.info('fetchResult success');
       let photoAsset: photoAccessHelper.PhotoAsset = await fetchResult.getFirstObject();
+      if (photoAsset === undefined) {
+        console.error('photoAsset is undefined');
+        return;
+      }
       await photoAccessHelper.MediaAssetManager.requestVideoFile(context, photoAsset, requestOptions, fileUri, handler);
       console.info('requestVideoFile successfully');
   });

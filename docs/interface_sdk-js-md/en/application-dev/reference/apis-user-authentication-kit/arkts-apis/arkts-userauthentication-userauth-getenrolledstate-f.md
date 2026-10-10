@@ -57,6 +57,6 @@ try {
   console.info('get current enrolled state successfully.');
 } catch (error) {
   const err: BusinessError = error as BusinessError;
-  console.error(`get current enrolled state failed, Code is ${err?.code}, message is ${err?.message}`);
+  console.error(`Failed to get current enrolled state. Code: ${err?.code}, message: ${err?.message}`);
 }
 ```

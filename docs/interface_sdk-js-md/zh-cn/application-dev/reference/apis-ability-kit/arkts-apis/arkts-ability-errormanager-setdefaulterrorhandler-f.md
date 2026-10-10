@@ -49,11 +49,12 @@ function setDefaultErrorHandler(defaultHandler?: ErrorHandler) : ErrorHandler
 ```TypeScript
 import { errorManager } from '@kit.AbilityKit';
 import { process } from '@kit.ArkTS';
+import { hilog } from '@kit.PerformanceAnalysisKit';
 
 let oldHandler: errorManager.ErrorHandler;
 const errorHandler: errorManager.ErrorHandler = (reason: Error) => {
   // 自定义的errorHandler实现逻辑
-  console.info('[Handler] Uncaught exception handler invoked.');
+  hilog.info(0x0000, 'testTag', '[Handler] Uncaught exception handler invoked.');
   if (oldHandler) {
       oldHandler(reason);
   } else {

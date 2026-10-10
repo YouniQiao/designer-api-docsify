@@ -41,18 +41,18 @@ import backgroundTaskManager from '@ohos.backgroundTaskManager';
 import featureAbility from '@ohos.ability.featureAbility';
 import { BusinessError } from '@ohos.base';
 
-function callback(err: BusinessError, data: void) {
+const callback = (err: BusinessError, data: void) => {
   if (err) {
-    console.error("Operation stopBackgroundRunning failed Cause: " + err);
+    console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
   } else {
-    console.info("Operation stopBackgroundRunning succeeded");
+    console.info('Operation stopBackgroundRunning succeeded');
   }
 }
 
 backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext(), callback);
 ```
 
-Stage model:
+stage model example:
 
 ```TypeScript
 import UIAbility from '@ohos.app.ability.UIAbility';
@@ -61,11 +61,11 @@ import Want from '@ohos.app.ability.Want';
 import AbilityConstant from '@ohos.app.ability.AbilityConstant';
 import { BusinessError } from '@ohos.base';
 
-function callback(err: BusinessError, data: void) {
+const callback = (err: BusinessError, data: void) => {
   if (err) {
-    console.error("Operation stopBackgroundRunning failed Cause: " + err);
+    console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
   } else {
-    console.info("Operation stopBackgroundRunning succeeded");
+    console.info('Operation stopBackgroundRunning succeeded');
   }
 }
 
@@ -120,8 +120,8 @@ import { BusinessError } from '@ohos.base';
 
 // Cancel a continuous task.
 backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext()).then(() => {
-  console.info("Operation stopBackgroundRunning succeeded");
+  console.info('Operation stopBackgroundRunning succeeded');
 }).catch((err: BusinessError) => {
-  console.error("Operation stopBackgroundRunning failed Cause: " + err);
+  console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
 });
 ```

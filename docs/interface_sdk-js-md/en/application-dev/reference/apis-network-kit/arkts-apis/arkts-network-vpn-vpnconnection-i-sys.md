@@ -60,7 +60,7 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -121,7 +121,7 @@ Destroys a VPN. This API uses a promise to return the result.
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -187,7 +187,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext on a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -274,7 +274,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext in a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { socket, vpn } from '@kit.NetworkKit';
@@ -359,7 +359,7 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext on a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';
@@ -384,7 +384,10 @@ struct Index {
       dnsAddresses: ["114.114.114.114"]
     }
     this.VpnConnection.setUp(config, (error: BusinessError, data: number) => {
-      console.error(JSON.stringify(error));
+      if (error) {
+        console.error(JSON.stringify(error));
+        return;
+      };
       console.info("tunfd: " + JSON.stringify(data));
     });
   }
@@ -441,7 +444,7 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 
 > NOTE
 > 
-> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use UIAbilityContext APIs on pages, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
+> In the sample code provided in this topic, this.context is used to obtain UIAbilityContext, where this indicates a UIAbility instance inherited from UIAbility. To use the capabilities provided by UIAbilityContext on a page, see [Obtaining the Context of UIAbility](../../../application-models/uiability-usage.md#obtaining-the-context-of-uiability).
 
 ```TypeScript
 import { vpn } from '@kit.NetworkKit';

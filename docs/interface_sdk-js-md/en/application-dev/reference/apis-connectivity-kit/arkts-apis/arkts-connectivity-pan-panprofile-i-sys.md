@@ -57,6 +57,17 @@ Initiate the PAN connection with the remote device.
 | 2900004 | Remote Device profile not supported. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+try {
+    let panProfile: pan.PanProfile = pan.createPanProfile();
+    panProfile.connect('XX:XX:XX:XX:XX:XX');
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -99,13 +110,11 @@ Disconnect the PAN connection with the remote device.
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let panProfile: pan.PanProfile = pan.createPanProfile();
     panProfile.disconnect('XX:XX:XX:XX:XX:XX');
 } catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 ```
 
 ## setTethering
@@ -150,11 +159,9 @@ Enable bluetooth tethering.
 **Examples**
 
 ```TypeScript
-import { BusinessError } from '@kit.BasicServicesKit';
 try {
     let panProfile: pan.PanProfile = pan.createPanProfile();
     panProfile.setTethering(false);
 } catch (err) {
-    console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
-}
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 ```

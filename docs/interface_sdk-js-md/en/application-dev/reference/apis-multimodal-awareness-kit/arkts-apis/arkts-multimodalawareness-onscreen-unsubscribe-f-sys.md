@@ -48,7 +48,7 @@ Disables proactive awareness on screen content and unsubscribes from a screen aw
 **Examples**
 
 ```TypeScript
-import onScreen from "@ohos.multimodalAwareness.onScreen";
+import { onScreen } from '@kit.MultimodalAwarenessKit';
 let onscreenAwarenessCap: onScreen.OnscreenAwarenessCap = {
    groupId: 'SmartEdge'
 }
@@ -58,6 +58,6 @@ try {
     console.info(`unsubscribe resultCode: ${info[0].resultCode}`);
   });
 } catch (err) {
-  console.error('unsubscribe failed, errCode = ' + err.code);
+  console.error(`unsubscribe failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```

@@ -64,11 +64,11 @@ let cancelAsBundleCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("cancelAsBundle success");
+        console.info('cancelAsBundle success');
     }
 }
 // Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
+let representativeBundle: string = 'com.example.demo';
 // Use the actual user ID when calling the API.
 let userId: number = 100;
 notificationManager.cancelAsBundle(0, representativeBundle, userId, cancelAsBundleCallback);
@@ -129,11 +129,11 @@ Cancels a notification published through the reminder agent. This API uses a pro
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Bundle name of the application whose notification function is taken over by the reminder agent
-let representativeBundle: string = "com.example.demo";
+let representativeBundle: string = 'com.example.demo';
 // Use the actual user ID when calling the API.
 let userId: number = 100;
 notificationManager.cancelAsBundle(0, representativeBundle, userId).then(() => {
-    console.info("cancelAsBundle success");
+    console.info('cancelAsBundle success');
 }).catch((err: BusinessError) => {
     console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -194,10 +194,10 @@ Cancels a notification published through the reminder agent. This API uses a pro
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let representativeBundle: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 notificationManager.cancelAsBundle(representativeBundle, 1).then(() => {
-    console.info("cancelAsBundle success");
+    console.info('cancelAsBundle success');
 }).catch((err: BusinessError) => {
     console.error(`cancelAsBundle failed, code is ${err.code}, message is ${err.message}`);
 });

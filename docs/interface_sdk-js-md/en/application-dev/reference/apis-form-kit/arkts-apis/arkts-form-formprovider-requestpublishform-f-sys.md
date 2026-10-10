@@ -50,6 +50,39 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501017](../errorcode-form.md#16501017-no-space-to-publish-the-widget) | There is no space to publish the form.<br>**Applicable version:** 26.0.1 and later |
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
 
+**Examples**
+
+```TypeScript
+import { formBindingData, formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  abilityName: 'FormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  }
+};
+try {
+  let param: Record<string, string> = {
+    'temperature': '22c',
+    'time': '22:00'
+  }
+  let obj: formBindingData.FormBindingData = formBindingData.createFormBindingData(param);
+  formProvider.requestPublishForm(want, obj, (error: BusinessError, data: string) => {
+    if (error) {
+      console.error(`callback error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+      return;
+    }
+    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
+
 
 <a id="requestpublishform2"></a>
 
@@ -89,6 +122,34 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 26.0.1 and later |
 | [16501017](../errorcode-form.md#16501017-no-space-to-publish-the-widget) | There is no space to publish the form.<br>**Applicable version:** 26.0.1 and later |
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
+
+**Examples**
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  abilityName: 'FormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  }
+};
+try {
+  formProvider.requestPublishForm(want, (error: BusinessError, data: string) => {
+    if (error) {
+      console.error(`callback error, code: ${error.code}, message: ${error.message}`);
+      return;
+    }
+    console.info(`formProvider requestPublishForm, form ID is: ${data}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```
 
 
 <a id="requestpublishform3"></a>
@@ -135,3 +196,29 @@ Requests to publish a widget to the widget host (usually the home screen). This 
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out.<br>**Applicable version:** 26.0.1 and later |
 | [16501017](../errorcode-form.md#16501017-no-space-to-publish-the-widget) | There is no space to publish the form.<br>**Applicable version:** 26.0.1 and later |
 | [16501018](../errorcode-form.md#16501018-widget-not-supported-for-publishing) | This form does not support publishing.<br>**Applicable version:** 26.0.1 and later |
+
+**Examples**
+
+```TypeScript
+import { formProvider } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  abilityName: 'FormAbility',
+  parameters: {
+    'ohos.extra.param.key.form_dimension': 2,
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.module_name': 'entry'
+  }
+};
+try {
+  formProvider.requestPublishForm(want).then((data: string) => {
+    console.info(`formProvider requestPublishForm success, form ID is : ${data}`);
+  }).catch((error: BusinessError) => {
+    console.error(`promise error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
+}
+```

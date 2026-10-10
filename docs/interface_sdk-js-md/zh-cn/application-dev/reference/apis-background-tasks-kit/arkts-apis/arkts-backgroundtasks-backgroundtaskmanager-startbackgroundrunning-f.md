@@ -55,8 +55,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { UIAbility, wantAgent, WantAgent } from '@kit.AbilityKit';
 // 在原子化服务中，请删除WantAgent导入
 
 const callback = (error: BusinessError, data: void) => {
@@ -158,8 +157,7 @@ function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAg
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { UIAbility } from '@kit.AbilityKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { UIAbility, wantAgent, WantAgent } from '@kit.AbilityKit';
 // 在原子化服务中，请删除WantAgent导入
 
 export default class EntryAbility extends UIAbility {
@@ -255,10 +253,9 @@ function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: 
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { notificationManager } from '@kit.NotificationKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { UIAbility, wantAgent, WantAgent } from '@kit.AbilityKit';
 // 在原子化服务中，请删除WantAgent导入
 
 export default class EntryAbility extends UIAbility {
@@ -306,7 +303,7 @@ export default class EntryAbility extends UIAbility {
   }
 
   // 当长时任务类型包含数据传输(dataTransfer)时，应用需要更新进度，其他类型不需要
-  // 从API版本26.1.0开始，可使用updateDataTransferProgress接口更新包含数据传输类型的长时任务通知。可选择通知是否带进度环，以及进度环为100时是否响铃。
+  // 从API版本26.0.1开始，可使用updateDataTransferProgress接口更新包含数据传输类型的长时任务通知。可选择通知是否带进度环，以及进度环为100时是否响铃。
   updateProcess(process: number) {
     // 定义通知类型，更新进度时的通知类型必须为实况窗
     let downLoadTemplate: notificationManager.NotificationTemplate = {
@@ -395,9 +392,8 @@ function startBackgroundRunning(context: Context, request: ContinuousTaskRequest
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { wantAgent, WantAgent } from '@kit.AbilityKit';
+import { UIAbility, wantAgent, WantAgent } from '@kit.AbilityKit';
 // 在原子化服务中，请删除WantAgent导入
 
 export default class EntryAbility extends UIAbility {

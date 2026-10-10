@@ -48,11 +48,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 
 let bundleOption: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 let notificationKey: notificationSubscribe.NotificationKey = {
     id: 11,
-    label: ""
+    label: ''
 };
 let filter: notificationManager.NotificationFilter = {
     bundle: bundleOption,
@@ -63,7 +63,7 @@ let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificat
     if (err) {
         console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("getActiveNotificationByFilter success");
+        console.info('getActiveNotificationByFilter success');
     }
 }
 notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
@@ -117,11 +117,11 @@ import { BusinessError } from '@kit.BasicServicesKit';
 import { notificationSubscribe } from '@kit.NotificationKit';
 
 let bundleOption: notificationManager.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 let notificationKey: notificationSubscribe.NotificationKey = {
     id: 11,
-    label: ""
+    label: ''
 };
 let filter: notificationManager.NotificationFilter = {
     bundle: bundleOption,

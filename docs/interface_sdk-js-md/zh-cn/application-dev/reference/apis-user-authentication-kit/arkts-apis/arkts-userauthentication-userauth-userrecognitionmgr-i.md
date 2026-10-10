@@ -48,6 +48,26 @@ getUserRecognitionResult(): Promise<UserRecognitionResult>
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  mgr.getUserRecognitionResult()
+    .then((result: userAuth.UserRecognitionResult) => {
+      console.info(`status: ${result.status}, userId: ${result.userId}`);
+    })
+    .catch((err: BusinessError) => {
+      console.error(`getUserRecognitionResult failed, Code: ${err?.code}, message: ${err?.message}`);
+    });
+}
+```
+
 ## offUserRecognitionChange
 
 ```TypeScript
@@ -78,6 +98,26 @@ offUserRecognitionChange(callback?: UserRecognitionResultCallback): void
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
 
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  let callback: userAuth.UserRecognitionResultCallback = (result: userAuth.UserRecognitionResult) => {
+    console.info(`status: ${result.status}, userId: ${result.userId}`);
+  };
+  mgr.onUserRecognitionChange(callback);
+  // 取消指定回调
+  mgr.offUserRecognitionChange(callback);
+  // 取消所有回调
+  mgr.offUserRecognitionChange();
+}
+```
+
 ## onUserRecognitionChange
 
 ```TypeScript
@@ -107,3 +147,19 @@ onUserRecognitionChange(callback: UserRecognitionResultCallback): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-身份认证系统通用错误码) | General operation error. |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  let callback: userAuth.UserRecognitionResultCallback = (result: userAuth.UserRecognitionResult) => {
+    console.info(`status: ${result.status}, userId: ${result.userId}`);
+  };
+  mgr.onUserRecognitionChange(callback);
+}
+```

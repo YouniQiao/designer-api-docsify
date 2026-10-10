@@ -124,8 +124,6 @@ struct CircleTypeExample {
 
 以下示例展示了如何使用attributeModifier动态设置Circle组件的fill、fillOpacity、stroke、strokeDashArray、strokeDashOffset、strokeLineCap、strokeOpacity、strokeWidth和antiAlias属性。
 
-
-
 ```TypeScript
 // xxx.ets
 class MyCircleModifier implements AttributeModifier<CircleAttribute> {
@@ -154,47 +152,6 @@ struct CircleModifierDemo {
         .attributeModifier(this.modifier)
         .offset({ x: 20, y: 20 })
     }
-  }
-}
-```
-
-### 示例4（使用ColorMetrics设置HDR填充和边框颜色）
-
-通过ColorMetrics可为Circle组件设置HDR颜色，实现超出普通显示范围的亮度效果。其中，[fill](#fill)接口用于设置填充区域的颜色，[stroke](#stroke)接口用于设置边框颜色。以下示例左侧使用HDR暖金色填充和冰蓝色边框（亮度倍数大于1.0），右侧使用普通SDR颜色作为对照。在支持HDR的屏幕上可观察到左侧明显比右侧更亮且色彩更鲜艳。
-
-从API版本26.0.0开始，新增Circle组件专有的[fill](#fill)和[stroke](#stroke)接口，支持传入ColorMetrics类型以实现HDR提亮效果。
-
-```TypeScript
-// xxx.ets
-import { ColorMetrics } from '@kit.ArkUI';
-
-@Entry
-@Component
-struct CircleHDRDemo {
-  build() {
-    Column({ space: 30 }) {
-      Row({ space: 60 }) {
-        // HDR填充和边框：颜色分量值可以超过1.0，超过1.0的部分用于表现超出普通屏幕亮度范围的高亮效果
-        Column({ space: 8 }) {
-          Circle()
-            .width(120).height(120).strokeWidth(6)
-            .fill(ColorMetrics.createHDRColor(ColorSpace.BT2020, 2.5, 1.2, 0.0, 1)) // 高亮暖金
-            .stroke(ColorMetrics.createHDRColor(ColorSpace.BT2020, 0.0, 0.8, 2.5, 1)) // 高亮冰蓝
-          Text('HDR').fontColor(Color.White).fontSize(14)
-        }
-
-        // SDR填充和边框：颜色分量值的范围为0.0到1.0，是常规标准动态范围的颜色显示方式
-        Column({ space: 8 }) {
-          Circle()
-            .width(120).height(120).strokeWidth(6)
-            .fill('#ffc800') // 普通金黄
-            .stroke('#0066ff') // 普通深蓝
-          Text('SDR').fontColor(Color.White).fontSize(14)
-        }
-      }
-    }
-    .width('100%').height('100%')
-    .justifyContent(FlexAlign.Center)
   }
 }
 ```

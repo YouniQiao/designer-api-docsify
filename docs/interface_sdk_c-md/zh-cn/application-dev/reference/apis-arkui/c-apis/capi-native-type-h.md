@@ -51,7 +51,7 @@ Defines the common types for the native module.
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [ArkUI_XComponentType](#arkui_xcomponenttype) | ArkUI_XComponentType | Enumerates the types of the <b><XComponent></b> component. |
-| [ArkUI_CopyOptions](#arkui_copyoptions) | ArkUI_CopyOptions | Enumerates the text copy and paste modes. |
+| [ArkUI_CopyOptions](#arkui_copyoptions) | ArkUI_CopyOptions | 定义文本复制粘贴模式枚举值。 |
 | [ArkUI_ShadowType](#arkui_shadowtype) | ArkUI_ShadowType | Enumerates the shadow types. |
 | [ArkUI_FocusWrapMode](#arkui_focuswrapmode) | ArkUI_FocusWrapMode | Enumerates the focus wrap mode of components. |
 | [ArkUI_ItemFillPolicy](#arkui_itemfillpolicy) | ArkUI_ItemFillPolicy | Specifies the number of columns for different responsive breakpoint specifications. |
@@ -490,16 +490,16 @@ enum ArkUI_CopyOptions
 
 **描述：**
 
-Enumerates the text copy and paste modes.
+定义文本复制粘贴模式枚举值。
 
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_COPY_OPTIONS_NONE = 0 | Copy is not allowed. |
-| ARKUI_COPY_OPTIONS_IN_APP | Intra-application copy is allowed. |
-| ARKUI_COPY_OPTIONS_LOCAL_DEVICE | Intra-device copy is allowed. |
-| ARKUI_COPY_OPTIONS_CROSS_DEVICE | Cross-device copy is allowed. |
+| ARKUI_COPY_OPTIONS_NONE = 0 | 不支持复制。 |
+| ARKUI_COPY_OPTIONS_IN_APP | 支持应用内复制。 |
+| ARKUI_COPY_OPTIONS_LOCAL_DEVICE | 支持设备内复制。 |
+| ARKUI_COPY_OPTIONS_CROSS_DEVICE | 支持跨设备复制。 |
 
 ### ArkUI_ShadowType
 

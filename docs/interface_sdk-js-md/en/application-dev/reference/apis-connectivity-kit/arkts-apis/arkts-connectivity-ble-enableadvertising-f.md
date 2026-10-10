@@ -65,7 +65,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -89,7 +90,7 @@ try {
         advertisingSettings: setting,
         advertisingData: advData,
         advertisingResponse: advResponse,
-        duration: 300
+        duration: 0
     }
     let advHandle = 0xFF;
     ble.startAdvertising(advertisingParams, (err, outAdvHandle) => {
@@ -101,13 +102,10 @@ try {
         }
     });
 
-    let advertisingEnableParams: ble.AdvertisingEnableParams = {
-        advertisingId: advHandle,
-        duration: 0
+    let advertisingDisableParams: ble.AdvertisingDisableParams = {
+        advertisingId: advHandle
     }
-
-    // after 3s, advertising disabled, then enable the advertising
-    ble.enableAdvertising(advertisingEnableParams, (err) => {
+    ble.disableAdvertising(advertisingDisableParams, (err) => {
         if (err) {
             return;
         }
@@ -182,7 +180,8 @@ try {
     let setting: ble.AdvertiseSetting = {
         interval:150,
         txPower:0,
-        connectable:true
+        connectable:true,
+        isExtended:false
     };
     let manufactureDataUnit: ble.ManufactureData = {
         manufactureId:4567,
@@ -206,7 +205,7 @@ try {
         advertisingSettings: setting,
         advertisingData: advData,
         advertisingResponse: advResponse,
-        duration: 300
+        duration: 0
     }
     let advHandle = 0xFF;
     ble.startAdvertising(advertisingParams, (err, outAdvHandle) => {
@@ -218,13 +217,10 @@ try {
         }
     });
 
-    let advertisingEnableParams: ble.AdvertisingEnableParams = {
-        advertisingId: advHandle,
-        duration: 0
+    let advertisingDisableParams: ble.AdvertisingDisableParams = {
+        advertisingId: advHandle
     }
-
-    // after 3s, advertising disabled, then enable the advertising
-    ble.enableAdvertising(advertisingEnableParams)
+    ble.disableAdvertising(advertisingDisableParams)
         .then(() => {
             console.info("enable success");
     });

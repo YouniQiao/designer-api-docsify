@@ -54,11 +54,11 @@ let removeAllCallback = (err: BusinessError) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 let bundle: notificationSubscribe.BundleOption = {
-  bundle: "bundleName1",
+  bundle: 'bundleName1',
 };
 notificationSubscribe.removeAll(bundle, removeAllCallback);
 ```
@@ -110,7 +110,7 @@ let removeAllCallback = (err: BusinessError) => {
     if (err) {
         console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("removeAll success");
+        console.info('removeAll success');
     }
 }
 notificationSubscribe.removeAll(removeAllCallback);
@@ -165,7 +165,7 @@ let removeAllCallback = (err: BusinessError) => {
   if (err) {
     console.error(`removeAll failed, code is ${err.code}, message is ${err.message}`);
   } else {
-    console.info("removeAll success");
+    console.info('removeAll success');
   }
 }
 // Use the actual user ID when calling the API.
@@ -225,7 +225,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 let userId: number = 1;
 notificationSubscribe.removeAll(userId).then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: BusinessError) => {
   console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });
@@ -283,7 +283,7 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 // If no application is specified, notifications of all applications are deleted.
 notificationSubscribe.removeAll().then(() => {
-  console.info("removeAll success");
+  console.info('removeAll success');
 }).catch((err: BusinessError) => {
   console.error(`removeAll fail, code is ${err.code}, message is ${err.message}`);
 });

@@ -38,14 +38,14 @@ Obtains the remaining duration before the application is suspended. This API use
 import backgroundTaskManager from '@ohos.backgroundTaskManager';
 import { BusinessError } from '@ohos.base';
 
-let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
+let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
 backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId, (err: BusinessError, res: number) => {
-    if(err) {
-        console.info('callback => Operation getRemainingDelayTime failed. Cause: ' + err.code);
-    } else {
-        console.info('callback => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
-    }
-})
+  if (err) {
+    console.error(`callback => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
+  } else {
+    console.info('callback => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+  }
+});
 ```
 
 
@@ -87,10 +87,10 @@ Obtains the remaining duration before the application is suspended. This API use
 import backgroundTaskManager from '@ohos.backgroundTaskManager';
 import { BusinessError } from '@ohos.base';
 
-let delayInfo = backgroundTaskManager.requestSuspendDelay("test", () => {});
-    backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
-    console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
+let delayInfo = backgroundTaskManager.requestSuspendDelay('test', () => {});
+backgroundTaskManager.getRemainingDelayTime(delayInfo.requestId).then((res:number) => {
+  console.info('promise => Operation getRemainingDelayTime succeeded. Data: ' + JSON.stringify(res));
 }).catch((err : BusinessError) => {
-    console.info('promise => Operation getRemainingDelayTime failed. Cause: ' + err.code);
-})
+  console.info(`promise => Operation getRemainingDelayTime failed. Code: ${err.code}, message: ${err.message}`);
+});
 ```

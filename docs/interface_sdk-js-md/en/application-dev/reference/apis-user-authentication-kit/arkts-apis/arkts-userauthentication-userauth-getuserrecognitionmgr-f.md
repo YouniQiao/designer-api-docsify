@@ -43,3 +43,16 @@ Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognition
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  console.info(`get user recognition mgr: ${mgr}`);
+}
+```

@@ -56,11 +56,11 @@ let displayBadgeCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("displayBadge success");
+        console.info('displayBadge success');
     }
 }
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false, displayBadgeCallback);
 ```
@@ -118,10 +118,10 @@ Sets whether to enable the notification badge for a specified application. This 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.displayBadge(bundle, false).then(() => {
-    console.info("displayBadge success");
+    console.info('displayBadge success');
 }).catch((err: BusinessError) => {
     console.error(`displayBadge failed, code is ${err.code}, message is ${err.message}`);
 });

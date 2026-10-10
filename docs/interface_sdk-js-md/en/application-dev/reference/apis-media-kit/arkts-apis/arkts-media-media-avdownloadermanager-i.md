@@ -46,6 +46,18 @@ Creates an offline download task based on the media source. By default, download
 | --- | --- |
 | string | ID of the offline download task that is successfully added. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  console.info(`Succeeded in adding download task, taskId: ${taskId}`);
+}
+```
+
 ## allowsCellularAccess
 
 ```TypeScript
@@ -68,6 +80,15 @@ Sets whether download is allowed on a cellular network. By default, download is 
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether download is allowed on a cellular network.<br>- **true**: allowed. <br>- **false**: not allowed (default). |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.allowsCellularAccess(true);
+}
+```
+
 ## getDownloadTasks
 
 ```TypeScript
@@ -89,6 +110,19 @@ Obtains all offline download tasks in the offline download manager.
 | Type | Description |
 | --- | --- |
 | Array&lt;string&gt; | If tasks exist in the task manager, an array of the task IDs is returned. Otherwise, an empty array is returned. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  let tasks: Array<string> = downloaderManager.getDownloadTasks();
+  console.info(`Download tasks: ${tasks}`);
+}
+```
 
 ## getTaskCacheDirectory
 
@@ -124,6 +158,19 @@ Obtains the cache directory of a specified offline download task.
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  let cacheDir: string = downloaderManager.getTaskCacheDirectory(taskId);
+  console.info(`Task cache directory: ${cacheDir}`);
+}
+```
+
 ## getTaskProgress
 
 ```TypeScript
@@ -157,6 +204,19 @@ Obtains the download progress of a specified offline download task.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  let progress: number = downloaderManager.getTaskProgress(taskId);
+  console.info(`Task progress: ${progress}`);
+}
+```
 
 ## getTaskStatus
 
@@ -192,6 +252,19 @@ Obtains the status of a specified offline download task. For details about the s
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the manager, an error is returned. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  let status: media.AVDownloadTaskState = downloaderManager.getTaskStatus(taskId);
+  console.info(`Task status: ${status}`);
+}
+```
+
 ## offProgressChange
 
 ```TypeScript
@@ -213,6 +286,15 @@ Unregisters the listener for the progress change event of an offline download ta
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | No | Callback for progress changes, which must be registered using **onProgressChange**.<br>By default, if this parameter is not specified, all callbacks for the event are unregistered. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.offProgressChange();
+}
+```
 
 ## offStatusChange
 
@@ -236,6 +318,15 @@ Unregisters the listener for the status change event of an offline download task
 | --- | --- | --- | --- |
 | callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | No | Callback for status changes, which must be registered using **onStatusChange**.<br>By default, if this parameter is not specified, all callbacks for the event are unregistered. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.offStatusChange();
+}
+```
+
 ## onProgressChange
 
 ```TypeScript
@@ -258,6 +349,17 @@ Registers a listener for the progress change event of an offline download task. 
 | --- | --- | --- | --- |
 | callback | [OnAVDownloadProgressChangeHandle](arkts-media-media-onavdownloadprogresschangehandle-t.md) | Yes | Callback for progress changes, which is implemented by the app.<br>The first parameter indicates the download task ID, and the second parameter indicates the download progress. <br>The value can be **-1** or a number within the range of [0.0, 1.0]. The value **-1** indicates that the resource size is unknown. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.onProgressChange((taskId: string, progress: number) => {
+    console.info(`Task progress changed, taskId: ${taskId}, progress: ${progress}`);
+  });
+}
+```
+
 ## onStatusChange
 
 ```TypeScript
@@ -279,6 +381,17 @@ Registers a listener for the status change event of an offline download task.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [OnAVDownloadTaskStateHandle](arkts-media-media-onavdownloadtaskstatehandle-t.md) | Yes | Callback for status changes, which is implemented by the app.<br>The first parameter indicates the ID of the task whose status changes, and the second parameter indicates the new status of the task |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.onStatusChange((taskId: string, state: media.AVDownloadTaskState) => {
+    console.info(`Task status changed, taskId: ${taskId}, state: ${state}`);
+  });
+}
+```
 
 ## pauseDownloadTask
 
@@ -309,6 +422,18 @@ Pauses a specified offline download task. The downloaded data will be retained. 
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  downloaderManager.pauseDownloadTask(taskId);
+}
+```
+
 ## release
 
 ```TypeScript
@@ -324,6 +449,15 @@ Releases the resources used by the **AVDownloaderManager** instance. After this 
 <!--Device-AVDownloaderManager-release(): void--><!--Device-AVDownloaderManager-release(): void-End-->
 
 **System capability:** SystemCapability.Multimedia.Media.Core
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.release();
+}
+```
 
 ## removeDownloadTask
 
@@ -352,6 +486,18 @@ Removes an offline download task from the offline download manager. After the ta
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  downloaderManager.removeDownloadTask(taskId);
+}
+```
 
 ## resumeDownloadTask
 
@@ -382,6 +528,19 @@ Resumes a specified offline download task from the breakpoint where the task was
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | If the specified ID is not in the offline download task manager. |
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  let headers: Record<string, string> = {'User-Agent' : 'MyApp/1.0'};
+  let mediaSource: media.MediaSource = media.createMediaSourceWithUrl('http://example.com/video.mp4', headers);
+  let taskId: string = downloaderManager.addAVDownloadTask(mediaSource);
+  downloaderManager.pauseDownloadTask(taskId);
+  downloaderManager.resumeDownloadTask(taskId);
+}
+```
+
 ## setRequestTimeout
 
 ```TypeScript
@@ -403,3 +562,12 @@ Sets the network timeout interval for an HTTP request. If the timeout interval i
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | timeout | number | Yes | Timeout interval, in milliseconds.<br>The value must be an integer. <br>- If the value is greater than 0, it indicates the timeout interval. The value range is (0, +∞). <br>- If the value is less than or equal to 0, there is no timeout limit. You are advised to set a proper timeout interval based on the service scenario to prevent tasks from being suspended for a long time. <br>- If this parameter is not specified, the default timeout interval of 60,000 milliseconds is used. |
+
+**Examples**
+
+```TypeScript
+async function test() {
+  let downloaderManager: media.AVDownloaderManager = await media.createAVDownloaderManager();
+  downloaderManager.setRequestTimeout(30000);
+}
+```

@@ -17,4 +17,4 @@ Defines the PiP action event in a live.
 | Type | Description |
 | --- | --- |
 | 'playbackStateChanged' | The live is played or paused. |
-| 'voiceStateChanged' | The speaker is muted or unmuted. [since 12] |
+| 'voiceStateChanged' | The speaker is muted or unmuted.<br>**Since:** 12 |

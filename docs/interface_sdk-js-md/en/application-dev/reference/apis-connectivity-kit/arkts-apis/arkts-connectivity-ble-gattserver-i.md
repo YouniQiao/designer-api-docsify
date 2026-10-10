@@ -170,6 +170,19 @@ Connects to a BLE central device.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
+**Examples**
+
+```TypeScript
+try {
+    let gattServer: ble.GattServer = ble.createGattServer();
+    let deviceId: string = 'XX:XX:XX:XX:XX:XX';
+    let autoConnect: boolean = true;
+    gattServer.connect(deviceId, autoConnect);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
+
 ## disconnect
 
 ```TypeScript
@@ -205,6 +218,18 @@ Disconnects from or stops an ongoing connection to a BLE central device.
 | 2900001 | Service stopped. |
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
+
+**Examples**
+
+```TypeScript
+try {
+    let gattServer: ble.GattServer = ble.createGattServer();
+    let deviceId: string = 'XX:XX:XX:XX:XX:XX';
+    gattServer.disconnect(deviceId);
+} catch (err) {
+    console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
+}
+```
 
 ## getConnectedState
 

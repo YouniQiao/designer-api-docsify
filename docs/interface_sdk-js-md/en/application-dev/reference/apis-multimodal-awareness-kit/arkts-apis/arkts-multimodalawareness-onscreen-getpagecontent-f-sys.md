@@ -63,9 +63,9 @@ try {
    onScreen.getPageContent(options).then((pageContent: onScreen.PageContent) => {
       console.info("get page content succeed, bundleName = " + pageContent.bundleName);
    }).catch((err: BusinessError) => {
-      console.error("get page content failed, errCode = " + err.code);
+      console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
    });
 } catch (err) {
-   console.error('get page content failed, errCode = ' + err.code);
+   console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```

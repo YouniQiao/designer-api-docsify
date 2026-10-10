@@ -55,7 +55,7 @@ Obtains the notification slot flag of a specified application. This API uses a p
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.getSlotFlagsByBundle(bundle).then((data : number) => {
     console.info(`getSlotFlagsByBundle success, data: ${JSON.stringify(data)}`);

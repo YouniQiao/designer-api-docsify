@@ -39,3 +39,21 @@ Create a MediaSource object from the given directory.
 | Error Code ID | Error Message |
 | --- | --- |
 | [5411007](../errorcode-media.md#5411007-no-resource-available) | The directory specified by the path parameter does not exist or inaccessible. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  media.createMediaSourceWithDirectory("/data/storage/el2/base/media/cache/").then((mediaSource: media.MediaSource | undefined) => {
+    if (mediaSource) {
+      console.info('Succeeded in creating MediaSource with directory');
+    } else {
+      console.error('Failed to create MediaSource with directory');
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create MediaSource with directory, error: ${error}`);
+  });
+}
+```

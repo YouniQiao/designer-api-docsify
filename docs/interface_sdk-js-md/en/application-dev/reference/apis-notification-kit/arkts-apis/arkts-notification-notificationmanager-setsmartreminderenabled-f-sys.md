@@ -59,10 +59,10 @@ This API can be properly called on devices other than wearables and TVs. If it i
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = "phone";
+let deviceType: string = 'wearable';
 let enable: boolean = true;
 notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
-    console.info("setSmartReminderEnabled success");
+    console.info('setSmartReminderEnabled success');
 }).catch((err: BusinessError) => {
     console.error(`setSmartReminderEnabled failed, code is ${err.code}, message is ${err.message}`);
 });

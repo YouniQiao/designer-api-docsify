@@ -45,6 +45,36 @@ Obtains the widget state. This API uses an asynchronous callback to return the r
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+**Examples**
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  'deviceId': '',
+  'bundleName': 'ohos.samples.FormApplication',
+  'abilityName': 'FormAbility',
+  'parameters': {
+    'ohos.extra.param.key.module_name': 'entry',
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.form_dimension': 2
+  }
+};
+try {
+  formHost.acquireFormState(want, (error: BusinessError, data: formInfo.FormStateInfo) => {
+    if (error) {
+      console.error(`error, code: ${error.code}, message: ${error.message}`);
+    } else {
+      console.info(`formHost acquireFormState, data: ${data.formState}`);
+    }
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```
+
 
 <a id="acquireformstate2"></a>
 
@@ -89,3 +119,31 @@ Obtains the widget state. This API uses a promise to return the result.
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
+
+**Examples**
+
+```TypeScript
+import { formHost, formInfo } from '@kit.FormKit';
+import { Want } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let want: Want = {
+  'deviceId': '',
+  'bundleName': 'ohos.samples.FormApplication',
+  'abilityName': 'FormAbility',
+  'parameters': {
+    'ohos.extra.param.key.module_name': 'entry',
+    'ohos.extra.param.key.form_name': 'widget',
+    'ohos.extra.param.key.form_dimension': 2
+  }
+};
+try {
+  formHost.acquireFormState(want).then((data: formInfo.FormStateInfo) => {
+    console.info(`formHost acquireFormState, data: ${data.formState}`);
+  }).catch((error: BusinessError) => {
+    console.error(`error, code: ${error.code}, message: ${error.message}`);
+  });
+} catch (error) {
+  console.error(`catch error, code: ${error.code}, message: ${error.message}`);
+}
+```

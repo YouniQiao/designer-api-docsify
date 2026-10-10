@@ -1689,7 +1689,51 @@ setAbilityInstanceInfo(label: string, icon: image.PixelMap, groupId: string): Pr
 
 **示例**
 
-参见 [setAbilityInstanceInfo](#setabilityinstanceinfo)
+```TypeScript
+import { UIAbility } from '@kit.AbilityKit';
+import { image } from '@kit.ImageKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { window } from '@kit.ArkUI';
+
+export default class EntryAbility extends UIAbility {
+  onWindowStageCreate(windowStage: window.WindowStage): void {
+    windowStage.loadContent('pages/Index', async (err, data) => {
+      if (err.code) {
+        console.error(`loadContent failed, code is ${err.code}`);
+        return;
+      }
+
+      let newLabel: string = 'instance label';
+      let groupId: string = 'group label';
+      let color = new ArrayBuffer(512 * 512 * 4); // 创建一个ArrayBuffer对象，用于存储图像像素。该对象的大小为（height * width * 4）字节。
+      let bufferArr = new Uint8Array(color);
+      for (let i = 0; i < bufferArr.length; i += 4) {
+        bufferArr[i] = 255;
+        bufferArr[i+1] = 0;
+        bufferArr[i+2] = 122;
+        bufferArr[i+3] = 255;
+      }
+      let opts: image.InitializationOptions = {
+        editable: true, pixelFormat: image.PixelMapFormat.RGBA_8888, size: { height: 512, width: 512 }
+      };
+      let imagePixelMap: image.PixelMap = await image.createPixelMap(color, opts);
+      // 设置UIAbility实例的图标、标签和图标聚合标签信息
+      try {
+        this.context.setAbilityInstanceInfo(newLabel, imagePixelMap, groupId)
+          .then(() => {
+            console.info('setAbilityInstanceInfo success');
+          }).catch((err: BusinessError) => {
+            console.error(`setAbilityInstanceInfo failed, code is ${err.code}, message is ${err.message}`);
+          });
+      } catch (paramError) {
+        let code = (paramError as BusinessError).code;
+        let message = (paramError as BusinessError).message;
+        console.error(`setAbilityInstanceInfo failed, code is ${code}, message is ${message}`);
+      }
+    });
+  }
+}
+```
 
 ## setColorMode
 

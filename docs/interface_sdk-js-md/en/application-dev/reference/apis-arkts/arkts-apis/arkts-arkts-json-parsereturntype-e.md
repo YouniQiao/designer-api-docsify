@@ -6,7 +6,7 @@ const enum ParseReturnType
 
 Enumerates the return types for parsing.
 
-When parseReturnType is MAP, the parsed result is a Sendable Map (JSSharedMap) instead of a Sendable Object (JSSharedObject). Only effective for [parseSendable](arkts-arkts-json-parsesendable-f.md); ignored by [parse](arkts-arkts-json-parse-f.md).
+When parseReturnType is MAP, the parsed result is a collections.Map instead of a Sendable Object. Only effective for [parseSendable](arkts-arkts-json-parsesendable-f.md); ignored by [parse](arkts-arkts-json-parse-f.md).
 
 **Since:** 26.0.1
 
@@ -20,7 +20,7 @@ When parseReturnType is MAP, the parsed result is a Sendable Map (JSSharedMap) i
 MAP = 1
 ```
 
-The parsing result is a sendable Map, which supports adding and deleting entries.
+The parsing result is a collections.Map, which supports adding and deleting entries.
 
 **Since:** 26.0.1
 

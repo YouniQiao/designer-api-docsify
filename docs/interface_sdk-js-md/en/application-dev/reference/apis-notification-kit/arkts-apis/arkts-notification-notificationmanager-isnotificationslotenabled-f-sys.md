@@ -64,7 +64,7 @@ let isNotificationSlotEnabledCallback = (err: BusinessError, data: boolean): voi
 };
 
 notificationManager.isNotificationSlotEnabled(
-    { bundle: "ohos.samples.notification", },
+    { bundle: 'ohos.samples.notification', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION,
     isNotificationSlotEnabledCallback);
 ```
@@ -124,7 +124,7 @@ This API can be properly called on devices other than wearables. If it is called
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // isNotificationSlotEnabled
-notificationManager.isNotificationSlotEnabled({ bundle: "ohos.samples.notification", },
+notificationManager.isNotificationSlotEnabled({ bundle: 'ohos.samples.notification', },
     notificationManager.SlotType.SOCIAL_COMMUNICATION).then((data: boolean) => {
     console.info(`isNotificationSlotEnabled success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {

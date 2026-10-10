@@ -51,11 +51,11 @@ Adds an array of notification slots. This API uses an asynchronous callback to r
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlots callback
-let addSlotsCallBack = (err: BusinessError): void => {
+let addSlotsCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("addSlots success");
+        console.info('addSlots success');
     }
 }
 // NotificationSlot object
@@ -66,7 +66,7 @@ let notificationSlot: notificationManager.NotificationSlot = {
 let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
 notificationSlotArray[0] = notificationSlot;
 
-notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
+notificationManager.addSlots(notificationSlotArray, addSlotsCallback);
 ```
 
 
@@ -128,7 +128,7 @@ let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
 notificationSlotArray[0] = notificationSlot;
 
 notificationManager.addSlots(notificationSlotArray).then(() => {
-    console.info("addSlots success");
+    console.info('addSlots success');
 }).catch((err: BusinessError) => {
     console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
 });

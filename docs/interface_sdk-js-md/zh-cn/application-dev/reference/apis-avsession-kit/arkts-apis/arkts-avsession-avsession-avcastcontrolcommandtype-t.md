@@ -14,16 +14,16 @@ type AVCastControlCommandType = 'play' | 'pause' | 'stop' | 'playNext' | 'playPr
 
 | 类型 | 说明 |
 | --- | --- |
-| 'play' | Play the current media. [since 10] |
-| 'pause' | Pause the current media. [since 10] |
-| 'stop' | Stop the current media. [since 10] |
-| 'playNext' | Play the next media in the queue. [since 10] |
-| 'playPrevious' | Play the previous media in the queue. [since 10] |
-| 'fastForward' | Fast forward the current media. [since 10] |
-| 'rewind' | Rewind the current media. [since 10] |
-| 'seek' | Seek to a specific position in the media. [since 10] |
-| 'setVolume' | Adjust volume for the media. [since 10] |
-| 'setSpeed' | Set the playback speed.. [since 10] |
-| 'setLoopMode' | Set the loop mode for the media. [since 10] |
-| 'toggleFavorite' | Toggle the favorite status of the current media. [since 10] |
-| 'toggleMute' | Toggle the mute status of the media. [since 10] |
+| 'play' | Play the current media.<br>**起始版本：** 10 |
+| 'pause' | Pause the current media.<br>**起始版本：** 10 |
+| 'stop' | Stop the current media.<br>**起始版本：** 10 |
+| 'playNext' | Play the next media in the queue.<br>**起始版本：** 10 |
+| 'playPrevious' | Play the previous media in the queue.<br>**起始版本：** 10 |
+| 'fastForward' | Fast forward the current media.<br>**起始版本：** 10 |
+| 'rewind' | Rewind the current media.<br>**起始版本：** 10 |
+| 'seek' | Seek to a specific position in the media.<br>**起始版本：** 10 |
+| 'setVolume' | Adjust volume for the media.<br>**起始版本：** 10 |
+| 'setSpeed' | Set the playback speed..<br>**起始版本：** 10 |
+| 'setLoopMode' | Set the loop mode for the media.<br>**起始版本：** 10 |
+| 'toggleFavorite' | Toggle the favorite status of the current media.<br>**起始版本：** 10 |
+| 'toggleMute' | Toggle the mute status of the media.<br>**起始版本：** 10 |

@@ -96,10 +96,10 @@ let option: i18n.PhoneNumberFormatOptions = { type: 'TYPING' };
 let typingFormatter: i18n.PhoneNumberFormat = new i18n.PhoneNumberFormat('CN', option);
 let phoneNumber: string = '130493';
 let formatResult: string = '';
-for (let i = 0; i < phoneNumber.length; i++) {
-  formatResult += phoneNumber.charAt(i);
+phoneNumber.split('').forEach((char: string) => {
+  formatResult += char;
   formatResult = typingFormatter.format(formatResult); // formatResult = '130 493'
-}
+});
 ```
 
 ## getLocationName

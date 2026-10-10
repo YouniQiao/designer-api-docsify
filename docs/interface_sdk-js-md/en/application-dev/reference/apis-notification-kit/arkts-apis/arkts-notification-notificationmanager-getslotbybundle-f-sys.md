@@ -59,7 +59,7 @@ Before obtaining the notification slot, create a slot through [addSlot](arkts-no
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 let slotType = notificationManager.SlotType.LIVE_VIEW;

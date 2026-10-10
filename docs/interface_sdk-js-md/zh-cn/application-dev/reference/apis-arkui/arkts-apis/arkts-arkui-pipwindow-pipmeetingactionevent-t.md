@@ -19,4 +19,4 @@ type PiPMeetingActionEvent = 'hangUp' | 'voiceStateChanged' | 'videoStateChanged
 | 'hangUp' | 挂断视频会议。 |
 | 'voiceStateChanged' | 静音或解除静音。 |
 | 'videoStateChanged' | 打开或关闭摄像头。 |
-| 'micStateChanged' | 打开或关闭麦克风。 [since 12] |
+| 'micStateChanged' | 打开或关闭麦克风。<br>**起始版本：** 12 |

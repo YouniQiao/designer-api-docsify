@@ -58,6 +58,8 @@ Enable the post-processing function of Camera for video playback.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
 
+**Examples**
+
 ## forceLoadVideo
 
 ```TypeScript
@@ -93,6 +95,16 @@ Specifies whether to forcibly load the video. This API can be called only when t
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Called from Non-System applications. Return by promise. |
+
+**Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the prepared, playing, or paused state before proceeding.
+  avPlayer.forceLoadVideo(true);
+}
+```
 
 ## enableStartFrameRateOpt
 

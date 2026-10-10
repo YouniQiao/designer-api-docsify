@@ -57,7 +57,7 @@ function setSmartReminderEnabled(deviceType: string, enable: boolean): Promise<v
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let deviceType: string = 'phone';
+let deviceType: string = 'wearable';
 let enable: boolean = true;
 notificationManager.setSmartReminderEnabled(deviceType, enable).then(() => {
     console.info('setSmartReminderEnabled success');

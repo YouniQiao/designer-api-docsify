@@ -53,7 +53,7 @@ function isAbilityDisabled(admin: Want, bundleName: string, accountId: number, a
 **示例**
 
 ```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 import { Want } from '@kit.AbilityKit';
 
 let wantTemp: Want = {
@@ -122,7 +122,7 @@ function isAbilityDisabled(admin: Want | null, bundleName: string, accountId: nu
 **示例**
 
 ```TypeScript
-import { applicationManager, common } from '@kit.MDMKit';
+import { applicationManager } from '@kit.MDMKit';
 
 try {
   // 需根据实际情况进行替换

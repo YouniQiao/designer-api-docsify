@@ -29,3 +29,12 @@ function getAppRunningUniqueId(): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回运行唯一标识ID字符串。失败时返回空字符串。 |
+
+**示例**
+
+```TypeScript
+import { hidebug } from '@kit.PerformanceAnalysisKit';
+
+let apprunningId = hidebug.getAppRunningUniqueId();
+console.info(`apprunningId: ${apprunningId}`);
+```

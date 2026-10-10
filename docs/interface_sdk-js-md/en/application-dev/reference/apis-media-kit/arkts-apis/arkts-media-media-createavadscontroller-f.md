@@ -39,3 +39,22 @@ Creates an ad playback controller associated with a player instance. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [5400108](../errorcode-media.md#5400108-parameter-value-out-of-range) | The player object corresponding to player does not exist or is invalid. |
+
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+async function test() {
+  let player: media.AVPlayer = await media.createAVPlayer();
+  media.createAVAdsController(player).then((adsController: media.AVAdsController | undefined) => {
+    if (adsController) {
+      console.info('Succeeded in creating AVAdsController');
+    } else {
+      console.error('Failed to create AVAdsController');
+    }
+  }).catch((error: BusinessError) => {
+    console.error(`Failed to create AVAdsController, error: ${error}`);
+  });
+}
+```

@@ -38,6 +38,18 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`a new form added, formId: ${data.formId}`);
+}
+
+formObserver.on('formAdd', callback);
+```
+
 
 ## on('formAdd')
 
@@ -72,6 +84,20 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let bundleName: string = 'ohos.samples.FormApplication';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`a new form added, formId: ${data.formId}`);
+}
+
+formObserver.on('formAdd', bundleName, callback);
+```
+
 
 ## on('formRemove')
 
@@ -104,6 +130,18 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`form deleted, formId: ${data.formId}`);
+}
+
+formObserver.on('formRemove', callback);
+```
 
 
 ## on('formRemove')
@@ -139,6 +177,20 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let bundleName: string = 'ohos.samples.FormApplication';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`form deleted, formId: ${data.formId}`);
+}
+
+formObserver.on('formRemove', bundleName, callback);
+```
+
 
 ## on('notifyVisible')
 
@@ -171,6 +223,20 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo[]) => {
+  data.forEach(data => {
+    console.info(`form change visibility, formId: ${data.formId}`);
+  });
+}
+
+formObserver.on('notifyVisible', callback);
+```
 
 
 ## on('notifyVisible')
@@ -210,6 +276,22 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let bundleName: string = 'ohos.samples.FormApplication';
+
+let callback = (data: formInfo.RunningFormInfo[]) => {
+  data.forEach(data => {
+    console.info(`form change visibility, formId: ${data.formId}`);
+  });
+}
+
+formObserver.on('notifyVisible', bundleName, callback);
+```
+
 
 ## on('notifyInvisible')
 
@@ -242,6 +324,20 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo[]) => {
+  data.forEach(data => {
+    console.info(`form change invisibility, formId: ${data.formId}`);
+  });
+}
+
+formObserver.on('notifyInvisible', callback);
+```
 
 
 ## on('notifyInvisible')
@@ -314,6 +410,17 @@ Router event listening in registered form. <p>This interface requires permission
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Router event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('router', callback);
+```
+
 
 ## on('router')
 
@@ -348,6 +455,18 @@ Router event listening in registered form. <p>This interface requires permission
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let hostBundleName: string = 'ohos.samples.FormApplication';
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Router event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('router', hostBundleName, callback);
+```
+
 
 ## on('message')
 
@@ -380,6 +499,17 @@ Message event listening in registered form. <p>This interface requires permissio
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Message event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('message', callback);
+```
 
 
 ## on('message')
@@ -415,6 +545,18 @@ Message event listening in registered form. <p>This interface requires permissio
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let hostBundleName: string = 'ohos.samples.FormApplication';
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Message event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('message', hostBundleName, callback);
+```
+
 
 ## on('call')
 
@@ -447,6 +589,17 @@ Call event listening in registered form. <p>This interface requires permission t
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Call event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('call', callback);
+```
 
 
 ## on('call')
@@ -481,3 +634,15 @@ Call event listening in registered form. <p>This interface requires permission t
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
+
+**Examples**
+
+```TypeScript
+import { formInfo, formObserver } from '@kit.FormKit';
+
+let hostBundleName: string = 'ohos.samples.FormApplication';
+let callback = (data: formInfo.RunningFormInfo) => {
+  console.info(`Call event listening in registered form. ID: ${data.formId}`);
+};
+formObserver.on('call', hostBundleName, callback);
+```

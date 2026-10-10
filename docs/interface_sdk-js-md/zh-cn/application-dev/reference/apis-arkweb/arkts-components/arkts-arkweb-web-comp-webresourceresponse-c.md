@@ -247,6 +247,8 @@ setResponseBody(data:string | number | Resource | ArrayBuffer): void
 | --- | --- | --- | --- |
 | data | string &#124; number &#124; Resource &#124; ArrayBuffer | 是 | 要设置的资源响应数据。string表示HTML格式的字符串。number表示文件句柄。Resource表示rawfile资源或HSP资源。ArrayBuffer表示二进制数据。 |
 
+**示例**
+
 ## setResponseCode
 
 ```TypeScript

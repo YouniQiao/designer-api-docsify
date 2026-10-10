@@ -40,3 +40,16 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
+
+**示例**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  console.info(`get user recognition mgr: ${mgr}`);
+}
+```

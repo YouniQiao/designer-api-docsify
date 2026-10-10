@@ -96,7 +96,7 @@ Unsubscribe the event reported when a remote Bluetooth device is discovered.
 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
-let onReceiveEvent: (data: Array<connection.DiscoveryResult>) => void = (data: Array<connection.DiscoveryResult>) => { // data is an array of Bluetooth devices discovered.
+let onReceiveEvent: (data: Array<connection.DiscoveryResult>) => void = (data: Array<connection.DiscoveryResult>) => { // data is the set of Bluetooth device scan results.
     console.info('bluetooth device find = '+ JSON.stringify(data));
 }
 try {

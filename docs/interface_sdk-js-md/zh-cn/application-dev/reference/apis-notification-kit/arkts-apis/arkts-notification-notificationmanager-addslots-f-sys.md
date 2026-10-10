@@ -51,7 +51,7 @@ function addSlots(slots: Array<NotificationSlot>, callback: AsyncCallback<void>)
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // addSlots回调
-let addSlotsCallBack = (err: BusinessError): void => {
+let addSlotsCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`addSlots failed, code is ${err.code}, message is ${err.message}`);
     } else {
@@ -66,7 +66,7 @@ let notificationSlot: notificationManager.NotificationSlot = {
 let notificationSlotArray: notificationManager.NotificationSlot[] = new Array();
 notificationSlotArray[0] = notificationSlot;
 
-notificationManager.addSlots(notificationSlotArray, addSlotsCallBack);
+notificationManager.addSlots(notificationSlotArray, addSlotsCallback);
 ```
 
 

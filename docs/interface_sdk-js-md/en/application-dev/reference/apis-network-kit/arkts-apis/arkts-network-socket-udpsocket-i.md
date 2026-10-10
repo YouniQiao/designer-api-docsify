@@ -381,7 +381,7 @@ udp.bind(bindAddr, (err: BusinessError) => {
     console.error('bind fail');
     return;
   }
-  console.error('bind success');
+  console.info('bind success');
   udp.getState((err: BusinessError, data: socket.SocketStateBase) => {
     if (err) {
       console.error('getState fail');

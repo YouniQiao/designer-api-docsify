@@ -49,10 +49,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive power state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiStateChange", recvPowerNotifyFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiStateChange", recvPowerNotifyFunc);
 ```
 
@@ -100,10 +100,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive wifi connection change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiConnectionChange", recvWifiConnectionChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiConnectionChange", recvWifiConnectionChangeFunc);
 ```
 
@@ -151,10 +151,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive Wifi scan state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiScanStateChange", recvWifiScanStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiScanStateChange", recvWifiScanStateChangeFunc);
 ```
 
@@ -200,10 +200,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive wifi rssi change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("wifiRssiChange", recvWifiRssiChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("wifiRssiChange", recvWifiRssiChangeFunc);
 ```
 
@@ -249,10 +249,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive hotspot state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("hotspotStateChange", recvHotspotStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("hotspotStateChange", recvHotspotStateChangeFunc);
 ```
 
@@ -298,10 +298,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p state change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pStateChange", recvP2pStateChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pStateChange", recvP2pStateChangeFunc);
 ```
 
@@ -347,10 +347,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p connection change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pConnectionChange", recvP2pConnectionChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pConnectionChange", recvP2pConnectionChangeFunc);
 ```
 
@@ -398,10 +398,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p device change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pDeviceChange", recvP2pDeviceChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pDeviceChange", recvP2pDeviceChangeFunc);
 ```
 
@@ -449,10 +449,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p peer device change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pPeerDeviceChange", recvP2pPeerDeviceChangeFunc);
 ```
 
@@ -498,10 +498,10 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p persistent group change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pPersistentGroupChange", recvP2pPersistentGroupChangeFunc);
 ```
 
@@ -547,9 +547,9 @@ import { wifiManager } from '@kit.ConnectivityKit';
       console.info("Receive p2p discovery change event: " + result);
   }
   
-  // Register event
+  // 注册事件
   wifiManager.on("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
   
-  // Unregister event
+  // 注销事件
   wifiManager.off("p2pDiscoveryChange", recvP2pDiscoveryChangeFunc);
 ```

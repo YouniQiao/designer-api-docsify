@@ -45,7 +45,7 @@ This API can detect the ArkTS object memory leak, which is simpler than the meth
 ```TypeScript
 let config: Array<string> = ['XComponent'];
 // Monitor the memory leak of the ArkTS object XComponent.
-// If an empty array is passed, all objects are monitored.
+// Passing an empty array means monitoring all objects.
 jsLeakWatcher.enableLeakWatcher(true, config, (filePath: Array<string>) => {
     console.info('JsLeakWatcher leaklistFileName:' + filePath[0]);
     console.info('JsLeakWatcher heapDumpFileName:' + filePath[1]);
@@ -92,8 +92,8 @@ This API can detect memory leaks of ArkTS objects with a single call, which is s
 **Examples**
 
 ```TypeScript
-// Detect memory leaks of the ArkTS objects CustomComponent and Window.
-// If the value of an object type is null or false, the default value is used.
+// Monitor memory leaks of the ArkTS objects CustomComponent and Window.
+// If a parameter in the object is passed as null or a falsy value, the property is set to its default value.
 let config: jsLeakWatcher.LeakWatcherConfig = {
     monitorObjectTypes: jsLeakWatcher.MonitorObjectType.CUSTOM_COMPONENT | jsLeakWatcher.MonitorObjectType.WINDOW,
     objectUniqueIDs: [],

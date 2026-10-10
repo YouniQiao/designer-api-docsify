@@ -298,6 +298,8 @@ struct LazyVGridLayoutStickyDemo {
 
 从API version 19开始，新增[columnsTemplate](#columnstemplate)接口。
 
+
+
 ```TypeScript
 import { LazyColumnLayout, LazyColumnLayoutAttribute, LengthMetrics } from '@kit.ArkUI';
 // MyDataSource是自定义数据源类，实现了LazyForEach所需的IDataSource接口
@@ -405,6 +407,91 @@ struct LazyVGridLayoutColumnsTemplateDemo {
           .rowsGap(LengthMetrics.vp(8))
           .columnsGap(LengthMetrics.vp(8))
           .header(this.AutoStretchHeader)
+          .padding(8)
+          .backgroundColor('#F7F9FC')
+          .border({ width: 1, color: '#D0D5DD' })
+          .borderRadius(8)
+        }
+        .space(LengthMetrics.vp(16))
+        .width('100%')
+      }
+      .width('100%')
+      .scrollable(ScrollDirection.Vertical)
+      .layoutWeight(1)
+    }
+    .width('100%')
+    .height('100%')
+    .padding({ top: 48, left: 12, right: 12, bottom: 12 })
+  }
+}
+```
+
+### 示例4（基于断点配置列数）
+
+该示例通过[columnsTemplate](#columnstemplate-1)设置ItemFillPolicy，并将fillType设置为PresetFillType.BREAKPOINT_SM1MD2LG3，实现LazyVGridLayout根据内容区宽度对应的断点类型自动确定列数。
+
+LazyVGridLayout内容区宽度属于sm及更小的断点区间时显示1列，属于md断点区间时显示2列，属于lg及更大的断点区间时显示3列。
+
+从API版本26.2.0开始，新增支持columnsTemplate设置为ItemFillPolicy类型。
+
+```TypeScript
+import { LazyColumnLayout, LazyColumnLayoutAttribute, LengthMetrics } from '@kit.ArkUI';
+// MyDataSource是自定义数据源类，实现了LazyForEach所需的IDataSource接口
+import { MyDataSource } from './MyDataSource';
+
+@Entry
+@Component
+struct LazyVGridLayoutItemFillPolicyDemo {
+  private sm1md2lg3Data: MyDataSource<number> = new MyDataSource<number>();
+
+  aboutToAppear(): void {
+    // 初始化LazyForEach数据
+    for (let i = 0; i < 12; i++) {
+      this.sm1md2lg3Data.pushData(i);
+    }
+  }
+
+  // 构建Header，展示当前使用的断点列数策略
+  @Builder
+  HeaderBuilder() {
+    Column() {
+      Text('ItemFillPolicy: BREAKPOINT_SM1MD2LG3')
+        .fontSize(16)
+        .fontWeight(FontWeight.Medium)
+        .fontColor('#182230')
+    }
+    .alignItems(HorizontalAlign.Start)
+    .width('100%')
+    .padding({ bottom: 8 })
+  }
+
+  @Builder
+  GridItemBuilder(item: number, backgroundColor: string) {
+    Text(item.toString())
+      .height(56)
+      .width('100%')
+      .borderRadius(6)
+      .backgroundColor(backgroundColor)
+      .fontColor('#182230')
+      .textAlign(TextAlign.Center)
+  }
+
+  build() {
+    Column() {
+      Scroll() {
+        LazyColumnLayout() {
+          LazyVGridLayout() {
+            LazyForEach(this.sm1md2lg3Data, (item: number) => {
+              this.GridItemBuilder(item, '#FFE6A8')
+            })
+          }
+          // 根据LazyVGridLayout内容区宽度对应的断点自动调整列数
+          // sm及以下显示1列，md显示2列，lg及以上显示3列
+          .columnsTemplate({ fillType: PresetFillType.BREAKPOINT_SM1MD2LG3 })
+          // 行间距和列间距均为8vp
+          .rowsGap(LengthMetrics.vp(8))
+          .columnsGap(LengthMetrics.vp(8))
+          .header(this.HeaderBuilder)
           .padding(8)
           .backgroundColor('#F7F9FC')
           .border({ width: 1, color: '#D0D5DD' })

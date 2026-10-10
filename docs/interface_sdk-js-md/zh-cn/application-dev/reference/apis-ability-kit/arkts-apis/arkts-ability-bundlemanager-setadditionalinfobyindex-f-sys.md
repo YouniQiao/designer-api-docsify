@@ -43,3 +43,23 @@ function setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, ap
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700053](../errorcode-bundle.md#17700053-非应用市场调用) | The caller is not AppGallery. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
+
+**示例**
+
+```TypeScript
+import { bundleManager } from '@kit.AbilityKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { hilog } from '@kit.PerformanceAnalysisKit';
+
+let bundleName = "com.example.myapplication";
+let additionalInfo = "xxxxxxxxx,formUpdateLevel:4";
+let appIndex = 0;
+
+try {
+  bundleManager.setAdditionalInfoByIndex(bundleName, additionalInfo, appIndex);
+  hilog.info(0x0000, 'testTag', 'setAdditionalInfoByIndex successfully.');
+} catch (err) {
+  let message = (err as BusinessError).message;
+  hilog.error(0x0000, 'testTag', 'setAdditionalInfoByIndex failed. Cause: %{public}s', message);
+}
+```

@@ -56,10 +56,10 @@ Snoozes a notification. The notification will be reminded again after the specif
 import { BusinessError } from '@kit.BasicServicesKit';
 
 // Replace it with the unique ID of the notification to be snoozed.
-let hashCode: string = "hashCode";
+let hashCode: string = 'hashCode';
 let delayTime: number = 60;
 notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
-  console.info("snoozeNotification success.")
+  console.info('snoozeNotification success.')
 }).catch((err: BusinessError):void => {
   console.error(`snoozeNotification failed, code is ${err.code}, message is ${err.message}`);
 });

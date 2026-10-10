@@ -55,26 +55,26 @@ Requests a continuous task of a specific type. This API uses an asynchronous cal
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 // In atomic services, please remove the WantAgent import.
 
-function callback(error: BusinessError, data: void) {
+const callback = (error: BusinessError, data: void) => {
   if (error) {
     console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
   } else {
-    console.info("Operation startBackgroundRunning succeeded");
+    console.info('Operation startBackgroundRunning succeeded');
   }
 }
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let wantAgentInfo: wantAgent.WantAgentInfo = {
       // List of operations to be executed after the notification is clicked.
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Type of the operation to perform after the notification is clicked.
@@ -158,18 +158,18 @@ Requests a continuous task of a specific type. This API uses a promise to return
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 // In atomic services, please remove the WantAgent import.
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let wantAgentInfo: wantAgent.WantAgentInfo = {
       // List of operations to be executed after the notification is clicked.
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Type of the operation to perform after the notification is clicked.
@@ -187,7 +187,7 @@ export default class EntryAbility extends UIAbility {
         try {
           backgroundTaskManager.startBackgroundRunning(this.context,
             backgroundTaskManager.BackgroundMode.AUDIO_PLAYBACK, wantAgentObj).then(() => {
-              console.info("Operation startBackgroundRunning succeeded");
+              console.info('Operation startBackgroundRunning succeeded');
             }).catch((error: BusinessError) => {
               console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
             });
@@ -255,22 +255,22 @@ Requests continuous tasks of multiple types. This API uses a promise to return t
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { notificationManager } from '@kit.NotificationKit';
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 // In atomic services, please remove the WantAgent import.
 
 export default class EntryAbility extends UIAbility {
-  id: number = 0; // Save the notification ID.
+  notificationId: number = 0; // Save the notification ID.
 
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let wantAgentInfo: wantAgent.WantAgentInfo = {
       // List of operations to be executed after the notification is clicked.
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Type of the operation to perform after the notification is clicked.
@@ -286,13 +286,13 @@ export default class EntryAbility extends UIAbility {
       // In atomic services, please replace the following line of code with wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: object) => {.
       wantAgent.getWantAgent(wantAgentInfo).then((wantAgentObj: WantAgent) => {
         try {
-          // The application needs to update the progress only for continuous tasks of the dataTransfer type.
-          let list: Array<string> = ["dataTransfer"];
-          // In atomic services, let list: Array<string> = ["audioPlayback"];
+          // The app needs to update the progress only for continuous tasks of the dataTransfer type.
+          let list: Array<string> = ['dataTransfer'];
+          // In atomic services, let list: Array<string> = ['audioPlayback'];
           backgroundTaskManager.startBackgroundRunning(this.context, list, wantAgentObj).then((res: backgroundTaskManager.ContinuousTaskNotification) => {
-            console.info("Operation startBackgroundRunning succeeded");
+            console.info('Operation startBackgroundRunning succeeded');
             // For a continuous task of the upload and download type, the application can use the notification ID returned in res to update the notification, for example, sending a template notification with a progress bar.
-            this.id = res.notificationId;
+            this.notificationId = res.notificationId;
           }).catch((error: BusinessError) => {
             console.error(`Operation startBackgroundRunning failed. code is ${error.code} message is ${error.message}`);
           });
@@ -306,6 +306,7 @@ export default class EntryAbility extends UIAbility {
   }
 
   // The application needs to update the progress only for continuous tasks of the dataTransfer type.
+  // Since API version 26.0.1, you can use the updateDataTransferProgress API to update continuous task notifications that contain the data transfer type. You can choose whether to display a progress ring in the notification and whether to play the ringtone when the progress reaches 100%.
   updateProcess(process: number) {
     // Define the notification type. The notification type of the progress update must be live view.
     let downLoadTemplate: notificationManager.NotificationTemplate = {
@@ -322,18 +323,18 @@ export default class EntryAbility extends UIAbility {
         notificationContentType: notificationManager.ContentType.NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW,
         systemLiveView: {
           typeCode: 8, // Set this parameter to 8 for the dataTransfer type. Currently, only the dataTransfer type is supported. Retain the value.
-          title: "test", // Customized by the application.
-          text: "test", // Customized by the application.
+          title: 'test', // Customized by the app
+          text: 'test', // Customized by the app
         }
       },
-      id: this.id, // The value must be the ID returned for a continuous-task request. Otherwise, the application fails to update the notification.
+      id: this.notificationId, // The value must be the notification ID returned for a continuous-task request. Otherwise, the application fails to update the notification.
       notificationSlotType: notificationManager.SlotType.LIVE_VIEW, // Live view type. Retain the value.
       template: downLoadTemplate // Name of the template to be set for the application.
     };
 
     try {
       notificationManager.publish(request).then(() => {
-        console.info("publish success, id= " + this.id);
+        console.info('publish success, id= ' + this.notificationId);
       }).catch((err: BusinessError) => {
         console.error(`publish fail: ${JSON.stringify(err)}`);
       });
@@ -398,7 +399,7 @@ If a continuous task requested via this API includes multiple task types (includ
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 // In atomic services, please remove the WantAgent import.
@@ -406,13 +407,13 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 export default class EntryAbility extends UIAbility {
   notificationId: number = 0; // Save the notification ID.
   continuousTaskId: number | undefined = -1;
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let wantAgentInfo: wantAgent.WantAgentInfo = {
       // Replace the bundleName and abilityName of the application with the actual ones.
       wants: [
         {
-          bundleName: "com.example.myapplication",
-          abilityName: "EntryAbility"
+          bundleName: 'com.example.myapplication',
+          abilityName: 'EntryAbility'
         }
       ],
       // Set the operation type after the notification is tapped.
@@ -432,6 +433,7 @@ export default class EntryAbility extends UIAbility {
           // Request a continuous task whose main type is MODE_LOCATION.
           let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_LOCATION];
           let subModeList: Array<number> = [backgroundTaskManager.BackgroundTaskSubmode.SUBMODE_NORMAL_NOTIFICATION];
+          // Create a continuous task request object.
           let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
           continuousTaskRequest.backgroundTaskModes =  modeList;
           continuousTaskRequest.backgroundTaskSubmodes = subModeList;

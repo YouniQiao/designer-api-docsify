@@ -57,7 +57,7 @@ let setDoNotDisturbDateCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setDoNotDisturbDate success");
+        console.info('setDoNotDisturbDate success');
     }
 }
 
@@ -129,7 +129,7 @@ let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
     end: new Date(2021, 11, 15, 18, 0)
 };
 notificationManager.setDoNotDisturbDate(doNotDisturbDate).then(() => {
-    console.info("setDoNotDisturbDate success");
+    console.info('setDoNotDisturbDate success');
 }).catch((err: BusinessError) => {
     console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -189,7 +189,7 @@ let setDoNotDisturbDateCallback = (err: BusinessError): void => {
     if (err) {
         console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
     } else {
-        console.info("setDoNotDisturbDate success");
+        console.info('setDoNotDisturbDate success');
     }
 }
 
@@ -270,7 +270,7 @@ let doNotDisturbDate: notificationManager.DoNotDisturbDate = {
 let userId: number = 1;
 
 notificationManager.setDoNotDisturbDate(doNotDisturbDate, userId).then(() => {
-    console.info("setDoNotDisturbDate success");
+    console.info('setDoNotDisturbDate success');
 }).catch((err: BusinessError) => {
     console.error(`setDoNotDisturbDate failed, code is ${err.code}, message is ${err.message}`);
 });

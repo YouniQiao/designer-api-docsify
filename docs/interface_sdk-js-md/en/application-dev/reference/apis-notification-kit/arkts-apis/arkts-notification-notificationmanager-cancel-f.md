@@ -127,7 +127,7 @@ let cancelCallback = (err: BusinessError): void => {
     console.info(`Succeeded in canceling notification.`);
   } 
 }
-notificationManager.cancel(0, "label", cancelCallback);
+notificationManager.cancel(0, 'label', cancelCallback);
 ```
 
 

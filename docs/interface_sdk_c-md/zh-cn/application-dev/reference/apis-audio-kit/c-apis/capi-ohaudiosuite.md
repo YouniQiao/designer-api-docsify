@@ -16,3 +16,5 @@ Provide the definition of the C interface for the audio module.
 | [native_audio_suite_base.h（系统接口）](capi-native-audio-suite-base-h-sys.md) | 声明音频编创相关底层数据结构。<br>**系统接口：** 此接口为系统接口。 |
 | [native_audio_suite_engine.h](capi-native-audio-suite-engine-h.md) | 声明与音频编创相关的接口。（包括引擎、管线、节点）。 |
 | [native_audio_suite_engine.h（系统接口）](capi-native-audio-suite-engine-h-sys.md) | 声明与音频编创相关的接口。（包括引擎、管线、节点）。<br>**系统接口：** 此接口为系统接口。 |
+| [native_audio_suite_download_manager.h](capi-native-audio-suite-download-manager-h.md) | Declare audio download manager related interfaces. |
+| [native_audio_suite_download_manager.h（系统接口）](capi-native-audio-suite-download-manager-h-sys.md) | Declare audio download manager related interfaces.<br>**系统接口：** 此接口为系统接口。 |

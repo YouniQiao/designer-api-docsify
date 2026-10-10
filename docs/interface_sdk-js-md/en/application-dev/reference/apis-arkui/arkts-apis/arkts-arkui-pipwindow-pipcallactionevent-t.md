@@ -19,4 +19,4 @@ Defines the PiP action event in a video call.
 | 'hangUp' | The video call is hung up. |
 | 'micStateChanged' | The microphone is muted or unmuted. |
 | 'videoStateChanged' | The camera is turned on or off. |
-| 'voiceStateChanged' | The speaker is muted or unmuted. [since 12] |
+| 'voiceStateChanged' | The speaker is muted or unmuted.<br>**Since:** 12 |

@@ -59,7 +59,7 @@ let isNotificationEnabledCallback = (err: BusinessError, data: boolean): void =>
 }
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 
 notificationManager.isNotificationEnabled(bundle, isNotificationEnabledCallback);
@@ -116,7 +116,7 @@ Checks whether notification is enabled for the specified application. This API u
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isNotificationEnabled(bundle).then((data: boolean) => {
     console.info(`isNotificationEnabled success, data: ${JSON.stringify(data)}`);

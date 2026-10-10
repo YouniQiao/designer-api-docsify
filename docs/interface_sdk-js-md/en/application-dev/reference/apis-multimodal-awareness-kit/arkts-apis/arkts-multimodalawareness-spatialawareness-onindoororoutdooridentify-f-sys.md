@@ -59,9 +59,9 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
    console.info('call onIndoorOrOutdoorIdentify start');
    try {
       spatialAwareness.onIndoorOrOutdoorIdentify(configParams, (data:spatialAwareness.DoorPositionResponse) => {
-         console.info('result = ${data.position}');
+         console.info(`result = ${data.position}`);
       });
    } catch (err) {
-      console.error('call onIndoorOrOutdoorIdentify failed, errCode = ' + err.code);
+      console.error(`call onIndoorOrOutdoorIdentify failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```

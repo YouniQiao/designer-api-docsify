@@ -18,5 +18,5 @@ Defines the vibration effect. This parameter is required for [vibrator.startVibr
 | --- | --- |
 | [VibrateTime](arkts-sensorservice-vibrator-vibratetime-i.md) | Triggers vibration based on a specified duration.<br>**Atomic service API**: This API can be used in atomic services since API version 11. |
 | [VibratePreset](arkts-sensorservice-vibrator-vibratepreset-i.md) | Triggers vibration based on a preset effect. |
-| [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) | Triggers vibration based on a custom vibration configuration file. [since 10] |
-| [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md) | Triggers vibration based on a custom effect. [since 18] |
+| [VibrateFromFile](arkts-sensorservice-vibrator-vibratefromfile-i.md) | Triggers vibration based on a custom vibration configuration file.<br>**Since:** 10 |
+| [VibrateFromPattern](arkts-sensorservice-vibrator-vibratefrompattern-i.md) | Triggers vibration based on a custom effect.<br>**Since:** 18 |

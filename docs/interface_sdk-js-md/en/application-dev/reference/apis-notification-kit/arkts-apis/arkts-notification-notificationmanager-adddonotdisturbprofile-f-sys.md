@@ -75,7 +75,7 @@ let templates: Array<notificationManager.DoNotDisturbProfile> = [
 ]
 
 notificationManager.addDoNotDisturbProfile(templates).then(() => {
-  console.info("addDoNotDisturbProfile success.");
+  console.info('addDoNotDisturbProfile success.');
 }).catch((err: BusinessError) => {
   console.error(`addDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
 });
@@ -157,7 +157,7 @@ let templates: Array<notificationManager.DoNotDisturbProfile> = [
 ]
 
 notificationManager.addDoNotDisturbProfile(templates, userId).then(() => {
-  console.info("addDoNotDisturbProfile success.");
+  console.info('addDoNotDisturbProfile success.');
 }).catch((err: BusinessError) => {
   console.error(`addDoNotDisturbProfile failed, code is ${err.code}, message is ${err.message}`);
 });

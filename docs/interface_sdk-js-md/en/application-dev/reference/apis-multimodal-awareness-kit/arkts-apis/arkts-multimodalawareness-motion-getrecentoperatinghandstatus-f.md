@@ -45,9 +45,9 @@ import { BusinessError } from '@kit.BasicServicesKit';
 
 try {
     let data:motion.OperatingHandStatus = motion.getRecentOperatingHandStatus();
-    console.info('get succeeded' + data);
+    console.info('get succeeded: ' + data);
 } catch (err) {
     let error = err as BusinessError;
-    console.error("Failed get and err code is " + error.code);
+    console.error(`Failed to get recent operating hand status. Code: ${error.code}, message: ${error.message}`);
 }
 ```

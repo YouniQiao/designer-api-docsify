@@ -96,12 +96,9 @@ Obtains the UID of applications that are on the device idle allowlist. This API 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-policy
-  .getDeviceIdleTrustlist()
-  .then((data: number[]) => {
-    console.info(JSON.stringify(data));
-  })
-  .catch((error: BusinessError) => {
-    console.error(JSON.stringify(error));
-  });
+policy.getDeviceIdleTrustlist().then((data: number[]) => {
+  console.info(JSON.stringify(data));
+}).catch((error: BusinessError) => {
+  console.error(JSON.stringify(error));
+});
 ```

@@ -220,7 +220,7 @@ struct ListItemGroupExample {
               }
             }, (item: string) => item)
           }
-          .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分界线
+          .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分割线
         })
       }
       .width('90%')
@@ -379,7 +379,7 @@ struct MyItemGroup {
         }
       }, (item: string) => item)
     }
-    .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分界线
+    .divider({ strokeWidth: 1, color: Color.Blue }) // 每行之间的分割线
   }
 }
 

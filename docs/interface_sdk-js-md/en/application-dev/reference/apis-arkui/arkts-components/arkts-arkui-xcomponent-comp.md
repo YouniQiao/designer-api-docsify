@@ -134,18 +134,18 @@ Constructor parameters
 
 ### Example 1: Enabling AI Image Analyzer
 
-This example shows how to use the enableAnalyzer attribute to enable image AI analysis. You can use XComponentController to start or stop image AI analysis.
+This example shows how to use the enableAnalyzer attribute to enable the AI image analyzer. You can use XComponentController to start or stop the AI image analyzer.
 
 > NOTE
 > 
-> For details about the specific implementation of the drawing logic in this example (the implementation of functions related to nativeRender), see [ArkTS XComponent Sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
+> For details about how to implement the rendering logic (functions related to nativeRender), see [ArkTS XComponent Example](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
 
 
 
 ```TypeScript
 // xxx.ets
 import { BusinessError } from '@kit.BasicServicesKit';
-import nativeRender from 'libnativerender.so'; // The .so file implemented by the developer. For details, see the description above.
+import nativeRender from 'libnativerender.so'; // Custom own .so file implementation (see the preceding note for details).
 
 class CustomXComponentController extends XComponentController {
   onSurfaceCreated(surfaceId: string): void {
@@ -264,13 +264,13 @@ struct XComponentExample {
 }
 ```
 
-### Example 2 (Locking During Surface Rotation)
+### Example 2: Locking the Surface Orientation During Screen Rotation
 
-Uses setXComponentSurfaceRotation to lock the Surface orientation during screen rotation so that it does not rotate with the screen.
+This example shows how to use setXComponentSurfaceRotation to lock the surface orientation during screen rotation so that the surface does not rotate with the screen.
 
 > NOTE
 > 
-> For details about the implementation of the drawing logic in this example (the function implementation related to nativeRender), see [ArkTS XComponent Sample](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
+> For details about how to implement the rendering logic (functions related to nativeRender), see [ArkTS XComponent Example](https://gitcode.com/openharmony/applications_app_samples/tree/master/code/DocsSample/ArkUISample/ArkTSXComponent).
 
 ```TypeScript
 // xxx.ets
@@ -328,7 +328,7 @@ struct Index {
 
 ### Example 3: Drawing Content on the XComponent Using a Canvas Object
 
-From API version 20, this example returns a canvas object by calling [lockCanvas](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#lockcanvas), calls the corresponding drawing API via the canvas object, and then calls [unlockCanvasAndPost](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
+From API version 20, this example demonstrates how to return a canvas object by calling [lockCanvas](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#lockcanvas), call the corresponding drawing API via the canvas object, and then call [unlockCanvasAndPost](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md#unlockcanvasandpost) to draw content on the XComponent.
 
 
 
@@ -350,7 +350,7 @@ struct Index {
         .onLoad(() => {
           this.mCanvas = this.xcController.lockCanvas();
           if (this.mCanvas) {
-            this.mCanvas.drawColor(255, 240, 250, 255); // The entire XComponent area must be completely redrawn before each drawing. You can call this method to implement it.
+            this.mCanvas.drawColor(255, 240, 250, 255); // Before each drawing operation, the entire XComponent area must be fully redrawn. This API can be used to achieve this.
             const brush = new drawing.Brush(); // Create a brush object.
             brush.setColor({ // Set the color of the brush.
               alpha: 255,
@@ -378,7 +378,7 @@ struct Index {
 
 ### Example 4: Implementing an Immersive Effect
 
-From API version 20, the setXComponentSurfaceRect API is called to set the surface display area to achieve the immersive effect.
+From API version 20, building upon Example 3, the setXComponentSurfaceRect API is called to set the surface area to achieve an immersive effect.
 
 
 
@@ -412,7 +412,7 @@ struct Index {
           this.xcController.setXComponentSurfaceRect({surfaceWidth: this.screenWidth, surfaceHeight: this.screenHeight, offsetX: 0, offsetY: 0});
           this.mCanvas = this.xcController.lockCanvas();
           if (this.mCanvas) {
-            this.mCanvas.drawColor(255, 39, 135, 217); // This method must be called to redraw the entire XComponent area before each drawing.
+            this.mCanvas.drawColor(255, 39, 135, 217); // Before each drawing operation, the entire XComponent area must be fully redrawn. This API can be used to achieve this.
             this.xcController.unlockCanvasAndPost(this.mCanvas);
           }
         })

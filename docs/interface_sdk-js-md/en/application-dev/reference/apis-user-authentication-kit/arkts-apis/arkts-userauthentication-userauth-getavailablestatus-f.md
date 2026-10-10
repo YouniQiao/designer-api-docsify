@@ -52,6 +52,6 @@ try {
   userAuth.getAvailableStatus(userAuth.UserAuthType.FACE, userAuth.AuthTrustLevel.ATL3);
   console.info('current auth trust level is supported');
 } catch (error) {
-  console.error(`current auth trust level is not supported. Code: ${error?.code}, message: ${error?.message}`);
+  console.error(`Failed to check auth trust level. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```

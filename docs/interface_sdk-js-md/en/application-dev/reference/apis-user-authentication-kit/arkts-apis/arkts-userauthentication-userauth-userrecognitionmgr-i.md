@@ -48,6 +48,26 @@ Obtains the latest user recognition result. This API uses a promise to return th
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  mgr.getUserRecognitionResult()
+    .then((result: userAuth.UserRecognitionResult) => {
+      console.info(`status: ${result.status}, userId: ${result.userId}`);
+    })
+    .catch((err: BusinessError) => {
+      console.error(`getUserRecognitionResult failed, Code: ${err?.code}, message: ${err?.message}`);
+    });
+}
+```
+
 ## offUserRecognitionChange
 
 ```TypeScript
@@ -78,6 +98,26 @@ Unsubscribes from user recognition change events.
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
 
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  let callback: userAuth.UserRecognitionResultCallback = (result: userAuth.UserRecognitionResult) => {
+    console.info(`status: ${result.status}, userId: ${result.userId}`);
+  };
+  mgr.onUserRecognitionChange(callback);
+  // Cancel the specified callback.
+  mgr.offUserRecognitionChange(callback);
+  // Cancel all callbacks.
+  mgr.offUserRecognitionChange();
+}
+```
+
 ## onUserRecognitionChange
 
 ```TypeScript
@@ -107,3 +147,19 @@ Subscribes to user recognition change events.
 | Error Code ID | Error Message |
 | --- | --- |
 | [12500002](../errorcode-useriam.md#12500002-common-error-code-of-the-identity-authentication-system) | General operation error. |
+
+**Examples**
+
+```TypeScript
+import { userAuth } from '@kit.UserAuthenticationKit';
+
+let mgr = userAuth.getUserRecognitionMgr();
+if (mgr == null) {
+  console.error('device does not support user recognition');
+} else {
+  let callback: userAuth.UserRecognitionResultCallback = (result: userAuth.UserRecognitionResult) => {
+    console.info(`status: ${result.status}, userId: ${result.userId}`);
+  };
+  mgr.onUserRecognitionChange(callback);
+}
+```

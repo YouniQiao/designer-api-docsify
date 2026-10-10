@@ -51,13 +51,13 @@ Subscribes to notifications of the application and specifies subscription inform
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let onConsumeCallback = (data: notificationSubscribe.SubscribeCallbackData) => {
-  console.info(`Consume callback:  ${JSON.stringify(data)}`);
+  console.info(`Consume callback: ${JSON.stringify(data)}`);
 }
 let subscriber: notificationSubscribe.NotificationSubscriber = {
   onConsume: onConsumeCallback
 };
 notificationSubscribe.subscribeSelf(subscriber).then(() => {
-  console.info("subscribeSelf success");
+  console.info('subscribeSelf success');
 }).catch((err: BusinessError) => {
   console.error(`subscribeSelf failed, code is ${err.code}, message is ${err.message}`);
 });

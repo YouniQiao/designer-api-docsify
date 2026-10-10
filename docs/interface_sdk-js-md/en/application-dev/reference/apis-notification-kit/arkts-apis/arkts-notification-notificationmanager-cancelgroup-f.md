@@ -52,7 +52,7 @@ let cancelGroupCallback = (err: BusinessError): void => {
     console.info(`Succeeded in canceling group.`);
   }
 }
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName, cancelGroupCallback);
 ```
 
@@ -101,7 +101,7 @@ The notification group **groupName** is the group identifier specified through t
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-let groupName: string = "GroupName";
+let groupName: string = 'GroupName';
 notificationManager.cancelGroup(groupName).then(() => {
   console.info(`Succeeded in canceling group.`);
 }).catch((err: BusinessError) => {

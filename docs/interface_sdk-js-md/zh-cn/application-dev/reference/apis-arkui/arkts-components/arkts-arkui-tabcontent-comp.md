@@ -1393,6 +1393,8 @@ struct MyComponent {
 
 从API version 22开始，新增了入参类型包含图片的indicator属性。
 
+
+
 ```TypeScript
 import { DrawableDescriptor } from '@kit.ArkUI';
 
@@ -1447,6 +1449,64 @@ struct TabsIndicatorExample {
     .width('100%')
     .height(500)
     .padding('24vp')
+  }
+}
+```
+
+### 示例12（设置页签在不同页签栏中的可见性）
+
+该示例通过[tabBarVisibility](#tabbarvisibility)属性，设置页签在不同样式的页签栏中的可见性。
+
+从API版本26.2.0开始，TabContent新增了[tabBarVisibility](#tabbarvisibility)属性。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TabBarVisibilityExample {
+  @State isBottomType: boolean = true;
+
+  build() {
+    Column() {
+      Row() {
+        Text('barStyle: ').fontSize(25)
+        Button('BOTTOM').onClick(() => {
+          this.isBottomType = true;
+        }).margin({right: 10}).fontSize(15).backgroundColor('#ff2787d9')
+        Button('SIDEBAR').onClick(() => {
+          this.isBottomType = false;
+        }).fontSize(15).backgroundColor('#ff2787d9')
+      }.width(450)
+      .height('20%')
+      .justifyContent(FlexAlign.Center)
+      Tabs() {
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text('TabContent1').fontSize(25)
+          }.width('100%').height('100%')
+        }
+        // 页签默认在TabBarDisplayMode.BOTTOM_TABBAR和TabBarDisplayMode.SIDEBAR显示模式中都可见
+        .tabBar({icon: $r('app.media.startIcon'), text: 'tab1'})
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text('TabContent2').fontSize(25)
+          }.width('100%').height('100%')
+        }
+        .tabBar({icon: $r('app.media.startIcon'), text: 'tab2'})
+        // 设置该页签在TabBarDisplayMode.BOTTOM_TABBAR显示模式时不可见
+        .tabBarVisibility(TabVisibility.HIDDEN, TabBarDisplayMode.BOTTOM_TABBAR)
+      }
+      .width(450)
+      .height('80%')
+      .border({width: 1, color: '#ffd9d9d9'})
+      .barBackgroundColor('#fff7f7f7')
+      .barStyle(this.isBottomType ? TabBarStyle.BOTTOM : TabBarStyle.SIDEBAR)
+      .barPosition(BarPosition.End)
+      .vertical(false)
+    }.width('100%')
+    .height(350)
+    .alignItems(HorizontalAlign.Center)
+    .justifyContent(FlexAlign.Center)
   }
 }
 ```

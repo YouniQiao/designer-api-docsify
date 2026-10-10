@@ -46,10 +46,8 @@ function setDisposedRule(appId: string, rule: DisposedRule, appIndex?: number): 
 **示例**
 
 ```TypeScript
-import { appControl } from '@kit.AbilityKit';
+import { appControl, Want, bundleManager } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
-import { Want } from '@kit.AbilityKit';
-import { bundleManager } from '@kit.AbilityKit';
 
 let appId = "com.example.myapplication_xxxxx";
 let want: Want = {

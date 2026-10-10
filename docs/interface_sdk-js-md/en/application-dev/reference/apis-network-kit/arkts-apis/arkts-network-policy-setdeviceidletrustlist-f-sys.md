@@ -105,9 +105,7 @@ Sets whether multiple UIDs are in the whitelist of the sleep firewall. This API 
 ```TypeScript
 import { BusinessError } from '@kit.BasicServicesKit';
 
-policy
-  .setDeviceIdleTrustlist([11111, 22222], true)
-  .then(() => {
+policy.setDeviceIdleTrustlist([11111, 22222], true).then(() => {
     console.info('setDeviceIdleTrustlist success');
   })
   .catch((error: BusinessError) => {

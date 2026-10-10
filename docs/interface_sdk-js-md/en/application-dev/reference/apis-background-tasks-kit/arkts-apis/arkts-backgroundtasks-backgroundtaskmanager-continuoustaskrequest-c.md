@@ -74,12 +74,13 @@ Checks whether the user has authorized tasks to run continuously in the backgrou
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     try {
+      // Create a continuous task request object.
       let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
       continuousTaskRequest.checkSpecialScenarioAuth(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
         console.info('Operation checkSpecialScenarioAuth succeeded. data: ' + JSON.stringify(res));
@@ -135,12 +136,13 @@ Check whether the application can request MODE_SPECIAL_SCENARIO_PROCESSING. No e
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     try {
+      // Create a continuous task request object.
       let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
       continuousTaskRequest.checkSpecialScenarioAuthResult(this.context).then((res: backgroundTaskManager.UserAuthResult) => {
         console.info('Operation checkSpecialScenarioAuthResult succeeded. data: ' + JSON.stringify(res));
@@ -189,12 +191,13 @@ Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](arkts
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
     let isModeSupported: boolean = false; 
+    // Create a continuous task request object.
     let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
     let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_TASK_KEEPING];
     continuousTaskRequest.backgroundTaskModes = modeList;
@@ -245,15 +248,16 @@ Requests user authorization to run tasks continuously in the background. This AP
 
 ```TypeScript
 import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
-import { AbilityConstant, UIAbility, Want } from '@kit.AbilityKit';
+import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
+const callbackAuth = (authResult: backgroundTaskManager.UserAuthResult) => {
   console.info('Operation requestAuthFromUser success. auth result: ' + JSON.stringify(authResult));
 }
 
 export default class EntryAbility extends UIAbility {
-  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+  onCreate() {
+    // Create a continuous task request object.
     let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
     let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
     continuousTaskRequest.backgroundTaskModes = modeList;
@@ -310,7 +314,7 @@ import { UIAbility } from '@kit.AbilityKit';
 import { window } from '@kit.ArkUI';
 import { BusinessError } from '@kit.BasicServicesKit';
 
-function callbackAuth(authResult: backgroundTaskManager.UserAuthResult) {
+const callbackAuth = (authResult: backgroundTaskManager.UserAuthResult) => {
   console.info('Operation requestAuthFromUserByDialog success. auth result: ' + JSON.stringify(authResult));
 }
 
@@ -321,6 +325,7 @@ export default class EntryAbility extends UIAbility {
         return;
       }
       try {
+        // Create a continuous task request object.
         let continuousTaskRequest = new backgroundTaskManager.ContinuousTaskRequest();
         let modeList: Array<number> = [backgroundTaskManager.BackgroundTaskMode.MODE_SPECIAL_SCENARIO_PROCESSING];
         continuousTaskRequest.backgroundTaskModes = modeList;

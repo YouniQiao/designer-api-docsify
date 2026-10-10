@@ -64,7 +64,7 @@ let isDistributedEnabledByBundleCallback = (err: BusinessError, data: boolean): 
     }
 };
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle, isDistributedEnabledByBundleCallback);
 ```
@@ -126,7 +126,7 @@ Checks whether distributed notification is enabled for a specified application. 
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
 };
 notificationManager.isDistributedEnabledByBundle(bundle).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
@@ -192,10 +192,10 @@ This API can be properly called on devices other than wearables and TVs. If it i
 import { BusinessError } from '@kit.BasicServicesKit';
 
 let bundle: notificationManager.BundleOption = {
-    bundle: "bundleName1",
+    bundle: 'bundleName1',
     uid: 1
 };
-let deviceType: string = "phone";
+let deviceType: string = 'wearable';
 notificationManager.isDistributedEnabledByBundle(bundle, deviceType).then((data: boolean) => {
     console.info(`isDistributedEnabledByBundle success, data: ${JSON.stringify(data)}`);
 }).catch((err: BusinessError) => {

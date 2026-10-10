@@ -339,11 +339,11 @@ struct TextExample3 {
         })
         .onMarqueeStateChange((state: MarqueeState) => {
           if (state == MarqueeState.START) {
-            // "收到状态: START";
+            console.info('收到状态: START');
           } else if (state == MarqueeState.BOUNCE) {
-            // "收到状态: BOUNCE";
+            console.info('收到状态: BOUNCE');
           } else if (state == MarqueeState.FINISH) {
-            // "收到状态: FINISH";
+            console.info('收到状态: FINISH');
           }
         })
 
@@ -601,7 +601,7 @@ struct TextExample7 {
       }
       .width('100%')
       // 使用parallelGesture中的TapGesture替代onClick属性，达到非冒泡事件类似冒泡
-      // 的效果，点击Text组件区域Column上的点击事件正常响应
+      // 的效果，单击Text组件区域Column上的单击事件正常响应
       .parallelGesture(TapGesture().onAction((event: GestureEvent) => {
         console.info('test column onClick timestamp:' + event.timestamp);
       }), GestureMask.Normal)
@@ -1955,6 +1955,10 @@ struct DataDetectorDemo {
 
 从API版本26.0.0开始，新增带编码类型参数的getCharacterPositionAtCoordinate、getGlyphRangeForCharacterRange、getCharacterRangeForGlyphRange接口重载，以及TextEncoding枚举。
 
+该效果图会因设备尺寸差异有显示区别，仅供参考。
+
+
+
 ```TypeScript
 // xxx.ets
 import { LengthMetrics } from '@kit.ArkUI';
@@ -2065,6 +2069,46 @@ struct Utf16GlyphHighlightPage {
       ctx.roundRect(l, t, w, h, 4);
       ctx.fill();
     }
+  }
+}
+```
+
+### 示例35（设置文本描边）
+
+该示例通过[strokeWidth](#strokewidth)、[strokeColor](#strokecolor)和[strokeJoinStyle](#strokejoinstyle)属性为Text设置文本描边样式，分别展示描边宽度、描边颜色和描边拐角样式的效果，并演示了将描边宽度设为负值时显示实心字的效果。
+
+从API版本26.2.0开始，新增[strokeColor](#strokecolor)、[strokeWidth](#strokewidth)和[strokeJoinStyle](#strokejoinstyle)属性。
+
+```TypeScript
+// xxx.ets
+import { LengthMetrics } from '@kit.ArkUI';
+
+@Entry
+@Component
+struct TextStrokeExample {
+  build() {
+    Column() {
+      Text('Text without stroke')
+        .height(60)
+        .fontSize(30)
+      Text('Text with stroke')
+        .height(60)
+        .fontSize(30)
+        .strokeWidth(LengthMetrics.px(-3.0))
+        .strokeColor('rgb(39,135,217)')
+      Text('Text with stroke')
+        .height(60)
+        .fontSize(30)
+        .strokeWidth(LengthMetrics.px(3.0))
+        .strokeColor('rgb(39,135,217)')
+      Text('Text with ROUND_JOIN stroke')
+        .height(60)
+        .fontSize(30)
+        .strokeWidth(LengthMetrics.px(3.0))
+        .strokeJoinStyle(StrokeJoinStyle.ROUND_JOIN)
+        .strokeColor('rgb(39,135,217)')
+    }
+    .width('100%')
   }
 }
 ```
