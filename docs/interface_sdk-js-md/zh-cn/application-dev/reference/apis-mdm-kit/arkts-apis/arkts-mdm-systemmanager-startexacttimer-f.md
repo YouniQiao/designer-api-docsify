@@ -47,4 +47,4 @@ function startExactTimer(timer: number, triggerTime: number): Promise<void>
 | [9200002](../errorcode-enterpriseDeviceManager.md#9200002-设备管理器权限不够) | The administrator application does not have permission to manage the device. |
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
-| 9201054 | The specified timer does not exist or does not belong to the current administrator. |
+| [9201054](../errorcode-enterpriseDeviceManager.md#9201054-指定的定时器不存在或不属于当前设备管理应用) | The specified timer does not exist or does not belong to the current administrator. |

@@ -1,6 +1,6 @@
 # @ohos.multimodalInput.inputDeviceCooperate(Screen Hopping)
 
-The **inputDeviceCooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse for collaborative operations.
+The **inputDeviceCooperate** module implements screen hopping for two or more networked devices to share the keyboard and mouse for collaborative operations. The APIs of this module are no longer maintained since API version 10.
 
 **Since:** 9
 

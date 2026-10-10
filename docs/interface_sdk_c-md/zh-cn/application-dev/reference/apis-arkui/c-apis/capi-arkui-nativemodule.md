@@ -22,6 +22,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [drag_and_drop.h](capi-drag-and-drop-h.md) | 提供NativeDrag相关接口定义。 |
 | [native_interface.h](capi-native-interface-h.md) | Provides a unified entry for the native module APIs. |
 | [native_interface_focus.h](capi-native-interface-focus-h.md) | 定义焦点管理接口，主要用于主动转移焦点、清除焦点、管理焦点转移默认行为、控制焦点激活态，以及设置按键事件的处理模式。适用于页面切换、键盘导航等需要统一管理焦点状态和焦点转移行为的场景， 有助于提升焦点控制的可预测性和交互体验。 |
+| [ui_event_injection.h](capi-ui-event-injection-h.md) | 声明供应用内智能体和UI自动化使用的接口，用于向UI注入宽松的非精确控制操作。 |
 | [native_type.h](capi-native-type-h.md) | Defines the common types for the native module. |
 | [native_dialog.h](capi-native-dialog-h.md) | 提供ArkUI在Native侧的自定义弹窗接口定义集合。 |
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |

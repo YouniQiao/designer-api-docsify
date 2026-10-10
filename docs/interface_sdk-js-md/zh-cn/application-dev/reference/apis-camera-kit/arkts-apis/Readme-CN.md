@@ -38,6 +38,8 @@
   - [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md)
   <!--Del-->
   - [CameraOutputCapability（系统接口）](arkts-camera-camera-cameraoutputcapability-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CameraSharedStatusInfo（系统接口）](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)<!--DelEnd-->
   - [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)
   - [CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)
   - [CapturePhoto](arkts-camera-camera-capturephoto-i.md)
@@ -45,6 +47,10 @@
   <!--Del-->
   - [CaptureSession（系统接口）](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)
+  <!--Del-->
+  - [ColorControls（系统接口）](arkts-camera-camera-colorcontrols-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ColorControlsQuery（系统接口）](arkts-camera-camera-colorcontrolsquery-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ColorEffect（系统接口）](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -192,6 +198,8 @@
   - [QuickThumbnail（系统接口）](arkts-camera-camera-quickthumbnail-i-sys.md)<!--DelEnd-->
   - [Rect](arkts-camera-camera-rect-i.md)
   <!--Del-->
+  - [RGBBias（系统接口）](arkts-camera-camera-rgbbias-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SceneDetection（系统接口）](arkts-camera-camera-scenedetection-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SceneDetectionQuery（系统接口）](arkts-camera-camera-scenedetectionquery-i-sys.md)<!--DelEnd-->
@@ -232,13 +240,7 @@
   <!--Del-->
   - [VideoSessionForSys（系统接口）](arkts-camera-camera-videosessionforsys-i-sys.md)<!--DelEnd-->
   - [WhiteBalance](arkts-camera-camera-whitebalance-i.md)
-  <!--Del-->
-  - [WhiteBalance（系统接口）](arkts-camera-camera-whitebalance-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [WhiteBalanceGains（系统接口）](arkts-camera-camera-whitebalancegains-i-sys.md)<!--DelEnd-->
   - [WhiteBalanceQuery](arkts-camera-camera-whitebalancequery-i.md)
-  <!--Del-->
-  - [WhiteBalanceQuery（系统接口）](arkts-camera-camera-whitebalancequery-i-sys.md)<!--DelEnd-->
   - [Zoom](arkts-camera-camera-zoom-i.md)
   <!--Del-->
   - [Zoom（系统接口）](arkts-camera-camera-zoom-i-sys.md)<!--DelEnd-->
@@ -265,6 +267,8 @@
   <!--Del-->
   - [CameraImagingMode（系统接口）](arkts-camera-camera-cameraimagingmode-e-sys.md)<!--DelEnd-->
   - [CameraPosition](arkts-camera-camera-cameraposition-e.md)
+  <!--Del-->
+  - [CameraSharedStatus（系统接口）](arkts-camera-camera-camerasharedstatus-e-sys.md)<!--DelEnd-->
   - [CameraStatus](arkts-camera-camera-camerastatus-e.md)
   - [CameraType](arkts-camera-camera-cameratype-e.md)
   <!--Del-->

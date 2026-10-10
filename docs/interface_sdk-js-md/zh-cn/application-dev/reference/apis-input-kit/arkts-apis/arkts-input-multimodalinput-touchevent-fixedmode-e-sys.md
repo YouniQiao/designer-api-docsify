@@ -6,8 +6,6 @@ export declare enum FixedMode
 
 修正坐标的模式。默认值为NONE。
 
-**系统API**: 此接口为系统接口。
-
 **起始版本：** 19
 
 <!--Device-unnamed-export declare enum FixedMode--><!--Device-unnamed-export declare enum FixedMode-End-->

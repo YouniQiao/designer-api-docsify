@@ -18,7 +18,7 @@ enum ControlCenterEffectType
 AUTO_FRAMING = 2
 ```
 
-自动对焦。
+自动构图。
 
 **起始版本：** 24
 

@@ -6,7 +6,7 @@ enum CameraImagingMode
 
 Enumerates the camera imaging modes.
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 <!--Device-camera-enum CameraImagingMode--><!--Device-camera-enum CameraImagingMode-End-->
 
@@ -22,7 +22,7 @@ AUTO = 0
 
 Auto imaging mode.
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +40,7 @@ IR = 2
 
 IR imaging mode.
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,7 +58,7 @@ RGB = 1
 
 RGB imaging mode.
 
-**起始版本：** 26.0.0
+**起始版本：** 26.0.1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

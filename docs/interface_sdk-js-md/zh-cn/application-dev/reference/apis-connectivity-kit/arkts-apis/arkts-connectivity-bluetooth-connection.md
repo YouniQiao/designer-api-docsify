@@ -78,6 +78,7 @@ import { connection } from '@kit.ConnectivityKit';
 | [controlDeviceAction](arkts-connectivity-connection-controldeviceaction-f-sys.md) | 查找蓝牙耳机设备时，向耳机发送控制命令。使用Promise异步回调。 |
 | [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md#disconnectallowedprofiles1) | 断开远端设备所有连接的profiles。使用Callback异步回调。 |
 | [generateLocalOobData](arkts-connectivity-connection-generatelocaloobdata-f-sys.md) | 获取本机的带外（Out of Band, OOB）通信数据。生成的OOB数据经带外通道传输至对端设备后，对端设备可通过[pairDeviceOutOfBand](arkts-connectivity-connection-pairdeviceoutofband-f-sys.md)使用该数据发起配对流程。使用Promise异步回调。 |
+| [getBleMacByBrMac](arkts-connectivity-connection-getblemacbybrmac-f-sys.md) | 根据配对远端设备的真实BR地址，获取配对远端设备的真实BLE地址。 |
 | [getCarKeyDfxData](arkts-connectivity-connection-getcarkeydfxdata-f-sys.md) | 获取车钥匙维测数据，例如蓝牙车钥匙连接、配对等维测数据。 |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids1) | 获取本地设备的profile UUID。使用Callback异步回调。 |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids2) | 获取本地设备的profile UUID。使用Promise异步回调。 |

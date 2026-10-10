@@ -13,6 +13,7 @@ The namespace of privacyComputation, providing privacy-preserving computation ca
 ## Modules to Import
 
 ```TypeScript
+import { privacyComputation } from '@kit.DataProtectionKit';
 ```
 
 ## Summary

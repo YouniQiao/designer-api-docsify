@@ -590,6 +590,22 @@ samba服务端能力，当前仅支持PC/2in1设备使用。
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
 
+## SATA_ODD_BURN
+
+```TypeScript
+SATA_ODD_BURN = 52
+```
+
+内置光驱刻录功能。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FeatureForDevice-SATA_ODD_BURN = 52--><!--Device-FeatureForDevice-SATA_ODD_BURN = 52-End-->
+
+**系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## SCREEN_RECORD
 
 ```TypeScript

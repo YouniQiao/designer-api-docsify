@@ -1,4 +1,4 @@
-# getBundleInstallStatus（系统接口）
+# getBundleInstallStatus
 
 ## 导入模块
 
@@ -14,15 +14,13 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 
 获取指定应用的安装状态。
 
-**起始版本：** 23
+**起始版本：** 26.0.1
 
 **需要权限：** ohos.permission.GET_BUNDLE_INFO_PRIVILEGED
 
 <!--Device-bundleManager-function getBundleInstallStatus(bundleName: string): BundleInstallStatus--><!--Device-bundleManager-function getBundleInstallStatus(bundleName: string): BundleInstallStatus-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**系统接口：** 此接口为系统接口。
 
 **参数：**
 
@@ -34,14 +32,14 @@ function getBundleInstallStatus(bundleName: string): BundleInstallStatus
 
 | 类型 | 说明 |
 | --- | --- |
-| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 返回指定应用的安装状态。 |
+| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md) | 返回指定应用的安装状态。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied. A non-system application is not allowed to call a system API. |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied. A non-system application is not allowed to call a system API.<br>**适用版本：** 23 - 26.0.0 |
 
 **示例**
 

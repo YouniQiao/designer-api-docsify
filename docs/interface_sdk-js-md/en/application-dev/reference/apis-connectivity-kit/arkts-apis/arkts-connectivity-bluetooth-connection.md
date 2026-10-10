@@ -78,6 +78,7 @@ import { connection } from '@kit.ConnectivityKit';
 | [controlDeviceAction](arkts-connectivity-connection-controldeviceaction-f-sys.md) | Controls the actions of Bluetooth peripherals. |
 | [disconnectAllowedProfiles](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md#disconnectallowedprofiles1) | Disconnects all allowed bluetooth profiles between the local and remote device. |
 | [generateLocalOobData](arkts-connectivity-connection-generatelocaloobdata-f-sys.md) | Generate out-of-band data of the local device. |
+| [getBleMacByBrMac](arkts-connectivity-connection-getblemacbybrmac-f-sys.md) | Obtains the real BLE address of a paired remote device based on its real BR address. |
 | [getCarKeyDfxData](arkts-connectivity-connection-getcarkeydfxdata-f-sys.md) | Get the dfx data of car key. |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids1) | Obtains the profile UUIDs supported by the local device. |
 | [getLocalProfileUuids](arkts-connectivity-connection-getlocalprofileuuids-f-sys.md#getlocalprofileuuids2) | Obtains the profile UUIDs supported by the local device. |

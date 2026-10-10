@@ -528,10 +528,10 @@ Creates a placeholder in a registered sync folder.
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | Indicates the registered sync folder path. |
-| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | Indicates the relative path in the sync folder. |
-| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | Indicates the placeholder metadata information. |
-| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | Indicates optional opaque custom information. NULL means it is not provided. |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] Indicates the registered sync folder path. |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | [in] Indicates the relative path in the sync folder. |
+| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | [in] Indicates the placeholder metadata information. |
+| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | [in] Indicates optional opaque custom information. NULL means it is not provided. |
 
 **Returns**:
 
@@ -555,9 +555,9 @@ Checks whether a file in a sync folder is a placeholder file.
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | Indicates the registered sync folder path. |
-| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | Indicates the relative path in the sync folder. |
-| bool *isPlaceholder | Output parameter. The value is valid only when the return value is [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode). Returns true if the file is a placeholder file; returns false otherwise. The value is set to false on error. |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] Indicates the registered sync folder path. |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | [in] Indicates the relative path in the sync folder. |
+| bool *isPlaceholder | [out] Output parameter. The value is valid only when the return value is [CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode). Returns true if the file is a placeholder file; returns false otherwise. The value is set to false on error. |
 
 **Returns**:
 
@@ -607,8 +607,8 @@ Converts a placeholder file to a 0-byte normal file.
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | Indicates the registered sync folder path. |
-| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | Indicates the relative path in the sync folder. |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] Indicates the registered sync folder path. |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | [in] Indicates the relative path in the sync folder. |
 
 **Returns**:
 
@@ -682,10 +682,10 @@ Updates file metadata (supports placeholder and normal files).
 
 | Parameter | Description |
 | -- | -- |
-| const CloudDisk_SyncFolderPath syncFolderPath | Indicates the registered sync folder path. |
-| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | Indicates the relative path in the sync folder. |
-| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | Indicates the placeholder metadata. |
-| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | Optional opaque custom information. NULL means the existing value is preserved. |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] Indicates the registered sync folder path. |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) relativePathInfo | [in] Indicates the relative path in the sync folder. |
+| [const OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) placeholderInfo | [in] Indicates the placeholder metadata. |
+| [const OH_CloudDisk_PlaceholderCustomInfo](capi-clouddisk-oh-clouddisk-placeholdercustominfo.md) *customInfo | [in] Optional opaque custom information. NULL means the existing value is preserved. |
 
 **Returns**:
 

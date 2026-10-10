@@ -3846,7 +3846,7 @@ KEYCODE_PTZ_APERTURE_RIGHT = 3243
 KEYCODE_PTZ_CLICK = 3235
 ```
 
-云台单击键。
+云台模式调节键。
 
 **起始版本：** 26.0.1
 

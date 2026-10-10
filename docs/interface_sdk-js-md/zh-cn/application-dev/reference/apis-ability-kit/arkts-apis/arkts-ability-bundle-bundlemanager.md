@@ -34,6 +34,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md) | 以同步方法根据给定的bundleFlags获取当前应用的BundleInfo。 |
 | [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync1) | 以同步方法根据给定的bundleName、bundleFlags和userId获取BundleInfo。 |
 | [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md#getbundleinfosync2) | 以同步方法根据给定的bundleName、bundleFlags获取调用方所在用户下的BundleInfo。 |
+| [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md) | 获取指定应用的安装状态。 |
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid1) | 根据给定的uid获取对应应用的bundleName。使用callback异步回调。 |
 | [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md#getbundlenamebyuid2) | 根据给定的uid获取对应应用的bundleName。使用Promise异步回调。 |
 | [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md) | 以同步方法根据给定的uid获取对应应用的bundleName。 |
@@ -104,7 +105,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getBundleArchiveInfo](arkts-ability-bundlemanager-getbundlearchiveinfo-f-sys.md#getbundlearchiveinfo2) | 根据给定的hapFilePath和bundleFlags获取BundleInfo。使用Promise异步回调。从API版本26.0.0开始,该接口支持处理APP包。 |
 | [getBundleArchiveInfoSync](arkts-ability-bundlemanager-getbundlearchiveinfosync-f-sys.md) | 以同步方法根据给定的hapFilePath和bundleFlags获取BundleInfo对象。 |
 | [getBundleExtensionPolicyInfo](arkts-ability-bundlemanager-getbundleextensionpolicyinfo-f-sys.md) | 获取指定应用的包扩展策略信息。 |
-| [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md) | 获取指定应用的安装状态。 |
 | [getDeveloperIds](arkts-ability-bundlemanager-getdeveloperids-f-sys.md) | 根据给定的应用[appDistributionType](arkts-ability-bundlemanager-appdistributiontype-e-sys.md)获取当前用户下的所有开发者ID列表。接口调用失败时可能返回空数组，需校验返回值后使用。 |
 | [getDynamicIcon](arkts-ability-bundlemanager-getdynamicicon-f-sys.md) | 根据给定的bundleName获得动态图标对应的moduleName。使用Promise异步回调。 |
 | [getDynamicIconInfo](arkts-ability-bundlemanager-getdynamiciconinfo-f-sys.md) | 根据指定的bundleName获取所有用户和所有分身下的动态图标信息。使用Promise异步回调。 |
@@ -219,6 +219,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [AbilityFlag](arkts-ability-bundlemanager-abilityflag-e.md) | Ability组件信息标志，指示需要获取的Ability组件信息的内容。 |
 | [AbilityType](arkts-ability-bundlemanager-abilitytype-e.md) | 标识Ability组件的类型。 |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md) | 包信息标志，指示需要获取的包信息的内容。 |
+| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md) | 应用安装状态枚举。 |
 | [BundleType](arkts-ability-bundlemanager-bundletype-e.md) | 标识应用的类型。 |
 | [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md) | 标识动态共享库的版本兼容类型。 |
 | [DisplayOrientation](arkts-ability-bundlemanager-displayorientation-e.md) | 标识该Ability的显示模式。仅适用于FA模型的[PageAbility](../../../application-models/pageability-overview.md)。 |
@@ -241,7 +242,6 @@ import { bundleManager } from '@kit.AbilityKit';
 | [ApplicationReservedFlag](arkts-ability-bundlemanager-applicationreservedflag-e-sys.md) | 应用分身偏好设置的模式。 |
 | [AppSandboxPolicy](arkts-ability-bundlemanager-appsandboxpolicy-e-sys.md) | 双模式（2in1/平板）场景下的应用沙箱策略。 |
 | [BundleFlag](arkts-ability-bundlemanager-bundleflag-e-sys.md) | 包信息标志，指示需要获取的包信息的内容。 |
-| [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md) | 应用安装状态枚举。 |
 | [DeviceModeDistributionPolicy](arkts-ability-bundlemanager-devicemodedistributionpolicy-e-sys.md) | 设备模式分发策略枚举，用于指定应用程序如何分发到设备上。 |
 | [ExtensionAbilityFlag](arkts-ability-bundlemanager-extensionabilityflag-e-sys.md) | 扩展组件信息标志，指示需要获取的扩展组件信息的内容。 |
 | [ProfileType](arkts-ability-bundlemanager-profiletype-e-sys.md) | 标识配置文件类型。 |

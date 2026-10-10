@@ -33,6 +33,7 @@ import { common } from '@kit.MDMKit';
 | 名称 | 说明 |
 | --- | --- |
 | [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md) | 应用的实例数据。 |
+| [ExternalStorageDeviceInfo](arkts-mdm-common-externalstoragedeviceinfo-i.md) | 外置存储设备信息。 |
 | [InstallationResult](arkts-mdm-common-installationresult-i.md) | 应用安装结果。 |
 | [PolicyChangedEvent](arkts-mdm-common-policychangedevent-i.md) | 策略变更事件。 |
 
@@ -46,6 +47,7 @@ import { common } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [DiskType](arkts-mdm-common-disktype-e.md) | 磁盘类型 |
 | [ManagedFeature](arkts-mdm-common-managedfeature-e.md) | 管控特性。 |
 | [ManagedPolicy](arkts-mdm-common-managedpolicy-e.md) | 企业设备管控策略。 |
 | [QueryPolicy](arkts-mdm-common-querypolicy-e.md) | 查询企业设备管理策略 |

@@ -28,20 +28,27 @@ import { usbManager } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
+| [addAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-addallowedopticaldiscdriveburnusbdevices-f.md) | Add the list of USB devices that support CD/DVD burning. |
 | [addAllowedUsbDevices](arkts-mdm-usbmanager-addallowedusbdevices-f.md) | Adds allowed USB devices. |
 | [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md) | Adds disallowed USB device types. Unlike the [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) API, this API does not require matching based on the [defined-class-codes](https://www.usb.org/defined-class-codes) standard. This API takes effect immediately on connected USB devices without requiring re-plugging. For example, if a USB wired headset is in normal use and this API is called to disable it, the headset will become unavailable immediately. |
 | [addDisallowedUsbDevices](arkts-mdm-usbmanager-adddisallowedusbdevices-f.md) | Adds disallowed USB device types. |
+| [getAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-getallowedopticaldiscdriveburnusbdevices-f.md) | Obtain the list of USB devices that support CD/DVD burning. |
 | [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md#getallowedusbdevices1) | Obtains allowed USB devices. |
 | [getAllowedUsbDevices](arkts-mdm-usbmanager-getallowedusbdevices-f.md#getallowedusbdevices2) | Obtains allowed USB devices. |
 | [getDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-getdisallowedpermissiveusbdevices-f.md) | Obtains the USB device types that have been disallowed via [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md). |
 | [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md#getdisallowedusbdevices1) | Obtains the disallowed USB device types. |
 | [getDisallowedUsbDevices](arkts-mdm-usbmanager-getdisallowedusbdevices-f.md#getdisallowedusbdevices2) | Obtains the disallowed USB device types. |
+| [getExternalStorageDeviceInfos](arkts-mdm-usbmanager-getexternalstoragedeviceinfos-f.md) | Obtain the volume information of the current device. |
 | [getUsbSerialNumber](arkts-mdm-usbmanager-getusbserialnumber-f.md) | Queries the serial number of the usb device. |
 | [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md#getusbstoragedeviceaccesspolicy1) | Obtains the access policy of the USB storage device. |
 | [getUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-getusbstoragedeviceaccesspolicy-f.md#getusbstoragedeviceaccesspolicy2) | Obtains the USB storage device (baseClass = 0x08) access policy. |
+| [isExternalStorageInterceptEnable](arkts-mdm-usbmanager-isexternalstorageinterceptenable-f.md) | Query the enabling status of external storage device mounting. |
+| [removeAllowedOpticalDiscDriveBurnUsbDevices](arkts-mdm-usbmanager-removeallowedopticaldiscdriveburnusbdevices-f.md) | Remove the list of USB devices that support CD/DVD burning. |
 | [removeAllowedUsbDevices](arkts-mdm-usbmanager-removeallowedusbdevices-f.md) | Removes allowed USB devices. |
 | [removeDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-removedisallowedpermissiveusbdevices-f.md) | Removes the USB device types that have been disallowed via [addDisallowedPermissiveUsbDevices](arkts-mdm-usbmanager-adddisallowedpermissiveusbdevices-f.md). The removed USB device types can be used normally. |
 | [removeDisallowedUsbDevices](arkts-mdm-usbmanager-removedisallowedusbdevices-f.md) | Removes the disallowed USB device types. |
+| [setExternalStorageDeviceMountPolicy](arkts-mdm-usbmanager-setexternalstoragedevicemountpolicy-f.md) | Set the mounting policy for external storage devices. |
+| [setExternalStorageInterceptEnable](arkts-mdm-usbmanager-setexternalstorageinterceptenable-f.md) | Set the enabling status of external storage device mounting. |
 | [setUsbStorageDeviceAccessPolicy](arkts-mdm-usbmanager-setusbstoragedeviceaccesspolicy-f.md) | Sets the USB storage device (baseClass = 0x08) access policy. |
 
 <!--Del-->
@@ -60,6 +67,7 @@ import { usbManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [PermissiveUsbDeviceType](arkts-mdm-usbmanager-permissiveusbdevicetype-i.md) | USB device type information. Partial field matching is supported. |
+| [UsbDevice](arkts-mdm-usbmanager-usbdevice-i.md) | Represents the USB device identity information. |
 | [UsbDeviceId](arkts-mdm-usbmanager-usbdeviceid-i.md) | Represents the USB device identity information. |
 | [UsbDeviceType](arkts-mdm-usbmanager-usbdevicetype-i.md) | Represents the USB device type information. |
 
@@ -68,4 +76,5 @@ import { usbManager } from '@kit.MDMKit';
 | Name | Description |
 | --- | --- |
 | [Descriptor](arkts-mdm-usbmanager-descriptor-e.md) | Enumerates USB descriptors. |
+| [MountPolicy](arkts-mdm-usbmanager-mountpolicy-e.md) | Mounting strategy. |
 | [UsbPolicy](arkts-mdm-usbmanager-usbpolicy-e.md) | Enumerates the USB storage device access policies. |

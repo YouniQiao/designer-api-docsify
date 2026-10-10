@@ -1196,6 +1196,28 @@ export default class EnterpriseAdminAbility extends EnterpriseAdminExtensionAbil
 }
 ```
 
+## onUnmountExternalStorageDevice
+
+```TypeScript
+onUnmountExternalStorageDevice(deviceInfo: common.ExternalStorageDeviceInfo): void
+```
+
+Callback for unmounting external storage devices. When an external storage device needs to be mounted, the callback is triggered.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-EnterpriseAdminExtensionAbility-onUnmountExternalStorageDevice(deviceInfo: common.ExternalStorageDeviceInfo): void--><!--Device-EnterpriseAdminExtensionAbility-onUnmountExternalStorageDevice(deviceInfo: common.ExternalStorageDeviceInfo): void-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| deviceInfo | [common.ExternalStorageDeviceInfo](arkts-mdm-common-externalstoragedeviceinfo-i.md) | Yes | Device information of the external storage device that needs to be unmounted. |
+
 ## context
 
 ```TypeScript

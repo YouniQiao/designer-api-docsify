@@ -13,6 +13,7 @@ privateComputation的命名空间，提供隐私保护的计算能力。如隐�
 ## 导入模块
 
 ```TypeScript
+import { privacyComputation } from '@kit.DataProtectionKit';
 ```
 
 ## 汇总

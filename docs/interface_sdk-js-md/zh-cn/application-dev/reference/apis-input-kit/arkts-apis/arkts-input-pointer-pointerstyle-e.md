@@ -130,7 +130,7 @@ DEFAULT = 0
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-自定义光标，开发者可使用[setCustomCursor](arkts-input-pointer-setcustomcursor-f.md)设置自定义光标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md)直接设置。
+自定义光标，开发者可使用[setCustomCursor](arkts-input-pointer-setcustomcursor-f.md)设置自定义光标，不支持使用[setPointerStyle](arkts-input-pointer-setpointerstyle-f.md)直接设置。自定义光标样式，通过接口设置。该参数用于getPointerStyle在特定场景（在设置自定义光标样式的窗口上获取样式）下返回数据，不能作为setCustomCursor、setPointerStyle接口入参使用。
 
 **起始版本：** 22
 

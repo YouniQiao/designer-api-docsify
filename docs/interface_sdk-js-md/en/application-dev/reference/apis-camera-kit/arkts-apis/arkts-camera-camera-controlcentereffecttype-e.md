@@ -18,7 +18,7 @@ Enumerates the effect types supported by the camera controller.
 AUTO_FRAMING = 2
 ```
 
-Auto focus.
+Automatic composition.
 
 **Since:** 24
 

@@ -1,14 +1,14 @@
-# WhiteBalanceGains（系统接口）
+# RGBBias（系统接口）
 
 ```TypeScript
-interface WhiteBalanceGains
+interface RGBBias
 ```
 
-RGB white balance gain values.
+RGB 偏置值。
 
 **起始版本：** 26.0.1
 
-<!--Device-camera-interface WhiteBalanceGains--><!--Device-camera-interface WhiteBalanceGains-End-->
+<!--Device-camera-interface RGBBias--><!--Device-camera-interface RGBBias-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
@@ -20,13 +20,13 @@ RGB white balance gain values.
 import { camera } from '@kit.CameraKit';
 ```
 
-## blueGain
+## blueBias
 
 ```TypeScript
-blueGain: number
+blueBias: number
 ```
 
-The blue gain component of the white balance value.
+蓝色色偏置值。
 
 **类型：** number
 
@@ -34,19 +34,19 @@ The blue gain component of the white balance value.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WhiteBalanceGains-blueGain: double--><!--Device-WhiteBalanceGains-blueGain: double-End-->
+<!--Device-RGBBias-blueBias: double--><!--Device-RGBBias-blueBias: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
 
-## greenGain
+## greenBias
 
 ```TypeScript
-greenGain: number
+greenBias: number
 ```
 
-The green gain component of the white balance value.
+绿色偏置值。
 
 **类型：** number
 
@@ -54,19 +54,19 @@ The green gain component of the white balance value.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WhiteBalanceGains-greenGain: double--><!--Device-WhiteBalanceGains-greenGain: double-End-->
+<!--Device-RGBBias-greenBias: double--><!--Device-RGBBias-greenBias: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **系统接口：** 此接口为系统接口。
 
-## redGain
+## redBias
 
 ```TypeScript
-redGain: number
+redBias: number
 ```
 
-The red gain component of the white balance value.
+红色偏置值。
 
 **类型：** number
 
@@ -74,7 +74,7 @@ The red gain component of the white balance value.
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-WhiteBalanceGains-redGain: double--><!--Device-WhiteBalanceGains-redGain: double-End-->
+<!--Device-RGBBias-redBias: double--><!--Device-RGBBias-redBias: double-End-->
 
 **系统能力：** SystemCapability.Multimedia.Camera.Core
 

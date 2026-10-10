@@ -230,6 +230,8 @@
   - [disconnectAllowedProfiles(system api)](arkts-connectivity-connection-disconnectallowedprofiles-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [generateLocalOobData(system api)](arkts-connectivity-connection-generatelocaloobdata-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getBleMacByBrMac(system api)](arkts-connectivity-connection-getblemacbybrmac-f-sys.md)<!--DelEnd-->
   - [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md)
   <!--Del-->
   - [getCarKeyDfxData(system api)](arkts-connectivity-connection-getcarkeydfxdata-f-sys.md)<!--DelEnd-->

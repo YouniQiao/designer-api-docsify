@@ -595,6 +595,22 @@ Samba server capability, currently supported only on PC/2-in-1 devices.
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
 
+## SATA_ODD_BURN
+
+```TypeScript
+SATA_ODD_BURN = 52
+```
+
+Built-in optical drive burning capability.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-FeatureForDevice-SATA_ODD_BURN = 52--><!--Device-FeatureForDevice-SATA_ODD_BURN = 52-End-->
+
+**System capability:** SystemCapability.Customization.EnterpriseDeviceManager
+
 ## SCREEN_RECORD
 
 ```TypeScript

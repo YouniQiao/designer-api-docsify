@@ -26,6 +26,7 @@ Defines the visual effect types for the native module.
 | [ArkUI_Matrix4ScaleOptions](capi-arkui-nativemodule-arkui-matrix4scaleoptions.md) | ArkUI_Matrix4ScaleOptions | Defines a matrix scaling object. |
 | [ArkUI_Matrix4RotationOptions](capi-arkui-nativemodule-arkui-matrix4rotationoptions.md) | ArkUI_Matrix4RotationOptions | Defines a matrix rotation object. |
 | [ArkUI_Matrix4TranslationOptions](capi-arkui-nativemodule-arkui-matrix4translationoptions.md) | ArkUI_Matrix4TranslationOptions | Defines a matrix translation object. |
+| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) | OH_ArkUI_LinearGradientBlurOptions | Defines the options for the linear gradient blur effect.<br> The options include the blur radius, fraction stops, and direction. When created by [OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_create), the default values are: blurRadius = 0 (no blur), fractionStops = {0.0, 0.0, 0.0, 1.0} (two stops: blur value 0 at position 0 and blur value 0 at position 1, meaning no blur across the entire gradient), direction = [OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_BOTTOM](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection). |
 
 ### Enum
 
@@ -52,6 +53,7 @@ Defines the visual effect types for the native module.
 | [OH_ArkUI_AnimationPropertyType](#oh_arkui_animationpropertytype) | OH_ArkUI_AnimationPropertyType | Enumerates the animatable property types for property animations, keyframe animations, and path animations. |
 | [OH_ArkUI_AnimationGroupState](#oh_arkui_animationgroupstate) | OH_ArkUI_AnimationGroupState | Enumerates the playback states of an animation group. |
 | [OH_ArkUI_AnimationFinishMode](#oh_arkui_animationfinishmode) | OH_ArkUI_AnimationFinishMode | Enumerates the finish modes of an animation group. |
+| [OH_ArkUI_LinearGradientBlurDirection](#oh_arkui_lineargradientblurdirection) | OH_ArkUI_LinearGradientBlurDirection | Enumerates the gradient directions for linear gradient blur. |
 
 ### Function
 
@@ -128,6 +130,14 @@ Defines the visual effect types for the native module.
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_TransformPoint(const ArkUI_Matrix4* matrix, const ArkUI_PointF* oriPoint, ArkUI_PointF* result)](#oh_arkui_matrix4_transformpoint) | Calculates the new coordinate position of a point after it is transformed by a matrix. |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_SetPolyToPoly(ArkUI_Matrix4* matrix, const ArkUI_PointF* src, const ArkUI_PointF* dst, const uint32_t pointCount)](#oh_arkui_matrix4_setpolytopoly) | Maps the vertex coordinates of one polygon to the vertex coordinates of another polygon and calculates the required matrix. |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_GetElements(const ArkUI_Matrix4* matrix, float* result)](#oh_arkui_matrix4_getelements) | Obtains the 16 elements of the fourth-order matrix. |
+| [OH_ArkUI_LinearGradientBlurOptions* OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create(void)](#oh_arkui_nativemodule_lineargradientbluroptions_create) | Creates a linear gradient blur options object. |
+| [void OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy(OH_ArkUI_LinearGradientBlurOptions *options)](#oh_arkui_nativemodule_lineargradientbluroptions_destroy) | Destroys a linear gradient blur options object. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius(OH_ArkUI_LinearGradientBlurOptions *options, float blurRadius)](#oh_arkui_nativemodule_lineargradientbluroptions_setblurradius) | Sets the blur radius for the linear gradient blur options. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius(const OH_ArkUI_LinearGradientBlurOptions *options, float *blurRadius)](#oh_arkui_nativemodule_lineargradientbluroptions_getblurradius) | Obtains the blur radius of linear gradient blur options. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops(OH_ArkUI_LinearGradientBlurOptions *options, const float *fractionStops, int32_t stopsLength)](#oh_arkui_nativemodule_lineargradientbluroptions_setfractionstops) | Sets the fraction stops for the linear gradient blur options. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops(const OH_ArkUI_LinearGradientBlurOptions *options, float *fractionStops, int32_t stopsSize, int32_t *writeLength)](#oh_arkui_nativemodule_lineargradientbluroptions_getfractionstops) | Obtains the fraction stops of linear gradient blur options. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection(OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection direction)](#oh_arkui_nativemodule_lineargradientbluroptions_setdirection) | Sets the gradient blur direction for the linear gradient blur options. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection(const OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection *direction)](#oh_arkui_nativemodule_lineargradientbluroptions_getdirection) | Obtains the gradient blur direction of linear gradient blur options. |
 
 ## Enum type description
 
@@ -598,6 +608,29 @@ Enumerates the finish modes of an animation group.
 | OH_ARKUI_ANIMATION_FINISH_TO_START = 0 | Finishes the animation group and jumps to the start state.<br>**Since**: 26.0.1 |
 | OH_ARKUI_ANIMATION_FINISH_TO_CURRENT = 1 | Finishes the animation group and stays at the current value.<br>**Since**: 26.0.1 |
 | OH_ARKUI_ANIMATION_FINISH_TO_END = 2 | Finishes the animation group and jumps to the end state.<br>**Since**: 26.0.1 |
+
+### OH_ArkUI_LinearGradientBlurDirection
+
+```c
+enum OH_ArkUI_LinearGradientBlurDirection
+```
+
+**Description**
+
+Enumerates the gradient directions for linear gradient blur.
+
+**Since**: 26.2.0
+
+| Enum item | Description |
+| -- | -- |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT = 0 | Linear gradient blur from right to left.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_TOP = 1 | Linear gradient blur from bottom to top.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT = 2 | Linear gradient blur from left to right.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_BOTTOM = 3 | Linear gradient blur from top to bottom.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT_TOP = 4 | Linear gradient blur from lower right to upper left.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT_BOTTOM = 5 | Linear gradient blur from upper right to lower left.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT_TOP = 6 | Linear gradient blur from lower left to upper right.<br>**Since**: 26.2.0 |
+| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT_BOTTOM = 7 | Linear gradient blur from upper left to lower right.<br>**Since**: 26.2.0 |
 
 
 ## Function description
@@ -2295,5 +2328,196 @@ Obtains the 16 elements of the fourth-order matrix.
 | Type | Description |
 | -- | -- |
 | [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create()
+
+```c
+OH_ArkUI_LinearGradientBlurOptions* OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create(void)
+```
+
+**Description**
+
+Creates a linear gradient blur options object.
+
+**Since**: 26.2.0
+
+**Resource release**: OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy {return}
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_ArkUI_LinearGradientBlurOptions*](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) | Returns the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. The caller owns the returned object and must release it with [OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_destroy). |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy()
+
+```c
+void OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy(OH_ArkUI_LinearGradientBlurOptions *options)
+```
+
+**Description**
+
+Destroys a linear gradient blur options object.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object returned by [OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_create). Passing <b>NULL</b> has no effect. After this function returns for a non-NULL handle, the handle is invalid, is not reference-counted, and must not be used or destroyed again. |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius(OH_ArkUI_LinearGradientBlurOptions *options, float blurRadius)
+```
+
+**Description**
+
+Sets the blur radius for the linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| float blurRadius | [in] Indicates the blur radius, in px. A larger value indicates a higher blur degree. If the value is <b>0</b>, the content is not blurred. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if options is null, blurRadius is negative, or blurRadius is NaN.</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius(const OH_ArkUI_LinearGradientBlurOptions *options, float *blurRadius)
+```
+
+**Description**
+
+Obtains the blur radius of linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| float *blurRadius | [out] Indicates the pointer to the blur radius, in px. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if options or blurRadius is null.</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops(OH_ArkUI_LinearGradientBlurOptions *options, const float *fractionStops, int32_t stopsLength)
+```
+
+**Description**
+
+Sets the fraction stops for the linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| const float *fractionStops | [in] Indicates the flat float array of (blur value, position) pairs. Each pair (fractionStops[i], fractionStops[i+1]) represents one fraction stop. The blur value (fractionStops[i]) indicates the fraction of the blur radius applied at this position, where 0.0 means no blur and 1.0 means full blur as defined by blurRadius. The position (fractionStops[i+1]) indicates the relative position along the gradient direction, where 0.0 is the start and 1.0 is the end. Position values must be strictly monotonically increasing. Each element must not be NaN and must be in the range [0.0, 1.0]. |
+| int32_t stopsLength | [in] Indicates the number of float elements in the fractionStops array. Must be even and >= 4. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if options or fractionStops is null, stopsLength is odd, stopsLength is less than 4, positions are not strictly monotonically increasing, or any element in fractionStops is NaN or is outside the range [0.0, 1.0].</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops(const OH_ArkUI_LinearGradientBlurOptions *options, float *fractionStops, int32_t stopsSize, int32_t *writeLength)
+```
+
+**Description**
+
+Obtains the fraction stops of linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| float *fractionStops | [out] Indicates the buffer pointer to the flat float array of (blur value, position) pairs. |
+| int32_t stopsSize | [in] Indicates the buffer size (number of float elements) allocated by the caller for the fractionStops array. If the buffer is not large enough to hold all fraction stops data, the operation returns ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR and sets writeLength to the required size. |
+| int32_t *writeLength | [out] Indicates the number of float elements actually written to the fractionStops buffer when returning ARKUI_ERROR_CODE_NO_ERROR. Indicates the minimum buffer size required to accommodate the fractionStops when returning ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter exception occurs.</li> <li>ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR if stopsSize is less than the actual fractionStops count.</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection(OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection direction)
+```
+
+**Description**
+
+Sets the gradient blur direction for the linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| [OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection) direction | [in] Indicates the direction of the linear gradient blur. The parameter type is [OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection). |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if options is null or direction is not a valid enum value.</li> </ul> |
+
+### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection(const OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection *direction)
+```
+
+**Description**
+
+Obtains the gradient blur direction of linear gradient blur options.
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] Indicates the pointer to the [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) object. |
+| [OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection) *direction | [out] Indicates the pointer to the direction of the linear gradient blur. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | <ul> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if options or direction is null.</li> </ul> |
 
 

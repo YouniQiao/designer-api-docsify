@@ -130,7 +130,7 @@ Default
 DEVELOPER_DEFINED_ICON = -100
 ```
 
-Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md).
+Custom pointer. You can use [setCustomCursor](arkts-input-pointer-setcustomcursor-f.md) to set a custom pointer. The custom pointer cannot be directly set using [setPointerStyle](arkts-input-pointer-setpointerstyle-f.md). Custom pointer style, set via the API. This value is used by **getPointerStyle** to return data in specific scenarios (obtaining the style on a window where a custom pointer style has been set). It cannot be used as an input parameter of the **setCustomCursor** or **setPointerStyle** API.
 
 **Since:** 22
 

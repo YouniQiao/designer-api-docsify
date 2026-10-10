@@ -444,6 +444,24 @@ const incrementalVersion: string
 
 **系统能力：** SystemCapability.Startup.SystemInfo
 
+## kernelVersion
+
+```TypeScript
+const kernelVersion: string
+```
+
+获取内核版本。示例: '产品内核1.0.0'。
+
+**类型：** string
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-deviceInfo-const kernelVersion: string--><!--Device-deviceInfo-const kernelVersion: string-End-->
+
+**系统能力：** SystemCapability.Startup.SystemInfo
+
 ## majorVersion
 
 ```TypeScript

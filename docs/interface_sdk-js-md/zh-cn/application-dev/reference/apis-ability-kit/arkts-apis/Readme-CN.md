@@ -1114,8 +1114,7 @@
   - [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md)
   - [getBundleInfoForSelfSync](arkts-ability-bundlemanager-getbundleinfoforselfsync-f.md)
   - [getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md)
-  <!--Del-->
-  - [getBundleInstallStatus（系统接口）](arkts-ability-bundlemanager-getbundleinstallstatus-f-sys.md)<!--DelEnd-->
+  - [getBundleInstallStatus](arkts-ability-bundlemanager-getbundleinstallstatus-f.md)
   - [getBundleNameByUid](arkts-ability-bundlemanager-getbundlenamebyuid-f.md)
   - [getBundleNameByUidSync](arkts-ability-bundlemanager-getbundlenamebyuidsync-f.md)
   <!--Del-->
@@ -1261,8 +1260,7 @@
   - [BundleFlag](arkts-ability-bundlemanager-bundleflag-e.md)
   <!--Del-->
   - [BundleFlag（系统接口）](arkts-ability-bundlemanager-bundleflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BundleInstallStatus（系统接口）](arkts-ability-bundlemanager-bundleinstallstatus-e-sys.md)<!--DelEnd-->
+  - [BundleInstallStatus](arkts-ability-bundlemanager-bundleinstallstatus-e.md)
   - [BundleType](arkts-ability-bundlemanager-bundletype-e.md)
   - [CompatiblePolicy](arkts-ability-bundlemanager-compatiblepolicy-e.md)
   <!--Del-->

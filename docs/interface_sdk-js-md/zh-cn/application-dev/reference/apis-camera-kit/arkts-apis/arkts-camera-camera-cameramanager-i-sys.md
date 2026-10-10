@@ -379,6 +379,36 @@ Unsubscribes control center status change event callback.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+## offCameraSharedStatus
+
+```TypeScript
+offCameraSharedStatus(callback?: Callback<CameraSharedStatusInfo>): void
+```
+
+取消订阅相机共享状态变更事件回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CameraManager-offCameraSharedStatus(callback?: Callback<CameraSharedStatusInfo>): void--><!--Device-CameraManager-offCameraSharedStatus(callback?: Callback<CameraSharedStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)&gt; | 否 | 用于获取相机共享状态变更的回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application. |
+
 ## on('cameraMute')
 
 ```TypeScript
@@ -455,6 +485,36 @@ Subscribes control center status change event callback.
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
+
+## onCameraSharedStatus
+
+```TypeScript
+onCameraSharedStatus(callback: Callback<CameraSharedStatusInfo>): void
+```
+
+订阅相机共享状态变更事件回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-CameraManager-onCameraSharedStatus(callback: Callback<CameraSharedStatusInfo>): void--><!--Device-CameraManager-onCameraSharedStatus(callback: Callback<CameraSharedStatusInfo>): void-End-->
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CameraSharedStatusInfo](arkts-camera-camera-camerasharedstatusinfo-i-sys.md)&gt; | 是 | 用于获取相机共享状态变更的回调函数。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application. |
 
 ## prelaunch
 
