@@ -48,11 +48,14 @@ getFileName(): string
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getFileName();
 ```
+
+<!--DelEnd-->
 
 ## getGentleFileName
 
@@ -82,11 +85,14 @@ getGentleFileName(): string | null
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getGentleFileName();
 ```
+
+<!--DelEnd-->
 
 ## getGentleTitle
 
@@ -116,11 +122,14 @@ getGentleTitle(): string | null
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getGentleTitle();
 ```
+
+<!--DelEnd-->
 
 ## getGentleUri
 
@@ -152,11 +161,14 @@ getGentleUri(): string | null
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getGentleUri();
 ```
+
+<!--DelEnd-->
 
 ## getTitle
 
@@ -186,11 +198,14 @@ getTitle(): string
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getTitle();
 ```
+
+<!--DelEnd-->
 
 ## getUri
 
@@ -222,8 +237,11 @@ getUri(): string
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 toneHapticsAttrs.getUri();
 ```
+
+<!--DelEnd-->

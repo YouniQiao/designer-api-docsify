@@ -42,6 +42,7 @@ Unsubscribes from **policy** changes. This API uses an asynchronous callback to 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
   console.error('off netUidPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## off('netUidRuleChange')
@@ -106,6 +109,7 @@ Unsubscribes from **rule** changes. This API uses an asynchronous callback to re
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -132,6 +136,8 @@ try {
   console.error('off netUidRuleChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## off('netMeteredIfacesChange')
@@ -170,6 +176,7 @@ Unsubscribes from the changes of the metering interface. This API uses an asynch
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -191,6 +198,8 @@ try {
   console.error('off netMeteredIfacesChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## off('netQuotaPolicyChange')
@@ -229,6 +238,7 @@ Unsubscribes from the changes of the metering network policy. This API uses an a
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -250,6 +260,8 @@ try {
   console.error('off netQuotaPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## off('netBackgroundPolicyChange')
@@ -288,6 +300,7 @@ Unsubscribes from background network policy changes. This API uses an asynchrono
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -309,3 +322,5 @@ try {
   console.error('off netBackgroundPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->

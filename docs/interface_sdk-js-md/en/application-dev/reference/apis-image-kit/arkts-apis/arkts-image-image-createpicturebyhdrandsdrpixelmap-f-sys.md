@@ -43,6 +43,7 @@ Creates a Picture object based on an HDR PixelMap and an SDR PixelMap. The syste
 | --- | --- |
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -80,6 +81,8 @@ async function CreatePictureTest(context: Context) {
   })
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="createpicturebyhdrandsdrpixelmap2"></a>
@@ -124,6 +127,7 @@ Creates a Picture object by a HDR PixelMap and a SDR PixelMap with specified opt
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications are not allowed to use system APIs. |
 | [7600201](../errorcode-image.md#7600201-unsupported-operation) | Unsupported operation. HdrPixelMap's PixelMapFormat is not RGBA_F16\RGBA_1010102\YCBCR_P010, or its color space is not BT2020_HLG. Or sdrPixelMap's PixelMapFormat is not RGBA_8888\NV21\NV12, or its color space is not P3. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -165,3 +169,5 @@ async function CreatePictureTest(context: Context) {
   })
 }
 ```
+
+<!--DelEnd-->

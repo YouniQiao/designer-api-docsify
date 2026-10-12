@@ -39,9 +39,10 @@ Creates a **DataShareHelper** instance. This API uses an asynchronous callback t
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameters types. |
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,6 +71,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="createdatasharehelper2"></a>
@@ -111,9 +114,10 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameters types. |
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -142,6 +146,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="createdatasharehelper3"></a>
@@ -187,9 +193,10 @@ Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whe
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 19 and later |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameters types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameters types. |
 | [15700010](../errorcode-datashare.md#15700010-failed-to-create-a-datasharehelper) | The DataShareHelper fails to be initialized. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -216,3 +223,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

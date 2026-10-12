@@ -37,6 +37,7 @@ Obtains the power consumption information list. This API uses a promise to retur
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -48,6 +49,8 @@ batteryStats.getBatteryStats()
     console.error('get battery statistics failed, err: ' + err);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbatterystats2"></a>
@@ -82,6 +85,7 @@ Obtains the power consumption information list. This API uses an asynchronous ca
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,3 +97,5 @@ batteryStats.getBatteryStats((err: Error, data : batteryStats.BatteryStatsInfo[]
     }
 });
 ```
+
+<!--DelEnd-->

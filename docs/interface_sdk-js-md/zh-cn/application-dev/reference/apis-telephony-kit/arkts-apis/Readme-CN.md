@@ -16,7 +16,6 @@
   - [combineConference（系统接口）](arkts-telephony-call-combineconference-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [controlCamera（系统接口）](arkts-telephony-call-controlcamera-f-sys.md)<!--DelEnd-->
-  - [dial](arkts-telephony-call-dial-f.md)
   <!--Del-->
   - [dialCall（系统接口）](arkts-telephony-call-dialcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -142,6 +141,7 @@
   - [unloadCallUI（系统接口）](arkts-telephony-call-unloadcallui-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateImsCallMode（系统接口）](arkts-telephony-call-updateimscallmode-f-sys.md)<!--DelEnd-->
+  - [dial](arkts-telephony-call-dial-f.md)
   <!--Del-->
   - [AudioDevice（系统接口）](arkts-telephony-call-audiodevice-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -405,7 +405,7 @@
   - [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md)
   - [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md)
   <!--Del-->
-  - [getNrOptionMode（系统接口）](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
+  - [getNROptionMode（系统接口）](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
   - [getOperatorName](arkts-telephony-radio-getoperatorname-f.md)
   - [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md)
   <!--Del-->
@@ -419,7 +419,7 @@
   - [getUniqueDeviceId（系统接口）](arkts-telephony-radio-getuniquedeviceid-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isManualNetworkScanning（系统接口）](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md)<!--DelEnd-->
-  - [isNrSupported](arkts-telephony-radio-isnrsupported-f.md)
+  - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
   - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
   <!--Del-->
   - [off（系统接口）](arkts-telephony-radio-off-f-sys.md)<!--DelEnd-->
@@ -488,7 +488,7 @@
   - [NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)
   - [NetworkType](arkts-telephony-radio-networktype-e.md)
   <!--Del-->
-  - [NrOptionMode（系统接口）](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
+  - [NROptionMode（系统接口）](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
   - [NsaState](arkts-telephony-radio-nsastate-e.md)
   <!--Del-->
   - [PreferredNetworkMode（系统接口）](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->
@@ -653,7 +653,6 @@
   - [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md)
   <!--Del-->
   - [isImsSmsSupported（系统接口）](arkts-telephony-sms-isimssmssupported-f-sys.md)<!--DelEnd-->
-  - [sendMessage](arkts-telephony-sms-sendmessage-f.md)
   <!--Del-->
   - [sendMms（系统接口）](arkts-telephony-sms-sendmms-f-sys.md)<!--DelEnd-->
   - [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md)
@@ -669,6 +668,7 @@
   - [splitMessage（系统接口）](arkts-telephony-sms-splitmessage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateSimMessage（系统接口）](arkts-telephony-sms-updatesimmessage-f-sys.md)<!--DelEnd-->
+  - [sendMessage](arkts-telephony-sms-sendmessage-f.md)
   <!--Del-->
   - [CBConfigListConfigs（系统接口）](arkts-telephony-sms-cbconfiglistconfigs-i-sys.md)<!--DelEnd-->
   <!--Del-->

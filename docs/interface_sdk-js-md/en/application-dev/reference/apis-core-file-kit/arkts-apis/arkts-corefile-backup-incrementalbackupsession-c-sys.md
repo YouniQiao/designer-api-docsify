@@ -66,6 +66,7 @@ Append new bundles to incremental backup.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -126,6 +127,8 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray).then(() => {
 }); // Appends the applications that require incremental backup.
 ```
 
+<!--DelEnd-->
+
 <a id="appendbundles2"></a>
 
 ## appendBundles
@@ -173,6 +176,7 @@ Append new bundles to incremental backup.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -274,6 +278,8 @@ incrementalBackupSession.appendBundles(incrementalBackupDataArray, infos).then((
 });
 ```
 
+<!--DelEnd-->
+
 ## cancel
 
 ```TypeScript
@@ -312,6 +318,7 @@ cancel the application being incrementalBackup.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -372,6 +379,8 @@ backupBundles.push(bundleData);
 incrementalBackupSession.appendBundles(backupBundles);
 ```
 
+<!--DelEnd-->
+
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -409,6 +418,7 @@ Provides an interface for the tool to clear temporary directories
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -475,6 +485,8 @@ let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to
 let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallbacks); // Create a session for an incremental backup.
 ```
 
+<!--DelEnd-->
+
 ## constructor
 
 ```TypeScript
@@ -507,6 +519,7 @@ Constructor for obtaining the instance of the IncrementalBackupSession class.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -556,6 +569,8 @@ let generalCallbacks: backup.GeneralCallbacks = {
 let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallbacks); // Create a session for an incremental backup.
 ```
 
+<!--DelEnd-->
+
 ## getBackupDataSize
 
 ```TypeScript
@@ -599,6 +614,7 @@ Obtain application data size to be backed up.
 | 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -705,6 +721,8 @@ Example of a JSON string returned asynchronously:
 }
 ```
 
+<!--DelEnd-->
+
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -743,6 +761,7 @@ Provides an interface for the tool to get compatibility info.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -808,6 +827,8 @@ async function getIncBackupCompatibilityInfo() {
 }
 ```
 
+<!--DelEnd-->
+
 ## getLocalCapabilities
 
 ```TypeScript
@@ -843,6 +864,7 @@ Obtain a Json file that describes local capabilities.
 | 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -970,6 +992,8 @@ The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](
 }
 ```
 
+<!--DelEnd-->
+
 ## release
 
 ```TypeScript
@@ -1006,6 +1030,7 @@ End backup process
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1056,3 +1081,5 @@ let incrementalBackupSession = new backup.IncrementalBackupSession(generalCallba
 incrementalBackupSession.release(); // End the incremental backup process.
 console.info('release success');
 ```
+
+<!--DelEnd-->

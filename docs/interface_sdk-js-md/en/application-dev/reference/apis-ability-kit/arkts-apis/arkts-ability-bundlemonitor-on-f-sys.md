@@ -39,6 +39,7 @@ Subscribes to bundle installation, uninstall, and update events. This API uses a
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,3 +57,5 @@ try {
   console.error(`errData is errCode:${errCode}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

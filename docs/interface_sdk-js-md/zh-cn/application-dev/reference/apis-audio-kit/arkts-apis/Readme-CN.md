@@ -51,14 +51,12 @@
   - [AudioEffectProperty（系统接口）](arkts-audio-audio-audioeffectproperty-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AudioHRTFAnonymousDescriptor（系统接口）](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md)<!--DelEnd-->
-  - [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md)
   - [AudioLoopback](arkts-audio-audio-audioloopback-i.md)
   - [AudioManager](arkts-audio-audio-audiomanager-i.md)
   <!--Del-->
   - [AudioManager（系统接口）](arkts-audio-audio-audiomanager-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AudioPersonalizedSpatialEnabledChangeForAnyDevice（系统接口）](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)<!--DelEnd-->
-  - [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
   - [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md)
   <!--Del-->
   - [AudioRecordingManager（系统接口）](arkts-audio-audio-audiorecordingmanager-i-sys.md)<!--DelEnd-->
@@ -106,12 +104,10 @@
   - [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md)
   <!--Del-->
   - [AudioVolumeManager（系统接口）](arkts-audio-audio-audiovolumemanager-i-sys.md)<!--DelEnd-->
-  - [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
   - [CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)
   - [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)
   - [DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)
   - [DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)
-  - [InterruptAction](arkts-audio-audio-interruptaction-i.md)
   - [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
   <!--Del-->
   - [InterruptResult（系统接口）](arkts-audio-audio-interruptresult-i-sys.md)<!--DelEnd-->
@@ -131,6 +127,10 @@
   - [VolumeEvent（系统接口）](arkts-audio-audio-volumeevent-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeGroupInfo（系统接口）](arkts-audio-audio-volumegroupinfo-i-sys.md)<!--DelEnd-->
+  - [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md)
+  - [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
+  - [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
+  - [InterruptAction](arkts-audio-audio-interruptaction-i.md)
   <!--Del-->
   - [ActiveStreamsVolumeInfoArray（系统接口）](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md)<!--DelEnd-->
   - [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)
@@ -145,7 +145,6 @@
   - [StreamUsageArray（系统接口）](arkts-audio-audio-streamusagearray-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeGroupInfos（系统接口）](arkts-audio-audio-volumegroupinfos-t-sys.md)<!--DelEnd-->
-  - [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md)
   <!--Del-->
   - [AsrAecMode（系统接口）](arkts-audio-audio-asraecmode-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -206,7 +205,6 @@
   - [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)
   <!--Del-->
   - [ConnectType（系统接口）](arkts-audio-audio-connecttype-e-sys.md)<!--DelEnd-->
-  - [ContentType](arkts-audio-audio-contenttype-e.md)
   - [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md)
   - [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
   - [DeviceFlag](arkts-audio-audio-deviceflag-e.md)
@@ -219,7 +217,6 @@
   - [DeviceUsage](arkts-audio-audio-deviceusage-e.md)
   <!--Del-->
   - [EffectFlag（系统接口）](arkts-audio-audio-effectflag-e-sys.md)<!--DelEnd-->
-  - [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
   - [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
   - [InterruptHint](arkts-audio-audio-interrupthint-e.md)
   - [InterruptMode](arkts-audio-audio-interruptmode-e.md)
@@ -251,6 +248,9 @@
   - [VolumeAdjustType（系统接口）](arkts-audio-audio-volumeadjusttype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeFlag（系统接口）](arkts-audio-audio-volumeflag-e-sys.md)<!--DelEnd-->
+  - [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md)
+  - [ContentType](arkts-audio-audio-contenttype-e.md)
+  - [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
   - [常量](arkts-audio-audio-con.md)
   <!--Del-->
   - [常量(系统接口)](arkts-audio-audio-con-sys.md)<!--DelEnd-->

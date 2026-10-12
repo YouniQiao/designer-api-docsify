@@ -56,6 +56,7 @@ function requestPublishFormCrossDevice(peerServiceInfo: formInfo.PeerFormHostSer
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501008](../errorcode-form.md#16501008-等待卡片加桌超时) | Waiting for the form addition to the desktop timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -95,3 +96,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

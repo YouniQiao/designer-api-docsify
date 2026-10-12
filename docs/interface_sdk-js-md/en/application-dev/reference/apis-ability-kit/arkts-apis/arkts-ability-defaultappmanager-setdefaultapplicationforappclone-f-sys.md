@@ -46,6 +46,7 @@ Sets an application clone as the default application of the specified type. This
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.0.1 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -102,3 +103,5 @@ try {
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 };
 ```
+
+<!--DelEnd-->

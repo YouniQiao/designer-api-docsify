@@ -35,6 +35,7 @@ function get(key: string, callback: AsyncCallback<string>): void
 | key | string | 是 | 待查询的系统参数key。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -52,6 +53,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get2"></a>
@@ -84,6 +87,7 @@ function get(key: string, def: string, callback: AsyncCallback<string>): void
 | def | string | 是 | def为所要获取的系统参数的默认值。调用时必须传入此参数，但参数值可以传任意字符串类型的值。仅当系统参数不存在时，def参数值生效。 |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数，用于异步返回系统参数值。当获取成功时，err为undefined，data为系统参数值；当获取失败时，err为错误对象，data为undefined。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -101,6 +105,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get3"></a>
@@ -138,6 +144,7 @@ function get(key: string, def?: string): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise实例，用于异步获取结果。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -154,3 +161,5 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->

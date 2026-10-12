@@ -50,6 +50,7 @@ function setAppClonePreference(bundleName: string, appClonePreference: AppCloneP
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 | [17700094](../errorcode-bundle.md#17700094-指定的应用未创建分身) | The specified bundle did not create a clone. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -74,3 +75,5 @@ try {
   hilog.error(0x0000, 'testTag', 'setAppClonePreference failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -36,6 +36,7 @@ function getBundleInfos(bundleFlag: BundleFlag, userId: number, callback: AsyncC
 | userId | number | 是 | User ID. Value range: greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If ${具体的操作} is successful, **err** is **undefined**, and ${XX} is ${XX} obtained. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -52,6 +53,8 @@ bundle.getBundleInfos(bundleFlag, userId, (err, data) => {
   console.info('Operation successful. Data:' + JSON.stringify(data));
 })
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundleinfos2"></a>
@@ -83,6 +86,7 @@ function getBundleInfos(bundleFlag: BundleFlag, callback: AsyncCallback<Array<Bu
 | bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | 是 | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | 是 | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -98,6 +102,8 @@ bundle.getBundleInfos(bundleFlag, (err, data) => {
   console.info('Operation successful. Data:' + JSON.stringify(data));
 })
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundleinfos3"></a>
@@ -135,6 +141,7 @@ function getBundleInfos(bundleFlag: BundleFlag, userId?: number): Promise<Array<
 | --- | --- |
 | Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | Promise used to return all available BundleInfo. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -151,3 +158,5 @@ bundle.getBundleInfos(bundleFlag, userId)
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   })
 ```
+
+<!--DelEnd-->

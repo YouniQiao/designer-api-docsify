@@ -29,7 +29,7 @@ Defines the event callback type.
 
 | Name | Description |
 | -- | -- |
-| [void (\*callback)(void* userData)](#callback) |  |
+| [void (\*callback)(void* userData)](#callback) | - |  |
 
 ## Member function description
 

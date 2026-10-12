@@ -49,6 +49,7 @@ function startShortcutWithReason(shortcutInfo: ShortcutInfo, startReason: string
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not support. |
 | [17700065](../errorcode-bundle.md#17700065-shortcutinfo结构体中指定的want不支持被拉起) | The specified shortcut want in shortcut info is not supported to be started. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -81,3 +82,5 @@ try {
   console.error(`startShortcutWithReason errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

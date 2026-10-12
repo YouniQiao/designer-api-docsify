@@ -51,6 +51,7 @@ Called to notify the caller the data is set.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid pinSubType. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,3 +67,5 @@ let inputer: osAccount.IInputer = {
   }
 };
 ```
+
+<!--DelEnd-->

@@ -46,6 +46,7 @@ Get the IMS registration state info of specified IMS service type.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -61,6 +62,8 @@ radio.getImsRegInfo(slotId, mode, (err: BusinessError, data: radio.ImsRegInfo) =
     console.info(`getImsRegInfo success, callback: data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getimsreginfo2"></a>
@@ -108,6 +111,7 @@ Get the IMS registration state info of specified IMS service type.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -121,3 +125,5 @@ radio.getImsRegInfo(slotId, mode).then((data: radio.ImsRegInfo) => {
     console.error(`getImsRegInfo failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

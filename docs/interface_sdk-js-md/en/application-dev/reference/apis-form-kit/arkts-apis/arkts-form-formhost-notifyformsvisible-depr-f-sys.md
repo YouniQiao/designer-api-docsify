@@ -37,6 +37,7 @@ Instructs the widgets to make themselves visible. This API uses an asynchronous 
 | isVisible | boolean | Yes | Whether to make the widgets visible. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,6 +50,8 @@ formHost.notifyFormsVisible(formIds, true, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyformsvisible2"></a>
@@ -88,6 +91,7 @@ Instructs the widgets to make themselves visible. This API uses a promise to ret
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -100,3 +104,5 @@ formHost.notifyFormsVisible(formIds, true).then(() => {
   console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

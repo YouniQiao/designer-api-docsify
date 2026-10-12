@@ -53,6 +53,7 @@ function addDynamicShortcutInfos(shortcutInfo: Array<ShortcutInfo>, userId: numb
 | [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is illegal. |
 | [18100001](../errorcode-bundle.md#18100001-shortcutinfo列表中bundlename和appindex不一一对应) | A combination of bundleName and appIndex in the shortcutInfo list is different from the others. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -90,3 +91,5 @@ try {
   console.error(`addDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

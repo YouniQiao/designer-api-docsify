@@ -46,6 +46,7 @@ function setSmscAddr(slotId: number, smscAddr: string, callback: AsyncCallback<v
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ sms.setSmscAddr(slotId, smscAddr, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setsmscaddr2"></a>
@@ -105,6 +108,7 @@ function setSmscAddr(slotId: number, smscAddr: string): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -119,3 +123,5 @@ sms.setSmscAddr(slotId, smscAddr).then(() => {
     console.error(`setSmscAddr failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

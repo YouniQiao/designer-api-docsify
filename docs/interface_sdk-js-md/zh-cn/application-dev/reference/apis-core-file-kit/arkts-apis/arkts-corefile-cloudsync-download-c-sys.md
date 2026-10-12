@@ -36,11 +36,14 @@ constructor()
 
 **系统接口：** 此接口为系统接口。
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 let download = new cloudSync.Download()
 ```
+
+<!--DelEnd-->
 
 <a id="off1"></a>
 
@@ -78,6 +81,7 @@ off(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -91,6 +95,8 @@ download.on('progress', callback);
 
 download.off('progress', callback);
 ```
+
+<!--DelEnd-->
 
 <a id="off2"></a>
 
@@ -127,6 +133,7 @@ off(evt: 'progress'): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -138,6 +145,8 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
 
 download.off('progress');
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -173,6 +182,7 @@ on(evt: 'progress', callback: (pg: DownloadProgress) => void): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -182,6 +192,8 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
   console.info("download state: " + pg.state);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -225,6 +237,7 @@ start(uri: string): Promise<void>
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -243,6 +256,8 @@ download.start(uri).then(() => {
   console.error(`start download failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -281,6 +296,7 @@ start(uri: string, callback: AsyncCallback<void>): void
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -297,6 +313,8 @@ download.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -342,6 +360,7 @@ stop(uri: string): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -356,6 +375,8 @@ download.stop(uri).then(() => {
   console.error(`stop download failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -396,6 +417,7 @@ stop(uri: string, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -412,3 +434,5 @@ download.stop(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

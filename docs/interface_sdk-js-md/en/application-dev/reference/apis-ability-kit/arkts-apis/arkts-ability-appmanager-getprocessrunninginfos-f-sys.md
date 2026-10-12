@@ -44,6 +44,7 @@ Obtains information about the running processes of the current application. This
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ appManager.getProcessRunningInfos().then((data) => {
   console.error(`error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getprocessrunninginfos2"></a>
@@ -94,9 +97,10 @@ Obtains information about the running processes of the current application. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed; |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -110,3 +114,5 @@ appManager.getProcessRunningInfos((error, data) => {
   }
 });
 ```
+
+<!--DelEnd-->

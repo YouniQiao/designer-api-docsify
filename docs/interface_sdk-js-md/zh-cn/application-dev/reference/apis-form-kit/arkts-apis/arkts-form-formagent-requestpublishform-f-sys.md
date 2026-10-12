@@ -47,6 +47,7 @@ function requestPublishForm(want: Want, callback: AsyncCallback<string>): void
 | [16501017](../errorcode-form.md#16501017-无空间发布卡片) | There is no space to publish the form.<br>**适用版本：** 26.0.1+ |
 | [16501018](../errorcode-form.md#16501018-卡片不支持发布) | This form does not support publishing.<br>**适用版本：** 26.0.1+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="requestpublishform2"></a>
@@ -123,6 +126,7 @@ function requestPublishForm(want: Want): Promise<string>
 | [16501017](../errorcode-form.md#16501017-无空间发布卡片) | There is no space to publish the form.<br>**适用版本：** 26.0.1+ |
 | [16501018](../errorcode-form.md#16501018-卡片不支持发布) | This form does not support publishing.<br>**适用版本：** 26.0.1+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -149,3 +153,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

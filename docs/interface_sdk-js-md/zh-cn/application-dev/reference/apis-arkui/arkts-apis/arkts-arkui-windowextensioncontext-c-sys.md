@@ -69,6 +69,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -108,6 +109,8 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startability2"></a>
 
@@ -155,6 +158,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 12+ |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -194,3 +198,5 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->

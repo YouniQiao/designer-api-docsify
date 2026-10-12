@@ -46,6 +46,7 @@ function getSandboxDataDir(bundleName: string, appIndex: number): string
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -64,3 +65,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getSandboxDataDir failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -56,6 +56,7 @@ getOsAccountDistributedInfoByLocalId(localId: number, callback: AsyncCallback<Di
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -77,6 +78,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountdistributedinfobylocalid2"></a>
 
@@ -121,6 +124,7 @@ getOsAccountDistributedInfoByLocalId(localId: number): Promise<DistributedInfo>
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | System service exception. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -140,6 +144,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountdistributedinfobylocalid1"></a>
 
@@ -182,6 +188,7 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 | [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -204,6 +211,8 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountdistributedinfobylocalid2"></a>
 
@@ -251,6 +260,7 @@ setOsAccountDistributedInfoByLocalId(localId: number, distributedInfo: Distribut
 | [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted OS account. |
 | [12300406](../errorcode-account.md#12300406-该分布式账号信息已经与目标系统账号的其他子身份资料绑定) | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**适用版本：** 26.0.0+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -271,3 +281,5 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -35,6 +35,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | wallpaperType | [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md) | Yes | indicates the wallpaper type. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | the callback of getPixelMap. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,6 +50,8 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM, (error: Business
   console.info(`success to getPixelMap : ${JSON.stringify(data.getImageInfoSync())}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpixelmap2"></a>
@@ -85,6 +88,7 @@ Obtains the default pixel map of a wallpaper of the specified type. Returns the 
 | --- | --- |
 | Promise&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | the promise returned by the function. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -97,3 +101,5 @@ wallpaper.getPixelMap(wallpaper.WallpaperType.WALLPAPER_SYSTEM).then((data: imag
   console.error(`failed to getPixelMap. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

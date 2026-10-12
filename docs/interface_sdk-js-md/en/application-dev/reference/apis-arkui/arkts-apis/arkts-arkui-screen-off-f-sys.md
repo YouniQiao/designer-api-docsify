@@ -38,6 +38,7 @@ Unsubscribes from events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,6 +50,8 @@ screen.off('connect', callback);
 // Unregister all the callbacks that have been registered through on().
 screen.off('connect');
 ```
+
+<!--DelEnd-->
 
 
 <a id="off2"></a>
@@ -83,9 +86,12 @@ Unsubscribes from events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 See [off](#off)
+
+<!--DelEnd-->
 
 
 <a id="off3"></a>
@@ -120,6 +126,9 @@ Unsubscribes from events related to the screen state.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 See [off](#off)
+
+<!--DelEnd-->

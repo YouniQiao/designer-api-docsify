@@ -45,6 +45,7 @@ Obtains the historical data traffic of the specified NIC. This API uses an async
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -77,6 +78,8 @@ if (iFaceInfo) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettrafficstatsbyiface2"></a>
@@ -127,6 +130,7 @@ Obtains the historical data traffic of the specified NIC. This API uses a promis
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -154,3 +158,5 @@ if (iFaceInfo) {
   });
 }
 ```
+
+<!--DelEnd-->

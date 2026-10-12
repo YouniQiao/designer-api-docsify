@@ -42,6 +42,7 @@ function killProcessWithAccount(bundleName: string, accountId: number): Promise<
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ appManager.killProcessWithAccount(bundleName, accountId)
     console.error(`KillProcessWithAccount failed, error code: ${err.code}, error msg: ${err.message}.`);
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="killprocesswithaccount2"></a>
@@ -92,6 +95,7 @@ function killProcessWithAccount(bundleName: string, accountId: number, callback:
 | accountId | number | 是 | 系统账号的账号ID，详情参考[getOsAccountCount] [getOsAccountCount](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountcount)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当切断account进程成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -111,3 +115,5 @@ function killProcessWithAccountCallback(err: BusinessError, data: void) {
 
 appManager.killProcessWithAccount(bundleName, accountId, killProcessWithAccountCallback);
 ```
+
+<!--DelEnd-->

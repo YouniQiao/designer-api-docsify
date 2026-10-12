@@ -44,6 +44,7 @@ Restores all the policies (cellular network, background network, firewall, and a
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ policy.resetPolicies('1', (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="resetpolicies2"></a>
@@ -98,6 +101,7 @@ Resets the cellular network, background network policy, firewall policy, and app
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -112,3 +116,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

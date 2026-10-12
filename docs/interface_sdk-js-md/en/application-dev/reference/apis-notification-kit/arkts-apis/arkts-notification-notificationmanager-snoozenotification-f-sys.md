@@ -50,6 +50,7 @@ Snoozes a notification. The notification will be reminded again after the specif
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [1600028](../errorcode-notification.md#1600028-current-notification-does-not-support-this-api) | This notification is not supported. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -64,3 +65,5 @@ notificationManager.snoozeNotification(hashCode, delayTime).then(() => {
   console.error(`snoozeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

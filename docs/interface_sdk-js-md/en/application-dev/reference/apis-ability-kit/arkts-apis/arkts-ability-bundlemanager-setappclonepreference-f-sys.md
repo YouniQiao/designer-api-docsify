@@ -50,6 +50,7 @@ Sets the app clone preference based on the given bundle name. This API uses a pr
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | [17700094](../errorcode-bundle.md#17700094-the-specified-application-has-not-created-a-clone) | The specified bundle did not create a clone. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,3 +75,5 @@ try {
   hilog.error(0x0000, 'testTag', 'setAppClonePreference failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

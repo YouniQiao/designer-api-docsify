@@ -65,6 +65,7 @@ Starts a **ServiceExtensionAbility**. This API uses a promise to return the resu
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,6 +94,8 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## stopServiceExtensionAbility
 
@@ -140,6 +143,7 @@ Stops a **ServiceExtensionAbility**. This API uses a promise to return the resul
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -168,3 +172,5 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   }
 }
 ```
+
+<!--DelEnd-->

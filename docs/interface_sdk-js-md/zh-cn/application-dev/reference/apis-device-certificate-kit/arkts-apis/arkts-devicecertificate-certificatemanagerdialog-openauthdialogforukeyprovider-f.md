@@ -43,7 +43,7 @@ function openAuthDialogForUkeyProvider(dialogInfo: UkeyAuthDialogInfo, ukeyAuthR
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported because the certificate management application hap is not preinstalled in the system. |
-| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | The certificate manager service processing failed. Possible causes: 1. IPC communication failed; 2. Memory operation error; 3. File operation error. Please try again. |
+| [29700001](../errorcode-certManagerDialog.md#29700001-内部错误) | The certificate manager service processing failed. Possible causes:         1. IPC communication failed; 2. Memory operation error; 3. File operation error. Please try again. |
 | [29700002](../errorcode-certManagerDialog.md#29700002-操作取消) | The user cancels the authentication operation. |
 | [29700003](../errorcode-certManagerDialog.md#29700003-证书安装失败错误) | The authentication operation failed, such as: The USB key certificate does not exist. The USB key status is abnormal, Please ask the user to check the status of the Ukey. |
 | [29700005](../errorcode-certManagerDialog.md#29700005-操作不符合设备安全策略) | The operation does not comply with the device security policy. Only the PC/2in1 device can open the dialog box of the UkeyAuthExtensionAbility type. |

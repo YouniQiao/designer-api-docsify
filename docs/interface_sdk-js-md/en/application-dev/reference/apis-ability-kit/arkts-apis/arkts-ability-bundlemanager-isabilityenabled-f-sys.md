@@ -47,6 +47,7 @@ Checks whether an ability of an application or an application clone is enabled. 
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -80,6 +81,8 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isabilityenabled2"></a>
@@ -116,6 +119,7 @@ Checks whether an ability is enabled. This API uses an asynchronous callback to 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -151,6 +155,8 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isabilityenabled3"></a>
@@ -192,6 +198,7 @@ Checks whether an ability is enabled. This API uses a promise to return the resu
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-ability-name-does-not-exist) | The specified abilityName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -225,3 +232,5 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

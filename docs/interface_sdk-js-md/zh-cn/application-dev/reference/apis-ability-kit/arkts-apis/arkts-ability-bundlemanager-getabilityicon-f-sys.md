@@ -54,6 +54,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -77,6 +78,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getabilityicon2"></a>
@@ -132,6 +135,7 @@ function getAbilityIcon(bundleName: string, moduleName: string, abilityName: str
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -155,3 +159,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

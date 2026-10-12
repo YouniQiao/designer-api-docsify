@@ -45,6 +45,7 @@ Checks whether the application specified by a given UID is allowed to access a m
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,6 +56,8 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed2"></a>
@@ -101,6 +104,7 @@ Checks whether the application specified by a given UID is allowed to access a m
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -115,6 +119,8 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed3"></a>
@@ -156,6 +162,7 @@ Obtains whether the network of the specified iface can be accessed by the corres
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -166,6 +173,8 @@ policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => 
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed4"></a>
@@ -212,6 +221,7 @@ Obtains whether the UID can access the network of the specified iface. This API 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -226,3 +236,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

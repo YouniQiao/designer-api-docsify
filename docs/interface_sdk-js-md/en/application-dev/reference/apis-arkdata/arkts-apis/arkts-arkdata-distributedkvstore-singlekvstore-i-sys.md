@@ -55,6 +55,7 @@ Deletes the key-value pairs based on the dataSharePredicates.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -109,6 +110,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="delete4"></a>
 
 ## delete
@@ -151,9 +154,12 @@ Deletes the key-value pairs based on the dataSharePredicates.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 See [delete](#delete)
+
+<!--DelEnd-->
 
 <a id="getresultset5"></a>
 
@@ -192,6 +198,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -358,6 +365,8 @@ try {
   console.error(`An unexpected error occurred. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getresultset6"></a>
 
@@ -401,6 +410,7 @@ Obtains the KVStoreResultSet object matching the specified predicate object.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [15100001](../errorcode-distributedKVStore.md#15100001-subscription-count-or-result-set-count-reaches-the-limit) | Over max limits.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -568,6 +578,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="putbatch3"></a>
 
 ## putBatch
@@ -605,6 +617,7 @@ Writes values of ValuesBucket type into the `SingleKVStore` database.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -684,6 +697,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="putbatch4"></a>
 
 ## putBatch
@@ -726,6 +741,9 @@ Writes values of ValuesBucket type into the `SingleKVStore` database.
 | [15100005](../errorcode-distributedKVStore.md#15100005-kv-store-or-result-set-closed) | Database or result set already closed. |
 | [14800047](../errorcode-data-rdb.md#14800047-wal-file-size-exceeds-the-default-limit) | The WAL file size exceeds the default limit.<br>**Applicable version:** 10 and later |
 
+<!--Del-->
 **Examples**
 
 See [putBatch](#putbatch)
+
+<!--DelEnd-->

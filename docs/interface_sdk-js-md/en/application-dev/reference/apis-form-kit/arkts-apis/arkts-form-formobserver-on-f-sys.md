@@ -38,6 +38,7 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,6 +50,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 
 formObserver.on('formAdd', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('formAdd')
@@ -84,6 +87,7 @@ Listens to the event of add form. <p>You can use this method to listen to the ev
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -97,6 +101,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 
 formObserver.on('formAdd', bundleName, callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('formRemove')
@@ -131,6 +137,7 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -142,6 +149,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 
 formObserver.on('formRemove', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('formRemove')
@@ -177,6 +186,7 @@ Listens to the event of remove form. <p>You can use this method to listen to the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -190,6 +200,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 
 formObserver.on('formRemove', bundleName, callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('notifyVisible')
@@ -224,6 +236,7 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -237,6 +250,8 @@ let callback = (data: formInfo.RunningFormInfo[]) => {
 
 formObserver.on('notifyVisible', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('notifyVisible')
@@ -276,6 +291,7 @@ Listens to the event of notifyVisible type change. <p>You can use this method to
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -291,6 +307,8 @@ let callback = (data: formInfo.RunningFormInfo[]) => {
 
 formObserver.on('notifyVisible', bundleName, callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('notifyInvisible')
@@ -325,6 +343,7 @@ Listens to the event of notifyInvisible type change. <p>You can use this method 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -338,6 +357,8 @@ let callback = (data: formInfo.RunningFormInfo[]) => {
 
 formObserver.on('notifyInvisible', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('notifyInvisible')
@@ -410,6 +431,7 @@ Router event listening in registered form. <p>This interface requires permission
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -420,6 +442,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('router', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('router')
@@ -455,6 +479,7 @@ Router event listening in registered form. <p>This interface requires permission
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -466,6 +491,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('router', hostBundleName, callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('message')
@@ -500,6 +527,7 @@ Message event listening in registered form. <p>This interface requires permissio
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -510,6 +538,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('message', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('message')
@@ -545,6 +575,7 @@ Message event listening in registered form. <p>This interface requires permissio
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -556,6 +587,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('message', hostBundleName, callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('call')
@@ -590,6 +623,7 @@ Call event listening in registered form. <p>This interface requires permission t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -600,6 +634,8 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('call', callback);
 ```
+
+<!--DelEnd-->
 
 
 ## on('call')
@@ -635,6 +671,7 @@ Call event listening in registered form. <p>This interface requires permission t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -646,3 +683,5 @@ let callback = (data: formInfo.RunningFormInfo) => {
 };
 formObserver.on('call', hostBundleName, callback);
 ```
+
+<!--DelEnd-->

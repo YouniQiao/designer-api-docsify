@@ -48,6 +48,7 @@ function getSystemAppCertificate(keyUri: string) : Promise<CMResult>
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-证书不存在) | Indicates that the certificate does not exist. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,3 +72,5 @@ try {
   console.error(`Failed to get system app certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

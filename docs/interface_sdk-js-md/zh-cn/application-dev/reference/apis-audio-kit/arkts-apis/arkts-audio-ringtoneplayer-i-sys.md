@@ -39,6 +39,7 @@ configure(options: RingtoneOptions, callback: AsyncCallback<void>): void
 | options | [RingtoneOptions](arkts-audio-ringtoneplayer-ringtoneoptions-i-sys.md) | 是 | 指定铃声参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当配置铃声播放参数成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ systemRingtonePlayer.configure(ringtoneOptions, (err: BusinessError) => {
   console.info(`Callback invoked to indicate a successful setting of ringtone options.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="configure2"></a>
 
@@ -89,6 +92,7 @@ configure(options: RingtoneOptions): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -106,6 +110,8 @@ systemRingtonePlayer.configure(ringtoneOptions).then(() => {
   console.error(`Failed to configure ringtone options. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getaudiorendererinfo1"></a>
 
@@ -131,6 +137,7 @@ getAudioRendererInfo(callback: AsyncCallback<audio.AudioRendererInfo>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | 是 | 回调函数。当获取音频渲染器信息成功，err为undefined，data为获取到的音频渲染器信息；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -148,6 +155,8 @@ systemRingtonePlayer.getAudioRendererInfo((err: BusinessError, value: audio.Audi
   audioRendererInfo = value;
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getaudiorendererinfo2"></a>
 
@@ -173,6 +182,7 @@ getAudioRendererInfo(): Promise<audio.AudioRendererInfo>
 | --- | --- |
 | Promise&lt;[audio.AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md)&gt; | Promise对象，返回获取的音频渲染器信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -188,6 +198,8 @@ systemRingtonePlayer.getAudioRendererInfo().then((value: audio.AudioRendererInfo
   console.error(`Failed to get the ringtone AudioRendererInfo ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="gettitle1"></a>
 
@@ -213,6 +225,7 @@ getTitle(callback: AsyncCallback<string>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取铃声标题成功，err为undefined，data为获取到的铃声标题；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -226,6 +239,8 @@ systemRingtonePlayer.getTitle((err: BusinessError, value: string) => {
   console.info(`Callback invoked to indicate the value of the system ringtone title is obtained ${value}.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="gettitle2"></a>
 
@@ -251,6 +266,7 @@ getTitle(): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回获取的系统铃声标题。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -262,6 +278,8 @@ systemRingtonePlayer.getTitle().then((value: string) => {
   console.error(`Failed to get the system ringtone title ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## off('audioInterrupt')
 
@@ -292,11 +310,14 @@ off(type: 'audioInterrupt'): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 systemRingtonePlayer.off('audioInterrupt');
 ```
+
+<!--DelEnd-->
 
 ## on('audioInterrupt')
 
@@ -328,6 +349,7 @@ on(type: 'audioInterrupt', callback: Callback<audio.InterruptEvent>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -378,6 +400,8 @@ systemRingtonePlayer.on('audioInterrupt', async(interruptEvent: audio.InterruptE
 });
 ```
 
+<!--DelEnd-->
+
 <a id="release1"></a>
 
 ## release
@@ -402,6 +426,7 @@ release(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放铃声播放器成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -415,6 +440,8 @@ systemRingtonePlayer.release((err: BusinessError) => {
   console.info(`Callback invoked to indicate a successful releasing of ringtone player.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="release2"></a>
 
@@ -440,6 +467,7 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -451,6 +479,8 @@ systemRingtonePlayer.release().then(() => {
   console.error(`Failed to release ringtone player. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -476,6 +506,7 @@ start(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始播放铃声成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -489,6 +520,8 @@ systemRingtonePlayer.start((err: BusinessError) => {
   console.info(`Callback invoked to indicate a successful starting of ringtone.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -514,6 +547,7 @@ start(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -525,6 +559,8 @@ systemRingtonePlayer.start().then(() => {
   console.error(`Failed to start playing ringtone. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -550,6 +586,7 @@ stop(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止播放铃声成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -563,6 +600,8 @@ systemRingtonePlayer.stop((err: BusinessError) => {
   console.info(`Callback invoked to indicate a successful stopping of ringtone.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -588,6 +627,7 @@ stop(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -599,6 +639,8 @@ systemRingtonePlayer.stop().then(() => {
   console.error(`Failed to stop playing ringtone. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## state
 

@@ -37,6 +37,7 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean, callback
 | isVisible | boolean | 是 | 是否可见。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当通知卡片是否可见成功，error为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -49,6 +50,8 @@ formHost.notifyFormsVisible(formIds, true, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyformsvisible2"></a>
@@ -88,6 +91,7 @@ function notifyFormsVisible(formIds: Array<string>, isVisible: boolean): Promise
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -100,3 +104,5 @@ formHost.notifyFormsVisible(formIds, true).then(() => {
   console.error(`formHost notifyFormsVisible, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

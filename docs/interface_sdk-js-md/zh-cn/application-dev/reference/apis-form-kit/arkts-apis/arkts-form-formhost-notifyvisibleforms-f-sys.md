@@ -44,6 +44,7 @@ function notifyVisibleForms(formIds: Array<string>, callback: AsyncCallback<void
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyvisibleforms2"></a>
@@ -106,6 +109,7 @@ function notifyVisibleForms(formIds: Array<string>): Promise<void>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -123,3 +127,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

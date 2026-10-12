@@ -81,6 +81,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>, callback: AsyncCallback<void>)
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -106,6 +107,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="applynewversion2"></a>
 
@@ -161,6 +164,7 @@ applyNewVersion(upgradeFiles: Array<UpgradeFile>): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -184,6 +188,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off
 
@@ -226,6 +232,7 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -247,6 +254,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -294,6 +303,7 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -315,6 +325,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="verifyupgradepackage1"></a>
 
@@ -370,6 +382,7 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string, callback: Asyn
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -398,6 +411,8 @@ try {
   console.error(`Fail to get localUpdater. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="verifyupgradepackage2"></a>
 
@@ -454,6 +469,7 @@ verifyUpgradePackage(upgradeFile: UpgradeFile, certsFile: string): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -480,3 +496,5 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->

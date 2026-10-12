@@ -6,6 +6,8 @@
 
 **库：** libohaudio.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **相关模块：** [OHAudio](capi-ohaudio.md)
@@ -17,12 +19,6 @@
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
 | [OH_AudioManager](capi-ohaudio-oh-audiomanager.md) | OH_AudioManager | 声明音频管理器。用于管理音频管理相关功能。 |
-
-### 宏定义
-
-| 名称 | 描述 |
-| -- | -- |
-| NATIVE_AUDIO_MANAGER_H | 声明音频管理相关的接口。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Multimedia.Audio.Core |
 
 ### 函数
 
@@ -52,6 +48,8 @@ typedef void (*OH_AudioManager_OnAudioSceneChangeCallback)(void *userData, OH_Au
 
 音频场景变化回调函数的原型定义，用于传递给[OH_AudioManager_RegisterAudioSceneChangeCallback](capi-native-audio-manager-h.md#oh_audiomanager_registeraudioscenechangecallback)。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -70,6 +68,8 @@ OH_AudioCommon_Result OH_GetAudioManager(OH_AudioManager **audioManager)
 **描述：**
 
 获取音频管理器。 <br>使用音频管理器相关功能，首先需要获取音频管理器实例。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -94,6 +94,8 @@ OH_AudioCommon_Result OH_GetAudioScene(OH_AudioManager* manager, OH_AudioScene *
 **描述：**
 
 获取音频场景模式。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -120,6 +122,8 @@ OH_AudioCommon_Result OH_AudioManager_RegisterAudioSceneChangeCallback(OH_AudioM
 
 注册音频场景切换回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -145,6 +149,8 @@ OH_AudioCommon_Result OH_AudioManager_UnregisterAudioSceneChangeCallback(OH_Audi
 **描述：**
 
 取消注册音频场景切换回调函数。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 

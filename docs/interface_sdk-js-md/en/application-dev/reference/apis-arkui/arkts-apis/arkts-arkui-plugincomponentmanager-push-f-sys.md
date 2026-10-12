@@ -33,6 +33,7 @@ Proactively pushes the component and data to the component user. This API applie
 | param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | Yes | Parameters to be sent by the component provider. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Asynchronous callback used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,3 +64,5 @@ pluginComponentManager.push(
   }
 )
 ```
+
+<!--DelEnd-->

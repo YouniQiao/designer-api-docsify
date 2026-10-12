@@ -33,6 +33,7 @@ function push(param: PushParameterForStage, callback: AsyncCallback<void>): void
 | param | [PushParameterForStage](arkts-arkui-plugincomponentmanager-pushparameterforstage-i-sys.md) | 是 | 组件提供方要发送的参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 此次接口调用的异步回调。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,3 +64,5 @@ pluginComponentManager.push(
   }
 )
 ```
+
+<!--DelEnd-->

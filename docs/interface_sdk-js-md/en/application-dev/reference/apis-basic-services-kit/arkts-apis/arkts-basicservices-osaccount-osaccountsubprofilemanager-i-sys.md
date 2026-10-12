@@ -64,6 +64,7 @@ Creates an OS account sub-profile. This API uses a promise to return the result.
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target OS account is being operated. |
 | [12300402](../errorcode-account.md#12300402-number-of-os-account-sub-profiles-has-reached-the-upper-limit) | The number of sub-profiles under the OS account has reached limit. |
 
+<!--Del-->
 **Examples**
 
 Create an OS account sub-profile whose ID is 100.
@@ -84,6 +85,8 @@ try {
   console.error(`createOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteOsAccountSubProfile
 
@@ -130,6 +133,7 @@ Deletes an OS account sub-profile. This API uses a promise to return the result.
 | [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be deleted. |
 | [12300404](../errorcode-account.md#12300404-foreground-sub-profile-of-the-os-account-cannot-be-deleted) | The foreground sub-profile cannot be deleted. |
 
+<!--Del-->
 **Examples**
 
 Delete the sub-profile whose ID is 100001 from OS account 100.
@@ -151,6 +155,8 @@ try {
   console.error(`deleteOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountforegroundsubprofileid1"></a>
 
@@ -186,6 +192,7 @@ Obtains the foreground sub-profile ID of the OS account of the caller. This API 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -203,6 +210,8 @@ try {
   console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountforegroundsubprofileid2"></a>
 
@@ -245,6 +254,7 @@ Obtains the foreground sub-profile ID of the specified OS account. This API uses
 | [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | The foreground sub-profile not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain the foreground sub-profile ID of OS account 100.
@@ -265,6 +275,8 @@ try {
   console.error(`getOsAccountForegroundSubProfileId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getOsAccountLocalIdForSubProfile
 
@@ -304,6 +316,7 @@ Obtains the local ID of the OS account of a sub-profile. This API uses a promise
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
 
+<!--Del-->
 **Examples**
 
 Obtains the local ID of the OS account of the sub-profile whose ID is 100001.
@@ -324,6 +337,8 @@ try {
   console.error(`getOsAccountLocalIdForSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountsubprofile1"></a>
 
@@ -368,6 +383,7 @@ Obtains the sub-profile of the OS account of the caller. This API uses a promise
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
 
+<!--Del-->
 **Examples**
 
 Obtains the sub-profile whose ID is 100001.
@@ -388,6 +404,8 @@ try {
   console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountsubprofile2"></a>
 
@@ -433,6 +451,7 @@ Obtains the sub-profile of the specified OS account. This API uses a promise to 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300401](../errorcode-account.md#12300401-os-account-sub-profile-not-found) | Sub-profile not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain the sub-profile whose ID is 100001 of OS account 100.
@@ -454,6 +473,8 @@ try {
   console.error(`getOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountsubprofileids1"></a>
 
@@ -491,6 +512,7 @@ Obtains the sub-profile IDs of the OS account of the caller. This API uses a pro
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -508,6 +530,8 @@ try {
   console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountsubprofileids2"></a>
 
@@ -552,6 +576,7 @@ Obtains the sub-profile IDs of the specified OS account. This API uses a promise
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | OS account not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain the sub-profile IDs of OS account 100.
@@ -572,6 +597,8 @@ try {
   console.error(`getOsAccountSubProfileIds exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## offOsAccountSubProfileEvent
 
@@ -604,6 +631,7 @@ Unsubscribes from OS account sub-profile events. This API uses an asynchronous c
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -617,6 +645,8 @@ try {
   console.error(`offOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## onOsAccountSubProfileEvent
 
@@ -653,6 +683,7 @@ Subscribes to OS account sub-profile events. This API uses an asynchronous callb
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid event. |
 
+<!--Del-->
 **Examples**
 
 Subscribe to an OS account sub-profile creation event.
@@ -671,6 +702,8 @@ try {
   console.error(`onOsAccountSubProfileEvent failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## switchOsAccountSubProfile
 
@@ -717,6 +750,7 @@ Switches to an OS account sub-profile. This API uses a promise to return the res
 | [12300403](../errorcode-account.md#12300403-restricted-os-account-sub-profile) | Restricted sub-profile cannot be switched to foreground. |
 | [12300405](../errorcode-account.md#12300405-foreground-sub-profile-with-a-logged-in-distributed-account-cannot-be-directly-switched-to-the-background) | The foreground sub-profile bound with a logged-in distributed account cannot be directly switched to background. |
 
+<!--Del-->
 **Examples**
 
 Switch from the current sub-profile of OS account 100 to the sub-profile whose ID is 100001.
@@ -738,3 +772,5 @@ try {
   console.error(`switchOsAccountSubProfile exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

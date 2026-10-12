@@ -49,6 +49,7 @@ Moves log files of the specified type to the target application directory. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid argument. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-specified-file-not-exist) | Source file does not exist |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -73,6 +74,8 @@ try {
     console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="move2"></a>
@@ -113,6 +116,7 @@ Moves log files of the specified type to the target application directory. This 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Invalid argument. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-specified-file-not-exist) | Source file does not exist |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -133,3 +137,5 @@ try {
     console.error(`error code: ${error?.code}, error msg: ${error?.message}`);
 }
 ```
+
+<!--DelEnd-->

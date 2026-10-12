@@ -51,6 +51,7 @@ Enables the dynamic icon based on the given bundle name and module name. This AP
 | [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) | Failed to enable the dynamic icon. |
 | [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) | Dynamic icons cannot take effect due to existing custom themes.<br>**Applicable version:** 20 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,6 +73,8 @@ try {
   hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="enabledynamicicon2"></a>
@@ -125,6 +128,7 @@ To enable the dynamic icon for another user, you must request the ohos.permissio
 | [17700304](../errorcode-bundle.md#17700304-failed-to-enable-the-dynamic-icon) | Failed to enable the dynamic icon. |
 | [17700307](../errorcode-bundle.md#17700307-dynamic-icon-does-not-take-effect-because-of-a-custom-theme) | Dynamic icons cannot take effect due to existing custom themes. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -147,3 +151,5 @@ try {
   hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

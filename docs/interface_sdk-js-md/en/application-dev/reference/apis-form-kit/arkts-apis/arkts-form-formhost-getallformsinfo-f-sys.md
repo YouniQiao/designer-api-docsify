@@ -43,6 +43,7 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,6 +61,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallformsinfo2"></a>
@@ -98,6 +101,7 @@ Obtains the widget information provided by all applications on the device (exclu
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

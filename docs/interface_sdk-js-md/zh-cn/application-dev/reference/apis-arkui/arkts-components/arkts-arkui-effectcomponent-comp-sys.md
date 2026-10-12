@@ -72,6 +72,7 @@ EffectComponent(options?: EffectComponentOptions)
 | --- | --- |
 | [EffectLayer](arkts-arkui-effectcomponent-comp-effectlayer-e-sys.md) | EffectComponent的渲染层级。 |
 
+<!--Del-->
 ## 示例
 
 ### 示例1（使用特效绘制合并能力）
@@ -169,3 +170,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

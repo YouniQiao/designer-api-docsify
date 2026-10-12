@@ -51,6 +51,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string): Promise<void
 | [17700304](../errorcode-bundle.md#17700304-动态图标使能失败) | Failed to enable the dynamic icon. |
 | [17700307](../errorcode-bundle.md#17700307-由于存在自定义主题动态图标无法生效) | Dynamic icons cannot take effect due to existing custom themes.<br>**适用版本：** 20+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -72,6 +73,8 @@ try {
   hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="enabledynamicicon2"></a>
@@ -125,6 +128,7 @@ function enableDynamicIcon(bundleName: string, moduleName: string, option?: Bund
 | [17700304](../errorcode-bundle.md#17700304-动态图标使能失败) | Failed to enable the dynamic icon. |
 | [17700307](../errorcode-bundle.md#17700307-由于存在自定义主题动态图标无法生效) | Dynamic icons cannot take effect due to existing custom themes. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -147,3 +151,5 @@ try {
   hilog.error(0x0000, 'testTag', 'enableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

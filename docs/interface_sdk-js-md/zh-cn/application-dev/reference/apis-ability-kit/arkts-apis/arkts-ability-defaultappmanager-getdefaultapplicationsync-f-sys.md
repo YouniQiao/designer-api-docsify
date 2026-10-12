@@ -49,6 +49,7 @@ function getDefaultApplicationSync(type: string, userId?: number): BundleInfo
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -76,3 +77,5 @@ try {
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 };
 ```
+
+<!--DelEnd-->

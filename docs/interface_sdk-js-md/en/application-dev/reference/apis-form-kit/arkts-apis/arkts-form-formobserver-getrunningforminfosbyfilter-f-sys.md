@@ -53,6 +53,7 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -80,6 +81,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getrunningforminfosbyfilter2"></a>
@@ -125,6 +128,9 @@ Obtains the RunningFormInfo objects by FormProviderFilter.
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 See [getRunningFormInfosByFilter](#getrunningforminfosbyfilter)
+
+<!--DelEnd-->

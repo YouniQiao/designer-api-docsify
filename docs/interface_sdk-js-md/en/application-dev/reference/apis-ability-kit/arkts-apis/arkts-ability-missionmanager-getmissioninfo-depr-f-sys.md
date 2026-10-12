@@ -37,6 +37,7 @@ Obtains the information about a given mission. This API uses an asynchronous cal
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Yes | Callback used to return the mission information obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ missionManager.getMissionInfo('', missionId, (error, mission) => {
   console.info(`mission.iconPath = ${mission.iconPath}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getmissioninfo2"></a>
@@ -98,6 +101,7 @@ Obtains the information about a given mission. This API uses a promise to return
 | --- | --- |
 | Promise&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt; | Promise used to return the mission information obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -116,3 +120,5 @@ try {
   console.error(`getMissionInfo failed. Cause: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

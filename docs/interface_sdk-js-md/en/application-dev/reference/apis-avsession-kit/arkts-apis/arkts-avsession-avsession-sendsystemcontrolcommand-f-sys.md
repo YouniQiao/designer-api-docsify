@@ -44,6 +44,7 @@ Send system control command.The system automatically selects the recipient.
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,6 +68,8 @@ avSession.sendSystemControlCommand(avcommand, () => {
     console.info('Succeeded in sending system control command.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="sendsystemcontrolcommand2"></a>
@@ -112,6 +115,7 @@ Send system control command.The system automatically selects the recipient.
 | [6600105](../errorcode-avsession.md#6600105-invalid-session-command) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-too-many-commands-or-events) | Too many commands or events. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -135,3 +139,5 @@ avSession.sendSystemControlCommand(avcommand).then(() => {
   console.info('Succeeded in sending system control command.');
 });
 ```
+
+<!--DelEnd-->

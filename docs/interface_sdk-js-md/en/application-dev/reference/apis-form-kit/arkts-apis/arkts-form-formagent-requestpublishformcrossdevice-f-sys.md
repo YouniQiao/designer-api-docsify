@@ -56,6 +56,7 @@ Requests to publish a form to the form host service of the remote device.
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501008](../errorcode-form.md#16501008-adding-a-widget-to-the-home-screen-times-out) | Waiting for the form addition to the desktop timed out. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -95,3 +96,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

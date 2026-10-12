@@ -38,9 +38,10 @@ Transfers metadata to the application or service that calls the encoding API. Th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,3 +56,5 @@ metadataBinding.notifyMetadataBindingEvent(bundleName).then((appLink:string) => 
   console.error(`Failed to notify metadata. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

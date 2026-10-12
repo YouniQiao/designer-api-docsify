@@ -51,7 +51,7 @@ This API can be properly called on devices running OpenHarmony 7.0.0 or later. F
 | Error Code ID | Error Message |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause:         1. This display is abnormal.         2. Internal task error. |
 
 **Examples**
 
@@ -100,7 +100,7 @@ Obtains the cutout information of the display. This API uses an asynchronous cal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause:         1. This display is abnormal.         2. Internal task error. |
 
 **Examples**
 

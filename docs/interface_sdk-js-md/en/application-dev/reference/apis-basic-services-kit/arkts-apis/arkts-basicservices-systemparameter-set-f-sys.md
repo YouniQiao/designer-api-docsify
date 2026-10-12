@@ -36,6 +36,7 @@ Sets a value of the specified key. This API uses an asynchronous callback to ret
 | value | string | Yes | Value to set. For details about length limit, see [Parameter Management](../../../../device-dev/subsystems/subsys-boot-init-sysparam.md). |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the setting result asynchronously. If the setting is successful, **err** is **undefined**. If the setting fails, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ try {
   console.error('set unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="set2"></a>
@@ -90,6 +93,7 @@ Sets a value of the specified key. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -106,3 +110,5 @@ try {
   console.error('set unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->

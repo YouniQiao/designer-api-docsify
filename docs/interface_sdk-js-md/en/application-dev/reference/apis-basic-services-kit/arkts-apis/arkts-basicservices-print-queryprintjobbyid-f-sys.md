@@ -41,6 +41,7 @@ Queries a print job by ID. This API uses an asynchronous callback to return the 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ print.queryPrintJobById(jobId, (error: BusinessError, printJob : print.PrintJob)
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryprintjobbyid2"></a>
@@ -98,6 +101,7 @@ Queries a print job by ID. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -111,3 +115,5 @@ print.queryPrintJobById(jobId).then((printJob : print.PrintJob) => {
     console.error(`Failed to query print job by id. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

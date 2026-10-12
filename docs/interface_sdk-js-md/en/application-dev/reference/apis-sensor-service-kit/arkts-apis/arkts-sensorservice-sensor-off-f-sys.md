@@ -42,6 +42,7 @@ After this method is called, the callback registered using **sensor.on(sensor.Se
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br> Applicable versions: 11+ |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
   console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="off2"></a>
@@ -107,6 +110,7 @@ After this API is called, the callback function of the color sensor on the speci
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -165,6 +169,8 @@ function sensorUnsubscribe(): Ret {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="off3"></a>
 
@@ -202,6 +208,7 @@ After this method is called, the callback registered using **sensor.on(sensor.Se
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br> Applicable versions: 11+ |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -228,6 +235,8 @@ try {
   console.error(`Failed to invoke off. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="off4"></a>
@@ -267,6 +276,7 @@ After this API is called, the callback function of the SAR sensor on the specifi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -324,3 +334,5 @@ function sensorUnsubscribe(): Ret {
   return ret;
 }
 ```
+
+<!--DelEnd-->

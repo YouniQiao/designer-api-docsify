@@ -51,6 +51,7 @@ function getShortcutInfoSync(bundleName: string): Array<ShortcutInfo>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getshortcutinfosync2"></a>
@@ -115,6 +118,7 @@ function getShortcutInfoSync(bundleName: string, userId: number): Array<Shortcut
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -130,3 +134,5 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

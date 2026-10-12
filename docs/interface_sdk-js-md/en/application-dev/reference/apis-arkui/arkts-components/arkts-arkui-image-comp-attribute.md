@@ -21,7 +21,7 @@ The **Image** component is usually used to display images in applications. It su
 > [onVisibleAreaChange](arkts-arkui-common-comp-commonmethod-c.md#onvisibleareachange1)
 > event. If the value of **ratios** is greater than 0, the component is visible.
 > 
-> - For details about how to resolve white block issues during image loading, see [Solution to White Image Blocks](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).For details about how to address slow image loading, see [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-&gt; compression-improve-performance#section91526132216). &gt;
+> - For details about how to resolve white block issues during image loading, see [Solution to White Image Blocks](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-image-white-lump-solution).For details about how to address slow image loading, see [Optimizing Preset Image Loading](https://developer.huawei.com/consumer/en/doc/best-practices/bpta-texture-> compression-improve-performance#section91526132216). &gt;
 
 **Inheritance/Implementation:** ImageAttribute extends CommonMethod&lt;ImageAttribute&gt;
 

@@ -41,6 +41,7 @@ Disables the screen content access permission monitoring.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Function can not work correctly due to limited<br> device capabilities. |
 | [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,3 +53,5 @@ try {
   console.error(`offReadingScreenPermissionListener failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

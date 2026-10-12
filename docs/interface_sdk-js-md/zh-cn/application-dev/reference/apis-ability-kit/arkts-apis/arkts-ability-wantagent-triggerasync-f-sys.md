@@ -48,6 +48,7 @@ function triggerAsync(agent: WantAgent, triggerInfo: TriggerInfo, context: Conte
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 | [16000153](../errorcode-ability.md#16000153-wantagent对象已被取消) | The WantAgent has been canceled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -122,3 +123,5 @@ class MyAbility extends UIAbility {
    }
  }
 ```
+
+<!--DelEnd-->

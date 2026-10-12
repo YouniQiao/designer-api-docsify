@@ -45,6 +45,7 @@ Set wallpapers for all forms of devices.
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -75,3 +76,5 @@ wallpaper.setAllWallpapers(wallpaperInfos, wallpaper.WallpaperType.WALLPAPER_SYS
   console.error(`failed to setAllWallpapers. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

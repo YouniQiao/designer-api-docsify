@@ -8,6 +8,8 @@
 
 **库：** libohinput.so
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **相关模块：** [input](capi-input.md)
@@ -34,6 +36,8 @@ enum InputEvent_AxisType
 
 输入设备的轴类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -54,6 +58,8 @@ enum InputEvent_AxisEventType
 
 输入设备的轴事件类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -70,6 +76,8 @@ enum InputEvent_AxisAction
 **描述：**
 
 轴事件动作。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 

@@ -40,6 +40,7 @@ Destroys a virtual screen. This API uses an asynchronous callback to return the 
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,6 +58,8 @@ screen.destroyVirtualScreen(screenId, (err: BusinessError) => {
   console.info('Succeeded in destroying the virtual screen.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="destroyvirtualscreen2"></a>
@@ -98,6 +101,7 @@ Destroys a virtual screen. This API uses a promise to return the result.
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400002](../errorcode-display.md#1400002-unauthorized-operation) | Unauthorized operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -112,3 +116,5 @@ screen.destroyVirtualScreen(screenId).then(() => {
   console.error(`Failed to destroy the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

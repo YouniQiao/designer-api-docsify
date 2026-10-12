@@ -4,82 +4,6 @@
   - [NotificationSubscriberExtensionAbility](arkts-notification-application-notificationsubscriberextensionability-notificationsubscriberextensionability-c.md)
 - [@ohos.application.NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext.md)
   - [NotificationSubscriberExtensionContext](arkts-notification-application-notificationsubscriberextensioncontext-notificationsubscriberextensioncontext-c.md)
-- [@ohos.notification](arkts-notification-notification.md)
-  - [addSlot](arkts-notification-notification-addslot-depr-f.md)
-  <!--Del-->
-  - [addSlot（系统接口）](arkts-notification-notification-addslot-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [addSlots（系统接口）](arkts-notification-notification-addslots-depr-f-sys.md)<!--DelEnd-->
-  - [cancel](arkts-notification-notification-cancel-depr-f.md)
-  - [cancelAll](arkts-notification-notification-cancelall-depr-f.md)
-  - [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md)
-  <!--Del-->
-  - [displayBadge（系统接口）](arkts-notification-notification-displaybadge-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [enableDistributed（系统接口）](arkts-notification-notification-enabledistributed-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [enableDistributedByBundle（系统接口）](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [enableNotification（系统接口）](arkts-notification-notification-enablenotification-depr-f-sys.md)<!--DelEnd-->
-  - [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md)
-  - [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md)
-  <!--Del-->
-  - [getAllActiveNotifications（系统接口）](arkts-notification-notification-getallactivenotifications-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getDeviceRemindType（系统接口）](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getDoNotDisturbDate（系统接口）](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
-  - [getSlot](arkts-notification-notification-getslot-depr-f.md)
-  <!--Del-->
-  - [getSlotNumByBundle（系统接口）](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md)<!--DelEnd-->
-  - [getSlots](arkts-notification-notification-getslots-depr-f.md)
-  <!--Del-->
-  - [getSlotsByBundle（系统接口）](arkts-notification-notification-getslotsbybundle-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [isBadgeDisplayed（系统接口）](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md)<!--DelEnd-->
-  - [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md)
-  <!--Del-->
-  - [isDistributedEnabledByBundle（系统接口）](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [isNotificationEnabled（系统接口）](arkts-notification-notification-isnotificationenabled-depr-f-sys.md)<!--DelEnd-->
-  - [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md)
-  - [publish](arkts-notification-notification-publish-depr-f.md)
-  <!--Del-->
-  - [publish（系统接口）](arkts-notification-notification-publish-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [remove（系统接口）](arkts-notification-notification-remove-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [removeAll（系统接口）](arkts-notification-notification-removeall-depr-f-sys.md)<!--DelEnd-->
-  - [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md)
-  <!--Del-->
-  - [removeGroupByBundle（系统接口）](arkts-notification-notification-removegroupbybundle-depr-f-sys.md)<!--DelEnd-->
-  - [removeSlot](arkts-notification-notification-removeslot-depr-f.md)
-  - [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md)
-  <!--Del-->
-  - [setDoNotDisturbDate（系统接口）](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setSlotByBundle（系统接口）](arkts-notification-notification-setslotbybundle-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [subscribe（系统接口）](arkts-notification-notification-subscribe-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [supportDoNotDisturbMode（系统接口）](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unsubscribe（系统接口）](arkts-notification-notification-unsubscribe-depr-f-sys.md)<!--DelEnd-->
-  - [BundleOption](arkts-notification-notification-bundleoption-depr-i.md)
-  <!--Del-->
-  - [DoNotDisturbDate（系统接口）](arkts-notification-notification-donotdisturbdate-depr-i-sys.md)<!--DelEnd-->
-  - [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md)
-  - [ContentType](arkts-notification-notification-contenttype-depr-e.md)
-  <!--Del-->
-  - [DeviceRemindType（系统接口）](arkts-notification-notification-deviceremindtype-depr-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DoNotDisturbType（系统接口）](arkts-notification-notification-donotdisturbtype-depr-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RemoveReason（系统接口）](arkts-notification-notification-removereason-depr-e-sys.md)<!--DelEnd-->
-  - [SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
-  - [SlotType](arkts-notification-notification-slottype-depr-e.md)
-  <!--Del-->
-  - [SourceType（系统接口）](arkts-notification-notification-sourcetype-depr-e-sys.md)<!--DelEnd-->
 - [@ohos.notificationExtensionSubscription](arkts-notification-notificationextensionsubscription.md)
   <!--Del-->
   - [getAllSubscriptionBundles（系统接口）](arkts-notification-notificationextensionsubscription-getallsubscriptionbundles-f-sys.md)<!--DelEnd-->
@@ -141,8 +65,6 @@
   <!--Del-->
   - [getBundlePriorityConfig（系统接口）](arkts-notification-notificationmanager-getbundlepriorityconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getDeviceRemindType（系统接口）](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [getDistributedDeviceList（系统接口）](arkts-notification-notificationmanager-getdistributeddevicelist-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDoNotDisturbDate（系统接口）](arkts-notification-notificationmanager-getdonotdisturbdate-f-sys.md)<!--DelEnd-->
@@ -173,12 +95,7 @@
   <!--Del-->
   - [getSlotsByBundle（系统接口）](arkts-notification-notificationmanager-getslotsbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getSyncNotificationEnabledWithoutApp（系统接口）](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [isBadgeDisplayed（系统接口）](arkts-notification-notificationmanager-isbadgedisplayed-f-sys.md)<!--DelEnd-->
-  - [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
-  <!--Del-->
-  - [isDistributedEnabled（系统接口）](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isDistributedEnabledByBundle（系统接口）](arkts-notification-notificationmanager-isdistributedenabledbybundle-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -237,10 +154,6 @@
   <!--Del-->
   - [setBundlePriorityConfig（系统接口）](arkts-notification-notificationmanager-setbundlepriorityconfig-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [setDistributedEnable（系统接口）](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setDistributedEnableByBundle（系统接口）](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [setDistributedEnableByBundles（系统接口）](arkts-notification-notificationmanager-setdistributedenablebybundles-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setDistributedEnabled（系统接口）](arkts-notification-notificationmanager-setdistributedenabled-f-sys.md)<!--DelEnd-->
@@ -281,8 +194,6 @@
   <!--Del-->
   - [setSmartReminderEnabled（系统接口）](arkts-notification-notificationmanager-setsmartreminderenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [setSyncNotificationEnabledWithoutApp（系统接口）](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [setTargetDeviceStatus（系统接口）](arkts-notification-notificationmanager-settargetdevicestatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [snoozeNotification（系统接口）](arkts-notification-notificationmanager-snoozenotification-f-sys.md)<!--DelEnd-->
@@ -290,6 +201,19 @@
   - [subscribeSystemLiveView（系统接口）](arkts-notification-notificationmanager-subscribesystemliveview-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [triggerSystemLiveView（系统接口）](arkts-notification-notificationmanager-triggersystemliveview-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDeviceRemindType（系统接口）](arkts-notification-notificationmanager-getdeviceremindtype-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSyncNotificationEnabledWithoutApp（系统接口）](arkts-notification-notificationmanager-getsyncnotificationenabledwithoutapp-f-sys.md)<!--DelEnd-->
+  - [isDistributedEnabled](arkts-notification-notificationmanager-isdistributedenabled-f.md)
+  <!--Del-->
+  - [isDistributedEnabled（系统接口）](arkts-notification-notificationmanager-isdistributedenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setDistributedEnable（系统接口）](arkts-notification-notificationmanager-setdistributedenable-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setDistributedEnableByBundle（系统接口）](arkts-notification-notificationmanager-setdistributedenablebybundle-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setSyncNotificationEnabledWithoutApp（系统接口）](arkts-notification-notificationmanager-setsyncnotificationenabledwithoutapp-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [BundleNotificationStatistics（系统接口）](arkts-notification-notificationmanager-bundlenotificationstatistics-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -394,13 +318,13 @@
   <!--Del-->
   - [removeAll（系统接口）](arkts-notification-notificationsubscribe-removeall-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [subscribe（系统接口）](arkts-notification-notificationsubscribe-subscribe-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [subscribeNotification（系统接口）](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [subscribeSelf（系统接口）](arkts-notification-notificationsubscribe-subscribeself-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unsubscribe（系统接口）](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [subscribe（系统接口）](arkts-notification-notificationsubscribe-subscribe-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [NotificationKey（系统接口）](arkts-notification-notificationsubscribe-notificationkey-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -437,6 +361,82 @@
   - [VoiceContentOptions（系统接口）](arkts-notification-notificationsubscribe-voicecontentoptions-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [RemoveReason（系统接口）](arkts-notification-notificationsubscribe-removereason-e-sys.md)<!--DelEnd-->
+- [@ohos.notification](arkts-notification-notification.md)
+  - [addSlot](arkts-notification-notification-addslot-depr-f.md)
+  <!--Del-->
+  - [addSlot（系统接口）](arkts-notification-notification-addslot-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [addSlots（系统接口）](arkts-notification-notification-addslots-depr-f-sys.md)<!--DelEnd-->
+  - [cancel](arkts-notification-notification-cancel-depr-f.md)
+  - [cancelAll](arkts-notification-notification-cancelall-depr-f.md)
+  - [cancelGroup](arkts-notification-notification-cancelgroup-depr-f.md)
+  <!--Del-->
+  - [displayBadge（系统接口）](arkts-notification-notification-displaybadge-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableDistributed（系统接口）](arkts-notification-notification-enabledistributed-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableDistributedByBundle（系统接口）](arkts-notification-notification-enabledistributedbybundle-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [enableNotification（系统接口）](arkts-notification-notification-enablenotification-depr-f-sys.md)<!--DelEnd-->
+  - [getActiveNotificationCount](arkts-notification-notification-getactivenotificationcount-depr-f.md)
+  - [getActiveNotifications](arkts-notification-notification-getactivenotifications-depr-f.md)
+  <!--Del-->
+  - [getAllActiveNotifications（系统接口）](arkts-notification-notification-getallactivenotifications-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDeviceRemindType（系统接口）](arkts-notification-notification-getdeviceremindtype-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getDoNotDisturbDate（系统接口）](arkts-notification-notification-getdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
+  - [getSlot](arkts-notification-notification-getslot-depr-f.md)
+  <!--Del-->
+  - [getSlotNumByBundle（系统接口）](arkts-notification-notification-getslotnumbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [getSlots](arkts-notification-notification-getslots-depr-f.md)
+  <!--Del-->
+  - [getSlotsByBundle（系统接口）](arkts-notification-notification-getslotsbybundle-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isBadgeDisplayed（系统接口）](arkts-notification-notification-isbadgedisplayed-depr-f-sys.md)<!--DelEnd-->
+  - [isDistributedEnabled](arkts-notification-notification-isdistributedenabled-depr-f.md)
+  <!--Del-->
+  - [isDistributedEnabledByBundle（系统接口）](arkts-notification-notification-isdistributedenabledbybundle-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [isNotificationEnabled（系统接口）](arkts-notification-notification-isnotificationenabled-depr-f-sys.md)<!--DelEnd-->
+  - [isSupportTemplate](arkts-notification-notification-issupporttemplate-depr-f.md)
+  - [publish](arkts-notification-notification-publish-depr-f.md)
+  <!--Del-->
+  - [publish（系统接口）](arkts-notification-notification-publish-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [remove（系统接口）](arkts-notification-notification-remove-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [removeAll（系统接口）](arkts-notification-notification-removeall-depr-f-sys.md)<!--DelEnd-->
+  - [removeAllSlots](arkts-notification-notification-removeallslots-depr-f.md)
+  <!--Del-->
+  - [removeGroupByBundle（系统接口）](arkts-notification-notification-removegroupbybundle-depr-f-sys.md)<!--DelEnd-->
+  - [removeSlot](arkts-notification-notification-removeslot-depr-f.md)
+  - [requestEnableNotification](arkts-notification-notification-requestenablenotification-depr-f.md)
+  <!--Del-->
+  - [setDoNotDisturbDate（系统接口）](arkts-notification-notification-setdonotdisturbdate-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setSlotByBundle（系统接口）](arkts-notification-notification-setslotbybundle-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [subscribe（系统接口）](arkts-notification-notification-subscribe-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [supportDoNotDisturbMode（系统接口）](arkts-notification-notification-supportdonotdisturbmode-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unsubscribe（系统接口）](arkts-notification-notification-unsubscribe-depr-f-sys.md)<!--DelEnd-->
+  - [BundleOption](arkts-notification-notification-bundleoption-depr-i.md)
+  <!--Del-->
+  - [DoNotDisturbDate（系统接口）](arkts-notification-notification-donotdisturbdate-depr-i-sys.md)<!--DelEnd-->
+  - [NotificationKey](arkts-notification-notification-notificationkey-depr-i.md)
+  - [ContentType](arkts-notification-notification-contenttype-depr-e.md)
+  <!--Del-->
+  - [DeviceRemindType（系统接口）](arkts-notification-notification-deviceremindtype-depr-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DoNotDisturbType（系统接口）](arkts-notification-notification-donotdisturbtype-depr-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RemoveReason（系统接口）](arkts-notification-notification-removereason-depr-e-sys.md)<!--DelEnd-->
+  - [SlotLevel](arkts-notification-notification-slotlevel-depr-e.md)
+  - [SlotType](arkts-notification-notification-slottype-depr-e.md)
+  <!--Del-->
+  - [SourceType（系统接口）](arkts-notification-notification-sourcetype-depr-e-sys.md)<!--DelEnd-->
 - [@system.notification](arkts-notification-system-notification.md)
   - [Notification](arkts-notification-system-notification-notification-c.md)
   - [ActionResult](arkts-notification-system-notification-actionresult-i.md)

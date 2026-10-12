@@ -49,6 +49,7 @@ function getPageContent(options?: ContentOptions): Promise<PageContent>
 | [34000004](../errorcode-onScreen.md#34000004-页面未准备就绪) | The page is not ready. |
 | [34000006](../errorcode-onScreen.md#34000006-请求超时) | The request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -69,3 +70,5 @@ try {
    console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

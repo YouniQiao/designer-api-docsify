@@ -53,6 +53,7 @@ Migrates files from the source path to the destination path. This API uses a pro
 | [17700085](../errorcode-bundle.md#17700085-no-write-permissions-for-the-destination-path) | The destination path cannot be accessed. |
 | [17700086](../errorcode-bundle.md#17700086-system-error) | System error occurred during copy execution. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,3 +79,5 @@ try {
   hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->

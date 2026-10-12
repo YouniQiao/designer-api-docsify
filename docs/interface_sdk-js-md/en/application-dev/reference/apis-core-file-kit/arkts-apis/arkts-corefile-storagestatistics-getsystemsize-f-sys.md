@@ -42,6 +42,7 @@ Get the system size.
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,6 +56,8 @@ storageStatistics.getSystemSize((error: BusinessError, number: number) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsystemsize2"></a>
@@ -93,6 +96,7 @@ Get the system size.
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -103,3 +107,5 @@ storageStatistics.getSystemSize().then((number: number) => {
   console.error("getSystemSize failed with error:" + JSON.stringify(err));
 });
 ```
+
+<!--DelEnd-->

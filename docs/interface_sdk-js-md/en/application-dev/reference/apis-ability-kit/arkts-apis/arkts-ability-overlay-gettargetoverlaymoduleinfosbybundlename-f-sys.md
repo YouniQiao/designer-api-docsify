@@ -46,6 +46,7 @@ No permission is required when the specified application is the caller itself.
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,6 +71,8 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettargetoverlaymoduleinfosbybundlename2"></a>
@@ -114,6 +117,7 @@ No permission is required when the specified application is the caller itself.
 | [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) | The specified module is an overlay module. |
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -139,6 +143,8 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettargetoverlaymoduleinfosbybundlename3"></a>
@@ -188,6 +194,7 @@ No permission is required when the specified application is the caller itself. I
 | [17700034](../errorcode-bundle.md#17700034-module-is-configured-with-the-overlay-feature) | The specified module is an overlay module. |
 | [17700035](../errorcode-bundle.md#17700035-application-contains-only-modules-with-the-overlay-feature) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -209,3 +216,5 @@ let moduleName = "feature";
   }
 })();
 ```
+
+<!--DelEnd-->

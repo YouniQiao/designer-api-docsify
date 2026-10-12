@@ -45,6 +45,7 @@ function setDate(date: Date, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -64,6 +65,8 @@ try {
   console.error(`Failed to set date. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdate2"></a>
@@ -110,6 +113,7 @@ function setDate(date: Date): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. <br> 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -127,3 +131,5 @@ try {
   console.error(`Failed to set date. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

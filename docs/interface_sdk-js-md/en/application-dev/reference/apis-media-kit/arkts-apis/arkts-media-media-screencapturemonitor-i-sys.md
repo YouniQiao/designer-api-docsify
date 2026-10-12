@@ -49,11 +49,14 @@ Unsubscribes from state change events of the system screen recorder.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 screenCaptureMonitor.off('systemScreenRecorder');
 ```
+
+<!--DelEnd-->
 
 ## on('systemScreenRecorder')
 
@@ -84,6 +87,7 @@ Subscribes to state change events of the system screen recorder. From the Screen
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,6 +97,8 @@ screenCaptureMonitor.on('systemScreenRecorder', (event: media.ScreenCaptureEvent
   console.info(`system ScreenRecorder event: ${event}`);
 })
 ```
+
+<!--DelEnd-->
 
 ## isSystemScreenRecorderWorking
 

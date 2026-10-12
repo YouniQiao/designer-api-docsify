@@ -41,6 +41,7 @@ Clear up application data by bundle name
 | --- | --- |
 | Promise&lt;void&gt; | The promise returned by the function. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ appManager.clearUpApplicationData(bundleName)
     console.error(`ClearUpApplicationData failed, error code: ${err.code}, error msg: ${err.message}.`);
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="clearupapplicationdata2"></a>
@@ -89,6 +92,7 @@ Clear up application data by bundle name
 | bundleName | string | Yes | bundle name. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Represents the specified callback method. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -107,3 +111,5 @@ function clearUpApplicationDataCallback(err: BusinessError, data: void) {
 
 appManager.clearUpApplicationData(bundleName, clearUpApplicationDataCallback);
 ```
+
+<!--DelEnd-->

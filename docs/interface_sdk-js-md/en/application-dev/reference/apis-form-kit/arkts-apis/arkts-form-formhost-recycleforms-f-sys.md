@@ -49,6 +49,7 @@ Recycles widgets, that is, reclaiming widget memory. This API uses a promise to 
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,3 +67,5 @@ try {
   console.error(`catch error, code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+<!--DelEnd-->

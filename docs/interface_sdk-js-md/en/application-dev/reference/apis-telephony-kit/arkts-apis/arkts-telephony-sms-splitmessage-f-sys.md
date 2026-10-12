@@ -45,6 +45,7 @@ Splits an SMS message into multiple segments. This API uses an asynchronous call
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.splitMessage(content, (err: BusinessError, data: string[]) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="splitmessage2"></a>
@@ -102,6 +105,7 @@ Splits an SMS message into multiple segments. This API uses a promise to return 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -116,3 +120,5 @@ promise.then((data: string[]) => {
     console.error(`splitMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

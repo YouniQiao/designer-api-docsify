@@ -6,20 +6,26 @@ The **UiTest** module provides UI automation test capabilities, such as componen
  This module provides the following functions:
 
 - [On<sup>9+</sup>](arkts-test-uitest-on-c.md): provides UI component feature description APIs for component filtering and matching.
- - [Component<sup>9+</sup>](arkts-test-uitest-component-c.md): represents a component on the UI and provides APIs for obtaining
+
+- [Component<sup>9+</sup>](arkts-test-uitest-component-c.md): represents a component on the UI and provides APIs for obtaining
  component attributes, clicking a component, scrolling to search for a component, and text injection.
- - [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md): works as the entry class and provides APIs for features such as component
+
+- [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md): works as the entry class and provides APIs for features such as component
  matching/search, key injection, coordinate clicking/sliding, and screenshot.
- - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md): represents a window object on the UI and provides APIs for obtaining window attributes,
+
+- [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md): represents a window object on the UI and provides APIs for obtaining window attributes,
  dragging windows, and adjusting window sizes.
- - [By<sup>(deprecated)</sup>](arkts-test-uitest-con.md#by): provides UI component feature description APIs for component filtering and
+
+- [By<sup>(deprecated)</sup>](arkts-test-uitest-con.md#by): provides UI component feature description APIs for component filtering and
  matching. This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [On](arkts-test-uitest-on-c.md) instead.
- - [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md): represents a component on the UI and provides APIs for
+
+- [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md): represents a component on the UI and provides APIs for
  obtaining component attributes, clicking a component, scrolling to search for a component, and text injection.
  This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [Component<sup>9+</sup>](arkts-test-uitest-component-c.md) instead.
- - [UiDriver<sup>(deprecated)</sup>](arkts-test-uitest-uidriver-c.md): works as the entry class and provides APIs for features such as
+
+- [UiDriver<sup>(deprecated)</sup>](arkts-test-uitest-uidriver-c.md): works as the entry class and provides APIs for features such as
  component matching/search, key injection, coordinate clicking/sliding, and screenshot.
  This API is supported since API version 8 and deprecated since API version 9.
  You are advised to use [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md) instead.

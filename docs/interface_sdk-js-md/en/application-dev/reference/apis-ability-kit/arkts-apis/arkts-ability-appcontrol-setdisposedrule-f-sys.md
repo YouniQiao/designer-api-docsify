@@ -43,6 +43,7 @@ Sets the disposed rule for an application or an application clone.
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is invalid. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -81,3 +82,5 @@ try {
   console.error('setDisposedRule failed ' + message);
 }
 ```
+
+<!--DelEnd-->

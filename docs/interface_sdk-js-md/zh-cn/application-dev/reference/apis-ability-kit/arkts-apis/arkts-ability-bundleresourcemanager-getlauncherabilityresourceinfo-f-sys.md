@@ -48,6 +48,7 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -84,6 +85,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlauncherabilityresourceinfo2"></a>
@@ -130,6 +133,9 @@ function getLauncherAbilityResourceInfo(bundleName: string, resourceFlags?: numb
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range or not found. |
 
+<!--Del-->
 **示例**
 
 参见 [getLauncherAbilityResourceInfo](#getlauncherabilityresourceinfo)
+
+<!--DelEnd-->

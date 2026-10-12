@@ -44,6 +44,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -61,6 +62,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyvisibleforms2"></a>
@@ -106,6 +109,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,3 +127,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

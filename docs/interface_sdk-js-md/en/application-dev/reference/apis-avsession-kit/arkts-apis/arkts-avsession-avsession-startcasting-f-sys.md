@@ -44,6 +44,7 @@ Cast resource to remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -62,6 +63,8 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startcasting2"></a>
@@ -107,6 +110,7 @@ Cast resource to remote device.
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600108](../errorcode-avsession.md#6600108-device-connection-failure) | Device connecting failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -125,3 +129,5 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   }
 });
 ```
+
+<!--DelEnd-->

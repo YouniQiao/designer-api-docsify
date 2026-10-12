@@ -50,6 +50,7 @@ Subscribes to notifications. After the subscription, the new message is received
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,6 +68,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="subscribenotification2"></a>
@@ -114,6 +117,7 @@ Subscribes to notifications. After the subscription, the new message is received
 | [1600002](../errorcode-notification.md#1600002-marshalling-or-unmarshalling-error) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -134,3 +138,5 @@ notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() =
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

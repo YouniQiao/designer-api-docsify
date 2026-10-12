@@ -63,6 +63,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -94,6 +95,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="addphotoassets2"></a>
 
@@ -137,6 +140,7 @@ Adds image and video assets to an album. Before the operation, ensure that the i
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -168,6 +172,8 @@ async function example(mgr: userFileManager.UserFileManager) {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="commitmodify1"></a>
 
 ## commitModify
@@ -198,6 +204,7 @@ Commits the modification on the album attributes to the database. This API uses 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -223,6 +230,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="commitmodify2"></a>
 
@@ -254,6 +263,7 @@ Commits the modification on the album attributes to the database. This API uses 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -282,6 +292,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deletephotoassets1"></a>
 
@@ -325,6 +337,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -356,6 +369,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deletephotoassets2"></a>
 
@@ -404,6 +419,7 @@ Deletes image or video assets from the recycle bin. Before the operation, ensure
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -434,6 +450,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recoverphotoassets1"></a>
 
@@ -472,6 +490,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -503,6 +522,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recoverphotoassets2"></a>
 
@@ -546,6 +567,7 @@ Recovers image or video assets from the recycle bin. Before the operation, ensur
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -576,6 +598,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removephotoassets1"></a>
 
@@ -614,6 +638,7 @@ Removes image and video assets from an album. The album and file resources must 
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -645,6 +670,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removephotoassets2"></a>
 
@@ -688,6 +715,7 @@ Removes image and video assets from an album. The album and file resources must 
 | --- | --- |
 | 13900020 | if PhotoAssets is invalid |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -718,3 +746,5 @@ async function example(mgr: userFileManager.UserFileManager) {
   }
 }
 ```
+
+<!--DelEnd-->

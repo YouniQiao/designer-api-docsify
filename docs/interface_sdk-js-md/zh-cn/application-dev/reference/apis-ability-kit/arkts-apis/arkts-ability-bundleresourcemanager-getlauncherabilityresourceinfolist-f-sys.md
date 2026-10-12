@@ -51,6 +51,7 @@ function getLauncherAbilityResourceInfoList(optionsList: Array<BundleOptions>, r
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified ability is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -81,3 +82,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfoList failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

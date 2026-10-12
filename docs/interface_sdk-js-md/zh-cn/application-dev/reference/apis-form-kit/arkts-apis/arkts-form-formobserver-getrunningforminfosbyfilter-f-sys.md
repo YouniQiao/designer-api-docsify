@@ -53,6 +53,7 @@ function getRunningFormInfosByFilter(
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -80,6 +81,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getrunningforminfosbyfilter2"></a>
@@ -125,6 +128,9 @@ function getRunningFormInfosByFilter(
 | [16500100](../errorcode-form.md#16500100-获取卡片配置信息失败) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 参见 [getRunningFormInfosByFilter](#getrunningforminfosbyfilter)
+
+<!--DelEnd-->

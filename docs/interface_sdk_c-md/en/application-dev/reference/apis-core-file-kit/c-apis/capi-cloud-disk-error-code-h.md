@@ -6,6 +6,8 @@ This file defines the error codes for the cloud disk management module.
 
 **Library**: libohclouddiskmanager.so
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Related module**: [CloudDisk](capi-clouddisk.md)
@@ -29,6 +31,8 @@ enum CloudDisk_ErrorCode
 **Description**
 
 Enumerates the error codes of the cloud disk management module.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 

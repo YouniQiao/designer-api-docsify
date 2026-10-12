@@ -46,6 +46,7 @@ function resizeVirtualScreen(screenId:number, width: number, height: number): Pr
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 | [1400004](../errorcode-display.md#1400004-参数异常) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,3 +63,5 @@ screen.resizeVirtualScreen(screenId, width, height).then(() => {
   console.error(`Failed to resize virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

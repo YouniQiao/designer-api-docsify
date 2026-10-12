@@ -44,8 +44,9 @@ Obtains the policy of the specified browser. This API uses an asynchronous callb
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,6 +68,8 @@ browser.getPolicies(wantTemp, appId, (err, result) => {
   console.info(`Succeeded in getting  browser policies, result : ${JSON.stringify(result)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpolicies2"></a>
@@ -112,8 +115,9 @@ Obtains the policy of the specified browser. This API uses a promise to return t
 | --- | --- |
 | [9200001](../errorcode-enterpriseDeviceManager.md#9200001-deviceadmin-not-enabled) | The application is not an administrator application of the device. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -134,3 +138,5 @@ browser.getPolicies(wantTemp, appId).then((result) => {
   console.error(`Failed to get browser policies. Code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -38,8 +38,9 @@ Checks whether a device administrator application of the current user is enabled
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,6 +61,8 @@ adminManager.isAdminEnabled(wantTemp, (err, result) => {
   console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isadminenabled2"></a>
@@ -95,8 +98,9 @@ Checks whether a device administrator application of the specified user is enabl
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -118,6 +122,8 @@ adminManager.isAdminEnabled(wantTemp, 100, (err, result) => {
   console.info(`Succeeded in querying admin is enabled or not, result : ${result}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isadminenabled3"></a>
@@ -158,8 +164,9 @@ Checks whether a device administrator application of the current or specified us
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -180,3 +187,5 @@ adminManager.isAdminEnabled(wantTemp, 100).then((result) => {
   console.error(`Failed to query admin is enabled or not. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

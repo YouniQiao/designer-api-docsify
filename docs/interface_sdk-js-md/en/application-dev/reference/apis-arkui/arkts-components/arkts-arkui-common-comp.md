@@ -29,8 +29,7 @@ Constructor
 | Name | Description |
 | --- | --- |
 | [@AnimatableExtend](arkts-arkui-common-comp-animatableextend-d.md) | The @AnimatableExtend decorator is used to customize animatable property methods. Functions defined within this decorator are called on a frame-by-frame basis during the animation process until the animation ends. |
-| [@Builder](arkts-arkui-common-comp-builder-d.md) | Defining Builder MethodDecorator |
-| [@BuilderParam](arkts-arkui-common-comp-builderparam-d.md) | **\@BuilderParam** is used to decorate variables that point to [\@Builder](arkts-arkui-common-comp-builder-d.md#builder) functions, enabling a custom component to receive externally passed **\@Builder** functions for custom rendering of UI content. It is suitable for scenarios where the parent component's UI building logic needs to be passed to a child component to achieve dynamic customization of component content. |
+| [@BuilderParam](arkts-arkui-common-comp-builderparam-d.md) | **\@BuilderParam** is used to decorate variables that point to [\@Builder](arkts-arkui-common-comp-con.md#builder) functions, enabling a custom component to receive externally passed **\@Builder** functions for custom rendering of UI content. It is suitable for scenarios where the parent component's UI building logic needs to be passed to a child component to achieve dynamic customization of component content. |
 | [@Component](arkts-arkui-common-comp-component-d.md) | The **@Component** decorator can decorate a struct declared with the **struct** keyword. A struct decorated by **@Component** gains componentization capabilities, enabling UI encapsulation and reuse. It is suitable for scenarios such as building reusable custom components and splitting complex UIs. The **build** method must be implemented to describe the UI. A struct can be decorated by only one **@Component**. |
 | [@ComponentV2](arkts-arkui-common-comp-componentv2-d.md) | **@ComponentV2** is primarily used with state management V2. Compared with [@Component](../../../ui/state-management/arkts-create-custom-components.md), **@ComponentV2** supports deep observation and deep listening of objects. The decorator is highly easy to use and extensible, and is suitable for scenarios requiring deep observation of nested object states. Unless otherwise specified, custom components decorated with **@ComponentV2** behave the same as those decorated with **@Component**. |
 | [@Computed](arkts-arkui-common-comp-computed-d.md) | **@Computed** is a method decorator used in [State Management V2](../../../ui/state-management/arkts-state-management-overview.md) to decorate a **getter** method, turning it into a computed property. Its return value is cached and recalculated only when the dependent source data changes, reducing the overhead of repeated computation. |
@@ -92,6 +91,7 @@ Constructor
 | [BlurSnapshotOptions](arkts-arkui-common-comp-blursnapshotoptions-i-sys.md) | Defines the options for blur snapshot optimization. Setting this object enables blur optimization. |
 | [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) | Defines the options of blurStyle |
 | [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | Border image option |
+| [BuilderDecoratorConfig](arkts-arkui-common-comp-builderdecoratorconfig-i.md) | Defining BuilderDecoratorConfig interface |
 | [Callback](arkts-arkui-common-comp-callback-i.md) | Defines the basic callback. |
 | [CaretOffset](arkts-arkui-common-comp-caretoffset-i.md) | Describes the position of the caret relative to the text box. |
 | [ClickEffect](arkts-arkui-common-comp-clickeffect-i.md) | Defines the click effect. |
@@ -240,6 +240,7 @@ Constructor
 | [Blender](arkts-arkui-common-comp-blender-t-sys.md) | [Blender](arkts-arkui-common-comp-blender-t-sys.md) |
 | [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | Enumerates the border corner radius types. |
 | [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | `BuilderCallback` is a type alias of the global `@Builder` function. It serves as the input parameter type of the `mutableBuilder` function and is used to specify the global `@Builder` function to be wrapped. |
+| [BuilderMethodDecorator](arkts-arkui-common-comp-buildermethoddecorator-t.md) | Define Builder Decorator type with config. |
 | [CircleShape](arkts-arkui-common-comp-circleshape-t.md) | Defines the CircleShape type. |
 | [ComponentContent](arkts-arkui-common-comp-componentcontent-t.md) | Represents a constructor used to create a **ComponentContent** object. |
 | [Context](arkts-arkui-common-comp-context-t.md) | Get context. |

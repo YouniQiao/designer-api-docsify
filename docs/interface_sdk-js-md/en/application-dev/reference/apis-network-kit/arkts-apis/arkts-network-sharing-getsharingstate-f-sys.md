@@ -44,6 +44,7 @@ Obtains the network sharing state of the specified type. This API uses an asynch
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sharing.getSharingState(SHARING_WIFI, (error: BusinessError, data: sharing.Shari
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsharingstate2"></a>
@@ -101,6 +104,7 @@ Obtains the network sharing state of the specified type. This API uses a promise
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Failed to connect to the service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ sharing
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

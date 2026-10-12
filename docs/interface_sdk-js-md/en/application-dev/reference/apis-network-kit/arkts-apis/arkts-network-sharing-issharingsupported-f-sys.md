@@ -42,6 +42,7 @@ Checks whether network sharing is supported. This API uses an asynchronous callb
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ sharing.isSharingSupported((error: BusinessError, data: boolean) => {
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="issharingsupported2"></a>
@@ -91,6 +94,7 @@ Checks whether network sharing is supported. This API uses a promise to return t
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -106,3 +110,5 @@ sharing
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

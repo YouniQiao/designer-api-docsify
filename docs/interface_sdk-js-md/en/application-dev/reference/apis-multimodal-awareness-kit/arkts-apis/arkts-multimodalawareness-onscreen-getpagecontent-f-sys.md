@@ -49,6 +49,7 @@ Obtains the onscreen content when a window is displayed on the screen.
 | [34000004](../errorcode-onScreen.md#34000004-page-not-ready) | The page is not ready. |
 | [34000006](../errorcode-onScreen.md#34000006-request-timeout) | The request timed out. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -69,3 +70,5 @@ try {
    console.error(`get page content failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

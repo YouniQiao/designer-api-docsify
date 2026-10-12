@@ -46,6 +46,7 @@ function setDefaultSmsSlotId(slotId: number, callback: AsyncCallback<void>): voi
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}.`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdefaultsmsslotid2"></a>
@@ -103,6 +106,7 @@ function setDefaultSmsSlotId(slotId: number): Promise<void>
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -115,3 +119,5 @@ sms.setDefaultSmsSlotId(0).then(() => {
     console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

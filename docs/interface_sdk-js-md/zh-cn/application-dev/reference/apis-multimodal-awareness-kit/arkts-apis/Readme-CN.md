@@ -156,21 +156,20 @@
 - [@ohos.multimodalAwareness.userStatus（用户状态感知）](arkts-multimodalawareness-multimodalawareness-userstatus.md)
   <!--Del-->
   - [configure（系统接口）](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
-  - [off](arkts-multimodalawareness-userstatus-off-f.md)
-  - [on](arkts-multimodalawareness-userstatus-on-f.md)
   <!--Del-->
   - [queryCapabilities（系统接口）](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [subscribe（系统接口）](arkts-multimodalawareness-userstatus-subscribe-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unsubscribe（系统接口）](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md)<!--DelEnd-->
+  - [off](arkts-multimodalawareness-userstatus-off-f.md)
+  - [on](arkts-multimodalawareness-userstatus-on-f.md)
   <!--Del-->
   - [ComfortReminderData（系统接口）](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DeviceInfo（系统接口）](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserBlowData（系统接口）](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md)<!--DelEnd-->
-  - [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)
   <!--Del-->
   - [UserEmotionData（系统接口）](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -181,15 +180,16 @@
   - [UserGesturesData（系统接口）](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserStatusData（系统接口）](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)<!--DelEnd-->
+  - [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)
   <!--Del-->
   - [DeviceType（系统接口）](arkts-multimodalawareness-userstatus-devicetype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ReminderLevel（系统接口）](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)<!--DelEnd-->
-  - [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
   <!--Del-->
   - [UserStatusAtomicCap（系统接口）](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserStatusFeature（系统接口）](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)<!--DelEnd-->
+  - [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 - [@ohos.stationary（设备状态感知框架）](arkts-multimodalawareness-stationary.md)
   - [off](arkts-multimodalawareness-stationary-off-f.md)
   - [on](arkts-multimodalawareness-stationary-on-f.md)

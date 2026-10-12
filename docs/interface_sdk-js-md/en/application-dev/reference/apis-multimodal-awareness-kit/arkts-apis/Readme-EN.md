@@ -156,21 +156,20 @@
 - [@ohos.multimodalAwareness.userStatus(User state awareness)](arkts-multimodalawareness-multimodalawareness-userstatus.md)
   <!--Del-->
   - [configure(system api)](arkts-multimodalawareness-userstatus-configure-f-sys.md)<!--DelEnd-->
-  - [off](arkts-multimodalawareness-userstatus-off-f.md)
-  - [on](arkts-multimodalawareness-userstatus-on-f.md)
   <!--Del-->
   - [queryCapabilities(system api)](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [subscribe(system api)](arkts-multimodalawareness-userstatus-subscribe-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unsubscribe(system api)](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md)<!--DelEnd-->
+  - [off](arkts-multimodalawareness-userstatus-off-f.md)
+  - [on](arkts-multimodalawareness-userstatus-on-f.md)
   <!--Del-->
   - [ComfortReminderData(system api)](arkts-multimodalawareness-userstatus-comfortreminderdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DeviceInfo(system api)](arkts-multimodalawareness-userstatus-deviceinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserBlowData(system api)](arkts-multimodalawareness-userstatus-userblowdata-i-sys.md)<!--DelEnd-->
-  - [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)
   <!--Del-->
   - [UserEmotionData(system api)](arkts-multimodalawareness-userstatus-useremotiondata-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -181,15 +180,16 @@
   - [UserGesturesData(system api)](arkts-multimodalawareness-userstatus-usergesturesdata-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserStatusData(system api)](arkts-multimodalawareness-userstatus-userstatusdata-i-sys.md)<!--DelEnd-->
+  - [UserClassification](arkts-multimodalawareness-userstatus-userclassification-i.md)
   <!--Del-->
   - [DeviceType(system api)](arkts-multimodalawareness-userstatus-devicetype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ReminderLevel(system api)](arkts-multimodalawareness-userstatus-reminderlevel-e-sys.md)<!--DelEnd-->
-  - [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
   <!--Del-->
   - [UserStatusAtomicCap(system api)](arkts-multimodalawareness-userstatus-userstatusatomiccap-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UserStatusFeature(system api)](arkts-multimodalawareness-userstatus-userstatusfeature-e-sys.md)<!--DelEnd-->
+  - [UserAgeGroup](arkts-multimodalawareness-userstatus-useragegroup-e.md)
 - [@ohos.stationary(Stationary)](arkts-multimodalawareness-stationary.md)
   - [off](arkts-multimodalawareness-stationary-off-f.md)
   - [on](arkts-multimodalawareness-stationary-on-f.md)

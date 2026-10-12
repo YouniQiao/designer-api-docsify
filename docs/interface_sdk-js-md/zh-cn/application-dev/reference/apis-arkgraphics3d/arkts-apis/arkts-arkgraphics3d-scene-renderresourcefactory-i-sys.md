@@ -47,6 +47,7 @@ createScene(uri: ResourceStr, param: SceneLoadParams): Promise<Scene>
 | --- | --- |
 | Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise对象，返回创建的场景对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,3 +64,5 @@ function createSceneWithParams(): Promise<Scene> {
   return renderResourceFactory.createScene($rawfile("gltf/CubeWithFloor/glTF/AnimatedCube.glb"), loadParams);
 }
 ```
+
+<!--DelEnd-->

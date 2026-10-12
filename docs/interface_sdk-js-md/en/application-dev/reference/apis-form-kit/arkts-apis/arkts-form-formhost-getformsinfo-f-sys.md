@@ -45,6 +45,7 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -62,6 +63,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo2"></a>
@@ -108,6 +111,7 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -125,6 +129,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo3"></a>
@@ -172,6 +178,7 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -187,6 +194,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo4"></a>
@@ -233,6 +242,7 @@ Obtains the widget information provided by a specified application on the device
 | [16500100](../errorcode-form.md#16500100-failed-to-obtain-widget-configuration-information) | Failed to obtain the configuration information. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -253,3 +263,5 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

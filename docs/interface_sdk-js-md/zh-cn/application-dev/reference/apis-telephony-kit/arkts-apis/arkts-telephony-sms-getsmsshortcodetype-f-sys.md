@@ -51,6 +51,7 @@ function getSmsShortCodeType(slotId: number, destAddr: string): Promise<SmsShort
 | [8300004](../errorcode-telephony.md#8300004-未识别sim卡) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,3 +68,5 @@ sms.getSmsShortCodeType(slotId, destAddr)
         console.error('getSmsShortCodeType failed, code: ${err.code}, message: ${err.message}');
     });
 ```
+
+<!--DelEnd-->

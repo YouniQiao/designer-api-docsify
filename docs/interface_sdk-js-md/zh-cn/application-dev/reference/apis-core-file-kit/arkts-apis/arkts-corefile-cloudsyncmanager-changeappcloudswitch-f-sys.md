@@ -46,6 +46,7 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true).then(() => {
   console.error(`changeAppCloudSwitch failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="changeappcloudswitch2"></a>
@@ -96,6 +99,7 @@ function changeAppCloudSwitch(accountId: string, bundleName: string, status: boo
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -111,3 +115,5 @@ cloudSyncManager.changeAppCloudSwitch(accountId, bundleName, true, (err: Busines
   }
 });
 ```
+
+<!--DelEnd-->

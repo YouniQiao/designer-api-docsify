@@ -41,6 +41,7 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -51,6 +52,8 @@ sms.getImsShortMessageFormat((err: BusinessError, data: string) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getimsshortmessageformat2"></a>
@@ -86,6 +89,7 @@ Obtains the SMS format supported by the IMS, for example, **3gpp**, **3gpp2**, o
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,3 +102,5 @@ sms.getImsShortMessageFormat().then((data: string) => {
     console.error(`getImsShortMessageFormat failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

@@ -39,6 +39,7 @@ Obtains all the shared bundle information. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllSharedBundleInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallsharedbundleinfo2"></a>
@@ -94,6 +97,7 @@ Obtains all the shared bundle information. This API uses a promise to return the
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -112,3 +116,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllSharedBundleInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

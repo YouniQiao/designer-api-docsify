@@ -144,8 +144,8 @@ componentType?: string
 
 例如：
 
-- 按钮Button类型-&gt;'Button'。  
-- 图片Image类型-&gt;'Image'。
+- 按钮Button类型->'Button'。  
+- 图片Image类型->'Image'。
 
 **类型：** string
 

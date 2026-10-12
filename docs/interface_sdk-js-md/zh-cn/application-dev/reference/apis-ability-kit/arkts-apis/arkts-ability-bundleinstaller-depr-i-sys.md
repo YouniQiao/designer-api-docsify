@@ -52,6 +52,7 @@ install(bundleFilePaths: Array<string>, param: InstallParam, callback: AsyncCall
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定安装所需的其他参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回安装状态信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -78,6 +79,8 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->
 
 ## recover
 
@@ -109,6 +112,7 @@ recover(bundleName: string, param: InstallParam, callback: AsyncCallback<Install
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定应用恢复所需的其他参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回应用恢复状态信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -135,6 +139,8 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->
 
 ## uninstall
 
@@ -166,6 +172,7 @@ uninstall(bundleName: string, param: InstallParam, callback: AsyncCallback<Insta
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | 是 | 指定卸载所需的其他参数。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | 是 | 程序启动作为入参的回调函数，返回安装状态信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -192,3 +199,5 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->

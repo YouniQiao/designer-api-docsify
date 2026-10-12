@@ -49,6 +49,7 @@ Provides grant uri permission for app
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -73,6 +74,8 @@ try {
   console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="granturipermission2"></a>
@@ -118,6 +121,7 @@ Provides grant uri permission for app
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 14300001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -140,6 +144,8 @@ try {
   console.error(`grantUriPermission failed with error: ${JSON.stringify(error)}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="granturipermission3"></a>
@@ -186,6 +192,7 @@ Grant URI permissions for an application.
 | 13900001 | Operation not permitted. |
 | 13900011 | Out of memory. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -210,3 +217,5 @@ async function grantUriPermissionExample() {
   }
 }
 ```
+
+<!--DelEnd-->

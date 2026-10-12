@@ -39,6 +39,7 @@ function queryAllPrinterExtensionInfos(callback: AsyncCallback<Array<PrinterExte
 | [201](../../errorcode-universal.md#201-api权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -53,6 +54,8 @@ print.queryAllPrinterExtensionInfos((error: BusinessError, extensionInfos: print
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryallprinterextensioninfos2"></a>
@@ -88,6 +91,7 @@ function queryAllPrinterExtensionInfos(): Promise<Array<PrinterExtensionInfo>>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -101,3 +105,5 @@ print.queryAllPrinterExtensionInfos().then((extensionInfos: print.PrinterExtensi
     console.error(`Failed to query all printer extension infos. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

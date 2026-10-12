@@ -44,6 +44,7 @@ function activate(targetNetworkId: string, inputDeviceId: number, callback: Asyn
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="activate2"></a>
@@ -108,6 +111,7 @@ function activate(targetNetworkId: string, inputDeviceId: number): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [20900001](../errorcode-devicestatus.md#20900001-操作输入设备失败) | Service exception. Possible causes:<br>1. A system error, such as null pointer, container-related exception, or IPC exception. <br>2. N-API invocation exception or invalid N-API status. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -125,3 +129,5 @@ try {
   console.error(`Start Keyboard mouse crossing failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
 }
 ```
+
+<!--DelEnd-->

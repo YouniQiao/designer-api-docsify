@@ -42,6 +42,7 @@ This API is used when you need to obtain the ambient light intensity and color t
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br> Applicable versions: 11+ |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -61,6 +62,8 @@ try{
   console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="on2"></a>
@@ -99,6 +102,7 @@ This API can be used to monitor the SAR of a device to implement functions such 
 | [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br> Applicable versions: 11+ |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ try {
   console.error(`Failed to invoke on. Code: ${e.code}, message: ${e.message}`);
 }
 ```
+
+<!--DelEnd-->

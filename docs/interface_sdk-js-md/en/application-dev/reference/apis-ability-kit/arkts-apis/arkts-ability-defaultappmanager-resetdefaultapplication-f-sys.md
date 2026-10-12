@@ -45,6 +45,7 @@ Resets the default application for a user based on a system-defined application 
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -79,6 +80,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
     console.info('Operation successful.');
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="resetdefaultapplication2"></a>
@@ -118,6 +121,7 @@ Resets the default application based on a system-defined application type, a fil
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -149,6 +153,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
   console.info('Operation successful.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="resetdefaultapplication3"></a>
@@ -195,6 +201,7 @@ Resets the default application based on a system-defined application type, a fil
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -227,3 +234,5 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

@@ -38,6 +38,7 @@ Obtains the scroll direction of the mouse wheel. This API uses a promise to retu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [3800001](../errorcode-infraredemitter.md#3800001-multimodal-input-service-internal-error) | Input service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,3 +67,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

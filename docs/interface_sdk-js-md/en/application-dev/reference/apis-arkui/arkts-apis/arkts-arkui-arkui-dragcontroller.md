@@ -56,6 +56,6 @@ import { dragController } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Enumerates hover detection states during drag operations. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still--&gt;500ms--&gt;BEGIN--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;UPDATE--&gt;100ms--&gt;END |
+| [DragSpringLoadingState](arkts-arkui-dragcontroller-dragspringloadingstate-e.md) | Enumerates hover detection states during drag operations. Under default system configuration, if no CANCEL occurs, the state reporting is as follows: Hover still-->500ms-->BEGIN-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->UPDATE-->100ms-->END |
 | [DragStartRequestStatus](arkts-arkui-dragcontroller-dragstartrequeststatus-e.md) | Enumerates the states defining whether an application can initiate a drag operation. This API is effective only when [onDragStart](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#ondragstart) is called. |
 | [DragStatus](arkts-arkui-dragcontroller-dragstatus-e.md) | Describes the dragging start and end states. |

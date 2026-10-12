@@ -56,6 +56,7 @@ Obtains the video frame number corresponding to a video timestamp. Only MP4 vide
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ avMetadataExtractor.getFrameIndexByTime(0).then((index: number) => {
   console.error(`Failed to getFrameIndexByTime ${err.message}`);
 })
 ```
+
+<!--DelEnd-->
 
 ## getTimeByFrameIndex
 
@@ -105,6 +108,7 @@ Obtains the video timestamp corresponding to a video frame number. Only MP4 vide
 | [5400102](../errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
 | [5400106](../errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ avMetadataExtractor.getTimeByFrameIndex(0).then((timeUs: number) => {
   console.error(`Failed to getTimeByFrameIndex ${err.message}`);
 })
 ```
+
+<!--DelEnd-->

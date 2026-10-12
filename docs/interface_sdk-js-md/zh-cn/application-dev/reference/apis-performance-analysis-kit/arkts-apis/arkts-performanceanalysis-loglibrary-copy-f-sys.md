@@ -49,6 +49,7 @@ function copy(logType: string, logName: string, dest: string): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid argument. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -73,6 +74,8 @@ try {
     console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="copy2"></a>
@@ -113,6 +116,7 @@ function copy(logType: string, logName: string, dest: string, callback: AsyncCal
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Invalid argument. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 | [21300001](../errorcode-loglibrary-sys.md#21300001-指定文件不存在) | Source file does not exists |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -133,3 +137,5 @@ try {
     console.error(`Failed to call logLibrary API. Code: ${error?.code}, message: ${error?.message}`);
 }
 ```
+
+<!--DelEnd-->

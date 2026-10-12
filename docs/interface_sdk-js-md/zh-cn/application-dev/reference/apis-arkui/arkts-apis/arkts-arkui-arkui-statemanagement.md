@@ -4,10 +4,10 @@
 
 本文中T和S的含义如下：
 
-| 类型   | 说明                                     |
+| 类型 | 说明 |
  | ---- | -------------------------------------- |
-| T    | Class、number、boolean、string和这些类型的数组形式。 |
-| S    | number、boolean、string。                 |
+| T | Class、number、boolean、string和这些类型的数组形式。 |
+| S | number、boolean、string。 |
 
 
 

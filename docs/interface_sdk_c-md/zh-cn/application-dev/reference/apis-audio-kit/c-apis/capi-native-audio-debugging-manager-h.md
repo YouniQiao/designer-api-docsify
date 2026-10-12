@@ -6,6 +6,8 @@ Declare audio debugging manager related interfaces.<br> The interfaces in this f
 
 **库：** libohaudio.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 26.0.0
 
 **相关模块：** [OHAudio](capi-ohaudio.md)
@@ -40,6 +42,8 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioDebuggingManager(OH_AudioDebugging
 
 获取音频调试管理器句柄，它是一个单例。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -63,6 +67,8 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintAppInfo(OH_AudioDebuggingMan
 **描述：**
 
 打印当前应用进程的完整音频运行时快照。 快照将包含所有音频渲染器、捕获器、音频会话信息。 请注意，不同版本的信息详情和格式可能会有所不同，它只能用于 手动调试，用户不应依赖实际功能实现或文件的信息 内容提取。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 26.0.0
 
@@ -88,6 +94,8 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintRendererInfo(OH_AudioDebuggi
 **描述：**
 
 打印目标音频渲染器实例的完整音频运行时快照。 快照将包含流、管道、卷和设备信息。 请注意，不同版本的信息详情和格式可能会有所不同，它只能用于 手动调试，用户不应依赖实际功能实现或文件的信息 内容提取。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 26.0.0
 
@@ -115,6 +123,8 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintCapturerInfo(OH_AudioDebuggi
 
 打印目标音频捕获程序实例的完整音频运行时快照。 快照将包含流、管道、卷和设备信息。 请注意，不同版本的信息详情和格式可能会有所不同，它只能用于 手动调试，用户不应依赖实际功能实现或文件的信息 内容提取。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -140,6 +150,8 @@ OH_AudioCommon_Result OH_AudioDebuggingManager_PrintSessionInfo(OH_AudioDebuggin
 **描述：**
 
 打印目标音频会话管理器实例的完整音频运行时快照。 快照将包含会话状态、场景、策略和设备信息。 请注意，不同版本的信息详情和格式可能会有所不同，它只能用于 手动调试，用户不应依赖实际功能实现或文件的信息 内容提取。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 26.0.0
 

@@ -41,6 +41,7 @@ Stops extended mode. This API uses an asynchronous callback to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -58,6 +59,8 @@ screen.stopExpand(expandScreenIds, (err: BusinessError) => {
   console.info('Succeeded in stopping expand screens.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="stopexpand2"></a>
@@ -100,6 +103,7 @@ Stops extended mode. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ screen.stopExpand(expandScreenIds).then(() => {
   console.error(`Failed to stop expand screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

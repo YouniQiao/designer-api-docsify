@@ -27,9 +27,9 @@ This type is a 4 x 4 matrix represented by `number[]` of length 16, which is use
 ```
 const transform: Matrix4 = [
 1, 0, 45, 0,
-0, 1, 0, 0,
-0, 0, 1, 0,
-0, 0, 0, 1
+0, 1,  0, 0,
+0, 0,  1, 0,
+0, 0,  0, 1
 ]
 ```.
 

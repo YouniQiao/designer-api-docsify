@@ -5,10 +5,6 @@
   <!--Del-->
   - [BackupExtensionAbility（系统接口）](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md)<!--DelEnd-->
   - [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md)
-- [@ohos.document（文件交互）](arkts-corefile-document.md)
-  - [document](arkts-corefile-document-depr-n.md)
-  - [choose](arkts-corefile-document-choose-f.md)
-  - [show](arkts-corefile-document-show-f.md)
 <!--Del-->
 - [@ohos.file.backup](arkts-corefile-file-backup.md)<!--DelEnd-->
   <!--Del-->
@@ -165,50 +161,6 @@
   - [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md)
   <!--Del-->
   - [getUserHomeDir（系统接口）](arkts-corefile-environment-getuserhomedir-f-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.fileAccess（公共文件访问与管理）](arkts-corefile-file-fileaccess.md)<!--DelEnd-->
-  <!--Del-->
-  - [createFileAccessHelper（系统接口）](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFileAccessAbilityInfo（系统接口）](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CopyResult（系统接口）](arkts-corefile-fileaccess-copyresult-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileAccessHelper（系统接口）](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo（系统接口）](arkts-corefile-fileaccess-fileinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileIterator（系统接口）](arkts-corefile-fileaccess-fileiterator-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [MoveResult（系统接口）](arkts-corefile-fileaccess-moveresult-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NotifyMessage（系统接口）](arkts-corefile-fileaccess-notifymessage-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RootInfo（系统接口）](arkts-corefile-fileaccess-rootinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RootIterator（系统接口）](arkts-corefile-fileaccess-rootiterator-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileKey（系统接口）](arkts-corefile-fileaccess-filekey-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NotifyType（系统接口）](arkts-corefile-fileaccess-notifytype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OPENFLAGS（系统接口）](arkts-corefile-fileaccess-openflags-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [常量(系统接口)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.fileExtensionInfo（公共文件访问与管理属性信息）](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
-  <!--Del-->
-  - [fileExtensionInfo（系统接口）](arkts-corefile-fileextensioninfo-n.md)<!--DelEnd-->
-    <!--Del-->
-    - [DeviceFlag（系统接口）](arkts-corefile-fileextensioninfo-deviceflag-n.md)<!--DelEnd-->
-      <!--Del-->
-      - [常量(系统接口)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [DocumentFlag（系统接口）](arkts-corefile-fileextensioninfo-documentflag-n.md)<!--DelEnd-->
-      <!--Del-->
-      - [常量(系统接口)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [DeviceType（系统接口）](arkts-corefile-fileextensioninfo-devicetype-e-sys.md)<!--DelEnd-->
 - [@ohos.file.fileuri（文件URI）](arkts-corefile-file-fileuri.md)
   - [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md)
   - [FileUri](arkts-corefile-fileuri-fileuri-c.md)
@@ -347,16 +299,6 @@
   - [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
   - [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
   - [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
-<!--Del-->
-- [@ohos.file.recent（最近访问列表）](arkts-corefile-file-recent.md)<!--DelEnd-->
-  <!--Del-->
-  - [add（系统接口）](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [listFile（系统接口）](arkts-corefile-recent-listfile-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [remove（系统接口）](arkts-corefile-recent-remove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo（系统接口）](arkts-corefile-recent-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.file.securityLabel（数据标签）](arkts-corefile-file-securitylabel.md)
   - [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md)
   - [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md)
@@ -405,16 +347,6 @@
   <!--Del-->
   - [UserdataDirInfo（系统接口）](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.file.trash（回收站）](arkts-corefile-file-trash.md)<!--DelEnd-->
-  <!--Del-->
-  - [completelyDelete（系统接口）](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [listFile（系统接口）](arkts-corefile-trash-listfile-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [recover（系统接口）](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo（系统接口）](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
-<!--Del-->
 - [@ohos.file.volumeManager（卷管理）](arkts-corefile-file-volumemanager.md)<!--DelEnd-->
   <!--Del-->
   - [format（系统接口）](arkts-corefile-volumemanager-format-f-sys.md)<!--DelEnd-->
@@ -434,6 +366,102 @@
   - [unmount（系统接口）](arkts-corefile-volumemanager-unmount-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Volume（系统接口）](arkts-corefile-volumemanager-volume-i-sys.md)<!--DelEnd-->
+- [@ohos.fileshare](arkts-corefile-fileshare.md)
+  - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
+  <!--Del-->
+  - [checkPathPermission（系统接口）](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->
+  - [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md)
+  - [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md)
+  <!--Del-->
+  - [getPersistentPolicy（系统接口）](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSharedDirectoryInfo（系统接口）](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantSharedDirectoryPermission（系统接口）](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantUriPermission（系统接口）](arkts-corefile-fileshare-granturipermission-f-sys.md)<!--DelEnd-->
+  - [persistPermission](arkts-corefile-fileshare-persistpermission-f.md)
+  - [revokePermission](arkts-corefile-fileshare-revokepermission-f.md)
+  <!--Del-->
+  - [revokePermission（系统接口）](arkts-corefile-fileshare-revokepermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [revokeSharedDirectoryPermission（系统接口）](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  - [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)
+  - [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md)
+  - [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
+  <!--Del-->
+  - [SharedDirectoryInfo（系统接口）](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)<!--DelEnd-->
+  - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
+  - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
+  - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
+- [@ohos.document（文件交互）](arkts-corefile-document.md)
+  - [document](arkts-corefile-document-depr-n.md)
+  - [choose](arkts-corefile-document-choose-f.md)
+  - [show](arkts-corefile-document-show-f.md)
+<!--Del-->
+- [@ohos.file.fileAccess（公共文件访问与管理）](arkts-corefile-file-fileaccess.md)<!--DelEnd-->
+  <!--Del-->
+  - [createFileAccessHelper（系统接口）](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getFileAccessAbilityInfo（系统接口）](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CopyResult（系统接口）](arkts-corefile-fileaccess-copyresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileAccessHelper（系统接口）](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo（系统接口）](arkts-corefile-fileaccess-fileinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileIterator（系统接口）](arkts-corefile-fileaccess-fileiterator-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MoveResult（系统接口）](arkts-corefile-fileaccess-moveresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyMessage（系统接口）](arkts-corefile-fileaccess-notifymessage-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RootInfo（系统接口）](arkts-corefile-fileaccess-rootinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RootIterator（系统接口）](arkts-corefile-fileaccess-rootiterator-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileKey（系统接口）](arkts-corefile-fileaccess-filekey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyType（系统接口）](arkts-corefile-fileaccess-notifytype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OPENFLAGS（系统接口）](arkts-corefile-fileaccess-openflags-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [常量(系统接口)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.fileExtensionInfo（公共文件访问与管理属性信息）](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
+  <!--Del-->
+  - [fileExtensionInfo（系统接口）](arkts-corefile-fileextensioninfo-n.md)<!--DelEnd-->
+    <!--Del-->
+    - [DeviceFlag（系统接口）](arkts-corefile-fileextensioninfo-deviceflag-n.md)<!--DelEnd-->
+      <!--Del-->
+      - [常量(系统接口)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [DocumentFlag（系统接口）](arkts-corefile-fileextensioninfo-documentflag-n.md)<!--DelEnd-->
+      <!--Del-->
+      - [常量(系统接口)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [DeviceType（系统接口）](arkts-corefile-fileextensioninfo-devicetype-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.recent（最近访问列表）](arkts-corefile-file-recent.md)<!--DelEnd-->
+  <!--Del-->
+  - [add（系统接口）](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [listFile（系统接口）](arkts-corefile-recent-listfile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [remove（系统接口）](arkts-corefile-recent-remove-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo（系统接口）](arkts-corefile-recent-fileinfo-i-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.trash（回收站）](arkts-corefile-file-trash.md)<!--DelEnd-->
+  <!--Del-->
+  - [completelyDelete（系统接口）](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [listFile（系统接口）](arkts-corefile-trash-listfile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [recover（系统接口）](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo（系统接口）](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.fileio（文件管理）](arkts-corefile-fileio.md)
   - [fileIO](arkts-corefile-fileio-depr-n.md)
   - [access](arkts-corefile-fileio-access-f.md)
@@ -500,34 +528,6 @@
   - [Stat](arkts-corefile-fileio-stat-depr-i.md)
   - [Stream](arkts-corefile-fileio-stream-depr-i.md)
   - [Watcher](arkts-corefile-fileio-watcher-depr-i.md)
-- [@ohos.fileshare](arkts-corefile-fileshare.md)
-  - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
-  <!--Del-->
-  - [checkPathPermission（系统接口）](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->
-  - [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md)
-  - [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md)
-  <!--Del-->
-  - [getPersistentPolicy（系统接口）](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSharedDirectoryInfo（系统接口）](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [grantSharedDirectoryPermission（系统接口）](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [grantUriPermission（系统接口）](arkts-corefile-fileshare-granturipermission-f-sys.md)<!--DelEnd-->
-  - [persistPermission](arkts-corefile-fileshare-persistpermission-f.md)
-  - [revokePermission](arkts-corefile-fileshare-revokepermission-f.md)
-  <!--Del-->
-  - [revokePermission（系统接口）](arkts-corefile-fileshare-revokepermission-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [revokeSharedDirectoryPermission（系统接口）](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md)<!--DelEnd-->
-  - [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)
-  - [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md)
-  - [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
-  <!--Del-->
-  - [SharedDirectoryInfo（系统接口）](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)<!--DelEnd-->
-  - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
-  - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
-  - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
 - [@ohos.statfs（statfs）](arkts-corefile-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)

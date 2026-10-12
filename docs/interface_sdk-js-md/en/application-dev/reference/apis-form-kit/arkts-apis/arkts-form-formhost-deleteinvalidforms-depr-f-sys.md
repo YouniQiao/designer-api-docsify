@@ -36,6 +36,7 @@ Deletes invalid widgets from the list. This API uses an asynchronous callback to
 | formIds | Array&lt;string&gt; | Yes | List of valid widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the invalid widgets are deleted, **error** is undefined and **data** is the number of widgets deleted; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -50,6 +51,8 @@ formHost.deleteInvalidForms(formIds, (error: Base.BusinessError, data: number) =
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="deleteinvalidforms2"></a>
@@ -88,6 +91,7 @@ Deletes invalid widgets from the list. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the number of widgets deleted. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -100,3 +104,5 @@ formHost.deleteInvalidForms(formIds).then((data: number) => {
   console.error(`formHost deleteInvalidForms, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

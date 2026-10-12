@@ -45,6 +45,7 @@ Subscribe to the results of indoorand outdoor identification.
 | [35100002](../errorcode-spatialAwareness.md#35100002-subscription-failed) | Subscription failed. |
 | [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) | Parameter invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,3 +66,5 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
       console.error(`call onIndoorOrOutdoorIdentify failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```
+
+<!--DelEnd-->

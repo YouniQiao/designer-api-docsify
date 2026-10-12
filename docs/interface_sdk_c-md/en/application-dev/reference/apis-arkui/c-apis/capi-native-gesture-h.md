@@ -6,6 +6,8 @@ Declares the APIs of **NativeGesture**, supporting capabilities such as gesture 
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -136,6 +138,8 @@ enum ArkUI_GestureEventActionType
 
 Enumerates gesture event types.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
@@ -155,6 +159,8 @@ enum ArkUI_GesturePriority
 
 Enumerates gesture priorities. **NORMAL** applies to default gesture recognition scenarios; **PRIORITY**<br>applies to scenarios where a specific gesture needs to be prioritized (for example, prioritizing a tap over a swipe); **PARALLEL** applies to scenarios where multiple gestures need to respond independently and simultaneously (for example, recognizing pinch and rotation at the same time).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
@@ -173,6 +179,8 @@ enum ArkUI_GroupGestureMode
 
 Enumerates gesture group modes. **SEQUENTIAL_GROUP** applies to scenarios where gestures need to be recognized step by step (for example, long press followed by swipe); **PARALLEL_GROUP** applies to scenarios where multiple gestures need to be recognized independently and simultaneously (for example, listening for pinch and rotation at the same time); **EXCLUSIVE_GROUP** applies to scenarios where multiple gestures compete exclusively and only one needs to succeed (for example, swipe and long press being mutually exclusive).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
@@ -190,6 +198,8 @@ enum ArkUI_GestureDirection
 **Description**
 
 Enumerates gesture directions.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -214,6 +224,8 @@ enum ArkUI_GestureMask
 
 Enumerates gesture masking modes. **NORMAL_GESTURE_MASK** applies to default scenarios, where child component gestures are recognized in the normal order; **IGNORE_INTERNAL_GESTURE_MASK** applies to scenarios where the parent component needs exclusive gesture control (for example, blocking gesture interference from child components during full-screen swiping), and it masks child component gestures, including system built-in gestures.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
@@ -230,6 +242,8 @@ enum ArkUI_GestureRecognizerType
 **Description**
 
 Enumerates gesture recognizer types.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -255,6 +269,8 @@ enum ArkUI_GestureInterruptResult
 
 Enumerates gesture interruption results.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 | Enum item | Description |
@@ -271,6 +287,8 @@ enum ArkUI_GestureRecognizerState
 **Description**
 
 Enumerates the gesture recognizer states.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -292,6 +310,8 @@ enum OH_ArkUI_GestureCollectIntervention
 **Description**
 
 Defines the intervention types for gesture and event collection.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.0
 
@@ -316,6 +336,8 @@ typedef void (*ArkUI_GestureRecognizerDisposeNotifyCallback)(ArkUI_GestureRecogn
 
 Defines a callback function for notifying gesture recognizer destruction.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -334,6 +356,8 @@ bool OH_ArkUI_GestureInterruptInfo_GetSystemFlag(const ArkUI_GestureInterruptInf
 **Description**
 
 Checks whether a gesture is a system built-in gesture.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -359,6 +383,8 @@ ArkUI_GestureRecognizer* OH_ArkUI_GestureInterruptInfo_GetRecognizer(const ArkUI
 
 Obtains the pointer to the interrupted gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -382,6 +408,8 @@ ArkUI_GestureEvent* OH_ArkUI_GestureInterruptInfo_GetGestureEvent(const ArkUI_Ge
 **Description**
 
 Obtains the pointer to the interrupted gesture event.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -407,6 +435,8 @@ int32_t OH_ArkUI_GestureInterruptInfo_GetSystemRecognizerType(const ArkUI_Gestur
 
 Obtains the type of the system built-in gesture to trigger.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -430,6 +460,8 @@ int32_t OH_ArkUI_GestureInterruptInfo_GetTouchRecognizers(const ArkUI_GestureInt
 **Description**
 
 Obtains touch recognizers from gesture interruption information.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -457,6 +489,8 @@ ArkUI_NodeHandle OH_ArkUI_TouchRecognizer_GetNodeHandle(const ArkUI_TouchRecogni
 
 Obtains the component handle corresponding to a touch recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 15
 
 **Parameters**:
@@ -480,6 +514,8 @@ int32_t OH_ArkUI_TouchRecognizer_CancelTouch(ArkUI_TouchRecognizerHandle recogni
 **Description**
 
 Sends a cancel touch event to a touch recognizer in a gesture interruption callback. This API is suitable for scenarios such as nested scrolling, where the parent component needs to take over scroll control. This API can be used to cancel the touch event of the child component touch recognizer to avoid gesture conflicts.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -506,6 +542,8 @@ ArkUI_GestureEventActionType OH_ArkUI_GestureEvent_GetActionType(const ArkUI_Ges
 
 Obtains the gesture event type.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -529,6 +567,8 @@ const ArkUI_UIInputEvent* OH_ArkUI_GestureEvent_GetRawInputEvent(const ArkUI_Ges
 **Description**
 
 Obtains the original input event of the gesture.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -554,6 +594,8 @@ int32_t OH_ArkUI_LongPress_GetRepeatCount(const ArkUI_GestureEvent* event)
 
 Checks whether the event is a repeated trigger event.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -577,6 +619,8 @@ float OH_ArkUI_PanGesture_GetVelocity(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the velocity of a pan gesture along the main axis.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -602,6 +646,8 @@ float OH_ArkUI_PanGesture_GetVelocityX(const ArkUI_GestureEvent* event)
 
 Obtains the velocity of a pan gesture along the x-axis.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -625,6 +671,8 @@ float OH_ArkUI_PanGesture_GetVelocityY(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the velocity of a pan gesture along the y-axis.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -650,6 +698,8 @@ float OH_ArkUI_PanGesture_GetOffsetX(const ArkUI_GestureEvent* event)
 
 Obtains the relative offset of a pan gesture along the x-axis.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -673,6 +723,8 @@ float OH_ArkUI_PanGesture_GetOffsetY(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the relative offset of a pan gesture along the y-axis.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -698,6 +750,8 @@ float OH_ArkUI_SwipeGesture_GetAngle(const ArkUI_GestureEvent* event)
 
 Obtains the angle information of the swipe gesture, that is, the angle between the instantaneous direction of the finger swipe and the positive horizontal direction. Based on the positive horizontal direction, if the swipe direction is on the clockwise side of the positive horizontal direction, the angle ranges from 0 to 180 degrees; if the swipe direction is on the counterclockwise side of the positive horizontal direction, the angle ranges from 0 to –180 degrees.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -721,6 +775,8 @@ float OH_ArkUI_SwipeGesture_GetVelocity(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the average velocity of all fingers used in the swipe gesture.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -746,6 +802,8 @@ float OH_ArkUI_RotationGesture_GetAngle(const ArkUI_GestureEvent* event)
 
 Obtains the angle information of a rotation gesture.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -769,6 +827,8 @@ float OH_ArkUI_PinchGesture_GetScale(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the scale ratio of a pinch gesture.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -794,6 +854,8 @@ float OH_ArkUI_PinchGesture_GetCenterX(const ArkUI_GestureEvent* event)
 
 Obtains the x-coordinate of the center of the pinch gesture, relative to the upper left corner of the current component.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -817,6 +879,8 @@ float OH_ArkUI_PinchGesture_GetCenterY(const ArkUI_GestureEvent* event)
 **Description**
 
 Obtains the y-coordinate of the center of the pinch gesture, relative to the upper left corner of the current component.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -842,6 +906,8 @@ ArkUI_NodeHandle OH_ArkUI_GestureEvent_GetNode(const ArkUI_GestureEvent* event)
 
 Obtains the ArkUI component to which the gesture is bound.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -865,6 +931,8 @@ int32_t OH_ArkUI_GetResponseRecognizersFromInterruptInfo(const ArkUI_GestureInte
 **Description**
 
 Obtains information about a gesture response chain.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -892,6 +960,8 @@ int32_t OH_ArkUI_SetGestureRecognizerEnabled(ArkUI_GestureRecognizer* recognizer
 
 Sets the enabled state of a gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -916,6 +986,8 @@ int32_t OH_ArkUI_SetGestureRecognizerLimitFingerCount(ArkUI_GestureRecognizer* r
 **Description**
 
 Sets whether to enable strict finger count checking. If this feature is enabled and the actual number of touch fingers does not match the set number, the gesture recognition fails.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -942,6 +1014,8 @@ bool OH_ArkUI_GetGestureRecognizerEnabled(ArkUI_GestureRecognizer* recognizer)
 
 Obtains the enabled state of a gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -965,6 +1039,8 @@ int32_t OH_ArkUI_GetGestureRecognizerState(ArkUI_GestureRecognizer* recognizer, 
 **Description**
 
 Obtains the state of a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -991,6 +1067,8 @@ int32_t OH_ArkUI_GetGestureEventTargetInfo(ArkUI_GestureRecognizer* recognizer, 
 
 Obtains the information about a gesture event target.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1015,6 +1093,8 @@ int32_t OH_ArkUI_GestureEventTargetInfo_IsScrollBegin(ArkUI_GestureEventTargetIn
 **Description**
 
 Obtains whether this scrollable container component is scrolled to the top.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1041,6 +1121,8 @@ int32_t OH_ArkUI_GestureEventTargetInfo_IsScrollEnd(ArkUI_GestureEventTargetInfo
 
 Obtains whether this scrollable container component is scrolled to the bottom.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1065,6 +1147,8 @@ int32_t OH_ArkUI_GetPanGestureDirectionMask(ArkUI_GestureRecognizer* recognizer,
 **Description**
 
 Obtains the direction of a pan gesture. It is recommended to use **OH_ArkUI_GetGestureParam_DirectMask**<br>(API version 18) first, which is a unified parameter query API. **OH_ArkUI_GetPanGestureDirectionMask** is an earlier API (API version 12) with the same functionality as **OH_ArkUI_GetGestureParam_DirectMask**.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1091,6 +1175,8 @@ bool OH_ArkUI_IsBuiltInGesture(ArkUI_GestureRecognizer* recognizer)
 
 Obtains whether a gesture is a built-in gesture.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1114,6 +1200,8 @@ int32_t OH_ArkUI_GetGestureTag(ArkUI_GestureRecognizer* recognizer, char* buffer
 **Description**
 
 Obtains the tag of a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1142,6 +1230,8 @@ int32_t OH_ArkUI_GetGestureBindNodeId(ArkUI_GestureRecognizer* recognizer, char*
 
 Obtains the ID of the component bound to a gesture recognizer (in string format, that is, the value of the **nodeId** attribute you set on the ArkUI component). To obtain the system-assigned integer unique identifier, use **OH_ArkUI_GetGestureBindNodeUniqueId**.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1169,6 +1259,8 @@ bool OH_ArkUI_IsGestureRecognizerValid(ArkUI_GestureRecognizer* recognizer)
 
 Obtains whether a gesture recognizer is valid.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1192,6 +1284,8 @@ void* OH_ArkUI_ParallelInnerGestureEvent_GetUserData(ArkUI_ParallelInnerGestureE
 **Description**
 
 Obtains custom data in the parallel built-in gesture event.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1217,6 +1311,8 @@ ArkUI_GestureRecognizer* OH_ArkUI_ParallelInnerGestureEvent_GetCurrentRecognizer
 
 Obtains the current gesture recognizer in a parallel built-in gesture event.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1240,6 +1336,8 @@ int32_t OH_ArkUI_ParallelInnerGestureEvent_GetConflictRecognizers(ArkUI_Parallel
 **Description**
 
 Obtains the conflicting gesture recognizers in a parallel built-in gesture event.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1267,6 +1365,8 @@ int32_t OH_ArkUI_SetArkUIGestureRecognizerDisposeNotify(ArkUI_GestureRecognizer*
 
 Sets a callback function for notifying gesture recognizer destruction.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1293,6 +1393,8 @@ int32_t OH_ArkUI_GetGestureParam_DirectMask(ArkUI_GestureRecognizer* recognizer,
 
 Obtains the swipe direction of a gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1317,6 +1419,8 @@ int32_t OH_ArkUI_GetGestureParam_FingerCount(ArkUI_GestureRecognizer* recognizer
 **Description**
 
 Obtains the number of fingers used by a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 18
 
@@ -1343,6 +1447,8 @@ int32_t OH_ArkUI_GetGestureParam_limitFingerCount(ArkUI_GestureRecognizer* recog
 
 Checks whether a gesture recognizer has a finger count limit.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1367,6 +1473,8 @@ int32_t OH_ArkUI_GetGestureParam_repeat(ArkUI_GestureRecognizer* recognizer, boo
 **Description**
 
 Checks whether a gesture recognizer continuously triggers event callbacks.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 18
 
@@ -1393,6 +1501,8 @@ int32_t OH_ArkUI_GetGestureParam_distance(ArkUI_GestureRecognizer* recognizer, d
 
 Obtains the allowed movement distance range for a gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1417,6 +1527,8 @@ int32_t OH_ArkUI_GetGestureParam_speed(ArkUI_GestureRecognizer* recognizer, doub
 **Description**
 
 Obtains the minimum swipe speed recognized by a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 18
 
@@ -1443,6 +1555,8 @@ int32_t OH_ArkUI_GetGestureParam_duration(ArkUI_GestureRecognizer* recognizer, i
 
 Obtains the minimum duration required to trigger a long press by a gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1467,6 +1581,8 @@ int32_t OH_ArkUI_GetGestureParam_angle(ArkUI_GestureRecognizer* recognizer, doub
 **Description**
 
 Obtains the minimum angle change required for a rotation gesture to be recognized by a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 18
 
@@ -1493,6 +1609,8 @@ int32_t OH_ArkUI_GetGestureParam_distanceThreshold(ArkUI_GestureRecognizer* reco
 
 Obtains the movement threshold distance for gesture recognition.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1517,6 +1635,8 @@ ArkUI_ErrorCode OH_ArkUI_LongPressGesture_GetAllowableMovement(ArkUI_GestureReco
 **Description**
 
 Obtains the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 22
 
@@ -1543,6 +1663,8 @@ ArkUI_ErrorCode OH_ArkUI_PanGesture_SetDistanceMap(ArkUI_GestureRecognizer* reco
 
 Sets the minimum sliding distance threshold mapping for gesture recognition, which is used for scenarios where the pan gesture recognition threshold needs to be configured based on different input tool types.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 19
 
 **Parameters**:
@@ -1551,7 +1673,7 @@ Sets the minimum sliding distance threshold mapping for gesture recognition, whi
 | -- | -- |
 | [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Pointer to the gesture recognizer instance. |
 | int size | Number of elements in the **toolTypeArray** and **distanceArray** arrays. The value must be greater than 0 and must match the actual number of elements in **toolTypeArray** and **distanceArray**. |
-| int* toolTypeArray | Pointer to the array of input event tool types. The element values are specified by [UI_INPUT_EVENT_TOOL_TYPE](capi-ui-input-event-h.md#anonymous1)_XXX. If a value outside this range is set, the setting does not take effect. |
+| int* toolTypeArray | Pointer to the array of input event tool types. The element values are specified by UI_INPUT_EVENT_TOOL_TYPE_XXX. If a value outside this range is set, the setting does not take effect. |
 | double* distanceArray | Pointer to the array of minimum sliding distance thresholds. The value range is (0, +∞), in px. If 0 or a negative number is passed in, the setting does not take effect. **distanceArray[i]** indicates the minimum sliding distance threshold for the tool type corresponding to **toolTypeArray[i]**. |
 
 **Returns**:
@@ -1570,6 +1692,8 @@ ArkUI_ErrorCode OH_ArkUI_PanGesture_GetDistanceByToolType(ArkUI_GestureRecognize
 
 Obtains the gesture movement threshold of the gesture recognizer. This API only supports querying thresholds for device types that have been modified through **OH_ArkUI_PanGesture_SetDistanceMap**. The default sliding threshold can be obtained by querying the [UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN](capi-ui-input-event-h.md#anonymous1) type. Other types that have not been set will not return the corresponding sliding thresholds.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 19
 
 **Parameters**:
@@ -1577,7 +1701,7 @@ Obtains the gesture movement threshold of the gesture recognizer. This API only 
 | Parameter | Description |
 | -- | -- |
 | [ArkUI_GestureRecognizer](capi-arkui-nativemodule-arkui-gesturerecognizer.md)* recognizer | Pointer to the gesture recognizer instance. |
-| int toolType | Tool type of the input event. The value specified by [UI_INPUT_EVENT_TOOL_TYPE](capi-ui-input-event-h.md#anonymous1)_XXX. Only threshold querying for device types modified by **OH_ArkUI_PanGesture_SetDistanceMap** and the [UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN](capi-ui-input-event-h.md#anonymous1) type is supported. Other types that have not been set will not return corresponding thresholds. |
+| int toolType | Tool type of the input event. The value specified by UI_INPUT_EVENT_TOOL_TYPE_XXX. Only threshold querying for device types modified by **OH_ArkUI_PanGesture_SetDistanceMap** and the [UI_INPUT_EVENT_TOOL_TYPE_UNKNOWN](capi-ui-input-event-h.md#anonymous1) type is supported. Other types that have not been set will not return corresponding thresholds. |
 | double* distance | Pointer to the movement distance threshold of the gesture recognizer. The unit is px. |
 
 **Returns**:
@@ -1595,6 +1719,8 @@ ArkUI_ErrorCode OH_ArkUI_SetTouchTestDoneCallback(ArkUI_NodeHandle node, void* u
 **Description**
 
 Registers a callback that is executed after all gesture recognizers are collected. When the user begins touching the screen, the system performs hit testing and collects gesture recognizers based on the touch location. Subsequently, before processing any move events, the component can use this API to determine the gesture recognizers that will participate in and compete for recognition.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 20
 
@@ -1622,6 +1748,8 @@ void* OH_ArkUI_GestureInterrupter_GetUserData(ArkUI_GestureInterruptInfo* event)
 
 Obtains the custom data from a gesture interruption event.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 18
 
 **Parameters**:
@@ -1645,6 +1773,8 @@ ArkUI_ErrorCode OH_ArkUI_PreventGestureRecognizerBegin(ArkUI_GestureRecognizer* 
 **Description**
 
 Prevents a gesture recognizer from participating in the current gesture recognition before all fingers are lifted. This is suitable for scenarios where a specified gesture recognizer needs to be dynamically excluded during the gesture competition process. If the system has already determined the result of the gesture recognizer (regardless of success or failure), calling this API will be ineffective.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 20
 
@@ -1670,6 +1800,8 @@ ArkUI_ErrorCode OH_ArkUI_LongPressGesture_SetAllowableMovement(ArkUI_GestureReco
 
 Sets the maximum movement distance allowed for gesture recognition by the long press gesture recognizer.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 22
 
 **Parameters**:
@@ -1694,6 +1826,8 @@ ArkUI_ErrorCode OH_ArkUI_GestureCollectInterceptInfo_GetResponseRecognizers(cons
 **Description**
 
 Obtains gesture recognizer handles from gesture collection interception information.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.0
 
@@ -1721,6 +1855,8 @@ ArkUI_ErrorCode OH_ArkUI_GestureCollectInterceptInfo_GetTouchRecognizers(const A
 
 Obtains touch recognizer handles from gesture collection interception information.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1747,6 +1883,8 @@ ArkUI_ErrorCode OH_ArkUI_GestureCollectInterceptInfo_SetGestureCollectInterventi
 
 Sets the intervention mode for gesture collection.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1771,6 +1909,8 @@ ArkUI_ErrorCode OH_ArkUI_GetGestureBindNodeUniqueId(const ArkUI_GestureRecognize
 **Description**
 
 Obtains the unique ID of the component bound to a gesture recognizer.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.0
 
@@ -1797,6 +1937,8 @@ bool OH_ArkUI_TouchRecognizer_IsHostBelongsTo(const ArkUI_TouchRecognizerHandle 
 
 Checks whether the node bound to the touch recognizer is a descendant node of the passed component.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1821,6 +1963,8 @@ bool OH_ArkUI_GestureRecognizer_IsHostBelongsTo(const ArkUI_GestureRecognizer* r
 **Description**
 
 Checks whether the node bound to the gesture recognizer is a descendant node of the passed component.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.0
 

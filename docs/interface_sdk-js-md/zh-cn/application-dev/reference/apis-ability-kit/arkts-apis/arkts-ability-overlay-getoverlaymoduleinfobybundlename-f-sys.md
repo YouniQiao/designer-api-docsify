@@ -46,6 +46,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string,
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) | The specified bundle does not contain any overlay module. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -69,6 +70,8 @@ try {
   console.error('getOverlayModuleInfoByBundleName failed due to err code : ' + code + ' ' + 'message :' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getoverlaymoduleinfobybundlename2"></a>
@@ -113,6 +116,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName: string
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) | The specified module is not an overlay module. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -137,6 +141,8 @@ try {
   console.error('getOverlayModuleInfoByBundleName failed due to err code : ' + code + ' ' + 'message :' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getoverlaymoduleinfobybundlename3"></a>
@@ -186,6 +192,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 | [17700032](../errorcode-bundle.md#17700032-指定的应用不包含overlay特征的module) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-指定的module不是overlay特征的module) | The specified module is not an overlay module. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -206,3 +213,5 @@ let moduleName = "feature";
   }
 })();
 ```
+
+<!--DelEnd-->

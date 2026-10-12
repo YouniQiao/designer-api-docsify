@@ -46,6 +46,7 @@ Returns the information about the specified exempted application.
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -64,6 +65,8 @@ deviceStandby.getExemptedApps(resourceTypes, (err: BusinessError, res: Array<dev
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getexemptedapps2"></a>
@@ -111,6 +114,7 @@ Returns the information about the specified exempted application.
 | [9800004](../errorcode-backgroundTaskMgr.md#9800004-system-service-failure) | Failed to get device standby service. Possible cause: A necessary system service is not ready. |
 | [18700001](../errorcode-backgroundTaskMgr.md#18700001-caller-information-verification-failure-for-an-energy-resource-request) | Caller information verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -127,3 +131,5 @@ deviceStandby.getExemptedApps(resourceTypes).then( (res: Array<deviceStandby.Exe
   console.error('DEVICE_STANDBY getExemptedApps promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
+
+<!--DelEnd-->

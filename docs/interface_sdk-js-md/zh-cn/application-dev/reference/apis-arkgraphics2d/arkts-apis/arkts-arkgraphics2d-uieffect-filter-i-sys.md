@@ -52,6 +52,7 @@ bezierWarp(controlPoints: Array<common2D.Point>): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ struct BezierWarpExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## blurBubblesRise
 
@@ -106,6 +109,7 @@ blurBubblesRise(param: BlurBubblesRiseEffectParam): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回模糊气泡上升滤镜。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -160,6 +164,8 @@ struct BlurBubblesRiseExample {
 }
 ```
 
+<!--DelEnd-->
+
 ## colorGradient
 
 ```TypeScript
@@ -198,6 +204,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -229,6 +236,8 @@ struct ColorGradientExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## contentLight
 
@@ -268,6 +277,7 @@ contentLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightI
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -308,6 +318,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## directionLight
 
 ```TypeScript
@@ -346,6 +358,7 @@ directionLight(direction: common2D.Point3d, color: Color, intensity: number, mas
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -384,6 +397,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## displacementDistort
 
 ```TypeScript
@@ -419,6 +434,7 @@ displacementDistort(displacementMap: Mask, factor?: [number, number]): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -441,6 +457,8 @@ struct DisplacementDistortExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## distort
 
@@ -476,6 +494,7 @@ distort(distortionK: number): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -483,6 +502,8 @@ distort(distortionK: number): Filter
 let filter = uiEffect.createFilter();
 filter.distort(-0.5);
 ```
+
+<!--DelEnd-->
 
 ## edgeLight
 
@@ -521,6 +542,7 @@ edgeLight(alpha: number, color?: Color, mask?: Mask, bloom?: boolean): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -545,6 +567,8 @@ struct EdgeLightExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## flyInFlyOutEffect
 
@@ -581,6 +605,7 @@ flyInFlyOutEffect(degree: number, flyMode: FlyMode): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -588,6 +613,8 @@ flyInFlyOutEffect(degree: number, flyMode: FlyMode): Filter
 let filter = uiEffect.createFilter();
 filter.flyInFlyOutEffect(0.5, uiEffect.FlyMode.TOP);
 ```
+
+<!--DelEnd-->
 
 ## haloBloom
 
@@ -625,6 +652,7 @@ haloBloom(tintColor: Color, bloomFactor: number, glowExposure: number): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回附加了光晕泛光效果的 Filter。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -653,6 +681,8 @@ struct example {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## heatDistortion
 
@@ -684,6 +714,7 @@ heatDistortion(param: HeatDistortionEffectParam): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回添加了热浪扭曲效果的Filter。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -716,13 +747,15 @@ struct HeatDistortionExample {
 }
 ```
 
+<!--DelEnd-->
+
 ## mapColorByBrightness
 
 ```TypeScript
 mapColorByBrightness(colors: Array<Color>, positions: Array<number>): Filter
 ```
 
-根据图片的明暗程度进行颜色渐变映射。根据输入的colors和对应的亮度锚点位置进行颜色映射，图片越暗对应的亮度值越小，图片中黑色的部分最暗，亮度值为0.0；白色部分最亮，亮度值为1.0。颜色映射为循环方式，如输入5个颜色，按照亮度锚点位置从小到大排序，则颜色映射顺序为 1--&gt;2--&gt;3--&gt;4--&gt;5--&gt;1。
+根据图片的明暗程度进行颜色渐变映射。根据输入的colors和对应的亮度锚点位置进行颜色映射，图片越暗对应的亮度值越小，图片中黑色的部分最暗，亮度值为0.0；白色部分最亮，亮度值为1.0。颜色映射为循环方式，如输入5个颜色，按照亮度锚点位置从小到大排序，则颜色映射顺序为 1-->2-->3-->4-->5-->1。
 
 > **说明：** 
 > 
@@ -790,6 +823,7 @@ maskDispersion(dispersionMap: Mask, alpha: number, rFactor?: [number, number], g
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -842,6 +876,8 @@ struct MaskDispersion {
 }
 ```
 
+<!--DelEnd-->
+
 ## maskTransition
 
 ```TypeScript
@@ -880,6 +916,7 @@ maskTransition(alphaMask: Mask, factor?: number, inverse?: boolean): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -926,6 +963,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## pixelStretch
 
 ```TypeScript
@@ -955,6 +994,7 @@ pixelStretch(stretchSizes: Array<number>, tileMode: TileMode): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回挂载了边缘像素扩展效果的Filter。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -962,6 +1002,8 @@ pixelStretch(stretchSizes: Array<number>, tileMode: TileMode): Filter
 let filter = uiEffect.createFilter();
 filter.pixelStretch([0.2, 0.2, 0.2, 0.2], uiEffect.TileMode.CLAMP);
 ```
+
+<!--DelEnd-->
 
 ## radiusGradientBlur
 
@@ -998,6 +1040,7 @@ radiusGradientBlur(radius: number, gradientParam: LinearGradientBlurOptions): Fi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1020,6 +1063,8 @@ struct RadiusGradientBlurExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## spinBlur
 
@@ -1057,6 +1102,7 @@ spinBlur(center: common2D.Point, angle: number, samples: number): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回附加了旋转模糊效果的 Filter。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1085,6 +1131,8 @@ struct example {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## variableRadiusBlur
 
@@ -1121,6 +1169,7 @@ variableRadiusBlur(radius: number, radiusMap: Mask): Filter
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1143,6 +1192,8 @@ struct VariableRadiusBlurExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## waterRipple
 
@@ -1182,6 +1233,7 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1189,3 +1241,5 @@ waterRipple(progress: number, waveCount: number, x: number, y: number, rippleMod
 let filter = uiEffect.createFilter();
 filter.waterRipple(0.5, 2, 0.5, 0.5, uiEffect.WaterRippleMode.SMALL2SMALL);
 ```
+
+<!--DelEnd-->

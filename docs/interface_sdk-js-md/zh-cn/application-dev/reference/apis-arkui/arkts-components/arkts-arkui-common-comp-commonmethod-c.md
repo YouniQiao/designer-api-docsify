@@ -68,7 +68,7 @@ accessibilityChecked(isCheck: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isCheck | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：** <br>1. 使用该接口设置true或false后，会默认修改该组件的checkable属性为true。 2. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为多选模式（设置为true、false），则需要保证未使用accessibilitySelected函数设置属性为true或者false，如果已设置，需使用accessibilitySelected函数设置accessibilitySelected属性为undefined模式。 |
+| isCheck | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：** <br>1. 使用该接口设置true或false后，会默认修改该组件的checkable属性为true。         2. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为多选模式（设置为true、false），则需要保证未使用accessibilitySelected函数设置属性为true或者false，如果已设置，需使用accessibilitySelected函数设置accessibilitySelected属性为undefined模式。 |
 
 **返回值：**
 
@@ -301,7 +301,7 @@ accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | isGroup | boolean | 是 | 无障碍分组，设置为true时表示该组件及其所有子组件为一整个可以选中的组件，无障碍服务将不再关注其子组件内容，会合并子组件的文本与无障碍信息，并将其发送至无障碍服务；设置为false表示不启用无障碍分组。默认值：false |
-| accessibilityOptions | AccessibilityOptions | 是 | 无障碍分组的配置选项对象，包含以下属性：<br>   - accessibilityPreferred：设置为true时，使应用优先拼接无障碍文本进行朗读；设置为false时，应用进行屏幕朗读时不会优先使用无障碍文本。   - stateControllerRoleType或stateControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的状态信息作为当前聚合组件的无障碍状态。   - actionControllerRoleType或actionControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的点击事件作为当前聚合组件的无障碍操作。 |
+| accessibilityOptions | AccessibilityOptions | 是 | 无障碍分组的配置选项对象，包含以下属性：<br>                   - accessibilityPreferred：设置为true时，使应用优先拼接无障碍文本进行朗读；设置为false时，应用进行屏幕朗读时不会优先使用无障碍文本。           - stateControllerRoleType或stateControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的状态信息作为当前聚合组件的无障碍状态。           - actionControllerRoleType或actionControllerId：从API version 23开始支持，指定一个特定子组件，使用该子组件的点击事件作为当前聚合组件的无障碍操作。 |
 
 **返回值：**
 
@@ -333,7 +333,7 @@ accessibilityLevel(value: string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | string | 是 | 无障碍重要性，用于控制某个组件是否可被无障碍辅助服务所识别。<br>支持的值为：<br>"auto"：当前组件由无障碍辅助服务和ArkUI进行综合判断组件是否可被无障碍辅助服务所识别。"yes"：当前组件可被无障碍辅助服务所识别。当父组件启用无障碍分组时，设置为"yes"的子组件不受分组约束，在满足屏幕朗读其他规则下仍可聚焦。<br>"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。<br>默认值："auto"<br>**说明：** 当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：<br>1. 组件是否可被识别由无障碍辅助服务内部判断，自行选择。 2. 若组件的父组件accessibilityGroup属性中isGroup设置为true，无障碍服务将不再关注其子组件内容，组件不可被无障碍辅助服务所识别。 3. 若组件的父组件accessibilityLevel属性设置为"no-hide-descendants"，组件不可被无障碍辅助服务所识别。 |
+| value | string | 是 | 无障碍重要性，用于控制某个组件是否可被无障碍辅助服务所识别。<br>支持的值为：<br>"auto"：当前组件由无障碍辅助服务和ArkUI进行综合判断组件是否可被无障碍辅助服务所识别。"yes"：当前组件可被无障碍辅助服务所识别。当父组件启用无障碍分组时，设置为"yes"的子组件不受分组约束，在满足屏幕朗读其他规则下仍可聚焦。<br>"no"：当前组件不可被无障碍辅助服务所识别。"no-hide-descendants"：当前组件及其所有子组件不可被无障碍辅助服务所识别。<br>默认值："auto"<br>**说明：** 当accessibilityLevel设置成"auto"时，组件是否可被无障碍辅助服务所识别取决于以下多方面因素：<br>1. 组件是否可被识别由无障碍辅助服务内部判断，自行选择。         2. 若组件的父组件accessibilityGroup属性中isGroup设置为true，无障碍服务将不再关注其子组件内容，组件不可被无障碍辅助服务所识别。         3. 若组件的父组件accessibilityLevel属性设置为"no-hide-descendants"，组件不可被无障碍辅助服务所识别。 |
 
 **返回值：**
 
@@ -466,7 +466,7 @@ accessibilityScrollTriggerable(isTriggerable: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isTriggerable | boolean | 是 | 用于表示组件是否支持该能力。<br>支持的值为：<br>true：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，需要自动滚动操作。false：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，不需要自动滚动操作。<br>undefined：还原默认值。<br>默认值：true。<br>**说明：**  1. 该属性不影响原先无障碍节点属性ElementAttributeValues中的scrollable。<br>2. 组件在屏幕朗读下的滚动逻辑由屏幕朗读根据该属性和组件是否支持scroll来决定。 3. 该属性为通用属性，所有基础组件均可配置。建议配置的滚动组件类型，如List、Grid、Scroll、WaterFlow等。 |
+| isTriggerable | boolean | 是 | 用于表示组件是否支持该能力。<br>支持的值为：<br>true：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，需要自动滚动操作。false：屏幕朗读焦点切换而容器内当前页面无可聚焦的组件时，不需要自动滚动操作。<br>undefined：还原默认值。<br>默认值：true。<br>**说明：**          1. 该属性不影响原先无障碍节点属性ElementAttributeValues中的scrollable。<br>2. 组件在屏幕朗读下的滚动逻辑由屏幕朗读根据该属性和组件是否支持scroll来决定。         3. 该属性为通用属性，所有基础组件均可配置。建议配置的滚动组件类型，如List、Grid、Scroll、WaterFlow等。 |
 
 **返回值：**
 
@@ -498,7 +498,7 @@ accessibilitySelected(isSelect: boolean): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSelect | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：**  1. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为单选模式（true、false），则需要保证未使用accessibilityChecked函数设置属性为true或者false；如果已设置，需使用accessibilityChecked函数设置accessibilityChecked属性为undefined模式。 |
+| isSelect | boolean | 是 | 用于表示组件是否被选中。<br>支持的值为：<br>true：当前组件被选中。<br>false：当前组件未被选中。<br> undefined：由组件自行确定选中状态。<br>默认值：undefined **说明：**          1. accessibilityChecked属性代表组件是多选模式，而accessibilitySelected属性代表组件是单选模式。 组件不能同时存在两种选择模式，会造成无障碍状态冲突，导致屏幕朗读等无障碍辅助应用无法正确识别选中状态。如使用当前接口设置组件为单选模式（true、false），则需要保证未使用accessibilityChecked函数设置属性为true或者false；如果已设置，需使用accessibilityChecked函数设置accessibilityChecked属性为undefined模式。 |
 
 **返回值：**
 
@@ -2570,7 +2570,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid   - Border style.<br>Default value: **BorderStyle.Solid**.<br>**适用版本：** 9 |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid           - Border style.<br>Default value: **BorderStyle.Solid**.<br>**适用版本：** 9 |
 
 **返回值：**
 

@@ -523,7 +523,7 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -592,7 +592,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | If the parameter is invalid. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -715,7 +715,7 @@ packToFile(source: ImageSource, fd: number, options: PackingOption, callback: As
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -783,7 +783,7 @@ packToFile(source: ImageSource, fd: number, options: PackingOption): Promise<voi
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -848,7 +848,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption, callback: Async
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -921,7 +921,7 @@ packToFile(source: PixelMap, fd: number, options: PackingOption): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980106](../errorcode-image.md#62980106-图片数据太大) | The image data is too large. This status code is thrown when an error occurs during the process of checking size. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |

@@ -42,6 +42,7 @@ getAudioVolumeScale(): number
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ try {
   console.error(`Failed to getAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getHapticsFeature
 
@@ -85,6 +88,7 @@ getHapticsFeature(): systemSoundManager.ToneHapticsFeature
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -98,6 +102,8 @@ try {
   console.error(`Failed to getHapticsFeature. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getSupportedHapticsFeatures
 
@@ -128,6 +134,7 @@ getSupportedHapticsFeatures(): Promise<Array<systemSoundManager.ToneHapticsFeatu
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -137,6 +144,8 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
   console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getTitle
 
@@ -167,6 +176,7 @@ getTitle(): Promise<string>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -178,6 +188,8 @@ systemTonePlayer.getTitle().then((value: string) => {
   console.error(`Failed to getTitle. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## off('playFinished')
 
@@ -209,6 +221,7 @@ off(type: 'playFinished', callback?: Callback<number>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -224,6 +237,8 @@ systemTonePlayer.on('playFinished', 0, playFinishedCallback);
 
 systemTonePlayer.off('playFinished', playFinishedCallback);
 ```
+
+<!--DelEnd-->
 
 ## off('error')
 
@@ -255,6 +270,7 @@ off(type: 'error', callback?: ErrorCallback): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -272,6 +288,8 @@ systemTonePlayer.on('error', callback);
 
 systemTonePlayer.off('error', callback);
 ```
+
+<!--DelEnd-->
 
 ## on('playFinished')
 
@@ -304,6 +322,7 @@ on(type: 'playFinished', streamId: number, callback: Callback<number>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -323,6 +342,8 @@ systemTonePlayer.start().then((value: number) => {
   console.error(`Failed to start system tone player. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('error')
 
@@ -354,6 +375,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -363,6 +385,8 @@ systemTonePlayer.on('error', (err: BusinessError) => {
   console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## prepare
 
@@ -394,6 +418,7 @@ prepare(): Promise<void>
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -405,6 +430,8 @@ systemTonePlayer.prepare().then(() => {
   console.error(`Failed to prepare. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## release
 
@@ -434,6 +461,7 @@ release(): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -445,6 +473,8 @@ systemTonePlayer.release().then(() => {
   console.error(`Failed to release. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setAudioVolumeScale
 
@@ -477,6 +507,7 @@ setAudioVolumeScale(scale: number): void
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter check error. For example, value is outside [0,1]. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -491,6 +522,8 @@ try {
   console.error(`Failed to setAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## setHapticsFeature
 
@@ -523,6 +556,7 @@ setHapticsFeature(hapticsFeature: systemSoundManager.ToneHapticsFeature): void
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -537,6 +571,8 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
   console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## start
 
@@ -577,6 +613,7 @@ start(toneOptions?: SystemToneOptions): Promise<number>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -594,6 +631,8 @@ systemTonePlayer.start(systemToneOptions).then((value: number) => {
   console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## stop
 
@@ -631,6 +670,7 @@ stop(id: number): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -643,3 +683,5 @@ systemTonePlayer.stop(streamID).then(() => {
   console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

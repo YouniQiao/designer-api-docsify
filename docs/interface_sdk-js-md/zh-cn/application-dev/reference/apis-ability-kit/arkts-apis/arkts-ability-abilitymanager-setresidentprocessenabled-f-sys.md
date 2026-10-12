@@ -48,6 +48,7 @@ function setResidentProcessEnabled(bundleName: string, enable: boolean): Promise
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200006](../errorcode-ability.md#16200006-没有权限设置常驻进程使能状态) | The caller application can only set the resident status of the configured process. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,3 +72,5 @@ try {
   console.error(`setResidentProcessEnabled failed, code is ${code}, message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

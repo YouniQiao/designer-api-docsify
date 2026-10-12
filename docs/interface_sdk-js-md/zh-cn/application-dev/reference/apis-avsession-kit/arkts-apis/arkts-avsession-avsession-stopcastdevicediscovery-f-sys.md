@@ -36,6 +36,7 @@ function stopCastDeviceDiscovery(callback: AsyncCallback<void>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -43,6 +44,8 @@ avSession.stopCastDeviceDiscovery(() => {
     console.info('Succeeded in stopping cast device discovery.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="stopcastdevicediscovery2"></a>
@@ -75,6 +78,7 @@ function stopCastDeviceDiscovery(): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -82,3 +86,5 @@ avSession.stopCastDeviceDiscovery().then(() => {
   console.info('Succeeded in stopping cast device discovery.');
 });
 ```
+
+<!--DelEnd-->

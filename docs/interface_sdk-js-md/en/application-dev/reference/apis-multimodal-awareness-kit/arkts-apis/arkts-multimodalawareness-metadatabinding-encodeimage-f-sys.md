@@ -39,10 +39,11 @@ Encodes metadata into an image. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission check failed. A non-system application uses the system API. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [32100001](../errorcode-metadataBinding.md#32100001-file-creation-failed) | Internal handling failed. |
 | [32100002](../errorcode-metadataBinding.md#32100002-encoding-failed) | Encode process fail. Possible causes:<br>1. Image processing error. <br>2. Channel coding error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,3 +61,5 @@ metadataBinding.encodeImage(srcImage, metadata).then((pixelMap: image.PixelMap) 
   console.error(`Failed to encode image. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

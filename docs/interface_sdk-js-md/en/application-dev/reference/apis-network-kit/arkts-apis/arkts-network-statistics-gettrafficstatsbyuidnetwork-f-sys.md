@@ -49,6 +49,7 @@ Obtains the traffic statistics of the specified application on the specified net
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,3 +69,5 @@ statistics.getTrafficStatsByUidNetwork(uid, networkInfo).then((statsInfoSequence
   }
 })
 ```
+
+<!--DelEnd-->

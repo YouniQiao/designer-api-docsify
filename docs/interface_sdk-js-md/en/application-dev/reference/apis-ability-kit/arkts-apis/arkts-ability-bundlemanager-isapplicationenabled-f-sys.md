@@ -46,6 +46,7 @@ Checks whether an application or an application clone is enabled. This API uses 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isapplicationenabled2"></a>
@@ -101,6 +104,7 @@ Checks whether an application is enabled. This API uses an asynchronous callback
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,6 +127,8 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isapplicationenabled3"></a>
@@ -163,6 +169,7 @@ Checks whether an application is enabled. This API uses a promise to return the 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -183,3 +190,5 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

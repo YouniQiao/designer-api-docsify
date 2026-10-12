@@ -62,11 +62,12 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, externalUri: string
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. System sound manager service error. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes:         1. The target file size exceeds 2 GB;         2. Failed to find the specified file;         3. System sound manager service error. |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -93,6 +94,8 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, path).then((val
   console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="addcustomizedtone2"></a>
 
@@ -139,11 +142,12 @@ addCustomizedTone(context: BaseContext, toneAttr: ToneAttrs, fd: number, offset?
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone to add is not customized. |
-| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes: 1. The target file size exceeds 2 GB; 2. Failed to find the specified file; 3. Ringtone library error. 4. System sound manager service error. |
+| [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. Possible causes:         1. The target file size exceeds 2 GB;         2. Failed to find the specified file;         3. Ringtone library error.         4. System sound manager service error. |
 | [20700004](../errorcode-audio-ringtone-sys.md#20700004-数据大小超过限制) | Data size exceeds the limit. Note: This error is returned when the file size is between 200MB and 2GB.<br>**适用版本：** 20+ |
 | [20700005](../errorcode-audio-ringtone-sys.md#20700005-文件个数超过限制) | The number of files exceeds the limit.<br>**适用版本：** 20+ |
 | [20700006](../errorcode-audio-ringtone-sys.md#20700006-rom空间不足) | Insufficient ROM space.<br>**适用版本：** 20+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -172,6 +176,8 @@ systemSoundManagerInstance.addCustomizedTone(context, toneAttrs, fd, offset, len
   console.error(`Failed to addCustomizedTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## close
 
@@ -209,6 +215,7 @@ close(fd: number): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -226,6 +233,8 @@ systemSoundManagerInstance.close(fd).then(() => {
   console.error(`Failed to close. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getAlarmToneAttrList
 
@@ -263,6 +272,7 @@ getAlarmToneAttrList(context: BaseContext): Promise<ToneAttrsArray>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -279,6 +289,8 @@ systemSoundManagerInstance.getAlarmToneAttrList(context).then((value: systemSoun
   console.error(`Failed to getAlarmToneAttrList. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getAlarmToneUri
 
@@ -316,6 +328,7 @@ getAlarmToneUri(context: BaseContext): Promise<string>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -332,6 +345,8 @@ systemSoundManagerInstance.getAlarmToneUri(context).then((value: string) => {
   console.error(`Failed to getAlarmToneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getCurrentRingtoneAttribute
 
@@ -368,6 +383,7 @@ getCurrentRingtoneAttribute(type: RingtoneType): Promise<ToneAttrs>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -382,6 +398,8 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((value: system
   console.error(`Failed to getCurrentRingtoneAttribute. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getDefaultAlarmToneAttrs
 
@@ -419,6 +437,7 @@ getDefaultAlarmToneAttrs(context: BaseContext): Promise<ToneAttrs>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -435,6 +454,8 @@ systemSoundManagerInstance.getDefaultAlarmToneAttrs(context).then((value: system
   console.error(`Failed to getDefaultAlarmToneAttrs. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getDefaultRingtoneAttrs
 
@@ -473,6 +494,7 @@ getDefaultRingtoneAttrs(context: BaseContext, type: RingtoneType): Promise<ToneA
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -490,6 +512,8 @@ systemSoundManagerInstance.getDefaultRingtoneAttrs(context, type).then((value: s
   console.error(`Failed to getDefaultRingtoneAttrs. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getDefaultSystemToneAttrs
 
@@ -528,6 +552,7 @@ getDefaultSystemToneAttrs(context: BaseContext, type: SystemToneType): Promise<T
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -545,6 +570,8 @@ systemSoundManagerInstance.getDefaultSystemToneAttrs(context, type).then((value:
   console.error(`Failed to getDefaultSystemToneAttrs. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getHapticsAttrsSyncedWithTone
 
@@ -585,6 +612,7 @@ getHapticsAttrsSyncedWithTone(context: BaseContext, toneUri: string): Promise<To
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -602,6 +630,8 @@ systemSoundManagerInstance.getHapticsAttrsSyncedWithTone(context, toneUri).then(
   console.error(`Failed to getHapticsAttrsSyncedWithTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getmockhapticringtoneplayer1"></a>
 
@@ -652,6 +682,7 @@ getMockHapticRingtonePlayer(
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. Possible causes: 1.The type exceeds the valid range, please use the RingtoneType enum for input. 2.The ringtoneUri does not exist or is incorrectly formatted, please use the ringtoneUri returned by the [addCustomizedTone](#addcustomizedtone). |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -674,6 +705,8 @@ systemSoundManagerInstance.getMockHapticRingtonePlayer(context, type, ringtoneUr
   console.error(`Failed to getMockHapticRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getmockhapticringtoneplayer2"></a>
 
@@ -722,6 +755,7 @@ getMockHapticRingtonePlayer(context: BaseContext, hapticUri: string): Promise<Ri
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-参数检查失败) | Parameter verification failed. The hapticUri does not exist or is incorrectly formatted. Ensure it is a JSON file and that it exists in the system's file system. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. The ringtone database access timed out or encountered an error. It is recommended to restart your phone. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -743,6 +777,8 @@ systemSoundManagerInstance.getMockHapticRingtonePlayer(context, hapticUri).then(
   console.error(`Failed to getMockHapticRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getRingtoneAttrList
 
@@ -781,6 +817,7 @@ getRingtoneAttrList(context: BaseContext, type: RingtoneType): Promise<ToneAttrs
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -798,6 +835,8 @@ systemSoundManagerInstance.getRingtoneAttrList(context, type).then((value: syste
   console.error(`Failed to getRingtoneAttrList. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getRingtonePlayer
 
@@ -835,6 +874,7 @@ getRingtonePlayer(context: BaseContext, type: RingtoneType): Promise<RingtonePla
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -854,6 +894,8 @@ systemSoundManagerInstance.getRingtonePlayer(context, type).then((value: systemS
   console.error(`Failed to getRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getRingtoneUri
 
@@ -892,6 +934,7 @@ getRingtoneUri(context: BaseContext, type: RingtoneType): Promise<string>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -909,6 +952,8 @@ systemSoundManagerInstance.getRingtoneUri(context, type).then((value: string) =>
   console.error(`Failed to getRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getSystemToneAttrList
 
@@ -947,6 +992,7 @@ getSystemToneAttrList(context: BaseContext, type: SystemToneType): Promise<ToneA
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -964,6 +1010,8 @@ systemSoundManagerInstance.getSystemToneAttrList(context, type).then((value: sys
   console.error(`Failed to getSystemToneAttrList. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getSystemTonePlayer
 
@@ -1001,6 +1049,7 @@ getSystemTonePlayer(context: BaseContext, type: SystemToneType): Promise<SystemT
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1020,6 +1069,8 @@ systemSoundManagerInstance.getSystemTonePlayer(context, type).then((value: syste
   console.error(`Failed to getSystemTonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getSystemToneUri
 
@@ -1058,6 +1109,7 @@ getSystemToneUri(context: BaseContext, type: SystemToneType): Promise<string>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1075,6 +1127,8 @@ systemSoundManagerInstance.getSystemToneUri(context, type).then((value: string) 
   console.error(`Failed to getSystemToneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getToneHapticsList
 
@@ -1114,6 +1168,7 @@ getToneHapticsList(context: BaseContext, isSynced: boolean): Promise<ToneHaptics
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1130,6 +1185,8 @@ systemSoundManagerInstance.getToneHapticsList(context, false).then((value: syste
   console.error(`Failed to getToneHapticsList. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getToneHapticsSettings
 
@@ -1169,6 +1226,7 @@ getToneHapticsSettings(context: BaseContext, type: ToneHapticsType): Promise<Ton
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1186,6 +1244,8 @@ systemSoundManagerInstance.getToneHapticsSettings(context, type).then((value: sy
   console.error(`Failed to getToneHapticsSettings. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## openAlarmTone
 
@@ -1225,6 +1285,7 @@ openAlarmTone(context: BaseContext, uri: string): Promise<number>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | 20700001 | Tone type mismatch, e.g. tone of uri is notification instead of alarm. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1242,6 +1303,8 @@ systemSoundManagerInstance.openAlarmTone(context, uri).then((value: number) => {
   console.error(`Failed to openAlarmTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## openToneHaptics
 
@@ -1282,6 +1345,7 @@ openToneHaptics(context: BaseContext, hapticsUri: string): Promise<number>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1299,6 +1363,8 @@ systemSoundManagerInstance.openToneHaptics(context, hapticsUri).then((value: num
   console.error(`Failed to openToneHaptics. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## openToneList
 
@@ -1335,6 +1401,7 @@ openToneList(uriList: Array<string>): Promise<Array<[string, number, SystemSound
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1354,6 +1421,8 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((toneAttrs) =>
   console.error(`Failed to get current ringtone attribute. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## removeCustomizedTone
 
@@ -1396,6 +1465,7 @@ removeCustomizedTone(context: BaseContext, uri:string): Promise<void>
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation is not allowed, e.g. ringtone of this uri is not customized. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1413,6 +1483,8 @@ systemSoundManagerInstance.removeCustomizedTone(context, uri).then(() => {
   console.error(`Failed to removeCustomizedTone. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## removeCustomizedToneList
 
@@ -1452,6 +1524,7 @@ removeCustomizedToneList(uriList: Array<string>): Promise<Array<[string, SystemS
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 | [20700007](../errorcode-audio-ringtone-sys.md#20700007-参数无效) | Parameter is invalid, e.g. the length of uriList is too long. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1471,6 +1544,8 @@ systemSoundManagerInstance.getCurrentRingtoneAttribute(type).then((toneAttrs) =>
   console.error(`Failed to get current ringtone attribute. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setAlarmToneUri
 
@@ -1510,6 +1585,7 @@ setAlarmToneUri(context: BaseContext, uri: string): Promise<void>
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | 20700001 | Tone type mismatch, e.g. tone of input uri is not an alarm tone. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1527,6 +1603,8 @@ systemSoundManagerInstance.setAlarmToneUri(context, uri).then(() => {
   console.error(`Failed to setAlarmToneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setRingtoneUri
 
@@ -1566,6 +1644,7 @@ setRingtoneUri(context: BaseContext, uri: string, type: RingtoneType): Promise<v
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1584,6 +1663,8 @@ systemSoundManagerInstance.setRingtoneUri(context, uri, type).then(() => {
   console.error(`Failed to setRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setSystemToneUri
 
@@ -1623,6 +1704,7 @@ setSystemToneUri(context: BaseContext, uri: string, type: SystemToneType): Promi
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1641,6 +1723,8 @@ systemSoundManagerInstance.setSystemToneUri(context, uri, type).then(() => {
   console.error(`Failed to setSystemToneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setToneHapticsSettings
 
@@ -1682,6 +1766,7 @@ setToneHapticsSettings(context: BaseContext, type: ToneHapticsType, settings: To
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | I/O error. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-操作不支持) | Unsupported operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1703,6 +1788,8 @@ systemSoundManagerInstance.setToneHapticsSettings(context, type, toneHapticsSett
   console.error(`Failed to setToneHapticsSettings. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getsystemringtoneplayer1"></a>
 
@@ -1740,6 +1827,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType, callback: AsyncCal
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取播放器的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | 是 | 回调函数。当获取系统铃声播放器成功，err为undefined，data为获取到的系统铃声播放器；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1761,6 +1849,8 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type, (err: Business
   systemRingtonePlayer = value;
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getsystemringtoneplayer2"></a>
 
@@ -1803,6 +1893,7 @@ getSystemRingtonePlayer(context: Context, type: RingtoneType): Promise<RingtoneP
 | --- | --- |
 | Promise&lt;[RingtonePlayer](arkts-audio-systemsoundmanager-ringtoneplayer-t-sys.md)&gt; | Promise对象，返回获取的系统铃声播放器。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1822,6 +1913,8 @@ systemSoundManagerInstance.getSystemRingtonePlayer(context, type).then((value: s
   console.error(`Failed to getSystemRingtonePlayer. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getsystemringtoneuri1"></a>
 
@@ -1858,6 +1951,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType, callback: AsyncCallba
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 待获取的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 回调函数。当获取系统铃声uri成功，err为undefined，data为获取到的系统铃声uri；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1877,6 +1971,8 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type, (err: BusinessErr
   console.info(`Callback invoked to indicate the value of the system ringtone uri is obtained ${value}.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getsystemringtoneuri2"></a>
 
@@ -1918,6 +2014,7 @@ getSystemRingtoneUri(context: Context, type: RingtoneType): Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | Promise对象，返回获取的系统铃声uri。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1935,6 +2032,8 @@ systemSoundManagerInstance.getSystemRingtoneUri(context, type).then((value: stri
   console.error(`Failed to getSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setsystemringtoneuri1"></a>
 
@@ -1972,6 +2071,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType, callback
 | type | [RingtoneType](arkts-audio-systemsoundmanager-ringtonetype-e-sys.md) | 是 | 被设置的系统铃声的类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置系统铃声uri成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1992,6 +2092,8 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type, (err: Busine
   console.info(`Callback invoked to indicate a successful setting of the system ringtone uri.`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setsystemringtoneuri2"></a>
 
@@ -2034,6 +2136,7 @@ setSystemRingtoneUri(context: Context, uri: string, type: RingtoneType): Promise
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2052,3 +2155,5 @@ systemSoundManagerInstance.setSystemRingtoneUri(context, uri, type).then(() => {
   console.error(`Failed to setSystemRingtoneUri. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

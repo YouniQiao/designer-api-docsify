@@ -49,6 +49,7 @@ disableSafeMediaVolume(): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -60,6 +61,8 @@ audioManager.disableSafeMediaVolume().then(() => {
   console.error(`disableSafeMediaVolume fail: ${err.code},${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getCollaborativeManager
 
@@ -117,6 +120,7 @@ getEffectManager(): AudioEffectManager
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -124,6 +128,8 @@ import { audio } from '@kit.AudioKit';
 
 let audioEffectManager: audio.AudioEffectManager = audioManager.getEffectManager();
 ```
+
+<!--DelEnd-->
 
 ## getExtraParameters
 
@@ -162,6 +168,7 @@ getExtraParameters(mainKey: string, subKeys?: Array<string>): Promise<Record<str
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -174,6 +181,8 @@ audioManager.getExtraParameters('key_example', subKeys).then((value: Record<stri
   console.error(`Failed to get the audio extra parameters ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getSuiteDownloadManager
 
@@ -230,6 +239,7 @@ setAudioScene(scene: AudioScene, callback: AsyncCallback<void> ): void
 | scene | [AudioScene](arkts-audio-audio-audioscene-e.md) | 是 | 音频场景模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音频场景模式成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -243,6 +253,8 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL, (err: Busine
   console.info('Callback invoked to indicate a successful setting of the audio scene mode.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setaudioscene2"></a>
 
@@ -274,6 +286,7 @@ setAudioScene(scene: AudioScene): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -285,6 +298,8 @@ audioManager.setAudioScene(audio.AudioScene.AUDIO_SCENE_PHONE_CALL).then(() => {
   console.error(`Failed to set the audio scene mode ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setExtraParameters
 
@@ -326,6 +341,7 @@ setExtraParameters(mainKey: string, kvpairs: Record<string, string>): Promise<vo
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -342,6 +358,8 @@ audioManager.setExtraParameters('key_example', kvpairs).then(() => {
   console.error(`Failed to set the audio extra parameters ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('volumeChange')
 
@@ -376,6 +394,7 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 | type | 'volumeChange' | 是 | 事件回调类型，支持的事件为'volumeChange'，当系统音量发生变化时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[VolumeEvent](arkts-audio-audio-volumeevent-i.md)&gt; | 是 | 回调函数，返回变化后的音量信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -385,6 +404,8 @@ audioManager.on('volumeChange', (volumeEvent: audio.VolumeEvent) => {
   console.info(`Whether to updateUI: ${volumeEvent.updateUi} `);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('ringerModeChange')
 
@@ -418,6 +439,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 | type | 'ringerModeChange' | 是 | 事件回调类型，支持的事件为'ringerModeChange'，当铃声模式发生改变时，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioRingMode](arkts-audio-audio-audioringmode-e.md)&gt; | 是 | 回调函数，返回变化后的铃音模式。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -425,3 +447,5 @@ audioManager.on('ringerModeChange', (ringerMode: audio.AudioRingMode) => {
   console.info(`Updated ringermode: ${ringerMode}`);
 });
 ```
+
+<!--DelEnd-->

@@ -47,6 +47,7 @@ function getAppClonePreference(bundleName: string): Promise<AppClonePreference>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700095](../errorcode-bundle.md#17700095-指定的应用未找到分身偏好) | The specified bundle not found app clone preference. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -68,3 +69,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAppClonePreference failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

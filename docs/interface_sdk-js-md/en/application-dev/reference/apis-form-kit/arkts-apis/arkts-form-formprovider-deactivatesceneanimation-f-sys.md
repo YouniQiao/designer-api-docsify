@@ -48,6 +48,7 @@ Requests to deactivate a widget. This API takes effect only for [scene-based wid
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 | [16501011](../errorcode-form.md#16501011-api-not-supported) | The form cannot support this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,3 +67,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

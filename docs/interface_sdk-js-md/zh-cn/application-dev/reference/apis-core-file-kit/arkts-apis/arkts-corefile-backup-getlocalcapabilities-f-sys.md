@@ -42,6 +42,7 @@ function getLocalCapabilities(): Promise<FileData>
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -80,6 +81,8 @@ async function getLocalCapabilities() {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="getlocalcapabilities2"></a>
 
@@ -117,6 +120,7 @@ function getLocalCapabilities(callback: AsyncCallback<FileData>): void
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -157,6 +161,8 @@ try {
  "systemFullName" : "OpenHarmony-4.0.0.0"
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlocalcapabilities3"></a>
@@ -204,6 +210,7 @@ function getLocalCapabilities(dataList: Array<IncrementalBackupTime>): Promise<F
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -226,3 +233,5 @@ async function getLocalCapabilities() {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -49,6 +49,7 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyformsprivacyprotected2"></a>
@@ -112,6 +115,9 @@ Notifies that the privacy protection status of the specified widgets changes. Th
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 See [notifyFormsPrivacyProtected](#notifyformsprivacyprotected)
+
+<!--DelEnd-->

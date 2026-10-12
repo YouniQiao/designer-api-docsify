@@ -50,6 +50,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,6 +68,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyformsenableupdate2"></a>
@@ -114,6 +117,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -131,3 +135,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

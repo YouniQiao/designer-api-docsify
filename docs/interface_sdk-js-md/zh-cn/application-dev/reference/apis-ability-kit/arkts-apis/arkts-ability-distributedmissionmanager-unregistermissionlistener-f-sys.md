@@ -42,6 +42,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo, callback: Async
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
     console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="unregistermissionlistener2"></a>
@@ -106,6 +109,7 @@ function unRegisterMissionListener(parameter: MissionDeviceInfo): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -122,3 +126,5 @@ try {
     console.error('unRegisterMissionListener failed, cause: ' + JSON.stringify(error));
 }
 ```
+
+<!--DelEnd-->

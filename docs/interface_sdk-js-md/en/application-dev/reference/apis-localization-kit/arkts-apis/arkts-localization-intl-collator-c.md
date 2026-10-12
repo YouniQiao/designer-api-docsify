@@ -45,7 +45,7 @@ Compares two strings based on the specified collation rules.
 
 | Type | Description |
 | --- | --- |
-| number | Comparison result.   - If the value is a negative number, the first string comes before the second string.   - If the value is **0**, the first and second strings are in the same sequence.   - If the value is a positive number, the first string is comes after the second string. |
+| number | Comparison result.           - If the value is a negative number, the first string comes before the second string.           - If the value is **0**, the first and second strings are in the same sequence.           - If the value is a positive number, the first string is comes after the second string. |
 
 **Examples**
 

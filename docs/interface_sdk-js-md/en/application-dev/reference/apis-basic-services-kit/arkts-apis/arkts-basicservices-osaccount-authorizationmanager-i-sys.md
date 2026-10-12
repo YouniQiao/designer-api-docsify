@@ -62,6 +62,7 @@ Acquires an authorization for the current process.
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege or options. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -85,6 +86,8 @@ try {
   console.error(`acquireAuthorization exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## hasAuthorization
 
@@ -124,6 +127,7 @@ Checks whether the current process has specified authorization.
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -144,6 +148,8 @@ try {
   console.error(`hasAuthorization exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## releaseAuthorization
 
@@ -183,6 +189,7 @@ Releases the specified authorization for the current process.
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid privilege. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -203,3 +210,5 @@ try {
   console.error(`releaseAuthorization exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

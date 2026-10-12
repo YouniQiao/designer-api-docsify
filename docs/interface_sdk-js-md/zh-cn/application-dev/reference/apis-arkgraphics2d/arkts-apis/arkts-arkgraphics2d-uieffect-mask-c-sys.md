@@ -50,6 +50,7 @@ static createAtlasFrameMask(atlasInfo: drawing.AtlasImage): Mask
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回携带图集帧参数的Mask实例。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -142,6 +143,8 @@ struct AtlasFrameMaskDemo {
 }
 ```
 
+<!--DelEnd-->
+
 ## createBinocularMask
 
 ```TypeScript
@@ -175,6 +178,7 @@ static createBinocularMask(radiusX: number, radiusY: number, gap: number, softne
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有双目蒙版效果的 Mask 实例。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -201,6 +205,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## createFractalGlassMask
 
@@ -237,6 +243,7 @@ static createFractalGlassMask(glassNum: number, glassStrength: number, glassSoft
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 带有分形玻璃蒙版效果的 Mask 实例。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -266,6 +273,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createpixelmapmask1"></a>
 
@@ -307,6 +316,7 @@ static createPixelMapMask(pixelMap: image.PixelMap, srcRect: common2D.Rect, dstR
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -348,6 +358,8 @@ image.createPixelMap(colorBuffer, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="createpixelmapmask2"></a>
 
 ## createPixelMapMask
@@ -384,6 +396,7 @@ static createPixelMapMask(pixelMap: image.PixelMap): Mask
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -474,6 +487,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## createRadialGradientMask
 
 ```TypeScript
@@ -512,6 +527,7 @@ static createRadialGradientMask(center: common2D.Point, radiusX: number, radiusY
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -533,6 +549,8 @@ struct RadialGradientMaskExample {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## createRippleMask
 
@@ -571,11 +589,14 @@ static createRippleMask(center: common2D.Point, radius: number, width: number, o
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 ```
+
+<!--DelEnd-->
 
 ## createSweepRefractionMask
 
@@ -609,6 +630,7 @@ static createSweepRefractionMask(param: SweepRefractionParam,
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扫光折射效果的 Mask。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -676,6 +698,8 @@ struct SweepRefractionExample {
 }
 ```
 
+<!--DelEnd-->
+
 ## createUseEffectMask
 
 ```TypeScript
@@ -710,6 +734,7 @@ static createUseEffectMask(useEffect: boolean): Mask
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -768,6 +793,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## createWarpedRingMask
 
 ```TypeScript
@@ -798,6 +825,7 @@ static createWarpedRingMask(ringParam: WarpedRingParam): Mask
 | --- | --- |
 | [Mask](arkts-arkgraphics2d-uieffect-mask-c-sys.md) | 返回带有扭曲光环蒙版效果的 Mask。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -839,6 +867,8 @@ struct example {
 }
 ```
 
+<!--DelEnd-->
+
 ## createWaveGradientMask
 
 ```TypeScript
@@ -878,6 +908,7 @@ static createWaveGradientMask(center: common2D.Point, width: number, propagation
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -899,3 +930,5 @@ struct WaveGradientMaskExample {
   }
 }
 ```
+
+<!--DelEnd-->

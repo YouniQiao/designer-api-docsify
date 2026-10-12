@@ -43,6 +43,7 @@ Sets the system color mode. This API uses an asynchronous callback to return the
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -62,6 +63,8 @@ try {
   console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdarkmode2"></a>
@@ -106,6 +109,7 @@ Sets the system color mode. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [500001](../errorcode-uiappearance.md#500001-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,3 +127,5 @@ try {
   console.error(`Set dark-mode failed. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

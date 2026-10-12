@@ -43,6 +43,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The hapFilePath is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleArchiveInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundlearchiveinfo2"></a>
@@ -110,6 +113,7 @@ Obtains the bundle information based on the given HAP file path and bundle flags
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The hapFilePath is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -131,3 +135,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleArchiveInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

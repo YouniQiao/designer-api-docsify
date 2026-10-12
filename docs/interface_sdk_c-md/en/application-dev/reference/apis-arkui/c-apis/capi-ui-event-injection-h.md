@@ -8,6 +8,8 @@ Declares the APIs used by in-app intelligent agents and UI automation to inject 
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -45,6 +47,8 @@ enum OH_ArkUI_NativeModule_UIEventInjection_ResultCode
 
 Enumerates the result codes of UI event injection.<br> This enumeration is shared by all injection APIs, including relaxed interaction injection (non-precise) and precise component-targeted injection. A nonzero result code indicates an execution failure, and its specific value conveys the failure reason.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -67,6 +71,8 @@ typedef void (*OH_ArkUI_NativeModule_UIEventInjectionCallback)(OH_ArkUI_NativeMo
 
 Callback for injection completion.<br> The callback is invoked once when the injected command finishes executing, whether successfully or not.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -85,6 +91,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIEventInjectCompositeCommand(ArkUI_Contex
 **Description**
 
 Injects a control command into a target UI node asynchronously.<br> The target node is identified by its unique ID (the same ID used by OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId). The framework resolves the unique ID to the corresponding node within the UI instance specified by uiContext.<br> The command is carried by an OH_ArkUI_NativeModule_UIJsonWrapper object created with OH_ArkUI_NativeModule_UIJsonWrapper_Create. The command payload's top-level structure is: {"schemaVersion": 1, "cmd": {"type": "<command type>", "action_info": { ... }}}<br> Supported command types and their action_info parameters please refernce to developer guide.<br> The uniqueId must correspond to a node that belongs to the same UI instance as uiContext. If the node belongs to a different instance, the framework fails to resolve it within uiContext and returns ARKUI_ERROR_CODE_PARAM_INVALID.<br> This function must be called on the UI thread of the UI instance specified by uiContext. If called on a non-UI thread, the framework triggers a fatal log output and aborts the process. This is a deliberate fail-fast design to prevent undefined behavior from cross-thread UI access.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 

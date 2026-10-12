@@ -44,6 +44,7 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>, callback: Asy
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,6 +72,8 @@ policy.setNetQuotaPolicies(netQuotaPolicyList, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setnetquotapolicies2"></a>
@@ -116,6 +119,7 @@ function setNetQuotaPolicies(quotaPolicies: Array<NetQuotaPolicy>): Promise<void
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -148,3 +152,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

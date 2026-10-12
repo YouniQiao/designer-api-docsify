@@ -53,6 +53,7 @@ hasImmersiveWindow(callback: AsyncCallback<boolean>): void
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -72,6 +73,8 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
   console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="hasimmersivewindow2"></a>
 
@@ -106,6 +109,7 @@ hasImmersiveWindow(): Promise<boolean>
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -123,3 +127,5 @@ promise.then((data) => {
   console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -49,6 +49,7 @@ Obtains the file sync state. This API uses a promise to return the result.
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ cloudSync.getFileSyncState(uris).then((syncStates: Array<cloudSync.FileSyncState
   console.error("get file sync state failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getfilesyncstate2"></a>
@@ -103,6 +106,7 @@ Obtains the file sync state. This API uses an asynchronous callback to return th
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -119,6 +123,8 @@ cloudSync.getFileSyncState(uris, (err: BusinessError, syncStates: Array<cloudSyn
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getfilesyncstate3"></a>
@@ -165,6 +171,7 @@ Obtains the file sync state.
 | 13900042 | Unknown error |
 | 14000002 | Invalid uri. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -180,3 +187,5 @@ try {
   console.error("getFileSyncStatefailed with error: " + JSON.stringify(error));
 }
 ```
+
+<!--DelEnd-->

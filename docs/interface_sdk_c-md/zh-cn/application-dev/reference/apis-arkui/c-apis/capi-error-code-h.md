@@ -6,6 +6,8 @@ Defines the error code for the native module.
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -29,6 +31,8 @@ enum ArkUI_ErrorCode
 **描述：**
 
 定义错误码枚举值。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 

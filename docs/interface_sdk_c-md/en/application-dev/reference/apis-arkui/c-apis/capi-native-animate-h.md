@@ -6,6 +6,8 @@ Defines a set of animation APIs of ArkUI on the native side. The APIs in **nativ
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -227,6 +229,8 @@ ArkUI_AnimateOption* OH_ArkUI_AnimateOption_Create()
 
 Creates an animation configuration.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Returns**:
@@ -245,6 +249,8 @@ void OH_ArkUI_AnimateOption_Dispose(ArkUI_AnimateOption* option)
 
 Disposes of an animation configuration.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -262,6 +268,8 @@ uint32_t OH_ArkUI_AnimateOption_GetDuration(ArkUI_AnimateOption* option)
 **Description**
 
 Obtains the animation duration, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -287,6 +295,8 @@ float OH_ArkUI_AnimateOption_GetTempo(ArkUI_AnimateOption* option)
 
 Obtains the playback speed of an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -310,6 +320,8 @@ ArkUI_AnimationCurve OH_ArkUI_AnimateOption_GetCurve(ArkUI_AnimateOption* option
 **Description**
 
 Obtains an animation curve.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -335,6 +347,8 @@ int32_t OH_ArkUI_AnimateOption_GetDelay(ArkUI_AnimateOption* option)
 
 Obtains the animation delay, in milliseconds.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -358,6 +372,8 @@ int32_t OH_ArkUI_AnimateOption_GetIterations(ArkUI_AnimateOption* option)
 **Description**
 
 Obtains the number of times that an animation is played.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -383,6 +399,8 @@ ArkUI_AnimationPlayMode OH_ArkUI_AnimateOption_GetPlayMode(ArkUI_AnimateOption* 
 
 Obtains the playback mode of an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -406,6 +424,8 @@ ArkUI_ExpectedFrameRateRange* OH_ArkUI_AnimateOption_GetExpectedFrameRateRange(A
 **Description**
 
 Obtains the expected frame rate range of an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -431,6 +451,8 @@ void OH_ArkUI_AnimateOption_SetDuration(ArkUI_AnimateOption* option, int32_t val
 
 Sets the animation duration, in milliseconds.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -449,6 +471,8 @@ void OH_ArkUI_AnimateOption_SetTempo(ArkUI_AnimateOption* option, float value)
 **Description**
 
 Sets the playback speed of an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -469,6 +493,8 @@ void OH_ArkUI_AnimateOption_SetCurve(ArkUI_AnimateOption* option, ArkUI_Animatio
 
 Animation curve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -487,6 +513,8 @@ void OH_ArkUI_AnimateOption_SetDelay(ArkUI_AnimateOption* option, int32_t value)
 **Description**
 
 Sets the animation delay, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -507,6 +535,8 @@ void OH_ArkUI_AnimateOption_SetIterations(ArkUI_AnimateOption* option, int32_t v
 
 Sets the number of times that an animation is played.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -526,6 +556,8 @@ void OH_ArkUI_AnimateOption_SetPlayMode(ArkUI_AnimateOption* option, ArkUI_Anima
 
 Sets the playback mode for an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -544,6 +576,8 @@ void OH_ArkUI_AnimateOption_SetExpectedFrameRateRange(ArkUI_AnimateOption* optio
 **Description**
 
 Defines a struct for the expected frame rate range of the animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -568,6 +602,8 @@ Sets the animation curve for an animation.
 >
 > This method is better than the value set by OH_ArkUI_AnimateOption_SetCurve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -586,6 +622,8 @@ ArkUI_CurveHandle OH_ArkUI_AnimateOption_GetICurve(ArkUI_AnimateOption* option)
 **Description**
 
 Obtains the animation curve of an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -611,6 +649,8 @@ ArkUI_KeyframeAnimateOption* OH_ArkUI_KeyframeAnimateOption_Create(int32_t size)
 
 Creates a keyframe animation parameter object.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -635,6 +675,8 @@ void OH_ArkUI_KeyframeAnimateOption_Dispose(ArkUI_KeyframeAnimateOption* option)
 
 Disposes of a keyframe animation parameter object.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -652,6 +694,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_SetDelay(ArkUI_KeyframeAnimateOption* opt
 **Description**
 
 Sets the overall delay of a keyframe animation, in milliseconds. By default, the keyframe animation starts without any delay.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -678,6 +722,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_SetIterations(ArkUI_KeyframeAnimateOption
 
 Sets the number of times that the keyframe animation is played. By default, the animation is played once. The value **-1** indicates that the animation is played for an unlimited number of times. The value **0** indicates that no animation is played.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -702,6 +748,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_RegisterOnFinishCallback(ArkUI_KeyframeAn
 **Description**
 
 Sets the callback invoked when the keyframe animation playback is complete. This function is called after the keyframe animation has played for the specified number of times.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -729,6 +777,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_SetExpectedFrameRate(ArkUI_KeyframeAnimat
 
 Sets the expected frame rate for a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 19
 
 **Parameters**:
@@ -753,6 +803,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_SetDuration(ArkUI_KeyframeAnimateOption* 
 **Description**
 
 Sets the duration of a keyframe animation, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -784,6 +836,8 @@ Sets the animation curve for a specific keyframe animation segment.
 >
 > Because the <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves do not have effective duration settings, they are not supported.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -809,6 +863,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_RegisterOnEventCallback(ArkUI_KeyframeAni
 **Description**
 
 Sets the closure function of the state at the time of the keyframe, that is, the state to be reached at the time of the keyframe.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -837,6 +893,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_GetDelay(ArkUI_KeyframeAnimateOption* opt
 
 Obtains the overall delay of a keyframe animation, in milliseconds.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -860,6 +918,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_GetIterations(ArkUI_KeyframeAnimateOption
 **Description**
 
 Obtains the number of times that a keyframe animation is played.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -885,6 +945,8 @@ ArkUI_ExpectedFrameRateRange* OH_ArkUI_KeyframeAnimateOption_GetExpectedFrameRat
 
 Obtains the expected frame rate from keyframe animation parameters.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 19
 
 **Parameters**:
@@ -908,6 +970,8 @@ int32_t OH_ArkUI_KeyframeAnimateOption_GetDuration(ArkUI_KeyframeAnimateOption* 
 **Description**
 
 Obtains the duration of a specific state in a keyframe animation, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -933,6 +997,8 @@ ArkUI_CurveHandle OH_ArkUI_KeyframeAnimateOption_GetCurve(ArkUI_KeyframeAnimateO
 **Description**
 
 Obtains the animation curve of a specific state in a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -963,6 +1029,8 @@ Creates an **AnimatorOption** object.
 >
 > When <b>keyframeSize</b> is greater than 0, the animation interpolation start point is 0, and the animation interpolation end point is 1; no setting is allowed.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -987,6 +1055,8 @@ void OH_ArkUI_AnimatorOption_Dispose(ArkUI_AnimatorOption* option)
 
 Disposes of an **AnimatorOption** object.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1004,6 +1074,8 @@ int32_t OH_ArkUI_AnimatorOption_SetDuration(ArkUI_AnimatorOption* option, int32_
 **Description**
 
 Sets the duration of an animator animation, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1029,6 +1101,8 @@ int32_t OH_ArkUI_AnimatorOption_SetDelay(ArkUI_AnimatorOption* option, int32_t v
 **Description**
 
 Sets the delay time of the animator playback, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1059,6 +1133,8 @@ Sets the number of times that an animator animation is played. By default, the a
 >
 > If this parameter is set to a negative value other than <b>-1</b>, the value is invalid. In this case, the animation is played once.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1084,6 +1160,8 @@ int32_t OH_ArkUI_AnimatorOption_SetFill(ArkUI_AnimatorOption* option, ArkUI_Anim
 
 Sets the status of the component before and after the animator animation execution.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1108,6 +1186,8 @@ int32_t OH_ArkUI_AnimatorOption_SetDirection(ArkUI_AnimatorOption* option, ArkUI
 **Description**
 
 Set the playback direction.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1138,6 +1218,8 @@ Sets the interpolation curve for the animation of an animator.
 >
 > <b>springCurve</b>, <b>springMotion</b>, <b>responsiveSpringMotion</b>, <b>interpolatingSpring</b>, and <b>customCurve</b> curves are not supported.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1166,6 +1248,8 @@ Sets the interpolation start point of an animation.
 > **Note**:
 >
 > This API does not take effect when the animation is a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1196,6 +1280,8 @@ Sets the interpolation end point for the animation of an animator.
 >
 > This API does not take effect when the animation is a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1221,6 +1307,8 @@ int32_t OH_ArkUI_AnimatorOption_SetExpectedFrameRateRange(ArkUI_AnimatorOption* 
 
 Sets the expected frame rate range of an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1245,6 +1333,8 @@ int32_t OH_ArkUI_AnimatorOption_SetKeyframe(ArkUI_AnimatorOption* option, float 
 **Description**
 
 Sets the keyframe parameters of an animator animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1277,6 +1367,8 @@ Sets the keyframe curve type for the animation of an animator.
 >
 > <b>springCurve</b>, <b>springMotion</b>, <b>responsiveSpringMotion</b>, <b>interpolatingSpring</b>, and <b>customCurve</b> curves are not supported.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1303,6 +1395,8 @@ int32_t OH_ArkUI_AnimatorOption_GetDuration(ArkUI_AnimatorOption* option)
 
 Obtains the duration for playing an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1326,6 +1420,8 @@ int32_t OH_ArkUI_AnimatorOption_GetDelay(ArkUI_AnimatorOption* option)
 **Description**
 
 Obtains the delay for playing an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1351,6 +1447,8 @@ int32_t OH_ArkUI_AnimatorOption_GetIterations(ArkUI_AnimatorOption* option)
 
 Obtains the number of times that an animator animation is played.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1374,6 +1472,8 @@ ArkUI_AnimationFillMode OH_ArkUI_AnimatorOption_GetFill(ArkUI_AnimatorOption* op
 **Description**
 
 Obtains the status of the component before and after the animator animation execution.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1399,6 +1499,8 @@ ArkUI_AnimationDirection OH_ArkUI_AnimatorOption_GetDirection(ArkUI_AnimatorOpti
 
 Obtains the playback direction of an animator animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1422,6 +1524,8 @@ ArkUI_CurveHandle OH_ArkUI_AnimatorOption_GetCurve(ArkUI_AnimatorOption* option)
 **Description**
 
 Obtains the interpolation curve of the animation of an animator.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1447,6 +1551,8 @@ float OH_ArkUI_AnimatorOption_GetBegin(ArkUI_AnimatorOption* option)
 
 Obtains the interpolation start point of an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1470,6 +1576,8 @@ float OH_ArkUI_AnimatorOption_GetEnd(ArkUI_AnimatorOption* option)
 **Description**
 
 Obtains the interpolation end point of an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1495,6 +1603,8 @@ ArkUI_ExpectedFrameRateRange* OH_ArkUI_AnimatorOption_GetExpectedFrameRateRange(
 
 Obtains the expected frame rate range of an animator animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1518,6 +1628,8 @@ float OH_ArkUI_AnimatorOption_GetKeyframeTime(ArkUI_AnimatorOption* option, int3
 **Description**
 
 Obtains the keyframe time of the animator playback, in milliseconds.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1544,6 +1656,8 @@ float OH_ArkUI_AnimatorOption_GetKeyframeValue(ArkUI_AnimatorOption* option, int
 
 Obtains the keyframe value of an animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1568,6 +1682,8 @@ ArkUI_CurveHandle OH_ArkUI_AnimatorOption_GetKeyframeCurve(ArkUI_AnimatorOption*
 **Description**
 
 Obtains the interpolation curve for a keyframe in the animation of an animator.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1594,6 +1710,8 @@ void* OH_ArkUI_AnimatorEvent_GetUserData(ArkUI_AnimatorEvent* event)
 
 Obtains the user-defined object in an animation event object.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1617,6 +1735,8 @@ void* OH_ArkUI_AnimatorOnFrameEvent_GetUserData(ArkUI_AnimatorOnFrameEvent* even
 **Description**
 
 Obtains the user-defined object in the frame event of an animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1642,6 +1762,8 @@ float OH_ArkUI_AnimatorOnFrameEvent_GetValue(ArkUI_AnimatorOnFrameEvent* event)
 
 Obtains the interpolation result in the animation frame callback event object.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1665,6 +1787,8 @@ int32_t OH_ArkUI_AnimatorOption_RegisterOnFrameCallback(ArkUI_AnimatorOption* op
 **Description**
 
 Sets the callback invoked when the animator receives a frame.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1692,6 +1816,8 @@ int32_t OH_ArkUI_AnimatorOption_RegisterOnFinishCallback(ArkUI_AnimatorOption* o
 
 Sets the callback invoked when the animation playback is complete.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1717,6 +1843,8 @@ int32_t OH_ArkUI_AnimatorOption_RegisterOnCancelCallback(ArkUI_AnimatorOption* o
 **Description**
 
 Sets the callback invoked when the animation playback is canceled.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1744,6 +1872,8 @@ int32_t OH_ArkUI_AnimatorOption_RegisterOnRepeatCallback(ArkUI_AnimatorOption* o
 
 Sets the callback invoked when the animation playback is repeated.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1770,6 +1900,8 @@ int32_t OH_ArkUI_Animator_ResetAnimatorOption(ArkUI_AnimatorHandle animatorHandl
 
 Resets the animation of an animator.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1795,6 +1927,8 @@ int32_t OH_ArkUI_Animator_Play(ArkUI_AnimatorHandle animatorHandle)
 
 Starts the animation of an animator.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1818,6 +1952,8 @@ int32_t OH_ArkUI_Animator_Finish(ArkUI_AnimatorHandle animatorHandle)
 **Description**
 
 Ends the animation of an animator.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1843,6 +1979,8 @@ int32_t OH_ArkUI_Animator_Pause(ArkUI_AnimatorHandle animatorHandle)
 
 Pauses the animation of an animator.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1866,6 +2004,8 @@ int32_t OH_ArkUI_Animator_Cancel(ArkUI_AnimatorHandle animatorHandle)
 **Description**
 
 Cancels the animation of an animator.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1891,6 +2031,8 @@ int32_t OH_ArkUI_Animator_Reverse(ArkUI_AnimatorHandle animatorHandle)
 
 Plays this animation in reverse order.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1914,6 +2056,8 @@ ArkUI_CurveHandle OH_ArkUI_Curve_CreateCurveByType(ArkUI_AnimationCurve curve)
 **Description**
 
 Implements initialization for the interpolation curve, which is used to create an interpolation curve based on the input parameter.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1939,6 +2083,8 @@ ArkUI_CurveHandle OH_ArkUI_Curve_CreateStepsCurve(int32_t count, bool end)
 
 Creates a step curve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -1963,6 +2109,8 @@ ArkUI_CurveHandle OH_ArkUI_Curve_CreateCubicBezierCurve(float x1, float y1, floa
 **Description**
 
 Creates a cubic Bezier curve.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -1990,6 +2138,8 @@ ArkUI_CurveHandle OH_ArkUI_Curve_CreateSpringCurve(float velocity, float mass, f
 **Description**
 
 Creates a spring curve. The curve shape is determined by the spring parameters, and the animation duration is controlled by the **duration** parameter in animation and [animateTo](capi-arkui-nativemodule-arkui-nativeanimateapi-1.md#animateto).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2022,6 +2172,8 @@ Creates a spring animation curve. If multiple spring animations are applied to t
 >
 > The animation duration is subject to the curve parameters, rather than the <b>duration</b> parameter in <b>animation</b> or <b>animateTo</b>.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2051,6 +2203,8 @@ Creates a responsive spring animation curve. It is a special case of **springMot
 > **Note**:
 >
 > The animation duration is subject to the curve parameters, rather than the <b>duration</b> parameter in <b>animation</b> or <b>animateTo</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2082,6 +2236,8 @@ Creates an interpolating spring curve animated from 0 to 1. The actual animation
 >
 > The animation duration is subject to the curve parameters, rather than the <b>duration</b> parameter in <b>animation</b> or <b>animateTo</b>.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2109,6 +2265,8 @@ ArkUI_CurveHandle OH_ArkUI_Curve_CreateCustomCurve(void* userData, float (*inter
 
 Creates a custom curve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2134,6 +2292,8 @@ void OH_ArkUI_Curve_DisposeCurve(ArkUI_CurveHandle curveHandle)
 
 Disposes of a custom curve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2155,6 +2315,8 @@ Creates an opacity effect object for component transitions.
 > **Note**:
 >
 > If the value specified is less than 0, the value <b>0</b> is used. If the value specified is greater than 1, the value <b>1</b> is used.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2180,6 +2342,8 @@ ArkUI_TransitionEffect* OH_ArkUI_CreateTranslationTransitionEffect(ArkUI_Transla
 
 Creates a translation effect object for component transitions.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2203,6 +2367,8 @@ ArkUI_TransitionEffect* OH_ArkUI_CreateScaleTransitionEffect(ArkUI_ScaleOptions*
 **Description**
 
 Creates a scaling effect object for component transitions.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2228,6 +2394,8 @@ ArkUI_TransitionEffect* OH_ArkUI_CreateRotationTransitionEffect(ArkUI_RotationOp
 
 Creates a rotation effect object for component transition.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2251,6 +2419,8 @@ ArkUI_TransitionEffect* OH_ArkUI_CreateMovementTransitionEffect(ArkUI_Transition
 **Description**
 
 Creates a movement transition effect object for the component.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2280,6 +2450,8 @@ Creates an asymmetric transition effect.
 >
 > If the <b>asymmetric</b> function is not used for <b>TransitionEffect</b>, the transition effect takes effect for both appearance and disappearance of the component.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2305,6 +2477,8 @@ ArkUI_TransitionEffect* OH_ArkUI_CreateIdentityTransitionEffect(void)
 
 Create an identity transition effect. Identity transition effect performs no visual transition animation. It can alse be used as the appear or disappear parameter of OH_ArkUI_CreateAsymmetricTransitionEffect to indicate no animation on one side.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.0
 
 **Resource release**: native_animate/OH_ArkUI_TransitionEffect_Dispose {return}
@@ -2325,6 +2499,8 @@ void OH_ArkUI_TransitionEffect_Dispose(ArkUI_TransitionEffect* effect)
 
 Disposes of a transition effect.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2342,6 +2518,8 @@ int32_t OH_ArkUI_TransitionEffect_Combine(ArkUI_TransitionEffect* firstEffect, A
 **Description**
 
 Sets a combination of transition effects.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -2372,6 +2550,8 @@ Sets transition effect animation settings.
 >
 > If <b>combine</b> is used for combining transition effects, the animation settings of a transition effect are applicable to the one following it.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 12
 
 **Parameters**:
@@ -2396,6 +2576,8 @@ OH_ArkUI_PropertyAnimationHandle OH_ArkUI_NativeModule_PropertyAnimation_Create(
 **Description**
 
 Creates a property animation for a specific animatable property.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype); otherwise, this API returns <b>NULL</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2423,6 +2605,8 @@ void OH_ArkUI_NativeModule_PropertyAnimation_Destroy(OH_ArkUI_PropertyAnimationH
 
 Destroys a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2440,6 +2624,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetFromValue(OH_ArkUI_Pr
 **Description**
 
 Sets the start value of a property animation.<br> It is recommended to set the start value. If not set, the animation starts from the current property value by default. If the property animation does not set the start value of the property and the corresponding property has never been assigned, the property animation cannot be produced due to the lack of a valid start state.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2467,6 +2653,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetFromValue(OH_ArkUI_Pr
 
 Obtains the start value of a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2492,6 +2680,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetToValue(OH_ArkUI_Prop
 **Description**
 
 Sets the end value of a property animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2519,6 +2709,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetToValue(OH_ArkUI_Prop
 
 Obtains the end value of a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2545,6 +2737,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetDuration(OH_ArkUI_Pro
 
 Sets the duration for a property animation.<br> The actual effective animation duration is determined by priority: if the duration is set via this API, that value is used; otherwise, the duration set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2569,6 +2763,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetDuration(OH_ArkUI_Pro
 **Description**
 
 Obtains the duration of a property animation.<br> This API returns only the duration explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the duration has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation duration used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setduration), that value is used; otherwise, the group's duration via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2595,6 +2791,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetDelay(OH_ArkUI_Proper
 
 Sets the delay for a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2619,6 +2817,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetDelay(OH_ArkUI_Proper
 **Description**
 
 Obtains the delay of a property animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2645,6 +2845,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetCurve(OH_ArkUI_Proper
 
 Sets the animation curve for a property animation.<br> The actual effective animation curve is determined by priority: if the curve is set via this API, that value is used; otherwise, the curve set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used. Spring curves (<b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b>) are supported. When a spring curve is set, the duration set via [OH_ArkUI_NativeModule_PropertyAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setduration) does not take effect; the animation duration is determined by the spring curve.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2669,6 +2871,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetCurve(OH_ArkUI_Proper
 **Description**
 
 Obtains the animation curve of a property animation.<br> This API returns only the curve explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set on this animation, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2695,6 +2899,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetTempo(OH_ArkUI_Proper
 
 Sets the tempo for a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2719,6 +2925,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetTempo(OH_ArkUI_Proper
 **Description**
 
 Obtains the tempo of a property animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2745,6 +2953,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetAutoReverse(OH_ArkUI_
 
 Sets whether to auto-reverse a property animation.<br> When auto-reverse is enabled, the animation plays forward and then backward alternately across iterations. The default value is <b>false</b>.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2769,6 +2979,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetAutoReverse(OH_ArkUI_
 **Description**
 
 Obtains whether auto-reverse is enabled for a property animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2795,6 +3007,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetIterations(OH_ArkUI_P
 
 Sets the number of iterations for a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2819,6 +3033,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetIterations(OH_ArkUI_P
 **Description**
 
 Obtains the number of iterations of a property animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2845,6 +3061,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_SetTargetNode(OH_ArkUI_P
 
 Sets the target render node for a property animation.<br> The target node is the render node animated by this property animation. If <b>NULL</b> (the default), the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). A non-NULL target must belong to the same UIContext that the group is registered on; the check is performed when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2870,6 +3088,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PropertyAnimation_GetTargetNode(OH_ArkUI_P
 
 Obtains the target render node of a property animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2894,6 +3114,8 @@ OH_ArkUI_KeyframeAnimationHandle OH_ArkUI_NativeModule_KeyframeAnimation_Create(
 **Description**
 
 Creates a keyframe animation for a specific animatable property.<br> The keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame). Use [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytimes) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setkeytime) to customize the keyframe time points.<br> <b>propertyType</b> must be a valid [OH_ArkUI_AnimationPropertyType](capi-native-type-visual-h.md#oh_arkui_animationpropertytype), and <b>size</b> must be at least 2; otherwise, this API returns <b>NULL</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2922,6 +3144,8 @@ void OH_ArkUI_NativeModule_KeyframeAnimation_Destroy(OH_ArkUI_KeyframeAnimationH
 
 Destroys a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2939,6 +3163,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTimes(OH_ArkUI_Key
 **Description**
 
 Sets the keyframe time points.<br> If this API is not called, the keyframe time point of each keyframe defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).<br> The elements in <b>keyTimes</b> must be non-decreasing, and <b>size</b> must equal the number of keyframes of the keyframe animation (the <b>size</b> value specified when the animation was created via [OH_ArkUI_NativeModule_KeyframeAnimation_Create](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_create)).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -2966,6 +3192,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetKeyTime(OH_ArkUI_Keyf
 
 Obtains the keyframe time point of a keyframe at the specified index.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -2992,6 +3220,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetKeyTime(OH_ArkUI_Keyf
 
 Sets the keyframe time point of a keyframe at the specified index.<br> If this API is not called for a keyframe, its keyframe time point defaults to being evenly distributed in [0, 1] by index (for example, when there are 3 keyframes, <b>0.0</b> for the first frame, <b>0.5</b> for the second frame, and <b>1.0</b> for the third frame).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3017,6 +3247,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValue(OH_ArkUI_Keyfra
 **Description**
 
 Sets the value of a keyframe at the specified index.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3045,6 +3277,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetValues(OH_ArkUI_Keyfr
 
 Sets the values for all keyframes at once.<br> The values are provided as a flat array.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3070,6 +3304,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetValue(OH_ArkUI_Keyfra
 **Description**
 
 Obtains the value of a keyframe at the specified index.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3098,6 +3334,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves(OH_ArkUI_Keyfr
 
 Sets the animation curves for keyframes.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3123,6 +3361,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve(OH_ArkUI_Keyfra
 **Description**
 
 Sets the animation curve for a keyframe at the specified index.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3150,6 +3390,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetCurve(OH_ArkUI_Keyfra
 
 Obtains the curve of a keyframe at the specified index.<br> This API returns only the curve explicitly set for the keyframe; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the curve has not been set for the keyframe, <b>NULL</b> is written to <b>outBorrowedCurve</b>. The actual effective animation curve used at runtime is determined by priority: if set for the keyframe via [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurves](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurves), that value is used; otherwise, the group's curve via [OH_ArkUI_NativeModule_AnimationGroup_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setcurve) is used; if neither is set, [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve) is used.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3176,6 +3418,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration(OH_ArkUI_Key
 
 Sets the duration for a keyframe animation.<br> The actual effective animation duration is determined by priority: if the duration is set via this API, that value is used; otherwise, the duration set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3200,6 +3444,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetDuration(OH_ArkUI_Key
 **Description**
 
 Obtains the duration of a keyframe animation.<br> This API returns only the duration explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the duration has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation duration used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setduration), that value is used; otherwise, the group's duration via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3226,6 +3472,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetDelay(OH_ArkUI_Keyfra
 
 Sets the delay for a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3250,6 +3498,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetDelay(OH_ArkUI_Keyfra
 **Description**
 
 Obtains the delay of a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3276,6 +3526,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetTempo(OH_ArkUI_Keyfra
 
 Sets the tempo for a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3300,6 +3552,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetTempo(OH_ArkUI_Keyfra
 **Description**
 
 Obtains the tempo of a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3326,6 +3580,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetAutoReverse(OH_ArkUI_
 
 Sets whether to auto-reverse a keyframe animation.<br> When auto-reverse is enabled, the animation plays forward and then backward alternately across iterations. The default value is <b>false</b>.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3350,6 +3606,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetAutoReverse(OH_ArkUI_
 **Description**
 
 Obtains whether auto-reverse is enabled for a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3376,6 +3634,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetIterations(OH_ArkUI_K
 
 Sets the number of iterations for a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3400,6 +3660,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetIterations(OH_ArkUI_K
 **Description**
 
 Obtains the number of iterations of a keyframe animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3426,6 +3688,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_SetTargetNode(OH_ArkUI_K
 
 Sets the target render node for a keyframe animation.<br> The target node is the render node animated by this keyframe animation. If <b>NULL</b> (the default), the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). A non-NULL target must belong to the same UIContext that the group is registered on; the check is performed when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3451,6 +3715,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_KeyframeAnimation_GetTargetNode(OH_ArkUI_K
 
 Obtains the target render node of a keyframe animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3475,6 +3741,8 @@ OH_ArkUI_PathAnimationHandle OH_ArkUI_NativeModule_PathAnimation_Create(const ch
 **Description**
 
 Creates a path animation that moves the component along a geometric path.<br> The path animation applies to the TRANSLATION property.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3502,6 +3770,8 @@ void OH_ArkUI_NativeModule_PathAnimation_Destroy(OH_ArkUI_PathAnimationHandle an
 
 Destroys a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3519,6 +3789,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetDuration(OH_ArkUI_PathAni
 **Description**
 
 Sets the duration for a path animation.<br> The actual effective animation duration is determined by priority: if the duration is set via this API, that value is used; otherwise, the duration set on the animation group via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3545,6 +3817,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetDuration(OH_ArkUI_PathAni
 
 Obtains the duration of a path animation.<br> This API returns only the duration explicitly set on this animation; the value inherited from the animation group or the default is resolved at runtime and is not stored on this object. If the duration has not been set on this animation, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. The actual effective animation duration used at runtime is determined by priority: if set via [OH_ArkUI_NativeModule_PathAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setduration), that value is used; otherwise, the group's duration via [OH_ArkUI_NativeModule_AnimationGroup_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_setduration) is used; if neither is set, **1000** ms is used.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3569,6 +3843,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetDelay(OH_ArkUI_PathAnimat
 **Description**
 
 Sets the delay for a path animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3595,6 +3871,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetDelay(OH_ArkUI_PathAnimat
 
 Obtains the delay of a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3619,6 +3897,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetTempo(OH_ArkUI_PathAnimat
 **Description**
 
 Sets the tempo for a path animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3645,6 +3925,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetTempo(OH_ArkUI_PathAnimat
 
 Obtains the tempo of a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3669,6 +3951,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoReverse(OH_ArkUI_Path
 **Description**
 
 Sets whether to auto-reverse a path animation.<br> When auto-reverse is enabled, the animation plays forward and then backward alternately across iterations. The default value is <b>false</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3695,6 +3979,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetAutoReverse(OH_ArkUI_Path
 
 Obtains whether auto-reverse is enabled for a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3719,6 +4005,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetIterations(OH_ArkUI_PathA
 **Description**
 
 Sets the number of iterations for a path animation.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3745,6 +4033,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetIterations(OH_ArkUI_PathA
 
 Obtains the number of iterations of a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3769,6 +4059,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetAutoRotation(OH_ArkUI_Pat
 **Description**
 
 Sets whether the component auto-rotates to align with the path tangent during a path animation.<br> When auto-rotation is enabled, the component rotates so that its orientation aligns with the tangent of the path at the current position. The default value is <b>false</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3795,6 +4087,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetAutoRotation(OH_ArkUI_Pat
 
 Obtains whether auto-rotation is enabled for a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3819,6 +4113,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_SetTargetNode(OH_ArkUI_PathA
 **Description**
 
 Sets the target render node for a path animation.<br> The target node is the render node animated by this path animation. If <b>NULL</b> (the default), the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). A non-NULL target must belong to the same UIContext that the group is registered on; the check is performed when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3845,6 +4141,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PathAnimation_GetTargetNode(OH_ArkUI_PathA
 
 Obtains the target render node of a path animation.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3870,6 +4168,8 @@ OH_ArkUI_AnimationGroupHandle OH_ArkUI_NativeModule_AnimationGroup_Create(void)
 
 Creates an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Resource release**: native_animate/OH_ArkUI_NativeModule_AnimationGroup_Destroy {return}
@@ -3890,6 +4190,8 @@ void OH_ArkUI_NativeModule_AnimationGroup_Destroy(OH_ArkUI_AnimationGroupHandle 
 
 Destroys the frontend handle of an animation group.<br> This releases the frontend handle only. The backend (runtime) objects of a group that has been registered via [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) are released separately — automatically when the finish callback is invoked, or via [OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup).<br> The child animations added to the group are not automatically destroyed. Call OH_ArkUI_NativeModule_PropertyAnimation_Destroy, OH_ArkUI_NativeModule_KeyframeAnimation_Destroy or OH_ArkUI_NativeModule_PathAnimation_Destroy separately.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3907,6 +4209,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetDuration(OH_ArkUI_Animat
 **Description**
 
 Sets the duration for an animation group.<br> The group's duration serves as the default duration for child animations that do not set their own duration via [OH_ArkUI_NativeModule_PropertyAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setduration), [OH_ArkUI_NativeModule_KeyframeAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setduration), or [OH_ArkUI_NativeModule_PathAnimation_SetDuration](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_setduration).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3933,6 +4237,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetDuration(OH_ArkUI_Animat
 
 Obtains the duration of an animation group.<br> This API returns only the duration explicitly set on this animation group, and is not affected by the duration of child animations. If the duration has not been set on this group, ARKUI_ERROR_CODE_NO_ATTRIBUTE_FOUND is returned. At runtime, an unset group duration defaults to **1000** ms.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -3957,6 +4263,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetDelay(OH_ArkUI_Animation
 **Description**
 
 Sets the delay for an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -3983,6 +4291,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetDelay(OH_ArkUI_Animation
 
 Obtains the delay of an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4007,6 +4317,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetCurve(OH_ArkUI_Animation
 **Description**
 
 Sets the animation curve for an animation group.<br> The group's curve serves as the default curve for child animations that do not set their own curve via [OH_ArkUI_NativeModule_PropertyAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_setcurve) or [OH_ArkUI_NativeModule_KeyframeAnimation_SetCurve](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_setcurve). The <b>springMotion</b>, <b>responsiveSpringMotion</b>, and <b>interpolatingSpring</b> curves are not supported because they do not have effective duration settings.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4033,6 +4345,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetCurve(OH_ArkUI_Animation
 
 Obtains the animation curve of an animation group.<br> This API returns only the curve explicitly set on this animation group, and is not affected by the curve of child animations. If the curve has not been set on this group, <b>NULL</b> is written to <b>outBorrowedCurve</b>. At runtime, an unset group curve defaults to [ARKUI_CURVE_LINEAR](capi-native-type-visual-h.md#arkui_animationcurve).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4057,6 +4371,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetTempo(OH_ArkUI_Animation
 **Description**
 
 Sets the tempo for an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4083,6 +4399,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetTempo(OH_ArkUI_Animation
 
 Obtains the tempo of an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4107,6 +4425,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetAutoReverse(OH_ArkUI_Ani
 **Description**
 
 Sets whether to auto-reverse an animation group.<br> When auto-reverse is enabled, the animation group plays forward and then backward alternately across iterations. The default value is <b>false</b>.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4133,6 +4453,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetAutoReverse(OH_ArkUI_Ani
 
 Obtains whether auto-reverse is enabled for an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4157,6 +4479,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetIterations(OH_ArkUI_Anim
 **Description**
 
 Sets the number of iterations for an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4183,6 +4507,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetIterations(OH_ArkUI_Anim
 
 Obtains the number of iterations of an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4207,6 +4533,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetExpectedFrameRateRange(O
 **Description**
 
 Sets the expected frame rate range for an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4233,6 +4561,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetExpectedFrameRateRange(O
 
 Obtains the expected frame rate range of an animation group.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4257,6 +4587,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback(OH
 **Description**
 
 Registers a callback to be invoked when the animation group playback is complete.<br> An animation group has one finish callback. Registering another callback replaces the previous callback and userData pair. Registering the same callback and userData pair again succeeds without creating an additional registration.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4284,6 +4616,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode(OH_ArkUI_Anim
 
 Sets the default target render node for an animation group.<br> The default target is the render node animated by child animations that do not set their own target via [OH_ArkUI_NativeModule_PropertyAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_settargetnode), [OH_ArkUI_NativeModule_KeyframeAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_settargetnode), or [OH_ArkUI_NativeModule_PathAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_settargetnode). Every child must resolve to a non-NULL target (its own, or this group default) when the group is registered by [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup); any resolved target must belong to the same UIContext that the group is registered on. The default value is <b>NULL</b>.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4308,6 +4642,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_GetTargetNode(OH_ArkUI_Anim
 **Description**
 
 Obtains the default target render node of an animation group.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4334,6 +4670,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation(OH_Ark
 
 Adds a property animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_PropertyAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4358,6 +4696,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation(OH_Ark
 **Description**
 
 Adds a keyframe animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_KeyframeAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4384,6 +4724,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation(OH_ArkUI_A
 
 Adds a path animation to an animation group.<br> The target node of the animation is determined by [OH_ArkUI_NativeModule_PathAnimation_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_settargetnode); if not set, the animation inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). Every child must resolve to a non-NULL target when the group is registered.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4408,6 +4750,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_AddAnimationGroup(ArkUI_ContextHandle cont
 **Description**
 
 Registers an animation group on a UIContext with a specified key and starts playback.<br> The UIContext owns the group by <b>key</b>: once registered, the UIContext holds the group's backend (runtime) objects, and the caller may destroy the frontend group handle (and child animation handles) after registration since the backend runs independently by (UIContext, key). Keys are scoped per UIContext (instance): the same key in different UIContexts does not collide. Within one UIContext, if a group is already registered with the same key, the system removes the previous group first (releasing its backend objects) and then registers the new group. The group is later identified and managed by the same (UIContext, key) pair.<br> Each child animation added via [OH_ArkUI_NativeModule_AnimationGroup_AddPropertyAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpropertyanimation), [OH_ArkUI_NativeModule_AnimationGroup_AddKeyframeAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addkeyframeanimation), or [OH_ArkUI_NativeModule_AnimationGroup_AddPathAnimation](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_addpathanimation) animates the target node set by its own <b>SetTargetNode</b> API; if that target is not set (or is <b>NULL</b>), it inherits the group's default target set by [OH_ArkUI_NativeModule_AnimationGroup_SetTargetNode](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_settargetnode). At registration, every child must resolve to a non-NULL target node (its own, or the group default); if a child has no resolvable target node, ARKUI_ERROR_CODE_SUB_ANIMATION_INVALID is returned. Every resolved target node must belong to the same UIContext as <b>context</b>; otherwise, the error code ARKUI_ERROR_CODE_TARGET_NODE_NOT_IN_SAME_CONTEXT is returned.<br> Playback control and lifecycle APIs ([OH_ArkUI_NativeModule_RemoveAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_removeanimationgroup), [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate), [OH_ArkUI_NativeModule_HasAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_hasanimationgroup), [OH_ArkUI_NativeModule_PauseAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_pauseanimationgroup), [OH_ArkUI_NativeModule_ResumeAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_resumeanimationgroup), [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup) are all keyed by the (UIContext, key) pair.<br> The finish callback (see [OH_ArkUI_NativeModule_AnimationGroup_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_registeronfinishcallback)) is invoked exactly once after natural completion, [OH_ArkUI_NativeModule_FinishAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_finishanimationgroup), or destruction of a target node. If [OH_ArkUI_NativeModule_AddAnimationGroup](capi-native-animate-h.md#oh_arkui_nativemodule_addanimationgroup) returns an error, the finish callback is not invoked. After the callback returns, the system automatically removes the group from the UIContext and releases the backend (runtime) objects of the group and its child animations; the frontend handles (the group and its child animations) must still be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4435,6 +4779,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_RemoveAnimationGroup(ArkUI_ContextHandle c
 
 Removes the animation group identified by the specified key from the UIContext.<br> Stops the group (if still running) and releases the backend (runtime) objects of the group and its child animations. The animated target nodes are restored to their state at the start of the animation. The frontend handles (the group and its child animations) are not freed by this call and must be destroyed by the caller via [OH_ArkUI_NativeModule_AnimationGroup_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_animationgroup_destroy), [OH_ArkUI_NativeModule_PropertyAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_propertyanimation_destroy), [OH_ArkUI_NativeModule_KeyframeAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_keyframeanimation_destroy), or [OH_ArkUI_NativeModule_PathAnimation_Destroy](capi-native-animate-h.md#oh_arkui_nativemodule_pathanimation_destroy). Use this only for a group that has not stopped on its own (for example, a paused group); once the finish callback is invoked, the group is removed automatically.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4459,6 +4805,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_GetAnimationGroupState(ArkUI_ContextHandle
 **Description**
 
 Obtains the playback state of an animation group identified by the specified key on the UIContext.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 
@@ -4486,6 +4834,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_HasAnimationGroup(ArkUI_ContextHandle cont
 
 Checks whether an animation group with the specified key exists on the UIContext.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4512,6 +4862,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_PauseAnimationGroup(ArkUI_ContextHandle co
 
 Pauses the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4537,6 +4889,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_ResumeAnimationGroup(ArkUI_ContextHandle c
 
 Resumes the animation group identified by the specified key on the UIContext.<br> The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -4561,6 +4915,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_FinishAnimationGroup(ArkUI_ContextHandle c
 **Description**
 
 Finishes the animation group identified by the specified key on the UIContext.<br> The animation group is finished according to the specified finish mode: jump to the end state, jump to the start state, or stay at the current value. The animation group must be in the [OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) or [OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED](capi-native-type-visual-h.md#oh_arkui_animationgroupstate) state; otherwise, ARKUI_ERROR_CODE_ANIMATION_GROUP_INVALID_STATE is returned. The playback state can be queried via [OH_ArkUI_NativeModule_GetAnimationGroupState](capi-native-animate-h.md#oh_arkui_nativemodule_getanimationgroupstate).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.0.1
 

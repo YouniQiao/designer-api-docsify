@@ -46,6 +46,7 @@ If the target window is displayed on the screen, you can use this API to send sc
 | [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |
 | [34000005](../errorcode-onScreen.md#34000005-target-not-found) | The target is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -84,3 +85,5 @@ if (event != undefined) {
    }
 }
 ```
+
+<!--DelEnd-->

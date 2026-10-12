@@ -41,6 +41,7 @@ function getAllAppPrivateCertificates(callback: AsyncCallback<CMResult>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -65,6 +66,8 @@ try {
   console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallappprivatecertificates2"></a>
@@ -101,6 +104,7 @@ function getAllAppPrivateCertificates(): Promise<CMResult>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [17500001](../errorcode-certManager.md#17500001-内部错误) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -125,3 +129,5 @@ try {
   console.error(`Failed to get all app private certificates. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

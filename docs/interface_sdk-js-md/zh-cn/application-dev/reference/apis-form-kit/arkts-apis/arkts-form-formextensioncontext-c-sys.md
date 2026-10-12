@@ -64,6 +64,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-免安装超时) | Installation-free timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -110,6 +111,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
 };
 ```
 
+<!--DelEnd-->
+
 <a id="disconnectserviceextensionability1"></a>
 
 ## disconnectServiceExtensionAbility
@@ -145,6 +148,7 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -179,6 +183,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<!--DelEnd-->
 
 <a id="disconnectserviceextensionability2"></a>
 
@@ -220,6 +226,7 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -255,6 +262,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<!--DelEnd-->
 
 <a id="startability1"></a>
 
@@ -294,6 +303,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -323,6 +333,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<!--DelEnd-->
 
 <a id="startability2"></a>
 
@@ -367,6 +379,7 @@ startAbility(want: Want): Promise<void>
 | 16500101 | The application is not a system application.<br>**适用版本：** 9 - 11 |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -394,3 +407,5 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 };
 ```
+
+<!--DelEnd-->

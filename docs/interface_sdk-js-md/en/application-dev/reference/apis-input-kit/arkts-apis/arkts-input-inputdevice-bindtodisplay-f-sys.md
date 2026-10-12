@@ -50,6 +50,7 @@ Binds an input device to a display group. Only external USB and Bluetooth mice, 
 | [3900004](../errorcode-inputdevice.md#3900004-specified-display-does-not-exist) | The specified display does not exist. |
 | [3900005](../errorcode-inputdevice.md#3900005-unsupported-input-device) | Unsupported input device. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,3 +79,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

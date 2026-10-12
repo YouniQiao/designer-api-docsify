@@ -51,14 +51,12 @@
   - [AudioEffectProperty(system api)](arkts-audio-audio-audioeffectproperty-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AudioHRTFAnonymousDescriptor(system api)](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md)<!--DelEnd-->
-  - [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md)
   - [AudioLoopback](arkts-audio-audio-audioloopback-i.md)
   - [AudioManager](arkts-audio-audio-audiomanager-i.md)
   <!--Del-->
   - [AudioManager(system api)](arkts-audio-audio-audiomanager-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AudioPersonalizedSpatialEnabledChangeForAnyDevice(system api)](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md)<!--DelEnd-->
-  - [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
   - [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i.md)
   <!--Del-->
   - [AudioRecordingManager(system api)](arkts-audio-audio-audiorecordingmanager-i-sys.md)<!--DelEnd-->
@@ -106,12 +104,10 @@
   - [AudioVolumeManager](arkts-audio-audio-audiovolumemanager-i.md)
   <!--Del-->
   - [AudioVolumeManager(system api)](arkts-audio-audio-audiovolumemanager-i-sys.md)<!--DelEnd-->
-  - [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
   - [CurrentInputDeviceChangedEvent](arkts-audio-audio-currentinputdevicechangedevent-i.md)
   - [CurrentOutputDeviceChangedEvent](arkts-audio-audio-currentoutputdevicechangedevent-i.md)
   - [DeviceBlockStatusInfo](arkts-audio-audio-deviceblockstatusinfo-i.md)
   - [DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)
-  - [InterruptAction](arkts-audio-audio-interruptaction-i.md)
   - [InterruptEvent](arkts-audio-audio-interruptevent-i.md)
   <!--Del-->
   - [InterruptResult(system api)](arkts-audio-audio-interruptresult-i-sys.md)<!--DelEnd-->
@@ -133,6 +129,10 @@
   - [VolumeGroupInfo(system api)](arkts-audio-audio-volumegroupinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeLimitExceededEvent(system api)](arkts-audio-audio-volumelimitexceededevent-i-sys.md)<!--DelEnd-->
+  - [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md)
+  - [AudioPlaybackCaptureConfig](arkts-audio-audio-audioplaybackcaptureconfig-i.md)
+  - [CaptureFilterOptions](arkts-audio-audio-capturefilteroptions-i.md)
+  - [InterruptAction](arkts-audio-audio-interruptaction-i.md)
   <!--Del-->
   - [ActiveStreamsVolumeInfoArray(system api)](arkts-audio-audio-activestreamsvolumeinfoarray-t-sys.md)<!--DelEnd-->
   - [AudioCapturerChangeInfoArray](arkts-audio-audio-audiocapturerchangeinfoarray-t.md)
@@ -147,7 +147,6 @@
   - [StreamUsageArray(system api)](arkts-audio-audio-streamusagearray-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeGroupInfos(system api)](arkts-audio-audio-volumegroupinfos-t-sys.md)<!--DelEnd-->
-  - [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md)
   <!--Del-->
   - [AsrAecMode(system api)](arkts-audio-audio-asraecmode-e-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -208,7 +207,6 @@
   - [CommunicationDeviceType](arkts-audio-audio-communicationdevicetype-e.md)
   <!--Del-->
   - [ConnectType(system api)](arkts-audio-audio-connecttype-e-sys.md)<!--DelEnd-->
-  - [ContentType](arkts-audio-audio-contenttype-e.md)
   - [DeviceBlockStatus](arkts-audio-audio-deviceblockstatus-e.md)
   - [DeviceChangeType](arkts-audio-audio-devicechangetype-e.md)
   - [DeviceFlag](arkts-audio-audio-deviceflag-e.md)
@@ -221,7 +219,6 @@
   - [DeviceUsage](arkts-audio-audio-deviceusage-e.md)
   <!--Del-->
   - [EffectFlag(system api)](arkts-audio-audio-effectflag-e-sys.md)<!--DelEnd-->
-  - [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
   - [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)
   - [InterruptHint](arkts-audio-audio-interrupthint-e.md)
   - [InterruptMode](arkts-audio-audio-interruptmode-e.md)
@@ -253,6 +250,9 @@
   - [VolumeAdjustType(system api)](arkts-audio-audio-volumeadjusttype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [VolumeFlag(system api)](arkts-audio-audio-volumeflag-e-sys.md)<!--DelEnd-->
+  - [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md)
+  - [ContentType](arkts-audio-audio-contenttype-e.md)
+  - [InterruptActionType](arkts-audio-audio-interruptactiontype-e.md)
   - [Constants](arkts-audio-audio-con.md)
   <!--Del-->
   - [Constants(system api)](arkts-audio-audio-con-sys.md)<!--DelEnd-->

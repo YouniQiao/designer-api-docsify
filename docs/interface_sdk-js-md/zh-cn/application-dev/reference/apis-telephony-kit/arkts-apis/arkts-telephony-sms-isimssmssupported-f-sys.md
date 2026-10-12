@@ -42,6 +42,7 @@ function isImsSmsSupported(slotId: number, callback: AsyncCallback<boolean>): vo
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -53,6 +54,8 @@ sms.isImsSmsSupported(slotId, (err: BusinessError, data: boolean) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isimssmssupported2"></a>
@@ -96,6 +99,7 @@ function isImsSmsSupported(slotId: number): Promise<boolean>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -110,3 +114,5 @@ promise.then((data: boolean) => {
     console.error(`isImsSmsSupported failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

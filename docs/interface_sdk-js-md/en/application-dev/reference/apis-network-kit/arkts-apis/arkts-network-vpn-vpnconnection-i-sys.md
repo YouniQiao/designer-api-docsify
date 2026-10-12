@@ -56,6 +56,7 @@ Destroys a VPN. This API uses an asynchronous callback to return the result.
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -80,6 +81,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="destroy2"></a>
 
@@ -117,6 +120,7 @@ Destroys a VPN. This API uses a promise to return the result.
 | [2200002](../errorcode-net-ethernet.md#2200002-service-connection-failure) | Operation failed. Cannot connect to service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -143,6 +147,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="protect1"></a>
 
@@ -183,6 +189,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -225,6 +232,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="protect2"></a>
 
@@ -270,6 +279,7 @@ Protects sockets against a VPN connection. The data sent through sockets is dire
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2203004](../errorcode-net-vpn.md#2203004-invalid-descriptor) | Invalid socket file descriptor. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -315,6 +325,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="setup1"></a>
 
 ## setUp
@@ -355,6 +367,7 @@ Creates a VPN based on the specified configuration. This API uses an asynchronou
 | [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied. Check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -394,6 +407,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setup2"></a>
 
@@ -440,6 +455,7 @@ Creates a VPN based on the specified configuration. This API uses a promise to r
 | [2203001](../errorcode-net-vpn.md#2203001-failed-to-create-a-vpn) | VPN creation denied. Check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn-already-exists) | VPN already exists. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -477,3 +493,5 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->

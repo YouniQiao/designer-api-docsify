@@ -46,6 +46,7 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -71,6 +72,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo2"></a>
@@ -118,6 +121,7 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -141,6 +145,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo3"></a>
@@ -183,6 +189,7 @@ Obtains the AbilityInfo array information of the application on the specified re
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -215,6 +222,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo4"></a>
@@ -262,6 +271,7 @@ Obtains the AbilityInfo array information of the application on the specified re
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -292,6 +302,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo5"></a>
@@ -335,6 +347,7 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -360,6 +373,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo6"></a>
@@ -408,6 +423,7 @@ Obtains information about the remote ability that matches the given element name
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -431,6 +447,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo7"></a>
@@ -474,6 +492,7 @@ Obtains the AbilityInfo array information of the application on the specified re
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -506,6 +525,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo8"></a>
@@ -554,6 +575,7 @@ Obtains the AbilityInfo array information of the application on the specified re
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -584,3 +606,5 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

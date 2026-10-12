@@ -46,6 +46,7 @@ function setDefaultApplicationForAppClone(type: string, elementName: ElementName
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 | [18000001](../errorcode-bundle.md#18000001-设置默认浏览器时应用缺少默认浏览器权限) | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**适用版本：** 26.0.1+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -102,3 +103,5 @@ try {
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 };
 ```
+
+<!--DelEnd-->

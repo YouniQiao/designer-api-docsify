@@ -8,6 +8,8 @@ Defines key codes of the key device.
 
 **Library**: libohinput.so
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 **Related module**: [input](capi-input.md)
@@ -31,6 +33,8 @@ enum Input_KeyCode
 **Description**
 
 Enumerates the key codes.
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
 
 **Since**: 12
 

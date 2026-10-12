@@ -8,6 +8,8 @@ Declares the shared JSON data object for the UI perception and control APIs.
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -47,6 +49,8 @@ enum OH_ArkUI_NativeModule_UIJsonFormat
 
 JSON输出格式枚举类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 | 枚举项 | 描述 |
@@ -66,6 +70,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIJsonWrapperCreate(const char *data, uint
 **描述：**
 
 从调用方提供的JSON字符串创建JSON数据对象。<br> 将提供的字符串复制到对象中。调用方拥有创建的对象，必须 当不再需要它时，使用[OH_ArkUI_NativeModule_UIJsonWrapperDestroy](capi-ui-json-wrapper-h.md#oh_arkui_nativemodule_uijsonwrapperdestroy)释放它。<br> 提供的字符串应包含schemaVersion字段。如果不存在，或指定的 版本值超出支持的范围，它被视为1，如下所示： { "schemaVersion": 1, ... }<br> 注意：传递给此函数的数据字符串仍由调用方拥有。销毁JSON 此接口返回的包装器对象不会释放数据指向的内存 调用者的代表。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.2.0
 
@@ -95,6 +101,8 @@ const char *OH_ArkUI_NativeModule_UIJsonWrapperGetData(const OH_ArkUI_NativeModu
 
 获取对象持有的JSON字符串。<br> 返回的字符串是只读的，并且以null终止。它指向JSON拥有的内存 对象，并保持有效，直到对象被销毁。调用者不得修改或释放 返回的字符串。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 **参数：**
@@ -119,6 +127,8 @@ uint32_t OH_ArkUI_NativeModule_UIJsonWrapperGetSize(const OH_ArkUI_NativeModule_
 
 获取JSON字符串的字节长度。<br> 返回的长度不包括终止空字符。对于一个空的JSON字符串，零是 返回。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 **参数：**
@@ -142,6 +152,8 @@ void OH_ArkUI_NativeModule_UIJsonWrapperDestroy(OH_ArkUI_NativeModule_UIJsonWrap
 **描述：**
 
 销毁JSON数据对象并释放其资源。<br> 传递null没有任何效果。返回的任何指针 OH_ArkUI_NativeModule_UIJsonWrapper_GetData在此次调用后失效。<br> 注意：仅在您显式持有其所有权的JSON包装器对象上调用此函数，对于 例如，使用OH_ArkUI_NativeModule_UIJsonWrapper_Create创建的包装器，或者包装器 你通过所有权转移函数明确地获得了所有权。不使用 该函数用于释放系统构造并传递出去的JSON包装器对象。 例如，通过传递的对象 [OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiinfocollectioninteractionjsoncallback)。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.2.0
 

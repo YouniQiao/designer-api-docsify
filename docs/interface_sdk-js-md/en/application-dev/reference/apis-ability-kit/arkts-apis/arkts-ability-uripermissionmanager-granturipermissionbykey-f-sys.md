@@ -49,6 +49,7 @@ Grants the URI access permission of the current application to the target applic
 | [16000092](../errorcode-ability.md#16000092-no-permission-to-authorize-uri) | No permission to authorize the URI. |
 | [16000094](../errorcode-ability.md#16000094-invalid-target-token-id) | The target token ID is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -81,3 +82,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

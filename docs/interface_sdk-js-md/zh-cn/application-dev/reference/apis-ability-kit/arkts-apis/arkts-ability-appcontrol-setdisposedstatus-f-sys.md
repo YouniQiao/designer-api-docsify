@@ -44,6 +44,7 @@ function setDisposedStatus(appId: string, disposedWant: Want, callback: AsyncCal
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,6 +68,8 @@ try {
   console.error('setDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdisposedstatus2"></a>
@@ -112,6 +115,7 @@ function setDisposedStatus(appId: string, disposedWant: Want): Promise<void>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -134,3 +138,5 @@ try {
   console.error('setDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->

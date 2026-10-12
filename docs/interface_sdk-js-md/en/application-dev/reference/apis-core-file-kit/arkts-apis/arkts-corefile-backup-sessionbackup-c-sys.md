@@ -65,6 +65,7 @@ Append new bundles and backupInfos to backup.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -170,6 +171,8 @@ async function appendBundles() {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="appendbundles2"></a>
 
 ## appendBundles
@@ -209,6 +212,7 @@ Append new bundles to backup.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -273,6 +277,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## cancel
 
 ```TypeScript
@@ -311,6 +317,7 @@ cancel the application being backup.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -365,6 +372,8 @@ let backupBundles: Array<string> = ["com.example.helloWorld"];
 sessionBackup.appendBundles(backupBundles);
 ```
 
+<!--DelEnd-->
+
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -402,6 +411,7 @@ Provides an interface for the tool to clear temporary directories
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -468,6 +478,8 @@ let generalCallbacks: backup.GeneralCallbacks = { // Define general callbacks to
 let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a backup process.
 ```
 
+<!--DelEnd-->
+
 ## constructor
 
 ```TypeScript
@@ -492,6 +504,7 @@ Constructor for obtaining the instance of the SessionBackup class.
 | --- | --- | --- | --- |
 | callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | Yes | Callbacks to be registered for the backup. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -541,6 +554,8 @@ let generalCallbacks: backup.GeneralCallbacks = {
 let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a backup process.
 ```
 
+<!--DelEnd-->
+
 ## getBackupDataSize
 
 ```TypeScript
@@ -584,6 +599,7 @@ Obtain application data size to be backed up.
 | 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -689,6 +705,8 @@ Example of a JSON string returned asynchronously:
 }
 ```
 
+<!--DelEnd-->
+
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -727,6 +745,7 @@ Provides an interface for the tool to get compatibility info.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -792,6 +811,8 @@ async function getBackupCompatibilityInfo() {
 }
 ```
 
+<!--DelEnd-->
+
 ## getLocalCapabilities
 
 ```TypeScript
@@ -827,6 +848,7 @@ Obtain a Json file that describes local capabilities.
 | 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -954,6 +976,8 @@ The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](
 }
 ```
 
+<!--DelEnd-->
+
 ## release
 
 ```TypeScript
@@ -990,6 +1014,7 @@ End Backup process
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1040,3 +1065,5 @@ let sessionBackup = new backup.SessionBackup(generalCallbacks); // Create a back
 sessionBackup.release(); // Release the backup session when the backup process is complete.
 console.info('release success');
 ```
+
+<!--DelEnd-->

@@ -43,6 +43,7 @@ function getAllLauncherAbilityInfo(userId: number, callback: AsyncCallback<Array
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not support. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -64,6 +65,8 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getalllauncherabilityinfo2"></a>
@@ -108,6 +111,7 @@ function getAllLauncherAbilityInfo(userId: number) : Promise<Array<LauncherAbili
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not support. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -127,3 +131,5 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

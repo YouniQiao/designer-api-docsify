@@ -48,6 +48,7 @@ Start an application for media playback.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,6 +58,8 @@ avSession.startAVPlayback("com.example.myapplication", "121278").then(() => {
   console.info('Succeeded in starting AV playback.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startavplayback2"></a>
@@ -101,6 +104,9 @@ Start an application for media playback with command info.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. Interface caller is not a system app. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
+<!--Del-->
 **Examples**
 
 See [startAVPlayback](#startavplayback)
+
+<!--DelEnd-->

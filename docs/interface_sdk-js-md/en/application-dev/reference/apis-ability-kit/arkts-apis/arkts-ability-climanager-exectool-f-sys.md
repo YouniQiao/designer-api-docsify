@@ -51,4 +51,4 @@ Execute a CLI command
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. Interface caller is not a system app. |
 | [35600030](../errorcode-ability.md#35600030-cli-tool-does-not-exist) | No tool with the specified name exists. |
 | [35600031](../errorcode-ability.md#35600031-maximum-number-of-concurrent-tools-reached) | Maximum number of processes has been reached. |
-| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Connect to system service failed; 2. The system service failed to communicate with the dependent module. |
+| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Connect to system service failed;         2. The system service failed to communicate with the dependent module. |

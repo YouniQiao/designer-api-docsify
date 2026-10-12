@@ -6,6 +6,8 @@
 
 **库：** libohweb.so
 
+**系统能力：** SystemCapability.Web.Webview.Core
+
 **起始版本：** 12
 
 **相关模块：** [Web](capi-web.md)
@@ -19,12 +21,6 @@
 | [ArkWeb_ErrorCode](#arkweb_errorcode) | ArkWeb_ErrorCode | 定义ArkWeb NDK接口异常错误码。 |
 | [ArkWeb_BlanklessErrorCode](#arkweb_blanklesserrorcode) | ArkWeb_BlanklessErrorCode | 定义无白屏加载的异常错误码。 |
 
-### 宏定义
-
-| 名称 | 描述 |
-| -- | -- |
-| ARKWEB_ERROR_CODE_H | 声明ArkWeb NDK接口异常错误码，用于在ArkWeb相关接口调用失败时返回具体的错误信息，帮助开发者快速定位和解决问题。这些错误码覆盖了初始化、参数校验、URL处理、Cookie管理、库加载等常见异常场景。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.Web.Webview.Core |
-
 ## 枚举类型说明
 
 ### ArkWeb_ErrorCode
@@ -36,6 +32,8 @@ enum ArkWeb_ErrorCode
 **描述：**
 
 定义ArkWeb NDK接口异常错误码。
+
+**系统能力：** SystemCapability.Web.Webview.Core
 
 **起始版本：** 12
 
@@ -63,6 +61,8 @@ enum ArkWeb_BlanklessErrorCode
 **描述：**
 
 定义无白屏加载的异常错误码。
+
+**系统能力：** SystemCapability.Web.Webview.Core
 
 **起始版本：** 20
 

@@ -47,6 +47,7 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 | [16000006](../errorcode-ability.md#16000006-不允许跨用户操作) | Cross-user operations are not allowed. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1. Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -87,3 +88,5 @@ function queryEntityInfoByPromise() {
   }
 }
 ```
+
+<!--DelEnd-->

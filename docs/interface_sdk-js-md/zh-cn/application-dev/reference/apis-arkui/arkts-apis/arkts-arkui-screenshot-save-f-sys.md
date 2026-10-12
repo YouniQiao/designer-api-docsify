@@ -45,6 +45,7 @@ function save(options: ScreenshotOptions, callback: AsyncCallback<image.PixelMap
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 11+ |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen.<br>**适用版本：** 11+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap
   pixelMap.release(); // PixelMap使用完后及时释放内存
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="save2"></a>
@@ -114,6 +117,7 @@ function save(callback: AsyncCallback<image.PixelMap>): void
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -130,6 +134,8 @@ screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
   pixelMap.release(); // PixelMap使用完后及时释放内存
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="save3"></a>
@@ -176,6 +182,7 @@ function save(options?: ScreenshotOptions): Promise<image.PixelMap>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -209,3 +216,5 @@ try {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
+
+<!--DelEnd-->

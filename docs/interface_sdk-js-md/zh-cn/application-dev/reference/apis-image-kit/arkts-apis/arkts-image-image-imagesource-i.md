@@ -406,7 +406,7 @@ createPixelMapList(options?: DecodingOptions): Promise<Array<PixelMap>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
@@ -480,7 +480,7 @@ createPixelMapList(callback: AsyncCallback<Array<PixelMap>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
@@ -549,7 +549,7 @@ createPixelMapList(options: DecodingOptions, callback: AsyncCallback<Array<Pixel
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-共享内存数据异常) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
@@ -691,7 +691,7 @@ createPixelMapUsingAllocator(options?: DecodingOptions, allocatorType?: Allocato
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete.         3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
 | [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
@@ -766,7 +766,7 @@ createPixelMapUsingAllocatorSync(options?: DecodingOptions, allocatorType?: Allo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700101](../errorcode-image.md#7700101-图片源存在问题) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete.         3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported mimetype. |
 | [7700103](../errorcode-image.md#7700103-图片太大) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-不支持的内存分配类型) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
@@ -1001,7 +1001,7 @@ getDelayTimeList(): Promise<Array<number>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
@@ -1050,7 +1050,7 @@ getDelayTimeList(callback: AsyncCallback<Array<number>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
@@ -1099,7 +1099,7 @@ getDisposalTypeList(): Promise<Array<number>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-图片输入数据错误) | The image data is abnormal. |
 | [62980137](../errorcode-image.md#62980137-图片操作无效) | Invalid media operation. |
 | [62980149](../errorcode-image.md#62980149-图片参数无效) | Invalid MIME type for the image source. |
@@ -1144,7 +1144,7 @@ getFrameCount(): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -1194,7 +1194,7 @@ getFrameCount(callback: AsyncCallback<number>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-图片格式不匹配) | The image format does not match. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -1434,7 +1434,7 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 | [62980113](../errorcode-image.md#62980113-图片未知格式) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980116](../errorcode-image.md#62980116-解码失败) | Failed to decode the image. |
@@ -1496,7 +1496,7 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980103](../errorcode-image.md#62980103-图片类型不支持) | The image data is not supported. |
 | [62980110](../errorcode-image.md#62980110-图片源数据错误) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-图片源数据不完整) | The image source data is incomplete. |
@@ -2130,7 +2130,7 @@ readImageMetadata(propertyKeys?: string[], index?: number): Promise<ImageMetadat
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1. The index is negative.         2. The index is greater than or equal to the number of frames in the image. |
 
 **示例**
 
@@ -2212,7 +2212,7 @@ readImageMetadataByType(metadataTypes?: MetadataType[], index?: number): Promise
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-不支持的mime类型) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-不支持的元数据) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700204](../errorcode-image.md#7700204-无效参数) | Invalid parameter. Possible causes: 1.The index is negative.         2. The index is greater than or equal to the number of frames in the image. |
 
 **示例**
 

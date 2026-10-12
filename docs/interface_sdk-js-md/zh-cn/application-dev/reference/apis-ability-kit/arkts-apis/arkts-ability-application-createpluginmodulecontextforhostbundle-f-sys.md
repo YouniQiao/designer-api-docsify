@@ -49,6 +49,7 @@ export function createPluginModuleContextForHostBundle(context: Context, pluginB
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -73,3 +74,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

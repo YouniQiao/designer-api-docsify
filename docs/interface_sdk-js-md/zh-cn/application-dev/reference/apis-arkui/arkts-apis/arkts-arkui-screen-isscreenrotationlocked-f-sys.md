@@ -36,6 +36,7 @@ function isScreenRotationLocked(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -51,6 +52,8 @@ screen.isScreenRotationLocked((err: BusinessError, isLocked: boolean) => {
   console.info(`Succeeded in getting the screen rotation lock status. isLocked: ${isLocked}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isscreenrotationlocked2"></a>
@@ -83,6 +86,7 @@ function isScreenRotationLocked(): Promise<boolean>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -95,3 +99,5 @@ screen.isScreenRotationLocked().then((isLocked: boolean) => {
   console.error(`Failed to get the screen rotation lock status. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

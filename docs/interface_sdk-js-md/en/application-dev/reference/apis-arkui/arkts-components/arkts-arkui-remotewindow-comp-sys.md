@@ -33,6 +33,7 @@ Called when the remote window interface is used.
 | [RRect](arkts-arkui-remotewindow-comp-rrect-i-sys.md) | Round rect. |
 | [WindowAnimationTarget](arkts-arkui-remotewindow-comp-windowanimationtarget-i-sys.md) | Window animation target. |
 
+<!--Del-->
 ## Examples
 
 The RemoteWindow component needs to receive the WindowAnimationTarget object from the WindowAnimationController object set by windowAnimationManager. You can create a RemoteWindowExample.ets file as an example to encapsulate the RemoteWindow component and the passed WindowAnimationTarget object.
@@ -144,3 +145,5 @@ export default struct RemoteWindowExample {
   }
 }
 ```
+
+<!--DelEnd-->

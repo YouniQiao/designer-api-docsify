@@ -50,6 +50,7 @@ Obtains the version code of the application with the specified bundle name on th
 | [17700007](../errorcode-bundle.md#17700007-incorrect-device-id) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-distributed-service-is-not-started) | The distributed service is not running. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,3 +69,5 @@ try {
   console.error(`getRemoteBundleVersionCode failed: error code is ${code}  and error msg is ${message}`);
 }
 ```
+
+<!--DelEnd-->

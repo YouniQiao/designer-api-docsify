@@ -67,6 +67,7 @@ hideSoftKeyboard(displayId: number): Promise<void>
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -79,6 +80,8 @@ inputMethod.getController().hideSoftKeyboard(displayId).then(() => {
   console.error(`Failed to hide softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="showsoftkeyboard3"></a>
 
@@ -126,6 +129,7 @@ showSoftKeyboard(displayId: number): Promise<void>
 | [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1.the edit box is not focused. 2.no edit box is bound to current input method application. 3.ipc failed due to the large amount of data transferred or other reasons. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -138,3 +142,5 @@ inputMethod.getController().showSoftKeyboard(displayId).then(() => {
   console.error(`Failed to show softKeyboard, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

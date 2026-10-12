@@ -50,6 +50,7 @@ Revoke all persistence permissions for the application.
 | 13900001 | Operation not permitted. |
 | 13900020 | Invalid tokenID |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -69,6 +70,8 @@ async function revokeAllPermissionExample() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="revokepermission3"></a>
@@ -118,6 +121,7 @@ Revoke persistence permissions for the URI.
 | 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -149,3 +153,5 @@ async function revokeSpecificPermissionExample() {
   }
 }
 ```
+
+<!--DelEnd-->

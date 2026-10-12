@@ -55,6 +55,7 @@ Sets the pixel density of the screen. This API uses an asynchronous callback to 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -97,6 +98,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setdensitydpi2"></a>
 
 ## setDensityDpi
@@ -135,6 +138,7 @@ Sets the pixel density of the screen. This API uses a promise to return the resu
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -174,6 +178,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setorientation1"></a>
 
 ## setOrientation
@@ -207,6 +213,7 @@ Sets the screen orientation. This API uses an asynchronous callback to return th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -248,6 +255,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setorientation2"></a>
 
 ## setOrientation
@@ -286,6 +295,7 @@ Sets the screen orientation. This API uses a promise to return the result. The s
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -324,6 +334,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setorientation3"></a>
 
@@ -366,6 +378,7 @@ Set the orientation of the screen
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -394,6 +407,8 @@ screensPromise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setscreenactivemode1"></a>
 
@@ -428,6 +443,7 @@ Sets the active mode of the screen. This API uses an asynchronous callback to re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -470,6 +486,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setscreenactivemode2"></a>
 
 ## setScreenActiveMode
@@ -508,6 +526,7 @@ Sets the active mode of the screen. This API uses a promise to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -547,6 +566,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## activeModeIndex
 

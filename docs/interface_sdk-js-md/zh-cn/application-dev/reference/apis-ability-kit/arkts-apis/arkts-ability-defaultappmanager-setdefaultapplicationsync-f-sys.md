@@ -45,6 +45,7 @@ function setDefaultApplicationSync(type: string, elementName: ElementName, userI
 | [17700028](../errorcode-bundle.md#17700028-输入的ability与type不匹配) | The specified ability does not match the type. |
 | [18000001](../errorcode-bundle.md#18000001-设置默认浏览器时应用缺少默认浏览器权限) | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**适用版本：** 26.0.1+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -96,3 +97,5 @@ try {
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 };
 ```
+
+<!--DelEnd-->

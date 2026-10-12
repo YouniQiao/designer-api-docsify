@@ -42,6 +42,7 @@ Sets the power mode of a device. This API uses an asynchronous callback to retur
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE, (err: Error) => {
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setpowermode2"></a>
@@ -96,6 +99,7 @@ Sets the power mode of a device. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4900301](../errorcode-power.md#4900301-power-mode-setting-failed) | Setting the power mode failed.<br>**Applicable version:** 23 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -107,3 +111,5 @@ power.setPowerMode(power.DevicePowerMode.MODE_PERFORMANCE)
     console.error('set power mode failed, err: ' + err);
 });
 ```
+
+<!--DelEnd-->

@@ -42,6 +42,7 @@ Get history avsession records. These sessions have been destroyed.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDe
     } 
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="gethistoricalsessiondescriptors2"></a>
@@ -99,6 +102,7 @@ Get history avsession records. These sessions have been destroyed.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessi
   }
 });
 ```
+
+<!--DelEnd-->

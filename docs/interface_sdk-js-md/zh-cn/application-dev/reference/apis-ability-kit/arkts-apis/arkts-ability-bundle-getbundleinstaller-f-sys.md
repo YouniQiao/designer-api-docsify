@@ -36,6 +36,7 @@ function getBundleInstaller(callback: AsyncCallback<BundleInstaller>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-i-sys.md)&gt; | 是 | 回调函数，返回安装接口对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -60,6 +61,8 @@ bundle.getBundleInstaller((err, data) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundleinstaller2"></a>
@@ -92,6 +95,9 @@ function getBundleInstaller(): Promise<BundleInstaller>
 | --- | --- |
 | Promise&lt;[BundleInstaller](arkts-ability-bundleinstaller-depr-i-sys.md)&gt; | Promise对象，返回安装接口对象。 |
 
+<!--Del-->
 **示例**
 
 参见 [getBundleInstaller](#getbundleinstaller)
+
+<!--DelEnd-->

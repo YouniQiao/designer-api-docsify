@@ -36,6 +36,7 @@ Unregisters a mission status listener. This API uses an asynchronous callback to
 | listenerId | number | Yes | Index of the mission status listener to unregister. It is returned by **registerMissionListener()**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,6 +75,8 @@ missionManager.unregisterMissionListener(listenerId, (error) => {
 });
 ```
 
+<!--DelEnd-->
+
 
 <a id="unregistermissionlistener2"></a>
 
@@ -111,6 +114,7 @@ Unregisters a mission status listener. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -151,3 +155,5 @@ missionManager.unregisterMissionListener(listenerId)
     console.error(`unregisterMissionListener failed. Code: ${error.code}, message: ${error.message}.`);
   });
 ```
+
+<!--DelEnd-->

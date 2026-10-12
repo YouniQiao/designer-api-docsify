@@ -46,7 +46,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 
 **Examples**
@@ -138,7 +138,7 @@ Binds joint assets. Currently, only the binding between an asset in a distribute
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 
 **Examples**
@@ -220,7 +220,7 @@ Unsubscribes from data changes of this distributed data object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
 **Examples**
 
@@ -266,7 +266,7 @@ Unsubscribes from the status change of this distributed data object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
 **Examples**
 
@@ -461,7 +461,7 @@ Subscribes to data changes of this distributed data object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
 **Examples**
 
@@ -504,7 +504,7 @@ Subscribes to status changes of this distributed data object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
 **Examples**
 
@@ -763,7 +763,7 @@ Saves a distributed data object. This API uses an asynchronous callback to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 
 **Examples**
@@ -814,7 +814,7 @@ Saves a distributed data object. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
 
 **Examples**
@@ -862,7 +862,7 @@ Sets the property information about a single asset in a distributed object. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetKey is invalid, such as ""; 2. The uri is invalid, such as "". |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes:         1. The assetKey is invalid, such as "";         2. The uri is invalid, such as "". |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
 
 **Examples**
@@ -940,7 +940,7 @@ Sets the property information about multiple assets in a distributed object. Thi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes: 1. The assetsKey is invalid, such as ""; 2. The uris is invalid, such as the length of uris is more than 50. |
+| [15400002](../errorcode-distributed-dataObject.md#15400002-incorrect-parameter) | Parameter error. Possible causes:         1. The assetsKey is invalid, such as "";         2. The uris is invalid, such as the length of uris is more than 50. |
 | [15400003](../errorcode-distributed-dataObject.md#15400003-sessionid-already-set) | The sessionId of the distributed object has been set. |
 
 **Examples**
@@ -1017,7 +1017,7 @@ Sets a session ID. This API uses an asynchronous callback to return the result. 
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types;         2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**
@@ -1115,7 +1115,7 @@ Sets a session ID or exits the distributed network. This API uses a promise to r
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types;         2. The sessionId allows only letters, digits, and underscores(_), and cannot exceed 128 in length. |
 | [15400001](../errorcode-distributed-dataObject.md#15400001-failed-to-create-the-in-memory-database) | Failed to create the in-memory database. |
 
 **Examples**

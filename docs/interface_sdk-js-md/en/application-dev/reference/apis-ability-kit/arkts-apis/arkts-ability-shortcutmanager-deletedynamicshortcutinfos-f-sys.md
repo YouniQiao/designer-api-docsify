@@ -52,6 +52,7 @@ Deletes dynamic shortcuts.
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,3 +73,5 @@ try {
   console.error(`deleteDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -38,6 +38,7 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 | end | number | Yes | Indicates the end time of the query period, in milliseconds.<br> Unit:ms |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | Yes | the callback of queryBundleStateInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -54,6 +55,8 @@ bundleState.queryBundleStateInfos(0, 20000000000000, (err: BusinessError ,
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="querybundlestateinfos2"></a>
@@ -93,6 +96,7 @@ This method queries usage information at the BY_OPTIMIZED interval by default.
 | --- | --- |
 | Promise&lt;[BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md)&gt; | the promise returned by queryBundleStatsInfos. the [BundleActiveInfoResponse](arkts-backgroundtasks-bundlestate-bundleactiveinforesponse-i.md) objects containing the usage information about each bundle. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -106,3 +110,5 @@ bundleState.queryBundleStateInfos(0, 20000000000000).then((res: bundleState.Bund
   console.error('BUNDLE_ACTIVE queryBundleStateInfos promise failed, because: ' + err.code);
 });
 ```
+
+<!--DelEnd-->

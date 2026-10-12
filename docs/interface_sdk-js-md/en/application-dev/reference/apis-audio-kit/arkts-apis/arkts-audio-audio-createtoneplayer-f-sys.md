@@ -31,6 +31,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | Yes | Tone playing attribute. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Yes | Callback used to return the tonePlayer instance. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,6 +53,8 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="createtoneplayer3"></a>
@@ -84,6 +87,7 @@ Obtains a [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) instance. This met
 | --- | --- |
 | Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Promise used to return the tonePlayer instance. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,3 +102,5 @@ async function createTonePlayerBefore(){
   tonePlayer = await audio.createTonePlayer(audioRendererInfo);
 }
 ```
+
+<!--DelEnd-->

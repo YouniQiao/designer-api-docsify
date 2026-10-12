@@ -36,6 +36,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | formId | string | Yes | Widget ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -50,6 +51,8 @@ formHost.releaseForm(formId, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="releaseform2"></a>
@@ -84,6 +87,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | isReleaseCache | boolean | Yes | Whether to release the cache. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is released, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,6 +102,8 @@ formHost.releaseForm(formId, true, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="releaseform3"></a>
@@ -137,6 +143,7 @@ Releases a widget. After this API is called, the application can no longer use t
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -149,3 +156,5 @@ formHost.releaseForm(formId, true).then(() => {
   console.error(`formHost releaseForm, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

@@ -46,6 +46,7 @@ function deleteDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): 
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -90,3 +91,5 @@ struct ShortcutExample {
   }
 }
 ```
+
+<!--DelEnd-->

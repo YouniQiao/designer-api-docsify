@@ -48,6 +48,7 @@ Sets the default application for a user based on a system-defined application ty
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
 | 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.0.1 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,6 +94,8 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
 });
 ```
 
+<!--DelEnd-->
+
 
 <a id="setdefaultapplication2"></a>
 
@@ -134,6 +137,7 @@ Sets the default application based on a system-defined application type, a file 
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
 | 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.0.1 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -177,6 +181,8 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.info('Operation successful.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdefaultapplication3"></a>
@@ -226,6 +232,7 @@ Sets the default application based on a system-defined application type, a file 
 | [17700028](../errorcode-bundle.md#17700028-mismatch-between-ability-and-type) | The specified ability does not match the type. |
 | 18000001 | The specified type is Web Browser and the specified application does not have the ohos.permission.DEFAULT_WEB_BROWSER permission.<br>**Applicable version:** 26.0.1 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -274,3 +281,5 @@ defaultAppManager.setDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->

@@ -48,6 +48,7 @@ function getDisposedRule(appId: string, appIndex?: number): DisposedRule
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is invalid. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex is not in the valid range.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -64,3 +65,5 @@ try {
   console.error('getDisposedRule failed ' + message);
 }
 ```
+
+<!--DelEnd-->

@@ -38,6 +38,7 @@ Sets whether to enable an ability. This API uses an asynchronous callback to ret
 | isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
   console.error('getAbilityInfo failed. Cause: ' + JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setabilityenabled2"></a>
@@ -98,6 +101,9 @@ Sets whether to enable an ability. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 See [setAbilityEnabled](#setabilityenabled)
+
+<!--DelEnd-->

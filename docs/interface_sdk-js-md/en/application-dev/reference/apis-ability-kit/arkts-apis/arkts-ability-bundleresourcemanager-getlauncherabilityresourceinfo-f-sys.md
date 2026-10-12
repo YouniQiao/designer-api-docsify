@@ -48,6 +48,7 @@ Obtains the bundle information of the entry ability of an application based on t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -84,6 +85,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getLauncherAbilityResourceInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlauncherabilityresourceinfo2"></a>
@@ -130,6 +133,9 @@ Obtains the launcher ability resource information of an application based on the
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range or not found. |
 
+<!--Del-->
 **Examples**
 
 See [getLauncherAbilityResourceInfo](#getlauncherabilityresourceinfo)
+
+<!--DelEnd-->

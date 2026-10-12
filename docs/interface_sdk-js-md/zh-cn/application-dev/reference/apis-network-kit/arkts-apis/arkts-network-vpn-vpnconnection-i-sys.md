@@ -56,6 +56,7 @@ destroy(callback: AsyncCallback<void>): void
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -80,6 +81,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="destroy2"></a>
 
@@ -117,6 +120,7 @@ destroy(): Promise<void>
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -143,6 +147,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="protect1"></a>
 
@@ -183,6 +189,7 @@ protect(socketFd: number, callback: AsyncCallback<void>): void
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -225,6 +232,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="protect2"></a>
 
@@ -270,6 +279,7 @@ protect(socketFd: number): Promise<void>
 | [2200003](../errorcode-net-ethernet.md#2200003-系统内部错误) | System internal error. |
 | [2203004](../errorcode-net-vpn.md#2203004-无效描述符) | Invalid socket file descriptor. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -315,6 +325,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="setup1"></a>
 
 ## setUp
@@ -355,6 +367,7 @@ setUp(config: VpnConfig, callback: AsyncCallback<number>): void
 | [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied. Check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN already exists. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -394,6 +407,8 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setup2"></a>
 
@@ -440,6 +455,7 @@ setUp(config: VpnConfig): Promise<number>
 | [2203001](../errorcode-net-vpn.md#2203001-vpn创建失败) | VPN creation denied. Check the user type. |
 | [2203002](../errorcode-net-vpn.md#2203002-vpn已存在) | VPN already exists. |
 
+<!--Del-->
 **示例**
 
 > 说明：
@@ -477,3 +493,5 @@ struct Index {
   build() { }
 }
 ```
+
+<!--DelEnd-->

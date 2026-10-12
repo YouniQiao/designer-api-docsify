@@ -53,6 +53,7 @@ Checks whether this display contains an immersive window. This API uses an async
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,6 +73,8 @@ displayClass.hasImmersiveWindow((err: BusinessError, data: boolean) => {
   console.info(`Succeeded in checking whether there is immersive window. data: ${data}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="hasimmersivewindow2"></a>
 
@@ -106,6 +109,7 @@ Checks whether this display contains an immersive window. This API uses a promis
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 | [1400003](../errorcode-display.md#1400003-abnormal-display-manager-service) | This display manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,3 +127,5 @@ promise.then((data) => {
   console.error(`Failed to check whether there is immersive window. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

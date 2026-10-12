@@ -33,6 +33,7 @@ function isSystemReady(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当检查系统是否准备好成功，error为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -45,6 +46,8 @@ formHost.isSystemReady((error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="issystemready2"></a>
@@ -75,6 +78,7 @@ function isSystemReady(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -87,3 +91,5 @@ formHost.isSystemReady().then(() => {
   console.error(`formHost isSystemReady, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

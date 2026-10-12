@@ -44,6 +44,7 @@ function deleteInvalidForms(formIds: Array<string>, callback: AsyncCallback<numb
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,6 +63,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="deleteinvalidforms2"></a>
@@ -107,6 +110,7 @@ function deleteInvalidForms(formIds: Array<string>): Promise<number>
 | [16500060](../errorcode-form.md#16500060-连接服务失败) | Service connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -123,3 +127,5 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

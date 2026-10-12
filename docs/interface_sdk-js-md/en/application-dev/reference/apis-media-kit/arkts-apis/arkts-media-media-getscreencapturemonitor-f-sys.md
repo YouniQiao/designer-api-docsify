@@ -35,6 +35,7 @@ Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -45,3 +46,5 @@ try {
   console.error(`getScreenCaptureMonitor failed, error message:${err.message}`);
 }
 ```
+
+<!--DelEnd-->

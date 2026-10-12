@@ -41,6 +41,7 @@ get Configurations which user can changes from AVScreenCapture server
 | [5400109](../errorcode-media.md#5400109-session-id-does-not-exist) | Sessions not exist. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,3 +56,5 @@ try {
   console.error(`getAVScreenCaptureConfigurableParameters error, error message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

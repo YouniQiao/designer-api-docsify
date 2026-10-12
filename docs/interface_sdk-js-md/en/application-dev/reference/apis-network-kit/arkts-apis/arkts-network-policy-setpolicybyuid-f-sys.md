@@ -45,6 +45,7 @@ Sets the metered network access policy for the application specified by a given 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -54,6 +55,8 @@ policy.setPolicyByUid(11111, policy.NetUidPolicy.NET_POLICY_NONE, (error: Busine
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setpolicybyuid2"></a>
@@ -100,6 +103,7 @@ Sets whether the application with the corresponding UID can access the metering 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -114,3 +118,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

@@ -35,6 +35,7 @@ getForegroundApplications.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Yes | Return all application information currently in the foreground in the form of callback. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -48,6 +49,8 @@ appManager.getForegroundApplications((err, data) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getforegroundapplications2"></a>
@@ -80,6 +83,7 @@ getForegroundApplications.
 | --- | --- |
 | Promise&lt;Array&lt;[AppStateData](arkts-ability-appstatedata-c.md)&gt;&gt; | Returns the list of AppStateData. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -94,3 +98,5 @@ appManager.getForegroundApplications()
     console.error(`GetForegroundApplications failed, error code: ${err.code}, error msg: ${err.message}.`);
   });
 ```
+
+<!--DelEnd-->

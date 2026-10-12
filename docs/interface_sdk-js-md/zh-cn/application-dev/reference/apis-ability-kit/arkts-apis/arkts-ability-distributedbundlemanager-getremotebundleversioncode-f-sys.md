@@ -50,6 +50,7 @@ function getRemoteBundleVersionCode(deviceId: string, bundleName: string): Promi
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -68,3 +69,5 @@ try {
   console.error(`getRemoteBundleVersionCode failed: error code is ${code}  and error msg is ${message}`);
 }
 ```
+
+<!--DelEnd-->

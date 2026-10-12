@@ -45,6 +45,7 @@ function getLauncherAbilityInfo(bundleName: string, userId: number, callback: As
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlauncherabilityinfo2"></a>
@@ -112,6 +115,7 @@ function getLauncherAbilityInfo(bundleName: string, userId: number) : Promise<Ar
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -131,3 +135,5 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -36,11 +36,14 @@ constructor()
 
 **系统接口：** 此接口为系统接口。
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync()
 ```
+
+<!--DelEnd-->
 
 <a id="off1"></a>
 
@@ -78,6 +81,7 @@ off(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -91,6 +95,8 @@ gallerySync.on('progress', callback);
 
 gallerySync.off('progress', callback);
 ```
+
+<!--DelEnd-->
 
 <a id="off2"></a>
 
@@ -127,6 +133,7 @@ off(evt: 'progress'): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -138,6 +145,8 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 
 gallerySync.off('progress');
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -173,6 +182,7 @@ on(evt: 'progress', callback: (pg: SyncProgress) => void): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -182,6 +192,8 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
   console.info("syncState: " + pg.state);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -220,6 +232,7 @@ start(): Promise<void>
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -237,6 +250,8 @@ gallerySync.start().then(() => {
   console.error(`start sync failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -275,6 +290,7 @@ start(callback: AsyncCallback<void>): void
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -290,6 +306,8 @@ gallerySync.start((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -329,6 +347,7 @@ stop(): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -342,6 +361,8 @@ gallerySync.stop().then(() => {
   console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -381,6 +402,7 @@ stop(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -396,3 +418,5 @@ gallerySync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

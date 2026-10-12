@@ -65,6 +65,7 @@ Starts an ability. This API uses an asynchronous callback to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -104,6 +105,8 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startability2"></a>
 
@@ -147,6 +150,7 @@ Starts an ability. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 12 and later |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -186,3 +190,5 @@ class WindowExtAbility extends WindowExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->

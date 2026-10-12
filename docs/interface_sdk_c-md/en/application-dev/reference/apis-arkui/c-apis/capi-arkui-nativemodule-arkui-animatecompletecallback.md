@@ -30,7 +30,7 @@ Defines the callback type for when the animation playback is complete.
 
 | Name | Description |
 | -- | -- |
-| [void (\*callback)(void* userData)](#callback) | Invoked when the animation playback is complete. |
+| [void (\*callback)(void* userData)](#callback) | - | Invoked when the animation playback is complete. |
 
 ## Member function description
 

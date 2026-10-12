@@ -37,8 +37,8 @@ If no child window exists or the child window is not displayed by calling [showW
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is not created or destroyed; 2. Stage mode without context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:         1. Top window or main window is not created or destroyed;         2. Stage mode without context. |
 | [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 
 **Examples**
@@ -123,8 +123,8 @@ If no child window exists or the child window is not displayed by calling [showW
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. Top window or main window is not created or destroyed; 2. Stage mode without context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:         1. Top window or main window is not created or destroyed;         2. Stage mode without context. |
 | [1300006](../errorcode-window.md#1300006-abnormal-window-context) | This window context is abnormal. |
 
 **Examples**

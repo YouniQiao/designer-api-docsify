@@ -6,6 +6,8 @@ Declares APIs for focus management, mainly used for actively transferring focus,
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 15
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -40,6 +42,8 @@ enum ArkUI_KeyProcessingMode
 
 Enumerates the processing modes of key events.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 15
 
 | Enum item | Description |
@@ -59,6 +63,8 @@ ArkUI_ErrorCode OH_ArkUI_FocusRequest(ArkUI_NodeHandle node)
 **Description**
 
 Requests focus for a specific node. This is applicable when focus needs to be proactively moved to a specified component, for example, setting the default focus after page initialization or navigating focus through a keyboard or remote control. Before calling this API, ensure that the node exists and is focusable, and that its ancestor nodes are also focusable; otherwise, the corresponding error code is returned.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -84,6 +90,8 @@ void OH_ArkUI_FocusClear(ArkUI_ContextHandle uiContext)
 
 Clears the current focus, after which the focus returns to the root container node. This is applicable when exiting the current focus interaction or when the page focus state needs to be reset.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 15
 
 **Parameters**:
@@ -101,6 +109,8 @@ void OH_ArkUI_FocusActivate(ArkUI_ContextHandle uiContext, bool isActive, bool i
 **Description**
 
 Sets the focus activation state of the current page, so that the focused node displays the focus frame. This is applicable when the focus position needs to be displayed in non-touch interactions such as keyboard and remote control. Default configuration: the focus activation state is disabled by default. Note: **OH_ArkUI_FocusActivate** only controls the focus activation state (that is, the display and hiding of the focus frame) and does not affect the logical ownership of the focus. To actually move the focus to the root container node, use **OH_ArkUI_FocusClear**.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -122,6 +132,8 @@ void OH_ArkUI_FocusSetAutoTransfer(ArkUI_ContextHandle uiContext, bool autoTrans
 
 Sets whether the focus is automatically transferred when the page is switched.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 15
 
 **Parameters**:
@@ -140,6 +152,8 @@ void OH_ArkUI_FocusSetKeyProcessingMode(ArkUI_ContextHandle uiContext, ArkUI_Key
 **Description**
 
 Sets the processing mode of key events. This is applicable when a priority policy needs to be selected between focus navigation and key event processing of ancestor components. Default configuration: the default key event processing priority is **ARKUI_KEY_PROCESSING_MODE_FOCUS_NAVIGATION**, that is, key events are used to move the focus.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 

@@ -796,10 +796,10 @@ Fills the drawable area of the canvas with the specified color and [BlendMode](a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| alpha | number | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
+| alpha | number | Yes | Alpha channel value of the color in ARGB format. The value is an integer ranging from 0 to         255. Any passed-in floating point number is rounded down. |
 | red | number | Yes | Red channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| green | number | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to 255. Any passed-in floating point number is rounded down. |
-| blue | number | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2 55. Any passed-in floating point number is rounded down. |
+| green | number | Yes | Green channel value of the color in ARGB format. The value is an integer ranging from 0 to         255. Any passed-in floating point number is rounded down. |
+| blue | number | Yes | Blue channel value of the color in ARGB format. The value is an integer ranging from 0 to 2         55. Any passed-in floating point number is rounded down. |
 | blendMode | [BlendMode](arkts-arkgraphics2d-drawing-blendmode-e.md) | No | Blend mode. The default mode is **SRC_OVER**. |
 
 **Error codes:**

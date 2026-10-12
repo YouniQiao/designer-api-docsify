@@ -43,6 +43,7 @@ Register a callback to retrieve an avsession cast controller. This function can 
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,6 +79,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getavcastcontroller3"></a>
@@ -122,6 +125,7 @@ Get the current session's remote controller client. If the avsession is not unde
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -157,3 +161,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

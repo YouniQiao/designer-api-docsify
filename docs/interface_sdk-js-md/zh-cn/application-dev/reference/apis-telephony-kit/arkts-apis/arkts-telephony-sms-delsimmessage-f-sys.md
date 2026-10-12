@@ -46,6 +46,7 @@ function delSimMessage(slotId: number, msgIndex: number, callback: AsyncCallback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="delsimmessage2"></a>
@@ -105,6 +108,7 @@ function delSimMessage(slotId: number, msgIndex: number): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -120,3 +124,5 @@ promise.then(() => {
     console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

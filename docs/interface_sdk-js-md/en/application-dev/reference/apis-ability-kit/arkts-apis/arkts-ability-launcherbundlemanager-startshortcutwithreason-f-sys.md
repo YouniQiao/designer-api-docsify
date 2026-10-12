@@ -49,6 +49,7 @@ The launched ability can obtain the launch reason through the **launchReasonMess
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
 | [17700065](../errorcode-bundle.md#17700065-ability-specified-by-want-in-the-shortcutinfo-struct-cannot-be-started) | The specified shortcut want in shortcut info is not supported to be started. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -81,3 +82,5 @@ try {
   console.error(`startShortcutWithReason errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

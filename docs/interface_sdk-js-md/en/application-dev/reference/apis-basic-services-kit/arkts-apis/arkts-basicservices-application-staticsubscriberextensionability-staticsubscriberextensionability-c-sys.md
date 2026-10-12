@@ -50,6 +50,7 @@ Defines a callback to be invoked when a common event is triggered in static mode
 | --- | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-i.md) | Yes | Common event data received through static subscription. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -61,6 +62,8 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## context
 

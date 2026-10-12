@@ -45,6 +45,7 @@ Obtains the storage space of an application, in bytes. This API uses an asynchro
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,6 +75,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundlestats2"></a>
@@ -120,6 +123,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -147,6 +151,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed with error: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundlestats3"></a>
@@ -193,6 +199,7 @@ Obtains the storage space of an application, in bytes. This API uses a promise t
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -248,3 +255,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleResourceInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

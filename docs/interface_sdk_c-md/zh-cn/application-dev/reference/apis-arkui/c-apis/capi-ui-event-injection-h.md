@@ -8,6 +8,8 @@
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -45,6 +47,8 @@ enum OH_ArkUI_NativeModule_UIEventInjection_ResultCode
 
 枚举UI事件注入的结果码。<br> 所有注入接口共用此枚举，包括宽松交互注入（非精确）和面向指定组件的精确注入。 非零结果码表示执行失败，其具体值表示失败原因。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 | 枚举项 | 描述 |
@@ -67,6 +71,8 @@ typedef void (*OH_ArkUI_NativeModule_UIEventInjectionCallback)(OH_ArkUI_NativeMo
 
 注入完成回调。<br> 注入的命令执行结束时，无论成功与否，均调用此回调一次。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.2.0
 
 **参数：**
@@ -85,6 +91,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIEventInjectCompositeCommand(ArkUI_Contex
 **描述：**
 
 向目标UI节点异步注入控制命令。<br> 目标节点通过唯一ID标识，该ID与OH_ArkUI_NodeUtils_GetNodeHandleByUniqueId使用的ID相同。 框架在uiContext指定的UI实例中，将此唯一ID解析为对应的节点。<br> 命令由通过OH_ArkUI_NativeModule_UIJsonWrapper_Create创建的 OH_ArkUI_NativeModule_UIJsonWrapper对象承载。命令内容的顶层结构如下： {"schemaVersion": 1, "cmd": {"type": "<命令类型>", "action_info": { ... }}}<br> 支持的命令类型及其action_info参数请参见开发指南。<br> uniqueId对应的节点必须与uiContext属于同一UI实例。如果节点属于其他实例， 框架将无法在uiContext中解析该节点，并返回ARKUI_ERROR_CODE_PARAM_INVALID。<br> 必须在uiContext指定的UI实例的UI线程上调用此函数。如果在非UI线程上调用， 框架将输出致命错误日志并终止进程。这是为防止跨线程访问UI导致未定义行为而采用的快速失败设计。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.2.0
 

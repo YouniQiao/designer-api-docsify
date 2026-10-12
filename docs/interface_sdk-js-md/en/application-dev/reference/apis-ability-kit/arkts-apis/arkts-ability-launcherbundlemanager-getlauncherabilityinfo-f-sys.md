@@ -45,6 +45,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlauncherabilityinfo2"></a>
@@ -112,6 +115,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -131,3 +135,5 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

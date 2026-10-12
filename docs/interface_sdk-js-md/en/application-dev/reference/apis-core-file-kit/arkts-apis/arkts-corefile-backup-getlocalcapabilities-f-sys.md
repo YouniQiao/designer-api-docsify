@@ -42,6 +42,7 @@ Obtain a Json file that describes local capabilities.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -80,6 +81,8 @@ The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="getlocalcapabilities2"></a>
 
@@ -117,6 +120,7 @@ Obtain a Json file that describes local capabilities.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -157,6 +161,8 @@ The capability file can be obtained by using fileIo.stat of the [@ohos.file.fs](
  "systemFullName" : "OpenHarmony-4.0.0.0"
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlocalcapabilities3"></a>
@@ -204,6 +210,7 @@ Obtain a json file that describes local capabilities.
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -226,3 +233,5 @@ async function getLocalCapabilities() {
   }
 }
 ```
+
+<!--DelEnd-->

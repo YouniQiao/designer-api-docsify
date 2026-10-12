@@ -56,6 +56,7 @@ Obtains the distributed account information about an OS account. This API uses a
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -77,6 +78,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountdistributedinfobylocalid2"></a>
 
@@ -121,6 +124,7 @@ Obtains the distributed account information about an OS account. This API uses a
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | System service exception. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -140,6 +144,8 @@ try {
   console.error(`getOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountdistributedinfobylocalid1"></a>
 
@@ -182,6 +188,7 @@ Sets the distributed account information about an OS account. This API uses an a
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -204,6 +211,8 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountdistributedinfobylocalid2"></a>
 
@@ -251,6 +260,7 @@ Sets the distributed account information about an OS account. This API uses a pr
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted OS account. |
 | 12300406 | The distributed account information has already been bound to a sub-profile of the target OS account.<br>**Applicable version:** 26.0.0 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -271,3 +281,5 @@ try {
   console.error(`setOsAccountDistributedInfoByLocalId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

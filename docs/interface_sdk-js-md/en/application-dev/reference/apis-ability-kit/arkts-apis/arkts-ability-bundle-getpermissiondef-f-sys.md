@@ -37,6 +37,7 @@ Obtains the permission details by permission name. This API uses an asynchronous
 | permissionName | string | Yes | Name of the permission. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Yes | Callback used to return the permission details. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ bundle.getPermissionDef(permissionName).then((data) => {
   console.error('getPermissionDef failed. Cause: ' + error.message);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpermissiondef2"></a>
@@ -101,6 +104,9 @@ Obtains the permission details by permission name. This API uses a promise to re
 | --- | --- |
 | Promise&lt;[PermissionDef](arkts-ability-permissiondef-depr-i-sys.md)&gt; | Promise used to return the permission details. |
 
+<!--Del-->
 **Examples**
 
 See [getPermissionDef](#getpermissiondef)
+
+<!--DelEnd-->

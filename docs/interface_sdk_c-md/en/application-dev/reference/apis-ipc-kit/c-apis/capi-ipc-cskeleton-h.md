@@ -6,6 +6,8 @@ Provides C APIs for managing the token IDs, credentials, process IDs (PIDs), use
 
 **Library**: libipc_capi.so
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Related module**: [OHIPCSkeleton](capi-ohipcskeleton.md)
@@ -41,6 +43,8 @@ void OH_IPCSkeleton_JoinWorkThread(void)
 
 Joins this thread to the IPC worker thread pool.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 ### OH_IPCSkeleton_StopWorkThread()
@@ -53,6 +57,8 @@ void OH_IPCSkeleton_StopWorkThread(void)
 
 Stops this thread.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 ### OH_IPCSkeleton_GetCallingTokenId()
@@ -64,6 +70,8 @@ uint64_t OH_IPCSkeleton_GetCallingTokenId(void)
 **Description**
 
 Obtains the token ID of the caller. This function must be called in the IPC context. Otherwise, the local token ID is returned.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -83,6 +91,8 @@ uint64_t OH_IPCSkeleton_GetFirstTokenId(void)
 
 Obtains the token ID of the first caller.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Returns**:
@@ -100,6 +110,8 @@ uint64_t OH_IPCSkeleton_GetSelfTokenId(void)
 **Description**
 
 Obtains the local token ID.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -119,6 +131,8 @@ uint64_t OH_IPCSkeleton_GetCallingPid(void)
 
 Obtains the PID of the caller. This function must be called in the IPC context. Otherwise, the local PID is returned.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Returns**:
@@ -136,6 +150,8 @@ uint64_t OH_IPCSkeleton_GetCallingUid(void)
 **Description**
 
 Obtains the UID of the caller. This function must be called in the IPC context. Otherwise, the local UID is returned.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -155,6 +171,8 @@ int OH_IPCSkeleton_IsLocalCalling(void)
 
 Checks whether a local calling is being made.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Returns**:
@@ -172,6 +190,8 @@ int OH_IPCSkeleton_SetMaxWorkThreadNum(const int maxThreadNum)
 **Description**
 
 Sets the maximum number of worker threads.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -196,6 +216,8 @@ int OH_IPCSkeleton_ResetCallingIdentity(char **identity, int32_t *len, OH_IPC_Me
 **Description**
 
 Resets the caller identity credential (including the token ID, UID, and PID) to that of this process and returns the caller credential information. The credential information is used in **OH_IPCSkeleton_SetCallingIdentity**.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -223,6 +245,8 @@ int OH_IPCSkeleton_SetCallingIdentity(const char *identity)
 
 Sets the caller credential information to the IPC context.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -246,6 +270,8 @@ int OH_IPCSkeleton_IsHandlingTransaction(void)
 **Description**
 
 Checks whether an IPC request is being handled.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 

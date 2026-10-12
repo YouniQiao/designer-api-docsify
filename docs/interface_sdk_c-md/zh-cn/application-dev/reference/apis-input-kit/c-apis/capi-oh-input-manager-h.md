@@ -8,6 +8,8 @@
 
 **库：** libohinput.so
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **相关模块：** [input](capi-input.md)
@@ -264,6 +266,8 @@ enum Input_KeyStateAction
 
 按键状态的枚举值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -284,6 +288,8 @@ enum Input_KeyEventAction
 
 按键事件类型的枚举值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -301,6 +307,8 @@ enum Input_MouseEventAction
 **描述：**
 
 鼠标动作的枚举值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -324,6 +332,8 @@ enum InputEvent_MouseAxis
 
 鼠标轴事件类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -340,6 +350,8 @@ enum Input_MouseEventButton
 **描述：**
 
 鼠标按键的枚举值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -362,6 +374,8 @@ enum Input_TouchEventAction
 
 触屏动作的枚举值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -380,6 +394,8 @@ enum Input_KeyboardType
 **描述：**
 
 输入设备的键盘类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -402,6 +418,8 @@ enum Input_InjectionStatus
 
 注入权限状态枚举值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -420,6 +438,8 @@ enum InputEvent_SourceType
 
 输入事件源类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -437,6 +457,8 @@ enum Input_Result
 **描述：**
 
 返回值枚举值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -470,6 +492,8 @@ enum Input_TouchEventToolType
 
 输入设备的触屏事件工具类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -496,6 +520,8 @@ typedef void (*Input_HotkeyCallback)(Input_Hotkey* hotkey)
 
 回调函数，用于回调快捷键事件。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -513,6 +539,8 @@ typedef void (*Input_KeyEventCallback)(const Input_KeyEvent* keyEvent)
 **描述：**
 
 按键事件的回调函数，keyEvent的生命周期为回调函数内。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -532,6 +560,8 @@ typedef void (*Input_MouseEventCallback)(const Input_MouseEvent* mouseEvent)
 
 鼠标事件的回调函数，mouseEvent的生命周期为回调函数内。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -549,6 +579,8 @@ typedef void (*Input_TouchEventCallback)(const Input_TouchEvent* touchEvent)
 **描述：**
 
 触屏输入事件的回调函数，touchEvent的生命周期为回调函数内。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -568,6 +600,8 @@ typedef void (*Input_AxisEventCallback)(const Input_AxisEvent* axisEvent)
 
 轴事件的回调函数，axisEvent的生命周期为回调函数内。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -585,6 +619,8 @@ typedef void (*Input_DeviceAddedCallback)(int32_t deviceId)
 **描述：**
 
 回调函数，用于接收输入设备的热插事件。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -604,6 +640,8 @@ typedef void (*Input_DeviceRemovedCallback)(int32_t deviceId)
 
 回调函数，用于接收输入设备的热拔事件。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -622,6 +660,8 @@ typedef void (*Input_InjectAuthorizeCallback)(Input_InjectionStatus authorizedSt
 
 回调函数，用于获取注入权限状态。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -639,6 +679,8 @@ Input_Result OH_Input_GetKeyState(struct Input_KeyState* keyState)
 **描述：**
 
 查询按键状态的结构体对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -664,6 +706,8 @@ struct Input_KeyState* OH_Input_CreateKeyState()
 
 创建按键状态的结构体对象。通过调用[OH_Input_DestroyKeyState](capi-oh-input-manager-h.md#oh_input_destroykeystate)销毁按键状态的结构体对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **资源释放：** OH_Input_DestroyKeyState {return}
@@ -684,6 +728,8 @@ void OH_Input_DestroyKeyState(struct Input_KeyState** keyState)
 
 销毁按键状态的结构体对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -701,6 +747,8 @@ void OH_Input_SetKeyCode(struct Input_KeyState* keyState, int32_t keyCode)
 **描述：**
 
 设置按键状态对象的键值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -720,6 +768,8 @@ int32_t OH_Input_GetKeyCode(const struct Input_KeyState* keyState)
 **描述：**
 
 获取按键状态对象的键值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -745,6 +795,8 @@ void OH_Input_SetKeyPressed(struct Input_KeyState* keyState, int32_t keyAction)
 
 设置按键状态对象的按键是否按下。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -763,6 +815,8 @@ int32_t OH_Input_GetKeyPressed(const struct Input_KeyState* keyState)
 **描述：**
 
 获取按键状态对象的按键是否按下。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -788,6 +842,8 @@ void OH_Input_SetKeySwitch(struct Input_KeyState* keyState, int32_t keySwitch)
 
 设置按键状态对象的按键开关。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -806,6 +862,8 @@ int32_t OH_Input_InjectKeyEvent(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 注入按键事件。 <br>如果当前处于用户未授权状态，且调用方未持有ohos.permission.CONTROL_DEVICE权限，调用该接口注入事件不生效。 <br>从API version 20开始，建议先使用[OH_Input_RequestInjection](capi-oh-input-manager-h.md#oh_input_requestinjection)请求授权。然后通过[OH_Input_QueryAuthorizedStatus](capi-oh-input-manager-h.md#oh_input_queryauthorizedstatus)查询授权状态， 当授权状态为[AUTHORIZED](capi-oh-input-manager-h.md#input_injectionstatus)时，再使用该接口。 <br>从API version 22开始，如果注入了修饰键（KEYCODE_META_LEFT、KEYCODE_META_RIGHT、KEYCODE_CTRL_LEFT、 KEYCODE_CTRL_RIGHT、KEYCODE_ALT_LEFT、KEYCODE_ALT_RIGHT、KEYCODE_SHIFT_LEFT、KEYCODE_SHIFT_RIGHT、 KEYCODE_CAPS_LOCK、KEYCODE_SCROLL_LOCK、KEYCODE_NUM_LOCK）的按压事件（KEY_ACTION_DOWN）时，请及时注入该按键的抬起事件 （KEY_ACTION_UP），以避免该按键长时间处于按压状态。 <br>从API版本26.0.0开始，持有ohos.permission.CONTROL_DEVICE权限的调用方也可以直接使用本接口。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -833,6 +891,8 @@ int32_t OH_Input_GetKeySwitch(const struct Input_KeyState* keyState)
 
 获取按键状态对象的按键开关。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -857,6 +917,8 @@ struct Input_KeyEvent* OH_Input_CreateKeyEvent()
 
 创建按键事件对象。通过调用[OH_Input_DestroyKeyEvent](capi-oh-input-manager-h.md#oh_input_destroykeyevent)销毁按键事件对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -874,6 +936,8 @@ void OH_Input_DestroyKeyEvent(struct Input_KeyEvent** keyEvent)
 **描述：**
 
 销毁按键事件对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -893,6 +957,8 @@ void OH_Input_SetKeyEventAction(struct Input_KeyEvent* keyEvent, int32_t action)
 
 设置按键事件类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -911,6 +977,8 @@ int32_t OH_Input_GetKeyEventAction(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 获取按键事件类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -936,6 +1004,8 @@ void OH_Input_SetKeyEventKeyCode(struct Input_KeyEvent* keyEvent, int32_t keyCod
 
 设置按键事件的键值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -954,6 +1024,8 @@ int32_t OH_Input_GetKeyEventKeyCode(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 获取按键事件的键值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -979,6 +1051,8 @@ void OH_Input_SetKeyEventActionTime(struct Input_KeyEvent* keyEvent, int64_t act
 
 设置按键事件发生的时间。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -997,6 +1071,8 @@ int64_t OH_Input_GetKeyEventActionTime(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 获取按键事件发生的时间。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1022,6 +1098,8 @@ void OH_Input_SetKeyEventWindowId(struct Input_KeyEvent* keyEvent, int32_t windo
 
 设置按键事件的窗口ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -1040,6 +1118,8 @@ int32_t OH_Input_GetKeyEventWindowId(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 获取按键事件的窗口ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -1065,6 +1145,8 @@ void OH_Input_SetKeyEventDisplayId(struct Input_KeyEvent* keyEvent, int32_t disp
 
 设置按键事件的屏幕ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -1083,6 +1165,8 @@ int32_t OH_Input_GetKeyEventDisplayId(const struct Input_KeyEvent* keyEvent)
 **描述：**
 
 获取按键事件的屏幕ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -1108,6 +1192,8 @@ Input_Result OH_Input_GetKeyEventId(const struct Input_KeyEvent* keyEvent, int32
 
 获取按键事件的ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -1132,6 +1218,8 @@ Input_Result OH_Input_AddKeyEventHook(Input_KeyEventCallback callback)
 **描述：**
 
 添加一个按键事件拦截钩子函数。 <br>添加后可以通过[OH_Input_RemoveKeyEventHook](capi-oh-input-manager-h.md#oh_input_removekeyeventhook)接口移除。一个进程仅支持设置一个钩子，一个应用支持多个钩子函数，后添加的生效优先级更高。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.HOOK_KEY_EVENT
 
@@ -1159,6 +1247,8 @@ Input_Result OH_Input_RemoveKeyEventHook(Input_KeyEventCallback callback)
 
 移除按键事件拦截钩子函数。 <br>通常与[OH_Input_AddKeyEventHook](capi-oh-input-manager-h.md#oh_input_addkeyeventhook)接口配合使用。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -1183,6 +1273,8 @@ Input_Result OH_Input_DispatchToNextHandler(int32_t eventId)
 
 重新分发按键事件。 <br>只有被钩子拦截的按键事件才能被重新分发，重新分发的事件必须保持原有优先级顺序。 <br>调用该接口后，按键事件可在3秒内重新分发。如果超过3秒，将返回[INPUT_PARAMETER_ERROR](capi-oh-input-manager-h.md#input_result)。 <br>重新分发的事件需要保证配对关系。如果重新分发了一个或多个按键按下事件[KEY_ACTION_DOWN](capi-oh-input-manager-h.md#input_keyeventaction)，再重新分发按键抬起事件[KEY_ACTION_UP](capi-oh-input-manager-h.md#input_keyeventaction)或按键动作取消事件 [KEY_ACTION_CANCEL](capi-oh-input-manager-h.md#input_keyeventaction)可以成功。 <br>如果仅分发[KEY_ACTION_UP](capi-oh-input-manager-h.md#input_keyeventaction)或[KEY_ACTION_CANCEL](capi-oh-input-manager-h.md#input_keyeventaction)按键事件，接口可以调用成功，但不会执行实际的分发动作。 <br>如果分发的事件未被钩子拦截，函数调用会成功，但不会执行实际的分发动作。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -1206,6 +1298,8 @@ int32_t OH_Input_InjectMouseEvent(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 使用以指定屏幕左上角为原点的相对坐标系的坐标注入鼠标事件。 <br>如果当前处于用户未授权状态，且调用方未持有ohos.permission.CONTROL_DEVICE权限，调用该接口注入事件不生效。 <br>从API version 20开始，建议先使用[OH_Input_RequestInjection](capi-oh-input-manager-h.md#oh_input_requestinjection)请求授权。然后通过[OH_Input_QueryAuthorizedStatus](capi-oh-input-manager-h.md#oh_input_queryauthorizedstatus)查询授权状态， 当授权状态为[AUTHORIZED](capi-oh-input-manager-h.md#input_injectionstatus)时，再使用该接口。 <br>从API版本26.0.0开始，持有ohos.permission.CONTROL_DEVICE权限的调用方也可以直接使用本接口。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -1233,6 +1327,8 @@ int32_t OH_Input_InjectMouseEventGlobal(const struct Input_MouseEvent* mouseEven
 
 使用以主屏左上角为原点的全局坐标系的坐标注入鼠标事件。 <br>如果当前处于用户未授权状态，且调用方未持有ohos.permission.CONTROL_DEVICE权限，调用该接口注入事件不生效。 <br>从API version 20开始，建议先使用[OH_Input_RequestInjection](capi-oh-input-manager-h.md#oh_input_requestinjection)请求授权。然后通过[OH_Input_QueryAuthorizedStatus](capi-oh-input-manager-h.md#oh_input_queryauthorizedstatus)查询授权状态， 当授权状态为[AUTHORIZED](capi-oh-input-manager-h.md#input_injectionstatus)时，再使用该接口。 <br>从API版本26.0.0开始，持有ohos.permission.CONTROL_DEVICE权限的调用方也可以直接使用本接口。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **起始版本：** 20
@@ -1259,6 +1355,8 @@ struct Input_MouseEvent* OH_Input_CreateMouseEvent()
 
 创建鼠标事件对象。通过调用[OH_Input_DestroyMouseEvent](capi-oh-input-manager-h.md#oh_input_destroymouseevent)销毁鼠标事件对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -1276,6 +1374,8 @@ void OH_Input_DestroyMouseEvent(struct Input_MouseEvent** mouseEvent)
 **描述：**
 
 销毁鼠标事件对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1295,6 +1395,8 @@ void OH_Input_SetMouseEventAction(struct Input_MouseEvent* mouseEvent, int32_t a
 
 设置鼠标事件的动作。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1313,6 +1415,8 @@ int32_t OH_Input_GetMouseEventAction(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 获取鼠标事件的动作。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1338,6 +1442,8 @@ void OH_Input_SetMouseEventDisplayX(struct Input_MouseEvent* mouseEvent, int32_t
 
 设置鼠标事件以指定屏幕左上角为原点的相对坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1356,6 +1462,8 @@ int32_t OH_Input_GetMouseEventDisplayX(const struct Input_MouseEvent* mouseEvent
 **描述：**
 
 获取鼠标事件以指定屏幕左上角为原点的相对坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1381,6 +1489,8 @@ void OH_Input_SetMouseEventDisplayY(struct Input_MouseEvent* mouseEvent, int32_t
 
 设置鼠标事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1399,6 +1509,8 @@ int32_t OH_Input_GetMouseEventDisplayY(const struct Input_MouseEvent* mouseEvent
 **描述：**
 
 获取鼠标事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1424,6 +1536,8 @@ void OH_Input_SetMouseEventButton(struct Input_MouseEvent* mouseEvent, int32_t b
 
 设置鼠标事件的按键。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1442,6 +1556,8 @@ int32_t OH_Input_GetMouseEventButton(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 获取鼠标事件的按键。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1467,6 +1583,8 @@ void OH_Input_SetMouseEventAxisType(struct Input_MouseEvent* mouseEvent, int32_t
 
 设置鼠标轴事件的类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1485,6 +1603,8 @@ int32_t OH_Input_GetMouseEventAxisType(const struct Input_MouseEvent* mouseEvent
 **描述：**
 
 获取鼠标轴事件的类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1510,6 +1630,8 @@ void OH_Input_SetMouseEventAxisValue(struct Input_MouseEvent* mouseEvent, float 
 
 设置鼠标轴事件的值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1528,6 +1650,8 @@ float OH_Input_GetMouseEventAxisValue(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 获取鼠标轴事件的值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1553,6 +1677,8 @@ void OH_Input_SetMouseEventActionTime(struct Input_MouseEvent* mouseEvent, int64
 
 设置鼠标事件发生的时间。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1571,6 +1697,8 @@ int64_t OH_Input_GetMouseEventActionTime(const struct Input_MouseEvent* mouseEve
 **描述：**
 
 获取鼠标事件发生的时间。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1596,6 +1724,8 @@ void OH_Input_SetMouseEventWindowId(struct Input_MouseEvent* mouseEvent, int32_t
 
 设置鼠标事件的窗口ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -1614,6 +1744,8 @@ int32_t OH_Input_GetMouseEventWindowId(const struct Input_MouseEvent* mouseEvent
 **描述：**
 
 获取鼠标事件的窗口ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -1639,6 +1771,8 @@ void OH_Input_SetMouseEventDisplayId(struct Input_MouseEvent* mouseEvent, int32_
 
 设置鼠标事件的屏幕ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -1657,6 +1791,8 @@ int32_t OH_Input_GetMouseEventDisplayId(const struct Input_MouseEvent* mouseEven
 **描述：**
 
 获取鼠标事件的屏幕ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -1682,6 +1818,8 @@ void OH_Input_SetMouseEventGlobalX(struct Input_MouseEvent* mouseEvent, int32_t 
 
 设置鼠标事件以主屏左上角为原点的全局坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -1700,6 +1838,8 @@ int32_t OH_Input_GetMouseEventGlobalX(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 获取鼠标事件以主屏左上角为原点的全局坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -1725,6 +1865,8 @@ void OH_Input_SetMouseEventGlobalY(struct Input_MouseEvent* mouseEvent, int32_t 
 
 设置鼠标事件以主屏左上角为原点的全局坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -1743,6 +1885,8 @@ int32_t OH_Input_GetMouseEventGlobalY(const struct Input_MouseEvent* mouseEvent)
 **描述：**
 
 获取鼠标事件以主屏左上角为原点的全局坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -1767,6 +1911,8 @@ int32_t OH_Input_InjectTouchEvent(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 使用以指定屏幕左上角为原点的相对坐标系的坐标注入触屏输入事件。 <br>如果当前处于用户未授权状态，且调用方未持有ohos.permission.CONTROL_DEVICE权限，调用该接口注入事件不生效。 <br>从API version 20开始，建议先使用[OH_Input_RequestInjection](capi-oh-input-manager-h.md#oh_input_requestinjection)请求授权。然后通过[OH_Input_QueryAuthorizedStatus](capi-oh-input-manager-h.md#oh_input_queryauthorizedstatus)查询授权状态， 当授权状态为[AUTHORIZED](capi-oh-input-manager-h.md#input_injectionstatus)时，再使用该接口。 <br>从API版本26.0.0开始，持有ohos.permission.CONTROL_DEVICE权限的调用方也可以直接使用本接口。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
@@ -1794,6 +1940,8 @@ int32_t OH_Input_InjectTouchEventGlobal(const struct Input_TouchEvent* touchEven
 
 使用以主屏左上角为原点的全局坐标系的坐标注入触屏输入事件。 <br>如果当前处于用户未授权状态，且调用方未持有ohos.permission.CONTROL_DEVICE权限，调用该接口注入事件不生效。 <br>从API version 20开始，建议先使用[OH_Input_RequestInjection](capi-oh-input-manager-h.md#oh_input_requestinjection)请求授权。然后通过[OH_Input_QueryAuthorizedStatus](capi-oh-input-manager-h.md#oh_input_queryauthorizedstatus)查询授权状态， 当授权状态为[AUTHORIZED](capi-oh-input-manager-h.md#input_injectionstatus)时，再使用该接口。 <br>从API版本26.0.0开始，持有ohos.permission.CONTROL_DEVICE权限的调用方也可以直接使用本接口。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.CONTROL_DEVICE
 
 **起始版本：** 20
@@ -1820,6 +1968,8 @@ struct Input_TouchEvent* OH_Input_CreateTouchEvent()
 
 创建触屏输入事件对象。通过调用[OH_Input_DestroyTouchEvent](capi-oh-input-manager-h.md#oh_input_destroytouchevent)销毁触屏输入事件对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -1837,6 +1987,8 @@ void OH_Input_DestroyTouchEvent(struct Input_TouchEvent** touchEvent)
 **描述：**
 
 销毁触屏输入事件对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1856,6 +2008,8 @@ void OH_Input_SetTouchEventAction(struct Input_TouchEvent* touchEvent, int32_t a
 
 设置触屏输入事件的动作。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1874,6 +2028,8 @@ int32_t OH_Input_GetTouchEventAction(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 获取触屏输入事件的动作。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1899,6 +2055,8 @@ void OH_Input_SetTouchEventFingerId(struct Input_TouchEvent* touchEvent, int32_t
 
 设置触屏输入事件的手指ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1917,6 +2075,8 @@ int32_t OH_Input_GetTouchEventFingerId(const struct Input_TouchEvent* touchEvent
 **描述：**
 
 获取触屏输入事件的手指ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1942,6 +2102,8 @@ void OH_Input_SetTouchEventDisplayX(struct Input_TouchEvent* touchEvent, int32_t
 
 设置触屏输入事件以指定屏幕左上角为原点的相对坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -1960,6 +2122,8 @@ int32_t OH_Input_GetTouchEventDisplayX(const struct Input_TouchEvent* touchEvent
 **描述：**
 
 获取触屏输入事件以指定屏幕左上角为原点的相对坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -1985,6 +2149,8 @@ void OH_Input_SetTouchEventDisplayY(struct Input_TouchEvent* touchEvent, int32_t
 
 设置触屏输入事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2003,6 +2169,8 @@ int32_t OH_Input_GetTouchEventDisplayY(const struct Input_TouchEvent* touchEvent
 **描述：**
 
 获取触屏输入事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2028,6 +2196,8 @@ void OH_Input_SetTouchEventActionTime(struct Input_TouchEvent* touchEvent, int64
 
 设置触屏输入事件发生的时间。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2046,6 +2216,8 @@ int64_t OH_Input_GetTouchEventActionTime(const struct Input_TouchEvent* touchEve
 **描述：**
 
 获取触屏输入事件发生的时间。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2071,6 +2243,8 @@ void OH_Input_SetTouchEventWindowId(struct Input_TouchEvent* touchEvent, int32_t
 
 设置触屏输入事件的窗口ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -2089,6 +2263,8 @@ int32_t OH_Input_GetTouchEventWindowId(const struct Input_TouchEvent* touchEvent
 **描述：**
 
 获取触屏输入事件的窗口ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -2114,6 +2290,8 @@ void OH_Input_SetTouchEventDisplayId(struct Input_TouchEvent* touchEvent, int32_
 
 设置触屏输入事件的屏幕ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -2132,6 +2310,8 @@ int32_t OH_Input_GetTouchEventDisplayId(const struct Input_TouchEvent* touchEven
 **描述：**
 
 获取触屏输入事件的屏幕ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -2157,6 +2337,8 @@ void OH_Input_SetTouchEventGlobalX(struct Input_TouchEvent* touchEvent, int32_t 
 
 设置触屏输入事件以主屏左上角为原点的全局坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -2175,6 +2357,8 @@ int32_t OH_Input_GetTouchEventGlobalX(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 获取触屏输入事件以主屏左上角为原点的全局坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -2200,6 +2384,8 @@ void OH_Input_SetTouchEventGlobalY(struct Input_TouchEvent* touchEvent, int32_t 
 
 设置触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -2218,6 +2404,8 @@ int32_t OH_Input_GetTouchEventGlobalY(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 获取触屏输入事件以主屏左上角为原点的全局坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -2242,6 +2430,8 @@ Input_Result OH_Input_SetTouchEventPressure(struct Input_TouchEvent* touchEvent,
 **描述：**
 
 设置触屏输入事件的压力。如果未设置压力值，或设置的值不在[0.0, 1.0]范围内，默认值是0.0。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 24
 
@@ -2268,6 +2458,8 @@ double OH_Input_GetTouchEventPressure(const struct Input_TouchEvent* touchEvent)
 
 获取触屏输入事件的压力。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -2292,6 +2484,8 @@ void OH_Input_SetTouchEventWindowX(struct Input_TouchEvent* touchEvent, int32_t 
 
 设置触屏输入事件以指定窗口左上角为原点的相对坐标系的X坐标。如果未设置，默认值是0。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -2310,6 +2504,8 @@ int32_t OH_Input_GetTouchEventWindowX(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 获取触屏输入事件以指定窗口左上角为原点的相对坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 24
 
@@ -2335,6 +2531,8 @@ void OH_Input_SetTouchEventWindowY(struct Input_TouchEvent* touchEvent, int32_t 
 
 设置触屏输入事件以指定窗口左上角为原点的相对坐标系的Y坐标。如果未设置，默认值是0。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -2353,6 +2551,8 @@ int32_t OH_Input_GetTouchEventWindowY(const struct Input_TouchEvent* touchEvent)
 **描述：**
 
 获取触屏输入事件以指定窗口左上角为原点的相对坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 24
 
@@ -2378,6 +2578,8 @@ void OH_Input_SetTouchEventDownTime(struct Input_TouchEvent* touchEvent, int64_t
 
 设置当前触屏事件对应手指/其他触屏外设最近一次按下事件发生的时间。如果未设置，默认值是0。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -2396,6 +2598,8 @@ int64_t OH_Input_GetTouchEventDownTime(const struct Input_TouchEvent* touchEvent
 **描述：**
 
 获取当前触屏事件对应手指/其他触屏外设最近一次按下事件发生的时间。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 24
 
@@ -2420,6 +2624,8 @@ Input_Result OH_Input_SetTouchEventToolType(struct Input_TouchEvent* touchEvent,
 **描述：**
 
 设置触屏输入事件的工具类型。如果未设置toolType，默认值是Input_TouchEventToolType.TOOL_TYPE_FINGER。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 24
 
@@ -2446,6 +2652,8 @@ Input_TouchEventToolType OH_Input_GetTouchEventToolType(const struct Input_Touch
 
 获取触屏输入事件的工具类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -2469,6 +2677,8 @@ Input_Result OH_Input_RequestInjection(Input_InjectAuthorizeCallback callback)
 **描述：**
 
 当前应用申请注入权限，包括申请注入按键事件[OH_Input_InjectKeyEvent](capi-oh-input-manager-h.md#oh_input_injectkeyevent)、注入触屏输入事件[OH_Input_InjectTouchEvent](capi-oh-input-manager-h.md#oh_input_injecttouchevent)、注入鼠标事件 [OH_Input_InjectMouseEvent](capi-oh-input-manager-h.md#oh_input_injectmouseevent)等注入操作的权限。 <br>从API版本26.0.0开始，在已授予ohos.permission.CONTROL_DEVICE权限的情况下，无需再申请注入授权。本接口的行为与ohos.permission.CONTROL_DEVICE权限无关。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -2494,6 +2704,8 @@ void OH_Input_CancelInjection()
 
 取消事件注入并撤销授权。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 ### OH_Input_QueryAuthorizedStatus()
@@ -2505,6 +2717,8 @@ Input_Result OH_Input_QueryAuthorizedStatus(Input_InjectionStatus* status)
 **描述：**
 
 查询当前应用注入的权限状态。 <br>从API版本26.0.0开始，本接口仅返回弹窗授权状态，不表示调用方是否因持有ohos.permission.CONTROL_DEVICE权限而具备注入能力。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -2530,6 +2744,8 @@ Input_AxisEvent* OH_Input_CreateAxisEvent(void)
 
 创建轴事件对象。通过调用[OH_Input_DestroyAxisEvent](capi-oh-input-manager-h.md#oh_input_destroyaxisevent)销毁轴事件对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **返回值：**
@@ -2547,6 +2763,8 @@ Input_Result OH_Input_DestroyAxisEvent(Input_AxisEvent** axisEvent)
 **描述：**
 
 销毁轴事件对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2571,6 +2789,8 @@ Input_Result OH_Input_SetAxisEventAction(Input_AxisEvent* axisEvent, InputEvent_
 **描述：**
 
 设置轴事件的动作。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2597,6 +2817,8 @@ Input_Result OH_Input_GetAxisEventAction(const Input_AxisEvent* axisEvent, Input
 
 获取轴事件的动作。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2621,6 +2843,8 @@ Input_Result OH_Input_SetAxisEventDisplayX(Input_AxisEvent* axisEvent, float dis
 **描述：**
 
 设置轴事件以指定屏幕左上角为原点的相对坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2647,6 +2871,8 @@ Input_Result OH_Input_GetAxisEventDisplayX(const Input_AxisEvent* axisEvent, flo
 
 获取轴事件以指定屏幕左上角为原点的相对坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2671,6 +2897,8 @@ Input_Result OH_Input_SetAxisEventDisplayY(Input_AxisEvent* axisEvent, float dis
 **描述：**
 
 设置轴事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2697,6 +2925,8 @@ Input_Result OH_Input_GetAxisEventDisplayY(const Input_AxisEvent* axisEvent, flo
 
 获取轴事件以指定屏幕左上角为原点的相对坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2721,6 +2951,8 @@ Input_Result OH_Input_SetAxisEventAxisValue(Input_AxisEvent* axisEvent, InputEve
 **描述：**
 
 设置轴事件指定轴类型的轴值。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2748,6 +2980,8 @@ Input_Result OH_Input_GetAxisEventAxisValue(const Input_AxisEvent* axisEvent, In
 
 获取轴事件指定轴类型的轴值。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2774,6 +3008,8 @@ Input_Result OH_Input_SetAxisEventActionTime(Input_AxisEvent* axisEvent, int64_t
 
 设置轴事件发生的时间。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2798,6 +3034,8 @@ Input_Result OH_Input_GetAxisEventActionTime(const Input_AxisEvent* axisEvent, i
 **描述：**
 
 获取轴事件发生的时间。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2824,6 +3062,8 @@ Input_Result OH_Input_SetAxisEventType(Input_AxisEvent* axisEvent, InputEvent_Ax
 
 设置轴事件类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2848,6 +3088,8 @@ Input_Result OH_Input_GetAxisEventType(const Input_AxisEvent* axisEvent, InputEv
 **描述：**
 
 获取轴事件类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2874,6 +3116,8 @@ Input_Result OH_Input_SetAxisEventSourceType(Input_AxisEvent* axisEvent, InputEv
 
 设置轴事件源类型。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -2898,6 +3142,8 @@ Input_Result OH_Input_GetAxisEventSourceType(const Input_AxisEvent* axisEvent, I
 **描述：**
 
 获取轴事件源类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -2924,6 +3170,8 @@ Input_Result OH_Input_SetAxisEventWindowId(Input_AxisEvent* axisEvent, int32_t w
 
 设置轴事件的窗口ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -2948,6 +3196,8 @@ Input_Result OH_Input_GetAxisEventWindowId(const Input_AxisEvent* axisEvent, int
 **描述：**
 
 获取轴事件的窗口ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -2974,6 +3224,8 @@ Input_Result OH_Input_SetAxisEventDisplayId(Input_AxisEvent* axisEvent, int32_t 
 
 设置轴事件的屏幕ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 15
 
 **参数：**
@@ -2998,6 +3250,8 @@ Input_Result OH_Input_GetAxisEventDisplayId(const Input_AxisEvent* axisEvent, in
 **描述：**
 
 获取轴事件的屏幕ID。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -3024,6 +3278,8 @@ Input_Result OH_Input_SetAxisEventGlobalX(struct Input_AxisEvent* axisEvent, int
 
 设置轴事件以主屏左上角为原点的全局坐标系的X坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -3048,6 +3304,8 @@ Input_Result OH_Input_GetAxisEventGlobalX(const Input_AxisEvent* axisEvent, int3
 **描述：**
 
 获取轴事件以主屏左上角为原点的全局坐标系的X坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -3074,6 +3332,8 @@ Input_Result OH_Input_SetAxisEventGlobalY(struct Input_AxisEvent* axisEvent, int
 
 设置轴事件以主屏左上角为原点的全局坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -3099,6 +3359,8 @@ Input_Result OH_Input_GetAxisEventGlobalY(const Input_AxisEvent* axisEvent, int3
 
 获取轴事件以主屏左上角为原点的全局坐标系的Y坐标。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -3123,6 +3385,8 @@ Input_Result OH_Input_AddKeyEventMonitor(Input_KeyEventCallback callback)
 **描述：**
 
 添加按键事件监听。重复添加只有第一次生效，后续添加请求将被忽略。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
@@ -3150,6 +3414,8 @@ Input_Result OH_Input_AddMouseEventMonitor(Input_MouseEventCallback callback)
 
 添加鼠标事件监听，包含鼠标点击，移动，不包含滚轮事件，滚轮事件归属于轴事件。 <br>应用处于录屏场景时才允许调用该接口，否则调用不生效。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 **起始版本：** 12
@@ -3175,6 +3441,8 @@ Input_Result OH_Input_AddTouchEventMonitor(Input_TouchEventCallback callback)
 **描述：**
 
 添加触屏输入事件监听。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
@@ -3202,6 +3470,8 @@ Input_Result OH_Input_AddAxisEventMonitorForAll(Input_AxisEventCallback callback
 
 添加所有类型轴事件监听，轴事件类型定义在[InputEvent_AxisEventType](capi-oh-axis-type-h.md#inputevent_axiseventtype)中。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 **起始版本：** 12
@@ -3227,6 +3497,8 @@ Input_Result OH_Input_AddAxisEventMonitor(InputEvent_AxisEventType axisEventType
 **描述：**
 
 添加指定类型的轴事件监听，轴事件类型定义在[InputEvent_AxisEventType](capi-oh-axis-type-h.md#inputevent_axiseventtype)中。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
@@ -3255,6 +3527,8 @@ Input_Result OH_Input_RemoveKeyEventMonitor(Input_KeyEventCallback callback)
 
 移除按键事件监听。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 **起始版本：** 12
@@ -3280,6 +3554,8 @@ Input_Result OH_Input_RemoveMouseEventMonitor(Input_MouseEventCallback callback)
 **描述：**
 
 移除鼠标事件监听。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
@@ -3307,6 +3583,8 @@ Input_Result OH_Input_RemoveTouchEventMonitor(Input_TouchEventCallback callback)
 
 移除触屏输入事件监听。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 **起始版本：** 12
@@ -3333,6 +3611,8 @@ Input_Result OH_Input_RemoveAxisEventMonitorForAll(Input_AxisEventCallback callb
 
 移除所有类型轴事件监听。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INPUT_MONITORING
 
 **起始版本：** 12
@@ -3358,6 +3638,8 @@ Input_Result OH_Input_RemoveAxisEventMonitor(InputEvent_AxisEventType axisEventT
 **描述：**
 
 移除指定类型轴事件监听，轴事件类型定义在[InputEvent_AxisEventType](capi-oh-axis-type-h.md#inputevent_axiseventtype)中。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_MONITORING
 
@@ -3386,6 +3668,8 @@ Input_Result OH_Input_AddKeyEventInterceptor(Input_KeyEventCallback callback, In
 
 添加按键事件的拦截，重复添加只有第一次生效，后续添加请求返回错误码[INPUT_REPEAT_INTERCEPTOR](capi-oh-input-manager-h.md#input_result)。仅在应用获焦时拦截按键事件。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INTERCEPT_INPUT_EVENT
 
 **起始版本：** 12
@@ -3412,6 +3696,8 @@ Input_Result OH_Input_AddInputEventInterceptor(Input_InterceptorEventCallback *c
 **描述：**
 
 添加输入事件拦截，包括鼠标、触屏和轴事件。重复添加只有第一次生效，后续添加请求返回错误码[INPUT_REPEAT_INTERCEPTOR](capi-oh-input-manager-h.md#input_result)。仅命中应用窗口时拦截输入事件。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INTERCEPT_INPUT_EVENT
 
@@ -3440,6 +3726,8 @@ Input_Result OH_Input_RemoveKeyEventInterceptor(void)
 
 移除按键事件拦截。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INTERCEPT_INPUT_EVENT
 
 **起始版本：** 12
@@ -3460,6 +3748,8 @@ Input_Result OH_Input_RemoveInputEventInterceptor(void)
 
 移除输入事件拦截，包括鼠标、触屏和轴事件。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **需要权限：** ohos.permission.INTERCEPT_INPUT_EVENT
 
 **起始版本：** 12
@@ -3479,6 +3769,8 @@ Input_Result OH_Input_GetIntervalSinceLastInput(int64_t *timeInterval)
 **描述：**
 
 获取距离上次系统输入事件的时间间隔。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3504,6 +3796,8 @@ Input_Hotkey *OH_Input_CreateHotkey(void)
 
 创建快捷键对象。通过调用[OH_Input_DestroyHotkey](capi-oh-input-manager-h.md#oh_input_destroyhotkey)销毁快捷键对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **返回值：**
@@ -3522,6 +3816,8 @@ void OH_Input_DestroyHotkey(Input_Hotkey **hotkey)
 
 销毁快捷键对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3539,6 +3835,8 @@ void OH_Input_SetPreKeys(Input_Hotkey *hotkey, int32_t *preKeys, int32_t size)
 **描述：**
 
 设置修饰键。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3559,6 +3857,8 @@ Input_Result OH_Input_GetPreKeys(const Input_Hotkey *hotkey, int32_t **preKeys, 
 **描述：**
 
 获取修饰键。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3586,6 +3886,8 @@ void OH_Input_SetFinalKey(Input_Hotkey *hotkey, int32_t finalKey)
 
 设置被修饰键。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3604,6 +3906,8 @@ Input_Result OH_Input_GetFinalKey(const Input_Hotkey *hotkey, int32_t *finalKeyC
 **描述：**
 
 获取被修饰键。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3629,6 +3933,8 @@ Input_Hotkey **OH_Input_CreateAllSystemHotkeys(int32_t count)
 **描述：**
 
 创建[Input_Hotkey](capi-input-input-hotkey.md)类型实例的数组。通过调用[OH_Input_GetAllSystemHotkeys](capi-oh-input-manager-h.md#oh_input_getallsystemhotkeys)获取有效的count参数。通过调用 [OH_Input_DestroyAllSystemHotkeys](capi-oh-input-manager-h.md#oh_input_destroyallsystemhotkeys)销毁[Input_Hotkey](capi-input-input-hotkey.md)实例数组并回收内存。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3656,6 +3962,8 @@ void OH_Input_DestroyAllSystemHotkeys(Input_Hotkey **hotkeys, int32_t count)
 
 销毁[Input_Hotkey](capi-input-input-hotkey.md)实例数组并回收内存。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3674,6 +3982,8 @@ Input_Result OH_Input_GetAllSystemHotkeys(Input_Hotkey **hotkey, int32_t *count)
 **描述：**
 
 获取设置的所有快捷键。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3700,6 +4010,8 @@ void OH_Input_SetRepeat(Input_Hotkey* hotkey, bool isRepeat)
 
 设置是否上报重复key事件。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3718,6 +4030,8 @@ Input_Result OH_Input_GetRepeat(const Input_Hotkey* hotkey, bool *isRepeat)
 **描述：**
 
 获取是否上报重复key事件。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 14
 
@@ -3744,6 +4058,8 @@ Input_Result OH_Input_AddHotkeyMonitor(const Input_Hotkey* hotkey, Input_HotkeyC
 
 订阅快捷键事件。 <br>**说明：**<br><br>订阅快捷键事件时，对于preKeys和finalKey有以下约束： <br>1. preKeys：修饰键（包括 Ctrl、Shift 和 Alt）集合，数量范围[1, 4]，无顺序要求。例如，Ctrl+Shift+Esc中，Ctrl+Shift称为修饰键。 <br>2. finalKey：被修饰键，除修饰键和Meta键以外的按键，详细按键介绍请参见[Input_KeyCode](capi-oh-key-code-h.md#input_keycode)。例如，Ctrl+Shift+Esc中，Esc称为被修饰键。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3769,6 +4085,8 @@ Input_Result OH_Input_RemoveHotkeyMonitor(const Input_Hotkey* hotkey, Input_Hotk
 
 取消订阅快捷键。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 14
 
 **参数：**
@@ -3793,6 +4111,8 @@ Input_Result OH_Input_GetDeviceIds(int32_t *deviceIds, int32_t inSize, int32_t *
 **描述：**
 
 获取所有输入设备的ID列表。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -3820,6 +4140,8 @@ Input_Result OH_Input_GetDevice(int32_t deviceId, Input_DeviceInfo **deviceInfo)
 
 获取输入设备信息。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -3845,6 +4167,8 @@ Input_DeviceInfo* OH_Input_CreateDeviceInfo(void)
 
 创建输入设备信息的对象。通过调用[OH_Input_DestroyDeviceInfo](capi-oh-input-manager-h.md#oh_input_destroydeviceinfo)销毁输入设备信息的对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **返回值：**
@@ -3863,6 +4187,8 @@ void OH_Input_DestroyDeviceInfo(Input_DeviceInfo **deviceInfo)
 
 销毁输入设备信息的对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -3880,6 +4206,8 @@ Input_Result OH_Input_GetKeyboardType(int32_t deviceId, int32_t *keyboardType)
 **描述：**
 
 获取输入设备的键盘类型。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -3906,6 +4234,8 @@ Input_Result OH_Input_GetDeviceId(Input_DeviceInfo *deviceInfo, int32_t *id)
 
 获取输入设备的ID。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -3930,6 +4260,8 @@ Input_Result OH_Input_GetDeviceName(Input_DeviceInfo *deviceInfo, char **name)
 **描述：**
 
 获取输入设备的名称。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -3956,6 +4288,8 @@ Input_Result OH_Input_GetCapabilities(Input_DeviceInfo *deviceInfo, int32_t *cap
 
 获取有关输入设备能力信息，比如设备是触摸屏、触控板、键盘等。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -3980,6 +4314,8 @@ Input_Result OH_Input_GetDeviceVersion(Input_DeviceInfo *deviceInfo, int32_t *ve
 **描述：**
 
 获取输入设备的版本信息。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -4006,6 +4342,8 @@ Input_Result OH_Input_GetDeviceProduct(Input_DeviceInfo *deviceInfo, int32_t *pr
 
 获取输入设备的产品信息。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -4030,6 +4368,8 @@ Input_Result OH_Input_GetDeviceVendor(Input_DeviceInfo *deviceInfo, int32_t *ven
 **描述：**
 
 获取输入设备的厂商信息。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -4056,6 +4396,8 @@ Input_Result OH_Input_GetDeviceAddress(Input_DeviceInfo *deviceInfo, char **addr
 
 获取输入设备的物理地址。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -4081,6 +4423,8 @@ Input_Result OH_Input_RegisterDeviceListener(Input_DeviceListener* listener)
 
 注册设备热插拔的监听器。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **参数：**
@@ -4104,6 +4448,8 @@ Input_Result OH_Input_UnregisterDeviceListener(Input_DeviceListener* listener)
 **描述：**
 
 取消注册设备热插拔的监听。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 13
 
@@ -4129,6 +4475,8 @@ Input_Result OH_Input_UnregisterDeviceListeners()
 
 取消注册所有的设备热插拔的监听。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 13
 
 **返回值：**
@@ -4146,6 +4494,8 @@ Input_Result OH_Input_GetFunctionKeyState(int32_t keyCode, int32_t *state)
 **描述：**
 
 获取功能键状态。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 15
 
@@ -4172,6 +4522,8 @@ Input_Result OH_Input_QueryMaxTouchPoints(int32_t *count)
 
 查询设备支持的最大触屏报点数。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -4195,6 +4547,8 @@ Input_Result OH_Input_GetPointerLocation(int32_t *displayId, double *displayX, d
 **描述：**
 
 获取当前屏幕上鼠标的坐标点。 <br>从API版本26.0.0开始，非焦点应用持有ohos.permission.INPUT_DEVICE_CONFIGURATOR权限，可调用该接口。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 20
 
@@ -4222,6 +4576,8 @@ struct Input_CursorInfo* OH_Input_CursorInfo_Create()
 
 创建鼠标光标信息对象。通过调用[OH_Input_CursorInfo_Destroy](capi-oh-input-manager-h.md#oh_input_cursorinfo_destroy)销毁鼠标光标信息对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **返回值：**
@@ -4240,6 +4596,8 @@ void OH_Input_CursorInfo_Destroy(Input_CursorInfo** cursorInfo)
 
 销毁鼠标光标信息对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4257,6 +4615,8 @@ Input_Result OH_Input_CursorInfo_IsVisible(Input_CursorInfo* cursorInfo, bool* v
 **描述：**
 
 获取指定鼠标光标信息对象对应的光标显示状态。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4283,6 +4643,8 @@ Input_Result OH_Input_CursorInfo_GetStyle(Input_CursorInfo* cursorInfo, Input_Po
 
 获取指定鼠标光标信息对象对应的光标样式。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4307,6 +4669,8 @@ Input_Result OH_Input_CursorInfo_GetSizeLevel(Input_CursorInfo* cursorInfo, int3
 **描述：**
 
 获取指定鼠标光标信息对象对应的光标大小档位。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4333,6 +4697,8 @@ Input_Result OH_Input_CursorInfo_GetColor(Input_CursorInfo* cursorInfo, uint32_t
 
 获取指定鼠标光标信息对象对应的光标颜色，使用32位ARGB整数表示。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4357,6 +4723,8 @@ Input_Result OH_Input_GetMouseEventCursorInfo(const struct Input_MouseEvent* mou
 **描述：**
 
 获取鼠标事件的鼠标光标信息，包括光标显示状态、光标样式、光标大小档位、光标颜色。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4383,6 +4751,8 @@ Input_Result OH_Input_GetCursorInfo(Input_CursorInfo* cursorInfo, OH_PixelmapNat
 
 查询当前鼠标光标信息，包括光标显示状态、光标样式、光标大小档位、光标颜色。如果pixelmap参数非空，且光标样式为[DEVELOPER_DEFINED_ICON](capi-oh-pointer-style-h.md#input_pointerstyle)， 则会同时返回光标的PixelMap位图对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4408,6 +4778,8 @@ Input_Result OH_Input_SetPointerVisible(bool visible)
 
 设置当前窗口的鼠标光标的显示或隐藏状态。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4431,6 +4803,8 @@ Input_Result OH_Input_GetPointerStyle(int32_t windowId, int32_t *pointerStyle)
 **描述：**
 
 获取指定窗口的鼠标光标样式。此接口仅支持获取本应用进程内窗口的鼠标光标样式。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4457,6 +4831,8 @@ Input_Result OH_Input_SetPointerStyle(int32_t windowId, int32_t pointerStyle)
 
 设置指定窗口的鼠标光标样式。此接口仅支持设置本应用进程内窗口的鼠标光标样式。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4481,6 +4857,8 @@ Input_CustomCursor* OH_Input_CustomCursor_Create(OH_PixelmapNative* pixelMap, in
 **描述：**
 
 创建自定义鼠标光标资源对象。通过调用[OH_Input_CustomCursor_Destroy](capi-oh-input-manager-h.md#oh_input_customcursor_destroy)销毁自定义鼠标光标资源对象。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4510,6 +4888,8 @@ void OH_Input_CustomCursor_Destroy(Input_CustomCursor** customCursor)
 
 销毁自定义鼠标光标资源对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4527,6 +4907,8 @@ Input_Result OH_Input_CustomCursor_GetPixelMap(Input_CustomCursor* customCursor,
 **描述：**
 
 获取指定自定义鼠标光标资源的自定义鼠标光标像素图。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4552,6 +4934,8 @@ Input_Result OH_Input_CustomCursor_GetAnchor(Input_CustomCursor* customCursor, i
 **描述：**
 
 获取指定自定义鼠标光标资源的焦点坐标。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4579,6 +4963,8 @@ Input_CursorConfig* OH_Input_CursorConfig_Create(bool followSystem)
 
 创建自定义鼠标光标配置对象。通过调用[OH_Input_CursorConfig_Destroy](capi-oh-input-manager-h.md#oh_input_cursorconfig_destroy)销毁自定义鼠标光标配置对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **资源释放：** OH_Input_CursorConfig_Destroy {return}
@@ -4605,6 +4991,8 @@ void OH_Input_CursorConfig_Destroy(Input_CursorConfig** cursorConfig)
 
 销毁自定义鼠标光标配置对象。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4622,6 +5010,8 @@ Input_Result OH_Input_CursorConfig_IsFollowSystem(Input_CursorConfig *cursorConf
 **描述：**
 
 查询自定义鼠标光标配置是否跟随系统设置调整光标大小。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 
@@ -4648,6 +5038,8 @@ Input_Result OH_Input_SetCustomCursor(int32_t windowId, Input_CustomCursor* cust
 
 设置自定义鼠标光标样式。 <br>应用窗口布局改变、热区切换、页面跳转、光标移出再回到窗口、光标在窗口不同区域移动，以上场景可能导致光标切换回系统样式，需要开发者重新设置光标样式。此接口仅支持设置本应用进程内窗口的自定义鼠标光标样式。
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **参数：**
@@ -4673,6 +5065,8 @@ Input_Result OH_Input_BindInputDeviceToDisplay(int32_t inputDeviceId, int32_t di
 **描述：**
 
 绑定指定输入设备到指定屏幕。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **需要权限：** ohos.permission.INPUT_DEVICE_CONFIGURATOR
 

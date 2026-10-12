@@ -31,13 +31,13 @@ Sets the number of columns, fixed column width, or minimum column width of the c
 - When **value** is of the string type, you can set the number of columns, fixed column width,  
 or minimum column width of the current **LazyVWaterFlowLayout**. Typical values and their meanings are as follows. For usage effects, see [Example 3](#example-3-setting-adaptive-column-count):
 
-1. **columnsTemplate('1fr 1fr 2fr')** divides the **LazyVWaterFlowLayout** into three columns,
+    1. **columnsTemplate('1fr 1fr 2fr')** divides the **LazyVWaterFlowLayout** into three columns,
 with the component width divided into four equal parts: the first column takes up one part, the second column takes up one part, and the third column takes up two parts.
-2. **columnsTemplate('repeat(auto-fit, track-size)')** sets the minimum column width to **track-size**
+    2. **columnsTemplate('repeat(auto-fit, track-size)')** sets the minimum column width to **track-size**
 and automatically calculates the number of columns and the actual column width.
-3. **columnsTemplate('repeat(auto-fill, track-size)')** sets the fixed column width to **track-size**
+    3. **columnsTemplate('repeat(auto-fill, track-size)')** sets the fixed column width to **track-size**
 and automatically calculates the number of columns.
-4. **columnsTemplate('repeat(auto-stretch, track-size)')** sets the fixed column width to **track-size**,
+    4. **columnsTemplate('repeat(auto-stretch, track-size)')** sets the fixed column width to **track-size**,
 uses [columnsGap](#columnsgap) as the minimum column spacing, and automatically calculates the number of columns and the actual column spacing.
 
 Here, **repeat**, **auto-fit**, **auto-fill**, and **auto-stretch** are keywords. **track-size** is the column width, which supports units including px, vp, %, or a valid number. The default unit is vp. **track-size** must include at least one valid column width. The **auto-fit** mode and **auto-stretch** mode support only one valid column width value for **track-size**, and in the **auto-stretch** mode, **track-size** supports only px, vp, and valid numbers, not %. The **auto-fill** mode supports one or more valid column widths, for example, **columnsTemplate('repeat(auto-fill, 20)')** and **columnsTemplate('repeat(auto-fill, 20 80px)')**.

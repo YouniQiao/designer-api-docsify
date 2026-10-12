@@ -103,7 +103,7 @@ A constructor used to create a URLParams instance.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| init | string[][] &#124; Record&lt;string, string&gt; &#124; string &#124; [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following:   - string[][]: two-dimensional string array.   - Record&lt;string, string&gt;: list of objects.   - string: string.   - URLParams: object.   The default value is null. |
+| init | string[][] &#124; Record&lt;string, string&gt; &#124; string &#124; [URLParams](arkts-arkts-url-urlparams-c.md) | No | Input parameter objects, which include the following:           - string[][]: two-dimensional string array.           - Record&lt;string, string&gt;: list of objects.           - string: string.           - URLParams: object.   The default value is null. |
 
 **Examples**
 

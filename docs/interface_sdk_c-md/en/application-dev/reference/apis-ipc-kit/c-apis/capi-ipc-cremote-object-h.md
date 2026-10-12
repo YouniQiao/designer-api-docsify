@@ -6,6 +6,8 @@ Provides C APIs for creating and destroying a remote object, transferring data, 
 
 **Library**: libipc_capi.so
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Related module**: [OHIPCRemoteObject](capi-ohipcremoteobject.md)
@@ -65,6 +67,8 @@ enum OH_IPC_RequestMode
 
 Enumerates the IPC request modes.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -84,6 +88,8 @@ typedef int (*OH_OnRemoteRequestCallback)(uint32_t code, const OHIPCParcel *data
 **Description**
 
 Called to process the peer request at the stub.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -112,6 +118,8 @@ typedef void (*OH_OnRemoteDestroyCallback)(void *userData)
 
 Called when an observed object is destroyed.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -129,6 +137,8 @@ OHIPCRemoteStub* OH_IPCRemoteStub_Create(const char *descriptor, OH_OnRemoteRequ
 **Description**
 
 Creates an **OHIPCRemoteStub** object.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -157,6 +167,8 @@ void OH_IPCRemoteStub_Destroy(OHIPCRemoteStub *stub)
 
 Destroys an **OHIPCRemoteStub** object.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -175,6 +187,8 @@ void OH_IPCRemoteProxy_Destroy(OHIPCRemoteProxy *proxy)
 
 Destroys an **OHIPCRemoteProxy** object.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -192,6 +206,8 @@ int OH_IPCRemoteProxy_SendRequest(const OHIPCRemoteProxy *proxy, uint32_t code, 
 **Description**
 
 Sends an IPC message.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -221,6 +237,8 @@ int OH_IPCRemoteProxy_GetInterfaceDescriptor(OHIPCRemoteProxy *proxy, char **des
 
 Obtains the interface descriptor from the stub.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -248,6 +266,8 @@ typedef void (*OH_OnDeathRecipientCallback)(void *userData)
 
 Defines a callback to be invoked when the remote **OHIPCRemoteStub** object dies unexpectedly.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -266,6 +286,8 @@ typedef void (*OH_OnDeathRecipientDestroyCallback)(void *userData)
 
 Defines a callback to be invoked when the **OHIPCDeathRecipient** object is destroyed.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -283,6 +305,8 @@ OHIPCDeathRecipient* OH_IPCDeathRecipient_Create(OH_OnDeathRecipientCallback dea
 **Description**
 
 Creates an **OHIPCDeathRecipient** object, which triggers a notification when the **OHIPCRemoteStub** object dies unexpectedly.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -310,6 +334,8 @@ void OH_IPCDeathRecipient_Destroy(OHIPCDeathRecipient *recipient)
 
 Destroys an **OHIPCDeathRecipient** object.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -327,6 +353,8 @@ int OH_IPCRemoteProxy_AddDeathRecipient(OHIPCRemoteProxy *proxy, OHIPCDeathRecip
 **Description**
 
 Subscribes to the death of an **OHIPCRemoteStub** object for an **OHIPCRemoteProxy** object.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 
@@ -353,6 +381,8 @@ int OH_IPCRemoteProxy_RemoveDeathRecipient(OHIPCRemoteProxy *proxy, OHIPCDeathRe
 
 Unsubscribes from the death of the **OHIPCRemoteStub** object for an **OHIPCRemoteProxy** object.
 
+**System capability**: SystemCapability.Communication.IPC.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -377,6 +407,8 @@ int OH_IPCRemoteProxy_IsRemoteDead(const OHIPCRemoteProxy *proxy)
 **Description**
 
 Checks whether the **OHIPCRemoteStub** object corresponding to the **OHIPCRemoteProxy** object is dead.
+
+**System capability**: SystemCapability.Communication.IPC.Core
 
 **Since**: 12
 

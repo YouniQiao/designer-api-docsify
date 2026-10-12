@@ -21,11 +21,12 @@ This module can be used together with [@ohos.window.floatingBall](arkts-arkui-wi
 
 - Similarities: Both the global floating window and float view are special types of application auxiliary windows  
 that can remain displayed on the foreground even after the application's main window and corresponding ability transition to the background. They can be used to continue displaying the UI after the application transitions to the background.  
-- Differences:  
-- The global floating window is managed and its UI is drawn by developers, without a unified UI or animation effect.  
-- The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and  
+- Differences:
+
+  - The global floating window is managed and its UI is drawn by developers, without a unified UI or animation effect.  
+  - The float view is managed by the system and its UI is drawn in a unified manner, offering a more sophisticated and  
 refined animation effect.  
-- The float view can be bound to the [floating ball](arkts-arkui-window-floatingball.md) for joint use,  
+  - The float view can be bound to the [floating ball](arkts-arkui-window-floatingball.md) for joint use,  
 enabling more complex scenarios.
 
 **Start version**: 26.0.0

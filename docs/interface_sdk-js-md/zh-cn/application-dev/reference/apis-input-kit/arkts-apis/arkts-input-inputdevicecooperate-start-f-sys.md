@@ -45,6 +45,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number, callback:
 | [4400001](../errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
 | [4400002](../errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -76,6 +77,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="start2"></a>
@@ -122,6 +125,7 @@ function start(sinkDeviceDescriptor: string, srcInputDeviceId: number): Promise<
 | [4400001](../errorcode-cooperator.md#4400001-目标设备描述符错误) | Incorrect descriptor for the target device. |
 | [4400002](../errorcode-cooperator.md#4400002-操作输入设备失败) | Screen hop failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -147,3 +151,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

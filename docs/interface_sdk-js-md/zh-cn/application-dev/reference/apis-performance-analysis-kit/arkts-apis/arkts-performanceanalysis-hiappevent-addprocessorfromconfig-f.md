@@ -39,7 +39,7 @@ function addProcessorFromConfig(processorName: string, configName?: string): Pro
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| [11105001](../errorcode-hiappevent.md#11105001-非法的参数值) | Invalid parameter value. Possible causes: 1. Incorrect parameter length;         2. Incorrect parameter format. |
 
 **示例**
 

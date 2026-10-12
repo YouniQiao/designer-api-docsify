@@ -43,6 +43,7 @@ function getBundleArchiveInfo(hapFilePath: string, bundleFlags: number, callback
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleArchiveInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundlearchiveinfo2"></a>
@@ -110,6 +113,7 @@ function getBundleArchiveInfo(hapFilePath: string,  bundleFlags: number): Promis
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700022](../errorcode-bundle.md#17700022-输入的待解析源文件无效) | The hapFilePath is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -131,3 +135,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getBundleArchiveInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -49,7 +49,7 @@ When a DLP management application or an authorized application needs to access a
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.0.1 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
@@ -63,6 +63,7 @@ When a DLP management application or an authorized application needs to access a
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,6 +94,8 @@ async function ExampleFunction() {
 
 ExampleFunction();
 ```
+
+<!--DelEnd-->
 
 
 <a id="opendlpfile2"></a>
@@ -129,7 +132,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported because car not support DLP feature.<br>**Applicable version:** 26.0.1 and later |
 | [19100001](../errorcode-dlp.md#19100001-invalid-parameter) | Invalid parameter value. |
 | [19100002](../errorcode-dlp.md#19100002-encryption-and-decryption-error) | Credential service busy due to too many tasks or duplicate tasks. |
@@ -143,6 +146,7 @@ Opens a DLP file. This API uses an asynchronous callback to return the result. A
 | [19100019](../errorcode-dlp.md#19100019-dlp-file-has-expired) | The DLP file has expired. |
 | [19100020](../errorcode-dlp.md#19100020-network-disconnected) | No network connection. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -173,3 +177,5 @@ dlpPermission.openDLPFile(file, appId, async (err, res) => { // Open a DLP file.
   }
 });
 ```
+
+<!--DelEnd-->

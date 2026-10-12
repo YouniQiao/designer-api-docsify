@@ -45,6 +45,7 @@ Unsubscribe from distance measurement result data.
 | [35100003](../errorcode-spatialAwareness.md#35100003-unsubscription-failed) | UnSubscription failed. |
 | [35100004](../errorcode-spatialAwareness.md#35100004-invalid-parameter) | Parameter invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,3 +66,5 @@ import { spatialAwareness } from '@kit.MultimodalAwarenessKit';
       console.error(`call offDistanceMeasure failed, Code: ${err.code}, message: ${err.message}`);
    }
 ```
+
+<!--DelEnd-->

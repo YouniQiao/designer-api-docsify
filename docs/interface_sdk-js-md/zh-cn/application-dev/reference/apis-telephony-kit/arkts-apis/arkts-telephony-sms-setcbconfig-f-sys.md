@@ -45,6 +45,7 @@ function setCBConfig(options: CBConfigOptions, callback: AsyncCallback<void>): v
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,6 +63,8 @@ sms.setCBConfig(cbConfigOptions, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setcbconfig2"></a>
@@ -108,6 +111,7 @@ function setCBConfig(options: CBConfigOptions): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -128,3 +132,5 @@ promise.then(() => {
     console.error(`setCBConfig failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

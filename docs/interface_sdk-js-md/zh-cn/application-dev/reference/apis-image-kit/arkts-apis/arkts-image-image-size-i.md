@@ -4,7 +4,7 @@
 interface Size
 ```
 
-表示图片尺寸。
+表示图像尺寸。
 
 **起始版本：** 6
 
@@ -24,9 +24,7 @@ import { image } from '@kit.ImageKit';
 height: number
 ```
 
-Height
-
-Unit:px.
+图像或区域的高度。单位：像素（px）。取值范围是正整数。
 
 **类型：** number
 
@@ -46,9 +44,7 @@ Unit:px.
 width: number
 ```
 
-Width
-
-Unit:px.
+图像或区域的宽度。单位：像素（px）。取值范围是正整数。
 
 **类型：** number
 

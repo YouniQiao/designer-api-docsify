@@ -45,6 +45,7 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -61,6 +62,8 @@ sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="addsimmessage2"></a>
@@ -107,6 +110,7 @@ Adds a message to the SIM card. If the SIM card is full, an error is reported. T
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -125,3 +129,5 @@ sms.addSimMessage(simMessageOptions).then(() => {
     console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

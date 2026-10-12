@@ -47,6 +47,7 @@ function isAbilityEnabled(info: AbilityInfo, appIndex: number): Promise<boolean>
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -80,6 +81,8 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isabilityenabled2"></a>
@@ -116,6 +119,7 @@ function isAbilityEnabled(info: AbilityInfo, callback: AsyncCallback<boolean>): 
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -151,6 +155,8 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isabilityenabled3"></a>
@@ -192,6 +198,7 @@ function isAbilityEnabled(info: AbilityInfo): Promise<boolean>
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700003](../errorcode-bundle.md#17700003-指定的abilityname不存在) | The specified abilityName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -225,3 +232,5 @@ try {
   hilog.error(0x0000, 'testTag', 'queryAbilityInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

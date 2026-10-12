@@ -50,6 +50,7 @@ function subscribeNotification(subscriber: NotificationSubscriber): Promise<void
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,6 +68,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="subscribenotification2"></a>
@@ -114,6 +117,7 @@ function subscribeNotification(subscriber: NotificationSubscriber, info: Notific
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -134,3 +138,5 @@ notificationSubscribe.subscribeNotification(subscriber, subscribeInfo).then(() =
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

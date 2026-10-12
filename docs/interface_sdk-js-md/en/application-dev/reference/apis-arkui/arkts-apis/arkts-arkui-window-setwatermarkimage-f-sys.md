@@ -42,9 +42,10 @@ Controls whether a watermark image is displayed on the screen. This API uses a p
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -75,6 +76,8 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setwatermarkimage2"></a>
@@ -119,6 +122,7 @@ Set watermark image.
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-parameter-verification-error) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -148,6 +152,8 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setwatermarkimage3"></a>
@@ -181,9 +187,10 @@ Controls whether a watermark image is displayed on the screen. This API uses an 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -216,3 +223,5 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

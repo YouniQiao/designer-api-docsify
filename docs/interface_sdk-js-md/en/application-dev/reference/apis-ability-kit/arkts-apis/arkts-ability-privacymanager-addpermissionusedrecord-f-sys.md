@@ -59,7 +59,7 @@ The permission usage record includes the application identity of the caller, the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, the count value is invalid, usedType in AddPermissionUsedRecordOptions is invalid, or the enhancedIdentity in AddPermissionUsedRecordOptions exceeds 48 characters. |
@@ -69,6 +69,7 @@ The permission usage record includes the application identity of the caller, the
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,6 +94,8 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
   console.error(`addPermissionUsedRecord fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="addpermissionusedrecord2"></a>
@@ -141,7 +144,7 @@ The permission usage record is controlled by the toggle status set by [setPermis
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. Interface caller does not have permission"ohos.permission.PERMISSION_USED_STATS". |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system app. Interface caller is not a system app. |
 | [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The tokenID is 0, the permissionName exceeds 256 characters, or the count value is invalid. |
@@ -151,6 +154,7 @@ The permission usage record is controlled by the toggle status set by [setPermis
 | [12100008](../errorcode-access-token.md#12100008-out-of-memory) | Out of memory. |
 | [12100009](../errorcode-access-token.md#12100009-internal-service-error) | Common inner error. A database error occurs. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -167,3 +171,5 @@ privacyManager.addPermissionUsedRecord(tokenID, 'ohos.permission.READ_AUDIO', 1,
   }
 });
 ```
+
+<!--DelEnd-->

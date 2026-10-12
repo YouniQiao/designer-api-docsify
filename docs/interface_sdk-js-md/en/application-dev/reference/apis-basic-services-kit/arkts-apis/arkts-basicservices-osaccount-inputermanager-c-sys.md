@@ -57,6 +57,7 @@ Registers a credential inputer.
 | [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
 | [12300106](../errorcode-account.md#12300106-authentication-type-not-supported) | The authentication type is not supported. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -76,6 +77,8 @@ try {
   console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## unregisterInputer
 
@@ -110,6 +113,7 @@ Unregisters a credential inputer.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid authType. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -124,3 +128,5 @@ try {
   console.error(`unregisterInputer code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

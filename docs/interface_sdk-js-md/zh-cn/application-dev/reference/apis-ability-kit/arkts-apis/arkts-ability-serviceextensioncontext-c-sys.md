@@ -62,7 +62,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
@@ -76,6 +76,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI.<br>**适用版本：** 10+ |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -114,6 +115,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## connectServiceExtensionAbilityWithAccount
 
@@ -161,7 +164,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
@@ -175,6 +178,7 @@ connectServiceExtensionAbilityWithAccount(want: Want, accountId: number, options
 | [16000053](../errorcode-ability.md#16000053-非顶层ability) | The ability is not on the top of the UI.<br>**适用版本：** 10+ |
 | [16000055](../errorcode-ability.md#16000055-免安装超时) | Installation-free timed out.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -217,6 +221,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="disconnectserviceextensionability1"></a>
 
 ## disconnectServiceExtensionAbility
@@ -248,10 +254,11 @@ disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -284,6 +291,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="disconnectserviceextensionability2"></a>
 
@@ -321,10 +330,11 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -358,6 +368,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## openAtomicService
 
@@ -407,6 +419,7 @@ openAtomicService(appId: string, options?: AtomicServiceOptions): Promise<void>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -435,6 +448,8 @@ export default class ServiceExtension extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## openLink
 
@@ -485,7 +500,7 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Failed to start the invisible ability. |
@@ -501,6 +516,7 @@ openLink(link: string, options?: OpenLinkOptions): Promise<void>
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000136](../errorcode-ability.md#16000136-不允许通过app-linking方式拉起应用自身uiability) | The UIAbility is prohibited from launching itself via App Linking.<br>**适用版本：** 23+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -542,6 +558,8 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## preStartMission
 
@@ -586,11 +604,12 @@ preStartMission(bundleName: string, moduleName: string, abilityName: string, sta
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16300007](../errorcode-ability.md#16300007-指定的原子化服务的下载安装任务信息不存在) | The target free-installation task does not exist. |
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -634,6 +653,8 @@ export default class ServiceExtAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="requestmodaluiextension1"></a>
 
 ## requestModalUIExtension
@@ -673,13 +694,14 @@ requestModalUIExtension(pickerWant: Want, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11 |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11 |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11 |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11 |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -718,6 +740,8 @@ class ServiceExtension extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="requestmodaluiextension2"></a>
 
@@ -763,13 +787,14 @@ requestModalUIExtension(pickerWant: Want): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 11 |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 11 |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 11 |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 11 |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 11 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -808,6 +833,8 @@ class ServiceExtension extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## requestModalUIExtensionWithAccount
 
@@ -855,6 +882,7 @@ requestModalUIExtensionWithAccount(pickerWant: Want, accountId: number): Promise
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.The logical screen corresponding to the specified accountId is not in the foreground. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -898,6 +926,8 @@ export default class ServiceExtension extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="startability1"></a>
 
 ## startAbility
@@ -929,7 +959,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -956,6 +986,7 @@ startAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -986,6 +1017,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startability2"></a>
 
@@ -1019,7 +1052,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1046,6 +1079,7 @@ startAbility(want: Want, options: StartOptions, callback: AsyncCallback<void>): 
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1080,6 +1114,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startability3"></a>
 
@@ -1118,7 +1154,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1145,6 +1181,7 @@ startAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1178,6 +1215,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startabilityascaller1"></a>
 
@@ -1216,7 +1255,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1241,6 +1280,7 @@ startAbilityAsCaller(want: Want, callback: AsyncCallback<void>): void
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1265,6 +1305,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startabilityascaller2"></a>
 
@@ -1304,7 +1346,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -1327,6 +1369,7 @@ startAbilityAsCaller(want: Want, options: StartOptions, callback: AsyncCallback<
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1355,6 +1398,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startabilityascaller3"></a>
 
@@ -1399,7 +1444,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1424,6 +1469,7 @@ startAbilityAsCaller(want: Want, options?: StartOptions): Promise<void>
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1453,6 +1499,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## startAbilityByCall
 
@@ -1499,7 +1547,7 @@ startAbilityByCall(want: Want): Promise<Caller>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1510,6 +1558,7 @@ startAbilityByCall(want: Want): Promise<Caller>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released.<br>**适用版本：** 9 |
 
+<!--Del-->
 **示例**
 
 后台启动：
@@ -1585,6 +1634,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 ## startAbilityByCallWithAccount
 
 ```TypeScript
@@ -1634,7 +1685,7 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`权限。
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1647,6 +1698,7 @@ ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS`权限。
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1688,6 +1740,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="startabilitywithaccount1"></a>
 
 ## startAbilityWithAccount
@@ -1728,7 +1782,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1754,6 +1808,7 @@ startAbilityWithAccount(want: Want, accountId: number, callback: AsyncCallback<v
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1786,6 +1841,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startabilitywithaccount2"></a>
 
@@ -1828,7 +1885,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9 |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1854,6 +1911,7 @@ startAbilityWithAccount(want: Want, accountId: number, options: StartOptions, ca
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1890,6 +1948,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startabilitywithaccount3"></a>
 
@@ -1937,7 +1997,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -1963,6 +2023,7 @@ startAbilityWithAccount(want: Want, accountId: number, options?: StartOptions): 
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2000,6 +2061,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="startrecentability1"></a>
 
 ## startRecentAbility
@@ -2035,7 +2098,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -2060,6 +2123,7 @@ startRecentAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2092,6 +2156,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startrecentability2"></a>
 
@@ -2131,7 +2197,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type.<br>**适用版本：** 9 |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -2156,6 +2222,7 @@ startRecentAbility(want: Want, options: StartOptions, callback: AsyncCallback<vo
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2192,6 +2259,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startrecentability3"></a>
 
@@ -2234,7 +2303,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
@@ -2259,6 +2328,7 @@ startRecentAbility(want: Want, options?: StartOptions): Promise<void>
 | [16000079](../errorcode-ability.md#16000079-不支持指定app_instance_key) | The APP_INSTANCE_KEY cannot be specified.<br>**适用版本：** 14+ |
 | [16000080](../errorcode-ability.md#16000080-不支持创建新实例) | Creating a new instance is not supported.<br>**适用版本：** 14+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2295,6 +2365,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="startserviceextensionability1"></a>
 
 ## startServiceExtensionAbility
@@ -2328,7 +2400,7 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2342,6 +2414,7 @@ startServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2373,6 +2446,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startserviceextensionability2"></a>
 
@@ -2412,7 +2487,7 @@ startServiceExtensionAbility(want: Want): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2426,6 +2501,7 @@ startServiceExtensionAbility(want: Want): Promise<void>
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2457,6 +2533,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startserviceextensionabilitywithaccount1"></a>
 
@@ -2500,7 +2578,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2514,6 +2592,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback:
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2547,6 +2626,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startserviceextensionabilitywithaccount2"></a>
 
@@ -2595,7 +2676,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2609,6 +2690,7 @@ startServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<
 | [16000013](../errorcode-ability.md#16000013-应用被edm管控) | The application is controlled by EDM.<br>**适用版本：** 10+ |
 | [16000019](../errorcode-ability.md#16000019-隐式启动未查找到匹配ability) | No matching ability is found.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2642,6 +2724,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## startUIAbilities
 
@@ -2706,6 +2790,7 @@ startUIAbilities(wantList: Array<Want>): Promise<void>
 | [16000125](../errorcode-ability.md#16000125-不支持启动插件uiability) | Starting a plugin UIAbility is not supported. |
 | [16000126](../errorcode-ability.md#16000126-不支持启动dlp文件) | Starting DLP files is not supported. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2736,6 +2821,8 @@ export default class EntryServiceExtAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## startUIServiceExtensionAbility
 
@@ -2777,7 +2864,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
@@ -2791,6 +2878,7 @@ startUIServiceExtensionAbility(want: Want): Promise<void>
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2812,6 +2900,8 @@ export default class MyServiceExtensionAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="stopserviceextensionability1"></a>
 
@@ -2845,7 +2935,7 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2856,6 +2946,7 @@ stopServiceExtensionAbility(want: Want, callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2887,6 +2978,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="stopserviceextensionability2"></a>
 
@@ -2925,7 +3018,7 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -2936,6 +3029,7 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface.<br>**适用版本：** 10+ |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2967,6 +3061,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="stopserviceextensionabilitywithaccount1"></a>
 
@@ -3008,7 +3104,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -3018,6 +3114,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number, callback: 
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -3051,6 +3148,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="stopserviceextensionabilitywithaccount2"></a>
 
@@ -3097,7 +3196,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | The application does not have permission to call the interface. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-接口调用ability类型错误) | Incorrect ability type. |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission. |
@@ -3107,6 +3206,7 @@ stopServiceExtensionAbilityWithAccount(want: Want, accountId: number): Promise<v
 | [16200001](../errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 10+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -3141,6 +3241,8 @@ class EntryAbility extends ServiceExtensionAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="terminateself1"></a>
 
 ## terminateSelf
@@ -3171,7 +3273,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000001](../errorcode-ability.md#16000001-指定的ability名称不存在) | The specified ability does not exist.<br>**适用版本：** 9 |
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component.<br>**适用版本：** 9 |
 | [16000005](../errorcode-ability.md#16000005-指定的进程权限校验失败) | The specified process does not have the permission.<br>**适用版本：** 9 |
@@ -3179,6 +3281,7 @@ terminateSelf(callback: AsyncCallback<void>): void
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -3199,6 +3302,8 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="terminateself2"></a>
 
@@ -3237,6 +3342,7 @@ terminateSelf(): Promise<void>
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -3255,3 +3361,5 @@ class EntryAbility extends ServiceExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -44,6 +44,7 @@ off(type: 'sizeUpdate', callback?: SizeUpdateCallback): void
 | type | 'sizeUpdate' | 是 | 取消监听当前面板的大小是否产生变化，固定值为'sizeUpdate'。 |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 否 | 回调函数。用于指定要取消监听的回调函数，如果不填则取消所有sizeUpdate监听。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ panel.off('sizeUpdate', (windowSize: window.Size, _keyboardArea: inputMethodEngi
   console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('sizeUpdate')
 
@@ -82,6 +85,7 @@ on(type: 'sizeUpdate', callback: SizeUpdateCallback): void
 | type | 'sizeUpdate' | 是 | 监听当前面板的大小是否产生变化，固定取值为'sizeUpdate'。 |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | 是 | 面板大小变化时的回调，参数包含当前软键盘面板的宽度和高度。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -94,6 +98,8 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
     `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setShadow
 
@@ -131,9 +137,12 @@ setShadow(radius: number, color: string, offsetX: number, offsetY: number): void
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 // 设置输入法窗口阴影效果，半径20px，颜色黑色，X/Y轴偏移量均为20px
 panel.setShadow(20, '#000000', 20, 20);
 ```
+
+<!--DelEnd-->

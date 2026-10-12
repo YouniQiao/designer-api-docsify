@@ -49,6 +49,7 @@ function preloadUIExtensionAbility(want: Want): Promise<number>
 | [16000004](../errorcode-ability.md#16000004-可见性校验失败) | Cannot start an invisible component. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.Preload UIExtensionAbility timeout. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -78,3 +79,5 @@ try {
   console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

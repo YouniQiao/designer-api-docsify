@@ -36,11 +36,14 @@ A constructor used to create a **GallerySync** instance.
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 let gallerySync = new cloudSync.GallerySync()
 ```
+
+<!--DelEnd-->
 
 <a id="off1"></a>
 
@@ -78,6 +81,7 @@ Removes the specified callback from the device-cloud sync progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -91,6 +95,8 @@ gallerySync.on('progress', callback);
 
 gallerySync.off('progress', callback);
 ```
+
+<!--DelEnd-->
 
 <a id="off2"></a>
 
@@ -127,6 +133,7 @@ Removes all callbacks from the device-cloud sync progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -138,6 +145,8 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
 
 gallerySync.off('progress');
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -173,6 +182,7 @@ Registers a listener for the device-cloud sync progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -182,6 +192,8 @@ gallerySync.on('progress', (pg: cloudSync.SyncProgress) => {
   console.info("syncState: " + pg.state);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -220,6 +232,7 @@ Starts device-cloud sync. This API uses a promise to return the result.
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -237,6 +250,8 @@ gallerySync.start().then(() => {
   console.error("start sync failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -275,6 +290,7 @@ Starts device-cloud sync. This API uses an asynchronous callback to return the r
 | 22400002 | Network unavailable. |
 | 22400003 | Low battery level. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -290,6 +306,8 @@ gallerySync.start((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -330,6 +348,7 @@ Stops device-cloud sync. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -343,6 +362,8 @@ gallerySync.stop().then(() => {
   console.error("stop sync failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -383,6 +404,7 @@ Stops device-cloud sync. This API uses an asynchronous callback to return the re
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -398,3 +420,5 @@ gallerySync.stop((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

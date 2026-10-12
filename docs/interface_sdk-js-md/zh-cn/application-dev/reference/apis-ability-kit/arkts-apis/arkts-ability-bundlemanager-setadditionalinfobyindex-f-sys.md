@@ -44,6 +44,7 @@ function setAdditionalInfoByIndex(bundleName: string, additionalInfo: string, ap
 | [17700053](../errorcode-bundle.md#17700053-非应用市场调用) | The caller is not AppGallery. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,3 +64,5 @@ try {
   hilog.error(0x0000, 'testTag', 'setAdditionalInfoByIndex failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

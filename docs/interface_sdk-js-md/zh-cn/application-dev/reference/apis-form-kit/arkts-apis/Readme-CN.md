@@ -161,7 +161,6 @@
   - [TemplateFormDetailInfoCallback（系统接口）](arkts-form-forminfo-templateformdetailinfocallback-t-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpdateFormsConfigCallback（系统接口）](arkts-form-forminfo-updateformsconfigcallback-t-sys.md)<!--DelEnd-->
-  - [ColorMode](arkts-form-forminfo-colormode-e.md)
   - [FormDimension](arkts-form-forminfo-formdimension-e.md)
   - [FormLocation](arkts-form-forminfo-formlocation-e.md)
   <!--Del-->
@@ -183,6 +182,7 @@
   <!--Del-->
   - [SceneAnimationTriggerType（系统接口）](arkts-form-forminfo-sceneanimationtriggertype-e-sys.md)<!--DelEnd-->
   - [VisibilityType](arkts-form-forminfo-visibilitytype-e.md)
+  - [ColorMode](arkts-form-forminfo-colormode-e.md)
 <!--Del-->
 - [@ohos.app.form.formObserver（卡片监听方-FormObserver）](arkts-form-app-form-formobserver.md)<!--DelEnd-->
   <!--Del-->
@@ -204,8 +204,6 @@
   - [deactivateSceneAnimation（系统接口）](arkts-form-formprovider-deactivatesceneanimation-f-sys.md)<!--DelEnd-->
   - [getFormRect](arkts-form-formprovider-getformrect-f.md)
   - [getFormsInfo](arkts-form-formprovider-getformsinfo-f.md)
-  - [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md)
-  - [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md)
   - [getPublishedRunningFormInfoById](arkts-form-formprovider-getpublishedrunningforminfobyid-f.md)
   - [getPublishedRunningFormInfos](arkts-form-formprovider-getpublishedrunningforminfos-f.md)
   <!--Del-->
@@ -227,16 +225,18 @@
   - [updateForm](arkts-form-formprovider-updateform-f.md)
   <!--Del-->
   - [updateTemplateFormDetailInfo（系统接口）](arkts-form-formprovider-updatetemplateformdetailinfo-f-sys.md)<!--DelEnd-->
+  - [getPublishedFormInfoById](arkts-form-formprovider-getpublishedforminfobyid-f.md)
+  - [getPublishedFormInfos](arkts-form-formprovider-getpublishedforminfos-f.md)
 - [@ohos.app.form.LiveFormExtensionAbility（互动卡片扩展能力-LiveFormExtensionAbility）](arkts-form-app-form-liveformextensionability.md)
   - [LiveFormExtensionAbility](arkts-form-app-form-liveformextensionability-liveformextensionability-c.md)
   - [LiveFormInfo](arkts-form-app-form-liveformextensionability-liveforminfo-i.md)
-- [@ohos.application.formBindingData（卡片数据绑定类）](arkts-form-application-formbindingdata.md)
-  - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md)
-  - [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
 - [@ohos.application.formError（卡片错误码-FormError）](arkts-form-application-formerror.md)
   - [FormError](arkts-form-formerror-formerror-e.md)
   <!--Del-->
   - [FormError（系统接口）](arkts-form-formerror-formerror-e-sys.md)<!--DelEnd-->
+- [@ohos.application.formBindingData（卡片数据绑定类）](arkts-form-application-formbindingdata.md)
+  - [createFormBindingData](arkts-form-formbindingdata-createformbindingdata-depr-f.md)
+  - [FormBindingData](arkts-form-formbindingdata-formbindingdata-depr-i.md)
 <!--Del-->
 - [@ohos.application.formHost（formHost）](arkts-form-application-formhost.md)<!--DelEnd-->
   <!--Del-->

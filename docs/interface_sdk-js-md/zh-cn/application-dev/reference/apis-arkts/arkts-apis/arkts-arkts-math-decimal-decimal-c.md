@@ -76,7 +76,7 @@ static abs(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="acos1"></a>
 
@@ -142,7 +142,7 @@ static acos(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="acosh1"></a>
@@ -209,7 +209,7 @@ static acosh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="add1"></a>
@@ -246,7 +246,7 @@ add(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="add2"></a>
 
@@ -283,7 +283,7 @@ static add(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="asin1"></a>
 
@@ -349,7 +349,7 @@ static asin(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="asinh1"></a>
@@ -416,7 +416,7 @@ static asinh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="atan1"></a>
@@ -483,7 +483,7 @@ static atan(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## atan2
@@ -519,7 +519,7 @@ static atan2(y: Value, x: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="atanh1"></a>
@@ -586,7 +586,7 @@ static atanh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="cbrt1"></a>
@@ -647,7 +647,7 @@ static cbrt(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="ceil1"></a>
 
@@ -707,7 +707,7 @@ static ceil(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="clamp1"></a>
 
@@ -744,7 +744,7 @@ clamp(min: Value, max: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 <a id="clamp2"></a>
@@ -783,7 +783,7 @@ static clamp(n: Value, min: Value, max: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `min` is out of range. |
 
 ## comparedTo
@@ -818,7 +818,7 @@ comparedTo(n: Value): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## constructor
 
@@ -846,7 +846,7 @@ Decimal的构造函数。
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="cos1"></a>
 
@@ -906,7 +906,7 @@ static cos(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="cosh1"></a>
 
@@ -966,7 +966,7 @@ static cosh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -1024,7 +1024,7 @@ div(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="div2"></a>
 
@@ -1061,7 +1061,7 @@ static div(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1095,7 +1095,7 @@ dividedToIntegerBy(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## equals
 
@@ -1129,7 +1129,7 @@ equals(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="exp1"></a>
 
@@ -1195,7 +1195,7 @@ static exp(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="floor1"></a>
@@ -1256,7 +1256,7 @@ static floor(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1290,7 +1290,7 @@ greaterThan(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1324,7 +1324,7 @@ greaterThanOrEqualTo(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## hypot
 
@@ -1358,7 +1358,7 @@ static hypot(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1524,7 +1524,7 @@ lessThan(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1558,7 +1558,7 @@ lessThanOrEqualTo(n: Value): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="ln1"></a>
 
@@ -1624,7 +1624,7 @@ static ln(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="log1"></a>
@@ -1661,7 +1661,7 @@ log(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="log2"></a>
@@ -1699,7 +1699,7 @@ static log(n: Value, base: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log10
@@ -1734,7 +1734,7 @@ static log10(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## log2
@@ -1769,7 +1769,7 @@ static log2(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 ## max
@@ -1804,7 +1804,7 @@ static max(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## min
 
@@ -1838,7 +1838,7 @@ static min(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mod1"></a>
 
@@ -1874,7 +1874,7 @@ mod(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mod2"></a>
 
@@ -1911,7 +1911,7 @@ static mod(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mul1"></a>
 
@@ -1947,7 +1947,7 @@ mul(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mul2"></a>
 
@@ -1984,7 +1984,7 @@ static mul(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## negate
 
@@ -2042,7 +2042,7 @@ pow(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="pow2"></a>
@@ -2080,7 +2080,7 @@ static pow(base: Value, exponent: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-超出精度限制) | Precision limit exceeded. |
 
 <a id="precision1"></a>
@@ -2207,7 +2207,7 @@ static random(significantDigits: number): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable. |
 
 ## round
@@ -2242,7 +2242,7 @@ static round(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## set
 
@@ -2270,7 +2270,7 @@ static set(config: DecimalConfig): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `DecimalConfig.properties` is out of range. |
 | [10200061](../errorcode-utils.md#10200061-加密方法不可用) | Crypto unavailable. |
 
@@ -2307,7 +2307,7 @@ static sign(n: Value): number
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sin1"></a>
 
@@ -2367,7 +2367,7 @@ static sin(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sinh1"></a>
 
@@ -2427,7 +2427,7 @@ static sinh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sqrt1"></a>
 
@@ -2487,7 +2487,7 @@ static sqrt(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sub1"></a>
 
@@ -2523,7 +2523,7 @@ sub(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sub2"></a>
 
@@ -2560,7 +2560,7 @@ static sub(x: Value, y: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## sum
 
@@ -2596,7 +2596,7 @@ static sum(...n: Value[]): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tan1"></a>
 
@@ -2656,7 +2656,7 @@ static tan(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tanh1"></a>
 
@@ -2716,7 +2716,7 @@ static tanh(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tobinary1"></a>
 
@@ -3164,7 +3164,7 @@ toFraction(maxDenominator: Value): Decimal[]
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tohexadecimal1"></a>
 
@@ -3297,7 +3297,7 @@ toNearest(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tonearest2"></a>
 
@@ -3334,7 +3334,7 @@ toNearest(n: Value, rounding: Rounding): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-参数范围越界错误) | The value of `rounding` is out of range. |
 
 ## toNumber
@@ -3730,7 +3730,7 @@ static trunc(n: Value): Decimal
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## valueOf
 

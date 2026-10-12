@@ -45,6 +45,7 @@ function getSmscAddr(slotId: number, callback: AsyncCallback<string>): void
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsmscaddr2"></a>
@@ -102,6 +105,7 @@ function getSmscAddr(slotId: number): Promise<string>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -115,3 +119,5 @@ sms.getSmscAddr(slotId).then((data: string) => {
     console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

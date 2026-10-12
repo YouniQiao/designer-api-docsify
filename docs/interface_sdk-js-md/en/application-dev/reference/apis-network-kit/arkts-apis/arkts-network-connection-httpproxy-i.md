@@ -26,9 +26,10 @@ exclusionList: Array<string>
 
 List of the names of hosts that do not use a proxy. Host names can be domain names, IP addresses, or wildcards. The detailed matching rules are as follows:
 
-- Domain name matching:  
-- Exact match: The host name of the proxy server exactly matches any host name in the list.  
-- Partial match: The host name of the proxy server contains any host name in the list.
+- Domain name matching:
+
+  - Exact match: The host name of the proxy server exactly matches any host name in the list.  
+  - Partial match: The host name of the proxy server contains any host name in the list.
 
 For example, if **ample.com** is set in the host name list, **ample.com**, **www.ample.com**, and **ample.com:80** are matched, and **www.example.com** and **ample.com.org** are not matched.
 

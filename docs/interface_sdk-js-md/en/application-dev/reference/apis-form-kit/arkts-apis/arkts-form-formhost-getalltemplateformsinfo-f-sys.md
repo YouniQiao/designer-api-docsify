@@ -38,6 +38,7 @@ Obtains the template widget information provided by all applications on the devi
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The application is not a system application. |
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,3 +57,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -42,9 +42,10 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean): Promise<v
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setwatermarkimage2"></a>
@@ -119,6 +122,7 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, priority: 
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 | [1300016](../errorcode-window.md#1300016-参数校验错误) | Parameter error. Possible cause: 1. Invalid parameter range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -148,6 +152,8 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setwatermarkimage3"></a>
@@ -181,9 +187,10 @@ function setWaterMarkImage(pixelMap: image.PixelMap, enable: boolean, callback: 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -216,3 +223,5 @@ image.createPixelMap(color, initializationOptions).then((pixelMap: image.PixelMa
   console.error(`Failed to create PixelMap. Cause code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

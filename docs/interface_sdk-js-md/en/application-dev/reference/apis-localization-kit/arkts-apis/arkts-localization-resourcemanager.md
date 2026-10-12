@@ -16,17 +16,17 @@ and color mode.
 - Since API version 9, in the stage model, the stage model allows you to obtain the **resourceManager** object  
 through context without importing any module. For details about the context, see [application context](../../../application-models/application-context-stage.md).
 
- ```ts
- import { UIAbility } from '@kit.AbilityKit';
- import { window } from '@kit.ArkUI';
+  ```ts
+  import { UIAbility } from '@kit.AbilityKit';
+  import { window } from '@kit.ArkUI';
 
- export default class EntryAbility extends UIAbility {
- onWindowStageCreate(windowStage: window.WindowStage) {
- let context = this.context;
- let resourceManager = context.resourceManager;
- }
- }
- ```
+  export default class EntryAbility extends UIAbility {
+    onWindowStageCreate(windowStage: window.WindowStage) {
+      let context = this.context;
+      let resourceManager = context.resourceManager;
+    }
+  }
+  ```
 
 **Since:** 6
 

@@ -49,6 +49,7 @@ Preloads a [UIExtensionAbility](arkts-ability-app-ability-uiextensionability-uie
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1.Connect to system service failed; 2.Send restart message to system service failed; 3.System service failed to communicate with dependency module. 4.Preload UIExtensionAbility timeout. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,3 +79,5 @@ try {
   console.error(`preloadUIExtensionAbility failed, code is ${code}, message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

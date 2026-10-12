@@ -53,6 +53,7 @@ Adds dynamic shortcuts for the given user.
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
 | [18100001](../errorcode-bundle.md#18100001-inconsistent-bundlename-and-appindex-combinations-in-the-shortcutinfo-list) | A combination of bundleName and appIndex in the shortcutInfo list is different from the others. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -90,3 +91,5 @@ try {
   console.error(`addDynamicShortcutInfos errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

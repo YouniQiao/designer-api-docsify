@@ -34,6 +34,7 @@ Obtains the identity information of an application, including the bundle name an
 | --- | --- |
 | [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | Bundle name and clone index of the application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -77,3 +78,5 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->

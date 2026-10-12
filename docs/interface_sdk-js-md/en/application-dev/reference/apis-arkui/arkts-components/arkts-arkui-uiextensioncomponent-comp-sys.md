@@ -69,6 +69,7 @@ Construct the UIExtensionComponent.<br> Called when the UIExtensionComponent is 
 | [DpiFollowStrategy](arkts-arkui-uiextensioncomponent-comp-dpifollowstrategy-e-sys.md) | Enumeration of different types of DpiFollowStrategy. |
 | [WindowModeFollowStrategy](arkts-arkui-uiextensioncomponent-comp-windowmodefollowstrategy-e-sys.md) | Enumerates the following strategies of the window mode. |
 
+<!--Del-->
 ## Examples
 
 ### Example 1: Loading a UIExtension
@@ -480,3 +481,5 @@ struct Extension {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -51,6 +51,7 @@ Sets traffic calibration data. You can use this API to set traffic data during t
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error, such as nullptr. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,3 +67,5 @@ statistics.setCalibrationTraffic(simId, remainData, totalData).then(() => {
   console.error(`setCalibrationTraffic error. code:${error.code}, message:${error.message}`);
 });
 ```
+
+<!--DelEnd-->

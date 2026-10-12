@@ -5,7 +5,8 @@
 该模块提供以下窗口相关的常用功能：
 
 - [Window](arkts-arkui-window-n.md)：当前窗口实例，窗口管理器管理的基本单元。
- - [WindowStage](arkts-arkui-window-n.md)：窗口管理器。管理各个基本窗口单元。
+
+- [WindowStage](arkts-arkui-window-n.md)：窗口管理器。管理各个基本窗口单元。
 
 > **说明：**
  >

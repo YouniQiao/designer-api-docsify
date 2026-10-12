@@ -42,6 +42,7 @@ function getSystemSize(callback: AsyncCallback<number>): void
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ storageStatistics.getSystemSize((error: BusinessError, number: number) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsystemsize2"></a>
@@ -94,6 +97,7 @@ function getSystemSize(): Promise<number>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -104,3 +108,5 @@ storageStatistics.getSystemSize().then((number: number) => {
   console.error(`getSystemSize failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

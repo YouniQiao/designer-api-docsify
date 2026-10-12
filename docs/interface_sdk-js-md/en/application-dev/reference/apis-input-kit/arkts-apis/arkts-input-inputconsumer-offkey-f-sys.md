@@ -39,6 +39,7 @@ Unsubscribes from system hotkeys. This API uses an asynchronous callback to retu
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -88,3 +89,5 @@ try {
   console.error(`Failed to execute operation. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

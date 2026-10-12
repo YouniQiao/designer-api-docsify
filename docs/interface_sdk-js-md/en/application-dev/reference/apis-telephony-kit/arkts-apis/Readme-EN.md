@@ -16,7 +16,6 @@
   - [combineConference(system api)](arkts-telephony-call-combineconference-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [controlCamera(system api)](arkts-telephony-call-controlcamera-f-sys.md)<!--DelEnd-->
-  - [dial](arkts-telephony-call-dial-f.md)
   <!--Del-->
   - [dialCall(system api)](arkts-telephony-call-dialcall-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -143,6 +142,7 @@
   - [unloadCallUI(system api)](arkts-telephony-call-unloadcallui-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateImsCallMode(system api)](arkts-telephony-call-updateimscallmode-f-sys.md)<!--DelEnd-->
+  - [dial](arkts-telephony-call-dial-f.md)
   <!--Del-->
   - [AudioDevice(system api)](arkts-telephony-call-audiodevice-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -353,12 +353,16 @@
   - [off](arkts-telephony-observer-off-f.md)
   <!--Del-->
   - [off(system api)](arkts-telephony-observer-off-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [offCallTransferChange(system api)](arkts-telephony-observer-offcalltransferchange-f-sys.md)<!--DelEnd-->
   - [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md)
   - [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md)
   - [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md)
   - [on](arkts-telephony-observer-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-telephony-observer-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onCallTransferChange(system api)](arkts-telephony-observer-oncalltransferchange-f-sys.md)<!--DelEnd-->
   - [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md)
   - [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md)
   - [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md)
@@ -406,7 +410,7 @@
   - [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md)
   - [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md)
   <!--Del-->
-  - [getNrOptionMode(system api)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
+  - [getNROptionMode(system api)](arkts-telephony-radio-getnroptionmode-f-sys.md)<!--DelEnd-->
   - [getOperatorName](arkts-telephony-radio-getoperatorname-f.md)
   - [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md)
   <!--Del-->
@@ -420,7 +424,7 @@
   - [getUniqueDeviceId(system api)](arkts-telephony-radio-getuniquedeviceid-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isManualNetworkScanning(system api)](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md)<!--DelEnd-->
-  - [isNrSupported](arkts-telephony-radio-isnrsupported-f.md)
+  - [isNRSupported](arkts-telephony-radio-isnrsupported-f.md)
   - [isRadioOn](arkts-telephony-radio-isradioon-f.md)
   <!--Del-->
   - [off(system api)](arkts-telephony-radio-off-f-sys.md)<!--DelEnd-->
@@ -489,7 +493,7 @@
   - [NetworkSelectionMode](arkts-telephony-radio-networkselectionmode-e.md)
   - [NetworkType](arkts-telephony-radio-networktype-e.md)
   <!--Del-->
-  - [NrOptionMode(system api)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
+  - [NROptionMode(system api)](arkts-telephony-radio-nroptionmode-e-sys.md)<!--DelEnd-->
   - [NsaState](arkts-telephony-radio-nsastate-e.md)
   <!--Del-->
   - [PreferredNetworkMode(system api)](arkts-telephony-radio-preferrednetworkmode-e-sys.md)<!--DelEnd-->
@@ -654,7 +658,6 @@
   - [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md)
   <!--Del-->
   - [isImsSmsSupported(system api)](arkts-telephony-sms-isimssmssupported-f-sys.md)<!--DelEnd-->
-  - [sendMessage](arkts-telephony-sms-sendmessage-f.md)
   <!--Del-->
   - [sendMms(system api)](arkts-telephony-sms-sendmms-f-sys.md)<!--DelEnd-->
   - [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md)
@@ -670,6 +673,7 @@
   - [splitMessage(system api)](arkts-telephony-sms-splitmessage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateSimMessage(system api)](arkts-telephony-sms-updatesimmessage-f-sys.md)<!--DelEnd-->
+  - [sendMessage](arkts-telephony-sms-sendmessage-f.md)
   <!--Del-->
   - [CBConfigListConfigs(system api)](arkts-telephony-sms-cbconfiglistconfigs-i-sys.md)<!--DelEnd-->
   <!--Del-->

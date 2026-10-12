@@ -45,6 +45,7 @@ function getAllSimMessages(slotId: number, callback: AsyncCallback<Array<SimShor
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallsimmessages2"></a>
@@ -102,6 +105,7 @@ function getAllSimMessages(slotId: number): Promise<Array<SimShortMessage>>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -116,3 +120,5 @@ promise.then((data: sms.SimShortMessage[]) => {
     console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

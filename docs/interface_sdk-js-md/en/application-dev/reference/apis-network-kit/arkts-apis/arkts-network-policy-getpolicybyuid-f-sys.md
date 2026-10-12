@@ -44,6 +44,7 @@ Obtains the network access policy for the application specified by a given UID. 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -54,6 +55,8 @@ policy.getPolicyByUid(11111, (error: BusinessError, data: policy.NetUidPolicy) =
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpolicybyuid2"></a>
@@ -99,6 +102,7 @@ Obtains the network access policy by app UID. This API uses a promise to return 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

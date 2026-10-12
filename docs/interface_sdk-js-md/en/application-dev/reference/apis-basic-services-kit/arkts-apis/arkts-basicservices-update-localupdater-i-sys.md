@@ -89,6 +89,7 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -114,6 +115,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="applynewversion2"></a>
 
@@ -172,6 +175,7 @@ Use scenarios: This method is used to upgrade the system from a local storage de
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -195,6 +199,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off
 
@@ -238,6 +244,7 @@ release resources in a timely manner.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -259,6 +266,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -307,6 +316,7 @@ listener when it is no longer needed.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -328,6 +338,8 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="verifyupgradepackage1"></a>
 
@@ -387,6 +399,7 @@ successful.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -415,6 +428,8 @@ try {
   console.error(`Fail to get localUpdater. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="verifyupgradepackage2"></a>
 
@@ -474,6 +489,7 @@ system may be damaged.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter verification failed. |
 | [11500104](../errorcode-update.md#11500104-ipc-error) | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -500,3 +516,5 @@ try {
   console.error(`Fail to get localUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->

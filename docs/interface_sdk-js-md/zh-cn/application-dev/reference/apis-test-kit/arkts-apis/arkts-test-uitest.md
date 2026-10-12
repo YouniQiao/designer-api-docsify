@@ -5,14 +5,20 @@ UiTest提供UI自动化测试能力，供开发者在测试场景使用，主要
 该模块提供以下功能：
 
 - [On<sup>9+</sup>](arkts-test-uitest-on-c.md)：提供控件特征描述能力，用于控件筛选匹配查找。
- - [Component<sup>9+</sup>](arkts-test-uitest-component-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。
- - [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。
- - [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md)：代表UI界面上的窗口对象，提供窗口属性获取，窗口拖动、调整窗口大小等能力。
- - [By<sup>(deprecated)</sup>](arkts-test-uitest-by-c.md)：提供控件特征描述能力，用于控件筛选匹配查找。从API version 8开始支持，从API version 9开始废弃，建议使用
+
+- [Component<sup>9+</sup>](arkts-test-uitest-component-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。
+
+- [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。
+
+- [UiWindow<sup>9+</sup>](arkts-test-uitest-uiwindow-c.md)：代表UI界面上的窗口对象，提供窗口属性获取，窗口拖动、调整窗口大小等能力。
+
+- [By<sup>(deprecated)</sup>](arkts-test-uitest-by-c.md)：提供控件特征描述能力，用于控件筛选匹配查找。从API version 8开始支持，从API version 9开始废弃，建议使用
  [On<sup>9+</sup>](arkts-test-uitest-on-c.md)替代。
- - [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。从API version 8开始支持，从API version
+
+- [UiComponent<sup>(deprecated)</sup>](arkts-test-uitest-uicomponent-c.md)：代表UI界面上的指定控件，提供控件属性获取，控件点击，滑动查找，文本注入等能力。从API version 8开始支持，从API version
  9开始废弃，建议使用[Component<sup>9+</sup>](arkts-test-uitest-component-c.md)替代。
- - [UiDriver<sup>(deprecated)</sup>](arkts-test-uitest-uidriver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。从API version 8开始支持，从API version 9开始废弃，建议使用
+
+- [UiDriver<sup>(deprecated)</sup>](arkts-test-uitest-uidriver-c.md)：入口类，提供控件匹配/查找，按键注入，坐标点击/滑动，截图等能力。从API version 8开始支持，从API version 9开始废弃，建议使用
  [Driver<sup>9+</sup>](arkts-test-uitest-driver-c.md)替代。
 
 > **说明：**

@@ -41,6 +41,7 @@ function killProcessesByBundleName(bundleName: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ appManager.killProcessesByBundleName(bundleName)
     console.error(`KillProcessesByBundleName failed, error code: ${err.code}, error msg: ${err.message}.`);
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="killprocessesbybundlename2"></a>
@@ -89,6 +92,7 @@ function killProcessesByBundleName(bundleName: string, callback: AsyncCallback<v
 | bundleName | string | 是 | 表示Bundle名称。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当通过Bundle名称终止进程成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -107,3 +111,5 @@ function killProcessesByBundleNameCallback(err: BusinessError, data: void) {
 
 appManager.killProcessesByBundleName(bundleName, killProcessesByBundleNameCallback);
 ```
+
+<!--DelEnd-->

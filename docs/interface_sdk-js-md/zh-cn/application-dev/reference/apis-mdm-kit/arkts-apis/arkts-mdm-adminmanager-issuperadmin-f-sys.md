@@ -38,8 +38,9 @@ function isSuperAdmin(bundleName: String, callback: AsyncCallback<boolean>): voi
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -57,6 +58,8 @@ adminManager.isSuperAdmin(bundleName, (err, result) => {
   console.info(`Succeeded in querying admin is super admin or not, result : ${result}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="issuperadmin2"></a>
@@ -96,8 +99,9 @@ function isSuperAdmin(bundleName: String): Promise<boolean>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -114,3 +118,5 @@ adminManager.isSuperAdmin(bundleName).then((result) => {
   console.error(`Failed to query admin is super admin or not. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

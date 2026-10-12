@@ -53,6 +53,7 @@ Unregisters the callback for listening to color picking. If no callback is speci
 | --- | --- | --- | --- |
 | samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | No | Callback to unregister. |
 
+<!--Del-->
 **Examples**
 
 Since API version 23, the [setBackgroundLuminanceSamplingConfigs](#setbackgroundluminancesamplingconfigs), [onBackgroundLuminanceChange](#onbackgroundluminancechange), and [offBackgroundLuminanceChange](#offbackgroundluminancechange) APIs are added. This example calls these three APIs to obtain the color picker of the corresponding component, set the color picking parameters and color picking callback for the component through the color picker, and implement the custom background-color-based inversion effect through the color picking callback.
@@ -144,6 +145,8 @@ struct PagePicker {
 }
 ```
 
+<!--DelEnd-->
+
 ## onBackgroundLuminanceChange
 
 ```TypeScript
@@ -170,9 +173,12 @@ The background luminance is divided into three ranges based on the luminance thr
 | --- | --- | --- | --- |
 | samplingCallback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;number&gt; | Yes | Callback used to return the current background luminance. <br>Note: [offBackgroundLuminanceChange](#offbackgroundluminancechange) cannot be called in the listening callback. |
 
+<!--Del-->
 **Examples**
 
 For details, see the example of [offBackgroundLuminanceChange](#offbackgroundluminancechange).
+
+<!--DelEnd-->
 
 ## setBackgroundLuminanceSamplingConfigs
 
@@ -204,6 +210,9 @@ Sets the color picking parameters. If the luminance threshold is not within the 
 | --- | --- |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error.<br> 1. Incorrect parameter values. <br> 2. Incorrect parameters types. |
 
+<!--Del-->
 **Examples**
 
 For details, see the example of [offBackgroundLuminanceChange](#offbackgroundluminancechange).
+
+<!--DelEnd-->

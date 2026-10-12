@@ -402,7 +402,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
@@ -476,7 +476,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
@@ -545,7 +545,7 @@ For dynamic images such as GIF and WebP images, this API returns the data of eac
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980099](../errorcode-image.md#62980099-data-error-in-the-shared-memory) | The shared memory data is abnormal. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
@@ -689,7 +689,7 @@ Creates a PixelMap object based on decoding options and memory type. This API us
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete.         3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
 | [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
@@ -766,7 +766,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types; 3.Parameter verification failed. |
-| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete. 3. Read image data failed. 4. Codec create failed. |
+| [7700101](../errorcode-image.md#7700101-abnormal-image-source) | Bad source. e.g.,1. Image has invalid width or height. 2. Image source incomplete.         3. Read image data failed. 4. Codec create failed. |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported mimetype. |
 | [7700103](../errorcode-image.md#7700103-image-oversized) | Image too large. This status code is thrown when an error occurs during the process of checking size. |
 | [7700201](../errorcode-image.md#7700201-unsupported-memory-allocation-type) | Unsupported allocator type, e.g., use share memory to decode a HDR image as only DMA supported hdr metadata. |
@@ -977,7 +977,7 @@ Obtains an array of delay times. This API uses a promise to return the result. T
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
@@ -1026,7 +1026,7 @@ Obtains an array of delay times. This API uses an asynchronous callback to retur
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980115](../errorcode-image.md#62980115-invalid-image-parameter) | Invalid image parameter. |
@@ -1075,7 +1075,7 @@ Obtains the list of disposal types. This API uses a promise to return the result
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980101](../errorcode-image.md#62980101-incorrect-input-image-data) | The image data is abnormal. |
 | [62980137](../errorcode-image.md#62980137-invalid-image-operation) | Invalid media operation. |
 | [62980149](../errorcode-image.md#62980149-invalid-image-parameter) | Invalid MIME type for the image source. |
@@ -1120,7 +1120,7 @@ Obtains the number of frames. This API uses a promise to return the result.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
 | [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -1170,7 +1170,7 @@ Obtains the number of frames. This API uses an asynchronous callback to return t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
 | [62980112](../errorcode-image.md#62980112-image-format-mismatch) | The image format does not match. |
 | [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
@@ -1412,7 +1412,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types; 3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 | [62980113](../errorcode-image.md#62980113-unknown-image-format) | Unknown image format. The image data provided is not in a recognized or supported format, or it may be corrupted. |
 | [62980116](../errorcode-image.md#62980116-decoding-failure) | Failed to decode the image. |
@@ -1468,7 +1468,7 @@ This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/su
 | Error Code ID | Error Message |
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error.Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types;3.Parameter verification failed; |
-| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-operation-failed) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 | [62980103](../errorcode-image.md#62980103-unsupported-image-type) | The image data is not supported. |
 | [62980110](../errorcode-image.md#62980110-incorrect-image-source-data) | The image source data is incorrect. |
 | [62980111](../errorcode-image.md#62980111-incomplete-image-source-data) | The image source data is incomplete. |
@@ -2077,7 +2077,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, or DNG format
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1. The index is negative.         2. The index is greater than or equal to the number of frames in the image. |
 
 **Examples**
 
@@ -2159,7 +2159,7 @@ This API applies only to images that are in JPEG, PNG, HEIF, WEBP, DNG, or HEIFS
 | --- | --- |
 | [7700102](../errorcode-image.md#7700102-unsupported-mime-type) | Unsupported MIME type. |
 | [7700202](../errorcode-image.md#7700202-unsupported-metadata) | Unsupported metadata. |
-| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative. 2. The index is greater than or equal to the number of frames in the image. |
+| [7700204](../errorcode-image.md#7700204-invalid-parameter) | Invalid parameter. Possible causes: 1.The index is negative.         2. The index is greater than or equal to the number of frames in the image. |
 
 **Examples**
 

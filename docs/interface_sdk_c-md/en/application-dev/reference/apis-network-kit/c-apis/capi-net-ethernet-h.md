@@ -6,6 +6,8 @@ Provides C APIs for the Ethernet NIC module.
 
 **Library**: libnet_ethernet.so
 
+**System capability**: SystemCapability.Communication.NetManager.Ethernet
+
 **Since**: 26.0.0
 
 **Related module**: [NetEthernet](capi-netethernet.md)
@@ -30,6 +32,8 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 **Description**
 
 Obtains the MAC address list of Ethernet NICs.
+
+**System capability**: SystemCapability.Communication.NetManager.Ethernet
 
 **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC
 
@@ -56,6 +60,8 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 **Description**
 
 Obtains the IP address list of Ethernet NICs.
+
+**System capability**: SystemCapability.Communication.NetManager.Ethernet
 
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 

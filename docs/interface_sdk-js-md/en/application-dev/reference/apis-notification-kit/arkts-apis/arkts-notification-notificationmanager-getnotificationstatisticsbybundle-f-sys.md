@@ -46,6 +46,7 @@ Obtains notification statistics of a specified list of applications in batches. 
 | [1600001](../errorcode-notification.md#1600001-internal-error) | Internal error. |
 | [1600003](../errorcode-notification.md#1600003-failed-to-connect-to-the-notification-service) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -62,3 +63,5 @@ notificationManager.getNotificationStatisticsByBundle(bundles).then(
   console.error(`getNotificationStatisticsByBundle err: ${JSON.stringify(err)}`)
 });
 ```
+
+<!--DelEnd-->

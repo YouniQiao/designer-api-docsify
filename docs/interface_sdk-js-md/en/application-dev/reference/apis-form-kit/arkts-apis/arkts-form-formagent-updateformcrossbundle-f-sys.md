@@ -52,6 +52,7 @@ Updates a widget by cross bundle. This API uses a promise to return the result.
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form to be operated has been deleted already. |
 | [16501007](../errorcode-form.md#16501007-untrusted-widget) | The form to be operated is not trusted. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,3 +75,5 @@ try {
   console.error(`catch error, code: ${error?.code}, message: ${error?.message}`);
 }
 ```
+
+<!--DelEnd-->

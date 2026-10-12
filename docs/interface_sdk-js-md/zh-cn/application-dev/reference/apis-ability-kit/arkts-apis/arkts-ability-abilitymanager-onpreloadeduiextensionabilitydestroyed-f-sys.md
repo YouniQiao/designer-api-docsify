@@ -40,6 +40,7 @@ function onPreloadedUIExtensionAbilityDestroyed(callback: PreloadedUIExtensionAb
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The application is not system-app, can not use system-api. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. Possible causes: Memory operation error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,3 +60,5 @@ try {
   console.error(`onPreloadedUIExtensionAbilityDestroyed failed, code is ${code}, message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

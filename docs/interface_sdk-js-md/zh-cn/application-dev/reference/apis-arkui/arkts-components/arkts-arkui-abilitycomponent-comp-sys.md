@@ -50,6 +50,7 @@ AbilityComponent(value: { want: import('../api/@ohos.app.ability.Want').default 
 
 ## 汇总
 
+<!--Del-->
 ## 示例
 
 ```TypeScript
@@ -76,3 +77,5 @@ struct MyComponent {
   }
 }
 ```
+
+<!--DelEnd-->

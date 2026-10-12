@@ -57,6 +57,7 @@ getInputSurface(callback: AsyncCallback<string>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -73,6 +74,8 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getinputsurface3"></a>
 
@@ -107,6 +110,7 @@ getInputSurface(): Promise<string>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -121,6 +125,8 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
   console.error('getInputSurface failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('error')
 
@@ -154,6 +160,7 @@ on(type: 'error', callback: ErrorCallback): void
 | [201](../../errorcode-universal.md#201-api权限校验失败) | permission denied.<br>**适用版本：** 12+ |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -164,6 +171,8 @@ videoRecorder.on('error', (error: BusinessError) => { // 设置'error'事件回�
   console.error(`audio error called, error: ${error}`);
 })
 ```
+
+<!--DelEnd-->
 
 <a id="pause1"></a>
 
@@ -200,6 +209,7 @@ pause(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -214,6 +224,8 @@ videoRecorder.pause((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="pause2"></a>
 
@@ -250,6 +262,7 @@ pause(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -262,6 +275,8 @@ videoRecorder.pause().then(() => {
   console.error('pause videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="prepare1"></a>
 
@@ -300,6 +315,7 @@ prepare(config: VideoRecorderConfig, callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -337,6 +353,8 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
   }
 })
 ```
+
+<!--DelEnd-->
 
 <a id="prepare2"></a>
 
@@ -380,6 +398,7 @@ prepare(config: VideoRecorderConfig): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -416,6 +435,8 @@ videoRecorder.prepare(videoConfig).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="release1"></a>
 
 ## release
@@ -447,6 +468,7 @@ release(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -461,6 +483,8 @@ videoRecorder.release((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="release2"></a>
 
@@ -493,6 +517,7 @@ release(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -505,6 +530,8 @@ videoRecorder.release().then(() => {
   console.error('release videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="reset1"></a>
 
@@ -540,6 +567,7 @@ reset(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -554,6 +582,8 @@ videoRecorder.reset((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="reset2"></a>
 
@@ -589,6 +619,7 @@ reset(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -601,6 +632,8 @@ videoRecorder.reset().then(() => {
   console.error('reset videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="resume1"></a>
 
@@ -635,6 +668,7 @@ resume(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -649,6 +683,8 @@ videoRecorder.resume((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="resume2"></a>
 
@@ -683,6 +719,7 @@ resume(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -695,6 +732,8 @@ videoRecorder.resume().then(() => {
   console.error('resume videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -731,6 +770,7 @@ start(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -745,6 +785,8 @@ videoRecorder.start((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -781,6 +823,7 @@ start(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -793,6 +836,8 @@ videoRecorder.start().then(() => {
   console.error('start videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -829,6 +874,7 @@ stop(callback: AsyncCallback<void>): void
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -843,6 +889,8 @@ videoRecorder.stop((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -879,6 +927,7 @@ stop(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -891,6 +940,8 @@ videoRecorder.stop().then(() => {
   console.error('stop videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 ## state
 

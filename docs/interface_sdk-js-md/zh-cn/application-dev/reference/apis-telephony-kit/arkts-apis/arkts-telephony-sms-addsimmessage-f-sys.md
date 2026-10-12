@@ -45,6 +45,7 @@ function addSimMessage(options: SimMessageOptions, callback: AsyncCallback<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ sms.addSimMessage(simMessageOptions, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="addsimmessage2"></a>
@@ -107,6 +110,7 @@ function addSimMessage(options: SimMessageOptions): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -125,3 +129,5 @@ sms.addSimMessage(simMessageOptions).then(() => {
     console.error(`addSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

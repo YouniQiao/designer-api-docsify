@@ -6,6 +6,8 @@ Defines the common types for the native module.
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -475,6 +477,8 @@ enum ArkUI_XComponentType
 
 Enumerates the types of the <b><XComponent></b> component.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -491,6 +495,8 @@ enum ArkUI_CopyOptions
 **描述：**
 
 定义文本复制粘贴模式枚举值。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -511,6 +517,8 @@ enum ArkUI_ShadowType
 
 Enumerates the shadow types.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -528,6 +536,8 @@ enum ArkUI_FocusWrapMode
 
 Enumerates the focus wrap mode of components.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -544,6 +554,8 @@ enum ArkUI_ItemFillPolicy
 **描述：**
 
 Specifies the number of columns for different responsive breakpoint specifications.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -564,6 +576,8 @@ enum ArkUI_BorderStyle
 
 Enumerates the border styles.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -581,6 +595,8 @@ enum ArkUI_ShadowStyle
 **描述：**
 
 Enumerates the shadow styles.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -602,6 +618,8 @@ enum ArkUI_AnimationCurve
 **描述：**
 
 Enumerates the animation curves.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -631,6 +649,8 @@ enum ArkUI_SwiperArrow
 
 Enumerates arrow styles of the navigation point indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -649,6 +669,8 @@ enum ArkUI_SwiperNestedScrollMode
 
 Nested scrolling mode for Swiper components and parent components.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -665,6 +687,8 @@ enum ArkUI_PageFlipMode
 **描述：**
 
 Enumerates the page flipping modes using the mouse wheel for the <b>Swiper</b> component.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
@@ -683,6 +707,8 @@ enum ArkUI_SwiperAnimationMode
 
 Enumerates the animation modes for [NODE_SWIPER_INDEX](capi-native-node-h.md#arkui_nodeattributetype).
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 | 枚举项 | 描述 |
@@ -700,6 +726,8 @@ enum ArkUI_AccessibilityMode
 **描述：**
 
 Enumerates the accessibility modes.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -720,6 +748,8 @@ enum ArkUI_AnimationPlayMode
 
 Enumerates the animation playback modes.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -739,6 +769,8 @@ enum ArkUI_AdaptiveColor
 
 Enumerates the adaptive color modes.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -755,6 +787,8 @@ enum ArkUI_ColorMode
 **描述：**
 
 Enumerates the color modes.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -774,6 +808,8 @@ enum ArkUI_SystemColorMode
 
 Enumerates the system color modes.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -790,6 +826,8 @@ enum ArkUI_BlurStyle
 **描述：**
 
 Enumerates the blur styles.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -819,6 +857,8 @@ enum ArkUI_BlurStyleActivePolicy
 
 Enumerates the activation policies for the background blur effect.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 | 枚举项 | 描述 |
@@ -836,6 +876,8 @@ enum ArkUI_BlendMode
 **描述：**
 
 Enumerates the blend modes.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -882,6 +924,8 @@ enum ArkUI_ColorStrategy
 
 Enumerates the foreground colors.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -899,6 +943,8 @@ enum ArkUI_MaskType
 **描述：**
 
 Enumerates the mask types.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -920,6 +966,8 @@ enum ArkUI_ClipType
 
 Enumerates the clipping region types.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -939,6 +987,8 @@ enum ArkUI_ShapeType
 
 Enumerates the custom shapes.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -957,6 +1007,8 @@ enum ArkUI_LinearGradientDirection
 **描述：**
 
 Enumerates the gradient directions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -983,6 +1035,8 @@ enum ArkUI_TransitionEdge
 
 Enumerates the slide-in and slide-out positions of the component from the screen edge during transition.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1002,6 +1056,8 @@ enum ArkUI_BlendApplyType
 
 Defines how the specified blend mode is applied.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1019,6 +1075,8 @@ enum ArkUI_FinishCallbackType
 
 Enumerates the animation onFinish callback types.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1035,6 +1093,8 @@ enum ArkUI_LengthMetricUnit
 **描述：**
 
 Enumerates the component units.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1054,6 +1114,8 @@ enum ArkUI_RenderFit
 **描述：**
 
 Enumerates the render fit.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1086,6 +1148,8 @@ enum ArkUI_SwiperIndicatorType
 
 Define the navigation indicator type of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1102,6 +1166,8 @@ enum ArkUI_AnimationStatus
 **描述：**
 
 Defines the playback status for the image animator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1122,6 +1188,8 @@ enum ArkUI_AnimationFillMode
 
 Defines the status before and after execution of the animation in the current playback direction.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1141,6 +1209,8 @@ enum ArkUI_AccessibilityCheckedState
 
 Defines the state type for the accessibility checkbox.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1157,6 +1227,8 @@ enum ArkUI_AnimationDirection
 **描述：**
 
 Enumerates the animation playback modes.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1177,6 +1249,8 @@ enum ArkUI_AccessibilityActionType
 
 Define accessible action types.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1196,6 +1270,8 @@ enum ArkUI_NavDestinationState
 **描述：**
 
 Defines the state of the NavDestination component.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1223,6 +1299,8 @@ enum ArkUI_RouterPageState
 
 Define the state of Router Page.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1243,6 +1321,8 @@ enum ArkUI_SafeAreaType
 
 defines the enumerated value of the extended security zone.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -1261,6 +1341,8 @@ enum ArkUI_KeyboardAvoidMode
 
 defines the enumerated value of the customDialog's keyboard avoid mode.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 | 枚举项 | 描述 |
@@ -1277,6 +1359,8 @@ enum ArkUI_HoverModeAreaType
 **描述：**
 
 defines the enumerated value of area in hover mode.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
@@ -1295,6 +1379,8 @@ enum ArkUI_ExpandMode
 
 定义子节点展开模式枚举值。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 | 枚举项 | 描述 |
@@ -1312,6 +1398,8 @@ enum ArkUI_EdgeDirection
 **描述：**
 
 定义矩形边方向。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 20
 
@@ -1333,6 +1421,8 @@ enum ArkUI_CornerDirection
 
 定义角度方向。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -1353,6 +1443,8 @@ enum ArkUI_MenuPolicy
 
 Menu pop-up strategy.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
@@ -1371,6 +1463,8 @@ enum ArkUI_RenderStrategy
 
 Enumerates the graphics rendering strategy.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 | 枚举项 | 描述 |
@@ -1387,6 +1481,8 @@ enum OH_ArkUI_CrossLanguageOperatingStatus
 **描述：**
 
 Enumerates the tree operating status for the cross-language option.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -1405,6 +1501,8 @@ enum OH_ArkUI_NodeMountPolicy
 **描述：**
 
 Enumeration of the policy for mounting child node to the target node.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -1426,6 +1524,8 @@ ArkUI_LayoutConstraint* OH_ArkUI_LayoutConstraint_Create()
 
 Creates a size constraint.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 ### OH_ArkUI_LayoutConstraint_Copy()
@@ -1437,6 +1537,8 @@ ArkUI_LayoutConstraint* OH_ArkUI_LayoutConstraint_Copy(const ArkUI_LayoutConstra
 **描述：**
 
 Creates a deep copy of a size constraint.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1462,6 +1564,8 @@ void* OH_ArkUI_LayoutConstraint_Dispose(ArkUI_LayoutConstraint* Constraint)
 
 Destroys the pointer to a size constraint.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1479,6 +1583,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetMaxWidth(const ArkUI_LayoutConstraint* Cons
 **描述：**
 
 Obtains the maximum width for a size constraint, in px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1504,6 +1610,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetMinWidth(const ArkUI_LayoutConstraint* Cons
 
 Obtains the minimum width for a size constraint, in px.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1527,6 +1635,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetMaxHeight(const ArkUI_LayoutConstraint* Con
 **描述：**
 
 Obtains the maximum height for a size constraint, in px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1552,6 +1662,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetMinHeight(const ArkUI_LayoutConstraint* Con
 
 Obtains the minimum height for a size constraint, in px.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1575,6 +1687,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetPercentReferenceWidth(const ArkUI_LayoutCon
 **描述：**
 
 Obtains the width percentage reference for a size constraint, in px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1600,6 +1714,8 @@ int32_t OH_ArkUI_LayoutConstraint_GetPercentReferenceHeight(const ArkUI_LayoutCo
 
 Obtains the height percentage reference for a size constraint, in px.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1624,6 +1740,8 @@ void OH_ArkUI_LayoutConstraint_SetMaxWidth(ArkUI_LayoutConstraint* Constraint, i
 
 Sets the maximum width.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1642,6 +1760,8 @@ void OH_ArkUI_LayoutConstraint_SetMinWidth(ArkUI_LayoutConstraint* Constraint, i
 **描述：**
 
 Sets the minimum width.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1662,6 +1782,8 @@ void OH_ArkUI_LayoutConstraint_SetMaxHeight(ArkUI_LayoutConstraint* Constraint, 
 
 Sets the maximum height.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1680,6 +1802,8 @@ void OH_ArkUI_LayoutConstraint_SetMinHeight(ArkUI_LayoutConstraint* Constraint, 
 **描述：**
 
 Sets the minimum height.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1700,6 +1824,8 @@ void OH_ArkUI_LayoutConstraint_SetPercentReferenceWidth(ArkUI_LayoutConstraint* 
 
 Sets the width percentage reference.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1719,6 +1845,8 @@ void OH_ArkUI_LayoutConstraint_SetPercentReferenceHeight(ArkUI_LayoutConstraint*
 
 Sets the height percentage reference.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1737,6 +1865,8 @@ void* OH_ArkUI_DrawContext_GetCanvas(ArkUI_DrawContext* context)
 **描述：**
 
 Obtains the pointer to a canvas for drawing, which can be converted into the <b>OH_Drawing_Canvas</b> pointer in the <b>Drawing</b> module.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1762,6 +1892,8 @@ ArkUI_IntSize OH_ArkUI_DrawContext_GetSize(ArkUI_DrawContext* context)
 
 Obtains the size of a drawing area.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1785,6 +1917,8 @@ ArkUI_SwiperIndicator* OH_ArkUI_SwiperIndicator_Create(ArkUI_SwiperIndicatorType
 **描述：**
 
 Creates a navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1810,6 +1944,8 @@ void OH_ArkUI_SwiperIndicator_Dispose(ArkUI_SwiperIndicator* indicator)
 
 Destroys the pointer to the indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1827,6 +1963,8 @@ void OH_ArkUI_SwiperIndicator_SetStartPosition(ArkUI_SwiperIndicator* indicator,
 **描述：**
 
 Sets the distance between the navigation point and the start of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1846,6 +1984,8 @@ float OH_ArkUI_SwiperIndicator_GetStartPosition(ArkUI_SwiperIndicator* indicator
 **描述：**
 
 Obtains the distance between the navigation point and the start of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1871,6 +2011,8 @@ void OH_ArkUI_SwiperIndicator_SetTopPosition(ArkUI_SwiperIndicator* indicator, f
 
 Sets the distance between the navigation point and the top of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1889,6 +2031,8 @@ float OH_ArkUI_SwiperIndicator_GetTopPosition(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the distance between the navigation point and the top of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1914,6 +2058,8 @@ void OH_ArkUI_SwiperIndicator_SetEndPosition(ArkUI_SwiperIndicator* indicator, f
 
 Sets the distance between the navigation point and the right of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1932,6 +2078,8 @@ float OH_ArkUI_SwiperIndicator_GetEndPosition(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the distance between the navigation point and the end of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -1957,6 +2105,8 @@ void OH_ArkUI_SwiperIndicator_SetBottomPosition(ArkUI_SwiperIndicator* indicator
 
 Sets the distance between the navigation point and the bottom of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -1975,6 +2125,8 @@ float OH_ArkUI_SwiperIndicator_GetBottomPosition(ArkUI_SwiperIndicator* indicato
 **描述：**
 
 Obtains the distance between the navigation point and the bottom of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2000,6 +2152,8 @@ void OH_ArkUI_SwiperIndicator_SetItemWidth(ArkUI_SwiperIndicator* indicator, flo
 
 Sets the width of the dot for the dot indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2018,6 +2172,8 @@ float OH_ArkUI_SwiperIndicator_GetItemWidth(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the width of the dot for the dot indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2043,6 +2199,8 @@ void OH_ArkUI_SwiperIndicator_SetItemHeight(ArkUI_SwiperIndicator* indicator, fl
 
 Sets the height of the dot for the dot indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2061,6 +2219,8 @@ float OH_ArkUI_SwiperIndicator_GetItemHeight(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the height of the dot for the dot indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2086,6 +2246,8 @@ void OH_ArkUI_SwiperIndicator_SetSelectedItemWidth(ArkUI_SwiperIndicator* indica
 
 Sets the width of the selected dot for the dot indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2104,6 +2266,8 @@ float OH_ArkUI_SwiperIndicator_GetSelectedItemWidth(ArkUI_SwiperIndicator* indic
 **描述：**
 
 Obtains the width of the selected dot for the dot indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2129,6 +2293,8 @@ void OH_ArkUI_SwiperIndicator_SetSelectedItemHeight(ArkUI_SwiperIndicator* indic
 
 Sets the height of the selected dot for the dot indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2147,6 +2313,8 @@ float OH_ArkUI_SwiperIndicator_GetSelectedItemHeight(ArkUI_SwiperIndicator* indi
 **描述：**
 
 Obtains the height of the selected dot for the dot indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2172,6 +2340,8 @@ void OH_ArkUI_SwiperIndicator_SetMask(ArkUI_SwiperIndicator* indicator, int32_t 
 
 Sets whether to display the mask style of the dot navigation indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2190,6 +2360,8 @@ int32_t OH_ArkUI_SwiperIndicator_GetMask(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains whether to display the mask style of the dot navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2215,6 +2387,8 @@ void OH_ArkUI_SwiperIndicator_SetColor(ArkUI_SwiperIndicator* indicator, uint32_
 
 Sets the color of the dot navigation indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2233,6 +2407,8 @@ uint32_t OH_ArkUI_SwiperIndicator_GetColor(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the color of the dot navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2258,6 +2434,8 @@ void OH_ArkUI_SwiperIndicator_SetSelectedColor(ArkUI_SwiperIndicator* indicator,
 
 Sets the color of the selected dot for the navigation indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2276,6 +2454,8 @@ uint32_t OH_ArkUI_SwiperIndicator_GetSelectedColor(ArkUI_SwiperIndicator* indica
 **描述：**
 
 Obtains the color of the selected dot for the dot navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2300,6 +2480,8 @@ int32_t OH_ArkUI_SwiperIndicator_SetMaxDisplayCount(ArkUI_SwiperIndicator* indic
 **描述：**
 
 Sets the number of maxDisplayCount for the dot navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -2326,6 +2508,8 @@ int32_t OH_ArkUI_SwiperIndicator_GetMaxDisplayCount(ArkUI_SwiperIndicator* indic
 
 Obtains the number of maxDisplayCount for the dot navigation indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -2350,6 +2534,8 @@ void OH_ArkUI_SwiperIndicator_SetIgnoreSizeOfBottom(ArkUI_SwiperIndicator* indic
 
 Sets whether to ignore the size of the indicator for [OH_ArkUI_SwiperIndicator_SetBottomPosition](capi-native-type-h.md#oh_arkui_swiperindicator_setbottomposition).
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2368,6 +2554,8 @@ int32_t OH_ArkUI_SwiperIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperIndicator* in
 **描述：**
 
 Obtains whether to ignore the size of the indicator for [OH_ArkUI_SwiperIndicator_SetBottomPosition](capi-native-type-h.md#oh_arkui_swiperindicator_setbottomposition).
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2393,6 +2581,8 @@ void OH_ArkUI_SwiperIndicator_SetSpace(ArkUI_SwiperIndicator* indicator, float s
 
 Sets the space between the dots of the navigation indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2411,6 +2601,8 @@ float OH_ArkUI_SwiperIndicator_GetSpace(ArkUI_SwiperIndicator* indicator)
 **描述：**
 
 Obtains the space between the dots of the navigation indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2436,6 +2628,8 @@ ArkUI_SwiperDigitIndicator *OH_ArkUI_SwiperDigitIndicator_Create()
 
 Creates a digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **返回值：**
@@ -2453,6 +2647,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetStartPosition(ArkUI_SwiperDigitIndicator* 
 **描述：**
 
 Sets the distance between the digital indicator and the start of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2472,6 +2668,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetStartPosition(ArkUI_SwiperDigitIndicator*
 **描述：**
 
 Gets the distance between the digital indicator and the start of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2497,6 +2695,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetTopPosition(ArkUI_SwiperDigitIndicator* in
 
 Sets the distance between the digital indicator and the top of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2515,6 +2715,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetTopPosition(ArkUI_SwiperDigitIndicator* i
 **描述：**
 
 Gets the distance between the digital indicator and the top of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2540,6 +2742,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetEndPosition(ArkUI_SwiperDigitIndicator* in
 
 Sets the distance between the digital indicator and the end of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2558,6 +2762,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetEndPosition(ArkUI_SwiperDigitIndicator* i
 **描述：**
 
 Gets the distance between the digital indicator and the end of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2583,6 +2789,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetBottomPosition(ArkUI_SwiperDigitIndicator*
 
 Sets the distance between the digital indicator and the bottom of the swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2601,6 +2809,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetBottomPosition(ArkUI_SwiperDigitIndicator
 **描述：**
 
 Gets the distance between the digital indicator and the bottom of the swiper.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2626,6 +2836,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetFontColor(ArkUI_SwiperDigitIndicator* indi
 
 Sets the font color of total count in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2644,6 +2856,8 @@ uint32_t OH_ArkUI_SwiperDigitIndicator_GetFontColor(ArkUI_SwiperDigitIndicator* 
 **描述：**
 
 Gets the font color of total count in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2669,6 +2883,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetSelectedFontColor(ArkUI_SwiperDigitIndicat
 
 Sets the font color of selected index in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2687,6 +2903,8 @@ uint32_t OH_ArkUI_SwiperDigitIndicator_GetSelectedFontColor(ArkUI_SwiperDigitInd
 **描述：**
 
 Gets the font color of selected index in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2712,6 +2930,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetFontSize(ArkUI_SwiperDigitIndicator* indic
 
 Sets the font size of total count in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2730,6 +2950,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetFontSize(ArkUI_SwiperDigitIndicator* indi
 **描述：**
 
 Gets the font size of total count in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2755,6 +2977,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetSelectedFontSize(ArkUI_SwiperDigitIndicato
 
 Sets the font size of selected index in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2773,6 +2997,8 @@ float OH_ArkUI_SwiperDigitIndicator_GetSelectedFontSize(ArkUI_SwiperDigitIndicat
 **描述：**
 
 Gets the font size of selected index in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2798,6 +3024,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetFontWeight(ArkUI_SwiperDigitIndicator *ind
 
 Sets the font weight of total count in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2816,6 +3044,8 @@ ArkUI_FontWeight OH_ArkUI_SwiperDigitIndicator_GetFontWeight(ArkUI_SwiperDigitIn
 **描述：**
 
 Gets the font weight of total count in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2841,6 +3071,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetSelectedFontWeight(ArkUI_SwiperDigitIndica
 
 Sets the font weight of selected index in the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2859,6 +3091,8 @@ ArkUI_FontWeight OH_ArkUI_SwiperDigitIndicator_GetSelectedFontWeight(ArkUI_Swipe
 **描述：**
 
 Gets the font weight of selected index in the digital indicator.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2884,6 +3118,8 @@ void OH_ArkUI_SwiperDigitIndicator_Destroy(ArkUI_SwiperDigitIndicator *indicator
 
 Destroys the digital indicator.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -2901,6 +3137,8 @@ void OH_ArkUI_SwiperDigitIndicator_SetIgnoreSizeOfBottom(ArkUI_SwiperDigitIndica
 **描述：**
 
 Sets whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-native-type-h.md#oh_arkui_swiperdigitindicator_setbottomposition).
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2920,6 +3158,8 @@ int32_t OH_ArkUI_SwiperDigitIndicator_GetIgnoreSizeOfBottom(ArkUI_SwiperDigitInd
 **描述：**
 
 Obtains whether to ignore the size of the indicator for [OH_ArkUI_SwiperDigitIndicator_SetBottomPosition](capi-native-type-h.md#oh_arkui_swiperdigitindicator_setbottomposition).
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2945,6 +3185,8 @@ ArkUI_SwiperArrowStyle *OH_ArkUI_SwiperArrowStyle_Create()
 
 Creates a arrow style for swiper.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **返回值：**
@@ -2962,6 +3204,8 @@ void OH_ArkUI_SwiperArrowStyle_SetShowBackground(ArkUI_SwiperArrowStyle *arrowSt
 **描述：**
 
 Sets whether to show the background for the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -2981,6 +3225,8 @@ int32_t OH_ArkUI_SwiperArrowStyle_GetShowBackground(ArkUI_SwiperArrowStyle* arro
 **描述：**
 
 Gets whether to show the background for the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3006,6 +3252,8 @@ void OH_ArkUI_SwiperArrowStyle_SetShowSidebarMiddle(ArkUI_SwiperArrowStyle* arro
 
 Sets the display position of the arrow.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -3024,6 +3272,8 @@ int32_t OH_ArkUI_SwiperArrowStyle_GetShowSidebarMiddle(ArkUI_SwiperArrowStyle* a
 **描述：**
 
 Gets the display position of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3049,6 +3299,8 @@ void OH_ArkUI_SwiperArrowStyle_SetBackgroundSize(ArkUI_SwiperArrowStyle* arrowSt
 
 Sets the background size of the arrow.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -3067,6 +3319,8 @@ float OH_ArkUI_SwiperArrowStyle_GetBackgroundSize(ArkUI_SwiperArrowStyle *arrowS
 **描述：**
 
 Gets the background size of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3092,6 +3346,8 @@ void OH_ArkUI_SwiperArrowStyle_Destroy(ArkUI_SwiperArrowStyle *arrowStyle)
 
 Destroys the arrow style.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -3109,6 +3365,8 @@ void OH_ArkUI_SwiperArrowStyle_SetBackgroundColor(ArkUI_SwiperArrowStyle *arrowS
 **描述：**
 
 Sets the background color of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3128,6 +3386,8 @@ uint32_t OH_ArkUI_SwiperArrowStyle_GetBackgroundColor(ArkUI_SwiperArrowStyle* ar
 **描述：**
 
 Gets the background color of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3153,6 +3413,8 @@ void OH_ArkUI_SwiperArrowStyle_SetArrowSize(ArkUI_SwiperArrowStyle* arrowStyle, 
 
 Sets the size of the arrow.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -3171,6 +3433,8 @@ float OH_ArkUI_SwiperArrowStyle_GetArrowSize(ArkUI_SwiperArrowStyle* arrowStyle)
 **描述：**
 
 Gets the size of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3196,6 +3460,8 @@ void OH_ArkUI_SwiperArrowStyle_SetArrowColor(ArkUI_SwiperArrowStyle* arrowStyle,
 
 Sets the color of the arrow.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 19
 
 **参数：**
@@ -3214,6 +3480,8 @@ uint32_t OH_ArkUI_SwiperArrowStyle_GetArrowColor(ArkUI_SwiperArrowStyle* arrowSt
 **描述：**
 
 Gets the color of the arrow.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 19
 
@@ -3239,6 +3507,8 @@ ArkUI_ContentTransitionEffect* OH_ArkUI_ContentTransitionEffect_Create(int32_t t
 
 创建内容切换动画效果。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 21
 
 **参数：**
@@ -3263,6 +3533,8 @@ ArkUI_AccessibilityState* OH_ArkUI_AccessibilityState_Create(void)
 
 Create accessibility state.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **返回值：**
@@ -3280,6 +3552,8 @@ void OH_ArkUI_AccessibilityState_Dispose(ArkUI_AccessibilityState* state)
 **描述：**
 
 Dispose accessibility state.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3299,6 +3573,8 @@ void OH_ArkUI_AccessibilityState_SetDisabled(ArkUI_AccessibilityState* state, in
 
 Set accessibility state disabled.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3317,6 +3593,8 @@ int32_t OH_ArkUI_AccessibilityState_IsDisabled(ArkUI_AccessibilityState* state)
 **描述：**
 
 Get accessibility state disabled.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3342,6 +3620,8 @@ void OH_ArkUI_AccessibilityState_SetSelected(ArkUI_AccessibilityState* state, in
 
 Set accessibility state selected.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3360,6 +3640,8 @@ int32_t OH_ArkUI_AccessibilityState_IsSelected(ArkUI_AccessibilityState* state)
 **描述：**
 
 Get accessibility state selected.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3385,6 +3667,8 @@ void OH_ArkUI_AccessibilityState_SetCheckedState(ArkUI_AccessibilityState* state
 
 Set accessibility checked state.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3403,6 +3687,8 @@ int32_t OH_ArkUI_AccessibilityState_GetCheckedState(ArkUI_AccessibilityState* st
 **描述：**
 
 Get accessibility checked state.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3428,6 +3714,8 @@ ArkUI_AccessibilityValue* OH_ArkUI_AccessibilityValue_Create(void)
 
 Create accessibility value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **返回值：**
@@ -3445,6 +3733,8 @@ void OH_ArkUI_AccessibilityValue_Dispose(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Dispose accessibility value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3464,6 +3754,8 @@ void OH_ArkUI_AccessibilityValue_SetMin(ArkUI_AccessibilityValue* value, int32_t
 
 Set accessibility minimum value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3482,6 +3774,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetMin(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility minimum value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3507,6 +3801,8 @@ void OH_ArkUI_AccessibilityValue_SetMax(ArkUI_AccessibilityValue* value, int32_t
 
 Set accessibility minimum value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3525,6 +3821,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetMax(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility minimum value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3550,6 +3848,8 @@ void OH_ArkUI_AccessibilityValue_SetCurrent(ArkUI_AccessibilityValue* value, int
 
 Set accessibility current value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3568,6 +3868,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetCurrent(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility current value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3593,6 +3895,8 @@ void OH_ArkUI_AccessibilityValue_SetRangeMin(ArkUI_AccessibilityValue* value, in
 
 Set accessibility minimum value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 18
 
 **参数：**
@@ -3611,6 +3915,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetRangeMin(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility minimum value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 18
 
@@ -3636,6 +3942,8 @@ void OH_ArkUI_AccessibilityValue_SetRangeMax(ArkUI_AccessibilityValue* value, in
 
 Set accessibility maximum value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 18
 
 **参数：**
@@ -3654,6 +3962,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetRangeMax(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility maximum value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 18
 
@@ -3679,6 +3989,8 @@ void OH_ArkUI_AccessibilityValue_SetRangeCurrent(ArkUI_AccessibilityValue* value
 
 Set accessibility current value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 18
 
 **参数：**
@@ -3697,6 +4009,8 @@ int32_t OH_ArkUI_AccessibilityValue_GetRangeCurrent(ArkUI_AccessibilityValue* va
 **描述：**
 
 Get accessibility current value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 18
 
@@ -3722,6 +4036,8 @@ void OH_ArkUI_AccessibilityValue_SetText(ArkUI_AccessibilityValue* value, const 
 
 Set accessibility text value.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **参数：**
@@ -3740,6 +4056,8 @@ const char* OH_ArkUI_AccessibilityValue_GetText(ArkUI_AccessibilityValue* value)
 **描述：**
 
 Get accessibility text value.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -3765,6 +4083,8 @@ void OH_ArkUI_CustomProperty_Destroy(ArkUI_CustomProperty* handle)
 
 销毁[ArkUI_CustomProperty](capi-arkui-nativemodule-arkui-customproperty.md)实例。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 14
 
 **参数：**
@@ -3782,6 +4102,8 @@ const char* OH_ArkUI_CustomProperty_GetStringValue(ArkUI_CustomProperty* handle)
 **描述：**
 
 获取自定义属性对象的value信息。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 14
 
@@ -3807,6 +4129,8 @@ const char* OH_ArkUI_HostWindowInfo_GetName(ArkUI_HostWindowInfo* info)
 
 获取[ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md)对象中的窗口名称。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 **参数：**
@@ -3831,6 +4155,8 @@ void OH_ArkUI_HostWindowInfo_Destroy(ArkUI_HostWindowInfo* info)
 
 销毁[ArkUI_HostWindowInfo](capi-arkui-nativemodule-arkui-hostwindowinfo.md)对象。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 **参数：**
@@ -3849,6 +4175,8 @@ void OH_ArkUI_ActiveChildrenInfo_Destroy(ArkUI_ActiveChildrenInfo* handle)
 
 销毁OH_ArkUI_ActiveChildrenInfo实例，释放获取活跃子节点信息时分配的资源。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 14
 
 **参数：**
@@ -3866,6 +4194,8 @@ ArkUI_NodeHandle OH_ArkUI_ActiveChildrenInfo_GetNodeByIndex(ArkUI_ActiveChildren
 **描述：**
 
 获取OH_ArkUI_ActiveChildrenInfo结构体的下标为index的子节点。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 14
 
@@ -3892,6 +4222,8 @@ int32_t OH_ArkUI_ActiveChildrenInfo_GetCount(ArkUI_ActiveChildrenInfo* handle)
 
 获取[ArkUI_ActiveChildrenInfo](capi-arkui-nativemodule-arkui-activechildreninfo.md)结构体内的子节点数量，适用于遍历活跃子节点前确定数量。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 14
 
 **参数：**
@@ -3916,6 +4248,8 @@ ArkUI_CrossLanguageOption* OH_ArkUI_CrossLanguageOption_Create(void)
 
 创建跨语言配置项实例。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 **返回值：**
@@ -3933,6 +4267,8 @@ void OH_ArkUI_CrossLanguageOption_Destroy(ArkUI_CrossLanguageOption* option)
 **描述：**
 
 销毁跨语言配置项实例。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
@@ -3952,6 +4288,8 @@ void OH_ArkUI_CrossLanguageOption_SetAttributeSettingStatus(ArkUI_CrossLanguageO
 
 设置配置项中是否允许跨语言修改属性。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 15
 
 **参数：**
@@ -3970,6 +4308,8 @@ bool OH_ArkUI_CrossLanguageOption_GetAttributeSettingStatus(ArkUI_CrossLanguageO
 **描述：**
 
 获取配置项中是否允许跨语言修改属性。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 15
 
@@ -3995,6 +4335,8 @@ ArkUI_EmbeddedComponentOption* OH_ArkUI_EmbeddedComponentOption_Create()
 
 Create an object for the EmbeddedComponent option.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 20
 
 **返回值：**
@@ -4013,6 +4355,8 @@ void OH_ArkUI_EmbeddedComponentOption_Dispose(ArkUI_EmbeddedComponentOption* opt
 
 Destroy the object by EmbeddedComponent option.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 20
 
 **参数：**
@@ -4030,6 +4374,8 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnError(ArkUI_EmbeddedComponentOption* 
 **描述：**
 
 Set the onError of EmbeddedComponent.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 20
 
@@ -4052,6 +4398,8 @@ void OH_ArkUI_EmbeddedComponentOption_SetOnTerminated(ArkUI_EmbeddedComponentOpt
 
 Set the onTerminated of EmbeddedComponent.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 20
 
 **参数：**
@@ -4071,6 +4419,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_SetContent(ArkUI_TextMenuItem* item, const
 **描述：**
 
 Set text menu item title.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4096,6 +4446,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_GetContent(const ArkUI_TextMenuItem* item,
 **描述：**
 
 Get text menu item title.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4124,6 +4476,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_SetIcon(ArkUI_TextMenuItem* item, const ch
 
 Set text menu item icon.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4148,6 +4502,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_GetIcon(const ArkUI_TextMenuItem* item, ch
 **描述：**
 
 Get text menu item icon.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4176,6 +4532,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_SetLabelInfo(ArkUI_TextMenuItem* item, con
 
 Set text menu item label info for keyboard shortcut.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4200,6 +4558,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_GetLabelInfo(const ArkUI_TextMenuItem* ite
 **描述：**
 
 Get text menu item label info for keyboard shortcut..
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4228,6 +4588,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_SetId(ArkUI_TextMenuItem* item, int32_t id
 
 Set text menu item id.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4252,6 +4614,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItem_GetId(const ArkUI_TextMenuItem* item, int3
 **描述：**
 
 Get text menu item id.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4278,6 +4642,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItemArray_GetSize(ArkUI_TextMenuItemArray* item
 
 Get the size of text menu items.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4302,6 +4668,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItemArray_GetItem(ArkUI_TextMenuItemArray* item
 **描述：**
 
 Get text menu item at index.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4329,6 +4697,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItemArray_Insert(ArkUI_TextMenuItemArray* items
 
 Insert text menu item at index.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4355,6 +4725,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItemArray_Erase(ArkUI_TextMenuItemArray* items,
 
 Erase text menu item at index.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4380,6 +4752,8 @@ ArkUI_ErrorCode OH_ArkUI_TextMenuItemArray_Clear(ArkUI_TextMenuItemArray* items)
 
 Clear all the items.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4403,6 +4777,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditMenuOptions_RegisterOnCreateMenuCallback(ArkUI_
 **描述：**
 
 Set the event to be called when text menu create.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4430,6 +4806,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditMenuOptions_RegisterOnPrepareMenuCallback(ArkUI
 
 Set the event to be called when menu prepare.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4455,6 +4833,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditMenuOptions_RegisterOnMenuItemClickCallback(Ark
 **描述：**
 
 Set the event to be called when menu item click.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4482,6 +4862,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_SetSpanType(ArkUI_TextSelectio
 
 Sets the recognition types of a configuration object for selected text recognition.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4506,6 +4888,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_GetSpanType(ArkUI_TextSelectio
 **描述：**
 
 Gets the span type select menu options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4532,6 +4916,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_SetContentNode(ArkUI_TextSelec
 
 Set custom text menu node of text.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4556,6 +4942,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_GetContentNode(ArkUI_TextSelec
 **描述：**
 
 Get custom text menu node of text.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4582,6 +4970,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_SetResponseType(ArkUI_TextSele
 
 Sets the recognition types of a configuration object for selected text recognition.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4607,6 +4997,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_GetResponseType(ArkUI_TextSele
 
 Gets the response type select menu options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4631,6 +5023,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuShowCallback(Ark
 **描述：**
 
 Set the event to be called when selection menu show.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 22
 
@@ -4658,6 +5052,8 @@ ArkUI_ErrorCode OH_ArkUI_TextSelectionMenuOptions_RegisterOnMenuHideCallback(Ark
 
 Set the event to be called when selection menu hide.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 22
 
 **参数：**
@@ -4684,6 +5080,8 @@ ArkUI_SelectionOptions* OH_ArkUI_SelectionOptions_Create()
 
 Create selection options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **返回值：**
@@ -4701,6 +5099,8 @@ void OH_ArkUI_SelectionOptions_Dispose(ArkUI_SelectionOptions* options)
 **描述：**
 
 Dispose selection options object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4720,6 +5120,8 @@ void OH_ArkUI_SelectionOptions_SetMenuPolicy(ArkUI_SelectionOptions* options, Ar
 
 Sets the menu policy for selection options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -4738,6 +5140,8 @@ ArkUI_MenuPolicy OH_ArkUI_SelectionOptions_GetMenuPolicy(ArkUI_SelectionOptions*
 **描述：**
 
 Gets the menu policy of selection options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4763,6 +5167,8 @@ ArkUI_MotionPathOptions* OH_ArkUI_MotionPathOptions_Create()
 
 Create an object of the motion path options for path animation. In the newly created ArkUI_MotionPathOptions, the "path" value is an empty string, the "from" value is 0, the "to" value is 1, and the "rotatable" value is false.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **返回值：**
@@ -4781,6 +5187,8 @@ void OH_ArkUI_MotionPathOptions_Dispose(ArkUI_MotionPathOptions* options)
 
 Dispose the ArkUI_MotionPathOptions object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -4798,6 +5206,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetPath(ArkUI_MotionPathOptions* opti
 **描述：**
 
 Sets the the motion path for the animation using an SVG path string. The path supports using "start" and "end" as placeholders for the starting and ending points, for example: "Mstart.x start.y L50 50 Lend.x end.y Z". Refer to the SVG path format for the path string. When set to an empty string, it is equivalent to not setting a path animation.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4823,6 +5233,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetPath(const ArkUI_MotionPathOptions
 **描述：**
 
 Gets the motion path string in the ArkUI_MotionPathOptions object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4851,6 +5263,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetFrom(ArkUI_MotionPathOptions* opti
 
 Sets the starting progress in the ArkUI_MotionPathOptions. Progress refers to the ratio of the length of the path that has been traveled to the total length of the entire path. The value range is [0.0, 1.0], and the "from" value should be less than or equal to the "to" value; otherwise, an ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE error code will be returned.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -4875,6 +5289,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetFrom(const ArkUI_MotionPathOptions
 **描述：**
 
 Gets the starting progress in the ArkUI_MotionPathOptions object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4901,6 +5317,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetTo(ArkUI_MotionPathOptions* option
 
 Sets the endpoint progress in the ArkUI_MotionPathOptions. Progress refers to the ratio of the length of the path that has been traveled to the total length of the entire path. The value range is [0.0, 1.0], and the "from" value should be less than or equal to the "to" value; otherwise, an ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE error code will be returned.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -4925,6 +5343,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetTo(const ArkUI_MotionPathOptions* 
 **描述：**
 
 Gets the endpoint progress in the ArkUI_MotionPathOptions object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -4951,6 +5371,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetRotatable(ArkUI_MotionPathOptions*
 
 Sets the rotatable parameter in the ArkUI_MotionPathOptions. It indicates whether to rotate along the path. True means rotating along the path, while false means not rotating along the path.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -4975,6 +5397,8 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetRotatable(const ArkUI_MotionPathOp
 **描述：**
 
 Gets the rotatable parameter in the ArkUI_MotionPathOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -5001,6 +5425,8 @@ ArkUI_SelectedDragPreviewStyle* OH_ArkUI_SelectedDragPreviewStyle_Create()
 
 Create a configuration object for selected drag preview style.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **返回值：**
@@ -5018,6 +5444,8 @@ void OH_ArkUI_SelectedDragPreviewStyle_Dispose(ArkUI_SelectedDragPreviewStyle* c
 **描述：**
 
 Dispose a configuration object for selected drag preview style.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -5037,6 +5465,8 @@ void OH_ArkUI_SelectedDragPreviewStyle_SetColor(ArkUI_SelectedDragPreviewStyle* 
 
 设置选中态拖拽文本预览样式的背景色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -5055,6 +5485,8 @@ uint32_t OH_ArkUI_SelectedDragPreviewStyle_GetColor(ArkUI_SelectedDragPreviewSty
 **描述：**
 
 获取选中态拖拽文本预览样式的背景色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -5079,6 +5511,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetTextDecorationType(OH_ArkUI_D
 **描述：**
 
 设置装饰线样式的装饰类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5105,6 +5539,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetTextDecorationType(OH_ArkUI_D
 
 获取装饰线样式的装饰类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5129,6 +5565,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetColor(OH_ArkUI_DecorationStyl
 **描述：**
 
 设置装饰线的颜色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5155,6 +5593,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetColor(OH_ArkUI_DecorationStyl
 
 获取装饰线的颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5179,6 +5619,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetTextDecorationStyle(OH_ArkUI_
 **描述：**
 
 设置装饰线的样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5205,6 +5647,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetTextDecorationStyle(OH_ArkUI_
 
 获取装饰线的样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5229,6 +5673,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_SetThicknessScale(OH_ArkUI_Decor
 **描述：**
 
 设置装饰线的粗细缩放比例。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5255,6 +5701,8 @@ ArkUI_ErrorCode OH_ArkUI_DecorationStyleOptions_GetThicknessScale(OH_ArkUI_Decor
 
 获取装饰线的粗细缩放比例。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5279,6 +5727,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetTypes(OH_ArkUI_TextDataDetect
 **描述：**
 
 设置文本实体识别配置的类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5305,6 +5755,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetTypes(OH_ArkUI_TextDataDetect
 **描述：**
 
 获取文本实体识别配置的类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5333,6 +5785,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_RegisterOnDetectResultUpdateCall
 
 设置文本实体识别结果更新回调。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5359,6 +5813,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetColor(OH_ArkUI_TextDataDetect
 
 设置识别内容的颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5383,6 +5839,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetColor(OH_ArkUI_TextDataDetect
 **描述：**
 
 获取识别内容的颜色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5409,6 +5867,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetDecorationStyleOptions(OH_Ark
 
 设置识别内容的装饰样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5433,6 +5893,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetDecorationStyleOptions(OH_Ark
 **描述：**
 
 获取识别内容的装饰样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5459,6 +5921,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_SetEnablePreviewMenu(OH_ArkUI_Te
 
 设置长按识别内容时是否显示预览菜单。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5483,6 +5947,8 @@ ArkUI_ErrorCode OH_ArkUI_TextDataDetectorConfig_GetEnablePreviewMenu(OH_ArkUI_Te
 **描述：**
 
 获取长按识别内容时是否显示预览菜单。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5509,6 +5975,8 @@ ArkUI_ErrorCode OH_ArkUI_TextController_SetStyledString(OH_ArkUI_TextController*
 
 Set the StyledString of the text.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -5534,6 +6002,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetValue(OH_ArkUI_TextEdit
 
 设置无输入时的提示文本选项的提示文字。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5558,6 +6028,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetValue(OH_ArkUI_TextEdit
 **描述：**
 
 获取无输入时的提示文本选项的提示文字。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5586,6 +6058,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontSize(OH_ArkUI_TextE
 
 设置无输入时的提示文本选项的字体大小。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5610,6 +6084,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontSize(OH_ArkUI_TextE
 **描述：**
 
 获取无输入时的提示文本选项的字体大小。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5636,6 +6112,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontWeight(OH_ArkUI_Tex
 
 设置无输入时的提示文本选项的字体粗细。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5660,6 +6138,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontWeight(OH_ArkUI_Tex
 **描述：**
 
 获取无输入时的提示文本选项的字体粗细。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5686,6 +6166,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontFamily(OH_ArkUI_Tex
 
 设置无输入时的提示文本选项的字体家族。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5710,6 +6192,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontFamily(OH_ArkUI_Tex
 **描述：**
 
 获取无输入时的提示文本选项的字体家族。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5738,6 +6222,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontStyle(OH_ArkUI_Text
 
 设置无输入时的提示文本选项的字体样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5762,6 +6248,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontStyle(OH_ArkUI_Text
 **描述：**
 
 获取无输入时的提示文本选项的字体样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5788,6 +6276,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_SetFontColor(OH_ArkUI_Text
 
 设置无输入时的提示文本选项的字体颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5812,6 +6302,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorPlaceholderOptions_GetFontColor(OH_ArkUI_Text
 **描述：**
 
 获取无输入时的提示文本选项的字体颜色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5838,6 +6330,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetCaretOffset(OH_ArkU
 
 通过属性字符串控制器设置光标偏移量。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5863,6 +6357,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretOffset(OH_ArkU
 
 通过属性字符串控制器获取光标索引位置。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5887,6 +6383,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetSelection(OH_ArkUI_
 **描述：**
 
 通过属性字符串控制器设置选中区域。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5915,6 +6413,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_IsEditing(OH_ArkUI_Tex
 
 通过属性字符串控制器获取文本编辑器的编辑状态。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5940,6 +6440,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_StopEditing(OH_ArkUI_T
 
 通过属性字符串控制器退出文本编辑器的编辑状态。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -5963,6 +6465,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetPreviewText(OH_ArkU
 **描述：**
 
 通过属性字符串控制器获取预上屏文本内容。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -5992,6 +6496,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetCaretRect(OH_ArkUI_
 
 通过属性字符串控制器获取光标矩形区域。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6017,6 +6523,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_DeleteBackward(OH_ArkU
 
 通过属性字符串控制器删除字符。没有内容被选中时，删除当前光标位置前的1个字符。有内容被选中时，删除选中内容。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6040,6 +6548,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextAlign(OH_ArkUI_TextEdit
 **描述：**
 
 设置段落样式中的文本对齐方式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6066,6 +6576,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextAlign(OH_ArkUI_TextEdit
 
 获取段落样式中的文本对齐方式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6090,6 +6602,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginPixelMap(OH_Ar
 **描述：**
 
 设置段落样式中段落缩进的像素图。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6116,6 +6630,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginPixelMap(OH_Ar
 
 获取段落样式中段落缩进的像素图。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6140,6 +6656,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginWidth(OH_ArkUI
 **描述：**
 
 设置段落样式中段落缩进的宽度。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6166,6 +6684,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginWidth(OH_ArkUI
 
 获取段落样式中段落缩进的宽度。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6190,6 +6710,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLeadingMarginHeight(OH_ArkU
 **描述：**
 
 设置段落样式中段落缩进的高度。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6216,6 +6738,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLeadingMarginHeight(OH_ArkU
 
 获取段落样式中段落缩进的高度。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6240,6 +6764,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetWordBreak(OH_ArkUI_TextEdit
 **描述：**
 
 设置段落样式的断字方式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6266,6 +6792,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetWordBreak(OH_ArkUI_TextEdit
 
 获取段落样式的断字方式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6290,6 +6818,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetLineBreakStrategy(OH_ArkUI_
 **描述：**
 
 设置段落样式的换行策略。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6316,6 +6846,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetLineBreakStrategy(OH_ArkUI_
 
 获取段落样式的换行策略。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6340,6 +6872,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetParagraphSpacing(OH_ArkUI_T
 **描述：**
 
 设置段落样式的段落间距。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6366,6 +6900,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetParagraphSpacing(OH_ArkUI_T
 
 获取段落样式的段落间距。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6390,6 +6926,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextVerticalAlign(OH_ArkUI_
 **描述：**
 
 设置段落样式的文本垂直对齐方式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6416,6 +6954,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextVerticalAlign(OH_ArkUI_
 
 获取段落样式的文本垂直对齐方式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6440,6 +6980,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_SetTextDirection(OH_ArkUI_Text
 **描述：**
 
 设置段落样式的文本方向。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6466,6 +7008,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorParagraphStyle_GetTextDirection(OH_ArkUI_Text
 
 获取段落样式的文本方向。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6490,6 +7034,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingParagraphStyl
 **描述：**
 
 通过属性字符串控制器设置预设段落样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6516,6 +7062,8 @@ OH_ArkUI_ShadowOptions* OH_ArkUI_ShadowOptions_Create()
 
 创建一个阴影选项对象。当该对象不再使用时，请调用[OH_ArkUI_ShadowOptions_Destroy](capi-native-type-h.md#oh_arkui_shadowoptions_destroy)销毁。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **返回值：**
@@ -6534,6 +7082,8 @@ void OH_ArkUI_ShadowOptions_Destroy(OH_ArkUI_ShadowOptions* options)
 
 销毁阴影选项对象。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6551,6 +7101,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetRadius(OH_ArkUI_ShadowOptions* options
 **描述：**
 
 设置阴影选项的模糊半径。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6577,6 +7129,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetRadius(OH_ArkUI_ShadowOptions* options
 
 获取阴影选项的模糊半径。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6601,6 +7155,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetType(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 设置阴影选项的阴影类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6627,6 +7183,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetType(OH_ArkUI_ShadowOptions* options, 
 
 获取阴影选项的阴影类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6651,6 +7209,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetColor(OH_ArkUI_ShadowOptions* options,
 **描述：**
 
 设置阴影选项的阴影颜色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6677,6 +7237,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetColor(OH_ArkUI_ShadowOptions* options,
 
 获取阴影选项的阴影颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6701,6 +7263,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetX(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 设置阴影在x轴上的偏移量。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6727,6 +7291,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetX(OH_ArkUI_ShadowOptions* option
 
 获取阴影在x轴上的偏移量。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6751,6 +7317,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetY(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 设置阴影在y轴上的偏移量。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6777,6 +7345,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetY(OH_ArkUI_ShadowOptions* option
 
 获取阴影在y轴上的偏移量。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6801,6 +7371,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetFill(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 设置是否用阴影填充组件内部。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6827,6 +7399,8 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetFill(OH_ArkUI_ShadowOptions* options, 
 
 获取是否用阴影填充组件内部。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6851,6 +7425,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontColor(OH_ArkUI_TextEditorTex
 **描述：**
 
 设置文本样式的字体颜色。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6877,6 +7453,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontColor(OH_ArkUI_TextEditorTex
 
 获取文本样式的字体颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6901,6 +7479,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontSize(OH_ArkUI_TextEditorText
 **描述：**
 
 设置文本样式的字体大小。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6927,6 +7507,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontSize(OH_ArkUI_TextEditorText
 
 获取文本样式的字体大小。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -6951,6 +7533,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontStyle(OH_ArkUI_TextEditorTex
 **描述：**
 
 设置文本样式的字体样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -6977,6 +7561,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontStyle(OH_ArkUI_TextEditorTex
 
 获取文本样式的字体样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7001,6 +7587,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontWeight(OH_ArkUI_TextEditorTe
 **描述：**
 
 设置文本样式的字体粗细。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7027,6 +7615,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontWeight(OH_ArkUI_TextEditorTe
 
 获取文本样式的字体粗细。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7052,6 +7642,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontFamily(OH_ArkUI_TextEditorTe
 
 设置文本样式的字体家族。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7076,6 +7668,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontFamily(OH_ArkUI_TextEditorTe
 **描述：**
 
 获取文本样式的字体家族。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7104,6 +7698,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetDecoration(OH_ArkUI_TextEditorTe
 
 设置文本样式的文本装饰选项。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7128,6 +7724,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetDecoration(OH_ArkUI_TextEditorTe
 **描述：**
 
 获取文本样式的文本装饰选项。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7154,6 +7752,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextShadows(OH_ArkUI_TextEditorT
 
 设置文本样式的文本阴影选项。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7179,6 +7779,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextShadows(OH_ArkUI_TextEditorT
 **描述：**
 
 获取文本样式的文本阴影选项。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7207,6 +7809,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetLineHeight(OH_ArkUI_TextEditorTe
 
 设置文本样式的文本行高。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7231,6 +7835,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetLineHeight(OH_ArkUI_TextEditorTe
 **描述：**
 
 获取文本样式的文本行高。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7257,6 +7863,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetLetterSpacing(OH_ArkUI_TextEdito
 
 设置文本样式的字符间距。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7281,6 +7889,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetLetterSpacing(OH_ArkUI_TextEdito
 **描述：**
 
 获取文本样式的字符间距。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7307,6 +7917,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetFontFeature(OH_ArkUI_TextEditorT
 
 设置文本样式的文字特性效果，比如数字等宽的特性。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7331,6 +7943,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetFontFeature(OH_ArkUI_TextEditorT
 **描述：**
 
 获取文本样式的文字特性效果，比如数字等宽的特性。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7359,6 +7973,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetHalfLeading(OH_ArkUI_TextEditorT
 
 设置文本样式中文本是否将行间距平分至行的顶部与底部。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7383,6 +7999,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetHalfLeading(OH_ArkUI_TextEditorT
 **描述：**
 
 获取文本样式中文本是否将行间距平分至行的顶部与底部。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7409,6 +8027,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundColor(OH_ArkUI_Tex
 
 设置文本样式中的文本背景颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7434,6 +8054,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundColor(OH_ArkUI_Tex
 
 获取文本样式中的文本背景颜色。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7458,6 +8080,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_SetTextBackgroundRadius(OH_ArkUI_Te
 **描述：**
 
 设置文本样式中文本背景的圆角半径。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7487,6 +8111,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorTextStyle_GetTextBackgroundRadius(OH_ArkUI_Te
 
 获取文本样式中文本背景的圆角半径。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7515,6 +8141,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetTypingStyle(OH_ArkU
 
 通过属性字符串控制器设置预设输入样式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7539,6 +8167,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetTypingStyle(OH_ArkU
 **描述：**
 
 通过属性字符串控制器获取预设输入样式。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7565,6 +8195,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetSpanType(OH_ArkUI_Tex
 
 设置文本编辑器中文本选择菜单的span的类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7589,6 +8221,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetSpanType(OH_ArkUI_Tex
 **描述：**
 
 获取文本编辑器中文本选择菜单的span的类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7615,6 +8249,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetContentNode(OH_ArkUI_
 
 设置文本编辑器中文本选择菜单的内容节点。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7639,6 +8275,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetContentNode(OH_ArkUI_
 **描述：**
 
 获取文本编辑器中文本选择菜单的内容节点。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7665,6 +8303,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetResponseType(OH_ArkUI
 
 设置文本编辑器中文本选择菜单的响应类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7689,6 +8329,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetResponseType(OH_ArkUI
 **描述：**
 
 获取文本编辑器中文本选择菜单的响应类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7715,6 +8357,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetMenuType(OH_ArkUI_Tex
 
 设置文本编辑器中文本选择菜单的类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7740,6 +8384,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetMenuType(OH_ArkUI_Tex
 
 获取文本编辑器中文本选择菜单的类型。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7764,6 +8410,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuShowCallba
 **描述：**
 
 设置文本选择菜单显示时触发的事件。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7791,6 +8439,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuHideCallba
 
 设置文本选择菜单隐藏时触发的事件。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7816,6 +8466,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuAppearCall
 **描述：**
 
 设置文本选择菜单出现时触发的事件。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7843,6 +8495,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_RegisterOnMenuDisappearC
 
 设置文本选择菜单消失时触发的事件。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7869,6 +8523,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_SetHapticFeedbackMode(OH
 
 设置文本编辑器中文本选择菜单的触觉反馈模式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7894,6 +8550,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorSelectionMenuOptions_GetHapticFeedbackMode(OH
 
 获取文本编辑器中文本选择菜单的触觉反馈模式。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -7918,6 +8576,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_CloseSelectionMenu(OH_
 **描述：**
 
 关闭文本编辑器属性字符串控制器的文本选择菜单。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7946,6 +8606,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetSelection(const OH_
 > **说明：**
 >
 > 所有输入指针参数必须由调用者分配、管理和释放。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -7977,6 +8639,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledString(const 
 >
 > 所有输入指针参数必须由调用者分配、管理和释放。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8005,6 +8669,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_GetStyledString(const 
 > **说明：**
 >
 > 所有输入指针参数必须由调用者分配、管理和释放。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8035,6 +8701,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_SetStyledPlaceholder(c
 >
 > 所有输入指针参数必须由调用者分配、管理和释放。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8059,6 +8727,8 @@ ArkUI_ErrorCode OH_ArkUI_TextEditorStyledStringController_ScrollToVisible(const 
 **描述：**
 
 通过属性字符串控制器使指定起始索引至结束索引范围内的内容滚动至可视区域。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -8086,6 +8756,8 @@ ArkUI_ErrorCode OH_ArkUI_PickerIndicatorStyle_ConfigureBackground(ArkUI_PickerIn
 
 Set the parameters of background style.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 23
 
 **参数：**
@@ -8110,6 +8782,8 @@ ArkUI_ErrorCode OH_ArkUI_PickerIndicatorStyle_ConfigureDivider(ArkUI_PickerIndic
 **描述：**
 
 Set the parameters of divider style.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -8136,6 +8810,8 @@ ArkUI_Matrix4ScaleOptions* OH_ArkUI_Matrix4ScaleOptions_Create()
 
 Create an object of ArkUI_Matrix4ScaleOptions. In the newly created options, the default values for the scaling coefficients in the x, y and z directions are 1, and the default values for centerX, centerY are 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **返回值：**
@@ -8154,6 +8830,8 @@ void OH_ArkUI_Matrix4ScaleOptions_Dispose(ArkUI_Matrix4ScaleOptions* options)
 
 Disposes the ArkUI_Matrix4ScaleOptions object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8171,6 +8849,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetX(ArkUI_Matrix4ScaleOptions* opt
 **描述：**
 
 Set the scaling factor in the x direction in ArkUI_Matrix4ScaleOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8197,6 +8877,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetX(const ArkUI_Matrix4ScaleOption
 
 Get the scaling factor in the x direction in ArkUI_Matrix4ScaleOptions. If the value of x is never set, its default value is 1.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8221,6 +8903,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetY(ArkUI_Matrix4ScaleOptions* opt
 **描述：**
 
 Set the scaling factor in the y direction in ArkUI_Matrix4ScaleOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8247,6 +8931,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetY(const ArkUI_Matrix4ScaleOption
 
 Get the scaling factor in the y direction in ArkUI_Matrix4ScaleOptions. If the value of y is never set, its default value is 1.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8271,6 +8957,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetZ(ArkUI_Matrix4ScaleOptions* opt
 **描述：**
 
 Set the scaling factor in the z direction in ArkUI_Matrix4ScaleOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8297,6 +8985,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetZ(const ArkUI_Matrix4ScaleOption
 
 Get the scaling factor in the z direction in ArkUI_Matrix4ScaleOptions. If the value of z is never set, its default value is 1.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8321,6 +9011,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterX(ArkUI_Matrix4ScaleOption
 **描述：**
 
 Set x offset relative to the transformation center. 0 means no additional x-direction offset from the transformation center. The unit is px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8347,6 +9039,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterX(const ArkUI_Matrix4Scale
 
 Get the value of centerX from the options, which represents the x-direction offset relative to the transformation center. The unit is px. If the value of centerX is never set, its default value is 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8371,6 +9065,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterY(ArkUI_Matrix4ScaleOption
 **描述：**
 
 Set y offset relative to the transformation center. 0 means no additional y-direction offset from the transformation center. The unit is px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8397,6 +9093,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterY(const ArkUI_Matrix4Scale
 
 Get the value of centerY from the options, which represents the y-direction offset relative to the transformation center. The unit is px. If the value of centerY is never set, its default value is 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8422,6 +9120,8 @@ ArkUI_Matrix4RotationOptions* OH_ArkUI_Matrix4RotationOptions_Create()
 
 Create an object of ArkUI_Matrix4RotationOptions. In the newly created options, the x, y, and z values in the direction vector specifying the rotation axis are undetermined; The default values for centerX, centerY are 0; The default value for angle is 0. If none of x, y, z are specified, it is equivalent to x=0, y=0, z=1, which means rotation around the z-axis. Once any one of x, y, z is specified, the remaining unspecified values are equivalent to 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **返回值：**
@@ -8440,6 +9140,8 @@ void OH_ArkUI_Matrix4RotationOptions_Dispose(ArkUI_Matrix4RotationOptions* optio
 
 Disposes the ArkUI_Matrix4RotationOptions object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8457,6 +9159,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetX(ArkUI_Matrix4RotationOption
 **描述：**
 
 Set the value of the direction vector for the x-axis direction in ArkUI_Matrix4RotationOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8483,6 +9187,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetX(const ArkUI_Matrix4Rotation
 
 Get the value of the direction vector for the x-axis direction in ArkUI_Matrix4RotationOptions. If the value of x is never set, its value will be undefined, so the function will return ARKUI_ERROR_CODE_PARAM_INVALID.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8507,6 +9213,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetY(ArkUI_Matrix4RotationOption
 **描述：**
 
 Set the value of the direction vector for the y-axis direction in ArkUI_Matrix4RotationOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8533,6 +9241,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetY(const ArkUI_Matrix4Rotation
 
 Get the value of the direction vector for the y-axis direction in ArkUI_Matrix4RotationOptions. If the value of y is never set, its value will be undefined, so the function will return ARKUI_ERROR_CODE_PARAM_INVALID.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8557,6 +9267,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetZ(ArkUI_Matrix4RotationOption
 **描述：**
 
 Set the value of the direction vector for the z-axis direction in ArkUI_Matrix4RotationOptions.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8583,6 +9295,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetZ(const ArkUI_Matrix4Rotation
 
 Get the value of the direction vector for the z-axis direction in ArkUI_Matrix4RotationOptions. If the value of z is never set, its value will be undefined, so the function will return ARKUI_ERROR_CODE_PARAM_INVALID.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8607,6 +9321,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetAngle(ArkUI_Matrix4RotationOp
 **描述：**
 
 Set the value of the rotation angle in ArkUI_Matrix4RotationOptions. The unit is degree.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8633,6 +9349,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetAngle(const ArkUI_Matrix4Rota
 
 Get the value of the rotation angle in ArkUI_Matrix4RotationOptions. The unit is degree. If the value of angle is never set, its default value is 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8657,6 +9375,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterX(ArkUI_Matrix4Rotation
 **描述：**
 
 Set x offset relative to the transformation center. 0 means no additional x-direction offset from the transformation center. The unit is px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8683,6 +9403,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterX(const ArkUI_Matrix4Ro
 
 Get the value of centerX from the options, which represents the x-direction offset relative to the transformation center. The unit is px. If the value of centerX is never set, its default value is 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8707,6 +9429,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterY(ArkUI_Matrix4Rotation
 **描述：**
 
 Set y offset relative to the transformation center. 0 means no additional y-direction offset from the transformation center. The unit is px.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8733,6 +9457,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterY(const ArkUI_Matrix4Ro
 
 Get the value of centerY from the options, which represents the y-direction offset relative to the transformation center. The unit is px. If the value of centerY is never set, its default value is 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8758,6 +9484,8 @@ ArkUI_Matrix4TranslationOptions* OH_ArkUI_Matrix4TranslationOptions_Create()
 
 Create an object of ArkUI_Matrix4TranslationOptions. In the newly created options, the default values for x, y and z are 0.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **返回值：**
@@ -8776,6 +9504,8 @@ void OH_ArkUI_Matrix4TranslationOptions_Dispose(ArkUI_Matrix4TranslationOptions*
 
 Disposes the ArkUI_Matrix4TranslationOptions object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8793,6 +9523,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetX(ArkUI_Matrix4Translation
 **描述：**
 
 Set the translation value in the x-axis direction. The unit is px. If the value of x is never set, its default value is 0.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8819,6 +9551,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetX(const ArkUI_Matrix4Trans
 
 Get the translation value in the x-axis direction from ArkUI_Matrix4TranslationOptions.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8843,6 +9577,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetY(ArkUI_Matrix4Translation
 **描述：**
 
 Set the translation value in the y-axis direction. The unit is px. If the value of y is never set, its default value is 0.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8869,6 +9605,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetY(const ArkUI_Matrix4Trans
 
 Get the translation value in the y-axis direction from ArkUI_Matrix4TranslationOptions.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8893,6 +9631,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetZ(ArkUI_Matrix4Translation
 **描述：**
 
 Set the translation value in the z-axis direction. The unit is px. If the value of z is never set, its default value is 0.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8919,6 +9659,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetZ(const ArkUI_Matrix4Trans
 
 Get the translation value in the z-axis direction from ArkUI_Matrix4TranslationOptions.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -8944,6 +9686,8 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_CreateIdentity()
 
 Create an identity matrix4 object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **返回值：**
@@ -8961,6 +9705,8 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_CreateByElements(const float* elements)
 **描述：**
 
 Specify each element of the matrix to create a matrix4 object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -8986,6 +9732,8 @@ void OH_ArkUI_Matrix4_Dispose(ArkUI_Matrix4* matrix)
 
 Disposes a matrix4 object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9003,6 +9751,8 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_Copy(const ArkUI_Matrix4* matrix)
 **描述：**
 
 Create a copy of the matrix4 object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -9028,6 +9778,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Invert(ArkUI_Matrix4* matrix)
 
 Perform an inverse matrix transformation on the input matrix. If the matrix is invertible, this function will modify the input matrix; otherwise, the matrix will remain unchanged and an error code will be returned.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9051,6 +9803,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Combine(ArkUI_Matrix4* oriMatrix, const ArkUI_M
 **描述：**
 
 Combine another matrix with the original matrix, and storing the resulting matrix in oriMatrix. The resulting matrix is equivalent to first applying the transformation of oriMatrix and then applying the transformation of anotherMatrix. This function will alter the oriMatrix object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -9077,6 +9831,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Translate(ArkUI_Matrix4* matrix, const ArkUI_Ma
 
 Apply a tranlation transformation to the original matrix to obtain the translated matrix. Each translation transformation is applied cumulatively. This function will alter the input matrix object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9101,6 +9857,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Scale(ArkUI_Matrix4* matrix, const ArkUI_Matrix
 **描述：**
 
 Apply a scale transformation to the original matrix to obtain the scaled matrix. Each scale transformation is applied cumulatively. This function will alter the input matrix object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -9127,6 +9885,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Rotate(ArkUI_Matrix4* matrix, const ArkUI_Matri
 
 Apply a rotation transformation to the original matrix to obtain the rotated matrix. Each rotation transformation is applied cumulatively. This function will alter the input matrix object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9151,6 +9911,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Skew(ArkUI_Matrix4* matrix, const float skewX, 
 **描述：**
 
 Apply a skew transformation to the original matrix to obtain the skewed matrix. Each skew transformation is applied cumulatively. This function will alter the input matrix object.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -9178,6 +9940,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_TransformPoint(const ArkUI_Matrix4* matrix, con
 
 Calculate the new coordinate position of a point after it has been transformed by a matrix. The calculated transformed coordinate point will be filled into the ArkUI_PointF structure pointed to by result.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9203,6 +9967,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_SetPolyToPoly(ArkUI_Matrix4* matrix, const ArkU
 **描述：**
 
 Map the vertex coordinates of one polygon to the vertex coordinates of another polygon, and calculate the required matrix. The resulting matrix will be filled into the object pointed to by matrix.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -9231,6 +9997,8 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_GetElements(const ArkUI_Matrix4* matrix, float*
 
 Obtain the 16 elements of the matrix and fill them into the array pointed to by result. The array pointed to by result must have space for 16 float elements.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 24
 
 **参数：**
@@ -9256,6 +10024,8 @@ void OH_ArkUI_CrossLanguageOption_SetTreeOperatingStatus(ArkUI_CrossLanguageOpti
 
 Sets the tree operating status for the cross-language option.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9274,6 +10044,8 @@ OH_ArkUI_CrossLanguageOperatingStatus OH_ArkUI_CrossLanguageOption_GetTreeOperat
 **描述：**
 
 Gets the tree operating status of the cross-language option.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9299,6 +10071,8 @@ OH_ArkUI_LinearGradientOptions* OH_ArkUI_LinearGradientOptions_Create()
 
 Creates a linear gradient options object. The returned object must be released by calling <b>OH_ArkUI_LinearGradientOptions_Destroy</b>.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **返回值：**
@@ -9317,6 +10091,8 @@ void OH_ArkUI_LinearGradientOptions_Destroy(OH_ArkUI_LinearGradientOptions* opti
 
 Destroys a linear gradient options object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9334,6 +10110,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_SetAngle(OH_ArkUI_LinearGradientO
 **描述：**
 
 Sets angle of linear gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9360,6 +10138,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_GetAngle(const OH_ArkUI_LinearGra
 
 Gets angle of linear gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9384,6 +10164,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_SetDirection(OH_ArkUI_LinearGradi
 **描述：**
 
 Sets direction of linear gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9410,6 +10192,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_GetDirection(const OH_ArkUI_Linea
 
 Gets direction of linear gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9434,6 +10218,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_SetRepeating(OH_ArkUI_LinearGradi
 **描述：**
 
 Sets whether colors are repeated in linear gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9460,6 +10246,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_GetRepeating(const OH_ArkUI_Linea
 
 Gets whether colors are repeated in linear gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9484,6 +10272,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_SetColorStop(OH_ArkUI_LinearGradi
 **描述：**
 
 Sets color stops of linear gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9511,6 +10301,8 @@ ArkUI_ErrorCode OH_ArkUI_LinearGradientOptions_GetColorStop(const OH_ArkUI_Linea
 **描述：**
 
 Gets color stops of linear gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9540,6 +10332,8 @@ OH_ArkUI_RadialGradientOptions* OH_ArkUI_RadialGradientOptions_Create()
 
 Creates a radial gradient options object. The returned object must be released by calling <b>OH_ArkUI_RadialGradientOptions_Destroy</b>.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **返回值：**
@@ -9558,6 +10352,8 @@ void OH_ArkUI_RadialGradientOptions_Destroy(OH_ArkUI_RadialGradientOptions* opti
 
 Destroys a radial gradient options object.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9575,6 +10371,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_SetCenterX(OH_ArkUI_RadialGradien
 **描述：**
 
 Sets centerX of radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9601,6 +10399,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_GetCenterX(const OH_ArkUI_RadialG
 
 Gets centerX of radial gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9625,6 +10425,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_SetCenterY(OH_ArkUI_RadialGradien
 **描述：**
 
 Sets centerY of radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9651,6 +10453,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_GetCenterY(const OH_ArkUI_RadialG
 
 Gets centerY of radial gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9675,6 +10479,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_SetRadius(OH_ArkUI_RadialGradient
 **描述：**
 
 Sets radius of radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9701,6 +10507,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_GetRadius(const OH_ArkUI_RadialGr
 
 Gets radius of radial gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9725,6 +10533,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_SetRepeating(OH_ArkUI_RadialGradi
 **描述：**
 
 Sets whether colors are repeated in radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9751,6 +10561,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_GetRepeating(const OH_ArkUI_Radia
 
 Gets whether colors are repeated in radial gradient options.
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 26.0.0
 
 **参数：**
@@ -9775,6 +10587,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_SetColorStop(OH_ArkUI_RadialGradi
 **描述：**
 
 Sets color stops of radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 
@@ -9802,6 +10616,8 @@ ArkUI_ErrorCode OH_ArkUI_RadialGradientOptions_GetColorStop(const OH_ArkUI_Radia
 **描述：**
 
 Gets color stops of radial gradient options.
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 26.0.0
 

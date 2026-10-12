@@ -44,6 +44,7 @@ Get the list of all SIM card account information.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -54,6 +55,8 @@ sim.getAllSimAccountInfoList((err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallsimaccountinfolist2"></a>
@@ -93,6 +96,7 @@ Get the list of all SIM card account information.
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -109,3 +113,5 @@ async getAllSimAccountInfoList(): Promise<ResponseData<sim.IccAccountInfo[] | nu
     }
   }
 ```
+
+<!--DelEnd-->

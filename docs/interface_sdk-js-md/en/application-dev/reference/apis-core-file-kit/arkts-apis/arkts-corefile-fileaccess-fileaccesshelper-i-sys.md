@@ -97,6 +97,7 @@ Checks whether a file or directory exists. This API uses a promise to return the
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,6 +124,8 @@ async function accessFunc() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="access2"></a>
 
@@ -194,6 +197,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -222,6 +226,8 @@ try {
   console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copy1"></a>
 
@@ -263,6 +269,7 @@ Copies a file or directory. This API uses a promise to return the result.
 | --- | --- |
 | Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Promise used to return the result. If the file or directory is copied successfully, no information is returned. If the file copy fails, a **copyResult** array is returned. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -331,6 +338,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="copy2"></a>
 
 ## copy
@@ -365,6 +374,7 @@ Copies a file or directory. This API uses an asynchronous callback to return the
 | destUri | string | Yes | URI of the destination directory, to which the file or directory is moved. For example, **file://docs/storage/Users/currentUser/Download/test**. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -399,6 +409,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copy3"></a>
 
@@ -435,6 +447,7 @@ Copies a file or directory. If a file with the same name already exists, you can
 | force | boolean | Yes | Whether to forcibly overwrite the original file with the same name. If **force** is set to **true**, the original file is forcibly overwritten. If **force** is left empty or set to **false**, the original file is not overwritten. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | Yes | Callback invoked to return the result. If the file or directory is copied successfully, no information is returned. If the copy fails, a **copyResult** array is returned. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -469,6 +482,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copyfile1"></a>
 
@@ -541,6 +556,7 @@ Copies a file with an alternative file name. This API uses a promise to return t
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -565,6 +581,8 @@ async function copyFunc01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copyfile2"></a>
 
@@ -632,6 +650,7 @@ Copies a file with an alternative file name. This API uses an asynchronous callb
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -655,6 +674,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createfile1"></a>
 
@@ -732,6 +753,7 @@ Creates a file in a directory. This API uses a promise to return the result.
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -760,6 +782,8 @@ async function createFile() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createfile2"></a>
 
@@ -832,6 +856,7 @@ Creates a file in a directory. This API uses an asynchronous callback to return 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -857,6 +882,8 @@ try {
   console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete1"></a>
 
@@ -933,6 +960,7 @@ Deletes a file or directory. This API uses a promise to return the result.
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -956,6 +984,8 @@ async function deleteFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete2"></a>
 
@@ -1027,6 +1057,7 @@ Deletes a file or directory. This API uses an asynchronous callback to return th
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1051,6 +1082,8 @@ try {
   console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromrelativepath1"></a>
 
@@ -1088,6 +1121,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses a promise 
 | --- | --- |
 | Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1108,6 +1142,8 @@ async function getRelativePath() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromrelativepath2"></a>
 
@@ -1140,6 +1176,7 @@ Obtains a **FileInfo** object based on a relative path. This API uses an asynchr
 | relativePath | string | Yes | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Yes | The callback is used to return a fileinfo object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1164,6 +1201,8 @@ try {
   console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromuri1"></a>
 
@@ -1201,6 +1240,7 @@ Obtains a **FileInfo** object based on a URI. This API uses a promise to return 
 | --- | --- |
 | Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1222,6 +1262,8 @@ async function getUri() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromuri2"></a>
 
@@ -1254,6 +1296,7 @@ Obtains a **FileInfo** object based on a URI. This API uses an asynchronous call
 | uri | string | Yes | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Yes | The callback is used to return a fileinfo object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1279,6 +1322,8 @@ try {
   console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getroots1"></a>
 
@@ -1347,6 +1392,7 @@ Obtains information about the device root nodes of the file management services 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1377,6 +1423,8 @@ async function getRoots() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getroots2"></a>
 
@@ -1445,6 +1493,7 @@ Obtains information about the device root nodes of the file management services 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1476,6 +1525,8 @@ async function getRoots() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="mkdir1"></a>
 
@@ -1553,6 +1604,7 @@ Creates a directory in a specified directory. This API uses a promise to return 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1581,6 +1633,8 @@ async function createDirectory() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="mkdir2"></a>
 
@@ -1653,6 +1707,7 @@ Creates a directory in a specified directory. This API uses an asynchronous call
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1678,6 +1733,8 @@ try {
   console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="move1"></a>
 
@@ -1755,6 +1812,7 @@ Moves a file or directory. This API uses a promise to return the result. Current
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1778,6 +1836,8 @@ async function moveFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="move2"></a>
 
@@ -1850,6 +1910,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1875,6 +1936,8 @@ try {
   console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="movefile1"></a>
 
@@ -1945,6 +2008,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1969,6 +2033,8 @@ async function moveFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="movefile2"></a>
 
@@ -2034,6 +2100,7 @@ Moves a file, and renames it if a file with the same name already exists in the 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2060,6 +2127,8 @@ try {
   console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="moveitem1"></a>
 
@@ -2130,6 +2199,7 @@ Moves a file or directory. This API uses a promise to return the result. You can
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2198,6 +2268,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="moveitem2"></a>
 
 ## moveItem
@@ -2261,6 +2333,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2295,6 +2368,8 @@ try {
   console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="moveitem3"></a>
 
@@ -2360,6 +2435,7 @@ Moves a file or directory. This API uses an asynchronous callback to return the 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2394,6 +2470,8 @@ try {
   console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="openfile1"></a>
 
@@ -2471,6 +2549,7 @@ Opens a file. This API uses a promise to return the result.
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2492,6 +2571,8 @@ async function openFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="openfile2"></a>
 
@@ -2564,6 +2645,7 @@ Opens a file. This API uses an asynchronous callback to return the result.
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2588,6 +2670,8 @@ try {
   console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query1"></a>
 
@@ -2626,6 +2710,7 @@ Queries the attribute information about a file or directory based on a URI. This
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return a JSON string that contains the file attribute and the value obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2647,6 +2732,8 @@ async function getQuery01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query2"></a>
 
@@ -2680,6 +2767,7 @@ Queries the attribute information about a file or directory based on a URI. This
 | metaJson | string | Yes | Attribute [FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md) to query. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return a JSON string that contains the file attribute and the value obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2706,6 +2794,8 @@ async function getQuery02() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## registerObserver
 
@@ -2819,6 +2909,7 @@ Renames a file or directory. This API uses a promise to return the result.
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2841,6 +2932,8 @@ async function renameFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="rename2"></a>
 
@@ -2913,6 +3006,7 @@ Renames a file or directory. This API uses an asynchronous callback to return th
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2937,6 +3031,8 @@ try {
   console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## unregisterObserver
 

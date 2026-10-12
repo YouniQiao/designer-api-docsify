@@ -45,6 +45,7 @@ No permission is required when the caller clears its own cache.
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,6 +68,8 @@ try {
   hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="cleanbundlecachefiles2"></a>
@@ -113,6 +116,7 @@ No permission is required when the caller clears its own cache.
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -133,6 +137,8 @@ try {
   hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="cleanbundlecachefiles3"></a>
@@ -181,6 +187,7 @@ No permission is required when the caller clears its own cache.
 | [17700030](../errorcode-bundle.md#17700030-failure-in-clearing-cache-files) | The specified bundle does not support clearing of cache files. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -202,3 +209,5 @@ try {
   hilog.error(0x0000, 'testTag', 'cleanBundleCacheFiles failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -46,6 +46,7 @@ Obtains the default application based on a system-defined application type, a fi
 | [17700023](../errorcode-bundle.md#17700023-default-application-does-not-exist) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,6 +79,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getdefaultapplication2"></a>
@@ -118,6 +121,7 @@ Obtains the default application based on a system-defined application type, a fi
 | [17700023](../errorcode-bundle.md#17700023-default-application-does-not-exist) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -149,6 +153,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getdefaultapplication3"></a>
@@ -196,6 +202,7 @@ Obtains the default application based on a system-defined application type, a fi
 | [17700023](../errorcode-bundle.md#17700023-default-application-does-not-exist) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-invalid-type) | The specified type is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -227,3 +234,5 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

@@ -6,6 +6,8 @@
 
 **库：** libohmidi.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 **相关模块：** [OHMIDI](capi-ohmidi.md)
@@ -33,12 +35,6 @@
 | [OH_MIDIProtocol](#oh_midiprotocol) | OH_MIDIProtocol | MIDI协议版本枚举，用于指定端口使用的MIDI协议行为。 |
 | [OH_MIDIDeviceType](#oh_mididevicetype) | OH_MIDIDeviceType | MIDI设备类型枚举。定义MIDI设备的连接类型。 |
 | [OH_MIDIDeviceChangeAction](#oh_mididevicechangeaction) | OH_MIDIDeviceChangeAction | 设备连接状态变化操作枚举。用于标识设备的连接和断开事件。 |
-
-### 宏定义
-
-| 名称 | 描述 |
-| -- | -- |
-| NATIVE_MIDI_BASE_H | 声明MIDI模块的基础数据结构。定义MIDI接口的基础类型、枚举、结构体和回调函数。<br>**起始版本：** 24<br>**系统能力：** SystemCapability.Multimedia.Audio.MIDI |
 
 ### 函数
 
@@ -69,6 +65,8 @@ enum OH_MIDIStatusCode
 **描述：**
 
 MIDI状态码枚举。定义MIDI操作的状态码，用于表示操作成功或失败的原因。
+
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
 
 **起始版本：** 24
 
@@ -101,6 +99,8 @@ enum OH_MIDIPortDirection
 
 表示端口方向的枚举。定义MIDI端口的数据传输方向。
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -122,6 +122,8 @@ MIDI协议版本枚举，用于指定端口使用的MIDI协议行为。
 >
 > CRITICAL**: The SDK always uses UMP (Universal MIDI Packet) format for data transfer, regardless of the selected protocol. This enum defines the "Behavior" and "Semantics" of the connection, not the data structure.
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -139,6 +141,8 @@ enum OH_MIDIDeviceType
 
 MIDI设备类型枚举。定义MIDI设备的连接类型。
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -155,6 +159,8 @@ enum OH_MIDIDeviceChangeAction
 **描述：**
 
 设备连接状态变化操作枚举。用于标识设备的连接和断开事件。
+
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
 
 **起始版本：** 24
 
@@ -175,6 +181,8 @@ typedef void (*OH_MIDICallback_OnDeviceChange)(void *userData, OH_MIDIDeviceChan
 **描述：**
 
 监控设备连接/断开连接的回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
 
 **起始版本：** 24
 
@@ -200,6 +208,8 @@ typedef void (*OH_MIDIDevice_OnReceived)(void *userData, const OH_MIDIEvent *eve
 >
 > This callback is invoked on a high-priority system thread. Do **not** perform blocking operations, heavy computation, or I/O.
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 **参数：**
@@ -220,6 +230,8 @@ typedef void (*OH_MIDICallback_OnError)(void *userData, OH_MIDIStatusCode code)
 
 处理客户端级别错误的回调。当MIDI服务发生关键错误（如服务崩溃）时调用。应用可能需要重新创建客户端。
 
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
+
 **起始版本：** 24
 
 **参数：**
@@ -238,6 +250,8 @@ typedef void (*OH_MIDIClient_OnDeviceOpened)(void *userData, bool opened, OH_MID
 **描述：**
 
 异步打开BLE设备的结果回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.MIDI
 
 **起始版本：** 24
 

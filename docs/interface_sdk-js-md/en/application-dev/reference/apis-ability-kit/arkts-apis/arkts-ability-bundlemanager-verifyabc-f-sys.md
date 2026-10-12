@@ -43,6 +43,7 @@ Verifies an .abc file. This API uses an asynchronous callback to return the resu
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,6 +66,8 @@ try {
   hilog.error(0x0000, 'testTag', 'verifyAbc failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="verifyabc2"></a>
@@ -109,6 +112,7 @@ Verifies an .abc file. This API uses a promise to return the result.
 | [17700201](../errorcode-bundle.md#17700201-abc-file-verification-failure) | Failed to verify the abc file. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -129,3 +133,5 @@ try {
   hilog.error(0x0000, 'testTag', 'verifyAbc failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

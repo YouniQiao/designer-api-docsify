@@ -49,6 +49,7 @@ function setPerceptionAdvHighFreq(type: PerceptionType, customData?: ArrayBuffer
 | [2000003](../errorcode-softbusBase.md#2000003-临时错误) | Temporary error. The request failed due to a temporary error and can be retried. |
 | [2006001](../errorcode-softbusBase.md#2006001-底层模块错误) | Underlying module error. The request failed due to an error in another underlying module and can be retried after a period of time. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -70,3 +71,5 @@ try {
   console.error(`Failed to setPerceptionAdvHighFreq. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -45,6 +45,7 @@ function notifyDataChange(accountId: string, bundleName: string): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ cloudSyncManager.notifyDataChange(accountId, bundleName).then(() => {
   console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange2"></a>
@@ -94,6 +97,7 @@ function notifyDataChange(accountId: string, bundleName: string, callback: Async
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -109,6 +113,8 @@ cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) =>
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange3"></a>
@@ -153,6 +159,7 @@ function notifyDataChange(userId: number, extraData: ExtraData): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -166,6 +173,8 @@ cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
   console.error(`notifyDataChange failed with error message: ${err.message}, error code: ${err.code}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange4"></a>
@@ -205,6 +214,7 @@ function notifyDataChange(userId: number, extraData: ExtraData, callback: AsyncC
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -220,3 +230,5 @@ cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

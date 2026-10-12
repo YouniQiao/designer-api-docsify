@@ -47,6 +47,7 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -65,6 +66,8 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="castaudio2"></a>
@@ -113,6 +116,7 @@ function castAudio(session: SessionToken | 'all', audioDevices: Array<audio.Audi
 | [6600102](../errorcode-avsession.md#6600102-会话不存在) | The session does not exist. |
 | [6600104](../errorcode-avsession.md#6600104-远端会话连接失败) | The remote session connection failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -131,3 +135,5 @@ audioRoutingManager.getDevices(audio.DeviceFlag.OUTPUT_DEVICES_FLAG).then((data)
   }
 });
 ```
+
+<!--DelEnd-->

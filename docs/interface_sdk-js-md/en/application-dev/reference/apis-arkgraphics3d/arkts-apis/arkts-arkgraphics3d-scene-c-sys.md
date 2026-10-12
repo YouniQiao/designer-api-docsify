@@ -45,6 +45,7 @@ Create a new scene from a SceneLoadParams.
 | --- | --- |
 | Promise&lt;[Scene](arkts-arkgraphics3d-scene-c.md)&gt; | Promise used to return a scene |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,3 +57,5 @@ function loadModelWithParams(): Promise<Scene> {
   return scene;
 }
 ```
+
+<!--DelEnd-->

@@ -49,6 +49,7 @@ function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void
 | [12800005](../errorcode-inputmethod-framework.md#12800005-配置持久化失败) | configuration persistence error. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -85,3 +86,5 @@ async function switchInputMethodWithSubtype() {
 
 switchInputMethodWithSubtype();
 ```
+
+<!--DelEnd-->

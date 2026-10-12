@@ -53,6 +53,7 @@ Deletes a cache file. This API returns the result synchronously.
 | 13900002 | No such file or directory. |
 | 14000002 | Invalid uri. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,6 +71,8 @@ try {
   console.error("clean cache failed with error message: " + err.message + ", error code: " + err.code);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="constructor2"></a>
 

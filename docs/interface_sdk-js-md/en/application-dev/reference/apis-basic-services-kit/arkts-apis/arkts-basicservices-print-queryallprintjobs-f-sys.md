@@ -43,6 +43,7 @@ Queries all print jobs. This API uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ print.queryAllPrintJobs().then(() => {
     console.error(`Failed to query all print jobs. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryallprintjobs2"></a>
@@ -107,6 +110,9 @@ Queries all print jobs. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 
+<!--Del-->
 **Examples**
 
 See [queryAllPrintJobs](#queryallprintjobs)
+
+<!--DelEnd-->

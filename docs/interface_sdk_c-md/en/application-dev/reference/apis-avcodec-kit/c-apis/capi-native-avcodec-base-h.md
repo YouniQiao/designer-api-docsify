@@ -6,6 +6,8 @@ Declare the Native API used for audio and video muxer, demuxer and basic encodin
 
 **Library**: libnative_media_codecbase.so
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 **Related module**: [CodecBase](capi-codecbase.md)
@@ -284,6 +286,8 @@ enum OH_MediaType
 
 Enumerates the media types.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 | Enum item | Description |
@@ -304,6 +308,8 @@ enum OH_AACProfile
 
 Enumerates the AAC profiles.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 | Enum item | Description |
@@ -322,6 +328,8 @@ enum OH_AVCProfile
 
 Enumerates the AVC profiles.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 | Enum item | Description |
@@ -339,6 +347,8 @@ enum OH_HEVCProfile
 **Description**
 
 Enumerates the HEVC profiles.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -359,6 +369,8 @@ enum OH_VVCProfile
 **Description**
 
 Enumerates the VVC profiles.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 15
 
@@ -390,6 +402,8 @@ enum OH_MPEG2Profile
 
 Enumerates the MPEG2 profiles.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 17
 
 | Enum item | Description |
@@ -410,6 +424,8 @@ enum OH_MPEG4Profile
 **Description**
 
 Enumerates the MPEG4 profiles.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 17
 
@@ -441,6 +457,8 @@ enum OH_H263Profile
 
 Enumerates the H.263 profiles.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 17
 
 | Enum item | Description |
@@ -457,6 +475,8 @@ enum OH_VC1Profile
 **Description**
 
 Enumerates the VC-1 profiles.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 22
 
@@ -476,6 +496,8 @@ enum OH_AV1Profile
 
 AV1 profile.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 23
 
 | Enum item | Description |
@@ -493,6 +515,8 @@ enum OH_VP9Profile
 **Description**
 
 VP9 profile.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 23
 
@@ -513,6 +537,8 @@ enum OH_WVC1Profile
 
 WVC1 profile.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 23
 
 | Enum item | Description |
@@ -528,6 +554,8 @@ enum OH_WMV3Profile
 **Description**
 
 Enumerates the WMV3 profiles.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 22
 
@@ -545,6 +573,8 @@ enum OH_AVOutputFormat
 **Description**
 
 Enumerates the output file formats supported by a muxer.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -571,6 +601,8 @@ enum OH_AVSeekMode
 
 Enumerates the seek modes.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 | Enum item | Description |
@@ -588,6 +620,8 @@ enum OH_ScalingMode
 **Description**
 
 Enumerates the scaling modes. This enum is used only in surface mode.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -609,6 +643,8 @@ enum OH_BitsPerSample
 **Description**
 
 Enumerates the number of audio bits for each coded sample.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -636,6 +672,8 @@ enum OH_ColorPrimary
 
 Enumerates the primary colors. This enum is used for both encoding and decoding.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 | Enum item | Description |
@@ -661,6 +699,8 @@ enum OH_TransferCharacteristic
 **Description**
 
 Enumerates the transfer characteristics. This enum is used for both encoding and decoding.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -694,6 +734,8 @@ enum OH_MatrixCoefficient
 
 Enumerates the matrix coefficients. This enum is used for both encoding and decoding.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 10
 
 | Enum item | Description |
@@ -722,6 +764,8 @@ enum OH_AVCLevel
 **Description**
 
 Enumerates the AVC levels.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 12
 
@@ -758,6 +802,8 @@ enum OH_HEVCLevel
 
 Enumerates the HEVC levels.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 12
 
 | Enum item | Description |
@@ -785,6 +831,8 @@ enum OH_VVCLevel
 **Description**
 
 Enumerates the VVC levels.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 15
 
@@ -816,6 +864,8 @@ enum OH_MPEG2Level
 
 Enumerates the MPEG2 levels.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 17
 
 | Enum item | Description |
@@ -834,6 +884,8 @@ enum OH_MPEG4Level
 **Description**
 
 Enumerates the MPEG4 levels.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 17
 
@@ -860,6 +912,8 @@ enum OH_H263Level
 
 Enumerates the H.263 levels.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 17
 
 | Enum item | Description |
@@ -883,6 +937,8 @@ enum OH_VC1Level
 
 Enumerates the VC-1 levels.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 22
 
 | Enum item | Description |
@@ -905,6 +961,8 @@ enum OH_AV1Level
 **Description**
 
 AV1 level.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 23
 
@@ -945,6 +1003,8 @@ enum OH_VP9Level
 
 VP9 level.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 23
 
 | Enum item | Description |
@@ -974,6 +1034,8 @@ enum OH_WVC1Level
 
 WVC1 level.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 23
 
 | Enum item | Description |
@@ -994,6 +1056,8 @@ enum OH_WMV3Level
 
 Enumerates the WMV3 levels.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 22
 
 | Enum item | Description |
@@ -1012,6 +1076,8 @@ enum OH_TemporalGopReferenceMode
 
 Enumerates the reference modes of temporal image groups.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 12
 
 | Enum item | Description |
@@ -1029,6 +1095,8 @@ enum OH_BitrateMode
 **Description**
 
 Enumerates the bit rate modes of an encoder.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 10
 
@@ -1050,6 +1118,8 @@ enum OH_FrameRetentionMode
 
 The video decoding frame retention mode.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -1067,6 +1137,8 @@ enum OH_AudioEncoderPTSMode
 **Description**
 
 The PTS mode of audio encoder.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 26.0.0
 
@@ -1094,6 +1166,8 @@ Defines the pointer to the function that is called to report error information w
 \| Video encoding/decoding\| **AV_ERROR_NO_MEMORY**: System resources are insufficient.<br>**AV_ERROR_UNKNOWN**: An unknown error occurs. Analyze the error based on specific logs.<br>**AV_ERR_SERVICE_DIED**: The service is dead. \|
 \| Video decoding\| **AV_ERR_VIDEO_UNSUPPORTED_COLOR_SPACE_CONVERSION**: The current input does not support CSC. \| <!--RP1--><!--RP1End-->
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 **Parameters**:
@@ -1114,6 +1188,8 @@ typedef void (*OH_AVCodecOnStreamChanged)(OH_AVCodec *codec, OH_AVFormat *format
 
 Defines the pointer to the function that is called to report the new stream description when the resolution of the input video stream being decoded or the output video stream that has been encoded changes.<br> Starting from API version 15, this function pointer is called to report the new stream description when the stream sampling rate, number of audio channels, or audio sampling format changes during audio decoding. The decoding formats that can detect these changes include <!--RP3--><!--RP3End-->AAC, FLAC, MP3, and VORBIS.<br> Note that the lifecycle of the pointer to the OH_AVFormat instance is valid only when the function pointer is being called. Do not access the pointer to the instance after the function pointer is called.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 9
 
 **Parameters**:
@@ -1133,6 +1209,8 @@ typedef void (*OH_AVCodecOnNeedInputData)(OH_AVCodec *codec, uint32_t index, OH_
 **Description**
 
 Defines the pointer to the function that is called when new input data is required during the running of an OH_AVCodec instance. The function carries a buffer to fill in new input data.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 9
 
@@ -1158,6 +1236,8 @@ typedef void (*OH_AVCodecOnNewOutputData)(OH_AVCodec *codec, uint32_t index, OH_
 **Description**
 
 Defines the pointer to the function that is called when new output data is generated during the running of an OH_AVCodec instance. The function carries a buffer filled with new output data. Note that the lifecycle of the pointer to the OH_AVCodecBufferAttr instance is valid only when the function pointer is being called. Do not access the pointer to the instance after the function pointer is called.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 9
 
@@ -1185,6 +1265,8 @@ typedef void (*OH_AVCodecOnNeedInputBuffer)(OH_AVCodec *codec, uint32_t index, O
 
 Defines the pointer to the function that is called when new input data is required during the running of an OH_AVCodec instance. The function carries a buffer to fill in new input data.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 11
 
 **Parameters**:
@@ -1206,6 +1288,8 @@ typedef void (*OH_AVCodecOnNewOutputBuffer)(OH_AVCodec *codec, uint32_t index, O
 
 Defines the pointer to the function that is called when new output data is generated during the running of an OH_AVCodec instance. The function carries a buffer filled with new output data.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 11
 
 **Parameters**:
@@ -1226,6 +1310,8 @@ typedef int32_t (*OH_AVDataSourceReadAt)(OH_AVBuffer *data, int32_t length, int6
 **Description**
 
 Defines a function pointer used to provide the capability of obtaining user-defined media data.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 12
 
@@ -1252,6 +1338,8 @@ typedef int32_t (*OH_AVDataSourceReadAtExt)(OH_AVBuffer *data, int32_t length, i
 **Description**
 
 Defines a function pointer used to provide the capability of obtaining user-defined media data.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 20
 

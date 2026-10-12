@@ -36,6 +36,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | formId | string | Yes | Widget ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the widget is converted to a normal one, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -48,6 +49,8 @@ formHost.castTempForm(formId, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="casttempform2"></a>
@@ -86,6 +89,7 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,3 +102,5 @@ formHost.castTempForm(formId).then(() => {
   console.error(`formHost castTempForm, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

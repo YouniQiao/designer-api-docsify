@@ -44,6 +44,7 @@ Delegates other applications to set device management policies. The applications
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -62,3 +63,5 @@ try {
   console.error(`Failed to set delegated policies. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -46,6 +46,7 @@ function getDisposedStatusSync(appId: string): Want
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,3 +63,5 @@ try {
   console.error('getDisposedStatusSync failed ' + message);
 }
 ```
+
+<!--DelEnd-->

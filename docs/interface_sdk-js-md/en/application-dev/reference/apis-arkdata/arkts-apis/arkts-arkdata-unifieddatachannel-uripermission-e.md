@@ -28,9 +28,9 @@ drag-and-drop operation. If an authorization policy is configured for a piece of
 - Default level: If no authorization policy is configured for either a single piece of data or  
 UnifiedDataProperties, proxy authorization is performed according to the default drag-and-drop logic. The default logic is as follows:
 
-- FileUri data (FileUri UDS or the File, Image, Video, Audio, and Folder UDC types): In the drag-and-drop  
+        - FileUri data (FileUri UDS or the File, Image, Video, Audio, and Folder UDC types): In the drag-and-drop  
 scenario, the default authorization is READ+WRITE+PERSIST (read + write + persistent authorization).  
-- HTML data: read authorization is granted only for the URIs under the img tag in the HTML text.
+        - HTML data: read authorization is granted only for the URIs under the img tag in the HTML text.
 
 **Since:** 26.0.0
 

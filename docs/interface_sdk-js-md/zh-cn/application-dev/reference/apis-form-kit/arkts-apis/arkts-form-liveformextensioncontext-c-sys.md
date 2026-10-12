@@ -64,6 +64,7 @@ ServiceExtensionAbility提供后台服务扩展能力，支持后台运行并对
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form can not support this operation |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -144,6 +145,8 @@ struct MyLiveFormPage {
 }
 ```
 
+<!--DelEnd-->
+
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -184,6 +187,7 @@ ServiceExtensionAbility是一类特殊的[ExtensionAbility](../../../application
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501011](../errorcode-form.md#16501011-卡片不支持调用当前接口) | The form can not support this operation |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -250,3 +254,5 @@ struct MyLiveFormPage {
   }
 }
 ```
+
+<!--DelEnd-->

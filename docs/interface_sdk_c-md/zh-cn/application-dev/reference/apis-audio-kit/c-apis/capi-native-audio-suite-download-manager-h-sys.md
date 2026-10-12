@@ -6,6 +6,8 @@ Declare audio download manager related interfaces.
 
 **库：** libohaudiosuite.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -59,6 +61,8 @@ typedef void (*OH_AudioSuite_DownloadCallback)(OH_AudioSuite_DownloadStatusInfoA
 
 更新下载状态的回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -78,6 +82,8 @@ int32_t OH_AudioSuite_GetDownloadManager(OH_AudioSuite_DownloadManager **downloa
 **描述：**
 
 获取音频下载管理器句柄。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 
@@ -104,6 +110,8 @@ int32_t OH_AudioSuite_RegisterDownloadCallback(OH_AudioSuite_DownloadManager *do
 **描述：**
 
 注册下载状态回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 
@@ -132,6 +140,8 @@ int32_t OH_AudioSuite_UnregisterDownloadCallback(OH_AudioSuite_DownloadManager *
 
 注销下载状态回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -158,6 +168,8 @@ int32_t OH_AudioSuite_StartDownload(OH_AudioSuite_DownloadManager *downloadManag
 **描述：**
 
 开始下载特性。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 
@@ -186,6 +198,8 @@ int32_t OH_AudioSuite_PauseDownload(OH_AudioSuite_DownloadManager *downloadManag
 
 暂停下载特性二进制文件。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -212,6 +226,8 @@ int32_t OH_AudioSuite_CancelDownload(OH_AudioSuite_DownloadManager *downloadMana
 **描述：**
 
 取消下载特性。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 
@@ -240,6 +256,8 @@ int32_t OH_AudioSuite_StartBackgroundDownload(OH_AudioSuite_DownloadManager *dow
 
 开始后台下载功能。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -266,6 +284,8 @@ int32_t OH_AudioSuite_GetDownloadStatus(OH_AudioSuite_DownloadManager *downloadM
 **描述：**
 
 获取功能的下载状态。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 
@@ -295,6 +315,8 @@ int32_t OH_AudioSuite_UninstallCloudRom(OH_AudioSuite_DownloadManager *downloadM
 
 卸载已下载的特性。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -321,6 +343,8 @@ int32_t OH_AudioSuite_IsFeatureInstalled(OH_AudioSuite_DownloadManager *download
 **描述：**
 
 批量获取特性的安装状态。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.1
 
@@ -352,6 +376,8 @@ int32_t OH_AudioSuite_GetFeatureStatus(OH_AudioSuite_DownloadManager *downloadMa
 
 批量获取特性的下载状态。
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 26.0.1
 
 **系统接口：** 此接口为系统接口。
@@ -381,6 +407,8 @@ int32_t OH_AudioSuite_GetNewVersionInfo(OH_AudioSuite_DownloadManager *downloadM
 **描述：**
 
 批量获取特性的新版本信息。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.1
 

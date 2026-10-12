@@ -39,6 +39,7 @@ function getAllSharedBundleInfo(callback: AsyncCallback<Array<SharedBundleInfo>>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllSharedBundleInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallsharedbundleinfo2"></a>
@@ -94,6 +97,7 @@ function getAllSharedBundleInfo(): Promise<Array<SharedBundleInfo>>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -112,3 +116,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllSharedBundleInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

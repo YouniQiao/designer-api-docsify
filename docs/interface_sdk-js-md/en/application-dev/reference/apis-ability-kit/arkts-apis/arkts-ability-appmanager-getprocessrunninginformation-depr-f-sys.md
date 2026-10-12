@@ -47,6 +47,7 @@ Obtains information about the running processes. This API uses a promise to retu
 | --- | --- |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ appManager.getProcessRunningInformation().then((data) => {
   console.error(`error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getprocessrunninginformation2"></a>
@@ -101,9 +104,10 @@ Obtains information about the running processes. This API uses an asynchronous c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Failed to connect to the system service; |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ appManager.getProcessRunningInformation((error, data) => {
   }
 });
 ```
+
+<!--DelEnd-->

@@ -39,7 +39,7 @@ Adds the configuration information of the data processor. The configuration file
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [11105001](../errorcode-hiappevent.md#11105001-invalid-parameter-value) | Invalid parameter value. Possible causes: 1. Incorrect parameter length; 2. Incorrect parameter format. |
+| [11105001](../errorcode-hiappevent.md#11105001-invalid-parameter-value) | Invalid parameter value. Possible causes: 1. Incorrect parameter length;         2. Incorrect parameter format. |
 
 **Examples**
 

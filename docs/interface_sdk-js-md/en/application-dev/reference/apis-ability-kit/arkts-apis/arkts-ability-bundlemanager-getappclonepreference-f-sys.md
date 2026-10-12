@@ -47,6 +47,7 @@ Queries the app clone preference settings based on the given bundleName. This AP
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700095](../errorcode-bundle.md#17700095-the-specified-application-has-no-clone-preference) | The specified bundle not found app clone preference. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,3 +69,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAppClonePreference failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

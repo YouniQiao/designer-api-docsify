@@ -40,6 +40,7 @@ function getAllSessionDescriptors(callback: AsyncCallback<Array<Readonly<AVSessi
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -69,3 +70,5 @@ struct Index {
   } 
 }
 ```
+
+<!--DelEnd-->

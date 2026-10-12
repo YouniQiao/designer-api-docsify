@@ -44,6 +44,7 @@ function queryBusinessAbilityInfo(
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | non-system app called system api. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -65,6 +66,8 @@ try {
   console.error('queryBusinessAbilityInfo failed ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="querybusinessabilityinfo2"></a>
@@ -107,6 +110,7 @@ function queryBusinessAbilityInfo(filter: BusinessAbilityFilter): Promise<Array<
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | non-system app called system api. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -127,3 +131,5 @@ try {
   console.error('queryBusinessAbilityInfo failed ' + message);
 }
 ```
+
+<!--DelEnd-->

@@ -42,6 +42,7 @@ Obtains the storage statistics of this user, in bytes. This API uses a promise t
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,6 +53,8 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
   console.error("getUserStorageStats failed with error:" + JSON.stringify(err));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats2"></a>
@@ -90,6 +93,7 @@ Obtains the storage statistics of this user, in bytes. This API uses an asynchro
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -103,6 +107,8 @@ storageStatistics.getUserStorageStats((error: BusinessError, storageStats: stora
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats3"></a>
@@ -148,6 +154,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses a 
 | 13600009 | User if out of range. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -159,6 +166,8 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
   console.error("getUserStorageStats failed with error:" + JSON.stringify(err));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats4"></a>
@@ -199,6 +208,7 @@ Obtains the storage statistics of the specified user, in bytes. This API uses an
 | 13600009 | User if out of range. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -213,3 +223,5 @@ storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStat
   }
 });
 ```
+
+<!--DelEnd-->

@@ -69,6 +69,7 @@ UIExtensionComponent(
 | [DpiFollowStrategy](arkts-arkui-uiextensioncomponent-comp-dpifollowstrategy-e-sys.md) | 表示不同类型的DpiFollowStrategy的枚举。 |
 | [WindowModeFollowStrategy](arkts-arkui-uiextensioncomponent-comp-windowmodefollowstrategy-e-sys.md) | 窗口Mode跟随策略，用于设置窗口Mode，使其能够跟随宿主或UIExtensionAbility。 |
 
+<!--Del-->
 ## 示例
 
 ### 示例1 (加载UIExtension)
@@ -480,3 +481,5 @@ struct Extension {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -39,6 +39,7 @@ Saves a character string name and its value to the database.
 | value | object | Yes | Indicates the value of the character string. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | The callback of setValue result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -76,6 +77,8 @@ settings.setValue(context, settings.display.SCREEN_BRIGHTNESS_STATUS, '100', set
   console.info(`callback:return whether value is set.`)
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setvalue2"></a>
@@ -116,6 +119,9 @@ Saves a character string name and its value to the database.
 | --- | --- |
 | Promise&lt;boolean&gt; | Returns `true` if the operation is successful; returns `false` otherwise. |
 
+<!--Del-->
 **Examples**
 
 See [setValue](#setvalue)
+
+<!--DelEnd-->

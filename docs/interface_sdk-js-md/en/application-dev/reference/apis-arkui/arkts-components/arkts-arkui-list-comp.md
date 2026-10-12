@@ -102,6 +102,7 @@ Creates a list container.
 | --- | --- |
 | [OnListScrollIndexCallback](arkts-arkui-list-comp-onlistscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **List** component. |
 | [OnScrollVisibleContentChangeCallback](arkts-arkui-list-comp-onscrollvisiblecontentchangecallback-t.md) | Triggered when a child component enters or leaves the list display area. |
+| [PlaceholderProvider](arkts-arkui-list-comp-placeholderprovider-t.md) | Provides the placeholder description for an item of a scrollable component. |
 
 ### Enums
 

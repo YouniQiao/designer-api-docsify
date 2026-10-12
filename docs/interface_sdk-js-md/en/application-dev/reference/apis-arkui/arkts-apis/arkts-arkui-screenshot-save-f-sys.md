@@ -45,6 +45,7 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API.<br>**Applicable version:** 11 and later |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen.<br>**Applicable version:** 11 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -75,6 +76,8 @@ screenshot.save(screenshotOptions, (err: BusinessError, pixelMap: image.PixelMap
   pixelMap.release(); // Release the memory in time after the PixelMap is used.
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="save2"></a>
@@ -114,6 +117,7 @@ Obtains a screenshot. This API uses an asynchronous callback to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -130,6 +134,8 @@ screenshot.save((err: BusinessError, pixelMap: image.PixelMap) => {
   pixelMap.release(); // Release the memory in time after the PixelMap is used.
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="save3"></a>
@@ -176,6 +182,7 @@ Obtains a screenshot. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -209,3 +216,5 @@ try {
   console.error(`Failed to save screenshot. Code: ${exception.code}, message: ${exception.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -44,6 +44,7 @@ function sendSystemControlCommand(command: AVControlCommand, callback: AsyncCall
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,6 +68,8 @@ avSession.sendSystemControlCommand(avcommand, () => {
     console.info('Succeeded in sending system control command.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="sendsystemcontrolcommand2"></a>
@@ -112,6 +115,7 @@ function sendSystemControlCommand(command: AVControlCommand): Promise<void>
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 | [6600107](../errorcode-avsession.md#6600107-命令消息过载) | Too many commands or events. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -135,3 +139,5 @@ avSession.sendSystemControlCommand(avcommand).then(() => {
   console.info('Succeeded in sending system control command.');
 });
 ```
+
+<!--DelEnd-->

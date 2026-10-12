@@ -43,6 +43,7 @@ function queryAllPrintJobs(callback: AsyncCallback<void>): void
 | [201](../../errorcode-universal.md#201-api权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -68,6 +69,8 @@ print.queryAllPrintJobs().then(() => {
     console.error(`Failed to query all print jobs. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryallprintjobs2"></a>
@@ -107,6 +110,9 @@ function queryAllPrintJobs(): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | the application does not have permission to call this function. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 
+<!--Del-->
 **示例**
 
 参见 [queryAllPrintJobs](#queryallprintjobs)
+
+<!--DelEnd-->

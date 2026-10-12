@@ -49,6 +49,7 @@ Called when the system acquire the form data.
 | object | Returns the wantParams object.<br>**Since:** 10 |
 | Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Since:** 11 |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,6 +66,8 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## onShareForm
 
@@ -97,6 +100,7 @@ Called when the system shares the form.
 | object | Returns the wantParams object.<br>**Since:** 9 - 10 |
 | Record&lt;string, Object&gt; | Returns the wantParams object.<br>**Since:** 11 |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ export default class MyFormExtensionAbility extends FormExtensionAbility {
   }
 }
 ```
+
+<!--DelEnd-->

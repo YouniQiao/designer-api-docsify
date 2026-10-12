@@ -52,13 +52,14 @@ function grantUriPermission(
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported.<br>**适用版本：** 19+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -86,6 +87,8 @@ fileIo.mkdir(path, (err) => {
     });
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="granturipermission3"></a>
@@ -134,13 +137,14 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
 | [16000060](../errorcode-ability.md#16000060-不支持沙箱应用授权uri) | A sandbox application cannot grant URI permission. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported.<br>**适用版本：** 19+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -168,6 +172,8 @@ fileIo.mkdir(path, (err) => {
   });
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="granturipermission5"></a>
@@ -219,7 +225,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. Interface caller is not a system app. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16000058](../errorcode-ability.md#16000058-指定的uri-flag无效) | Invalid URI flag. |
 | [16000059](../errorcode-ability.md#16000059-指定的uri类型无效) | Invalid URI type. |
@@ -227,6 +233,7 @@ function grantUriPermission(uri: string, flag: wantConstant.Flags, targetBundleN
 | [16000081](../errorcode-ability.md#16000081-获取目标应用信息失败) | Failed to obtain the target application information. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported.<br>**适用版本：** 19+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -272,3 +279,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

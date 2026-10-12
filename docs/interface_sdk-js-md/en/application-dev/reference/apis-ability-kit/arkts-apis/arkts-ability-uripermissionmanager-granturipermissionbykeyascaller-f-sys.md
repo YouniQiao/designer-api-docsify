@@ -54,6 +54,7 @@ Grants the URI access permission of the specified application to the target appl
 | [16000093](../errorcode-ability.md#16000093-invalid-caller-token-id) | The caller token ID is invalid. |
 | [16000094](../errorcode-ability.md#16000094-invalid-target-token-id) | The target token ID is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -126,3 +127,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

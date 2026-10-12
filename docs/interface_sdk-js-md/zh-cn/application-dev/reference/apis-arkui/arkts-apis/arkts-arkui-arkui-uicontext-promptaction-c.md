@@ -2036,8 +2036,8 @@ updateMenu<T extends Object>(content: ComponentContent<T>, options: MenuOptions,
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | content | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | 是 | menu弹窗中显示的组件内容。 |
-| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | 是 | menu弹窗样式。<br> **说明：** <br> 1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br> 2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
-| partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。<br> **说明：** <br> 1. true为增量更新，保留当前值，更新options中的指定属性。 <br> 2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
+| options | [MenuOptions](../arkts-components/arkts-arkui-common-comp-menuoptions-i.md) | 是 | menu弹窗样式。<br> **说明：** <br>       1. 不支持更新showInSubWindow、preview、previewAnimationOptions、transition、onAppear、aboutToAppear、onDisappear、 aboutToDisappear、onWillAppear、onDidAppear、onWillDisappear和onDidDisappear。<br>       2. 支持mask通过设置[MenuMaskType](../arkts-components/arkts-arkui-common-comp-menumasktype-i.md)实现更新蒙层样式， 不支持mask通过设置boolean实现蒙层从无到有或者从有到无的更新。 |
+| partialUpdate | boolean | 否 | menu弹窗更新方式，默认值为false。<br> **说明：** <br>           1. true为增量更新，保留当前值，更新options中的指定属性。 <br>           2. false为全量更新，除options中的指定属性，其他属性恢复默认值。 |
 
 **返回值：**
 

@@ -42,6 +42,7 @@ function getHistoricalSessionDescriptors(maxSize: number, callback: AsyncCallbac
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ avSession.getHistoricalSessionDescriptors(1, (descriptors: avSession.AVSessionDe
     } 
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="gethistoricalsessiondescriptors2"></a>
@@ -99,6 +102,7 @@ function getHistoricalSessionDescriptors(maxSize?: number): Promise<Array<Readon
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -113,3 +117,5 @@ avSession.getHistoricalSessionDescriptors().then((descriptors: avSession.AVSessi
   }
 });
 ```
+
+<!--DelEnd-->

@@ -40,6 +40,7 @@ UnionEffectContainer(options?: UnionEffectContainerOptions)
 | --- | --- |
 | [UnionMode](arkts-arkui-unioneffectcontainer-comp-unionmode-e-sys.md) | 设置融合效果模式。 |
 
+<!--Del-->
 ## 示例
 
 ### 示例1（设置融合形变效果）
@@ -268,3 +269,5 @@ struct UnionEffectContainerPage {
   }
 }
 ```
+
+<!--DelEnd-->

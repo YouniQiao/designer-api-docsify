@@ -54,6 +54,7 @@ function grantUriPermissionByKeyAsCaller(key: string, flag: wantConstant.Flags, 
 | [16000093](../errorcode-ability.md#16000093-调用方的token-id无效) | The caller token ID is invalid. |
 | [16000094](../errorcode-ability.md#16000094-目标应用的token-id无效) | The target token ID is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -126,3 +127,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

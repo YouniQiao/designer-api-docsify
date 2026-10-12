@@ -45,6 +45,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlaunchwantforbundle2"></a>
@@ -107,6 +110,7 @@ Obtains the Want used to launch the bundle based on the given bundle name. This 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -129,6 +133,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getlaunchwantforbundle3"></a>
@@ -175,6 +181,7 @@ Obtains the Want used to launch the bundle based on the given bundle name and us
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -196,3 +203,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getLaunchWantForBundle failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

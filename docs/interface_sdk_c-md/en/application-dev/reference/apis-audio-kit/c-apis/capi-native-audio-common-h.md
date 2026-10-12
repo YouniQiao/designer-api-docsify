@@ -6,6 +6,8 @@ Declare the audio common base data structure.<br> Defines the types of public re
 
 **Library**: libohaudio.so
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 **Related module**: [OHAudio](capi-ohaudio.md)
@@ -32,6 +34,8 @@ enum OH_AudioCommon_Result
 **Description**
 
 Define the result of the function execution.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -61,6 +65,8 @@ enum OH_AudioScene
 
 Defines the audio scene.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -80,6 +86,8 @@ enum OH_AudioRingerMode
 
 Defines the ringer mode.
 
+**System capability**: SystemCapability.Multimedia.Audio.Core
+
 **Since**: 20
 
 | Enum item | Description |
@@ -97,6 +105,8 @@ enum OH_AudioNoiseReductionMode
 **Description**
 
 Enumerates the noise reduction modes.
+
+**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 

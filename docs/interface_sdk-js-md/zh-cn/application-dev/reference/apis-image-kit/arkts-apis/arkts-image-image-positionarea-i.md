@@ -44,7 +44,7 @@ offset: number
 pixels: ArrayBuffer
 ```
 
-像素数据缓冲区。仅支持BGRA_8888格式的像素数据。
+像素数据缓冲区。
 
 **类型：** ArrayBuffer
 
@@ -64,7 +64,7 @@ pixels: ArrayBuffer
 region: Region
 ```
 
-区域信息，用于按区域进行图像数据的读写。写入的区域宽度加X坐标不能大于原图的宽度，写入的区域高度加Y坐标不能大于原图的高度。
+区域信息，用于按区域进行图像数据的读写。指定的区域宽度加X坐标不能大于原图的宽度，指定的区域高度加Y坐标不能大于原图的高度。
 
 **类型：** [Region](arkts-image-image-region-i.md)
 
@@ -84,7 +84,7 @@ region: Region
 stride: number
 ```
 
-跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride &gt;= region.size.width * 4，不满足时数据读取异常。
+跨距，内存中每行像素所占的空间。单位：字节（Byte）。
 
 **类型：** number
 

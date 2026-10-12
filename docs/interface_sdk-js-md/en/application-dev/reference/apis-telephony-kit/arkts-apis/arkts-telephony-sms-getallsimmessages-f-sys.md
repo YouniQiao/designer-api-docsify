@@ -45,6 +45,7 @@ Obtains all SIM card messages. This API uses an asynchronous callback to return 
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.getAllSimMessages(slotId, (err: BusinessError, data: sms.SimShortMessage[]) 
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallsimmessages2"></a>
@@ -102,6 +105,7 @@ Obtains all SIM card messages. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -116,3 +120,5 @@ promise.then((data: sms.SimShortMessage[]) => {
     console.error(`getAllSimMessages failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

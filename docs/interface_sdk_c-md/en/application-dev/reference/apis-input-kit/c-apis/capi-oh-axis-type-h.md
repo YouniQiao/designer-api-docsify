@@ -8,6 +8,8 @@ Axis event enums of input devices. The axis type defines the physical behavior c
 
 **Library**: libohinput.so
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 **Related module**: [input](capi-input.md)
@@ -34,6 +36,8 @@ enum InputEvent_AxisType
 
 Defines the axis type of an input device.
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -54,6 +58,8 @@ enum InputEvent_AxisEventType
 
 Event type of the input device.
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 12
 
 | Enum item | Description |
@@ -70,6 +76,8 @@ enum InputEvent_AxisAction
 **Description**
 
 Action of the input device.
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
 
 **Since**: 12
 

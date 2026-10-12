@@ -45,6 +45,7 @@ Obtains the historical data traffic of the specified application. This API uses 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -86,6 +87,8 @@ statistics.getTrafficStatsByUid(
   }
 );
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettrafficstatsbyuid2"></a>
@@ -132,6 +135,7 @@ Obtains the historical data traffic of the specified application. This API uses 
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-failed-to-read-the-database) | Failed to read the database. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -153,3 +157,5 @@ statistics.getTrafficStatsByUid(uidInfo).then((statsInfo: statistics.NetStatsInf
   console.info("getTrafficStatsByUid packets of sent = " + JSON.stringify(statsInfo.txPackets));
 })
 ```
+
+<!--DelEnd-->

@@ -6,6 +6,8 @@ This file defines the APIs for the cloud disk management module.
 
 **Library**: libohclouddiskmanager.so
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Related module**: [CloudDisk](capi-clouddisk.md)
@@ -104,6 +106,8 @@ enum CloudDisk_SyncState
 
 Enumerates the file sync states.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 | Enum item | Description |
@@ -124,6 +128,8 @@ enum CloudDisk_OperationType
 **Description**
 
 Enumerates the file change types.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -147,6 +153,8 @@ enum CloudDisk_ErrorReason
 
 Enumerates the file sync failure causes.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 | Enum item | Description |
@@ -167,6 +175,8 @@ enum CloudDisk_SyncFolderState
 
 Enumerates the sync root path states.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 | Enum item | Description |
@@ -183,6 +193,8 @@ enum OH_CloudDisk_PlaceholderState
 **Description**
 
 Enumerates the placeholder states.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -203,6 +215,8 @@ enum OH_CloudDisk_CallbackType
 
 Enumerates the cloud disk callback types.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 | Enum item | Description |
@@ -221,6 +235,8 @@ enum OH_CloudDisk_HydratePriority
 **Description**
 
 Enumerates the hydrate priorities.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -242,6 +258,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChanges(const CloudDisk_SyncF
 **Description**
 
 Registers a callback to obtain file changes in the sync root path.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -268,6 +286,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnregisterSyncFolderChanges(const CloudDisk_Syn
 
 Unregisters the callback for file changes in the sync root path.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -291,6 +311,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChanges(const CloudDisk_SyncFolder
 **Description**
 
 Obtains the change history in the sync root path.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -318,6 +340,8 @@ CloudDisk_ErrorCode OH_CloudDisk_SetFileSyncStates(const CloudDisk_SyncFolderPat
 **Description**
 
 Sets the file sync state in the sync root path.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -347,6 +371,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetFileSyncStates(const CloudDisk_SyncFolderPat
 
 Obtains the file sync state in the sync root path.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -375,6 +401,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolder(const CloudDisk_SyncFolder *
 
 Registers a sync root.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -398,6 +426,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnregisterSyncFolder(const CloudDisk_SyncFolder
 **Description**
 
 Unregisters the sync root.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -423,6 +453,8 @@ CloudDisk_ErrorCode OH_CloudDisk_ActiveSyncFolder(const CloudDisk_SyncFolderPath
 
 Activates the sync root.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -447,6 +479,8 @@ CloudDisk_ErrorCode OH_CloudDisk_DeactiveSyncFolder(const CloudDisk_SyncFolderPa
 
 Deactivates the sync root.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -470,6 +504,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolders(CloudDisk_SyncFolder **syncFolde
 **Description**
 
 Obtains all sync roots.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 21
 
@@ -496,6 +532,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UpdateCustomAlias(const CloudDisk_SyncFolderPat
 
 Updates the sync root alias.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 21
 
 **Parameters**:
@@ -521,6 +559,8 @@ CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPat
 **Description**
 
 Creates a placeholder in a registered sync folder.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -549,6 +589,8 @@ CloudDisk_ErrorCode OH_CloudDisk_IsPlaceholderFile(const CloudDisk_SyncFolderPat
 
 Checks whether a file in a sync folder is a placeholder file.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -574,6 +616,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetPlaceholderState(const CloudDisk_SyncFolderP
 **Description**
 
 Gets the placeholder state of a file in a registered sync folder.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -601,6 +645,8 @@ CloudDisk_ErrorCode OH_CloudDisk_ConvertPlaceholderToFile(const CloudDisk_SyncFo
 
 Converts a placeholder file to a 0-byte normal file.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -625,6 +671,8 @@ CloudDisk_ErrorCode OH_CloudDisk_MarkFileAsPlaceholder(const CloudDisk_SyncFolde
 **Description**
 
 Marks a normal file as a fully hydrated placeholder without changing its data or metadata.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -651,6 +699,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnmarkPlaceholderFile(const CloudDisk_SyncFolde
 
 Converts a fully hydrated placeholder to a normal file without changing its data or metadata.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -675,6 +725,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UpdatePlaceholder(const CloudDisk_SyncFolderPat
 **Description**
 
 Updates file metadata (supports placeholder and normal files).
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -703,6 +755,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetPlaceholderCustomInfo(const CloudDisk_SyncFo
 
 Gets opaque custom information associated with a placeholder.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -729,6 +783,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterCallbackTable(const CloudDisk_SyncFolde
 **Description**
 
 Registers a callback table for hydration and dehydrate requests.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -760,6 +816,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnregisterCallbackTable(const CloudDisk_SyncFol
 
 Unregisters the callback table for hydration and dehydrate requests.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -783,6 +841,8 @@ CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqH
 **Description**
 
 Responds to a callback request.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -809,6 +869,8 @@ CloudDisk_ErrorCode OH_CloudDisk_HydratePlaceholder(const CloudDisk_SyncFolderPa
 **Description**
 
 Actively hydrates a placeholder file or cancels hydration.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 
@@ -837,6 +899,8 @@ CloudDisk_ErrorCode OH_CloudDisk_DehydrateFile(const CloudDisk_SyncFolderPath *s
 
 Dehydrates a fully hydrated placeholder file.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -862,6 +926,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFol
 
 Registers a sync folder with placeholder support info.
 
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
+
 **Since**: 26.0.1
 
 **Parameters**:
@@ -885,6 +951,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetSyncFoldersEx(OH_CloudDisk_SyncFolderEx **sy
 **Description**
 
 Gets the sync folders with placeholder support info.
+
+**System capability**: SystemCapability.FileManagement.CloudDiskManager
 
 **Since**: 26.0.1
 

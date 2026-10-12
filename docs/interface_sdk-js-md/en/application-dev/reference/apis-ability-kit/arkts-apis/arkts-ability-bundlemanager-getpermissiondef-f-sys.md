@@ -42,6 +42,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) | The specified permission is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getPermissionDef failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpermissiondef2"></a>
@@ -106,6 +109,7 @@ Obtains the PermissionDef struct based on the given permission name. This API us
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700006](../errorcode-bundle.md#17700006-permission-does-not-exist) | The specified permission is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -125,3 +129,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getPermissionDef failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

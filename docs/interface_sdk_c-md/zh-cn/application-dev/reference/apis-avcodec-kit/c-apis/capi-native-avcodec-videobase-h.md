@@ -8,6 +8,8 @@
 
 **库：** libnative_media_codecbase.so
 
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 26.0.0
 
 **相关模块：** [CodecBase](capi-codecbase.md)
@@ -52,6 +54,8 @@ enum OH_VideoMetadataRoiSemanticLabel
 
 视频编码中感兴趣区域（ROI）的语义标签。
 
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
@@ -75,6 +79,8 @@ OH_AVErrCode OH_VideoMetadata_AppendRoiString(char **roiStrInOut, OH_AVFormat *f
 > **说明：**
 >
 > 调用者拥有为*roiStrInOut分配内存的所有权。 内存是通过标准C库分配器（malloc/realloc）分配的。 当不再需要该字符串时，调用者必须使用匹配的标准C库释放器（free）释放该字符串， 并将指针设置为NULL以防止重复释放。
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 26.0.0
 
@@ -102,6 +108,8 @@ OH_AVErrCode OH_VideoMetadata_GetRoiCount(const char *roiStr, uint32_t *outCount
 **描述：**
 
 预解析ROI字符串，以获取其中包含的有效ROI区域数量。<br> 此接口不受具体后端容量限制影响，并根据语法规则准确返回字符串中识别出的有效区域数。
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 26.0.0
 
@@ -131,6 +139,8 @@ OH_AVErrCode OH_VideoMetadata_ParseRoiString(const char *roiStr, OH_AVFormat **o
 > **说明：**
 >
 > 调用者拥有每个成功创建的OH_AVFormat句柄的所有权。返回时， 有效的句柄存储在outOwnedFormats数组的前*outCount个元素中。 - 完全或部分成功时（*outCount > 0），调用者必须使用[OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy)逐个销毁 有效句柄，以防止内存泄漏。 - 完全失败时（*outCount == 0），不会创建任何句柄，也无需销毁。
+
+**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 26.0.0
 

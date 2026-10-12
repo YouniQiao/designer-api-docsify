@@ -44,6 +44,7 @@ Updates the static configuration information of a specified template widget on t
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16501013](../errorcode-form.md#16501013-operation-not-supported) | The system does not support the current operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,3 +71,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

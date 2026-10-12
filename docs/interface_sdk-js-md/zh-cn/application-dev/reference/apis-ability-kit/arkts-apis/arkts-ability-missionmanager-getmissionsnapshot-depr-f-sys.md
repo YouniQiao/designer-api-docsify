@@ -37,6 +37,7 @@ function getMissionSnapShot(deviceId: string, missionId: number, callback: Async
 | missionId | number | 是 | 任务ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | 是 | 回调函数，返回任务快照信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -58,6 +59,8 @@ try {
   console.error(`getMissionSnapShot sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getmissionsnapshot2"></a>
@@ -97,6 +100,7 @@ function getMissionSnapShot(deviceId: string, missionId: number): Promise<Missio
 | --- | --- |
 | Promise&lt;[MissionSnapshot](arkts-ability-missionsnapshot-i-sys.md)&gt; | Promise对象，返回任务快照信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -115,3 +119,5 @@ try {
   console.error(`getMissionSnapShot failed. Cause: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

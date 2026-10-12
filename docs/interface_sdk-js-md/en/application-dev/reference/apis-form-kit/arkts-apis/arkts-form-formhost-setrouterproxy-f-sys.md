@@ -54,6 +54,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -108,6 +109,8 @@ struct CardExample {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="setrouterproxy2"></a>
 
@@ -160,6 +163,7 @@ Sets a router proxy for widgets and obtains the Want information required for re
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -215,3 +219,5 @@ struct CardExample {
   }
 }
 ```
+
+<!--DelEnd-->

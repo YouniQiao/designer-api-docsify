@@ -6,6 +6,8 @@ Provides common event constants defined by the system.
 
 **Library**: libohcommonevent.so
 
+**System capability**: SystemCapability.Notification.CommonEvent
+
 **Since**: 12
 
 **Related module**: [OH_CommonEvent](capi-oh-commonevent.md)

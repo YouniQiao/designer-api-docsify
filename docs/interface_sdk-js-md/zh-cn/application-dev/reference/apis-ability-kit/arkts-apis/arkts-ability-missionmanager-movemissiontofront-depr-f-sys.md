@@ -36,6 +36,7 @@ function moveMissionToFront(missionId: number, callback: AsyncCallback<void>): v
 | missionId | number | 是 | 任务ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当把指定任务id的任务切到前台成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -57,6 +58,8 @@ try {
   console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="movemissiontofront2"></a>
@@ -91,6 +94,7 @@ function moveMissionToFront(missionId: number, options: StartOptions, callback: 
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | 是 | 启动参数选项，用于指定任务切到前台时的窗口模式，设备ID等。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当把指定任务id的任务切到前台成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -112,6 +116,8 @@ try {
   console.error(`moveMissionToFront sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="movemissiontofront3"></a>
@@ -151,6 +157,7 @@ function moveMissionToFront(missionId: number, options?: StartOptions): Promise<
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -169,3 +176,5 @@ try {
   console.error(`moveMissionToFront failed. Cause: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

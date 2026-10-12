@@ -38,6 +38,7 @@ function getKioskStatus(): Promise<KioskStatus>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Failed to connect to the system service. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,3 +68,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

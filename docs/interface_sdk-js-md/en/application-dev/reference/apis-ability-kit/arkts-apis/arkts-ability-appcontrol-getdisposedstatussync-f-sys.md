@@ -46,6 +46,7 @@ Obtains the disposed status of an application. This API returns the result synch
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,3 +64,5 @@ try {
   console.error('getDisposedStatusSync failed ' + message);
 }
 ```
+
+<!--DelEnd-->

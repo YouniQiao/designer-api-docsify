@@ -46,6 +46,7 @@ Converts a temporary widget to a normal one. This API uses an asynchronous callb
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="casttonormalform2"></a>
@@ -110,6 +113,7 @@ Converts a temporary widget to a normal one. This API uses a promise to return t
 | [16501002](../errorcode-form.md#16501002-too-many-widgets) | The number of forms exceeds the maximum allowed. |
 | [16501003](../errorcode-form.md#16501003-widget-not-operatable) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -127,3 +131,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

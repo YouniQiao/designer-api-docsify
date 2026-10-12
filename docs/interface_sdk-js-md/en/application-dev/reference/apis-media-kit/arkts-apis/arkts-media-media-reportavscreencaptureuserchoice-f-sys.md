@@ -39,9 +39,10 @@ Reports the user selection result in the screen capture privacy dialog box to th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3.Parameter verification failed. |
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,3 +71,5 @@ try {
   console.error(`reportAVScreenCaptureUserChoice error, error message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

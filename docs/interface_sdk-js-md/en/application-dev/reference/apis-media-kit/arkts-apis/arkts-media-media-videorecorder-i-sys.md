@@ -53,6 +53,7 @@ get input surface.it must be called between prepare completed and start.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -69,6 +70,8 @@ videoRecorder.getInputSurface((err: BusinessError, surfaceId: string) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getinputsurface3"></a>
 
@@ -103,6 +106,7 @@ get input surface. it must be called between prepare completed and start.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,6 +121,8 @@ videoRecorder.getInputSurface().then((surfaceId: string) => {
   console.error('getInputSurface failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('error')
 
@@ -150,6 +156,7 @@ Listens for video recording error events.
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied.<br>**Applicable version:** 12 and later |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -160,6 +167,8 @@ videoRecorder.on('error', (error: BusinessError) => { // Set the 'error' event c
   console.error(`audio error called, error: ${error}`);
 })
 ```
+
+<!--DelEnd-->
 
 <a id="pause1"></a>
 
@@ -194,6 +203,7 @@ Pauses video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -208,6 +218,8 @@ videoRecorder.pause((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="pause2"></a>
 
@@ -242,6 +254,7 @@ Pauses video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -254,6 +267,8 @@ videoRecorder.pause().then(() => {
   console.error('pause videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="prepare1"></a>
 
@@ -292,6 +307,7 @@ Prepares for recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -329,6 +345,8 @@ videoRecorder.prepare(videoConfig, (err: BusinessError) => {
   }
 })
 ```
+
+<!--DelEnd-->
 
 <a id="prepare2"></a>
 
@@ -372,6 +390,7 @@ Prepares for recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -408,6 +427,8 @@ videoRecorder.prepare(videoConfig).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="release1"></a>
 
 ## release
@@ -439,6 +460,7 @@ Releases resources used for video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -453,6 +475,8 @@ videoRecorder.release((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="release2"></a>
 
@@ -485,6 +509,7 @@ Releases resources used for video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -497,6 +522,8 @@ videoRecorder.release().then(() => {
   console.error('release videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="reset1"></a>
 
@@ -530,6 +557,7 @@ Resets video recording. Before resetting video recording, you must call stop() t
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -544,6 +572,8 @@ videoRecorder.reset((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="reset2"></a>
 
@@ -577,6 +607,7 @@ Resets video recording. Before resetting video recording, you must call stop() t
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -589,6 +620,8 @@ videoRecorder.reset().then(() => {
   console.error('reset videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="resume1"></a>
 
@@ -623,6 +656,7 @@ Resumes video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -637,6 +671,8 @@ videoRecorder.resume((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="resume2"></a>
 
@@ -671,6 +707,7 @@ Resumes video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -683,6 +720,8 @@ videoRecorder.resume().then(() => {
   console.error('resume videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -717,6 +756,7 @@ Starts video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -731,6 +771,8 @@ videoRecorder.start((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -765,6 +807,7 @@ Starts video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -777,6 +820,8 @@ videoRecorder.start().then(() => {
   console.error('start videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -811,6 +856,7 @@ Stops video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -825,6 +871,8 @@ videoRecorder.stop((err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -859,6 +907,7 @@ Stops video recording.
 | [5400105](../errorcode-media.md#5400105-play-service-dead) | Service died. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -871,6 +920,8 @@ videoRecorder.stop().then(() => {
   console.error('stop videorecorder failed and catch error is ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 ## state
 

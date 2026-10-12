@@ -39,11 +39,12 @@ Removes a sticky common event. This API uses an asynchronous callback to return 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1500004](../errorcode-CommonEventService.md#1500004-failed-to-send-system-common-events) | A third-party application cannot send system common events. |
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,6 +58,8 @@ commonEventManager.removeStickyCommonEvent('sticky_event', (err: BusinessError) 
   console.info(`removeStickyCommonEvent success`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="removestickycommonevent2"></a>
@@ -97,11 +100,12 @@ Removes a sticky common event that has been published. This API uses a promise t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [1500004](../errorcode-CommonEventService.md#1500004-failed-to-send-system-common-events) | A third-party application cannot send system common events. |
 | [1500007](../errorcode-CommonEventService.md#1500007-failed-to-send-a-request-through-ipc) | Failed to send the message to the common event service. |
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +117,5 @@ commonEventManager.removeStickyCommonEvent('sticky_event').then(() => {
   console.error(`removeStickyCommonEvent failed, errCode: ${err.code}, errMsg: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

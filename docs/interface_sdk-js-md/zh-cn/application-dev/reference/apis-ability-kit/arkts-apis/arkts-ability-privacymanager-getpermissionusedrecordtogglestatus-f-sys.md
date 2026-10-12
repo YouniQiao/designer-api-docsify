@@ -43,6 +43,7 @@ function getPermissionUsedRecordToggleStatus(): Promise<boolean>
 | [12100004](../errorcode-access-token.md#12100004-接口未配套使用) | This API must be used together with [setPermissionUsedRecordToggleStatus](arkts-ability-privacymanager-setpermissionusedrecordtogglestatus-f-sys.md#setpermissionusedrecordtogglestatus1).<br>**适用版本：** 26.0.1+ |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ privacyManager.getPermissionUsedRecordToggleStatus().then((status) => {
   console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getpermissionusedrecordtogglestatus2"></a>
@@ -107,6 +110,7 @@ function getPermissionUsedRecordToggleStatus(subProfileId: number): Promise<bool
 | [12100001](../errorcode-access-token.md#12100001-入参错误) | Invalid parameter. The specified subProfileId does not exist for the current user. |
 | [12100007](../errorcode-access-token.md#12100007-系统服务工作异常) | Service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -120,3 +124,5 @@ privacyManager.getPermissionUsedRecordToggleStatus(subProfileId).then((status: b
   console.error(`getPermissionUsedRecordToggleStatus fail, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

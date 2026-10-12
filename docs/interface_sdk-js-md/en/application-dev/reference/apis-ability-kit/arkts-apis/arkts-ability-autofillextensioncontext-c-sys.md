@@ -55,6 +55,7 @@ Reloads the modal page. This API uses a promise to return the result.
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 The autofill service is triggered when a user touches the account and password text box, and an account selection page is displayed in the onFillRequest lifecycle of the [AutoFillExtensionAbility](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md).
@@ -147,3 +148,5 @@ struct AccountPage {
   }
 }
 ```
+
+<!--DelEnd-->

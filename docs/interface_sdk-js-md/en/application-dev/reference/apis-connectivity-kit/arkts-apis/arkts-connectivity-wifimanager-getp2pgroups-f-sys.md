@@ -41,6 +41,7 @@ Obtain information about the groups.
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ wifiManager.getP2pGroups().then(data => {
   console.info("get P2P groups: " + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getp2pgroups2"></a>
@@ -97,6 +100,9 @@ Obtain information about the groups.
 | [2801000](../errorcode-wifi.md#2801000-p2p-module-error) | Operation failed. |
 | [2801001](../errorcode-wifi.md#2801001-p2p-module-error) | Wi-Fi STA disabled. |
 
+<!--Del-->
 **Examples**
 
 See [getP2pGroups](#getp2pgroups)
+
+<!--DelEnd-->

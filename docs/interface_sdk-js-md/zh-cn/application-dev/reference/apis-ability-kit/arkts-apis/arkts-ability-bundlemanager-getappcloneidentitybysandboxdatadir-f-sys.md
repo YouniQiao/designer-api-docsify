@@ -34,6 +34,7 @@ function getAppCloneIdentityBySandboxDataDir(sandboxDataDir: string): AppCloneId
 | --- | --- |
 | [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md) | 返回应用包名和分身索引信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -77,3 +78,5 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->

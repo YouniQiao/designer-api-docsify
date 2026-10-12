@@ -42,6 +42,7 @@ function resetDefaultApplicationSync(type: string, userId?: number): void
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -70,3 +71,5 @@ try {
   console.error('Operation failed. Cause: ' + JSON.stringify(error));
 };
 ```
+
+<!--DelEnd-->

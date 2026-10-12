@@ -62,6 +62,7 @@ Enables or disables an input method. This API uses a promise to return the resul
 | [12800018](../errorcode-inputmethod-framework.md#12800018-input-method-not-found) | input method is not found. |
 | [12800019](../errorcode-inputmethod-framework.md#12800019-unsupported-operation-by-default-input-method) | current operation cannot be applied to the preconfigured default input method. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -90,6 +91,8 @@ function enableInputMethodSafely() {
 
 enableInputMethodSafely();
 ```
+
+<!--DelEnd-->
 
 <a id="enableinputmethod2"></a>
 
@@ -142,6 +145,7 @@ Change the enabled state of an input method of a specified user.
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -153,6 +157,8 @@ inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodE
   console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getallinputmethodssync2"></a>
 
@@ -197,6 +203,7 @@ Get all input methods sync of a specified user.
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -210,6 +217,8 @@ try {
   console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getCursorInfo
 
@@ -246,12 +255,13 @@ Obtains the cursor information of a specified user. If the edit box does not not
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-input-method-client-error) | input method client error. Possible causes:         1. No edit box is bound to the current input method application under the specified user. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
 | [12800023](../errorcode-inputmethod-framework.md#12800023-specified-user-not-exist) | the specified user does not exist. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -265,6 +275,8 @@ try {
   console.error(`Failed to get cursorInfo. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getDefaultInputMethodAbility
 
@@ -297,6 +309,7 @@ Obtains the default input method capabilities. To optimize performance, the retu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -310,6 +323,8 @@ try {
   console.error(`Failed to getDefaultInputMethodAbility. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getinputmethodssync2"></a>
 
@@ -355,6 +370,7 @@ List enabled or disabled input methods sync of a specified user.
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -368,6 +384,8 @@ try {
   console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getInputMethodSubtypes
 
@@ -411,6 +429,7 @@ Get subtypes of a specified input method of a specified user.
 | [12800024](../errorcode-inputmethod-framework.md#12800024-specified-user-not-in-the-foreground) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-cross-user-operation-denied) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -426,6 +445,8 @@ try {
   console.error(`Failed to getInputMethodSubtypes. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ispanelshown1"></a>
 
@@ -465,6 +486,7 @@ Checks whether the input method panel of a specified type is shown.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -482,6 +504,8 @@ try {
   console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ispanelshown2"></a>
 
@@ -523,6 +547,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-input-method-manager-service-error) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -541,6 +566,8 @@ try {
   console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('imeShow')
 
@@ -565,11 +592,14 @@ Unsubscribes from the soft keyboard show event of the [input method panel](arkts
 | type | 'imeShow' | Yes | Event type, which is **'imeShow'**. |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 inputMethod.getSetting().off('imeShow');
 ```
+
+<!--DelEnd-->
 
 ## off('imeHide')
 
@@ -594,11 +624,14 @@ Unsubscribes from the soft keyboard hide event of the [input method panel](arkts
 | type | 'imeHide' | Yes | Event type, which is **'imeHide'**. |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | No | Callback to unregister.<br>If this parameter is not specified, this API unregisters all callbacks for the specified event type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 inputMethod.getSetting().off('imeHide');
 ```
+
+<!--DelEnd-->
 
 ## offImeChangeWithUserId
 
@@ -630,11 +663,14 @@ Unsubscribe from the input method change event.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 inputMethod.getSetting().offImeChangeWithUserId();
 ```
+
+<!--DelEnd-->
 
 ## on('imeShow')
 
@@ -665,6 +701,7 @@ Subscribes to the soft keyboard show event of the [input method panel](arkts-ime
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -672,6 +709,8 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
   console.info('Succeeded in subscribing imeShow event.');
 });
 ```
+
+<!--DelEnd-->
 
 ## on('imeHide')
 
@@ -702,6 +741,7 @@ Subscribes to the soft keyboard hide event of the [input method panel](arkts-ime
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -709,6 +749,8 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
   console.info('Succeeded in subscribing imeHide event.');
 });
 ```
+
+<!--DelEnd-->
 
 ## onImeChangeWithUserId
 
@@ -740,6 +782,7 @@ Subscribe to the input method change event.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -750,3 +793,5 @@ inputMethod.getSetting()
     console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name}, inputMethodSubtype.id: ${inputMethodSubtype.id}, userId: ${userId}`);
   });
 ```
+
+<!--DelEnd-->

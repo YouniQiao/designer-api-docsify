@@ -43,6 +43,7 @@ function sendSystemAVKeyEvent(event: KeyEvent, callback: AsyncCallback<void>): v
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ avSession.sendSystemAVKeyEvent(event, () => {
     console.info('Succeeded in sending system AV key event.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="sendsystemavkeyevent2"></a>
@@ -99,6 +102,7 @@ function sendSystemAVKeyEvent(event: KeyEvent): Promise<void>
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 | [6600105](../errorcode-avsession.md#6600105-无效会话命令) | Invalid session command. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -111,3 +115,5 @@ avSession.sendSystemAVKeyEvent(event).then(() => {
   console.info('Succeeded in sending system AV key event.');
 });
 ```
+
+<!--DelEnd-->

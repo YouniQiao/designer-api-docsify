@@ -8,6 +8,8 @@
 
 **库：** libcontent_embed_ndk.so
 
+**系统能力：** SystemCapability.ContentEmbed.ObjectEditor
+
 **起始版本：** 24
 
 **相关模块：** [ContentEmbed](capi-contentembed.md)
@@ -38,6 +40,8 @@ enum ContentEmbed_ErrorCode
 **描述：**
 
 提供内容嵌入模块的错误码定义。
+
+**系统能力：** SystemCapability.ContentEmbed.ObjectEditor
 
 **起始版本：** 24
 
@@ -73,6 +77,8 @@ enum ContentEmbed_CapabilityCode
 **描述：**
 
 嵌入文档对象支持能力的枚举，可通过位掩码组合多个能力值。
+
+**系统能力：** SystemCapability.ContentEmbed.ObjectEditor
 
 **起始版本：** 24
 

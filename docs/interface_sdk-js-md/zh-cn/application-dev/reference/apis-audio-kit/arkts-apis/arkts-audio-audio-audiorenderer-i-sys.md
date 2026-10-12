@@ -52,6 +52,7 @@ getTarget(): RenderTarget
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Caller is not a system application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -65,6 +66,8 @@ async function getTarget(){
   console.info(`Succeeded in getting target, RenderTarget: ${renderTarget}.`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="settarget1"></a>
 
@@ -123,6 +126,7 @@ setTarget(target: RenderTarget): Promise<void>
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Current renderer is not supported to set target. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio client call audio service error, System error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -134,6 +138,8 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
   console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="settarget2"></a>
 
@@ -195,6 +201,7 @@ setTarget(target: RenderTarget, targetParams?: AudioRendererTargetParams): Promi
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Current renderer is not supported to set target. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | Audio server process died. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -211,3 +218,5 @@ audioRenderer.setTarget(audio.RenderTarget.INJECT_TO_VOICE_COMMUNICATION_CAPTURE
   console.error(`Failed to set target. code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

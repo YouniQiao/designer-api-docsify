@@ -43,6 +43,7 @@ function deleteDisposedStatus(appId: string, callback: AsyncCallback<void>): voi
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   console.error('deleteDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="deletedisposedstatus2"></a>
@@ -107,6 +110,7 @@ function deleteDisposedStatus(appId: string): Promise<void>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-指定的appid为空字符串) | The specified app ID is empty string. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -128,3 +132,5 @@ try {
   console.error('deleteDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->

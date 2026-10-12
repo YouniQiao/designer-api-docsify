@@ -284,7 +284,7 @@ Obtains the offset area of the soft keyboard relative to the system panel under 
 | Error Code ID | Error Message |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes:         1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-invalid-displayid) | invalid displayId. |
 
 **Examples**
@@ -799,10 +799,10 @@ Sets the immersive effect of the input method application. <br> <br>- Gradient m
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability;         2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes:         1. input method panel not created. 2. the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-immersive-effect-parameter-configuration-error) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-immersive-effect-parameter-configuration-error) | invalid immersive effect.         1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled.         2. The fluid light mode can only be used when the gradient mode is enabled.         3. When the gradient mode is not enabled, the gradient height can only be 0. |
 | [12800021](../errorcode-inputmethod-framework.md#12800021-incorrect-call-sequence) | this operation is allowed only after adjustPanelRect or resize is called. |
 
 **Examples**
@@ -1254,7 +1254,7 @@ Sends a command to start moving the window. The window can be moved only when th
 | [12800002](../errorcode-inputmethod-framework.md#12800002-input-method-engine-error) | input method engine error. Possible causes: 1.input method panel not created. 2.the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported.<br>**Applicable version:** 18 and later |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability;         2. The chip does not support the capability; 3. A dependent service feature is not supported.<br>**Applicable version:** 18 and later |
 
 **Examples**
 

@@ -41,9 +41,10 @@ Enables or disables the screen curtain. When the screen curtain is enabled, the 
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 | [9300003](../errorcode-accessibility.md#9300003-no-accessibility-permission-to-perform-the-operation) | No accessibility permission to perform the operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -89,6 +90,8 @@ export default class AccessibilityManager {
 }
 ```
 
+<!--DelEnd-->
+
 ## executeAction
 
 ```TypeScript
@@ -128,6 +131,7 @@ Performs an action on an accessibility node element based on the action type and
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300005](../errorcode-accessibility.md#9300005-operation-not-supported) | This action is not supported. |
 
+<!--Del-->
 **Examples**
 
 Action without parameters.
@@ -184,6 +188,8 @@ rootElement.executeAction(AccessibilityAction.SET_CURSOR_POSITION, parameter).th
 });
 ```
 
+<!--DelEnd-->
+
 ## findElement('textType')
 
 ```TypeScript
@@ -217,8 +223,9 @@ Searches for all node elements based on the accessibility text type configured i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -235,6 +242,8 @@ rootElement.findElement('textType', condition).then((data: AccessibilityElement[
   console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## findElement('elementId')
 
@@ -271,8 +280,9 @@ This method and [findElementById](#findelementbyid) both find a node element by 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -289,6 +299,8 @@ rootElement.findElement('elementId', condition).then((data: AccessibilityElement
   console.error(`Failed to find element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## findElementByContent
 
@@ -328,6 +340,7 @@ Searches for node elements by their content text, and returns all node elements 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -356,6 +369,8 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
   console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="findelementbyfocusdirection1"></a>
 
@@ -399,6 +414,7 @@ Compared with [findElementsByCondition](#findelementsbycondition1), this method 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -430,6 +446,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="findelementbyfocusdirection2"></a>
 
@@ -474,6 +492,7 @@ Searches for an element based on the focus direction and focus rule type. This A
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -527,6 +546,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<!--DelEnd-->
+
 ## findElementById
 
 ```TypeScript
@@ -567,6 +588,7 @@ This method is functionally equivalent to [findElement('elementId')](arkts-acces
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -598,6 +620,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## findElementsByAccessibilityHintText
 
@@ -637,6 +661,7 @@ Searches for elements by hint text, and returns all node elements whose accessib
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [9300006](../errorcode-accessibility.md#9300006-failed-to-connect-the-target-app-and-accessibility-service) | The target application failed to connect to accessibility service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -670,6 +695,8 @@ axContext.getRootInActiveWindow(windowId).then((root: AccessibilityElement) => {
   console.error(`Failed to get root in active window. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="findelementsbycondition1"></a>
 
@@ -713,6 +740,7 @@ Compared with [findElementByFocusDirection](#findelementbyfocusdirection1), this
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -730,6 +758,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="findelementsbycondition2"></a>
 
@@ -774,6 +804,7 @@ Searches for focusable nodes of the target type based on the rule and query cond
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -827,6 +858,8 @@ axContext.getAccessibilityFocusedElement().then((focus: AccessibilityElement) =>
 });
 ```
 
+<!--DelEnd-->
+
 ## getChildren
 
 ```TypeScript
@@ -858,6 +891,7 @@ Obtains the list of child elements of this element. This API uses a promise to r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -876,6 +910,8 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getcursorposition1"></a>
 
@@ -901,6 +937,7 @@ Obtains the cursor position in a text component. This API uses an asynchronous c
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. If the cursor position is obtained successfully, **err** is undefined and **data** is the position index of the cursor in the text; otherwise, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -915,6 +952,8 @@ rootElement.getCursorPosition((err: BusinessError, data: number) => {
   console.info(`succeeded in getting cursor position, ${data}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getcursorposition2"></a>
 
@@ -940,6 +979,7 @@ Obtains the cursor position in a text component. This API uses a promise to retu
 | --- | --- |
 | Promise&lt;number&gt; | Promise used to return the current cursor position. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -952,6 +992,8 @@ rootElement.getCursorPosition().then((data: number) => {
   console.error(`Failed to get cursor position. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getParent
 
@@ -984,6 +1026,7 @@ Obtains the parent element of an accessibility node. This API uses a promise to 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1002,6 +1045,8 @@ axContext.getAccessibilityFocusedElement().then((element: AccessibilityElement) 
   console.error(`Failed to get accessibility focused element. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getRoot
 
@@ -1034,6 +1079,7 @@ Obtains the root element of the active window. This API uses a promise to return
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed.The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1051,6 +1097,8 @@ for (let window of windows) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## accessibilityFocused
 

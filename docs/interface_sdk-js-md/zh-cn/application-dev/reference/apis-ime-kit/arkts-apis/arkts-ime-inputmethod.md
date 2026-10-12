@@ -15,7 +15,7 @@
 | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | 编辑框文本配置，包含输入属性（InputAttribute）、光标信息（CursorInfo）、选区信息、窗口ID等。 |
 | [InputAttribute](arkts-ime-inputmethod-inputattribute-i.md) | 输入属性，定义文本输入类型（TextInputType）和回车键类型（EnterKeyType）。 |
 | [CursorInfo](arkts-ime-inputmethod-cursorinfo-i.md) | 光标信息，定义光标的位置和尺寸。 |
-| MessageHandler | 自定义消息处理器，用于接收输入法应用发送的消息并提供终止通知。 |<br> <br>编辑框应用与输入法交互的典型流程涉及InputMethodController的多个API组合调用：获取控制器 -&gt; 绑定输入法 -&gt; 订阅输入法操作事件 -&gt; 在回调中处理文本操作 -&gt; 解绑输入法。<br> <br>  
+| MessageHandler | 自定义消息处理器，用于接收输入法应用发送的消息并提供终止通知。 |<br> <br>编辑框应用与输入法交互的典型流程涉及InputMethodController的多个API组合调用：获取控制器 -> 绑定输入法 -> 订阅输入法操作事件 -> 在回调中处理文本操作 -> 解绑输入法。<br> <br>  
 > **说明：** <br>
 > <br>
 > 订阅输入法操作事件（如insertText、deleteLeft等）应在`attach`之前完成，避免事件遗漏。`attach`是编辑框应用使用输入法能力的前提，必须先绑定才能进行后续操作。

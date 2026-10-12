@@ -42,6 +42,7 @@ Decodes MMS messages. This API uses an asynchronous callback to return the resul
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -58,6 +59,8 @@ sms.decodeMms(mmsPdu, (err: BusinessError, data: sms.MmsInformation) => {
     console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="decodemms2"></a>
@@ -101,6 +104,7 @@ Decodes MMS messages. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -123,3 +127,5 @@ promiseArr.then((data: sms.MmsInformation) => {
     console.error(`decodeMms failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

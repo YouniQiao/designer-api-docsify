@@ -71,6 +71,7 @@ function getFileAccessAbilityInfo(callback: AsyncCallback<Array<Want>>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -91,6 +92,8 @@ async function getFileAccessAbilityInfo() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getfileaccessabilityinfo2"></a>
@@ -158,6 +161,7 @@ function getFileAccessAbilityInfo(): Promise<Array<Want>>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -174,3 +178,5 @@ async function getFileAccessAbilityInfo() {
   }
 }
 ```
+
+<!--DelEnd-->

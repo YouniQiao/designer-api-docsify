@@ -44,6 +44,7 @@ function getDLPGatheringPolicy(): Promise<GatheringPolicyType>
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ dlpPermission.getDLPGatheringPolicy().then((gatheringPolicy: dlpPermission.Gathe
   console.error(`Failed to get DLPGatheringPolicy. Code: ${error.code}, message: ${error.message}`);
 }); // 获取沙箱聚合策略。
 ```
+
+<!--DelEnd-->
 
 
 <a id="getdlpgatheringpolicy2"></a>
@@ -96,6 +99,7 @@ function getDLPGatheringPolicy(callback: AsyncCallback<GatheringPolicyType>): vo
 | [19100001](../errorcode-dlp.md#19100001-入参错误) | Invalid parameter value. |
 | [19100011](../errorcode-dlp.md#19100011-系统服务工作异常) | The system ability works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -109,3 +113,5 @@ dlpPermission.getDLPGatheringPolicy((err, gatheringPolicy) => {
   }
 }); // 获取沙箱聚合策略。
 ```
+
+<!--DelEnd-->

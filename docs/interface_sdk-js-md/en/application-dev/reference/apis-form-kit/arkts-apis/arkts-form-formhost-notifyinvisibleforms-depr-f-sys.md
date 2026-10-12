@@ -36,6 +36,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget invisible, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -48,6 +49,8 @@ formHost.notifyInvisibleForms(formIds, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyinvisibleforms2"></a>
@@ -86,6 +89,7 @@ Instructs the widget framework to make a widget invisible. After this API is cal
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,3 +102,5 @@ formHost.notifyInvisibleForms(formIds).then(() => {
   console.error(`formHost notifyInvisibleForms, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

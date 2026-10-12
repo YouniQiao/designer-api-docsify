@@ -44,6 +44,7 @@ function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean,
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ sms.getSmsSegmentsInfo(slotId, "message", false, (err: BusinessError, data: sms.
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsmssegmentsinfo2"></a>
@@ -100,6 +103,7 @@ function getSmsSegmentsInfo(slotId: number, message: string, force7bit: boolean)
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -114,3 +118,5 @@ promise.then((data: sms.SmsSegmentsInfo) => {
     console.error(`getSmsSegmentsInfo failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

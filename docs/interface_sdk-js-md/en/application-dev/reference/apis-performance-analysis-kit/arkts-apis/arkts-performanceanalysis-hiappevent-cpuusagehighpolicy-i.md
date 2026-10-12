@@ -82,8 +82,9 @@ If the value is not within the threshold range, the default value **1** is used.
 **NOTE:** 
 
 1. The value **-1** indicates that log collection times are not limited.
-2. The value **0** indicates that logs are not collected.
-3. A value greater than **0** indicates the maximum number of daily collection times.
+
+  2. The value **0** indicates that logs are not collected.
+  3. A value greater than **0** indicates the maximum number of daily collection times.
 
 **Type:** number
 

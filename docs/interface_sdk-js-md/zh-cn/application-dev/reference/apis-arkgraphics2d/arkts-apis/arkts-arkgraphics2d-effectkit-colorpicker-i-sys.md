@@ -44,6 +44,7 @@ discriminatePictureLightDegree(): PictureLightDegree
 | --- | --- |
 | [PictureLightDegree](arkts-arkgraphics2d-effectkit-picturelightdegree-e-sys.md) | 图像颜色明亮程度。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,6 +72,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   });
 });
 ```
+
+<!--DelEnd-->
 
 ## getAlphaZeroTransparentProportion
 
@@ -102,6 +105,7 @@ getAlphaZeroTransparentProportion(): number
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -129,6 +133,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   });
 });
 ```
+
+<!--DelEnd-->
 
 ## getComplexityDegree
 
@@ -160,6 +166,7 @@ getComplexityDegree(): PictureComplexityDegree
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -188,6 +195,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getDeepenImmersionColor
 
 ```TypeScript
@@ -214,6 +223,7 @@ getDeepenImmersionColor(): Color
 | --- | --- |
 | [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像强沉浸色对应的颜色值。当图像处理失败或无法生成沉浸色时返回null。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -242,6 +252,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getImmersiveBackgroundColor
 
 ```TypeScript
@@ -268,6 +280,7 @@ getImmersiveBackgroundColor(): Color
 | --- | --- |
 | [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像沉浸式背景色对应的颜色值。当图像处理失败或无法生成沉浸式背景色时返回null。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -296,6 +309,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getImmersiveForegroundColor
 
 ```TypeScript
@@ -322,6 +337,7 @@ getImmersiveForegroundColor(): Color
 | --- | --- |
 | [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像沉浸式前景色对应的颜色值。当图像处理失败或无法生成沉浸式前景色时返回null。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -350,6 +366,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getMorandiShadowColor
 
 ```TypeScript
@@ -376,6 +394,7 @@ getMorandiShadowColor(): Color
 | --- | --- |
 | [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像莫兰迪阴影色对应的颜色值。当图像处理失败或无法获取莫兰迪阴影色时返回null。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -404,6 +423,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getReverseColor
 
 ```TypeScript
@@ -430,6 +451,7 @@ getReverseColor(): Color
 | --- | --- |
 | [Color](arkts-arkgraphics2d-effectkit-color-i.md) | Color实例，即图像反向颜色对应的颜色值。当图像处理失败或无法生成反向颜色时返回null。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -457,6 +479,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   });
 });
 ```
+
+<!--DelEnd-->
 
 ## getShadeDegree
 
@@ -488,6 +512,7 @@ getShadeDegree(): PictureShadeDegree
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -515,6 +540,8 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   });
 });
 ```
+
+<!--DelEnd-->
 
 ## getTopProportionColorsAndPercentage
 
@@ -544,7 +571,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 | 类型 | 说明 |
 | --- | --- |
-| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null, number &#124; null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。   - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。   - 取色失败或取色个数小于1返回`Map()`。 |
+| Map&lt;[Color](arkts-arkgraphics2d-effectkit-color-i.md) &#124; null, number &#124; null&gt; | 图像占比前`colorCount`的颜色值与对应比例的字典，比例的取值范围为[0,1]。           - 当实际读取的特征色个数小于`colorCount`时，字典大小为实际特征色个数。           - 取色失败或取色个数小于1返回`Map()`。 |
 
 **错误码：**
 
@@ -552,6 +579,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -581,3 +609,5 @@ image.createPixelMap(color, opts).then((pixelMap) => {
   });
 });
 ```
+
+<!--DelEnd-->

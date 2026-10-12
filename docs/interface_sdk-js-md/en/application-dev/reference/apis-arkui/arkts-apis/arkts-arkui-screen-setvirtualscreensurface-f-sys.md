@@ -43,6 +43,7 @@ Sets a surface for a virtual screen. This API uses an asynchronous callback to r
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -84,6 +85,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setvirtualscreensurface2"></a>
@@ -128,6 +131,7 @@ Sets a surface for a virtual screen. This API uses a promise to return the resul
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -166,3 +170,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

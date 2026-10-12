@@ -1,8 +1,6 @@
 # ArkTS API<!--arkts-mediakit-->
 
 - [@ohos.multimedia.media（(媒体服务)）](arkts-media-multimedia-media.md)
-  - [createAudioPlayer](arkts-media-media-createaudioplayer-f.md)
-  - [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md)
   - [createAVAdsController](arkts-media-media-createavadscontroller-f.md)
   - [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md)
   - [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md)
@@ -19,7 +17,6 @@
   <!--Del-->
   - [createParallelSoundPool（系统接口）](arkts-media-media-createparallelsoundpool-f-sys.md)<!--DelEnd-->
   - [createSoundPool](arkts-media-media-createsoundpool-f.md)
-  - [createVideoPlayer](arkts-media-media-createvideoplayer-f.md)
   <!--Del-->
   - [createVideoRecorder（系统接口）](arkts-media-media-createvideorecorder-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -28,9 +25,9 @@
   - [getScreenCaptureMonitor（系统接口）](arkts-media-media-getscreencapturemonitor-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [reportAVScreenCaptureUserChoice（系统接口）](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md)<!--DelEnd-->
-  - [AudioPlayer](arkts-media-media-audioplayer-i.md)
-  - [AudioRecorder](arkts-media-media-audiorecorder-i.md)
-  - [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md)
+  - [createAudioPlayer](arkts-media-media-createaudioplayer-f.md)
+  - [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md)
+  - [createVideoPlayer](arkts-media-media-createvideoplayer-f.md)
   - [AVAdsController](arkts-media-media-avadscontroller-i.md)
   - [AVDataSrcDescriptor](arkts-media-media-avdatasrcdescriptor-i.md)
   - [AVDownloaderManager](arkts-media-media-avdownloadermanager-i.md)
@@ -85,7 +82,6 @@
   - [SeiMessage](arkts-media-media-seimessage-i.md)
   - [SubtitleInfo](arkts-media-media-subtitleinfo-i.md)
   - [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md)
-  - [VideoPlayer](arkts-media-media-videoplayer-i.md)
   <!--Del-->
   - [VideoRecorder（系统接口）](arkts-media-media-videorecorder-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -96,7 +92,10 @@
   <!--Del-->
   - [WatermarkConfig（系统接口）](arkts-media-media-watermarkconfig-i-sys.md)<!--DelEnd-->
   - [WatermarkConfiguration](arkts-media-media-watermarkconfiguration-i.md)
-  - [AudioState](arkts-media-media-audiostate-t.md)
+  - [AudioPlayer](arkts-media-media-audioplayer-i.md)
+  - [AudioRecorder](arkts-media-media-audiorecorder-i.md)
+  - [AudioRecorderConfig](arkts-media-media-audiorecorderconfig-i.md)
+  - [VideoPlayer](arkts-media-media-videoplayer-i.md)
   - [AVDownloadTaskState](arkts-media-media-avdownloadtaskstate-t.md)
   - [AVPlayerState](arkts-media-media-avplayerstate-t.md)
   - [AVRecorderState](arkts-media-media-avrecorderstate-t.md)
@@ -119,12 +118,11 @@
   - [SourceCloseCallback](arkts-media-media-sourceclosecallback-t.md)
   - [SourceOpenCallback](arkts-media-media-sourceopencallback-t.md)
   - [SourceReadCallback](arkts-media-media-sourcereadcallback-t.md)
-  - [VideoPlayState](arkts-media-media-videoplaystate-t.md)
   <!--Del-->
   - [VideoRecordState（系统接口）](arkts-media-media-videorecordstate-t-sys.md)<!--DelEnd-->
+  - [AudioState](arkts-media-media-audiostate-t.md)
+  - [VideoPlayState](arkts-media-media-videoplaystate-t.md)
   - [AacProfile](arkts-media-media-aacprofile-e.md)
-  - [AudioEncoder](arkts-media-media-audioencoder-e.md)
-  - [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md)
   - [AudioSourceType](arkts-media-media-audiosourcetype-e.md)
   - [AVErrorCode](arkts-media-media-averrorcode-e.md)
   <!--Del-->
@@ -143,7 +141,6 @@
   - [HdrType](arkts-media-media-hdrtype-e.md)
   - [LoadingRequestError](arkts-media-media-loadingrequesterror-e.md)
   - [MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md)
-  - [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md)
   - [MediaType](arkts-media-media-mediatype-e.md)
   <!--Del-->
   - [MetaSourceType（系统接口）](arkts-media-media-metasourcetype-e-sys.md)<!--DelEnd-->
@@ -162,6 +159,9 @@
   - [SwitchMode](arkts-media-media-switchmode-e.md)
   - [VideoScaleType](arkts-media-media-videoscaletype-e.md)
   - [VideoSourceType](arkts-media-media-videosourcetype-e.md)
+  - [AudioEncoder](arkts-media-media-audioencoder-e.md)
+  - [AudioOutputFormat](arkts-media-media-audiooutputformat-e.md)
+  - [MediaErrorCode](arkts-media-media-mediaerrorcode-e.md)
 - [@ohos.multimedia.videoProcessing（提供视频画质处理能力。）](arkts-media-multimedia-videoprocessing.md)
   - [createVideoProcessor](arkts-media-videoprocessing-createvideoprocessor-f.md)
   - [VideoProcessor](arkts-media-videoprocessing-videoprocessor-i.md)

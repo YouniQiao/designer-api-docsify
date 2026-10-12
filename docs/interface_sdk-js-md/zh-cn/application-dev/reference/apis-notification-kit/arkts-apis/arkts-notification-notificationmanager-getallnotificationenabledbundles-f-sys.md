@@ -42,6 +42,7 @@ function getAllNotificationEnabledBundles(): Promise<Array<BundleOption>>
 | [1600002](../errorcode-notification.md#1600002-序列化或反序列化错误) | Marshalling or unmarshalling error. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -57,6 +58,8 @@ notificationManager.getAllNotificationEnabledBundles().then((data: Array<notific
     console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
 })
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallnotificationenabledbundles2"></a>
@@ -102,6 +105,7 @@ function getAllNotificationEnabledBundles(userId: number): Promise<Array<BundleO
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600008](../errorcode-notification.md#1600008-用户不存在) | The user does not exist. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -119,3 +123,5 @@ notificationManager.getAllNotificationEnabledBundles(userId).then((data: Array<n
   console.error(`getAllNotificationEnabledBundles failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

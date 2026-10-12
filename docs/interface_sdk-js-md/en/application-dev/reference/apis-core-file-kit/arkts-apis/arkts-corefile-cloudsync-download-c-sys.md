@@ -36,11 +36,14 @@ A constructor used to create a **Download** instance.
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 let download = new cloudSync.Download()
 ```
+
+<!--DelEnd-->
 
 <a id="off1"></a>
 
@@ -78,6 +81,7 @@ Removes the specified callback from the device-cloud download progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -91,6 +95,8 @@ download.on('progress', callback);
 
 download.off('progress', callback);
 ```
+
+<!--DelEnd-->
 
 <a id="off2"></a>
 
@@ -127,6 +133,7 @@ Removes all callbacks from the device-cloud download progress.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -138,6 +145,8 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
 
 download.off('progress');
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -173,6 +182,7 @@ Registers a listener for the download progress of a cloud file.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -182,6 +192,8 @@ download.on('progress', (pg: cloudSync.DownloadProgress) => {
   console.info("download state: " + pg.state);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start1"></a>
 
@@ -225,6 +237,7 @@ Starts downloading a cloud file. This API uses a promise to return the result.
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -243,6 +256,8 @@ download.start(uri).then(() => {
   console.error("start download failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="start2"></a>
 
@@ -281,6 +296,7 @@ Starts downloading a cloud file. This API uses an asynchronous callback to retur
 | 13900002 | No such file or directory. |
 | 13900025 | No space left on device. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -297,6 +313,8 @@ download.start(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop1"></a>
 
@@ -343,6 +361,7 @@ Stops downloading a cloud file. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -357,6 +376,8 @@ download.stop(uri).then(() => {
   console.error("stop download failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="stop2"></a>
 
@@ -398,6 +419,7 @@ Stops downloading a cloud file. This API uses an asynchronous callback to return
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -414,3 +436,5 @@ download.stop(uri, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

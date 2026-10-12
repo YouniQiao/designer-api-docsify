@@ -47,4 +47,4 @@ Call this method to clean up a session when the command process is no longer nee
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application.<br>**Applicable version:** 26.0.0 |
 | [35600032](../errorcode-ability.md#35600032-the-specified-session-does-not-exist) | The specified session does not exist. |
-| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
+| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Failed to connect to the system service;         2. The system service failed to communicate with the dependent module. |

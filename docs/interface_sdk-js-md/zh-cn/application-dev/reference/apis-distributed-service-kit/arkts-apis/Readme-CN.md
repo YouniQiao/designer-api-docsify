@@ -7,31 +7,31 @@
 <!--Del-->
 - [@ohos.cooperate（键鼠穿越）](arkts-distributedservice-cooperate.md)<!--DelEnd-->
   <!--Del-->
-  - [activate（系统接口）](arkts-distributedservice-cooperate-activate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [activateCooperate（系统接口）](arkts-distributedservice-cooperate-activatecooperate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [activateCooperateWithOptions（系统接口）](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [deactivate（系统接口）](arkts-distributedservice-cooperate-deactivate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [deactivateCooperate（系统接口）](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getCooperateSwitchState（系统接口）](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [getCrossingSwitchState（系统接口）](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [off（系统接口）](arkts-distributedservice-cooperate-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [on（系统接口）](arkts-distributedservice-cooperate-on-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [prepare（系统接口）](arkts-distributedservice-cooperate-prepare-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [prepareCooperate（系统接口）](arkts-distributedservice-cooperate-preparecooperate-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [unprepare（系统接口）](arkts-distributedservice-cooperate-unprepare-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [unprepareCooperate（系统接口）](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [activate（系统接口）](arkts-distributedservice-cooperate-activate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [deactivate（系统接口）](arkts-distributedservice-cooperate-deactivate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getCrossingSwitchState（系统接口）](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [prepare（系统接口）](arkts-distributedservice-cooperate-prepare-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unprepare（系统接口）](arkts-distributedservice-cooperate-unprepare-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [CooperateMessage（系统接口）](arkts-distributedservice-cooperate-cooperatemessage-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -39,9 +39,9 @@
   <!--Del-->
   - [MouseLocation（系统接口）](arkts-distributedservice-cooperate-mouselocation-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [CooperateMsg（系统接口）](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [CooperateState（系统接口）](arkts-distributedservice-cooperate-cooperatestate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CooperateMsg（系统接口）](arkts-distributedservice-cooperate-cooperatemsg-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.distributed.softbusBase（This module provides the capabilities for device perception.）](arkts-distributedservice-distributed-softbusbase.md)<!--DelEnd-->
   <!--Del-->
@@ -86,35 +86,6 @@
   - [DeviceStateChange](arkts-distributedservice-distributeddevicemanager-devicestatechange-e.md)
   <!--Del-->
   - [StrategyForHeartbeat（系统接口）](arkts-distributedservice-distributeddevicemanager-strategyforheartbeat-e-sys.md)<!--DelEnd-->
-- [@ohos.distributedHardware.deviceManager（设备管理）](arkts-distributedservice-distributedhardware-devicemanager.md)
-  <!--Del-->
-  - [createDeviceManager（系统接口）](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AuthInfo（系统接口）](arkts-distributedservice-devicemanager-authinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AuthParam（系统接口）](arkts-distributedservice-devicemanager-authparam-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeviceInfo（系统接口）](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeviceManager（系统接口）](arkts-distributedservice-devicemanager-devicemanager-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PublishInfo（系统接口）](arkts-distributedservice-devicemanager-publishinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SubscribeInfo（系统接口）](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AuthForm（系统接口）](arkts-distributedservice-devicemanager-authform-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeviceStateChangeAction（系统接口）](arkts-distributedservice-devicemanager-devicestatechangeaction-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DeviceType（系统接口）](arkts-distributedservice-devicemanager-devicetype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DiscoverMode（系统接口）](arkts-distributedservice-devicemanager-discovermode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ExchangeFreq（系统接口）](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ExchangeMedium（系统接口）](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SubscribeCap（系统接口）](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.distributedHardware.hardwareManager（分布式硬件管理）](arkts-distributedservice-distributedhardware-hardwaremanager.md)<!--DelEnd-->
   <!--Del-->
@@ -219,3 +190,32 @@
   - [DeviceNodeInfo（系统接口）](arkts-distributedservice-conversation-devicenodeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DataCallback（系统接口）](arkts-distributedservice-conversation-datacallback-t-sys.md)<!--DelEnd-->
+- [@ohos.distributedHardware.deviceManager（设备管理）](arkts-distributedservice-distributedhardware-devicemanager.md)
+  <!--Del-->
+  - [createDeviceManager（系统接口）](arkts-distributedservice-devicemanager-createdevicemanager-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AuthInfo（系统接口）](arkts-distributedservice-devicemanager-authinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AuthParam（系统接口）](arkts-distributedservice-devicemanager-authparam-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceInfo（系统接口）](arkts-distributedservice-devicemanager-deviceinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceManager（系统接口）](arkts-distributedservice-devicemanager-devicemanager-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PublishInfo（系统接口）](arkts-distributedservice-devicemanager-publishinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SubscribeInfo（系统接口）](arkts-distributedservice-devicemanager-subscribeinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AuthForm（系统接口）](arkts-distributedservice-devicemanager-authform-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceStateChangeAction（系统接口）](arkts-distributedservice-devicemanager-devicestatechangeaction-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DeviceType（系统接口）](arkts-distributedservice-devicemanager-devicetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [DiscoverMode（系统接口）](arkts-distributedservice-devicemanager-discovermode-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ExchangeFreq（系统接口）](arkts-distributedservice-devicemanager-exchangefreq-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ExchangeMedium（系统接口）](arkts-distributedservice-devicemanager-exchangemedium-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SubscribeCap（系统接口）](arkts-distributedservice-devicemanager-subscribecap-e-sys.md)<!--DelEnd-->

@@ -48,6 +48,7 @@ Disables the dynamic icon based on the given bundle name. This API uses a promis
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) | Failed to disable the dynamic icon. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
   hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="disabledynamicicon2"></a>
@@ -118,6 +121,7 @@ To disable the dynamic icon for another user, you must request the ohos.permissi
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [17700305](../errorcode-bundle.md#17700305-failed-to-disable-the-dynamic-icon) | Failed to disable the dynamic icon. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -139,3 +143,5 @@ try {
   hilog.error(0x0000, 'testTag', 'disableDynamicIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

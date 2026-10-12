@@ -6,6 +6,8 @@ Declare the Native API used for basic video encoding and decoding functions, as 
 
 **Library**: libnative_media_codecbase.so
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 26.0.0
 
 **Related module**: [CodecBase](capi-codecbase.md)
@@ -50,6 +52,8 @@ enum OH_VideoMetadataRoiSemanticLabel
 
 The semantic labels for Region of Interest (ROI) in video encoding.
 
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
+
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -73,6 +77,8 @@ Formats the region of interest (ROI) configuration from an OH_AVFormat handle in
 > **Note**:
 >
 > The caller takes ownership of the memory allocated for *roiStrInOut. The memory is allocated using the standard C library allocator (malloc/realloc). The caller must free the string using the matching standard C library deallocator (free) when it is no longer needed, and set the pointer to NULL to prevent double-free.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 26.0.0
 
@@ -100,6 +106,8 @@ OH_AVErrCode OH_VideoMetadata_GetRoiCount(const char *roiStr, uint32_t *outCount
 **Description**
 
 Pre-parses the ROI string to obtain the number of valid ROI regions contained within it.<br> This interface is decoupled from specific backend capacity limits and accurately returns the number of valid regions identified in the string based on syntax rules.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 26.0.0
 
@@ -129,6 +137,8 @@ Parses the ROI string and populates the caller-provided OH_AVFormat array.
 > **Note**:
 >
 > The caller takes ownership of every successfully created OH_AVFormat handle. Upon return, the valid handles are stored in the first *outCount elements of the outOwnedFormats array. - On full or partial success (*outCount > 0), the caller must individually destroy each valid handle using [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy) to prevent memory leaks. - On total failure (*outCount == 0), no handles are created and no destruction is needed.
+
+**System capability**: SystemCapability.Multimedia.Media.CodecBase
 
 **Since**: 26.0.0
 

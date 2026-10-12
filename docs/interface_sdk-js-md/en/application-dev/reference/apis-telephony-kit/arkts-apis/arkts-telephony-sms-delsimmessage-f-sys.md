@@ -46,6 +46,7 @@ Deletes a message from the SIM card. If the specified **msgIndex** is invalid, a
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -58,6 +59,8 @@ sms.delSimMessage(slotId, msgIndex, (err: BusinessError) => {
       console.info(`callback: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="delsimmessage2"></a>
@@ -105,6 +108,7 @@ Deletes a message from the SIM card. If the specified **msgIndex** is invalid, a
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -120,3 +124,5 @@ promise.then(() => {
     console.error(`delSimMessage failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

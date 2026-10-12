@@ -56,6 +56,7 @@ Queries the shortcut information of a specified UIAbility under a specified user
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -113,3 +114,5 @@ try {
   console.error(`getShortcutInfoByAbility errData is errCode:${(err as BusinessError).code}  message:${(err as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

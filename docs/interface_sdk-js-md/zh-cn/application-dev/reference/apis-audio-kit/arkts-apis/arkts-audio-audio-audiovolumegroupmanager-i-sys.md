@@ -55,6 +55,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -68,6 +69,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="adjustsystemvolumebystep2"></a>
 
@@ -111,6 +114,7 @@ adjustSystemVolumeByStep(volumeType: AudioVolumeType, adjustType: VolumeAdjustTy
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -122,6 +126,8 @@ audioVolumeGroupManager.adjustSystemVolumeByStep(audio.AudioVolumeType.MEDIA, au
   console.error('Fail to adjust the system volume by step.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="adjustvolumebystep1"></a>
 
@@ -159,6 +165,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType, callback: AsyncCallback<void>):
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by callback. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by callback. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -173,6 +180,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP, (er
   }
 });
 ```
+
+<!--DelEnd-->
 
 <a id="adjustvolumebystep2"></a>
 
@@ -215,6 +224,7 @@ adjustVolumeByStep(adjustType: VolumeAdjustType): Promise<void>
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. Return by promise. |
 | [6800301](../errorcode-audio.md#6800301-系统处理异常) | System error. Return by promise. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -226,6 +236,8 @@ audioVolumeGroupManager.adjustVolumeByStep(audio.VolumeAdjustType.VOLUME_UP).the
   console.error('Fail to adjust the volume by step.');
 });
 ```
+
+<!--DelEnd-->
 
 ## getActiveVolumeTypeSync
 
@@ -263,6 +275,7 @@ getActiveVolumeTypeSync(uid: number): AudioVolumeType
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters unspecified. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -270,6 +283,8 @@ let uid: number = 20010041; // 应用ID。
 
 let value = audioVolumeGroupManager.getActiveVolumeTypeSync(uid);
 ```
+
+<!--DelEnd-->
 
 ## isPersistentMicMute
 
@@ -302,11 +317,14 @@ isPersistentMicMute(): boolean
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 let value: boolean = audioVolumeGroupManager.isPersistentMicMute();
 ```
+
+<!--DelEnd-->
 
 <a id="mute1"></a>
 
@@ -336,6 +354,7 @@ mute(volumeType: AudioVolumeType, mute: boolean, callback: AsyncCallback<void>):
 | mute | boolean | 是 | 静音状态，true为静音，false为非静音。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定音量流静音成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -349,6 +368,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true, (err: BusinessEr
   console.info('Callback invoked to indicate that the stream is muted.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="mute2"></a>
 
@@ -383,6 +404,7 @@ mute(volumeType: AudioVolumeType, mute: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -390,6 +412,8 @@ audioVolumeGroupManager.mute(audio.AudioVolumeType.MEDIA, true).then(() => {
   console.info('Promise returned to indicate that the stream is muted.');
 });
 ```
+
+<!--DelEnd-->
 
 ## setMicMute
 
@@ -430,6 +454,7 @@ setMicMute(mute: boolean): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -437,6 +462,8 @@ audioVolumeGroupManager.setMicMute(true).then(() => {
   console.info('Promise returned to indicate that the mic is muted.');
 });
 ```
+
+<!--DelEnd-->
 
 ## setMicMutePersistent
 
@@ -478,6 +505,7 @@ setMicMutePersistent(mute: boolean, type: PolicyType): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters missing. 2.Incorrect parameter types. |
 | [6800101](../errorcode-audio.md#6800101-无效入参) | Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -485,6 +513,8 @@ audioVolumeGroupManager.setMicMutePersistent(true, audio.PolicyType.PRIVACY).the
   console.info('Succeeded in setting mic mute.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setringermode1"></a>
 
@@ -513,6 +543,7 @@ setRingerMode(mode: AudioRingMode, callback: AsyncCallback<void>): void
 | mode | [AudioRingMode](arkts-audio-audio-audioringmode-e.md) | 是 | 音频铃声模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置铃声模式成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -526,6 +557,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL, (e
   console.info('Callback invoked to indicate a successful setting of the ringer mode.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setringermode2"></a>
 
@@ -559,6 +592,7 @@ setRingerMode(mode: AudioRingMode): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -566,6 +600,8 @@ audioVolumeGroupManager.setRingerMode(audio.AudioRingMode.RINGER_MODE_NORMAL).th
   console.info('Promise returned to indicate a successful setting of the ringer mode.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setvolume1"></a>
 
@@ -595,6 +631,7 @@ setVolume(volumeType: AudioVolumeType, volume: number, callback: AsyncCallback<v
 | volume | number | 是 | 音量等级，可设置范围通过[getMinVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getminvolume)和[getMaxVolume](arkts-audio-audio-audiovolumegroupmanager-i.md#getmaxvolume)获取。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置指定流的音量成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -608,6 +645,8 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10, (err: Busines
   console.info('Callback invoked to indicate a successful volume setting.');
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setvolume2"></a>
 
@@ -642,6 +681,7 @@ setVolume(volumeType: AudioVolumeType, volume: number): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -649,6 +689,8 @@ audioVolumeGroupManager.setVolume(audio.AudioVolumeType.MEDIA, 10).then(() => {
   console.info('Promise returned to indicate a successful volume setting.');
 });
 ```
+
+<!--DelEnd-->
 
 ## setVolumeWithFlag
 
@@ -689,6 +731,7 @@ setVolumeWithFlag(volumeType: AudioVolumeType, volume: number, flags: number): P
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -696,3 +739,5 @@ audioVolumeGroupManager.setVolumeWithFlag(audio.AudioVolumeType.MEDIA, 10, 1).th
   console.info('Promise returned to indicate a successful volume setting.');
 });
 ```
+
+<!--DelEnd-->

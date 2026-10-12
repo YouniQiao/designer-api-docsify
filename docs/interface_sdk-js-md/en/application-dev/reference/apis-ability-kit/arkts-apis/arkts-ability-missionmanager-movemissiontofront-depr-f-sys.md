@@ -36,6 +36,7 @@ Switches a given mission to the foreground. This API uses an asynchronous callba
 | missionId | number | Yes | Mission ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,6 +58,8 @@ try {
   console.error(`moveMissionToFront failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="movemissiontofront2"></a>
@@ -91,6 +94,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | options | [StartOptions](arkts-ability-app-ability-startoptions-startoptions-c.md) | Yes | Startup parameters, which are used to specify the window mode and device ID for switching the mission to the foreground. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the mission is switched to the foreground, **err** is **undefined**. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -112,6 +116,8 @@ try {
   console.error(`moveMissionToFront sync failed. Code: ${error.code}, message: ${error.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="movemissiontofront3"></a>
@@ -151,6 +157,7 @@ Switches a given mission to the foreground, with the startup parameters for the 
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -169,3 +176,5 @@ try {
   console.error(`moveMissionToFront failed. Cause: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

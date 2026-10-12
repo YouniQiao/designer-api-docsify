@@ -50,6 +50,7 @@ Synchronously queries whether a specified application or application clone of a 
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -69,3 +70,5 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationDisableForbidden failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

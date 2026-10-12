@@ -6,6 +6,8 @@
 
 **库：** libnet_ethernet.so
 
+**系统能力：** SystemCapability.Communication.NetManager.Ethernet
+
 **起始版本：** 26.0.0
 
 **相关模块：** [NetEthernet](capi-netethernet.md)
@@ -30,6 +32,8 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 **描述：**
 
 获取以太网网卡MAC地址列表。
+
+**系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **需要权限：** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
@@ -56,6 +60,8 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 **描述：**
 
 获取以太网网卡IP地址列表。
+
+**系统能力：** SystemCapability.Communication.NetManager.Ethernet
 
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 

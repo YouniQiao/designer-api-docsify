@@ -42,6 +42,7 @@ function startSyncRemoteMissions(parameter: MissionParameter, callback: AsyncCal
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,6 +68,8 @@ try {
   console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="startsyncremotemissions2"></a>
@@ -112,6 +115,7 @@ function startSyncRemoteMissions(parameter: MissionParameter): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -134,3 +138,5 @@ try {
   console.error(`startSyncRemoteMissions failed. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

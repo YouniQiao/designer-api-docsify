@@ -42,6 +42,7 @@ Obtains the battery configuration based on the specified scenario.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; |
 | [5100101](../errorcode-battery-info.md#5100101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,3 +53,5 @@ let result = batteryInfo.getBatteryConfig(sceneName);
 
 console.info("The result is: " + result);
 ```
+
+<!--DelEnd-->

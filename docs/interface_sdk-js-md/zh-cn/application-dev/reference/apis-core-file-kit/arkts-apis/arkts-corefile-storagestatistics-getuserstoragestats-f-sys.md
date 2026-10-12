@@ -42,6 +42,7 @@ function getUserStorageStats(): Promise<StorageStats>
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -52,6 +53,8 @@ storageStatistics.getUserStorageStats().then((storageStats: storageStatistics.St
   console.error(`getUserStorageStats failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats2"></a>
@@ -90,6 +93,7 @@ function getUserStorageStats(callback: AsyncCallback<StorageStats>): void
 | 13600001 | IPC error. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -103,6 +107,8 @@ storageStatistics.getUserStorageStats((error: BusinessError, storageStats: stora
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats3"></a>
@@ -148,6 +154,7 @@ function getUserStorageStats(userId: number): Promise<StorageStats>
 | 13600009 | User if out of range. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -159,6 +166,8 @@ storageStatistics.getUserStorageStats(userId).then((storageStats: storageStatist
   console.error(`getUserStorageStats failed with err, code is: ${err.code}, message is: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getuserstoragestats4"></a>
@@ -199,6 +208,7 @@ function getUserStorageStats(userId: number, callback: AsyncCallback<StorageStat
 | 13600009 | User if out of range. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -213,3 +223,5 @@ storageStatistics.getUserStorageStats(userId, (error: BusinessError, storageStat
   }
 });
 ```
+
+<!--DelEnd-->

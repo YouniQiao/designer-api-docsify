@@ -48,6 +48,7 @@ Obtains the uninstall disposition rule with the highest priority that has been s
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range. |
 | [17700074](../errorcode-bundle.md#17700074-invalid-appidentifier) | The specified appIdentifier is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -64,3 +65,5 @@ try {
   console.error('getUninstallDisposedRule failed ' + message);
 }
 ```
+
+<!--DelEnd-->

@@ -43,9 +43,6 @@
   - [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)
   - [CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)
   - [CapturePhoto](arkts-camera-camera-capturephoto-i.md)
-  - [CaptureSession](arkts-camera-camera-capturesession-i.md)
-  <!--Del-->
-  - [CaptureSession（系统接口）](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)
   <!--Del-->
   - [ColorControls（系统接口）](arkts-camera-camera-colorcontrols-i-sys.md)<!--DelEnd-->
@@ -249,6 +246,9 @@
   <!--Del-->
   - [ZoomQuery（系统接口）](arkts-camera-camera-zoomquery-i-sys.md)<!--DelEnd-->
   - [ZoomRange](arkts-camera-camera-zoomrange-i.md)
+  - [CaptureSession](arkts-camera-camera-capturesession-i.md)
+  <!--Del-->
+  - [CaptureSession（系统接口）](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [ImageType](arkts-camera-camera-imagetype-t.md)
   - [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
   <!--Del-->

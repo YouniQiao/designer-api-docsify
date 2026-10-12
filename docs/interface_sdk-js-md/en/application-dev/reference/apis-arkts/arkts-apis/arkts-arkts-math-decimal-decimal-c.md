@@ -76,7 +76,7 @@ Return a new Decimal whose value is the absolute value of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="acos1"></a>
 
@@ -142,7 +142,7 @@ Return a new Decimal whose value is the arccosine in radians of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="acosh1"></a>
@@ -209,7 +209,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic cosine of `n`,
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="add1"></a>
@@ -246,7 +246,7 @@ Return a new Decimal whose value is the value of this Decimal plus `n`, rounded 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="add2"></a>
 
@@ -283,7 +283,7 @@ Return a new Decimal whose value is the sum of `x` and `y`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="asin1"></a>
 
@@ -349,7 +349,7 @@ Return a new Decimal whose value is the arcsine in radians of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="asinh1"></a>
@@ -416,7 +416,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic sine of `n`, r
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="atan1"></a>
@@ -483,7 +483,7 @@ Return a new Decimal whose value is the arctangent in radians of `n`, rounded to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## atan2
@@ -519,7 +519,7 @@ Return a new Decimal whose value is the arctangent in radians of `y/x` in the ra
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="atanh1"></a>
@@ -586,7 +586,7 @@ Return a new Decimal whose value is the inverse of the hyperbolic tangent of `n`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="cbrt1"></a>
@@ -647,7 +647,7 @@ Return a new Decimal whose value is the cube root of `n`, rounded to `precision`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="ceil1"></a>
 
@@ -707,7 +707,7 @@ Return a new Decimal whose value is `n` rounded to an integer using `ROUND_CEIL`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="clamp1"></a>
 
@@ -744,7 +744,7 @@ Return a new Decimal whose value is the value of this Decimal clamped to the ran
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 <a id="clamp2"></a>
@@ -783,7 +783,7 @@ Return a new Decimal whose value is `n` clamped to the range delineated by `min`
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `min` is out of range. |
 
 ## comparedTo
@@ -818,7 +818,7 @@ Return 1 if the value of this Decimal is greater than the value of `n`, -1 if th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## constructor
 
@@ -846,7 +846,7 @@ Return a new Decimal whose value is the absolute value of this Decimal.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="cos1"></a>
 
@@ -906,7 +906,7 @@ Return a new Decimal whose value is the cosine of `n`, rounded to `precision` si
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="cosh1"></a>
 
@@ -966,7 +966,7 @@ Return a new Decimal whose value is the hyperbolic cosine of `n`, rounded to pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## decimalPlaces
 
@@ -1024,7 +1024,7 @@ Return a new Decimal whose value is the value of this Decimal divided by `n`, ro
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="div2"></a>
 
@@ -1061,7 +1061,7 @@ Return a new Decimal whose value is `x` divided by `y`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## dividedToIntegerBy
 
@@ -1095,7 +1095,7 @@ Return a new Decimal whose value is the integer part of dividing the value of th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## equals
 
@@ -1129,7 +1129,7 @@ Return true if the value of this Decimal is equal to the value of `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="exp1"></a>
 
@@ -1195,7 +1195,7 @@ Return a new Decimal whose value is the natural exponential of `n`, rounded to `
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="floor1"></a>
@@ -1256,7 +1256,7 @@ Return a new Decimal whose value is `n` round to an integer using `ROUND_FLOOR`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## greaterThan
 
@@ -1290,7 +1290,7 @@ Return true if the value of this Decimal is greater than the value of `n`, other
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## greaterThanOrEqualTo
 
@@ -1324,7 +1324,7 @@ Return true if the value of this Decimal is greater than or equal to the value o
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## hypot
 
@@ -1358,7 +1358,7 @@ Return a new Decimal whose value is the square root of the sum of the squares of
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## isFinite
 
@@ -1524,7 +1524,7 @@ Return true if the value of this Decimal is less than `n`, otherwise return fals
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## lessThanOrEqualTo
 
@@ -1558,7 +1558,7 @@ Return true if the value of this Decimal is less than or equal to `n`, otherwise
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="ln1"></a>
 
@@ -1624,7 +1624,7 @@ Return a new Decimal whose value is the natural logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="log1"></a>
@@ -1661,7 +1661,7 @@ Return the logarithm of the value of this Decimal to the specified base, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="log2"></a>
@@ -1699,7 +1699,7 @@ Return a new Decimal whose value is the log of `n` to the base `base`, rounded t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log10
@@ -1734,7 +1734,7 @@ Return a new Decimal whose value is the base 10 logarithm of `n`, rounded to `pr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## log2
@@ -1769,7 +1769,7 @@ Return a new Decimal whose value is the base 2 logarithm of `n`, rounded to `pre
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 ## max
@@ -1804,7 +1804,7 @@ Return a new Decimal whose value is the maximum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## min
 
@@ -1838,7 +1838,7 @@ Return a new Decimal whose value is the minimum of the arguments.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mod1"></a>
 
@@ -1874,7 +1874,7 @@ Return a new Decimal whose value is the value of this Decimal modulo `n`, rounde
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mod2"></a>
 
@@ -1911,7 +1911,7 @@ Return a new Decimal whose value is `x` modulo `y`, rounded to `precision` signi
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mul1"></a>
 
@@ -1947,7 +1947,7 @@ Return a new Decimal whose value is this Decimal times `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="mul2"></a>
 
@@ -1984,7 +1984,7 @@ Return a new Decimal whose value is `x` multiplied by `y`, rounded to `precision
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## negate
 
@@ -2042,7 +2042,7 @@ Return a new Decimal whose value is the value of this Decimal raised to the powe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="pow2"></a>
@@ -2080,7 +2080,7 @@ Return a new Decimal whose value is `base` raised to the power `exponent`, round
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200060](../errorcode-utils.md#10200060-precision-limit-is-exceeded) | Precision limit exceeded. |
 
 <a id="precision1"></a>
@@ -2207,7 +2207,7 @@ Returns a new Decimal with a random value equal to or greater than 0 and less th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
 ## round
@@ -2242,7 +2242,7 @@ Return a new Decimal whose value is `n` rounded to an integer using rounding mod
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## set
 
@@ -2270,7 +2270,7 @@ Configures the 'global' settings for this particular Decimal constructor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `DecimalConfig.properties` is out of range. |
 | [10200061](../errorcode-utils.md#10200061-encryption-method-is-unavailable) | Crypto unavailable. |
 
@@ -2307,7 +2307,7 @@ Return the sign of the passed value to the method. 1 if x &gt; 0, -1 if x &lt; 0
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sin1"></a>
 
@@ -2367,7 +2367,7 @@ Return a new Decimal whose value is the sine of `n`, rounded to `precision` sign
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sinh1"></a>
 
@@ -2427,7 +2427,7 @@ Return a new Decimal whose value is the hyperbolic sine of `n`, rounded to `prec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sqrt1"></a>
 
@@ -2487,7 +2487,7 @@ Return a new Decimal whose value is the square root of `n`, rounded to `precisio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sub1"></a>
 
@@ -2523,7 +2523,7 @@ Return a new Decimal whose value is the value of this Decimal minus `n`, rounded
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="sub2"></a>
 
@@ -2560,7 +2560,7 @@ Return a new Decimal whose value is `x` minus `y`, rounded to `precision` signif
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## sum
 
@@ -2596,7 +2596,7 @@ Only the result is rounded, not the intermediate calculations.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tan1"></a>
 
@@ -2656,7 +2656,7 @@ Return a new Decimal whose value is the tangent of `n`, rounded to `precision` s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tanh1"></a>
 
@@ -2716,7 +2716,7 @@ Return a new Decimal whose value is the hyperbolic tangent of `n`, rounded to `p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tobinary1"></a>
 
@@ -3164,7 +3164,7 @@ Return an array representing the value of this Decimal as a simple fraction with
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tohexadecimal1"></a>
 
@@ -3297,7 +3297,7 @@ Returns a new Decimal whose value is the nearest multiple of `n`.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 <a id="tonearest2"></a>
 
@@ -3334,7 +3334,7 @@ Returns a new Decimal whose value is the nearest multiple of `n` in the directio
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 | [10200001](../errorcode-utils.md#10200001-value-out-of-range) | The value of `rounding` is out of range. |
 
 ## toNumber
@@ -3730,7 +3730,7 @@ Return a new Decimal whose value is `n` truncated to an integer.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types; 2. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Incorrect parameter types;         2. Parameter verification failed. |
 
 ## valueOf
 

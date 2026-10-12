@@ -36,6 +36,7 @@ Stop device discovery.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -43,6 +44,8 @@ avSession.stopCastDeviceDiscovery(() => {
     console.info('Succeeded in stopping cast device discovery.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="stopcastdevicediscovery2"></a>
@@ -75,6 +78,7 @@ Stop device discovery.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -82,3 +86,5 @@ avSession.stopCastDeviceDiscovery().then(() => {
   console.info('Succeeded in stopping cast device discovery.');
 });
 ```
+
+<!--DelEnd-->

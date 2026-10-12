@@ -42,6 +42,7 @@ Registers the callback when the **policy** changes. This API uses an asynchronou
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,6 +61,8 @@ try {
   console.error('on netUidPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## on('netUidRuleChange')
@@ -98,6 +101,7 @@ Registers the callback when the **rule** changes. This API uses an asynchronous 
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -116,6 +120,8 @@ try {
   console.error('on netUidRuleChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## on('netMeteredIfacesChange')
@@ -154,6 +160,7 @@ Registers the callback when the **iface** changes. This API uses an asynchronous
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -167,6 +174,8 @@ try {
   console.error('on netMeteredIfacesChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## on('netQuotaPolicyChange')
@@ -205,6 +214,7 @@ Registers the callback for network quota policy changes. This API uses an asynch
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -223,6 +233,8 @@ try {
   console.error('on netQuotaPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->
 
 
 ## on('netBackgroundPolicyChange')
@@ -261,6 +273,7 @@ Registers the callback for background network policy changes. This API uses an a
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -274,3 +287,5 @@ try {
   console.error('on netBackgroundPolicyChange error: ' + JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->

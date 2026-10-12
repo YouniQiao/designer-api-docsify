@@ -43,6 +43,7 @@ Create an avsession controller
 | [6600101](../errorcode-avsession.md#6600101-session-service-exception) | Session service exception. |
 | [6600102](../errorcode-avsession.md#6600102-session-does-not-exist) | The session does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,3 +73,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

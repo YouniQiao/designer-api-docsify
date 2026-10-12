@@ -51,6 +51,7 @@ constructor(album: Album)
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ async function example(context: Context) {
     new photoAccessHelper.MediaAnalysisAlbumChangeRequest(highlightAlbum);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createanalysisalbumrequest2"></a>
 
@@ -130,6 +133,7 @@ static createAnalysisAlbumRequest(
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: <br>1. The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 photoAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -147,6 +151,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setDefaultCoverUri
 
@@ -180,6 +186,7 @@ setDefaultCoverUri(coverUri: string): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: <br>1. The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -228,6 +235,8 @@ async function example(context: Context) {
 }
 ```
 
+<!--DelEnd-->
+
 ## setOrderPosition
 
 ```TypeScript
@@ -262,6 +271,7 @@ setOrderPosition(assets: Array<PhotoAsset>, position: Array<number>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -305,6 +315,8 @@ async function example(context: Context) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setRelationship
 
@@ -374,6 +386,7 @@ setRelationship(relationship: string): Promise<void>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: <br>1. The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -405,3 +418,5 @@ async function setRelationshipExample(context: Context, relationship: string) {
   }
 }
 ```
+
+<!--DelEnd-->

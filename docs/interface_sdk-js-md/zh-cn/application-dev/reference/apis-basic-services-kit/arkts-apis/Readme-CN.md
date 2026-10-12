@@ -6,16 +6,16 @@
   - [AppAccountInfo](arkts-basicservices-appaccount-appaccountinfo-i.md)
   - [AppAccountManager](arkts-basicservices-appaccount-appaccountmanager-i.md)
   - [AuthCallback](arkts-basicservices-appaccount-authcallback-i.md)
-  - [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)
   - [AuthenticatorInfo](arkts-basicservices-appaccount-authenticatorinfo-i.md)
   - [AuthResult](arkts-basicservices-appaccount-authresult-i.md)
   - [AuthTokenInfo](arkts-basicservices-appaccount-authtokeninfo-i.md)
   - [CreateAccountImplicitlyOptions](arkts-basicservices-appaccount-createaccountimplicitlyoptions-i.md)
   - [CreateAccountOptions](arkts-basicservices-appaccount-createaccountoptions-i.md)
-  - [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)
   - [SelectAccountsOptions](arkts-basicservices-appaccount-selectaccountsoptions-i.md)
   - [SetPropertiesOptions](arkts-basicservices-appaccount-setpropertiesoptions-i.md)
   - [VerifyCredentialOptions](arkts-basicservices-appaccount-verifycredentialoptions-i.md)
+  - [AuthenticatorCallback](arkts-basicservices-appaccount-authenticatorcallback-i.md)
+  - [OAuthTokenInfo](arkts-basicservices-appaccount-oauthtokeninfo-i.md)
   - [Constants](arkts-basicservices-appaccount-constants-e.md)
   - [ResultCode](arkts-basicservices-appaccount-resultcode-e.md)
 - [@ohos.account.distributedAccount（分布式账号管理）](arkts-basicservices-account-distributedaccount.md)
@@ -233,14 +233,6 @@
 - [@ohos.charger（充电类型）](arkts-basicservices-charger.md)<!--DelEnd-->
   <!--Del-->
   - [ChargeType（系统接口）](arkts-basicservices-charger-chargetype-e-sys.md)<!--DelEnd-->
-- [@ohos.commonEvent](arkts-basicservices-commonevent.md)
-  - [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md)
-  - [publish](arkts-basicservices-commonevent-publish-depr-f.md)
-  <!--Del-->
-  - [publishAsUser（系统接口）](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md)<!--DelEnd-->
-  - [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md)
-  - [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md)
-  - [Support](arkts-basicservices-commonevent-support-depr-e.md)
 - [@ohos.commonEventManager](arkts-basicservices-commoneventmanager.md)
   - [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md)
   - [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md)
@@ -298,16 +290,16 @@
   - [EventPriority](arkts-basicservices-emitter-eventpriority-e.md)
 - [@ohos.pasteboard（剪贴板）](arkts-basicservices-pasteboard.md)
   - [createData](arkts-basicservices-pasteboard-createdata-f.md)
+  - [createRecord](arkts-basicservices-pasteboard-createrecord-f.md)
+  - [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md)
   - [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md)
   - [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md)
   - [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md)
   - [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md)
-  - [createRecord](arkts-basicservices-pasteboard-createrecord-f.md)
   - [createUriData](arkts-basicservices-pasteboard-createuridata-f.md)
   - [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md)
   - [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md)
   - [createWantRecord](arkts-basicservices-pasteboard-createwantrecord-f.md)
-  - [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md)
   - [ProgressSignal](arkts-basicservices-pasteboard-progresssignal-c.md)
   - [GetDataParams](arkts-basicservices-pasteboard-getdataparams-i.md)
   - [PasteData](arkts-basicservices-pasteboard-pastedata-i.md)
@@ -330,11 +322,9 @@
   <!--Del-->
   - [hibernate（系统接口）](arkts-basicservices-power-hibernate-f-sys.md)<!--DelEnd-->
   - [isActive](arkts-basicservices-power-isactive-f.md)
-  - [isScreenOn](arkts-basicservices-power-isscreenon-f.md)
   - [isStandby](arkts-basicservices-power-isstandby-f.md)
   <!--Del-->
   - [reboot（系统接口）](arkts-basicservices-power-reboot-f-sys.md)<!--DelEnd-->
-  - [rebootDevice](arkts-basicservices-power-rebootdevice-f.md)
   <!--Del-->
   - [refreshActivity（系统接口）](arkts-basicservices-power-refreshactivity-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -355,6 +345,8 @@
   - [unregisterShutdownCallback（系统接口）](arkts-basicservices-power-unregistershutdowncallback-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [wakeup（系统接口）](arkts-basicservices-power-wakeup-f-sys.md)<!--DelEnd-->
+  - [isScreenOn](arkts-basicservices-power-isscreenon-f.md)
+  - [rebootDevice](arkts-basicservices-power-rebootdevice-f.md)
   - [DevicePowerMode](arkts-basicservices-power-devicepowermode-e.md)
   - [PowerKeyFilteringStrategy](arkts-basicservices-power-powerkeyfilteringstrategy-e.md)
 - [@ohos.print](arkts-basicservices-print.md)
@@ -416,8 +408,6 @@
   <!--Del-->
   - [queryAllPrinterPpds（系统接口）](arkts-basicservices-print-queryallprinterppds-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [queryAllPrintJobs（系统接口）](arkts-basicservices-print-queryallprintjobs-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [queryPrinterCapability（系统接口）](arkts-basicservices-print-queryprintercapability-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [queryPrinterCapabilityByUri（系统接口）](arkts-basicservices-print-queryprintercapabilitybyuri-f-sys.md)<!--DelEnd-->
@@ -460,6 +450,8 @@
   <!--Del-->
   - [updatePrinterState（系统接口）](arkts-basicservices-print-updateprinterstate-f-sys.md)<!--DelEnd-->
   - [updatePrintJobState](arkts-basicservices-print-updateprintjobstate-f.md)
+  <!--Del-->
+  - [queryAllPrintJobs（系统接口）](arkts-basicservices-print-queryallprintjobs-f-sys.md)<!--DelEnd-->
   - [PpdInfo](arkts-basicservices-print-ppdinfo-i.md)
   - [PreviewAttribute](arkts-basicservices-print-previewattribute-i.md)
   - [PrintAttributes](arkts-basicservices-print-printattributes-i.md)
@@ -543,10 +535,10 @@
       - [State](arkts-basicservices-agent-state-e.md)
       - [WaitingReason](arkts-basicservices-agent-waitingreason-e.md)
       - [常量](arkts-basicservices-agent-con.md)
-    - [download](arkts-basicservices-request-download-f.md)
     - [downloadFile](arkts-basicservices-request-downloadfile-f.md)
-    - [upload](arkts-basicservices-request-upload-f.md)
     - [uploadFile](arkts-basicservices-request-uploadfile-f.md)
+    - [download](arkts-basicservices-request-download-f.md)
+    - [upload](arkts-basicservices-request-upload-f.md)
     - [DownloadConfig](arkts-basicservices-request-downloadconfig-i.md)
     - [DownloadInfo](arkts-basicservices-request-downloadinfo-i.md)
     - [DownloadTask](arkts-basicservices-request-downloadtask-i.md)
@@ -589,9 +581,9 @@
   - [SystemLoadLevel](arkts-basicservices-systemload-systemloadlevel-e.md)
 - [@ohos.runningLock（RunningLock锁）](arkts-basicservices-runninglock.md)
   - [create](arkts-basicservices-runninglock-create-f.md)
+  - [isSupported](arkts-basicservices-runninglock-issupported-f.md)
   - [createRunningLock](arkts-basicservices-runninglock-createrunninglock-f.md)
   - [isRunningLockTypeSupported](arkts-basicservices-runninglock-isrunninglocktypesupported-f.md)
-  - [isSupported](arkts-basicservices-runninglock-issupported-f.md)
   - [RunningLock](arkts-basicservices-runninglock-runninglock-c.md)
   - [RunningLockType](arkts-basicservices-runninglock-runninglocktype-e.md)
 - [@ohos.scan](arkts-basicservices-scan.md)
@@ -651,12 +643,8 @@
   - [PanelType](arkts-basicservices-selectioninput-selectionpanel-paneltype-e.md)
 - [@ohos.systemDateTime（系统时间、时区）](arkts-basicservices-systemdatetime.md)
   - [getAutoTimeStatus](arkts-basicservices-systemdatetime-getautotimestatus-f.md)
-  - [getCurrentTime](arkts-basicservices-systemdatetime-getcurrenttime-f.md)
-  - [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
   <!--Del-->
   - [getNtpTime（系统接口）](arkts-basicservices-systemdatetime-getntptime-f-sys.md)<!--DelEnd-->
-  - [getRealActiveTime](arkts-basicservices-systemdatetime-getrealactivetime-f.md)
-  - [getRealTime](arkts-basicservices-systemdatetime-getrealtime-f.md)
   - [getTime](arkts-basicservices-systemdatetime-gettime-f.md)
   - [getTimezone](arkts-basicservices-systemdatetime-gettimezone-f.md)
   - [getTimezoneSync](arkts-basicservices-systemdatetime-gettimezonesync-f.md)
@@ -664,24 +652,18 @@
   <!--Del-->
   - [setAutoTimeStatus（系统接口）](arkts-basicservices-systemdatetime-setautotimestatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [setDate（系统接口）](arkts-basicservices-systemdatetime-setdate-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [setTime（系统接口）](arkts-basicservices-systemdatetime-settime-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setTimezone（系统接口）](arkts-basicservices-systemdatetime-settimezone-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateNtpTime（系统接口）](arkts-basicservices-systemdatetime-updatentptime-f-sys.md)<!--DelEnd-->
+  - [getCurrentTime](arkts-basicservices-systemdatetime-getcurrenttime-f.md)
+  - [getDate](arkts-basicservices-systemdatetime-getdate-f.md)
+  - [getRealActiveTime](arkts-basicservices-systemdatetime-getrealactivetime-f.md)
+  - [getRealTime](arkts-basicservices-systemdatetime-getrealtime-f.md)
+  <!--Del-->
+  - [setDate（系统接口）](arkts-basicservices-systemdatetime-setdate-f-sys.md)<!--DelEnd-->
   - [TimeType](arkts-basicservices-systemdatetime-timetype-e.md)
-<!--Del-->
-- [@ohos.systemparameter（系统属性）](arkts-basicservices-systemparameter.md)<!--DelEnd-->
-  <!--Del-->
-  - [get（系统接口）](arkts-basicservices-systemparameter-get-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSync（系统接口）](arkts-basicservices-systemparameter-getsync-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [set（系统接口）](arkts-basicservices-systemparameter-set-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setSync（系统接口）](arkts-basicservices-systemparameter-setsync-f-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.systemParameterEnhance（系统参数）](arkts-basicservices-systemparameterenhance.md)<!--DelEnd-->
   <!--Del-->
@@ -692,15 +674,6 @@
   - [set（系统接口）](arkts-basicservices-systemparameterenhance-set-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setSync（系统接口）](arkts-basicservices-systemparameterenhance-setsync-f-sys.md)<!--DelEnd-->
-- [@ohos.systemTime（系统时间、时区）](arkts-basicservices-systemtime.md)
-  - [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md)
-  - [getDate](arkts-basicservices-systemtime-getdate-f.md)
-  - [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md)
-  - [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md)
-  - [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md)
-  - [setDate](arkts-basicservices-systemtime-setdate-f.md)
-  - [setTime](arkts-basicservices-systemtime-settime-f.md)
-  - [setTimezone](arkts-basicservices-systemtime-settimezone-f.md)
 <!--Del-->
 - [@ohos.systemTimer（系统定时器）](arkts-basicservices-systemtimer.md)<!--DelEnd-->
   <!--Del-->
@@ -717,10 +690,10 @@
   - [常量(系统接口)](arkts-basicservices-systemtimer-con-sys.md)<!--DelEnd-->
 - [@ohos.thermal（热管理）](arkts-basicservices-thermal.md)
   - [getLevel](arkts-basicservices-thermal-getlevel-f.md)
-  - [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md)
   - [registerThermalLevelCallback](arkts-basicservices-thermal-registerthermallevelcallback-f.md)
-  - [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md)
   - [unregisterThermalLevelCallback](arkts-basicservices-thermal-unregisterthermallevelcallback-f.md)
+  - [getThermalLevel](arkts-basicservices-thermal-getthermallevel-f.md)
+  - [subscribeThermalLevel](arkts-basicservices-thermal-subscribethermallevel-f.md)
   - [unsubscribeThermalLevel](arkts-basicservices-thermal-unsubscribethermallevel-f.md)
   - [ThermalLevel](arkts-basicservices-thermal-thermallevel-e.md)
 <!--Del-->
@@ -817,6 +790,227 @@
   - [UpgradeAction（系统接口）](arkts-basicservices-update-upgradeaction-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UpgradeStatus（系统接口）](arkts-basicservices-update-upgradestatus-e-sys.md)<!--DelEnd-->
+- [@ohos.usbManager（USB管理）](arkts-basicservices-usbmanager.md)
+  <!--Del-->
+  - [addAccessoryRight（系统接口）](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [addDeviceAccessRight（系统接口）](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md)<!--DelEnd-->
+  - [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md)
+  - [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md)
+  - [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
+  - [claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md)
+  - [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md)
+  - [closePipe](arkts-basicservices-usbmanager-closepipe-f.md)
+  - [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)
+  - [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)
+  <!--Del-->
+  - [getDeviceFunctions（系统接口）](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md)<!--DelEnd-->
+  - [getDevices](arkts-basicservices-usbmanager-getdevices-f.md)
+  - [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md)
+  <!--Del-->
+  - [getFunctionsFromString（系统接口）](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getPortList（系统接口）](arkts-basicservices-usbmanager-getportlist-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getPortSupportModes（系统接口）](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md)<!--DelEnd-->
+  - [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md)
+  <!--Del-->
+  - [getStringFromFunctions（系统接口）](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md)<!--DelEnd-->
+  - [hasAccessoryRight](arkts-basicservices-usbmanager-hasaccessoryright-f.md)
+  - [hasRight](arkts-basicservices-usbmanager-hasright-f.md)
+  - [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md)
+  - [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md)
+  - [removeRight](arkts-basicservices-usbmanager-removeright-f.md)
+  - [requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md)
+  - [requestRight](arkts-basicservices-usbmanager-requestright-f.md)
+  - [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md)
+  - [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md)
+  <!--Del-->
+  - [setDeviceFunctions（系统接口）](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md)<!--DelEnd-->
+  - [setInterface](arkts-basicservices-usbmanager-setinterface-f.md)
+  <!--Del-->
+  - [setPortRoleTypes（系统接口）](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)<!--DelEnd-->
+  - [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md)
+  - [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md)
+  - [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md)
+  - [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md)
+  <!--Del-->
+  - [getCurrentFunctions（系统接口）](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getPorts（系统接口）](arkts-basicservices-usbmanager-getports-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSupportedModes（系统接口）](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setCurrentFunctions（系统接口）](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setPortRoles（系统接口）](arkts-basicservices-usbmanager-setportroles-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [usbFunctionsFromString（系统接口）](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [usbFunctionsToString（系统接口）](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md)<!--DelEnd-->
+  - [InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md)
+  - [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)
+  - [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)
+  - [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md)
+  - [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
+  - [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md)
+  - [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
+  - [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
+  - [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
+  - [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md)
+  - [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)
+  - [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)
+  <!--Del-->
+  - [USBPort（系统接口）](arkts-basicservices-usbmanager-usbport-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [USBPortStatus（系统接口）](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)<!--DelEnd-->
+  - [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md)
+  <!--Del-->
+  - [DataRoleType（系统接口）](arkts-basicservices-usbmanager-dataroletype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FunctionType（系统接口）](arkts-basicservices-usbmanager-functiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PortModeType（系统接口）](arkts-basicservices-usbmanager-portmodetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PowerRoleType（系统接口）](arkts-basicservices-usbmanager-powerroletype-e-sys.md)<!--DelEnd-->
+  - [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md)
+  - [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
+  - [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md)
+  - [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
+  - [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
+  - [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
+- [@ohos.usbManager.serial（串口通信管理）](arkts-basicservices-usbmanager-serial.md)
+  <!--Del-->
+  - [addSerialRight（系统接口）](arkts-basicservices-serialmanager-addserialright-f-sys.md)<!--DelEnd-->
+  - [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)
+  - [close](arkts-basicservices-serialmanager-close-f.md)
+  - [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md)
+  - [getPortList](arkts-basicservices-serialmanager-getportlist-f.md)
+  - [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md)
+  - [open](arkts-basicservices-serialmanager-open-f.md)
+  - [read](arkts-basicservices-serialmanager-read-f.md)
+  - [readSync](arkts-basicservices-serialmanager-readsync-f.md)
+  - [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)
+  - [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md)
+  - [write](arkts-basicservices-serialmanager-write-f.md)
+  - [writeSync](arkts-basicservices-serialmanager-writesync-f.md)
+  - [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)
+  - [SerialPort](arkts-basicservices-serialmanager-serialport-i.md)
+  - [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
+  - [DataBits](arkts-basicservices-serialmanager-databits-e.md)
+  - [Parity](arkts-basicservices-serialmanager-parity-e.md)
+  - [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
+- [@ohos.wallpaper（壁纸）](arkts-basicservices-wallpaper.md)
+  <!--Del-->
+  - [getImage（系统接口）](arkts-basicservices-wallpaper-getimage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getMinHeightSync（系统接口）](arkts-basicservices-wallpaper-getminheightsync-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getMinWidthSync（系统接口）](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getWallpaperByState（系统接口）](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [restore（系统接口）](arkts-basicservices-wallpaper-restore-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setAllWallpapers（系统接口）](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setCustomWallpaper（系统接口）](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setImage（系统接口）](arkts-basicservices-wallpaper-setimage-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setVideo（系统接口）](arkts-basicservices-wallpaper-setvideo-f-sys.md)<!--DelEnd-->
+  - [getColors](arkts-basicservices-wallpaper-getcolors-f.md)
+  <!--Del-->
+  - [getColorsSync（系统接口）](arkts-basicservices-wallpaper-getcolorssync-f-sys.md)<!--DelEnd-->
+  - [getFile](arkts-basicservices-wallpaper-getfile-f.md)
+  - [getId](arkts-basicservices-wallpaper-getid-f.md)
+  - [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md)
+  - [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md)
+  <!--Del-->
+  - [getPixelMap（系统接口）](arkts-basicservices-wallpaper-getpixelmap-f-sys.md)<!--DelEnd-->
+  - [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md)
+  - [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md)
+  - [off](arkts-basicservices-wallpaper-off-f.md)
+  <!--Del-->
+  - [off（系统接口）](arkts-basicservices-wallpaper-off-f-sys.md)<!--DelEnd-->
+  - [on](arkts-basicservices-wallpaper-on-f.md)
+  <!--Del-->
+  - [on（系统接口）](arkts-basicservices-wallpaper-on-f-sys.md)<!--DelEnd-->
+  - [reset](arkts-basicservices-wallpaper-reset-f.md)
+  - [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md)
+  <!--Del-->
+  - [WallpaperInfo（系统接口）](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md)<!--DelEnd-->
+  - [RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)
+  <!--Del-->
+  - [FoldState（系统接口）](arkts-basicservices-wallpaper-foldstate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RotateState（系统接口）](arkts-basicservices-wallpaper-rotatestate-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [WallpaperResourceType（系统接口）](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md)<!--DelEnd-->
+  - [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md)
+- [@ohos.zlib（Zip模块）](arkts-basicservices-zlib.md)
+  - [compressFile](arkts-basicservices-zlib-compressfile-f.md)
+  - [compressFiles](arkts-basicservices-zlib-compressfiles-f.md)
+  - [createChecksum](arkts-basicservices-zlib-createchecksum-f.md)
+  - [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md)
+  - [createGZip](arkts-basicservices-zlib-creategzip-f.md)
+  - [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md)
+  - [createZip](arkts-basicservices-zlib-createzip-f.md)
+  - [createZipSync](arkts-basicservices-zlib-createzipsync-f.md)
+  - [decompressFile](arkts-basicservices-zlib-decompressfile-f.md)
+  - [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md)
+  - [unzipFile](arkts-basicservices-zlib-unzipfile-f.md)
+  - [zipFile](arkts-basicservices-zlib-zipfile-f.md)
+  - [Checksum](arkts-basicservices-zlib-checksum-i.md)
+  - [DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md)
+  - [DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md)
+  - [DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)
+  - [GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md)
+  - [GzHeader](arkts-basicservices-zlib-gzheader-i.md)
+  - [GZip](arkts-basicservices-zlib-gzip-i.md)
+  - [Options](arkts-basicservices-zlib-options-i.md)
+  - [Zip](arkts-basicservices-zlib-zip-i.md)
+  - [ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)
+  - [ZStream](arkts-basicservices-zlib-zstream-i.md)
+  - [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md)
+  - [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md)
+  - [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md)
+  - [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
+  - [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md)
+  - [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
+  - [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
+  - [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md)
+  - [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
+  - [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
+  - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
+  - [ErrorCode](arkts-basicservices-zlib-errorcode-e.md)
+- [@ohos.commonEvent](arkts-basicservices-commonevent.md)
+  - [createSubscriber](arkts-basicservices-commonevent-createsubscriber-depr-f.md)
+  - [publish](arkts-basicservices-commonevent-publish-depr-f.md)
+  <!--Del-->
+  - [publishAsUser（系统接口）](arkts-basicservices-commonevent-publishasuser-depr-f-sys.md)<!--DelEnd-->
+  - [subscribe](arkts-basicservices-commonevent-subscribe-depr-f.md)
+  - [unsubscribe](arkts-basicservices-commonevent-unsubscribe-depr-f.md)
+  - [Support](arkts-basicservices-commonevent-support-depr-e.md)
+<!--Del-->
+- [@ohos.systemparameter（系统属性）](arkts-basicservices-systemparameter.md)<!--DelEnd-->
+  <!--Del-->
+  - [get（系统接口）](arkts-basicservices-systemparameter-get-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSync（系统接口）](arkts-basicservices-systemparameter-getsync-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [set（系统接口）](arkts-basicservices-systemparameter-set-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setSync（系统接口）](arkts-basicservices-systemparameter-setsync-f-sys.md)<!--DelEnd-->
+- [@ohos.systemTime（系统时间、时区）](arkts-basicservices-systemtime.md)
+  - [getCurrentTime](arkts-basicservices-systemtime-getcurrenttime-f.md)
+  - [getDate](arkts-basicservices-systemtime-getdate-f.md)
+  - [getRealActiveTime](arkts-basicservices-systemtime-getrealactivetime-f.md)
+  - [getRealTime](arkts-basicservices-systemtime-getrealtime-f.md)
+  - [getTimezone](arkts-basicservices-systemtime-gettimezone-f.md)
+  - [setDate](arkts-basicservices-systemtime-setdate-f.md)
+  - [setTime](arkts-basicservices-systemtime-settime-f.md)
+  - [setTimezone](arkts-basicservices-systemtime-settimezone-f.md)
 - [@ohos.usb（USB管理）](arkts-basicservices-usb.md)
   - [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md)
   - [claimInterface](arkts-basicservices-usb-claiminterface-f.md)
@@ -866,204 +1060,10 @@
   - [USBControlRequestType](arkts-basicservices-usb-usbcontrolrequesttype-e.md)
   - [USBRequestDirection](arkts-basicservices-usb-usbrequestdirection-e.md)
   - [USBRequestTargetType](arkts-basicservices-usb-usbrequesttargettype-e.md)
-- [@ohos.usbManager（USB管理）](arkts-basicservices-usbmanager.md)
-  <!--Del-->
-  - [addAccessoryRight（系统接口）](arkts-basicservices-usbmanager-addaccessoryright-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [addDeviceAccessRight（系统接口）](arkts-basicservices-usbmanager-adddeviceaccessright-f-sys.md)<!--DelEnd-->
-  - [bulkTransfer](arkts-basicservices-usbmanager-bulktransfer-f.md)
-  - [cancelAccessoryRight](arkts-basicservices-usbmanager-cancelaccessoryright-f.md)
-  - [claimInterface](arkts-basicservices-usbmanager-claiminterface-f.md)
-  - [claimInterfaceExclusive](arkts-basicservices-usbmanager-claiminterfaceexclusive-f.md)
-  - [closeAccessory](arkts-basicservices-usbmanager-closeaccessory-f.md)
-  - [closePipe](arkts-basicservices-usbmanager-closepipe-f.md)
-  - [connectDevice](arkts-basicservices-usbmanager-connectdevice-f.md)
-  - [controlTransfer](arkts-basicservices-usbmanager-controltransfer-f.md)
-  - [getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)
-  <!--Del-->
-  - [getCurrentFunctions（系统接口）](arkts-basicservices-usbmanager-getcurrentfunctions-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getDeviceFunctions（系统接口）](arkts-basicservices-usbmanager-getdevicefunctions-f-sys.md)<!--DelEnd-->
-  - [getDevices](arkts-basicservices-usbmanager-getdevices-f.md)
-  - [getFileDescriptor](arkts-basicservices-usbmanager-getfiledescriptor-f.md)
-  <!--Del-->
-  - [getFunctionsFromString（系统接口）](arkts-basicservices-usbmanager-getfunctionsfromstring-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getPortList（系统接口）](arkts-basicservices-usbmanager-getportlist-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getPorts（系统接口）](arkts-basicservices-usbmanager-getports-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getPortSupportModes（系统接口）](arkts-basicservices-usbmanager-getportsupportmodes-f-sys.md)<!--DelEnd-->
-  - [getRawDescriptor](arkts-basicservices-usbmanager-getrawdescriptor-f.md)
-  <!--Del-->
-  - [getStringFromFunctions（系统接口）](arkts-basicservices-usbmanager-getstringfromfunctions-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSupportedModes（系统接口）](arkts-basicservices-usbmanager-getsupportedmodes-f-sys.md)<!--DelEnd-->
-  - [hasAccessoryRight](arkts-basicservices-usbmanager-hasaccessoryright-f.md)
-  - [hasRight](arkts-basicservices-usbmanager-hasright-f.md)
-  - [openAccessory](arkts-basicservices-usbmanager-openaccessory-f.md)
-  - [releaseInterface](arkts-basicservices-usbmanager-releaseinterface-f.md)
-  - [removeRight](arkts-basicservices-usbmanager-removeright-f.md)
-  - [requestAccessoryRight](arkts-basicservices-usbmanager-requestaccessoryright-f.md)
-  - [requestRight](arkts-basicservices-usbmanager-requestright-f.md)
-  - [resetUsbDevice](arkts-basicservices-usbmanager-resetusbdevice-f.md)
-  - [setConfiguration](arkts-basicservices-usbmanager-setconfiguration-f.md)
-  <!--Del-->
-  - [setCurrentFunctions（系统接口）](arkts-basicservices-usbmanager-setcurrentfunctions-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setDeviceFunctions（系统接口）](arkts-basicservices-usbmanager-setdevicefunctions-f-sys.md)<!--DelEnd-->
-  - [setInterface](arkts-basicservices-usbmanager-setinterface-f.md)
-  <!--Del-->
-  - [setPortRoles（系统接口）](arkts-basicservices-usbmanager-setportroles-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setPortRoleTypes（系统接口）](arkts-basicservices-usbmanager-setportroletypes-f-sys.md)<!--DelEnd-->
-  - [usbCancelTransfer](arkts-basicservices-usbmanager-usbcanceltransfer-f.md)
-  - [usbControlTransfer](arkts-basicservices-usbmanager-usbcontroltransfer-f.md)
-  <!--Del-->
-  - [usbFunctionsFromString（系统接口）](arkts-basicservices-usbmanager-usbfunctionsfromstring-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [usbFunctionsToString（系统接口）](arkts-basicservices-usbmanager-usbfunctionstostring-f-sys.md)<!--DelEnd-->
-  - [usbSubmitTransfer](arkts-basicservices-usbmanager-usbsubmittransfer-f.md)
-  - [InterfaceConflictInfo](arkts-basicservices-usbmanager-interfaceconflictinfo-i.md)
-  - [SubmitTransferCallback](arkts-basicservices-usbmanager-submittransfercallback-i.md)
-  - [USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)
-  - [USBAccessoryHandle](arkts-basicservices-usbmanager-usbaccessoryhandle-i.md)
-  - [USBConfiguration](arkts-basicservices-usbmanager-usbconfiguration-i.md)
-  - [USBControlParams](arkts-basicservices-usbmanager-usbcontrolparams-i.md)
-  - [UsbDataTransferParams](arkts-basicservices-usbmanager-usbdatatransferparams-i.md)
-  - [USBDevice](arkts-basicservices-usbmanager-usbdevice-i.md)
-  - [USBDevicePipe](arkts-basicservices-usbmanager-usbdevicepipe-i.md)
-  - [USBDeviceRequestParams](arkts-basicservices-usbmanager-usbdevicerequestparams-i.md)
-  - [USBEndpoint](arkts-basicservices-usbmanager-usbendpoint-i.md)
-  - [USBInterface](arkts-basicservices-usbmanager-usbinterface-i.md)
-  - [UsbIsoPacketDescriptor](arkts-basicservices-usbmanager-usbisopacketdescriptor-i.md)
-  <!--Del-->
-  - [USBPort（系统接口）](arkts-basicservices-usbmanager-usbport-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [USBPortStatus（系统接口）](arkts-basicservices-usbmanager-usbportstatus-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [DataRoleType（系统接口）](arkts-basicservices-usbmanager-dataroletype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FunctionType（系统接口）](arkts-basicservices-usbmanager-functiontype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PortModeType（系统接口）](arkts-basicservices-usbmanager-portmodetype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [PowerRoleType（系统接口）](arkts-basicservices-usbmanager-powerroletype-e-sys.md)<!--DelEnd-->
-  - [USBControlRequestType](arkts-basicservices-usbmanager-usbcontrolrequesttype-e.md)
-  - [UsbEndpointTransferType](arkts-basicservices-usbmanager-usbendpointtransfertype-e.md)
-  - [USBRequestDirection](arkts-basicservices-usbmanager-usbrequestdirection-e.md)
-  - [USBRequestTargetType](arkts-basicservices-usbmanager-usbrequesttargettype-e.md)
-  - [UsbTransferFlags](arkts-basicservices-usbmanager-usbtransferflags-e.md)
-  - [UsbTransferStatus](arkts-basicservices-usbmanager-usbtransferstatus-e.md)
-- [@ohos.usbManager.serial（串口通信管理）](arkts-basicservices-usbmanager-serial.md)
-  <!--Del-->
-  - [addSerialRight（系统接口）](arkts-basicservices-serialmanager-addserialright-f-sys.md)<!--DelEnd-->
-  - [cancelSerialRight](arkts-basicservices-serialmanager-cancelserialright-f.md)
-  - [close](arkts-basicservices-serialmanager-close-f.md)
-  - [getAttribute](arkts-basicservices-serialmanager-getattribute-f.md)
-  - [getPortList](arkts-basicservices-serialmanager-getportlist-f.md)
-  - [hasSerialRight](arkts-basicservices-serialmanager-hasserialright-f.md)
-  - [open](arkts-basicservices-serialmanager-open-f.md)
-  - [read](arkts-basicservices-serialmanager-read-f.md)
-  - [readSync](arkts-basicservices-serialmanager-readsync-f.md)
-  - [requestSerialRight](arkts-basicservices-serialmanager-requestserialright-f.md)
-  - [setAttribute](arkts-basicservices-serialmanager-setattribute-f.md)
-  - [write](arkts-basicservices-serialmanager-write-f.md)
-  - [writeSync](arkts-basicservices-serialmanager-writesync-f.md)
-  - [SerialAttribute](arkts-basicservices-serialmanager-serialattribute-i.md)
-  - [SerialPort](arkts-basicservices-serialmanager-serialport-i.md)
-  - [BaudRates](arkts-basicservices-serialmanager-baudrates-e.md)
-  - [DataBits](arkts-basicservices-serialmanager-databits-e.md)
-  - [Parity](arkts-basicservices-serialmanager-parity-e.md)
-  - [StopBits](arkts-basicservices-serialmanager-stopbits-e.md)
-- [@ohos.wallpaper（壁纸）](arkts-basicservices-wallpaper.md)
-  - [getColors](arkts-basicservices-wallpaper-getcolors-f.md)
-  <!--Del-->
-  - [getColorsSync（系统接口）](arkts-basicservices-wallpaper-getcolorssync-f-sys.md)<!--DelEnd-->
-  - [getFile](arkts-basicservices-wallpaper-getfile-f.md)
-  - [getId](arkts-basicservices-wallpaper-getid-f.md)
-  <!--Del-->
-  - [getImage（系统接口）](arkts-basicservices-wallpaper-getimage-f-sys.md)<!--DelEnd-->
-  - [getMinHeight](arkts-basicservices-wallpaper-getminheight-f.md)
-  <!--Del-->
-  - [getMinHeightSync（系统接口）](arkts-basicservices-wallpaper-getminheightsync-f-sys.md)<!--DelEnd-->
-  - [getMinWidth](arkts-basicservices-wallpaper-getminwidth-f.md)
-  <!--Del-->
-  - [getMinWidthSync（系统接口）](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getPixelMap（系统接口）](arkts-basicservices-wallpaper-getpixelmap-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getWallpaperByState（系统接口）](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md)<!--DelEnd-->
-  - [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md)
-  - [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md)
-  - [off](arkts-basicservices-wallpaper-off-f.md)
-  <!--Del-->
-  - [off（系统接口）](arkts-basicservices-wallpaper-off-f-sys.md)<!--DelEnd-->
-  - [on](arkts-basicservices-wallpaper-on-f.md)
-  <!--Del-->
-  - [on（系统接口）](arkts-basicservices-wallpaper-on-f-sys.md)<!--DelEnd-->
-  - [reset](arkts-basicservices-wallpaper-reset-f.md)
-  <!--Del-->
-  - [restore（系统接口）](arkts-basicservices-wallpaper-restore-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setAllWallpapers（系统接口）](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setCustomWallpaper（系统接口）](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setImage（系统接口）](arkts-basicservices-wallpaper-setimage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setVideo（系统接口）](arkts-basicservices-wallpaper-setvideo-f-sys.md)<!--DelEnd-->
-  - [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md)
-  - [RgbaColor](arkts-basicservices-wallpaper-rgbacolor-i.md)
-  <!--Del-->
-  - [WallpaperInfo（系统接口）](arkts-basicservices-wallpaper-wallpaperinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FoldState（系统接口）](arkts-basicservices-wallpaper-foldstate-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RotateState（系统接口）](arkts-basicservices-wallpaper-rotatestate-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [WallpaperResourceType（系统接口）](arkts-basicservices-wallpaper-wallpaperresourcetype-e-sys.md)<!--DelEnd-->
-  - [WallpaperType](arkts-basicservices-wallpaper-wallpapertype-e.md)
 <!--Del-->
 - [@ohos.WallpaperExtensionAbility（WallpaperExtensionAbility）](arkts-basicservices-wallpaperextensionability.md)<!--DelEnd-->
   <!--Del-->
   - [WallpaperExtensionAbility（系统接口）](arkts-basicservices-wallpaperextensionability-c-sys.md)<!--DelEnd-->
-- [@ohos.zlib（Zip模块）](arkts-basicservices-zlib.md)
-  - [compressFile](arkts-basicservices-zlib-compressfile-f.md)
-  - [compressFiles](arkts-basicservices-zlib-compressfiles-f.md)
-  - [createChecksum](arkts-basicservices-zlib-createchecksum-f.md)
-  - [createChecksumSync](arkts-basicservices-zlib-createchecksumsync-f.md)
-  - [createGZip](arkts-basicservices-zlib-creategzip-f.md)
-  - [createGZipSync](arkts-basicservices-zlib-creategzipsync-f.md)
-  - [createZip](arkts-basicservices-zlib-createzip-f.md)
-  - [createZipSync](arkts-basicservices-zlib-createzipsync-f.md)
-  - [decompressFile](arkts-basicservices-zlib-decompressfile-f.md)
-  - [getOriginalSize](arkts-basicservices-zlib-getoriginalsize-f.md)
-  - [unzipFile](arkts-basicservices-zlib-unzipfile-f.md)
-  - [zipFile](arkts-basicservices-zlib-zipfile-f.md)
-  - [Checksum](arkts-basicservices-zlib-checksum-i.md)
-  - [DecompressionOutputInfo](arkts-basicservices-zlib-decompressionoutputinfo-i.md)
-  - [DeflatePendingOutputInfo](arkts-basicservices-zlib-deflatependingoutputinfo-i.md)
-  - [DictionaryOutputInfo](arkts-basicservices-zlib-dictionaryoutputinfo-i.md)
-  - [GzErrorOutputInfo](arkts-basicservices-zlib-gzerroroutputinfo-i.md)
-  - [GzHeader](arkts-basicservices-zlib-gzheader-i.md)
-  - [GZip](arkts-basicservices-zlib-gzip-i.md)
-  - [Options](arkts-basicservices-zlib-options-i.md)
-  - [Zip](arkts-basicservices-zlib-zip-i.md)
-  - [ZipOutputInfo](arkts-basicservices-zlib-zipoutputinfo-i.md)
-  - [ZStream](arkts-basicservices-zlib-zstream-i.md)
-  - [InflateBackInputCallback](arkts-basicservices-zlib-inflatebackinputcallback-t.md)
-  - [InflateBackOutputCallback](arkts-basicservices-zlib-inflatebackoutputcallback-t.md)
-  - [CompressFlushMode](arkts-basicservices-zlib-compressflushmode-e.md)
-  - [CompressLevel](arkts-basicservices-zlib-compresslevel-e.md)
-  - [CompressMethod](arkts-basicservices-zlib-compressmethod-e.md)
-  - [CompressStrategy](arkts-basicservices-zlib-compressstrategy-e.md)
-  - [ErrorCode](arkts-basicservices-zlib-errorcode-e.md)
-  - [MemLevel](arkts-basicservices-zlib-memlevel-e.md)
-  - [OffsetReferencePoint](arkts-basicservices-zlib-offsetreferencepoint-e.md)
-  - [ParallelStrategy](arkts-basicservices-zlib-parallelstrategy-e.md)
-  - [PathSeparatorStrategy](arkts-basicservices-zlib-pathseparatorstrategy-e.md)
-  - [ReturnStatus](arkts-basicservices-zlib-returnstatus-e.md)
 - [@system.battery（电量信息）](arkts-basicservices-system-battery.md)
   - [Battery](arkts-basicservices-system-battery-battery-c.md)
   - [BatteryResponse](arkts-basicservices-system-battery-batteryresponse-i.md)

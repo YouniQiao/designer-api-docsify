@@ -8,6 +8,8 @@
 
 **库：** libavmetadata_extractor.so
 
+**系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
+
 **起始版本：** 18
 
 **相关模块：** [AVMetadataExtractor](capi-avmetadataextractor.md)
@@ -64,6 +66,8 @@ enum OH_AVMetadataExtractor_FetchState
 **描述：**
 
 枚举帧提取操作的结果状态。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
 
 **起始版本：** 23
 

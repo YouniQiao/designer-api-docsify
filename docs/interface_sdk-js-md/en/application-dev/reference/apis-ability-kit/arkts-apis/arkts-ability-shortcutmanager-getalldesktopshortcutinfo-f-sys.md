@@ -45,6 +45,7 @@ Obtains the information about all shortcuts of the given user.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -76,3 +77,5 @@ struct ShortcutExample {
   }
 }
 ```
+
+<!--DelEnd-->

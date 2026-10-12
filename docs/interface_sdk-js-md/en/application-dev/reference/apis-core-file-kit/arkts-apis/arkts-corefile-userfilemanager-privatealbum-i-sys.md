@@ -61,6 +61,7 @@ This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfi
 | uri | string | Yes | File URI. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -89,6 +90,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete2"></a>
 
@@ -128,6 +131,7 @@ This API will be deprecated. Use [Album.deletePhotoAssets](arkts-corefile-userfi
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -155,6 +159,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recover1"></a>
 
@@ -189,6 +195,7 @@ This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userf
 | uri | string | Yes | File URI. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -225,6 +232,8 @@ async function example(mgr: userFileManager.UserFileManager) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recover2"></a>
 
@@ -264,6 +273,7 @@ This API will be deprecated. Use [Album.recoverPhotoAssets](arkts-corefile-userf
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 For details about how to create a userFileManager instance, see the example in userFileManager.getUserFileMgr.
@@ -291,3 +301,5 @@ async function example(mgr: userFileManager.UserFileManager) {
   });
 }
 ```
+
+<!--DelEnd-->

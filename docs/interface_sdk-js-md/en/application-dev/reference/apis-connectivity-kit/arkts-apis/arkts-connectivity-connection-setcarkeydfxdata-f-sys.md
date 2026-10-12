@@ -40,6 +40,7 @@ Set the dfx data of car key.
 | 2900003 | Bluetooth disabled. |
 | 2900099 | Operation failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,3 +50,5 @@ try {
     console.error(`Failed to set car key dfx data. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

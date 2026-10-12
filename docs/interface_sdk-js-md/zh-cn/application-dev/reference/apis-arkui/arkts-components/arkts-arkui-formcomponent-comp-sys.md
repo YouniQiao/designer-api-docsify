@@ -44,6 +44,7 @@ Set a new value of form info.
 | [FormRenderingMode](arkts-arkui-formcomponent-comp-formrenderingmode-e-sys.md) | 卡片渲染模式枚举 |
 | [FormShape](arkts-arkui-formcomponent-comp-formshape-e-sys.md) | 定义卡片形状枚举。 |
 
+<!--Del-->
 ## 示例
 
 卡片示例。
@@ -103,3 +104,5 @@ struct CardExample {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -41,6 +41,7 @@ Obtains the resource information of the entry abilities of the current applicati
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -83,6 +84,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="getalllauncherabilityresourceinfo2"></a>
 
@@ -124,6 +127,9 @@ Obtains the resource information of the entry abilities of the current applicati
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 See [getAllLauncherAbilityResourceInfo](#getalllauncherabilityresourceinfo)
+
+<!--DelEnd-->

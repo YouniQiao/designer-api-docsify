@@ -45,6 +45,7 @@ function setAllWallpapers(wallpaperInfos: Array<WallpaperInfo>, wallpaperType: W
 | [201](../../errorcode-universal.md#201-api权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -74,3 +75,5 @@ wallpaper.setAllWallpapers(wallpaperInfos, wallpaper.WallpaperType.WALLPAPER_SYS
   console.error(`Failed to setAllWallpapers. Code: ${error.code}, Message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -43,6 +43,7 @@ Deletes the disposed status for an application. This API uses an asynchronous ca
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   console.error('deleteDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="deletedisposedstatus2"></a>
@@ -107,6 +110,7 @@ Deletes the disposition status of an application. This API uses a promise to ret
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -128,3 +132,5 @@ try {
   console.error('deleteDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->

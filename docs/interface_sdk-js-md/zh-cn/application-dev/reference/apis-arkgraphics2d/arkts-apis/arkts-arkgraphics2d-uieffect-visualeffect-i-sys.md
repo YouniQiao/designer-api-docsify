@@ -48,6 +48,7 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 | --- | --- |
 | [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md) | 返回添加了背景颜色更改效果的VisualEffect。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ let visualEffect = uiEffect.createEffect();
 // 将混合器添加至组件上以改变组件背景颜色
 visualEffect.backgroundColorBlender(blender);
 ```
+
+<!--DelEnd-->
 
 ## borderLight
 
@@ -98,6 +101,7 @@ borderLight(lightPosition: common2D.Point3d, lightColor: common2D.Color, lightIn
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -141,6 +145,8 @@ struct Index {
 }
 ```
 
+<!--DelEnd-->
+
 ## colorGradient
 
 ```TypeScript
@@ -179,6 +185,7 @@ colorGradient(colors: Array<Color>, positions: Array<common2D.Point>, strengths:
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -218,6 +225,8 @@ struct ColorGradientExample {
 }
 ```
 
+<!--DelEnd-->
+
 ## distortionCollapse
 
 ```TypeScript
@@ -256,6 +265,7 @@ backgroundEffect、brightness、blur等需要截屏的接口无法截取到正�
 | --- | --- |
 | [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md) | 返回添加了非线性形变效果的VisualEffect。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -283,6 +293,8 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## glassMarbleEffect
 
@@ -321,6 +333,7 @@ glassMarbleEffect(material: GlassMarbleMaterialParam, marbleShell: GlassMarbleSp
 | --- | --- |
 | [VisualEffect](arkts-arkgraphics2d-uieffect-visualeffect-i-sys.md) | 返回附加了玻璃弹珠效果的VisualEffect。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -389,6 +402,8 @@ struct GlassMarbleEffectExample {
 }
 ```
 
+<!--DelEnd-->
+
 ## liquidMaterial
 
 ```TypeScript
@@ -427,6 +442,7 @@ liquidMaterial(param : LiquidMaterialEffectParam, useEffectMask: Mask, distortMa
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -484,3 +500,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

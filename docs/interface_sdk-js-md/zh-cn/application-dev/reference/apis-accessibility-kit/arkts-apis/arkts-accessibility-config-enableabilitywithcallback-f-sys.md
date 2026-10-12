@@ -51,6 +51,7 @@ function enableAbilityWithCallback(name: string, capability: Array<accessibility
 | [9300001](../errorcode-accessibility.md#9300001-输入无效的包名称或者ability名称) | Invalid bundle name or ability name. |
 | [9300002](../errorcode-accessibility.md#9300002-目标ability已启用) | Target ability already enabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,3 +72,5 @@ config.enableAbilityWithCallback(name, capability, connectCallback).then(() => {
   console.error(`Failed to enable ability. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -55,6 +55,7 @@ reloadInModal(customData: CustomData): Promise<void>
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 通过点击账号密码输入框触发自动填充服务时，在[AutoFillExtensionAbility](arkts-ability-app-ability-autofillextensionability-autofillextensionability-c-sys.md)的onFillRequest生命周期中拉起账号选择界面。
@@ -147,3 +148,5 @@ struct AccountPage {
   }
 }
 ```
+
+<!--DelEnd-->

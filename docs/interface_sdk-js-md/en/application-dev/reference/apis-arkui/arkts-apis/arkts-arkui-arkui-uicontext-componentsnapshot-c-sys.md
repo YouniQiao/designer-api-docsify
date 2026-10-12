@@ -76,6 +76,7 @@ Captures a snapshot of the area between two specified components. This API uses 
 | [100001](../errorcode-internal.md#100001-internal-error) | Invalid ID detected. |
 | [160003](../errorcode-snapshot.md#160003-color-space-or-dynamic-range-mode-set-in-screenshot-options-is-not-supported) | Unsupported color space or dynamic range mode in snapshot options.<br>**Applicable version:** 23 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -149,3 +150,5 @@ struct SnapshotExample {
   }
 }
 ```
+
+<!--DelEnd-->

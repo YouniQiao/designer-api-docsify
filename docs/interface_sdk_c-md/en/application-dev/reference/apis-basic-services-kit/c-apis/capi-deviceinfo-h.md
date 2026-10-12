@@ -8,6 +8,8 @@ Declares the APIs for querying device information. This module provides the capa
 
 **Library**: libdeviceinfo_ndk.z.so
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Related module**: [DeviceInfo](capi-deviceinfo.md)
@@ -60,6 +62,8 @@ const char *OH_GetDeviceType(void)
 
 Obtains the device type. This API returns a predefined device type in the form of a string.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -77,6 +81,8 @@ const char *OH_GetManufacture(void)
 **Description**
 
 Obtains the device manufacturer.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -96,6 +102,8 @@ const char *OH_GetBrand(void)
 
 Obtains the device brand.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -113,6 +121,8 @@ const char *OH_GetMarketName(void)
 **Description**
 
 Obtains the external product series, that is, the market name.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -132,6 +142,8 @@ const char *OH_GetProductSeries(void)
 
 Obtains the product series.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -149,6 +161,8 @@ const char *OH_GetProductModel(void)
 **Description**
 
 Obtains the product model.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -168,6 +182,8 @@ const char *OH_GetSoftwareModel(void)
 
 Obtains the software model. When the same software version is used on different hardware models, this field is used to distinguish different software branches.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -185,6 +201,8 @@ const char *OH_GetHardwareModel(void)
 **Description**
 
 Obtains the hardware model.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -204,6 +222,8 @@ const char *OH_GetBootloaderVersion(void)
 
 Obtains the Bootloader version.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -221,6 +241,8 @@ const char *OH_GetAbiList(void)
 **Description**
 
 Obtains the ABI list.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -240,6 +262,8 @@ const char *OH_GetSecurityPatchTag(void)
 
 Obtains the security patch tag.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -257,6 +281,8 @@ const char *OH_GetDisplayVersion(void)
 **Description**
 
 Obtains the display version.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -276,6 +302,8 @@ const char *OH_GetIncrementalVersion(void)
 
 Obtains the incremental version.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -293,6 +321,8 @@ const char *OH_GetOsReleaseType(void)
 **Description**
 
 Obtains the OS release type. This API returns a predefined OS release type in the form of a string.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -312,6 +342,8 @@ const char *OH_GetOSFullName(void)
 
 Obtains the OS full name.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -329,6 +361,8 @@ int OH_GetSdkApiVersion(void)
 **Description**
 
 Obtains the SDK API version.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -348,6 +382,8 @@ int OH_GetSdkMinorApiVersion(void)
 
 Obtains the SDK minor API version. Starting from API version 26.0.0, the minor version is introduced as part of semantic versioning. It is the middle field in the semantic version and is an integer. The complete API version is represented by sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 26.0.1
 
 **Returns**:
@@ -365,6 +401,8 @@ int OH_GetSdkPatchApiVersion(void)
 **Description**
 
 Obtains the SDK patch API version. Starting from API version 26.0.0, the patch version is introduced as part of semantic versioning. It is the third field in the semantic version and is an integer. The complete API version is represented by sdkApiVersion.sdkMinorApiVersion.sdkPatchApiVersion.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 26.0.1
 
@@ -384,6 +422,8 @@ int OH_GetFirstApiVersion(void)
 
 Obtains the first API version, which is the API version supported by the device when it was first released.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -401,6 +441,8 @@ const char *OH_GetVersionId(void)
 **Description**
 
 Obtains the version ID.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -420,6 +462,8 @@ const char *OH_GetBuildType(void)
 
 Obtains the build type.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -437,6 +481,8 @@ const char *OH_GetBuildUser(void)
 **Description**
 
 Obtains the build user.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -456,6 +502,8 @@ const char *OH_GetBuildHost(void)
 
 Obtains the build host.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -473,6 +521,8 @@ const char *OH_GetBuildTime(void)
 **Description**
 
 Obtains the build time.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -492,6 +542,8 @@ const char *OH_GetBuildRootHash(void)
 
 Obtains the build root hash.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -509,6 +561,8 @@ const char *OH_GetDistributionOSName(void)
 **Description**
 
 Obtains the ISV distribution OS name. ISVs can use their own OS names.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 
@@ -528,6 +582,8 @@ const char *OH_GetDistributionOSVersion(void)
 
 Obtains the ISV distribution OS version.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -546,6 +602,8 @@ int OH_GetDistributionOSApiVersion(void)
 
 Obtains the ISV distribution OS API version.
 
+**System capability**: SystemCapability.Startup.SystemInfo
+
 **Since**: 10
 
 **Returns**:
@@ -563,6 +621,8 @@ const char *OH_GetDistributionOSReleaseType(void)
 **Description**
 
 Obtains the ISV distribution OS release type.
+
+**System capability**: SystemCapability.Startup.SystemInfo
 
 **Since**: 10
 

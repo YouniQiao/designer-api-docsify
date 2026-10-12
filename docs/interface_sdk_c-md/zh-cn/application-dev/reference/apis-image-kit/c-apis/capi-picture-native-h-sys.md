@@ -6,6 +6,8 @@
 
 **库：** libpicture.so
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 13
 
 **系统接口：** 此接口为系统接口。
@@ -47,6 +49,8 @@ Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, ui
 
 创建一个具有指定内存类型的OH_AuxiliaryPictureNative对象。<ul><li>系统默认根据图像类型、图像大小、平台能力等因素选择内存类型。</li><li>处理该接口返回的辅助图时， 需要考虑stride的影响。</li><li>如果data为null或dataLength小于等于0，则不会初始化辅助图数据。</li></ul>
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **资源释放：** picture_native/OH_AuxiliaryPictureNative_Release {auxiliaryPicture}
@@ -60,7 +64,7 @@ Image_ErrorCode OH_AuxiliaryPictureNative_CreateUsingAllocator(uint8_t *data, ui
 | uint8_t *data | 指向图像数据的指针。 |
 | uint32_t dataLength | 图像数据的长度。 |
 | [OH_AuxiliaryPictureInfo](capi-image-nativemodule-oh-auxiliarypictureinfo.md) *info | 指向辅助图基本信息的指针。 |
-| [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode) allocator | 辅助图使用的内存类型。有关可用选项的详细信息，请参阅[IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode)。 |
+| [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode) allocator | 辅助图使用的内存类型。有关可用选项的详细信息，请参阅[IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode)。 |
 | [OH_AuxiliaryPictureNative](capi-image-nativemodule-oh-auxiliarypicturenative.md) **auxiliaryPicture | 输出参数，用于接收新创建的OH_AuxiliaryPictureNative对象地址。 |
 
 **返回值：**
@@ -78,6 +82,8 @@ Image_ErrorCode OH_DecomposeOptions_Create(OH_DecomposeOptions **outOwnedOptions
 **描述：**
 
 创建OH_DecomposeOptions实例。创建的实例需通过[OH_DecomposeOptions_Release](capi-picture-native-h.md#oh_decomposeoptions_release)释放。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
@@ -107,6 +113,8 @@ Image_ErrorCode OH_DecomposeOptions_SetIsFullSizeGainmap(OH_DecomposeOptions *op
 
 设置是否生成全尺寸增益图（指增益图和主图尺寸一致）。若不自行设置，默认值为false，即增益图的尺寸是主图的一半。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -133,6 +141,8 @@ Image_ErrorCode OH_DecomposeOptions_GetIsFullSizeGainmap(OH_DecomposeOptions *op
 **描述：**
 
 获取是否生成全尺寸增益图（指增益图和主图尺寸一致）。如果isFullSizeGainmap为true，则增益图和主图尺寸一致；否则，增益图为主图尺寸的一半。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
@@ -161,6 +171,8 @@ Image_ErrorCode OH_DecomposeOptions_SetDesiredPixelFormat(OH_DecomposeOptions *o
 
 设置HDR分解后的SDR PixelMap和增益图的像素格式。若不设置，默认值为RGBA_8888。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -187,6 +199,8 @@ Image_ErrorCode OH_DecomposeOptions_GetDesiredPixelFormat(OH_DecomposeOptions *o
 **描述：**
 
 获取HDR分解后的SDR PixelMap和增益图的像素格式。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 
@@ -215,6 +229,8 @@ Image_ErrorCode OH_DecomposeOptions_Release(OH_DecomposeOptions *options)
 
 释放OH_DecomposeOptions指针。
 
+**系统能力：** SystemCapability.Multimedia.Image.Core
+
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -240,6 +256,8 @@ Image_ErrorCode OH_PictureNative_ConvertPictureNativeToNapi(napi_env env, OH_Pic
 **描述：**
 
 将 [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) 对象转换为以 napi_value 表示的 ArkTS <b>Picture</b> 对象。 返回的 ArkTS Picture 对象独立持有底层 Picture 的强引用，与 pictureNative 共享同一个底层 Picture。 本接口不会深拷贝主图、辅助图或元数据。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.1
 
@@ -268,6 +286,8 @@ Image_ErrorCode OH_PictureNative_ConvertPictureNativeFromNapi(napi_env env, napi
 **描述：**
 
 将由 napi_value 表示的 ArkTS <b>Picture</b> 对象转换为 [OH_PictureNative](capi-image-nativemodule-oh-picturenative.md) 对象。 返回的 OH_PictureNative 对象与 pictureNapi 共享同一个底层 Picture 对象。 本接口不复制主图、辅助图或元数据。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.1
 
@@ -298,6 +318,8 @@ Image_ErrorCode OH_PictureNative_DecomposeToPicture(OH_PixelmapNative *hdrPixelm
 **描述：**
 
 将HDR PixelMap分解为包含SDR PixelMap和增益图（gainmap）的Picture对象。创建的Picture实例需通过[OH_PictureNative_Release](capi-picture-native-h.md#oh_picturenative_release)释放。
+
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 **起始版本：** 26.0.0
 

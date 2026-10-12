@@ -91,6 +91,7 @@ Creates a **Grid** component.
 | [OnGetStartIndexByIndexCallback](arkts-arkui-grid-comp-ongetstartindexbyindexcallback-t-sys.md) | Calculates the start line on the page when the grid is scrolled to the specified target index. This API is used to support operations such as [scrollToIndex](Scroller#scrollToIndex). This callback must be set simultaneously with **onGetStartIndexByOffset** to take effect. |
 | [OnGetStartIndexByOffsetCallback](arkts-arkui-grid-comp-ongetstartindexbyoffsetcallback-t-sys.md) | Calculates the start line position of the current page based on the total offset of the **Grid** component, which is used for fast scrolling or reverse scrolling. This callback must be set simultaneously with **onGetStartIndexByIndex** to take effect. |
 | [OnGridScrollIndexCallback](arkts-arkui-grid-comp-ongridscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **Grid** component. |
+| [PlaceholderProvider](arkts-arkui-grid-comp-placeholderprovider-t.md) | Provides the placeholder description for an item of a scrollable component. |
 
 ### Enums
 

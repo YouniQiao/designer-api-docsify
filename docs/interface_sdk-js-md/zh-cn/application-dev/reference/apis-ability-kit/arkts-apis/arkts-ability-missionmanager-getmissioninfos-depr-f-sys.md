@@ -37,6 +37,7 @@ function getMissionInfos(deviceId: string, numMax: number, callback: AsyncCallba
 | numMax | number | 是 | 任务信息数量上限。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | 是 | 回调函数，返回任务信息数组。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -52,6 +53,8 @@ missionManager.getMissionInfos('', 10, (error, missions) => {
   console.info(`missions = ${JSON.stringify(missions)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getmissioninfos2"></a>
@@ -91,6 +94,7 @@ function getMissionInfos(deviceId: string, numMax: number): Promise<Array<Missio
 | --- | --- |
 | Promise&lt;Array&lt;[MissionInfo](arkts-ability-missioninfo-i-sys.md)&gt;&gt; | Promise对象，返回任务信息数组。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -108,3 +112,5 @@ try {
   console.error(`getMissionInfos failed. Cause: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

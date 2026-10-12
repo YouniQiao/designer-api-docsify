@@ -48,6 +48,7 @@ function getTrafficStatsByNetwork(networkInfo: NetworkInfo): Promise<UidNetStats
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) | Failed to read the database. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -67,3 +68,5 @@ statistics.getTrafficStatsByNetwork(networkInfo).then((statsInfo: statistics.Uid
   })
 })
 ```
+
+<!--DelEnd-->

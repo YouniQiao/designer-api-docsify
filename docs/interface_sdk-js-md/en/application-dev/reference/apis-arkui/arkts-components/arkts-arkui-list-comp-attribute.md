@@ -4,7 +4,7 @@
 declare class ListAttribute extends ScrollableCommonMethod<ListAttribute>
 ```
 
-In addition to [universal attributes](arkts-arkui-common-comp.md) and [scrollable component common attributes](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
+In addition to [universal attributes](arkts-arkui-common-comp.md) and [scrollable component common attributes](../../../reference/apis-arkui-ts/ts-container-scrollable-common.md#attributes), the following attributes are also supported.
 
 In addition to [universal events](arkts-arkui-common-comp.md) and [scrollable component common events](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#events), the following events are also supported.
 
@@ -1142,6 +1142,40 @@ Sets the scrollbar state.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [BarState](../arkts-apis/arkts-arkui-barstate-e.md) | Yes | Scrollbar state.<br>In API version 9 and earlier versions, the default value is **BarState.Off**. Since API version 10, the default value is **BarState.Auto**. |
+
+## scrollPlaceholder
+
+```TypeScript
+scrollPlaceholder(provider?: PlaceholderProvider)
+```
+
+Sets a scroll placeholder provider for the **List** component. When the framework predicts that creating the next item within the remaining frame budget would overrun the frame, it first displays a placeholder for that item and creates the real item across frames on the UI thread.
+
+The provider returns the placeholder description of an item: **id** refers to a template registered through [getPlaceholderRegister()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getplaceholderregister).register and **size** is a layout suggestion. If the provider returns **undefined**, or the returned **id** is missing or not registered, the system default placeholder is used and scrolling is not interrupted.
+
+<br>**NOTE:** <br>
+1. This attribute is opt-in: if it is not set, the **List** component keeps the current behavior,
+including the semantics of **syncLoad**.
+2. The placeholder template must be a global, parameterless  
+**@Builder({ isPlaceholder: true })** function that performs read-only static rendering.
+3. After the real item has been created, it is re-laid out under the normal layout constraints of
+ListItem and replaces the placeholder, keeping the scroll anchor.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-ListAttribute-scrollPlaceholder(provider?: PlaceholderProvider): ListAttribute--><!--Device-ListAttribute-scrollPlaceholder(provider?: PlaceholderProvider): ListAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| provider | [PlaceholderProvider](arkts-arkui-list-comp-placeholderprovider-t.md) | No | Placeholder provider of the item at the given index. |
 
 ## scrollSnapAlign
 

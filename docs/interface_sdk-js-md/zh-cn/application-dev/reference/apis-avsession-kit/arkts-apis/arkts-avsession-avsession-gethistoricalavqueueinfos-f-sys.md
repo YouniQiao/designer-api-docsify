@@ -43,6 +43,7 @@ function getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number, callback
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -50,6 +51,8 @@ avSession.getHistoricalAVQueueInfos(3, 5, (avQueueInfos: avSession.AVQueueInfo[]
     console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`); 
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="gethistoricalavqueueinfos2"></a>
@@ -92,6 +95,7 @@ function getHistoricalAVQueueInfos(maxSize: number, maxAppSize: number): Promise
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -99,3 +103,5 @@ avSession.getHistoricalAVQueueInfos(3, 5).then((avQueueInfos: avSession.AVQueueI
   console.info(`Succeeded in getting historical AV queue infos, length: ${avQueueInfos.length}`);
 });
 ```
+
+<!--DelEnd-->

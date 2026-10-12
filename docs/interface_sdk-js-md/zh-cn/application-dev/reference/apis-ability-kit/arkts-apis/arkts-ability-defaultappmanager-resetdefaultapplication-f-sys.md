@@ -45,6 +45,7 @@ function resetDefaultApplication(type: string, userId: number, callback: AsyncCa
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -79,6 +80,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
     console.info('Operation successful.');
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="resetdefaultapplication2"></a>
@@ -118,6 +121,7 @@ function resetDefaultApplication(type: string, callback: AsyncCallback<void>) : 
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -149,6 +153,8 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
   console.info('Operation successful.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="resetdefaultapplication3"></a>
@@ -195,6 +201,7 @@ function resetDefaultApplication(type: string, userId?: number) : Promise<void>
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -227,3 +234,5 @@ defaultAppManager.resetDefaultApplication(uniformTypeDescriptor.UniformDataType.
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

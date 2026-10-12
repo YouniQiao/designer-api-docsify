@@ -33,6 +33,7 @@ Requests the component from the component provider. This API applies to scenario
 | param | [RequestParameterForStage](arkts-arkui-plugincomponentmanager-requestparameterforstage-i-sys.md) | Yes | Details about the component template request. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[RequestCallbackParameters](arkts-arkui-plugincomponentmanager-requestcallbackparameters-i.md)&gt; | Yes | Asynchronous callback for this request, which returns the request response data through the parameter of the callback. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,3 +64,5 @@ pluginComponentManager.request(
   }
 )
 ```
+
+<!--DelEnd-->

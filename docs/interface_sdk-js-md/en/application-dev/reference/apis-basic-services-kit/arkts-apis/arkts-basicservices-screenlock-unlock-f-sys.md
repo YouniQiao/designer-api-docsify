@@ -39,6 +39,7 @@ Unlock the screen.
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 | [13200003](../errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,6 +53,8 @@ screenLock.unlock((err: BusinessError, data: Boolean) => {
   console.info(`Succeeded in unlocking the screen. result: ${data}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="unlock2"></a>
@@ -86,6 +89,7 @@ Unlock the screen.
 | [13200002](../errorcode-screenlock.md#13200002-screen-lock-management-service-is-abnormal) | the screenlock management service is abnormal. |
 | [13200003](../errorcode-screenlock.md#13200003-invalid-use) | Invalid use. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -97,3 +101,5 @@ screenLock.unlock().then((data: Boolean) => {
   console.error(`Failed to unlock the screen, Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

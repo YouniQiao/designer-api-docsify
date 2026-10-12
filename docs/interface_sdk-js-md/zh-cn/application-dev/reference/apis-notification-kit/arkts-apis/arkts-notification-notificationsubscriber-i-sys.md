@@ -36,6 +36,7 @@ onBadgeChanged?:(data: BadgeNumberCallbackData) => void
 | --- | --- | --- | --- |
 | data | [BadgeNumberCallbackData](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onBatchCancel
 
@@ -78,6 +81,7 @@ onBatchCancel?: (data: Array<SubscribeCallbackData>) => void
 | --- | --- | --- | --- |
 | data | Array&lt;[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)&gt; | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -99,6 +103,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onCancel
 
@@ -122,6 +128,7 @@ onCancel?:(data: SubscribeCallbackData) => void
 | --- | --- | --- | --- |
 | data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -144,6 +151,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onConnect
 
 ```TypeScript
@@ -160,6 +169,7 @@ onConnect?:() => void
 
 **系统接口：** 此接口为系统接口。
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -179,6 +189,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onConsume
 
@@ -202,6 +214,7 @@ onConsume?:(data: SubscribeCallbackData) => void
 | --- | --- | --- | --- |
 | data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -224,6 +237,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onDestroy
 
 ```TypeScript
@@ -240,6 +255,7 @@ onDestroy?:() => void
 
 **系统接口：** 此接口为系统接口。
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -260,6 +276,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onDisconnect
 
 ```TypeScript
@@ -276,6 +294,7 @@ onDisconnect?:() => void
 
 **系统接口：** 此接口为系统接口。
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -311,6 +330,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
 ```
 
+<!--DelEnd-->
+
 ## onDoNotDisturbChanged
 
 ```TypeScript
@@ -333,6 +354,7 @@ onDoNotDisturbChanged?: (mode: notificationManager.DoNotDisturbDate) => void
 | --- | --- | --- | --- |
 | mode | [notificationManager.DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -353,6 +375,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledNotificationChanged
 
@@ -376,6 +400,7 @@ onEnabledNotificationChanged?:(callbackData: EnabledNotificationCallbackData) =>
 | --- | --- | --- | --- |
 | callbackData | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -397,6 +422,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledPriorityByBundleChanged
 
@@ -420,6 +447,7 @@ onEnabledPriorityByBundleChanged?: (callbackData: EnabledPriorityNotificationByB
 | --- | --- | --- | --- |
 | callbackData | [EnabledPriorityNotificationByBundleCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -436,6 +464,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledPriorityChanged
 
@@ -459,6 +489,7 @@ onEnabledPriorityChanged?: (callbackData: EnabledPriorityNotificationCallbackDat
 | --- | --- | --- | --- |
 | callbackData | [EnabledPriorityNotificationCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -475,6 +506,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledSilentReminderChanged
 
@@ -552,6 +585,7 @@ onUpdate?:(data: NotificationSortingMap) => void
 | --- | --- | --- | --- |
 | data | [NotificationSortingMap](arkts-notification-notificationsortingmap-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -569,6 +603,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onDoNotDisturbDateChange
 
@@ -596,6 +632,7 @@ onDoNotDisturbDateChange?: (mode: notification.DoNotDisturbDate) => void
 | --- | --- | --- | --- |
 | mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | 是 |  |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -620,6 +657,8 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 
 notificationSubscribe.subscribe(subscriber, subscribeCallback);
 ```
+
+<!--DelEnd-->
 
 ## onBadgeEnabledChanged
 

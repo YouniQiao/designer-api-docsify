@@ -8,6 +8,8 @@ Declares the APIs used by in-app intelligent agents and UI automation to observe
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -85,6 +87,8 @@ enum OH_ArkUI_NativeModule_UIInfoCollection_InteractionEventType
 
 Enumerates the observable UI interaction event types.<br> The values are bit flags. They are used to build the eventMask passed to [OH_ArkUI_NativeModule_UIInfoCollectionRegisterInteractionObserver](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiinfocollectionregisterinteractionobserver).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -110,6 +114,8 @@ enum OH_ArkUI_NativeModule_UIAgentTreeType
 
 Enumeration of the collection type of the UI tree.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -126,6 +132,8 @@ enum OH_ArkUI_NativeModule_UIContentChangeEventCategory
 **Description**
 
 UI Content Change Event Type Enumeration
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -146,6 +154,8 @@ enum OH_ArkUI_NativeModule_UIContentChangeIgnoreType
 
 UI Content Change Event Ignore Enumeration
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -163,6 +173,8 @@ enum OH_ArkUI_NativeModule_UIContentChangeEventType
 **Description**
 
 Enumerates ArkUI state change event types.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -194,6 +206,8 @@ typedef void (*OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback)(co
 
 Callback type for receiving a sensed interaction event.<br> The callback carries a borrowed [OH_ArkUI_NativeModule_UIJsonWrapper](capi-arkui-nativemodule-oh-arkui-nativemodule-uijsonwrapper.md) object that holds the event payload. The object is valid only within the callback invocation; the callback must not retain or destroy it. All positional coordinates in the payload are relative to the screen (display), in physical pixels (px). The payload's top-level structure is:<br> { "schemaVersion": 1, "type": "<event type>", ... }<br> The event-specific fields are as follows: - Tap or click: id, point, count, fingers. - Long press: id, point, actualDuration (milliseconds), action ("end"). - Pan: id, point, direction, action ("start" \| "end" \| "cancel"). - Pinch: id, point (array of [x, y]), fingers, action ("start" \| "end" \| "cancel"); scale is present only on "end". - Rotation: id, point (array of [x, y]), fingers, action ("start" \| "end" \| "cancel"); angle (degrees) is present only on "end". - Swipe: id, downPoint (array of [x, y]), upPoint (array of [x, y]), direction, speed, actualSpeed. - Drag: action ("start" \| "end"); "start" carries id, point, hostName, actualDuration; "end" carries point, dropResult ("success" \| "fail"), id (target, present only on success), hostName. - Touch: action ("down" \| "up"), fingerId, point; "down" also carries id (hit node ID).
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -212,6 +226,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIInfoCollectionRegisterInteractionObserve
 **Description**
 
 Registers an observer for UI interaction events.<br> The observer receives callbacks only for the event types included in eventMask. Multiple observers can be registered for the same UI instance. Registering the same callback and userData pair again creates an additional independent observer with a new registration ID.<br> Remember to unregister the callback by [OH_ArkUI_NativeModule_UIInfoCollectionUnregisterInteractionObserver](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiinfocollectionunregisterinteractionobserver) when it's not used anymore.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -241,6 +257,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIInfoCollectionUnregisterInteractionObser
 
 Unregisters an interaction observer.<br> After this call completes, the associated callback is no longer invoked.<br> This function is thread-safe, can be called from any thread, does not block the caller, and is not async-signal-safe.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -265,6 +283,8 @@ typedef void (*OH_ArkUI_NativeModule_UIAgentJsonCallback)(ArkUI_ContextHandle co
 
 Defines the callback invoked after an asynchronous JSON tree request completes.<br> The callback is invoked exactly once on the UI thread for each accepted request. The callback receives ownership of a non-NULL JSON object only when errorCode is ARKUI_ERROR_CODE_NO_ERROR. The caller must release the object by calling OH_ArkUI_NativeModule_UIJsonWrapperDestroy.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Resource release**: ui_json_wrapper/OH_ArkUI_NativeModule_UIJsonWrapperDestroy {json}.
@@ -288,6 +308,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestCreate(OH_ArkUI_NativeMo
 **Description**
 
 Create a UI tree collection request.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -316,6 +338,8 @@ void OH_ArkUI_NativeModule_UIAgentTreeRequestDestroy(OH_ArkUI_NativeModule_UIAge
 
 Destroys the UI tree collection request object.<br> Passing NULL has no effect.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -333,6 +357,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetFilterPureLayoutNodes
 **Description**
 
 Sets whether pure layout nodes are filtered from the returned tree.<br> Filtering is disabled by default. When enabled, retained descendants of a filtered node are attached to the nearest retained ancestor while preserving their relative order.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -359,6 +385,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetFilterOccludedNodes(O
 
 Sets whether fully occluded nodes are filtered from the returned tree.<br> Filtering is disabled by default and can be enabled only for visible-tree requests. Disabling this option does not disable visibility, clipping, off-screen, or fully transparent node filtering.<br> The occluder opacity threshold is configured separately by [OH_ArkUI_NativeModule_UIAgentTreeRequestSetOcclusionOpacityThreshold](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiagenttreerequestsetocclusionopacitythreshold). Changing this option does not change that threshold.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -383,6 +411,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetOcclusionOpacityThres
 **Description**
 
 Sets the minimum final opacity for a node to participate as an occluder.<br> The default value is 1.0. The option is supported only for visible-tree requests. A target node is removed only when the union of qualifying occluder regions fully covers its effective visible region.<br> This threshold will not work if the filter option is not enabled by [OH_ArkUI_NativeModule_UIAgentTreeRequestSetFilterOccludedNodes](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiagenttreerequestsetfilteroccludednodes).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -409,6 +439,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetInteractionInfo(OH_Ar
 
 Sets whether additional interaction information is collected.<br> Collection is disabled by default. When enabled, the result includes supported interaction information, such as whether a node is clickable, focusable, or editable. This option does not register event observers or change the interaction behavior of any node.<br> Disabling this option does not remove fields included in the default simplified result. Advanced property collection does not implicitly enable this option or collect fields reserved for this option.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -433,6 +465,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetAccessibilityInfo(OH_
 **Description**
 
 Sets whether additional accessibility information is collected.<br> Collection is disabled by default. When enabled, the result includes supported accessibility information, such as accessibility content. This option does not enable accessibility services or change node behavior.<br> Disabling this option does not remove fields included in the default simplified result. Advanced property collection does not implicitly enable this option or collect fields reserved for this option.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -459,6 +493,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetCollectVisualProperti
 
 Sets whether advanced visual properties are collected.<br> Collection is disabled by default. When enabled, the result additionally includes supported properties describing directly perceivable appearance, such as visual styles and displayed states.<br> Properties already included in the default simplified result are not duplicated. Fields reserved for interaction or accessibility collection are excluded from this property group, regardless of those options. Internal diagnostic properties are never included.<br> This option is independent of advanced functional property collection and does not change which nodes are retained in the tree.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -484,6 +520,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentTreeRequestSetCollectFunctionalProp
 
 Sets whether advanced functional properties are collected.<br> Collection is disabled by default. When enabled, the result additionally includes supported properties describing developer-configured component behavior and functional capabilities.<br> Properties already included in the default simplified result are not duplicated. Fields reserved for interaction or accessibility collection are excluded from this property group, regardless of those options. Internal diagnostic properties are never included.<br> This option is independent of advanced visual property collection and does not change which nodes are retained in the tree.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -508,6 +546,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentGetTreeJson(ArkUI_ContextHandle con
 **Description**
 
 Collects a UI tree synchronously and returns it as JSON.<br> This function must be called on the UI thread. The result contains at most 5000 nodes and must not exceed 5 MiB. The size limit is measured using canonical compact JSON. If pretty output itself exceeds 5 MiB, the request also fails. No partial JSON is returned.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -538,6 +578,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentGetTreeJsonAsync(ArkUI_ContextHandl
 
 Initiate an asynchronous UI tree collection request. Receive the collection through asynchronous callback. This function must be called on the UI thread. function copies the request and format before returning, so The caller can destroy or reuse the request immediately after the call. Each accepted request is completed only once On the UI thread.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -567,6 +609,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIAgentGetPageText(ArkUI_ContextHandle uiC
 
 Synchronously collects the text on the current ArkUI page and outputs the text in JSON format. Each JSON item contains an integer "id". Recognize the control, the rectangular "rect" relative to the target window, and the text content The string "content". After using the result, use OH_ArkUI_NativeModule_UIJsonWrapperDestroy to free up the result memory. The function must be called on the UI thread. The output format is as follows:
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Resource release**: ui_json_wrapper/OH_ArkUI_NativeModule_UIJsonWrapperDestroy {pageText}
@@ -594,6 +638,8 @@ typedef void (*OH_ArkUI_NativeModule_UIContentChangeEventCallback)(const OH_ArkU
 
 Defines the callback invoked for a registered ArkUI state change event.<br> The callback runs on the user interface thread associated with the registered context. The event snapshot is immutable and valid only until this callback returns. ArkUI borrows but does not access or release userData.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -612,6 +658,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_RegisterUIContentChangeEvent(ArkUI_Context
 **Description**
 
 Registers to the selected ArkUI state change event categories for a user interface context.<br> Each successful call creates an independent subscription. The returned ID is nonzero and unique within the context. The callback is invoked synchronously on the context's user interface thread. ArkUI borrows uiContext and userData and does not release either value. If the operation fails, subscriptionId is not modified. This function must be called on the UI thread; calling it from a non-UI thread will abort the process.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -643,6 +691,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UnRegisterUIContentChangeEvent(ArkUI_Conte
 
 Unregisters an active ArkUI state change event subscription from a user interface context.<br> After this function returns successfully, no later event invokes the removed subscription. The caller can then release its userData. Unsubscribing from a callback does not change the callback batch currently being dispatched. This function must be called on the UI thread; calling it from a non-UI thread will abort the process.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -667,6 +717,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIContentChangeEventGetType(const OH_ArkUI
 **Description**
 
 Obtains the event type from an ArkUI state change event snapshot.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -693,6 +745,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIContentChangeEventGetTimestamp(const OH_
 
 Obtains the monotonic timestamp of an ArkUI state change event snapshot.<br> The timestamp is captured at the event completion point, is expressed in nanoseconds, and is not wall-clock time.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -717,6 +771,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIContentChangeEventGetContext(const OH_Ar
 **Description**
 
 Obtains the user interface context associated with an ArkUI state change event snapshot.<br> The returned handle is borrowed, and the caller must not release it or use it after the callback returns.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -743,6 +799,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIContentChangeEventGetContentChangeEventJ
 
 Obtains the content change event details as a JSON wrapper from an ArkUI state change event snapshot.<br> The JSON output includes the content change type, trigger node, target node, overlay type, and an optional sub-tree dump depending on the event category:<br> Page events identify the target page. Scroll events identify the scrolling node. Overlay events identify overlay node and provide the overlay type (such as "dialog"). The trigger node is the node that initiated the content change; it is available for overlay events and general start/end scenarios, and is NULL for page and scroll events when no trigger node can be exposed. The operation succeeds and writes an empty JSON wrapper when no target node can be exposed. The handles referenced in the JSON wrapper are borrowed and must not be released or used after the callback returns.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -768,6 +826,8 @@ typedef void (*OH_ArkUI_NativeModule_ImageCollectionCallback)(ArkUI_ErrorCode er
 
 Defines the callback used to return the result of collecting images of ArkUI nodes.<br> The framework invokes this callback exactly once on the UI thread for each accepted request. When <b>errorCode</b> is ARKUI_ERROR_CODE_NO_ERROR, the framework transfers ownership of the non-<b>NULL</b> <b>collection</b> to the caller. When <b>errorCode</b> is ARKUI_ERROR_CODE_INTERNAL_ERROR or ARKUI_ERROR_CODE_UI_CONTEXT_INVALID, <b>collection</b> is <b>NULL</b>.<br> The framework returns <b>userData</b> unchanged without dereferencing, copying, or releasing the object it points to. The caller must keep that object valid until the callback has finished using it.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Resource release**: OH_ArkUI_NativeModule_ImageCollectionDestroy {collection}
@@ -789,6 +849,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_GetImagesByNodeIdAsync(ArkUI_ContextHandle
 **Description**
 
 Asynchronously collects images for specified ArkUI node IDs.<br> The framework accepts from <b>0</b> to <b>20</b> unique node IDs in one request and copies the <b>nodeIds</b> array before this function returns. The framework accepts a request with <b>count</b> equal to <b>0</b> and returns a non-<b>NULL</b> empty collection through the callback.<br> Each accepted node ID has one result in the collection, including a result for a node ID that cannot be found or whose image cannot be captured. An <b>Image</b> node returns its complete source <b>PixelMap</b> when available and otherwise falls back to capturing the rendered content within the node bounds. A non-<b>Image</b> node uses the same node-bounds capture behavior. A node does not need to be visible.<br> If the ArkUI node corresponding to a requested node ID cannot be found, the corresponding collection item reports <b>ARKUI_ERROR_CODE_PARAM_INVALID</b>; the caller should check the node ID. A capture timeout reports <b>ARKUI_ERROR_CODE_COMPONENT_SNAPSHOT_TIMEOUT</b>; the caller can retry the request. Another internal capture failure reports <b>ARKUI_ERROR_CODE_INTERNAL_ERROR</b> for that item; the caller can retry the request after handling the failure. An item failure does not change the overall successful request result.<br> The caller can call this function from any thread. For each accepted request, the framework invokes <b>callback</b> exactly once on the UI thread associated with <b>context</b>. Concurrent requests are independent, and the framework does not guarantee their callback order.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -818,6 +880,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_ImageCollectionTakeItemByNodeId(OH_ArkUI_N
 
 Consumes the result for a specified node ID.<br> For a successful image result, this function transfers ownership of the <b>PixelMap</b> to the caller. The caller must release it by calling <b>OH_PixelmapNative_Destroy</b>. This function also consumes a failed image result. In that case, it sets <b>*outPixelmap</b> to <b>NULL</b> and writes the item error to <b>*outItemError</b>. Each node ID in a collection can be consumed only once.<br> Destroying the collection releases only <b>PixelMap</b> instances that the caller has not taken and does not invalidate a transferred <b>PixelMap</b>.<br> The caller must not call this function concurrently with another collection API for the same collection.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Resource release**: multimedia/image_framework/image/OH_PixelmapNative_Destroy {outPixelmap}
@@ -846,6 +910,8 @@ void OH_ArkUI_NativeModule_ImageCollectionDestroy(OH_ArkUI_NativeModule_ImageCol
 **Description**
 
 Destroys an image collection and releases <b>PixelMap</b> instances that have not been consumed.<br> The caller must destroy every non-<b>NULL</b> collection that a callback returns, including an empty collection or a collection after the caller has consumed all its items. This function does not release or invalidate <b>PixelMap</b> instances that the caller obtained through <b>OH_ArkUI_NativeModule_ImageCollectionTakeItemByNodeId</b>.<br> The caller must not call this function concurrently with another collection API for the same collection.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 

@@ -104,6 +104,7 @@ Creates a **WaterFlow** component.
 | --- | --- |
 | [GetItemMainSizeByIndex](arkts-arkui-waterflow-comp-getitemmainsizebyindex-t.md) | Obtains the main axis size of a specified water flow item based on its index. |
 | [OnWaterFlowScrollIndexCallback](arkts-arkui-waterflow-comp-onwaterflowscrollindexcallback-t.md) | Represents a callback for item changes in the visible area of the **WaterFlow** component. |
+| [PlaceholderProvider](arkts-arkui-waterflow-comp-placeholderprovider-t.md) | Provides the placeholder description for an item of a scrollable component. |
 
 ### Enums
 

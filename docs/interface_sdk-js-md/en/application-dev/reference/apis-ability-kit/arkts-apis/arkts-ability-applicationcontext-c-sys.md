@@ -67,6 +67,7 @@ Multiple UIExtensionAbility instances can be preloaded. Each time a formal load 
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -108,6 +109,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="getprocessrunninginformation1"></a>
 
 ## getProcessRunningInformation
@@ -145,6 +148,7 @@ Obtains information about the running processes. This API uses a promise to retu
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -163,6 +167,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getprocessrunninginformation2"></a>
 
@@ -201,6 +207,7 @@ Obtains information about the running processes. This API uses an asynchronous c
 | [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -220,6 +227,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## registerAbilityLifecycleCallback
 
@@ -257,6 +266,7 @@ Registers a listener to monitor the ability lifecycle of the application. This A
 | --- | --- |
 | number | ID of the callback registered. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterAbilityLifecycleCallback](#unregisterabilitylifecyclecallback). |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -315,6 +325,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<!--DelEnd-->
+
 ## registerEnvironmentCallback
 
 ```TypeScript
@@ -349,6 +361,7 @@ Registers a listener for system environment changes. This API uses an asynchrono
 | --- | --- |
 | number | ID of the callback registered this time. This ID is used to unregister the corresponding callback in [ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback). |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -381,6 +394,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterabilitylifecyclecallback1"></a>
 
@@ -415,6 +430,7 @@ Unregisters the listener that monitors the ability lifecycle of the application.
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback) |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -442,6 +458,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterabilitylifecyclecallback2"></a>
 
@@ -487,6 +505,7 @@ Unregisters a listener for the lifecycle of a UIAbility within the application. 
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -508,6 +527,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterenvironmentcallback1"></a>
 
@@ -540,6 +561,7 @@ Unregisters the listener for system environment changes. This API uses an asynch
 | callbackId | number | Yes | ID returned when the [ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback) |
 | envcallback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the ID of the registered listener. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -566,6 +588,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterenvironmentcallback2"></a>
 
@@ -609,6 +633,7 @@ Unregisters the listener for system environment changes. This API uses a promise
 | --- | --- |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -629,3 +654,5 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

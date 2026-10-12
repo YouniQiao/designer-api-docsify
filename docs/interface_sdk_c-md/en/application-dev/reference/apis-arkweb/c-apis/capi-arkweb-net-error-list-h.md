@@ -6,6 +6,8 @@ Declares the ArkWeb network protocol stack error codes. This enumeration defines
 
 **Library**: libohweb.so
 
+**System capability**: SystemCapability.Web.Webview.Core
+
 **Since**: 12
 
 **Related module**: [Web](capi-web.md)
@@ -18,12 +20,6 @@ Declares the ArkWeb network protocol stack error codes. This enumeration defines
 | -- | -- | -- |
 | [ArkWeb_NetError](#arkweb_neterror) | ArkWeb_NetError | Declares the ArkWeb network protocol stack error codes. This enumeration defines various error types that may occur in the ArkWeb network protocol stack, covering error scenarios in network connections, SSL/TLS, certificate verification, HTTP/2, QUIC, caching, and other aspects. Developers can use these error codes to quickly identify the cause of network request failures, facilitating troubleshooting and error handling. |
 
-### Macro
-
-| Name | Description |
-| -- | -- |
-| ARKWEB_NET_ERROR_LIST_H | Declares the ArkWeb network protocol stack error codes. This enumeration defines various error types that may occur in the ArkWeb network protocol stack, covering error scenarios in network connections, SSL/TLS, certificate verification, HTTP/2, QUIC, caching, and other aspects. Developers can use these error codes to quickly identify the cause of network request failures, facilitating troubleshooting and error handling.<br>**Since**: 12<br>**System capability**: SystemCapability.Web.Webview.Core |
-
 ## Enum type description
 
 ### ArkWeb_NetError
@@ -35,6 +31,8 @@ enum ArkWeb_NetError
 **Description**
 
 Declares the ArkWeb network protocol stack error codes. This enumeration defines various error types that may occur in the ArkWeb network protocol stack, covering error scenarios in network connections, SSL/TLS, certificate verification, HTTP/2, QUIC, caching, and other aspects. Developers can use these error codes to quickly identify the cause of network request failures, facilitating troubleshooting and error handling.
+
+**System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12 /
 #define ARKWEB_NET_ERROR_LIST_H

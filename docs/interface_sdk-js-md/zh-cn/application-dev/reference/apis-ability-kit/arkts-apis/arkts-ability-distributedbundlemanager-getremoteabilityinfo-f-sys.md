@@ -46,6 +46,7 @@ function getRemoteAbilityInfo(elementName: ElementName, callback: AsyncCallback<
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -71,6 +72,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo2"></a>
@@ -118,6 +121,7 @@ function getRemoteAbilityInfo(elementName: ElementName): Promise<RemoteAbilityIn
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -141,6 +145,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo3"></a>
@@ -183,6 +189,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, callback: AsyncC
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -215,6 +222,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo4"></a>
@@ -262,6 +271,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>): Promise<Array<R
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -292,6 +302,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo5"></a>
@@ -335,6 +347,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string, callback
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -360,6 +373,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo6"></a>
@@ -408,6 +423,7 @@ function getRemoteAbilityInfo(elementName: ElementName, locale: string): Promise
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -431,6 +447,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo7"></a>
@@ -474,6 +492,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string, 
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -506,6 +525,8 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getremoteabilityinfo8"></a>
@@ -554,6 +575,7 @@ function getRemoteAbilityInfo(elementNames: Array<ElementName>, locale: string):
 | [17700007](../errorcode-bundle.md#17700007-输入的设备id有误) | The specified device ID is not found. |
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -584,3 +606,5 @@ try {
     console.error(`Operation failed: error code is ${code}  and error message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

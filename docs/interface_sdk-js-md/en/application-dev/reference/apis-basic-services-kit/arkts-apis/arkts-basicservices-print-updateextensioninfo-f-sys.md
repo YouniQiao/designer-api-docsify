@@ -41,6 +41,7 @@ Updates the printer extension information. This API uses an asynchronous callbac
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ print.updateExtensionInfo(info, (error: BusinessError) => {
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="updateextensioninfo2"></a>
@@ -98,6 +101,7 @@ Updates the printer extension information. This API uses a promise to return the
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | not system application |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -111,3 +115,5 @@ print.updateExtensionInfo(info).then(() => {
     console.error(`Failed to update extension info. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

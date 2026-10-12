@@ -7,10 +7,10 @@ This module provides capabilities for application data storage, data persistence
 
 T and S in this topic represent the types as described below.
 
-| Type  | Description                                    |
+| Type | Description |
  | ---- | -------------------------------------- |
-| T    | Class, number, boolean, string, and arrays of these types.|
-| S    | number, boolean, string.                |
+| T | Class, number, boolean, string, and arrays of these types.|
+| S | number, boolean, string. |
 
 
 

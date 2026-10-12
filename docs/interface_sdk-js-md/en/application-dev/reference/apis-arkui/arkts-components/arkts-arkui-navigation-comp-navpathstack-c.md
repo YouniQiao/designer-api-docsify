@@ -618,7 +618,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameters types.         3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -660,7 +660,7 @@ Pushes the navigation destination page specified by **info** onto the routing st
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameters types.         3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -703,7 +703,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameters types.         3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -747,7 +747,7 @@ Pushes the navigation destination page specified by **name**, with the data spec
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameters types.         3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |
@@ -988,7 +988,7 @@ Performs a replacement operation on the routing stack. This API uses a promise t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameters types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameters types.         3. Parameter verification failed. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 | [100005](../errorcode-router.md#100005-builder-function-not-registered-during-navigation) | Builder function not registered. |
 | [100006](../errorcode-router.md#100006-navdestination-not-found) | NavDestination not found. |

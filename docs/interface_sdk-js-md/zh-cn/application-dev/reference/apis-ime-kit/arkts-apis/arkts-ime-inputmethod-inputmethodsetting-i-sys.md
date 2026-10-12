@@ -62,6 +62,7 @@ enableInputMethod(bundleName: string, extensionName: string, enabledState: Enabl
 | [12800018](../errorcode-inputmethod-framework.md#12800018-输入法未找到) | input method is not found. |
 | [12800019](../errorcode-inputmethod-framework.md#12800019-系统配置的默认输入法不支持此操作) | current operation cannot be applied to the preconfigured default input method. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -90,6 +91,8 @@ function enableInputMethodSafely() {
 
 enableInputMethodSafely();
 ```
+
+<!--DelEnd-->
 
 <a id="enableinputmethod2"></a>
 
@@ -142,6 +145,7 @@ enableInputMethod(
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -153,6 +157,8 @@ inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodE
   console.error(`Failed to enableInputMethod, code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getallinputmethodssync2"></a>
 
@@ -197,6 +203,7 @@ getAllInputMethodsSync(userId?: number): Array<InputMethodProperty>
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -210,6 +217,8 @@ try {
   console.error(`Failed to getAllInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getCursorInfo
 
@@ -246,12 +255,13 @@ getCursorInfo(userId?: number): CursorInfo
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes: 1. No edit box is bound to the current input method application under the specified user. |
+| [12800003](../errorcode-inputmethod-framework.md#12800003-客户端应用异常) | input method client error. Possible causes:         1. No edit box is bound to the current input method application under the specified user. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible causes: a system error, such as null pointer, IPC exception. |
 | [12800023](../errorcode-inputmethod-framework.md#12800023-指定的用户不存在) | the specified user does not exist. |
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -265,6 +275,8 @@ try {
   console.error(`Failed to get cursorInfo. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getDefaultInputMethodAbility
 
@@ -297,6 +309,7 @@ getDefaultInputMethodAbility(): InputMethodProperty
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -310,6 +323,8 @@ try {
   console.error(`Failed to getDefaultInputMethodAbility. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getinputmethodssync2"></a>
 
@@ -360,6 +375,7 @@ getInputMethodsSync(enable: boolean, userId?: number): Array<InputMethodProperty
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -373,6 +389,8 @@ try {
   console.error(`Failed to getInputMethodsSync. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getInputMethodSubtypes
 
@@ -416,6 +434,7 @@ getInputMethodSubtypes(bundleName: string, userId?: number): Array<InputMethodSu
 | [12800024](../errorcode-inputmethod-framework.md#12800024-指定的用户未在前台) | the specified user is not in the foreground. |
 | [12800025](../errorcode-inputmethod-framework.md#12800025-跨用户操作被拒绝) | cross-user operation denied. Only user 0 applications are authorized for this operation. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -431,6 +450,8 @@ try {
   console.error(`Failed to getInputMethodSubtypes. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ispanelshown1"></a>
 
@@ -470,6 +491,7 @@ isPanelShown(panelInfo: PanelInfo): boolean
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -487,6 +509,8 @@ try {
   console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ispanelshown2"></a>
 
@@ -528,6 +552,7 @@ isPanelShown(panelInfo: PanelInfo, displayId: number): boolean
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [12800008](../errorcode-inputmethod-framework.md#12800008-输入法管理服务异常) | input method manager service error. Possible cause: a system error, such as null pointer, IPC exception. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -546,6 +571,8 @@ try {
   console.error(`Failed to query isPanelShown. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('imeShow')
 
@@ -570,11 +597,14 @@ off(type: 'imeShow', callback?: (info: Array<InputWindowInfo>) => void): void
 | type | 'imeShow' | 是 | 设置监听类型，固定取值'imeShow'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 inputMethod.getSetting().off('imeShow');
 ```
+
+<!--DelEnd-->
 
 ## off('imeHide')
 
@@ -599,11 +629,14 @@ off(type: 'imeHide', callback?: (info: Array<InputWindowInfo>) => void): void
 | type | 'imeHide' | 是 | 设置监听类型，固定取值'imeHide'。 |
 | callback | (info: Array&lt;[InputWindowInfo](arkts-ime-inputmethod-inputwindowinfo-i.md)&gt;) =&gt; void | 否 | 取消订阅的回调函数。<br>参数不填写时，取消订阅type对应的所有回调事件。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 inputMethod.getSetting().off('imeHide');
 ```
+
+<!--DelEnd-->
 
 ## offImeChangeWithUserId
 
@@ -635,11 +668,14 @@ offImeChangeWithUserId(callback?: ImeChangeWithUserIdCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
 inputMethod.getSetting().offImeChangeWithUserId();
 ```
+
+<!--DelEnd-->
 
 ## on('imeShow')
 
@@ -670,6 +706,7 @@ on(type: 'imeShow', callback: (info: Array<InputWindowInfo>) => void): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -677,6 +714,8 @@ inputMethod.getSetting().on('imeShow', (info: Array<inputMethod.InputWindowInfo>
   console.info('Succeeded in subscribing imeShow event.');
 });
 ```
+
+<!--DelEnd-->
 
 ## on('imeHide')
 
@@ -707,6 +746,7 @@ on(type: 'imeHide', callback: (info: Array<InputWindowInfo>) => void): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -714,6 +754,8 @@ inputMethod.getSetting().on('imeHide', (info: Array<inputMethod.InputWindowInfo>
   console.info('Succeeded in subscribing imeHide event.');
 });
 ```
+
+<!--DelEnd-->
 
 ## onImeChangeWithUserId
 
@@ -745,6 +787,7 @@ onImeChangeWithUserId(callback: ImeChangeWithUserIdCallback): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -755,3 +798,5 @@ inputMethod.getSetting()
     console.info(`Succeeded in subscribing imeChange: inputMethodProperty.name: ${inputMethodProperty.name}, inputMethodSubtype.id: ${inputMethodSubtype.id}, userId: ${userId}`);
   });
 ```
+
+<!--DelEnd-->

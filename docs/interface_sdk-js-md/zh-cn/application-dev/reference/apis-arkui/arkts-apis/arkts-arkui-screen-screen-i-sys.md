@@ -55,6 +55,7 @@ setDensityDpi(densityDpi: number, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -97,6 +98,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setdensitydpi2"></a>
 
 ## setDensityDpi
@@ -135,6 +138,7 @@ setDensityDpi(densityDpi: number): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -174,6 +178,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setorientation1"></a>
 
 ## setOrientation
@@ -207,6 +213,7 @@ setOrientation(orientation: Orientation, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -248,6 +255,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setorientation2"></a>
 
 ## setOrientation
@@ -286,6 +295,7 @@ setOrientation(orientation: Orientation): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -324,6 +334,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setorientation3"></a>
 
@@ -366,6 +378,7 @@ setOrientation(orientation: Orientation, orientationOptions?: OrientationOptions
 | [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: The screen is not a wired external display in extended mode. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -394,6 +407,8 @@ screensPromise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="setscreenactivemode1"></a>
 
@@ -428,6 +443,7 @@ setScreenActiveMode(modeIndex: number, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -470,6 +486,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
 });
 ```
 
+<!--DelEnd-->
+
 <a id="setscreenactivemode2"></a>
 
 ## setScreenActiveMode
@@ -508,6 +526,7 @@ setScreenActiveMode(modeIndex: number): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -547,6 +566,8 @@ screen.createVirtualScreen(option).then((data: screen.Screen) => {
   console.error(`Failed to create the virtual screen. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## activeModeIndex
 

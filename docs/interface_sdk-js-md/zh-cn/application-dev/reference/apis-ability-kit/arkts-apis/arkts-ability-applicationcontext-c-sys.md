@@ -67,6 +67,7 @@ preloadUIExtensionAbility(want: Want): Promise<void>
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -108,6 +109,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="getprocessrunninginformation1"></a>
 
 ## getProcessRunningInformation
@@ -145,6 +148,7 @@ getProcessRunningInformation(): Promise<Array<ProcessInformation>>
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -163,6 +167,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getprocessrunninginformation2"></a>
 
@@ -201,6 +207,7 @@ getProcessRunningInformation(callback: AsyncCallback<Array<ProcessInformation>>)
 | [16000011](../errorcode-ability.md#16000011-上下文对象不存在) | The context does not exist. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -220,6 +227,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## registerAbilityLifecycleCallback
 
@@ -257,6 +266,7 @@ registerAbilityLifecycleCallback(abilityLifecycleCallback: AbilityLifecycleCallb
 | --- | --- |
 | number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterAbilityLifecycleCallback()](#unregisterabilitylifecyclecallback)方法中取消注册对应的callback。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -315,6 +325,8 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
+<!--DelEnd-->
+
 ## registerEnvironmentCallback
 
 ```TypeScript
@@ -351,6 +363,7 @@ registerEnvironmentCallback(environmentCallback: EnvironmentCallback): number
 | --- | --- |
 | number | 返回此次注册的callbackID，该ID用于在[ApplicationContext.unregisterEnvironmentCallback](#unregisterenvironmentcallback)方法中取消注册对应的callback。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -383,6 +396,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterabilitylifecyclecallback1"></a>
 
@@ -417,6 +432,7 @@ unregisterAbilityLifecycleCallback(callbackId: number, callback: AsyncCallback<v
 | callbackId | number | 是 | 通过[ApplicationContext.registerAbilityLifecycleCallback](#registerabilitylifecyclecallback)接口注册监听应用内UIAbility的生命周期时返回的ID。 |
 | callback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消监听应用内生命周期成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -444,6 +460,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterabilitylifecyclecallback2"></a>
 
@@ -489,6 +507,7 @@ unregisterAbilityLifecycleCallback(callbackId: number): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -510,6 +529,8 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterenvironmentcallback1"></a>
 
@@ -544,6 +565,7 @@ unregisterEnvironmentCallback(callbackId: number, envcallback: AsyncCallback<voi
 | callbackId | number | 是 | 通过[ApplicationContext.registerEnvironmentCallback](#registerenvironmentcallback)接口注册监听系统环境变化时返回的ID。 |
 | envcallback | AsyncCallback&lt;void&gt; | 是 | 回调方法。当取消对系统环境变化的监听成功，err为undefined，否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -570,6 +592,8 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="unregisterenvironmentcallback2"></a>
 
@@ -613,6 +637,7 @@ unregisterEnvironmentCallback(callbackId: number): Promise<void>
 | --- | --- |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -633,3 +658,5 @@ export default class MyAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

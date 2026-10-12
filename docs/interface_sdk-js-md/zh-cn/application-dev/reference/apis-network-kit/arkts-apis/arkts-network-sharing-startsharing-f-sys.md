@@ -49,6 +49,7 @@ function startSharing(type: SharingIfaceType, callback: AsyncCallback<void>): vo
 | [2202009](../errorcode-net-sharing.md#2202009-网络共享开启转发错误) | Failed to enable forwarding for network sharing. |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -60,6 +61,8 @@ sharing.startSharing(SHARING_WIFI, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startsharing2"></a>
@@ -110,6 +113,7 @@ function startSharing(type: SharingIfaceType): Promise<void>
 | [2202009](../errorcode-net-sharing.md#2202009-网络共享开启转发错误) | Failed to enable forwarding for network sharing. |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -126,3 +130,5 @@ sharing
     console.error('start wifi sharing failed');
   });
 ```
+
+<!--DelEnd-->

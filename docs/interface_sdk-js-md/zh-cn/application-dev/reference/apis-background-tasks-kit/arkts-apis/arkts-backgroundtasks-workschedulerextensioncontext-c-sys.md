@@ -65,6 +65,7 @@ startServiceExtensionAbility(want: Want): Promise<void>
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -93,6 +94,8 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## stopServiceExtensionAbility
 
@@ -140,6 +143,7 @@ stopServiceExtensionAbility(want: Want): Promise<void>
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-内部错误) | Internal error. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-通用组件客户端caller已回收) | The caller has been released. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -168,3 +172,5 @@ export default class MyWorkSchedulerExtensionAbility extends WorkSchedulerExtens
   }
 }
 ```
+
+<!--DelEnd-->

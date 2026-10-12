@@ -44,6 +44,7 @@ Sets the disposed status for an application. This API uses an asynchronous callb
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
   console.error('setDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdisposedstatus2"></a>
@@ -113,6 +116,7 @@ Sets the disposed status for an application. This API uses a promise to return t
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [17700005](../errorcode-bundle.md#17700005-appid-is-an-empty-string) | The specified app ID is empty string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -136,3 +140,5 @@ try {
   console.error('setDisposedStatus failed ' + message);
 }
 ```
+
+<!--DelEnd-->

@@ -41,6 +41,7 @@ function getCooperateSwitchState(networkId: string, callback: AsyncCallback<bool
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ try {
   console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getcooperateswitchstate2"></a>
@@ -101,6 +104,7 @@ function getCooperateSwitchState(networkId: string): Promise<boolean>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. <br>3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -117,3 +121,5 @@ try {
   console.error(`Get the status failed, error: ${JSON.stringify(error, [`code`, `message`])}`);
 }
 ```
+
+<!--DelEnd-->

@@ -32,7 +32,7 @@ HDR_DYNAMIC_METADATA = 2
 HDR_GAINMAP_METADATA = 3
 ```
 
-Gainmap使用的元数据。
+增益图使用的元数据。
 
 **起始版本：** 12
 

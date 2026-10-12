@@ -43,6 +43,7 @@ Publishes a common event to a specified user. This API uses an asynchronous call
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 | [1500009](../errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,6 +66,8 @@ try {
     console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="publishasuser2"></a>
@@ -110,6 +113,7 @@ Publishes a common event to a specified user and specifies the information to be
 | [1500008](../errorcode-CommonEventService.md#1500008-failed-to-initialize-the-common-event-service) | Failed to initialize the common event service. |
 | [1500009](../errorcode-CommonEventService.md#1500009-failed-to-obtain-system-parameters) | Failed to obtain system parameters. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -137,3 +141,5 @@ try {
   console.error(`publishAsUser failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -297,7 +297,7 @@ getSystemPanelCurrentInsets(displayId: number): Promise<SystemPanelInsets>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
-| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. Possible causes: 1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
+| [12800017](../errorcode-inputmethod-framework.md#12800017-无效的面板类型或面板状态) | invalid panel type or panel flag. Possible causes:         1. Current panel's type is not SOFT_KEYBOARD. 2. Panel's flag is not FLG_FIXED or FLG_FLOATING. |
 | [12800022](../errorcode-inputmethod-framework.md#12800022-无效的displayid) | invalid displayId. |
 
 **示例**
@@ -826,9 +826,9 @@ setImmersiveEffect(effect: ImmersiveEffect): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
-| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes: 1. input method panel not created. 2. the input method application does not subscribe to related events. |
+| [12800002](../errorcode-inputmethod-framework.md#12800002-输入法应用异常) | input method engine error. Possible causes:         1. input method panel not created. 2. the input method application does not subscribe to related events. |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-窗口管理服务错误) | window manager service error. |
-| [12800020](../errorcode-inputmethod-framework.md#12800020-沉浸效果参数配置错误) | invalid immersive effect. 1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled. 2. The fluid light mode can only be used when the gradient mode is enabled. 3. When the gradient mode is not enabled, the gradient height can only be 0. |
+| [12800020](../errorcode-inputmethod-framework.md#12800020-沉浸效果参数配置错误) | invalid immersive effect.         1. The gradient mode and the fluid light mode can only be used when the immersive mode is enabled.         2. The fluid light mode can only be used when the gradient mode is enabled.         3. When the gradient mode is not enabled, the gradient height can only be 0. |
 | [12800021](../errorcode-inputmethod-framework.md#12800021-调用顺序错误) | this operation is allowed only after adjustPanelRect or resize is called. |
 
 **示例**

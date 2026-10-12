@@ -41,6 +41,7 @@ function removePrinters(printerIds: Array<string>, callback: AsyncCallback<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -56,6 +57,8 @@ print.removePrinters([printerId], (error: BusinessError) => {
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="removeprinters2"></a>
@@ -98,6 +101,7 @@ function removePrinters(printerIds: Array<string>): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -111,3 +115,5 @@ print.removePrinters([printerId]).then(() => {
     console.error(`Failed to remove printers. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

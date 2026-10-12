@@ -36,6 +36,7 @@ function getFormsInfo(bundleName: string, callback: AsyncCallback<Array<formInfo
 | bundleName | string | 是 | 要查询的应用Bundle名称。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | 是 | 回调函数。当获取设备上指定应用程序提供的卡片信息成功，error为undefined，data为查询到的卡片信息；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -50,6 +51,8 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError,
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo2"></a>
@@ -88,6 +91,7 @@ function getFormsInfo(
 | moduleName | string | 是 | 要查询的模块名称。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | 是 | 回调函数。当获取设备上指定应用程序提供的卡片信息成功，error为undefined，data为查询到的卡片信息；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -102,6 +106,8 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.Busin
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo3"></a>
@@ -141,6 +147,7 @@ function getFormsInfo(bundleName: string, moduleName?: string): Promise<Array<fo
 | --- | --- |
 | Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise对象。返回查询到的卡片信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -153,3 +160,5 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formIn
   console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

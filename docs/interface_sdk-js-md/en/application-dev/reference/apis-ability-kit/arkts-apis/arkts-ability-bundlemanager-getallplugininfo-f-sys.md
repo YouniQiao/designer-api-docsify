@@ -46,6 +46,7 @@ Obtains all PluginBundleInfo based on the given hostBundleName and userId. This 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -86,3 +87,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllPluginInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

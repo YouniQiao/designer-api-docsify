@@ -40,6 +40,7 @@ function createHdrBrightnessBlender(param: BrightnessBlenderParam): HdrBrightnes
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -63,3 +64,5 @@ struct Example {
   }
 }
 ```
+
+<!--DelEnd-->

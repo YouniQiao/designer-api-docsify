@@ -8,6 +8,8 @@ Declares the shared JSON data object for the UI perception and control APIs.
 
 **Library**: libace_ndk.z.so
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Related module**: [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -47,6 +49,8 @@ enum OH_ArkUI_NativeModule_UIJsonFormat
 
 Enumerated type of the JSON output format.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 | Enum item | Description |
@@ -66,6 +70,8 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_UIJsonWrapperCreate(const char *data, uint
 **Description**
 
 Creates a JSON data object from a caller-provided JSON string.<br> The provided string is copied into the object. The caller owns the created object and must release it with [OH_ArkUI_NativeModule_UIJsonWrapperDestroy](capi-ui-json-wrapper-h.md#oh_arkui_nativemodule_uijsonwrapperdestroy) when it is no longer needed.<br> The provided string should contain a schemaVersion field. If it is absent, or the specified version value is outside the supported range, it is treated as 1, as follows: { "schemaVersion": 1, ... }<br> Note: the data string passed to this function remains owned by the caller. Destroying the JSON wrapper object returned by this API does not release the memory pointed to by data on the caller's behalf.
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 
@@ -95,6 +101,8 @@ const char *OH_ArkUI_NativeModule_UIJsonWrapperGetData(const OH_ArkUI_NativeModu
 
 Obtains the JSON string held by the object.<br> The returned string is read-only and null-terminated. It points to memory owned by the JSON object and remains valid until the object is destroyed. The caller must not modify or free the returned string.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -119,6 +127,8 @@ uint32_t OH_ArkUI_NativeModule_UIJsonWrapperGetSize(const OH_ArkUI_NativeModule_
 
 Obtains the byte length of the JSON string.<br> The returned length excludes the terminating null character. For an empty JSON string, zero is returned.
 
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
+
 **Since**: 26.2.0
 
 **Parameters**:
@@ -142,6 +152,8 @@ void OH_ArkUI_NativeModule_UIJsonWrapperDestroy(OH_ArkUI_NativeModule_UIJsonWrap
 **Description**
 
 Destroys a JSON data object and releases its resources.<br> Passing null has no effect. Any pointer returned by OH_ArkUI_NativeModule_UIJsonWrapper_GetData becomes invalid after this call.<br> Note: call this function only on a JSON wrapper object whose ownership you explicitly hold, for example, a wrapper created with OH_ArkUI_NativeModule_UIJsonWrapper_Create, or a wrapper whose ownership you have explicitly obtained through an ownership transfer function. Do not use this function to release JSON wrapper objects that are constructed and handed out by the system, for example, the object delivered through [OH_ArkUI_NativeModule_UIInfoCollectionInteractionJsonCallback](capi-ui-info-collection-h.md#oh_arkui_nativemodule_uiinfocollectioninteractionjsoncallback).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 26.2.0
 

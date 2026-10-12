@@ -61,6 +61,7 @@ Adds extended resources based on the specified bundle name and HSP file path. Th
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700301](../errorcode-bundle.md#17700301-failed-to-add-extended-resources) | AddExtResource failed due to parse file failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -84,6 +85,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## createAppClone
 
@@ -128,6 +131,7 @@ Creates an application clone. This API uses a promise to return the result.
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The appIndex is not in valid range or already exists. |
 | [17700069](../errorcode-bundle.md#17700069-application-clone-is-not-supported) | The app does not support the creation of an appClone instance. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -156,6 +160,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="destroyappclone1"></a>
 
@@ -202,6 +208,7 @@ Destroys an app clone or a CLI sandbox app. This API uses a promise to return th
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The userId is invalid. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -228,6 +235,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="destroyappclone2"></a>
 
@@ -275,6 +284,7 @@ Destroys an app clone or a CLI sandbox app. This API uses a promise to return th
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 | [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -309,6 +319,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="install1"></a>
 
@@ -382,6 +394,7 @@ Installs a specified app. This API uses an asynchronous callback to return the r
 | [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
 | [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -412,6 +425,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="install2"></a>
 
@@ -483,6 +498,7 @@ Installs a specified app. This API uses an asynchronous callback to return the r
 | [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
 | [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -508,6 +524,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="install3"></a>
 
@@ -586,6 +604,7 @@ Installs a specified app. This API uses a promise to return the result. Since AP
 | [17700077](../errorcode-bundle.md#17700077-application-installation-fails-but-preinstallation-is-successful) | Failed to install the HAP and restore to preinstalled bundle.<br>**Applicable version:** 17 and later |
 | [17700076](../errorcode-bundle.md#17700076-application-installation-failure-due-to-unsupported-distribution-type-in-the-signing-certificate-profile) | Failed to install the HAP or HSP because the app distribution type is not allowed.<br>**Applicable version:** 18 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -615,6 +634,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## installPlugin
 
@@ -671,6 +692,7 @@ Installs a plugin for an application. This API uses a promise to return the resu
 | [17700090](../errorcode-bundle.md#17700090-plugin-installation-failure-because-of-plugin-id-verification-failure) | Failed to install the plugin because the plugin id fails to be verified. |
 | [17700091](../errorcode-bundle.md#17700091-plugin-installation-failure-because-of-the-same-plugin-name-and-host-bundle-name) | Failed to install the plugin because the plugin name is same as host bundle name. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -699,6 +721,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## installPreexistingApp
 
@@ -749,6 +773,7 @@ Installs the app with the specified bundleName for the specified user. This API 
 | [17700071](../errorcode-bundle.md#17700071-enterprise-applications-cannot-be-installed) | It is not allowed to install the enterprise bundle. |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -774,6 +799,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recover1"></a>
 
@@ -815,6 +842,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -845,6 +873,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recover2"></a>
 
@@ -884,6 +914,7 @@ Rolls back an application to the initial installation state. This API uses an as
 | [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -909,6 +940,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="recover3"></a>
 
@@ -955,6 +988,7 @@ Rolls back an application to the initial installation state. This API uses a pro
 | [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 | [17700058](../errorcode-bundle.md#17700058-specified-application-cannot-be-installed-on-this-device-or-by-this-user) | Failed to install the HAP because this application is prohibited<br>from being installed on this device or by specified users.<br>**Applicable version:** 14 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -984,6 +1018,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## removeExtResource
 
@@ -1026,6 +1062,7 @@ Removes extended resources based on the specified bundle name and module names. 
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700302](../errorcode-bundle.md#17700302-failed-to-delete-extended-resources) | RemoveExtResource failed due to module does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1049,6 +1086,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="uninstall1"></a>
 
@@ -1094,6 +1133,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 | [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1124,6 +1164,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="uninstall2"></a>
 
@@ -1166,6 +1208,7 @@ Uninstalls an application. This API uses an asynchronous callback to return the 
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 12 and later |
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1191,6 +1234,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="uninstall3"></a>
 
@@ -1241,6 +1286,7 @@ Uninstalls an application. This API uses a promise to return the result.
 | [17700060](../errorcode-bundle.md#17700060-specified-application-cannot-be-uninstalled) | The specified application cannot be uninstalled.<br>**Applicable version:** 13 and later |
 | [17700062](../errorcode-bundle.md#17700062-failed-to-uninstall-an-application-configured-with-an-uninstallation-disposed-rule) | Failed to uninstall the app because the app is locked.<br>**Applicable version:** 15 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1270,6 +1316,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="uninstall4"></a>
 
@@ -1309,6 +1357,7 @@ Uninstalls a shared package. This API uses an asynchronous callback to return th
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 | [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1336,6 +1385,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="uninstall5"></a>
 
@@ -1380,6 +1431,7 @@ Uninstalls a shared package. This API uses a promise to return the result.
 | [17700037](../errorcode-bundle.md#17700037-failure-in-uninstalling-the-shared-library-due-to-dependency) | The version of shared bundle is dependent on other applications. |
 | [17700038](../errorcode-bundle.md#17700038-shared-library-to-uninstall-does-not-exist) | The specified shared bundle does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1407,6 +1459,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## uninstallNewPreinstalledApps
 
@@ -1447,6 +1501,7 @@ Uninstalls newly added preinstalled apps in batches. This API uses a promise to 
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1471,6 +1526,8 @@ try {
     console.error('uninstallNewPreinstalledApps failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## uninstallPlugin
 
@@ -1514,6 +1571,7 @@ Uninstalls a plugin for an application. This API uses a promise to return the re
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The user id is invalid. |
 | [17700092](../errorcode-bundle.md#17700092-plugin-uninstall-failure-because-of-nonexistent-plugin-bundle-name) | Failed to uninstall the plugin because the specified plugin is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1542,6 +1600,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 ## uninstallUpdates
 
@@ -1588,6 +1648,7 @@ Uninstalls and updates a preinstalled application and restores it to the initial
 | [17700067](../errorcode-bundle.md#17700067-failed-to-uninstall-the-native-software-package) | Failed to uninstall the HAP because uninstalling the native package failed.<br>**Applicable version:** 13 and later |
 | [17700073](../errorcode-bundle.md#17700073-installation-failure-caused-by-an-application-with-the-same-bundle-name-but-different-signature-information) | Failed to install the HAP because an application with the same<br>bundle name but different signature information exists on the device.<br>**Applicable version:** 13 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1616,6 +1677,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="updatebundleforself1"></a>
 
@@ -1651,7 +1714,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature;         4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
 | [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
@@ -1671,6 +1734,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1701,6 +1765,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="updatebundleforself2"></a>
 
@@ -1754,6 +1820,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1779,6 +1846,8 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="updatebundleforself3"></a>
 
@@ -1819,7 +1888,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Calling interface without permission 'ohos.permission.INSTALL_SELF_BUNDLE'. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature; 4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter hapFiles is needed for code signature;         4. The size of specifiedDistributionType is greater than 128; 5. The size of additionalInfo is greater than 3 000. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700010](../errorcode-bundle.md#17700010-bundle-installation-failure-due-to-file-parsing-failure) | Failed to install the HAP because the HAP fails to be parsed. |
 | [17700011](../errorcode-bundle.md#17700011-bundle-installation-failure-due-to-signature-verification-failure) | Failed to install the HAP because the HAP signature fails to be verified. |
@@ -1839,6 +1908,7 @@ Updates the current bundle. This API can be called only by enterprise MDM applic
 | [17700050](../errorcode-bundle.md#17700050-installation-of-enterprise-mdm-applications-and-standard-enterprise-applications-not-allowed) | Failed to install the HAP because enterprise normal/MDM bundle cannot be installed on non-enterprise device. |
 | [17700051](../errorcode-bundle.md#17700051-hap-installation-failure-due-to-incorrect-distribution-type-in-the-signing-certificate-profile-of-the-caller) | Failed to install the HAP because the distribution type of caller application is not enterprise_mdm. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1868,3 +1938,5 @@ try {
     console.error('getBundleInstaller failed. Cause: ' + message);
 }
 ```
+
+<!--DelEnd-->

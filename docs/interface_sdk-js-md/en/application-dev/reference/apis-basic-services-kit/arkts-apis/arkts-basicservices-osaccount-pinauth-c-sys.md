@@ -42,11 +42,14 @@ Creates a PIN authentication instance.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
 ```
+
+<!--DelEnd-->
 
 ## registerInputer
 
@@ -83,6 +86,7 @@ Registers a PIN inputer.
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid inputer. |
 | [12300103](../errorcode-account.md#12300103-credential-inputer-already-exists) | The credential inputer already exists. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -102,6 +106,8 @@ try {
   console.error(`registerInputer exception = code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## unregisterInputer
 
@@ -128,9 +134,12 @@ Unregisters this PIN inputer.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 let pinAuth: osAccount.PINAuth = new osAccount.PINAuth();
 pinAuth.unregisterInputer();
 ```
+
+<!--DelEnd-->

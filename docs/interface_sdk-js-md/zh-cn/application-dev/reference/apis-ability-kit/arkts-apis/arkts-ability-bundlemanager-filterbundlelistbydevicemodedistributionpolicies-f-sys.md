@@ -49,6 +49,7 @@ function filterBundleListByDeviceModeDistributionPolicies(
 | [17700098](../errorcode-bundle.md#17700098-入参无效) | The input parameter is invalid. It is either outside the range of valid enum values or does not include the following required enum values: [DeviceModeDistributionPolicy.UNIVERSAL_DIFFERENT_PACKAGE, DeviceModeDistributionPolicy.PARTIAL_COMPATIBLE_DIFFERENT_PACKAGE, DeviceModeDistributionPolicy.FULL_COMPATIBLE_DIFFERENT_PACKAGE]. |
 | [17700099](../errorcode-bundle.md#17700099-设备正在安装卸载应用或双模切换正在处理中) | The device is installing or uninstalling an application, or a previous API call is still being processed. Please try again. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -73,3 +74,5 @@ try {
   hilog.error(0x0000, 'testTag', 'filterBundleListByDeviceModeDistributionPolicies failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -15,7 +15,7 @@ Enumerates the types of services used by the card emulation application.
 ## OTHER
 
 ```TypeScript
-OTHER = "other"
+OTHER = 'other'
 ```
 
 Other services.
@@ -26,14 +26,14 @@ Other services.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
+<!--Device-CardType-OTHER = 'other'--><!--Device-CardType-OTHER = 'other'-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
 
 ## PAYMENT
 
 ```TypeScript
-PAYMENT = "payment"
+PAYMENT = 'payment'
 ```
 
 Payment service.
@@ -44,6 +44,6 @@ Payment service.
 
 **Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
 
-<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
+<!--Device-CardType-PAYMENT = 'payment'--><!--Device-CardType-PAYMENT = 'payment'-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation

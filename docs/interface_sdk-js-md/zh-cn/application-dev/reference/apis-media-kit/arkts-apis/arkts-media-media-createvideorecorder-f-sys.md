@@ -37,6 +37,7 @@ function createVideoRecorder(callback: AsyncCallback<VideoRecorder>): void
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by callback. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -52,6 +53,8 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="createvideorecorder3"></a>
@@ -85,6 +88,7 @@ function createVideoRecorder(): Promise<VideoRecorder>
 | [5400101](../errorcode-media.md#5400101-内存分配失败) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -102,3 +106,5 @@ media.createVideoRecorder().then((video: media.VideoRecorder) => {
   console.error(`video catchCallback, error message:${error.message}`);
 });
 ```
+
+<!--DelEnd-->

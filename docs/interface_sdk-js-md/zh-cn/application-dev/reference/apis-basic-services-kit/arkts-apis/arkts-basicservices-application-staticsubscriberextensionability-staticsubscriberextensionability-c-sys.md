@@ -50,6 +50,7 @@ onReceiveEvent(event: CommonEventData): void
 | --- | --- | --- | --- |
 | event | [CommonEventData](arkts-basicservices-commoneventdata-i.md) | 是 | 静态订阅接收到的公共事件数据。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ class MyStaticSubscriberExtensionAbility extends StaticSubscriberExtensionAbilit
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## context
 

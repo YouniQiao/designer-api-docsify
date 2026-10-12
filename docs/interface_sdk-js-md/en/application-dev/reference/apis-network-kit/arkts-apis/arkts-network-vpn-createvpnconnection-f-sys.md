@@ -41,6 +41,7 @@ Creates a VPN connection.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Non-system applications use system APIs. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. |
 
+<!--Del-->
 **Examples**
 
 > NOTE
@@ -64,3 +65,5 @@ struct Index {
   build() {  }
 }
 ```
+
+<!--DelEnd-->

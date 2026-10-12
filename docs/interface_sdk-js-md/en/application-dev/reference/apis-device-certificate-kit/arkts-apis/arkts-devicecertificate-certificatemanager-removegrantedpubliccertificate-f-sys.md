@@ -49,6 +49,7 @@ Removes the permission for an application to use the public credentials of a use
 | [17500001](../errorcode-certManager.md#17500001-internal-error) | Internal error. Possible causes: 1. IPC communication failed;<br>2. Memory operation error; 3. File operation error. Please try again. |
 | [17500002](../errorcode-certManager.md#17500002-certificate-not-exist) | Indicates that the certificate does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,3 +69,5 @@ try {
   console.error(`Failed to remove granted public certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

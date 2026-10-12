@@ -36,6 +36,7 @@ Obtains the widget information provided by a given application on the device. Th
 | bundleName | string | Yes | Bundle name of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -50,6 +51,8 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', (error: Base.BusinessError,
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo2"></a>
@@ -88,6 +91,7 @@ Obtains the widget information provided by a given application on the device. Th
 | moduleName | string | Yes | Module name. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -102,6 +106,8 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry', (error: Base.Busin
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getformsinfo3"></a>
@@ -141,6 +147,7 @@ Obtains the widget information provided by a given application on the device. Th
 | --- | --- |
 | Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise used to return the information obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -153,3 +160,5 @@ formHost.getFormsInfo('com.example.ohos.formjsdemo', 'entry').then((data: formIn
   console.error(`formHost getFormsInfo, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

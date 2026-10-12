@@ -44,6 +44,7 @@ function getAllAppProvisionInfo(userId?: number): Promise<Array<AppProvisionInfo
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied. A non-system application is not allowed to call a system API. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user id is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,3 +76,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllAppProvisionInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

@@ -5,10 +5,6 @@
   <!--Del-->
   - [BackupExtensionAbility(system api)](arkts-corefile-application-backupextensionability-backupextensionability-c-sys.md)<!--DelEnd-->
   - [BundleVersion](arkts-corefile-application-backupextensionability-bundleversion-i.md)
-- [@ohos.document(File Operation)](arkts-corefile-document.md)
-  - [document](arkts-corefile-document-depr-n.md)
-  - [choose](arkts-corefile-document-choose-f.md)
-  - [show](arkts-corefile-document-show-f.md)
 <!--Del-->
 - [@ohos.file.backup](arkts-corefile-file-backup.md)<!--DelEnd-->
   <!--Del-->
@@ -175,50 +171,6 @@
   - [getUserDownloadDir](arkts-corefile-environment-getuserdownloaddir-f.md)
   <!--Del-->
   - [getUserHomeDir(system api)](arkts-corefile-environment-getuserhomedir-f-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.fileAccess(User File Access and Management)](arkts-corefile-file-fileaccess.md)<!--DelEnd-->
-  <!--Del-->
-  - [createFileAccessHelper(system api)](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getFileAccessAbilityInfo(system api)](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CopyResult(system api)](arkts-corefile-fileaccess-copyresult-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileAccessHelper(system api)](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo(system api)](arkts-corefile-fileaccess-fileinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileIterator(system api)](arkts-corefile-fileaccess-fileiterator-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [MoveResult(system api)](arkts-corefile-fileaccess-moveresult-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NotifyMessage(system api)](arkts-corefile-fileaccess-notifymessage-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RootInfo(system api)](arkts-corefile-fileaccess-rootinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RootIterator(system api)](arkts-corefile-fileaccess-rootiterator-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileKey(system api)](arkts-corefile-fileaccess-filekey-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [NotifyType(system api)](arkts-corefile-fileaccess-notifytype-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [OPENFLAGS(system api)](arkts-corefile-fileaccess-openflags-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.fileExtensionInfo(User File Access and Management Attribute Information)](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
-  <!--Del-->
-  - [fileExtensionInfo(system api)](arkts-corefile-fileextensioninfo-n.md)<!--DelEnd-->
-    <!--Del-->
-    - [DeviceFlag(system api)](arkts-corefile-fileextensioninfo-deviceflag-n.md)<!--DelEnd-->
-      <!--Del-->
-      - [Constants(system api)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [DocumentFlag(system api)](arkts-corefile-fileextensioninfo-documentflag-n.md)<!--DelEnd-->
-      <!--Del-->
-      - [Constants(system api)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [DeviceType(system api)](arkts-corefile-fileextensioninfo-devicetype-e-sys.md)<!--DelEnd-->
 - [@ohos.file.fileuri](arkts-corefile-file-fileuri.md)
   - [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md)
   - [FileUri](arkts-corefile-fileuri-fileuri-c.md)
@@ -357,16 +309,6 @@
   - [DocumentSelectMode](arkts-corefile-picker-documentselectmode-e.md)
   - [MergeTypeMode](arkts-corefile-picker-mergetypemode-e.md)
   - [PhotoViewMIMETypes](arkts-corefile-picker-photoviewmimetypes-e.md)
-<!--Del-->
-- [@ohos.file.recent(Latest Access List)](arkts-corefile-file-recent.md)<!--DelEnd-->
-  <!--Del-->
-  - [add(system api)](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [listFile(system api)](arkts-corefile-recent-listfile-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [remove(system api)](arkts-corefile-recent-remove-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo(system api)](arkts-corefile-recent-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.file.securityLabel(Data Label)](arkts-corefile-file-securitylabel.md)
   - [getSecurityLabel](arkts-corefile-securitylabel-getsecuritylabel-f.md)
   - [getSecurityLabelSync](arkts-corefile-securitylabel-getsecuritylabelsync-f.md)
@@ -418,16 +360,6 @@
   - [UserdataDirInfo(system api)](arkts-corefile-storagestatistics-userdatadirinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [GetBundleStatsFlag(system api)](arkts-corefile-storagestatistics-getbundlestatsflag-e-sys.md)<!--DelEnd-->
-<!--Del-->
-- [@ohos.file.trash(Trash)](arkts-corefile-file-trash.md)<!--DelEnd-->
-  <!--Del-->
-  - [completelyDelete(system api)](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [listFile(system api)](arkts-corefile-trash-listfile-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [recover(system api)](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.file.volumeManager(Volume Management)](arkts-corefile-file-volumemanager.md)
   <!--Del-->
   - [burn(system api)](arkts-corefile-volumemanager-burn-f-sys.md)<!--DelEnd-->
@@ -487,6 +419,102 @@
   - [Volume(system api)](arkts-corefile-volumemanager-volume-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [DiskType(system api)](arkts-corefile-volumemanager-disktype-e-sys.md)<!--DelEnd-->
+- [@ohos.fileshare](arkts-corefile-fileshare.md)
+  - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
+  <!--Del-->
+  - [checkPathPermission(system api)](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->
+  - [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md)
+  - [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md)
+  <!--Del-->
+  - [getPersistentPolicy(system api)](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getSharedDirectoryInfo(system api)](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantSharedDirectoryPermission(system api)](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [grantUriPermission(system api)](arkts-corefile-fileshare-granturipermission-f-sys.md)<!--DelEnd-->
+  - [persistPermission](arkts-corefile-fileshare-persistpermission-f.md)
+  - [revokePermission](arkts-corefile-fileshare-revokepermission-f.md)
+  <!--Del-->
+  - [revokePermission(system api)](arkts-corefile-fileshare-revokepermission-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [revokeSharedDirectoryPermission(system api)](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md)<!--DelEnd-->
+  - [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)
+  - [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md)
+  - [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
+  <!--Del-->
+  - [SharedDirectoryInfo(system api)](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)<!--DelEnd-->
+  - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
+  - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
+  - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
+- [@ohos.document(File Operation)](arkts-corefile-document.md)
+  - [document](arkts-corefile-document-depr-n.md)
+  - [choose](arkts-corefile-document-choose-f.md)
+  - [show](arkts-corefile-document-show-f.md)
+<!--Del-->
+- [@ohos.file.fileAccess(User File Access and Management)](arkts-corefile-file-fileaccess.md)<!--DelEnd-->
+  <!--Del-->
+  - [createFileAccessHelper(system api)](arkts-corefile-fileaccess-createfileaccesshelper-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getFileAccessAbilityInfo(system api)](arkts-corefile-fileaccess-getfileaccessabilityinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CopyResult(system api)](arkts-corefile-fileaccess-copyresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileAccessHelper(system api)](arkts-corefile-fileaccess-fileaccesshelper-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo(system api)](arkts-corefile-fileaccess-fileinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileIterator(system api)](arkts-corefile-fileaccess-fileiterator-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [MoveResult(system api)](arkts-corefile-fileaccess-moveresult-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyMessage(system api)](arkts-corefile-fileaccess-notifymessage-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RootInfo(system api)](arkts-corefile-fileaccess-rootinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RootIterator(system api)](arkts-corefile-fileaccess-rootiterator-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileKey(system api)](arkts-corefile-fileaccess-filekey-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [NotifyType(system api)](arkts-corefile-fileaccess-notifytype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [OPENFLAGS(system api)](arkts-corefile-fileaccess-openflags-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Constants(system api)](arkts-corefile-fileaccess-con-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.fileExtensionInfo(User File Access and Management Attribute Information)](arkts-corefile-file-fileextensioninfo.md)<!--DelEnd-->
+  <!--Del-->
+  - [fileExtensionInfo(system api)](arkts-corefile-fileextensioninfo-n.md)<!--DelEnd-->
+    <!--Del-->
+    - [DeviceFlag(system api)](arkts-corefile-fileextensioninfo-deviceflag-n.md)<!--DelEnd-->
+      <!--Del-->
+      - [Constants(system api)](arkts-corefile-deviceflag-con-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [DocumentFlag(system api)](arkts-corefile-fileextensioninfo-documentflag-n.md)<!--DelEnd-->
+      <!--Del-->
+      - [Constants(system api)](arkts-corefile-documentflag-con-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [DeviceType(system api)](arkts-corefile-fileextensioninfo-devicetype-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.recent(Latest Access List)](arkts-corefile-file-recent.md)<!--DelEnd-->
+  <!--Del-->
+  - [add(system api)](arkts-corefile-recent-add-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [listFile(system api)](arkts-corefile-recent-listfile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [remove(system api)](arkts-corefile-recent-remove-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo(system api)](arkts-corefile-recent-fileinfo-i-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.file.trash(Trash)](arkts-corefile-file-trash.md)<!--DelEnd-->
+  <!--Del-->
+  - [completelyDelete(system api)](arkts-corefile-trash-completelydelete-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [listFile(system api)](arkts-corefile-trash-listfile-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [recover(system api)](arkts-corefile-trash-recover-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FileInfo(system api)](arkts-corefile-trash-fileinfo-i-sys.md)<!--DelEnd-->
 - [@ohos.fileio(File Management)](arkts-corefile-fileio.md)
   - [fileIO](arkts-corefile-fileio-depr-n.md)
   - [access](arkts-corefile-fileio-access-f.md)
@@ -605,34 +633,6 @@
   - [PositionType(system api)](arkts-corefile-userfilemanager-positiontype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PrivateAlbumType(system api)](arkts-corefile-userfilemanager-privatealbumtype-e-sys.md)<!--DelEnd-->
-- [@ohos.fileshare](arkts-corefile-fileshare.md)
-  - [activatePermission](arkts-corefile-fileshare-activatepermission-f.md)
-  <!--Del-->
-  - [checkPathPermission(system api)](arkts-corefile-fileshare-checkpathpermission-f-sys.md)<!--DelEnd-->
-  - [checkPersistentPermission](arkts-corefile-fileshare-checkpersistentpermission-f.md)
-  - [deactivatePermission](arkts-corefile-fileshare-deactivatepermission-f.md)
-  <!--Del-->
-  - [getPersistentPolicy(system api)](arkts-corefile-fileshare-getpersistentpolicy-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getSharedDirectoryInfo(system api)](arkts-corefile-fileshare-getshareddirectoryinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [grantSharedDirectoryPermission(system api)](arkts-corefile-fileshare-grantshareddirectorypermission-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [grantUriPermission(system api)](arkts-corefile-fileshare-granturipermission-f-sys.md)<!--DelEnd-->
-  - [persistPermission](arkts-corefile-fileshare-persistpermission-f.md)
-  - [revokePermission](arkts-corefile-fileshare-revokepermission-f.md)
-  <!--Del-->
-  - [revokePermission(system api)](arkts-corefile-fileshare-revokepermission-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [revokeSharedDirectoryPermission(system api)](arkts-corefile-fileshare-revokeshareddirectorypermission-f-sys.md)<!--DelEnd-->
-  - [PathPolicyInfo](arkts-corefile-fileshare-pathpolicyinfo-i.md)
-  - [PolicyErrorResult](arkts-corefile-fileshare-policyerrorresult-i.md)
-  - [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
-  <!--Del-->
-  - [SharedDirectoryInfo(system api)](arkts-corefile-fileshare-shareddirectoryinfo-i-sys.md)<!--DelEnd-->
-  - [OperationMode](arkts-corefile-fileshare-operationmode-e.md)
-  - [PolicyErrorCode](arkts-corefile-fileshare-policyerrorcode-e.md)
-  - [PolicyType](arkts-corefile-fileshare-policytype-e.md)
 - [@ohos.statfs(statfs)](arkts-corefile-statfs.md)
   - [getFreeBytes](arkts-corefile-statfs-getfreebytes-depr-f.md)
   - [getTotalBytes](arkts-corefile-statfs-gettotalbytes-depr-f.md)

@@ -50,6 +50,7 @@ function revokePermission(tokenID: number): Promise<void>
 | 13900001 | Operation not permitted. |
 | 13900020 | Invalid tokenID |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -69,6 +70,8 @@ async function revokeAllPermissionExample() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="revokepermission3"></a>
@@ -118,6 +121,7 @@ function revokePermission(tokenID: number, policies: Array<PolicyInfo>): Promise
 | 13900011 | Out of memory |
 | 13900020 | Invalid tokenID |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -149,3 +153,5 @@ async function revokeSpecificPermissionExample() {
   }
 }
 ```
+
+<!--DelEnd-->

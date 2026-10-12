@@ -42,6 +42,7 @@ function setVideo(source: string, wallpaperType: WallpaperType, callback: AsyncC
 | [201](../../errorcode-universal.md#201-api权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ try {
     console.error(`Failed to setVideo. Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setvideo2"></a>
@@ -104,6 +107,7 @@ function setVideo(source: string, wallpaperType: WallpaperType): Promise<void>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -121,3 +125,5 @@ try {
     console.error(`Failed to setVideo. Code: ${err.code}, Message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

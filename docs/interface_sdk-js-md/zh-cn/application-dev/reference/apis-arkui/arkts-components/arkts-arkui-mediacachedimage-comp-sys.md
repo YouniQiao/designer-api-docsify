@@ -34,6 +34,7 @@ MediaCachedImage(src: PixelMap | ResourceStr | DrawableDescriptor | ASTCResource
 | --- | --- |
 | [ASTCResource](arkts-arkui-mediacachedimage-comp-astcresource-i-sys.md) | 定义可以使用 ASTC 的资源。 |
 
+<!--Del-->
 ## 示例
 
 加载基本类型图片。
@@ -70,3 +71,5 @@ struct MediaCachedImageExample {
   }
 }
 ```
+
+<!--DelEnd-->

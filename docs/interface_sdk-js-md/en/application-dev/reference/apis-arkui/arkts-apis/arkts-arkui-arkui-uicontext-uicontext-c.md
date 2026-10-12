@@ -60,9 +60,9 @@ InputEventSubTypeMask.LEFT_MOUSE_DOWN,
 if (wrapper.isMouseEvent()) {
 const mouseEvent = wrapper.asMouseEvent();
 console.log(`Mouse: (${mouseEvent.windowX}, ${mouseEvent.windowY})`);
-return { action: InputEventInterceptAction.CONTINUE }; // Allow event to continue
+return { action: InputEventInterceptAction.CONTINUE };  // Allow event to continue
 }
-return { action: InputEventInterceptAction.BLOCK }; // Block event
+return { action: InputEventInterceptAction.BLOCK };  // Block event
 }
 );
 // Monitor multiple event types (using bitwise operations)
@@ -2701,6 +2701,30 @@ export default class EntryAbility extends UIAbility{
     }
 }
 ```
+
+## getPlaceholderRegister
+
+```TypeScript
+getPlaceholderRegister(): PlaceholderRegister
+```
+
+Obtains the **PlaceholderRegister** object of this UI instance.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-UIContext-getPlaceholderRegister(): PlaceholderRegister--><!--Device-UIContext-getPlaceholderRegister(): PlaceholderRegister-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [PlaceholderRegister](arkts-arkui-arkui-placeholderregister-placeholderregister-c.md) | The scroll placeholder registry of this UI instance. |
 
 ## getPromptAction
 

@@ -38,6 +38,7 @@ Obtains all BundleInfo for a specified user in the system. This API uses an asyn
 | userId | number | Yes | User ID. Value range: greater than or equal to 0. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and the BundleInfo of all bundles under the specified user as the input parameter at program startup. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -54,6 +55,8 @@ bundle.getBundleInfos(bundleFlag, userId, (err, data) => {
   console.info('Operation successful. Data:' + JSON.stringify(data));
 })
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundleinfos2"></a>
@@ -87,6 +90,7 @@ Obtains all BundleInfo for the current user. This API uses an asynchronous callb
 | bundleFlag | [BundleFlag](arkts-ability-bundle-bundleflag-e.md) | Yes | Flag used to specify the information contained in the returned bundle information object. Value range: see the bundle information related flags in [BundleFlag](arkts-ability-bundle-bundleflag-e.md). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | Yes | Callback used to return the result. If getBundleInfos is successful, **err** is **undefined**, and all available BundleInfo as the input parameter at program startup. Otherwise, **err** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -102,6 +106,8 @@ bundle.getBundleInfos(bundleFlag, (err, data) => {
   console.info('Operation successful. Data:' + JSON.stringify(data));
 })
 ```
+
+<!--DelEnd-->
 
 
 <a id="getbundleinfos3"></a>
@@ -141,6 +147,7 @@ Obtains all BundleInfo for a specified user. This API uses a promise to return t
 | --- | --- |
 | Promise&lt;Array&lt;[BundleInfo](arkts-ability-bundleinfo-depr-i.md)&gt;&gt; | Promise used to return all available BundleInfo. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -157,3 +164,5 @@ bundle.getBundleInfos(bundleFlag, userId)
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   })
 ```
+
+<!--DelEnd-->

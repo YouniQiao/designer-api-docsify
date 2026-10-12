@@ -41,6 +41,7 @@ function startPrintJob(jobInfo: PrintJob, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -72,6 +73,8 @@ print.startPrintJob(jobInfo, (error: BusinessError) => {
     }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startprintjob2"></a>
@@ -114,6 +117,7 @@ function startPrintJob(jobInfo: PrintJob): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | not system application |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -143,3 +147,5 @@ print.startPrintJob(jobInfo).then(() => {
     console.error(`Failed to start print job. Code: ${error.code}, message: ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

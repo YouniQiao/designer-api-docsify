@@ -8,6 +8,8 @@ Defines the mouse cursor styles.
 
 **Library**: libohinput.so
 
+**System capability**: SystemCapability.MultimodalInput.Input.Core
+
 **Since**: 22
 
 **Related module**: [input](capi-input.md)
@@ -20,12 +22,6 @@ Defines the mouse cursor styles.
 | -- | -- | -- |
 | [Input_PointerStyle](#input_pointerstyle) | Input_PointerStyle | Enumerates the cursor styles. |
 
-### Macro
-
-| Name | Description |
-| -- | -- |
-| OH_POINTER_STYLE_H | Defines the mouse cursor styles.<br>**Since**: 22<br>**System capability**: SystemCapability.MultimodalInput.Input.Core |
-
 ## Enum type description
 
 ### Input_PointerStyle
@@ -37,6 +33,8 @@ enum Input_PointerStyle
 **Description**
 
 Enumerates the cursor styles.
+
+**System capability**: SystemCapability.MultimodalInput.Input.Core
 
 **Since**: 22
 

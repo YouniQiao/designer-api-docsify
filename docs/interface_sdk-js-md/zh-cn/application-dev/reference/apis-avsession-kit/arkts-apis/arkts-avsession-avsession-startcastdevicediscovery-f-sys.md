@@ -36,6 +36,7 @@ function startCastDeviceDiscovery(callback: AsyncCallback<void>): void
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -43,6 +44,8 @@ avSession.startCastDeviceDiscovery(() => {
     console.info('Succeeded in starting cast device discovery.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startcastdevicediscovery2"></a>
@@ -77,6 +80,7 @@ function startCastDeviceDiscovery(filter: number, callback: AsyncCallback<void>)
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -85,6 +89,8 @@ avSession.startCastDeviceDiscovery(filter, () => {
     console.info('Succeeded in starting cast device discovery.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startcastdevicediscovery3"></a>
@@ -125,6 +131,7 @@ function startCastDeviceDiscovery(filter?: number, drmSchemes?: Array<string>): 
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System App.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -134,3 +141,5 @@ avSession.startCastDeviceDiscovery(filter, drmSchemes).then(() => {
   console.info('Succeeded in starting cast device discovery.');
 });
 ```
+
+<!--DelEnd-->

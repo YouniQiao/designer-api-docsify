@@ -39,6 +39,7 @@ function isRequestPublishFormSupported(callback: AsyncCallback<boolean>): void
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -79,6 +80,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="isrequestpublishformsupported2"></a>
 
@@ -112,6 +115,7 @@ function isRequestPublishFormSupported(): Promise<boolean>
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | IPC connection error. |
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -147,3 +151,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

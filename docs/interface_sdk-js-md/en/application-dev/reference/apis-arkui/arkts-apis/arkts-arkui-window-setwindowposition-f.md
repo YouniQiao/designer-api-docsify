@@ -50,6 +50,6 @@ Setting the global topmost state requires the ohos.permission.WINDOW_TOPMOST per
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause: 1. The window to be adjusted cannot be found: not created, has been destroyed or not belong to current process; 2. The target main window specified by insertAfter cannot be found: not created, has been destroyed or not belong to current process; |
+| [1300002](../errorcode-window.md#1300002-abnormal-window-state) | This window state is abnormal. Possible cause:         1. The window to be adjusted cannot be found: not created, has been destroyed or not belong to current process;         2. The target main window specified by insertAfter cannot be found: not created, has been destroyed or not belong to current process; |
 | [1300003](../errorcode-window.md#1300003-abnormal-window-manager-service) | This window manager service works abnormally. |
 | [1300004](../errorcode-window.md#1300004-unauthorized-operation) | Unauthorized operation. Possible cause: Invalid window type. Only main windows are supported. |

@@ -36,6 +36,7 @@ Listens for changes of the application badge number.
 | --- | --- | --- | --- |
 | data | [BadgeNumberCallbackData](arkts-notification-notificationsubscriber-badgenumbercallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,6 +56,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onBatchCancel
 
@@ -78,6 +81,7 @@ Called for batch deletion.
 | --- | --- | --- | --- |
 | data | Array&lt;[SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md)&gt; | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -99,6 +103,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onCancel
 
@@ -122,6 +128,7 @@ Called when a notification is canceled.
 | --- | --- | --- | --- |
 | data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -144,6 +151,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onConnect
 
 ```TypeScript
@@ -160,6 +169,7 @@ Called when subscription is complete.
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -179,6 +189,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onConsume
 
@@ -202,6 +214,7 @@ Called when a new notification is received.
 | --- | --- | --- | --- |
 | data | [SubscribeCallbackData](arkts-notification-notificationsubscriber-subscribecallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -224,6 +237,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onDestroy
 
 ```TypeScript
@@ -240,6 +255,7 @@ Called when the service is disconnected.
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -260,6 +276,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 });
 ```
 
+<!--DelEnd-->
+
 ## onDisconnect
 
 ```TypeScript
@@ -276,6 +294,7 @@ Called when unsubscription is complete.
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -311,6 +330,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
 notificationSubscribe.unsubscribe(subscriber, unsubscribeCallback);
 ```
 
+<!--DelEnd-->
+
 ## onDoNotDisturbChanged
 
 ```TypeScript
@@ -333,6 +354,7 @@ Called when the DND time settings are changed.
 | --- | --- | --- | --- |
 | mode | [notificationManager.DoNotDisturbDate](arkts-notification-notificationmanager-donotdisturbdate-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -353,6 +375,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledNotificationChanged
 
@@ -376,6 +400,7 @@ Listens for the notification enabled state changes.
 | --- | --- | --- | --- |
 | callbackData | [EnabledNotificationCallbackData](arkts-notification-notificationsubscriber-enablednotificationcallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -397,6 +422,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledPriorityByBundleChanged
 
@@ -420,6 +447,7 @@ Called when the enabling state of the application priority notification changes.
 | --- | --- | --- | --- |
 | callbackData | [EnabledPriorityNotificationByBundleCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationbybundlecallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -436,6 +464,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledPriorityChanged
 
@@ -459,6 +489,7 @@ Called when the enabling state of the priority notification changes.
 | --- | --- | --- | --- |
 | callbackData | [EnabledPriorityNotificationCallbackData](arkts-notification-notificationsubscriber-enabledprioritynotificationcallbackdata-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -475,6 +506,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onEnabledSilentReminderChanged
 
@@ -552,6 +585,7 @@ Called when notification sorting is updated. Not supported currently.
 | --- | --- | --- | --- |
 | data | [NotificationSortingMap](arkts-notification-notificationsortingmap-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -569,6 +603,8 @@ notificationSubscribe.subscribeNotification(subscriber).then(() => {
   console.error(`subscribeNotification failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## onDoNotDisturbDateChange
 
@@ -596,6 +632,7 @@ Called when the DND time settings are changed.
 | --- | --- | --- | --- |
 | mode | [notification.DoNotDisturbDate](arkts-notification-notification-donotdisturbdate-depr-i-sys.md) | Yes |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -620,6 +657,8 @@ let subscriber: notificationSubscribe.NotificationSubscriber = {
 
 notificationSubscribe.subscribe(subscriber, subscribeCallback);
 ```
+
+<!--DelEnd-->
 
 ## onBadgeEnabledChanged
 

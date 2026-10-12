@@ -44,6 +44,7 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo, callback:
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600108](../errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,6 +63,8 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startcasting2"></a>
@@ -107,6 +110,7 @@ function startCasting(session: SessionToken, device: OutputDeviceInfo): Promise<
 | [6600101](../errorcode-avsession.md#6600101-会话服务端异常) | Session service exception |
 | [6600108](../errorcode-avsession.md#6600108-设备连接失败) | Device connecting failed |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -125,3 +129,5 @@ avSession.on('deviceAvailable', (device: avSession.OutputDeviceInfo) => {
   }
 });
 ```
+
+<!--DelEnd-->

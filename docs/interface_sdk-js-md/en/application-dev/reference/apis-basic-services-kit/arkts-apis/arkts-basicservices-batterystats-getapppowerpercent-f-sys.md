@@ -42,6 +42,7 @@ Obtains the proportion of the power consumption of an application.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
 | [4600101](../errorcode-batteryStatistics.md#4600101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,3 +53,5 @@ try {
     console.error('get battery statistics percent of app failed, err: ' + err);
 }
 ```
+
+<!--DelEnd-->

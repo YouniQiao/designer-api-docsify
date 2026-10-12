@@ -47,14 +47,14 @@ propertyId表示查询属性的ID信息，当前仅支持GMT 0016-2023中定义�
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability. 2. The chip does not support the capability. 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability.         2. The chip does not support the capability.         3. A dependent service feature is not supported. |
 | [12000005](../errorcode-huks.md#12000005-进程通信错误) | IPC communication failed. |
-| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | If the UKey driver operation failed. Possible causes: 1. Error reported when the provider accesses the SKF interface of UKey. |
+| [12000006](../errorcode-huks.md#12000006-算法库操作失败) | If the UKey driver operation failed. Possible causes:         1. Error reported when the provider accesses the SKF interface of UKey. |
 | [12000011](../errorcode-huks.md#12000011-目标对象不存在) | If the cached resource ID is not found. |
 | [12000012](../errorcode-huks.md#12000012-外部错误) | Device environment or input parameter is abnormal. This error may occur if the process function is not found, or due to other issues. |
 | [12000014](../errorcode-huks.md#12000014-内存不足) | If the memory is insufficient. |
-| [12000018](../errorcode-huks.md#12000018-输入参数非法) | Input parameter is invalid. Possible causes: 1. The resourceId or propertyId length is invalid. 2. The params contains invalid tags or invalid value types. |
-| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | If the provider operation failed. Possible causes: 1. The provider experienced an internal processing error. |
+| [12000018](../errorcode-huks.md#12000018-输入参数非法) | Input parameter is invalid. Possible causes:         1. The resourceId or propertyId length is invalid.         2. The params contains invalid tags or invalid value types. |
+| [12000020](../errorcode-huks.md#12000020-依赖的模块报错) | If the provider operation failed. Possible causes:         1. The provider experienced an internal processing error. |
 | [12000021](../errorcode-huks.md#12000021-ukey-pin码被锁定) | The UKey PIN is locked. |
 | [12000023](../errorcode-huks.md#12000023-ukey-pin码未认证) | The UKey PIN is not authenticated. |
 | [12000024](../errorcode-huks.md#12000024-设备或资源繁忙) | If the provider or UKey is busy. |

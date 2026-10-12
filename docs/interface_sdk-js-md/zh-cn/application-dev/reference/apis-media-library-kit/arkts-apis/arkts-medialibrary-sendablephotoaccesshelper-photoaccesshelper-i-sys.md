@@ -73,6 +73,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name. |
 | 14000011 | Internal system error. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
@@ -90,6 +91,8 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createasset2"></a>
 
@@ -145,6 +148,7 @@ API10-17，非法字符包括： . .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name. |
 | 14000011 | Internal system error. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
@@ -165,6 +169,8 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getHiddenAlbums
 
@@ -206,6 +212,7 @@ getHiddenAlbums(mode: photoAccessHelper.HiddenPhotosDisplayMode, options?: photo
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
@@ -262,6 +269,8 @@ async function getHiddenAlbumsView(phAccessHelper: sendablePhotoAccessHelper.Pho
 }
 ```
 
+<!--DelEnd-->
+
 ## getPhotoAssets
 
 ```TypeScript
@@ -300,6 +309,7 @@ getPhotoAssets(assetsData: photoAccessHelper.ValuesBucket[]): Promise<PhotoAsset
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid value type in ValuesBucket; <br>2. Missing required column in ValuesBucket; <br>3. Array size exceeds 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[@ohos.file.sendablePhotoAccessHelper (基于Sendable对象的相册管理模块)](arkts-medialibrary-file-sendablephotoaccesshelper.md)的示例使用。
@@ -327,6 +337,8 @@ async function example(phAccessHelper: sendablePhotoAccessHelper.PhotoAccessHelp
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getShareAlbums
 

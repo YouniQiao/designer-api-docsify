@@ -3644,7 +3644,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | index | number | Yes | Index of the track. You can call [getTrackDescription](#gettrackdescription) to obtain all track information [MediaDescription](arkts-media-media-mediadescription-i.md) of the current resource. |
-| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version 24.<br>**Since:** 26.0.0 |
+| mode | [SwitchMode](arkts-media-media-switchmode-e.md) | No | Video track mode. The default mode is **SMOOTH**. This parameter takes effect only for DASH/HLS network stream video track switching.<br>HLS network stream video is supported since API version         24.<br>**Since:** 26.0.0 |
 
 **Return value:**
 

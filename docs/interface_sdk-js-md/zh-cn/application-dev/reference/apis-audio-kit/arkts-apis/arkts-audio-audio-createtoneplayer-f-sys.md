@@ -33,6 +33,7 @@ function createTonePlayer(options: AudioRendererInfo, callback: AsyncCallback<To
 | options | [AudioRendererInfo](arkts-audio-audio-audiorendererinfo-i.md) | 是 | 配置音频渲染器信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | 是 | 回调函数。当获取DTMF播放器成功，err为undefined，data为获取到的DTMF播放器对象；否则为错误对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -54,6 +55,8 @@ audio.createTonePlayer(audioRendererInfo, (err, data) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="createtoneplayer3"></a>
@@ -86,6 +89,7 @@ function createTonePlayer(options: AudioRendererInfo): Promise<TonePlayer>
 | --- | --- |
 | Promise&lt;[TonePlayer](arkts-audio-audio-toneplayer-i-sys.md)&gt; | Promise对象，返回DTMF播放器对象。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -100,3 +104,5 @@ async function createTonePlayerBefore(){
   tonePlayer = await audio.createTonePlayer(audioRendererInfo);
 }
 ```
+
+<!--DelEnd-->

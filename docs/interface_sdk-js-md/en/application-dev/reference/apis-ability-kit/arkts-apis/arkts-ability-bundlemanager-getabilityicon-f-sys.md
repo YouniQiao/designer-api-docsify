@@ -54,6 +54,7 @@ No permission is required for obtaining the caller information.
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -77,6 +78,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getabilityicon2"></a>
@@ -132,6 +135,7 @@ No permission is required for obtaining the caller information.
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-disabled-ability) | The specified ability is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -155,3 +159,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityIcon failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

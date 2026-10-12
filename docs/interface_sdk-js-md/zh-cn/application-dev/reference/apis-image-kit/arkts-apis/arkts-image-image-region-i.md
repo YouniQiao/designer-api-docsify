@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 size: Size
 ```
 
-区域大小。
+区域尺寸。
 
 **类型：** Size
 
@@ -44,7 +44,7 @@ size: Size
 x: number
 ```
 
-区域左上角横坐标。单位：像素（px）。
+区域左上角像素的横坐标（X坐标）。单位：像素（px）。
 
 **类型：** number
 
@@ -64,7 +64,7 @@ x: number
 y: number
 ```
 
-区域左上角纵坐标。单位：像素（px）。
+区域左上角像素的纵坐标（Y坐标）。单位：像素（px）。
 
 **类型：** number
 

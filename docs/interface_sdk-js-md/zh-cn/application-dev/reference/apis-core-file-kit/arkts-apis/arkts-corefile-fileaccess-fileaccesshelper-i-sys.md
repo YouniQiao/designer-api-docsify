@@ -97,6 +97,7 @@ access(sourceFileUri: string) : Promise<boolean>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -123,6 +124,8 @@ async function accessFunc() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="access2"></a>
 
@@ -194,6 +197,7 @@ access(sourceFileUri: string, callback: AsyncCallback<boolean>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -222,6 +226,8 @@ try {
   console.error("access failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copy1"></a>
 
@@ -263,6 +269,7 @@ copy(sourceUri: string, destUri: string, force?: boolean): Promise<Array<CopyRes
 | --- | --- |
 | Promise&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -331,6 +338,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="copy2"></a>
 
 ## copy
@@ -365,6 +374,7 @@ copy(sourceUri: string, destUri: string, callback: AsyncCallback<Array<CopyResul
 | destUri | string | 是 | 目标文件夹的 uri。例如：file://docs/storage/Users/currentUser/Download/test。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -399,6 +409,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copy3"></a>
 
@@ -435,6 +447,7 @@ copy(sourceUri: string, destUri: string, force: boolean, callback: AsyncCallback
 | force | boolean | 是 | 含有同名文件时是否强制覆盖原文件。force 为 true 时强制覆盖原文件；force 为空或 false 时不覆盖原文件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[CopyResult](arkts-corefile-fileaccess-copyresult-i-sys.md)&gt;&gt; | 是 | 返回 copyresult 数组。copyResult 为复制操作失败的返回信息；复制成功无返回信息。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -469,6 +482,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copyfile1"></a>
 
@@ -541,6 +556,7 @@ copyFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -564,6 +580,8 @@ try {
   console.error("copy failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="copyfile2"></a>
 
@@ -631,9 +649,12 @@ copyFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 参见 [copyFile](#copyfile)
+
+<!--DelEnd-->
 
 <a id="createfile1"></a>
 
@@ -711,6 +732,7 @@ createFile(uri: string, displayName: string) : Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -739,6 +761,8 @@ async function createFile() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createfile2"></a>
 
@@ -811,6 +835,7 @@ createFile(uri: string, displayName: string, callback: AsyncCallback<string>): v
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -836,6 +861,8 @@ try {
   console.error("createFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete1"></a>
 
@@ -912,6 +939,7 @@ delete(uri: string) : Promise<number>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -935,6 +963,8 @@ async function deleteFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete2"></a>
 
@@ -1006,6 +1036,7 @@ delete(uri: string, callback: AsyncCallback<number>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1030,6 +1061,8 @@ try {
   console.error("delete failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromrelativepath1"></a>
 
@@ -1067,6 +1100,7 @@ getFileInfoFromRelativePath(relativePath: string) : Promise<FileInfo>
 | --- | --- |
 | Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1087,6 +1121,8 @@ async function getRelativePath() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromrelativepath2"></a>
 
@@ -1119,6 +1155,7 @@ getFileInfoFromRelativePath(relativePath: string, callback: AsyncCallback<FileIn
 | relativePath | string | 是 | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | 是 | The callback is used to return a fileinfo object. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1143,6 +1180,8 @@ try {
   console.error("getFileInfoFromRelativePath failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromuri1"></a>
 
@@ -1180,6 +1219,7 @@ getFileInfoFromUri(uri: string) : Promise<FileInfo>
 | --- | --- |
 | Promise&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | Returns a FileInfo. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1201,6 +1241,8 @@ async function getUri() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getfileinfofromuri2"></a>
 
@@ -1233,6 +1275,7 @@ getFileInfoFromUri(uri: string, callback: AsyncCallback<FileInfo>) : void
 | uri | string | 是 | Indicates the selected file or directory. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[FileInfo](arkts-corefile-fileaccess-fileinfo-i-sys.md)&gt; | 是 | The callback is used to return a fileinfo object. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1258,6 +1301,8 @@ try {
   console.error("getFileInfoFromUri failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getroots1"></a>
 
@@ -1326,6 +1371,7 @@ getRoots(): Promise<RootIterator>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1356,6 +1402,8 @@ async function getRoots() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getroots2"></a>
 
@@ -1424,6 +1472,7 @@ getRoots(callback: AsyncCallback<RootIterator>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1455,6 +1504,8 @@ async function getRoots() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="mkdir1"></a>
 
@@ -1532,6 +1583,7 @@ mkDir(parentUri: string, displayName: string) : Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1560,6 +1612,8 @@ async function createDirectory() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="mkdir2"></a>
 
@@ -1632,6 +1686,7 @@ mkDir(parentUri: string, displayName: string, callback: AsyncCallback<string>): 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1657,6 +1712,8 @@ try {
   console.error("mkDir failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="move1"></a>
 
@@ -1734,6 +1791,7 @@ move(sourceFile: string, destFile: string) : Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1757,6 +1815,8 @@ async function moveFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="move2"></a>
 
@@ -1829,6 +1889,7 @@ move(sourceFile: string, destFile: string, callback: AsyncCallback<string>): voi
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1854,6 +1915,8 @@ try {
   console.error("move failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="movefile1"></a>
 
@@ -1924,6 +1987,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string): Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1948,6 +2012,8 @@ async function moveFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="movefile2"></a>
 
@@ -2013,6 +2079,7 @@ moveFile(sourceUri: string, destUri: string, fileName: string, callback: AsyncCa
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2039,6 +2106,8 @@ try {
   console.error("moveFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="moveitem1"></a>
 
@@ -2109,6 +2178,7 @@ moveItem(sourceUri: string, destUri: string, force?: boolean): Promise<Array<Mov
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2177,6 +2247,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="moveitem2"></a>
 
 ## moveItem
@@ -2240,6 +2312,7 @@ moveItem(sourceUri: string, destUri: string, callback: AsyncCallback<Array<MoveR
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2274,6 +2347,8 @@ try {
   console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="moveitem3"></a>
 
@@ -2339,6 +2414,7 @@ moveItem(sourceUri: string, destUri: string, force: boolean, callback: AsyncCall
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2373,6 +2449,8 @@ try {
   console.error("moveItem failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="openfile1"></a>
 
@@ -2450,6 +2528,7 @@ openFile(uri: string, flags: OPENFLAGS) : Promise<number>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2471,6 +2550,8 @@ async function openFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="openfile2"></a>
 
@@ -2543,6 +2624,7 @@ openFile(uri: string, flags: OPENFLAGS, callback: AsyncCallback<number>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2567,6 +2649,8 @@ try {
   console.error("openFile failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query1"></a>
 
@@ -2605,6 +2689,7 @@ query(uri: string, metaJson: string) : Promise<string>
 | --- | --- |
 | Promise&lt;string&gt; | 返回json字符串，包括查询属性和值。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2626,6 +2711,8 @@ async function getQuery01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query2"></a>
 
@@ -2659,6 +2746,7 @@ query(uri: string, metaJson: string, callback: AsyncCallback<string>) : void
 | metaJson | string | 是 | json字符串，包含查询属性[FILEKEY](arkts-corefile-fileaccess-filekey-e-sys.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | 是 | 返回json字符串，包括查询属性和值。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2685,6 +2773,8 @@ async function getQuery02() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## registerObserver
 
@@ -2798,6 +2888,7 @@ rename(uri: string, displayName: string) : Promise<string>
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2820,6 +2911,8 @@ async function renameFile01() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="rename2"></a>
 
@@ -2892,6 +2985,7 @@ rename(uri: string, displayName: string, callback: AsyncCallback<string>): void
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2916,6 +3010,8 @@ try {
   console.error("rename failed, errCode:" + error.code + ", errMessage:" + error.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## unregisterObserver
 

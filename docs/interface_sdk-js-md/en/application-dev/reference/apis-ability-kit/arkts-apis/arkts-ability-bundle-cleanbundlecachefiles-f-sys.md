@@ -37,6 +37,7 @@ Clears the cache data of an application. This API uses an asynchronous callback 
 | bundleName | string | Yes | Bundle name. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,6 +66,8 @@ bundle.cleanBundleCacheFiles(bundleName).then(() => {
   console.error('cleanBundleCacheFiles failed.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="cleanbundlecachefiles2"></a>
@@ -103,6 +106,9 @@ Clears the cache data of an application. This API uses a promise to return the r
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 See [cleanBundleCacheFiles](#cleanbundlecachefiles)
+
+<!--DelEnd-->

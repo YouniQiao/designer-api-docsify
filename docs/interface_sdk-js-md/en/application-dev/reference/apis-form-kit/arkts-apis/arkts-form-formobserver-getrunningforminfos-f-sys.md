@@ -43,6 +43,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getrunningforminfos2"></a>
@@ -107,6 +110,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -127,6 +131,8 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getrunningforminfos3"></a>
@@ -171,6 +177,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -187,6 +194,8 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getrunningforminfos4"></a>
@@ -235,6 +244,7 @@ Obtains the RunningFormInfo objects provided by a specific card host application
 | [16500050](../errorcode-form.md#16500050-ipc-failure) | IPC connection error. |
 | [16500060](../errorcode-form.md#16500060-service-connection-failure) | Service connection error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -251,3 +261,5 @@ try {
   console.error(`catch error, code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

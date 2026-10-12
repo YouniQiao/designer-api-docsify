@@ -89,6 +89,7 @@ checkNewVersion(callback: AsyncCallback<CheckResult>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -119,6 +120,8 @@ try {
   console.error(`Failed to get updater. Code: ${errInfo.code}, message: ${errInfo.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="checknewversion2"></a>
 
@@ -176,6 +179,7 @@ checkNewVersion(): Promise<CheckResult>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -205,6 +209,8 @@ try {
   console.error(`Fail to checkNewVersion. Code: ${err.code}, message: ${err.message}.`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="clearerror1"></a>
 
@@ -260,6 +266,7 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions, cal
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -300,6 +307,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="clearerror2"></a>
 
@@ -360,6 +369,7 @@ clearError(versionDigestInfo: VersionDigestInfo, clearOptions: ClearOptions): Pr
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -396,6 +406,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="download1"></a>
 
@@ -459,6 +471,7 @@ download(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -500,6 +513,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="download2"></a>
 
@@ -566,6 +581,7 @@ download(versionDigestInfo: VersionDigestInfo, downloadOptions: DownloadOptions)
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -603,6 +619,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getcurrentversiondescription1"></a>
 
@@ -657,6 +675,7 @@ getCurrentVersionDescription(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -690,6 +709,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getcurrentversiondescription2"></a>
 
@@ -744,6 +765,7 @@ getCurrentVersionDescription(descriptionOptions: DescriptionOptions): Promise<Ar
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -775,6 +797,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getcurrentversioninfo1"></a>
 
@@ -816,6 +840,7 @@ getCurrentVersionInfo(callback: AsyncCallback<CurrentVersionInfo>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -848,6 +873,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getcurrentversioninfo2"></a>
 
@@ -889,6 +916,7 @@ getCurrentVersionInfo(): Promise<CurrentVersionInfo>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -916,6 +944,8 @@ try {
   console.error(`Fail to get updater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getnewversiondescription1"></a>
 
@@ -969,6 +999,7 @@ getNewVersionDescription(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1008,6 +1039,8 @@ try {
   console.error(`Fail to get updater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getnewversiondescription2"></a>
 
@@ -1065,6 +1098,7 @@ getNewVersionDescription(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1105,6 +1139,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getnewversioninfo1"></a>
 
@@ -1165,6 +1201,7 @@ getNewVersionInfo(callback: AsyncCallback<NewVersionInfo>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1193,6 +1230,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getnewversioninfo2"></a>
 
@@ -1253,6 +1292,7 @@ getNewVersionInfo(): Promise<NewVersionInfo>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1279,6 +1319,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gettaskinfo1"></a>
 
@@ -1333,6 +1375,7 @@ getTaskInfo(callback: AsyncCallback<TaskInfo>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1362,6 +1405,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gettaskinfo2"></a>
 
@@ -1416,6 +1461,7 @@ getTaskInfo(): Promise<TaskInfo>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1443,6 +1489,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getupgradepolicy1"></a>
 
@@ -1484,6 +1532,7 @@ getUpgradePolicy(callback: AsyncCallback<UpgradePolicy>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1512,6 +1561,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getupgradepolicy2"></a>
 
@@ -1553,6 +1604,7 @@ getUpgradePolicy(): Promise<UpgradePolicy>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1579,6 +1631,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off
 
@@ -1621,6 +1675,7 @@ off(eventClassifyInfo: EventClassifyInfo, taskCallback?: UpgradeTaskCallback): v
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1647,6 +1702,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -1698,6 +1755,7 @@ on(eventClassifyInfo: EventClassifyInfo, taskCallback: UpgradeTaskCallback): voi
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1724,6 +1782,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="pausedownload1"></a>
 
@@ -1782,6 +1842,7 @@ pauseDownload(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1821,6 +1882,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="pausedownload2"></a>
 
@@ -1880,6 +1943,7 @@ pauseDownload(versionDigestInfo: VersionDigestInfo, pauseDownloadOptions: PauseD
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1917,6 +1981,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="resumedownload1"></a>
 
@@ -1970,6 +2036,7 @@ resumeDownload(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2009,6 +2076,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="resumedownload2"></a>
 
@@ -2063,6 +2132,7 @@ resumeDownload(versionDigestInfo: VersionDigestInfo, resumeDownloadOptions: Resu
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2099,6 +2169,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setupgradepolicy1"></a>
 
@@ -2143,6 +2215,7 @@ setUpgradePolicy(policy: UpgradePolicy, callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2176,6 +2249,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setupgradepolicy2"></a>
 
@@ -2225,6 +2300,7 @@ setUpgradePolicy(policy: UpgradePolicy): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2256,6 +2332,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="terminateupgrade1"></a>
 
@@ -2310,6 +2388,7 @@ terminateUpgrade(callback: AsyncCallback<void>): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2337,6 +2416,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="terminateupgrade2"></a>
 
@@ -2391,6 +2472,7 @@ terminateUpgrade(): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2416,6 +2498,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="upgrade1"></a>
 
@@ -2478,6 +2562,7 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions, ca
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2516,6 +2601,8 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="upgrade2"></a>
 
@@ -2583,6 +2670,7 @@ upgrade(versionDigestInfo: VersionDigestInfo, upgradeOptions: UpgradeOptions): P
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter verification failed. |
 | 11500104 | IPC error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2619,3 +2707,5 @@ try {
   console.error(`Fail to get onlineUpdater error: ${error}`);
 }
 ```
+
+<!--DelEnd-->

@@ -44,6 +44,7 @@ Whether the window has focus. The default value is **true**, indicating that the
 
 **System API:** This is a system API.
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -162,3 +163,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

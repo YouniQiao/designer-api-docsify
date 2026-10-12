@@ -30,6 +30,7 @@ Get System Capability.
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | indicates the system capability string result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -44,6 +45,8 @@ try {
     console.error("get unexpected error: " + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="querysystemcapabilities2"></a>
@@ -70,6 +73,7 @@ Get System Capability.
 | --- | --- |
 | Promise&lt;string&gt; | system capability string. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -83,3 +87,5 @@ try {
     console.error("get unexpected error: " + e);
 }
 ```
+
+<!--DelEnd-->

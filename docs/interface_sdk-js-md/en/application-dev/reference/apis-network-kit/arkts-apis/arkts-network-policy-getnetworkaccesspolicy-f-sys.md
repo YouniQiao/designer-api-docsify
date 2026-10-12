@@ -49,6 +49,7 @@ Obtains whether the application with the specified UID can access the network. T
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getnetworkaccesspolicy2"></a>
@@ -100,6 +103,7 @@ Obtains the network access policy of all applications under the current user. Th
 | [2100002](../errorcode-net-connection.md#2100002-service-connection-failure) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-system-internal-error) | System internal error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -131,3 +135,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

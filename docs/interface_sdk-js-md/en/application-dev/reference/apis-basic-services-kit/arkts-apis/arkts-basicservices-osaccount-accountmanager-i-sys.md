@@ -59,6 +59,7 @@ Activates an OS account. This API uses an asynchronous callback to return the re
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
 | [12300016](../errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 Activate OS account 100.
@@ -81,6 +82,8 @@ try {
   console.error(`activateOsAccount failed, code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="activateosaccount2"></a>
 
@@ -128,6 +131,7 @@ Activates an OS account. This API uses a promise to return the result.
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated.<br>**Applicable version:** 12 and later |
 | [12300016](../errorcode-account.md#12300016-login-accounts-reached-the-limit) | The number of logged in accounts reaches the upper limit.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 Activate OS account 100.
@@ -148,6 +152,8 @@ try {
   console.error(`activateOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="activateosaccount3"></a>
 
@@ -199,6 +205,7 @@ Currently, cross-logical-display activation is not supported. That is, you canno
 | [12300018](../errorcode-account.md#12300018-logical-display-not-found) | Display not found. |
 | [12300019](../errorcode-account.md#12300019-cross-display-activation-not-supported) | Cross-display activation not supported. |
 
+<!--Del-->
 **Examples**
 
 Activate the OS account 100 on the logical screen 0.
@@ -220,6 +227,8 @@ try {
   console.error(`activateOsAccount with displayId exception: ${err.code} ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## bindDomainAccount
 
@@ -267,6 +276,7 @@ Binds a domain account to an OS account. This API uses a promise to return the r
 | [12300021](../errorcode-account.md#12300021-os-account-already-bound) | The OS account is already bound. |
 | [12300022](../errorcode-account.md#12300022-domain-account-already-bound) | The domain account is already bound. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -287,6 +297,8 @@ try {
   console.error(`bindDomainAccount error, errCode=${err.code}, errMsg=${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createosaccount1"></a>
 
@@ -322,7 +334,7 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName or type. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
@@ -331,6 +343,7 @@ Creates an OS account. This API uses an asynchronous callback to return the resu
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -351,6 +364,8 @@ try {
   console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createosaccount2"></a>
 
@@ -392,7 +407,7 @@ Creates an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localName, type or options. |
 | [12300004](../errorcode-account.md#12300004-account-already-exists) | Local name already exists.<br>**Applicable version:** 12 and later |
@@ -402,6 +417,7 @@ Creates an OS account. This API uses a promise to return the result.
 | [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -425,6 +441,8 @@ try {
   console.error(`createOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createosaccountfordomain1"></a>
 
@@ -464,7 +482,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or domainInfo. |
@@ -474,6 +492,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | [12300007](../errorcode-account.md#12300007-account-count-reached-the-limit) | The number of accounts has reached the upper limit. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -496,6 +515,8 @@ try {
   console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createosaccountfordomain2"></a>
 
@@ -537,7 +558,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported.<br>**Applicable version:** 12 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type, domainInfo or options. |
@@ -548,6 +569,7 @@ Creates an OS account and associates it with the specified domain account. This 
 | [12300015](../errorcode-account.md#12300015-duplicate-short-name) | The short name already exists.<br>**Applicable version:** 12 and later |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit.<br>**Applicable version:** 24 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -571,6 +593,8 @@ try {
   console.error(`createOsAccountForDomain exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## deactivateOsAccount
 
@@ -614,6 +638,7 @@ Deactivates an OS account. This API uses a promise to return the result.
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 
+<!--Del-->
 **Examples**
 
 Deactivate OS account 100.
@@ -634,6 +659,8 @@ try {
   console.error(`deactivateOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getbundleidforuid1"></a>
 
@@ -669,6 +696,7 @@ Obtains the bundle ID based on the specified UID. This API uses an asynchronous 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -690,6 +718,8 @@ try {
   console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getbundleidforuid2"></a>
 
@@ -730,6 +760,7 @@ Obtains the bundle ID based on the specified UID. This API uses a promise to ret
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -748,6 +779,8 @@ try {
   console.error(`getBundleIdForUid exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getBundleIdForUidSync
 
@@ -785,6 +818,7 @@ Obtains the bundle ID based on the specified UID. The API returns the result syn
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid uid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -800,6 +834,8 @@ try {
   console.error(`getBundleIdForUidSync exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getEnabledOsAccountConstraints
 
@@ -841,6 +877,7 @@ Obtains all the enabled constraints of an OS account. This API uses a promise to
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain all constraints of OS account 100.
@@ -861,6 +898,8 @@ try {
   console.error(`getEnabledOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getForegroundOsAccountDisplayId
 
@@ -901,6 +940,7 @@ Obtains the logical display ID of the specified foreground OS account. This API 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300017](../errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -919,6 +959,8 @@ try {
   console.error(`getForegroundOsAccountDisplayId exception: ${err.code} ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getforegroundosaccountlocalid2"></a>
 
@@ -961,6 +1003,7 @@ Obtains the ID of the foreground OS account running on a specified logical displ
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300017](../errorcode-account.md#12300017-foreground-os-account-not-found) | The foreground OS account is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -979,6 +1022,8 @@ try {
   console.error(`getForegroundOsAccountLocalId exception: ${err.code} ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountconstraintsourcetypes1"></a>
 
@@ -1019,6 +1064,7 @@ Obtains the constraint source information of an OS account. This API uses an asy
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1039,6 +1085,8 @@ try {
   console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountconstraintsourcetypes2"></a>
 
@@ -1084,6 +1132,7 @@ Obtains the constraint source information of an OS account. This API uses a prom
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1102,6 +1151,8 @@ try {
   console.error(`getOsAccountConstraintSourceTypes exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountprofilephoto1"></a>
 
@@ -1141,6 +1192,7 @@ Obtains the profile photo of an OS account. This API uses an asynchronous callba
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain the profile photo of OS account 100.
@@ -1163,6 +1215,8 @@ try {
   console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccountprofilephoto2"></a>
 
@@ -1207,6 +1261,7 @@ Obtains the profile photo of an OS account. This API uses a promise to return th
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Obtain the profile photo of OS account 100.
@@ -1227,6 +1282,8 @@ try {
   console.error(`getOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getosaccounttype3"></a>
 
@@ -1270,6 +1327,7 @@ Obtains the type of a specified OS account. This API uses a promise to return th
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1288,6 +1346,8 @@ try {
   console.error(`getOsAccountType exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ismainosaccount1"></a>
 
@@ -1324,6 +1384,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1343,6 +1404,8 @@ try {
   console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="ismainosaccount2"></a>
 
@@ -1378,6 +1441,7 @@ Checks whether the current process belongs to the main OS account. This API uses
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1395,6 +1459,8 @@ try {
   console.error(`isMainOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## isOsAccountActivated
 
@@ -1436,6 +1502,7 @@ Checks whether an OS account is activated. This API uses a promise to return the
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Check whether OS account 100 is activated.
@@ -1456,6 +1523,8 @@ try {
   console.error(`isOsAccountActivated exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="isosaccountconstraintenabled2"></a>
 
@@ -1500,6 +1569,7 @@ Checks whether a constraint is enabled for an OS account. This API uses a promis
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Check whether OS account 100 is forbidden to use Wi-Fi.
@@ -1521,6 +1591,8 @@ try {
   console.error(`isOsAccountConstraintEnabled exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="isosaccountunlocked2"></a>
 
@@ -1564,6 +1636,7 @@ Checks whether an OS account has been unlocked. This API uses a promise to retur
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1582,6 +1655,8 @@ try {
   console.error(`isOsAccountUnlocked exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('activate' | 'activating')
 
@@ -1619,6 +1694,7 @@ Unsubscribes from the OS account activation states, including the states of the 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1637,6 +1713,8 @@ try {
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('switching')
 
@@ -1674,6 +1752,7 @@ Unsubscribes from the switchover between a foreground OS account and a backgroun
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1687,6 +1766,8 @@ try {
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('switched')
 
@@ -1724,6 +1805,7 @@ Unsubscribes from the end of a switchover between a foreground OS account and a 
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1737,6 +1819,8 @@ try {
   console.error(`off exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## offConstraintChanged
 
@@ -1767,6 +1851,7 @@ Unsubscribes from constraint change events associated with the specified callbac
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1792,6 +1877,8 @@ try {
   console.error(`offConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('activate' | 'activating')
 
@@ -1829,6 +1916,7 @@ Subscribes to the OS account activation states, including the states of the acco
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or name. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1847,6 +1935,8 @@ try {
   console.error(`receive localId exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('switching')
 
@@ -1884,6 +1974,7 @@ Subscribes to the switchover between a foreground OS account and a background OS
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1902,6 +1993,8 @@ try {
   console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('switched')
 
@@ -1939,6 +2032,7 @@ Subscribes to the end of a switchover between a foreground OS account and a back
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1957,6 +2051,8 @@ try {
   console.error(`receive eventData exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## onConstraintChanged
 
@@ -1989,6 +2085,7 @@ Subscribes to one or more constraint change events of the OS account to which th
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | One or more constraints are invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2007,6 +2104,8 @@ try {
   console.error(`onConstraintChanged exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="queryallcreatedosaccounts1"></a>
 
@@ -2043,6 +2142,7 @@ Queries information about all the OS accounts created. This API uses an asynchro
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2062,6 +2162,8 @@ try {
   console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="queryallcreatedosaccounts2"></a>
 
@@ -2097,6 +2199,7 @@ Queries information about all the OS accounts created. This API uses a promise t
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2114,6 +2217,8 @@ try {
   console.error(`queryAllCreatedOsAccounts exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## queryMaxLoggedInOsAccountNumber
 
@@ -2144,6 +2249,7 @@ Queries the maximum number of OS accounts allowed to log in to the system. This 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2161,6 +2267,8 @@ try {
   console.error(`queryMaxLoggedInOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="querymaxosaccountnumber1"></a>
 
@@ -2194,6 +2302,7 @@ Queries the maximum number of OS accounts that can be created. This API uses an 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2213,6 +2322,8 @@ try {
   console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="querymaxosaccountnumber2"></a>
 
@@ -2245,6 +2356,7 @@ Queries the maximum number of OS accounts that can be created. This API uses a p
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2262,6 +2374,8 @@ try {
   console.error(`queryMaxOsAccountNumber exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## queryOsAccount
 
@@ -2295,6 +2409,7 @@ Obtains information about the OS account to which the current process belongs. T
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2312,6 +2427,8 @@ try {
   console.error(`queryOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="queryosaccountbyid1"></a>
 
@@ -2351,6 +2468,7 @@ Queries information about the OS account of the given ID. This API uses an async
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Query information about OS account 100.
@@ -2373,6 +2491,8 @@ try {
   console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="queryosaccountbyid2"></a>
 
@@ -2417,6 +2537,7 @@ Queries information about the OS account of the given ID. This API uses a promis
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 
+<!--Del-->
 **Examples**
 
 Query information about OS account 100.
@@ -2437,6 +2558,8 @@ try {
   console.error(`queryOsAccountById exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removeosaccount1"></a>
 
@@ -2471,13 +2594,14 @@ Removes an OS account. This API uses an asynchronous callback to return the resu
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2501,6 +2625,8 @@ try {
   console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removeosaccount2"></a>
 
@@ -2540,13 +2666,14 @@ Removes an OS account. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted.<br>**Applicable version:** 24 and later |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2568,6 +2695,8 @@ try {
   console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removeosaccount3"></a>
 
@@ -2608,13 +2737,14 @@ Removes a specified OS account based on the options. This API uses a promise to 
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid localId or options. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated on. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -2640,6 +2770,8 @@ try {
   console.error(`removeOsAccount exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountconstraints1"></a>
 
@@ -2682,6 +2814,7 @@ Sets or removes constraints for an OS account. This API uses an asynchronous cal
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Disable Wi-Fi for OS account 100.
@@ -2705,6 +2838,8 @@ try {
   console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountconstraints2"></a>
 
@@ -2752,6 +2887,7 @@ Sets or removes constraints for an OS account. This API uses a promise to return
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Remove the constraint on the use of Wi-Fi for OS account 100.
@@ -2772,6 +2908,8 @@ try {
   console.error(`setOsAccountConstraints exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountname1"></a>
 
@@ -2813,6 +2951,7 @@ Sets the name of an OS account. This API uses an asynchronous callback to return
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Set the name of OS account 100 to demoName.
@@ -2836,6 +2975,8 @@ try {
   console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountname2"></a>
 
@@ -2882,6 +3023,7 @@ Sets the name of an OS account. This API uses a promise to return the result.
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Set the name of OS account 100 to demoName.
@@ -2903,6 +3045,8 @@ try {
   console.error(`setOsAccountName exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountprofilephoto1"></a>
 
@@ -2944,6 +3088,7 @@ Sets a profile photo for an OS account. This API uses an asynchronous callback t
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Set a profile photo for OS account 100.
@@ -2970,6 +3115,8 @@ try {
   console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setosaccountprofilephoto2"></a>
 
@@ -3016,6 +3163,7 @@ Sets a profile photo for an OS account. This API uses a promise to return the re
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-restricted-account) | Restricted Account. |
 
+<!--Del-->
 **Examples**
 
 Set a profile photo for OS account 100.
@@ -3040,6 +3188,8 @@ try {
   console.error(`setOsAccountProfilePhoto exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## setOsAccountType
 
@@ -3079,7 +3229,7 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes: 1. The operation is restricted by the OS-account constraint. 2. The required privilege for the operation has not been granted. |
+| [204](../../errorcode-universal.md#204-access-denied-by-user-access-control-policy) | Access denied due to user access control policy. Possible causes:         1. The operation is restricted by the OS-account constraint.         2. The required privilege for the operation has not been granted. |
 | [12300001](../errorcode-account.md#12300001-system-service-abnormal) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-invalid-parameter) | Invalid type or options. |
 | [12300003](../errorcode-account.md#12300003-account-not-found) | Account not found. |
@@ -3087,6 +3237,7 @@ Sets the type of a specified OS account. This API uses a promise to return the r
 | [12300010](../errorcode-account.md#12300010-account-service-not-respond) | Service busy. Possible causes: The target account is being operated. |
 | [12300023](../errorcode-account.md#12300023-accounts-of-a-specified-type-reached-the-limit) | The number of accounts of the specified type has reached the upper limit. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -3109,3 +3260,5 @@ try {
   console.error(`setOsAccountType exception: code is ${err.code}, message is ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

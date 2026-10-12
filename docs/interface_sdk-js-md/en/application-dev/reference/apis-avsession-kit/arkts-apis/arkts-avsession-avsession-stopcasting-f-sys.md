@@ -39,6 +39,7 @@ Stop current cast and disconnect device connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -50,6 +51,8 @@ avSession.stopCasting(myToken, () => {
     console.info('Succeeded in stopping casting.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="stopcasting2"></a>
@@ -90,6 +93,7 @@ Stop current cast and disconnect device connection.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -101,3 +105,5 @@ avSession.stopCasting(myToken).then(() => {
   console.info('Succeeded in stopping casting.');
 });
 ```
+
+<!--DelEnd-->

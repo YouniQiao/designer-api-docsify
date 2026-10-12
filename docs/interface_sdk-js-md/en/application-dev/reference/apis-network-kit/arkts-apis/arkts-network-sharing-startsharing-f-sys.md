@@ -49,6 +49,7 @@ Enables sharing of a specified type. This API uses an asynchronous callback to r
 | [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) | Failed to enable forwarding for network sharing. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,6 +61,8 @@ sharing.startSharing(SHARING_WIFI, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="startsharing2"></a>
@@ -110,6 +113,7 @@ Enables sharing of a specified type. This API uses a promise to return the resul
 | [2202009](../errorcode-net-sharing.md#2202009-failed-to-enable-forwarding-for-network-sharing) | Failed to enable forwarding for network sharing. |
 | [2202011](../errorcode-net-sharing.md#2202011-failed-to-obtain-the-network-sharing-configuration) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -126,3 +130,5 @@ sharing
     console.error('start wifi sharing failed');
   });
 ```
+
+<!--DelEnd-->

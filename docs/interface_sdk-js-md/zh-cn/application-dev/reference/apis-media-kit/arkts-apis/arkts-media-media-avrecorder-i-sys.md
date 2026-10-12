@@ -87,6 +87,7 @@ isWatermarkSupported(): Promise<boolean>
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise对象，返回查询结果。true表示设备支持硬件数字水印，false表示不支持。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -98,6 +99,8 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
   console.error(`Failed to get and catch error is ${error.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setWatermark
 
@@ -121,7 +124,7 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像PixelMap数据。<br>当前支持规格:<br>- 当前仅支持pixelformat为RGBA8888。<br>- 原图像为8K时-&gt;水印图像限制范围3072x288，原图像为4K时-&gt;水印图像限制范围1536x144。 |
+| watermark | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) | 是 | 图像PixelMap数据。<br>当前支持规格:<br>- 当前仅支持pixelformat为RGBA8888。<br>- 原图像为8K时->水印图像限制范围3072x288，原图像为4K时->水印图像限制范围1536x144。 |
 | config | [WatermarkConfig](arkts-media-media-watermarkconfig-i-sys.md) | 是 | 水印的相关配置参数。 |
 
 **返回值：**
@@ -137,6 +140,7 @@ setWatermark(watermark: image.PixelMap, config: WatermarkConfig): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The parameter check failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -152,3 +156,5 @@ avRecorder.setWatermark(watermark, watermarkConfig).then(() => {
   console.error(`Failed to setWatermark and catch error is ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -46,6 +46,7 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string,
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700035](../errorcode-bundle.md#17700035-指定的应用只包含overlay特征的module) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -70,6 +71,8 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettargetoverlaymoduleinfosbybundlename2"></a>
@@ -114,6 +117,7 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, modul
 | [17700034](../errorcode-bundle.md#17700034-指定的module是overlay特征的module) | The specified module is an overlay module. |
 | [17700035](../errorcode-bundle.md#17700035-指定的应用只包含overlay特征的module) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -139,6 +143,8 @@ try {
     message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettargetoverlaymoduleinfosbybundlename3"></a>
@@ -188,6 +194,7 @@ function getTargetOverlayModuleInfosByBundleName(targetBundleName: string, modul
 | [17700034](../errorcode-bundle.md#17700034-指定的module是overlay特征的module) | The specified module is an overlay module. |
 | [17700035](../errorcode-bundle.md#17700035-指定的应用只包含overlay特征的module) | The specified bundle is an overlay bundle. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -209,3 +216,5 @@ let moduleName = "feature";
   }
 })();
 ```
+
+<!--DelEnd-->

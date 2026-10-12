@@ -50,6 +50,7 @@ function bindToDisplay(inputDeviceId: number, displayId: number): Promise<void>
 | [3900004](../errorcode-inputdevice.md#3900004-指定的显示器不存在) | The specified display does not exist. |
 | [3900005](../errorcode-inputdevice.md#3900005-不支持的输入设备) | Unsupported input device. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -78,3 +79,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

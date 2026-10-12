@@ -45,6 +45,7 @@ Obtains the SMSC address. This API uses an asynchronous callback to return the r
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.getSmscAddr(slotId, (err: BusinessError, data: string) => {
       console.info(`callback: err->${JSON.stringify(err)}, data->${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getsmscaddr2"></a>
@@ -102,6 +105,7 @@ Obtains the SMSC address. This API uses a promise to return the result.
 | [8300003](../errorcode-telephony.md#8300003-system-internal-error) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -115,3 +119,5 @@ sms.getSmscAddr(slotId).then((data: string) => {
     console.error(`getSmscAddr failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

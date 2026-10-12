@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 alphaType?: AlphaType
 ```
 
-透明度。默认值为IMAGE_ALPHA_TYPE_PREMUL。
+透明度类型。默认值为IMAGE_ALPHA_TYPE_PREMUL。
 
 **类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
@@ -44,7 +44,7 @@ alphaType?: AlphaType
 editable?: boolean
 ```
 
-图像像素是否可被编辑。true表示可被编辑，false表示不可被编辑。设为false时，可提升图像的渲染和传输性能，但是图像不可被二次编辑。例如，writePixels操作将失败。默认值为false。
+图像像素是否可被编辑。true表示可被编辑，false表示不可被编辑。设为false时，可提升图像的渲染和传输性能，但是图像不可被二次编辑，例如，writePixels操作将失败。默认值为false。
 
 **类型：** boolean
 
@@ -104,7 +104,7 @@ scaleMode?: ScaleMode
 size: Size
 ```
 
-创建的图片尺寸，宽高值必须为正整数。
+创建的图像尺寸，宽高值必须为正整数。
 
 **类型：** Size
 

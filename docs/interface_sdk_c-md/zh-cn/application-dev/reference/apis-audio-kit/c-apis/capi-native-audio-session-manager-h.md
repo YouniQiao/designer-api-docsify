@@ -6,6 +6,8 @@
 
 **库：** libohaudio.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **相关模块：** [OHAudio](capi-ohaudio.md)
@@ -90,6 +92,8 @@ enum OH_AudioSession_Scene
 
 音频会话场景。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -108,6 +112,8 @@ enum OH_AudioSession_StateChangeHint
 **描述：**
 
 音频会话状态变更的提示信息。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -134,6 +140,8 @@ enum OH_AudioSession_OutputDeviceChangeRecommendedAction
 
 输出设备变更后推荐的操作。 <br>常见场景示例：耳机设备和外放设备之间进行切换。当佩戴耳机时，从外放设备切换到耳机设备，系统会推荐继续播放，提示应用无需停止当前播放。当摘下耳机设备切换到外放设备时，系统会推荐停止播放。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -151,6 +159,8 @@ enum OH_AudioSession_DeactivatedReason
 
 音频会话停用原因。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -167,6 +177,8 @@ enum OH_AudioSession_BluetoothAndNearlinkPreferredRecordCategory
 **描述：**
 
 在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -190,6 +202,8 @@ typedef void (*OH_AudioSession_StateChangedCallback)(OH_AudioSession_StateChange
 
 该函数指针将指向用于监听音频会话状态变更事件的回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -207,6 +221,8 @@ typedef void (*OH_AudioSession_AvailableDeviceChangedCallback)(OH_AudioDevice_Ch
 **描述：**
 
 此函数指针将指向用于返回变化的音频设备描述符的回调函数，可能会返回多个音频设备描述符。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -227,6 +243,8 @@ typedef void (*OH_AudioSession_CurrentInputDeviceChangedCallback)(OH_AudioDevice
 
 这个函数指针将指向用于监听当前输入设备变化事件的回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -245,6 +263,8 @@ typedef void (*OH_AudioSession_CurrentOutputDeviceChangedCallback)(OH_AudioDevic
 **描述：**
 
 这个函数指针将指向用于监听当前输出设备变化事件的回调函数。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -266,6 +286,8 @@ typedef int32_t (*OH_AudioSession_DeactivatedCallback)(OH_AudioSession_Deactivat
 
 这个函数指针将指向用于监听音频会话停用事件的回调函数。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -283,6 +305,8 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioSessionManager(OH_AudioSessionMana
 **描述：**
 
 获取音频会话管理器。使用音频会话管理器相关功能，首先需要获取音频会话管理器实例。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -307,6 +331,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_ActivateAudioSession(OH_AudioSessio
 **描述：**
 
 激活音频会话。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -333,6 +359,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_DeactivateAudioSession(OH_AudioSess
 
 停用音频会话。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -357,6 +385,8 @@ bool OH_AudioSessionManager_IsAudioSessionActivated(OH_AudioSessionManager *audi
 
 检查音频会话是否已激活。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -380,6 +410,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterSessionDeactivatedCallback(
 **描述：**
 
 注册音频会话停用事件回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -406,6 +438,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterSessionDeactivatedCallbac
 
 取消注册音频会话停用事件回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -430,6 +464,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetScene(OH_AudioSessionManager *au
 **描述：**
 
 设置音频会话场景参数。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -456,6 +492,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterStateChangeCallback(OH_Audi
 
 注册音频会话状态变更事件回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -480,6 +518,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterStateChangeCallback(OH_Au
 **描述：**
 
 取消音频会话状态变更事件回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -506,6 +546,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetDefaultOutputDevice(OH_AudioSess
 
 设置默认本机内置发声设备。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -530,6 +572,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetDefaultOutputDevice(OH_AudioSess
 **描述：**
 
 获取通过[OH_AudioSessionManager_SetDefaultOutputDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_setdefaultoutputdevice)设置的默认发声设备。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -556,6 +600,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevices(OH_AudioSessionManag
 
 释放音频设备描述符数组对象。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -580,6 +626,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterCurrentOutputDeviceChangeCa
 **描述：**
 
 注册当前输出设备变化回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 20
 
@@ -606,6 +654,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterCurrentOutputDeviceChange
 
 取消注册当前输出设备变化回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 20
 
 **参数：**
@@ -630,6 +680,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetAvailableDevices(OH_AudioSession
 **描述：**
 
 获取音频可选设备列表。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -657,6 +709,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterAvailableDevicesChangeCallb
 
 注册可用设备更改回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -683,6 +737,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterAvailableDevicesChangeCal
 
 取消注册可用设备更改回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -707,6 +763,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SelectMediaInputDevice(OH_AudioSess
 **描述：**
 
 设置媒体输入设备。此功能不适用于呼叫录音，即SourceType为SOURCE_TYPE_VOICE_COMMUNICATION的场景不适用。 <br>在存在更高优先级的并发录音流的场景中，应用程序实际使用的输入设备可能与所选设备不同。 <br>应用程序可以使用[OH_AudioSessionManager_RegisterCurrentInputDeviceChangeCallback](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_registercurrentinputdevicechangecallback)注册一个回调来监听实际的输入设备。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -733,6 +791,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetSelectedMediaInputDevice(OH_Audi
 
 获得通过[OH_AudioSessionManager_SelectMediaInputDevice](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_selectmediainputdevice)设置的媒体输入设备。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -757,6 +817,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetBluetoothAndNearlinkPreferredRec
 **描述：**
 
 设置在使用蓝牙或星闪进行录音时，应用程序的设备偏好分类。应用程序可以在蓝牙或星闪连接之前设置此分类，系统将在设备连接时优先使用蓝牙或星闪进行录音。 <br>在更高优先级的并发录音流的场景中，应用程序实际使用的输入设备可能与当前设置的偏好设备不同。 <br>应用程序可以使用[OH_AudioSessionManager_RegisterCurrentInputDeviceChangeCallback](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_registercurrentinputdevicechangecallback)注册一个回调来监听实际的输入设备。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -783,6 +845,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_GetBluetoothAndNearlinkPreferredRec
 
 获取应用程序设置的在使用蓝牙或星闪进行录音时的设备偏好分类。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -807,6 +871,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_RegisterCurrentInputDeviceChangeCal
 **描述：**
 
 注册音频会话管理器的输入设备更改回调。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -833,6 +899,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_UnregisterCurrentInputDeviceChangeC
 
 取消注册音频会话管理器的输入设备更改回调。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 21
 
 **参数：**
@@ -857,6 +925,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_ReleaseDevice(OH_AudioSessionManage
 **描述：**
 
 释放音频设备描述符对象。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 21
 
@@ -883,6 +953,8 @@ bool OH_AudioSessionManager_IsOtherMediaPlaying(OH_AudioSessionManager *audioSes
 
 检查是否有其他应用正在播放MUSIC、MOVIE、AUDIOBOOK、GAME四种媒体类型的音频，已激活媒体类型的音频会话也将会被检查。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -906,6 +978,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_EnableMuteSuggestionWhenMixWithOthe
 **描述：**
 
 启用混音播放下接收静音播放建议通知功能。通常，当使用混音模式时，如果有其他应用的音频同时播放，此时两者会混合播放。部分场景下（如游戏或广播），应用可以通过启用静音建议通知，以为用户提供更好的体验。如果启用此功能， 当订阅音频会话状态更改事件后静音建议和取消静音建议提示将通过[OH_AudioSession_StateChangedCallback](capi-native-audio-session-manager-h.md#oh_audiosession_statechangedcallback)回调发送，该回调由 [OH_AudioSessionManager_RegisterStateChangeCallback](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_registerstatechangecallback)注册。 <br>收到静音建议表示其他应用程序开始播放音频，且播放的音频和本应用的音频不能混音。此功能仅支持已设置[OH_AudioSession_Scene](capi-native-audio-session-manager-h.md#oh_audiosession_scene)并激活模式为 [OH_AudioSession_ConcurrencyMode](capi-native-audio-session-base-h.md#oh_audiosession_concurrencymode).CONCURRENCY_MIX_WITH_OTHERS的音频会话使用。 <br>并且仅在激活音频会话期间生效一次，每次激活音频会话前都必须重新启用。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 23
 
@@ -932,6 +1006,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetBehavior(OH_AudioSessionManager 
 
 设置音频会话行为参数（支持多种标志位的组合使用）。当音频会话在激活状态时调用此接口后，必须重新调用 接口[OH_AudioSessionManager_ActivateAudioSession](capi-native-audio-session-manager-h.md#oh_audiosessionmanager_activateaudiosession)使其生效。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 24
 
 **参数：**
@@ -956,6 +1032,8 @@ OH_AudioCommon_Result OH_AudioSessionManager_SetCaptureMuteHint(OH_AudioSessionM
 **描述：**
 
 应用将当前音频会话内录音流的自身静音状态传递给系统音频模块。该接口用于向系统音频模块上报当前音频会话内录音流的静音状态，不会改变录音流的实际静音状态。当前仅在部分PC/2in1设备上， 系统音频模块会基于设置的状态调整策略以降低功耗。该接口仅在当前音频会话存在运行中的录音流时允许调用，否则返回错误码AUDIOCOMMON_RESULT_ERROR_ILLEGAL_STATE。若某条录音流同时调用了流级接口和本接口， 流级接口设置优先级更高，以流级接口设置值为准。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 24
 

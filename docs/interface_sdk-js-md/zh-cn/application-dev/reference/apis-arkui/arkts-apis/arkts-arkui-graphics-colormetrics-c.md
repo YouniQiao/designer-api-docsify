@@ -198,7 +198,7 @@ static resourceColor(color: ResourceColor): ColorMetrics
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [180003](../errorcode-event.md#180003-该事件不是克隆事件) | Failed to obtain the color resource. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause: 1. The type of the input color parameter is not ResourceColor. 2. The format of the input color string is not RGB or RGBA. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible cause:         1. The type of the input color parameter is not ResourceColor.         2. The format of the input color string is not RGB or RGBA. |
 
 ## rgba
 

@@ -52,6 +52,7 @@ This API can be properly called on devices other than wearables and TVs. If it i
 | [1600010](../errorcode-notification.md#1600010-distributed-operation-failed) | Distributed operation failed. |
 | [1600012](../errorcode-notification.md#1600012-insufficient-memory-space) | No memory space. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -78,3 +79,5 @@ notificationManager.setDistributedEnableByBundles(bundles, deviceType).then(() =
     console.error(`setDistributedEnableByBundles failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

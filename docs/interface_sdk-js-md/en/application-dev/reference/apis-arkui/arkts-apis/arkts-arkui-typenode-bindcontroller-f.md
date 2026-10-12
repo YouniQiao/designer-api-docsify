@@ -155,7 +155,7 @@ Binds the [Scroller](../arkts-components/arkts-arkui-scroll-comp-scroller-c.md) 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error. 2. the node is null or undefined. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. the type of the node is error.         2. the node is null or undefined. |
 | [100021](../errorcode-node.md#100021-framenode-not-modifiable) | The FrameNode is not modifiable. Introduced in API version 15 and will not be thrown above API version 24.<br>**Applicable version:** 15 - 24 |
 
 **Examples**

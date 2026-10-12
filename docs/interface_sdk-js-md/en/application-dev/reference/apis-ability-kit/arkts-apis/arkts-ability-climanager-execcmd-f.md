@@ -51,4 +51,4 @@ If an event callback is provided in the options, the system automatically subscr
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application.<br>**Applicable version:** 26.0.0 |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Failed to call the API due to limited device capabilities.<br>**Applicable version:** 26.0.1 and later |
 | [35600031](../errorcode-ability.md#35600031-maximum-number-of-concurrent-tools-reached) | Maximum number of processes has been reached. |
-| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
+| [35600050](../errorcode-ability.md#35600050-occasional-error) | System Error. 1. Failed to connect to the system service;         2. The system service failed to communicate with the dependent module. |

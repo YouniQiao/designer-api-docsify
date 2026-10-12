@@ -11,7 +11,7 @@
 
 | KeyboardController | 键盘控制器对象，提供隐藏键盘、退出当前输入类型等能力。通过订阅`inputStart`事件在回调中获取实例。 |  
 | Panel | 输入法面板对象，提供面板页面内容加载、大小调整、位置移动、显示/隐藏、面板状态切换、隐私模式设置、沉浸模式与效果设置、面板矩形区域预设置、热区更新等能力。通过`createPanel()`获取实例。 |  
-| MessageHandler | 自定义通信对象，用于接收编辑框应用发送的自定义通信数据，并提供终止通知回调。通过`InputClient.recvMessage()`注册。 |<br> <br>输入法应用的典型使用流程涉及多个API的组合调用，核心流程为：获取InputMethodAbility实例 -&gt; 订阅inputStart事件 -&gt; 在回调中获取KeyboardController和InputClient -&gt; 创建Panel -&gt; 加载面板页面内容 -&gt; 通过InputClient操作编辑框文本 -&gt; 通过KeyboardController控制键盘显隐。
+| MessageHandler | 自定义通信对象，用于接收编辑框应用发送的自定义通信数据，并提供终止通知回调。通过`InputClient.recvMessage()`注册。 |<br> <br>输入法应用的典型使用流程涉及多个API的组合调用，核心流程为：获取InputMethodAbility实例 -> 订阅inputStart事件 -> 在回调中获取KeyboardController和InputClient -> 创建Panel -> 加载面板页面内容 -> 通过InputClient操作编辑框文本 -> 通过KeyboardController控制键盘显隐。
 
 **起始版本：** 8
 

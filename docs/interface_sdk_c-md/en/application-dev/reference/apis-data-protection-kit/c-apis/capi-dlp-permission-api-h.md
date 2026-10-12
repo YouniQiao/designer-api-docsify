@@ -6,6 +6,8 @@ Defines the APIs for cross-device file access management, encrypted storage, and
 
 **Library**: libohdlp_permission.so
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 **Related module**: [DlpPermissionApi](capi-dlppermissionapi.md)
@@ -42,6 +44,8 @@ enum DLP_ErrCode
 
 Enumerates the DLP error codes.
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 | Enum item | Description |
@@ -65,6 +69,8 @@ enum DLP_FileAccess
 
 Enumerates the permissions on a DLP file.
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 | Enum item | Description |
@@ -86,6 +92,8 @@ DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t 
 **Description**
 
 Obtains the permission information of this DLP sandbox.
+
+**System capability**: SystemCapability.Security.DataLossPrevention
 
 **Since**: 14
 
@@ -112,6 +120,8 @@ DLP_ErrCode OH_DLP_GetOriginalFileName(const char *fileName, char **originalFile
 
 Obtains the original file name of a DLP file.
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 **Parameters**:
@@ -137,6 +147,8 @@ DLP_ErrCode OH_DLP_IsInSandbox(bool *isInSandbox)
 
 Checks whether this application is running in a DLP sandbox environment.
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 **Parameters**:
@@ -160,6 +172,8 @@ DLP_ErrCode OH_DLP_SetSandboxAppConfig(const char *configInfo)
 **Description**
 
 Sets sandbox application configuration.
+
+**System capability**: SystemCapability.Security.DataLossPrevention
 
 **Since**: 14
 
@@ -185,6 +199,8 @@ DLP_ErrCode OH_DLP_GetSandboxAppConfig(char **configInfo)
 
 Obtains the sandbox application configuration.
 
+**System capability**: SystemCapability.Security.DataLossPrevention
+
 **Since**: 14
 
 **Parameters**:
@@ -208,6 +224,8 @@ DLP_ErrCode OH_DLP_CleanSandboxAppConfig()
 **Description**
 
 Cleans the sandbox application configuration.
+
+**System capability**: SystemCapability.Security.DataLossPrevention
 
 **Since**: 14
 

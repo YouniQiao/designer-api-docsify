@@ -43,6 +43,7 @@ Registers a mission status listener. This API uses an asynchronous callback to r
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -81,6 +82,8 @@ try {
   console.error(`Failed to register mission listener. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="registermissionlistener2"></a>
@@ -125,6 +128,7 @@ Registers a mission status listener. This API uses a promise to return the resul
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br>2. Incorrect parameter types; 3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -160,3 +164,5 @@ try {
     console.error('registerMissionListener failed, cause: ' + JSON.stringify(error));
 }
 ```
+
+<!--DelEnd-->

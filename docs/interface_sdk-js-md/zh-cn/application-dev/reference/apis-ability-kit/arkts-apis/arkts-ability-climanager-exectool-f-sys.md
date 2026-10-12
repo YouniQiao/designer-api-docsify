@@ -51,4 +51,4 @@ function execTool(toolName: string, subCommand: string, args: Record<string, Obj
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. Interface caller is not a system app. |
 | [35600030](../errorcode-ability.md#35600030-cli工具不存在) | No tool with the specified name exists. |
 | [35600031](../errorcode-ability.md#35600031-工具并发数已达上限) | Maximum number of processes has been reached. |
-| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed; 2. The system service failed to communicate with the dependent module. |
+| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Connect to system service failed;         2. The system service failed to communicate with the dependent module. |

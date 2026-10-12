@@ -44,6 +44,7 @@ Sets an uninstallation disposed rule for an application or an application clone.
 | [17700074](../errorcode-bundle.md#17700074-invalid-appidentifier) | The specified appIdentifier is invalid. |
 | [17700075](../errorcode-bundle.md#17700075-bundle-name-specified-in-want-is-inconsistent-with-that-of-the-caller) | The specified bundleName of want is not the same with caller. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,3 +71,5 @@ try {
   console.error('setUninstallDisposedRule failed ' + message);
 }
 ```
+
+<!--DelEnd-->

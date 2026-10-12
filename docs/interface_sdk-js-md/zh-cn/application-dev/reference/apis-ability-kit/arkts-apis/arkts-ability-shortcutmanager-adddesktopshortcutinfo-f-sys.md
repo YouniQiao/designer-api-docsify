@@ -50,6 +50,7 @@ function addDesktopShortcutInfo(shortcutInfo: ShortcutInfo, userId: number): Pro
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 | [17700070](../errorcode-bundle.md#17700070-指定的快捷方式id不合法) | The specified shortcut id is illegal. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -94,3 +95,5 @@ struct ShortcutExample {
   }
 }
 ```
+
+<!--DelEnd-->

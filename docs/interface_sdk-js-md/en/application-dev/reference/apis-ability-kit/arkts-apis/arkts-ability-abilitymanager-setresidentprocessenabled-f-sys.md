@@ -49,6 +49,7 @@ Enables or disables the resident process of an application.
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Internal error. |
 | [16200006](../errorcode-ability.md#16200006-no-permission-to-enable-or-disable-the-resident-process) | The caller application can only set the resident status of the configured process. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,3 +73,5 @@ try {
   console.error(`setResidentProcessEnabled failed, code is ${code}, message is ${message}`);
 }
 ```
+
+<!--DelEnd-->

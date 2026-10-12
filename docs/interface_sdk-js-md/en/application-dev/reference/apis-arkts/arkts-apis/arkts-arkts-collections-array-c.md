@@ -317,7 +317,7 @@ Copies elements within a given range from this ArkTS array to another position i
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | ArkTS array after being modified. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| Array&lt;T&gt; | ArkTS array after being modified. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameter types.         3. Parameter verification failed. |
 
 **Error codes:**
 
@@ -866,7 +866,7 @@ Check whether the input parameter is an ArkTS array.
 
 | Type | Description |
 | --- | --- |
-| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| boolean | Check result. The value **true** is returned if the input parameter is an ArkTS array; otherwise, **false** is returned. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameter types.         3. Parameter verification failed. |
 
 ## join
 
@@ -1029,7 +1029,7 @@ Creates an ArkTS array with a variable number of parameters.
 
 | Type | Description |
 | --- | --- |
-| Array&lt;T&gt; | Newly created ArkTS array. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| Array&lt;T&gt; | Newly created ArkTS array. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameter types.         3. Parameter verification failed. |
 
 ## pop
 

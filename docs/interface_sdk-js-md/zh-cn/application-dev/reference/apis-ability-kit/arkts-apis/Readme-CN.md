@@ -8,11 +8,6 @@
   - [DataAbilityResult](arkts-ability-ability-dataabilityresult-t.md)
   - [PacMap](arkts-ability-ability-pacmap-t.md)
   - [StartAbilityParameter](arkts-ability-ability-startabilityparameter-t.md)
-- [@ohos.ability.dataUriUtils（DataUriUtils模块）](arkts-ability-ability-datauriutils.md)
-  - [attachId](arkts-ability-datauriutils-attachid-depr-f.md)
-  - [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md)
-  - [getId](arkts-ability-datauriutils-getid-depr-f.md)
-  - [updateId](arkts-ability-datauriutils-updateid-depr-f.md)
 - [@ohos.ability.errorCode（ErrorCode）](arkts-ability-ability-errorcode.md)
   - [ErrorCode](arkts-ability-ability-errorcode-errorcode-e.md)
 - [@ohos.ability.featureAbility（FeatureAbility模块）](arkts-ability-ability-featureability.md)
@@ -36,12 +31,12 @@
   - [ErrorCode](arkts-ability-featureability-errorcode-e.md)
 - [@ohos.ability.particleAbility（ParticleAbility模块）](arkts-ability-ability-particleability.md)
   - [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md)
-  - [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md)
   - [connectAbility](arkts-ability-particleability-connectability-f.md)
   - [disconnectAbility](arkts-ability-particleability-disconnectability-f.md)
   - [startAbility](arkts-ability-particleability-startability-f.md)
-  - [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md)
   - [terminateSelf](arkts-ability-particleability-terminateself-f.md)
+  - [cancelBackgroundRunning](arkts-ability-particleability-cancelbackgroundrunning-f.md)
+  - [startBackgroundRunning](arkts-ability-particleability-startbackgroundrunning-f.md)
   - [ErrorCode](arkts-ability-particleability-errorcode-e.md)
 - [@ohos.ability.screenLockFileManager（锁屏敏感数据管理）](arkts-ability-ability-screenlockfilemanager.md)
   - [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md)
@@ -57,12 +52,6 @@
   - [DataType](arkts-ability-screenlockfilemanager-datatype-e.md)
   - [KeyStatus](arkts-ability-screenlockfilemanager-keystatus-e.md)
   - [ReleaseStatus](arkts-ability-screenlockfilemanager-releasestatus-e.md)
-- [@ohos.ability.wantConstant（wantConstant）](arkts-ability-ability-wantconstant.md)
-  - [Action](arkts-ability-wantconstant-action-depr-e.md)
-  - [Entity](arkts-ability-wantconstant-entity-depr-e.md)
-  - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
-  <!--Del-->
-  - [Flags（系统接口）](arkts-ability-wantconstant-flags-depr-e-sys.md)<!--DelEnd-->
 - [@ohos.abilityAccessCtrl（程序访问控制管理）](arkts-ability-abilityaccessctrl.md)
   - [abilityAccessCtrl](arkts-ability-abilityaccessctrl-n.md)
     - [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md)
@@ -175,8 +164,6 @@
   <!--Del-->
   - [notifyDebugAssertResult（系统接口）](arkts-ability-abilitymanager-notifydebugassertresult-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [notifySaveAsResult（系统接口）](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [off（系统接口）](arkts-ability-abilitymanager-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [offPreloadedUIExtensionAbilityDestroyed（系统接口）](arkts-ability-abilitymanager-offpreloadeduiextensionabilitydestroyed-f-sys.md)<!--DelEnd-->
@@ -197,6 +184,8 @@
   - [setResidentProcessEnabled（系统接口）](arkts-ability-abilitymanager-setresidentprocessenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [updateConfiguration（系统接口）](arkts-ability-abilitymanager-updateconfiguration-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [notifySaveAsResult（系统接口）](arkts-ability-abilitymanager-notifysaveasresult-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AtomicServiceStartupRule（系统接口）](arkts-ability-abilitymanager-atomicservicestartuprule-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -878,57 +867,6 @@
   <!--Del-->
   - [InvokeResult（系统接口）](arkts-ability-functionmanager-invokeresult-i-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.application.abilityManager](arkts-ability-application-abilitymanager.md)<!--DelEnd-->
-  <!--Del-->
-  - [getAbilityRunningInfos（系统接口）](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [updateConfiguration（系统接口）](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AbilityState（系统接口）](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md)<!--DelEnd-->
-- [@ohos.application.appManager（appManager）](arkts-ability-application-appmanager.md)
-  <!--Del-->
-  - [clearUpApplicationData（系统接口）](arkts-ability-appmanager-clearupapplicationdata-depr-f-sys.md)<!--DelEnd-->
-  - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
-  <!--Del-->
-  - [getForegroundApplications（系统接口）](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md)<!--DelEnd-->
-  - [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md)
-  - [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md)
-  - [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md)
-  <!--Del-->
-  - [killProcessesByBundleName（系统接口）](arkts-ability-appmanager-killprocessesbybundlename-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [killProcessWithAccount（系统接口）](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [registerApplicationStateObserver（系统接口）](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unregisterApplicationStateObserver（系统接口）](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
-- [@ohos.application.Configuration（Configuration）](arkts-ability-application-configuration.md)
-  - [Configuration](arkts-ability-application-configuration-configuration-depr-i.md)
-- [@ohos.application.ConfigurationConstant（ConfigurationConstant）](arkts-ability-application-configurationconstant.md)
-  - [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
-<!--Del-->
-- [@ohos.application.missionManager](arkts-ability-application-missionmanager.md)<!--DelEnd-->
-  <!--Del-->
-  - [clearAllMissions（系统接口）](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [clearMission（系统接口）](arkts-ability-missionmanager-clearmission-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getMissionInfo（系统接口）](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getMissionInfos（系统接口）](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getMissionSnapShot（系统接口）](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [lockMission（系统接口）](arkts-ability-missionmanager-lockmission-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [moveMissionToFront（系统接口）](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [registerMissionListener（系统接口）](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unlockMission（系统接口）](arkts-ability-missionmanager-unlockmission-depr-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [unregisterMissionListener（系统接口）](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
-<!--Del-->
 - [@ohos.application.uriPermissionManager（URI权限管理）](arkts-ability-application-uripermissionmanager.md)<!--DelEnd-->
   <!--Del-->
   - [grantUriPermission（系统接口）](arkts-ability-uripermissionmanager-granturipermission-f-sys.md)<!--DelEnd-->
@@ -938,53 +876,6 @@
   - [grantUriPermissionByKeyAsCaller（系统接口）](arkts-ability-uripermissionmanager-granturipermissionbykeyascaller-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [revokeUriPermission（系统接口）](arkts-ability-uripermissionmanager-revokeuripermission-f-sys.md)<!--DelEnd-->
-- [@ohos.application.Want（Want）](arkts-ability-application-want.md)
-  - [Want](arkts-ability-application-want-want-depr-c.md)
-- [@ohos.bundle](arkts-ability-bundle.md)
-  <!--Del-->
-  - [cleanBundleCacheFiles（系统接口）](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md)<!--DelEnd-->
-  - [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md)
-  - [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)
-  - [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md)
-  - [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md)
-  - [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md)
-  - [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)
-  <!--Del-->
-  - [getApplicationInfos（系统接口）](arkts-ability-bundle-getapplicationinfos-f-sys.md)<!--DelEnd-->
-  - [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md)
-  - [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)
-  <!--Del-->
-  - [getBundleInfos（系统接口）](arkts-ability-bundle-getbundleinfos-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getBundleInstaller（系统接口）](arkts-ability-bundle-getbundleinstaller-f-sys.md)<!--DelEnd-->
-  - [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md)
-  - [getNameForUid](arkts-ability-bundle-getnameforuid-f.md)
-  <!--Del-->
-  - [getPermissionDef（系统接口）](arkts-ability-bundle-getpermissiondef-f-sys.md)<!--DelEnd-->
-  - [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md)
-  - [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md)
-  - [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md)
-  <!--Del-->
-  - [setAbilityEnabled（系统接口）](arkts-ability-bundle-setabilityenabled-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [setApplicationEnabled（系统接口）](arkts-ability-bundle-setapplicationenabled-f-sys.md)<!--DelEnd-->
-  - [BundleOptions](arkts-ability-bundle-bundleoptions-i.md)
-  - [AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md)
-  - [AbilityType](arkts-ability-bundle-abilitytype-e.md)
-  - [BundleFlag](arkts-ability-bundle-bundleflag-e.md)
-  - [ColorMode](arkts-ability-bundle-colormode-e.md)
-  - [DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)
-  - [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
-  - [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
-  - [LaunchMode](arkts-ability-bundle-launchmode-e.md)
-  <!--Del-->
-  - [ModuleRemoveFlag（系统接口）](arkts-ability-bundle-moduleremoveflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [QueryShortCutFlag（系统接口）](arkts-ability-bundle-queryshortcutflag-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [ShortcutExistence（系统接口）](arkts-ability-bundle-shortcutexistence-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [SignatureCompareResult（系统接口）](arkts-ability-bundle-signaturecompareresult-e-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.bundle.appControl（appControl模块）](arkts-ability-bundle-appcontrol.md)<!--DelEnd-->
   <!--Del-->
@@ -1050,8 +941,6 @@
   - [enableDynamicIcon（系统接口）](arkts-ability-bundlemanager-enabledynamicicon-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [filterBundleListByDeviceModeDistributionPolicies（系统接口）](arkts-ability-bundlemanager-filterbundlelistbydevicemodedistributionpolicies-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getAbilityIcon（系统接口）](arkts-ability-bundlemanager-getabilityicon-f-sys.md)<!--DelEnd-->
   - [getAbilityInfo](arkts-ability-bundlemanager-getabilityinfo-f.md)
   <!--Del-->
   - [getAbilityLabel（系统接口）](arkts-ability-bundlemanager-getabilitylabel-f-sys.md)<!--DelEnd-->
@@ -1199,6 +1088,8 @@
   - [switchUninstallState（系统接口）](arkts-ability-bundlemanager-switchuninstallstate-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [verifyAbc（系统接口）](arkts-ability-bundlemanager-verifyabc-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getAbilityIcon（系统接口）](arkts-ability-bundlemanager-getabilityicon-f-sys.md)<!--DelEnd-->
   - [AbilityInfo](arkts-ability-bundlemanager-abilityinfo-t.md)
   - [AlternateIconInfo](arkts-ability-bundlemanager-alternateiconinfo-t.md)
   - [AppCloneIdentity](arkts-ability-bundlemanager-appcloneidentity-t.md)
@@ -1377,22 +1268,6 @@
   <!--Del-->
   - [UpgradeFlag（系统接口）](arkts-ability-freeinstall-upgradeflag-e-sys.md)<!--DelEnd-->
 <!--Del-->
-- [@ohos.bundle.innerBundleManager（innerBundleManager模块）](arkts-ability-bundle-innerbundlemanager.md)<!--DelEnd-->
-  <!--Del-->
-  - [innerBundleManager（系统接口）](arkts-ability-innerbundlemanager-n.md)<!--DelEnd-->
-    <!--Del-->
-    - [getAllLauncherAbilityInfos（系统接口）](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [getLauncherAbilityInfos（系统接口）](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [getShortcutInfos（系统接口）](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [off（系统接口）](arkts-ability-innerbundlemanager-off-f-sys.md)<!--DelEnd-->
-    <!--Del-->
-    - [on（系统接口）](arkts-ability-innerbundlemanager-on-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [BundleStatusCallback（系统接口）](arkts-ability-bundlestatuscallback-t-sys.md)<!--DelEnd-->
-<!--Del-->
 - [@ohos.bundle.installer（installer模块）](arkts-ability-bundle-installer.md)<!--DelEnd-->
   <!--Del-->
   - [getBundleInstaller（系统接口）](arkts-ability-installer-getbundleinstaller-f-sys.md)<!--DelEnd-->
@@ -1487,27 +1362,6 @@
   - [SkillInfo](arkts-ability-skillmanager-skillinfo-t.md)
   - [SkillType](arkts-ability-skillmanager-skilltype-t.md)
   - [SkillInfoFlag](arkts-ability-skillmanager-skillinfoflag-e.md)
-- [@ohos.continuation.continuationManager](arkts-ability-continuation-continuationmanager.md)
-  - [off](arkts-ability-continuationmanager-off-f.md)
-  - [on](arkts-ability-continuationmanager-on-f.md)
-  - [register](arkts-ability-continuationmanager-register-f.md)
-  - [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md)
-  - [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md)
-  - [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md)
-  - [unregister](arkts-ability-continuationmanager-unregister-f.md)
-  - [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md)
-  - [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md)
-  - [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md)
-  - [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md)
-  - [ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)
-  - [ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md)
-  - [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md)
-<!--Del-->
-- [@ohos.distributedBundle（分布式包管理）](arkts-ability-distributedbundle.md)<!--DelEnd-->
-  <!--Del-->
-  - [getRemoteAbilityInfo（系统接口）](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getRemoteAbilityInfos（系统接口）](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md)<!--DelEnd-->
 <!--Del-->
 - [@ohos.distributedMissionManager](arkts-ability-distributedmissionmanager.md)<!--DelEnd-->
   <!--Del-->
@@ -1588,6 +1442,152 @@
   - [PermissionUsageFlag（系统接口）](arkts-ability-privacymanager-permissionusageflag-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PermissionUsedType（系统接口）](arkts-ability-privacymanager-permissionusedtype-e-sys.md)<!--DelEnd-->
+- [@ohos.ability.dataUriUtils（DataUriUtils模块）](arkts-ability-ability-datauriutils.md)
+  - [attachId](arkts-ability-datauriutils-attachid-depr-f.md)
+  - [deleteId](arkts-ability-datauriutils-deleteid-depr-f.md)
+  - [getId](arkts-ability-datauriutils-getid-depr-f.md)
+  - [updateId](arkts-ability-datauriutils-updateid-depr-f.md)
+- [@ohos.ability.wantConstant（wantConstant）](arkts-ability-ability-wantconstant.md)
+  - [Action](arkts-ability-wantconstant-action-depr-e.md)
+  - [Entity](arkts-ability-wantconstant-entity-depr-e.md)
+  - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
+  <!--Del-->
+  - [Flags（系统接口）](arkts-ability-wantconstant-flags-depr-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.application.abilityManager](arkts-ability-application-abilitymanager.md)<!--DelEnd-->
+  <!--Del-->
+  - [getAbilityRunningInfos（系统接口）](arkts-ability-abilitymanager-getabilityrunninginfos-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [updateConfiguration（系统接口）](arkts-ability-abilitymanager-updateconfiguration-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AbilityState（系统接口）](arkts-ability-abilitymanager-abilitystate-depr-e-sys.md)<!--DelEnd-->
+- [@ohos.application.appManager（appManager）](arkts-ability-application-appmanager.md)
+  <!--Del-->
+  - [clearUpApplicationData（系统接口）](arkts-ability-appmanager-clearupapplicationdata-depr-f-sys.md)<!--DelEnd-->
+  - [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-depr-f.md)
+  <!--Del-->
+  - [getForegroundApplications（系统接口）](arkts-ability-appmanager-getforegroundapplications-depr-f-sys.md)<!--DelEnd-->
+  - [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-depr-f.md)
+  - [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-depr-f.md)
+  - [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-depr-f.md)
+  <!--Del-->
+  - [killProcessesByBundleName（系统接口）](arkts-ability-appmanager-killprocessesbybundlename-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [killProcessWithAccount（系统接口）](arkts-ability-appmanager-killprocesswithaccount-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerApplicationStateObserver（系统接口）](arkts-ability-appmanager-registerapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterApplicationStateObserver（系统接口）](arkts-ability-appmanager-unregisterapplicationstateobserver-depr-f-sys.md)<!--DelEnd-->
+- [@ohos.application.Configuration（Configuration）](arkts-ability-application-configuration.md)
+  - [Configuration](arkts-ability-application-configuration-configuration-depr-i.md)
+- [@ohos.application.ConfigurationConstant（ConfigurationConstant）](arkts-ability-application-configurationconstant.md)
+  - [ColorMode](arkts-ability-configurationconstant-colormode-depr-e.md)
+<!--Del-->
+- [@ohos.application.missionManager](arkts-ability-application-missionmanager.md)<!--DelEnd-->
+  <!--Del-->
+  - [clearAllMissions（系统接口）](arkts-ability-missionmanager-clearallmissions-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [clearMission（系统接口）](arkts-ability-missionmanager-clearmission-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getMissionInfo（系统接口）](arkts-ability-missionmanager-getmissioninfo-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getMissionInfos（系统接口）](arkts-ability-missionmanager-getmissioninfos-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getMissionSnapShot（系统接口）](arkts-ability-missionmanager-getmissionsnapshot-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [lockMission（系统接口）](arkts-ability-missionmanager-lockmission-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [moveMissionToFront（系统接口）](arkts-ability-missionmanager-movemissiontofront-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [registerMissionListener（系统接口）](arkts-ability-missionmanager-registermissionlistener-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unlockMission（系统接口）](arkts-ability-missionmanager-unlockmission-depr-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [unregisterMissionListener（系统接口）](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
+- [@ohos.application.Want（Want）](arkts-ability-application-want.md)
+  - [Want](arkts-ability-application-want-want-depr-c.md)
+- [@ohos.bundle](arkts-ability-bundle.md)
+  <!--Del-->
+  - [cleanBundleCacheFiles（系统接口）](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md)<!--DelEnd-->
+  - [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md)
+  - [getAbilityInfo](arkts-ability-bundle-getabilityinfo-f.md)
+  - [getAbilityLabel](arkts-ability-bundle-getabilitylabel-f.md)
+  - [getAllApplicationInfo](arkts-ability-bundle-getallapplicationinfo-f.md)
+  - [getAllBundleInfo](arkts-ability-bundle-getallbundleinfo-f.md)
+  - [getApplicationInfo](arkts-ability-bundle-getapplicationinfo-f.md)
+  <!--Del-->
+  - [getApplicationInfos（系统接口）](arkts-ability-bundle-getapplicationinfos-f-sys.md)<!--DelEnd-->
+  - [getBundleArchiveInfo](arkts-ability-bundle-getbundlearchiveinfo-f.md)
+  - [getBundleInfo](arkts-ability-bundle-getbundleinfo-f.md)
+  <!--Del-->
+  - [getBundleInfos（系统接口）](arkts-ability-bundle-getbundleinfos-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getBundleInstaller（系统接口）](arkts-ability-bundle-getbundleinstaller-f-sys.md)<!--DelEnd-->
+  - [getLaunchWantForBundle](arkts-ability-bundle-getlaunchwantforbundle-f.md)
+  - [getNameForUid](arkts-ability-bundle-getnameforuid-f.md)
+  <!--Del-->
+  - [getPermissionDef（系统接口）](arkts-ability-bundle-getpermissiondef-f-sys.md)<!--DelEnd-->
+  - [isAbilityEnabled](arkts-ability-bundle-isabilityenabled-f.md)
+  - [isApplicationEnabled](arkts-ability-bundle-isapplicationenabled-f.md)
+  - [queryAbilityByWant](arkts-ability-bundle-queryabilitybywant-f.md)
+  <!--Del-->
+  - [setAbilityEnabled（系统接口）](arkts-ability-bundle-setabilityenabled-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [setApplicationEnabled（系统接口）](arkts-ability-bundle-setapplicationenabled-f-sys.md)<!--DelEnd-->
+  - [BundleOptions](arkts-ability-bundle-bundleoptions-i.md)
+  - [AbilitySubType](arkts-ability-bundle-abilitysubtype-e.md)
+  - [AbilityType](arkts-ability-bundle-abilitytype-e.md)
+  - [BundleFlag](arkts-ability-bundle-bundleflag-e.md)
+  - [ColorMode](arkts-ability-bundle-colormode-e.md)
+  - [DisplayOrientation](arkts-ability-bundle-displayorientation-e.md)
+  - [GrantStatus](arkts-ability-bundle-grantstatus-e.md)
+  - [InstallErrorCode](arkts-ability-bundle-installerrorcode-e.md)
+  - [LaunchMode](arkts-ability-bundle-launchmode-e.md)
+  <!--Del-->
+  - [ModuleRemoveFlag（系统接口）](arkts-ability-bundle-moduleremoveflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [QueryShortCutFlag（系统接口）](arkts-ability-bundle-queryshortcutflag-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ShortcutExistence（系统接口）](arkts-ability-bundle-shortcutexistence-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SignatureCompareResult（系统接口）](arkts-ability-bundle-signaturecompareresult-e-sys.md)<!--DelEnd-->
+<!--Del-->
+- [@ohos.bundle.innerBundleManager（innerBundleManager模块）](arkts-ability-bundle-innerbundlemanager.md)<!--DelEnd-->
+  <!--Del-->
+  - [innerBundleManager（系统接口）](arkts-ability-innerbundlemanager-n.md)<!--DelEnd-->
+    <!--Del-->
+    - [getAllLauncherAbilityInfos（系统接口）](arkts-ability-innerbundlemanager-getalllauncherabilityinfos-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [getLauncherAbilityInfos（系统接口）](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [getShortcutInfos（系统接口）](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [off（系统接口）](arkts-ability-innerbundlemanager-off-f-sys.md)<!--DelEnd-->
+    <!--Del-->
+    - [on（系统接口）](arkts-ability-innerbundlemanager-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BundleStatusCallback（系统接口）](arkts-ability-bundlestatuscallback-t-sys.md)<!--DelEnd-->
+- [@ohos.continuation.continuationManager](arkts-ability-continuation-continuationmanager.md)
+  - [off](arkts-ability-continuationmanager-off-f.md)
+  - [on](arkts-ability-continuationmanager-on-f.md)
+  - [register](arkts-ability-continuationmanager-register-f.md)
+  - [registerContinuation](arkts-ability-continuationmanager-registercontinuation-f.md)
+  - [startContinuationDeviceManager](arkts-ability-continuationmanager-startcontinuationdevicemanager-f.md)
+  - [startDeviceManager](arkts-ability-continuationmanager-startdevicemanager-f.md)
+  - [unregister](arkts-ability-continuationmanager-unregister-f.md)
+  - [unregisterContinuation](arkts-ability-continuationmanager-unregistercontinuation-f.md)
+  - [updateConnectStatus](arkts-ability-continuationmanager-updateconnectstatus-f.md)
+  - [updateContinuationState](arkts-ability-continuationmanager-updatecontinuationstate-f.md)
+  - [ContinuationExtraParams](arkts-ability-continuationmanager-continuationextraparams-t.md)
+  - [ContinuationResult](arkts-ability-continuationmanager-continuationresult-t.md)
+  - [ContinuationMode](arkts-ability-continuationmanager-continuationmode-e.md)
+  - [DeviceConnectState](arkts-ability-continuationmanager-deviceconnectstate-e.md)
+<!--Del-->
+- [@ohos.distributedBundle（分布式包管理）](arkts-ability-distributedbundle.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteAbilityInfo（系统接口）](arkts-ability-distributedbundle-getremoteabilityinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [getRemoteAbilityInfos（系统接口）](arkts-ability-distributedbundle-getremoteabilityinfos-f-sys.md)<!--DelEnd-->
 - [@ohos.wantAgent（WantAgent模块）](arkts-ability-wantagent.md)
   - [wantAgent](arkts-ability-wantagent-depr-n.md)
     - [cancel](arkts-ability-wantagent-cancel-depr-f.md)
@@ -1855,8 +1855,6 @@
     - [ProcessData](arkts-ability-processdata-c.md)
   - [ProcessInformation（ProcessInformation）](arkts-ability-processinformation.md)
     - [ProcessInformation](arkts-ability-processinformation-i.md)
-  - [ProcessRunningInfo（ProcessRunningInfo）](arkts-ability-processrunninginfo.md)
-    - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
   <!--Del-->
   - [RunningAppClone（分身应用运行信息）](arkts-ability-runningappclone.md)<!--DelEnd-->
     <!--Del-->
@@ -1912,7 +1910,10 @@
     - [ViewData](arkts-ability-viewdata-i.md)
     <!--Del-->
     - [ViewData（系统接口）](arkts-ability-viewdata-i-sys.md)<!--DelEnd-->
+  - [ProcessRunningInfo（ProcessRunningInfo）](arkts-ability-processrunninginfo.md)
+    - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
 - bundle<!--arkts-abilitykit-bundle-->
+  - [hapModuleInfo（HapModuleInfo）](arkts-ability-hapmoduleinfo.md)
   - [abilityInfo（AbilityInfo）](arkts-ability-abilityinfo.md)
     - [AbilityInfo](arkts-ability-abilityinfo-depr-i.md)
   - [applicationInfo（ApplicationInfo）](arkts-ability-applicationinfo.md)
@@ -1937,7 +1938,6 @@
     - [CustomizeData](arkts-ability-customizedata-depr-i.md)
   - [elementName（ElementName）](arkts-ability-elementname.md)
     - [ElementName](arkts-ability-elementname-depr-i.md)
-  - [hapModuleInfo（HapModuleInfo）](arkts-ability-hapmoduleinfo.md)
   <!--Del-->
   - [launcherAbilityInfo（LauncherAbilityInfo）](arkts-ability-launcherabilityinfo.md)<!--DelEnd-->
     <!--Del-->

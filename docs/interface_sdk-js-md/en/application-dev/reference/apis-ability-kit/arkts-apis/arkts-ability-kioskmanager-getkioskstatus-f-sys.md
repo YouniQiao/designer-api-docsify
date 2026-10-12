@@ -38,6 +38,7 @@ Obtains the Kiosk mode status information, including whether the system is in ki
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 | [16000050](../errorcode-ability.md#16000050-internal-error) | Failed to connect to the system service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,3 +68,5 @@ struct Index {
   }
 }
 ```
+
+<!--DelEnd-->

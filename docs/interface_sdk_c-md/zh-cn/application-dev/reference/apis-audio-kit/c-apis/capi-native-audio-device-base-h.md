@@ -6,6 +6,8 @@
 
 **库：** libohaudio.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **相关模块：** [OHAudio](capi-ohaudio.md)
@@ -56,6 +58,8 @@ enum OH_AudioDevice_ChangeType
 
 定义音频设备更改类型。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -73,6 +77,8 @@ enum OH_AudioDevice_Role
 
 定义音频设备角色。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -89,6 +95,8 @@ enum OH_AudioDevice_Type
 **描述：**
 
 定义音频设备类型。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -123,6 +131,8 @@ enum OH_AudioDevice_Flag
 
 定义音频设备标志。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -141,6 +151,8 @@ enum OH_AudioDevice_Usage
 **描述：**
 
 定义可获取的设备种类。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -163,6 +175,8 @@ enum OH_AudioDevice_BlockStatus
 
 声明音频设备的堵塞状态。默认情况下，音频设备被视为未堵塞。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 13
 
 | 枚举项 | 描述 |
@@ -182,6 +196,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescr
 **描述：**
 
 查询目标音频设备描述符的设备角色。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -208,6 +224,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescr
 
 查询目标音频设备描述符的设备类型。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -232,6 +250,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescrip
 **描述：**
 
 查询目标音频设备描述符的设备id。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -258,6 +278,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescr
 
 查询目标音频设备描述符的设备名称。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -283,6 +305,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDe
 
 查询目标音频设备描述符的设备地址。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -307,6 +331,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceSampleRates(OH_AudioDevi
 **描述：**
 
 查询目标音频设备描述符的采样率数组。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 
@@ -334,6 +360,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceChannelCounts(OH_AudioDe
 
 查询目标音频设备描述符的设备通道计数数组。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -360,6 +388,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceDisplayName(OH_AudioDevi
 
 查询目标音频设备描述符的显示名称。
 
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
 **起始版本：** 12
 
 **参数：**
@@ -384,6 +414,8 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceEncodingTypes(OH_AudioDe
 **描述：**
 
 查询目标音频设备描述符的编码类型数组。
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 **起始版本：** 12
 

@@ -4,7 +4,18 @@
 interface PixelMap
 ```
 
-The **PixelMap** class provides APIs to read or write image data and obtain image information. Before calling any API in PixelMap, you must use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to create a PixelMap object. Currently, the maximum size of a serialized PixelMap is 128 MB. A larger size will cause a display failure. The size is calculated as follows: Width x Height x [Bytes per pixel](arkts-image-image-pixelmapformat-e.md). Since API version 11, PixelMap supports cross-thread calls through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md). If a PixelMap object is invoked by another thread through [Worker](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md), all APIs of the PixelMap object cannot be called in the original thread. Otherwise, error 501 is reported, indicating that the server cannot complete the request. Before calling any API in PixelMap, you can use [image.createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) to pass pixel data to create a PixelMap object, or use [ImageSource](arkts-image-multimedia-image.md) to decode an image to a PixelMap object. To develop an atomic service, use [ImageSource](arkts-image-multimedia-image.md) to create a PixelMap object. Images occupy a large amount of memory. When you finish using a PixelMap instance, call [release](#release) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+图像像素类，用于读取或写入图像数据以及获取图像信息，同时支持图像变换（缩放、平移、旋转、翻转、裁剪）、设置不透明度、提取Alpha通道、色彩空间设置等操作，适用于图像处理、图像编辑、图像显示等需要进行像素级数据操作的场景。在调用PixelMap的方法前，需要先通过[image.createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md)或[image.createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md)系列接口传入像素数据创建一个PixelMap对象，也可以通过[ImageSource](arkts-image-image-imagesource-i.md)进行图片解码创建PixelMap对象。目前PixelMap序列化大小最大为128MiB，超过会渲染失败。PixelMap大小的计算方式为：宽 \* 高 \* 每像素占用字节数（详情请参考[PixelMapFormat](arkts-image-image-pixelmapformat-e.md)）。
+
+从API version 11开始，PixelMap支持通过[@ohos.worker (启动一个Worker)](../../apis-arkts/arkts-apis/arkts-arkts-worker-n.md)跨线程调用。当PixelMap通过Worker或[@ohos.taskpool (启动任务池)](../../apis-arkts/arkts-apis/arkts-arkts-taskpool.md)跨线程传输后，原线程的PixelMap的所有接口均不能继续调用，否则将抛出501或7600106（详情请参考[Image错误码](../errorcode-image.md)）。
+
+开发原子化服务请通过[ImageSource](arkts-image-image-imagesource-i.md)构建PixelMap对象。
+
+图像占用的内存往往较大，当PixelMap对象使用完成后，应主动调用[release](#release)方法及时释放内存。释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+
+> **说明：** 
+> 
+> - 本模块首批接口从API version 6开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
+> - 本Interface首批接口从API version 7开始支持。
 
 **起始版本：** 7
 
@@ -26,7 +37,12 @@ import { image } from '@kit.ImageKit';
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager, callback: AsyncCallback<void>): void
 ```
 
-Performs color space conversion (CSC) on the image pixel color based on a given color space. This API uses an asynchronous callback to return the result.
+根据输入的目标色彩空间对图像的像素颜色进行色彩空间转换。使用callback异步回调。
+
+> **说明：** 
+> 
+> - 本接口仅执行色彩空间之间的数学转换，不包含HDR到SDR的色调映射。当源图像为HDR色彩空间（传输函数为HLG或PQ，例如BT2020_HLG、BT2020_PQ、P3_HLG、P3_PQ等）且目标为SDR色彩空间（传输函数为sRGB gamma，例如SRGB、DISPLAY_P3、DCI_P3、ADOBE_RGB_1998等）时，直接调用本接口会导致图像整体偏亮、泛白、高光细节丢失。
+> - 从API版本12开始，如果要将HDR色彩空间转换为SDR色彩空间，请先调用[toSdr](#tosdr)完成HDR到SDR的转换和色调映射，再按需调用本接口在SDR色彩空间之间转换。
 
 **起始版本：** 11
 
@@ -38,8 +54,8 @@ Performs color space conversion (CSC) on the image pixel color based on a given 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | 目标色彩空间，支持SRGB、DCI_P3、DISPLAY_P3、ADOBE_RGB_1998。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对图像像素颜色进行色彩空间转换成功，err为undefined，否则为错误对象。 |
 
 **错误码：**
 
@@ -77,7 +93,12 @@ function applyColorSpace(pixelMap: image.PixelMap) {
 applyColorSpace(targetColorSpace: colorSpaceManager.ColorSpaceManager): Promise<void>
 ```
 
-Performs Color Space Converters (CSC) on the image pixel color based on a given color space. This API uses a promise to return the result.
+根据输入的目标色彩空间对图像的像素颜色进行色彩空间转换。使用Promise异步回调。
+
+> **说明：** 
+> 
+> - 本接口仅执行色彩空间之间的数学转换，不包含HDR到SDR的色调映射。当源图像为HDR色彩空间（传输函数为HLG或PQ，例如BT2020_HLG、BT2020_PQ、P3_HLG、P3_PQ等）且目标为SDR色彩空间（传输函数为sRGB gamma，例如SRGB、DISPLAY_P3、DCI_P3、ADOBE_RGB_1998等）时，直接调用本接口会导致图像整体偏亮、泛白、高光细节丢失。
+> - 从API版本12开始，如果要将HDR色彩空间转换为SDR色彩空间，请先调用[toSdr](#tosdr)完成HDR到SDR的转换和色调映射，再按需调用本接口在SDR色彩空间之间转换。
 
 **起始版本：** 11
 
@@ -89,13 +110,13 @@ Performs Color Space Converters (CSC) on the image pixel color based on a given 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | Target color space. SRGB, DCI_P3, DISPLAY_P3, and ADOBE_RGB_1998 are supported. |
+| targetColorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | 目标色彩空间，支持SRGB、DCI_P3、DISPLAY_P3、ADOBE_RGB_1998。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -129,7 +150,7 @@ function applyColorSpace(pixelMap: image.PixelMap) {
 applyCrop(region: Region): Promise<void>
 ```
 
-Crops the PixelMap.
+根据指定的区域信息对PixelMap进行裁剪。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -147,13 +168,13 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域，区域范围不能超过图片的宽高。单位：像素（px）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -198,7 +219,7 @@ function applyCrop(pixelMap: image.PixelMap) {
 applyCropSync(region: Region): void
 ```
 
-Crops the PixelMap.
+根据指定的区域信息对PixelMap进行裁剪。同步返回结果。
 
 **起始版本：** 26.0.0
 
@@ -216,7 +237,7 @@ Crops the PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | The region to crop. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域，区域范围不能超过图片的宽高。单位：像素（px）。 |
 
 **错误码：**
 
@@ -261,7 +282,7 @@ function applyCropSync(pixelMap: image.PixelMap) {
 applyFlip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips the PixelMap in the horizontal and/or vertical directions.
+根据指定的水平或垂直翻转条件对PixelMap进行翻转。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -279,14 +300,14 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontal | boolean | 是 | Whether to flip horizontally. |
-| vertical | boolean | 是 | Whether to flip vertically. |
+| horizontal | boolean | 是 | 是否进行水平翻转。true表示进行水平翻转，false表示不进行水平翻转。 |
+| vertical | boolean | 是 | 是否进行垂直翻转。true表示进行垂直翻转，false表示不进行垂直翻转。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -323,7 +344,7 @@ function applyFlip(pixelMap: image.PixelMap) {
 applyFlipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips the PixelMap in the horizontal and/or vertical directions.
+根据指定的水平或垂直翻转条件对PixelMap进行翻转。同步返回结果。
 
 **起始版本：** 26.0.0
 
@@ -341,8 +362,8 @@ Flips the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontal | boolean | 是 | Whether to flip horizontally. |
-| vertical | boolean | 是 | Whether to flip vertically. |
+| horizontal | boolean | 是 | 是否进行水平翻转。true表示进行水平翻转，false表示不进行水平翻转。 |
+| vertical | boolean | 是 | 是否进行垂直翻转。true表示进行垂直翻转，false表示不进行垂直翻转。 |
 
 **错误码：**
 
@@ -379,9 +400,13 @@ function applyFlipSync(pixelMap: image.PixelMap) {
 applyRotate(angle: number): Promise<void>
 ```
 
-Rotates the PixelMap.
+根据指定的角度对PixelMap进行旋转。使用Promise异步回调。
 
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+> **说明：** 
+> 
+> - YUV格式仅支持90°倍数的旋转角。
+> - 图像旋转角度的取值范围为[0, 360]。超出取值范围时，将根据圆周360°自动矫正。例如，-100°与260°效果相同。
+> - 当旋转角度不是90°的倍数时，图像的尺寸会扩大为旋转后的外接矩形尺寸，以容纳旋转后的图像内容。例如：正方形图像旋转45°后，输出图像的尺寸（边长）变为原图像的√2倍。
 
 **起始版本：** 26.0.0
 
@@ -399,13 +424,13 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | number | 是 | The rotation angle in degrees. Unit: Degree. |
+| angle | number | 是 | 旋转的角度。方向为正数顺时针，负数逆时针。单位：角度（°）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -441,9 +466,13 @@ function applyRotate(pixelMap: image.PixelMap) {
 applyRotateSync(angle: number): void
 ```
 
-Rotates the PixelMap.
+根据指定的角度对PixelMap进行旋转。同步返回结果。
 
-Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
+> **说明：** 
+> 
+> - YUV格式仅支持90°倍数的旋转角。
+> - 图像旋转角度的取值范围为[0, 360]。超出取值范围时，将根据圆周360°自动矫正。例如，-100°与260°效果相同。
+> - 当旋转角度不是90°的倍数时，图像的尺寸会扩大为旋转后的外接矩形尺寸，以容纳旋转后的图像内容。例如：正方形图像旋转45°后，输出图像的尺寸（边长）变为原图像的√2倍。
 
 **起始版本：** 26.0.0
 
@@ -461,7 +490,7 @@ Note: YUV format PixelMaps only support rotation angles that are multiples of 90
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | number | 是 | The rotation angle in degrees. Unit: Degree. |
+| angle | number | 是 | 旋转的角度。方向为正数顺时针，负数逆时针。单位：角度（°）。 |
 
 **错误码：**
 
@@ -497,7 +526,11 @@ function applyRotateSync(pixelMap: image.PixelMap) {
 applyScale(x: number, y: number, level?: AntiAliasingLevel): Promise<void>
 ```
 
-Scales the PixelMap in the horizontal and/or vertical dimensions.
+根据指定的宽高缩放倍数和缩放算法对PixelMap进行缩放。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 缩放倍数 = 缩放后的图像尺寸 / 缩放前的图像尺寸。
 
 **起始版本：** 26.0.0
 
@@ -515,15 +548,15 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | The scale ratio of width. Unit: Percentage. |
-| y | number | 是 | The scale ratio of height. Unit: Percentage. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | The anti-aliasing algorithm to be used. Default value: NONE. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法。该参数对于ASTC格式的PixelMap不生效。默认值为AntiAliasingLevel.NONE。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -560,7 +593,11 @@ function applyScale(pixelMap: image.PixelMap) {
 applyScaleSync(x: number, y: number, level?: AntiAliasingLevel): void
 ```
 
-Scales the PixelMap in the horizontal and/or vertical dimensions.
+根据指定的宽高缩放倍数和缩放算法对PixelMap进行缩放。同步返回结果。
+
+> **说明：** 
+> 
+> 缩放倍数 = 缩放后的图像尺寸 / 缩放前的图像尺寸。
 
 **起始版本：** 26.0.0
 
@@ -578,9 +615,9 @@ Scales the PixelMap in the horizontal and/or vertical dimensions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | The scale ratio of width. Unit: Percentage. |
-| y | number | 是 | The scale ratio of height. Unit: Percentage. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | The anti-aliasing algorithm to be used. Default value: NONE. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法。该参数对于ASTC格式的PixelMap不生效。默认值为AntiAliasingLevel.NONE。 |
 
 **错误码：**
 
@@ -617,7 +654,11 @@ function applyScaleSync(pixelMap: image.PixelMap) {
 applyTranslate(x: number, y: number): Promise<void>
 ```
 
-Repositions the PixelMap in the horizontal and/or vertical directions.
+根据指定的横向和纵向距离对PixelMap进行平移。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 平移后的图像尺寸将变为：宽度 = 原宽度 + x，高度 = 原高度 + y。
 
 **起始版本：** 26.0.0
 
@@ -635,14 +676,14 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | number | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | number | 是 | 横向平移的距离。方向为正数向右，负数向左。取值范围是(-图像宽度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像左侧起的x列像素。 |
+| y | number | 是 | 纵向平移的距离。方向为正数向下，负数向上。取值范围是(-图像高度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像上方起的y行像素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -679,7 +720,11 @@ function applyTranslate(pixelMap: image.PixelMap) {
 applyTranslateSync(x: number, y: number): void
 ```
 
-Repositions the PixelMap in the horizontal and/or vertical directions.
+根据指定的横向和纵向距离对PixelMap进行平移。同步返回结果。
+
+> **说明：** 
+> 
+> 平移后的图像尺寸将变为：宽度 = 原宽度 + x，高度 = 原高度 + y。
 
 **起始版本：** 26.0.0
 
@@ -697,8 +742,8 @@ Repositions the PixelMap in the horizontal and/or vertical directions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | The distance in pixels to move in the horizontal direction. Unit: px. |
-| y | number | 是 | The distance in pixels to move in the vertical direction. Unit: px. |
+| x | number | 是 | 横向平移的距离。方向为正数向右，负数向左。取值范围是(-图像宽度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像左侧起的x列像素。 |
+| y | number | 是 | 纵向平移的距离。方向为正数向下，负数向上。取值范围是(-图像高度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像上方起的y行像素。 |
 
 **错误码：**
 
@@ -735,7 +780,11 @@ function applyTranslateSync(pixelMap: image.PixelMap) {
 clone(): Promise<PixelMap>
 ```
 
-Copies this PixelMap object. This API uses a promise to return the result.
+拷贝一份当前的PixelMap对象。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的EXIF信息。
 
 **起始版本：** 18
 
@@ -747,7 +796,7 @@ Copies this PixelMap object. This API uses a promise to return the result.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回拷贝的PixelMap。 |
 
 **错误码：**
 
@@ -779,7 +828,11 @@ function clone(pixelMap: image.PixelMap) {
 cloneSync(): PixelMap
 ```
 
-Copies this PixelMap object. This API returns the result synchronously.
+拷贝一份当前的PixelMap对象。同步返回结果。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的EXIF信息。
 
 **起始版本：** 18
 
@@ -791,7 +844,7 @@ Copies this PixelMap object. This API returns the result synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 成功同步返回拷贝的PixelMap对象，失败抛出异常。 |
 
 **错误码：**
 
@@ -825,7 +878,16 @@ function cloneSync(pixelMap: image.PixelMap) {
 convertPixelFormat(targetPixelFormat: PixelMapFormat): Promise<void>
 ```
 
-The method is used for the transformation of the image formats. Pixel data will be changed by calling this method.
+YUV和RGB类型互转。使用Promise异步回调。
+
+支持NV12/NV21与RGB_888/RGBA_8888/RGB_565/BGRA_8888/RGBA_F16互转，YCRCB_P010/YCBCR_P010与RGBA_1010102互转。
+
+从API version 18开始，可用于ASTC_4x4类型转为RGBA_8888类型，目前仅支持ASTC_4x4转为RGBA_8888。
+
+> **注意：**
+> 
+> 仅在ASTC_4x4格式的图像需要进行像素访问时，建议调用此接口将ASTC_4x4类型转为RGBA_8888类型。由于使用ASTC_4x4反解为RGBA_8888时延较高，
+> 其余情况下不推荐使用。
 
 **起始版本：** 12
 
@@ -837,13 +899,13 @@ The method is used for the transformation of the image formats. Pixel data will 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| targetPixelFormat | [PixelMapFormat](arkts-image-image-pixelmapformat-e.md) | 是 | The pixel format for pixelmap conversion. |
+| targetPixelFormat | [PixelMapFormat](arkts-image-image-pixelmapformat-e.md) | 是 | 目标像素格式，用于YUV和RGB类型互转，或者ASTC_4x4类型转为RGBA_8888类型。目前仅支持NV12/NV21与RGB_888/RGBA_8888/RGB_565/BGRA_8888/RGBA_F16互转，YCRCB_P010/YCBCR_P010与RGBA_1010102互转，ASTC_4x4转为RGBA_8888。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -879,9 +941,13 @@ function convertPixelFormat(pixelMap: image.PixelMap) {
 createAlphaPixelmap(): Promise<PixelMap>
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API uses a promise to return the result.
+根据Alpha通道的信息，生成一个仅包含Alpha通道信息的ALPHA_8格式的PixelMap，生成的新PixelMap不可编辑，可用于阴影效果。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式不支持此接口。
+> - 如果原PixelMap的格式是ALPHA_F16，则新生成的PixelMap将维持ALPHA_F16格式。
+> - 从API版本26.0.0开始，建议使用[extractAlphaPixelMap](#extractalphapixelmap)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -897,7 +963,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回仅包含Alpha通道信息的ALPHA_8格式的PixelMap。 |
 
 **示例**
 
@@ -921,9 +987,13 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 createAlphaPixelmap(callback: AsyncCallback<PixelMap>): void
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. It is invalid for YUV images. This API returns the result through a callback.
+根据Alpha通道的信息，来生成一个仅包含Alpha通道信息的ALPHA_8格式的PixelMap，生成的新PixelMap不可编辑，可用于阴影效果。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extractalphapixelmap) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式不支持此接口。
+> - 如果原PixelMap的格式是ALPHA_F16，则新生成的PixelMap将维持ALPHA_F16格式。
+> - 从API版本26.0.0开始，建议使用[extractAlphaPixelMap](#extractalphapixelmap)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -939,7 +1009,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMap](#extra
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is undefined and **data** is the PixelMap object obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | 是 | 回调函数，当创建PixelMap成功，err为undefined，data为获取到的PixelMap对象；否则为错误对象。 |
 
 **示例**
 
@@ -963,9 +1033,13 @@ function createAlphaPixelmap(pixelMap: image.PixelMap) {
 createAlphaPixelmapSync(): PixelMap
 ```
 
-Creates a PixelMap object that contains only the alpha channel information. This object can be used for the shadow effect. This API returns the result synchronously. It is invalid for YUV images.
+根据Alpha通道的信息，生成一个仅包含Alpha通道信息的ALPHA_8格式的PixelMap，生成的新PixelMap不可编辑，可用于阴影效果。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#extractalphapixelmapsync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式不支持此接口。
+> - 如果原PixelMap的格式是ALPHA_F16，则新生成的PixelMap将维持ALPHA_F16格式。
+> - 从API版本26.0.0开始，建议使用[extractAlphaPixelMapSync](#extractalphapixelmapsync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -979,7 +1053,7 @@ Starting from API 26.0.0, it is recommended to use [extractAlphaPixelMapSync](#e
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 成功同步返回仅包含Alpha通道信息的ALPHA_8格式的PixelMap对象，失败抛出异常。 |
 
 **错误码：**
 
@@ -1014,7 +1088,11 @@ function createAlphaPixelmapSync(pixelMap: image.PixelMap) {
 createCroppedAndScaledPixelMap(region: Region, x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
-Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API uses a promise to return the result.
+根据指定的裁剪区域、宽高的缩放倍数和缩放算法，基于当前PixelMap创建一个新的裁剪并缩放后的PixelMap。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的EXIF信息。
 
 **起始版本：** 22
 
@@ -1026,16 +1104,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | number | 是 | Scale factor of the width. It must not be **0**. |
-| y | number | 是 | Scale factor of the height. It must not be **0**. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域。取值范围不能超过图片的宽和高。单位：像素（px）。 |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法。默认值为AntiAliasingLevel.NONE。该参数对于ASTC格式的PixelMap不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回裁剪并缩放后的PixelMap。 |
 
 **错误码：**
 
@@ -1076,7 +1154,11 @@ function createCroppedAndScaledPixelMap(pixelMap: image.PixelMap) {
 createCroppedAndScaledPixelMapSync(region: Region, x: number, y: number, level?: AntiAliasingLevel): PixelMap
 ```
 
-Creates an image that has been cropped and resized based on the specified cropping area, scale factors of the width and height, and anti-aliasing level. This API returns the result synchronously.
+根据指定的裁剪区域、宽高的缩放倍数和缩放算法，基于当前PixelMap创建一个新的裁剪并缩放后的PixelMap。同步返回结果。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的EXIF信息。
 
 **起始版本：** 22
 
@@ -1088,16 +1170,16 @@ Creates an image that has been cropped and resized based on the specified croppi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Area to crop. It must be within the original image's dimension (in pixels). |
-| x | number | 是 | Scale factor of the width. It must not be **0**. |
-| y | number | 是 | Scale factor of the height. It must not be **0**. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. Default value: **NONE**. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域。取值范围不能超过图片的宽和高。单位：像素（px）。 |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法。默认值为AntiAliasingLevel.NONE。该参数对于ASTC格式的PixelMap不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 成功则同步返回裁剪并缩放后的PixelMap对象，失败则抛出异常。 |
 
 **错误码：**
 
@@ -1138,7 +1220,11 @@ function createCroppedAndScaledPixelMapSync(pixelMap: image.PixelMap) {
 createScaledPixelMap(x: number, y: number, level?: AntiAliasingLevel): Promise<PixelMap>
 ```
 
-Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API uses a promise to return the result.
+根据指定的缩放算法和输入的宽高的缩放倍数，基于当前PixelMap创建一个新的缩放后的PixelMap，生成的新PixelMap不可编辑。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的HDR元数据和EXIF信息。
 
 **起始版本：** 18
 
@@ -1150,15 +1236,15 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法，默认值为AntiAliasingLevel.NONE。该参数对于ASTC格式的PixelMap不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回缩放后的PixelMap。 |
 
 **错误码：**
 
@@ -1189,7 +1275,11 @@ function createScaledPixelMap(pixelMap: image.PixelMap) {
 createScaledPixelMapSync(x: number, y: number, level?: AntiAliasingLevel): PixelMap
 ```
 
-Creates an image that has been resized based on the specified anti-aliasing level and the scale factors of the width and height. This API returns the result synchronously.
+根据指定的缩放算法和输入的宽高的缩放倍数，基于当前PixelMap创建一个新的缩放后的PixelMap，生成的新PixelMap不可编辑。同步返回结果。
+
+> **说明：** 
+> 
+> 该接口不会拷贝原图像的HDR元数据和EXIF信息。
 
 **起始版本：** 18
 
@@ -1201,15 +1291,15 @@ Creates an image that has been resized based on the specified anti-aliasing leve
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | Anti-aliasing level. The default value is **AntiAliasingLevel.NONE**. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 否 | 采用的缩放算法，默认值为AntiAliasingLevel.NONE。该参数对于ASTC格式的PixelMap不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | PixelMap object. If the operation fails, an error is thrown. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 成功同步返回缩放后的PixelMap对象，失败抛出异常。 |
 
 **错误码：**
 
@@ -1244,9 +1334,11 @@ function createScaledPixelMapSync(pixelMap: image.PixelMap) {
 crop(region: Region, callback: AsyncCallback<void>): void
 ```
 
-Crops this image based on a given size. This API uses an asynchronous callback to return the result.
+根据输入的区域信息对图片进行裁剪。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyCrop](#applycrop)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -1262,8 +1354,8 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域，包含起始坐标和宽高。取值范围不能超过图片的宽高。单位：像素（px）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对图片进行裁剪成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -1290,9 +1382,11 @@ function crop(pixelMap: image.PixelMap) {
 crop(region: Region): Promise<void>
 ```
 
-Crops a PixelMap based on a given size. This API uses a promise to return the result.
+根据输入的区域信息对图片进行裁剪。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyCrop](#applycrop)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -1308,13 +1402,13 @@ Starting from API 26.0.0, it is recommended to use [applyCrop](#applycrop) inste
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域，包含起始坐标和宽高。取值范围不能超过图片的宽高。单位：像素（px）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1337,9 +1431,11 @@ function crop(pixelMap: image.PixelMap) {
 cropSync(region: Region): void
 ```
 
-Crops this image based on a given size. This API returns the result synchronously.
+根据输入的区域信息对图片进行裁剪。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyCropSync](#applycropsync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -1353,7 +1449,7 @@ Starting from API 26.0.0, it is recommended to use [applyCropSync](#applycropsyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| region | [Region](arkts-image-image-region-i.md) | 是 | Size of the image after cropping. The value cannot exceed the width or height of the image. |
+| region | [Region](arkts-image-image-region-i.md) | 是 | 裁剪的区域，包含起始坐标和宽高。取值范围不能超过图片的宽高。单位：像素（px）。 |
 
 **错误码：**
 
@@ -1385,7 +1481,12 @@ function cropSync(pixelMap: image.PixelMap) {
 extractAlphaPixelMap(): Promise<PixelMap>
 ```
 
-Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 format PixelMap.
+提取当前PixelMap的Alpha通道数据，并生成一个仅包含Alpha通道信息的ALPHA_U8格式的PixelMap。生成的新PixelMap不可编辑，可用于阴影效果。使用Promise异步回调。
+
+> **说明：** 
+> 
+> - YUV格式不支持此接口。
+> - 如果原PixelMap的格式是ALPHA_F16，则新生成的PixelMap将维持ALPHA_F16格式。
 
 **起始版本：** 26.0.0
 
@@ -1403,7 +1504,7 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | A Promise of the new ALPHA_U8 format PixelMap. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回仅包含Alpha通道信息的ALPHA_U8格式的PixelMap。 |
 
 **错误码：**
 
@@ -1437,7 +1538,12 @@ function extractAlphaPixelMap(pixelMap: image.PixelMap) {
 extractAlphaPixelMapSync(): PixelMap
 ```
 
-Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 format PixelMap.
+提取当前PixelMap的Alpha通道数据，并生成一个仅包含Alpha通道信息的ALPHA_U8格式的PixelMap。生成的新PixelMap不可编辑，可用于阴影效果。同步返回结果。
+
+> **说明：** 
+> 
+> - YUV格式不支持此接口。
+> - 如果原PixelMap的格式是ALPHA_F16，则新生成的PixelMap将维持ALPHA_F16格式。
 
 **起始版本：** 26.0.0
 
@@ -1455,7 +1561,7 @@ Extracts the alpha channel from the current PixelMap to create a new ALPHA_U8 fo
 
 | 类型 | 说明 |
 | --- | --- |
-| [PixelMap](arkts-image-image-pixelmap-i.md) | A new ALPHA_U8 format PixelMap. |
+| [PixelMap](arkts-image-image-pixelmap-i.md) | 返回仅包含Alpha通道信息的ALPHA_U8格式的PixelMap。 |
 
 **错误码：**
 
@@ -1491,9 +1597,11 @@ function extractAlphaPixelMapSync(pixelMap: image.PixelMap) {
 flip(horizontal: boolean, vertical: boolean, callback: AsyncCallback<void>): void
 ```
 
-Flips this image horizontally or vertically, or both. This API uses an asynchronous callback to return the result.
+根据输入的水平或垂直翻转条件对图片进行翻转。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyFlip](#applyflip)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -1509,9 +1617,9 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontal | boolean | 是 | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
-| vertical | boolean | 是 | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| horizontal | boolean | 是 | true表示进行水平翻转，false表示不进行水平翻转。 |
+| vertical | boolean | 是 | true表示进行垂直翻转，false表示不进行垂直翻转。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当对图片翻转成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -1539,9 +1647,11 @@ function flip(pixelMap: image.PixelMap) {
 flip(horizontal: boolean, vertical: boolean): Promise<void>
 ```
 
-Flips a PixelMap based on a given angle. This API uses a promise to return the result.
+根据输入的水平或垂直翻转条件对图片进行翻转。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyFlip](#applyflip)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -1557,14 +1667,14 @@ Starting from API 26.0.0, it is recommended to use [applyFlip](#applyflip) inste
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontal | boolean | 是 | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
-| vertical | boolean | 是 | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
+| horizontal | boolean | 是 | true表示进行水平翻转，false表示不进行水平翻转。 |
+| vertical | boolean | 是 | true表示进行垂直翻转，false表示不进行垂直翻转。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -1588,9 +1698,11 @@ function flip(pixelMap: image.PixelMap) {
 flipSync(horizontal: boolean, vertical: boolean): void
 ```
 
-Flips this image horizontally or vertically, or both. This API returns the result synchronously.
+根据输入的水平或垂直翻转条件对图片进行翻转。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[applyFlipSync](#applyflipsync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -1604,8 +1716,8 @@ Starting from API 26.0.0, it is recommended to use [applyFlipSync](#applyflipsyn
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| horizontal | boolean | 是 | Whether to flip the image horizontally. **true** to flip the image horizontally, **false** otherwise. |
-| vertical | boolean | 是 | Whether to flip the image vertically. **true** to flip the image vertically, **false** otherwise. |
+| horizontal | boolean | 是 | true表示进行水平翻转，false表示不进行水平翻转。 |
+| vertical | boolean | 是 | true表示进行垂直翻转，false表示不进行垂直翻转。 |
 
 **错误码：**
 
@@ -1638,7 +1750,7 @@ function flipSync(pixelMap: image.PixelMap) {
 getBytesNumberPerRow(): number
 ```
 
-Obtains the number of bytes per row of this image. Unit: bytes.
+获取图像每行像素的字节数。
 
 **起始版本：** 7
 
@@ -1654,7 +1766,7 @@ Obtains the number of bytes per row of this image. Unit: bytes.
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Number of bytes per row. |
+| number | 图像像素的行字节数。单位：字节（Byte）。 |
 
 **示例**
 
@@ -1670,7 +1782,7 @@ function getBytesNumberPerRow(pixelMap: image.PixelMap) {
 getColorSpace(): colorSpaceManager.ColorSpaceManager
 ```
 
-Obtains the color space of this image.
+获取图像的色彩空间。
 
 **起始版本：** 10
 
@@ -1682,7 +1794,7 @@ Obtains the color space of this image.
 
 | 类型 | 说明 |
 | --- | --- |
-| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | Color space obtained. |
+| [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 图像色彩空间信息。如果图像不含色彩空间信息，则会抛出异常。 |
 
 **错误码：**
 
@@ -1714,7 +1826,7 @@ function getColorSpace(pixelMap: image.PixelMap) {
 getDensity(): number
 ```
 
-Obtains the pixel density of this image. Unit: ppi (pixels/inch)
+获取图像的像素密度。
 
 **起始版本：** 9
 
@@ -1730,7 +1842,7 @@ Obtains the pixel density of this image. Unit: ppi (pixels/inch)
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Pixel density, in ppi. |
+| number | 图像的像素密度，单位：ppi（像素/英寸）。 |
 
 **示例**
 
@@ -1748,7 +1860,7 @@ function getDensity(pixelMap: image.PixelMap) {
 getImageInfo(): Promise<ImageInfo>
 ```
 
-Obtains the image information of a PixelMap. This API uses a promise to return the result.
+获取图像像素信息。使用Promise异步回调。
 
 **起始版本：** 7
 
@@ -1764,7 +1876,7 @@ Obtains the image information of a PixelMap. This API uses a promise to return t
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise used to return the image information. |
+| Promise&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | Promise对象，返回图像像素信息。 |
 
 **示例**
 
@@ -1788,7 +1900,7 @@ function getImageInfo(pixelMap: image.PixelMap) {
 getImageInfo(callback: AsyncCallback<ImageInfo>): void
 ```
 
-Obtains the image information. This API uses an asynchronous callback to return the result.
+获取图像像素信息。使用callback异步回调。
 
 **起始版本：** 7
 
@@ -1804,7 +1916,7 @@ Obtains the image information. This API uses an asynchronous callback to return 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is the image information obtained; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ImageInfo](arkts-image-image-imageinfo-i.md)&gt; | 是 | 回调函数。当获取图像像素信息成功，err为undefined，data为获取到的图像像素信息；否则为错误对象。 |
 
 **示例**
 
@@ -1828,7 +1940,7 @@ function getImageInfo(pixelMap: image.PixelMap) {
 getImageInfoSync(): ImageInfo
 ```
 
-Obtains the image information. This API returns the result synchronously.
+获取图像像素信息。同步返回结果。
 
 **起始版本：** 12
 
@@ -1844,7 +1956,7 @@ Obtains the image information. This API returns the result synchronously.
 
 | 类型 | 说明 |
 | --- | --- |
-| [ImageInfo](arkts-image-image-imageinfo-i.md) | Image information. |
+| [ImageInfo](arkts-image-image-imageinfo-i.md) | 图像像素信息。 |
 
 **错误码：**
 
@@ -1874,7 +1986,11 @@ function getImageInfoSync(pixelMap: image.PixelMap) {
 getMetadata(key: HdrMetadataKey): HdrMetadataValue
 ```
 
-Obtains the value of the metadata with a given key in this PixelMap.
+从PixelMap中获取HDR元数据。
+
+> **说明：** 
+> 
+> 该接口仅支持DMA内存类型的PixelMap调用。详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 **起始版本：** 12
 
@@ -1886,13 +2002,13 @@ Obtains the value of the metadata with a given key in this PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 | Key of the HDR metadata. |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 | HDR元数据的关键字，可用于查询对应值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | Value of the metadata with the given key. |
+| [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | 返回元数据的值。 |
 
 **错误码：**
 
@@ -1937,7 +2053,7 @@ function getMetadata(context: Context) {
 getPixelBytesNumber(): number
 ```
 
-Obtains the total number of bytes of this image. Unit: bytes.
+获取图像所有像素占用的总字节数，不包含内存对齐填充字节。
 
 **起始版本：** 7
 
@@ -1953,7 +2069,7 @@ Obtains the total number of bytes of this image. Unit: bytes.
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Total number of bytes. |
+| number | 图像像素的总字节数。单位：字节（Byte）。 |
 
 **示例**
 
@@ -1969,7 +2085,7 @@ function getPixelBytesNumber(pixelMap: image.PixelMap) {
 getUniqueId(): number
 ```
 
-Obtains the unique ID of this PixelMap.
+获取PixelMap的唯一ID。
 
 **起始版本：** 22
 
@@ -1981,7 +2097,7 @@ Obtains the unique ID of this PixelMap.
 
 | 类型 | 说明 |
 | --- | --- |
-| number | Unique ID. The value is a positive integer. |
+| number | 唯一ID。取值为正整数。 |
 
 **错误码：**
 
@@ -2011,12 +2127,11 @@ function getUniqueId(pixelMap: image.PixelMap) {
 isReleased(): boolean
 ```
 
-Checks whether this PixelMap object is released. If released, any attempt to access the internal data of this object will fail.
+检查PixelMap对象是否已被释放。如果已被释放，则任何访问该对象内部数据的方法调用将会失败。
 
-> **NOTE:** 
+> **注意：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> 释放指的是ArkTS对象释放与之关联的native对象的管理权。仅当所有管理该native对象的ArkTS对象都被释放时，native对象占用的内存才会被回收。
 
 **起始版本：** 22
 
@@ -2028,7 +2143,7 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for whether the PixelMap object is released. **true** if released; **false** otherwise. |
+| boolean | PixelMap是否已被释放。返回true表示已被释放，否则返回false。 |
 
 **示例**
 
@@ -2038,7 +2153,7 @@ Checks whether this PixelMap object is released. If released, any attempt to acc
 marshalling(sequence: rpc.MessageSequence): void
 ```
 
-Marshals this PixelMap object and writes it to a MessageSequence object.
+将PixelMap序列化后写入MessageSequence。
 
 **起始版本：** 10
 
@@ -2050,14 +2165,14 @@ Marshals this PixelMap object and writes it to a MessageSequence object.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | MessageSequence object. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | 新创建的MessageSequence。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception.         3. Decode process exception. 4. Insufficient memory. |
 
 **示例**
 
@@ -2122,9 +2237,12 @@ async function marshal() {
 opacity(rate: number, callback: AsyncCallback<void>): void
 ```
 
-Sets an opacity rate for this image. This API uses an asynchronous callback to return the result. It is invalid for YUV images.
+设置PixelMap的不透明度，指定的不透明度值将被应用于所有像素，不受原图不透明度的影响。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式的图像不支持设置不透明度。
+> - 从API版本26.0.0开始，建议使用[setOpacity](#setopacity)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -2140,8 +2258,8 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | number | 是 | Opacity rate. The value range is (0,1]. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| rate | number | 是 | 不透明度的值，取值范围是(0.0, 1.0]。1.0表示完全不透明，数值越接近0.0则透明度越高。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置透明比率成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -2168,9 +2286,12 @@ function opacity(pixelMap: image.PixelMap) {
 opacity(rate: number): Promise<void>
 ```
 
-Sets an opacity rate for this image. It is invalid for YUV images. This API uses a promise to return the result.
+设置PixelMap的不透明度，指定的不透明度值将被应用于所有像素，不受原图不透明度的影响。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式的图像不支持设置不透明度。
+> - 从API版本26.0.0开始，建议使用[setOpacity](#setopacity)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -2186,13 +2307,13 @@ Starting from API 26.0.0, it is recommended to use [setOpacity](#setopacity) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | number | 是 | Opacity rate. The value range is (0,1]. |
+| rate | number | 是 | 不透明度的值，取值范围是(0.0, 1.0]。1.0表示完全不透明，数值越接近0.0则透明度越高。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2215,9 +2336,12 @@ function opacity(pixelMap: image.PixelMap) {
 opacitySync(rate: number): void
 ```
 
-Sets an opacity rate for this image. This API returns the result synchronously. It is invalid for YUV images.
+设置PixelMap的不透明度，指定的不透明度值将被应用于所有像素，不受原图不透明度的影响。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitysync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式的图像不支持设置不透明度。
+> - 从API版本26.0.0开始，建议使用[setOpacitySync](#setopacitysync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -2231,7 +2355,7 @@ Starting from API 26.0.0, it is recommended to use [setOpacitySync](#setopacitys
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| rate | number | 是 | Opacity rate. The value range is (0,1]. |
+| rate | number | 是 | 不透明度的值，取值范围是(0.0, 1.0]。1.0表示完全不透明，数值越接近0.0则透明度越高。 |
 
 **错误码：**
 
@@ -2263,7 +2387,7 @@ function opacitySync(pixelMap: image.PixelMap) {
 readAllPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
+读取整个PixelMap的像素数据，并按照PixelMap的像素格式存入缓冲区。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -2281,13 +2405,13 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | The buffer to receive the pixel data from the PixelMap. |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2323,7 +2447,7 @@ function readAllPixelsToBuffer(pixelMap: image.PixelMap) {
 readAllPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads all the pixel data from the PixelMap and writes the data to a buffer. The resulting data will be in the same pixel format as the PixelMap.
+读取整个PixelMap的像素数据，并按照PixelMap的像素格式存入缓冲区。同步返回结果。
 
 **起始版本：** 26.0.0
 
@@ -2341,7 +2465,7 @@ Reads all the pixel data from the PixelMap and writes the data to a buffer. The 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | The buffer to receive the pixel data from the PixelMap. |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **错误码：**
 
@@ -2379,9 +2503,16 @@ function readAllPixelsToBufferSync(pixelMap: image.PixelMap) {
 readPixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+读取PixelMap指定区域内的像素数据并存入缓冲区。如果PixelMap的像素格式为YUV类型，则按照PixelMap的像素格式存入缓冲区，否则按照BGRA_8888格式存入缓冲区。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：读取区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：读取区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[readPixelsToArea](#readpixelstoarea)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -2397,13 +2528,13 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the pixels will be read. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 读取的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，获取的像素数据会被拷贝至[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区。如果PixelMap的像素格式为YUV类型，则获取的像素数据格式与PixelMap相同，否则会被转换为BGRA_8888格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2449,9 +2580,16 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 readPixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+读取PixelMap指定区域内的像素数据并存入缓冲区。如果PixelMap的像素格式为YUV类型，则按照PixelMap的像素格式存入缓冲区，否则按照BGRA_8888格式存入缓冲区。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixelstoarea) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：读取区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：读取区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[readPixelsToArea](#readpixelstoarea)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -2467,8 +2605,8 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToArea](#readpixel
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the pixels will be read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 读取的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，获取的像素数据会被拷贝至[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区。如果PixelMap的像素格式为YUV类型，则获取的像素数据格式与PixelMap相同，否则会被转换为BGRA_8888格式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当读取区域内的图片数据成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -2516,9 +2654,16 @@ function readPixelsYUV(pixelMap: image.PixelMap) {
 readPixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the area specified by [PositionArea](arkts-image-image-positionarea-i.md).region of this PixelMap object in the BGRA_8888 format and writes the data to the [PositionArea](arkts-image-image-positionarea-i.md).pixels buffer. This API returns the result synchronously.
+读取PixelMap指定区域内的像素数据并存入缓冲区。如果PixelMap的像素格式为YUV类型，则按照PixelMap的像素格式存入缓冲区，否则按照BGRA_8888格式存入缓冲区。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readpixelstoareasync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：读取区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：读取区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[readPixelsToAreaSync](#readpixelstoareasync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -2532,7 +2677,7 @@ Starting from API 26.0.0, it is recommended to use [readPixelsToAreaSync](#readp
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area from which the pixels will be read. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 读取的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，获取的像素数据会被拷贝至[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区。如果PixelMap的像素格式为YUV类型，则获取的像素数据格式与PixelMap相同，否则会被转换为BGRA_8888格式。 |
 
 **错误码：**
 
@@ -2569,7 +2714,14 @@ function readPixelsSync(pixelMap: image.PixelMap) {
 readPixelsToArea(area: PositionArea): Promise<void>
 ```
 
-Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format.
+读取PixelMap指定区域内的像素数据并存入缓冲区。如果PixelMap的像素格式为YUV类型，则按照PixelMap的像素格式存入缓冲区，否则按照BGRA_8888格式存入缓冲区。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：读取区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：读取区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
 
 **起始版本：** 26.0.0
 
@@ -2587,13 +2739,13 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 读取的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，获取的像素数据会被拷贝至[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区。如果PixelMap的像素格式为YUV类型，则获取的像素数据格式与PixelMap相同，否则会被转换为BGRA_8888格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -2661,7 +2813,14 @@ function readPixelsToAreaYUV(pixelMap: image.PixelMap) {
 readPixelsToAreaSync(area: PositionArea): void
 ```
 
-Reads pixel data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format.
+读取PixelMap指定区域内的像素数据并存入缓冲区。如果PixelMap的像素格式为YUV类型，则按照PixelMap的像素格式存入缓冲区，否则按照BGRA_8888格式存入缓冲区。同步返回结果。
+
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：读取区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：读取区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
 
 **起始版本：** 26.0.0
 
@@ -2679,7 +2838,7 @@ Reads pixel data from a certain area of the PixelMap to a buffer. The resulting 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area of the PixelMap to read the data. Data will be read from the PixelMap and copied into PositionArea.pixels. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 读取的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，获取的像素数据会被拷贝至[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区。如果PixelMap的像素格式为YUV类型，则获取的像素数据格式与PixelMap相同，否则会被转换为BGRA_8888格式。 |
 
 **错误码：**
 
@@ -2749,9 +2908,11 @@ function readPixelsToAreaSyncYUV(pixelMap: image.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses a promise to return the result.
+读取整个PixelMap的像素数据，并按照PixelMap的像素格式存入缓冲区。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[readAllPixelsToBuffer](#readallpixelstobuffer)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -2767,13 +2928,13 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2798,9 +2959,11 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 readPixelsToBuffer(dst: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API uses an asynchronous callback to return the result.
+读取整个PixelMap的像素数据，并按照PixelMap的像素格式存入缓冲区。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#readallpixelstobuffer) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[readAllPixelsToBuffer](#readallpixelstobuffer)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -2816,8 +2979,8 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBuffer](#read
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当读取像素数据到ArrayBuffer成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -2842,9 +3005,11 @@ function readPixelsToBuffer(pixelMap: image.PixelMap) {
 readPixelsToBufferSync(dst: ArrayBuffer): void
 ```
 
-Reads the pixels of this PixelMap object based on the PixelMap's pixel format and writes the data to the buffer. This API returns the result synchronously.
+读取整个PixelMap的像素数据，并按照PixelMap的像素格式存入缓冲区。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#readallpixelstobuffersync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[readAllPixelsToBufferSync](#readallpixelstobuffersync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -2860,7 +3025,7 @@ Starting from API 26.0.0, it is recommended to use [readAllPixelsToBufferSync](#
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| dst | ArrayBuffer | 是 | Buffer to which the pixels will be written. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
+| dst | ArrayBuffer | 是 | 目标缓冲区，获取的像素数据会被拷贝至该缓冲区。缓冲区内像素的格式与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小由[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **错误码：**
 
@@ -2894,12 +3059,15 @@ function readPixelsToBufferSync(pixelMap: image.PixelMap) {
 release(callback: AsyncCallback<void>): void
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses an asynchronous callback to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放PixelMap对象。释放后，任何访问该对象内部数据的方法调用都会失败。使用callback异步回调。
 
-> **NOTE:** 
+图片使用的内存往往较大，在PixelMap对象使用完成后，应主动调用该方法及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+
+> **注意：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> 释放指的是ArkTS对象释放与之关联的native对象的管理权。仅当所有管理该native对象的ArkTS对象都被释放时，native对象占用的内存才会被回收。
 
 **起始版本：** 7
 
@@ -2915,7 +3083,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对PixelMap对象释放成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -2941,12 +3109,15 @@ function release(pixelMap: image.PixelMap) {
 release(): Promise<void>
 ```
 
-Releases this PixelMap instance. After the release, any attempt to access the internal data of this object will fail. This API uses a promise to return the result. Images occupy a large amount of memory. When you finish using a PixelMap instance, call this API to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
+释放PixelMap对象。释放后，任何访问该对象内部数据的方法调用都会失败。使用Promise异步回调。
 
-> **NOTE:** 
+图片使用的内存往往较大，在PixelMap对象使用完成后，应主动调用该方法及时释放内存。
+
+释放时应确保该对象的所有异步方法均执行完成，且后续不再使用该对象。
+
+> **注意：**
 > 
-> Release occurs when an ArkTS object relinquishes control over its associated native object. The memory occupied
-> by the native object is reclaimed only after all managing ArkTS objects have relinquished their control.
+> 释放指的是ArkTS对象释放与之关联的native对象的管理权。仅当所有管理该native对象的ArkTS对象都被释放时，native对象占用的内存才会被回收。
 
 **起始版本：** 7
 
@@ -2962,7 +3133,7 @@ Releases this PixelMap instance. After the release, any attempt to access the in
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -2986,9 +3157,14 @@ function release(pixelMap: image.PixelMap) {
 rotate(angle: number, callback: AsyncCallback<void>): void
 ```
 
-Rotates this image based on a given angle. This API uses an asynchronous callback to return the result.
+根据输入的角度对图片进行旋转。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式仅支持90°倍数的旋转角。
+> - 图像旋转的角度取值范围：[0, 360]。超出取值范围时，根据圆周360°自动矫正。例如，-100°与260°效果相同。
+> - 如果图片旋转的角度不是90的整数倍，旋转后图片的尺寸会发生改变。
+> - 从API版本26.0.0开始，建议使用[applyRotate](#applyrotate)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3004,8 +3180,8 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | number | 是 | Angle to rotate. Unit: degrees. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| angle | number | 是 | 图像旋转的角度。方向为正数顺时针，负数逆时针。单位：角度（°）。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对图片进行旋转成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -3032,9 +3208,14 @@ function rotate(pixelMap: image.PixelMap) {
 rotate(angle: number): Promise<void>
 ```
 
-Rotates a PixelMap based on a given angle. This API uses a promise to return the result.
+根据输入的角度对图片进行旋转。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式仅支持90°倍数的旋转角。
+> - 图像旋转的角度取值范围：[0, 360]。超出取值范围时，根据圆周360°自动矫正。例如，-100°与260°效果相同。
+> - 如果图片旋转的角度不是90的整数倍，旋转后图片的尺寸会发生改变。
+> - 从API版本26.0.0开始，建议使用[applyRotate](#applyrotate)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3050,13 +3231,13 @@ Starting from API 26.0.0, it is recommended to use [applyRotate](#applyrotate) i
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | number | 是 | Angle to rotate. Unit: degrees. |
+| angle | number | 是 | 图像旋转的角度。方向为正数顺时针，负数逆时针。单位：角度（°）。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -3079,9 +3260,14 @@ function rotate(pixelMap: image.PixelMap) {
 rotateSync(angle: number): void
 ```
 
-Rotates this image based on a given angle. This API returns the result synchronously.
+根据输入的角度对图片进行旋转。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotatesync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - YUV格式仅支持90°倍数的旋转角。
+> - 图像旋转的角度取值范围：[0, 360]。超出取值范围时，根据圆周360°自动矫正。例如，-100°与260°效果相同。
+> - 如果图片旋转的角度不是90的整数倍，旋转后图片的尺寸会发生改变。
+> - 从API版本26.0.0开始，建议使用[applyRotateSync](#applyrotatesync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -3095,7 +3281,7 @@ Starting from API 26.0.0, it is recommended to use [applyRotateSync](#applyrotat
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| angle | number | 是 | Angle to rotate. Unit: degrees. |
+| angle | number | 是 | 图像旋转的角度。方向为正数顺时针，负数逆时针。单位：角度（°）。 |
 
 **错误码：**
 
@@ -3129,9 +3315,12 @@ function rotateSync(pixelMap: image.PixelMap) {
 scale(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses an asynchronous callback to return the result.
+根据输入的宽高缩放倍数对图片进行缩放。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 宽高的缩放倍数 = 缩放后的图片宽高 / 缩放前的图片宽高。
+> - 从API版本26.0.0开始，建议使用[applyScale](#applyscale)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3147,9 +3336,9 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对图片进行缩放成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -3177,9 +3366,12 @@ function scale(pixelMap: image.PixelMap) {
 scale(x: number, y: number): Promise<void>
 ```
 
-Scales this image based on the scale factors of the width and height. This API uses a promise to return the result.
+根据输入的宽高缩放倍数对图片进行缩放。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 宽高的缩放倍数 = 缩放后的图片宽高 / 缩放前的图片宽高。
+> - 从API版本26.0.0开始，建议使用[applyScale](#applyscale)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3195,14 +3387,14 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -3228,9 +3420,12 @@ function scale(pixelMap: image.PixelMap) {
 scale(x: number, y: number, level: AntiAliasingLevel): Promise<void>
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API uses a promise to return the result.
+根据指定的缩放算法和输入的宽高的缩放倍数对图片进行缩放。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 宽高的缩放倍数 = 缩放后的图片宽高 / 缩放前的图片宽高。
+> - 从API版本26.0.0开始，建议使用[applyScale](#applyscale)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -3246,15 +3441,15 @@ Starting from API 26.0.0, it is recommended to use [applyScale](#applyscale) ins
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | Anti-aliasing level. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | 采用的缩放算法。该参数对于ASTC格式的PixelMap不生效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3287,9 +3482,12 @@ function scaleSync(pixelMap: image.PixelMap) {
 scaleSync(x: number, y: number): void
 ```
 
-Scales this image based on the scale factors of the width and height. This API returns the result synchronously.
+根据输入的宽高缩放倍数对图片进行缩放。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 宽高的缩放倍数 = 缩放后的图片宽高 / 缩放前的图片宽高。
+> - 从API版本26.0.0开始，建议使用[applyScaleSync](#applyscalesync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -3303,8 +3501,8 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
 
 **错误码：**
 
@@ -3339,9 +3537,12 @@ function scaleSync(pixelMap: image.PixelMap) {
 scaleSync(x: number, y: number, level: AntiAliasingLevel): void
 ```
 
-Scales this image based on the specified anti-aliasing level and the scale factors for the width and height. This API returns the result synchronously.
+根据指定的缩放算法和输入的宽高的缩放倍数对图片进行缩放。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscalesync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 宽高的缩放倍数 = 缩放后的图片宽高 / 缩放前的图片宽高。
+> - 从API版本26.0.0开始，建议使用[applyScaleSync](#applyscalesync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -3355,9 +3556,9 @@ Starting from API 26.0.0, it is recommended to use [applyScaleSync](#applyscales
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | Scale factor of the width. |
-| y | number | 是 | Scale factor of the height. |
-| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | Anti-aliasing level. |
+| x | number | 是 | 宽度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| y | number | 是 | 高度的缩放倍数。<br>取值不能为0，建议取正数，否则会产生翻转效果。 |
+| level | [AntiAliasingLevel](arkts-image-image-antialiasinglevel-e.md) | 是 | 采用的缩放算法。该参数对于ASTC格式的PixelMap不生效。 |
 
 **错误码：**
 
@@ -3390,11 +3591,9 @@ function scaleSync(pixelMap: image.PixelMap) {
 setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void
 ```
 
-Set color space of pixel map.
+设置图像的色彩空间。如需同时对图像的像素颜色进行色彩空间转换，请使用[applyColorSpace](#applycolorspace)。
 
-This method is only used to set the colorspace property of pixelmap, while all pixel data remains the same after calling this method. If you want to change colorspace for all pixels, use method {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager)} or {@Link #applyColorSpace(colorSpaceManager.ColorSpaceManager, AsyncCallback&lt;void&gt;)}.
-
-**起始版本：** 12
+**起始版本：** 10
 
 <!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void--><!--Device-PixelMap-setColorSpace(colorSpace: colorSpaceManager.ColorSpaceManager): void-End-->
 
@@ -3404,7 +3603,7 @@ This method is only used to set the colorspace property of pixelmap, while all p
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | The color space for pixel map. |
+| colorSpace | [colorSpaceManager.ColorSpaceManager](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspacemanager-i.md) | 是 | 图像色彩空间信息。 |
 
 **错误码：**
 
@@ -3438,7 +3637,11 @@ function setColorSpace(pixelMap: image.PixelMap) {
 setMemoryNameSync(name: string): void
 ```
 
-Sets a memory name for this PixelMap.
+设置PixelMap的内存标识符，便于在内存调试或问题定位时识别该内存。
+
+> **说明：** 
+> 
+> 仅支持DMA和SHARE_MEMORY内存类型的PixelMap设置内存标识符。
 
 **起始版本：** 13
 
@@ -3450,7 +3653,7 @@ Sets a memory name for this PixelMap.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| name | string | 是 | Memory name, which can be set only for a PixelMap with the DMA or ASHMEM memory format. The name length for DMA memory settings should be within the range of 1 to 255 bytes. For ASHMEM memory settings, the name length should be within the range of 1 to 244 bytes. |
+| name | string | 是 | 需要设置的内存标识符。DMA内存标识符的字符串长度取值范围为[1, 255]字节，SHARE_MEMORY内存标识符的字符串长度取值范围为[1, 244]字节。 |
 
 **错误码：**
 
@@ -3482,7 +3685,11 @@ function setMemoryNameSync(pixelMap: image.PixelMap) {
 setMetadata(key: HdrMetadataKey, value: HdrMetadataValue): Promise<void>
 ```
 
-Sets the value for the metadata with a given key in this PixelMap. This API uses a promise to return the result.
+设置PixelMap的HDR元数据。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 该接口仅支持DMA内存类型的PixelMap调用。详情请参考[图片解码内存优化(ArkTS)](../../../media/image/image-allocator-type.md)。
 
 **起始版本：** 12
 
@@ -3494,14 +3701,14 @@ Sets the value for the metadata with a given key in this PixelMap. This API uses
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 | Key of the HDR metadata. |
-| value | [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | 是 | Value of the metadata. |
+| key | [HdrMetadataKey](arkts-image-image-hdrmetadatakey-e.md) | 是 | HDR元数据的关键字，用于设置对应值。 |
+| value | [HdrMetadataValue](arkts-image-image-hdrmetadatavalue-t.md) | 是 | 元数据的值。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3542,7 +3749,11 @@ function setMetadata(pixelMap: image.PixelMap) { // 入参pixelMap内存类型�
 setOpacity(value: number): Promise<void>
 ```
 
-Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
+设置PixelMap的不透明度，指定的不透明度值将被应用于所有像素，不受原图不透明度的影响。使用Promise异步回调。
+
+> **说明：** 
+> 
+> YUV格式的图像不支持设置不透明度。
 
 **起始版本：** 26.0.0
 
@@ -3560,13 +3771,13 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | number | 是 | 不透明度的值。取值范围是(0.0, 1.0]，1.0表示完全不透明，数值越接近0.0则透明度越高。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3602,7 +3813,11 @@ function setOpacity(pixelMap: image.PixelMap) {
 setOpacitySync(value: number): void
 ```
 
-Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
+设置PixelMap的不透明度，指定的不透明度值将被应用于所有像素，不受原图不透明度的影响。同步返回结果。
+
+> **说明：** 
+> 
+> YUV格式的图像不支持设置不透明度。
 
 **起始版本：** 26.0.0
 
@@ -3620,7 +3835,7 @@ Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number | 是 | The target opacity value to be set. Unit: Percentage, Value range: (0,1]. The valid range is (0.0, 1.0] where 1.0 is fully opaque and becoming transparent as it approaches 0.0. |
+| value | number | 是 | 不透明度的值。取值范围是(0.0, 1.0]，1.0表示完全不透明，数值越接近0.0则透明度越高。 |
 
 **错误码：**
 
@@ -3656,7 +3871,7 @@ function setOpacitySync(pixelMap: image.PixelMap) {
 setTransferDetached(detached: boolean): void
 ```
 
-Sets whether to detach from the original thread when this PixelMap is transmitted across threads. This API applies to the scenario where the PixelMap needs to be released immediately.
+设置PixelMap在跨线程传输后断开原线程的引用。适用于需要立即释放PixelMap的场景。
 
 **起始版本：** 12
 
@@ -3668,7 +3883,7 @@ Sets whether to detach from the original thread when this PixelMap is transmitte
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| detached | boolean | 是 | Whether to detach from the original thread. **true** to detach, **false** otherwise. |
+| detached | boolean | 是 | true表示断开原线程引用，false表示不断开原线程引用。 |
 
 **错误码：**
 
@@ -3732,7 +3947,7 @@ struct Demo {
 toSdr(): Promise<void>
 ```
 
-Convert pixelmap to standard dynamic range.
+将HDR的图像内容转换为SDR的图像内容。使用Promise异步回调。
 
 **起始版本：** 12
 
@@ -3744,7 +3959,7 @@ Convert pixelmap to standard dynamic range.
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise instance used to return the operation result. If the operation fails, an error message is returned. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -3787,9 +4002,12 @@ async function toSdr(context: Context) {
 translate(x: number, y: number, callback: AsyncCallback<void>): void
 ```
 
-Translates this image based on given coordinates. This API uses an asynchronous callback to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+根据输入的坐标对图片进行位置变换。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 平移后的图像尺寸将变为：宽度 = 原宽度 + x，高度 = 原高度 + y。
+> - 从API版本26.0.0开始，建议使用[applyTranslate](#applytranslate)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3805,9 +4023,9 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | X coordinate to translate, in px. |
-| y | number | 是 | Y coordinate to translate, in px. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| x | number | 是 | 横向平移的距离。方向为正数向右，负数向左。取值范围是(-图像宽度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像左侧起的x列像素。 |
+| y | number | 是 | 纵向平移的距离。方向为正数向下，负数向上。取值范围是(-图像高度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像上方起的y行像素。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当对图片进行位置变换成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -3835,9 +4053,12 @@ function translate(pixelMap: image.PixelMap) {
 translate(x: number, y: number): Promise<void>
 ```
 
-Translates a PixelMap based on given coordinates. This API uses a promise to return the result. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+根据输入的坐标对图片进行位置变换。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytranslate) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 平移后的图像尺寸将变为：宽度 = 原宽度 + x，高度 = 原高度 + y。
+> - 从API版本26.0.0开始，建议使用[applyTranslate](#applytranslate)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 9
 
@@ -3853,14 +4074,14 @@ Starting from API 26.0.0, it is recommended to use [applyTranslate](#applytransl
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | X coordinate to translate, in px. |
-| y | number | 是 | Y coordinate to translate, in px. |
+| x | number | 是 | 横向平移的距离。方向为正数向右，负数向左。取值范围是(-图像宽度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像左侧起的x列像素。 |
+| y | number | 是 | 纵向平移的距离。方向为正数向下，负数向上。取值范围是(-图像高度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像上方起的y行像素。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -3884,9 +4105,12 @@ function translate(pixelMap: image.PixelMap) {
 translateSync(x: number, y: number): void
 ```
 
-Translates this image based on given coordinates. This API returns the result synchronously. The size of the translated image is changed to width+X and height+Y. It is recommended that the new width and height not exceed the width and height of the screen.
+根据输入的坐标对图片进行位置变换。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytranslatesync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> - 平移后的图像尺寸将变为：宽度 = 原宽度 + x，高度 = 原高度 + y。
+> - 从API版本26.0.0开始，建议使用[applyTranslateSync](#applytranslatesync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -3900,8 +4124,8 @@ Starting from API 26.0.0, it is recommended to use [applyTranslateSync](#applytr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| x | number | 是 | X coordinate to translate, in px. |
-| y | number | 是 | Y coordinate to translate, in px. |
+| x | number | 是 | 横向平移的距离。方向为正数向右，负数向左。取值范围是(-图像宽度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像左侧起的x列像素。 |
+| y | number | 是 | 纵向平移的距离。方向为正数向下，负数向上。取值范围是(-图像高度, +∞)。单位：像素（px）。<br>取值为负数时，平移的效果等同于裁剪掉自图像上方起的y行像素。 |
 
 **错误码：**
 
@@ -3934,7 +4158,11 @@ function translateSync(pixelMap: image.PixelMap) {
 unmarshalling(sequence: rpc.MessageSequence): Promise<PixelMap>
 ```
 
-Unmarshals a MessageSequence object to obtain a PixelMap object. To create a PixelMap object in synchronous mode, use [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md).
+从MessageSequence中反序列化并获取PixelMap。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 如需使用同步方式反序列化并创建PixelMap可使用[createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md)。
 
 **起始版本：** 10
 
@@ -3946,21 +4174,21 @@ Unmarshals a MessageSequence object to obtain a PixelMap object. To create a Pix
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | MessageSequence object that stores the PixelMap information. |
+| sequence | [rpc.MessageSequence](../../apis-ipc-kit/arkts-apis/arkts-ipc-rpc-messagesequence-c.md) | 是 | 保存有PixelMap信息的MessageSequence。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise used to return the PixelMap object. |
+| Promise&lt;[PixelMap](arkts-image-image-pixelmap-i.md)&gt; | Promise对象，返回反序列化后的PixelMap。 |
 
 **错误码：**
 
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [62980115](../errorcode-image.md#62980115-图片无效参数) | Invalid image parameter. |
-| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception. 3. Decode process exception. 4. Insufficient memory. |
-| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception. 2. Decoding process exception. 3. Insufficient memory. |
+| [62980097](../errorcode-image.md#62980097-pixelmap序列化传输失败) | IPC error. Possible cause: 1.IPC communication failed. 2. Image upload exception.         3. Decode process exception. 4. Insufficient memory. |
+| [62980096](../errorcode-image.md#62980096-操作失败) | The operation failed. Possible cause: 1.Image upload exception.         2. Decoding process exception. 3. Insufficient memory. |
 
 **示例**
 
@@ -4023,7 +4251,7 @@ async function unmarshal() {
 writeAllPixelsFromBuffer(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
+将缓冲区内的像素数据写入整个PixelMap。使用Promise异步回调。
 
 **起始版本：** 26.0.0
 
@@ -4041,13 +4269,13 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | The buffer that contains pixel data to be written to the PixelMap. |
+| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -4092,7 +4320,7 @@ function writeAllPixelsFromBuffer(pixelMap: image.PixelMap) {
 writeAllPixelsFromBufferSync(src: ArrayBuffer): void
 ```
 
-Reads the pixel data from a buffer and writes the data to the PixelMap. The source data must be in the same pixel format as the PixelMap.
+将缓冲区内的像素数据写入整个PixelMap。同步返回结果。
 
 **起始版本：** 26.0.0
 
@@ -4110,7 +4338,7 @@ Reads the pixel data from a buffer and writes the data to the PixelMap. The sour
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | The buffer that contains pixel data to be written to the PixelMap. |
+| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **错误码：**
 
@@ -4157,9 +4385,11 @@ function writeAllPixelsFromBufferSync(pixelMap: image.PixelMap) {
 writeBufferToPixels(src: ArrayBuffer): Promise<void>
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses a promise to return the result.
+将缓冲区内的像素数据写入整个PixelMap。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[writeAllPixelsFromBuffer](#writeallpixelsfrombuffer)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -4175,13 +4405,13 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
+| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4210,9 +4440,11 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 writeBufferToPixels(src: ArrayBuffer, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API uses an asynchronous callback to return the result.
+将缓冲区内的像素数据写入整个PixelMap。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#writeallpixelsfrombuffer) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[writeAllPixelsFromBuffer](#writeallpixelsfrombuffer)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -4228,8 +4460,8 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBuffer](#w
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the pixels in the buffer are successfully written to the PixelMap, **err** is **undefined**; otherwise, **err** is an error object. |
+| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当缓冲区中的图像像素数据写入PixelMap成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -4258,9 +4490,11 @@ function writeBufferToPixels(pixelMap: image.PixelMap) {
 writeBufferToPixelsSync(src: ArrayBuffer): void
 ```
 
-Reads the pixels in the buffer based on the PixelMap's pixel format and writes the data to this PixelMap object. This API returns the result synchronously.
+将缓冲区内的像素数据写入整个PixelMap。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 从API版本26.0.0开始，建议使用[writeAllPixelsFromBufferSync](#writeallpixelsfrombuffersync) 代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -4274,7 +4508,7 @@ Starting from API 26.0.0, it is recommended to use [writeAllPixelsFromBufferSync
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | ArrayBuffer | 是 | Buffer from which the pixels are read. The buffer size is obtained by calling [getPixelBytesNumber](#getpixelbytesnumber). |
+| src | ArrayBuffer | 是 | 源数据缓冲区，该缓冲区内的图像像素数据会被写入PixelMap。缓冲区内的像素数据必须是整个PixelMap的像素数据，且像素格式需与PixelMap相同，不包含内存对齐填充字节。缓冲区的大小可通过[getPixelBytesNumber](#getpixelbytesnumber)接口获取。 |
 
 **错误码：**
 
@@ -4312,9 +4546,16 @@ function writeBufferToPixelsSync(pixelMap: image.PixelMap) {
 writePixels(area: PositionArea): Promise<void>
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses a promise to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+将缓冲区内的像素数据写入PixelMap的指定区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的数据会按照PixelMap的像素格式解析，否则按照BGRA_8888格式解析。使用Promise异步回调。
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：写入区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：写入区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[writePixelsFromArea](#writepixelsfromarea)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -4330,13 +4571,13 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the pixels will be written. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 写入的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区内的像素数据会被写入PixelMap的该区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的像素数据格式需与PixelMap相同，否则需要为BGRA_8888格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | Promise that returns no value. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **示例**
 
@@ -4388,9 +4629,16 @@ function writePixelsYUV(pixelMap: image.PixelMap) {
 writePixels(area: PositionArea, callback: AsyncCallback<void>): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API uses an asynchronous callback to return the result. You can use a formula to calculate the size of the memory to be applied for based on **PositionArea**. YUV region calculation formula: region to read (region.size{width * height}) * 1.5 (1 * Y component + 0.25 * U component + 0.25 * V component) RGBA region calculation formula: region to read (region.size{width * height}) * 4 (1 * R component + 1 * G component + 1 * B component + 1 * A component)
+将缓冲区内的像素数据写入PixelMap的指定区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的数据会按照PixelMap的像素格式解析，否则按照BGRA_8888格式解析。使用callback异步回调。
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writepixelsfromarea) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：写入区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：写入区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[writePixelsFromArea](#writepixelsfromarea)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 7
 
@@ -4406,8 +4654,8 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromArea](#writep
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the pixels will be written. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | Callback used to return the result. If the operation is successful, **err** is **undefined**; otherwise, **err** is an error object. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 写入的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区内的像素数据会被写入PixelMap的该区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的像素数据格式需与PixelMap相同，否则需要为BGRA_8888格式。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数，当写入成功，err为undefined，否则为错误对象。 |
 
 **示例**
 
@@ -4461,7 +4709,14 @@ function writePixelsYUV(pixelMap: image.PixelMap) {
 writePixelsFromArea(area: PositionArea): Promise<void>
 ```
 
-Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA_8888 format.
+将缓冲区内的像素数据写入PixelMap的指定区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的数据会按照PixelMap的像素格式解析，否则按照BGRA_8888格式解析。使用Promise异步回调。
+
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：写入区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：写入区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
 
 **起始版本：** 26.0.0
 
@@ -4479,13 +4734,13 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 写入的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区内的像素数据会被写入PixelMap的该区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的像素数据格式需与PixelMap相同，否则需要为BGRA_8888格式。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;void&gt; | A Promise that resolves when the operation completes. |
+| Promise&lt;void&gt; | Promise对象，无返回结果。 |
 
 **错误码：**
 
@@ -4568,7 +4823,14 @@ function writePixelsFromAreaYUV(pixelMap: image.PixelMap) {
 writePixelsFromAreaSync(area: PositionArea): void
 ```
 
-Writes data from a buffer to a certain area of the PixelMap. The source data must be in BGRA_8888 format.
+将缓冲区内的像素数据写入PixelMap的指定区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的数据会按照PixelMap的像素格式解析，否则按照BGRA_8888格式解析。同步返回结果。
+
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：写入区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：写入区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
 
 **起始版本：** 26.0.0
 
@@ -4586,7 +4848,7 @@ Writes data from a buffer to a certain area of the PixelMap. The source data mus
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area of the PixelMap to write the data. Data will be copied from PositionArea.pixels to the PixelMap. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 写入的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区内的像素数据会被写入PixelMap的该区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的像素数据格式需与PixelMap相同，否则需要为BGRA_8888格式。 |
 
 **错误码：**
 
@@ -4669,9 +4931,16 @@ function writePixelsFromAreaSyncYUV(pixelMap: image.PixelMap) {
 writePixelsSync(area: PositionArea): void
 ```
 
-Reads the pixels in the [PositionArea](arkts-image-image-positionarea-i.md).region buffer in the BGRA_8888 format and writes the data to the area specified by [PositionArea](arkts-image-image-positionarea-i.md).pixels in this PixelMap object. This API returns the result synchronously.
+将缓冲区内的像素数据写入PixelMap的指定区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的数据会按照PixelMap的像素格式解析，否则按照BGRA_8888格式解析。同步返回结果。
 
-Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#writepixelsfromareasync) instead for better exception handling capabilities.
+> **说明：** 
+> 
+> 可使用公式计算PositionArea需要申请的缓冲区大小。
+> 
+> - RGBA的区域计算公式：写入区域像素数量（Region.size {width * height}）* 4（1倍R分量 + 1倍G分量 + 1倍B分量 + 1倍A分量）
+> - YUV的区域计算公式：写入区域像素数量（Region.size {width * height}）* 1.5（1倍Y分量 + 0.25倍U分量 + 0.25倍V分量）
+> 
+> 从API版本26.0.0开始，建议使用[writePixelsFromAreaSync](#writepixelsfromareasync)代替，以获得更完善的异常处理能力。
 
 **起始版本：** 12
 
@@ -4687,7 +4956,7 @@ Starting from API 26.0.0, it is recommended to use [writePixelsFromAreaSync](#wr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | Area to which the pixels will be written. |
+| area | [PositionArea](arkts-image-image-positionarea-i.md) | 是 | 写入的区域数据。<br>该区域由[PositionArea](arkts-image-image-positionarea-i.md).region指定，[PositionArea](arkts-image-image-positionarea-i.md).pixels缓冲区内的像素数据会被写入PixelMap的该区域。如果PixelMap的像素格式为YUV类型，则缓冲区内的像素数据格式需与PixelMap相同，否则需要为BGRA_8888格式。 |
 
 **错误码：**
 
@@ -4728,7 +4997,7 @@ function writePixelsSync(pixelMap: image.PixelMap) {
 readonly isEditable: boolean
 ```
 
-Whether the image pixels are editable. **true** if editable, **false** otherwise. The value **false** provides better image rendering and transmission performance.<br> This API can be used in atomic services since API version 11.<br> This API can be used in ArkTS widgets since API version 12.
+图像像素是否可被编辑。true表示可被编辑，false表示不可被编辑。为false时，图像的渲染和传输性能更好。
 
 **类型：** boolean
 
@@ -4748,7 +5017,7 @@ Whether the image pixels are editable. **true** if editable, **false** otherwise
 readonly isStrideAlignment: boolean
 ```
 
-Whether the row data of the image is memory aligned. The value **true** means that the row data is memory-aligned, and there may be blank bytes padded at the end of each row to meet alignment requirements. The value **false** means that the row data is not memory-aligned, and rows are packed contiguously with no padding bytes at the end.
+图像的行数据是否已进行内存对齐。true表示已进行内存对齐，每行数据的末尾有空白填充字节以满足对齐要求（如果数据本身已满足对齐要求，则不会有填充字节）；false表示未进行内存对齐，每行数据紧密排列，末尾无空白填充字节。
 
 **类型：** boolean
 

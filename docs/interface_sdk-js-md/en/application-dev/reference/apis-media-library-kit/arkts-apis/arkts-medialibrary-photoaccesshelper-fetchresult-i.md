@@ -38,8 +38,8 @@ Closes this FetchResult instance to invalidate it. After this instance is releas
 
 | Error Code ID | Error Message |
 | --- | --- |
-| 13900020 | Invalid argument. Possible causes: 1. Parameter count exceeds the limit; 2. The current object is invalid. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 13900020 | Invalid argument. Possible causes:         1. Parameter count exceeds the limit; 2. The current object is invalid. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -149,7 +149,7 @@ Obtains all the file assets in the result set. This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1.System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -205,7 +205,7 @@ Obtains all the file assets in the result set. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -305,7 +305,7 @@ Obtains the first file asset in the result set. This API uses an asynchronous ca
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -361,7 +361,7 @@ Obtains the first file asset in the result set. This API uses a promise to retur
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -467,7 +467,7 @@ Obtains the last file asset in the result set. This API uses an asynchronous cal
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | 1.Parameter count exceeds the limit;<br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -523,7 +523,7 @@ Obtains the last file asset in the result set. This API uses a promise to return
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -576,7 +576,7 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -637,7 +637,7 @@ Before using this API, you must use [isAfterLast()](#isafterlast) to check wheth
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -692,7 +692,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 
@@ -754,7 +754,7 @@ Obtains a file asset with the specified index in the result set. This API uses a
 | Error Code ID | Error Message |
 | --- | --- |
 | 13900020 | Invalid parameter. Possible causes:<br>1.Parameter count exceeds the limit; <br>2.The object is not a valid instance. |
-| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes: 1. Database exception; 2. IPC timeout. Please retry and check logs. |
+| 14000011 | MediaLibrary inner fail. Possible causes:<br>1. System internal error. Possible causes:         1. Database exception; 2. IPC timeout. Please retry and check logs. |
 
 **Examples**
 

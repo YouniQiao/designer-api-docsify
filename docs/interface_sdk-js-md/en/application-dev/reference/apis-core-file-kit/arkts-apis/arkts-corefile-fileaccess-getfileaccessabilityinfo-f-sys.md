@@ -71,6 +71,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -91,6 +92,8 @@ async function getFileAccessAbilityInfo() {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getfileaccessabilityinfo2"></a>
@@ -158,6 +161,7 @@ Obtains information about all Wants with **extension** set to **fileAccess** in 
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -174,3 +178,5 @@ async function getFileAccessAbilityInfo() {
   }
 }
 ```
+
+<!--DelEnd-->

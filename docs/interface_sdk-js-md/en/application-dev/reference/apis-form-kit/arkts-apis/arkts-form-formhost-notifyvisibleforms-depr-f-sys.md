@@ -36,6 +36,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 | formIds | Array&lt;string&gt; | Yes | List of widget IDs. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If a notification is sent to the widget framework to make the widget visible, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -48,6 +49,8 @@ formHost.notifyVisibleForms(formIds, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyvisibleforms2"></a>
@@ -86,6 +89,7 @@ Instructs the widget framework to make a widget visible. After this API is calle
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,3 +102,5 @@ formHost.notifyVisibleForms(formIds).then(() => {
   console.error(`formHost notifyVisibleForms, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

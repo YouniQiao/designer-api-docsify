@@ -53,6 +53,7 @@ function getAppCloneBundleInfo(bundleName: string, appIndex: number, bundleFlags
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -76,3 +77,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAppCloneBundleInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

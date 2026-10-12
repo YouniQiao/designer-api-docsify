@@ -64,7 +64,7 @@ cleanDeviceDirtyData(table: string, cursor?: number): Promise<void>
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported;         3. This is a read-only database. |
 
 <a id="cloudsync5"></a>
 
@@ -109,11 +109,12 @@ cloudSync(
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. 6. The callback must be a function. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr.         3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty.         5. The progress must be a callback type. 6. The callback must be a function. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -176,6 +177,8 @@ if (store != undefined) {
 };
 ```
 
+<!--DelEnd-->
+
 <a id="cloudsync6"></a>
 
 ## cloudSync
@@ -219,14 +222,17 @@ cloudSync(mode: SyncMode, predicates: RdbPredicates, progress: Callback<Progress
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr.         3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty.         5. The progress must be a callback type. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 参见 [cloudSync](#cloudsync)
+
+<!--DelEnd-->
 
 <a id="delete3"></a>
 
@@ -282,6 +288,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates, callb
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -311,6 +318,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete4"></a>
 
@@ -371,6 +380,7 @@ delete(table: string, predicates: dataSharePredicates.DataSharePredicates): Prom
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -400,6 +410,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## lockCloudContainer
 
@@ -471,6 +483,7 @@ query(table: string, predicates: dataSharePredicates.DataSharePredicates, callba
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -559,6 +572,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query5"></a>
 
@@ -604,6 +619,7 @@ query(
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -692,6 +708,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query6"></a>
 
@@ -741,6 +759,7 @@ query(
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -830,6 +849,8 @@ if (store != undefined) {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="querysharingresource1"></a>
 
 ## querySharingResource
@@ -865,9 +886,9 @@ querySharingResource(predicates: RdbPredicates, columns?: Array<string>): Promis
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
 | [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
@@ -915,9 +936,9 @@ querySharingResource(predicates: RdbPredicates, callback: AsyncCallback<ResultSe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. |
 | [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
@@ -966,9 +987,9 @@ querySharingResource(predicates: RdbPredicates, columns: Array<string>, callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-内部错误) | Inner error. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
 | [14800011](../errorcode-data-rdb.md#14800011-数据库文件异常) | The current operation failed because the database is corrupted.<br>**适用版本：** 12+ |
 | [14800014](../errorcode-data-rdb.md#14800014-目标实例已关闭) | The target instance is already closed.<br>**适用版本：** 12+ |
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond.<br>**适用版本：** 12+ |
@@ -1075,6 +1096,7 @@ restore(): Promise<void>
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1101,6 +1123,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## retainDeviceData
 
@@ -1157,7 +1181,7 @@ retainDeviceData(retainDevices?: Record<string, Array<string>>): Promise<void>
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
 | 14800042 | The database does not exist. Possible causes: 1. The database is deleted;<br>2. The database is not created. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
 
 ## unlockCloudContainer
 
@@ -1247,6 +1271,7 @@ update(
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1404,6 +1429,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="update6"></a>
 
@@ -1465,6 +1492,7 @@ update(table: string, values: ValuesBucket, predicates: dataSharePredicates.Data
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite数据类型不匹配) | SQLite: Data type mismatch.<br>**适用版本：** 12+ |
 | [14800034](../errorcode-data-rdb.md#14800034-sqlite库使用不正确) | SQLite: Library used incorrectly.<br>**适用版本：** 12+ |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1623,6 +1651,8 @@ if (store != undefined) {
 }
 ```
 
+<!--DelEnd-->
+
 ## updateDistributedInfo
 
 ```TypeScript
@@ -1675,4 +1705,4 @@ updateDistributedInfo(info: DistributedInfo, predicates: RdbPredicates): Promise
 | [14800015](../errorcode-data-rdb.md#14800015-数据库没有响应) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite通用错误) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite数据库文件已锁定) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |

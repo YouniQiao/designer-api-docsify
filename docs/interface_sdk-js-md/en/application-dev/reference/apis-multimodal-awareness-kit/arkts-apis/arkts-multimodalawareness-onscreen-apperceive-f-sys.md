@@ -53,6 +53,7 @@ Proactively triggers screen content awareness to obtain the screen content for s
 | [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |
 | [34000002](../errorcode-carAwareness.md#34000002-specified-capability-not-supported) | The application or page is not supported. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,3 +68,5 @@ try {
   console.error(`apperceive failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

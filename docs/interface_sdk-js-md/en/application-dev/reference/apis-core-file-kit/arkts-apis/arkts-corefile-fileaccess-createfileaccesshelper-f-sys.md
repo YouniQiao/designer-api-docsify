@@ -77,6 +77,7 @@ Creates a **Helper** object to bind with all file management services in the sys
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -99,6 +100,8 @@ function createFileAccessHelper02(context: common.UIAbilityContext) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="createfileaccesshelper2"></a>
@@ -173,6 +176,7 @@ Creates a **Helper** object to bind with the specified Wants. This API returns t
 | 14300003 | Fail to get fileextension info |
 | 14300004 | Get wrong result |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -202,3 +206,5 @@ function createFileAccessHelper01(context: common.UIAbilityContext) {
   }
 }
 ```
+
+<!--DelEnd-->

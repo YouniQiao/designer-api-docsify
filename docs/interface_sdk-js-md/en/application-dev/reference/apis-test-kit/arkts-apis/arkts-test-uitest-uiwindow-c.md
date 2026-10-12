@@ -589,7 +589,7 @@ Resizes a window based on the specified width, height, and direction. This API u
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wide | number | Yes | Width of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
+| wide | number | Yes | Width of the adjusted window, in pixels. The value is an integer greater than or equal to         0. If the value is out of range, error code 401 is thrown. |
 | height | number | Yes | Height of the adjusted window, in pixels. The value is an integer greater than or equal to 0. If the value is out of range, error code 401 is thrown. |
 | direction | [ResizeDirection](arkts-test-uitest-resizedirection-e.md) | Yes | Resize direction. |
 

@@ -88,6 +88,7 @@ This API can be called after the prepare(), start(), or paused() event is trigge
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the check result. The value **true** means that the device supports the hardware digital watermark, and **false** means the opposite. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -99,6 +100,8 @@ avRecorder.isWatermarkSupported().then((isWatermarkSupported: boolean) => {
   console.error(`Failed to get and catch error is ${error.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setWatermark
 
@@ -138,6 +141,7 @@ This API can be called only after the prepare() event is triggered and before th
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The parameter check failed. |
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -153,3 +157,5 @@ avRecorder.setWatermark(watermark, watermarkConfig).then(() => {
   console.error(`Failed to setWatermark and catch error is ${error.message}`);
 });
 ```
+
+<!--DelEnd-->

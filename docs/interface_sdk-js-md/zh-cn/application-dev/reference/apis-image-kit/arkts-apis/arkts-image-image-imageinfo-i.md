@@ -4,7 +4,7 @@
 interface ImageInfo
 ```
 
-表示图片信息。
+表示图像的基本信息。
 
 **起始版本：** 6
 
@@ -24,7 +24,7 @@ import { image } from '@kit.ImageKit';
 alphaType: AlphaType
 ```
 
-透明度。
+透明度类型。
 
 **类型：** [AlphaType](arkts-image-image-alphatype-e.md)
 
@@ -64,7 +64,7 @@ density: number
 isHdr: boolean
 ```
 
-true表示图片为高动态范围（HDR），false表示图片非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
+true表示图像为高动态范围（HDR），false表示图像非高动态范围（SDR）。对于[ImageSource](arkts-image-image-imagesource-i.md)，代表源图片是否为HDR；对于[PixelMap](arkts-image-image-pixelmap-i.md)，代表解码后的PixelMap是否为HDR。
 
 **类型：** boolean
 
@@ -100,7 +100,7 @@ mimeType: string
 pixelFormat: PixelMapFormat
 ```
 
-像素格式。
+像素格式，表示像素数据的颜色通道排列和位深信息。
 
 **类型：** [PixelMapFormat](arkts-image-image-pixelmapformat-e.md)
 
@@ -120,7 +120,7 @@ pixelFormat: PixelMapFormat
 size: Size
 ```
 
-图片大小。
+图像尺寸。
 
 **类型：** Size
 
@@ -140,7 +140,7 @@ size: Size
 stride: number
 ```
 
-跨距，内存中每行像素所占的空间。单位：字节（Byte）。stride &gt;= size.width * 4，不满足时数据读取异常。
+跨距（行跨距），表示内存中每行像素所占的空间。单位：字节（Byte）。跨距 &gt;= 图像宽度 * 每像素字节数。
 
 **类型：** number
 

@@ -94,7 +94,7 @@ applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promis
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: 1. The mediaShareAlbumRequest is null. 2. The operator must be the owner of the share album when creating the album. 3. The operator must be the owner of the share album when adding share member. 4. The operator must be the owner of the share album or device owner of share album member when updating share member status. 5. The shared album member status update logic does not meet expectations. 6. The operator must be the owner of the share album when deleting share member. 7. The target Album is not exist. 8. The operator must be the owner of the share album when modifying the share album name. 9. The CoverUri is deleted or riskControlled. 10. The operator must be the owner of the share album when setting the cover of the album. 11. The operator must be the owner of the share album when resetting the cover of the album. 12. This member does not belong to the current shared album. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:         1. The mediaShareAlbumRequest is null.         2. The operator must be the owner of the share album when creating the album.         3. The operator must be the owner of the share album when adding share member.         4. The operator must be the owner of the share album or device owner of share album member when updating share member status.         5. The shared album member status update logic does not meet expectations.         6. The operator must be the owner of the share album when deleting share member.         7. The target Album is not exist.         8. The operator must be the owner of the share album when modifying the share album name.         9. The CoverUri is deleted or riskControlled.         10. The operator must be the owner of the share album when setting the cover of the album.         11. The operator must be the owner of the share album when resetting the cover of the album.         12. This member does not belong to the current shared album. |
 | [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Operation not supported. Possible causes: 1. Request must be from share album. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
@@ -135,6 +135,7 @@ batchGetPhotoAssetParams(assets: PhotoAsset[], members: string[]): PhotoAssetPar
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: The attribute to be queried does not exist in assets. |
 | [23800104](../errorcode-medialibrary.md#23800104-传入参数校验不通过) | The provided member must be a property name of PhotoKey. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -193,6 +194,8 @@ async function example(context: Context) {
 }
 ```
 
+<!--DelEnd-->
+
 ## cancelAnalysisTool
 
 ```TypeScript
@@ -234,6 +237,7 @@ cancelAnalysisTool(config: ToolCancelConfig): Promise<void>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid task id. <br>2. The length of **param** in **ToolCancelConfig** exceeds 16KB. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:<br>1. IPC timeout; <br>2. System exception. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -254,6 +258,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## cancelPhotoUriPermission
 
@@ -296,6 +302,7 @@ cancelPhotoUriPermission(tokenId: number, uri: string, photoPermissionType: Phot
 | 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range; <br>3. This operation is not supported for assets in shared albums. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -323,6 +330,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## canPerformDeepOptimizeSpace
 
@@ -358,6 +367,7 @@ canPerformDeepOptimizeSpace(): Promise<boolean>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -372,6 +382,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## cloneAssetsByPath
 
@@ -416,6 +428,7 @@ cloneAssetsByPath(assets: string[], target: Album, option?: BatchOperationOption
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been delete or hidden; <br>2. Asset to be cloned is cloud pictures, which can not be cloned; <br>3. The Target Album does not exist. <br>4. Insufficient system space. <br>5. Automatic renaming is not supported. <br>6. The clone task is interrupted. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -433,6 +446,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## cloneToAlbum
 
@@ -477,6 +492,7 @@ cloneToAlbum(assets: PhotoAsset[], target: Album, option?: BatchOperationOptions
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been deleted or hidden; <br>2. The Target Album does not exist. <br>3. Insufficient system space. <br>4. Automatic renaming is not supported. <br>5. The clone task is interrupted; <br>6. This operation is not supported for assets in shared albums. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -505,6 +521,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## cloneToDir
 
@@ -549,6 +567,7 @@ cloneToDir(assets: string[], target: string, option?: BatchOperationOptions): Pr
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Asset to be cloned has been deleted or hidden; <br>2. Asset to be cloned is cloud pictures, which can not be cloned; <br>3. The Target Album does not exist. <br>4. Insufficient system space. <br>5. Automatic renaming is not supported. <br>6. The clone task is interrupted. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -574,6 +593,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## cloneWithShareAlbum
 
@@ -658,6 +679,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid Array&lt;PhotoAsset&gt;. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -681,6 +703,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## convertToAsset
 
@@ -723,6 +747,7 @@ convertToAsset(path: string): Promise<PhotoAsset>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Converted an image after filtering into an asset object; <br>2. File to be converted is not exist; <br>3. Only images in the public directory of filemanager can be converted. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -738,6 +763,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createasset1"></a>
 
@@ -787,6 +814,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -805,6 +833,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createasset2"></a>
 
@@ -859,6 +889,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -876,6 +907,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createasset3"></a>
 
@@ -931,6 +964,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -951,6 +985,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createasset4"></a>
 
@@ -1001,6 +1037,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1022,6 +1059,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## createAssetsForApp
 
@@ -1065,6 +1104,7 @@ createAssetsForApp(bundleName: string, appName: string, tokenId: number, photoCr
 | 13900020 | Invalid argument. Possible causes:<br>1. The photoCreationConfigs is empty; <br>2. Incorrect photoCreationConfigs format. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1099,6 +1139,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## createAssetsForAppWithAlbum
 
@@ -1142,6 +1184,7 @@ createAssetsForAppWithAlbum(source: PhotoCreationSource, albumUri: string, isAut
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1182,6 +1225,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## createAssetsForAppWithMode
 
@@ -1234,6 +1279,7 @@ createAssetsForAppWithMode(
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1271,6 +1317,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## createAssetsWithAlbum
 
@@ -1318,6 +1366,7 @@ createAssetsWithAlbum(
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scenario-specific parameters are incorrect. Possible causes are as follows:<br>1. The input parameter creationSettings is null or undefined. <br>2. The array length of creationSettings is bigger than 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1349,6 +1398,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getAlbumIdByBundleName
 
@@ -1391,6 +1442,7 @@ getAlbumIdByBundleName(bundleName: string): Promise<number>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1410,6 +1462,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## getAlbumsByIds
 
@@ -1450,6 +1504,7 @@ getAlbumsByIds(albumIds: Array<number>): Promise<Map<number, Album>>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1470,6 +1525,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getAssetCompatibleCapability
 
@@ -1509,6 +1566,7 @@ getAssetCompatibleCapability(bundleName: string): Promise<AssetCompatibleCapabil
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1523,6 +1581,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getAssetCompatibleUris
 
@@ -1564,6 +1624,7 @@ getAssetCompatibleUris(bundleName: string, assets: Array<PhotoAsset>, compatible
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The bundleName is invalid; <br>2. The compatibleFlag is invalid; |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1590,6 +1651,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getClonedAlbumUris
 
@@ -1632,6 +1695,7 @@ getClonedAlbumUris(oldUris: Array<string>): Promise<Map<string, string>>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考 [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1653,6 +1717,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## getClonedAssetUris
 
@@ -1695,6 +1761,7 @@ getClonedAssetUris(oldUris: Array<string>): Promise<Map<string, string>>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The size of input parameter exceeds 100 or is 0. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考 [photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1716,6 +1783,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## getDataAnalysisProgress
 
@@ -1756,6 +1825,7 @@ getDataAnalysisProgress(analysisType?: AnalysisType): Promise<string>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Incorrect parameter types; <br>2. Parameter verification failed. |
 | 14000011 | Internal system error. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1773,6 +1843,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getDeepOptimizeSpace
 
@@ -1813,6 +1885,7 @@ getDeepOptimizeSpace(): Promise<number>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1830,6 +1903,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gethiddenalbums1"></a>
 
@@ -1868,6 +1943,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options: FetchOptions, callback: 
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1906,6 +1982,8 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
+<!--DelEnd-->
+
 <a id="gethiddenalbums2"></a>
 
 ## getHiddenAlbums
@@ -1942,6 +2020,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, callback: AsyncCallback<FetchResu
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2004,6 +2083,8 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
+<!--DelEnd-->
+
 <a id="gethiddenalbums3"></a>
 
 ## getHiddenAlbums
@@ -2046,6 +2127,7 @@ getHiddenAlbums(mode: HiddenPhotosDisplayMode, options?: FetchOptions): Promise<
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2102,6 +2184,8 @@ async function getHiddenAlbumsView(phAccessHelper: photoAccessHelper.PhotoAccess
 }
 ```
 
+<!--DelEnd-->
+
 ## getIndexConstructProgress
 
 ```TypeScript
@@ -2134,6 +2218,7 @@ getIndexConstructProgress(): Promise<string>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2160,6 +2245,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## getPhotoAlbumOrder
 
@@ -2201,6 +2288,7 @@ getPhotoAlbumOrder(orderStyle: number, options?: FetchOptions): Promise<FetchRes
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2230,6 +2318,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## getPhotoAlbums
 
@@ -2271,6 +2361,7 @@ getPhotoAlbums(options?: FetchOptions):Promise<FetchResult<Album>>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2299,6 +2390,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## getPhotoAssets
 
@@ -2338,6 +2431,7 @@ getPhotoAssets(assetsData: ValuesBucket[]): Promise<PhotoAsset[]>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid value type in ValuesBucket; <br>2. Missing required column in ValuesBucket; <br>3. Array size exceeds 500. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2364,6 +2458,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getphotoindex1"></a>
 
@@ -2404,6 +2500,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions, callbac
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2445,6 +2542,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getphotoindex2"></a>
 
@@ -2490,6 +2589,7 @@ getPhotoIndex(photoUri: string, albumUri: string, options: FetchOptions): Promis
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2530,6 +2630,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<!--DelEnd-->
+
 ## getPreferredCompatibleMode
 
 ```TypeScript
@@ -2568,6 +2670,7 @@ getPreferredCompatibleMode(bundleName: string): Promise<PreferredCompatibleMode>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2592,6 +2695,8 @@ async function getPreferredCompatibleMode(
   return mode;
 }
 ```
+
+<!--DelEnd-->
 
 ## getShareAlbums
 
@@ -2673,6 +2778,7 @@ getSharedPhotoAssets(options: FetchOptions): Array<SharedPhotoAsset>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2696,6 +2802,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## grantPhotoUriPermission
 
@@ -2744,6 +2852,7 @@ grantPhotoUriPermission(
 | 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range; <br>3. This operation is not supported for assets in shared albums. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2772,6 +2881,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## grantPhotoUrisPermission
 
@@ -2820,6 +2931,7 @@ grantPhotoUrisPermission(
 | 13900020 | Invalid argument. Possible causes:<br>1. Incorrect uri format; <br>2. The value of photoPermissionType or hideSensitiveType is out of range; <br>3. This operation is not supported for assets in shared albums. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2851,6 +2963,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper,
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## invokeAnalysisTool
 
@@ -2894,6 +3008,7 @@ invokeAnalysisTool(config: ToolInvokeConfig, callback: Callback<AnalysisToolResu
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported tool type; <br>2. The length of **param** in **ToolInvokeConfig** exceeds 16KB. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. Possible causes:<br>1. IPC timeout; <br>2. System exception. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -2918,6 +3033,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## isCompatibleDuplicateSupported
 
@@ -2957,6 +3074,7 @@ isCompatibleDuplicateSupported(bundleName: string): Promise<boolean>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. The IPC request timed out. <br>2. system running error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -2972,6 +3090,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## isMediaDataReady
 
@@ -3014,6 +3134,7 @@ isMediaDataReady(mediaDataKey: string): Promise<boolean>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails, unsupported media data type. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3034,6 +3155,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## modifyAlbumDefaultCoverOrder
 
@@ -3080,6 +3203,7 @@ modifyAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Only the system album can be set without lpath. Otherwise, the setting is not supported; <br>2. The orderKey and orderSubKey are not in the specified range; <br>3. The order type must be either descending or ascending. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3106,6 +3230,8 @@ async function modifyAlbumDefaultCoverOrder(phAccessHelper: photoAccessHelper.Ph
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## modifyHiddenAlbumDefaultCoverOrder
 
@@ -3152,6 +3278,7 @@ modifyHiddenAlbumDefaultCoverOrder(coverOrderInfos: DefaultCoverOrderInfo[],
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Only the system album can be set without lpath. Otherwise, the setting is not supported; <br>2. The orderKey and orderSubKey are not in the specified range; <br>3. The order type must be either descending or ascending. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3177,6 +3304,8 @@ async function modifyHiddenAlbumDefaultCoverOrder(phAccessHelper: photoAccessHel
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## moveAssetsByPath
 
@@ -3221,6 +3350,7 @@ moveAssetsByPath(assets: string[], target: Album, option?: BatchOperationOptions
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Moving to the target Album is not supported; <br>2. Assets to be Moved does not exist; <br>3. Automatic renaming is not supported. <br>4. The task is interrupted. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: 1. Database corrupted; 2. The file system is abnormal; 3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3238,6 +3368,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## moveAssetsToDir
 
@@ -3282,6 +3414,7 @@ moveAssetsToDir(assets: string[], target: string, option?: BatchOperationOptions
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Moving to the target directory is not supported; <br>2. Assets to be Moved does not exist; <br>3. Automatic renaming is not supported. <br>4. The task is interrupted. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3307,6 +3440,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## off('hiddenPhotoChange')
 
@@ -3342,6 +3477,7 @@ off(type: 'hiddenPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3372,6 +3508,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## off('trashedPhotoChange')
 
@@ -3407,6 +3545,7 @@ off(type: 'trashedPhotoChange', callback?: Callback<PhotoAssetChangeInfos>): voi
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3437,6 +3576,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## off('hiddenAlbumChange')
 
@@ -3472,6 +3613,7 @@ off(type: 'hiddenAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3502,6 +3644,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## off('trashedAlbumChange')
 
@@ -3537,6 +3681,7 @@ off(type: 'trashedAlbumChange', callback?: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3567,6 +3712,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## offAnalysisAlbumChange
 
@@ -3603,6 +3750,7 @@ offAnalysisAlbumChange(callback?: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3633,6 +3781,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## offAnalysisPhotoChange
 
@@ -3669,6 +3819,7 @@ offAnalysisPhotoChange(callback?: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3699,6 +3850,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## offShareAlbumChange
 
@@ -3800,6 +3953,7 @@ on(type: 'hiddenPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3827,6 +3981,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## on('trashedPhotoChange')
 
@@ -3862,6 +4018,7 @@ on(type: 'trashedPhotoChange', callback: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3889,6 +4046,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## on('hiddenAlbumChange')
 
@@ -3924,6 +4083,7 @@ on(type: 'hiddenAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -3951,6 +4111,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## on('trashedAlbumChange')
 
@@ -3986,6 +4148,7 @@ on(type: 'trashedAlbumChange', callback: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4013,6 +4176,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## onAnalysisAlbumChange
 
@@ -4049,6 +4214,7 @@ onAnalysisAlbumChange(callback: Callback<AlbumChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4076,6 +4242,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper){
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## onAnalysisPhotoChange
 
@@ -4112,6 +4280,7 @@ onAnalysisPhotoChange(callback: Callback<PhotoAssetChangeInfos>): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes:<br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) |  |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4139,6 +4308,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## onShareAlbumChange
 
@@ -4245,6 +4416,7 @@ query(sql: string): Promise<ResultSet>
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: The SQL statement is abnormal. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs.<br>Possible causes: <br>1. The database is corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4267,6 +4439,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## releaseDebugDatabase
 
@@ -4342,6 +4516,7 @@ removeFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4366,6 +4541,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="removeforminfo2"></a>
 
@@ -4408,6 +4585,7 @@ removeFormInfo(info: FormInfo): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4430,6 +4608,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## removeGalleryFormInfo
 
@@ -4470,6 +4650,7 @@ removeGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -4489,6 +4670,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="saveforminfo1"></a>
 
@@ -4526,6 +4709,7 @@ saveFormInfo(info: FormInfo, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4559,6 +4743,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="saveforminfo2"></a>
 
@@ -4601,6 +4787,7 @@ saveFormInfo(info: FormInfo): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4632,6 +4819,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## saveGalleryFormInfo
 
@@ -4672,6 +4861,7 @@ saveGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -4711,6 +4901,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setassetcompatiblecapability1"></a>
 
@@ -4753,6 +4945,7 @@ setAssetCompatibleCapability(bundleName: string, capability: AssetCompatibleCapa
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName or capability is invalid. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4770,6 +4963,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setPhotoAlbumOrder
 
@@ -4811,6 +5006,7 @@ setPhotoAlbumOrder(orderStyle: number, albumOrders: Array<AlbumOrder>): Promise<
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: 1.The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4845,6 +5041,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## setPreferredCompatibleMode
 
@@ -4885,6 +5083,7 @@ setPreferredCompatibleMode(bundleName: string, compatibleMode: PreferredCompatib
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The bundleName is invalid, such as null, undefined and empty. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建方法请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例用法。
@@ -4907,6 +5106,8 @@ async function setPreferredCompatibleMode(
     });
 }
 ```
+
+<!--DelEnd-->
 
 ## startAssetAnalysis
 
@@ -4947,6 +5148,7 @@ startAssetAnalysis(type: AnalysisType, assetUris?: Array<string>): Promise<numbe
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -4966,6 +5168,8 @@ async function example(context: Context) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## startAssetAnalysisAsync
 
@@ -5009,6 +5213,7 @@ startAssetAnalysisAsync(config: AnalysisConfig, callback: Callback<AnalysisResul
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported or invalid types of config; <br>2. The types or uris array size of config exceed max value; <br>3. This operation is not supported for assets in shared albums. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5034,6 +5239,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## startDeepOptimizeSpace
 
@@ -5078,6 +5285,7 @@ startDeepOptimizeSpace(callback?: Callback<DeepOptimizeSpaceProgress>): Promise<
 | [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Unsupported operation type, Possible causes:<br>1. Restarted repeatedly; <br>2. system is busy. Please try again later; |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5094,6 +5302,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startthumbnailcreationtask1"></a>
 
@@ -5137,6 +5347,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5159,6 +5370,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startthumbnailcreationtask2"></a>
 
@@ -5205,6 +5418,7 @@ startThumbnailCreationTask(predicate: dataSharePredicates.DataSharePredicates, c
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The predicates invalid. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; <br>4. This operation is not supported for assets in shared albums. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5234,6 +5448,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## stopAssetAnalysis
 
@@ -5270,6 +5486,7 @@ stopAssetAnalysis(config: AnalysisConfig): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Unsupported or invalid AnalysisType of config; <br>2. The types or uris array size of config exceed max value; <br>3. This operation is not supported for assets in shared albums. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5290,6 +5507,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## stopDeepOptimizeSpace
 
@@ -5325,6 +5544,7 @@ stopDeepOptimizeSpace(): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5339,6 +5559,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## stopThumbnailCreationTask
 
@@ -5373,6 +5595,7 @@ stopThumbnailCreationTask(taskId: number): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5389,6 +5612,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## updateGalleryFormInfo
 
@@ -5429,6 +5654,7 @@ updateGalleryFormInfo(info: GalleryFormInfo): Promise<void>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -5462,6 +5688,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createalbum1"></a>
 
@@ -5514,6 +5742,7 @@ createAlbum(name: string, callback: AsyncCallback<Album>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5531,6 +5760,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="createalbum2"></a>
 
@@ -5588,6 +5819,7 @@ createAlbum(name: string): Promise<Album>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5605,6 +5837,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deletealbums1"></a>
 
@@ -5647,6 +5881,7 @@ deleteAlbums(albums: Array<Album>, callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5675,6 +5910,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   fetchResult.close();
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deletealbums2"></a>
 
@@ -5722,6 +5959,7 @@ deleteAlbums(albums: Array<Album>): Promise<void>
 | 13900020 | Invalid argument |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5749,6 +5987,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   fetchResult.close();
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deleteassets1"></a>
 
@@ -5792,6 +6032,7 @@ deleteAssets(uriList: Array<string>, callback: AsyncCallback<void>): void
 | 14000002 | The uri format is incorrect or does not exist. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5825,6 +6066,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 <a id="deleteassets2"></a>
 
@@ -5873,6 +6116,7 @@ deleteAssets(uriList: Array<string>): Promise<void>
 | 14000002 | The uri format is incorrect or does not exist. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -5901,3 +6145,5 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->

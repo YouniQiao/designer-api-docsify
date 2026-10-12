@@ -51,4 +51,4 @@ function sendMessage(sessionId: string, message: string): Promise<void>
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application.<br>**适用版本：** 26.0.0 |
 | [35600032](../errorcode-ability.md#35600032-指定的session不存在) | The specified session does not exist. |
 | [35600033](../errorcode-ability.md#35600033-向工具进程写入消息失败) | Failed to write message to the tool process. |
-| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Failed to connect to the system service; 2. The system service failed to communicate with the dependent module. |
+| [35600050](../errorcode-ability.md#35600050-偶发性报错) | System Error. 1. Failed to connect to the system service;         2. The system service failed to communicate with the dependent module. |

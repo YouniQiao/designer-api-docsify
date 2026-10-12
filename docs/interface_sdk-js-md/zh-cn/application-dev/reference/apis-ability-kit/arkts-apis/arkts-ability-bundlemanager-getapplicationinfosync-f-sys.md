@@ -53,6 +53,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number, us
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -72,6 +73,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getapplicationinfosync2"></a>
@@ -119,6 +122,7 @@ function getApplicationInfoSync(bundleName: string, applicationFlags: number) : 
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -137,3 +141,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getApplicationInfoSync failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

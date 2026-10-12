@@ -37,10 +37,11 @@ Obtains information about the common live view that matches the specified filter
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ let getActiveNotificationByFilterCallback = (err: BusinessError, data: notificat
 }
 notificationManager.getActiveNotificationByFilter(filter, getActiveNotificationByFilterCallback);
 ```
+
+<!--DelEnd-->
 
 
 <a id="getactivenotificationbyfilter3"></a>
@@ -106,10 +109,11 @@ Obtains information about the common live view that matches the specified filter
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3. Parameter verification failed. |
 | [1600007](../errorcode-notification.md#1600007-notification-not-found) | The notification does not exist. |
 | [17700001](../../apis-ability-kit/errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle name was not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -134,3 +138,5 @@ notificationManager.getActiveNotificationByFilter(filter).then((data: notificati
     console.error(`getActiveNotificationByFilter failed, code is ${err.code}, message is ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

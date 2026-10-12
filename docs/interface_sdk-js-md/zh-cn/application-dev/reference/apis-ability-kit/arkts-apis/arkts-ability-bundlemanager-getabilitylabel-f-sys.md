@@ -51,6 +51,7 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,6 +76,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityLabel failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getabilitylabel2"></a>
@@ -127,6 +130,7 @@ function getAbilityLabel(bundleName: string, moduleName: string, abilityName: st
 | [17700026](../errorcode-bundle.md#17700026-指定应用被禁用) | The specified bundle is disabled. |
 | [17700029](../errorcode-bundle.md#17700029-指定的ability被禁用) | The specified ability is disabled. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -149,3 +153,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAbilityLabel failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

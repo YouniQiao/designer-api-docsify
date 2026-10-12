@@ -46,6 +46,7 @@ Sets the default slot ID of the SIM card used to send SMS messages. This API use
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ sms.setDefaultSmsSlotId(0, (err: BusinessError) => {
     console.info(`callback: err->${JSON.stringify(err)}.`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setdefaultsmsslotid2"></a>
@@ -103,6 +106,7 @@ Sets the default slot ID of the SIM card used to send SMS messages. This API use
 | [8300004](../errorcode-telephony.md#8300004-sim-card-not-detected) | Do not have sim card. |
 | [8300999](../errorcode-telephony.md#8300999-internal-error) | Unknown error code. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -115,3 +119,5 @@ sms.setDefaultSmsSlotId(0).then(() => {
     console.error(`setDefaultSmsSlotId failed, promise: err->${JSON.stringify(err)}`);
 });
 ```
+
+<!--DelEnd-->

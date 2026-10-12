@@ -46,6 +46,7 @@ No permission is required for obtaining the caller's own information.
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -69,6 +70,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getapplicationinfo2"></a>
@@ -113,6 +116,7 @@ No permission is required for obtaining the caller's own information.
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -137,6 +141,8 @@ try {
   hilog.error(0x0000, 'testTag', 'getApplicationInfo failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getapplicationinfo3"></a>
@@ -186,6 +192,7 @@ No permission is required for obtaining the caller's own information.
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 | [17700026](../errorcode-bundle.md#17700026-bundle-disabled) | The specified bundle is disabled. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -208,3 +215,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getApplicationInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

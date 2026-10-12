@@ -42,6 +42,7 @@ Deletes an uninstallation disposed rule for an application or an application clo
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex is not in the valid range. |
 | [17700074](../errorcode-bundle.md#17700074-invalid-appidentifier) | The specified appIdentifier is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,3 +58,5 @@ try {
   console.error('deleteUninstallDisposedRule failed ' + message);
 }
 ```
+
+<!--DelEnd-->

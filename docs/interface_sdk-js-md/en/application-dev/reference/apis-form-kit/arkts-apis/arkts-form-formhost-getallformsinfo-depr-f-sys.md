@@ -35,6 +35,7 @@ Obtains the widget information provided by all applications on the device. This 
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Yes | Callback used to return the result. If the widget information is obtained, **error** is undefined and **data** is the information obtained; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -49,6 +50,8 @@ formHost.getAllFormsInfo((error: Base.BusinessError, data: formInfo.FormInfo[]) 
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallformsinfo2"></a>
@@ -81,6 +84,7 @@ Obtains the widget information provided by all applications on the device. This 
 | --- | --- |
 | Promise&lt;Array&lt;[formInfo.FormInfo](arkts-form-forminfo-forminfo-i.md)&gt;&gt; | Promise used to return the information obtained. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -93,3 +97,5 @@ formHost.getAllFormsInfo().then((data: formInfo.FormInfo[]) => {
   console.error(`formHost getAllFormsInfo, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

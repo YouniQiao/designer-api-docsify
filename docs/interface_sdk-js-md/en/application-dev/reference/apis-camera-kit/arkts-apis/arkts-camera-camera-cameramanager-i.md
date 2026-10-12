@@ -497,7 +497,7 @@ Creates a **Session** instance with a given scene mode. This API returns the res
 | Error Code ID | Error Message |
 | --- | --- |
 | [7400201](../errorcode-camera.md#7400201-camera-service-error) | Camera service fatal error. |
-| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed.<br>**Applicable version:** 19 and later |
+| [7400101](../errorcode-camera.md#7400101-invalid-parameter) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified; 2. Incorrect parameter types;         3. Parameter verification failed.<br>**Applicable version:** 19 and later |
 
 **Examples**
 

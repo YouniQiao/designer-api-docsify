@@ -6,6 +6,8 @@
 
 **库：** libace_ndk.z.so
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -33,6 +35,8 @@ enum ArkUI_TextInputType
 
 定义单行文本输入类型枚举值。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -59,6 +63,8 @@ enum ArkUI_CancelButtonStyle
 
 定义清除按钮样式枚举值。
 
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -76,6 +82,8 @@ enum ArkUI_TextInputContentType
 **描述：**
 
 定义自动填充类型。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -124,6 +132,8 @@ enum ArkUI_TextInputStyle
 **描述：**
 
 定义输入框风格。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 

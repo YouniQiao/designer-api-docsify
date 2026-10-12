@@ -6,6 +6,8 @@ Defines the data structures for the C APIs of the Ethernet NIC module.
 
 **Library**: libnet_ethernet.so
 
+**System capability**: SystemCapability.Communication.NetManager.Ethernet
+
 **Since**: 26.0.0
 
 **Related module**: [NetEthernet](capi-netethernet.md)

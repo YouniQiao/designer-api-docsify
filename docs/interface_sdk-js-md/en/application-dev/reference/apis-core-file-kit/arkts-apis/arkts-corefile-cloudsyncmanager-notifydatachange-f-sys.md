@@ -45,6 +45,7 @@ Notifies the device-cloud service that the cloud data of a specific application 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -58,6 +59,8 @@ cloudSyncManager.notifyDataChange(accountId, bundleName).then(() => {
   console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange2"></a>
@@ -94,6 +97,7 @@ Notifies the device-cloud service that the cloud data of a specific application 
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | The caller is not a system application. |
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -109,6 +113,8 @@ cloudSyncManager.notifyDataChange(accountId, bundleName, (err: BusinessError) =>
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange3"></a>
@@ -153,6 +159,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -166,6 +173,8 @@ cloudSyncManager.notifyDataChange(userId, extraData).then(() => {
   console.error("notifyDataChange failed with error message: " + err.message + ", error code: " + err.code);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifydatachange4"></a>
@@ -205,6 +214,7 @@ Notifies the device-cloud service of the cloud data change information of a spec
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | The input parameter is invalid.Possible causes:1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -220,3 +230,5 @@ cloudSyncManager.notifyDataChange(userId, extraData, (err: BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->

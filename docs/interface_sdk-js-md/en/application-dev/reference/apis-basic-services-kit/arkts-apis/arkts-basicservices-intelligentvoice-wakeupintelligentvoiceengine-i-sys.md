@@ -56,6 +56,7 @@ Obtains the value of an intelligent voice parameter. This method uses an asynchr
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -72,6 +73,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getparameter2"></a>
 
@@ -114,6 +117,7 @@ Obtains the value of an intelligent voice parameter. This method uses a promise 
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -128,6 +132,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## getPcm
 
@@ -162,6 +168,7 @@ Gets pulse-code modulation audio. This method uses a promise to return the resul
 | [22700101](../errorcode-intelligentVoice.md#22700101-insufficient-memory) | No memory. |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -176,6 +183,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getsupportedregions1"></a>
 
@@ -210,6 +219,7 @@ Obtains the supported regions, This method uses an asynchronous callback to retu
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -226,6 +236,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getsupportedregions2"></a>
 
@@ -260,6 +272,7 @@ Obtains the supported regions, This method uses a promise to return the query re
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -274,6 +287,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## off('wakeupIntelligentVoiceEvent')
 
@@ -307,6 +322,7 @@ Unsubscribes wakeup intelligent voice events.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -314,6 +330,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   (wakeupIntelligentVoiceEngine as intelligentVoice.WakeupIntelligentVoiceEngine).off('wakeupIntelligentVoiceEvent');
 }
 ```
+
+<!--DelEnd-->
 
 ## on('wakeupIntelligentVoiceEvent')
 
@@ -347,6 +365,7 @@ Subscribes wakeup intelligent voice events. When wakeup intelligent voice events
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -358,6 +377,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## read
 
@@ -393,6 +414,7 @@ Reads the buffer from wakeup engine. This method uses a promise to return the re
 | [22700106](../errorcode-intelligentVoice.md#22700106-failed-to-read-data) | Read failed. |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -407,6 +429,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="release1"></a>
 
@@ -441,6 +465,7 @@ Releases the engine, This method uses an asynchronous callback to return the res
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -456,6 +481,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="release2"></a>
 
@@ -490,6 +517,7 @@ Releases the engine, This method uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -503,6 +531,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setparameter1"></a>
 
@@ -541,6 +571,7 @@ Sets an intelligent voice parameter. This method uses an asynchronous callback t
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -556,6 +587,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setparameter2"></a>
 
@@ -599,6 +632,7 @@ Sets an intelligent voice parameter. This method uses a promise to return the re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -612,6 +646,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setsensibility1"></a>
 
@@ -649,6 +685,7 @@ Sets sensibility, This method uses an asynchronous callback to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -664,6 +701,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setsensibility2"></a>
 
@@ -706,6 +745,7 @@ Sets sensibility, This method uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -719,6 +759,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setwakeuphapinfo1"></a>
 
@@ -756,6 +798,7 @@ Sets wakeup hap information, This method uses an asynchronous callback to return
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -776,6 +819,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="setwakeuphapinfo2"></a>
 
@@ -818,6 +863,7 @@ Sets wakeup hap information, This method uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -835,6 +881,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## startCapturer
 
@@ -872,11 +920,12 @@ Starts the capturer. This method uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3.Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.         2. Incorrect parameter types. 3.Parameter verification failed. |
 | [22700102](../errorcode-intelligentVoice.md#22700102-invalid-parameter) | Invalid parameter. |
 | [22700105](../errorcode-intelligentVoice.md#22700105-failed-to-start-the-capturer) | Start capturer failed. |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -890,6 +939,8 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## stopCapturer
 
@@ -923,6 +974,7 @@ Stops the capturer. This method uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
 | [22700107](../errorcode-intelligentVoice.md#22700107-system-error) | System error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -936,3 +988,5 @@ if (wakeupIntelligentVoiceEngine != null) {
   });
 }
 ```
+
+<!--DelEnd-->

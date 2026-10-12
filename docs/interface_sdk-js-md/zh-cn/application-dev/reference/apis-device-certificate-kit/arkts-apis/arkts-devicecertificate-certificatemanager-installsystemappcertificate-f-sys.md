@@ -51,6 +51,7 @@ function installSystemAppCertificate(keystore: Uint8Array, keystorePwd: string):
 | [17500004](../errorcode-certManager.md#17500004-证书或凭据数量达到上限) | Indicates that the number of certificates reaches the maximum allowed. |
 | [17500008](../errorcode-certManager.md#17500008-密码错误) | Indicates that the password is error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -75,3 +76,5 @@ try {
   console.error(`Failed to install system app certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -66,6 +66,7 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], infos?: s
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -159,6 +160,8 @@ async function appendBundles() {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="appendbundles2"></a>
 
 ## appendBundles
@@ -199,6 +202,7 @@ appendBundles(remoteCapabilitiesFd: number, bundlesToBackup: string[], callback:
 | 13900025 | No space left on device |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -272,6 +276,8 @@ async function appendBundles() {
 }
 ```
 
+<!--DelEnd-->
+
 ## cancel
 
 ```TypeScript
@@ -310,6 +316,7 @@ cancel(bundleName: string): number
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed, application which is not a system application uses system API. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3.Parameter verification failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -377,6 +384,8 @@ async function cancelTest() {
 }
 ```
 
+<!--DelEnd-->
+
 ## cleanBundleTempDir
 
 ```TypeScript
@@ -414,6 +423,7 @@ cleanBundleTempDir(bundleName: string): Promise<boolean>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -480,6 +490,8 @@ let generalCallbacks: backup.GeneralCallbacks = { // 定义备份/恢复过程�
 let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
 ```
 
+<!--DelEnd-->
+
 ## constructor
 
 ```TypeScript
@@ -504,6 +516,7 @@ constructor(callbacks: GeneralCallbacks)
 | --- | --- | --- | --- |
 | callbacks | [GeneralCallbacks](arkts-corefile-backup-generalcallbacks-i-sys.md) | 是 | 恢复流程所需的回调。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -553,6 +566,8 @@ let generalCallbacks: backup.GeneralCallbacks = {
 let sessionRestore = new backup.SessionRestore(generalCallbacks); // 创建恢复流程
 ```
 
+<!--DelEnd-->
+
 ## getApkFileHandle
 
 ```TypeScript
@@ -596,6 +611,7 @@ getApkFileHandle(path: string, fileName: string): Promise<FileData>
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -665,6 +681,8 @@ async function testGetApkFileHandle() {
 }
 ```
 
+<!--DelEnd-->
+
 ## getCompatibilityInfo
 
 ```TypeScript
@@ -703,6 +721,7 @@ getCompatibilityInfo(bundleName: string, extInfo: string): Promise<string>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed, usually the result returned by VerifyAccessToken. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -768,6 +787,8 @@ async function getRestoreCompatibilityInfo() {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="getfilehandle1"></a>
 
 ## getFileHandle
@@ -809,6 +830,7 @@ getFileHandle(fileMeta: FileMeta): Promise<void>
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -871,6 +893,8 @@ async function getFileHandle() {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="getfilehandle2"></a>
 
 ## getFileHandle
@@ -907,6 +931,7 @@ getFileHandle(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -966,6 +991,8 @@ sessionRestore.getFileHandle(fileMeta, (err: BusinessError) => {
 });
 ```
 
+<!--DelEnd-->
+
 ## getFileHandles
 
 ```TypeScript
@@ -1008,6 +1035,7 @@ getFileHandles(fileMeta: FileMeta): Promise<void>
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1083,6 +1111,8 @@ async function getFileHandles() {
 }
 ```
 
+<!--DelEnd-->
+
 ## getLocalCapabilities
 
 ```TypeScript
@@ -1118,6 +1148,7 @@ getLocalCapabilities(): Promise<FileData>
 | 13900020 | Invalid argument |
 | 13900042 | Internal error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1246,6 +1277,8 @@ async function getLocalCapabilitiesTest() {
 }
 ```
 
+<!--DelEnd-->
+
 ## migrateFile
 
 ```TypeScript
@@ -1289,6 +1322,7 @@ migrateFile(pathInfo: PathInfo, fileMeta: FileMeta): Promise<void>
 | 13900001 | Operation not permitted |
 | 13900020 | Invalid argument |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1365,6 +1399,8 @@ async function testMigrateFile() {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="publishfile1"></a>
 
 ## publishFile
@@ -1406,6 +1442,7 @@ publishFile(fileMeta: FileMeta): Promise<void>
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1480,6 +1517,8 @@ function createSessionRestore() {
 g_session = createSessionRestore();
 ```
 
+<!--DelEnd-->
+
 <a id="publishfile2"></a>
 
 ## publishFile
@@ -1516,6 +1555,7 @@ publishFile(fileMeta: FileMeta, callback: AsyncCallback<void>): void
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1592,6 +1632,8 @@ function createSessionRestore() {
 g_session = createSessionRestore();
 ```
 
+<!--DelEnd-->
+
 ## release
 
 ```TypeScript
@@ -1628,6 +1670,7 @@ release(): Promise<void>
 | 13900005 | I/O error |
 | 13900042 | Unknown error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1712,3 +1755,5 @@ async function releaseSession() {
   }
 }
 ```
+
+<!--DelEnd-->

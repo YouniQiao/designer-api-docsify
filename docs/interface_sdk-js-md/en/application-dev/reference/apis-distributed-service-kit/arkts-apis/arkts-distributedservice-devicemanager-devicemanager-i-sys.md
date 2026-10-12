@@ -60,9 +60,10 @@ Authenticates a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -130,6 +131,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## deleteCredential
 
 ```TypeScript
@@ -161,9 +164,10 @@ Deletes credential information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified queryInfo is greater than 5999. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified queryInfo is greater than 5999. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -202,6 +206,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="getdeviceinfo1"></a>
 
 ## getDeviceInfo
@@ -237,9 +243,10 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified networkId is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -263,6 +270,8 @@ try {
   console.error("getDeviceInfo errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getdeviceinfo2"></a>
 
@@ -304,9 +313,10 @@ Obtains the information about a specific device based on the network ID. This AP
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified networkId is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified networkId is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -323,6 +333,8 @@ dmInstance.getDeviceInfo(networkId).then((data: deviceManager.DeviceInfo) => {
   console.error("getDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="getlocaldeviceinfo1"></a>
 
@@ -358,9 +370,10 @@ Obtains local device information. This API uses an asynchronous callback to retu
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -383,6 +396,8 @@ try {
   console.error("getLocalDeviceInfo errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="getlocaldeviceinfo2"></a>
 
@@ -420,6 +435,7 @@ Obtains local device information. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -434,6 +450,8 @@ dmInstance.getLocalDeviceInfo().then((data: deviceManager.DeviceInfo) => {
   console.error("getLocalDeviceInfo errCode:" + err.code + ",errMessage:" + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 ## getLocalDeviceInfoSync
 
@@ -471,6 +489,7 @@ Obtains local device information synchronously.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -486,6 +505,8 @@ try {
   console.error("getLocalDeviceInfoSync errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gettrusteddevicelist1"></a>
 
@@ -522,8 +543,9 @@ Obtains all trusted devices. This API uses an asynchronous callback to return th
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -545,6 +567,8 @@ try {
   console.error("getTrustedDeviceList errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gettrusteddevicelist2"></a>
 
@@ -582,6 +606,7 @@ Obtains all trusted devices. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -596,6 +621,8 @@ dmInstance.getTrustedDeviceList().then((data: Array<deviceManager.DeviceInfo>) =
     console.error("getTrustedDeviceList errCode:" + err.code + ",errMessage:" + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="gettrusteddevicelistsync1"></a>
 
@@ -635,6 +662,7 @@ Obtains all trusted devices synchronously.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -650,6 +678,8 @@ try {
   console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="gettrusteddevicelistsync2"></a>
 
@@ -691,9 +721,10 @@ Enables the DSoftBus heartbeat mode to quickly bring offline trusted devices onl
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -709,6 +740,8 @@ try {
   console.error("getTrustedDeviceListSync errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## importCredential
 
@@ -741,9 +774,10 @@ Imports credential information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified credentialInfo is greater than 5999. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified credentialInfo is greater than 5999. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -811,6 +845,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## off('uiStateChange')
 
 ```TypeScript
@@ -844,9 +880,10 @@ Unsubscribes from UI status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -861,6 +898,8 @@ try {
   console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('deviceStateChange')
 
@@ -895,9 +934,10 @@ Unsubscribes from changes in the device state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -927,6 +967,8 @@ try {
   console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('deviceFound')
 
@@ -961,9 +1003,10 @@ Unsubscribes from device discovery events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -993,6 +1036,8 @@ try {
   console.error("deviceFound errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('discoverFail')
 
@@ -1027,9 +1072,10 @@ Unsubscribes from device discovery failures.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1051,6 +1097,8 @@ try {
   console.error("discoverFail errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('publishSuccess')
 
@@ -1083,9 +1131,10 @@ Unsubscribes from device information publication success events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1106,6 +1155,8 @@ try {
   console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('publishFail')
 
@@ -1138,9 +1189,10 @@ Unsubscribes from device information publication failures.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1162,6 +1214,8 @@ try {
   console.error("publishFail errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## off('serviceDie')
 
@@ -1196,9 +1250,10 @@ Unsubscribes from dead events of the **DeviceManager** service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1215,6 +1270,8 @@ try {
   console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('uiStateChange')
 
@@ -1249,9 +1306,10 @@ Subscribes to UI status changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1279,6 +1337,8 @@ try {
   console.error("uiStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('deviceStateChange')
 
@@ -1313,9 +1373,10 @@ Subscribes to changes in the device state.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1345,6 +1406,8 @@ try {
   console.error("deviceStateChange errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('deviceFound')
 
@@ -1379,9 +1442,10 @@ Subscribes to device discovery events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1411,6 +1475,8 @@ try {
   console.error("deviceFound errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('discoverFail')
 
@@ -1445,9 +1511,10 @@ Subscribes to device discovery failures.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1469,6 +1536,8 @@ try {
   console.error("discoverFail errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('publishSuccess')
 
@@ -1501,9 +1570,10 @@ Subscribes to device information publication success events.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1524,6 +1594,8 @@ try {
   console.error("publishSuccess errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('publishFail')
 
@@ -1556,9 +1628,10 @@ Subscribes to device information publication failures.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1580,6 +1653,8 @@ try {
   console.error("publishFail errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## on('serviceDie')
 
@@ -1614,9 +1689,10 @@ Subscribes to dead events of the **DeviceManager** service.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified eventType is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified eventType is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1633,6 +1709,8 @@ try {
   console.error("serviceDie errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## publishDeviceDiscovery
 
@@ -1664,12 +1742,13 @@ Publishes device information for discovery purposes. The publish process lasts 2
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600105](../errorcode-device-manager.md#11600105-publish-unavailable) | Publish unavailable. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1701,6 +1780,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## release
 
 ```TypeScript
@@ -1731,6 +1812,7 @@ Releases this **DeviceManager** instance when it is no longer used.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1745,6 +1827,8 @@ try {
   console.error("release errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## requestCredentialRegisterInfo
 
@@ -1777,9 +1861,10 @@ Obtains the registration information of the credential.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified requestInfo is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified requestInfo is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1815,6 +1900,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## setUserOperation
 
 ```TypeScript
@@ -1848,10 +1935,11 @@ Sets a user operation.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified params is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified params is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1875,6 +1963,8 @@ try {
   console.error("setUserOperation errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 <a id="startdevicediscovery1"></a>
 
@@ -1910,12 +2000,13 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -1952,6 +2043,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="startdevicediscovery2"></a>
 
 ## startDeviceDiscovery
@@ -1987,12 +2080,13 @@ Starts to discover peripheral devices. The discovery process lasts 2 minutes. A 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600104](../errorcode-device-manager.md#11600104-discovery-unavailable) | Discovery unavailable. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -2051,6 +2145,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## stopDeviceDiscovery
 
 ```TypeScript
@@ -2083,11 +2179,12 @@ Stops device discovery.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed; 4. The size of specified param is greater than 255. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed;         4. The size of specified param is greater than 255. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -2104,6 +2201,8 @@ try {
   console.error("stopDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## unAuthenticateDevice
 
@@ -2137,11 +2236,12 @@ Deauthenticates a device.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -2173,6 +2273,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 ## unPublishDeviceDiscovery
 
 ```TypeScript
@@ -2203,11 +2305,12 @@ Stops publishing device information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [11600101](../errorcode-device-manager.md#11600101-service-invoking-exception) | Failed to execute the function. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -2224,6 +2327,8 @@ try {
   console.error("unPublishDeviceDiscovery errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->
 
 ## verifyAuthInfo
 
@@ -2256,9 +2361,10 @@ Verifies authentication information.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter type; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter type;         3. Parameter verification failed. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 For details about how to initialize  in the example, see deviceManager.createDeviceManager.
@@ -2305,3 +2411,5 @@ try {
   console.error("verifyAuthInfo errCode:" + e.code + ",errMessage:" + e.message);
 }
 ```
+
+<!--DelEnd-->

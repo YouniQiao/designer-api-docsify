@@ -41,6 +41,7 @@ Instructs the widgets to enable or disable updates. This API uses an asynchronou
 | isEnableUpdate | boolean | Yes | Whether to make the widgets updatable. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the notification is sent, **error** is undefined; otherwise, **error** is an error object. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ formHost.notifyFormsEnableUpdate(formIds, true, (error: Base.BusinessError) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="notifyformsenableupdate2"></a>
@@ -92,6 +95,7 @@ Instructs the widgets to enable or disable updates. This API uses a promise to r
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -104,3 +108,5 @@ formHost.notifyFormsEnableUpdate(formIds, true).then(() => {
   console.error(`formHost notifyFormsEnableUpdate, error: ${JSON.stringify(error)}`);
 });
 ```
+
+<!--DelEnd-->

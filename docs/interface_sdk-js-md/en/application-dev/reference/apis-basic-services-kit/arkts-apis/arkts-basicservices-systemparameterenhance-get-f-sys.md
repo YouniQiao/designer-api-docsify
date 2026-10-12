@@ -40,6 +40,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | [14700103](../errorcode-device-info.md#14700103-operation-denied-due-to-permission) | The operation on the system permission is denied. |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -57,6 +58,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get2"></a>
@@ -94,6 +97,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | [14700103](../errorcode-device-info.md#14700103-operation-denied-due-to-permission) | The operation on the system permission is denied. |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -111,6 +115,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get3"></a>
@@ -153,6 +159,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | [14700103](../errorcode-device-info.md#14700103-operation-denied-due-to-permission) | The operation on the system permission is denied. |
 | [14700104](../errorcode-system-parameterV9.md#14700104-internal-system-error-including-out-of-memory-and-deadlock) | System internal error such as out memory or deadlock. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -169,3 +176,5 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->

@@ -38,6 +38,7 @@ Sets whether to enable an application. This API uses an asynchronous callback to
 | isEnable | boolean | Yes | Whether to enable the application. **true** to enable, **false** otherwise. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -66,6 +67,8 @@ bundle.setApplicationEnabled(bundleName, false).then(() => {
   console.error('setApplicationEnabled failed.');
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled2"></a>
@@ -105,6 +108,9 @@ Sets whether to enable an application. This API uses a promise to return the res
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
 
+<!--Del-->
 **Examples**
 
 See [setApplicationEnabled](#setapplicationenabled)
+
+<!--DelEnd-->

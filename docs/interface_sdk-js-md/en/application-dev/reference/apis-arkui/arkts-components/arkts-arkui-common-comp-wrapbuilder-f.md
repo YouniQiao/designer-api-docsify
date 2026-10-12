@@ -6,7 +6,7 @@
 declare function wrapBuilder<Args extends Object[]>(builder: (...args: Args) => void): WrappedBuilder<Args>
 ```
 
-`wrapBuilder` is used to encapsulate a global [\@Builder](arkts-arkui-common-comp-builder-d.md#builder) function, so that the global `@Builder` function can be passed as a parameter to implement pass-by-reference and dynamic invocation, improving code reusability.
+`wrapBuilder` is used to encapsulate a global [\@Builder](arkts-arkui-common-comp-con.md#builder) function, so that the global `@Builder` function can be passed as a parameter to implement pass-by-reference and dynamic invocation, improving code reusability.
 
 For details about the development guide, see [wrapBuilder: Encapsulating Global @Builder](../../../ui/state-management/arkts-wrapBuilder.md).
 

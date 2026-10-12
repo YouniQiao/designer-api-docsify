@@ -37,6 +37,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by callback. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,6 +53,8 @@ media.createVideoRecorder((error: BusinessError, video: media.VideoRecorder) => 
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="createvideorecorder3"></a>
@@ -85,6 +88,7 @@ The maintenance of this interface has been stopped since version api 9. Please u
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not System App.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -102,3 +106,5 @@ media.createVideoRecorder().then((video: media.VideoRecorder) => {
   console.error(`video catchCallback, error message:${error.message}`);
 });
 ```
+
+<!--DelEnd-->

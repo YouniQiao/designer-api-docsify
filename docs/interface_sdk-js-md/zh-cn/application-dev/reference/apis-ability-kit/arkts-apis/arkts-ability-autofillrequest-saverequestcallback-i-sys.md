@@ -39,6 +39,7 @@ onFailure(): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -109,6 +110,8 @@ struct SavePage {
 }
 ```
 
+<!--DelEnd-->
+
 ## onSuccess
 
 ```TypeScript
@@ -134,6 +137,7 @@ onSuccess(): void
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission denied, non-system app called system api. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -203,3 +207,5 @@ struct SavePage {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -8,6 +8,8 @@
 
 **库：** libohinput.so
 
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
+
 **起始版本：** 22
 
 **相关模块：** [input](capi-input.md)
@@ -20,12 +22,6 @@
 | -- | -- | -- |
 | [Input_PointerStyle](#input_pointerstyle) | Input_PointerStyle | 鼠标光标样式。 |
 
-### 宏定义
-
-| 名称 | 描述 |
-| -- | -- |
-| OH_POINTER_STYLE_H | 鼠标光标的样式。<br>**起始版本：** 22<br>**系统能力：** SystemCapability.MultimodalInput.Input.Core |
-
 ## 枚举类型说明
 
 ### Input_PointerStyle
@@ -37,6 +33,8 @@ enum Input_PointerStyle
 **描述：**
 
 鼠标光标样式。
+
+**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 22
 

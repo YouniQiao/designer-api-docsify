@@ -46,6 +46,7 @@ function getDefaultApplication(type: string, userId: number, callback: AsyncCall
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -78,6 +79,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getdefaultapplication2"></a>
@@ -118,6 +121,7 @@ function getDefaultApplication(type: string, callback: AsyncCallback<BundleInfo>
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -149,6 +153,8 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
   console.info('Operation successful. bundleInfo:' + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getdefaultapplication3"></a>
@@ -196,6 +202,7 @@ function getDefaultApplication(type: string, userId?: number) : Promise<BundleIn
 | [17700023](../errorcode-bundle.md#17700023-指定的默认应用不存在) | The specified default app does not exist. |
 | [17700025](../errorcode-bundle.md#17700025-输入的type无效) | The specified type is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -227,3 +234,5 @@ defaultAppManager.getDefaultApplication(uniformTypeDescriptor.UniformDataType.AV
     console.error('Operation failed. Cause: ' + JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

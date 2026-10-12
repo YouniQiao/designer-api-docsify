@@ -51,6 +51,7 @@ Obtains the value of a property. This API uses a promise to return the result.
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -63,6 +64,8 @@ config.highContrastText.get().then((data: boolean) => {
   console.error(`Failed to get highContrastText. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="get2"></a>
 
@@ -94,6 +97,7 @@ Obtains the property value. This API uses an asynchronous callback to return the
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -108,6 +112,8 @@ config.highContrastText.get((err: BusinessError, data: boolean) => {
   console.info(`succeeded in getting highContrastText, data is ${data}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## off
 
@@ -140,6 +146,7 @@ Cancels the listener for property changes. This API uses an asynchronous callbac
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -151,6 +158,8 @@ let callback = (data: boolean) => {
 config.highContrastText.on(callback);
 config.highContrastText.off(callback);
 ```
+
+<!--DelEnd-->
 
 ## on
 
@@ -184,8 +193,9 @@ This API must be used together with [off](#off). Call off to unregister the list
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -195,6 +205,8 @@ config.highContrastText.on((data: boolean) => {
   console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="set1"></a>
 
@@ -234,8 +246,9 @@ Sets the value of a property. This API uses a promise to return the result.
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -250,6 +263,8 @@ config.highContrastText.set(value).then(() => {
   console.error(`Failed to set highContrastText. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 <a id="set2"></a>
 
@@ -284,8 +299,9 @@ Sets the property value. This API uses an asynchronous callback to return the re
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified;         2. Incorrect parameter types;         3. Parameter verification failed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -302,3 +318,5 @@ config.highContrastText.set(value, (err: BusinessError) => {
   console.info(`succeeded in setting highContrastText, value is ${value}`);
 });
 ```
+
+<!--DelEnd-->

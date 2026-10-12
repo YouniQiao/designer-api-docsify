@@ -45,6 +45,7 @@ Checks whether the interface is activated. This API uses an asynchronous callbac
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -59,6 +60,8 @@ ethernet.isIfaceActive("eth0", (error: BusinessError, value: number) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isifaceactive2"></a>
@@ -105,6 +108,7 @@ Checks whether the interface is activated. This API uses a promise to return the
 | [2200003](../errorcode-net-ethernet.md#2200003-system-internal-error) | System internal error. |
 | [2201005](../errorcode-net-ethernet.md#2201005-device-information-not-exist) | Device information does not exist. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ ethernet.isIfaceActive("eth0").then((data: number) => {
   console.error("isIfaceActive promise error = " + JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->

@@ -52,6 +52,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>, callback:
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -106,6 +107,8 @@ struct CardExample {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="setrouterproxy2"></a>
 
@@ -158,6 +161,7 @@ function setRouterProxy(formIds: Array<string>, proxy: Callback<Want>): Promise<
 | [16501000](../errorcode-form.md#16501000-内部功能错误) | An internal functional error occurred. |
 | [16501003](../errorcode-form.md#16501003-无法操作指定卡片) | The form cannot be operated by the current application. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -213,3 +217,5 @@ struct CardExample {
   }
 }
 ```
+
+<!--DelEnd-->

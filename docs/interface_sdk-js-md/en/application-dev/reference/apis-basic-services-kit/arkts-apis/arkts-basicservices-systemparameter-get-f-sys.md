@@ -35,6 +35,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | key | string | Yes | Key to be queried. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system parameter value asynchronously. If the operation is successful, **err** is **undefined** and **data** is the system parameter value. If the operation fails, **err** is an error object and **data** is **undefined**. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -52,6 +53,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get2"></a>
@@ -84,6 +87,7 @@ Obtains a value of the specified key. This API uses an asynchronous callback to 
 | def | string | Yes | Default value of the system parameter. This parameter must be passed during the call, but its value can be a random character string. **def** takes effect only when the system parameter does not exist. |
 | callback | [AsyncCallback](arkts-basicservices-base-asynccallback-i.md)&lt;string&gt; | Yes | Callback used to return the system parameter value asynchronously. If the operation is successful, **err** is **undefined** and **data** is the system parameter value. If the operation fails, **err** is an error object and **data** is **undefined**. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -101,6 +105,8 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="get3"></a>
@@ -138,6 +144,7 @@ Obtains a value of the specified key. This API uses a promise to return the resu
 | --- | --- |
 | Promise&lt;string&gt; | Promise used to return the result. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -154,3 +161,5 @@ try {
   console.error('get unexpected error: ' + e);
 }
 ```
+
+<!--DelEnd-->

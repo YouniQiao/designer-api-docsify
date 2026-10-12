@@ -6,6 +6,8 @@ The file declares the basic dependencies for OH_LowPowerAudioSink and OH_LowPowe
 
 **Library**: liblowpower_avsink.so
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Related module**: [AVSinkBase](capi-avsinkbase.md)
@@ -39,6 +41,8 @@ OH_AVErrCode OH_AVSamplesBuffer_AppendOneBuffer(OH_AVSamplesBuffer *samplesBuffe
 
 Appends data from an OH_AVBuffer instance to an OH_AVSamplesBuffer instance.
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -64,6 +68,8 @@ int32_t OH_AVSamplesBuffer_GetRemainedCapacity(OH_AVSamplesBuffer *samplesBuffer
 
 Obtains the remaining capacity available in an OH_AVSamplesBuffer instance.
 
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
+
 **Since**: 20
 
 **Parameters**:
@@ -87,6 +93,8 @@ OH_LowPowerAVSink_Capability *OH_LowPowerAVSink_GetCapability()
 **Description**
 
 Obtains the capability of the low-power player. It mainly helps you find out what the low-power player can do, including the media formats and features it supports. When you call this function, you can learn about the device's capabilities in audio and video processing. For example, you can find out which encoding and decoding formats are supported, as well as the range of bit rates that the device can handle.
+
+**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 21
 

@@ -46,6 +46,7 @@ function isApplicationEnabled(bundleName: string, appIndex: number): Promise<boo
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -66,6 +67,8 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isapplicationenabled2"></a>
@@ -101,6 +104,7 @@ function isApplicationEnabled(bundleName: string, callback: AsyncCallback<boolea
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -123,6 +127,8 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="isapplicationenabled3"></a>
@@ -163,6 +169,7 @@ function isApplicationEnabled(bundleName: string): Promise<boolean>
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -183,3 +190,5 @@ try {
   hilog.error(0x0000, 'testTag', 'isApplicationEnabled failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

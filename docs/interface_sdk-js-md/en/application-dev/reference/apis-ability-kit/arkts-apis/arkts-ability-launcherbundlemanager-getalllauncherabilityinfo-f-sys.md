@@ -43,6 +43,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -64,6 +65,8 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="getalllauncherabilityinfo2"></a>
@@ -108,6 +111,7 @@ Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.m
 | [801](../../errorcode-universal.md#801-api-not-supported) | Capability not support. |
 | [17700004](../errorcode-bundle.md#17700004-user-id-does-not-exist) | The specified user ID is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -127,3 +131,5 @@ try {
   console.error(`errData is errCode:${code}  message:${message}`);
 }
 ```
+
+<!--DelEnd-->

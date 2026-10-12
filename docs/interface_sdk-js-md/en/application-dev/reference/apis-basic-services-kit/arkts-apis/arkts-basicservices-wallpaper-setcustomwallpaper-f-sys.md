@@ -42,6 +42,7 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -60,6 +61,8 @@ try {
     console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setcustomwallpaper2"></a>
@@ -103,6 +106,7 @@ Sets wallpaper of the specified type based on the uri path of the custom wallpap
 | [201](../../errorcode-universal.md#201-permission-denied) | permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | permission verification failed, application which is not a system application uses system API. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -119,3 +123,5 @@ try {
     console.error(`failed to setCustomWallpaper. Code: ${error.code}, Message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

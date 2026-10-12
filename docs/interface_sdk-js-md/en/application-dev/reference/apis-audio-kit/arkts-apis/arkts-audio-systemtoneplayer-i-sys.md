@@ -42,6 +42,7 @@ Obtains the scale of the audio volume. This API returns the result synchronously
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -55,6 +56,8 @@ try {
   console.error(`Failed to getAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getHapticsFeature
 
@@ -85,6 +88,7 @@ Obtains the haptics style of the ringtone. This API returns the result synchrono
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -98,6 +102,8 @@ try {
   console.error(`Failed to getHapticsFeature. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## getSupportedHapticsFeatures
 
@@ -128,6 +134,7 @@ Obtains the supported haptics styles. This API uses a promise to return the resu
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -137,6 +144,8 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
   console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## getTitle
 
@@ -167,6 +176,7 @@ Obtains the title of a system tone. This API uses a promise to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -178,6 +188,8 @@ systemTonePlayer.getTitle().then((value: string) => {
   console.error(`Failed to getTitle. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## off('playFinished')
 
@@ -209,6 +221,7 @@ Unsubscribes from the event indicating that the ringtone playback is finished. T
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -224,6 +237,8 @@ systemTonePlayer.on('playFinished', 0, playFinishedCallback);
 
 systemTonePlayer.off('playFinished', playFinishedCallback);
 ```
+
+<!--DelEnd-->
 
 ## off('error')
 
@@ -255,6 +270,7 @@ Unsubscribes from error events that occur during ringtone playback. This API use
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -272,6 +288,8 @@ systemTonePlayer.on('error', callback);
 
 systemTonePlayer.off('error', callback);
 ```
+
+<!--DelEnd-->
 
 ## on('playFinished')
 
@@ -306,6 +324,7 @@ The object to listen for is an audio stream specified by **streamId**. If **stre
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -325,6 +344,8 @@ systemTonePlayer.start().then((value: number) => {
   console.error(`Failed to start system tone player. ${err}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('error')
 
@@ -356,6 +377,7 @@ Subscribes to error events that occur during ringtone playback. This API uses an
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system App. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) |  |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -365,6 +387,8 @@ systemTonePlayer.on('error', (err: BusinessError) => {
   console.info(`Succeeded in using on function. code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## prepare
 
@@ -396,6 +420,7 @@ Prepares to play a system tone. This API uses a promise to return the result.
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-io-error) | I/O error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -407,6 +432,8 @@ systemTonePlayer.prepare().then(() => {
   console.error(`Failed to prepare. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## release
 
@@ -436,6 +463,7 @@ Releases the system tone player. This API uses a promise to return the result.
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Caller is not a system application. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -447,6 +475,8 @@ systemTonePlayer.release().then(() => {
   console.error(`Failed to release. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setAudioVolumeScale
 
@@ -479,6 +509,7 @@ Sets the scale of the audio volume. No result is returned.
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [20700002](../errorcode-audio-ringtone-sys.md#20700002-parameter-check-failed) | Parameter check error. For example, value is outside [0,1]. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -493,6 +524,8 @@ try {
   console.error(`Failed to setAudioVolumeScale. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## setHapticsFeature
 
@@ -527,6 +560,7 @@ Before calling this API, call [getSupportedHapticsFeatures](#getsupportedhaptics
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 | [20700003](../errorcode-audio-ringtone-sys.md#20700003-operation-not-supported) | Unsupported operation. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -541,6 +575,8 @@ systemTonePlayer.getSupportedHapticsFeatures().then((features: Array<systemSound
   console.error(`Failed to getSupportedHapticsFeatures. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## start
 
@@ -581,6 +617,7 @@ Start playing the system tone. By default, the audio and haptic will not be mute
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -598,6 +635,8 @@ systemTonePlayer.start(systemToneOptions).then((value: number) => {
   console.error(`Failed to start. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## stop
 
@@ -635,6 +674,7 @@ Stops playing a system tone. This API uses a promise to return the result.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2.Incorrect parameter types. |
 | [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -647,3 +687,5 @@ systemTonePlayer.stop(streamID).then(() => {
   console.error(`Failed to stop. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

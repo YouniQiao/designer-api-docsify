@@ -38,6 +38,7 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean, callback: Async
 | isEnable | boolean | 是 | 指定是否启用应用程序。true表示启用，false禁用。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 为返回操作结果而调用的回调。 |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ bundle.getAbilityInfo(bundleName, abilityName).then((abilityInfo) => {
   console.error('getAbilityInfo failed. Cause: ' + JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="setabilityenabled2"></a>
@@ -98,6 +101,9 @@ function setAbilityEnabled(info: AbilityInfo, isEnable: boolean): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象，无返回结果的Promise对象。 |
 
+<!--Del-->
 **示例**
 
 参见 [setAbilityEnabled](#setabilityenabled)
+
+<!--DelEnd-->

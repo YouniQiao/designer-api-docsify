@@ -319,7 +319,7 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
 
 **错误码：**
 
@@ -860,7 +860,7 @@ static isArray(value: Object | undefined | null): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
 
 ## join
 
@@ -1023,7 +1023,7 @@ static of<T>(...items: T[]): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因： 1. 必填参数未指定。 2. 参数类型不正确。 3. 参数校验失败。 |
+| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
 
 ## pop
 

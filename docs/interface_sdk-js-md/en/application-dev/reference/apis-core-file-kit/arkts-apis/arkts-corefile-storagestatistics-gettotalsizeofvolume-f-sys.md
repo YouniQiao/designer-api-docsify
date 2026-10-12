@@ -44,6 +44,7 @@ Get the total size of volume.
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   console.error("getAllVolumes failed with error:" + JSON.stringify(err));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettotalsizeofvolume2"></a>
@@ -113,6 +116,7 @@ Get the total size of volume.
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -134,3 +138,5 @@ volumeManager.getAllVolumes().then((volumes: Array<volumeManager.Volume>) => {
   console.error("getAllVolumes failed with error:" + JSON.stringify(err));
 });
 ```
+
+<!--DelEnd-->

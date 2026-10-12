@@ -41,7 +41,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
@@ -59,6 +59,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | [16000137](../errorcode-ability.md#16000137-cross-device-intent-execution-connection-failed) | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
 | [16000138](../errorcode-ability.md#16000138-device-disconnected-during-cross-device-intent-execution) | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -92,6 +93,8 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
     }
   }
 ```
+
+<!--DelEnd-->
 
 
 <a id="execute2"></a>
@@ -134,7 +137,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types. |
 | [16000001](../errorcode-ability.md#16000001-ability-name-does-not-exist) | The specified ability does not exist. |
 | [16000002](../errorcode-ability.md#16000002-incorrect-ability-type) | Incorrect ability type. |
 | [16000004](../errorcode-ability.md#16000004-visibility-verification-failure) | Cannot start an invisible component. |
@@ -152,6 +155,7 @@ Executes a call to an intent. This API uses an asynchronous callback to return t
 | [16000137](../errorcode-ability.md#16000137-cross-device-intent-execution-connection-failed) | Cross-device execution failed due to a connection error.<br>**Applicable version:** 26.0.0 and later |
 | [16000138](../errorcode-ability.md#16000138-device-disconnected-during-cross-device-intent-execution) | Device disconnected during cross-device intent execution.<br>**Applicable version:** 26.0.0 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -179,3 +183,5 @@ import { insightIntentDriver, insightIntent } from '@kit.AbilityKit';
     }
   }
 ```
+
+<!--DelEnd-->

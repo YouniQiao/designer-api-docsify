@@ -44,6 +44,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | No | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -53,6 +54,8 @@ panel.off('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngin
   console.info(`panel size changed, width: ${windowSize.width}, height: ${windowSize.height}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## on('sizeUpdate')
 
@@ -80,6 +83,7 @@ Listens for the panel size change. This API uses an asynchronous callback to ret
 | type | 'sizeUpdate' | Yes | Event type, which is **'sizeUpdate'**. |
 | callback | [SizeUpdateCallback](arkts-ime-inputmethodengine-sizeupdatecallback-t-sys.md) | Yes | Callback used to return the size of the soft keyboard panel, including the width and height. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -90,6 +94,8 @@ panel.on('sizeUpdate', (windowSize: window.Size, keyboardArea: inputMethodEngine
     `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
 });
 ```
+
+<!--DelEnd-->
 
 ## setShadow
 
@@ -127,8 +133,11 @@ Sets the shadow effect of the input method window. <br> <br>
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. Possible causes: Panel's flag is FLG_FIXED. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
 panel.setShadow(20, '#000000', 20, 20);
 ```
+
+<!--DelEnd-->

@@ -64,7 +64,7 @@ Cleans dirty data deleted in the cross-device sync. If a cursor is specified, da
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not support;2. The table type is not supported;         3. This is a read-only database. |
 
 <a id="cloudsync5"></a>
 
@@ -102,11 +102,12 @@ Sync data to cloud.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. 6. The callback must be a function. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr.         3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty.         5. The progress must be a callback type. 6. The callback must be a function. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -169,6 +170,8 @@ if (store != undefined) {
 };
 ```
 
+<!--DelEnd-->
+
 <a id="cloudsync6"></a>
 
 ## cloudSync
@@ -205,14 +208,17 @@ Sync data to cloud.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr. 3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty. 5. The progress must be a callback type. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 2 - 4 parameter(s). 2. The RdbStore must be not nullptr.         3. The mode must be a SyncMode of cloud. 4. The tablesNames must be not empty.         5. The progress must be a callback type. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 See [cloudSync](#cloudsync)
+
+<!--DelEnd-->
 
 <a id="delete3"></a>
 
@@ -268,6 +274,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -297,6 +304,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="delete4"></a>
 
@@ -357,6 +366,7 @@ Deletes data from the database based on a specified instance object of RdbPredic
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -386,6 +396,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## lockCloudContainer
 
@@ -453,6 +465,7 @@ Queries data in the database based on specified conditions.
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -541,6 +554,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query5"></a>
 
@@ -586,6 +601,7 @@ Queries data in the database based on specified conditions.
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -674,6 +690,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="query6"></a>
 
@@ -723,6 +741,7 @@ Queries data in the database based on specified conditions.
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -812,6 +831,8 @@ if (store != undefined) {
 }
 ```
 
+<!--DelEnd-->
+
 <a id="querysharingresource1"></a>
 
 ## querySharingResource
@@ -847,9 +868,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
@@ -897,9 +918,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
@@ -948,9 +969,9 @@ Obtains sharing resource of rows corresponding to the predicates.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes: 1. The hardware does not support the capability; 2. The chip does not support the capability; 3. A dependent service feature is not supported. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. Possible causes:         1. The hardware does not support the capability; 2. The chip does not support the capability;         3. A dependent service feature is not supported. |
 | [14800000](../errorcode-data-rdb.md#14800000-internal-error) | Inner error. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr. 3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Need 1 - 3 parameter(s)! 2. The RdbStore must be not nullptr.         3. The predicates must be an RdbPredicates. 4. The columns must be a string array. |
 | [14800011](../errorcode-data-rdb.md#14800011-database-file-corrupted) | The current operation failed because the database is corrupted.<br>**Applicable version:** 12 and later |
 | [14800014](../errorcode-data-rdb.md#14800014-target-instance-closed) | The target instance is already closed.<br>**Applicable version:** 12 and later |
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond.<br>**Applicable version:** 12 and later |
@@ -1057,6 +1078,7 @@ Restores a database from a specified database file.
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch. |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1083,6 +1105,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## retainDeviceData
 
@@ -1125,7 +1149,7 @@ Remove distributed table remote data.
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
 | 14800042 | The database does not exist. Possible causes: 1. The database is deleted;<br>2. The database is not created. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |
 
 ## unlockCloudContainer
 
@@ -1215,6 +1239,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1372,6 +1397,8 @@ if (store != undefined) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 <a id="update6"></a>
 
@@ -1433,6 +1460,7 @@ Updates data in the database based on a specified instance object of RdbPredicat
 | [14800033](../errorcode-data-rdb.md#14800033-sqlite-data-types-mismatch) | SQLite: Data type mismatch.<br>**Applicable version:** 12 and later |
 | [14800034](../errorcode-data-rdb.md#14800034-incorrect-use-of-sqlite-library) | SQLite: Library used incorrectly.<br>**Applicable version:** 12 and later |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -1591,6 +1619,8 @@ if (store != undefined) {
 }
 ```
 
+<!--DelEnd-->
+
 ## updateDistributedInfo
 
 ```TypeScript
@@ -1633,4 +1663,4 @@ Update distributed table log.
 | [14800015](../errorcode-data-rdb.md#14800015-rdb-store-not-respond) | The database does not respond. |
 | [14800021](../errorcode-data-rdb.md#14800021-sqlite-generic-error) | SQLite: Generic error. |
 | [14800024](../errorcode-data-rdb.md#14800024-sqlite-database-file-locked) | SQLite: The database file is locked. |
-| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported; 3. This is a read-only database. |
+| 14800043 | The database does not support this scenario. Possible causes: 1. The database type is not supported;2. The table type is not supported;         3. This is a read-only database. |

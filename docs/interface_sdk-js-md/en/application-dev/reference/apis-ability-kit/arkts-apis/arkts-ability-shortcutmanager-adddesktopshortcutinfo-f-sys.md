@@ -50,6 +50,7 @@ Adds a shortcut for the given user. This API uses a promise to return the result
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 | [17700070](../errorcode-bundle.md#17700070-invalid-shortcut-id) | The specified shortcut id is illegal. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -94,3 +95,5 @@ struct ShortcutExample {
   }
 }
 ```
+
+<!--DelEnd-->

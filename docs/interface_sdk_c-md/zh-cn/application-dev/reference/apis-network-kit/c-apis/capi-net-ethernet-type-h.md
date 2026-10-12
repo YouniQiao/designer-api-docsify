@@ -6,6 +6,8 @@
 
 **库：** libnet_ethernet.so
 
+**系统能力：** SystemCapability.Communication.NetManager.Ethernet
+
 **起始版本：** 26.0.0
 
 **相关模块：** [NetEthernet](capi-netethernet.md)

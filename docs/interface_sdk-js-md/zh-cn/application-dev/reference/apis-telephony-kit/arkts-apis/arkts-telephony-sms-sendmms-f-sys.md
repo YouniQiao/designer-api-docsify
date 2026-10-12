@@ -46,6 +46,7 @@ function sendMms(context: Context, mmsParams: MmsParams, callback: AsyncCallback
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 FA模型示例：
@@ -122,6 +123,8 @@ class EntryAbility extends UIAbility {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="sendmms2"></a>
 
@@ -168,6 +171,7 @@ function sendMms(context: Context, mmsParams: MmsParams): Promise<void>
 | [8300003](../errorcode-telephony.md#8300003-系统内部错误) | System internal error. |
 | [8300999](../errorcode-telephony.md#8300999-内部错误) | Unknown error code. |
 
+<!--Del-->
 **示例**
 
 FA模型示例：
@@ -241,3 +245,5 @@ class EntryAbility extends UIAbility {
     }
 }
 ```
+
+<!--DelEnd-->

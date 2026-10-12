@@ -40,7 +40,7 @@ Writes event information to the event file. This API uses a promise to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameter types.         3. Parameter verification failed. |
 | [11200001](../errorcode-hisysevent-sys.md#11200001-illegal-event-domain) | Invalid event domain. |
 | [11200002](../errorcode-hisysevent-sys.md#11200002-illegal-event-name) | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
@@ -50,6 +50,7 @@ Writes event information to the event file. This API uses a promise to return th
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 | [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -84,6 +85,8 @@ try {
 }
 ```
 
+<!--DelEnd-->
+
 
 <a id="write2"></a>
 
@@ -114,7 +117,7 @@ Writes event information to the event file. This API uses an asynchronous callba
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. 2. Incorrect parameter types. 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:         1. Mandatory parameters are left unspecified.         2. Incorrect parameter types.         3. Parameter verification failed. |
 | [11200001](../errorcode-hisysevent-sys.md#11200001-illegal-event-domain) | Invalid event domain. |
 | [11200002](../errorcode-hisysevent-sys.md#11200002-illegal-event-name) | Invalid event name. |
 | [11200003](../errorcode-hisysevent-sys.md#11200003-environment-error) | Abnormal environment. |
@@ -124,6 +127,7 @@ Writes event information to the event file. This API uses an asynchronous callba
 | [11200053](../errorcode-hisysevent-sys.md#11200053-number-of-event-parameters-exceeding-the-limit) | The number of event parameters exceeds the limit. |
 | [11200054](../errorcode-hisysevent-sys.md#11200054-length-of-event-parameter-values-of-the-array-type-exceeding-the-limit) | The number of event parameters of the array type exceeds the limit. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -151,3 +155,5 @@ try {
   console.error(`error code: ${(err as BusinessError).code}, error msg: ${(err as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

@@ -53,6 +53,7 @@ Installs a bundle. Multiple HAP files can be installed. This API uses an asynchr
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle installation. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the installation status. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -79,6 +80,8 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->
 
 ## recover
 
@@ -110,6 +113,7 @@ Recovers a bundle. This API uses an asynchronous callback to return the result. 
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle recovery. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the recovery status. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -136,6 +140,8 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->
 
 ## uninstall
 
@@ -167,6 +173,7 @@ Uninstalls a bundle. This API uses an asynchronous callback to return the result
 | param | [InstallParam](arkts-ability-bundleinstaller-installparam-depr-i-sys.md) | Yes | Parameters required for bundle uninstall. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[InstallStatus](arkts-ability-bundleinstaller-installstatus-depr-i-sys.md)&gt; | Yes | Callback used to return the installation status. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -193,3 +200,5 @@ bundleInstall.getBundleInstaller().then(installer => {
   console.error('getBundleInstaller failed. Cause: ' + message);
 });
 ```
+
+<!--DelEnd-->

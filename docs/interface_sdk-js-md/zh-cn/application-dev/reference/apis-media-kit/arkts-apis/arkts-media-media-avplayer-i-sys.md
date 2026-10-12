@@ -60,7 +60,10 @@ enableCameraPostprocessing(): Promise<void>
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Called from Non-System applications. Return by promise. |
 
+<!--Del-->
 **示例**
+
+<!--DelEnd-->
 
 ## forceLoadVideo
 
@@ -98,6 +101,7 @@ forceLoadVideo(force: boolean): Promise<void>
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Called from Non-System applications. Return by promise. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -107,6 +111,8 @@ async function test(){
   avPlayer.forceLoadVideo(true);
 }
 ```
+
+<!--DelEnd-->
 
 ## getCurrentTrack
 
@@ -148,6 +154,7 @@ getCurrentTrack(trackType: MediaType): Promise<number>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -166,6 +173,8 @@ async function test(){
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## enableStartFrameRateOpt
 

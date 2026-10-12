@@ -44,6 +44,7 @@ If a **SoundPool** instance created using [createSoundPool](arkts-media-media-cr
 | [5400101](../errorcode-media.md#5400101-memory-allocation-failed) | No memory. Return by promise. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | System API error. Return by promise. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -67,3 +68,5 @@ media.createParallelSoundPool(5, audioRendererInfo).then((soundpool_: media.Soun
   console.error(`soundpool catchCallback, error message:${error.message}`);
 });
 ```
+
+<!--DelEnd-->

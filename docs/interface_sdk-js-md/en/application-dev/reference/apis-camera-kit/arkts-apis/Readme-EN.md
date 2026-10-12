@@ -44,9 +44,6 @@
   - [CameraStatusInfo](arkts-camera-camera-camerastatusinfo-i.md)
   - [CaptureEndInfo](arkts-camera-camera-captureendinfo-i.md)
   - [CapturePhoto](arkts-camera-camera-capturephoto-i.md)
-  - [CaptureSession](arkts-camera-camera-capturesession-i.md)
-  <!--Del-->
-  - [CaptureSession(system api)](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [CaptureStartInfo](arkts-camera-camera-capturestartinfo-i.md)
   <!--Del-->
   - [ColorControls(system api)](arkts-camera-camera-colorcontrols-i-sys.md)<!--DelEnd-->
@@ -250,6 +247,9 @@
   <!--Del-->
   - [ZoomQuery(system api)](arkts-camera-camera-zoomquery-i-sys.md)<!--DelEnd-->
   - [ZoomRange](arkts-camera-camera-zoomrange-i.md)
+  - [CaptureSession](arkts-camera-camera-capturesession-i.md)
+  <!--Del-->
+  - [CaptureSession(system api)](arkts-camera-camera-capturesession-i-sys.md)<!--DelEnd-->
   - [ImageType](arkts-camera-camera-imagetype-t.md)
   - [AutomotiveCameraPosition](arkts-camera-camera-automotivecameraposition-e.md)
   <!--Del-->

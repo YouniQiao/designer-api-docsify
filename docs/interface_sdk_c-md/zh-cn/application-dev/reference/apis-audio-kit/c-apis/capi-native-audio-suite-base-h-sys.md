@@ -6,6 +6,8 @@
 
 **库：** libohaudiosuite.so
 
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
+
 **起始版本：** 22
 
 **系统接口：** 此接口为系统接口。
@@ -38,6 +40,8 @@ enum OH_AudioSuite_SystemNodeType
 **描述：**
 
 定义音频节点系统类型。
+
+**系统能力：** SystemCapability.Multimedia.Audio.SuiteEngine
 
 **起始版本：** 26.0.0
 

@@ -49,6 +49,7 @@ No permission is required when the specified application is the caller itself.
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,6 +75,8 @@ try {
   console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setoverlayenabledbybundlename2"></a>
@@ -124,6 +127,7 @@ No permission is required when the specified application is the caller itself. I
 | [17700032](../errorcode-bundle.md#17700032-application-does-not-contain-a-module-with-the-overlay-feature) | The specified bundle does not contain any overlay module. |
 | [17700033](../errorcode-bundle.md#17700033-module-is-not-configured-with-the-overlay-feature) | The specified module is not an overlay module. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -148,3 +152,5 @@ try {
   console.error('setOverlayEnabledByBundleName failed due to err code: ' + code + ' ' + 'message:' + message);
 }
 ```
+
+<!--DelEnd-->

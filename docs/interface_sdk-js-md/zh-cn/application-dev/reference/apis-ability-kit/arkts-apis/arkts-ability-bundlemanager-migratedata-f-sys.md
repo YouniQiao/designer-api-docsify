@@ -53,6 +53,7 @@ function migrateData(sourcePaths: Array<string>, destinationPath: string): Promi
 | [17700085](../errorcode-bundle.md#17700085-目标路径未开启写权限) | The destination path cannot be accessed. |
 | [17700086](../errorcode-bundle.md#17700086-发生系统错误) | System error occurred during copy execution. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -78,3 +79,5 @@ try {
   hilog.error(0x0000, 'testTag', 'migrateData call err: %{public}s', JSON.stringify(err));
 }
 ```
+
+<!--DelEnd-->

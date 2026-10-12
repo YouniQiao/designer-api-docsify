@@ -6,6 +6,8 @@
 
 **库：** libohdlp_permission.so
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **相关模块：** [DlpPermissionApi](capi-dlppermissionapi.md)
@@ -42,6 +44,8 @@ enum DLP_ErrCode
 
 DLP错误码的枚举。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 | 枚举项 | 描述 |
@@ -65,6 +69,8 @@ enum DLP_FileAccess
 
 DLP文件授权类型的枚举。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 | 枚举项 | 描述 |
@@ -86,6 +92,8 @@ DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t 
 **描述：**
 
 查询当前DLP沙箱的权限信息。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 
@@ -112,6 +120,8 @@ DLP_ErrCode OH_DLP_GetOriginalFileName(const char *fileName, char **originalFile
 
 获取指定DLP文件名的原始文件名。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
@@ -137,6 +147,8 @@ DLP_ErrCode OH_DLP_IsInSandbox(bool *isInSandbox)
 
 查询当前应用是否运行在DLP沙箱环境。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
@@ -160,6 +172,8 @@ DLP_ErrCode OH_DLP_SetSandboxAppConfig(const char *configInfo)
 **描述：**
 
 设置沙箱应用配置信息。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 
@@ -185,6 +199,8 @@ DLP_ErrCode OH_DLP_GetSandboxAppConfig(char **configInfo)
 
 获取沙箱应用配置信息。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
@@ -208,6 +224,8 @@ DLP_ErrCode OH_DLP_CleanSandboxAppConfig()
 **描述：**
 
 清理沙箱应用配置信息。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 

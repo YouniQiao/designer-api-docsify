@@ -12,8 +12,8 @@
 > **说明：**
 
 > - 模块维护策略：
- >  >   - 对于Lite Wearable设备类型，该模块长期维护，正常使用。
- >  >   - 对于支持该模块的其他设备类型，该模块从API version 8开始不再维护，推荐使用新接口[@ohos.vibrator (振动)](arkts-sensorservice-vibrator.md)。
+ > > - 对于Lite Wearable设备类型，该模块长期维护，正常使用。
+ > > - 对于支持该模块的其他设备类型，该模块从API version 8开始不再维护，推荐使用新接口[@ohos.vibrator (振动)](arkts-sensorservice-vibrator.md)。
  > - 本模块首批接口从API version 3开始支持。后续版本的新增接口，采用上角标单独标记接口的起始版本。
  > - 该功能使用需要对应硬件支持，仅支持真机调试。可通过系统设备信息或相关接口查询设备是否支持振动功能。
 

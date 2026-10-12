@@ -51,6 +51,7 @@ function getRemoteMetadata(deviceId: string, bundleName: string): Promise<Array<
 | [17700027](../errorcode-bundle.md#17700027-分布式服务未启动) | The distributed service is not running. |
 | [17700101](../errorcode-bundle.md#17700101-包管理服务异常) | Bundle manager service is excepted. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -69,3 +70,5 @@ try {
   console.error(`getRemoteMetadata failed: error code is ${code}  and error msg is ${message}`);
 }
 ```
+
+<!--DelEnd-->

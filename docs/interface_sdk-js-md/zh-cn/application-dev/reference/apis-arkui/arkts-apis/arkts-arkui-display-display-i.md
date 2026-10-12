@@ -49,7 +49,7 @@ getAvailableArea(): Promise<Rect>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause:         1. This display is abnormal.         2. Internal task error. |
 
 **示例**
 
@@ -98,7 +98,7 @@ getCutoutInfo(callback: AsyncCallback<CutoutInfo>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause: 1. This display is abnormal. 2. Internal task error. |
+| [1400001](../errorcode-display.md#1400001-无效的显示设备) | Invalid display or screen. Possible cause:         1. This display is abnormal.         2. Internal task error. |
 
 **示例**
 

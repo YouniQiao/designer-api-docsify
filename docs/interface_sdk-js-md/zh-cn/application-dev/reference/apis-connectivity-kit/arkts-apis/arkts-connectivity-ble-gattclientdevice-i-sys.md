@@ -72,6 +72,7 @@ client端向指定的server端特征值写入数据，适用于需要获取serve
 | [2901006](../errorcode-bluetoothManager.md#2901006-gatt未认证) | The connection is not authenticated. |
 | [2901007](../errorcode-bluetoothManager.md#2901007-gatt未授权) | The connection is not authorized. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -99,3 +100,5 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

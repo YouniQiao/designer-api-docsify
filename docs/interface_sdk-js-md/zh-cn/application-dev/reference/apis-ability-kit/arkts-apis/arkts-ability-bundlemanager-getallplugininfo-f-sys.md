@@ -46,6 +46,7 @@ function getAllPluginInfo(hostBundleName: string, userId?: number): Promise<Arra
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700004](../errorcode-bundle.md#17700004-指定的用户不存在) | The specified user ID is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -86,3 +87,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getAllPluginInfo failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

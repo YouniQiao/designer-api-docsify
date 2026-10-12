@@ -37,6 +37,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -56,6 +57,8 @@ screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallscreens2"></a>
@@ -92,6 +95,7 @@ Obtains all screens. This API uses an asynchronous callback to return the result
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -111,6 +115,8 @@ screen.getAllScreens((err: BusinessError, data: Array<screen.Screen>) => {
   }
 }, true);
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallscreens3"></a>
@@ -144,6 +150,7 @@ Obtains all screens. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -161,6 +168,8 @@ promise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getallscreens4"></a>
@@ -202,6 +211,7 @@ Obtains all screens. This API uses a promise to return the result.
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [1400001](../errorcode-display.md#1400001-invalid-display-or-screen) | Invalid display or screen. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -219,3 +229,5 @@ promise.then((data: Array<screen.Screen>) => {
   console.error(`Failed to get all screens. Code: ${err.code}, message: ${err.message}`);
 });
 ```
+
+<!--DelEnd-->

@@ -8,6 +8,8 @@
 
 **库：** libnative_rdb_ndk.z.so
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **相关模块：** [RDB](capi-rdb.md)
@@ -64,6 +66,8 @@ enum OH_RDB_TransType
 
 表示关系型数据库事务类型。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -85,6 +89,8 @@ OH_RDB_TransOptions *OH_RdbTrans_CreateOptions(void)
 **描述：**
 
 创建事务配置对象。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -109,6 +115,8 @@ int OH_RdbTrans_DestroyOptions(OH_RDB_TransOptions *options)
 
 销毁事务配置对象。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -132,6 +140,8 @@ int OH_RdbTransOption_SetType(OH_RDB_TransOptions *options, OH_RDB_TransType typ
 **描述：**
 
 设置关系型数据库事务类型。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -158,6 +168,8 @@ int OH_RdbTrans_Commit(OH_Rdb_Transaction *trans)
 
 提交事务。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -182,6 +194,8 @@ int OH_RdbTrans_Rollback(OH_Rdb_Transaction *trans)
 
 回滚事务。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -205,6 +219,8 @@ int OH_RdbTrans_Insert(OH_Rdb_Transaction *trans, const char *table, const OH_VB
 **描述：**
 
 将一行数据插入到目标表中。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -232,6 +248,8 @@ int OH_RdbTrans_InsertWithConflictResolution(OH_Rdb_Transaction *trans, const ch
 **描述：**
 
 将一行数据插入到目标表中，支持冲突解决。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 
@@ -261,6 +279,8 @@ int OH_RdbTrans_Update(OH_Rdb_Transaction *trans, const OH_VBucket *row, const O
 
 根据指定的条件更新数据库中的数据。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -287,6 +307,8 @@ int OH_RdbTrans_UpdateWithConflictResolution(OH_Rdb_Transaction *trans, const OH
 **描述：**
 
 根据指定条件更新数据库中的数据，并支持冲突解决。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 20
 
@@ -316,6 +338,8 @@ int OH_RdbTrans_Delete(OH_Rdb_Transaction *trans, const OH_Predicates *predicate
 
 根据指定条件从数据库中删除数据。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -341,6 +365,8 @@ OH_Cursor *OH_RdbTrans_Query(OH_Rdb_Transaction *trans, const OH_Predicates *pre
 **描述：**
 
 根据指定的条件查询数据库中的数据。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -369,6 +395,8 @@ OH_Cursor *OH_RdbTrans_QueryWithoutRowCount(OH_Rdb_Transaction *trans, const OH_
 
 根据指定的条件查询数据库中的数据，不计算行数。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -396,6 +424,8 @@ OH_Cursor *OH_RdbTrans_QuerySql(OH_Rdb_Transaction *trans, const char *sql, cons
 
 根据SQL语句查询数据库中的数据。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -422,6 +452,8 @@ OH_Cursor *OH_RdbTrans_QuerySqlWithoutRowCount(OH_Rdb_Transaction *trans, const 
 
 根据SQL语句查询数据库中的数据，不计算行数。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -447,6 +479,8 @@ int OH_RdbTrans_Execute(OH_Rdb_Transaction *trans, const char *sql, const OH_Dat
 **描述：**
 
 执行包含指定参数的SQL语句。 <br>不支持开头包含注释的语句。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -480,6 +514,8 @@ int OH_RdbTrans_Destroy(OH_Rdb_Transaction *trans)
 
 销毁事务对象。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 18
 
 **参数：**
@@ -503,6 +539,8 @@ int OH_RdbTrans_BatchInsert(OH_Rdb_Transaction *trans, const char *table, const 
 **描述：**
 
 将一组数据批量插入到目标表中。 <br>单次插入参数的最大数量限制为32766，超出上限会返回RDB_E_INVALID_ARGS错误码。参数数量计算方式为插入数据条数乘以插入数据的所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10，则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -531,6 +569,8 @@ int OH_RdbTrans_BatchInsertWithReturning(OH_Rdb_Transaction *trans, const char *
 **描述：**
 
 将批量数据插入目标表，并将变更信息输出到上下文中。 <br>一次最多可以插入32766个参数。如果参数数量超过上限，则返回错误代码RDB_E_INVALID_ARGS。 <br>参数数量计算方式为插入数据条数乘以插入数据时所有字段的并集大小。 <br>例如：插入数据的所有字段的并集大小为10则最多可以插入3276条数据（3276*10=32760）。 <br>请确保在调用接口时遵守此限制，以避免因参数数量过多而导致错误。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 23
 
@@ -565,6 +605,8 @@ int OH_RdbTrans_UpdateWithReturning(OH_Rdb_Transaction *trans, OH_VBucket *row, 
 
 根据指定条件更新数据库中的数据并输出更改信息到上下文。
 
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
+
 **起始版本：** 23
 
 **参数：**
@@ -597,6 +639,8 @@ int OH_RdbTrans_DeleteWithReturning(OH_Rdb_Transaction *trans, OH_Predicates *pr
 **描述：**
 
 根据指定条件从数据库中删除数据并输出更改信息到上下文。
+
+**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 23
 

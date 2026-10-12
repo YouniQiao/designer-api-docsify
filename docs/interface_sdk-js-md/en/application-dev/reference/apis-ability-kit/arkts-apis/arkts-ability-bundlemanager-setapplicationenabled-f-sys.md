@@ -50,6 +50,7 @@ Enables or disables an application or an application clone. This API uses a prom
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | AppIndex not in valid range. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,6 +71,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled2"></a>
@@ -118,6 +121,7 @@ Sets the enabled or disabled state of a specified application or application clo
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundle is not found. |
 | [17700061](../errorcode-bundle.md#17700061-appindex-for-a-clone-is-invalid) | The specified app index is invalid. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -144,6 +148,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled3"></a>
@@ -183,6 +189,7 @@ Enables or disables an application. This API uses an asynchronous callback to re
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -205,6 +212,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled4"></a>
@@ -249,6 +258,7 @@ Enables or disables an application. This API uses a promise to return the result
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-bundle-name-does-not-exist) | The specified bundleName is not found. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -269,3 +279,5 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

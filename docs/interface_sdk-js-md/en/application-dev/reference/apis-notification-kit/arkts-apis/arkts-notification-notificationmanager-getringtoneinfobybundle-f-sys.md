@@ -47,6 +47,7 @@ Obtains the custom ringtone information of an application. This API uses a promi
 | [1600022](../errorcode-notification.md#1600022-invalid-bundle-information) | The specified bundle is invalid. |
 | [1600024](../errorcode-notification.md#1600024-custom-ringtones-not-configured) | The specified bundle has no custom ringtone information. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,3 +75,5 @@ export default class EntryAbility extends UIAbility {
   }
 }
 ```
+
+<!--DelEnd-->

@@ -45,6 +45,7 @@ function isUidNetAllowed(uid: number, isMetered: boolean, callback: AsyncCallbac
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -55,6 +56,8 @@ policy.isUidNetAllowed(11111, true, (error: BusinessError, data: boolean) => {
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed2"></a>
@@ -101,6 +104,7 @@ function isUidNetAllowed(uid: number, isMetered: boolean): Promise<boolean>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -115,6 +119,8 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed3"></a>
@@ -156,6 +162,7 @@ function isUidNetAllowed(uid: number, iface: string, callback: AsyncCallback<boo
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -166,6 +173,8 @@ policy.isUidNetAllowed(11111, 'wlan0', (error: BusinessError, data: boolean) => 
   console.info(JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="isuidnetallowed4"></a>
@@ -212,6 +221,7 @@ function isUidNetAllowed(uid: number, iface: string): Promise<boolean>
 | [2100002](../errorcode-net-connection.md#2100002-连接服务失败) | Failed to connect to the service. |
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -226,3 +236,5 @@ policy
     console.error(JSON.stringify(error));
   });
 ```
+
+<!--DelEnd-->

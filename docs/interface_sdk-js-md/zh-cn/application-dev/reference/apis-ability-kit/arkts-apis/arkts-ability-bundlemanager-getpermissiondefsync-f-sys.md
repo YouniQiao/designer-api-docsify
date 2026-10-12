@@ -45,6 +45,7 @@ function getPermissionDefSync(permissionName: string): PermissionDef
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700006](../errorcode-bundle.md#17700006-查询的权限不存在) | The specified permission is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,3 +62,5 @@ try {
   hilog.error(0x0000, 'testTag', 'getPermissionDefSync failed. Cause: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

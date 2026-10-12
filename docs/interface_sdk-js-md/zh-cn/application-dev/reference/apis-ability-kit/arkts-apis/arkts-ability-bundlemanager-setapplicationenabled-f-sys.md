@@ -50,6 +50,7 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | AppIndex not in valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -70,6 +71,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled2"></a>
@@ -118,6 +121,7 @@ function setApplicationEnabled(bundleName: string, appIndex: number, isEnabled: 
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundle is not found. |
 | [17700061](../errorcode-bundle.md#17700061-指定的应用分身索引无效) | The specified app index is invalid. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -144,6 +148,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled3"></a>
@@ -183,6 +189,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean, callback:
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -205,6 +212,8 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setapplicationenabled4"></a>
@@ -249,6 +258,7 @@ function setApplicationEnabled(bundleName: string, isEnabled: boolean): Promise<
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types. |
 | [17700001](../errorcode-bundle.md#17700001-指定的bundlename不存在) | The specified bundleName is not found. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -269,3 +279,5 @@ try {
   hilog.error(0x0000, 'testTag', 'setApplicationEnabled failed: %{public}s', message);
 }
 ```
+
+<!--DelEnd-->

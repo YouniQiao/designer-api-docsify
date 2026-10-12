@@ -15,7 +15,7 @@ enum CardType
 ## OTHER
 
 ```TypeScript
-OTHER = "other"
+OTHER = 'other'
 ```
 
 卡模拟应用所使用的业务是其他类型。
@@ -26,14 +26,14 @@ OTHER = "other"
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-CardType-OTHER = "other"--><!--Device-CardType-OTHER = "other"-End-->
+<!--Device-CardType-OTHER = 'other'--><!--Device-CardType-OTHER = 'other'-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
 
 ## PAYMENT
 
 ```TypeScript
-PAYMENT = "payment"
+PAYMENT = 'payment'
 ```
 
 卡模拟应用所使用的业务是支付类型。
@@ -44,6 +44,6 @@ PAYMENT = "payment"
 
 **原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-CardType-PAYMENT = "payment"--><!--Device-CardType-PAYMENT = "payment"-End-->
+<!--Device-CardType-PAYMENT = 'payment'--><!--Device-CardType-PAYMENT = 'payment'-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation

@@ -51,6 +51,7 @@ Installs the public credential of the user. This API is called only by the certi
 | [17500004](../errorcode-certManager.md#17500004-the-number-of-certificates-or-credentials-reaches-the-limit) | Indicates that the number of certificates reaches the maximum allowed. |
 | [17500008](../errorcode-certManager.md#17500008-incorrect-password) | Indicates that the password is error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -74,3 +75,5 @@ try {
   console.error(`Failed to install public certificate. Code: ${error.code}, message: ${error.message}`);
 }
 ```
+
+<!--DelEnd-->

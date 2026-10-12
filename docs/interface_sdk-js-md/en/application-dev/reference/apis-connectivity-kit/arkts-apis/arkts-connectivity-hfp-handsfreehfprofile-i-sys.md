@@ -58,6 +58,7 @@ Initiate the HFP connection to a remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Internal system error. For example, IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -68,6 +69,8 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->
 
 ## disconnect
 
@@ -107,6 +110,7 @@ Disconnect the HFP connection with the remote device.
 | 2900004 | Profile not supported. |
 | 2900099 | Internal system error. For example, IPC error. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -117,3 +121,5 @@ try {
     console.error(`errCode: ${err.code}, errMessage: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

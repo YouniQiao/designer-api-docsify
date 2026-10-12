@@ -38,7 +38,7 @@ function queryAppGroup(callback: AsyncCallback<number>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
 | [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc序列化失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
@@ -48,6 +48,7 @@ function queryAppGroup(callback: AsyncCallback<number>): void
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -62,6 +63,8 @@ usageStatistics.queryAppGroup((err: BusinessError, res: number) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryappgroup2"></a>
@@ -105,6 +108,7 @@ function queryAppGroup(): Promise<number>
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -117,6 +121,8 @@ usageStatistics.queryAppGroup().then((res: number) => {
   console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryappgroup3"></a>
@@ -152,7 +158,7 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): voi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
 | [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc序列化失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
@@ -162,6 +168,7 @@ function queryAppGroup(bundleName: string, callback: AsyncCallback<number>): voi
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -177,6 +184,8 @@ usageStatistics.queryAppGroup(bundleName, (err: BusinessError, res: number) => {
   }
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="queryappgroup4"></a>
@@ -217,7 +226,7 @@ function queryAppGroup(bundleName: string): Promise<number>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;         2. Incorrect parameter types; 3. Parameter verification failed. |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
 | [10000001](../errorcode-DeviceUsageStatistics.md#10000001-内存操作失败) | Memory operation failed. |
 | [10000002](../errorcode-DeviceUsageStatistics.md#10000002-ipc序列化失败) | Failed to write data into parcel. Possible reasons: 1. Invalid parameters;<br> 2. Failed to apply for memory. |
@@ -227,6 +236,7 @@ function queryAppGroup(bundleName: string): Promise<number>
 | [10000006](../errorcode-DeviceUsageStatistics.md#10000006-获取应用信息失败) | Failed to get the application information. |
 | [10100002](../errorcode-DeviceUsageStatistics.md#10100002-获取应用分组信息失败) | Failed to get the application group information. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -241,3 +251,5 @@ usageStatistics.queryAppGroup(bundleName).then((res: number) => {
   console.error('BUNDLE_ACTIVE queryAppGroup promise failed. code is: ' + err.code + ',message is: ' + err.message);
 });
 ```
+
+<!--DelEnd-->

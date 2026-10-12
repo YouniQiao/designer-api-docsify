@@ -64,6 +64,7 @@ addResource(type: ResourceType, proxy: PhotoProxy): void
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -88,6 +89,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## addResourceForPicker
 
@@ -174,6 +177,7 @@ API10-17，非法字符包括：. .. \ / : * ? " ' ` &lt; &gt; | { } [ ]
 | 14000001 | Invalid display name |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -194,6 +198,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteAssetsPermanentlyWithUri
 
@@ -243,6 +249,7 @@ static deleteAssetsPermanentlyWithUri(context: Context, assetUris: string[]): Pr
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -256,6 +263,8 @@ async function example(context: Context, assetUri: string) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteCloudAssetsWithUri
 
@@ -305,6 +314,7 @@ static deleteCloudAssetsWithUri(context: Context, assetUris: string[]): Promise<
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out; |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -317,6 +327,8 @@ async function example(context: Context, assetUri: string) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteLocalAssetsPermanently
 
@@ -362,6 +374,7 @@ static deleteLocalAssetsPermanently(context: Context, assets: Array<PhotoAsset>)
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -383,6 +396,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteLocalAssetsPermanentlyWithUri
 
@@ -428,6 +443,7 @@ static deleteLocalAssetsPermanentlyWithUri(context: Context, assetUris: Array<st
 | 13900020 | Invalid argument |
 | 14000011 | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -457,6 +473,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, cont
 }
 }
 ```
+
+<!--DelEnd-->
 
 ## deleteLocalAssetsWithUri
 
@@ -506,6 +524,7 @@ static deleteLocalAssetsWithUri(context: Context, assetUris: string[]): Promise<
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The context is empty; <br>2. Asset uri array size is empty or bigger than 500 . |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1.Database corrupted; <br>2.The file system is abnormal; <br>3.The IPC request timed out; |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -518,6 +537,8 @@ async function example(context: Context, assetUri: string) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## setAppLinkInfo
 
@@ -549,6 +570,7 @@ setAppLinkInfo(appLink: string): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter's length is not within the valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -569,6 +591,8 @@ async function example(asset: photoAccessHelper.PhotoAsset, appLinkInfo: string,
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## setAppLinkState
 
@@ -602,6 +626,7 @@ setAppLinkState(appLinkState: AppLinkState): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -621,6 +646,8 @@ async function example(asset: photoAccessHelper.PhotoAsset, context: Context) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## setCameraEditData
 
@@ -654,6 +681,7 @@ setCameraEditData(editData: MediaAssetEditData): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -687,6 +715,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<!--DelEnd-->
+
 ## setCameraShotKey
 
 ```TypeScript
@@ -717,6 +747,7 @@ setCameraShotKey(cameraShotKey: string): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -735,6 +766,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setCompositeDisplayMode
 
@@ -772,6 +805,7 @@ setCompositeDisplayMode(compositeDisplayMode: CompositeDisplayMode): Promise<voi
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Scene parameter verification failed. Possible causes:<br>1. The compositeDisplayMode is not within the supported range. <br>2. The original file does not exist locally in PhotoAsset. <br>3. The PhotoAsset is not a composite asset. <br>4. The original file format is not within the supported range. <br>5. The original file has been edited. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes:<br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -797,6 +831,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## setEditData
 
@@ -828,6 +864,7 @@ setEditData(editData: MediaAssetEditData): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -860,6 +897,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
 }
 ```
 
+<!--DelEnd-->
+
 ## setEffectMode
 
 ```TypeScript
@@ -891,6 +930,7 @@ setEffectMode(mode: MovingPhotoEffectMode): void
 | 14000011 | System inner fail |
 | 14000016 | Operation Not Support |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -913,6 +953,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper, asse
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setHasAppLink
 
@@ -944,6 +986,7 @@ setHasAppLink(hasAppLink: number): void
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes: The input parameter is not within the valid range. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -969,6 +1012,8 @@ async function example(asset: photoAccessHelper.PhotoAsset, hasAppLink: LinkType
     }
 }
 ```
+
+<!--DelEnd-->
 
 ## setHidden
 
@@ -1000,6 +1045,7 @@ setHidden(hiddenState: boolean): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1026,6 +1072,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## setHiddenAttribute
 
@@ -1059,6 +1107,7 @@ setHiddenAttribute(hiddenState: boolean): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The asset is not exist; |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1085,6 +1134,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setLivePhoto4dStatus
 
@@ -1149,6 +1200,7 @@ setLocation(longitude: number, latitude: number): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1175,6 +1227,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## setMovingPhotoVersion
 
@@ -1208,6 +1262,7 @@ setMovingPhotoVersion(version: number): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | Parameter error, only supports 9. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs. Possible causes: 1. Database corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1234,6 +1289,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## setSupportedWatermarkType
 
@@ -1265,6 +1322,7 @@ setSupportedWatermarkType(watermarkType: WatermarkType): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | Internal system error |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -1289,6 +1347,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setTitleByFile
 
@@ -1322,6 +1382,7 @@ setTitleByFile(name: string): void
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. The asset is not exist; |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error.It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted. <br>2. The file system is abnormal. <br>3. The IPC request timed out. |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1347,6 +1408,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   }
 }
 ```
+
+<!--DelEnd-->
 
 ## setUserComment
 
@@ -1378,6 +1441,7 @@ setUserComment(userComment: string): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | 14000011 | System inner fail |
 
+<!--Del-->
 **示例**
 
 phAccessHelper的创建请参考[photoAccessHelper.getPhotoAccessHelper](arkts-apis-photoAccessHelper-f.md#photoaccesshelpergetphotoaccesshelper)的示例使用。
@@ -1405,6 +1469,8 @@ async function example(phAccessHelper: photoAccessHelper.PhotoAccessHelper) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 ## setVideoEnhancementAttr
 

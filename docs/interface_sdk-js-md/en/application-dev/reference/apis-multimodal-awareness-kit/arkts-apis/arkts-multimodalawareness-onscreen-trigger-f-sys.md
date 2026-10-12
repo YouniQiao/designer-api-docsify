@@ -53,6 +53,7 @@ Proactively triggers screen content awareness and obtains the current screen awa
 | [34000001](../errorcode-carAwareness.md#34000001-service-exception) | Service exception. |
 | [34000002](../errorcode-carAwareness.md#34000002-specified-capability-not-supported) | The application or page is not supported. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -76,3 +77,5 @@ try {
   console.error(`trigger failed, Code: ${err.code}, message: ${err.message}`);
 }
 ```
+
+<!--DelEnd-->

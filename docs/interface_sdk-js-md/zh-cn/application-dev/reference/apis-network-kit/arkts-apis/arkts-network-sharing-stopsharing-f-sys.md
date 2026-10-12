@@ -48,6 +48,7 @@ function stopSharing(type: SharingIfaceType, callback: AsyncCallback<void>): voi
 | [2202006](../errorcode-net-sharing.md#2202006-蓝牙共享失败) | Bluetooth sharing failed. |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -59,6 +60,8 @@ sharing.stopSharing(SHARING_WIFI, (error: BusinessError) => {
   console.error(JSON.stringify(error));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="stopsharing2"></a>
@@ -108,6 +111,7 @@ function stopSharing(type: SharingIfaceType): Promise<void>
 | [2202006](../errorcode-net-sharing.md#2202006-蓝牙共享失败) | Bluetooth sharing failed. |
 | [2202011](../errorcode-net-sharing.md#2202011-无法获取网络共享配置) | Cannot get network sharing configuration. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -124,3 +128,5 @@ sharing
     console.error('stop wifi sharing failed');
   });
 ```
+
+<!--DelEnd-->

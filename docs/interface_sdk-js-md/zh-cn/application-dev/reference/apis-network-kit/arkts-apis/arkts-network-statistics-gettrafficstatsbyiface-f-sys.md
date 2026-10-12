@@ -45,6 +45,7 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo, callback: AsyncCallback<Ne
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) | Failed to read the database. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -77,6 +78,8 @@ if (iFaceInfo) {
   });
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="gettrafficstatsbyiface2"></a>
@@ -127,6 +130,7 @@ function getTrafficStatsByIface(ifaceInfo: IfaceInfo): Promise<NetStatsInfo>
 | [2100003](../errorcode-net-connection.md#2100003-系统内部错误) | System internal error. |
 | [2103017](../errorcode-net-statistics.md#2103017-读取数据库失败) | Failed to read the database. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -154,3 +158,5 @@ if (iFaceInfo) {
   });
 }
 ```
+
+<!--DelEnd-->

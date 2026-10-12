@@ -51,6 +51,7 @@ Set a surface instance to display playing view, used at sink side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -70,6 +71,8 @@ media.createAVRecorder().then((avRecorder) => {
   });
 })
 ```
+
+<!--DelEnd-->
 
 <a id="setdisplaysurface2"></a>
 
@@ -109,6 +112,7 @@ Set a surface instance to display playing view, used at sink side.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | parameter check failed. 1.Mandatory parameters are left unspecified. 2.Parameter verification failed. |
 | [6600109](../errorcode-avsession.md#6600109-remote-session-does-not-exist) | The remote connection is not established. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -128,3 +132,5 @@ media.createAVRecorder().then((avRecorder) => {
   });
 })
 ```
+
+<!--DelEnd-->

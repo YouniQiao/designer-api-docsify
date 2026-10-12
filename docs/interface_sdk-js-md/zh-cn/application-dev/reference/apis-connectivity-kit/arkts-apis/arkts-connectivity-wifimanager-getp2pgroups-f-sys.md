@@ -43,6 +43,7 @@ function getP2pGroups(): Promise<Array<WifiP2pGroupInfo>>
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
 
+<!--Del-->
 **示例**
 
 ```TypeScript
@@ -61,6 +62,8 @@ wifiManager.getP2pGroups().then(data => {
   console.info("get P2P groups: " + JSON.stringify(data));
 });
 ```
+
+<!--DelEnd-->
 
 
 <a id="getp2pgroups2"></a>
@@ -101,6 +104,9 @@ function getP2pGroups(callback: AsyncCallback<Array<WifiP2pGroupInfo>>): void
 | [2801000](../errorcode-wifi.md#2801000-p2p模块异常) | Operation failed. |
 | [2801001](../errorcode-wifi.md#2801001-p2p功能未打开) | Wi-Fi STA disabled. |
 
+<!--Del-->
 **示例**
 
 参见 [getP2pGroups](#getp2pgroups)
+
+<!--DelEnd-->

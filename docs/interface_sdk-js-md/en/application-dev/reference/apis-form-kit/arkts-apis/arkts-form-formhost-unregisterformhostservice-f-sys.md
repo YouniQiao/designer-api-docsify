@@ -48,6 +48,7 @@ Unregister the form host service info.
 | [16501019](../errorcode-form.md#16501019-unable-to-unregister-the-widget-service-not-registered-by-the-current-application) | A form service not owned by you cannot be unregistered. |
 | [16501000](../errorcode-form.md#16501000-internal-function-error) | An internal functional error occurred. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -65,3 +66,5 @@ try {
   console.error(`catch error, code: ${(error as BusinessError).code}, message: ${(error as BusinessError).message}`);
 }
 ```
+
+<!--DelEnd-->

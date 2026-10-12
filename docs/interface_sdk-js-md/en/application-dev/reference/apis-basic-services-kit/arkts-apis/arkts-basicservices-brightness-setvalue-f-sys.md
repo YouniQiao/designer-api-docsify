@@ -35,9 +35,10 @@ Sets the screen brightness.
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;         2. Incorrect parameter types; |
 | [4700101](../errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -47,6 +48,8 @@ try {
     console.error('set brightness failed, err: ' + err);
 }
 ```
+
+<!--DelEnd-->
 
 
 <a id="setvalue2"></a>
@@ -79,9 +82,10 @@ Sets the screen brightness. This API is used for continuous brightness adjustmen
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified; 2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified;         2. Incorrect parameter types; |
 | [4700101](../errorcode-brightness.md#4700101-service-connection-failure) | Failed to connect to the service. |
 
+<!--Del-->
 **Examples**
 
 ```TypeScript
@@ -91,3 +95,5 @@ try {
     console.error('set brightness failed, err: ' + err);
 }
 ```
+
+<!--DelEnd-->
