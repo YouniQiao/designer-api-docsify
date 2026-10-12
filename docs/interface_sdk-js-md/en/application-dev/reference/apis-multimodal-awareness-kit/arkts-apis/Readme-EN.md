@@ -1,5 +1,57 @@
 # ArkTS API<!--arkts-multimodalawarenesskit-->
 
+<!--Del-->
+- [@ohos.multimodalAwareness.behaviorAwareness(behaviorAwareness)](arkts-multimodalawareness-multimodalawareness-behaviorawareness.md)<!--DelEnd-->
+  <!--Del-->
+  - [offPerception(system api)](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onPerception(system api)](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [submitFeedback(system api)](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ActionData(system api)](arkts-multimodalawareness-behaviorawareness-actiondata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BehaviorAwarenessPayload(system api)](arkts-multimodalawareness-behaviorawareness-behaviorawarenesspayload-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Coordinates(system api)](arkts-multimodalawareness-behaviorawareness-coordinates-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventData(system api)](arkts-multimodalawareness-behaviorawareness-eventdata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FeedbackData(system api)](arkts-multimodalawareness-behaviorawareness-feedbackdata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LocationAttributes(system api)](arkts-multimodalawareness-behaviorawareness-locationattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionEvent(system api)](arkts-multimodalawareness-behaviorawareness-perceptionevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SubscribeInfo(system api)](arkts-multimodalawareness-behaviorawareness-subscribeinfo-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemActionAttributes(system api)](arkts-multimodalawareness-behaviorawareness-systemactionattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemEventAttributes(system api)](arkts-multimodalawareness-behaviorawareness-systemeventattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TimeAttributes(system api)](arkts-multimodalawareness-behaviorawareness-timeattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ActionType(system api)](arkts-multimodalawareness-behaviorawareness-actiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AdjustmentDirection(system api)](arkts-multimodalawareness-behaviorawareness-adjustmentdirection-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BluetoothDeviceType(system api)](arkts-multimodalawareness-behaviorawareness-bluetoothdevicetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventType(system api)](arkts-multimodalawareness-behaviorawareness-eventtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FeedbackType(system api)](arkts-multimodalawareness-behaviorawareness-feedbacktype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LocationType(system api)](arkts-multimodalawareness-behaviorawareness-locationtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Operation(system api)](arkts-multimodalawareness-behaviorawareness-operation-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PatternType(system api)](arkts-multimodalawareness-behaviorawareness-patterntype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionDomain(system api)](arkts-multimodalawareness-behaviorawareness-perceptiondomain-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RecurrenceType(system api)](arkts-multimodalawareness-behaviorawareness-recurrencetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SoundMode(system api)](arkts-multimodalawareness-behaviorawareness-soundmode-e-sys.md)<!--DelEnd-->
 - [@ohos.multimodalAwareness.carAwareness(Car awareness)](arkts-multimodalawareness-multimodalawareness-carawareness.md)
   - [getAllCapabilityList](arkts-multimodalawareness-carawareness-getallcapabilitylist-f.md)
   <!--Del-->

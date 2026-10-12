@@ -72,6 +72,7 @@
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForPause(OH_AVScreenCapture_CaptureStrategy *strategy, bool value)](#oh_avscreencapture_strategyforpause) | 允许暂停屏幕捕获。<br> 适用于录屏过程中可能需要临时暂停的场景，如用户切换应用、接听电话等需要中断录制但不想结束录屏会话的情况。 设置为true时允许暂停，设置为false时录屏过程不可暂停。设置value为true后， 可在录屏运行阶段调用OH_AVScreenCapture_PauseScreenCapture暂停录屏和OH_AVScreenCapture_ResumeScreenCapture恢复录屏。 该策略需通过OH_AVScreenCapture_SetCaptureStrategy在录屏启动前完成配置。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_PauseScreenCapture(struct OH_AVScreenCapture *capture)](#oh_avscreencapture_pausescreencapture) | 暂停屏幕捕获。应在录屏启动之后被调用。<br> 与[OH_AVScreenCapture_ResumeScreenCapture](capi-native-avscreen-capture-h.md#oh_avscreencapture_resumescreencapture)配合使用，调用后暂停录屏数据采集，已采集的数据保持有效。 调用此接口前，需先通过[OH_AVScreenCapture_StrategyForPause](capi-native-avscreen-capture-h.md#oh_avscreencapture_strategyforpause)设置允许暂停策略（value设为true）， 并通过OH_AVScreenCapture_SetCaptureStrategy在录屏启动前完成策略配置。 |
 | [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ResumeScreenCapture(struct OH_AVScreenCapture *capture)](#oh_avscreencapture_resumescreencapture) | 恢复屏幕捕获。应在录屏启动之后被调用。<br> 与[OH_AVScreenCapture_PauseScreenCapture](capi-native-avscreen-capture-h.md#oh_avscreencapture_pausescreencapture)配合使用，调用后恢复录屏数据采集。调用此接口前， 需先通过OH_AVScreenCapture_StrategyForPause设置允许暂停策略（value设为true）， 并通过OH_AVScreenCapture_SetCaptureStrategy在录屏启动前完成策略配置。 |
+| [OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForMicAEC(OH_AVScreenCapture_CaptureStrategy *strategy, bool enable)](#oh_avscreencapture_strategyformicaec) | 设置当麦克风开启时是否使能回声消除（AEC）功能。<br> 该策略需通过[OH_AVScreenCapture_SetCaptureStrategy](capi-native-avscreen-capture-h.md#oh_avscreencapture_setcapturestrategy)在录屏启动前完成配置。 |
 
 ## 函数说明
 
@@ -281,7 +282,7 @@ OH_NativeBuffer* OH_AVScreenCapture_AcquireVideoBuffer(struct OH_AVScreenCapture
 
 | 类型 | 说明 |
 | -- | -- |
-| [OH_NativeBuffer*](capi-avscreencapture-oh-nativebuffer.md) | 执行成功返回OH_NativeBuffer对象，通过OH_NativeBuffer对象相关接口可以获取到视频buffer和分辨率等信息参数。 |
+| [OH_NativeBuffer*](../../apis-arkgraphics2d/c-apis/capi-nativewindow-oh-nativebuffer.md) | 执行成功返回OH_NativeBuffer对象，通过OH_NativeBuffer对象相关接口可以获取到视频buffer和分辨率等信息参数。 |
 
 ### OH_AVScreenCapture_ReleaseAudioBuffer()
 
@@ -1462,5 +1463,32 @@ OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_ResumeScreenCapture(struct OH_AVS
 | 类型 | 说明 |
 | -- | -- |
 | [OH_AVSCREEN_CAPTURE_ErrCode](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) | AV_SCREEN_CAPTURE_ERR_OK：执行成功。<br> AV_SCREEN_CAPTURE_ERR_INVALID_VAL：输入录屏实例为空指针。<br> AV_SCREEN_CAPTURE_ERR_OPERATE_NOT_PERMIT：不允许操作。 |
+
+### OH_AVScreenCapture_StrategyForMicAEC()
+
+```c
+OH_AVSCREEN_CAPTURE_ErrCode OH_AVScreenCapture_StrategyForMicAEC(OH_AVScreenCapture_CaptureStrategy *strategy, bool enable)
+```
+
+**描述：**
+
+设置当麦克风开启时是否使能回声消除（AEC）功能。<br> 该策略需通过[OH_AVScreenCapture_SetCaptureStrategy](capi-native-avscreen-capture-h.md#oh_avscreencapture_setcapturestrategy)在录屏启动前完成配置。
+
+**系统能力：** SystemCapability.Multimedia.Media.AVScreenCapture
+
+**起始版本：** 26.2.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_AVScreenCapture_CaptureStrategy](capi-avscreencapture-oh-avscreencapture-capturestrategy.md) *strategy | 指向OH_AVScreenCapture_CaptureStrategy实例的指针。 |
+| bool enable | 麦克风采集时是否使能AEC（回声消除）能力。<br> true表示开启麦克风回声消除功能，false表示关闭麦克风回声消除功能。<br> 默认是false。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [OH_AVSCREEN_CAPTURE_ErrCode](capi-native-avscreen-capture-errors-h.md#oh_avscreen_capture_errcode) | AV_SCREEN_CAPTURE_ERR_OK：执行成功。<br> AV_SCREEN_CAPTURE_ERR_INVALID_VAL：输入参数strategy为空指针或输入value为无效值。 |
 
 

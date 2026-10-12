@@ -38,6 +38,7 @@ import { window } from '@kit.ArkUI';
 | [onApplicationFocusStateChange](arkts-arkui-window-onapplicationfocusstatechange-f.md) | 开启应用进程获焦状态变化的监听。此监听针对应用间的获焦状态变化，若同应用内窗口间的获焦状态发生变化，则不会触发回调函数。 |
 | [setStartWindowBackgroundColor](arkts-arkui-window-setstartwindowbackgroundcolor-f.md) | 设置同一应用包名下指定moduleName、abilityName对应UIAbility的启动页背景色，使用Promise异步回调。 |
 | [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md) | 设置或取消本应用进程下窗口的水印图片，使用Promise异步回调。该接口需要在[loadContent()](arkts-arkui-window-window-i.md#loadcontent1)或[setUIContent()](arkts-arkui-window-window-i.md#setuicontent1)调用生效后使用。 |
+| [setWindowPosition](arkts-arkui-window-setwindowposition-f.md) | 调整当前应用进程中一个或多个主窗口的z序。使用Promise异步回调。 |
 | [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md) | 在同应用内将窗口焦点从源窗口转移到目标窗口，仅支持应用主窗、子窗范围内的焦点转移。使用Promise异步回调。 |
 | [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md) | 主窗口和子窗口可正常调用，用于将鼠标输入事件从源窗口转移到目标窗口。使用Promise异步回调。 |
 | [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md) | 主窗口和子窗口可正常调用，用于将触屏输入事件从源窗口转移到目标窗口。使用Promise异步回调。 |
@@ -125,6 +126,7 @@ import { window } from '@kit.ArkUI';
 | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | 窗口布局信息过滤选项。 |
 | [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md) | 窗口布局信息。 |
 | [WindowLimits](arkts-arkui-window-windowlimits-i.md) | 窗口尺寸限制参数，应用可以通过[getWindowLimits](arkts-arkui-window-window-i.md#getwindowlimits)获得当前窗口的尺寸限制（单位为px）；从API version 22开始，还可以通过[getWindowLimitsVP](arkts-arkui-window-window-i.md#getwindowlimitsvp)获取窗口尺寸限制（单位为vp）。 |
+| [WindowPositionParams](arkts-arkui-window-windowpositionparams-i.md) | 描述待调整z序的主窗口的位置。 |
 | [WindowProperties](arkts-arkui-window-windowproperties-i.md) | 窗口属性。 |
 | [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md) | 窗口截图动效的配置。 |
 | [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md) | 主窗口截图的配置项。 |
@@ -185,6 +187,7 @@ import { window } from '@kit.ArkUI';
 | [WindowAnchor](arkts-arkui-window-windowanchor-e.md) | 窗口锚点枚举。 |
 | [WindowAnimationCurve](arkts-arkui-window-windowanimationcurve-e.md) | 窗口动画曲线类型。 |
 | [WindowEventType](arkts-arkui-window-windoweventtype-e.md) | 窗口生命周期。 |
+| [WindowPosition](arkts-arkui-window-windowposition-e.md) | 主窗口z序调整的目标位置枚举。 |
 | [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md) | WindowStage生命周期状态枚举。 |
 | [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md) | WindowStage生命周期的状态类型枚举。 |
 | [WindowStatusType](arkts-arkui-window-windowstatustype-e.md) | 窗口模式枚举。 |

@@ -3,10 +3,7 @@
 - 模块<!--audiokit-module-->
     - [OHMIDI](capi-ohmidi.md)
     - [OHAudioSuite](capi-ohaudiosuite.md)
-    - [AudioConverter](capi-audioconverter.md)
-    - [AudioRenderer](capi-audiorenderer.md)
     - [OHAudio](capi-ohaudio.md)
-    - [AudioCapturer](capi-audiocapturer.md)
 - 头文件<!--audiokit-headerfile-->
     - [native_midi.h](capi-native-midi-h.md)
     - [native_midi_base.h](capi-native-midi-base-h.md)
@@ -60,8 +57,8 @@
     - [OH_AudioSuite_DownloadStatusInfoArray（系统接口）](capi-ohaudiosuite-oh-audiosuite-downloadstatusinfoarray-sys.md)
     - [OH_AudioSuite_FeatureVersionInfo（系统接口）](capi-ohaudiosuite-oh-audiosuite-featureversioninfo-sys.md)
     - [OH_AudioSuite_DownloadManager（系统接口）](capi-ohaudiosuite-oh-audiosuite-downloadmanager-sys.md)
-    - [OH_AudioConverter_Format](capi-audioconverter-oh-audioconverter-format.md)
-    - [OH_AudioConverter](capi-audioconverter-oh-audioconverter.md)
+    - [OH_AudioConverter_Format](capi-ohaudiosuite-oh-audioconverter-format.md)
+    - [OH_AudioConverter](capi-ohaudiosuite-oh-audioconverter.md)
     - [OH_AudioDeviceDescriptorArray](capi-ohaudio-oh-audiodevicedescriptorarray.md)
     - [OH_AudioDeviceDescriptor](capi-ohaudio-oh-audiodevicedescriptor.md)
     - [OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)

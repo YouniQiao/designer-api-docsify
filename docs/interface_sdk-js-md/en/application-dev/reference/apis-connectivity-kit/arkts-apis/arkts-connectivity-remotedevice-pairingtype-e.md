@@ -24,6 +24,8 @@ Pairing type that does not require a passkey. Users do not need to check the pai
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PairingType-NO_PASSKEY_CONFIRMATION = 0--><!--Device-PairingType-NO_PASSKEY_CONFIRMATION = 0-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -40,6 +42,8 @@ Pairing type with authentication based on digit comparison. Users must ensure th
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2--><!--Device-PairingType-PAIRING_TYPE_NUMBER_COMPARE = 2-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -55,6 +59,8 @@ Pairing type with passcode authentication. Users need to enter the pairing code 
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1--><!--Device-PairingType-PAIRING_TYPE_PASSCODE = 1-End-->
 

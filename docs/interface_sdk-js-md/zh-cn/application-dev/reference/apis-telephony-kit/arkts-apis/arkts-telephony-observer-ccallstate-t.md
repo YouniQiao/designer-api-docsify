@@ -4,7 +4,7 @@
 type CCallState = call.CCallState
 ```
 
-运营商通话状态码。
+运营商通话状态
 
 **起始版本：** 23
 

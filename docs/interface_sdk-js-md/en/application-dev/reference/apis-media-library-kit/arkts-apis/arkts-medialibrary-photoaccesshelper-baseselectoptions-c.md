@@ -423,6 +423,26 @@ Single selection mode. The default value is **SingleSelectionMode.BROWSER_MODE**
 
 **System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## textColor
+
+```TypeScript
+textColor?: string
+```
+
+Font color of the text displayed in the picker grid and search pages, such as recommended bubble content, categories and time labels in search. The value is an 8-digit hexadecimal color code. If the value is an invalid color format, the default font color is used and no error is thrown.
+
+**Type:** string
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+
+<!--Device-BaseSelectOptions-textColor?: string--><!--Device-BaseSelectOptions-textColor?: string-End-->
+
+**System capability:** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## videoDurationFilter
 
 ```TypeScript

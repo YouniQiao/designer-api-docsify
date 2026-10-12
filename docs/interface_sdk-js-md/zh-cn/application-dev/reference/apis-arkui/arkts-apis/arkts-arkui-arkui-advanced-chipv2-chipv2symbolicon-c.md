@@ -6,8 +6,6 @@ export abstract class ChipV2SymbolIcon extends ChipV2Icon
 
 ChipV2SymbolIcon定义Symbol图标类。
 
-继承自[ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)。
-
 **继承/实现关系：** ChipV2SymbolIcon extends [ChipV2Icon](arkts-arkui-arkui-advanced-chipv2-chipv2icon-c.md)
 
 **起始版本：** 26.0.0

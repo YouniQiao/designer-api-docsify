@@ -342,7 +342,7 @@ NODE_SCROLL_ENABLE_SCROLL_WITH_MOUSE = 1002027
 
 **Description**
 
-Sets whether dragging scrolling with the left mouse button pressed is supported.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].i32: whether dragging scrolling with the left mouse button pressed is supported. <b>0</b>: no; <b>1</b>: yes. Default value: <b>0</b>.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].i32: whether dragging scrolling with the left mouse button pressed is supported. <b>0</b>: no; <b>1</b>: yes.</li> </ul>
+Whether to support scroll using the left button on the mouse. This attribute can be set, reset, and obtained as required through APIs. <br>The format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute and the format of the return value **ArkUI_AttributeItem** are as follows.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].i32: whether to support scrolling by pressing the left mouse button. 0: no; 1: yes. For API versions earlier than 26.2.0, the default value is 0. For API versions 26.2.0 and later, the default value is 1 when the scrollable component scrolls horizontally,0 otherwise.</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].i32: whether to support scrolling by pressing the left mouse button. 0: no; 1: yes.</li> </ul>
 
 **Since**: 26.0.0
 

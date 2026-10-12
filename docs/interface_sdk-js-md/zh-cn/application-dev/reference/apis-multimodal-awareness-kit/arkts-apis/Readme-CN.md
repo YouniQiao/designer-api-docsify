@@ -1,5 +1,54 @@
 # ArkTS API<!--arkts-multimodalawarenesskit-->
 
+- [@ohos.multimodalAwareness.behaviorAwareness（行为感知）](arkts-multimodalawareness-multimodalawareness-behaviorawareness.md)
+  <!--Del-->
+  - [offPerception（系统接口）](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onPerception（系统接口）](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [submitFeedback（系统接口）](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ActionData（系统接口）](arkts-multimodalawareness-behaviorawareness-actiondata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BehaviorAwarenessPayload（系统接口）](arkts-multimodalawareness-behaviorawareness-behaviorawarenesspayload-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventData（系统接口）](arkts-multimodalawareness-behaviorawareness-eventdata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FeedbackData（系统接口）](arkts-multimodalawareness-behaviorawareness-feedbackdata-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LocationAttributes（系统接口）](arkts-multimodalawareness-behaviorawareness-locationattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionEvent（系统接口）](arkts-multimodalawareness-behaviorawareness-perceptionevent-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SubscribeOptions（系统接口）](arkts-multimodalawareness-behaviorawareness-subscribeoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemActionAttributes（系统接口）](arkts-multimodalawareness-behaviorawareness-systemactionattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SystemEventAttributes（系统接口）](arkts-multimodalawareness-behaviorawareness-systemeventattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [TimeAttributes（系统接口）](arkts-multimodalawareness-behaviorawareness-timeattributes-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ActionType（系统接口）](arkts-multimodalawareness-behaviorawareness-actiontype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AdjustmentDirection（系统接口）](arkts-multimodalawareness-behaviorawareness-adjustmentdirection-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [BluetoothDeviceType（系统接口）](arkts-multimodalawareness-behaviorawareness-bluetoothdevicetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EventType（系统接口）](arkts-multimodalawareness-behaviorawareness-eventtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [FeedbackType（系统接口）](arkts-multimodalawareness-behaviorawareness-feedbacktype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [LocationType（系统接口）](arkts-multimodalawareness-behaviorawareness-locationtype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [Operation（系统接口）](arkts-multimodalawareness-behaviorawareness-operation-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PatternType（系统接口）](arkts-multimodalawareness-behaviorawareness-patterntype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [PerceptionDomain（系统接口）](arkts-multimodalawareness-behaviorawareness-perceptiondomain-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [RecurrenceType（系统接口）](arkts-multimodalawareness-behaviorawareness-recurrencetype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [SoundMode（系统接口）](arkts-multimodalawareness-behaviorawareness-soundmode-e-sys.md)<!--DelEnd-->
 - [@ohos.multimodalAwareness.carAwareness（车辆感知）](arkts-multimodalawareness-multimodalawareness-carawareness.md)
   - [getAllCapabilityList](arkts-multimodalawareness-carawareness-getallcapabilitylist-f.md)
   <!--Del-->

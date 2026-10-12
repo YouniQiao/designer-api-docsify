@@ -24,6 +24,8 @@ Notifications are supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-Operation-NOTIFY = 0x08--><!--Device-Operation-NOTIFY = 0x08-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ Data is readable.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-Operation-READABLE = 0x01--><!--Device-Operation-READABLE = 0x01-End-->
 
@@ -56,6 +60,8 @@ Write requests without responses are supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-Operation-WRITE_NO_RESPONSE = 0x02--><!--Device-Operation-WRITE_NO_RESPONSE = 0x02-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ Write requests with responses are supported.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-Operation-WRITE_WITH_RESPONSE = 0x04--><!--Device-Operation-WRITE_WITH_RESPONSE = 0x04-End-->
 

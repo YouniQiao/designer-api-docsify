@@ -22,16 +22,16 @@ import { dataTransfer } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [connect](arkts-connectivity-datatransfer-connect-f.md) | 连接远端设备。使用Promise异步回调。 |
-| [createPort](arkts-connectivity-datatransfer-createport-f.md) | 注册端口通道。端口通道注册后方可用于连接远端设备，不再使用时需通过[dataTransfer.destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)销毁。 |
-| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md) | 销毁端口通道。 |
-| [disconnect](arkts-connectivity-datatransfer-disconnect-f.md) | 断连远端设备。需在通过[dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md)成功建立连接后调用，用于断开已建立的远端设备连接。使用Promise异步回调。 |
-| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md) | 获取与远端设备之间的端口通道连接状态。 |
-| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) | 取消订阅端口通道连接状态变更事件。使用callback异步回调。 |
-| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md) | 取消订阅端口通道数据接收事件。使用callback异步回调。 |
+| [connect](arkts-connectivity-datatransfer-connect-f.md) | 连接远端设备。使用Promise异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [createPort](arkts-connectivity-datatransfer-createport-f.md) | 注册端口通道。端口通道注册后方可用于连接远端设备，不再使用时需通过[dataTransfer.destroyPort](arkts-connectivity-datatransfer-destroyport-f.md)销毁。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [destroyPort](arkts-connectivity-datatransfer-destroyport-f.md) | 销毁端口通道。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [disconnect](arkts-connectivity-datatransfer-disconnect-f.md) | 断连远端设备。需在通过[dataTransfer.connect](arkts-connectivity-datatransfer-connect-f.md)成功建立连接后调用，用于断开已建立的远端设备连接。使用Promise异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [getConnectionState](arkts-connectivity-datatransfer-getconnectionstate-f.md) | 获取与远端设备之间的端口通道连接状态。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [offConnectionStateChanged](arkts-connectivity-datatransfer-offconnectionstatechanged-f.md) | 取消订阅端口通道连接状态变更事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [offReadData](arkts-connectivity-datatransfer-offreaddata-f.md) | 取消订阅端口通道数据接收事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
 | [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) | 订阅端口通道连接状态变更事件。使用callback异步回调。 |
 | [onReadData](arkts-connectivity-datatransfer-onreaddata-f.md) | 订阅端口通道数据接收事件。使用callback异步回调。 |
-| [writeData](arkts-connectivity-datatransfer-writedata-f.md) | 通过设备地址和UUID向远端设备发送数据。使用Promise异步回调。 |
+| [writeData](arkts-connectivity-datatransfer-writedata-f.md) | 通过设备地址和UUID向远端设备发送数据。使用Promise异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
 
 ### 接口
 

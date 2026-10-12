@@ -4,7 +4,7 @@
 enum NearlinkState
 ```
 
-Enumerated the NearLink statuses.
+Enumerates the NearLink statuses.
 
 **Since:** 26.0.0
 
@@ -24,6 +24,8 @@ NearLink is turned off.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-NearlinkState-STATE_OFF = 3--><!--Device-NearlinkState-STATE_OFF = 3-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ NearLink is turned on.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-NearlinkState-STATE_ON = 1--><!--Device-NearlinkState-STATE_ON = 1-End-->
 
@@ -56,6 +60,8 @@ NearLink is being turned off.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-NearlinkState-STATE_TURNING_OFF = 2--><!--Device-NearlinkState-STATE_TURNING_OFF = 2-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ NearLink is being turned on.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-NearlinkState-STATE_TURNING_ON = 0--><!--Device-NearlinkState-STATE_TURNING_ON = 0-End-->
 

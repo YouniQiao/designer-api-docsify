@@ -24,6 +24,8 @@ NOTIFY = 0x08
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-Operation-NOTIFY = 0x08--><!--Device-Operation-NOTIFY = 0x08-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ READABLE = 0x01
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Operation-READABLE = 0x01--><!--Device-Operation-READABLE = 0x01-End-->
 
@@ -56,6 +60,8 @@ WRITE_NO_RESPONSE = 0x02
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-Operation-WRITE_NO_RESPONSE = 0x02--><!--Device-Operation-WRITE_NO_RESPONSE = 0x02-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ WRITE_WITH_RESPONSE = 0x04
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Operation-WRITE_WITH_RESPONSE = 0x04--><!--Device-Operation-WRITE_WITH_RESPONSE = 0x04-End-->
 

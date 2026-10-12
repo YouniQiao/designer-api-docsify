@@ -8223,7 +8223,11 @@ Sets the distributed migration identifier of a component. The identifier is used
 reuse(options: ReuseOptions): T
 ```
 
-Reuse id is used for identify the reuse type of each @ComponentV2 custom component, which can give user control of sub-component recycle and reuse.
+Sets reuse options for V2 custom components decorated by **\@ReusableV2**. Components with the same reuse ID are reused with each other, improving the precision of reuse matching.
+
+> **NOTE:** 
+> 
+> This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 18
 
@@ -8239,13 +8243,13 @@ Reuse id is used for identify the reuse type of each @ComponentV2 custom compone
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| options | [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | Yes | The configuration parameter for reusable custom component. |
+| options | [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | Yes | Reuse options, used to configure the reuse ID, which is specified by the developer. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| T |  |
+| T | Current component. |
 
 ## reuseId
 

@@ -28,7 +28,7 @@ off(type: 'frame', callback?: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void--><!--Device-DisplaySync-off(type: 'frame', callback?: Callback<IntervalInfo>): void-End-->
 
@@ -66,7 +66,7 @@ on(type: 'frame', callback: Callback<IntervalInfo>): void
 
 **起始版本：** 11
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void--><!--Device-DisplaySync-on(type: 'frame', callback: Callback<IntervalInfo>): void-End-->
 
@@ -104,7 +104,7 @@ setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void--><!--Device-DisplaySync-setExpectedFrameRateRange(rateRange: ExpectedFrameRateRange) : void-End-->
 
@@ -149,7 +149,7 @@ start(): void
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplaySync-start(): void--><!--Device-DisplaySync-start(): void-End-->
 
@@ -219,7 +219,7 @@ stop(): void
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplaySync-stop(): void--><!--Device-DisplaySync-stop(): void-End-->
 

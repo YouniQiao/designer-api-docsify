@@ -358,6 +358,7 @@
   - [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md)
   - [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md)
   - [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md)
+  - [offVoIPStateChange](arkts-telephony-observer-offvoipstatechange-f.md)
   - [on](arkts-telephony-observer-on-f.md)
   <!--Del-->
   - [on(system api)](arkts-telephony-observer-on-f-sys.md)<!--DelEnd-->
@@ -366,11 +367,13 @@
   - [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md)
   - [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md)
   - [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md)
+  - [onVoIPStateChange](arkts-telephony-observer-onvoipstatechange-f.md)
   - [CallStateInfo](arkts-telephony-observer-callstateinfo-i.md)
   - [CCallStateInfo](arkts-telephony-observer-ccallstateinfo-i.md)
   - [DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md)
   - [ObserverOptions](arkts-telephony-observer-observeroptions-i.md)
   - [SimStateData](arkts-telephony-observer-simstatedata-i.md)
+  - [VoIPCallStateInfo](arkts-telephony-observer-voipcallstateinfo-i.md)
   - [CallState](arkts-telephony-observer-callstate-t.md)
   - [CardType](arkts-telephony-observer-cardtype-t.md)
   - [CCallState](arkts-telephony-observer-ccallstate-t.md)
@@ -386,6 +389,8 @@
   - [SimState](arkts-telephony-observer-simstate-t.md)
   - [TelCallState](arkts-telephony-observer-telcallstate-t.md)
   - [LockReason](arkts-telephony-observer-lockreason-e.md)
+  - [VoIPCallState](arkts-telephony-observer-voipcallstate-e.md)
+  - [VoIPCallType](arkts-telephony-observer-voipcalltype-e.md)
 - [@ohos.telephony.radio(Network Search)](arkts-telephony-telephony-radio.md)
   <!--Del-->
   - [factoryReset(system api)](arkts-telephony-radio-factoryreset-f-sys.md)<!--DelEnd-->

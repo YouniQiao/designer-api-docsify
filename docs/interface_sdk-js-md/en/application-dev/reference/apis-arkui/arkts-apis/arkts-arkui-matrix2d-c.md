@@ -276,8 +276,6 @@ multiply(other?: Matrix2D): Matrix2D
 
 Multiplies the current matrix by the target matrix. This API is an empty API and has no actual effect.
 
-This API is deprecated since API version 10 and has no actual drawing effect, so no example is provided.
-
 **Since:** 8
 
 **Deprecated since:** 10

@@ -95,7 +95,7 @@ applyShareAlbumChanges(mediaChangeRequest: MediaShareAlbumChangeRequest): Promis
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:         1. The mediaShareAlbumRequest is null.         2. The operator must be the owner of the share album when creating the album.         3. The operator must be the owner of the share album when adding share member.         4. The operator must be the owner of the share album or device owner of share album member when updating share member status.         5. The shared album member status update logic does not meet expectations.         6. The operator must be the owner of the share album when deleting share member.         7. The target Album is not exist.         8. The operator must be the owner of the share album when modifying the share album name.         9. The CoverUri is deleted or riskControlled.         10. The operator must be the owner of the share album when setting the cover of the album.         11. The operator must be the owner of the share album when resetting the cover of the album.         12. This member does not belong to the current shared album. |
-| [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Operation not supported. Possible causes: 1. Request must be from share album. |
+| [23800201](../errorcode-medialibrary.md#23800201-不支持的操作类型) | Operation not supported. Possible causes: Request must be from share album. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## batchGetPhotoAssetParams
@@ -677,7 +677,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>1. Invalid Array&lt;PhotoAsset&gt;. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>Invalid Array&lt;PhotoAsset&gt;. |
 
 <!--Del-->
 **示例**
@@ -5003,7 +5003,7 @@ setPhotoAlbumOrder(orderStyle: number, albumOrders: Array<AlbumOrder>): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: 1.The input parameter is not within the valid range. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails.<br>Possible causes: The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-系统内部错误) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 <!--Del-->

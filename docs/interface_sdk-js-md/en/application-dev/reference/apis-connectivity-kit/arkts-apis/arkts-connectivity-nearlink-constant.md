@@ -25,6 +25,7 @@ import { nearlinkConstant } from '@kit.ConnectivityKit';
 | [AcbState](arkts-connectivity-nearlinkconstant-acbstate-e.md) | Enumerates the logical link connection states with a remote device. |
 | [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md) | Enumerates the connection states with a remote device. |
 | [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md) | Enumerates the device types. |
+| [FrameType](arkts-connectivity-nearlinkconstant-frametype-e.md) | Enumerates the NearLink radio frame types. |
 | [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md) | Enumerates the pairing states with a remote device. |
 
 <!--Del-->

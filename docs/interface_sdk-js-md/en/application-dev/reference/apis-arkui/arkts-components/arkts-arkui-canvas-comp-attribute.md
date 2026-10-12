@@ -4,9 +4,9 @@
 declare class CanvasAttribute extends CommonMethod<CanvasAttribute>
 ```
 
-In addition to the universal attributes, the following attributes are supported.
+In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
 
-The universal events are supported.
+The [universal events](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 **Inheritance/Implementation:** CanvasAttribute extends CommonMethod&lt;CanvasAttribute&gt;
 

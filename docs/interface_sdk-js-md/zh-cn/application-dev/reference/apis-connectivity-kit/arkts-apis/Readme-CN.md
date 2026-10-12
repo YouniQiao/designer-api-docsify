@@ -432,6 +432,7 @@
   - [ConnectionInterval（系统接口）](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)<!--DelEnd-->
   - [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)
   - [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
+  - [FrameType](arkts-connectivity-nearlinkconstant-frametype-e.md)
   - [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 - [@ohos.nearlink.dataTransfer（星闪数传能力）](arkts-connectivity-nearlink-datatransfer.md)
   - [connect](arkts-connectivity-datatransfer-connect-f.md)
@@ -456,17 +457,24 @@
   <!--Del-->
   - [enable（系统接口）](arkts-connectivity-manager-enable-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [enableWithOptions（系统接口）](arkts-connectivity-manager-enablewithoptions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [factoryReset（系统接口）](arkts-connectivity-manager-factoryreset-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getLocalAddress（系统接口）](arkts-connectivity-manager-getlocaladdress-f-sys.md)<!--DelEnd-->
   - [getLocalName](arkts-connectivity-manager-getlocalname-f.md)
   - [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md)
   - [getState](arkts-connectivity-manager-getstate-f.md)
+  - [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md)
   - [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)
   - [offStateChange](arkts-connectivity-manager-offstatechange-f.md)
   - [onStateChange](arkts-connectivity-manager-onstatechange-f.md)
   <!--Del-->
   - [setConnectionMode（系统接口）](arkts-connectivity-manager-setconnectionmode-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EnableOptions（系统接口）](arkts-connectivity-manager-enableoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AutoConnectPolicy（系统接口）](arkts-connectivity-manager-autoconnectpolicy-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConnectionMode（系统接口）](arkts-connectivity-manager-connectionmode-e-sys.md)<!--DelEnd-->
   - [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)

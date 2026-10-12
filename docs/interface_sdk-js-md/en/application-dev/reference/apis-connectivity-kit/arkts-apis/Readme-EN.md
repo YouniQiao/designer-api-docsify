@@ -432,6 +432,7 @@
   - [ConnectionInterval(system api)](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)<!--DelEnd-->
   - [ConnectionState](arkts-connectivity-nearlinkconstant-connectionstate-e.md)
   - [DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
+  - [FrameType](arkts-connectivity-nearlinkconstant-frametype-e.md)
   - [PairingState](arkts-connectivity-nearlinkconstant-pairingstate-e.md)
 - [@ohos.nearlink.dataTransfer(NearLink Data Transfer Capability)](arkts-connectivity-nearlink-datatransfer.md)
   - [connect](arkts-connectivity-datatransfer-connect-f.md)
@@ -456,17 +457,24 @@
   <!--Del-->
   - [enable(system api)](arkts-connectivity-manager-enable-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [enableWithOptions(system api)](arkts-connectivity-manager-enablewithoptions-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [factoryReset(system api)](arkts-connectivity-manager-factoryreset-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getLocalAddress(system api)](arkts-connectivity-manager-getlocaladdress-f-sys.md)<!--DelEnd-->
   - [getLocalName](arkts-connectivity-manager-getlocalname-f.md)
   - [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md)
   - [getState](arkts-connectivity-manager-getstate-f.md)
+  - [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md)
   - [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)
   - [offStateChange](arkts-connectivity-manager-offstatechange-f.md)
   - [onStateChange](arkts-connectivity-manager-onstatechange-f.md)
   <!--Del-->
   - [setConnectionMode(system api)](arkts-connectivity-manager-setconnectionmode-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [EnableOptions(system api)](arkts-connectivity-manager-enableoptions-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [AutoConnectPolicy(system api)](arkts-connectivity-manager-autoconnectpolicy-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ConnectionMode(system api)](arkts-connectivity-manager-connectionmode-e-sys.md)<!--DelEnd-->
   - [NearlinkState](arkts-connectivity-manager-nearlinkstate-e.md)

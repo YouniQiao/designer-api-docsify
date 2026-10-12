@@ -24,6 +24,8 @@ CONNECTION_FAIL_ACB_CONNECTION = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-ConnectionReason-CONNECTION_FAIL_ACB_CONNECTION = 4--><!--Device-ConnectionReason-CONNECTION_FAIL_ACB_CONNECTION = 4-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ CONNECTION_FAIL_CONNECTION_NUM_LIMITED = 7
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ConnectionReason-CONNECTION_FAIL_CONNECTION_NUM_LIMITED = 7--><!--Device-ConnectionReason-CONNECTION_FAIL_CONNECTION_NUM_LIMITED = 7-End-->
 
@@ -56,6 +60,8 @@ CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-ConnectionReason-CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6--><!--Device-ConnectionReason-CONNECTION_FAIL_NO_AVAILABLE_SERVICE = 6-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ CONNECTION_FAIL_SERVICE_DISCOVERY = 5
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ConnectionReason-CONNECTION_FAIL_SERVICE_DISCOVERY = 5--><!--Device-ConnectionReason-CONNECTION_FAIL_SERVICE_DISCOVERY = 5-End-->
 
@@ -88,6 +96,8 @@ CONNECTION_FAILURE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-ConnectionReason-CONNECTION_FAILURE = 1--><!--Device-ConnectionReason-CONNECTION_FAILURE = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -103,6 +113,8 @@ CONNECTION_LOCAL_DISCONNECT = 2
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ConnectionReason-CONNECTION_LOCAL_DISCONNECT = 2--><!--Device-ConnectionReason-CONNECTION_LOCAL_DISCONNECT = 2-End-->
 
@@ -120,6 +132,8 @@ CONNECTION_REMOTE_DISCONNECT = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-ConnectionReason-CONNECTION_REMOTE_DISCONNECT = 3--><!--Device-ConnectionReason-CONNECTION_REMOTE_DISCONNECT = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -135,6 +149,8 @@ CONNECTION_SUCCESS = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ConnectionReason-CONNECTION_SUCCESS = 0--><!--Device-ConnectionReason-CONNECTION_SUCCESS = 0-End-->
 

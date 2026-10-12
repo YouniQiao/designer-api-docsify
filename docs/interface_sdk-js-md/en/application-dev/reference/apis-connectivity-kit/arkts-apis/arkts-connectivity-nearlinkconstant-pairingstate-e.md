@@ -24,6 +24,8 @@ Not paired.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PairingState-PAIRING_STATE_NONE = 1--><!--Device-PairingState-PAIRING_STATE_NONE = 1-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -40,6 +42,8 @@ Paired.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PairingState-PAIRING_STATE_PAIRED = 3--><!--Device-PairingState-PAIRING_STATE_PAIRED = 3-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -55,6 +59,8 @@ Pairing.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-PairingState-PAIRING_STATE_PAIRING = 2--><!--Device-PairingState-PAIRING_STATE_PAIRING = 2-End-->
 

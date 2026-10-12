@@ -95,7 +95,7 @@ Applies media changes of share album. This API uses a promise to return the targ
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
 | [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:         1. The mediaShareAlbumRequest is null.         2. The operator must be the owner of the share album when creating the album.         3. The operator must be the owner of the share album when adding share member.         4. The operator must be the owner of the share album or device owner of share album member when updating share member status.         5. The shared album member status update logic does not meet expectations.         6. The operator must be the owner of the share album when deleting share member.         7. The target Album is not exist.         8. The operator must be the owner of the share album when modifying the share album name.         9. The CoverUri is deleted or riskControlled.         10. The operator must be the owner of the share album when setting the cover of the album.         11. The operator must be the owner of the share album when resetting the cover of the album.         12. This member does not belong to the current shared album. |
-| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Operation not supported. Possible causes: 1. Request must be from share album. |
+| [23800201](../errorcode-medialibrary.md#23800201-unsupported-operation-type) | Operation not supported. Possible causes: Request must be from share album. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. You are advised to retry and check the logs. Possible causes: 1. The database is corrupted. 2. The file system is abnormal. 3. The IPC request timed out. |
 
 ## batchGetPhotoAssetParams
@@ -646,7 +646,7 @@ Convert Asset Attributes to Compatibility Attributes
 | Error Code ID | Error Message |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>1. Invalid Array&lt;PhotoAsset&gt;. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails. Possible causes:<br>Invalid Array&lt;PhotoAsset&gt;. |
 
 ## convertToAsset
 
@@ -4904,7 +4904,7 @@ Sets the sorting order for system, user, and source albums. This API uses a prom
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission required to call the API. |
 | [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails.<br>Possible causes: 1.The input parameter is not within the valid range. |
+| [23800151](../errorcode-medialibrary.md#23800151-failed-to-verify-scene-parameters) | The scenario parameter verification fails.<br>Possible causes: The input parameter is not within the valid range. |
 | [23800301](../errorcode-medialibrary.md#23800301-system-internal-error) | Internal system error. It is recommended to retry and check the logs.<br>Possible causes: <br>1. Database corrupted; <br>2. The file system is abnormal; <br>3. The IPC request timed out. |
 
 <!--Del-->

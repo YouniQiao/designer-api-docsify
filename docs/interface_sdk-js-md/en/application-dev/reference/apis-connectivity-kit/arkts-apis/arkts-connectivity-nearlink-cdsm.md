@@ -22,7 +22,7 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) | Creates a CDSM client instance. |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md) | Creates a CDSM client instance. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
 
 ### Interfaces
 

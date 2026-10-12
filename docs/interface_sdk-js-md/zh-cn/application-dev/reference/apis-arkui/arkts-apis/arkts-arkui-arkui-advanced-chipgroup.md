@@ -1,5 +1,9 @@
 # @ohos.arkui.advanced.ChipGroup
 
+ChipGroup组件提供操作块群组能力，支持单选或多选模式，可自定义样式、图标和间距，支持选中状态管理和事件回调。
+ 适用于文件分类、资源筛选、标签选择、内容分组等多种场景，帮助开发者快速实现选择功能，提供统一的视觉和交互体验。
+
+
 ## 导入模块
 
 ```TypeScript
@@ -12,8 +16,8 @@ import { IconOptions, LabelOptions as ChipItemLabelOptions, ChipGroupItemOptions
 
 | 名称 | 说明 |
 | --- | --- |
-| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) | ChipGroup组件提供操作块群组能力，支持单选或多选模式，可自定义样式、图标和间距，支持选中状态管理和事件回调。适用于文件分类、资源筛选、标签选择、内容分组等多种场景，帮助开发者快速实现选择功能，提供统一的视觉和交互体验。 |
-| [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | ChipGroup组件提供操作块群组能力，支持单选或多选模式，可自定义样式、图标和间距，支持选中状态管理和事件回调。适用于文件分类、资源筛选、标签选择、内容分组等多种场景，帮助开发者快速实现选择功能，提供统一的视觉和交互体验。 |
+| [ChipGroup](arkts-arkui-arkui-advanced-chipgroup-chipgroup-s.md) | 创建ChipGroup组件。 |
+| [IconGroupSuffix](arkts-arkui-arkui-advanced-chipgroup-icongroupsuffix-s.md) | 用于定义ChipGroup的后缀区域图标属性，在ChipGroup组件最右侧显示自定义内容的可配置suffix属性中使用。 |
 
 ### 接口
 

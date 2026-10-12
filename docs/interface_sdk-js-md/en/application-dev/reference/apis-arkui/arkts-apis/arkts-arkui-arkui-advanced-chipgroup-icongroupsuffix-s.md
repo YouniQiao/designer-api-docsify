@@ -4,12 +4,7 @@
 export declare struct IconGroupSuffix
 ```
 
-The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience.
-
-> **NOTE:** 
-> 
-> With **SymbolGlyphModifier**, neither modifying the animation type with **symbolEffect** nor setting the effect
-> strategy with [effectStrategy](../arkts-components/arkts-arkui-symbolglyph-comp-attribute.md#effectstrategy) is supported.
+Defines the suffix area icon of a ChipGroup. It is used in the configurable suffix property, which displays custom content at the far right of the ChipGroup component.
 
 **Since:** 12
 

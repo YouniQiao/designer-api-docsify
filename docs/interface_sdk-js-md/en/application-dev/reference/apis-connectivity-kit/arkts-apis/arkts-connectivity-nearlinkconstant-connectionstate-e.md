@@ -24,6 +24,8 @@ Connected.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-ConnectionState-STATE_CONNECTED = 1--><!--Device-ConnectionState-STATE_CONNECTED = 1-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ Connecting.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-ConnectionState-STATE_CONNECTING = 0--><!--Device-ConnectionState-STATE_CONNECTING = 0-End-->
 
@@ -56,6 +60,8 @@ Disconnected.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-ConnectionState-STATE_DISCONNECTED = 3--><!--Device-ConnectionState-STATE_DISCONNECTED = 3-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ Disconnecting.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-ConnectionState-STATE_DISCONNECTING = 2--><!--Device-ConnectionState-STATE_DISCONNECTING = 2-End-->
 

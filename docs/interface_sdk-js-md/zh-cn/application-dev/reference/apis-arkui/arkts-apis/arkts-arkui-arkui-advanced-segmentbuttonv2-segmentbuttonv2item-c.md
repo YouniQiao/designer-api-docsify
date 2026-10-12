@@ -56,8 +56,6 @@ accessibilityDescription?: ResourceStr
 
 值为undefined时，按默认值处理。
 
-装饰器类型：@Trace
-
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
@@ -84,8 +82,6 @@ accessibilityLevel?: string
 
 值为undefined时，按默认值处理。
 
-装饰器类型：@Trace
-
 **类型：** string
 
 **起始版本：** 18
@@ -111,8 +107,6 @@ accessibilityText?: ResourceStr
 默认值：""
 
 值为undefined时，按默认值处理。
-
-装饰器类型：@Trace
 
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
@@ -142,8 +136,6 @@ true：可用；false：不可用。
 
 值为undefined时，按默认值处理。
 
-装饰器类型：@Trace
-
 **类型：** boolean
 
 **起始版本：** 18
@@ -168,8 +160,6 @@ icon?: ResourceStr
 
 默认值：undefined
 
-装饰器类型：@Trace
-
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
@@ -193,8 +183,6 @@ iconModifier?: ImageModifier
 分段按钮选项图片类型图标属性的样式修改器。
 
 默认值：undefined
-
-装饰器类型：@Trace
 
 **类型：** [ImageModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -240,8 +228,6 @@ symbol?: Resource
 
 默认值：undefined
 
-装饰器类型：@Trace
-
 **类型：** [Resource](arkts-arkui-resource-t.md)
 
 **起始版本：** 18
@@ -265,8 +251,6 @@ symbolModifier?: SymbolGlyphModifier
 分段按钮选项HM Symbol类型图标属性样式修改器。
 
 默认值：undefined
-
-装饰器类型：@Trace
 
 **类型：** [SymbolGlyphModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 
@@ -292,8 +276,6 @@ text?: ResourceStr
 
 默认值：undefined
 
-装饰器类型：@Trace
-
 **类型：** [ResourceStr](arkts-arkui-resourcestr-t.md)
 
 **起始版本：** 18
@@ -317,8 +299,6 @@ textModifier?: TextModifier
 分段按钮选项文本属性样式修改器。
 
 默认值：undefined
-
-装饰器类型：@Trace
 
 **类型：** [TextModifier](../../apis-default/arkts-apis/arkts-default-arkui-modifier.md)
 

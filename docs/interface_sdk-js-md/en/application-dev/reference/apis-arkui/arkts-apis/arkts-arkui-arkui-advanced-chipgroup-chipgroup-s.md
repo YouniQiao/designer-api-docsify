@@ -4,7 +4,7 @@
 export declare struct ChipGroup
 ```
 
-The **ChipGroup** component provides chip group capabilities, supporting single-selection or multi-selection modes, customizable styles, icons, and spacing, as well as selected state management and event callbacks. It is suitable for various scenarios such as file categorization, resource filtering, tag selection, and content grouping, helping developers quickly implement selection functionality while delivering a consistent visual and interactive experience.
+Creates a **ChipGroup** component.
 
 > **NOTE:** 
 > 

@@ -24,6 +24,8 @@ Property configuration on the client.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2--><!--Device-PropertyDescriptorType-CLIENT_PROPERTY_CONFIG = 2-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ Property.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-PropertyDescriptorType-PROPERTY = 1--><!--Device-PropertyDescriptorType-PROPERTY = 1-End-->
 
@@ -56,6 +60,8 @@ Property format.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4--><!--Device-PropertyDescriptorType-PROPERTY_FORMAT = 4-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -72,6 +78,8 @@ Property configuration on the server.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3--><!--Device-PropertyDescriptorType-SERVER_PROPERTY_CONFIG = 3-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -87,6 +95,8 @@ Vendor-defined field.
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
 
 <!--Device-PropertyDescriptorType-TYPE_VENDOR = 255--><!--Device-PropertyDescriptorType-TYPE_VENDOR = 255-End-->
 

@@ -22,7 +22,7 @@
 | [CacheCountInfo](arkts-arkui-cachecountinfo-i.md) | Defines the number of cached items. |
 | [ChainWeightOptions](arkts-arkui-chainweightoptions-i.md) | Defines the layout weight of a component in a chain. |
 | [ConstraintSizeOptions](arkts-arkui-constraintsizeoptions-i.md) | Defines the size constraints of a component during layout. |
-| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | /** Describes a two-dimension coordinate. Responsive layout fill mode, used for the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0. |
+| [Coordinate2D](arkts-arkui-coordinate2d-i.md) | Describes a two-dimension coordinate. Responsive layout fill mode, used for the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0. |
 | [DirectionalEdgesT](arkts-arkui-directionaledgest-i.md) | Defines component edge widths for localized logical directions. Globalization is supported. |
 | [DividerStyleOptions](arkts-arkui-dividerstyleoptions-i.md) | Defines divider information. |
 | [Edges](arkts-arkui-edges-i.md) | Defines the offset relative to the four edges. If both **top** and **bottom** are set, only **top** takes effect. If both **left** and **right** are set, only **left** takes effect. |

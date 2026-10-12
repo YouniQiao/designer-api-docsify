@@ -24,6 +24,8 @@ STATE_OFF = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-NearlinkState-STATE_OFF = 3--><!--Device-NearlinkState-STATE_OFF = 3-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -39,6 +41,8 @@ STATE_ON = 1
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-NearlinkState-STATE_ON = 1--><!--Device-NearlinkState-STATE_ON = 1-End-->
 
@@ -56,6 +60,8 @@ STATE_TURNING_OFF = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-NearlinkState-STATE_TURNING_OFF = 2--><!--Device-NearlinkState-STATE_TURNING_OFF = 2-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -71,6 +77,8 @@ STATE_TURNING_ON = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-NearlinkState-STATE_TURNING_ON = 0--><!--Device-NearlinkState-STATE_TURNING_ON = 0-End-->
 

@@ -1,5 +1,10 @@
 # @ohos.arkui.advanced.Chip
 
+The **Chip** component is used for tag display and interaction scenarios. It supports custom styles, icons, activated
+ states, and other features, and is applicable to scenarios such as search box history and email recipient lists,
+ enabling you to quickly implement tag creation, deletion, and interaction.
+
+
 ## Modules to Import
 
 ```TypeScript

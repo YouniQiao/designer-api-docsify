@@ -37,7 +37,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types;         2. Parameter verification failed. |
 
 **Examples**
 
@@ -88,7 +88,7 @@ Creates a [RunningLock](arkts-basicservices-runninglock-runninglock-c.md) object
 | Error Code ID | Error Message |
 | --- | --- |
 | [201](../../errorcode-universal.md#201-permission-denied) | If the permission is denied. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Incorrect parameter types;         2. Parameter verification failed. |
 
 **Examples**
 

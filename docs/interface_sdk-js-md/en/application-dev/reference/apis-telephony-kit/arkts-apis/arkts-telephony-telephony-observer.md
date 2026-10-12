@@ -31,6 +31,7 @@ import { observer } from '@kit.TelephonyKit';
 | [offCCallStateChange](arkts-telephony-observer-offccallstatechange-f.md) | Cancels the listening on the carrier call status and obtaining of the call number by a third-party application. This method uses an asynchronous callback to return the result. |
 | [offCommunicationStateChange](arkts-telephony-observer-offcommunicationstatechange-f.md) | Unsubscribes from the callback for listening to the 5A state. |
 | [offGetSimActiveState](arkts-telephony-observer-offgetsimactivestate-f.md) | Unregisters an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result. |
+| [offVoIPStateChange](arkts-telephony-observer-offvoipstatechange-f.md) | Cancel callback when the VoIP call state is updated. |
 | [on](arkts-telephony-observer-on-f.md#onnetworkstatechange) | Registers an observer for network status change events. This API uses an asynchronous callback to return the execution result. |
 | [on](arkts-telephony-observer-on-f.md#onnetworkstatechange) | Registers an observer for network status change events of the SIM card in the specified slot. This API uses an asynchronous callback to return the execution result. |
 | [on](arkts-telephony-observer-on-f.md#onsignalinfochange) | Registers an observer for signal status change events. This API uses an asynchronous callback to return the execution result. |
@@ -48,6 +49,7 @@ import { observer } from '@kit.TelephonyKit';
 | [onCCallStateChange](arkts-telephony-observer-onccallstatechange-f.md) | Subscribes to the carrier call state changes and obtains the call number. This method uses an asynchronous callback to return the execution result. |
 | [onCommunicationStateChange](arkts-telephony-observer-oncommunicationstatechange-f.md) | This API uses an asynchronous callback to return the result. |
 | [onGetSimActiveState](arkts-telephony-observer-ongetsimactivestate-f.md) | Registers an observer for SIM card activation state changes. This API uses an asynchronous callback to return the execution result. |
+| [onVoIPStateChange](arkts-telephony-observer-onvoipstatechange-f.md) | Callback when the VoIP call state is updated. This callback is invoked when a third-party VoIP application's call state changes and the observer is added to monitor the updates. |
 
 <!--Del-->
 ### Functions(System API)
@@ -70,6 +72,7 @@ import { observer } from '@kit.TelephonyKit';
 | [DataConnectionStateInfo](arkts-telephony-observer-dataconnectionstateinfo-i.md) | Defines information about the data connection status. |
 | [ObserverOptions](arkts-telephony-observer-observeroptions-i.md) | Defines event subscription parameters. |
 | [SimStateData](arkts-telephony-observer-simstatedata-i.md) | Enumerates SIM card types and states. |
+| [VoIPCallStateInfo](arkts-telephony-observer-voipcallstateinfo-i.md) | Indicates VoIP call state information. |
 
 ### Types
 
@@ -100,3 +103,5 @@ import { observer } from '@kit.TelephonyKit';
 | Name | Description |
 | --- | --- |
 | [LockReason](arkts-telephony-observer-lockreason-e.md) | Enumerates SIM card lock types. |
+| [VoIPCallState](arkts-telephony-observer-voipcallstate-e.md) | Enum for VoIP call state. |
+| [VoIPCallType](arkts-telephony-observer-voipcalltype-e.md) | Enum for VoIP call type. |

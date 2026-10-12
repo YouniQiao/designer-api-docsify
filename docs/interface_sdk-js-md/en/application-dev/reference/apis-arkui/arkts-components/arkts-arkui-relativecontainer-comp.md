@@ -6,8 +6,6 @@ Child components can define their alignment rules within the container using [al
 
 > **NOTE:** 
 > 
-> * This component is supported since API version 9. New APIs in later versions are marked with a superscript to indicate their initial version.
-> 
 > * In the **RelativeContainer** component, when [width](arkts-arkui-common-comp-commonmethod-c.md#width1) and [height](arkts-arkui-common-comp-commonmethod-c.md#height1) are not set, the layout behavior of the corresponding attributes is the same as when they are set to 100%.
 > 
 > * Since API version 11, in the **RelativeContainer** component, setting [width](arkts-arkui-common-comp-commonmethod-c.md#width1) and [height](arkts-arkui-common-comp-commonmethod-c.md#height1) to "auto"means adapting to child components. When width is set to "auto", if a child component uses the container as an anchor in the horizontal direction, "auto" does not take effect (that is, it is treated as if width is not set).The same applies to the vertical direction.

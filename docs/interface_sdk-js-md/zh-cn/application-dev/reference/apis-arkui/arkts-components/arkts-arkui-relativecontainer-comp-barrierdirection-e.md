@@ -17,7 +17,7 @@ declare enum BarrierDirection
 ## BOTTOM
 
 ```TypeScript
-BOTTOM = 3
+BOTTOM
 ```
 
 屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最下方。
@@ -28,14 +28,14 @@ BOTTOM = 3
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-BarrierDirection-BOTTOM = 3--><!--Device-BarrierDirection-BOTTOM = 3-End-->
+<!--Device-BarrierDirection-BOTTOM--><!--Device-BarrierDirection-BOTTOM-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## LEFT
 
 ```TypeScript
-LEFT = 0
+LEFT
 ```
 
 屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最左侧。
@@ -46,14 +46,14 @@ LEFT = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-BarrierDirection-LEFT = 0--><!--Device-BarrierDirection-LEFT = 0-End-->
+<!--Device-BarrierDirection-LEFT--><!--Device-BarrierDirection-LEFT-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## RIGHT
 
 ```TypeScript
-RIGHT = 1
+RIGHT
 ```
 
 屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最右侧。
@@ -64,14 +64,14 @@ RIGHT = 1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-BarrierDirection-RIGHT = 1--><!--Device-BarrierDirection-RIGHT = 1-End-->
+<!--Device-BarrierDirection-RIGHT--><!--Device-BarrierDirection-RIGHT-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## TOP
 
 ```TypeScript
-TOP = 2
+TOP
 ```
 
 屏障在其所有[referencedId](arkts-arkui-relativecontainer-comp-barrierstyle-i.md)的最上方。
@@ -82,6 +82,6 @@ TOP = 2
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-BarrierDirection-TOP = 2--><!--Device-BarrierDirection-TOP = 2-End-->
+<!--Device-BarrierDirection-TOP--><!--Device-BarrierDirection-TOP-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

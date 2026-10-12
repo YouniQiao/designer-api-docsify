@@ -81,7 +81,7 @@ OH_AudioCommon_Result OH_AudioManager_GetAccessoryManager(OH_AudioAccessoryManag
 
 | 参数项 | 描述 |
 | -- | -- |
-| OH_AudioAccessoryManager **outManager | [out] 指向OH_AudioAccessoryManager指针的地址。该指针地址由系统管理，调用方不得释放，否则可能导致使用异常。 |
+| OH_AudioAccessoryManager **outManager | [out] 指向OH_AudioAccessoryManager指针的地址。 该指针地址由系统管理，调用方不得释放，否则可能导致使用异常。 |
 
 **返回值：**
 

@@ -26,6 +26,8 @@ SLE_MODE_CONNECTABLE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
 <!--Device-ConnectionMode-SLE_MODE_CONNECTABLE = 1--><!--Device-ConnectionMode-SLE_MODE_CONNECTABLE = 1-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -43,6 +45,8 @@ SLE_MODE_UNCONNECTABLE = 0
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ConnectionMode-SLE_MODE_UNCONNECTABLE = 0--><!--Device-ConnectionMode-SLE_MODE_UNCONNECTABLE = 0-End-->
 

@@ -88,7 +88,7 @@ Dog images will be recommended.
 FEATURED_SINGLE_PET = 18
 ```
 
-Recommended pet
+Recommended pet.
 
 **Since:** 26.2.0
 

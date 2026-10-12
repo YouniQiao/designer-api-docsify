@@ -10,6 +10,8 @@ Enumerates the connection intervals.
 
 **Model restriction:** This API can be used only in the stage model.
 
+**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+
 <!--Device-remoteDevice-type ConnectionInterval = nearlinkConstant.ConnectionInterval--><!--Device-remoteDevice-type ConnectionInterval = nearlinkConstant.ConnectionInterval-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base

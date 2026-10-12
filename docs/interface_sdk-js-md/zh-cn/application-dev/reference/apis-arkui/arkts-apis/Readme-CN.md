@@ -1117,6 +1117,7 @@
     <!--Del-->
     - [setWaterMarkImage（系统接口）](arkts-arkui-window-setwatermarkimage-f-sys.md)<!--DelEnd-->
     - [setWatermarkImageForAppWindows](arkts-arkui-window-setwatermarkimageforappwindows-f.md)
+    - [setWindowPosition](arkts-arkui-window-setwindowposition-f.md)
     - [shiftAppWindowFocus](arkts-arkui-window-shiftappwindowfocus-f.md)
     - [shiftAppWindowPointerEvent](arkts-arkui-window-shiftappwindowpointerevent-f.md)
     - [shiftAppWindowTouchEvent](arkts-arkui-window-shiftappwindowtouchevent-f.md)
@@ -1197,6 +1198,7 @@
     - [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md)
     - [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)
     - [WindowLimits](arkts-arkui-window-windowlimits-i.md)
+    - [WindowPositionParams](arkts-arkui-window-windowpositionparams-i.md)
     - [WindowProperties](arkts-arkui-window-windowproperties-i.md)
     - [WindowSnapshotAnimationConfig](arkts-arkui-window-windowsnapshotanimationconfig-i.md)
     - [WindowSnapshotConfiguration](arkts-arkui-window-windowsnapshotconfiguration-i.md)
@@ -1233,6 +1235,7 @@
     - [WindowEventType](arkts-arkui-window-windoweventtype-e.md)
     <!--Del-->
     - [WindowMode（系统接口）](arkts-arkui-window-windowmode-e-sys.md)<!--DelEnd-->
+    - [WindowPosition](arkts-arkui-window-windowposition-e.md)
     - [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md)
     - [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md)
     - [WindowStatusType](arkts-arkui-window-windowstatustype-e.md)

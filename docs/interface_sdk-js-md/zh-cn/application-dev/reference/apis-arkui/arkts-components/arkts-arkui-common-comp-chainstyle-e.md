@@ -17,7 +17,7 @@ declare enum ChainStyle
 ## PACKED
 
 ```TypeScript
-PACKED = 2
+PACKED
 ```
 
 链内子组件无间隙。
@@ -28,14 +28,14 @@ PACKED = 2
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-ChainStyle-PACKED = 2--><!--Device-ChainStyle-PACKED = 2-End-->
+<!--Device-ChainStyle-PACKED--><!--Device-ChainStyle-PACKED-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SPREAD
 
 ```TypeScript
-SPREAD = 0
+SPREAD
 ```
 
 组件在约束锚点间均匀分布。
@@ -46,14 +46,14 @@ SPREAD = 0
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-ChainStyle-SPREAD = 0--><!--Device-ChainStyle-SPREAD = 0-End-->
+<!--Device-ChainStyle-SPREAD--><!--Device-ChainStyle-SPREAD-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 ## SPREAD_INSIDE
 
 ```TypeScript
-SPREAD_INSIDE = 1
+SPREAD_INSIDE
 ```
 
 除首尾2个子组件的其他组件在约束锚点间均匀分布。
@@ -64,6 +64,6 @@ SPREAD_INSIDE = 1
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
-<!--Device-ChainStyle-SPREAD_INSIDE = 1--><!--Device-ChainStyle-SPREAD_INSIDE = 1-End-->
+<!--Device-ChainStyle-SPREAD_INSIDE--><!--Device-ChainStyle-SPREAD_INSIDE-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

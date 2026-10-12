@@ -425,6 +425,26 @@ singleSelectionMode?: SingleSelectionMode
 
 **系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
 
+## textColor
+
+```TypeScript
+textColor?: string
+```
+
+选择器网格和搜索页面中显示的文本的字体颜色。如搜索中推荐的气泡内容、分类和时间标签等。8位十六进制色码。如果值是无效的颜色格式，使用默认字体颜色，不会抛出错误。
+
+**类型：** string
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.1开始，该接口支持在原子化服务中使用。
+
+<!--Device-BaseSelectOptions-textColor?: string--><!--Device-BaseSelectOptions-textColor?: string-End-->
+
+**系统能力：** SystemCapability.FileManagement.PhotoAccessHelper.Core
+
 ## videoDurationFilter
 
 ```TypeScript

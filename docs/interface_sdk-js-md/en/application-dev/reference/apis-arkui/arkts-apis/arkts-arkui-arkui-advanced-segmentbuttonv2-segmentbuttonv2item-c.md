@@ -4,6 +4,8 @@
 export declare class SegmentButtonV2Item
 ```
 
+**SegmentButtonV2** component option class, used to define properties such as the text and icon of a single segmented button item.
+
 **Since:** 18
 
 **Decorator:** @ObservedV2
@@ -79,8 +81,6 @@ Accessibility level of the segmented button item [accessibilityLevel](../arkts-c
 Default value: **"auto"**
 
 If the value is **undefined**, the default value is used.
-
-**Decorator:** @Trace
 
 **Type:** string
 
