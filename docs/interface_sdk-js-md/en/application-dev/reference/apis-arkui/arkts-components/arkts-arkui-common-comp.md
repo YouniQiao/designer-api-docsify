@@ -126,7 +126,7 @@ Constructor
 | [FadingEdgeOptions](arkts-arkui-common-comp-fadingedgeoptions-i.md) | Implements an object used to configure the [fadingEdge](arkts-arkui-common-comp-scrollablecommonmethod-c.md#fadingedge) attribute. |
 | [FocusAxisEvent](arkts-arkui-common-comp-focusaxisevent-i.md) | Describes the focus axis event object. Inherits from [BaseEvent](arkts-arkui-common-comp-baseevent-i.md). |
 | [FocusMovement](arkts-arkui-common-comp-focusmovement-i.md) | Sets the target component for focus movement based on key presses. If it is not specified, the default focus movement logic applies. |
-| [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | Inherits from [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) to define the foreground blur options. |
+| [ForegroundBlurStyleOptions](arkts-arkui-common-comp-foregroundblurstyleoptions-i.md) | Defines the options of ForegroundBlurStyle |
 | [ForegroundEffectOptions](arkts-arkui-common-comp-foregroundeffectoptions-i.md) | Describes the foreground effect. |
 | [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | Provides layout information of the parent component (a custom component). Inherits from [SizeResult](arkts-arkui-common-comp-sizeresult-i.md). In the **onMeasureSize** and **onPlaceChildren** methods, the **GeometryInfo** object can be obtained through the **selfLayoutInfo** parameter. It contains the border width, margin, and padding information of the parent component, which developers need to consider when calculating the layout of child components. |
 | [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) | Defines the options of geometry transition. |

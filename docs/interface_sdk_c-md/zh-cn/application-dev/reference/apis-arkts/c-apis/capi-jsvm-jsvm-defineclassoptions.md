@@ -23,8 +23,8 @@ typedef struct JSVM_DefineClassOptions {...} JSVM_DefineClassOptions
 | 名称 | 描述 |
 | -- | -- |
 | JSVM_DefineClassOptionsId id | 定义Class的选项ID。 |
-| content.ptr | void*类型。 |
-| content.num | int类型。 |
-| content.boolean | bool类型。 |
+| content.ptr | 指向定义Class选项值的指针。 |
+| content.num | 存储整数类型的定义Class选项值。 |
+| content.boolean | 存储布尔类型的定义Class选项值。 |
 
 

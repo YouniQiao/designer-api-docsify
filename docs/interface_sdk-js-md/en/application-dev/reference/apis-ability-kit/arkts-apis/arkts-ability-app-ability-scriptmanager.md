@@ -39,7 +39,7 @@ import { scriptManager } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md) | The first parameter of the ArkTS script entry function of an app, used to receive the script context information passed by the system. |
-| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Result of arkTS script execution. |
+| [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Defines the result of ArkTS script execution. |
 
 <!--Del-->
 ### Interfaces(System API)

@@ -2,9 +2,11 @@
 
 定义 Web 组件。
 
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:
+访问在线网页时需添加网络权限：ohos.permission.INTERNET，具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
-&lt;strong&gt;Performance Note&lt;/strong&gt;: <p>For details about how to optimize the compilation, resource loading, and JSBridge performance, see Optimizing Web Page Loading <p>When the white screen duration is long due to complex web page parsing, you can enable [optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget) to reduce the first frame rendering content.</p> </p>
+<p>&lt;strong&gt;接口说明&lt;/strong&gt;:
+
+&lt;strong&gt;性能说明&lt;/strong&gt;: <p>有关如何优化编译、资源加载和JSBridge性能的详细信息，请参见Web加载性能优化 <p>当由于复杂的网页解析导致白屏时间较长时，可以开启[optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget)以减少首帧渲染内容。</p> </p>
 
 ## Web
 
@@ -155,7 +157,7 @@ Sets Value.
 | [OnZoomChangeCallback](arkts-arkweb-web-comp-onzoomchangecallback-t.md) | 浏览器级缩放倍率变化时触发的回调类型。 |
 | [TextSelectionChangeCallback](arkts-arkweb-web-comp-textselectionchangecallback-t.md) | onTextSelectionChange的回调，选区内容改变时触发。 |
 | [WebKeyboardCallback](arkts-arkweb-web-comp-webkeyboardcallback-t.md) | 拦截网页可编辑元素拉起软键盘的回调，一般在点击网页input标签时触发。 |
-| [WebviewController](arkts-arkweb-web-comp-webviewcontroller-t.md) | 提供Web控制器的方法。 |
+| [WebviewController](arkts-arkweb-web-comp-webviewcontroller-t.md) | 提供Web控制器的方法。通过WebviewController可以控制Web组件各种行为。一个WebviewController对象只能控制一个Web组件，且必须在Web组件和WebviewController绑定后，才能调用WebviewController上的方法（静态方法除外）。 |
 
 ### 枚举
 

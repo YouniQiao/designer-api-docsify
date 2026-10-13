@@ -4,7 +4,7 @@
 interface QueryParam
 ```
 
-查询洞察意图实体时的Param。
+意图实体查询参数，用于筛选设备上符合条件的意图实体。
 
 @typedef QueryParam
 

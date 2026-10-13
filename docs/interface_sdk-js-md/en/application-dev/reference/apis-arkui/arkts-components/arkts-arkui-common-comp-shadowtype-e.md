@@ -18,7 +18,7 @@ Define the type of shadow
 BLUR = 1
 ```
 
-Define a blur type of shadow
+Blur shadow. Draws a shadow effect based on the blur of the component content.
 
 **Since:** 10
 
@@ -36,7 +36,7 @@ Define a blur type of shadow
 COLOR = 0
 ```
 
-Define a color type of shadow
+Color shadow. Draws a shadow effect based on the specified color value.
 
 **Since:** 10
 

@@ -28,9 +28,9 @@ Completes the ArkTS script execution of an app and reports the execution result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](arkts-ability-context-c.md) | Yes | Ability context, Used for temporary file authorization. |
-| requestCode | string | Yes | Identifying the current operation. It is from ArkTSScriptInfo.requestCode. |
-| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | The result of arkTS script execution. |
+| context | [Context](arkts-ability-context-c.md) | Yes | Ability context, used for temporary file authorization. |
+| requestCode | string | Yes | Request code used to identify the current operation. |
+| result | [ExecuteResult](arkts-ability-scriptmanager-executeresult-i.md) | Yes | Execution result of the ArkTS script. |
 
 **Return value:**
 

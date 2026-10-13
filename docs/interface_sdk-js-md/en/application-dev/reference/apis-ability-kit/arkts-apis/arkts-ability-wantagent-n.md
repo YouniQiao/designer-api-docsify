@@ -36,8 +36,8 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | [getOperationType](arkts-ability-wantagent-getoperationtype-f.md#getoperationtype2) | Obtains the operation type of a WantAgent object. This API uses a promise to return the result. |
 | [getUid](arkts-ability-wantagent-getuid-f.md#getuid1) | Obtains the user ID of a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getUid](arkts-ability-wantagent-getuid-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null WantAgent object is returned. |
-| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | Obtains a WantAgent object. This API uses a promise to return the result. If the creation fails, a null WantAgent object is returned. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null value is returned. |
+| [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | Creates a WantAgent instance for triggering a specified operation later. This API uses a promise to return the result. If the creation succeeds, the WantAgent object is returned; otherwise, null is returned. |
 | [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->

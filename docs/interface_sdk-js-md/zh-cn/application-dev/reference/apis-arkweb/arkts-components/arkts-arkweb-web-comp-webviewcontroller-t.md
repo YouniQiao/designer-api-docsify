@@ -4,7 +4,7 @@
 declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController
 ```
 
-提供Web控制器的方法。
+提供Web控制器的方法。通过WebviewController可以控制Web组件各种行为。一个WebviewController对象只能控制一个Web组件，且必须在Web组件和WebviewController绑定后，才能调用WebviewController上的方法（静态方法除外）。
 
 **起始版本：** 9
 

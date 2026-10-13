@@ -54,7 +54,7 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | [InsightIntentInfoFilter](arkts-ability-insightintentdriver-insightintentinfofilter-i-sys.md) | 意图筛选器，描述目标意图的筛选条件，用于筛选设备上符合条件的意图。 |
 | [LinkIntentInfo](arkts-ability-insightintentdriver-linkintentinfo-i-sys.md) | LinkIntentInfo用于描述[@InsightIntentLink](arkts-ability-app-ability-insightintentdecorator-insightintentlink-d.md#insightintentlink)装饰器支持的参数，例如应用间跳转需要的uri信息。 |
 | [PageIntentInfo](arkts-ability-insightintentdriver-pageintentinfo-i-sys.md) | PageIntentInfo用于描述[@InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-d.md#insightintentpage)装饰器支持的参数，例如目标页面的[NavDestination](../../apis-arkui/arkts-components/arkts-arkui-navdestination-comp.md)名称。 |
-| [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | 查询洞察意图实体时的Param。 |
+| [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | 意图实体查询参数，用于筛选设备上符合条件的意图实体。 |
 | [ServiceExtensionIntentInfo](arkts-ability-insightintentdriver-serviceextensionintentinfo-i-sys.md) | 用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的ServiceExtensionAbility组件信息。 |
 | [SubIntentInfoForConfiguration](arkts-ability-insightintentdriver-subintentinfoforconfiguration-i-sys.md) | 用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)的特有信息。 |
 | [UIAbilityIntentInfo](arkts-ability-insightintentdriver-uiabilityintentinfo-i-sys.md) | 用于描述[使用配置文件开发的意图](../../../application-models/insight-intent-config-development.md)所绑定的UIAbility组件信息。 |

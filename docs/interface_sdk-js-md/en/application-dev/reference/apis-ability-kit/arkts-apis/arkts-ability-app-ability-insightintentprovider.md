@@ -1,6 +1,6 @@
 # @ohos.app.ability.insightIntentProvider(Intent Provider Management)
 
-Insight intent Provider. @namespace insightIntentProvider
+This module provides management capabilities for intent providers, such as proactively sending the execution result of a specified intent. @namespace insightIntentProvider
 
 **Since:** 23
 

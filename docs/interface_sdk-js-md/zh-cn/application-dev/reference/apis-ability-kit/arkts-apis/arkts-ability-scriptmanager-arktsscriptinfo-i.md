@@ -44,7 +44,7 @@ readonly context: Context
 readonly requestCode: string
 ```
 
-用于标识当前操作的请求码
+用于标识当前操作的请求码。
 
 **类型：** string
 

@@ -24,7 +24,7 @@ import { scriptManager } from '@kit.AbilityKit';
 readonly context: Context
 ```
 
-The context of the bound ability.
+Context of the bound ability.
 
 **Type:** [Context](arkts-ability-context-c.md)
 
@@ -44,7 +44,7 @@ The context of the bound ability.
 readonly requestCode: string
 ```
 
-Request code for identifying the current operation
+Request code used to identify the current operation.
 
 **Type:** string
 

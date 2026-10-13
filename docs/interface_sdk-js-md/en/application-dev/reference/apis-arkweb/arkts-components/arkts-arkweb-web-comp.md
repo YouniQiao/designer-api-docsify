@@ -2,6 +2,8 @@
 
 Defines Web Component.
 
+**ohos.permission.INTERNET**, required for accessing online web pages. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
+
 <p>&lt;strong&gt;API Note&lt;/strong&gt;:
 
 &lt;strong&gt;Performance Note&lt;/strong&gt;: <p>For details about how to optimize the compilation, resource loading, and JSBridge performance, see Optimizing Web Page Loading <p>When the white screen duration is long due to complex web page parsing, you can enable [optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget) to reduce the first frame rendering content.</p> </p>
@@ -151,7 +153,7 @@ Sets Value.
 | [OnZoomChangeCallback](arkts-arkweb-web-comp-onzoomchangecallback-t.md) | Called when the browser zoom factor of the page changes. |
 | [TextSelectionChangeCallback](arkts-arkweb-web-comp-textselectionchangecallback-t.md) | Callback for onTextSelectionChange. Triggered when the text selection content changes. |
 | [WebKeyboardCallback](arkts-arkweb-web-comp-webkeyboardcallback-t.md) | Defines a callback to intercept the soft keyboard initiated from editable elements on a web page. This event is typically called when the **\&lt;input&gt;** tag on the web page is clicked. |
-| [WebviewController](arkts-arkweb-web-comp-webviewcontroller-t.md) | Defines methods for the web controller. |
+| [WebviewController](arkts-arkweb-web-comp-webviewcontroller-t.md) | Defines methods for the web controller. Controls various behaviors of the Web component through WebviewController. A WebviewController object can control only one Web component, and methods on WebviewController (except static methods) can be called only after the Web component and WebviewController are bound. |
 
 ### Enums
 

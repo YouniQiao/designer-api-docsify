@@ -85,8 +85,6 @@ Sets the drag animation type. This attribute can only be set during the [onDragS
 
 Default value: **DEFAULT**
 
-**System API:** This is a system API.
-
 **Type:** [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md)
 
 **Default:** DragAnimationType.DEFAULT

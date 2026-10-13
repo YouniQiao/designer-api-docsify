@@ -4,7 +4,7 @@
 declare type WebviewController = import('../api/@ohos.web.webview').default.WebviewController
 ```
 
-Defines methods for the web controller.
+Defines methods for the web controller. Controls various behaviors of the Web component through WebviewController. A WebviewController object can control only one Web component, and methods on WebviewController (except static methods) can be called only after the Web component and WebviewController are bound.
 
 **Since:** 9
 

@@ -81,6 +81,7 @@ import { bundleManager } from '@kit.AbilityKit';
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo2) | 根据给定的bundleFlags和userId获取系统中所有的BundleInfo。使用callback异步回调。 |
 | [getAllBundleInfo](arkts-ability-bundlemanager-getallbundleinfo-f-sys.md#getallbundleinfo3) | 根据给定的bundleFlags和userId获取系统中所有的BundleInfo。使用Promise异步回调。 |
 | [getAllBundleInfoByDeveloperId](arkts-ability-bundlemanager-getallbundleinfobydeveloperid-f-sys.md) | 根据给定的developerId获取当前用户下的包信息列表。 |
+| [getAllBundleInfoInstances](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md) | 根据给定的套餐名称和套餐标志，获取系统中所有的套餐信息。该接口使用了一个类型的promise来返回结果。 |
 | [getAllBundleInstallInfo](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md) | 获取系统内所有应用的扩展安装信息。使用Promise异步回调。 |
 | [getAllDynamicIconInfo](arkts-ability-bundlemanager-getalldynamiciconinfo-f-sys.md) | 查询指定用户下所有应用和所有分身的动态图标信息。使用Promise异步回调。 |
 | [getAllNewPreinstalledApplicationInfo](arkts-ability-bundlemanager-getallnewpreinstalledapplicationinfo-f-sys.md) | 获取设备OTA升级期间当前用户下新增的所有预置应用信息。使用Promise异步回调。 |

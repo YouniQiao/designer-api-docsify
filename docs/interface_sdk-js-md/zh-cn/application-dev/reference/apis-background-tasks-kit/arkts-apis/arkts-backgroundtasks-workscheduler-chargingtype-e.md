@@ -18,7 +18,7 @@ export enum ChargingType
 CHARGING_PLUGGED_AC = 1
 ```
 
-表示这个触发条件是直流充电器连接。
+表示这个触发条件是交流充电器连接。
 
 **起始版本：** 9
 

@@ -27,7 +27,7 @@
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) | OH_UdmfOptions | 数据操作选项，定义数据操作的可选参数。 |
 | [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md) | OH_UdmfDataLoadParams | 表示数据加载参数结构体。 |
 | [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md) | OH_UdmfDataLoadInfo | 表示数据加载信息结构体。 |
-| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | 描述统一数据的汇总信息。 |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | 描述统一数据对象的数据摘要，包括数据类型和大小。 |
 
 ### 枚举
 

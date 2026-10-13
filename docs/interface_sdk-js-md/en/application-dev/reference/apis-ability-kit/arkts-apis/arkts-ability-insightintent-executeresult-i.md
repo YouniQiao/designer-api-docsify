@@ -4,7 +4,7 @@
 interface ExecuteResult
 ```
 
-Enumerates the return results of intent execution.
+Return result of intent execution.
 
 **Since:** 11
 

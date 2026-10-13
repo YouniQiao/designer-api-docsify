@@ -960,6 +960,8 @@
   <!--Del-->
   - [getAllBundleInfoByDeveloperId（系统接口）](arkts-ability-bundlemanager-getallbundleinfobydeveloperid-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getAllBundleInfoInstances（系统接口）](arkts-ability-bundlemanager-getallbundleinfoinstances-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getAllBundleInstallInfo（系统接口）](arkts-ability-bundlemanager-getallbundleinstallinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getAllDynamicIconInfo（系统接口）](arkts-ability-bundlemanager-getalldynamiciconinfo-f-sys.md)<!--DelEnd-->

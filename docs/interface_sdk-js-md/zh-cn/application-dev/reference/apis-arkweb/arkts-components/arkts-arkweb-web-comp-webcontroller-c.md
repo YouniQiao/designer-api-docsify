@@ -657,7 +657,7 @@ registerJavaScriptProxy(options: { object: object, name: string, methodList: Arr
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 | The option with the JavaScript object and method list. |
+| options | { object: object, name: string, methodList: Array&lt;string&gt; } | 是 | 包含JavaScript对象和方法列表的选项。 |
 
 **示例**
 
@@ -781,7 +781,7 @@ runJavaScript(options: { script: string, callback?: (result: string) => void })
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| options | { script: string, callback?: (result: string) =&gt; void } | 是 | The options with a piece of code and a callback. |
+| options | { script: string, callback?: (result: string) =&gt; void } | 是 | 包含脚本和回调的选项。 |
 
 **示例**
 
@@ -895,7 +895,7 @@ zoom(factor: number): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| factor | number | 是 | The zoom factor. |
+| factor | number | 是 | 缩放系数。1表示恢复加载网页的默认缩放比例；小于1为缩小，大于1为放大。取值范围(0, 100]。 |
 
 **示例**
 

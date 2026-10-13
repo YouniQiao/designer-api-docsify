@@ -20,7 +20,7 @@
 | -- | -- |
 | JSVM_VERSION_EXPERIMENTAL 2147483647 | JSVM实验版本号，使用INT_MAX，只能由预处理器消费。<br>**起始版本：** 11 |
 | JSVM_VERSION JSVM_VERSION_EXPERIMENTAL | JSVM实验阶段标识。<br>**起始版本：** 11 |
-| JSVM_EXTERN \_\_declspec(dllexport) | 对外可见。<br> WIN环境下为： \_\_declspec(dllexport) 在Windows上，当构建动态链接库（DLL）时，用于告知编译器一个函数或变量从DLL中导出，使其可以被其他程序使用。 wasm环境下为： \_\_attribute\_\_((visibility("default"))) \ \_\_attribute\_\_((\_\_import_module\_\_("jsvm"))) ①\_\_attribute\_\_ 是 GCC 和 Clang 编译器用来添加特殊属性的语法。 ②\_\_attribute\_\_((visibility("default"))): 这个属性控制符号（函数/变量名）的可见性。 "default" 意味着这个符号是公开的、可导出的。在 Wasm 模块中，这使得函数可以被宿主环境（通常是 JavaScript）调用。 ③\_\_attribute\_\_((\_\_import_module\_\_("jsvm"))): 这是最关键的部分。 它告诉编译器，被这个宏修饰的函数不是在本 C/C++ 代码中实现的，而是需要从外部导入。 其他环境下为： \_\_attribute\_\_((visibility("default"))) 此类清空通常对应于 Linux、macOS 和其他类 Unix 系统。 与 Windows 的 dllexport 类似，这个属性用于从共享库（在 Linux 上是 .so 文件，在 macOS 上是 .dylib 文件）中导出符号。 当使用 -fvisibility=hidden 编译标志（这是一个常见的优化和安全实践，默认隐藏所有符号）时， 只有明确标记为 visibility("default") 的符号才是公开可见的。<br>**起始版本：** 11 |
+| JSVM_EXTERN \_\_declspec(dllexport) | 指定符号对外部可见。<br> WIN环境下为： \_\_declspec(dllexport) 在Windows上，当构建动态链接库（DLL）时，用于告知编译器一个函数或变量从DLL中导出，使其可以被其他程序使用。 wasm环境下为： \_\_attribute\_\_((visibility("default"))) \ \_\_attribute\_\_((\_\_import_module\_\_("jsvm"))) ①\_\_attribute\_\_ 是 GCC 和 Clang 编译器用来添加特殊属性的语法。 ②\_\_attribute\_\_((visibility("default"))): 这个属性控制符号（函数/变量名）的可见性。 "default" 意味着这个符号是公开的、可导出的。在 Wasm 模块中，这使得函数可以被宿主环境（通常是 JavaScript）调用。 ③\_\_attribute\_\_((\_\_import_module\_\_("jsvm"))): 这是最关键的部分。 它告诉编译器，被这个宏修饰的函数不是在本 C/C++ 代码中实现的，而是需要从外部导入。 其他环境下为： \_\_attribute\_\_((visibility("default"))) 此类清空通常对应于 Linux、macOS 和其他类 Unix 系统。 与 Windows 的 dllexport 类似，这个属性用于从共享库（在 Linux 上是 .so 文件，在 macOS 上是 .dylib 文件）中导出符号。 当使用 -fvisibility=hidden 编译标志（这是一个常见的优化和安全实践，默认隐藏所有符号）时， 只有明确标记为 visibility("default") 的符号才是公开可见的。<br>**起始版本：** 11 |
 | JSVM_AUTO_LENGTH SIZE_MAX | 自动长度。<br>**起始版本：** 11 |
 | EXTERN_C_START extern "C" { | 用于告知编译器按C Code编译以下代码段的段起始标识：<br> 当预处理指令\_\_cplusplus检查到C++编译器正在进行编译时：EXTERN_C_START被赋值为"extern "C" {" ，表示其后代码为C代码。 当预处理指令\_\_cplusplus检查到不是C++编译器时，无须标记。<br>**起始版本：** 11 |
 | EXTERN_C_END } | 用于告知编译器按C Code编译以下代码段的段终止标识：<br> 当使用预处理指令\_\_cplusplus检查到C++编译器正在编译时：EXTERN_C_START被赋值为"}" ，表示C代码到此为止。 当预处理指令\_\_cplusplus检查到不是C++编译器时，无须标记。<br>**起始版本：** 11 |
@@ -46,7 +46,7 @@
 | [JSVM_EXTERN JSVM_Status OH_JSVM_GetVM(JSVM_Env env, JSVM_VM* result)](#oh_jsvm_getvm) | 检索给定环境的虚拟机实例。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CompileScript(JSVM_Env env, JSVM_Value script, const uint8_t* cachedData, size_t cacheDataLength, bool eagerCompile, bool* cacheRejected, JSVM_Script* result)](#oh_jsvm_compilescript) | 编译一串JavaScript代码，并返回编译后的脚本。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOrigin(JSVM_Env env, JSVM_Value script, const uint8_t* cachedData, size_t cacheDataLength, bool eagerCompile, bool* cacheRejected, JSVM_ScriptOrigin* origin, JSVM_Script* result)](#oh_jsvm_compilescriptwithorigin) | 编译一串包含 sourcemap 信息的 JavaScript 代码，并返回编译后的脚本。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Value script, size_t optionCount, JSVM_CompileOptions options[], JSVM_Value* result)](#oh_jsvm_compilescriptwithoptions) | 编译一串JavaScript代码，并返回编译后的脚本。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Value script, size_t optionCount, JSVM_CompileOptions options[], JSVM_Script* result)](#oh_jsvm_compilescriptwithoptions) | 编译一串JavaScript代码，并返回编译后的脚本。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateCodeCache(JSVM_Env env, JSVM_Script script, const uint8_t** data, size_t* length)](#oh_jsvm_createcodecache) | 为编译后的脚本创建代码缓存。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_RunScript(JSVM_Env env, JSVM_Script script, JSVM_Value* result)](#oh_jsvm_runscript) | 执行一串JavaScript代码并返回其结果，其中包含以下注意事项： 与eval不同的是，该函数不允许脚本访问当前词法作用域，因此也不允许访问模块作用域， 这意味着require等伪全局变量将不可用。 脚本可以访问全局作用域。 脚本中的函数和var声明将被添加到全局对象。 使用let和const的变量声明将全局可见，但不会被添加到全局对象。 this的值在脚本内是global。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetInstanceData(JSVM_Env env, void* data, JSVM_Finalize finalizeCb, void* finalizeHint)](#oh_jsvm_setinstancedata) | 将data与当前运行的JSVM环境相关联。后续可以使用OH_JSVM_GetInstanceData()检索data。 通过先前调用OH_JSVM_SetInstanceData()设置的任何与当前运行的JSVM环境相关联的现有数据都将 被覆盖。如果先前提供了finalizeCb，则不会调用它。 |
@@ -78,8 +78,8 @@
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayWithLength(JSVM_Env env, size_t length, JSVM_Value* result)](#oh_jsvm_createarraywithlength) | 返回对应于JavaScript Array类型的JSVM-API值。Array 的长度属性设置为传入的长度参数。但是，不保证底层缓冲区在创建 数组时由VM预先分配。该行为留给底层VM实现。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArraybuffer(JSVM_Env env, size_t byteLength, void** data, JSVM_Value* result)](#oh_jsvm_createarraybuffer) | 返回JavaScript ArrayBuffer类型对应的JSVM-API值。ArrayBuffer用于 表示固定长度的二进制数据缓冲区。通常用作TypedArray对象的后备缓冲区。 分配的ArrayBuffer有一个底层字节缓冲区，其大小由传入的length参数决定。 底层缓冲区可选择返回给调用方，调用方可直接操作该缓冲区。 此缓冲区只能直接从native代码写入。如果想从JavaScript写入该缓冲区， 需创建TypedArray或DataView对象。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteLength, JSVM_InitializedFlag initialized, void **data)](#oh_jsvm_allocatearraybufferbackingstoredata) | 申请一段 BackingStore 内存给 array buffer 使用。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void *data)](#oh_jsvm_freearraybufferbackingstoredata) | 释放由 OH_JSVM_AllocateArrayBufferBackingStoreData 申请的 BackingStore 内存。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void *data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)](#oh_jsvm_createarraybufferfrombackingstoredata) | 在申请得到的 BackingStore 内存上创建 array buffer。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void* data)](#oh_jsvm_freearraybufferbackingstoredata) | 释放由 OH_JSVM_AllocateArrayBufferBackingStoreData 申请的 BackingStore 内存。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void* data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)](#oh_jsvm_createarraybufferfrombackingstoredata) | 在申请得到的 BackingStore 内存上创建 array buffer。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateDate(JSVM_Env env, double time, JSVM_Value* result)](#oh_jsvm_createdate) | 分配一个JavaScript Date对象。此API不处理闰秒。 这是因为ECMAScript遵循POSIX时间规范，对闰秒进行忽略。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternal(JSVM_Env env, void* data, JSVM_Finalize finalizeCb, void* finalizeHint, JSVM_Value* result)](#oh_jsvm_createexternal) | 分配一个带有外部数据的JavaScript值。这用于通过JavaScript代码传递外部数据。 后续可以使用OH_JSVM_GetValueExternal由native代码检索。 该API添加了一个JSVM_Finalize回调，当刚刚创建的JavaScript对象被垃圾回收时将调用该回调。 创建的值不是一个对象，因此不支持附加属性。它被认为是一个独特的值类型： 使用外部值调用OH_JSVM_Typeof()会生成JSVM_EXTERNAL。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateObject(JSVM_Env env, JSVM_Value* result)](#oh_jsvm_createobject) | 分配一个默认的JavaScript对象。该函数功能等同于在JavaScript中执行new Object()。 |
@@ -179,9 +179,9 @@
 | [JSVM_EXTERN JSVM_Status OH_JSVM_StartCpuProfiler(JSVM_VM vm, JSVM_CpuProfiler* result)](#oh_jsvm_startcpuprofiler) | 创建并启动一个CPU profiler。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_StopCpuProfiler(JSVM_VM vm, JSVM_CpuProfiler profiler, JSVM_OutputStream stream, void* streamData)](#oh_jsvm_stopcpuprofiler) | 停止CPU profiler并将结果输出到流。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_TakeHeapSnapshot(JSVM_VM vm, JSVM_OutputStream stream, void* streamData)](#oh_jsvm_takeheapsnapshot) | 获取当前堆快照并将其输出到流。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStream stream, void* streamData)](#oh_jsvm_takerawheapsnapshot) | 获取当前堆快照并将其以原始堆格式（二进制格式）输出到流。原始堆格式是VM特定的，其布局不保证在不同版本之间稳定。 此操作可能会暂时暂停应用程序，频繁调用可能会生成大型快照文件并增加磁盘使用量，因此调用者应适当管理生成的文件（如果文件写入磁盘）。 流回调在VM运行的线程上同步调用。回调应避免长时间阻塞操作。如果回调返回false，则中止输出流，停止快照生成。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void* data)](#oh_jsvm_setheapthresholdcallback) | 为VM设置堆阈值回调，VM只能有一个堆阈值回调。当不再需要时，应通过OH_JSVM_ClearHeapThresholdCallback清除已注册的回调。 此API不是线程安全的，必须在VM运行的线程上调用。在GC前后检查阈值，当观察到的堆使用量大于或等于阈值时调用回调。 回调在同一线程上同步调用，回调运行期间跳过阈值检查。回调返回后，如果堆使用量仍大于或等于阈值，将在下一次GC前后再次调用回调。 回调返回后无需再次注册。已注册的回调通过（threshold, callback, data）标识。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_ClearHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void* data)](#oh_jsvm_clearheapthresholdcallback) | 清除之前为VM注册的堆阈值回调。此API不是线程安全的，必须在VM运行的线程上调用。已注册的回调通过（threshold, callback, data）标识。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStream stream, void *streamData)](#oh_jsvm_takerawheapsnapshot) | 获取当前堆快照并将其以原始堆格式（二进制格式）输出到流。原始堆格式是VM特定的，其布局不保证在不同版本之间稳定。 此操作可能会暂时暂停应用程序，频繁调用可能会生成大型快照文件并增加磁盘使用量，因此调用者应适当管理生成的文件（如果文件写入磁盘）。 流回调在VM运行的线程上同步调用。回调应避免长时间阻塞操作。如果回调返回false，则中止输出流，停止快照生成。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void *data)](#oh_jsvm_setheapthresholdcallback) | 为VM设置堆阈值回调，VM只能有一个堆阈值回调。当不再需要时，应通过OH_JSVM_ClearHeapThresholdCallback清除已注册的回调。 此API不是线程安全的，必须在VM运行的线程上调用。在GC前后检查阈值，当观察到的堆使用量大于或等于阈值时调用回调。 回调在同一线程上同步调用，回调运行期间跳过阈值检查。回调返回后，如果堆使用量仍大于或等于阈值，将在下一次GC前后再次调用回调。 回调返回后无需再次注册。已注册的回调通过（threshold, callback, data）标识。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_ClearHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void *data)](#oh_jsvm_clearheapthresholdcallback) | 清除之前为VM注册的堆阈值回调。此API不是线程安全的，必须在VM运行的线程上调用。已注册的回调通过（threshold, callback, data）标识。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_OpenInspector(JSVM_Env env, const char* host, uint16_t port)](#oh_jsvm_openinspector) | 在指定的主机和端口上激活inspector，将用来调试JS代码。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CloseInspector(JSVM_Env env)](#oh_jsvm_closeinspector) | 尝试关闭剩余的所有inspector连接。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_WaitForDebugger(JSVM_Env env, bool breakNextLine)](#oh_jsvm_waitfordebugger) | 等待主机与inspector建立socket连接，连接建立后程序将继续运行。 发送Runtime.runIfWaitingForDebugger命令。 |
@@ -245,9 +245,9 @@
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetDebugOption(JSVM_Env env, JSVM_DebugOption debugOption, bool isEnabled)](#oh_jsvm_setdebugoption) | 启用/禁用特定JSVM_Env的指定调试选项。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetHandlerForFatalError(JSVM_VM vm, JSVM_HandlerForFatalError handler)](#oh_jsvm_sethandlerforfatalerror) | 为Fatal错误设置回调处理。当接口被重复调用时，仅最后一次生效。当传入的handler为null时，表示取消之前的设置。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetHandlerForPromiseReject(JSVM_VM vm, JSVM_HandlerForPromiseReject handler)](#oh_jsvm_sethandlerforpromisereject) | 为PromiseReject错误设置回调处理。当接口被重复调用时，仅最后一次生效。当传入的handler为null时，表示取消之前的设置。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_DefineClassWithOptions(JSVM_Env env, const char* utf8name, size_t length, JSVM_Callback constructor, size_t propertyCount, const JSVM_PropertyDescriptor* properties, JSVM_Value parentClass, size_t optionCount, JSVM_DefineClassOptions options[], JSVM_Value* result)](#oh_jsvm_defineclasswithoptions) | 在封装一个 C++ 类时，通过构造函数传递的 C++ 构造函数回调应该是类中的一个静态方法， 该方法调用实际的类构造函数，然后根据传入的不同选项，将新的 C++ 实例封装在一个 JavaScript 对象中并返回封装对象。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_DefineClassWithOptions(JSVM_Env env, const char* utf8name, size_t length, JSVM_Callback constructor, size_t propertyCount, const JSVM_PropertyDescriptor* properties, JSVM_Value parentClass, size_t option_count, JSVM_DefineClassOptions options[], JSVM_Value* result)](#oh_jsvm_defineclasswithoptions) | 在封装一个 C++ 类时，通过构造函数传递的 C++ 构造函数回调应该是类中的一个静态方法， 该方法调用实际的类构造函数，然后根据传入的不同选项，将新的 C++ 实例封装在一个 JavaScript 对象中并返回封装对象。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringLatin1(JSVM_Env env, char* str, size_t length, JSVM_Finalize finalizeCallback, void* finalizeHint, JSVM_Value* result, bool* copied)](#oh_jsvm_createexternalstringlatin1) | 此 API 使用 ISO-8859-1 编码的 C 字符串，创建一个外部的 JavaScript 字符串。 创建外部字符串失败时会复制原生字符串。 |
-| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringUtf16(JSVM_Env env, char16_t* str, size_t length, JSVM_Finalize finalizecallback, void* finalizeHint, JSVM_Value* result, bool* copied)](#oh_jsvm_createexternalstringutf16) | 此 API 使用 UTF16-LE 编码的 C 字符串，创建一个外部的 JavaScript 字符串。 创建外部字符串失败时会复制原生字符串。 |
+| [JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringUtf16(JSVM_Env env, char16_t* str, size_t length, JSVM_Finalize finalizeCallback, void* finalizeHint, JSVM_Value* result, bool* copied)](#oh_jsvm_createexternalstringutf16) | 此 API 使用 UTF16-LE 编码的 C 字符串，创建一个外部的 JavaScript 字符串。 创建外部字符串失败时会复制原生字符串。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_CreatePrivate(JSVM_Env env, JSVM_Value description, JSVM_Data* result)](#oh_jsvm_createprivate) | 创建一个 JavaScript private key 对象。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_SetPrivate(JSVM_Env env, JSVM_Value object, JSVM_Data key, JSVM_Value value)](#oh_jsvm_setprivate) | 为传入的object设置一个 private 属性。 |
 | [JSVM_EXTERN JSVM_Status OH_JSVM_GetPrivate(JSVM_Env env, JSVM_Value object, JSVM_Data key, JSVM_Value *result)](#oh_jsvm_getprivate) | 从传入的object获取 private key 对应的 private 属性。 |
@@ -286,7 +286,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_Init(const JSVM_InitOptions* options)
 
 | 类型 | 说明 |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | 返回执行状态码 JSVM_Status。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示执行成功。\n [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) 表示有未知的原因导致执行失败。\n |
+| JSVM_EXTERN JSVM_Status | 返回执行状态码 JSVM_Status。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示执行成功。\n [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) 表示执行失败，说明当前进程已完成JSVM初始化，无需重复执行。\n |
 
 ### OH_JSVM_CreateVM()
 
@@ -395,7 +395,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CreateProxy(JSVM_Env env, JSVM_Value target, JSV
 
 | 类型 | 说明 |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | 返回执行状态码。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示接口调用成功。\n [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) 如果 target 或 handler 非 JS 对象。\n [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) 表示有未知的原因导致执行失败。\n |
+| JSVM_EXTERN JSVM_Status | 返回执行状态码。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示接口调用成功。\n [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) 表示传入参数不合法。\n [JSVM_OBJECT_EXPECTED](capi-jsvm-types-h.md#jsvm_status) 如果 target 或 handler 非 JS 对象。\n [JSVM_PENDING_EXCEPTION](capi-jsvm-types-h.md#jsvm_status) 表示执行的过程中产生了JS异常。\n [JSVM_GENERIC_FAILURE](capi-jsvm-types-h.md#jsvm_status) 表示有未知的原因导致执行失败。\n |
 
 ### OH_JSVM_IsProxy()
 
@@ -739,7 +739,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOrigin(JSVM_Env env, JSVM_Value
 ### OH_JSVM_CompileScriptWithOptions()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Value script, size_t optionCount, JSVM_CompileOptions options[], JSVM_Value* result)
+JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Value script, size_t optionCount, JSVM_CompileOptions options[], JSVM_Script* result)
 ```
 
 **描述：**
@@ -758,7 +758,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CompileScriptWithOptions(JSVM_Env env, JSVM_Valu
 | [JSVM_Value](capi-jsvm-jsvm-value.md) script | 包含要编译的脚本的JavaScript代码。 |
 | size_t optionCount | 传入的 option 数组的长度。 |
 | [JSVM_CompileOptions](capi-jsvm-jsvm-compileoptions.md) options[] | option 数组，存放所有的编译选项。 |
-| [JSVM_Value](capi-jsvm-jsvm-value.md)* result | 编译后的脚本。 |
+| [JSVM_Script](capi-jsvm-jsvm-script.md)* result | 编译后的脚本。 |
 
 **返回值：**
 
@@ -1635,7 +1635,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_AllocateArrayBufferBackingStoreData(size_t byteL
 ### OH_JSVM_FreeArrayBufferBackingStoreData()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void *data)
+JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void* data)
 ```
 
 **描述：**
@@ -1661,7 +1661,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_FreeArrayBufferBackingStoreData(void *data)
 ### OH_JSVM_CreateArrayBufferFromBackingStoreData()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void *data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)
+JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env env, void* data, size_t backingStoreSize, size_t offset, size_t arrayBufferSize, JSVM_Value *result)
 ```
 
 **描述：**
@@ -1677,7 +1677,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CreateArrayBufferFromBackingStoreData(JSVM_Env e
 | 参数项 | 描述 |
 | -- | -- |
 | [JSVM_Env](capi-jsvm-jsvm-env.md) env | 调用JSVM-API的环境。 |
-| void *data | 申请得到的 BackingStore 内存。 |
+| void* data | 申请得到的 BackingStore 内存。 |
 | size_t backingStoreSize | BackingStore 内存的大小。 |
 | size_t offset | array buffer 在这段内存上的起始位置与内存头之间的相对偏移，单位是字节。 |
 | size_t arrayBufferSize | array buffer 的大小，单位是字节。 |
@@ -4527,7 +4527,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_TakeHeapSnapshot(JSVM_VM vm, JSVM_OutputStream s
 ### OH_JSVM_TakeRawHeapSnapshot()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStream stream, void* streamData)
+JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStream stream, void *streamData)
 ```
 
 **描述：**
@@ -4544,7 +4544,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStrea
 | -- | -- |
 | [JSVM_VM](capi-jsvm-jsvm-vm.md) vm | 将被获取堆快照的虚拟机。 |
 | JSVM_OutputStream stream | 接收二进制数据的输出流回调。 |
-| void* streamData | 传递给输出流回调的可选数据。 |
+| void *streamData | 传递给输出流回调的可选数据。 |
 
 **返回值：**
 
@@ -4555,7 +4555,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_TakeRawHeapSnapshot(JSVM_VM vm, JSVM_OutputStrea
 ### OH_JSVM_SetHeapThresholdCallback()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void* data)
+JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void *data)
 ```
 
 **描述：**
@@ -4573,7 +4573,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t th
 | [JSVM_VM](capi-jsvm-jsvm-vm.md) vm | 将被监控堆使用量的虚拟机。 |
 | uint64_t threshold | 堆使用量阈值（以字节为单位）。该值必须大于0且不得超过heapSizeLimit，其中heapSizeLimit是JSVM_HeapStatistics中的字段。 |
 | JSVM_HandlerForHeapThreshold callback | 当阈值检查观察到堆使用量大于或等于阈值时要调用的回调函数。 |
-| void* data | 传递给回调的可选用户提供的数据。调用者负责管理此数据的生命周期。 |
+| void *data | 传递给回调的可选用户提供的数据。调用者负责管理此数据的生命周期。 |
 
 **返回值：**
 
@@ -4584,7 +4584,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_SetHeapThresholdCallback(JSVM_VM vm, uint64_t th
 ### OH_JSVM_ClearHeapThresholdCallback()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_ClearHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void* data)
+JSVM_EXTERN JSVM_Status OH_JSVM_ClearHeapThresholdCallback(JSVM_VM vm, uint64_t threshold, JSVM_HandlerForHeapThreshold callback, void *data)
 ```
 
 **描述：**
@@ -4602,7 +4602,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_ClearHeapThresholdCallback(JSVM_VM vm, uint64_t 
 | [JSVM_VM](capi-jsvm-jsvm-vm.md) vm | 将被清除堆阈值回调的虚拟机。 |
 | uint64_t threshold | 先前注册的堆使用量阈值（以字节为单位）。 |
 | JSVM_HandlerForHeapThreshold callback | 先前通过OH_JSVM_SetHeapThresholdCallback注册的回调函数。 |
-| void* data | 注册时使用的用户提供的数据。 |
+| void *data | 注册时使用的用户提供的数据。 |
 
 **返回值：**
 
@@ -6368,7 +6368,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_SetHandlerForPromiseReject(JSVM_VM vm, JSVM_Hand
 ### OH_JSVM_DefineClassWithOptions()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_DefineClassWithOptions(JSVM_Env env, const char* utf8name, size_t length, JSVM_Callback constructor, size_t propertyCount, const JSVM_PropertyDescriptor* properties, JSVM_Value parentClass, size_t optionCount, JSVM_DefineClassOptions options[], JSVM_Value* result)
+JSVM_EXTERN JSVM_Status OH_JSVM_DefineClassWithOptions(JSVM_Env env, const char* utf8name, size_t length, JSVM_Callback constructor, size_t propertyCount, const JSVM_PropertyDescriptor* properties, JSVM_Value parentClass, size_t option_count, JSVM_DefineClassOptions options[], JSVM_Value* result)
 ```
 
 **描述：**
@@ -6390,7 +6390,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_DefineClassWithOptions(JSVM_Env env, const char*
 | size_t propertyCount | properties数组参数中的项目数量。 |
 | [const JSVM_PropertyDescriptor](capi-jsvm-jsvm-propertydescriptor.md)* properties | 类的属性描述符，用于定义类的属性和方法。 |
 | [JSVM_Value](capi-jsvm-jsvm-value.md) parentClass | 当前所定义的class的父类class。 |
-| size_t optionCount | options数组参数中的项目数量。 |
+| size_t option_count | options数组参数中的项目数量。 |
 | [JSVM_DefineClassOptions](capi-jsvm-jsvm-defineclassoptions.md) options[] | 传入的用于定义class的选项数组。 |
 | [JSVM_Value](capi-jsvm-jsvm-value.md)* result | 表示类的构造函数的JSVM_Value。 |
 
@@ -6435,7 +6435,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringLatin1(JSVM_Env env, char* s
 ### OH_JSVM_CreateExternalStringUtf16()
 
 ```c
-JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringUtf16(JSVM_Env env, char16_t* str, size_t length, JSVM_Finalize finalizecallback, void* finalizeHint, JSVM_Value* result, bool* copied)
+JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringUtf16(JSVM_Env env, char16_t* str, size_t length, JSVM_Finalize finalizeCallback, void* finalizeHint, JSVM_Value* result, bool* copied)
 ```
 
 **描述：**
@@ -6453,7 +6453,7 @@ JSVM_EXTERN JSVM_Status OH_JSVM_CreateExternalStringUtf16(JSVM_Env env, char16_t
 | [JSVM_Env](capi-jsvm-jsvm-env.md) env | 调用 JSVM-API 的环境。 |
 | char16_t* str | 指向 UTF16-LE 编码字符串的指针。 |
 | size_t length | 字符串的字节长度，如果是空终止字符串可以直接传入 JSVM_AUTO_LENGTH。 |
-| finalizeCallback | 可选项，是当创建的字符串被 GC 回收时会触发的回调函数。 更多细节详见 JSVM_Finalize 类型说明。 |
+| JSVM_Finalize finalizeCallback | 可选项，是当创建的字符串被 GC 回收时会触发的回调函数。 更多细节详见 JSVM_Finalize 类型说明。 |
 | void* finalizeHint | 可选项，当字符串被回收时会传递给触发的 finalize callback。 |
 | [JSVM_Value](capi-jsvm-jsvm-value.md)* result | 接收创建完成的 JavaScript 外部字符串，表示为 JSVM_Value 类型。 |
 | bool* copied | 指示外部字符串是否成功创建的标志，为真表示创建外部字符串失败并返回一个原生 JS 字符串，否表示成功。 |
@@ -6721,6 +6721,6 @@ EXTERN_C_END
 
 | 类型 | 说明 |
 | -- | -- |
-| JSVM_EXTERN JSVM_Status | 返回执行状态码 JSVM_Status。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示执行成功。\n [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) 表示出现了以下场景：result 为空、byteLength > 0 时但 externalData 为空、externalData 未按 8 字节对齐，byteLength 超过引擎支持的 ArrayBuffer 最大大小。\n |
+| JSVM_EXTERN JSVM_Status | 返回执行状态码 JSVM_Status。[JSVM_OK](capi-jsvm-types-h.md#jsvm_status) 表示执行成功。\n [JSVM_INVALID_ARG](capi-jsvm-types-h.md#jsvm_status) 表示出现了以下场景：result 为空、byteLength > 0 时但 externalData 为空、externalData 未按 8 字节对齐、byteLength 超过引擎支持的 ArrayBuffer 最大大小、byteLength 为 0 时但 finalizeCb 不为空。\n |
 
 

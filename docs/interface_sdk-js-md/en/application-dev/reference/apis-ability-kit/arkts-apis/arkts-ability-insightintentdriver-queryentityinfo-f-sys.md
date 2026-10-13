@@ -30,13 +30,13 @@ Queries the dynamic intent entity information of an application based on [QueryP
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | Query parameter. |
+| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | Yes | Intent entity parameters, which describe the query conditions of the intent entity and are used to query the intent entities that meet the conditions in the application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Promise object that returns the array of intent entities returned by the application. |
 
 **Error codes:**
 

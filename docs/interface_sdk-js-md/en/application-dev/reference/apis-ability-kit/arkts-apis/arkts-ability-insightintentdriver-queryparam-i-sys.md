@@ -4,7 +4,7 @@
 interface QueryParam
 ```
 
-Param when query insight intent entity.
+Intent entity query parameters, used to filter intent entities on the device that meet matching conditions.
 
 @typedef QueryParam
 

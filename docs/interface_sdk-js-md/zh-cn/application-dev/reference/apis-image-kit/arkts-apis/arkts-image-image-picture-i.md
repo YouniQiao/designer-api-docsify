@@ -570,7 +570,7 @@ setMainPixelmap(pixelmap: PixelMap): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7700204](../errorcode-image.md#7700204-无效参数) | 参数错误。 |
+| [7700204](../errorcode-image.md#7700204-无效参数) | 参数错误。PixelMap对象为空或已被释放。 |
 
 **示例**
 

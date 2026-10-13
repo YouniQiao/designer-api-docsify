@@ -4,7 +4,7 @@
 interface PageIntentInfo
 ```
 
-Describes the parameters supported by the [@InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-d.md#insightintentpage) decorator, such as the [NavDestination](../../apis-arkui/arkts-components/arkts-arkui-navdestination-comp.md) name of the target page.
+PageIntentInfo is used to describe the parameters supported by the [@InsightIntentPage](arkts-ability-app-ability-insightintentdecorator-insightintentpage-d.md#insightintentpage) decorator, for example, the [navDestination](../../apis-arkui/arkts-components/arkts-arkui-navdestination-comp.md) name of the target page.
 
 **Since:** 20
 

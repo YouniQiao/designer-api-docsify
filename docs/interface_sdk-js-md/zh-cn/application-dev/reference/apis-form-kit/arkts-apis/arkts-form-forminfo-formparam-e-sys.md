@@ -30,6 +30,24 @@ DEVICE_ID_KEY = "ohos.extra.param.key.device_id"
 
 **系统接口：** 此接口为系统接口。
 
+## FORM_EDIT_COLOR_MODE_KEY
+
+```TypeScript
+FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'
+```
+
+指定卡片编辑能力的深浅模式，-1是自动，0是深色模式，1是浅色模式
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-FormParam-FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'--><!--Device-FormParam-FORM_EDIT_COLOR_MODE_KEY = 'ohos.extra.param.key.form_edit_color_mode'-End-->
+
+**系统能力：** SystemCapability.Ability.Form
+
+**系统接口：** 此接口为系统接口。
+
 ## FORM_FONT_SIZE_SCALE_KEY
 
 ```TypeScript

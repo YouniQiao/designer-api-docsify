@@ -27,7 +27,7 @@ Defines the APIs, data structs, and enums for accessing the UDMF. If the paramet
 | [OH_UdmfOptions](capi-udmf-oh-udmfoptions.md) | OH_UdmfOptions | Defines the optional parameters for data operations. |
 | [OH_UdmfDataLoadParams](capi-udmf-oh-udmfdataloadparams.md) | OH_UdmfDataLoadParams | Defines a struct for data loading parameters. |
 | [OH_UdmfDataLoadInfo](capi-udmf-oh-udmfdataloadinfo.md) | OH_UdmfDataLoadInfo | Defines a struct for the data loading information. |
-| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | Describes summary information of unified data. |
+| [OH_UDMF_Summary](capi-udmf-oh-udmf-summary.md) | OH_UDMF_Summary | Summarizes the data information of the **unifiedData** object, including the data type and size. |
 
 ### Enum
 

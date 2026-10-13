@@ -108,7 +108,7 @@ Whether the intent entity class decorated by [@InsightIntentEntity](arkts-abilit
 readonly parameters: Record<string, Object>
 ```
 
-Data format of intent entity parameters.
+Data format declaration of the intent entity parameters, used to define the data format of entity parameters during intent invocation.
 
 **Type:** Record&lt;string, Object&gt;
 

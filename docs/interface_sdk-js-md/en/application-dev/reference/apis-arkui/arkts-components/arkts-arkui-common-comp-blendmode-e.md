@@ -164,7 +164,7 @@ r = d: Only the target pixels are displayed.
 DST_ATOP = 11
 ```
 
-r = d * sa + s * (1 - da): The part of the target pixels that overlap with the source pixels and the part of the source pixels that do not overlap with the target pixels are displayed.
+r = d * sa + s * (1 - da): The part of the target pixels that overlaps with the source pixels and the part of the source pixels that does not overlap with the target pixels are displayed.
 
 **Since:** 11
 
@@ -184,7 +184,7 @@ r = d * sa + s * (1 - da): The part of the target pixels that overlap with the s
 DST_IN = 7
 ```
 
-r = d * sa: Only the part of the target pixels that overlap with the source pixels is displayed.
+r = d * sa: Only the part of the target pixels that overlaps with the source pixels is displayed.
 
 **Since:** 11
 
@@ -204,7 +204,7 @@ r = d * sa: Only the part of the target pixels that overlap with the source pixe
 DST_OUT = 9
 ```
 
-r = d * (1 - sa): Only the part of the target pixels that do not overlap with the source pixels is displayed.
+r = d * (1 - sa): Only the part of the target pixels that does not overlap with the source pixels is displayed.
 
 **Since:** 11
 
@@ -224,7 +224,7 @@ r = d * (1 - sa): Only the part of the target pixels that do not overlap with th
 DST_OVER = 5
 ```
 
-r = d + (1 - da) * s: The target pixels are blended based on opacity and cover on the source pixels.
+r = d + (1 - da) * s: The target pixels are blended based on opacity and cover the source pixels.
 
 **Since:** 11
 
@@ -244,7 +244,7 @@ r = d + (1 - da) * s: The target pixels are blended based on opacity and cover o
 EXCLUSION = 24
 ```
 
-rc = s + d - two(s * d), ra = kSrcOver: The final pixel is similar to **DIFFERENCE**, but with less contrast.
+rc = s + d - 2 * (s * d), ra = kSrcOver, compares the source pixel and the target pixel, and subtracts the pixel with lower brightness from the pixel with higher brightness to produce a soft effect.
 
 **Since:** 11
 
@@ -524,7 +524,7 @@ r = s: Only the source pixels are displayed.
 SRC_ATOP = 10
 ```
 
-r = s * da + d * (1 - sa): The part of the source pixels that overlap with the target pixels is displayed and the part of the target pixels that do not overlap with the source pixels are displayed.
+r = s * da + d * (1 - sa): The part of the source pixels that overlaps with the target pixels is displayed and the part of the target pixels that does not overlap with the source pixels are displayed.
 
 **Since:** 11
 
@@ -544,7 +544,7 @@ r = s * da + d * (1 - sa): The part of the source pixels that overlap with the t
 SRC_IN = 6
 ```
 
-r = s * da: Only the part of the source pixels that overlap with the target pixels is displayed.
+r = s * da: Only the part of the source pixels that overlaps with the target pixels is displayed.
 
 **Since:** 11
 
@@ -564,7 +564,7 @@ r = s * da: Only the part of the source pixels that overlap with the target pixe
 SRC_OUT = 8
 ```
 
-r = s * (1 - da): Only the part of the source pixels that do not overlap with the target pixels is displayed.
+r = s * (1 - da): Only the part of the source pixels that does not overlap with the target pixels is displayed.
 
 **Since:** 11
 

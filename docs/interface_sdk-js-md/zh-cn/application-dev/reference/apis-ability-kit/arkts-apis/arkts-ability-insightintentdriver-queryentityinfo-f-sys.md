@@ -30,13 +30,13 @@ function queryEntityInfo(param: QueryParam): Promise<Array<Record<string, Object
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | 是 | 查询参数。 |
+| param | [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md) | 是 | 意图实体参数，描述意图实体的查询条件，用于查询应用中符合条件的意图实体。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Returns the insight intent entity information. |
+| Promise&lt;Array&lt;Record&lt;string, Object&gt;&gt;&gt; | Promise对象，返回应用返回的意图实体数组。 |
 
 **错误码：**
 

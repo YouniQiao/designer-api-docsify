@@ -49,8 +49,7 @@ Image对象存储了JPEG文件。
 
 <!--Device-unnamed-declare namespace image--><!--Device-unnamed-declare namespace image-End-->
 
-**系统能力：** 
-- API版本11+：SystemCapability.Multimedia.Image.Core
+**系统能力：** SystemCapability.Multimedia.Image.Core
 
 ## 导入模块
 
@@ -242,24 +241,24 @@ import { image } from '@kit.ImageKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_front_lens_night_view) | 拍摄模式：前置摄像头夜景模式。 |
-| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#capture_mode_light_graffiti) | 拍摄模式：轻涂鸦模式。 |
-| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#capture_mode_moving_photo) | 拍摄模式：动态照片模式。 |
-| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#capture_mode_panorama) | 拍摄模式：全景模式。 |
-| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#capture_mode_portrait) | 拍摄模式：人像模式。 |
-| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#capture_mode_professional) | 拍摄模式：专业模式。 |
-| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_rear_lens_night_view) | 拍摄模式：后镜头夜景模式。 |
-| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#capture_mode_silky_water) | 拍摄模式：缎面感水流模式。 |
-| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#capture_mode_snap_shot) | 拍摄模式：抓拍模式。 |
-| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#capture_mode_star_track) | 拍摄模式：星轨模式。 |
-| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#capture_mode_super_macro) | 拍摄模式：超微距模式。 |
-| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#capture_mode_tail_light) | 拍摄模式：尾灯模式。 |
-| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#capture_mode_wideaperture) | 拍摄模式：广角模式。 |
+| [CAPTURE_MODE_FRONT_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_front_lens_night_view) | 拍摄模式：前置摄像头夜景模式，取值为7。 |
+| [CAPTURE_MODE_LIGHT_GRAFFITI](arkts-image-image-con.md#capture_mode_light_graffiti) | 拍摄模式：光绘涂鸦模式，取值为10。 |
+| [CAPTURE_MODE_MOVING_PHOTO](arkts-image-image-con.md#capture_mode_moving_photo) | 拍摄模式：动态照片模式，取值为20。 |
+| [CAPTURE_MODE_PANORAMA](arkts-image-image-con.md#capture_mode_panorama) | 拍摄模式：全景模式，取值为8。 |
+| [CAPTURE_MODE_PORTRAIT](arkts-image-image-con.md#capture_mode_portrait) | 拍摄模式：人像模式，取值为23。 |
+| [CAPTURE_MODE_PROFESSIONAL](arkts-image-image-con.md#capture_mode_professional) | 拍摄模式：专业模式，取值为2。 |
+| [CAPTURE_MODE_REAR_LENS_NIGHT_VIEW](arkts-image-image-con.md#capture_mode_rear_lens_night_view) | 拍摄模式：后镜头夜景模式，取值为42。 |
+| [CAPTURE_MODE_SILKY_WATER](arkts-image-image-con.md#capture_mode_silky_water) | 拍摄模式：缎面感水流模式，取值为11。 |
+| [CAPTURE_MODE_SNAP_SHOT](arkts-image-image-con.md#capture_mode_snap_shot) | 拍摄模式：抓拍模式，取值为62。 |
+| [CAPTURE_MODE_STAR_TRACK](arkts-image-image-con.md#capture_mode_star_track) | 拍摄模式：星轨模式，取值为12。 |
+| [CAPTURE_MODE_SUPER_MACRO](arkts-image-image-con.md#capture_mode_super_macro) | 拍摄模式：超微距模式，取值为47。 |
+| [CAPTURE_MODE_TAIL_LIGHT](arkts-image-image-con.md#capture_mode_tail_light) | 拍摄模式：尾灯模式，取值为9。 |
+| [CAPTURE_MODE_WIDEAPERTURE](arkts-image-image-con.md#capture_mode_wideaperture) | 拍摄模式：大光圈模式，取值为19。 |
 | [DUBLIN_CORE](arkts-image-image-con.md#dublin_core) | Dublin Core元数据命名空间。Namespace uri: 'http://purl.org/dc/elements/1.1/', prefix: 'dc' |
 | [EXIF](arkts-image-image-con.md#exif) | EXIF元数据命名空间。Namespace uri: 'http://ns.adobe.com/exif/1.0/', prefix: 'exif' |
 | [TIFF](arkts-image-image-con.md#tiff) | TIFF图像格式参数命名空间。Namespace uri: 'http://ns.adobe.com/tiff/1.0/', prefix: 'tiff' |
-| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#xmage_watermark_mode_at_the_bottom) | XMAGE水印模式：XMAGE水印固定位于图像底部中央。 |
-| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#xmage_watermark_mode_border) | XMAGE水印模式：XMAGE水印会自动调整到边界位置，系统根据图像内容选择最适合的边界区域。 |
+| [XMAGE_WATERMARK_MODE_AT_THE_BOTTOM](arkts-image-image-con.md#xmage_watermark_mode_at_the_bottom) | XMAGE水印模式：水印位于图像底部，取值为9。 |
+| [XMAGE_WATERMARK_MODE_BORDER](arkts-image-image-con.md#xmage_watermark_mode_border) | XMAGE水印模式：水印位于图像边缘，取值为10。 |
 | [XMP_BASIC](arkts-image-image-con.md#xmp_basic) | XMP基础命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/', prefix: 'xmp' |
 | [XMP_RIGHTS](arkts-image-image-con.md#xmp_rights) | XMP版权与权限命名空间。Namespace uri: 'http://ns.adobe.com/xap/1.0/rights/', prefix: 'xmpRights' |
 

@@ -4,7 +4,7 @@
 interface ExecuteResult
 ```
 
-Result of arkTS script execution.
+Defines the result of ArkTS script execution.
 
 **Since:** 26.0.0
 
@@ -69,7 +69,7 @@ write permission.
 result?: Record<string, Object>
 ```
 
-Indicates execute result.
+Script execution result.
 
 **Type:** Record&lt;string, Object&gt;
 
@@ -89,7 +89,7 @@ Indicates execute result.
 uris?: Array<string>
 ```
 
-Indicates the URIs will be authorized to the caller.
+List of URIs to be authorized to the caller.
 
 **Type:** Array&lt;string&gt;
 

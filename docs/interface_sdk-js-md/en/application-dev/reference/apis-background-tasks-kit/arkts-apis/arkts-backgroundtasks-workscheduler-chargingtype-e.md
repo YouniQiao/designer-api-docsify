@@ -18,7 +18,7 @@ Enumerates the charging types that trigger deferred task callback.
 CHARGING_PLUGGED_AC = 1
 ```
 
-DC charging.
+AC charging.
 
 **Since:** 9
 

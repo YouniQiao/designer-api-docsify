@@ -12,10 +12,10 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 
 | Name | Description |
 | -- | -- |
-| [native_material.h](capi-native-material-h.md) | Declares the immersive material types and APIs for ArkUI on the native side. |
+| [native_material.h](capi-native-material-h.md) | Provides immersive material types and API declarations for ArkUI on the native side, to implement immersive UI effects such as the blurred background in semi-transparent mode and light sensing interaction feedback. |
 | [native_gesture.h](capi-native-gesture-h.md) | Declares the APIs of **NativeGesture**, supporting capabilities such as gesture recognizers, gesture events, gesture interruption, touch recognizers, gesture collection intervention, and gesture parameter query and setting. It is suitable for scenarios where an application processes gesture recognition, gesture conflicts, and gesture collection intervention through native APIs. The gesture recognition pipeline performs recognition based on priority and competition rules, and gestures can be intercepted through interruption callbacks. The gesture collection intervention mechanism allows dynamic intervention in the gesture collection process during the gesture collection phase. |
 | [native_animate.h](capi-native-animate-h.md) | Defines a set of animation APIs of ArkUI on the native side. The APIs in **native_animate.h** must be called in the main thread. |
-| [native_type_visual.h](capi-native-type-visual-h.md) | Defines the visual effect types for the native module. |
+| [native_type_visual.h](capi-native-type-visual-h.md) | Defines the visual types for the native module. |
 | [native_node.h](capi-native-node-h.md) | Provides type definitions for <b>NativeNode</b> APIs. |
 | [native_node_ani.h](capi-native-node-ani-h.md) | Declares APIs for converting <b>FrameNode</b> objects on the ArkTS side to <b>ArkUI_NodeHandle</b> objects on the native side. |
 | [native_key_event.h](capi-native-key-event-h.md) | Declares the APIs of **NativeKeyEvent** for obtaining the type, key code, key value, input device type, key intent, and Unicode value of a key event. It supports controlling key event bubbling or consumption, dispatching key events, and querying the **NumLock**, **CapsLock**, and **ScrollLock** states. It is applicable to scenarios where the native side needs fine-grained processing of key input events, enabling you to obtain detailed key event information and flexibly control event propagation and consumption behavior. |
