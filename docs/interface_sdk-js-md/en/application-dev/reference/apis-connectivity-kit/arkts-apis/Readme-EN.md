@@ -800,6 +800,8 @@
   - [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md)
   - [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md)
   <!--Del-->
+  - [getSpecialWifiInfo(system api)](arkts-connectivity-wifimanager-getspecialwifiinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getStations(system api)](arkts-connectivity-wifimanager-getstations-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getSupportedFeatures(system api)](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md)<!--DelEnd-->
@@ -868,6 +870,8 @@
   <!--Del-->
   - [Ipv6Config(system api)](arkts-connectivity-wifimanager-ipv6config-i-sys.md)<!--DelEnd-->
   - [Ipv6Info](arkts-connectivity-wifimanager-ipv6info-i.md)
+  <!--Del-->
+  - [SpecialWifiInfo(system api)](arkts-connectivity-wifimanager-specialwifiinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [StationInfo(system api)](arkts-connectivity-wifimanager-stationinfo-i-sys.md)<!--DelEnd-->
   - [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i.md)

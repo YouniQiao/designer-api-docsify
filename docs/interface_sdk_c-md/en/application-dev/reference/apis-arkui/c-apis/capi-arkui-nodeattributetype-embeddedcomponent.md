@@ -18,7 +18,7 @@ NODE_EMBEDDED_COMPONENT_WANT = MAX_NODE_SCOPE_NUM * ARKUI_NODE_EMBEDDED_COMPONEN
 
 **Description**
 
-Defines the want used to start EmbeddedAbility. This attribute can be set as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: The want of EmbeddedComponent, with parameter type {@AbilityBase_Want}.</li> <li>The default value is <b>nullptr</b>.</li> </ul>
+Defines the want used to start EmbeddedUIExtensionAbility. This attribute can be set as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: The want of EmbeddedComponent, with parameter type {@AbilityBase_Want}.</li> <li>The default value is <b>nullptr</b>.</li> </ul>
 
 **Since**: 20
 

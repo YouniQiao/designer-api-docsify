@@ -70,6 +70,8 @@ create(config: VpnConfig): Promise<number>
 
 **起始版本：** 11
 
+**需要权限：** ohos.permission.INTERNET
+
 <!--Device-VpnConnection-create(config: VpnConfig): Promise<int>--><!--Device-VpnConnection-create(config: VpnConfig): Promise<int>-End-->
 
 **系统能力：** SystemCapability.Communication.NetManager.Vpn
@@ -90,6 +92,7 @@ create(config: VpnConfig): Promise<number>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. |
 | [2200001](../errorcode-net-ethernet.md#2200001-非法参数值) | Invalid parameter value. |
 | [2200002](../errorcode-net-ethernet.md#2200002-连接服务失败) | Operation failed. Cannot connect to service. |

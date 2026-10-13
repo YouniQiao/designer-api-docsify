@@ -123,6 +123,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups1) | Obtain information about the groups. |
 | [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups2) | Obtain information about the groups. |
 | [getScanAlwaysAllowed](arkts-connectivity-wifimanager-getscanalwaysallowed-f-sys.md) | Get scan always allowed flag. |
+| [getSpecialWifiInfo](arkts-connectivity-wifimanager-getspecialwifiinfo-f-sys.md) | Get special Wi-Fi info |
 | [getStations](arkts-connectivity-wifimanager-getstations-f-sys.md) | Obtain the list of stations that are connected to the Wi-Fi hotspot. This method can only be used on a device that serves as a Wi-Fi hotspot. |
 | [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md) | Obtain the features supported by the device. To check whether this device supports a specified feature. |
 | [getWifiCapability](arkts-connectivity-wifimanager-getwificapability-f-sys.md) | Get Wi-Fi capability |
@@ -178,6 +179,7 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [HotspotConfig](arkts-connectivity-wifimanager-hotspotconfig-i-sys.md) | Wi-Fi hotspot configuration information. @typedef HotspotConfig |
 | [IpConfig](arkts-connectivity-wifimanager-ipconfig-i-sys.md) | Wi-Fi IP configuration information. @typedef IpConfig |
 | [Ipv6Config](arkts-connectivity-wifimanager-ipv6config-i-sys.md) | Wi-Fi Ipv6 configuration information. @typedef Ipv6Config |
+| [SpecialWifiInfo](arkts-connectivity-wifimanager-specialwifiinfo-i-sys.md) | Special Wi-Fi info |
 | [StationInfo](arkts-connectivity-wifimanager-stationinfo-i-sys.md) | Wi-Fi station information. @typedef StationInfo |
 | [WifiDeviceConfig](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md) | Wi-Fi device configuration information. @typedef WifiDeviceConfig |
 | [WifiLinkedInfo](arkts-connectivity-wifimanager-wifilinkedinfo-i-sys.md) | Wi-Fi connection information. @typedef WifiLinkedInfo |

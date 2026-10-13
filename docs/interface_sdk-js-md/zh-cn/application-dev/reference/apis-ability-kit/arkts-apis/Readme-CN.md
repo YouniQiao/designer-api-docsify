@@ -831,13 +831,10 @@
   - [execCmd](arkts-ability-climanager-execcmd-f.md)
   <!--Del-->
   - [execTool（系统接口）](arkts-ability-climanager-exectool-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [getToolInfoByName（系统接口）](arkts-ability-climanager-gettoolinfobyname-f-sys.md)<!--DelEnd-->
+  - [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f.md)
   - [querySession](arkts-ability-climanager-querysession-f.md)
-  <!--Del-->
-  - [queryTools（系统接口）](arkts-ability-climanager-querytools-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [queryToolSummaries（系统接口）](arkts-ability-climanager-querytoolsummaries-f-sys.md)<!--DelEnd-->
+  - [queryTools](arkts-ability-climanager-querytools-f.md)
+  - [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f.md)
   <!--Del-->
   - [registerCliHook（系统接口）](arkts-ability-climanager-registerclihook-f-sys.md)<!--DelEnd-->
   - [sendMessage](arkts-ability-climanager-sendmessage-f.md)
