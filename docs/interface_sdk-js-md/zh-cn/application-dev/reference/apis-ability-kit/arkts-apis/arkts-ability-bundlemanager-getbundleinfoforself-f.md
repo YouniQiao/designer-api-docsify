@@ -18,7 +18,7 @@ function getBundleInfoForSelf(bundleFlags: number): Promise<BundleInfo>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int): Promise<BundleInfo>--><!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int): Promise<BundleInfo>-End-->
 
@@ -78,7 +78,7 @@ function getBundleInfoForSelf(bundleFlags: number, callback: AsyncCallback<Bundl
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleInfo>): void--><!--Device-bundleManager-function getBundleInfoForSelf(bundleFlags: int, callback: AsyncCallback<BundleInfo>): void-End-->
 

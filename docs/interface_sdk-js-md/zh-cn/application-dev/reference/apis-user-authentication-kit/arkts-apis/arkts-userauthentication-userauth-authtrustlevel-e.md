@@ -24,7 +24,7 @@ ATL1 = 10000
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AuthTrustLevel-ATL1 = 10000--><!--Device-AuthTrustLevel-ATL1 = 10000-End-->
 
@@ -40,7 +40,7 @@ ATL2 = 20000
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AuthTrustLevel-ATL2 = 20000--><!--Device-AuthTrustLevel-ATL2 = 20000-End-->
 
@@ -56,7 +56,7 @@ ATL3 = 30000
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AuthTrustLevel-ATL3 = 30000--><!--Device-AuthTrustLevel-ATL3 = 30000-End-->
 
@@ -72,7 +72,7 @@ ATL4 = 40000
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AuthTrustLevel-ATL4 = 40000--><!--Device-AuthTrustLevel-ATL4 = 40000-End-->
 

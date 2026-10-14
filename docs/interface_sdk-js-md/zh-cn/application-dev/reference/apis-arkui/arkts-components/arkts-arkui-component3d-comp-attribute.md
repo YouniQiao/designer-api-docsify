@@ -4,7 +4,7 @@
 declare class Component3DAttribute extends CommonMethod<Component3DAttribute>
 ```
 
-@extends CommonMethod&lt;Component3DAttribute&gt;
+@extends CommonMethod<Component3DAttribute>
 
 **继承/实现关系：** Component3DAttribute extends CommonMethod&lt;Component3DAttribute&gt;
 

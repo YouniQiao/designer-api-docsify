@@ -6,8 +6,6 @@ enum WifiSecurityType
 
 Describes the wifi security type.
 
-@enum { number } WifiSecurityType
-
 **Since:** 6
 
 **Deprecated since:** 9

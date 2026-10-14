@@ -293,7 +293,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 contentEndOffset(offset: number | Resource)
 ```
 
-Sets the offset from the end of the list content to the boundary of the list display area. Compared with [contentEndOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentendoffset1), the parameter name is changed to **offset** and the Resource type is supported.
+Sets the offset from the end of the list content to the boundary of the list display area. Compared with [contentEndOffset<sup>11+</sup>](#contentendoffset1), the parameter name is changed to **offset** and the Resource type is supported.
 
 If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 
@@ -339,7 +339,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Start offset of the content area.<br>Default value: **0**<br>Unit: vp<br>**Note:** &lt;br/ &gt;If this parameter is set to a negative value, the default value is used.<br>Value range: [0, +∞) |
+| value | number | Yes | Start offset of the content area.<br>Default value: **0**<br>Unit: vp<br>**Note:** <br/ >If this parameter is set to a negative value, the default value is used.<br>Value range: [0, +∞) |
 
 <a id="contentstartoffset2"></a>
 
@@ -349,7 +349,7 @@ If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length
 contentStartOffset(offset: number | Resource)
 ```
 
-Sets the offset from the start of the list content to the boundary of the list display area. Compared with [contentStartOffset&lt;sup&gt;11+&lt;/sup&gt;](#contentstartoffset1), the parameter name is changed to **offset** and the Resource type is supported.
+Sets the offset from the start of the list content to the boundary of the list display area. Compared with [contentStartOffset<sup>11+</sup>](#contentstartoffset1), the parameter name is changed to **offset** and the Resource type is supported.
 
 If the sum of **contentStartOffset** and **contentEndOffset** exceeds the length of the list content area, both offsets are reset to **0**.
 

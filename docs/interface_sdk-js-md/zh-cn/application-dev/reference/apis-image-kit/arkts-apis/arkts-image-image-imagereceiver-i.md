@@ -506,7 +506,7 @@ setMemoryName(name: string): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [7900201](../errorcode-image.md#7900201-无效参数) | 参数无效。可能原因：&lt;ol&gt;&lt;li&gt;name为空。&lt;/li&gt; &lt;li&gt;过滤后name中无可视字符。&lt;/li&gt; &lt;li&gt;name的长度超过256字节。&lt;/li&gt; &lt;li&gt;请确保name参数包含可见ASCII字符。&lt;/li&gt;&lt;/ol&gt; |
+| [7900201](../errorcode-image.md#7900201-无效参数) | 参数无效。可能原因：<ol><li>name为空。</li> <li>过滤后name中无可视字符。</li> <li>name的长度超过256字节。</li> <li>请确保name参数包含可见ASCII字符。</li></ol> |
 
 **示例**
 

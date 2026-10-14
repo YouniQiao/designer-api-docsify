@@ -355,7 +355,7 @@ By default, the **Scroll** component comes with an animation, while the **Grid**
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [Edge](../arkts-apis/arkts-arkui-edge-e.md) | Yes | Edge position to scroll to. |
-| options | [ScrollEdgeOptions](arkts-arkui-scroll-comp-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position.<br>&lt;em&gt;Atomic service API&lt;/em&gt;: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
+| options | [ScrollEdgeOptions](arkts-arkui-scroll-comp-scrolledgeoptions-i.md) | No | Mode of scrolling to the edge position.<br><em>Atomic service API</em>: This API can be used in atomic services since API version 12.<br>**Since:** 12 |
 
 <a id="scrollpage1"></a>
 
@@ -409,7 +409,7 @@ Scrolls to the next or previous page.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value &lt;em&gt;true&lt;/em&gt; means to scroll to the next page, and &lt;em&gt;false&lt;/em&gt; means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
+| value | { next: boolean; direction?: Axis } | Yes | next: Whether to turn to the next page. The value<em>true</em> means to scroll to the next page, and <em>false</em> means to scroll to the previous page. direction: Scrolling direction: horizontal or vertical. |
 
 ## scrollTo
 

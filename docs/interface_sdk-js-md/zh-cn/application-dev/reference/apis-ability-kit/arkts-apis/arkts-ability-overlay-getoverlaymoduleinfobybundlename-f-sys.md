@@ -178,7 +178,7 @@ function getOverlayModuleInfoByBundleName(bundleName: string, moduleName?: strin
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise对象，返回&lt;Array<[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)>&gt;。 |
+| Promise&lt;Array&lt;[OverlayModuleInfo](arkts-ability-overlay-overlaymoduleinfo-t.md)&gt;&gt; | Promise对象，返回<Array<[OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)>&gt;。 |
 
 **错误码：**
 

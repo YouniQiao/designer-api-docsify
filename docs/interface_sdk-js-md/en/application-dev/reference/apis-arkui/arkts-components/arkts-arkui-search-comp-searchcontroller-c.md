@@ -40,7 +40,7 @@ Sets the position of the input cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Length from the start of the string to the cursor position.&lt;/br&gt;When value is less than 0, it is processed as 0. When value is greater than the string length, it is processed as the string length. |
+| value | number | Yes | Length from the start of the string to the cursor position.</br>When value is less than 0, it is processed as 0. When value is greater than the string length, it is processed as the string length. |
 
 ## constructor
 

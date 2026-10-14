@@ -22,7 +22,7 @@ CERT_STATUS_EXPIRED = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertificateStatus-CERT_STATUS_EXPIRED = 2--><!--Device-CertificateStatus-CERT_STATUS_EXPIRED = 2-End-->
 
@@ -38,7 +38,7 @@ CERT_STATUS_INVALID = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertificateStatus-CERT_STATUS_INVALID = 3--><!--Device-CertificateStatus-CERT_STATUS_INVALID = 3-End-->
 
@@ -54,7 +54,7 @@ CERT_STATUS_NOT_PROVISIONED = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1--><!--Device-CertificateStatus-CERT_STATUS_NOT_PROVISIONED = 1-End-->
 
@@ -70,7 +70,7 @@ CERT_STATUS_PROVISIONED = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertificateStatus-CERT_STATUS_PROVISIONED = 0--><!--Device-CertificateStatus-CERT_STATUS_PROVISIONED = 0-End-->
 
@@ -86,7 +86,7 @@ CERT_STATUS_UNAVAILABLE = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE = 4--><!--Device-CertificateStatus-CERT_STATUS_UNAVAILABLE = 4-End-->
 

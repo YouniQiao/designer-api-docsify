@@ -22,7 +22,7 @@ MIFARE Classic.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-MIFARE_CLASSIC = 101--><!--Device-NfcForumType-MIFARE_CLASSIC = 101-End-->
 
@@ -38,7 +38,7 @@ NFC Forum tag type 1.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1--><!--Device-NfcForumType-NFC_FORUM_TYPE_1 = 1-End-->
 
@@ -54,7 +54,7 @@ NFC Forum tag type 2.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2--><!--Device-NfcForumType-NFC_FORUM_TYPE_2 = 2-End-->
 
@@ -70,7 +70,7 @@ NFC Forum tag type 3.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3--><!--Device-NfcForumType-NFC_FORUM_TYPE_3 = 3-End-->
 
@@ -86,7 +86,7 @@ NFC Forum tag type 4.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4--><!--Device-NfcForumType-NFC_FORUM_TYPE_4 = 4-End-->
 

@@ -34,7 +34,7 @@ Generates a key pair using this asymmetric key generator. This API uses an async
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
@@ -113,7 +113,7 @@ Generates a key pair using this asymmetric key generator. This API uses a promis
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGeneratorBySpec-generateKeyPair(): Promise<KeyPair>-End-->
 
@@ -192,7 +192,7 @@ Generates a key pair using this asymmetric key generator. This API returns the r
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGeneratorBySpec-generateKeyPairSync(): KeyPair-End-->
 
@@ -274,7 +274,7 @@ Generates a private key using this asymmetric key generator. This API uses an as
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(callback: AsyncCallback<PriKey>): void-End-->
 
@@ -353,7 +353,7 @@ Generates a private key using this asymmetric key generator. This API uses a pro
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>--><!--Device-AsyKeyGeneratorBySpec-generatePriKey(): Promise<PriKey>-End-->
 
@@ -432,7 +432,7 @@ Generates a private key using this asymmetric key generator. This API returns th
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey--><!--Device-AsyKeyGeneratorBySpec-generatePriKeySync(): PriKey-End-->
 
@@ -512,7 +512,7 @@ Generates a public key using this asymmetric key generator. This API uses an asy
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(callback: AsyncCallback<PubKey>): void-End-->
 
@@ -591,7 +591,7 @@ Generates a public key using this asymmetric key generator. This API uses a prom
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>--><!--Device-AsyKeyGeneratorBySpec-generatePubKey(): Promise<PubKey>-End-->
 
@@ -670,7 +670,7 @@ Generates a public key using this asymmetric key generator. This API returns the
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey--><!--Device-AsyKeyGeneratorBySpec-generatePubKeySync(): PubKey-End-->
 
@@ -748,7 +748,7 @@ Indicates the algorithm name of the generator.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGeneratorBySpec-readonly algName: string--><!--Device-AsyKeyGeneratorBySpec-readonly algName: string-End-->
 

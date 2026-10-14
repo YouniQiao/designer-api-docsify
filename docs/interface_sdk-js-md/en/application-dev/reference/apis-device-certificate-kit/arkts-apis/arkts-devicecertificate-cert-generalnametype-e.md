@@ -22,7 +22,7 @@ Indicates a directory name.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_DIRECTORY_NAME = 4--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_DIRECTORY_NAME = 4-End-->
 
@@ -38,7 +38,7 @@ Indicates a DNS name.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_DNS_NAME = 2--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_DNS_NAME = 2-End-->
 
@@ -54,7 +54,7 @@ Indicates an Electronic Data Interchange (EDI) entity.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_EDI_PARTY_NAME = 5--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_EDI_PARTY_NAME = 5-End-->
 
@@ -70,7 +70,7 @@ Indicates an IP address.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_IP_ADDRESS = 7--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_IP_ADDRESS = 7-End-->
 
@@ -86,7 +86,7 @@ Indicates an otherName.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_OTHER_NAME = 0--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_OTHER_NAME = 0-End-->
 
@@ -102,7 +102,7 @@ Indicates a registered object identifier.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_REGISTERED_ID = 8--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_REGISTERED_ID = 8-End-->
 
@@ -118,7 +118,7 @@ Indicates an email address.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_RFC822_NAME = 1--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_RFC822_NAME = 1-End-->
 
@@ -134,7 +134,7 @@ Indicates a uniform resource identifier.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_UNIFORM_RESOURCE_ID = 6--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_UNIFORM_RESOURCE_ID = 6-End-->
 
@@ -150,7 +150,7 @@ Indicates an X.400 address.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GeneralNameType-GENERAL_NAME_TYPE_X400_ADDRESS = 3--><!--Device-GeneralNameType-GENERAL_NAME_TYPE_X400_ADDRESS = 3-End-->
 

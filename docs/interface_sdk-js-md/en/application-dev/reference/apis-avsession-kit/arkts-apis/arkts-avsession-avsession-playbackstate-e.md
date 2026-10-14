@@ -22,7 +22,7 @@ Buffering state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 11--><!--Device-PlaybackState-PLAYBACK_STATE_BUFFERING = 11-End-->
 
@@ -38,7 +38,7 @@ Completed state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 7--><!--Device-PlaybackState-PLAYBACK_STATE_COMPLETED = 7-End-->
 
@@ -54,7 +54,7 @@ error state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 9--><!--Device-PlaybackState-PLAYBACK_STATE_ERROR = 9-End-->
 
@@ -70,7 +70,7 @@ Fast forwarding state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_FAST_FORWARD = 4--><!--Device-PlaybackState-PLAYBACK_STATE_FAST_FORWARD = 4-End-->
 
@@ -86,7 +86,7 @@ Idle state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_IDLE = 10--><!--Device-PlaybackState-PLAYBACK_STATE_IDLE = 10-End-->
 
@@ -102,7 +102,7 @@ Initial state. The initial state of media file
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_INITIAL = 0--><!--Device-PlaybackState-PLAYBACK_STATE_INITIAL = 0-End-->
 
@@ -118,7 +118,7 @@ Paused state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 3--><!--Device-PlaybackState-PLAYBACK_STATE_PAUSE = 3-End-->
 
@@ -134,7 +134,7 @@ Playing state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 2--><!--Device-PlaybackState-PLAYBACK_STATE_PLAY = 2-End-->
 
@@ -150,7 +150,7 @@ Preparing state. Indicates that the media file is not ready to play, the media i
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 1--><!--Device-PlaybackState-PLAYBACK_STATE_PREPARE = 1-End-->
 
@@ -166,7 +166,7 @@ Released state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_RELEASED = 8--><!--Device-PlaybackState-PLAYBACK_STATE_RELEASED = 8-End-->
 
@@ -182,7 +182,7 @@ Rewinding state.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_REWIND = 5--><!--Device-PlaybackState-PLAYBACK_STATE_REWIND = 5-End-->
 
@@ -198,7 +198,7 @@ Stopped state.The server will clear the media playback position and other inform
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackState-PLAYBACK_STATE_STOP = 6--><!--Device-PlaybackState-PLAYBACK_STATE_STOP = 6-End-->
 

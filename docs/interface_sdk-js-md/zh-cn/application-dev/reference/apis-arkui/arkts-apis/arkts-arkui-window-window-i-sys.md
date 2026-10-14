@@ -2426,7 +2426,7 @@ setSnapshotSkip(isSkip: boolean): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isSkip | boolean | 是 | 截屏、录屏或投屏是否忽略当前窗口，默认为false。<br>true表示忽略当前窗口，false表示不忽略当前窗口。&lt;/br&gt; |
+| isSkip | boolean | 是 | 截屏、录屏或投屏是否忽略当前窗口，默认为false。<br>true表示忽略当前窗口，false表示不忽略当前窗口。</br> |
 
 **错误码：**
 

@@ -18,7 +18,7 @@ Creates an **X500DistinguishedName** object with a name in the form of a string.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameStr: string): Promise<X500DistinguishedName>-End-->
 
@@ -96,7 +96,7 @@ Creates an **X500DistinguishedName** object with a name in DER format. This API 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>--><!--Device-cert-function createX500DistinguishedName(nameDer: Uint8Array): Promise<X500DistinguishedName>-End-->
 

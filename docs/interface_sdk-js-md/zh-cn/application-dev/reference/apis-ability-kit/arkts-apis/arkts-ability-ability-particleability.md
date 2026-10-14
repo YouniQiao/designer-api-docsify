@@ -4,8 +4,6 @@ particleAbility模块提供了操作Data和Service类型的Ability的能力，�
 
 **起始版本：** 7
 
-**模型约束：** 此接口仅可在FA模型下使用。
-
 <!--Device-unnamed-declare namespace particleAbility--><!--Device-unnamed-declare namespace particleAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -22,8 +20,8 @@ import { particleAbility } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md) | 获取dataAbilityHelper对象。 |
-| [connectAbility](arkts-ability-particleability-connectability-f.md) | 将当前ability与指定的ServiceAbility进行连接。 |
+| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) | 获取dataAbilityHelper对象。 |
+| [connectAbility](arkts-ability-particleability-connectability-f.md#connectability) | 将当前ability与指定的ServiceAbility进行连接。 |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability1) | 断开当前ability与指定ServiceAbility的连接。使用callback异步回调。 |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability2) | 断开当前ability与指定ServiceAbility的连接。使用Promise异步回调。 |
 | [startAbility](arkts-ability-particleability-startability-f.md#startability1) | 启动指定的particleAbility。使用callback异步回调。 |

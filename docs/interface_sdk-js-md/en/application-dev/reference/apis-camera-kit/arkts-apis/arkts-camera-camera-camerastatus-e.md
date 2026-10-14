@@ -22,7 +22,7 @@ A camera appears.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0--><!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0-End-->
 
@@ -38,7 +38,7 @@ The camera is available.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2--><!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2-End-->
 
@@ -54,7 +54,7 @@ The camera disappears.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1--><!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1-End-->
 
@@ -70,7 +70,7 @@ The camera is unavailable.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3--><!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3-End-->
 

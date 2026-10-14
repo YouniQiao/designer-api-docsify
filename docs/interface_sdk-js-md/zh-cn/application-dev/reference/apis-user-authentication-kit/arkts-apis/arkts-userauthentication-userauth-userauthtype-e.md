@@ -26,7 +26,7 @@ COMPANION_DEVICE = 64
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthType-COMPANION_DEVICE = 64--><!--Device-UserAuthType-COMPANION_DEVICE = 64-End-->
 
@@ -42,7 +42,7 @@ FACE = 2
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthType-FACE = 2--><!--Device-UserAuthType-FACE = 2-End-->
 
@@ -58,7 +58,7 @@ FINGERPRINT = 4
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthType-FINGERPRINT = 4--><!--Device-UserAuthType-FINGERPRINT = 4-End-->
 
@@ -74,7 +74,7 @@ PIN = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthType-PIN = 1--><!--Device-UserAuthType-PIN = 1-End-->
 

@@ -24,7 +24,7 @@ Formatted state, indicating that the text has been formatted.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
@@ -42,7 +42,7 @@ Index generated state, indicating that the text index has been generated.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-INDEXED = 1--><!--Device-TextProcessState-INDEXED = 1-End-->
 
@@ -60,7 +60,7 @@ Initial state, indicating that text processing has not started.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
@@ -78,7 +78,7 @@ Line-wrapped state. The text has been line-wrapped.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-LINE_BROKEN = 3--><!--Device-TextProcessState-LINE_BROKEN = 3-End-->
 
@@ -96,7 +96,7 @@ Drawn state, indicating that the text has been drawn.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
 
@@ -114,7 +114,7 @@ Shaped state, indicating that the text has been shaped.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
@@ -132,7 +132,7 @@ Updated property state. The text properties have been updated.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6--><!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6-End-->
 

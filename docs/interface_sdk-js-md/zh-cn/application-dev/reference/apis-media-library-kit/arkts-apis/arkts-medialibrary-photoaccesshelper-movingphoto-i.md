@@ -109,7 +109,7 @@ requestContent(imageFileUri: string, videoFileUri: string): Promise<void>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(imageFileUri: string, videoFileUri: string): Promise<void>-End-->
 
@@ -206,7 +206,7 @@ requestContent(resourceType: ResourceType, fileUri: string): Promise<void>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType, fileUri: string): Promise<void>-End-->
 
@@ -298,7 +298,7 @@ requestContent(resourceType: ResourceType): Promise<ArrayBuffer>
 
 **需要权限：** ohos.permission.READ_IMAGEVIDEO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>--><!--Device-MovingPhoto-requestContent(resourceType: ResourceType): Promise<ArrayBuffer>-End-->
 

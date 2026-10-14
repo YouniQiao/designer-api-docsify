@@ -18,7 +18,7 @@ declare namespace focusControl
 
 | 名称 | 说明 |
 | --- | --- |
-| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md) | 方法语句中可使用的全局接口，调用此接口可以主动让焦点在下一帧渲染时转移至参数指定的组件上。 |
+| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus) | 方法语句中可使用的全局接口，调用此接口可以主动让焦点在下一帧渲染时转移至参数指定的组件上。 |
 
 ## 示例
 
@@ -9435,7 +9435,7 @@ struct ContextMenuGridStyleExample {
 
 ### 示例1（获取鼠标事件相关参数）
 
-该示例通过按钮设置了鼠标事件，通过鼠标点击按钮可以触发[onMouse](#onmouse)事件，获取鼠标事件相关参数。从API version 15开始，可以获取鼠标事件[MouseEvent](#mouseevent对象说明)的rawDeltaX、rawDeltaY、pressedButtons等参数。
+该示例通过按钮设置了鼠标事件，通过鼠标点击按钮可以触发[onMouse](arkts-arkui-common-comp-commonmethod-c.md#onmouse)事件，获取鼠标事件相关参数。从API version 15开始，可以获取鼠标事件[MouseEvent](#mouseevent对象说明)的rawDeltaX、rawDeltaY、pressedButtons等参数。
 
 鼠标滚轮的处理请参考[轴事件示例](ts-universal-events-axis.md#示例)。
 

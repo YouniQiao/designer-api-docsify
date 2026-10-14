@@ -24,7 +24,7 @@ Decryption.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CryptoMode-DECRYPT_MODE = 1--><!--Device-CryptoMode-DECRYPT_MODE = 1-End-->
 
@@ -42,7 +42,7 @@ Encryption.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CryptoMode-ENCRYPT_MODE = 0--><!--Device-CryptoMode-ENCRYPT_MODE = 0-End-->
 

@@ -28,7 +28,7 @@ Stops an HTTP request task and releases system resources.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
@@ -404,7 +404,7 @@ Unregisters the observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [off_headersReceive](#offheadersreceive)
+**Substitutes:** off_headersReceive
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -687,7 +687,7 @@ Registers an observer for HTTP Response Header events.
 
 **Deprecated since:** 8
 
-**Substitutes:** [on_headersReceive](#onheadersreceive)
+**Substitutes:** on_headersReceive
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -798,7 +798,7 @@ Initiates an HTTP request to a given URL. This API uses an asynchronous callback
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
 
@@ -919,7 +919,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
 
@@ -1066,7 +1066,7 @@ Initiates an HTTP request containing specified options to a given URL. This API 
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
 

@@ -24,7 +24,7 @@ FLOATING = 3
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowMode-FLOATING = 3--><!--Device-WindowMode-FLOATING = 3-End-->
 
@@ -42,7 +42,7 @@ FULLSCREEN = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowMode-FULLSCREEN = 0--><!--Device-WindowMode-FULLSCREEN = 0-End-->
 
@@ -60,7 +60,7 @@ PRIMARY = 1
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowMode-PRIMARY = 1--><!--Device-WindowMode-PRIMARY = 1-End-->
 
@@ -78,7 +78,7 @@ SECONDARY = 2
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowMode-SECONDARY = 2--><!--Device-WindowMode-SECONDARY = 2-End-->
 

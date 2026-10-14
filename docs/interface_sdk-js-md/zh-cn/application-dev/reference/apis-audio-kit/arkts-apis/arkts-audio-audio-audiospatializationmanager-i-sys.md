@@ -896,14 +896,14 @@ off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [off('spatializationEnabledChangeForAnyDevice')](#offspatializationenabledchangeforanydevice)
+> off('spatializationEnabledChangeForAnyDevice')
 > 替代。
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [off](#offspatializationenabledchange)
+**替代接口：** [off](arkts-audio-audio-audiospatializationmanager-i.md#off)
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -955,14 +955,14 @@ off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [off('headTrackingEnabledChangeForAnyDevice')](#offheadtrackingenabledchangeforanydevice)
+> off('headTrackingEnabledChangeForAnyDevice')
 > 替代。
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [off](#offspatializationenabledchange)
+**替代接口：** [off](arkts-audio-audio-audiospatializationmanager-i.md#off)
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -1238,14 +1238,14 @@ on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onspatializationenabledchangeforanydevice)
+> on(type: 'spatializationEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice\>): void
 > 替代。
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [on](#onspatializationenabledchange)
+**替代接口：** [on](arkts-audio-audio-audiospatializationmanager-i.md#on)
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1291,14 +1291,14 @@ on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback&lt;AudioSpatialEnabledStateForDevice\&gt;): void](#onheadtrackingenabledchangeforanydevice)
+> on(type: 'headTrackingEnabledChangeForAnyDevice', callback: Callback<AudioSpatialEnabledStateForDevice\>): void
 > 替代。
 
 **起始版本：** 11
 
 **废弃版本：** 12
 
-**替代接口：** [on](#onspatializationenabledchange)
+**替代接口：** [on](arkts-audio-audio-audiospatializationmanager-i.md#on)
 
 <!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1611,7 +1611,7 @@ setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled3)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1676,7 +1676,7 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setheadtrackingenabled3)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1860,7 +1860,7 @@ setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled3)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled3)
 > 替代。
 
 **起始版本：** 11
@@ -1925,7 +1925,7 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\&lt;void&gt;](#setspatializationenabled3)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled3)
 > 替代。
 
 **起始版本：** 11

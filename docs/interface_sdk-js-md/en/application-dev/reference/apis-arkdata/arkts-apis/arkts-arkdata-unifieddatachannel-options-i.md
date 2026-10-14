@@ -32,7 +32,7 @@ Type of the data channel related to the data operation.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Options-intention?: Intention--><!--Device-Options-intention?: Intention-End-->
 
@@ -56,7 +56,7 @@ The key consists of **udmf:/**, **intention**, **bundleName**, and **groupId** w
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Options-key?: string--><!--Device-Options-key?: string-End-->
 
@@ -78,7 +78,7 @@ Data visibility level. This parameter is effective only when specified during da
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Options-visibility?: Visibility--><!--Device-Options-visibility?: Visibility-End-->
 

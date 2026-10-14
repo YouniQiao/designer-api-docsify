@@ -24,7 +24,7 @@ actionFlags?: Array<abilityWantAgent.WantAgentFlags>
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>--><!--Device-WantAgentInfo-actionFlags?: Array<abilityWantAgent.WantAgentFlags>-End-->
 
@@ -42,7 +42,7 @@ actionType?: abilityWantAgent.OperationType
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType--><!--Device-WantAgentInfo-actionType?: abilityWantAgent.OperationType-End-->
 
@@ -96,7 +96,7 @@ requestCode: number
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WantAgentInfo-requestCode: int--><!--Device-WantAgentInfo-requestCode: int-End-->
 
@@ -114,7 +114,7 @@ wants数组为预留能力，当前只支持一个want。传入多个时只取wa
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WantAgentInfo-wants: Array<Want>--><!--Device-WantAgentInfo-wants: Array<Want>-End-->
 
@@ -128,7 +128,7 @@ operationType?: wantAgent.OperationType
 
 动作类型。不设置时无默认动作类型。
 
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType&lt;sup&gt;11+&lt;/sup&gt;替代。
+从API version 7 开始支持，从API version 11 开始废弃，建议使用actionType<sup>11+</sup>替代。
 
 **类型：** [wantAgent.OperationType](arkts-ability-wantagent-operationtype-depr-e.md)
 
@@ -152,7 +152,7 @@ wantAgentFlags?: Array<wantAgent.WantAgentFlags>
 
 动作执行属性。不设置时无执行属性。
 
-从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags&lt;sup&gt;11+&lt;/sup&gt;替代。
+从API version 7 开始支持，从API version 11 开始废弃，建议使用actionFlags<sup>11+</sup>替代。
 
 **类型：** Array&lt;[wantAgent.WantAgentFlags](arkts-ability-wantagent-wantagentflags-depr-e.md)&gt;
 

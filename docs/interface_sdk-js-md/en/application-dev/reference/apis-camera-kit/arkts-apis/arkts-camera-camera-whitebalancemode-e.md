@@ -22,7 +22,7 @@ Automatic.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-AUTO = 0--><!--Device-WhiteBalanceMode-AUTO = 0-End-->
 
@@ -38,7 +38,7 @@ Cloudy.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-CLOUDY = 1--><!--Device-WhiteBalanceMode-CLOUDY = 1-End-->
 
@@ -54,7 +54,7 @@ Daylight.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
 
@@ -70,7 +70,7 @@ Fluorescence light.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-FLUORESCENT =3--><!--Device-WhiteBalanceMode-FLUORESCENT =3-End-->
 
@@ -86,7 +86,7 @@ Incandescent light.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
 
@@ -102,7 +102,7 @@ Locked.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-LOCKED = 6--><!--Device-WhiteBalanceMode-LOCKED = 6-End-->
 
@@ -118,7 +118,7 @@ Manual.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
 

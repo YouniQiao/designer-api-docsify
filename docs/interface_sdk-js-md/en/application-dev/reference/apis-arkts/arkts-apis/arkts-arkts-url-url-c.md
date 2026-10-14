@@ -30,7 +30,7 @@ A no-argument constructor used to create a URL. It returns a URL object after pa
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
@@ -107,7 +107,7 @@ Parses a URL.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-static parseURL(url: string, base?: string | URL): URL--><!--Device-URL-static parseURL(url: string, base?: string | URL): URL-End-->
 
@@ -159,7 +159,7 @@ Converts the parsed URL into a JSON string.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
 
@@ -188,7 +188,7 @@ Converts the parsed URL into a string.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
 

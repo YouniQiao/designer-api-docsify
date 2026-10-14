@@ -24,7 +24,7 @@ Ellipsis at the end. This enumerated value is valid when **maxLines** is set to 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-EllipsisMode-END = 2--><!--Device-EllipsisMode-END = 2-End-->
 
@@ -40,7 +40,7 @@ Ellipsis in the middle. This enumerated value is valid only when **maxLines** is
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-EllipsisMode-MIDDLE = 1--><!--Device-EllipsisMode-MIDDLE = 1-End-->
 
@@ -56,7 +56,7 @@ Ellipsis in the middle. This enumerated value is valid when **maxLines** is set 
 
 **Since:** 24
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-EllipsisMode-MULTILINE_MIDDLE = 4--><!--Device-EllipsisMode-MULTILINE_MIDDLE = 4-End-->
 
@@ -72,7 +72,7 @@ Ellipsis at the beginning. This enumerated value is valid when **maxLines** is s
 
 **Since:** 24
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-EllipsisMode-MULTILINE_START = 3--><!--Device-EllipsisMode-MULTILINE_START = 3-End-->
 
@@ -88,7 +88,7 @@ Ellipsis at the beginning. This enumerated value is valid only when **maxLines**
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-EllipsisMode-START = 0--><!--Device-EllipsisMode-START = 0-End-->
 

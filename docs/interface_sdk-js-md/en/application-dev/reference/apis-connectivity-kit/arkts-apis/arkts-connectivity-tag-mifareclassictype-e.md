@@ -22,7 +22,7 @@ MIFARE Classic.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_CLASSIC = 1--><!--Device-MifareClassicType-TYPE_CLASSIC = 1-End-->
 
@@ -38,7 +38,7 @@ MIFARE Plus.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_PLUS = 2--><!--Device-MifareClassicType-TYPE_PLUS = 2-End-->
 
@@ -54,7 +54,7 @@ MIFARE Pro.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_PRO = 3--><!--Device-MifareClassicType-TYPE_PRO = 3-End-->
 
@@ -70,7 +70,7 @@ Unknown type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MifareClassicType-TYPE_UNKNOWN = 0--><!--Device-MifareClassicType-TYPE_UNKNOWN = 0-End-->
 

@@ -64,7 +64,7 @@ CFT_MPEG_4 = 'mp4'
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContainerFormatType-CFT_MPEG_4 = 'mp4'--><!--Device-ContainerFormatType-CFT_MPEG_4 = 'mp4'-End-->
 
@@ -80,7 +80,7 @@ CFT_MPEG_4A = 'm4a'
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'--><!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'-End-->
 

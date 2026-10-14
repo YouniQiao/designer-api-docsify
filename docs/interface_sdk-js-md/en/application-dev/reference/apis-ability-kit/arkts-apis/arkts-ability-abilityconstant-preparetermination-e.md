@@ -24,7 +24,7 @@ Cancels the termination action.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-PrepareTermination-CANCEL = 1--><!--Device-PrepareTermination-CANCEL = 1-End-->
 
@@ -42,7 +42,7 @@ Executes the termination action immediately. This is the default behavior.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-PrepareTermination-TERMINATE_IMMEDIATELY = 0--><!--Device-PrepareTermination-TERMINATE_IMMEDIATELY = 0-End-->
 

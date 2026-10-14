@@ -22,7 +22,7 @@ Defination of audio vivid codec type.
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_AUDIO_VIVID = 'audio/av3a'-End-->
 
@@ -38,7 +38,7 @@ Defination of avc codec type.
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_AVC = 'video/avc'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_AVC = 'video/avc'-End-->
 
@@ -54,7 +54,7 @@ Defination of hevc codec type.
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'--><!--Device-DecoderType-OH_AVCODEC_MIMETYPE_VIDEO_HEVC = 'video/hevc'-End-->
 

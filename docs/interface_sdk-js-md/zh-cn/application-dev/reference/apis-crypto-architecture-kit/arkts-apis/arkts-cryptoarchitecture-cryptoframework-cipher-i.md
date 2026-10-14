@@ -70,6 +70,8 @@ doFinal(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 
+ArkTS示例：
+
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
@@ -116,6 +118,122 @@ function cipherByCallback() {
     });
   });
 }
+```
+
+JS示例：
+
+在Lite Wearable侧对称密钥只支持AES128算法；加解密只支持AES128|GCM或AES128|CBC算法。
+
+下述样例以对称算法为AES128，分组模式为GCM为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="Aes128Test">Aes128加解密异步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+let plainText = "This is a test";
+ 
+function genGcmAeadParamsSpec(ivData, aadData, tagLen) {
+    return {
+        nonce: ivData,
+        authenticatedData: aadData || new Uint8Array(0),
+        algName: 'AeadParamsSpec',
+        tagLen: tagLen === undefined ? 16 : tagLen
+    };
+}
+ 
+function aes128Test() {
+  try {
+      let aesKeyData = new Uint8Array([0x53, 0xD9, 0xE7, 0x4C, 0x1C, 0x71, 0x17, 0xDB, 0xFA, 0x47, 0xD1, 0xD2, 0xCD, 0x61, 0x20, 0x9F]);
+      let symKey = cryptoFramework.createSymKeyGenerator('AES128').convertKeySync({data: aesKeyData});
+      let iv = cryptoFramework.createRandom().generateRandomSync(12);
+      let aeadParams = genGcmAeadParamsSpec(iv, new Uint8Array(0), 16);
+      
+      let cipher = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+      cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, aeadParams, function (err) {
+          if (err) {
+              console.error('Encrypt init failed. Code: ' + err.code + " : " + err.message);
+              return;
+          }
+          let inData = StringToUint8Array(plainText);
+          cipher.doFinal({ data: inData }, function (err, encryptOutput) {
+              if (err) {
+                  console.error('Encrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                  return;
+              }
+              console.info('Encrypt successfully. cipherText: ' + encryptOutput.data);
+              let dec = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+              dec.init(cryptoFramework.CryptoMode.DECRYPT_MODE, symKey, aeadParams, function (err) {
+                  if (err) {
+                      console.error('Decrypt init failed. Code: ' + err.code + " : " + err.message);
+                      return;
+                  }
+                  dec.doFinal({ data: encryptOutput.data }, function (err, decryptOutput) {
+                      if (err) {
+                          console.error('Decrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                      } else {
+                          console.info('Decrypt successfully: ' + decryptOutput.data);
+                      }
+                  })
+              })
+          })
+      })
+    } catch (error) {
+        console.error(`aes128Test failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    Aes128Test() {
+        aes128Test();
+    }
+};
 ```
 
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
@@ -219,6 +337,8 @@ authTag为末尾的16字节；CCM模式下，authTag为末尾的12字节。其�
 
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 
+ArkTS示例：
+
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
@@ -265,6 +385,122 @@ function cipherByCallback() {
     });
   });
 }
+```
+
+JS示例：
+
+在Lite Wearable侧对称密钥只支持AES128算法；加解密只支持AES128|GCM或AES128|CBC算法。
+
+下述样例以对称算法为AES128，分组模式为GCM为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="Aes128Test">Aes128加解密异步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+let plainText = "This is a test";
+ 
+function genGcmAeadParamsSpec(ivData, aadData, tagLen) {
+    return {
+        nonce: ivData,
+        authenticatedData: aadData || new Uint8Array(0),
+        algName: 'AeadParamsSpec',
+        tagLen: tagLen === undefined ? 16 : tagLen
+    };
+}
+ 
+function aes128Test() {
+  try {
+      let aesKeyData = new Uint8Array([0x53, 0xD9, 0xE7, 0x4C, 0x1C, 0x71, 0x17, 0xDB, 0xFA, 0x47, 0xD1, 0xD2, 0xCD, 0x61, 0x20, 0x9F]);
+      let symKey = cryptoFramework.createSymKeyGenerator('AES128').convertKeySync({data: aesKeyData});
+      let iv = cryptoFramework.createRandom().generateRandomSync(12);
+      let aeadParams = genGcmAeadParamsSpec(iv, new Uint8Array(0), 16);
+      
+      let cipher = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+      cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, aeadParams, function (err) {
+          if (err) {
+              console.error('Encrypt init failed. Code: ' + err.code + " : " + err.message);
+              return;
+          }
+          let inData = StringToUint8Array(plainText);
+          cipher.doFinal({ data: inData }, function (err, encryptOutput) {
+              if (err) {
+                  console.error('Encrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                  return;
+              }
+              console.info('Encrypt successfully. cipherText: ' + encryptOutput.data);
+              let dec = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+              dec.init(cryptoFramework.CryptoMode.DECRYPT_MODE, symKey, aeadParams, function (err) {
+                  if (err) {
+                      console.error('Decrypt init failed. Code: ' + err.code + " : " + err.message);
+                      return;
+                  }
+                  dec.doFinal({ data: encryptOutput.data }, function (err, decryptOutput) {
+                      if (err) {
+                          console.error('Decrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                      } else {
+                          console.info('Decrypt successfully: ' + decryptOutput.data);
+                      }
+                  })
+              })
+          })
+      })
+    } catch (error) {
+        console.error(`aes128Test failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    Aes128Test() {
+        aes128Test();
+    }
+};
 ```
 
 <a id="dofinal4"></a>
@@ -314,6 +550,8 @@ doFinal(data: DataBlob): Promise<DataBlob>
 
 更多加解密流程的完整示例请参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 
+ArkTS示例：
+
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
@@ -360,6 +598,122 @@ function cipherByCallback() {
     });
   });
 }
+```
+
+JS示例：
+
+在Lite Wearable侧对称密钥只支持AES128算法；加解密只支持AES128|GCM或AES128|CBC算法。
+
+下述样例以对称算法为AES128，分组模式为GCM为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="Aes128Test">Aes128加解密异步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+let plainText = "This is a test";
+ 
+function genGcmAeadParamsSpec(ivData, aadData, tagLen) {
+    return {
+        nonce: ivData,
+        authenticatedData: aadData || new Uint8Array(0),
+        algName: 'AeadParamsSpec',
+        tagLen: tagLen === undefined ? 16 : tagLen
+    };
+}
+ 
+function aes128Test() {
+  try {
+      let aesKeyData = new Uint8Array([0x53, 0xD9, 0xE7, 0x4C, 0x1C, 0x71, 0x17, 0xDB, 0xFA, 0x47, 0xD1, 0xD2, 0xCD, 0x61, 0x20, 0x9F]);
+      let symKey = cryptoFramework.createSymKeyGenerator('AES128').convertKeySync({data: aesKeyData});
+      let iv = cryptoFramework.createRandom().generateRandomSync(12);
+      let aeadParams = genGcmAeadParamsSpec(iv, new Uint8Array(0), 16);
+      
+      let cipher = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+      cipher.init(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, aeadParams, function (err) {
+          if (err) {
+              console.error('Encrypt init failed. Code: ' + err.code + " : " + err.message);
+              return;
+          }
+          let inData = StringToUint8Array(plainText);
+          cipher.doFinal({ data: inData }, function (err, encryptOutput) {
+              if (err) {
+                  console.error('Encrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                  return;
+              }
+              console.info('Encrypt successfully. cipherText: ' + encryptOutput.data);
+              let dec = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+              dec.init(cryptoFramework.CryptoMode.DECRYPT_MODE, symKey, aeadParams, function (err) {
+                  if (err) {
+                      console.error('Decrypt init failed. Code: ' + err.code + " : " + err.message);
+                      return;
+                  }
+                  dec.doFinal({ data: encryptOutput.data }, function (err, decryptOutput) {
+                      if (err) {
+                          console.error('Decrypt doFinal failed. Code: ' + err.code + " : " + err.message);
+                      } else {
+                          console.info('Decrypt successfully: ' + decryptOutput.data);
+                      }
+                  })
+              })
+          })
+      })
+    } catch (error) {
+        console.error(`aes128Test failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    Aes128Test() {
+        aes128Test();
+    }
+};
 ```
 
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
@@ -565,6 +919,8 @@ doFinalSync(data: DataBlob | null): DataBlob
 
 **示例**
 
+ArkTS示例：
+
 此外，更多加解密流程的完整示例可参考[加解密开发指导](../../../security/CryptoArchitectureKit/crypto-aes-sym-encrypt-decrypt.md#使用aes对称密钥gcm模式加解密)。
 
 ```TypeScript
@@ -610,6 +966,100 @@ async function cipherBySync() {
 }
 ```
 
+JS示例：
+
+在Lite Wearable侧对称密钥只支持AES128算法；加解密只支持AES128|GCM或AES128|CBC算法。
+
+下述样例以对称算法为AES128，分组模式为GCM为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="Aes128TestSync">Aes128加解密同步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+function genGcmAeadParamsSpec(ivData, aadData, tagLen) {
+    return {
+        nonce: ivData,
+        authenticatedData: aadData || new Uint8Array(0),
+        algName: 'AeadParamsSpec',
+        tagLen: tagLen === undefined ? 16 : tagLen
+    };
+}
+ 
+function aes128TestSync() {
+  try {
+      let aesKeyData = new Uint8Array([0x53, 0xD9, 0xE7, 0x4C, 0x1C, 0x71, 0x17, 0xDB, 0xFA, 0x47, 0xD1, 0xD2, 0xCD, 0x61, 0x20, 0x9F]);
+      let symKey = cryptoFramework.createSymKeyGenerator('AES128').convertKeySync({data: aesKeyData});
+      let iv = cryptoFramework.createRandom().generateRandomSync(12);
+      let aeadParams = genGcmAeadParamsSpec(iv, new Uint8Array(0), 16);
+      let cipher = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+      let inData = StringToUint8Array("This is a test");
+      cipher.initSync(cryptoFramework.CryptoMode.ENCRYPT_MODE, symKey, aeadParams);
+      let encryptOutput = cipher.doFinalSync({ data: inData });
+      console.info('Encrypt successfully. cipherText: ' + encryptOutput.data);
+
+      let dec = cryptoFramework.createCipher('AES128|GCM|NoPadding');
+      dec.initSync(cryptoFramework.CryptoMode.DECRYPT_MODE, symKey, aeadParams);
+      let decryptOutput = dec.doFinalSync({ data: encryptOutput.data });
+      console.info('Decrypt successfully: ' + decryptOutput.data);
+  } catch (error) {
+      console.error(`aes128TestSync failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    Aes128TestSync() {
+        aes128TestSync();
+    }
+};
+```
+
 ## getCipherSpec
 
 ```TypeScript
@@ -620,7 +1070,7 @@ getCipherSpec(itemType: CipherSpecItem): string | Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-getCipherSpec(itemType: CipherSpecItem): string | Uint8Array--><!--Device-Cipher-getCipherSpec(itemType: CipherSpecItem): string | Uint8Array-End-->
 
@@ -717,7 +1167,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCal
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null, callback: AsyncCallback<void>): void-End-->
 
@@ -805,7 +1255,7 @@ init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>--><!--Device-Cipher-init(opMode: CryptoMode, key: Key, params: ParamsSpec | null): Promise<void>-End-->
 
@@ -851,7 +1301,7 @@ initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void--><!--Device-Cipher-initSync(opMode: CryptoMode, key: Key, params: ParamsSpec | null): void-End-->
 
@@ -885,7 +1335,7 @@ setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void--><!--Device-Cipher-setCipherSpec(itemType: CipherSpecItem, itemValue: Uint8Array): void-End-->
 
@@ -1088,7 +1538,7 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Cipher-readonly algName: string--><!--Device-Cipher-readonly algName: string-End-->
 

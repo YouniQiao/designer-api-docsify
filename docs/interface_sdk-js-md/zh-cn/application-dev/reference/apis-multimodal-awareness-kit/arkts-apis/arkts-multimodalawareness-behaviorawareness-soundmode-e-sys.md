@@ -6,8 +6,6 @@ export enum SoundMode
 
 声音模式枚举。
 
-@enum { string }
-
 **起始版本：** 26.2.0
 
 <!--Device-behaviorAwareness-export enum SoundMode--><!--Device-behaviorAwareness-export enum SoundMode-End-->

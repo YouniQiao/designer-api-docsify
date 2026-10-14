@@ -4,8 +4,6 @@
 
 **Since:** 26.2.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace behaviorAwareness--><!--Device-unnamed-declare namespace behaviorAwareness-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -25,9 +23,9 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [offPerception](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md) | The service cancels the subscription relationship on the MSDP. |
-| [onPerception](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md) | Initiate subscription. The service side registers the subscription relationship with the MSDP and registers the awareness event callback. |
-| [submitFeedback](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md) | Submit user feedback. The service side sends the user feedback to the MSDP. |
+| [offPerception](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md#offperception) | The service cancels the subscription relationship on the MSDP. |
+| [onPerception](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md#onperception) | Initiate subscription. The service side registers the subscription relationship with the MSDP and registers the awareness event callback. |
+| [submitFeedback](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md#submitfeedback) | Submit user feedback. The service side sends the user feedback to the MSDP. |
 <!--DelEnd-->
 
 <!--Del-->

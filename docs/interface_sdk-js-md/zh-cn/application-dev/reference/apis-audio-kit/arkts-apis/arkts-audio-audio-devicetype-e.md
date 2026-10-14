@@ -22,7 +22,7 @@ BLUETOOTH_A2DP = 8
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-BLUETOOTH_A2DP = 8--><!--Device-DeviceType-BLUETOOTH_A2DP = 8-End-->
 
@@ -38,7 +38,7 @@ BLUETOOTH_SCO = 7
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-BLUETOOTH_SCO = 7--><!--Device-DeviceType-BLUETOOTH_SCO = 7-End-->
 
@@ -56,7 +56,7 @@ DEFAULT = 1000
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEFAULT = 1000--><!--Device-DeviceType-DEFAULT = 1000-End-->
 
@@ -72,7 +72,7 @@ DisplayPort（显示接口，简称DP），用于外接扩展设备。
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DISPLAY_PORT = 23--><!--Device-DeviceType-DISPLAY_PORT = 23-End-->
 
@@ -88,7 +88,7 @@ EARPIECE = 1
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-EARPIECE = 1--><!--Device-DeviceType-EARPIECE = 1-End-->
 
@@ -134,7 +134,7 @@ INVALID = 0
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-INVALID = 0--><!--Device-DeviceType-INVALID = 0-End-->
 
@@ -164,7 +164,7 @@ MIC = 15
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-MIC = 15--><!--Device-DeviceType-MIC = 15-End-->
 
@@ -196,7 +196,7 @@ REMOTE_CAST = 24
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-REMOTE_CAST = 24--><!--Device-DeviceType-REMOTE_CAST = 24-End-->
 
@@ -212,7 +212,7 @@ REMOTE_DAUDIO = 29
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
 
@@ -228,7 +228,7 @@ SPEAKER = 2
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-SPEAKER = 2--><!--Device-DeviceType-SPEAKER = 2-End-->
 
@@ -272,7 +272,7 @@ USB耳机，带麦克风。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-USB_HEADSET = 22--><!--Device-DeviceType-USB_HEADSET = 22-End-->
 
@@ -288,7 +288,7 @@ WIRED_HEADPHONES = 4
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-WIRED_HEADPHONES = 4--><!--Device-DeviceType-WIRED_HEADPHONES = 4-End-->
 
@@ -304,7 +304,7 @@ WIRED_HEADSET = 3
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-WIRED_HEADSET = 3--><!--Device-DeviceType-WIRED_HEADSET = 3-End-->
 

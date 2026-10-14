@@ -30,7 +30,7 @@ Payload data of SEI message.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SeiMessage-payload: ArrayBuffer--><!--Device-SeiMessage-payload: ArrayBuffer-End-->
 
@@ -48,7 +48,7 @@ Payload type of SEI message.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SeiMessage-payloadType: int--><!--Device-SeiMessage-payloadType: int-End-->
 

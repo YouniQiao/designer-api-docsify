@@ -22,7 +22,7 @@ Close.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlStatus-CLOSE = 0--><!--Device-PiPControlStatus-CLOSE = 0-End-->
 
@@ -38,7 +38,7 @@ Open.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlStatus-OPEN = 1--><!--Device-PiPControlStatus-OPEN = 1-End-->
 
@@ -54,7 +54,7 @@ Pause.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlStatus-PAUSE = 0--><!--Device-PiPControlStatus-PAUSE = 0-End-->
 
@@ -70,7 +70,7 @@ Play.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlStatus-PLAY = 1--><!--Device-PiPControlStatus-PLAY = 1-End-->
 

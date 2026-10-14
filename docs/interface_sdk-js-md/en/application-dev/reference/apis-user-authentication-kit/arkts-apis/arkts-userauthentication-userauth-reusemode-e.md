@@ -24,7 +24,7 @@ For example, after a user uses face authentication to unlock the device, the aut
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2--><!--Device-ReuseMode-AUTH_TYPE_IRRELEVANT = 2-End-->
 
@@ -42,7 +42,7 @@ For example, after a user uses face authentication to unlock the device, the aut
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1--><!--Device-ReuseMode-AUTH_TYPE_RELEVANT = 1-End-->
 
@@ -60,7 +60,7 @@ For example, after a user uses face authentication to complete an operation in a
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_IRRELEVANT = 4-End-->
 
@@ -78,7 +78,7 @@ For example, after a user uses face authentication to complete payment in an app
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3--><!--Device-ReuseMode-CALLER_IRRELEVANT_AUTH_TYPE_RELEVANT = 3-End-->
 

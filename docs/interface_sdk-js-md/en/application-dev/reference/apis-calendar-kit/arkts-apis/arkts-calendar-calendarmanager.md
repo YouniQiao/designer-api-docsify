@@ -20,7 +20,7 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | Name | Description |
 | --- | --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md) | Obtains a CalendarManager object based on the context. |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) | Obtains a CalendarManager object based on the context. |
 
 ### Classes
 

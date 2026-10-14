@@ -112,7 +112,7 @@ contentModifier(modifier: ContentModifier<RadioConfiguration>)
 contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 ```
 
-定制Radio内容区的方法。与[contentModifier](#contentmodifier1)&lt;sup&gt;12+&lt;/sup &gt;相比，modifier参数新增了对undefined类型的支持。
+定制Radio内容区的方法。与[contentModifier](#contentmodifier1)<sup>12+</sup >相比，modifier参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

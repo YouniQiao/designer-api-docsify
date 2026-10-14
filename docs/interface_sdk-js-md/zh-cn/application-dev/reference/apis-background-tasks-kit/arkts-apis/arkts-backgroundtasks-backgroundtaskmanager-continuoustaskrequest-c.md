@@ -162,7 +162,7 @@ isModeSupported(): boolean
 
 **需要权限：** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-isModeSupported(): boolean--><!--Device-ContinuousTaskRequest-isModeSupported(): boolean-End-->
 
@@ -349,7 +349,7 @@ get backgroundTaskModes(): BackgroundTaskMode[]
 
 **起始版本：** 21
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]-End-->
 
@@ -367,7 +367,7 @@ set backgroundTaskModes(value: BackgroundTaskMode[])
 
 **起始版本：** 21
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])-End-->
 
@@ -387,7 +387,7 @@ get backgroundTaskSubmodes(): BackgroundTaskSubmode[]
 
 **起始版本：** 21
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]-End-->
 
@@ -405,7 +405,7 @@ set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])
 
 **起始版本：** 21
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])-End-->
 
@@ -491,7 +491,7 @@ get wantAgent(): WantAgent
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent--><!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent-End-->
 
@@ -507,7 +507,7 @@ set wantAgent(value: WantAgent)
 
 **起始版本：** 21
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)--><!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)-End-->
 

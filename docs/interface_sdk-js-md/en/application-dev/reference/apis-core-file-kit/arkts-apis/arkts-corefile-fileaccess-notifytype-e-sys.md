@@ -46,7 +46,7 @@ NOTIFY_DELETE = 1
 
 File deleted.
 
-See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback&lt;NotifyMessage&gt;)**.
+See examples 1 and 2 of **unregisterObserver(uri: string, callback: Callback<NotifyMessage>)**.
 
 **Since:** 10
 

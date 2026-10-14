@@ -126,7 +126,7 @@ static globalConnect<T extends CollectionType<S>, S extends object>(
   ): T | undefined
 ```
 
-Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\&lt;ClassA&gt;** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array&lt;Array\<ClassA>&gt;** persistence is not supported.
+Stores key-value pair data on the application disk. Supports the persistence of the following collection types: [Array, Map, Set, collections.Array, collections.Map, and collections.Set](../../../ui/state-management/arkts-new-persistencev2.md#types-supported-by-globalconnect). Note that when persisting data of the **Array\<ClassA>** type, you need to call [makeObserved](arkts-arkui-arkui-statemanagement-uiutils-c.md#makeobserved) to make the returned object observed. Multi-level nested sets are not supported. For example, **Array<Array\<ClassA>&gt;** persistence is not supported.
 
 > **NOTE:** 
 > 
@@ -136,7 +136,7 @@ Stores key-value pair data on the application disk. Supports the persistence of 
 > 
 > 3. Avoid using **connect** and **globalConnect** together because they have different data copy paths. If they must be used together, make sure the keys are unique to avoid application crashes.
 > 
-> For other general conditions, see the description of **globalConnect&lt;sup&gt;18+&lt;/sup&gt;**.
+> For other general conditions, see the description of **globalConnect<sup>18+</sup>**.
 
 **Since:** 23
 

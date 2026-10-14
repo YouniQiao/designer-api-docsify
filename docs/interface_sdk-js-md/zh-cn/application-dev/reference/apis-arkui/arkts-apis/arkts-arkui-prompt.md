@@ -12,8 +12,6 @@
 
 **替代接口：** [promptAction/promptAction](arkts-arkui-promptaction-n.md)
 
-**模型约束：** 此接口可在Stage模型和FA模型下使用。
-
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -34,7 +32,7 @@ import { prompt } from '@kit.ArkUI';
 | [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu2) | 创建并显示操作菜单，菜单响应后同步返回结果。 |
 | [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog1) | 创建并显示对话框，对话框响应结果异步返回。 |
 | [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog2) | 创建并显示对话框，对话框响应后同步返回结果。 |
-| [showToast](arkts-arkui-prompt-showtoast-f.md) | 创建并显示文本提示框。 |
+| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) | 创建并显示文本提示框。 |
 
 ### 接口
 

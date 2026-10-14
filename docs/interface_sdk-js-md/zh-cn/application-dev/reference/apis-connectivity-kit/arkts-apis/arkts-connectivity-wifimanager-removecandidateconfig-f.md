@@ -23,7 +23,7 @@ function removeCandidateConfig(networkId: number): Promise<void>
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-wifiManager-function removeCandidateConfig(networkId: int): Promise<void>--><!--Device-wifiManager-function removeCandidateConfig(networkId: int): Promise<void>-End-->
 
@@ -86,7 +86,7 @@ function removeCandidateConfig(networkId: number, callback: AsyncCallback<void>)
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-wifiManager-function removeCandidateConfig(networkId: int, callback: AsyncCallback<void>): void--><!--Device-wifiManager-function removeCandidateConfig(networkId: int, callback: AsyncCallback<void>): void-End-->
 

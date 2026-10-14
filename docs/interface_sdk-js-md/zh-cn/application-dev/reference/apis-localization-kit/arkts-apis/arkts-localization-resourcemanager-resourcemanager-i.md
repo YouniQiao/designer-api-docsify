@@ -46,7 +46,7 @@ addResource(path: string) : void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-addResource(path: string) : void--><!--Device-ResourceManager-addResource(path: string) : void-End-->
 
@@ -98,7 +98,7 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void--><!--Device-ResourceManager-closeRawFd(path: string, callback: _AsyncCallback<void>): void-End-->
 
@@ -160,7 +160,7 @@ closeRawFd(path: string): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-closeRawFd(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFd(path: string): Promise<void>-End-->
 
@@ -220,7 +220,7 @@ closeRawFdSync(path: string): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
 
@@ -277,7 +277,7 @@ getBoolean(resId: number): boolean
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getBoolean(resId: long): boolean--><!--Device-ResourceManager-getBoolean(resId: long): boolean-End-->
 
@@ -427,7 +427,7 @@ getBooleanByName(resName: string): boolean
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getBooleanByName(resName: string): boolean--><!--Device-ResourceManager-getBooleanByName(resName: string): boolean-End-->
 
@@ -500,7 +500,7 @@ getColor(resId: number, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColor(resId: long, callback: _AsyncCallback<long>): void-End-->
 
@@ -605,7 +605,7 @@ getColor(resId: number): Promise<number>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColor(resId: long): Promise<long>--><!--Device-ResourceManager-getColor(resId: long): Promise<long>-End-->
 
@@ -828,7 +828,7 @@ getColorByName(resName: string, callback: _AsyncCallback<number>): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void--><!--Device-ResourceManager-getColorByName(resName: string, callback: _AsyncCallback<long>): void-End-->
 
@@ -895,7 +895,7 @@ getColorByName(resName: string): Promise<number>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColorByName(resName: string): Promise<long>--><!--Device-ResourceManager-getColorByName(resName: string): Promise<long>-End-->
 
@@ -965,7 +965,7 @@ getColorByNameSync(resName: string) : number
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColorByNameSync(resName: string) : long--><!--Device-ResourceManager-getColorByNameSync(resName: string) : long-End-->
 
@@ -1038,7 +1038,7 @@ getColorSync(resId: number) : number
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getColorSync(resId: long) : long--><!--Device-ResourceManager-getColorSync(resId: long) : long-End-->
 
@@ -1190,7 +1190,7 @@ getConfiguration(callback: _AsyncCallback<Configuration>): void
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void--><!--Device-ResourceManager-getConfiguration(callback: _AsyncCallback<Configuration>): void-End-->
 
@@ -1239,7 +1239,7 @@ getConfiguration(): Promise<Configuration>
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getConfiguration(): Promise<Configuration>--><!--Device-ResourceManager-getConfiguration(): Promise<Configuration>-End-->
 
@@ -1284,7 +1284,7 @@ getConfigurationSync(): Configuration
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getConfigurationSync(): Configuration--><!--Device-ResourceManager-getConfigurationSync(): Configuration-End-->
 
@@ -1326,7 +1326,7 @@ getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void--><!--Device-ResourceManager-getDeviceCapability(callback: _AsyncCallback<DeviceCapability>): void-End-->
 
@@ -1375,7 +1375,7 @@ getDeviceCapability(): Promise<DeviceCapability>
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>--><!--Device-ResourceManager-getDeviceCapability(): Promise<DeviceCapability>-End-->
 
@@ -1420,7 +1420,7 @@ getDeviceCapabilitySync(): DeviceCapability
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability--><!--Device-ResourceManager-getDeviceCapabilitySync(): DeviceCapability-End-->
 
@@ -1741,7 +1741,7 @@ getDrawableDescriptor(resId: number, density?: number, type?: number): DrawableD
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptor(resId: long, density?: int, type?: int): DrawableDescriptor-End-->
 
@@ -1897,7 +1897,7 @@ getDrawableDescriptorByName(resName: string, density?: number, type?: number): D
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor--><!--Device-ResourceManager-getDrawableDescriptorByName(resName: string, density?: int, type?: int): DrawableDescriptor-End-->
 
@@ -2251,7 +2251,7 @@ getLocales(includeSystem?: boolean): Array<string>
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>--><!--Device-ResourceManager-getLocales(includeSystem?: boolean): Array<string>-End-->
 
@@ -2323,7 +2323,7 @@ getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
@@ -2382,7 +2382,7 @@ getMediaBase64ByName(resName: string, density: number, callback: _AsyncCallback<
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int, callback: _AsyncCallback<string>): void-End-->
 
@@ -2442,7 +2442,7 @@ getMediaBase64ByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string): Promise<string>-End-->
 
@@ -2504,7 +2504,7 @@ getMediaBase64ByName(resName: string, density: number): Promise<string>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>--><!--Device-ResourceManager-getMediaBase64ByName(resName: string, density: int): Promise<string>-End-->
 
@@ -2565,7 +2565,7 @@ getMediaBase64ByNameSync(resName: string, density?: number): string
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string--><!--Device-ResourceManager-getMediaBase64ByNameSync(resName: string, density?: int): string-End-->
 
@@ -2633,7 +2633,7 @@ getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
@@ -2692,7 +2692,7 @@ getMediaByName(resName: string, density: number, callback: _AsyncCallback<Uint8A
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaByName(resName: string, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
@@ -2752,7 +2752,7 @@ getMediaByName(resName: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string): Promise<Uint8Array>-End-->
 
@@ -2814,7 +2814,7 @@ getMediaByName(resName: string, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaByName(resName: string, density: int): Promise<Uint8Array>-End-->
 
@@ -2875,7 +2875,7 @@ getMediaByNameSync(resName: string, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaByNameSync(resName: string, density?: int): Uint8Array-End-->
 
@@ -2943,7 +2943,7 @@ getMediaContent(resId: number, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, callback: _AsyncCallback<Uint8Array>): void-End-->
 
@@ -3003,7 +3003,7 @@ getMediaContent(resId: number, density: number, callback: _AsyncCallback<Uint8Ar
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getMediaContent(resId: long, density: int, callback: _AsyncCallback<Uint8Array>): void-End-->
 
@@ -3063,7 +3063,7 @@ getMediaContent(resId: number): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long): Promise<Uint8Array>-End-->
 
@@ -3125,7 +3125,7 @@ getMediaContent(resId: number, density: number): Promise<Uint8Array>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>--><!--Device-ResourceManager-getMediaContent(resId: long, density: int): Promise<Uint8Array>-End-->
 
@@ -3456,7 +3456,7 @@ getMediaContentBase64(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, callback: _AsyncCallback<string>): void-End-->
 
@@ -3515,7 +3515,7 @@ getMediaContentBase64(resId: number, density: number, callback: _AsyncCallback<s
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int, callback: _AsyncCallback<string>): void-End-->
 
@@ -3575,7 +3575,7 @@ getMediaContentBase64(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long): Promise<string>-End-->
 
@@ -3637,7 +3637,7 @@ getMediaContentBase64(resId: number, density: number): Promise<string>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>--><!--Device-ResourceManager-getMediaContentBase64(resId: long, density: int): Promise<string>-End-->
 
@@ -3968,7 +3968,7 @@ getMediaContentBase64Sync(resId: number, density?: number): string
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string--><!--Device-ResourceManager-getMediaContentBase64Sync(resId: long, density?: int): string-End-->
 
@@ -4109,7 +4109,7 @@ getMediaContentSync(resId: number, density?: number): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array--><!--Device-ResourceManager-getMediaContentSync(resId: long, density?: int): Uint8Array-End-->
 
@@ -4526,7 +4526,7 @@ getOverrideConfiguration(): Configuration
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getOverrideConfiguration(): Configuration--><!--Device-ResourceManager-getOverrideConfiguration(): Configuration-End-->
 
@@ -4573,7 +4573,7 @@ getOverrideResourceManager(configuration?: Configuration): ResourceManager
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager--><!--Device-ResourceManager-getOverrideResourceManager(configuration?: Configuration): ResourceManager-End-->
 
@@ -4638,7 +4638,7 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void--><!--Device-ResourceManager-getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void-End-->
 
@@ -4707,7 +4707,7 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>-End-->
 
@@ -4777,7 +4777,7 @@ getRawFdSync(path: string): RawFileDescriptor
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor--><!--Device-ResourceManager-getRawFdSync(path: string): RawFileDescriptor-End-->
 
@@ -4836,7 +4836,7 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
@@ -4896,7 +4896,7 @@ getRawFileContent(path: string): Promise<Uint8Array>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
 
@@ -4957,7 +4957,7 @@ getRawFileContentSync(path: string): Uint8Array
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
 
@@ -5020,7 +5020,7 @@ getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getRawFileList(path: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
@@ -5078,7 +5078,7 @@ getRawFileList(path: string): Promise<Array<string>>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>--><!--Device-ResourceManager-getRawFileList(path: string): Promise<Array<string>>-End-->
 
@@ -5139,7 +5139,7 @@ getRawFileListSync(path: string): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>--><!--Device-ResourceManager-getRawFileListSync(path: string): Array<string>-End-->
 
@@ -5199,7 +5199,7 @@ getResourceName(resId: number): string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getResourceName(resId: long): string--><!--Device-ResourceManager-getResourceName(resId: long): string-End-->
 
@@ -5269,7 +5269,7 @@ getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): 
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayByName(resName: string, callback: _AsyncCallback<Array<string>>): void-End-->
 
@@ -5341,7 +5341,7 @@ getStringArrayByName(resName: string): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayByName(resName: string): Promise<Array<string>>-End-->
 
@@ -5415,7 +5415,7 @@ getStringArrayByNameSync(resName: string): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>--><!--Device-ResourceManager-getStringArrayByNameSync(resName: string): Array<string>-End-->
 
@@ -5492,7 +5492,7 @@ getStringArrayValue(resId: number, callback: _AsyncCallback<Array<string>>): voi
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void--><!--Device-ResourceManager-getStringArrayValue(resId: long, callback: _AsyncCallback<Array<string>>): void-End-->
 
@@ -5564,7 +5564,7 @@ getStringArrayValue(resId: number): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>--><!--Device-ResourceManager-getStringArrayValue(resId: long): Promise<Array<string>>-End-->
 
@@ -5799,7 +5799,7 @@ getStringArrayValueSync(resId: number): Array<string>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>--><!--Device-ResourceManager-getStringArrayValueSync(resId: long): Array<string>-End-->
 
@@ -5959,7 +5959,7 @@ getStringByName(resName: string, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringByName(resName: string, callback: _AsyncCallback<string>): void-End-->
 
@@ -6026,7 +6026,7 @@ getStringByName(resName: string): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringByName(resName: string): Promise<string>--><!--Device-ResourceManager-getStringByName(resName: string): Promise<string>-End-->
 
@@ -6552,7 +6552,7 @@ getStringValue(resId: number, callback: _AsyncCallback<string>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void--><!--Device-ResourceManager-getStringValue(resId: long, callback: _AsyncCallback<string>): void-End-->
 
@@ -6636,7 +6636,7 @@ getStringValue(resId: number): Promise<string>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getStringValue(resId: long): Promise<string>--><!--Device-ResourceManager-getStringValue(resId: long): Promise<string>-End-->
 
@@ -6845,7 +6845,7 @@ getSymbol(resId: number) : number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getSymbol(resId: long) : long--><!--Device-ResourceManager-getSymbol(resId: long) : long-End-->
 
@@ -6971,7 +6971,7 @@ getSymbolByName(resName: string) : number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-getSymbolByName(resName: string) : long--><!--Device-ResourceManager-getSymbolByName(resName: string) : long-End-->
 
@@ -7030,7 +7030,7 @@ isRawDir(path: string): boolean
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-isRawDir(path: string): boolean--><!--Device-ResourceManager-isRawDir(path: string): boolean-End-->
 
@@ -7100,7 +7100,7 @@ removeResource(path: string) : void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-removeResource(path: string) : void--><!--Device-ResourceManager-removeResource(path: string) : void-End-->
 
@@ -7152,7 +7152,7 @@ updateOverrideConfiguration(configuration: Configuration): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void--><!--Device-ResourceManager-updateOverrideConfiguration(configuration: Configuration): void-End-->
 

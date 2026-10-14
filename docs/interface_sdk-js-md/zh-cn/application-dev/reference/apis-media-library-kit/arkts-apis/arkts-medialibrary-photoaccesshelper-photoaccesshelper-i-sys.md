@@ -677,7 +677,7 @@ convertAssetToCompatibleAsset(assets: Array<PhotoAsset>): Promise<Array<PhotoAss
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API. |
-| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>Invalid Array&lt;PhotoAsset&gt;. |
+| [23800151](../errorcode-medialibrary.md#23800151-场景参数校验不通过) | The scenario parameter verification fails. Possible causes:<br>Invalid Array<PhotoAsset>. |
 
 <!--Del-->
 **示例**

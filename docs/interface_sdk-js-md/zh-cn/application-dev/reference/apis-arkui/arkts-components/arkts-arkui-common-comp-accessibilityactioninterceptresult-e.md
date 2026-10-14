@@ -4,7 +4,7 @@
 declare enum AccessibilityActionInterceptResult
 ```
 
-intercept action的枚举@enum { number }
+intercept action的枚举
 
 **起始版本：** 20
 

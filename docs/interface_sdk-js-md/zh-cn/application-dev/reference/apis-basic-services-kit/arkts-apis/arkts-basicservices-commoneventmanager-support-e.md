@@ -449,7 +449,7 @@ COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'--><!--Device-Support-COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'-End-->
 
@@ -467,7 +467,7 @@ datashare服务启动完成后，将会触发事件通知服务发布该系统�
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'--><!--Device-Support-COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'-End-->
 
@@ -629,7 +629,7 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN'-End-->
 
@@ -649,7 +649,7 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'-End-->
 
@@ -669,7 +669,7 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGO
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'-End-->
 
@@ -689,7 +689,7 @@ COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOU
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID'-End-->
 
@@ -1129,7 +1129,7 @@ COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'--><!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'-End-->
 
@@ -1147,7 +1147,7 @@ COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'--><!--Device-Support-COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'-End-->
 
@@ -1581,7 +1581,7 @@ COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'--><!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'-End-->
 
@@ -1631,7 +1631,7 @@ COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'--><!--Device-Support-COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'-End-->
 
@@ -1699,7 +1699,7 @@ COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'--><!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'-End-->
 
@@ -1735,7 +1735,7 @@ COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'--><!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'-End-->
 

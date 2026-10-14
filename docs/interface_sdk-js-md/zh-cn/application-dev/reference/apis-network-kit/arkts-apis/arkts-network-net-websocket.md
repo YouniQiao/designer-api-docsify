@@ -24,8 +24,8 @@ import { webSocket } from '@kit.NetworkKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createWebSocket](arkts-network-websocket-createwebsocket-f.md) | 创建一个WebSocket对象，里面包括建立连接、关闭连接、发送数据和订阅/取消订阅WebSocket连接的打开事件、接收到服务器消息事件、关闭事件和错误事件。 |
-| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md) | 创建一个WebSocketServer对象，包括启动服务、发送数据、关闭连接、列出客户端信息、停止服务，订阅/取消订阅webSocket连接的连接事件、接收到客户端消息事件、关闭事件和错误事件。 |
+| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createwebsocket) | 创建一个WebSocket对象，里面包括建立连接、关闭连接、发送数据和订阅/取消订阅WebSocket连接的打开事件、接收到服务器消息事件、关闭事件和错误事件。 |
+| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createwebsocketserver) | 创建一个WebSocketServer对象，包括启动服务、发送数据、关闭连接、列出客户端信息、停止服务，订阅/取消订阅webSocket连接的连接事件、接收到客户端消息事件、关闭事件和错误事件。 |
 
 ### 接口
 

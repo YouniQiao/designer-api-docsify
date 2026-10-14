@@ -22,7 +22,7 @@ Attachment information (for example, an embedded external file).
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3--><!--Device-MediaType-MEDIA_TYPE_ATTACHMENT = 3-End-->
 
@@ -38,7 +38,7 @@ Media.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaType-MEDIA_TYPE_AUD = 0--><!--Device-MediaType-MEDIA_TYPE_AUD = 0-End-->
 
@@ -54,7 +54,7 @@ Auxiliary (track) information.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6--><!--Device-MediaType-MEDIA_TYPE_AUXILIARY = 6-End-->
 
@@ -70,7 +70,7 @@ Data.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-MediaType-MEDIA_TYPE_DATA = 4--><!--Device-MediaType-MEDIA_TYPE_DATA = 4-End-->
 
@@ -86,7 +86,7 @@ Subtitle.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2--><!--Device-MediaType-MEDIA_TYPE_SUBTITLE = 2-End-->
 
@@ -102,7 +102,7 @@ Metadata with a timestamp.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5--><!--Device-MediaType-MEDIA_TYPE_TIMED_METADATA = 5-End-->
 
@@ -118,7 +118,7 @@ The media type is not supported.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1--><!--Device-MediaType-MEDIA_TYPE_UNSUPPORTED = -1-End-->
 
@@ -134,7 +134,7 @@ Video.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MediaType-MEDIA_TYPE_VID = 1--><!--Device-MediaType-MEDIA_TYPE_VID = 1-End-->
 

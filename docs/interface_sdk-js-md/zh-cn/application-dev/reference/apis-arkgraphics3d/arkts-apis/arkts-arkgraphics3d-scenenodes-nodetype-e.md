@@ -6,8 +6,6 @@ export enum NodeType
 
 节点类型枚举。
 
-@enum { int }
-
 **起始版本：** 12
 
 <!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->

@@ -31,7 +31,7 @@ import { deviceInfo } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md) | 获取设备信息。 |
+| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo) | 获取设备信息。 |
 
 <!--Del-->
 ### 函数（系统接口）

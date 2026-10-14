@@ -12,7 +12,7 @@ Enum for location scenario
 
 **Substitutes:** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
-**Required permissions:** ohos.permission.LOCATION @enum { number }
+**Required permissions:** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum LocationRequestScenario--><!--Device-geolocation-export enum LocationRequestScenario-End-->
 

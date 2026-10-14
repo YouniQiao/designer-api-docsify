@@ -48,7 +48,7 @@ Creates a content modifier for the **Checkbox** component. Setting this attribut
 contentModifier(modifier: Optional<ContentModifier<CheckBoxConfiguration>>)
 ```
 
-Creates a content modifier for the **Checkbox** component. Compared with [contentModifier](#contentmodifier1)&lt;sup&gt;12 +&lt;/sup&gt;, this API supports the **undefined** type for the **modifier** parameter. Setting this attribute will invalidate other attribute settings.
+Creates a content modifier for the **Checkbox** component. Compared with [contentModifier](#contentmodifier1)<sup>12 +</sup>, this API supports the **undefined** type for the **modifier** parameter. Setting this attribute will invalidate other attribute settings.
 
 **Since:** 18
 
@@ -100,7 +100,7 @@ Sets the check mark style of the check box.
 mark(style: Optional<MarkStyle>)
 ```
 
-Sets the check mark style of the check box. Compared with [mark](#mark1)&lt;sup&gt;10+&lt;/sup&gt;, this API supports the **undefined** type for the **style** parameter.
+Sets the check mark style of the check box. Compared with [mark](#mark1)<sup>10+</sup>, this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -328,7 +328,7 @@ Sets the check box shape, including circle and rounded square. To adjust the sty
 shape(shape: Optional<CheckBoxShape>)
 ```
 
-Sets the check box shape. Compared with [shape](#shape1)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **shape** parameter. To adjust the style of the current check box, use the [contentModifier](#contentmodifier1) attribute.
+Sets the check box shape. Compared with [shape](#shape1)<sup>11+</sup>, this API supports the **undefined** type for the **shape** parameter. To adjust the style of the current check box, use the [contentModifier](#contentmodifier1) attribute.
 
 **Since:** 18
 
@@ -382,7 +382,7 @@ Sets the border color of the check box when it is not selected.
 unselectedColor(resColor: Optional<ResourceColor>)
 ```
 
-Sets the border color of the check box when it is not selected. Compared with [unselectedColor](#unselectedcolor1)&lt;sup&gt;10+&lt;/sup&gt;, this API supports the **undefined** type for the **resColor** parameter.
+Sets the border color of the check box when it is not selected. Compared with [unselectedColor](#unselectedcolor1)<sup>10+</sup>, this API supports the **undefined** type for the **resColor** parameter.
 
 **Since:** 18
 

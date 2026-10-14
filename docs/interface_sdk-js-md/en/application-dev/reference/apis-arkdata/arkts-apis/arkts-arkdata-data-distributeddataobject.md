@@ -20,9 +20,9 @@ import { distributedDataObject } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [create](arkts-arkdata-distributeddataobject-create-f.md) | Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types). |
-| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md) | Creates a random session ID. |
-| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md) | Creates a distributed data object. |
+| [create](arkts-arkdata-distributeddataobject-create-f.md#create) | Creates a distributed data object. The object properties support basic types (number, Boolean, and string) and complex types (array and nested basic types). |
+| [genSessionId](arkts-arkdata-distributeddataobject-gensessionid-f.md#gensessionid) | Creates a random session ID. |
+| [createDistributedObject](arkts-arkdata-distributeddataobject-createdistributedobject-f.md#createdistributedobject) | Creates a distributed data object. |
 
 ### Interfaces
 

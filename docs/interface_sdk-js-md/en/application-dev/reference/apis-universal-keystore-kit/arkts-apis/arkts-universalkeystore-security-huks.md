@@ -6,8 +6,6 @@ The keys managed by OpenHarmony Universal KeyStore (HUKS) can be imported by app
 
 **Since:** 8
 
-**Model restriction:** This API can be used in both the stage model and FA model.
-
 <!--Device-unnamed-declare namespace huks--><!--Device-unnamed-declare namespace huks-End-->
 
 **System capability:** SystemCapability.Security.Huks.Core
@@ -28,13 +26,13 @@ import { huks } from '@kit.UniversalKeystoreKit';
 | [abortSession](arkts-universalkeystore-huks-abortsession-f.md#abortsession2) | Aborts a key operation. This API uses a promise to return the result. |
 | [anonAttestKeyItem](arkts-universalkeystore-huks-anonattestkeyitem-f.md#anonattestkeyitem1) | Attests an anonymous key. This API uses an asynchronous callback to return the result. |
 | [anonAttestKeyItem](arkts-universalkeystore-huks-anonattestkeyitem-f.md#anonattestkeyitem2) | Attests an anonymous key. This API uses a promise to return the result. |
-| [anonAttestKeyItemOffline](arkts-universalkeystore-huks-anonattestkeyitemoffline-f.md) | Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result. |
+| [anonAttestKeyItemOffline](arkts-universalkeystore-huks-anonattestkeyitemoffline-f.md#anonattestkeyitemoffline) | Obtains an anonymous key certificate in offline mode. This API uses a promise to return the result. |
 | [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem1) | Attests a key. This API uses an asynchronous callback to return the result. |
 | [attestKeyItem](arkts-universalkeystore-huks-attestkeyitem-f.md#attestkeyitem2) | Attests a key. This API uses a promise to return the result. |
-| [decapsulate](arkts-universalkeystore-huks-decapsulate-f.md) | Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS or the app itself. If the app chooses to manage the key, the symmetric key is contained in the outData field of HuksReturnResult. |
+| [decapsulate](arkts-universalkeystore-huks-decapsulate-f.md#decapsulate) | Decapsulates a post-quantum cryptography key. This operation can be managed by HUKS or the app itself. If the app chooses to manage the key, the symmetric key is contained in the outData field of HuksReturnResult. |
 | [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem1) | Deletes a key. This API uses an asynchronous callback to return the result. |
 | [deleteKeyItem](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem2) | Deletes a key. This API uses a promise to return the result. |
-| [encapsulate](arkts-universalkeystore-huks-encapsulate-f.md) | Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key, the symmetric key is carried in the outData field of HuksReturnResult. |
+| [encapsulate](arkts-universalkeystore-huks-encapsulate-f.md#encapsulate) | Post-Quantum Cryptography key encapsulation operation, supporting key management by HUKS or by the application itself. If the application chooses to manage the key, the symmetric key is carried in the outData field of HuksReturnResult. |
 | [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem1) | Exports a key. This API uses an asynchronous callback to return the result. |
 | [exportKeyItem](arkts-universalkeystore-huks-exportkeyitem-f.md#exportkeyitem2) | Exports a key. This API uses a promise to return the result. |
 | [finishSession](arkts-universalkeystore-huks-finishsession-f.md#finishsession1) | Finishes the key operation. This API uses an asynchronous callback to return the result. |
@@ -54,12 +52,12 @@ import { huks } from '@kit.UniversalKeystoreKit';
 | [initSession](arkts-universalkeystore-huks-initsession-f.md#initsession2) | Initializes a session for a key operation. This API uses a promise to return the result. |
 | [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist1) | Checks whether a key exists. This API uses an asynchronous callback to return the result. |
 | [isKeyItemExist](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist2) | Checks whether a key exists. This API uses a promise to return the result. |
-| [listAliases](arkts-universalkeystore-huks-listaliases-f.md) | Lists key aliases. This API uses a promise to return the result. |
-| [unwrapKeyItem](arkts-universalkeystore-huks-unwrapkeyitem-f.md) | Unwraps a key. This API uses a promise to return the result. |
+| [listAliases](arkts-universalkeystore-huks-listaliases-f.md#listaliases) | Lists key aliases. This API uses a promise to return the result. |
+| [unwrapKeyItem](arkts-universalkeystore-huks-unwrapkeyitem-f.md#unwrapkeyitem) | Unwraps a key. This API uses a promise to return the result. |
 | [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession1) | Updates the key operation. This API uses an asynchronous callback to return the result. |
 | [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession2) | Updates the key operation by segment. The **updateSession** operation is used for user identity authentication and access control. This API uses an asynchronous callback to return the result. |
 | [updateSession](arkts-universalkeystore-huks-updatesession-f.md#updatesession3) | Updates the key operation. This API uses a promise to return the result. |
-| [wrapKeyItem](arkts-universalkeystore-huks-wrapkeyitem-f.md) | Wraps a key. This API uses a promise to return the result. |
+| [wrapKeyItem](arkts-universalkeystore-huks-wrapkeyitem-f.md#wrapkeyitem) | Wraps a key. This API uses a promise to return the result. |
 | [abort](arkts-universalkeystore-huks-abort-f.md#abort1) | Aborts a key operation. This API uses an asynchronous callback to return the result. |
 | [abort](arkts-universalkeystore-huks-abort-f.md#abort2) | Aborts a key operation. This API uses a promise to return the result. |
 | [deleteKey](arkts-universalkeystore-huks-deletekey-f.md#deletekey1) | Deletes a key. This API uses an asynchronous callback to return the result. |
@@ -72,7 +70,7 @@ import { huks } from '@kit.UniversalKeystoreKit';
 | [generateKey](arkts-universalkeystore-huks-generatekey-f.md#generatekey2) | Generates a key. This API uses a promise to return the result. |
 | [getKeyProperties](arkts-universalkeystore-huks-getkeyproperties-f.md#getkeyproperties1) | Obtains key properties. This API uses an asynchronous callback to return the result. |
 | [getKeyProperties](arkts-universalkeystore-huks-getkeyproperties-f.md#getkeyproperties2) | Obtains key properties. This API uses a promise to return the result. |
-| [getSdkVersion](arkts-universalkeystore-huks-getsdkversion-f.md) | Obtains the SDK version of the current system. |
+| [getSdkVersion](arkts-universalkeystore-huks-getsdkversion-f.md#getsdkversion) | Obtains the SDK version of the current system. |
 | [importKey](arkts-universalkeystore-huks-importkey-f.md#importkey1) | Imports a key in plaintext. This API uses an asynchronous callback to return the result. |
 | [importKey](arkts-universalkeystore-huks-importkey-f.md#importkey2) | Imports a key in plaintext. This API uses a promise to return the result. |
 | [init](arkts-universalkeystore-huks-init-f.md#init1) | Initializes a session for a key operation. This API uses an asynchronous callback to return the result. |
@@ -87,17 +85,17 @@ import { huks } from '@kit.UniversalKeystoreKit';
 
 | Name | Description |
 | --- | --- |
-| [anonAttestKeyItemAsUser](arkts-universalkeystore-huks-anonattestkeyitemasuser-f-sys.md) | Performs anonymous key attestation. This API uses a promise to return the result. |
-| [anonAttestKeyItemOfflineAsUser](arkts-universalkeystore-huks-anonattestkeyitemofflineasuser-f-sys.md) | Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result. |
-| [attestKeyItemAsUser](arkts-universalkeystore-huks-attestkeyitemasuser-f-sys.md) | Attests a key for the specified user. This API uses a promise to return the result. |
-| [deleteKeyItemAsUser](arkts-universalkeystore-huks-deletekeyitemasuser-f-sys.md) | Deletes a key for the specified user. This API uses a promise to return the result. |
-| [exportKeyItemAsUser](arkts-universalkeystore-huks-exportkeyitemasuser-f-sys.md) | Exports the public key for the specified user. This API uses a promise to return the result. |
-| [generateKeyItemAsUser](arkts-universalkeystore-huks-generatekeyitemasuser-f-sys.md) | Generates a key for the specified user. This API uses a promise to return the result. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through the promise and is only used to indicate whether the call is successful. |
-| [getKeyItemPropertiesAsUser](arkts-universalkeystore-huks-getkeyitempropertiesasuser-f-sys.md) | Obtains key properties for the specified user. This API uses a promise to return the result. |
-| [hasKeyItemAsUser](arkts-universalkeystore-huks-haskeyitemasuser-f-sys.md) | Checks whether a key exists for the specified user. This API uses a promise to return the result. |
-| [importKeyItemAsUser](arkts-universalkeystore-huks-importkeyitemasuser-f-sys.md) | Imports a plaintext key for the specified user. This API uses a promise to return the result. |
-| [importWrappedKeyItemAsUser](arkts-universalkeystore-huks-importwrappedkeyitemasuser-f-sys.md) | Imports a key securely for the specified user. This API uses a promise to return the result. |
-| [initSessionAsUser](arkts-universalkeystore-huks-initsessionasuser-f-sys.md) | Initialize a key session for the specified user. This API uses a promise to return the result. **huks.initSessionAsUser**, **huks.updateSession**, and **huks.finishSession** must be used together. |
+| [anonAttestKeyItemAsUser](arkts-universalkeystore-huks-anonattestkeyitemasuser-f-sys.md#anonattestkeyitemasuser) | Performs anonymous key attestation. This API uses a promise to return the result. |
+| [anonAttestKeyItemOfflineAsUser](arkts-universalkeystore-huks-anonattestkeyitemofflineasuser-f-sys.md#anonattestkeyitemofflineasuser) | Obtains an anonymous key certificate in offline mode for a specified user. This API uses a promise to return the result. |
+| [attestKeyItemAsUser](arkts-universalkeystore-huks-attestkeyitemasuser-f-sys.md#attestkeyitemasuser) | Attests a key for the specified user. This API uses a promise to return the result. |
+| [deleteKeyItemAsUser](arkts-universalkeystore-huks-deletekeyitemasuser-f-sys.md#deletekeyitemasuser) | Deletes a key for the specified user. This API uses a promise to return the result. |
+| [exportKeyItemAsUser](arkts-universalkeystore-huks-exportkeyitemasuser-f-sys.md#exportkeyitemasuser) | Exports the public key for the specified user. This API uses a promise to return the result. |
+| [generateKeyItemAsUser](arkts-universalkeystore-huks-generatekeyitemasuser-f-sys.md#generatekeyitemasuser) | Generates a key for the specified user. This API uses a promise to return the result. Based on the principle that the key cannot be transferred out of [Trusted Execution Environment (TEE)](../../../security/UniversalKeystoreKit/huks-concepts.md#tee), the key material content is not returned through the promise and is only used to indicate whether the call is successful. |
+| [getKeyItemPropertiesAsUser](arkts-universalkeystore-huks-getkeyitempropertiesasuser-f-sys.md#getkeyitempropertiesasuser) | Obtains key properties for the specified user. This API uses a promise to return the result. |
+| [hasKeyItemAsUser](arkts-universalkeystore-huks-haskeyitemasuser-f-sys.md#haskeyitemasuser) | Checks whether a key exists for the specified user. This API uses a promise to return the result. |
+| [importKeyItemAsUser](arkts-universalkeystore-huks-importkeyitemasuser-f-sys.md#importkeyitemasuser) | Imports a plaintext key for the specified user. This API uses a promise to return the result. |
+| [importWrappedKeyItemAsUser](arkts-universalkeystore-huks-importwrappedkeyitemasuser-f-sys.md#importwrappedkeyitemasuser) | Imports a key securely for the specified user. This API uses a promise to return the result. |
+| [initSessionAsUser](arkts-universalkeystore-huks-initsessionasuser-f-sys.md#initsessionasuser) | Initialize a key session for the specified user. This API uses a promise to return the result. **huks.initSessionAsUser**, **huks.updateSession**, and **huks.finishSession** must be used together. |
 <!--DelEnd-->
 
 ### Interfaces

@@ -260,7 +260,7 @@ Unregisters a callback to monitor changes in the progress of a batch download fo
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | No | Callback to unregister, which is registered by [onDownloadProgressChange](#ondownloadprogresschange). If this parameter is left empty, all progress-related callbacks are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[CloudAssetDownloadProgressInfo](arkts-medialibrary-photoaccesshelper-cloudassetdownloadprogressinfo-i-sys.md)&gt; | No | Callback to unregister, which is registered by onDownloadProgressChange. If this parameter is left empty, all progress-related callbacks are unregistered. |
 
 **Error codes:**
 

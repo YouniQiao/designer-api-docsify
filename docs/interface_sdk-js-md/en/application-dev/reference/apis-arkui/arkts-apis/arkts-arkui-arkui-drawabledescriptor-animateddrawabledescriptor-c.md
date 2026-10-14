@@ -103,7 +103,7 @@ A constructor used to create an **AnimatedDrawableDescriptor** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Animated image source address or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) array. <br> The address (**ResourceStr**) supports the following formats: application resources (**Resource**), sandbox path (file://&lt;bundleName&gt;/&lt;sandboxPath&gt;), and Base64 string. |
+| src | [ResourceStr](arkts-arkui-resourcestr-t.md) &#124; Array&lt;[image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md)&gt; | Yes | Animated image source address or [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) array. <br> The address (**ResourceStr**) supports the following formats: application resources (**Resource**), sandbox path (file://<bundleName>/<sandboxPath>), and Base64 string. |
 | options | [AnimationOptions](arkts-arkui-arkui-drawabledescriptor-animationoptions-i.md) | No | Options for animation playback. |
 
 **Examples**

@@ -8,8 +8,6 @@ The continuationManager module provides the continuation/collaboration managemen
 
 **Substitutes:** [distributedDeviceManager](../../apis-distributed-service-kit/arkts-apis/arkts-distributedservice-distributeddevicemanager.md)
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace continuationManager--><!--Device-unnamed-declare namespace continuationManager-End-->
 
 **System capability:** SystemCapability.Ability.DistributedAbilityManager

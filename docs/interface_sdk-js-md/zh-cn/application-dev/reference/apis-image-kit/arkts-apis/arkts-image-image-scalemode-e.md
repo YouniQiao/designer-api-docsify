@@ -22,9 +22,9 @@ CENTER_CROP = 1
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ScaleMode-CENTER_CROP = 1--><!--Device-ScaleMode-CENTER_CROP = 1-End-->
 
@@ -40,9 +40,9 @@ FIT_TARGET_SIZE = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ScaleMode-FIT_TARGET_SIZE = 0--><!--Device-ScaleMode-FIT_TARGET_SIZE = 0-End-->
 

@@ -22,7 +22,7 @@ The task is complete.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-COMPLETED = 0x40--><!--Device-State-COMPLETED = 0x40-End-->
 
@@ -38,7 +38,7 @@ The task fails.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-FAILED = 0x41--><!--Device-State-FAILED = 0x41-End-->
 
@@ -54,7 +54,7 @@ The task is initialized based on the configuration specified in [Config](arkts-b
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-INITIALIZED = 0x00--><!--Device-State-INITIALIZED = 0x00-End-->
 
@@ -70,7 +70,7 @@ The task is suspended and will be resumed later.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-PAUSED = 0x30--><!--Device-State-PAUSED = 0x30-End-->
 
@@ -86,7 +86,7 @@ The task is removed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-REMOVED = 0x50--><!--Device-State-REMOVED = 0x50-End-->
 
@@ -102,7 +102,7 @@ The task has failed at least once and is being executed again.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-RETRYING = 0x21--><!--Device-State-RETRYING = 0x21-End-->
 
@@ -118,7 +118,7 @@ The task is being executed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-RUNNING = 0x20--><!--Device-State-RUNNING = 0x20-End-->
 
@@ -134,7 +134,7 @@ The task is stopped.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-STOPPED = 0x31--><!--Device-State-STOPPED = 0x31-End-->
 
@@ -150,7 +150,7 @@ The task lacks resources for running or the resources for retries, or does not m
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-State-WAITING = 0x10--><!--Device-State-WAITING = 0x10-End-->
 

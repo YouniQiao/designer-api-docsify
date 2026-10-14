@@ -182,7 +182,7 @@ Sets the accessibility description. <br>This attribute provides additional conte
 accessibilityDescription(description: Resource): T
 ```
 
-Sets the accessibility description, with support for resource references using Resource. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>Reference resource of the accessibility description. You can specify further explanation <br>of the current component, for example, possible operation consequences, especially those that <br>cannot be learned from component attributes and accessibility text. If a component contains <br>both text information and the accessibility description, the text is read first and then the <br>accessibility description, when the component is selected.</p>
+Sets the accessibility description, with support for resource references using Resource. <br>This attribute provides additional context and explanation for the component, helping users understand its <br>functionality and purpose. <p><strong>NOTE</strong>: <br>Reference resource of the accessibility description. You can specify further explanation <br>of the current component, for example, possible operation consequences, especially those that <br>cannot be learned from component attributes and accessibility text. If a component contains <br>both text information and the accessibility description, the text is read first and then the <br>accessibility description, when the component is selected.</p>
 
 **Since:** 12
 
@@ -250,7 +250,7 @@ accessibilityGroup(value: boolean): T
 
 Sets whether to enable accessibility grouping.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>Whether to enable accessibility grouping. When accessibility grouping is enabled, <br>the component and all its children are treated as a single selectable unit, and the accessibility <br>service will no longer focus on the individual child components.</p>
+<p><strong>NOTE</strong> <br>Whether to enable accessibility grouping. When accessibility grouping is enabled, <br>the component and all its children are treated as a single selectable unit, and the accessibility <br>service will no longer focus on the individual child components.</p>
 
 **Since:** 12
 
@@ -286,7 +286,7 @@ accessibilityGroup(isGroup: boolean, accessibilityOptions: AccessibilityOptions)
 
 Sets whether to enable accessibility grouping.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; <br>If accessibility grouping is enabled and the component does not contain a universal text attribute <br>or an accessibility text attribute, the system will concatenate the universal text attributes of <br>its child components to form a merged text for the component. If a child component lacks a universal <br>text attribute, it will be ignored in the concatenation process.
+<p><strong>NOTE</strong> <br>If accessibility grouping is enabled and the component does not contain a universal text attribute <br>or an accessibility text attribute, the system will concatenate the universal text attributes of <br>its child components to form a merged text for the component. If a child component lacks a universal <br>text attribute, it will be ignored in the concatenation process.
 
 <br>When accessibilityPreferred is set to true, the system will prioritize concatenating the accessibility <br>text attributes of the child components to form the merged text. If a child component lacks an <br>accessibility text attribute, the system will continue to concatenate its universal text attribute. <br>If a child component lacks both, it will be ignored.</p>
 
@@ -321,7 +321,7 @@ Sets whether to enable accessibility grouping.
 accessibilityLevel(value: string): T
 ```
 
-Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. <p> Accessibility level, which is used to decide whether a component can be identified by the accessibility service. <br>The options are as follows: <br>"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. <br>"yes": The component can be recognized by accessibility services. <br>"no": The component cannot be recognized by accessibility services. <br>"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. &lt;strong&gt;NOTE&lt;/strong&gt; <br>When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: <br>1. The accessibility service internally determines whether the component can be recognized. <br>2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will <br>not focus on its child components, making them unrecognizable. <br>3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be <br>recognized by accessibility services.</p>
+Sets the accessibility level. This property determines whether the component can be recognized by accessibility services. <p> Accessibility level, which is used to decide whether a component can be identified by the accessibility service. <br>The options are as follows: <br>"auto": The component's recognizability is determined by the accessibility grouping service and ArkUI. <br>"yes": The component can be recognized by accessibility services. <br>"no": The component cannot be recognized by accessibility services. <br>"no-hide-descendants": Neither the component nor its child components can be recognized by accessibility services. <strong>NOTE</strong> <br>When accessibilityLevel is set to "auto", the component's recognizability depends on the following factors: <br>1. The accessibility service internally determines whether the component can be recognized. <br>2. If the parent component's accessibilityGroup property has isGroup set to true, the accessibility service will <br>not focus on its child components, making them unrecognizable. <br>3. If the parent component's accessibilityLevel is set to "no-hide-descendants", the component will not be <br>recognized by accessibility services.</p>
 
 **Since:** 12
 
@@ -588,7 +588,7 @@ accessibilityText(text: Resource): T
 
 Sets the accessibility text.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt; If a component has both text content and accessibility text, only the accessibility text is announced. <br>If a component is grouped for accessibility purposes but lacks both text content and accessibility <br>text, the screen reader will concatenate text from its child components (depth-first traversal). <br>To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
+<p><strong>NOTE</strong> If a component has both text content and accessibility text, only the accessibility text is announced. <br>If a component is grouped for accessibility purposes but lacks both text content and accessibility <br>text, the screen reader will concatenate text from its child components (depth-first traversal). <br>To prioritize accessibility text concatenation, set accessibilityPreferred in accessibilityGroup. </p>
 
 **Since:** 12
 
@@ -894,7 +894,7 @@ Sets the data types allowed to be dropped on this component. If **allowDrop** is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | Yes | Sets the data types allowed to be dropped on this component. Since API version 12, **null** can be set so that this component does not accept any data type. Since API version 23, custom data types **Array&lt;string&gt;** can be set. A custom data type is a data type string defined by the application. The string has no explicit format requirements, but it should not duplicate the standard type format of **UniformDataType** to avoid confusion with standard types. It is recommended to define it based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
+| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | Yes | Sets the data types allowed to be dropped on this component. Since API version 12, **null** can be set so that this component does not accept any data type. Since API version 23, custom data types **Array<string>** can be set. A custom data type is a data type string defined by the application. The string has no explicit format requirements, but it should not duplicate the standard type format of **UniformDataType** to avoid confusion with standard types. It is recommended to define it based on the principle of being easy to remember and distinguish.<br>**Since:** 23 |
 
 **Return value:**
 
@@ -1212,7 +1212,7 @@ Defines the background material blur style. It encapsulates various blur radius,
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions): T
 ```
 
-Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to [backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundblurstyle1), the **style** parameter supports the **undefined** type.
+Defines the background material blur style. It encapsulates various blur radius, mask color, mask opacity, saturation, and brightness values through enum values. Compared to [backgroundBlurStyle<sup>9+</sup>](#backgroundblurstyle1), the **style** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1315,7 +1315,7 @@ Sets the background brightness of the component.
 backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
-Sets the background brightness of the component. Compared to [backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundbrightness1), the **options** parameter supports the **undefined** type.
+Sets the background brightness of the component. Compared to [backgroundBrightness<sup>12+</sup>](#backgroundbrightness1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1479,7 +1479,7 @@ Sets the background effect of the component, including the blur radius, brightne
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundeffect1), the **options** parameter supports the **undefined** type.
+Sets the background effect of the component, including the blur radius, brightness, saturation, and color. Compared to [backgroundEffect<sup>11+</sup>](#backgroundeffect1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -1856,7 +1856,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShown | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:<br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. </p> |
+| isShown | boolean | Yes | true means display content, false means hide content, default is false.<p><strong>NOTE</strong>: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. To trigger dragging by long presses is not supported. </p> |
 | content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -1888,7 +1888,7 @@ Binds a context menu to the component, whose visibility is subject to the isShow
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isShow | boolean | Yes | true means display content, false means hide content, default is false. <p>&lt;strong&gt;NOTE&lt;/strong&gt;:<br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. </p>. |
+| isShow | boolean | Yes | true means display content, false means hide content, default is false.<p><strong>NOTE</strong>: <br>The menu can be displayed properly only when the related page has been constructed. If this parameter is set to true before the construction is complete, display issues, such as misplacement, distortion, or failure to pop up, may occur. Dragging via long press is not supported. </p>. |
 | content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; | Yes | Indicates the content of context menu. |
 | options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | No | Indicates the options of context menu. |
 
@@ -2069,7 +2069,7 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
+Popup control <p><strong>NOTE</strong>: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
 **Since:** 7
 
@@ -2186,7 +2186,7 @@ Defines how the component's content (including the content of it child component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [BlendMode](arkts-arkui-common-comp-blendmode-e.md) | Yes | Blend mode.<br>Default value: **BlendMode.NONE** <br>**NOTE:** <br>When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen. <br>Default value: **BlendApplyType.FAST** <br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as  [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen. <br>Default value: **BlendApplyType.FAST** <br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as  [linearGradientBlur<sup>12+</sup>](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
 
 **Return value:**
 
@@ -2202,7 +2202,7 @@ Defines how the component's content (including the content of it child component
 blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
-Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to [blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendmode1), the **mode** parameter supports the **undefined** type.
+Defines how the component's content (including the content of it child components) is blended with the existing content on the canvas (possibly offscreen canvas) below. Compared to [blendMode<sup>11+</sup>](#blendmode1), the **mode** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -2221,7 +2221,7 @@ Defines how the component's content (including the content of it child component
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[BlendMode](arkts-arkui-common-comp-blendmode-e.md)&gt; | Yes | Blend mode.<br>Default value: **BlendMode.NONE** <br>If **mode** is **undefined**, the component reverts to its original effect of not enabling offscreen rendering as a whole before blending with the parent component. <br>**NOTE:** <br>When **BlendMode.NONE** is used, the blend effect is **BlendMode.SRC_OVER** by default, and **BlendApplyType** does not take effect. |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen. <br>Default value: **BlendApplyType.FAST** <br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as  [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | No | Whether the blend mode is implemented offscreen. <br>Default value: **BlendApplyType.FAST** <br>**NOTE:** <br>1. **BlendApplyType.FAST**: The blend mode is not implemented offscreen. <br>2. **BlendApplyType.OFFSCREEN**: An offscreen canvas of the size of the current component is created. The content of the current component (including child components) is then drawn onto the offscreen canvas, and blended with the existing content on the canvas below using the specified blend mode. This approach may cause issues with screen capture for APIs such as  [linearGradientBlur<sup>12+</sup>](#lineargradientblur1), [backgroundEffect](#backgroundeffect1), [brightness](#brightness1), and [blur](#blur1). |
 
 **Return value:**
 
@@ -2794,7 +2794,7 @@ Sets whether to clip the areas of child components that extend beyond this compo
 clip(clip: Optional<boolean>): T
 ```
 
-Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with [clip&lt;sup&gt;12+&lt;/sup&gt;](#clip1), this API supports the **undefined** type.
+Sets whether to clip the areas of child components that extend beyond this component's bounds, that is, whether to perform clipping based on the edge contour of the parent container If this API is not used, the area of child components extending beyond the current component's bounds is not clipped by default. Compared with [clip<sup>12+</sup>](#clip1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -2911,7 +2911,7 @@ Clips this component according to the specified shape (which may include positio
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Clips this component according to the specified shape (which may include position information). Compared with [clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape1), this API supports the **undefined** type.
+Clips this component according to the specified shape (which may include position information). Compared with [clipShape<sup>12+</sup>](#clipshape1), this API supports the **undefined** type.
 
 > **NOTE:** 
 > 
@@ -4976,7 +4976,7 @@ Applies a light up effect to the component.
 lightUpEffect(degree: Optional<number>): T
 ```
 
-Applies a light up effect to the component. Compared to [lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightupeffect1), the **degree** parameter supports the **undefined** type.
+Applies a light up effect to the component. Compared to [lightUpEffect<sup>12+</sup>](#lightupeffect1), the **degree** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -5107,7 +5107,7 @@ Applies a linear gradient foreground blur effect to the component.
 linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T
 ```
 
-Applies a linear gradient foreground blur effect to the component. Compared with [linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1), this API supports the **undefined** type.
+Applies a linear gradient foreground blur effect to the component. Compared with [linearGradientBlur<sup>12+</sup>](#lineargradientblur1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5232,7 +5232,7 @@ Adds a mask to the component to indicate the progress.
 mask(mask: Optional<ProgressMask>): T
 ```
 
-Adds a mask to the component to indicate the progress. Compared with [mask&lt;sup&gt;12+&lt;/sup&gt;](#mask1), this API supports the **undefined** type.
+Adds a mask to the component to indicate the progress. Compared with [mask<sup>12+</sup>](#mask1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5336,7 +5336,7 @@ Adds a mask of the specified shape to the component.
 maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-Adds a mask of the specified shape to the component. Compared with [maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskshape1), this API supports the **undefined** type.
+Adds a mask of the specified shape to the component. Compared with [maskShape<sup>12+</sup>](#maskshape1), this API supports the **undefined** type.
 
 **Since:** 18
 
@@ -5622,7 +5622,7 @@ Sets how the component content is obscured.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.<br>This API is only available for the [Image](arkts-arkui-image-comp.md)<!--Del-->, [FormComponent](arkts-arkui-formcomponent-comp-sys.md)&lt;sup&gt;12+&lt;/sup&gt;,<!--DelEnd--> and [Text](arkts-arkui-text-comp.md) components.<br>**NOTE:** <br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any [styled string](../arkts-apis/arkts-arkui-styledstring.md#styled_string) configured. <br>Default value: []. |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | Yes | How the component content is obscured.<br>This API is only available for the [Image](arkts-arkui-image-comp.md)<!--Del-->, [FormComponent](arkts-arkui-formcomponent-comp-sys.md)<sup>12+</sup>,<!--DelEnd--> and [Text](arkts-arkui-text-comp.md) components.<br>**NOTE:** <br>To obscure an image when it is being loaded, you must set the width and height of the **Image** component.<br>Obscuring is not available for **Text** components that have child components or have any [styled string](../arkts-apis/arkts-arkui-styledstring.md#styled_string) configured. <br>Default value: []. |
 
 **Return value:**
 
@@ -7147,7 +7147,7 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](#scale1) attribute. To enable support for the [scale](#scale1) attribute, use [onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange2)and set **measureFromViewport** to **true**.
+> - This API does not support the [scale](#scale1) attribute. To enable support for the [scale](#scale1) attribute, use [onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange2)and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -7814,7 +7814,7 @@ Applies a pixel stretch effect to the component.
 pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
-Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelstretcheffect1), the **options** parameter supports the **undefined** type.
+Applies a pixel stretch effect to the component. Compared to [pixelStretchEffect<sup>12+</sup>](#pixelstretcheffect1), the **options** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -8886,7 +8886,7 @@ Applies a spherical effect to the component.
 sphericalEffect(effect: Optional<number>): T
 ```
 
-Applies a spherical effect to the component. Compared to [sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericaleffect1), the **effect** parameter supports the **undefined** type.
+Applies a spherical effect to the component. Compared to [sphericalEffect<sup>12+</sup>](#sphericaleffect1), the **effect** parameter supports the **undefined** type.
 
 **Since:** 18
 
@@ -9196,7 +9196,7 @@ Displays the matrix transformation when 2D transformation is performed. If 3D tr
 transform(transform: Optional<object>): T
 ```
 
-Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the [transform3D](#transform3d) API is required. Compared with [transform](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform), the transform&lt;sup&gt;18+&lt;/sup&gt; parameter supports the undefined type.
+Displays the matrix transformation when 2D transformation is performed. If 3D transformation is included, the [transform3D](#transform3d) API is required. Compared with [transform](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-transformation.md#transform), the transform<sup>18+</sup> parameter supports the undefined type.
 
 **Since:** 18
 
@@ -9527,7 +9527,7 @@ Sets whether to render child node shadows at the same layer, enabling shadow ove
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useshadowbatching1), this API supports the **undefined** type for the **use** parameter.
+Sets whether to render child node shadows at the same layer, enabling shadow overlap within the same layer. Compared with [useShadowBatching<sup>11+</sup>](#useshadowbatching1), this API supports the **undefined** type for the **use** parameter.
 
 **Since:** 18
 

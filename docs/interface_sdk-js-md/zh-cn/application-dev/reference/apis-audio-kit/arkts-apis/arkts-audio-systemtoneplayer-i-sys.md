@@ -366,7 +366,7 @@ on(type: 'error', callback: ErrorCallback): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'error' | 是 | 事件回调类型，支持的事件为'error'，当提示音播放过程中发生错误时，触发该事件。 |
-| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的。[on('error')](../../apis-media-kit/arkts-apis/arkts-media-media-avplayer-i.md#onerror)。 |
+| callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 回调函数，返回错误码和错误信息。错误码请参考AVPlayer的。on('error')。 |
 
 **错误码：**
 

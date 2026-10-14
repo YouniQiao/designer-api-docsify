@@ -8,8 +8,6 @@
 
 **起始版本：** 22
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 
 **系统能力：** SystemCapability.Customization.EnterpriseDeviceManager
@@ -26,7 +24,7 @@ import { common } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md) | 查询是否支持某个管控特性 |
+| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md#isfeaturesupported) | 查询是否支持某个管控特性 |
 
 ### 接口
 

@@ -12,7 +12,7 @@ export enum LocationPrivacyType
 
 **替代接口：** [LocationPrivacyType](arkts-location-geolocationmanager-locationprivacytype-e-sys.md)
 
-**需要权限：** ohos.permission.LOCATION @enum { number }
+**需要权限：** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum LocationPrivacyType--><!--Device-geolocation-export enum LocationPrivacyType-End-->
 

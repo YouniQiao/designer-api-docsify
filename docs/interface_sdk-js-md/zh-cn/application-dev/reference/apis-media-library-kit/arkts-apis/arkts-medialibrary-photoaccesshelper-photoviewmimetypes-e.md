@@ -22,7 +22,7 @@ IMAGE_TYPE = 'image/*'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'--><!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'-End-->
 
@@ -38,7 +38,7 @@ IMAGE_VIDEO_TYPE = '*/*'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'--><!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'-End-->
 
@@ -54,7 +54,7 @@ MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'--><!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'-End-->
 
@@ -70,7 +70,7 @@ VIDEO_TYPE = 'video/*'
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
 

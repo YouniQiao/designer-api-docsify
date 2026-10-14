@@ -6,8 +6,6 @@ enum AVMusicTemplateErrorCode
 
 表示错误码类型的枚举。
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode--><!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode-End-->

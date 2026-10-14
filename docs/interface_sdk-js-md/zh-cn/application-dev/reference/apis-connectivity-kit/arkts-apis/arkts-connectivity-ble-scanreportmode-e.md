@@ -28,7 +28,7 @@ BATCH = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ScanReportMode-BATCH = 2--><!--Device-ScanReportMode-BATCH = 2-End-->
 
@@ -48,7 +48,7 @@ FENCE_SENSITIVITY_HIGH = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-ScanReportMode-FENCE_SENSITIVITY_HIGH = 11--><!--Device-ScanReportMode-FENCE_SENSITIVITY_HIGH = 11-End-->
 
@@ -68,7 +68,7 @@ FENCE_SENSITIVITY_LOW = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-ScanReportMode-FENCE_SENSITIVITY_LOW = 10--><!--Device-ScanReportMode-FENCE_SENSITIVITY_LOW = 10-End-->
 
@@ -86,7 +86,7 @@ NORMAL = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 <!--Device-ScanReportMode-NORMAL = 1--><!--Device-ScanReportMode-NORMAL = 1-End-->
 

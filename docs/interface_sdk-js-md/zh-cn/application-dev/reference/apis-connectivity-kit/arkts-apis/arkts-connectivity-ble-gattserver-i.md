@@ -34,7 +34,7 @@ server端添加服务。该操作会在蓝牙子系统中注册该服务，表�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-addService(service: GattService): void--><!--Device-GattServer-addService(service: GattService): void-End-->
 
@@ -105,7 +105,7 @@ close(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
 
@@ -149,7 +149,7 @@ connect(deviceId: string, autoConnect?: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-connect(deviceId: string, autoConnect?: boolean): void--><!--Device-GattServer-connect(deviceId: string, autoConnect?: boolean): void-End-->
 
@@ -201,7 +201,7 @@ disconnect(deviceId: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-disconnect(deviceId: string): void--><!--Device-GattServer-disconnect(deviceId: string): void-End-->
 
@@ -422,7 +422,7 @@ server端发送特征值变化通知或者指示给client端。使用Callback异
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void--><!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -490,7 +490,7 @@ server端发送特征值变化通知或者指示给client端。使用Promise异�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>-End-->
 
@@ -1341,7 +1341,7 @@ removeAllServices(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-removeAllServices(): void--><!--Device-GattServer-removeAllServices(): void-End-->
 
@@ -1384,7 +1384,7 @@ removeService(serviceUuid: string): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-removeService(serviceUuid: string): void--><!--Device-GattServer-removeService(serviceUuid: string): void-End-->
 
@@ -1444,7 +1444,7 @@ client请求是指通过下述接口订阅回调收到的请求消息：
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void-End-->
 

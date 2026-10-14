@@ -24,7 +24,7 @@ The flash is turned on.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FlashState-FLASH_STATE_FLASHING = 2--><!--Device-FlashState-FLASH_STATE_FLASHING = 2-End-->
 
@@ -42,7 +42,7 @@ The flash is available.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FlashState-FLASH_STATE_READY = 1--><!--Device-FlashState-FLASH_STATE_READY = 1-End-->
 
@@ -60,7 +60,7 @@ The flash is unavailable. This is the default value.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FlashState-FLASH_STATE_UNAVAILABLE = 0--><!--Device-FlashState-FLASH_STATE_UNAVAILABLE = 0-End-->
 

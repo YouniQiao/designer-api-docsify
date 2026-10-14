@@ -22,7 +22,7 @@ CONFIG_DEVICE_ALGORITHMS = 'algorithms'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_DEVICE_ALGORITHMS = 'algorithms'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_ALGORITHMS = 'algorithms'-End-->
 
@@ -38,7 +38,7 @@ CONFIG_DEVICE_DESCRIPTION = 'description'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_DEVICE_DESCRIPTION = 'description'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_DESCRIPTION = 'description'-End-->
 
@@ -54,7 +54,7 @@ CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_UNIQUE_ID = 'deviceUniqueId'-End-->
 
@@ -70,7 +70,7 @@ CONFIG_DEVICE_VENDOR = 'vendor'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_DEVICE_VENDOR = 'vendor'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_VENDOR = 'vendor'-End-->
 
@@ -86,7 +86,7 @@ CONFIG_DEVICE_VERSION = 'version'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_DEVICE_VERSION = 'version'--><!--Device-PreDefinedConfigName-CONFIG_DEVICE_VERSION = 'version'-End-->
 
@@ -102,7 +102,7 @@ CONFIG_SESSION_CURRENT = 'currentSessionNum'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_SESSION_CURRENT = 'currentSessionNum'--><!--Device-PreDefinedConfigName-CONFIG_SESSION_CURRENT = 'currentSessionNum'-End-->
 
@@ -118,7 +118,7 @@ CONFIG_SESSION_MAX = 'maxSessionNum'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreDefinedConfigName-CONFIG_SESSION_MAX = 'maxSessionNum'--><!--Device-PreDefinedConfigName-CONFIG_SESSION_MAX = 'maxSessionNum'-End-->
 

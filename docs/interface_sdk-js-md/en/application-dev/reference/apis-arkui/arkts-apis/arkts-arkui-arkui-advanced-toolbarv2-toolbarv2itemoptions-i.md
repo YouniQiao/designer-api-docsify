@@ -68,7 +68,7 @@ accessibilityLevel?: string
 
 Accessibility level of the toolbar item, which controls whether the current item can be recognized by the accessibility service.
 
-&lt;/div&gt;Supported values:
+</div>Supported values:
 
 **"auto"**: The current value is converted to **"yes"**.
 

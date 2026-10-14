@@ -12,7 +12,7 @@ import { geoLocationManager } from '@kit.LocationKit';
 function off(type: 'locationChange', callback?: Callback<Location>): void
 ```
 
-Unsubscribe location changed. You are advised to use the [offLocationChange](#offlocationchange) instead.
+Unsubscribe location changed. You are advised to use the [offLocationChange](arkts-location-geolocationmanager-offlocationchange-f.md) instead.
 
 **Since:** 9
 

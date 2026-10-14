@@ -1293,7 +1293,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<Ac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
-> [on_SensorId.ACCELEROMETER](#on3)
+> [on](#on3)
 > 替代。
 
 **起始版本：** 8
@@ -1345,7 +1345,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
-> [on_SensorId.ACCELEROMETER_UNCALIBRATED](#on4)
+> [on](#on4)
 > 替代。
 
 **起始版本：** 8
@@ -1400,7 +1400,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<Li
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> [on_SensorId.AMBIENT_LIGHT](#on5)
+> [on](#on5)
 > 替代。
 
 **起始版本：** 8
@@ -1448,7 +1448,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_TEMPERATURE]
-> [on_SensorId.AMBIENT_TEMPERATURE](#on6)
+> [on](#on6)
 > 替代。
 
 **起始版本：** 8
@@ -1496,7 +1496,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Barome
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
-> [on_SensorId.BAROMETER](#on7)
+> [on](#on7)
 > 替代。
 
 **起始版本：** 8
@@ -1544,7 +1544,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityR
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
-> [on_SensorId.GRAVITY](#on8)
+> [on](#on8)
 > 替代。
 
 **起始版本：** 8
@@ -1594,7 +1594,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
-> [on_SensorId.GYROSCOPE](#on9)
+> [on](#on9)
 > 替代。
 
 **起始版本：** 8
@@ -1646,7 +1646,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Ca
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
-> [on_SensorId.GYROSCOPE_UNCALIBRATED](#on10)
+> [on](#on10)
 > 替代。
 
 **起始版本：** 8
@@ -1701,7 +1701,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
-> [on_SensorId.HALL](#on11)
+> [on](#on11)
 > 替代。
 
 **起始版本：** 8
@@ -1749,7 +1749,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
-> [on_SensorId.HEART_RATE](#on12)
+> [on](#on12)
 > 替代。
 
 **起始版本：** 8
@@ -1787,7 +1787,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humidit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
-> [on_SensorId.HUMIDITY](#on13)
+> [on](#on13)
 > 替代。
 
 **起始版本：** 8
@@ -1835,7 +1835,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
-> [on_SensorId.LINEAR_ACCELEROMETER](#on14)
+> [on](#on14)
 > 替代。
 
 **起始版本：** 8
@@ -1873,7 +1873,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<M
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
-> [on_SensorId.MAGNETIC_FIELD](#on15)
+> [on](#on15)
 > 替代。
 
 **起始版本：** 8
@@ -1923,7 +1923,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
-> [on_SensorId.MAGNETIC_FIELD_UNCALIBRATED](#on16)
+> [on](#on16)
 > 替代。
 
 **起始版本：** 8
@@ -1976,7 +1976,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Orie
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
-> [on_SensorId.ORIENTATION](#on17)
+> [on](#on17)
 > 替代。
 
 **起始版本：** 8
@@ -2026,7 +2026,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedome
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
-> [on_SensorId.PEDOMETER](#on18)
+> [on](#on18)
 > 替代。
 
 **起始版本：** 8
@@ -2076,7 +2076,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
-> [on_SensorId.PEDOMETER_DETECTION](#on19)
+> [on](#on19)
 > 替代。
 
 **起始版本：** 8
@@ -2126,7 +2126,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Proxim
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
-> [on_SensorId.PROXIMITY](#on20)
+> [on](#on20)
 > 替代。
 
 **起始版本：** 8
@@ -2174,7 +2174,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
-> [on_SensorId.ROTATION_VECTOR](#on21)
+> [on](#on21)
 > 替代。
 
 **起始版本：** 8
@@ -2225,7 +2225,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
-> [on_SensorId.SIGNIFICANT_MOTION](#on22)
+> [on](#on22)
 > 替代。
 
 **起始版本：** 8
@@ -2273,7 +2273,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<W
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
-> [on_SensorId.WEAR_DETECTION](#on23)
+> [on](#on23)
 > 替代。
 
 **起始版本：** 8

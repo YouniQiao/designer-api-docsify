@@ -4,7 +4,7 @@
 enum IntelligentVoiceErrorCode
 ```
 
-Enumerates intelligent voice error code. @enum {number}
+Enumerates intelligent voice error code.
 
 **Since:** 10
 

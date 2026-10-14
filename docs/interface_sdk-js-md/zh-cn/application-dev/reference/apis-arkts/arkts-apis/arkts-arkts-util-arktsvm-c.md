@@ -204,8 +204,6 @@ static offVMHeapMemoryPressure(): void
 
 取消注册在 GC 后堆内存超过临界预警阈值时触发的回调。
 
-@static
-
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -251,7 +249,7 @@ NOTE:无法保证在 OOM（内存溢出）前一定会触发该回调。
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 注册成功返回 `true`；若不在主线程调用或回调已注册，则返回 `false`。@static |
+| boolean | 注册成功返回 `true`；若不在主线程调用或回调已注册，则返回 `false`。 |
 
 **示例**
 

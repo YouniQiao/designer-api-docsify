@@ -66,7 +66,7 @@ connectAbility(want: Want, options: ConnectOptions): number
 将当前Ability连接到ServiceExtensionAbility。<br> <br>  
 > **说明：** <br>
 > <br>
-> 输入法应用不建议主动连接ServiceExtensionAbility，如需与系统组件通信建议使用sendPrivateCommand或[on('privateCommand')](arkts-ime-inputmethodengine-inputmethodability-i.md#onprivatecommand)私有命令通道。
+> 输入法应用不建议主动连接ServiceExtensionAbility，如需与系统组件通信建议使用sendPrivateCommand或on('privateCommand')私有命令通道。
 
 **起始版本：** 9
 
@@ -171,7 +171,7 @@ connectServiceExtensionAbility(want: Want, options: ConnectOptions): number
 将当前Ability连接到ServiceExtensionAbility。<br> <br>  
 > **说明：** <br>
 > <br>
-> 输入法应用不建议主动连接ServiceExtensionAbility，如需与系统组件通信建议使用sendPrivateCommand或[on('privateCommand')](arkts-ime-inputmethodengine-inputmethodability-i.md#onprivatecommand)私有命令通道。
+> 输入法应用不建议主动连接ServiceExtensionAbility，如需与系统组件通信建议使用sendPrivateCommand或on('privateCommand')私有命令通道。
 
 **起始版本：** 9
 

@@ -24,7 +24,7 @@ Logical 'AND', similar to 'and' in database queries. No **field** or **value** i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-AND = 7--><!--Device-OperationType-AND = 7-End-->
 
@@ -42,7 +42,7 @@ Adds a left parenthesis to the predicate, similar to "(" in database queries. It
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-BEGIN_WRAP = 11--><!--Device-OperationType-BEGIN_WRAP = 11-End-->
 
@@ -62,7 +62,7 @@ including both endpoints (closed interval). It uses the first two elements of th
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-BETWEEN = 13--><!--Device-OperationType-BETWEEN = 13-End-->
 
@@ -80,7 +80,7 @@ Adds a right parenthesis to the predicate, similar to ")" in database queries. I
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-END_WRAP = 12--><!--Device-OperationType-END_WRAP = 12-End-->
 
@@ -98,7 +98,7 @@ Checks for equality, using the first element of the **value** array to match the
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-EQUAL_TO = 1--><!--Device-OperationType-EQUAL_TO = 1-End-->
 
@@ -116,7 +116,7 @@ Checks whether the value is greater than the predicate, using the first element 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-GREATER_THAN = 3--><!--Device-OperationType-GREATER_THAN = 3-End-->
 
@@ -134,7 +134,7 @@ Checks whether the value is greater than or equal to the predicate, using the fi
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5--><!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5-End-->
 
@@ -152,7 +152,7 @@ Matches fields within a specified range, with a maximum value length of 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-IN = 9--><!--Device-OperationType-IN = 9-End-->
 
@@ -170,7 +170,7 @@ Checks whether the value is less than the predicate, using the first element of 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-LESS_THAN = 4--><!--Device-OperationType-LESS_THAN = 4-End-->
 
@@ -188,7 +188,7 @@ Checks whether the value is less than or equal to the predicate, using the first
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6--><!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6-End-->
 
@@ -208,7 +208,7 @@ excluding both endpoints (open interval). It uses the first two elements of the 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-NOT_BETWEEN = 14--><!--Device-OperationType-NOT_BETWEEN = 14-End-->
 
@@ -226,7 +226,7 @@ Checks for inequality, using the first element of the **value** array to match t
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-NOT_EQUAL_TO = 2--><!--Device-OperationType-NOT_EQUAL_TO = 2-End-->
 
@@ -244,7 +244,7 @@ Matches fields outside a specified range, with a maximum value length of 10.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-NOT_IN = 10--><!--Device-OperationType-NOT_IN = 10-End-->
 
@@ -262,7 +262,7 @@ Logical 'OR', similar to 'or' in database queries. No **field** or **value** is 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationType-OR = 8--><!--Device-OperationType-OR = 8-End-->
 

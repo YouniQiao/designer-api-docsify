@@ -65,7 +65,7 @@ Creates a **ListItem** component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | No | This parameter is deprecated and does not take effect in the current version. You are advised to use [ListItem&lt;sup&gt;10+&lt;/sup&gt;](#listitem) instead. |
+| value | string | No | This parameter is deprecated and does not take effect in the current version. You are advised to use [ListItem<sup>10+</sup>](#listitem) instead. |
 
 ## Summary
 

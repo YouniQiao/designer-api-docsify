@@ -22,7 +22,7 @@ The image rotates 0 degrees.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ImageRotation-ROTATION_0 = 0--><!--Device-ImageRotation-ROTATION_0 = 0-End-->
 
@@ -38,7 +38,7 @@ The image rotates 180 degrees.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ImageRotation-ROTATION_180 = 180--><!--Device-ImageRotation-ROTATION_180 = 180-End-->
 
@@ -54,7 +54,7 @@ The image rotates 270 degrees.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ImageRotation-ROTATION_270 = 270--><!--Device-ImageRotation-ROTATION_270 = 270-End-->
 
@@ -70,7 +70,7 @@ The image rotates 90 degrees.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
 

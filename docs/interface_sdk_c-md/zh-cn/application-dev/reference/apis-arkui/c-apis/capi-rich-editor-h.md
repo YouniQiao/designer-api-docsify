@@ -67,9 +67,9 @@ enum OH_ArkUI_HapticFeedbackMode
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_DISABLED = 0 |  |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_ENABLED = 1 |  |
-| OH_ARKUI_HAPTIC_FEEDBACK_MODE_AUTO = 2 |  |
+| OH_ARKUI_HAPTIC_FEEDBACK_MODE_DISABLED = 0 | 无振动效果。<br>**起始版本：** 24 |
+| OH_ARKUI_HAPTIC_FEEDBACK_MODE_ENABLED = 1 | 有振动效果。<br>**起始版本：** 24 |
+| OH_ARKUI_HAPTIC_FEEDBACK_MODE_AUTO = 2 | 跟随系统的振动效果。<br>**起始版本：** 24 |
 
 ### OH_ArkUI_TextEditorSpanType
 
@@ -87,11 +87,11 @@ enum OH_ArkUI_TextEditorSpanType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_TEXT = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_IMAGE = 1 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_MIXED = 2 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_BUILDER = 3 |  |
-| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_DEFAULT = 4 |  |
+| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_TEXT = 0 | 文本span。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_IMAGE = 1 | 图片span。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_MIXED = 2 | 混合span。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_BUILDER = 3 | 自定义布局span。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_SPAN_TYPE_DEFAULT = 4 | 默认span。<br>**起始版本：** 24 |
 
 ### OH_ArkUI_TextEditorResponseType
 
@@ -109,10 +109,10 @@ enum OH_ArkUI_TextEditorResponseType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_RIGHT_CLICK = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_LONG_PRESS = 1 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_SELECT = 2 |  |
-| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_DEFAULT = 3 |  |
+| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_RIGHT_CLICK = 0 | 通过鼠标右键触发菜单弹出。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_LONG_PRESS = 1 | 通过长按触发菜单弹出。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_SELECT = 2 | 通过鼠标选中触发菜单弹出。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_RESPONSE_TYPE_DEFAULT = 3 | 默认响应类型。<br>**起始版本：** 24 |
 
 ### OH_ArkUI_TextMenuType
 
@@ -130,8 +130,8 @@ enum OH_ArkUI_TextMenuType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_TEXT_EDITOR_SELECTION_MENU = 0 |  |
-| OH_ARKUI_TEXT_EDITOR_PREVIEW_MENU = 1 |  |
+| OH_ARKUI_TEXT_EDITOR_SELECTION_MENU = 0 | 文本选择菜单。<br>**起始版本：** 24 |
+| OH_ARKUI_TEXT_EDITOR_PREVIEW_MENU = 1 | 预览菜单。<br>**起始版本：** 24 |
 
 ### OH_ArkUI_TextEditorType
 

@@ -24,7 +24,7 @@ Content information. This type corresponds to the [SlotLevel](arkts-notification
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-CONTENT_INFORMATION = 3--><!--Device-SlotType-CONTENT_INFORMATION = 3-End-->
 
@@ -40,7 +40,7 @@ Customer service message. This type is used for messages between users and custo
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-CUSTOMER_SERVICE = 5--><!--Device-SlotType-CUSTOMER_SERVICE = 5-End-->
 
@@ -56,7 +56,7 @@ Live view. A third-party application cannot directly create a notification of th
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-LIVE_VIEW = 4--><!--Device-SlotType-LIVE_VIEW = 4-End-->
 
@@ -72,7 +72,7 @@ Other types. This type corresponds to the [SlotLevel](arkts-notification-notific
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-OTHER_TYPES = 0xFFFF--><!--Device-SlotType-OTHER_TYPES = 0xFFFF-End-->
 
@@ -88,7 +88,7 @@ Service information. This type corresponds to the [SlotLevel](arkts-notification
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-SERVICE_INFORMATION = 2--><!--Device-SlotType-SERVICE_INFORMATION = 2-End-->
 
@@ -104,7 +104,7 @@ Social communication. This type corresponds to the [SlotLevel](arkts-notificatio
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-SOCIAL_COMMUNICATION = 1--><!--Device-SlotType-SOCIAL_COMMUNICATION = 1-End-->
 
@@ -120,7 +120,7 @@ Unknown type. This type corresponds to the [SlotLevel](arkts-notification-notifi
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SlotType-UNKNOWN_TYPE = 0--><!--Device-SlotType-UNKNOWN_TYPE = 0-End-->
 

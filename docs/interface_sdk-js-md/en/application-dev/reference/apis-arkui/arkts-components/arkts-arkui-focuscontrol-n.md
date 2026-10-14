@@ -26,7 +26,7 @@ Focus control module, used to actively request focus for a specified component t
 
 | Name | Description |
 | --- | --- |
-| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. |
+| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. |
 
 ## Examples
 
@@ -4578,7 +4578,7 @@ struct KeyEventExample {
 
 ### Example 1: Obtaining Parameters Related to a Mouse Event
 
-This example demonstrates how to set a mouse event on a button. When the button is clicked using a mouse device, the [onMouse](#onmouse) event is triggered to obtain relevant mouse event parameters. Starting from API version 15, the [MouseEvent](#mouseevent) object provides access to the targetDisplayId, rawDeltaX, rawDeltaY, and pressedButtons parameters.
+This example demonstrates how to set a mouse event on a button. When the button is clicked using a mouse device, the [onMouse](arkts-arkui-common-comp-commonmethod-c.md#onmouse) event is triggered to obtain relevant mouse event parameters. Starting from API version 15, the [MouseEvent](#mouseevent) object provides access to the targetDisplayId, rawDeltaX, rawDeltaY, and pressedButtons parameters.
 
 For mouse wheel event examples, see [Axis Event](ts-universal-events-axis.md#example).
 

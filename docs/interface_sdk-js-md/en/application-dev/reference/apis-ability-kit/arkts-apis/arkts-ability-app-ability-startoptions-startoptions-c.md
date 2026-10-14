@@ -32,7 +32,7 @@ Operation class used to handle the result of an application launch request.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-StartOptions-completionHandler?: CompletionHandler--><!--Device-StartOptions-completionHandler?: CompletionHandler-End-->
 
@@ -62,7 +62,7 @@ In versions earlier than API version 14, the default value is **0**, indicating 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-StartOptions-displayId?: long--><!--Device-StartOptions-displayId?: long-End-->
 
@@ -198,7 +198,7 @@ Whether to prefer using the default browser to open the URL when the target is a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-StartOptions-preferDefaultBrowser?: boolean--><!--Device-StartOptions-preferDefaultBrowser?: boolean-End-->
 

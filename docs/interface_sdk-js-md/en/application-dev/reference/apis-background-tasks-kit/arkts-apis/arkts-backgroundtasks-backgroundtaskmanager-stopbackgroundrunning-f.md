@@ -18,7 +18,7 @@ Cancels all continuous tasks in the current UIAbility (ServiceAbility in the FA 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void-End-->
 
@@ -84,7 +84,7 @@ Cancels all continuous tasks in the current UIAbility (ServiceAbility in the FA 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>-End-->
 
@@ -151,7 +151,7 @@ Cancels a continuous task with the specified ID. This API uses a promise to retu
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, continuousTaskId: int): Promise<void>--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, continuousTaskId: int): Promise<void>-End-->
 

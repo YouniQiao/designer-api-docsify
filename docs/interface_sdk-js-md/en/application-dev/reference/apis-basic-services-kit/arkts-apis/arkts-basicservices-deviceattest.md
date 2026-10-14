@@ -25,7 +25,7 @@ import { deviceAttest } from '@kit.BasicServicesKit';
 | --- | --- |
 | [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getatteststatus1) | Obtains the AttestResultInfo object. |
 | [getAttestStatus](arkts-basicservices-deviceattest-getatteststatus-f-sys.md#getatteststatus2) | Obtains the AttestResultInfo object. |
-| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md) | Obtains the AttestResultInfo object. |
+| [getAttestStatusSync](arkts-basicservices-deviceattest-getatteststatussync-f-sys.md#getatteststatussync) | Obtains the AttestResultInfo object. |
 <!--DelEnd-->
 
 <!--Del-->

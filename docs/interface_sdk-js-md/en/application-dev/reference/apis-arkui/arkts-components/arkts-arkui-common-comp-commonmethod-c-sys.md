@@ -73,7 +73,7 @@ edgeLight(params: EdgeLightParams | undefined): T
 
 Sets the edge light effect for the component.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. </p>
+<p><strong>NOTE</strong>: <br>The edge light effect creates a glowing light effect along the component's edges, starting from the specified position and extending along the edge. <br>This effect can enhance the visual appeal and highlight important components. </p>
 
 **Since:** 26.0.0
 

@@ -38,7 +38,7 @@ addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>--><!--Device-AVPlayer-addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>-End-->
 
@@ -87,7 +87,7 @@ addSubtitleFromFd(fd: number, offset?: number, length?: number): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>--><!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>-End-->
 
@@ -136,7 +136,7 @@ addSubtitleFromUrl(url: string): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>--><!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>-End-->
 
@@ -183,7 +183,7 @@ advanceToMediaSource(id: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-advanceToMediaSource(id: string): Promise<void>--><!--Device-AVPlayer-advanceToMediaSource(id: string): Promise<void>-End-->
 
@@ -239,7 +239,7 @@ advanceToNextMediaSource() : Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-advanceToNextMediaSource() : Promise<void>--><!--Device-AVPlayer-advanceToNextMediaSource() : Promise<void>-End-->
 
@@ -288,7 +288,7 @@ advanceToPrevMediaSource(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-advanceToPrevMediaSource(): Promise<void>--><!--Device-AVPlayer-advanceToPrevMediaSource(): Promise<void>-End-->
 
@@ -340,7 +340,7 @@ clearPlaybackList(): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-clearPlaybackList(): Promise<void>--><!--Device-AVPlayer-clearPlaybackList(): Promise<void>-End-->
 
@@ -382,7 +382,7 @@ deselectTrack(index: number): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-deselectTrack(index: int): Promise<void>--><!--Device-AVPlayer-deselectTrack(index: int): Promise<void>-End-->
 
@@ -445,7 +445,7 @@ getCurrentMediaSource(): MediaSource | undefined
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getCurrentMediaSource(): MediaSource | undefined--><!--Device-AVPlayer-getCurrentMediaSource(): MediaSource | undefined-End-->
 
@@ -487,7 +487,7 @@ getCurrentPresentationTimestamp() : number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getCurrentPresentationTimestamp() : long--><!--Device-AVPlayer-getCurrentPresentationTimestamp() : long-End-->
 
@@ -576,7 +576,7 @@ getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>--><!--Device-AVPlayer-getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>-End-->
 
@@ -617,7 +617,7 @@ getMediaSources(): Array<MediaSource | undefined>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getMediaSources(): Array<MediaSource | undefined>--><!--Device-AVPlayer-getMediaSources(): Array<MediaSource | undefined>-End-->
 
@@ -705,7 +705,7 @@ getPlaybackPosition() : number
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getPlaybackPosition() : int--><!--Device-AVPlayer-getPlaybackPosition() : int-End-->
 
@@ -871,7 +871,7 @@ getSelectedTracks(): Promise<Array<number>>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>--><!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>-End-->
 
@@ -917,7 +917,7 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -965,7 +965,7 @@ getTrackDescription(): Promise<Array<MediaDescription>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -1052,7 +1052,7 @@ isSeekContinuousSupported() : boolean
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-isSeekContinuousSupported() : boolean--><!--Device-AVPlayer-isSeekContinuousSupported() : boolean-End-->
 
@@ -1879,7 +1879,7 @@ offPlaybackContentChanged(callback?: Callback<string>):void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void--><!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void-End-->
 
@@ -1917,7 +1917,7 @@ offTimedMetaData(callback?: Callback<AVTimedMetaData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void-End-->
 
@@ -2896,7 +2896,7 @@ onPlaybackContentChanged(callback: Callback<string>):void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void--><!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void-End-->
 
@@ -2931,7 +2931,7 @@ onTimedMetaData(callback: Callback<AVTimedMetaData>): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void-End-->
 
@@ -2966,7 +2966,7 @@ pause(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -3014,7 +3014,7 @@ pause(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-pause(): Promise<void>--><!--Device-AVPlayer-pause(): Promise<void>-End-->
 
@@ -3060,7 +3060,7 @@ play(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-play(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-play(callback: AsyncCallback<void>): void-End-->
 
@@ -3108,7 +3108,7 @@ play(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-play(): Promise<void>--><!--Device-AVPlayer-play(): Promise<void>-End-->
 
@@ -3154,7 +3154,7 @@ prepare(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -3205,7 +3205,7 @@ prepare(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-prepare(): Promise<void>--><!--Device-AVPlayer-prepare(): Promise<void>-End-->
 
@@ -3252,7 +3252,7 @@ release(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-release(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -3300,7 +3300,7 @@ release(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-release(): Promise<void>--><!--Device-AVPlayer-release(): Promise<void>-End-->
 
@@ -3350,7 +3350,7 @@ removePlaybackMediaSource(id: string): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-removePlaybackMediaSource(id: string): Promise<void>--><!--Device-AVPlayer-removePlaybackMediaSource(id: string): Promise<void>-End-->
 
@@ -3399,7 +3399,7 @@ reset(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -3447,7 +3447,7 @@ reset(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-reset(): Promise<void>--><!--Device-AVPlayer-reset(): Promise<void>-End-->
 
@@ -3497,7 +3497,7 @@ seek(timeMs: number, mode?: SeekMode): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void--><!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void-End-->
 
@@ -3584,7 +3584,7 @@ selectTrack(index: number, mode?: SwitchMode): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>--><!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>-End-->
 
@@ -3647,7 +3647,7 @@ setBitrate(bitrate: number): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setBitrate(bitrate: int): void--><!--Device-AVPlayer-setBitrate(bitrate: int): void-End-->
 
@@ -3680,7 +3680,7 @@ setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boole
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void--><!--Device-AVPlayer-setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void-End-->
 
@@ -3787,7 +3787,7 @@ setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>--><!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>-End-->
 
@@ -3842,7 +3842,7 @@ setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>-End-->
 
@@ -3897,7 +3897,7 @@ setPlaybackRange(startTimeMs: number, endTimeMs: number, mode?: SeekMode) : Prom
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>--><!--Device-AVPlayer-setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>-End-->
 
@@ -3953,7 +3953,7 @@ setPlaybackRate(rate: number): void
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setPlaybackRate(rate: double): void--><!--Device-AVPlayer-setPlaybackRate(rate: double): void-End-->
 
@@ -3992,7 +3992,7 @@ setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>-End-->
 
@@ -4053,7 +4053,7 @@ setSpeed(speed: PlaybackSpeed): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setSpeed(speed: PlaybackSpeed): void--><!--Device-AVPlayer-setSpeed(speed: PlaybackSpeed): void-End-->
 
@@ -4087,7 +4087,7 @@ setSuperResolution(enabled: boolean) : Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setSuperResolution(enabled: boolean) : Promise<void>--><!--Device-AVPlayer-setSuperResolution(enabled: boolean) : Promise<void>-End-->
 
@@ -4207,7 +4207,7 @@ setVideoWindowSize(width: number, height: number) : Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setVideoWindowSize(width: int, height: int) : Promise<void>--><!--Device-AVPlayer-setVideoWindowSize(width: int, height: int) : Promise<void>-End-->
 
@@ -4262,7 +4262,7 @@ setVolume(volume: number): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-setVolume(volume: double): void--><!--Device-AVPlayer-setVolume(volume: double): void-End-->
 
@@ -4296,7 +4296,7 @@ stop(callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -4344,7 +4344,7 @@ stop(): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-stop(): Promise<void>--><!--Device-AVPlayer-stop(): Promise<void>-End-->
 
@@ -4390,7 +4390,7 @@ audioEffectMode ?: audio.AudioEffectMode
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode--><!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode-End-->
 
@@ -4412,7 +4412,7 @@ audioInterruptMode?: audio.InterruptMode
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -4434,7 +4434,7 @@ audioRendererInfo?: audio.AudioRendererInfo
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-audioRendererInfo?: audio.AudioRendererInfo--><!--Device-AVPlayer-audioRendererInfo?: audio.AudioRendererInfo-End-->
 
@@ -4456,7 +4456,7 @@ readonly currentTime: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-readonly currentTime: int--><!--Device-AVPlayer-readonly currentTime: int-End-->
 
@@ -4498,7 +4498,7 @@ dataSrc?: AVDataSrcDescriptor
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-dataSrc?: AVDataSrcDescriptor--><!--Device-AVPlayer-dataSrc?: AVDataSrcDescriptor-End-->
 
@@ -4520,7 +4520,7 @@ readonly duration: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-readonly duration: int--><!--Device-AVPlayer-readonly duration: int-End-->
 
@@ -4564,7 +4564,7 @@ fdSrc?: AVFileDescriptor
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-fdSrc?: AVFileDescriptor--><!--Device-AVPlayer-fdSrc?: AVFileDescriptor-End-->
 
@@ -4584,7 +4584,7 @@ readonly height: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-readonly height: int--><!--Device-AVPlayer-readonly height: int-End-->
 
@@ -4606,7 +4606,7 @@ loop: boolean
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-loop: boolean--><!--Device-AVPlayer-loop: boolean-End-->
 
@@ -4626,7 +4626,7 @@ playlistLoopMode?: PlaylistLoopMode
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-playlistLoopMode?: PlaylistLoopMode--><!--Device-AVPlayer-playlistLoopMode?: PlaylistLoopMode-End-->
 
@@ -4644,7 +4644,7 @@ readonly state: AVPlayerState
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-readonly state: AVPlayerState--><!--Device-AVPlayer-readonly state: AVPlayerState-End-->
 
@@ -4672,7 +4672,7 @@ surfaceId?: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-surfaceId?: string--><!--Device-AVPlayer-surfaceId?: string-End-->
 
@@ -4711,7 +4711,7 @@ url?: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-url?: string--><!--Device-AVPlayer-url?: string-End-->
 
@@ -4731,7 +4731,7 @@ videoScaleType?: VideoScaleType
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-videoScaleType?: VideoScaleType--><!--Device-AVPlayer-videoScaleType?: VideoScaleType-End-->
 
@@ -4751,7 +4751,7 @@ readonly width: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVPlayer-readonly width: int--><!--Device-AVPlayer-readonly width: int-End-->
 

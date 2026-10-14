@@ -32,7 +32,7 @@ C2PA signature configuration.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-PickerProfile-c2PASignatureConfig?: C2PASignatureConfig--><!--Device-PickerProfile-c2PASignatureConfig?: C2PASignatureConfig-End-->
 
@@ -50,7 +50,7 @@ Camera position.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerProfile-cameraPosition: camera.CameraPosition--><!--Device-PickerProfile-cameraPosition: camera.CameraPosition-End-->
 
@@ -70,7 +70,7 @@ Enables or disables the C2PA signature feature for the photo output.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-PickerProfile-enableC2PA?: boolean--><!--Device-PickerProfile-enableC2PA?: boolean-End-->
 
@@ -88,7 +88,7 @@ URI for saving the configuration information. For details about the default valu
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerProfile-saveUri?: string--><!--Device-PickerProfile-saveUri?: string-End-->
 
@@ -106,7 +106,7 @@ Maximum video duration, in seconds. The default value is **0**, indicating that 
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PickerProfile-videoDuration?: int--><!--Device-PickerProfile-videoDuration?: int-End-->
 

@@ -6,8 +6,6 @@ export enum TrackingEvent
 
 跟踪事件
 
-@enum { int }
-
 **起始版本：** 20
 
 <!--Device-mechanicManager-export enum TrackingEvent--><!--Device-mechanicManager-export enum TrackingEvent-End-->

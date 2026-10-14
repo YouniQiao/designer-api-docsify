@@ -22,7 +22,7 @@ import { mdns } from '@kit.NetworkKit';
 | --- | --- |
 | [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice1) | 添加一个MDNS服务，使用callback方式作为异步方法。 |
 | [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice2) | 添加一个MDNS服务，使用Promise方式作为异步方法。 |
-| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md) | 返回一个DiscoveryService对象，该对象用于发现指定服务类型（serviceType）的MDNS服务。 |
+| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice) | 返回一个DiscoveryService对象，该对象用于发现指定服务类型（serviceType）的MDNS服务。 |
 | [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice1) | 移除一个MDNS服务，使用callback方式作为异步方法。 |
 | [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice2) | 移除一个MDNS服务，使用Promise方式作为异步方法。 |
 | [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice1) | 解析一个MDNS服务，使用callback方式作为异步方法。 |

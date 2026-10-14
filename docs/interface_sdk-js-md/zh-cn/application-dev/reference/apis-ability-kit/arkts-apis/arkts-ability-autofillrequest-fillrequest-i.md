@@ -26,7 +26,7 @@ triggerType?: AutoFillTriggerType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-FillRequest-triggerType?: AutoFillTriggerType--><!--Device-FillRequest-triggerType?: AutoFillTriggerType-End-->
 
@@ -46,7 +46,7 @@ type: AutoFillType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-FillRequest-type: AutoFillType--><!--Device-FillRequest-type: AutoFillType-End-->
 
@@ -66,7 +66,7 @@ viewData: ViewData
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-FillRequest-viewData: ViewData--><!--Device-FillRequest-viewData: ViewData-End-->
 

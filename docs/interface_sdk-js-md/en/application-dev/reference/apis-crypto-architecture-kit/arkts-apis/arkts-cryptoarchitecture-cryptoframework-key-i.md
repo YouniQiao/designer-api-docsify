@@ -37,7 +37,7 @@ Obtains the byte stream of the key data. This API returns the result synchronous
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Key-getEncoded(): DataBlob--><!--Device-Key-getEncoded(): DataBlob-End-->
 
@@ -84,7 +84,7 @@ Obtains the key size in bits. The key can be a symmetric key, a public key, or a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Key-getKeySize(): int--><!--Device-Key-getKeySize(): int-End-->
 
@@ -130,7 +130,7 @@ Indicates the algorithm name of the key object. This parameter contains the key 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Key-readonly algName: string--><!--Device-Key-readonly algName: string-End-->
 
@@ -150,7 +150,7 @@ Indicates the format of the key object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Key-readonly format: string--><!--Device-Key-readonly format: string-End-->
 

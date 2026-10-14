@@ -50,7 +50,7 @@ Temporarily grants the receiver read permission for the URI.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001--><!--Device-Flags-FLAG_AUTH_READ_URI_PERMISSION = 0x00000001-End-->
 
@@ -66,7 +66,7 @@ Temporarily grants the receiver write permission for the URI.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002--><!--Device-Flags-FLAG_AUTH_WRITE_URI_PERMISSION = 0x00000002-End-->
 
@@ -86,7 +86,7 @@ proceeding with the launch.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800--><!--Device-Flags-FLAG_INSTALL_ON_DEMAND = 0x00000800-End-->
 

@@ -50,7 +50,7 @@ Sets the check box shape of the check box group.
 checkboxShape(shape: Optional<CheckBoxShape>)
 ```
 
-Sets the check box shape of the check box group. Available options include circle and rounded square. Compared with [checkboxShape](#checkboxshape1)&lt;sup&gt;12+&lt;/sup&gt;, this API supports the **undefined** type for the **shape** parameter.
+Sets the check box shape of the check box group. Available options include circle and rounded square. Compared with [checkboxShape](#checkboxshape1)<sup>12+</sup>, this API supports the **undefined** type for the **shape** parameter.
 
 **Since:** 18
 
@@ -132,7 +132,7 @@ Sets the check mark style of the check box.
 mark(style: Optional<MarkStyle>)
 ```
 
-Sets the check mark style of the check box. Compared with [mark](#mark1)&lt;sup&gt;10+&lt;/sup&gt;, this API supports the **undefined** type for the **style** parameter.
+Sets the check mark style of the check box. Compared with [mark](#mark1)<sup>10+</sup>, this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -362,7 +362,7 @@ Sets the border color of the check box when it is not selected.
 unselectedColor(resColor: Optional<ResourceColor>)
 ```
 
-Sets the border color of the check box when it is not selected. Compared with [unselectedColor](#unselectedcolor1)&lt;sup&gt;10+&lt;/sup&gt;, this API supports the **undefined** type for the **resColor** parameter.
+Sets the border color of the check box when it is not selected. Compared with [unselectedColor](#unselectedcolor1)<sup>10+</sup>, this API supports the **undefined** type for the **resColor** parameter.
 
 **Since:** 18
 

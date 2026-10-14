@@ -30,7 +30,7 @@ discriminatePictureLightDegree(): PictureLightDegree
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree--><!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree-End-->
 
@@ -85,7 +85,7 @@ getAlphaZeroTransparentProportion(): number
 
 **起始版本：** 23
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
 
@@ -146,7 +146,7 @@ getComplexityDegree(): PictureComplexityDegree
 
 **起始版本：** 22
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
 
@@ -209,7 +209,7 @@ getDeepenImmersionColor(): Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getDeepenImmersionColor(): Color--><!--Device-ColorPicker-getDeepenImmersionColor(): Color-End-->
 
@@ -266,7 +266,7 @@ getImmersiveBackgroundColor(): Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getImmersiveBackgroundColor(): Color--><!--Device-ColorPicker-getImmersiveBackgroundColor(): Color-End-->
 
@@ -323,7 +323,7 @@ getImmersiveForegroundColor(): Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getImmersiveForegroundColor(): Color--><!--Device-ColorPicker-getImmersiveForegroundColor(): Color-End-->
 
@@ -380,7 +380,7 @@ getMorandiShadowColor(): Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getMorandiShadowColor(): Color--><!--Device-ColorPicker-getMorandiShadowColor(): Color-End-->
 
@@ -437,7 +437,7 @@ getReverseColor(): Color
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getReverseColor(): Color--><!--Device-ColorPicker-getReverseColor(): Color-End-->
 
@@ -492,7 +492,7 @@ getShadeDegree(): PictureShadeDegree
 
 **起始版本：** 22
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
 
@@ -553,7 +553,7 @@ getTopProportionColorsAndPercentage(colorCount: number): Map<Color | null, numbe
 
 **起始版本：** 22
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
 

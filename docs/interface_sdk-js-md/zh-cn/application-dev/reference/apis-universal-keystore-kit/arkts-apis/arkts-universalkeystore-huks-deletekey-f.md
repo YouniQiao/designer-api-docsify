@@ -19,7 +19,7 @@ function deleteKey(keyAlias: string, options: HuksOptions, callback: AsyncCallba
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.deleteKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem1)
+> [huks.deleteKeyItem<sup>9+</sup>](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem1)
 > 替代。
 
 **起始版本：** 8
@@ -68,7 +68,7 @@ function deleteKey(keyAlias: string, options: HuksOptions): Promise<HuksResult>
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.deleteKeyItem&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem2)替代。
+> [huks.deleteKeyItem<sup>9+</sup>](arkts-universalkeystore-huks-deletekeyitem-f.md#deletekeyitem2)替代。
 
 **起始版本：** 8
 

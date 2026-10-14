@@ -44,7 +44,7 @@ host names; that is, the HTTP proxy is disabled. A wildcard can only be added in
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpProxy-exclusionList: Array<string>--><!--Device-HttpProxy-exclusionList: Array<string>-End-->
 
@@ -62,7 +62,7 @@ Host name of the proxy server.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpProxy-host: string--><!--Device-HttpProxy-host: string-End-->
 
@@ -98,7 +98,7 @@ Host port. The value range is [0, 65535].
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpProxy-port: int--><!--Device-HttpProxy-port: int-End-->
 

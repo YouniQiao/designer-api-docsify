@@ -18,7 +18,7 @@ Obtains the bundle name of a WantAgent object. This API uses an asynchronous cal
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void--><!--Device-wantAgent-function getBundleName(agent: WantAgent, callback: AsyncCallback<string>): void-End-->
 
@@ -121,7 +121,7 @@ Obtains the bundle name of a WantAgent object. This API uses a promise to return
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>--><!--Device-wantAgent-function getBundleName(agent: WantAgent): Promise<string>-End-->
 

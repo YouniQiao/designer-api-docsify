@@ -33,11 +33,11 @@ import { deviceControl } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md) | Locks the device screen immediately. |
-| [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md) | Reboots the device. |
+| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md#lockscreen) | Locks the device screen immediately. |
+| [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md#reboot) | Reboots the device. |
 | [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory1) | Restores factory settings. This API uses an asynchronous callback to return the result. |
 | [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory2) | Restores factory settings. This API uses a promise to return the result. |
-| [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md) | Shuts down the device. |
+| [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md#shutdown) | Shuts down the device. |
 <!--DelEnd-->
 
 ### Enums

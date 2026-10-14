@@ -22,9 +22,9 @@ ALPHA_8 = 6
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-ALPHA_8 = 6--><!--Device-PixelMapFormat-ALPHA_8 = 6-End-->
 
@@ -42,7 +42,7 @@ ALPHA_F16 = 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-ALPHA_F16 = 16--><!--Device-PixelMapFormat-ALPHA_F16 = 16-End-->
 
@@ -60,7 +60,7 @@ ALPHA_U8 = 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-ALPHA_U8 = 15--><!--Device-PixelMapFormat-ALPHA_U8 = 15-End-->
 
@@ -104,9 +104,9 @@ BGRA_8888 = 4
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-BGRA_8888 = 4--><!--Device-PixelMapFormat-BGRA_8888 = 4-End-->
 
@@ -122,9 +122,9 @@ YUV像素排列，U分量在V分量之前。颜色信息由亮度分量Y和交�
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-NV12 = 9--><!--Device-PixelMapFormat-NV12 = 9-End-->
 
@@ -140,9 +140,9 @@ YVU像素排列，V分量在U分量之前。颜色信息由亮度分量Y和交�
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-NV21 = 8--><!--Device-PixelMapFormat-NV21 = 8-End-->
 
@@ -158,9 +158,9 @@ RGB_565 = 2
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-RGB_565 = 2--><!--Device-PixelMapFormat-RGB_565 = 2-End-->
 
@@ -176,9 +176,9 @@ RGB_888 = 5
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-RGB_888 = 5--><!--Device-PixelMapFormat-RGB_888 = 5-End-->
 
@@ -208,9 +208,9 @@ RGBA_8888 = 3
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-RGBA_8888 = 3--><!--Device-PixelMapFormat-RGBA_8888 = 3-End-->
 
@@ -226,9 +226,9 @@ RGBA_F16 = 7
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-RGBA_F16 = 7--><!--Device-PixelMapFormat-RGBA_F16 = 7-End-->
 
@@ -244,9 +244,9 @@ UNKNOWN = 0
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本12开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PixelMapFormat-UNKNOWN = 0--><!--Device-PixelMapFormat-UNKNOWN = 0-End-->
 

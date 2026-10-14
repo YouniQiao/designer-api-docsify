@@ -24,7 +24,7 @@ MOUSE_BUTTON_LEFT = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0--><!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0-End-->
 
@@ -42,7 +42,7 @@ MOUSE_BUTTON_MIDDLE = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2--><!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2-End-->
 
@@ -60,7 +60,7 @@ MOUSE_BUTTON_RIGHT = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
 

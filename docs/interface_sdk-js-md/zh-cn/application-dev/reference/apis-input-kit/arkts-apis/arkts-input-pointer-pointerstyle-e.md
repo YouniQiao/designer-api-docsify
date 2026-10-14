@@ -274,7 +274,7 @@ LOADING = 42
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PointerStyle-LOADING = 42--><!--Device-PointerStyle-LOADING = 42-End-->
 
@@ -570,7 +570,7 @@ RUNNING = 43
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PointerStyle-RUNNING = 43--><!--Device-PointerStyle-RUNNING = 43-End-->
 

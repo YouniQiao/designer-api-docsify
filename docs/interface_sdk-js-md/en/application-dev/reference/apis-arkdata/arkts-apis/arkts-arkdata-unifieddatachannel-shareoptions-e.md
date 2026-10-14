@@ -24,7 +24,7 @@ CROSS_APP = 1
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShareOptions-CROSS_APP = 1--><!--Device-ShareOptions-CROSS_APP = 1-End-->
 
@@ -42,7 +42,7 @@ IN_APP = 0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShareOptions-IN_APP = 0--><!--Device-ShareOptions-IN_APP = 0-End-->
 

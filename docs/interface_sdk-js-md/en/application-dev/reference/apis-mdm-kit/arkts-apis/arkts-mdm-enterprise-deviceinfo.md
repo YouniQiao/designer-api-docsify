@@ -32,7 +32,7 @@ import { deviceInfo } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md) | Obtains device information. |
+| [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md#getdeviceinfo) | Obtains device information. |
 
 <!--Del-->
 ### Functions(System API)

@@ -4,7 +4,7 @@
 export enum RotationAxisLimited
 ```
 
-Enumerates the rotation axis limit states. @enum { int }
+Enumerates the rotation axis limit states.
 
 **Since:** 20
 

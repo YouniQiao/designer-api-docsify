@@ -32,5 +32,5 @@ import { identifier } from '@kit.AdsKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | 重置开放匿名设备标识符（OAID）。 |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid) | 重置开放匿名设备标识符（OAID）。 |
 <!--DelEnd-->

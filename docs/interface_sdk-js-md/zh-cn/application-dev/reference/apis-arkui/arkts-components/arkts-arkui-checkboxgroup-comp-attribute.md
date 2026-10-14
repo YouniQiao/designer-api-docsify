@@ -52,7 +52,7 @@ checkboxShape(value: CheckBoxShape)
 checkboxShape(shape: Optional<CheckBoxShape>)
 ```
 
-设置CheckboxGroup组件形状，包括圆形和圆角方形。与[checkboxShape](#checkboxshape1)&lt;sup&gt;12+&lt;/sup&gt;相比，shape参数新增了对undefined类型的支持。
+设置CheckboxGroup组件形状，包括圆形和圆角方形。与[checkboxShape](#checkboxshape1)<sup>12+</sup>相比，shape参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -134,7 +134,7 @@ mark(value: MarkStyle)
 mark(style: Optional<MarkStyle>)
 ```
 
-设置多选框内部图标样式。与[mark](#mark1)&lt;sup&gt;10+&lt;/sup&gt;相比，style参数新增了对undefined类型的支持。
+设置多选框内部图标样式。与[mark](#mark1)<sup>10+</sup>相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -364,7 +364,7 @@ unselectedColor(value: ResourceColor)
 unselectedColor(resColor: Optional<ResourceColor>)
 ```
 
-设置非选中状态边框颜色。与[unselectedColor](#unselectedcolor1)&lt;sup&gt;10+&lt;/sup&gt;相比，resColor参数新增了对undefined类型的支持。
+设置非选中状态边框颜色。与[unselectedColor](#unselectedcolor1)<sup>10+</sup>相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

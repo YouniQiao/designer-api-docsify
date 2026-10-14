@@ -22,7 +22,7 @@ AUDIO_AAC = 'audio/mp4a-latm'
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'--><!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'-End-->
 
@@ -138,7 +138,7 @@ VIDEO_AVC = 'video/avc'
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'--><!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'-End-->
 
@@ -168,7 +168,7 @@ VIDEO_HEVC = 'video/hevc'
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'--><!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'-End-->
 

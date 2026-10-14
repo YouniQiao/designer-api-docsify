@@ -10,7 +10,7 @@ Enumerates the state types of the input method panel.<br> <br>
 | ------------ | -- | ------------------ |  
 | FLG_FIXED | 0 | Fixed state type.|
 | FLG_FLOATING | 1 | Floating state type.|
-| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | Candidate state type.|
+| FLAG_CANDIDATE<sup>15+</sup> | 2 | Candidate state type.|
 
 **Since:** 10
 

@@ -22,7 +22,7 @@ ALL = 0x0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHeightBehavior-ALL = 0x0--><!--Device-TextHeightBehavior-ALL = 0x0-End-->
 
@@ -38,7 +38,7 @@ DISABLE_ALL = 0x1 | 0x2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2--><!--Device-TextHeightBehavior-DISABLE_ALL = 0x1 | 0x2-End-->
 
@@ -54,7 +54,7 @@ DISABLE_FIRST_ASCENT = 0x1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHeightBehavior-DISABLE_FIRST_ASCENT = 0x1--><!--Device-TextHeightBehavior-DISABLE_FIRST_ASCENT = 0x1-End-->
 
@@ -70,7 +70,7 @@ DISABLE_LAST_ASCENT = 0x2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2--><!--Device-TextHeightBehavior-DISABLE_LAST_ASCENT = 0x2-End-->
 

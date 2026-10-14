@@ -30,7 +30,7 @@ Obtains the ExtensionAbility running information. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
+| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>31</sup>-1. |
 
 **Return value:**
 
@@ -71,7 +71,7 @@ Obtains the ExtensionAbility running information. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
+| upperLimit | number | Yes | Maximum number of messages that can be obtained. The maximum value is 2<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>31</sup>-1. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ExtensionRunningInfo](arkts-ability-abilitymanager-extensionrunninginfo-t-sys.md)&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the ExtensionAbility running information obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing. |
 
 **Error codes:**

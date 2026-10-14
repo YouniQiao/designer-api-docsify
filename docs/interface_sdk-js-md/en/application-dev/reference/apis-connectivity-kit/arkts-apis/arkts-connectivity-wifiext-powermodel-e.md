@@ -6,8 +6,6 @@ export enum PowerModel
 
 The power model enumeration.
 
-@enum { number } PowerModel
-
 **Since:** 8
 
 **Deprecated since:** 9

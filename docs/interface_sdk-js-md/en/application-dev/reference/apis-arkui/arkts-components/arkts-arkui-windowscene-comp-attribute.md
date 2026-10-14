@@ -6,7 +6,7 @@ declare class WindowSceneAttribute extends CommonMethod<WindowSceneAttribute>
 
 Defines the attribute functions of WindowScene.
 
-@extends CommonMethod&lt;WindowSceneAttribute&gt;
+@extends CommonMethod<WindowSceneAttribute>
 
 **Inheritance/Implementation:** WindowSceneAttribute extends CommonMethod&lt;WindowSceneAttribute&gt;
 

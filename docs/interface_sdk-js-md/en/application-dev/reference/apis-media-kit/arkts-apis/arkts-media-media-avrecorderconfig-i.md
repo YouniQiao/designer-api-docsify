@@ -32,7 +32,7 @@ Type of the audio source to record. This parameter is mandatory for audio record
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType--><!--Device-AVRecorderConfig-audioSourceType?: AudioSourceType-End-->
 
@@ -98,7 +98,7 @@ Recording profile. This parameter is mandatory.<br>**Atomic service API**: This 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderConfig-profile: AVRecorderProfile--><!--Device-AVRecorderConfig-profile: AVRecorderProfile-End-->
 
@@ -116,7 +116,7 @@ Recording output URL: fd://xx (fd number).<br>This parameter is mandatory.<br>**
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVRecorderConfig-url: string--><!--Device-AVRecorderConfig-url: string-End-->
 

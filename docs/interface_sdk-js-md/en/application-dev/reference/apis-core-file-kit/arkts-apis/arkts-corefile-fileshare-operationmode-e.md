@@ -6,8 +6,6 @@ export enum OperationMode
 
 Enumerates the uri operate mode types.
 
-@enum { int } OperationMode
-
 **Since:** 11
 
 <!--Device-fileShare-export enum OperationMode--><!--Device-fileShare-export enum OperationMode-End-->

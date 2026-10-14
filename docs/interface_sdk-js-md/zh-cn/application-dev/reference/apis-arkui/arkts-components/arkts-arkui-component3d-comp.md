@@ -42,7 +42,7 @@ Component3D(sceneOptions?: SceneOptions)
 
 | 名称 | 说明 |
 | --- | --- |
-| [ModelType](arkts-arkui-component3d-comp-modeltype-e.md) | 模型类型枚举@enum { number } |
+| [ModelType](arkts-arkui-component3d-comp-modeltype-e.md) | 模型类型枚举 |
 
 ## 示例
 

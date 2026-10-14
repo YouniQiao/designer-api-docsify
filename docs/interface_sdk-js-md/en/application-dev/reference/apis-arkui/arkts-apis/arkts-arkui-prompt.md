@@ -13,8 +13,6 @@ The **Prompt** module provides APIs for creating and showing toasts, dialog boxe
 
 **Substitutes:** [promptAction](arkts-arkui-promptaction-n.md)
 
-**Model restriction:** This API can be used in both the stage model and FA model.
-
 <!--Device-unnamed-declare namespace prompt--><!--Device-unnamed-declare namespace prompt-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -35,7 +33,7 @@ import { prompt } from '@kit.ArkUI';
 | [showActionMenu](arkts-arkui-prompt-showactionmenu-f.md#showactionmenu2) | Shows an action menu. This API uses a promise to return the result. |
 | [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog1) | Shows a dialog box. This API uses an asynchronous callback to return the result. |
 | [showDialog](arkts-arkui-prompt-showdialog-f.md#showdialog2) | Shows a dialog box. This API uses a promise to return the result. |
-| [showToast](arkts-arkui-prompt-showtoast-f.md) | Shows a toast. |
+| [showToast](arkts-arkui-prompt-showtoast-f.md#showtoast) | Shows a toast. |
 
 ### Interfaces
 

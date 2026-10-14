@@ -10,8 +10,6 @@ When **typeNode** is used to create [Text](../arkts-components/arkts-arkui-text-
 
 **Since:** 12
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-export namespace typeNode--><!--Device-unnamed-export namespace typeNode-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full

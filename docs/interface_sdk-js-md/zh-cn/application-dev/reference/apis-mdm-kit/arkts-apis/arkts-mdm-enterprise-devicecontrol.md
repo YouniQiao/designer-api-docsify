@@ -32,11 +32,11 @@ import { deviceControl } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md) | 使设备屏幕锁定。设置之后设备立即锁屏。 |
-| [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md) | 使设备重启。 |
+| [lockScreen](arkts-mdm-devicecontrol-lockscreen-f-sys.md#lockscreen) | 使设备屏幕锁定。设置之后设备立即锁屏。 |
+| [reboot](arkts-mdm-devicecontrol-reboot-f-sys.md#reboot) | 使设备重启。 |
 | [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory1) | 使设备恢复出厂设置。使用callback异步回调。 |
 | [resetFactory](arkts-mdm-devicecontrol-resetfactory-f-sys.md#resetfactory2) | 使设备恢复出厂设置。使用Promise异步回调。 |
-| [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md) | 使设备关机。 |
+| [shutdown](arkts-mdm-devicecontrol-shutdown-f-sys.md#shutdown) | 使设备关机。 |
 <!--DelEnd-->
 
 ### 枚举

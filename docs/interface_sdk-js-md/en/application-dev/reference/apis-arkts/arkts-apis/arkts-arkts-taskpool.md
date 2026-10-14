@@ -40,10 +40,10 @@ import { taskpool } from '@kit.ArkTS';
 | [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed2) | Executes the generic task with a delay without verifying the parameter type and return value type of the task. This API uses a promise to return the result. The verification of the **executeDelayed** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**. |
 | [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically1) | Executes a task periodically. In this execution mode, you can set the task priority and call **cancel()** to cancel the execution. A periodic task cannot be a task in a task group, serial queue, or asynchronous queue. It cannot call **execute()** again or have a dependency relationship. |
 | [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically2) | Executes a generic task periodically, without verifying the parameter type and return value type of the task. The verification of the **executePeriodically** task works in conjunction with **new GenericsTask**, requiring that the parameter and return value types match those specified in **new GenericsTask**. |
-| [getTask](arkts-arkts-taskpool-gettask-f.md) | Obtains the corresponding task instance by task ID, or by task ID and task name. |
-| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md) | Obtains the thread information and task information of the task pool. |
-| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md) | Checks whether a function is a concurrent function. |
-| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md) | Terminates a continuous task in the task pool. It is called after the continuous task is complete. After the task is terminated, the thread that executes the task may be reclaimed. |
+| [getTask](arkts-arkts-taskpool-gettask-f.md#gettask) | Obtains the corresponding task instance by task ID, or by task ID and task name. |
+| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md#gettaskpoolinfo) | Obtains the thread information and task information of the task pool. |
+| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md#isconcurrent) | Checks whether a function is a concurrent function. |
+| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) | Terminates a continuous task in the task pool. It is called after the continuous task is complete. After the task is terminated, the thread that executes the task may be reclaimed. |
 
 ### Classes
 

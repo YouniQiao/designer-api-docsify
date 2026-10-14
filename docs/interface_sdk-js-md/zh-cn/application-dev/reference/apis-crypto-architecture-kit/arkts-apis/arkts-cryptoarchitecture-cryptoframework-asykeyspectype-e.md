@@ -24,7 +24,7 @@ COMMON_PARAMS_SPEC = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0--><!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0-End-->
 
@@ -42,7 +42,7 @@ KEY_PAIR_SPEC = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
@@ -60,7 +60,7 @@ PRIVATE_KEY_SPEC = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1--><!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1-End-->
 
@@ -78,7 +78,7 @@ PUBLIC_KEY_SPEC = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
 

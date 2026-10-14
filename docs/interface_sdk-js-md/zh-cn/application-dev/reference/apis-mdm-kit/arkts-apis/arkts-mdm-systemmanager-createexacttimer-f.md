@@ -52,3 +52,24 @@ function createExactTimer(config: ExactTimerConfig): Promise<number>
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
 | [9201053](../errorcode-enterpriseDeviceManager.md#9201053-定时器数量已达上限) | The number of timers has reached the upper limit. |
+
+**示例**
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let config: systemManager.ExactTimerConfig = {
+  name: 'timer1',
+  repeat: true,
+  interval: 5000,
+  callback: () => {
+    console.info('Timer expired.');
+  }
+};
+systemManager.createExactTimer(config).then((timerId: number) => {
+  console.info(`Succeeded in creating exact timer, timerId: ${timerId}.`);
+}).catch((err: BusinessError) => {
+  console.error(`Failed to create exact timer. Code: ${err.code}, message: ${err.message}`);
+});
+```

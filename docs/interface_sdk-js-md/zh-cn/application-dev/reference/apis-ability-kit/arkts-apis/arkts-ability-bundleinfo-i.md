@@ -60,7 +60,7 @@ readonly buildVersion?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly buildVersion?: string--><!--Device-BundleInfo-readonly buildVersion?: string-End-->
 
@@ -78,7 +78,7 @@ readonly firstInstallTime?: number
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly firstInstallTime?: long--><!--Device-BundleInfo-readonly firstInstallTime?: long-End-->
 
@@ -96,7 +96,7 @@ readonly hapModulesInfo: Array<HapModuleInfo>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly hapModulesInfo: Array<HapModuleInfo>--><!--Device-BundleInfo-readonly hapModulesInfo: Array<HapModuleInfo>-End-->
 
@@ -118,7 +118,7 @@ readonly installTime: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly installTime: long--><!--Device-BundleInfo-readonly installTime: long-End-->
 
@@ -136,7 +136,7 @@ readonly minCompatibleVersionCode: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly minCompatibleVersionCode: int--><!--Device-BundleInfo-readonly minCompatibleVersionCode: int-End-->
 
@@ -154,7 +154,7 @@ readonly name: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly name: string--><!--Device-BundleInfo-readonly name: string-End-->
 
@@ -172,7 +172,7 @@ readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>--><!--Device-BundleInfo-readonly permissionGrantStates: Array<bundleManager.PermissionGrantState>-End-->
 
@@ -190,7 +190,7 @@ readonly reqPermissionDetails: Array<ReqPermissionDetail>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>--><!--Device-BundleInfo-readonly reqPermissionDetails: Array<ReqPermissionDetail>-End-->
 
@@ -208,7 +208,7 @@ readonly routerMap: Array<RouterItem>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly routerMap: Array<RouterItem>--><!--Device-BundleInfo-readonly routerMap: Array<RouterItem>-End-->
 
@@ -244,7 +244,7 @@ readonly targetVersion: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly targetVersion: int--><!--Device-BundleInfo-readonly targetVersion: int-End-->
 
@@ -262,7 +262,7 @@ readonly updateTime: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly updateTime: long--><!--Device-BundleInfo-readonly updateTime: long-End-->
 
@@ -280,7 +280,7 @@ readonly vendor: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly vendor: string--><!--Device-BundleInfo-readonly vendor: string-End-->
 
@@ -298,7 +298,7 @@ readonly versionCode: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly versionCode: long--><!--Device-BundleInfo-readonly versionCode: long-End-->
 
@@ -316,7 +316,7 @@ readonly versionName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleInfo-readonly versionName: string--><!--Device-BundleInfo-readonly versionName: string-End-->
 

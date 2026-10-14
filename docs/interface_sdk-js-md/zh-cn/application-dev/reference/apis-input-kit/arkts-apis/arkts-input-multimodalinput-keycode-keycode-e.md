@@ -2772,7 +2772,7 @@ KEYCODE_MEDIA_FAST_FORWARD = 15
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15--><!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15-End-->
 
@@ -2788,7 +2788,7 @@ KEYCODE_MEDIA_NEXT = 12
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12--><!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12-End-->
 
@@ -2804,7 +2804,7 @@ KEYCODE_MEDIA_PAUSE = 2086
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086--><!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086-End-->
 
@@ -2820,7 +2820,7 @@ KEYCODE_MEDIA_PLAY = 2085
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085-End-->
 
@@ -2840,7 +2840,7 @@ KEYCODE_PLAYPAUSE是较早的定义，KEYCODE_MEDIA_PLAY_PAUSE为现代媒体键
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10-End-->
 
@@ -2856,7 +2856,7 @@ KEYCODE_MEDIA_PREVIOUS = 13
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13--><!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13-End-->
 
@@ -2900,7 +2900,7 @@ KEYCODE_MEDIA_REWIND = 14
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14--><!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14-End-->
 
@@ -2916,7 +2916,7 @@ KEYCODE_MEDIA_STOP = 11
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11--><!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11-End-->
 

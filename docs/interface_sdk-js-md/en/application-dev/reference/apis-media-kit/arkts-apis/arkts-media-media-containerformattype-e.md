@@ -64,7 +64,7 @@ Video container format MP4.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-ContainerFormatType-CFT_MPEG_4 = 'mp4'--><!--Device-ContainerFormatType-CFT_MPEG_4 = 'mp4'-End-->
 
@@ -80,7 +80,7 @@ Audio container format M4A.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'--><!--Device-ContainerFormatType-CFT_MPEG_4A = 'm4a'-End-->
 

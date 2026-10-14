@@ -6,8 +6,6 @@ export enum SamplerFilter
 
 Enumerates the filtering modes of a sampler. The filtering mode determines the interpolation method used when sampling textures, controlling how final pixel colors are calculated during texture scaling or deformation.
 
-@enum { int }
-
 **Since:** 20
 
 <!--Device-unnamed-export enum SamplerFilter--><!--Device-unnamed-export enum SamplerFilter-End-->

@@ -18,7 +18,7 @@ function getAllDisplays(callback: AsyncCallback<Array<Display>>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void--><!--Device-display-function getAllDisplays(callback: AsyncCallback<Array<Display>>): void-End-->
 
@@ -66,7 +66,7 @@ function getAllDisplays(): Promise<Array<Display>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-display-function getAllDisplays(): Promise<Array<Display>>--><!--Device-display-function getAllDisplays(): Promise<Array<Display>>-End-->
 

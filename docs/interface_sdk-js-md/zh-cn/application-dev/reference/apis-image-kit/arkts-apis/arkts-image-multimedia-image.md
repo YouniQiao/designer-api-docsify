@@ -4,9 +4,9 @@
 
 本模块包含以下基础类：
 
-- [ImageSource](arkts-image-image-imagesource-i.md)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md)、将图片解码为PixelMap或Picture、读取和修改[图片属性](arkts-image-image-propertykey-e.md)的能力。[支持解码的图片格式](arkts-image-image-imagesource-i.md#supportedformats)包括png、jpeg、bmp、gif、webp、dng、heic&lt;sup&gt;12+&lt;/sup&gt;、wbmp&lt;sup&gt;23+&lt;/sup&gt;、heifs&lt;sup&gt;23+&lt;/sup&gt;、tiff&lt;sup&gt;23+&lt;/sup&gt;。
+- [ImageSource](arkts-image-image-imagesource-i.md)类，提供获取[图片信息](arkts-image-image-imageinfo-i.md)、将图片解码为PixelMap或Picture、读取和修改[图片属性](arkts-image-image-propertykey-e.md)的能力。[支持解码的图片格式](arkts-image-image-imagesource-i.md#supportedformats)包括png、jpeg、bmp、gif、webp、dng、heic<sup>12+</sup>、wbmp<sup>23+</sup>、heifs<sup>23+</sup>、tiff<sup>23+</sup>。
 
-- [ImagePacker](arkts-image-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。[支持编码的图片格式](arkts-image-image-imagepacker-i.md#supportedformats)包括jpeg、webp、png、heic&lt;sup&gt;12+&lt;/sup&gt;、gif&lt;sup&gt;18+&lt;/sup&gt;。
+- [ImagePacker](arkts-image-image-imagepacker-i.md)类，提供将图片编码为压缩后的数据流或文件的能力。编码前需获取图片的ImageSource、PixelMap或Picture作为输入。[支持编码的图片格式](arkts-image-image-imagepacker-i.md#supportedformats)包括jpeg、webp、png、heic<sup>12+</sup>、gif<sup>18+</sup>。
 
 - [PixelMap](arkts-image-image-pixelmap-i.md)类，位图对象，包含像素数据以及[图片信息](arkts-image-image-imageinfo-i.md)。可用于读取或写入像素数据，进行裁剪、缩放、平移、旋转、镜像等操作，并可直接传  
 给[Image组件](../../apis-arkui/arkts-components/arkts-arkui-image-comp.md)用于显示。还提供了获取和设置图片色域、HDR元数据的方法。
@@ -63,11 +63,11 @@ import { image } from '@kit.ImageKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md) | 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。 |
-| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md) | 使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 |
-| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md) | 通过图像属性创建空白PixelMap。 |
+| [createAuxiliaryPicture](arkts-image-image-createauxiliarypicture-f.md#createauxiliarypicture) | 通过ArrayBuffer图片数据、辅助图尺寸、辅助图类型创建AuxiliaryPicture实例。该接口仅支持传入BGRA的连续像素数据，会创建出RGBA的辅助图。 |
+| [createAuxiliaryPictureUsingAllocator](arkts-image-image-createauxiliarypictureusingallocator-f.md#createauxiliarypictureusingallocator) | 使用指定的内存类型，根据辅助图信息和像素数据创建辅助图对象。 |
+| [createEmptyPixelMap](arkts-image-image-createemptypixelmap-f.md#createemptypixelmap) | 通过图像属性创建空白PixelMap。 |
 | [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator2) | 通过图片大小、图片格式、容量创建ImageCreator实例。 |
-| [createImagePacker](arkts-image-image-createimagepacker-f.md) | 创建ImagePacker实例。 |
+| [createImagePacker](arkts-image-image-createimagepacker-f.md#createimagepacker) | 创建ImagePacker实例。 |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver2) | 通过图片大小、图片格式、容量创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver4) | 通过ImageReceiverOptions创建ImageReceiver实例。ImageReceiver作为图片的接收方、消费者，其参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 | [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource1) | 通过传入的uri创建ImageSource实例。 |
@@ -79,30 +79,30 @@ import { image } from '@kit.ImageKit';
 | [createImageSource](arkts-image-image-createimagesource-f.md#createimagesource13) | 通过图像资源文件的RawFileDescriptor创建ImageSource实例。 |
 | [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource1) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
 | [CreateIncrementalSource](arkts-image-image-createincrementalsource-f.md#createincrementalsource2) | 通过缓冲区以增量的方式创建ImageSource实例，IncrementalSource不支持读写Exif信息。 |
-| [createPicture](arkts-image-image-createpicture-f.md) | 通过主图的PixelMap创建一个Picture对象。 |
-| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md) | 从MessageSequence中获取Picture。 |
+| [createPicture](arkts-image-image-createpicture-f.md#createpicture) | 通过主图的PixelMap创建一个Picture对象。 |
+| [createPictureFromParcel](arkts-image-image-createpicturefromparcel-f.md#createpicturefromparcel) | 从MessageSequence中获取Picture。 |
 | [createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap1) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用callback异步回调。 |
 | [createPixelMap](arkts-image-image-createpixelmap-f.md#createpixelmap2) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用Promise异步回调。 |
-| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md) | 从MessageSequence中反序列化并获取PixelMap。 |
-| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用Promise异步回调。 |
-| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。同步返回结果。 |
+| [createPixelMapFromParcel](arkts-image-image-createpixelmapfromparcel-f.md#createpixelmapfromparcel) | 从MessageSequence中反序列化并获取PixelMap。 |
+| [createPixelMapFromPixels](arkts-image-image-createpixelmapfrompixels-f.md#createpixelmapfrompixels) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用Promise异步回调。 |
+| [createPixelMapFromPixelsSync](arkts-image-image-createpixelmapfrompixelssync-f.md#createpixelmapfrompixelssync) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。同步返回结果。 |
 | [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface1) | 根据Surface ID和区域信息创建一个PixelMap对象。该区域的大小由[Region](arkts-image-image-region-i.md).size指定。使用Promise异步回调。 |
 | [createPixelMapFromSurface](arkts-image-image-createpixelmapfromsurface-f.md#createpixelmapfromsurface2) | 从Surface ID创建一个PixelMap对象。使用Promise异步回调。 |
 | [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createpixelmapfromsurfacesync1) | 根据Surface ID和区域信息创建一个PixelMap对象。该区域的大小由[Region](arkts-image-image-region-i.md).size指定。同步返回结果。 |
 | [createPixelMapFromSurfaceSync](arkts-image-image-createpixelmapfromsurfacesync-f.md#createpixelmapfromsurfacesync2) | 从Surface ID创建一个PixelMap对象。同步返回结果。 |
-| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md) | 通过Surface的ID创建一个预览流画面的PixelMap对象。该Surface可能携带旋转或翻转的变换信息。使用Promise异步回调。 |
-| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md) | 通过Surface的ID创建一个预览流画面的PixelMap对象。该Surface可能携带旋转或翻转的变换信息。同步返回结果。 |
+| [createPixelMapFromSurfaceWithTransformation](arkts-image-image-createpixelmapfromsurfacewithtransformation-f.md#createpixelmapfromsurfacewithtransformation) | 通过Surface的ID创建一个预览流画面的PixelMap对象。该Surface可能携带旋转或翻转的变换信息。使用Promise异步回调。 |
+| [createPixelMapFromSurfaceWithTransformationSync](arkts-image-image-createpixelmapfromsurfacewithtransformationsync-f.md#createpixelmapfromsurfacewithtransformationsync) | 通过Surface的ID创建一个预览流画面的PixelMap对象。该Surface可能携带旋转或翻转的变换信息。同步返回结果。 |
 | [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync1) | 通过像素数据和图像属性创建PixelMap。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。同步返回结果。 |
 | [createPixelMapSync](arkts-image-image-createpixelmapsync-f.md#createpixelmapsync2) | 通过图像属性创建空白PixelMap。同步返回结果。 |
-| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md) | 通过像素数据和图像属性创建PixelMap，可以指定内存类型。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用Promise异步回调。 |
+| [createPixelMapUsingAllocator](arkts-image-image-createpixelmapusingallocator-f.md#createpixelmapusingallocator) | 通过像素数据和图像属性创建PixelMap，可以指定内存类型。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。使用Promise异步回调。 |
 | [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync1) | 通过像素数据和图像属性创建PixelMap，可以指定内存类型。传入的像素数据会进行拷贝并转换为[InitializationOptions](arkts-image-image-initializationoptions-i.md).pixelFormat指定的像素格式，用于初始化PixelMap的像素。同步返回结果。 |
 | [createPixelMapUsingAllocatorSync](arkts-image-image-createpixelmapusingallocatorsync-f.md#createpixelmapusingallocatorsync2) | 通过图像属性创建空白PixelMap，可以指定内存类型。同步返回结果。 |
 | [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap1) | 将PixelMap像素数据的透明度类型从非预乘模式转换为预乘模式，转换后的像素数据存入目标PixelMap。适用于图像渲染管线需要预乘Alpha格式的场景，例如使用OpenGL等图形接口进行图像合成时。使用callback异步回调。 |
 | [createPremultipliedPixelMap](arkts-image-image-createpremultipliedpixelmap-f.md#createpremultipliedpixelmap2) | 将PixelMap像素数据的透明度类型从非预乘模式转换为预乘模式，转换后的像素数据存入目标PixelMap。适用于图像渲染管线需要预乘Alpha格式的场景，例如使用OpenGL等图形接口进行图像合成时。使用Promise异步回调。 |
 | [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap1) | 将PixelMap像素数据的透明度类型从预乘模式转换为非预乘模式，转换后的像素数据存入目标PixelMap。适用于需要对像素原始颜色值进行直接处理的场景，例如图像编辑、像素级分析等。使用callback异步回调。 |
 | [createUnpremultipliedPixelMap](arkts-image-image-createunpremultipliedpixelmap-f.md#createunpremultipliedpixelmap2) | 将PixelMap像素数据的透明度类型从预乘模式转换为非预乘模式，转换后的像素数据存入目标PixelMap。适用于需要对像素原始颜色值进行直接处理的场景，例如图像编辑、像素级分析等。使用Promise异步回调。 |
-| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md) | 获取支持编码的图片格式，图片格式以mime type表示。 |
-| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md) | 获取支持解码的图片格式，图片格式以mime type表示。 |
+| [getImagePackerSupportedFormats](arkts-image-image-getimagepackersupportedformats-f.md#getimagepackersupportedformats) | 获取支持编码的图片格式，图片格式以mime type表示。 |
+| [getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md#getimagesourcesupportedformats) | 获取支持解码的图片格式，图片格式以mime type表示。 |
 | [createImageCreator](arkts-image-image-createimagecreator-f.md#createimagecreator1) | 通过宽、高、图片格式、容量创建ImageCreator实例。 |
 | [createImageReceiver](arkts-image-image-createimagereceiver-f.md#createimagereceiver1) | 通过宽、高、图片格式、容量创建ImageReceiver实例。ImageReceiver做为图片的接收方、消费者，它的参数属性实际上不会对接收到的图片产生影响。图片属性的配置应在发送方、生产者进行，如相机预览流[createPreviewOutput](../../apis-camera-kit/arkts-apis/arkts-camera-camera-cameramanager-i.md#createpreviewoutput1)。 |
 
@@ -113,7 +113,7 @@ import { image } from '@kit.ImageKit';
 | --- | --- |
 | [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap1) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个增益图（gainmap），返回的Picture对象将包含SDR PixelMap和生成的gainmap PixelMap，像素格式为RGBA8888。使用Promise异步回调。 |
 | [createPictureByHdrAndSdrPixelMap](arkts-image-image-createpicturebyhdrandsdrpixelmap-f-sys.md#createpicturebyhdrandsdrpixelmap2) | 根据HDR PixelMap和SDR PixelMap创建Picture对象。系统将使用HDR和SDR PixelMap生成一个Gainmap（增益图），返回的Picture对象将包含SDR PixelMap和生成的Gainmap PixelMap，像素格式为RGBA8888。Gainmap PixelMap的尺寸可以通过设置params进行选择。使用Promise异步回调。 |
-| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md) | 将HDR PixelMap分解为包含SDR PixelMap和增益图（gainmap）的Picture对象。使用Promise异步回调。 |
+| [decomposeToPicture](arkts-image-image-decomposetopicture-f-sys.md#decomposetopicture) | 将HDR PixelMap分解为包含SDR PixelMap和增益图（gainmap）的Picture对象。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 类

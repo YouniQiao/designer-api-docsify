@@ -6,8 +6,6 @@ enum SessionCategory
 
 表示不同场景会话类别的枚举。
 
-@enum { int }
-
 **起始版本：** 22
 
 <!--Device-avSession-enum SessionCategory--><!--Device-avSession-enum SessionCategory-End-->

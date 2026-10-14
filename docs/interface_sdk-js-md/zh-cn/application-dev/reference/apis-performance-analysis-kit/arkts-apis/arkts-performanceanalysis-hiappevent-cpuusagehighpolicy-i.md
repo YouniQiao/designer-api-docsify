@@ -36,7 +36,7 @@ backgroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-backgroundLoadThreshold?: int-End-->
 
@@ -56,7 +56,7 @@ foregroundLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-foregroundLoadThreshold?: int-End-->
 
@@ -89,7 +89,7 @@ Release版本应用，阈值范围：[0, 20]。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int--><!--Device-CpuUsageHighPolicy-perfLogCaptureCount?: int-End-->
 
@@ -109,7 +109,7 @@ threadLoadInterval?: number
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CpuUsageHighPolicy-threadLoadInterval?: int--><!--Device-CpuUsageHighPolicy-threadLoadInterval?: int-End-->
 
@@ -127,7 +127,7 @@ threadLoadThreshold?: number
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int--><!--Device-CpuUsageHighPolicy-threadLoadThreshold?: int-End-->
 

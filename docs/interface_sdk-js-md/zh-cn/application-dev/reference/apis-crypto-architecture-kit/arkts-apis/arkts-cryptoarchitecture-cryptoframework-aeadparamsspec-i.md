@@ -43,7 +43,7 @@ authenticatedData?: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AeadParamsSpec-authenticatedData?: Uint8Array--><!--Device-AeadParamsSpec-authenticatedData?: Uint8Array-End-->
 
@@ -69,7 +69,7 @@ nonce: Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AeadParamsSpec-nonce: Uint8Array--><!--Device-AeadParamsSpec-nonce: Uint8Array-End-->
 
@@ -97,7 +97,7 @@ tagLen?: number
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AeadParamsSpec-tagLen?: int--><!--Device-AeadParamsSpec-tagLen?: int-End-->
 

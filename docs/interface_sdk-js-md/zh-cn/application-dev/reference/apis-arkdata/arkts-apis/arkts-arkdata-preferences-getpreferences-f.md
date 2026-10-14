@@ -20,7 +20,7 @@ function getPreferences(context: Context, name: string, callback: AsyncCallback<
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-preferences-function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void--><!--Device-preferences-function getPreferences(context: Context, name: string, callback: AsyncCallback<Preferences>): void-End-->
 
@@ -100,7 +100,7 @@ function getPreferences(context: Context, options: Options, callback: AsyncCallb
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-preferences-function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void--><!--Device-preferences-function getPreferences(context: Context, options: Options, callback: AsyncCallback<Preferences>): void-End-->
 
@@ -186,7 +186,7 @@ function getPreferences(context: Context, name: string): Promise<Preferences>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-preferences-function getPreferences(context: Context, name: string): Promise<Preferences>--><!--Device-preferences-function getPreferences(context: Context, name: string): Promise<Preferences>-End-->
 
@@ -270,7 +270,7 @@ function getPreferences(context: Context, options: Options): Promise<Preferences
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-preferences-function getPreferences(context: Context, options: Options): Promise<Preferences>--><!--Device-preferences-function getPreferences(context: Context, options: Options): Promise<Preferences>-End-->
 

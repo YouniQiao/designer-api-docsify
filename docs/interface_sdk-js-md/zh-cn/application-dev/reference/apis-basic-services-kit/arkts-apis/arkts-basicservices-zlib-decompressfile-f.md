@@ -24,7 +24,7 @@ function decompressFile(inFile: string, outFile: string, options: Options, callb
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, options: Options, callback: AsyncCallback<void>): void-End-->
 
@@ -95,7 +95,7 @@ function decompressFile(inFile: string, outFile: string, callback: AsyncCallback
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, callback: AsyncCallback<void>): void-End-->
 
@@ -161,7 +161,7 @@ function decompressFile(inFile: string, outFile: string, options?: Options): Pro
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-zlib-function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>--><!--Device-zlib-function decompressFile(inFile: string, outFile: string, options?: Options): Promise<void>-End-->
 

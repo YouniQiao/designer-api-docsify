@@ -48,3 +48,21 @@ function startExactTimer(timer: number, triggerTime: number): Promise<void>
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
 | [9201054](../errorcode-enterpriseDeviceManager.md#9201054-指定的定时器不存在或不属于当前设备管理应用) | The specified timer does not exist or does not belong to the current administrator. |
+
+**示例**
+
+```TypeScript
+import { systemManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+import { systemDateTime } from '@kit.BasicServicesKit';
+
+// 需根据实际情况进行替换，timerId由createExactTimer接口获取
+let timerId: number = 1;
+// 10秒后开始触发定时器
+let triggerTime: number = systemDateTime.getUptime(systemDateTime.TimeType.STARTUP) + 10000;
+systemManager.startExactTimer(timerId, triggerTime).then(() => {
+  console.info('Succeeded in starting exact timer.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to start exact timer. Code: ${err.code}, message: ${err.message}`);
+});
+```

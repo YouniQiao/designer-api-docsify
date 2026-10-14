@@ -24,7 +24,7 @@ FRAME_TYPE_1 = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-FrameType-FRAME_TYPE_1 = 1--><!--Device-FrameType-FRAME_TYPE_1 = 1-End-->
 
@@ -42,7 +42,7 @@ FRAME_TYPE_4 = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-FrameType-FRAME_TYPE_4 = 4--><!--Device-FrameType-FRAME_TYPE_4 = 4-End-->
 

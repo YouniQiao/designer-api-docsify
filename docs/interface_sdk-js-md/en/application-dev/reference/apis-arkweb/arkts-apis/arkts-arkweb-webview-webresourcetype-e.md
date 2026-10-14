@@ -144,7 +144,7 @@ Object (or embed) tag of the plug-in, or the resource requested by the plug-in.
 PING = 14
 ```
 
-&lt;a ping&gt;/sendBeacon ping request.
+<a ping>/sendBeacon ping request.
 
 **Since:** 12
 

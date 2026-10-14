@@ -4,8 +4,6 @@ This module provides basic definitions of the [InsightIntent framework](../../..
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace insightIntent--><!--Device-unnamed-declare namespace insightIntent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -29,6 +27,7 @@ import { insightIntent } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | Return result of intent execution. |
+| [FileEntity](arkts-ability-insightintent-fileentity-i.md) | Defines the struct of a file entity. It represents key file objects involved during intent execution, including intent parameters and execution results. |
 | [IntentEntity](arkts-ability-insightintent-intententity-i.md) | Defines the struct of an intent entity. It represents key information objects involved during intent execution, including intent parameters and execution results. |
 | [IntentResult](arkts-ability-insightintent-intentresult-i.md) | Defines the return result of intent execution. The [generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported. |
 | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Parameter for query entity. |
@@ -39,6 +38,7 @@ import { insightIntent } from '@kit.AbilityKit';
 | Name | Description |
 | --- | --- |
 | [ExecuteResult](arkts-ability-insightintent-executeresult-i-sys.md) | Return result of intent execution. |
+| [FileEntity](arkts-ability-insightintent-fileentity-i-sys.md) | Defines the struct of a file entity. It represents key file objects involved during intent execution, including intent parameters and execution results. |
 | [IntentResult](arkts-ability-insightintent-intentresult-i-sys.md) | Defines the return result of intent execution. The [generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported. |
 | [InteractionInfo](arkts-ability-insightintent-interactioninfo-i-sys.md) | Defines the interaction information returned after the current intent execution completes, including the next intent to be triggered and the interaction UI to be displayed. |
 | [InteractionModalUIExtension](arkts-ability-insightintent-interactionmodaluiextension-i-sys.md) | Defines the information of the modal UIExtension to be displayed as the interaction UI after the current intent execution completes. Does not support distributed scenarios. |

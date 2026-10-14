@@ -12,7 +12,7 @@ export enum LocationRequestScenario
 
 **替代接口：** [LocationRequestScenario](arkts-location-geolocationmanager-locationrequestscenario-e.md)
 
-**需要权限：** ohos.permission.LOCATION @enum { number }
+**需要权限：** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum LocationRequestScenario--><!--Device-geolocation-export enum LocationRequestScenario-End-->
 

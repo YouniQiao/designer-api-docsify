@@ -4,9 +4,9 @@ Defines Web Component.
 
 **ohos.permission.INTERNET**, required for accessing online web pages. For details about how to apply for a permission, see [Declaring Permissions](../../../security/AccessToken/declare-permissions.md).
 
-<p>&lt;strong&gt;API Note&lt;/strong&gt;:
+<p><strong>API Note</strong>:
 
-&lt;strong&gt;Performance Note&lt;/strong&gt;: <p>For details about how to optimize the compilation, resource loading, and JSBridge performance, see Optimizing Web Page Loading <p>When the white screen duration is long due to complex web page parsing, you can enable [optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget) to reduce the first frame rendering content.</p> </p>
+<strong>Performance Note</strong>: <p>For details about how to optimize the compilation, resource loading, and JSBridge performance, see Optimizing Web Page Loading <p>When the white screen duration is long due to complex web page parsing, you can enable [optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget) to reduce the first frame rendering content.</p> </p>
 
 ## Web
 
@@ -149,10 +149,10 @@ Sets Value.
 | [OnSafeBrowsingCheckResultCallback](arkts-arkweb-web-comp-onsafebrowsingcheckresultcallback-t.md) | Defines a callback invoked by a website safe browsing check. |
 | [OnSslErrorEventCallback](arkts-arkweb-web-comp-onsslerroreventcallback-t.md) | Callback invoked when an SSL error occurs during resource loading. Returns detailed information about the SSL error. |
 | [OnVerifyPinCallback](arkts-arkweb-web-comp-onverifypincallback-t.md) | Callback triggered to notify the user of PIN authentication. |
-| [OnViewportFitChangedCallback](arkts-arkweb-web-comp-onviewportfitchangedcallback-t.md) | Defines a callback invoked when the **viewport-fit** configuration in the web page's **\&lt;meta&gt;** tag changes. |
+| [OnViewportFitChangedCallback](arkts-arkweb-web-comp-onviewportfitchangedcallback-t.md) | Defines a callback invoked when the **viewport-fit** configuration in the web page's **\<meta>** tag changes. |
 | [OnZoomChangeCallback](arkts-arkweb-web-comp-onzoomchangecallback-t.md) | Called when the browser zoom factor of the page changes. |
 | [TextSelectionChangeCallback](arkts-arkweb-web-comp-textselectionchangecallback-t.md) | Callback for onTextSelectionChange. Triggered when the text selection content changes. |
-| [WebKeyboardCallback](arkts-arkweb-web-comp-webkeyboardcallback-t.md) | Defines a callback to intercept the soft keyboard initiated from editable elements on a web page. This event is typically called when the **\&lt;input&gt;** tag on the web page is clicked. |
+| [WebKeyboardCallback](arkts-arkweb-web-comp-webkeyboardcallback-t.md) | Defines a callback to intercept the soft keyboard initiated from editable elements on a web page. This event is typically called when the **\<input>** tag on the web page is clicked. |
 | [WebviewController](arkts-arkweb-web-comp-webviewcontroller-t.md) | Defines methods for the web controller. Controls various behaviors of the Web component through WebviewController. A WebviewController object can control only one Web component, and methods on WebviewController (except static methods) can be called only after the Web component and WebviewController are bound. |
 
 ### Enums
@@ -193,7 +193,7 @@ Sets Value.
 | [ScrollDirectionalLockType](arkts-arkweb-web-comp-scrolldirectionallocktype-e.md) | Defines the scenario types for scroll direction locking. |
 | [SslError](arkts-arkweb-web-comp-sslerror-e.md) | Enumerates the error codes returned by **onSslErrorEventReceive** API. |
 | [ThreatType](arkts-arkweb-web-comp-threattype-e.md) | Enumerates the website threat types. |
-| [ViewportFit](arkts-arkweb-web-comp-viewportfit-e.md) | Enumerates the viewport types available for **viewport-fit** in the web page **\&lt;meta&gt;** tag. |
+| [ViewportFit](arkts-arkweb-web-comp-viewportfit-e.md) | Enumerates the viewport types available for **viewport-fit** in the web page **\<meta>** tag. |
 | [WebBypassVsyncCondition](arkts-arkweb-web-comp-webbypassvsynccondition-e.md) | Enumerates whether to allow the rendering process to bypass the vsync scheduling. |
 | [WebCaptureMode](arkts-arkweb-web-comp-webcapturemode-e.md) | Enumerates the web screen capture modes. |
 | [WebDarkMode](arkts-arkweb-web-comp-webdarkmode-e.md) | Configures the web dark mode, which controls the dark theme display of web content and helps developers improve visual experience and readability based on user preferences and system themes. |

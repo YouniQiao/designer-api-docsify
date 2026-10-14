@@ -22,7 +22,7 @@ Cubic interpolation.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-HIGH = 3--><!--Device-AntiAliasingLevel-HIGH = 3-End-->
 
@@ -38,7 +38,7 @@ Bilinear interpolation.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-LOW = 1--><!--Device-AntiAliasingLevel-LOW = 1-End-->
 
@@ -54,7 +54,7 @@ Bilinear interpolation with mipmap enabled. You are advised to use this value wh
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-MEDIUM = 2--><!--Device-AntiAliasingLevel-MEDIUM = 2-End-->
 
@@ -70,7 +70,7 @@ Nearest neighbor interpolation.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AntiAliasingLevel-NONE = 0--><!--Device-AntiAliasingLevel-NONE = 0-End-->
 

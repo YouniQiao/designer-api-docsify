@@ -22,7 +22,7 @@ interface SwipeGestureInterface extends GestureInterface<SwipeGestureInterface>
 (value?: { fingers?: number; direction?: SwipeDirection; speed?: number }): SwipeGestureInterface
 ```
 
-Sets the parameters for the swipe gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
+Sets the parameters for the swipe gesture. Inherits from [GestureInterface<T>](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
 
 **Since:** 8
 

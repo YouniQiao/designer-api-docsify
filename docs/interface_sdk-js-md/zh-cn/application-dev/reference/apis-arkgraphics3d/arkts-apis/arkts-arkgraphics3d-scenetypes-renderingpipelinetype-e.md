@@ -6,8 +6,6 @@ export enum RenderingPipelineType
 
 渲染管线类型枚举。
 
-@enum { int }
-
 **起始版本：** 21
 
 <!--Device-unnamed-export enum RenderingPipelineType--><!--Device-unnamed-export enum RenderingPipelineType-End-->

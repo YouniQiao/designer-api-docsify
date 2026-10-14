@@ -54,7 +54,7 @@ Stops the animation. When page switching is controlled through this method, the 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | No | Callback triggered when an animation stops.<br>Default value: No callback when not passed. |
+| handler | [FinishAnimationHandler](arkts-arkui-arcswiper-comp-finishanimationhandler-t.md) | No | Callback triggered when an animation stops.<br>Default value: No callback when not passed. |
 
 ## showNext
 
@@ -62,7 +62,7 @@ Stops the animation. When page switching is controlled through this method, the 
 showNext()
 ```
 
-Swipes to the next page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
+Swipes to the next page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arcswiper-comp-attribute.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
 
 **Since:** 18
 
@@ -78,7 +78,7 @@ Swipes to the next page. The swipe transition includes animation, with the durat
 showPrevious()
 ```
 
-Swipes to the previous page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
+Swipes to the previous page. The swipe transition includes animation, with the duration specified by [duration](arkts-arkui-arcswiper-comp-attribute.md#duration). When page switching is controlled through this method, the bounce effect set by **effectMode** does not take effect.
 
 **Since:** 18
 

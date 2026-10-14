@@ -24,7 +24,7 @@ FAST_FORWARD_BACKWARD = 102
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102--><!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102-End-->
 
@@ -42,7 +42,7 @@ VIDEO_PREVIOUS_NEXT = 101
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
 

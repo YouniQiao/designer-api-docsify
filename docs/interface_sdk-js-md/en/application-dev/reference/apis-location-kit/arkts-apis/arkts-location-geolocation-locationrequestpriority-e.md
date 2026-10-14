@@ -12,7 +12,7 @@ Enum for location priority
 
 **Substitutes:** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
-**Required permissions:** ohos.permission.LOCATION @enum { number }
+**Required permissions:** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum LocationRequestPriority--><!--Device-geolocation-export enum LocationRequestPriority-End-->
 

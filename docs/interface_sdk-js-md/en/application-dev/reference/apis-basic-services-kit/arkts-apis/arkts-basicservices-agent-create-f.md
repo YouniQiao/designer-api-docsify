@@ -26,7 +26,7 @@ Creates an upload or download task and adds it to the queue. This API uses an as
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-agent-function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void--><!--Device-agent-function create(context: BaseContext, config: Config, callback: AsyncCallback<Task>): void-End-->
 
@@ -72,7 +72,7 @@ Creates an upload or download task and adds it to the queue. This API uses a pro
 
 **Required permissions:** ohos.permission.INTERNET
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-agent-function create(context: BaseContext, config: Config): Promise<Task>--><!--Device-agent-function create(context: BaseContext, config: Config): Promise<Task>-End-->
 

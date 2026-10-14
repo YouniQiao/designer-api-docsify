@@ -34,7 +34,7 @@ Clears the key data in memory. This API returns the result synchronously.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PriKey-clearMem(): void--><!--Device-PriKey-clearMem(): void-End-->
 
@@ -70,7 +70,7 @@ Obtains a key parameter. This API returns the result synchronously.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PriKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int--><!--Device-PriKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int-End-->
 
@@ -153,7 +153,7 @@ Obtains the private key data that complies with the ASN.1 syntax and DER encodin
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PriKey-getEncodedDer(format: string): DataBlob--><!--Device-PriKey-getEncodedDer(format: string): DataBlob-End-->
 
@@ -210,7 +210,7 @@ Obtains the private key data in PEM encoding. This API returns the result synchr
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PriKey-getEncodedPem(format: string): string--><!--Device-PriKey-getEncodedPem(format: string): string-End-->
 
@@ -281,7 +281,7 @@ Obtains the encrypted private key data in PEM encoding. This API returns the res
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-PriKey-getEncodedPem(format: string, config: KeyEncodingConfig): string--><!--Device-PriKey-getEncodedPem(format: string, config: KeyEncodingConfig): string-End-->
 
@@ -356,7 +356,7 @@ Obtains the private key data based on the specified key data type. This API uses
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PriKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>--><!--Device-PriKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>-End-->
 
@@ -411,7 +411,7 @@ Obtains the private key data based on the specified key data type. This API retu
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PriKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array--><!--Device-PriKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array-End-->
 
@@ -462,7 +462,7 @@ Obtains a public key from a private key. This API uses a promise to return the r
 
 **Since:** 23
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PriKey-getPubKey(): Promise<PubKey>--><!--Device-PriKey-getPubKey(): Promise<PubKey>-End-->
 
@@ -565,7 +565,7 @@ Obtains a public key from a private key in synchronous mode.
 
 **Since:** 23
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PriKey-getPubKeySync(): PubKey--><!--Device-PriKey-getPubKeySync(): PubKey-End-->
 

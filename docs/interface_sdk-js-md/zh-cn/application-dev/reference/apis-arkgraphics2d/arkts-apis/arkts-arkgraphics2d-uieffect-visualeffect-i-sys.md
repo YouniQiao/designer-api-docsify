@@ -28,7 +28,7 @@ backgroundColorBlender(blender: BrightnessBlender): VisualEffect
 
 **起始版本：** 12
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
 

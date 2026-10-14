@@ -22,7 +22,7 @@ BUSY = 12500007
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-BUSY = 12500007--><!--Device-UserAuthResultCode-BUSY = 12500007-End-->
 
@@ -38,7 +38,7 @@ CANCELED = 12500003
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-CANCELED = 12500003--><!--Device-UserAuthResultCode-CANCELED = 12500003-End-->
 
@@ -54,7 +54,7 @@ CANCELED_FROM_WIDGET = 12500011
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011--><!--Device-UserAuthResultCode-CANCELED_FROM_WIDGET = 12500011-End-->
 
@@ -70,7 +70,7 @@ FAIL = 12500001
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-FAIL = 12500001--><!--Device-UserAuthResultCode-FAIL = 12500001-End-->
 
@@ -86,7 +86,7 @@ GENERAL_ERROR = 12500002
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002--><!--Device-UserAuthResultCode-GENERAL_ERROR = 12500002-End-->
 
@@ -102,7 +102,7 @@ INVALID_PARAMETERS = 12500008
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008--><!--Device-UserAuthResultCode-INVALID_PARAMETERS = 12500008-End-->
 
@@ -118,7 +118,7 @@ LOCKED = 12500009
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-LOCKED = 12500009--><!--Device-UserAuthResultCode-LOCKED = 12500009-End-->
 
@@ -134,7 +134,7 @@ NOT_ENROLLED = 12500010
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010--><!--Device-UserAuthResultCode-NOT_ENROLLED = 12500010-End-->
 
@@ -150,7 +150,7 @@ PIN_EXPIRED = 12500013
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013--><!--Device-UserAuthResultCode-PIN_EXPIRED = 12500013-End-->
 
@@ -166,7 +166,7 @@ SUCCESS = 12500000
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-SUCCESS = 12500000--><!--Device-UserAuthResultCode-SUCCESS = 12500000-End-->
 
@@ -182,7 +182,7 @@ TIMEOUT = 12500004
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-TIMEOUT = 12500004--><!--Device-UserAuthResultCode-TIMEOUT = 12500004-End-->
 
@@ -198,7 +198,7 @@ TRUST_LEVEL_NOT_SUPPORT = 12500006
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006--><!--Device-UserAuthResultCode-TRUST_LEVEL_NOT_SUPPORT = 12500006-End-->
 
@@ -214,7 +214,7 @@ TYPE_NOT_SUPPORT = 12500005
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005--><!--Device-UserAuthResultCode-TYPE_NOT_SUPPORT = 12500005-End-->
 

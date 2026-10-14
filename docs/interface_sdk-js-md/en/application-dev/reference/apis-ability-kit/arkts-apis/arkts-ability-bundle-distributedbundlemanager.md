@@ -31,8 +31,8 @@ import { distributedBundleManager } from '@kit.AbilityKit';
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo6) | Obtains information about the remote ability that matches the given element name and locale. This API uses a promise to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo7) | Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames and locale. This API uses an asynchronous callback to return the result. |
 | [getRemoteAbilityInfo](arkts-ability-distributedbundlemanager-getremoteabilityinfo-f-sys.md#getremoteabilityinfo8) | Obtains the AbilityInfo array information of the application on the specified remote device identified by elementNames and locale. This API uses a promise to return the result. |
-| [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md) | Obtains the version code of the application with the specified bundle name on the specified remote device. This API uses a promise to return the result. |
-| [getRemoteMetadata](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md) | Obtains the metadata of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result. |
+| [getRemoteBundleVersionCode](arkts-ability-distributedbundlemanager-getremotebundleversioncode-f-sys.md#getremotebundleversioncode) | Obtains the version code of the application with the specified bundle name on the specified remote device. This API uses a promise to return the result. |
+| [getRemoteMetadata](arkts-ability-distributedbundlemanager-getremotemetadata-f-sys.md#getremotemetadata) | Obtains the metadata of an app with a specified bundle name on a specified remote device. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 <!--Del-->

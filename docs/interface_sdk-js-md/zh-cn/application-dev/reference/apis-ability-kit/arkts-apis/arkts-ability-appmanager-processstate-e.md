@@ -22,7 +22,7 @@ At least one window in the process has focus.
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProcessState-STATE_ACTIVE = 2--><!--Device-ProcessState-STATE_ACTIVE = 2-End-->
 
@@ -38,7 +38,7 @@ The process is running in the background.
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProcessState-STATE_BACKGROUND = 3--><!--Device-ProcessState-STATE_BACKGROUND = 3-End-->
 
@@ -54,7 +54,7 @@ The process is created.
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProcessState-STATE_CREATE = 0--><!--Device-ProcessState-STATE_CREATE = 0-End-->
 
@@ -70,7 +70,7 @@ The process is destroyed.
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProcessState-STATE_DESTROY = 4--><!--Device-ProcessState-STATE_DESTROY = 4-End-->
 
@@ -86,7 +86,7 @@ The process is running in the foreground.
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProcessState-STATE_FOREGROUND = 1--><!--Device-ProcessState-STATE_FOREGROUND = 1-End-->
 

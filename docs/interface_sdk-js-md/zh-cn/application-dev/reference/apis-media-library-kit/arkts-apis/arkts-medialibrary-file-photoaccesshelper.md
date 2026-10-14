@@ -1,4 +1,4 @@
-# @ohos.file.photoAccessHelper(访问图片、视频资源的辅助函数)
+# @ohos.file.photoAccessHelper(相册管理模块)
 
 该模块提供相册管理能力，包括创建相册、访问和修改相册中的媒体数据。
 

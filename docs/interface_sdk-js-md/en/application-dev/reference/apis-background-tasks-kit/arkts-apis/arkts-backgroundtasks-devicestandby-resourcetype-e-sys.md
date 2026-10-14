@@ -6,8 +6,6 @@ export enum ResourceType
 
 The type of exemption resources requested by the application.
 
-@enum { int }
-
 **Since:** 10
 
 <!--Device-deviceStandby-export enum ResourceType--><!--Device-deviceStandby-export enum ResourceType-End-->

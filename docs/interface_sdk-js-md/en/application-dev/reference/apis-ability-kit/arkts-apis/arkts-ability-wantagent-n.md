@@ -38,19 +38,19 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | [getUid](arkts-ability-wantagent-getuid-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | Obtains a WantAgent object. This API uses an asynchronous callback to return the result. If the creation fails, a null value is returned. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | Creates a WantAgent instance for triggering a specified operation later. This API uses a promise to return the result. If the creation succeeds, the WantAgent object is returned; otherwise, null is returned. |
-| [trigger](arkts-ability-wantagent-trigger-f.md) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [trigger](arkts-ability-wantagent-trigger-f.md#trigger) | Proactively triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) | Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process. |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) | Create a local WantAgent object. The WantAgent created by this interface stores data on the client side and is not managed by the WantAgent servcer. If this WantAgent object is passed across processes, its contained data will be serialized and transmitted to the target process. |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant1) | Obtains the Want in a WantAgent object. This API uses an asynchronous callback to return the result. |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant2) | Obtains the Want in a WantAgent object. This API uses a promise to return the result. |
-| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md) | Checks whether the specified WantAgent is local. |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | Enables or disables the WantAgent multithreading feature. |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
+| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) | Checks whether the specified WantAgent is local. |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) | Enables or disables the WantAgent multithreading feature. |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | Asynchronously triggers a predefined operation encration encapsulated in a Wantagent with specified trigger information. If the specified wantAgent is local, you need to apply for permission: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
 <!--DelEnd-->
 
 ### Interfaces

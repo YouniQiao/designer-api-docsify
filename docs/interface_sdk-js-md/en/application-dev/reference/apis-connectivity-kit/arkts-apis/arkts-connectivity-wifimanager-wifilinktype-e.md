@@ -4,7 +4,7 @@
 enum WifiLinkType
 ```
 
-Wi-Fi link type. @enum { int }
+Wi-Fi link type.
 
 **Since:** 18
 

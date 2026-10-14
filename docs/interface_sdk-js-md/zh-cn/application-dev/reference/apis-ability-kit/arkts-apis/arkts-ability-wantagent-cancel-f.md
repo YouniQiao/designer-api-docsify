@@ -18,7 +18,7 @@ function cancel(agent: WantAgent, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void-End-->
 
@@ -125,7 +125,7 @@ function cancel(agent: WantAgent): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
 

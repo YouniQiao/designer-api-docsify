@@ -26,7 +26,7 @@ CDATA事件。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-CDSECT--><!--Device-EventType-CDSECT-End-->
 
@@ -42,7 +42,7 @@ XML注释事件。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-COMMENT--><!--Device-EventType-COMMENT-End-->
 
@@ -58,7 +58,7 @@ XML文档类型声明事件。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-DOCDECL--><!--Device-EventType-DOCDECL-End-->
 
@@ -74,7 +74,7 @@ END_DOCUMENT
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
 
@@ -90,7 +90,7 @@ END_TAG
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
 
@@ -106,7 +106,7 @@ ENTITY_REFERENCE
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-ENTITY_REFERENCE--><!--Device-EventType-ENTITY_REFERENCE-End-->
 
@@ -122,7 +122,7 @@ XML处理指令声明事件。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
 
@@ -138,7 +138,7 @@ START_DOCUMENT
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
 
@@ -154,7 +154,7 @@ START_TAG
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
 
@@ -170,7 +170,7 @@ TEXT
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
 
@@ -186,7 +186,7 @@ WHITESPACE
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-EventType-WHITESPACE--><!--Device-EventType-WHITESPACE-End-->
 

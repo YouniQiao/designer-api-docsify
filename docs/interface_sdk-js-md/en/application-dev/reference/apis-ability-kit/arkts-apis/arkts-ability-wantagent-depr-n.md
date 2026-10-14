@@ -37,7 +37,7 @@ The WantAgent module provides APIs for creating and comparing WantAgent objects,
 | [getUid](arkts-ability-wantagent-getuid-depr-f.md#getuid2) | Obtains the user ID of a WantAgent object. This API uses a promise to return the result. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent1) | Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses an asynchronous callback to return the result. |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-depr-f.md#getwantagent2) | Creates a WantAgent object. If the creation fails, a null WantAgent object is returned. This API uses a promise to return the result. |
-| [trigger](arkts-ability-wantagent-trigger-depr-f.md) | Triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
+| [trigger](arkts-ability-wantagent-trigger-depr-f.md#trigger) | Triggers a WantAgent object. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)

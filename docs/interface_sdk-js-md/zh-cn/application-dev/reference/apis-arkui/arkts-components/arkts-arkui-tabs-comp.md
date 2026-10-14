@@ -2271,11 +2271,11 @@ struct TabsSidebarExample {
       .border({width: 1, color: '#ffd9d9d9'})
       // 设置Tabs显示样式
       .barStyle(this.myBarStyle)
-      // 设置侧边栏显示在起始侧
+      // 设置侧边页签栏显示在起始侧
       .sidebarPosition(BarPosition.Start)
-      // 设置侧边栏头部内容
+      // 设置侧边页签栏头部内容
       .sidebarHeader(new ComponentContent(this.getUIContext(), wrapBuilder(TestHeaderBuilder)))
-      // 设置侧边栏搜索选项
+      // 设置侧边页签栏搜索选项
       .sidebarSearchable({
         placeholder: 'Search tabs',
         searchCallback: (text: string) => {
@@ -2299,6 +2299,8 @@ struct TabsSidebarExample {
 本示例展示了如何通过[sidebarDisplayStyle](#sidebardisplaystyle)接口设置Tabs的侧边栏展示模式，切换嵌入模式（EMBED）和推挤模式（DISPLACE）。
 
 从API版本26.2.0开始，新增sidebarDisplayStyle接口。
+
+
 
 ```TypeScript
 // xxx.ets
@@ -2356,6 +2358,220 @@ struct TabsSideBarDemo {
     }
     .width('100%')
     .height('100%')
+  }
+}
+```
+
+### 示例27（设置侧边页签栏内容的显示效果）
+
+本示例展示了通过以下接口控制侧边页签栏内容的显示效果。
+
+通过[sidebarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#sidebarwidth)接口设置侧边页签栏的宽度。
+
+通过[sidebarBackgroundColor](#sidebarbackgroundcolor)接口设置侧边页签栏的背景颜色。
+
+通过[sidebarBackgroundBlurStyle](#sidebarbackgroundblurstyle)接口设置侧边页签栏的背景模糊样式。
+
+通过[sidebarSelectedIconColor](#sidebarselectediconcolor)接口设置侧边页签栏中选中态页签的图标颜色。
+
+通过[sidebarSelectedTextColor](#sidebarselectedtextcolor)接口设置侧边页签栏中选中态页签的文本颜色。
+
+通过[sidebarUnselectedIconColor](#sidebarunselectediconcolor)接口设置侧边页签栏中非选中态页签的图标颜色。
+
+通过[sidebarUnselectedTextColor](#sidebarunselectedtextcolor)接口设置侧边页签栏中非选中态页签的文本颜色。
+
+通过[sidebarSelectedBoardColor](#sidebarselectedboardcolor)接口设置侧边页签栏中选中页签的背板颜色。
+
+从API版本26.2.0开始，新增sidebarWidth、sidebarBackgroundColor、sidebarBackgroundBlurStyle、sidebarSelectedTextColor、sidebarSelectedIconColor、sidebarUnselectedTextColor、sidebarUnselectedIconColor、sidebarSelectedBoardColor接口。
+
+
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TabsSidebarContentStyleExample {
+  private testArr: Array<number> = new Array();
+
+  aboutToAppear(): void {
+    for (let i = 0; i < 6; i++) {
+      this.testArr.push(i);
+    }
+  }
+
+  build() {
+    Tabs() {
+      ForEach(this.testArr, (data: number) => {
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text(`TabContent${data}`)
+          }
+          .width('100%')
+          .height('100%')
+        }
+        // 请开发者将$r('app.media.arrow')替换为实际的资源
+        .tabBar({icon: $r('app.media.arrow'), text: `TabContent${data}`})
+      }, (data: number) => data.toString())
+    }
+    .height('400')
+    .width('400')
+    .backgroundColor('#fffffbf0')
+    // 设置Tabs为侧边页签栏样式
+    .barStyle(TabBarStyle.SIDEBAR)
+    // 设置侧边页签栏的宽度
+    .sidebarWidth('190')
+    // 设置侧边页签栏的背景颜色
+    .sidebarBackgroundColor('#80f6fcf5')
+    // 设置侧边页签栏的背景模糊样式
+    .sidebarBackgroundBlurStyle(BlurStyle.Thin)
+    // 设置侧边页签栏的选中页签的图标颜色
+    .sidebarSelectedIconColor('#ffa10a21')
+    // 设置侧边页签栏的选中页签的文本颜色
+    .sidebarSelectedTextColor('#ffa10a21')
+    // 设置侧边页签栏的非选中页签的图标颜色
+    .sidebarUnselectedIconColor('#ffffc000')
+    // 设置侧边页签栏的非选中页签的文本颜色
+    .sidebarUnselectedTextColor('#ffffc000')
+    // 设置侧边页签栏的选中页签的背板颜色
+    .sidebarSelectedBoardColor('#ffe3fff9')
+  }
+}
+```
+
+### 示例28（设置侧边页签栏模式下分割线支持拖拽效果）
+
+本示例展示了通过以下接口实现侧边页签栏模式下分割线支持拖拽并指定拖拽范围的效果。
+
+通过[sidebarDivider](#sidebardivider)接口设置侧边页签栏的分割线样式。
+
+通过[minSidebarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#minsidebarwidth)接口设置侧边页签栏的最小宽度。
+
+通过[maxSidebarWidth](arkts-arkui-sidebarcontainer-comp-attribute.md#maxsidebarwidth)接口设置侧边页签栏的最大宽度。
+
+通过[minContentWidth](#mincontentwidth)接口设置内容区的最小宽度。
+
+从API版本26.2.0开始，新增sidebarDivider、minSidebarWidth、maxSidebarWidth、minContentWidth接口。
+
+
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TabsSidebarDraggableExample {
+  private testArr: Array<number> = new Array();
+
+  aboutToAppear(): void {
+    for (let i = 0; i < 3; i++) {
+      this.testArr.push(i);
+    }
+  }
+
+  build() {
+    Tabs() {
+      ForEach(this.testArr, (data: number) => {
+        TabContent() {
+          Stack({alignContent: Alignment.Center}) {
+            Text(`TabContent${data}`)
+          }
+          .width('100%')
+          .height('100%')
+        }
+        // 请开发者将$r('app.media.arrow')替换为实际的资源
+        .tabBar({icon: $r('app.media.arrow'), text: `TabContent${data}`})
+      }, (data: number) => data.toString())
+    }
+    .height('400')
+    .width('800')
+    .backgroundColor('#fffffbf0')
+    // 设置Tabs为侧边页签栏样式
+    .barStyle(TabBarStyle.SIDEBAR)
+    // 设置侧边页签栏对应的分割线样式
+    .sidebarDivider({
+      strokeWidth: 1,
+      color: '#ff707070',
+      startMargin: 5,
+      endMargin: 5
+    })
+    // 设置侧边页签栏的最小宽度
+    .minSidebarWidth('190')
+    // 设置侧边页签栏的最大宽度
+    .maxSidebarWidth('40%')
+    // 设置内容区的最小宽度
+    .minContentWidth('360')
+  }
+}
+```
+
+### 示例29（自定义显示模式断点）
+
+本示例展示了通过[barDisplayModeBreakpoint](#bardisplaymodebreakpoint)接口实现自定义显示模式断点的功能。
+
+从API版本26.2.0开始，新增barDisplayModeBreakpoint接口。
+
+```TypeScript
+// xxx.ets
+@Entry
+@Component
+struct TabsSidebarBreakpointExample {
+  private testArr: Array<number> = new Array();
+  @State tabsWidth: number = 590;
+
+  aboutToAppear(): void {
+    for (let i = 0; i < 6; i++) {
+      this.testArr.push(i);
+    }
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Text('Tabs width: ').fontSize(25)
+        Button('590').onClick(() => {
+          this.tabsWidth = 590;
+        }).fontSize(15).backgroundColor('#ff2787d9')
+        Button('650').onClick(() => {
+          this.tabsWidth = 650;
+        }).fontSize(15).backgroundColor('#ff2787d9')
+        Button('850').onClick(() => {
+          this.tabsWidth = 850;
+        }).fontSize(15).backgroundColor('#ff2787d9')
+      }
+      .width(400)
+      .height(100)
+      .justifyContent(FlexAlign.SpaceAround)
+      Tabs() {
+        ForEach(this.testArr, (data: number) => {
+          TabContent() {
+            Stack({alignContent: Alignment.Center}) {
+              Text(`TabContent${data}`)
+            }
+            .width('100%')
+            .height('100%')
+          }
+          // 请开发者将$r('app.media.arrow')替换为实际的资源
+          .tabBar({icon: $r('app.media.arrow'), text: `TabContent${data}`})
+        }, (data: number) => data.toString())
+      }
+      .height('400')
+      .width(this.tabsWidth)
+      .border({width: 1, color: '#ffd9d9d9'})
+      .backgroundColor("#fffffbf0")
+      // 设置Tabs为自适应样式
+      .barStyle(TabBarStyle.SIDEBAR_ADAPTABLE)
+      // 设置自定义显示断点
+      .barDisplayModeBreakpoint({
+        // 设定[0, 600vp)宽度范围时显示为TabBarDisplayMode.BOTTOM_TABBAR模式
+        sm: TabBarDisplayMode.BOTTOM_TABBAR,
+        // 设定[600vp, 840vp)宽度范围时显示为TabBarDisplayMode.BOTTOM_TABBAR模式
+        md: TabBarDisplayMode.BOTTOM_TABBAR,
+        // 设定[840vp, +∞)宽度范围时显示为TabBarDisplayMode.SIDEBAR模式
+        lg: TabBarDisplayMode.SIDEBAR
+      })
+    }
+    .width('100%')
+    .height('100%')
+    .alignItems(HorizontalAlign.Center)
   }
 }
 ```

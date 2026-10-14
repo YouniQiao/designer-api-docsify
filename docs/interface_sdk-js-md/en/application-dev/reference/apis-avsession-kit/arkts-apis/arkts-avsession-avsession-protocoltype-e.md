@@ -22,7 +22,7 @@ This type indicates the device supports audio casting with high definition to ge
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_AUDIO = 8--><!--Device-ProtocolType-TYPE_CAST_PLUS_AUDIO = 8-End-->
 
@@ -38,7 +38,7 @@ The Cast+ Stream indicating the media is presenting on a different device the ap
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2--><!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2-End-->
 
@@ -54,7 +54,7 @@ The DLNA type indicates the device supports DLNA protocol, the application needs
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ProtocolType-TYPE_DLNA = 4--><!--Device-ProtocolType-TYPE_DLNA = 4-End-->
 
@@ -70,7 +70,7 @@ The default cast type "local", media can be routed on the same device, including
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ProtocolType-TYPE_LOCAL = 0--><!--Device-ProtocolType-TYPE_LOCAL = 0-End-->
 

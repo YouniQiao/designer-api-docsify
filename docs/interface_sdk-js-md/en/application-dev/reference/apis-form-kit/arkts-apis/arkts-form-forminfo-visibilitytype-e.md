@@ -22,7 +22,7 @@ Indicates the type of the form is invisible. Often used as a condition variable 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VisibilityType-FORM_INVISIBLE = 2--><!--Device-VisibilityType-FORM_INVISIBLE = 2-End-->
 
@@ -38,7 +38,7 @@ Indicates the type of the form is visible. Often used as a condition variable in
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VisibilityType-FORM_VISIBLE = 1--><!--Device-VisibilityType-FORM_VISIBLE = 1-End-->
 
@@ -54,7 +54,7 @@ Indicates the type of the form type is unknown. Often used as a condition variab
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-VisibilityType-UNKNOWN = 0--><!--Device-VisibilityType-UNKNOWN = 0-End-->
 

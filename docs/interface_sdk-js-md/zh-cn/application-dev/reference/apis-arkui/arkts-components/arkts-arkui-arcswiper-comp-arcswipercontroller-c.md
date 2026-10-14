@@ -54,7 +54,7 @@ finishAnimation(handler?: FinishAnimationHandler)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| handler | [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | 否 | 动画结束的回调。<br>默认值：不传入时无回调。 |
+| handler | [FinishAnimationHandler](arkts-arkui-arcswiper-comp-finishanimationhandler-t.md) | 否 | 动画结束的回调。<br>默认值：不传入时无回调。 |
 
 ## showNext
 
@@ -62,7 +62,7 @@ finishAnimation(handler?: FinishAnimationHandler)
 showNext()
 ```
 
-翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
+翻至下一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arcswiper-comp-attribute.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
 
@@ -78,7 +78,7 @@ showNext()
 showPrevious()
 ```
 
-翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
+翻至上一页。翻页带动效切换过程，时长通过[duration](arkts-arkui-arcswiper-comp-attribute.md#duration)指定。通过此方法控制翻页时，effectMode设置的回弹效果不生效。
 
 **起始版本：** 18
 

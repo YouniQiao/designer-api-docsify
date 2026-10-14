@@ -22,7 +22,7 @@ AUTO = 4
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoStabilizationMode-AUTO = 4--><!--Device-VideoStabilizationMode-AUTO = 4-End-->
 
@@ -38,7 +38,7 @@ HIGH = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoStabilizationMode-HIGH = 3--><!--Device-VideoStabilizationMode-HIGH = 3-End-->
 
@@ -54,7 +54,7 @@ LOW = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoStabilizationMode-LOW = 1--><!--Device-VideoStabilizationMode-LOW = 1-End-->
 
@@ -70,7 +70,7 @@ MIDDLE = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoStabilizationMode-MIDDLE = 2--><!--Device-VideoStabilizationMode-MIDDLE = 2-End-->
 
@@ -86,7 +86,7 @@ OFF = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoStabilizationMode-OFF = 0--><!--Device-VideoStabilizationMode-OFF = 0-End-->
 

@@ -4,7 +4,7 @@
 enum WifiStandard
 ```
 
-Wi-Fi standard. @enum { int }
+Wi-Fi standard.
 
 **Since:** 10
 

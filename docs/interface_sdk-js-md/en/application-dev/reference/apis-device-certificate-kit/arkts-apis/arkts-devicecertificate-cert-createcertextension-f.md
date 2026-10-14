@@ -18,7 +18,7 @@ Creates a certificate extension object. This API uses an asynchronous callback t
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void--><!--Device-cert-function createCertExtension(inStream: EncodingBlob, callback: AsyncCallback<CertExtension>): void-End-->
 
@@ -86,7 +86,7 @@ Creates a certificate extension object. This API uses a promise to return the re
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>--><!--Device-cert-function createCertExtension(inStream: EncodingBlob): Promise<CertExtension>-End-->
 

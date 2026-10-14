@@ -24,7 +24,7 @@ APP_FREEZE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-APP_FREEZE = 5--><!--Device-LastExitReason-APP_FREEZE = 5-End-->
 
@@ -42,7 +42,7 @@ CPP_CRASH = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-CPP_CRASH = 3--><!--Device-LastExitReason-CPP_CRASH = 3-End-->
 
@@ -60,7 +60,7 @@ JS_ERROR = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-JS_ERROR = 4--><!--Device-LastExitReason-JS_ERROR = 4-End-->
 
@@ -80,7 +80,7 @@ NORMAL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-NORMAL = 2--><!--Device-LastExitReason-NORMAL = 2-End-->
 
@@ -100,7 +100,7 @@ PERFORMANCE_CONTROL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-PERFORMANCE_CONTROL = 6--><!--Device-LastExitReason-PERFORMANCE_CONTROL = 6-End-->
 
@@ -125,7 +125,7 @@ RESOURCE_CONTROL = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-RESOURCE_CONTROL = 7--><!--Device-LastExitReason-RESOURCE_CONTROL = 7-End-->
 
@@ -143,7 +143,7 @@ SIGNAL = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 
@@ -161,7 +161,7 @@ UNKNOWN = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-UNKNOWN = 0--><!--Device-LastExitReason-UNKNOWN = 0-End-->
 
@@ -179,7 +179,7 @@ UPGRADE = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-UPGRADE = 8--><!--Device-LastExitReason-UPGRADE = 8-End-->
 
@@ -197,7 +197,7 @@ USER_REQUEST = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-LastExitReason-USER_REQUEST = 9--><!--Device-LastExitReason-USER_REQUEST = 9-End-->
 

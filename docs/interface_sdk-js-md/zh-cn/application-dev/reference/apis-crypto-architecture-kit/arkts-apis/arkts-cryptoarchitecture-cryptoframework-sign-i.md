@@ -42,7 +42,7 @@ getSignSpec(itemType: SignSpecItem): string | number
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-getSignSpec(itemType: SignSpecItem): string | int--><!--Device-Sign-getSignSpec(itemType: SignSpecItem): string | int-End-->
 
@@ -99,7 +99,7 @@ init(priKey: PriKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-init(priKey: PriKey, callback: AsyncCallback<void>): void--><!--Device-Sign-init(priKey: PriKey, callback: AsyncCallback<void>): void-End-->
 
@@ -138,7 +138,7 @@ init(priKey: PriKey): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-init(priKey: PriKey): Promise<void>--><!--Device-Sign-init(priKey: PriKey): Promise<void>-End-->
 
@@ -182,7 +182,7 @@ initSync(priKey: PriKey): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-initSync(priKey: PriKey): void--><!--Device-Sign-initSync(priKey: PriKey): void-End-->
 
@@ -278,7 +278,7 @@ setSignSpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Sign-setSignSpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
 
@@ -417,7 +417,7 @@ sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void--><!--Device-Sign-sign(data: DataBlob | null, callback: AsyncCallback<DataBlob>): void-End-->
 
@@ -496,7 +496,7 @@ sign(data: DataBlob | null): Promise<DataBlob>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>--><!--Device-Sign-sign(data: DataBlob | null): Promise<DataBlob>-End-->
 
@@ -538,7 +538,7 @@ signSync(data: DataBlob | null): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-signSync(data: DataBlob | null): DataBlob--><!--Device-Sign-signSync(data: DataBlob | null): DataBlob-End-->
 
@@ -788,7 +788,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Sign-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
@@ -843,7 +843,7 @@ update(data: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-update(data: DataBlob): Promise<void>--><!--Device-Sign-update(data: DataBlob): Promise<void>-End-->
 
@@ -903,7 +903,7 @@ updateSync(data: DataBlob): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-updateSync(data: DataBlob): void--><!--Device-Sign-updateSync(data: DataBlob): void-End-->
 
@@ -937,7 +937,7 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Sign-readonly algName: string--><!--Device-Sign-readonly algName: string-End-->
 

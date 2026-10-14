@@ -30,7 +30,7 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-constructor()--><!--Device-DocumentViewPicker-constructor()-End-->
 
@@ -54,7 +54,7 @@ constructor(context: Context)
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-constructor(context: Context)--><!--Device-DocumentViewPicker-constructor(context: Context)-End-->
 
@@ -162,7 +162,7 @@ getSelectedIndex(): number
 
 **起始版本：** 14
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-getSelectedIndex(): int--><!--Device-DocumentViewPicker-getSelectedIndex(): int-End-->
 
@@ -186,7 +186,7 @@ save(option?: DocumentSaveOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-save(option?: DocumentSaveOptions): Promise<Array<string>>--><!--Device-DocumentViewPicker-save(option?: DocumentSaveOptions): Promise<Array<string>>-End-->
 
@@ -239,7 +239,7 @@ save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(option: DocumentSaveOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -289,7 +289,7 @@ save(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-save(callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -336,7 +336,7 @@ select(option?: DocumentSelectOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-select(option?: DocumentSelectOptions): Promise<Array<string>>--><!--Device-DocumentViewPicker-select(option?: DocumentSelectOptions): Promise<Array<string>>-End-->
 
@@ -388,7 +388,7 @@ select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): v
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(option: DocumentSelectOptions, callback: AsyncCallback<Array<string>>): void-End-->
 
@@ -437,7 +437,7 @@ select(callback: AsyncCallback<Array<string>>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void--><!--Device-DocumentViewPicker-select(callback: AsyncCallback<Array<string>>): void-End-->
 

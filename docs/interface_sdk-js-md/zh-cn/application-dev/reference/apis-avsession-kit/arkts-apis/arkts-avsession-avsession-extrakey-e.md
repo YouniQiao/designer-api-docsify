@@ -26,7 +26,7 @@ DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'--><!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'-End-->
 
@@ -46,7 +46,7 @@ DLNA_DIDL_LITE = 'DIDL-Lite'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'--><!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'-End-->
 
@@ -64,7 +64,7 @@ REQUIRE_ABILITY_LIST = 'requireAbilityList'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'--><!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'-End-->
 
@@ -84,7 +84,7 @@ setExtras)}接口传入入参`{[avSession.ExtraKey.REQUIRE_ABILITY_LIST]: [avSes
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'--><!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'-End-->
 

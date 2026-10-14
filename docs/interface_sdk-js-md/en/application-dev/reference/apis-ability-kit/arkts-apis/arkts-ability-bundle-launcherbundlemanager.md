@@ -20,7 +20,7 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. |
+| [getLauncherAbilityInfoSync](arkts-ability-launcherbundlemanager-getlauncherabilityinfosync-f.md#getlauncherabilityinfosync) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. |
 
 <!--Del-->
 ### Functions(System API)
@@ -33,11 +33,11 @@ import { launcherBundleManager } from '@kit.AbilityKit';
 | [getLauncherAbilityInfo](arkts-ability-launcherbundlemanager-getlauncherabilityinfo-f-sys.md#getlauncherabilityinfo2) | Obtains the [launcher ability information](arkts-ability-launcherabilityinfo-i.md) based on the given bundle name and user ID. This API uses a promise to return the result. |
 | [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo1) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses an asynchronous callback to return the result. |
 | [getShortcutInfo](arkts-ability-launcherbundlemanager-getshortcutinfo-f-sys.md#getshortcutinfo2) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). This API uses a promise to return the result. |
-| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the index of an application clone. |
+| [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md#getshortcutinfobyappindex) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the index of an application clone. |
 | [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync1) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the current user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). |
 | [getShortcutInfoSync](arkts-ability-launcherbundlemanager-getshortcutinfosync-f-sys.md#getshortcutinfosync2) | Obtains the [shortcut information](arkts-ability-shortcutinfo-i.md) of the specified user based on the given bundle name of a main application. To obtain shortcut information about an application clone, use [getShortcutInfoByAppIndex](arkts-ability-launcherbundlemanager-getshortcutinfobyappindex-f-sys.md). |
-| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md) | Starts an ability based on the specified [shortcut information](arkts-ability-shortcutinfo-i.md). This API uses a promise to return the result. |
-| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md) | Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result. |
+| [startShortcut](arkts-ability-launcherbundlemanager-startshortcut-f-sys.md#startshortcut) | Starts an ability based on the specified [shortcut information](arkts-ability-shortcutinfo-i.md). This API uses a promise to return the result. |
+| [startShortcutWithReason](arkts-ability-launcherbundlemanager-startshortcutwithreason-f-sys.md#startshortcutwithreason) | Starts an ability based on the specified shortcut information, and carries the reason for the shortcut launch. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Types

@@ -20,16 +20,16 @@ import { osAccount } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md) | 获取系统账号管理对象。 |
-| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md) | 检查是否支持域账号。使用Promise异步回调。 |
+| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getaccountmanager) | 获取系统账号管理对象。 |
+| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isdomainaccountsupported) | 检查是否支持域账号。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md) | 获取系统账号授权管理器。 |
-| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md) | 获取系统账号子身份资料管理器。 |
+| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getauthorizationmanager) | 获取系统账号授权管理器。 |
+| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getosaccountsubprofilemanager) | 获取系统账号子身份资料管理器。 |
 <!--DelEnd-->
 
 ### 类

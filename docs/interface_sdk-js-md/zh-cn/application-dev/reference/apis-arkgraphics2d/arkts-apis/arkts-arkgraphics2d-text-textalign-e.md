@@ -22,7 +22,7 @@ CENTER = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-CENTER = 2--><!--Device-TextAlign-CENTER = 2-End-->
 
@@ -38,7 +38,7 @@ END = 5
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-END = 5--><!--Device-TextAlign-END = 5-End-->
 
@@ -54,7 +54,7 @@ JUSTIFY = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-JUSTIFY = 3--><!--Device-TextAlign-JUSTIFY = 3-End-->
 
@@ -70,7 +70,7 @@ LEFT = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-LEFT = 0--><!--Device-TextAlign-LEFT = 0-End-->
 
@@ -86,7 +86,7 @@ RIGHT = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-RIGHT = 1--><!--Device-TextAlign-RIGHT = 1-End-->
 
@@ -102,7 +102,7 @@ START = 4
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextAlign-START = 4--><!--Device-TextAlign-START = 4-End-->
 

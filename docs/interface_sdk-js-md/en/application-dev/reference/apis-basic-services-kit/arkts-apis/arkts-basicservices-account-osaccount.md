@@ -20,16 +20,16 @@ import { osAccount } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md) | Obtains an **AccountManager** instance. |
-| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md) | Checks whether this domain account is supported. This API uses a promise to return the result. |
+| [getAccountManager](arkts-basicservices-osaccount-getaccountmanager-f.md#getaccountmanager) | Obtains an **AccountManager** instance. |
+| [isDomainAccountSupported](arkts-basicservices-osaccount-isdomainaccountsupported-f.md#isdomainaccountsupported) | Checks whether this domain account is supported. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md) | Obtains the current OS account authorization manager. |
-| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md) | Obtains the OS account sub-profile manager. |
+| [getAuthorizationManager](arkts-basicservices-osaccount-getauthorizationmanager-f-sys.md#getauthorizationmanager) | Obtains the current OS account authorization manager. |
+| [getOsAccountSubProfileManager](arkts-basicservices-osaccount-getosaccountsubprofilemanager-f-sys.md#getosaccountsubprofilemanager) | Obtains the OS account sub-profile manager. |
 <!--DelEnd-->
 
 ### Classes

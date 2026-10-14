@@ -24,7 +24,7 @@ Type of [AbilityStageContext](arkts-ability-abilitystagecontext-c.md), which pro
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1--><!--Device-ContextType-ABILITY_STAGE_CONTEXT = 1-End-->
 
@@ -42,7 +42,7 @@ Type of [AppServiceExtensionContext](arkts-ability-appserviceextensioncontext-c.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4--><!--Device-ContextType-APP_SERVICE_EXTENSION_CONTEXT = 4-End-->
 
@@ -60,7 +60,7 @@ Type of [ApplicationContext](arkts-ability-applicationcontext-c.md), which provi
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextType-APPLICATION_CONTEXT = 0--><!--Device-ContextType-APPLICATION_CONTEXT = 0-End-->
 
@@ -78,7 +78,7 @@ Type of [FormExtensionContext](../../apis-form-kit/arkts-apis/arkts-form-formext
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3--><!--Device-ContextType-FORM_EXTENSION_CONTEXT = 3-End-->
 
@@ -96,7 +96,7 @@ Type of [UIAbilityContext](arkts-ability-uiabilitycontext-c.md), which provides 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContextType-UIABILITY_CONTEXT = 2--><!--Device-ContextType-UIABILITY_CONTEXT = 2-End-->
 

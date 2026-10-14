@@ -29,7 +29,7 @@ export interface InstallParam
 installFlag: number
 ```
 
-Install flag. Default value: 1. &lt;/br&gt;Value range:&lt;/br&gt;1: overwrite installation.&lt;/br&gt;16: free installation.
+Install flag. Default value: 1. </br>Value range:</br>1: overwrite installation.</br>16: free installation.
 
 **Type:** number
 

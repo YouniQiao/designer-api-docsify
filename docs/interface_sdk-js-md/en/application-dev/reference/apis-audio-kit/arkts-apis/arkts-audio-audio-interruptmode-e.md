@@ -22,7 +22,7 @@ Mode that each stream has independent interrupt unit.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptMode-INDEPENDENT_MODE = 1--><!--Device-InterruptMode-INDEPENDENT_MODE = 1-End-->
 
@@ -38,7 +38,7 @@ Mode that different stream share one interrupt unit.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptMode-SHARE_MODE = 0--><!--Device-InterruptMode-SHARE_MODE = 0-End-->
 

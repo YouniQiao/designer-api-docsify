@@ -44,7 +44,7 @@ appIndex?: number
 parameters?: Array<Parameters>
 ```
 
-创建分身应用扩展参数，默认值为空。Parameters.key取值支持：&lt;/br&gt;- "ohos.bms.param.disableInstallEventReport"：value值建议为string类型的"true"或"false"。若对应value值为"true"，表示分身创建完成后不发送安装广播事件；若对应value值为"false"或其他非"true"的值，则正常发送安装广播。不传入该键时，正常发送安装广播（默认行为）。&lt;/br&gt;- "ohos.bms.param.bundleEnableState"：value值建议为string类型的"true"或"false"。若对应value值为"true"，表示分身创建后处于启用状态（enabled为true）；若对应value值为"false"或其他非"true"的值，表示分身创建后处于禁用状态（enabled为false）。不传入该键时，表示分身创建后处于启用状态（enabled为true，默认行为）。&lt;/br&gt; &lt;/br&gt;。
+创建分身应用扩展参数，默认值为空。Parameters.key取值支持：</br>- "ohos.bms.param.disableInstallEventReport"：value值建议为string类型的"true"或"false"。若对应value值为"true"，表示分身创建完成后不发送安装广播事件；若对应value值为"false"或其他非"true"的值，则正常发送安装广播。不传入该键时，正常发送安装广播（默认行为）。</br>- "ohos.bms.param.bundleEnableState"：value值建议为string类型的"true"或"false"。若对应value值为"true"，表示分身创建后处于启用状态（enabled为true）；若对应value值为"false"或其他非"true"的值，表示分身创建后处于禁用状态（enabled为false）。不传入该键时，表示分身创建后处于启用状态（enabled为true，默认行为）。</br> </br>。
 
 **类型：** Array&lt;Parameters&gt;
 

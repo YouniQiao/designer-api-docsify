@@ -22,7 +22,7 @@ Behavior event.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-BEHAVIOR = 4--><!--Device-EventType-BEHAVIOR = 4-End-->
 
@@ -38,7 +38,7 @@ Fault event.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-FAULT = 1--><!--Device-EventType-FAULT = 1-End-->
 
@@ -54,7 +54,7 @@ Security event.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-SECURITY = 3--><!--Device-EventType-SECURITY = 3-End-->
 
@@ -70,7 +70,7 @@ Statistic event.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-STATISTIC = 2--><!--Device-EventType-STATISTIC = 2-End-->
 

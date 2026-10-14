@@ -26,7 +26,7 @@ accessTokenId of the application, which is the identity identifier of the applic
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly accessTokenId: long--><!--Device-ApplicationInfo-readonly accessTokenId: long-End-->
 
@@ -38,7 +38,7 @@ accessTokenId of the application, which is the identity identifier of the applic
 readonly appDistributionType: string
 ```
 
-Distribution type of the application signing certificate, which is divided into: &lt;li&gt;app_gallery: application installed from the application market. <!--RP1--><!--RP1End--> &lt;li&gt; enterprise: enterprise internal application, which is developed by the enterprise itself and used only by its internal employees. It is not released through public channels such as the application market, but distributed internally through the enterprise's own channels. <!--RP2--><!--RP2End-->&lt;li&gt; enterprise_mdm: enterprise [MDM app](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del--> It can be installed only after the administrator privilege is activated by calling [enableAdmin](../../../reference/apis-mdm-kit/js-apis-enterprise-adminManager-sys.md#adminmanagerenableadmin). <!--DelEnd--><!--RP3--><!--RP3End--> &lt;li&gt;enterprise_normal: normal enterprise application, which does not need to be listed on the Huawei application market and can be distributed and installed through the enterprise [MDM app](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. <!--RP4--><!--RP4End-->&lt;li&gt;os_integration: preset application, which cannot be applied for or configured by third-party applications.&lt;li&gt;crowdtesting: crowdtesting application, which is a specific application distributed by the application market to some users with a certain validity period. When the system detects that the validity period of the application has expired, it notifies the user to update to the release version of the application in the application market. Deprecated since API version 11.&lt;li&gt;internaltesting: application under internal testing in the application market. <!--RP5--> <!--RP5End-->&lt;li&gt;none: others.
+Distribution type of the application signing certificate, which is divided into: <li>app_gallery: application installed from the application market. <!--RP1--><!--RP1End--> <li> enterprise: enterprise internal application, which is developed by the enterprise itself and used only by its internal employees. It is not released through public channels such as the application market, but distributed internally through the enterprise's own channels. <!--RP2--><!--RP2End--><li> enterprise_mdm: enterprise [MDM app](../../../mdm/mdm-kit-term.md#mdm-app). <!--Del--> It can be installed only after the administrator privilege is activated by calling [enableAdmin](../../../reference/apis-mdm-kit/js-apis-enterprise-adminManager-sys.md#adminmanagerenableadmin). <!--DelEnd--><!--RP3--><!--RP3End--> <li>enterprise_normal: normal enterprise application, which does not need to be listed on the Huawei application market and can be distributed and installed through the enterprise [MDM app](../../../mdm/mdm-kit-term.md#mdm-app) and offline installer. <!--RP4--><!--RP4End--><li>os_integration: preset application, which cannot be applied for or configured by third-party applications.<li>crowdtesting: crowdtesting application, which is a specific application distributed by the application market to some users with a certain validity period. When the system detects that the validity period of the application has expired, it notifies the user to update to the release version of the application in the application market. Deprecated since API version 11.<li>internaltesting: application under internal testing in the application market. <!--RP5--> <!--RP5End--><li>none: others.
 
 **Atomic service API:** Since API version 11, this API is supported in atomic services.
 
@@ -46,7 +46,7 @@ Distribution type of the application signing certificate, which is divided into:
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly appDistributionType: string--><!--Device-ApplicationInfo-readonly appDistributionType: string-End-->
 
@@ -82,7 +82,7 @@ Type of the application signing certificate file, which is divided into 'debug' 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly appProvisionType: string--><!--Device-ApplicationInfo-readonly appProvisionType: string-End-->
 
@@ -102,7 +102,7 @@ Type of the bundle, whose value is APP (application) or ATOMIC_SERVICE (atomic s
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType--><!--Device-ApplicationInfo-readonly bundleType: bundleManager.BundleType-End-->
 
@@ -120,7 +120,7 @@ Whether device-cloud file synchronization is enabled for the application. **true
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean--><!--Device-ApplicationInfo-readonly cloudFileSyncEnabled: boolean-End-->
 
@@ -138,7 +138,7 @@ Whether device-cloud structured data synchronization is enabled for the applicat
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean--><!--Device-ApplicationInfo-readonly cloudStructuredDataSyncEnabled?: boolean-End-->
 
@@ -156,7 +156,7 @@ Installation directory of the application.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly codePath: string--><!--Device-ApplicationInfo-readonly codePath: string-End-->
 
@@ -174,7 +174,7 @@ Whether the application data is unclearable. **true** if unclearable, **false** 
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly dataUnclearable: boolean--><!--Device-ApplicationInfo-readonly dataUnclearable: boolean-End-->
 
@@ -192,7 +192,7 @@ Whether the application is running in debug mode. **true** if in debug mode, **f
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly debug: boolean--><!--Device-ApplicationInfo-readonly debug: boolean-End-->
 
@@ -210,7 +210,7 @@ Description of the application. It corresponds to the **description** field in t
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly description: string--><!--Device-ApplicationInfo-readonly description: string-End-->
 
@@ -228,7 +228,7 @@ Resource ID of the application description. It is automatically generated during
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly descriptionId: long--><!--Device-ApplicationInfo-readonly descriptionId: long-End-->
 
@@ -248,7 +248,7 @@ Description resource information of the application, which contains the bundleNa
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly descriptionResource: Resource--><!--Device-ApplicationInfo-readonly descriptionResource: Resource-End-->
 
@@ -266,7 +266,7 @@ Whether the application is enabled. **true** if enabled, **false** otherwise.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly enabled: boolean--><!--Device-ApplicationInfo-readonly enabled: boolean-End-->
 
@@ -284,7 +284,7 @@ Application icon. It corresponds to the **icon** field in the [app.json5](../../
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly icon: string--><!--Device-ApplicationInfo-readonly icon: string-End-->
 
@@ -302,7 +302,7 @@ Resource ID of the application icon. It is automatically generated during compil
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly iconId: long--><!--Device-ApplicationInfo-readonly iconId: long-End-->
 
@@ -322,7 +322,7 @@ Icon resource information of the application, which contains the bundleName, mod
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly iconResource: Resource--><!--Device-ApplicationInfo-readonly iconResource: Resource-End-->
 
@@ -347,7 +347,7 @@ variable, subject to the actual value.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ApplicationInfo-readonly installSource: string--><!--Device-ApplicationInfo-readonly installSource: string-End-->
 
@@ -365,7 +365,7 @@ Application label. It corresponds to the **label** field in the [app.json5](../.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly label: string--><!--Device-ApplicationInfo-readonly label: string-End-->
 
@@ -383,7 +383,7 @@ Resource ID of the application label. It is automatically generated during compi
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly labelId: long--><!--Device-ApplicationInfo-readonly labelId: long-End-->
 
@@ -403,7 +403,7 @@ Name resource information of the application, which contains the bundleName, mod
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly labelResource: Resource--><!--Device-ApplicationInfo-readonly labelResource: Resource-End-->
 
@@ -421,7 +421,7 @@ Metadata of the application. The information can be obtained by passing in **GET
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>--><!--Device-ApplicationInfo-readonly metadataArray: Array<ModuleMetadata>-End-->
 
@@ -457,7 +457,7 @@ Name of the application bundle. It corresponds to the **bundleName** field in th
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly name: string--><!--Device-ApplicationInfo-readonly name: string-End-->
 
@@ -495,7 +495,7 @@ When [getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.m
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly permissions: Array<string>--><!--Device-ApplicationInfo-readonly permissions: Array<string>-End-->
 
@@ -513,7 +513,7 @@ Process name.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly process: string--><!--Device-ApplicationInfo-readonly process: string-End-->
 
@@ -533,7 +533,7 @@ Release type of the SDK used when the application is packaged. The current SDK r
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ApplicationInfo-readonly releaseType: string--><!--Device-ApplicationInfo-readonly releaseType: string-End-->
 
@@ -551,7 +551,7 @@ Whether the application is removable. **true** if removable, **false** otherwise
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly removable: boolean--><!--Device-ApplicationInfo-readonly removable: boolean-End-->
 
@@ -569,7 +569,7 @@ Whether the application is a system application. **true** if it is a system appl
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly systemApp: boolean--><!--Device-ApplicationInfo-readonly systemApp: boolean-End-->
 
@@ -587,7 +587,7 @@ UID of the application.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ApplicationInfo-readonly uid: int--><!--Device-ApplicationInfo-readonly uid: int-End-->
 

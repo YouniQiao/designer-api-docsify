@@ -22,7 +22,7 @@ SEEK_CUR = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OffsetReferencePoint-SEEK_CUR = 1--><!--Device-OffsetReferencePoint-SEEK_CUR = 1-End-->
 
@@ -38,7 +38,7 @@ SEEK_SET = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OffsetReferencePoint-SEEK_SET = 0--><!--Device-OffsetReferencePoint-SEEK_SET = 0-End-->
 

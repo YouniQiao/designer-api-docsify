@@ -25,7 +25,7 @@ Creates a **Mac** instance.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-cryptoFramework-function createMac(algName: string): Mac--><!--Device-cryptoFramework-function createMac(algName: string): Mac-End-->
 
@@ -83,7 +83,7 @@ Creates a **Mac** instance.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac--><!--Device-cryptoFramework-function createMac(macSpec: MacSpec): Mac-End-->
 

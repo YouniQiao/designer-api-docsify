@@ -8,8 +8,6 @@ This module provides APIs for system materials. Different system materials corre
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace uiMaterial--><!--Device-unnamed-declare namespace uiMaterial-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,17 +24,17 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md) | Obtains the global material level, which is related to the device computing power. This configuration item is defined by the device and cannot be modified. |
-| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md) | Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application. |
-| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md) | Checks whether the current device supports immersive system materials ([ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)). This configuration item is defined by the device and cannot be modified. |
+| [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getglobalmateriallevel) | Obtains the global material level, which is related to the device computing power. This configuration item is defined by the device and cannot be modified. |
+| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getmaterialinfo) | Obtains the material configuration information of this application. The returned configuration information comes from the metadata configured in the [module.json5](../../../quick-start/module-configuration-file.md) file of the application. |
+| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md#isimmersivematerialsupported) | Checks whether the current device supports immersive system materials ([ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)). This configuration item is defined by the device and cannot be modified. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md) | Converts an [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) material into an ImmersiveMaterial material applicable to [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md). |
-| [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md) | Converts an [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) material into an ImmersiveMaterial material applicable to the child components of [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md). |
+| [convertToECMaterial](arkts-arkui-uimaterial-converttoecmaterial-f-sys.md#converttoecmaterial) | Converts an [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) material into an ImmersiveMaterial material applicable to [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md). |
+| [convertToECSubMaterial](arkts-arkui-uimaterial-converttoecsubmaterial-f-sys.md#converttoecsubmaterial) | Converts an [ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md) material into an ImmersiveMaterial material applicable to the child components of [EffectComponent](../arkts-components/arkts-arkui-effectcomponent-comp-sys.md). |
 <!--DelEnd-->
 
 ### Classes

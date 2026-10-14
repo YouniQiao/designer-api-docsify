@@ -32,7 +32,7 @@ Author ID for the C2PA signature. This field is optional. If not set, the author
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-C2PASignatureConfig-authorID?: string--><!--Device-C2PASignatureConfig-authorID?: string-End-->
 
@@ -52,7 +52,7 @@ Author name for the C2PA signature. This field is optional. If not set, the auth
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-C2PASignatureConfig-authorName?: string--><!--Device-C2PASignatureConfig-authorName?: string-End-->
 

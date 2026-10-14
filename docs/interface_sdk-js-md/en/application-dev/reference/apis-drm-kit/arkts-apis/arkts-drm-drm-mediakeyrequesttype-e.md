@@ -22,7 +22,7 @@ Initial request.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1-End-->
 
@@ -38,7 +38,7 @@ No request.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
 
@@ -54,7 +54,7 @@ Release request.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3-End-->
 
@@ -70,7 +70,7 @@ Renewal request.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
 
@@ -86,7 +86,7 @@ Unknown type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
 
@@ -102,7 +102,7 @@ Update request.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5-End-->
 

@@ -19,7 +19,7 @@ abort终止密钥操作。使用callback异步回调。
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortsession1)
+> [huks.abortSession<sup>9+</sup>](arkts-universalkeystore-huks-abortsession-f.md#abortsession1)
 > 替代。
 
 **起始版本：** 8
@@ -148,7 +148,7 @@ abort终止密钥操作。使用Promise异步回调。
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.abortSession&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-abortsession-f.md#abortsession2)替代。
+> [huks.abortSession<sup>9+</sup>](arkts-universalkeystore-huks-abortsession-f.md#abortsession2)替代。
 
 **起始版本：** 8
 

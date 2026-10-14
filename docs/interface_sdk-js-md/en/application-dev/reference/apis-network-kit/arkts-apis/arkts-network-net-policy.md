@@ -20,8 +20,8 @@ import { policy } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md) | Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings**  > **Mobile network** > **Manage data usage** > **Network access**. This API uses a promise to return the result. |
-| [showAppNetPolicySettings](arkts-network-policy-showappnetpolicysettings-f.md) | Sets whether the current application can connect to the Wi-Fi or cellular network. You can call this API to open the network access settings page of the current application and set the network access permission of the application. This API uses a promise to return the result. |
+| [getNetAccessPolicy](arkts-network-policy-getnetaccesspolicy-f.md#getnetaccesspolicy) | Queries the network access policy of an application (whether cellular or Wi-Fi network access is allowed). You can check the policy by choosing **Settings**  > **Mobile network** > **Manage data usage** > **Network access**. This API uses a promise to return the result. |
+| [showAppNetPolicySettings](arkts-network-policy-showappnetpolicysettings-f.md#showappnetpolicysettings) | Sets whether the current application can connect to the Wi-Fi or cellular network. You can call this API to open the network access settings page of the current application and set the network access permission of the application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -60,14 +60,14 @@ import { policy } from '@kit.NetworkKit';
 | [on](arkts-network-policy-on-f-sys.md#onnetbackgroundpolicychange) | Registers the callback for background network policy changes. This API uses an asynchronous callback to return the result. |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md#resetpolicies1) | Restores all the policies (cellular network, background network, firewall, and application-specific network policies) for the specified SIM card. This API uses an asynchronous callback to return the result. |
 | [resetPolicies](arkts-network-policy-resetpolicies-f-sys.md#resetpolicies2) | Resets the cellular network, background network policy, firewall policy, and app policy corresponding to the SIM card ID. This API uses a promise to return the result. |
-| [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md) | Reset the specified network management policy. |
+| [restoreAllPolicies](arkts-network-policy-restoreallpolicies-f-sys.md#restoreallpolicies) | Reset the specified network management policy. |
 | [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md#setbackgroundallowed1) | Sets whether background applications are allowed to access the network. This API uses an asynchronous callback to return the result. |
 | [setBackgroundAllowed](arkts-network-policy-setbackgroundallowed-f-sys.md#setbackgroundallowed2) | Sets whether background applications are allowed to access the network. This API uses a promise to return the result. |
 | [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md#setdeviceidletrustlist1) | Adds applications specified by given UIDs to the device idle allowlist. This API uses an asynchronous callback to return the result. |
 | [setDeviceIdleTrustlist](arkts-network-policy-setdeviceidletrustlist-f-sys.md#setdeviceidletrustlist2) | Sets whether multiple UIDs are in the whitelist of the sleep firewall. This API uses a promise to return the result. |
 | [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md#setnetquotapolicies1) | Sets the metering network policy. This API uses an asynchronous callback to return the result. |
 | [setNetQuotaPolicies](arkts-network-policy-setnetquotapolicies-f-sys.md#setnetquotapolicies2) | Sets the metering network policy. This API uses a promise to return the result. |
-| [setNetworkAccessPolicy](arkts-network-policy-setnetworkaccesspolicy-f-sys.md) | Sets whether the application with the specified UID can access the network. This API uses a promise to return the result. |
+| [setNetworkAccessPolicy](arkts-network-policy-setnetworkaccesspolicy-f-sys.md#setnetworkaccesspolicy) | Sets whether the application with the specified UID can access the network. This API uses a promise to return the result. |
 | [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md#setpolicybyuid1) | Sets the metered network access policy for the application specified by a given UID. This API uses an asynchronous callback to return the result. |
 | [setPolicyByUid](arkts-network-policy-setpolicybyuid-f-sys.md#setpolicybyuid2) | Sets whether the application with the corresponding UID can access the metering network. This API uses a promise to return the result. |
 | [setPowerSaveTrustlist](arkts-network-policy-setpowersavetrustlist-f-sys.md#setpowersavetrustlist1) | Sets whether the app with the specified UID is in the whitelist of the power saving firewall. This API uses an asynchronous callback to return the result. |

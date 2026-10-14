@@ -24,7 +24,7 @@ The task is canceled.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-CANCELED = 2--><!--Device-ListenerStatus-CANCELED = 2-End-->
 
@@ -42,7 +42,7 @@ Failed to copy data.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-COPY_FILE_FAILED = 204--><!--Device-ListenerStatus-COPY_FILE_FAILED = 204-End-->
 
@@ -60,7 +60,7 @@ No data is obtained.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-DATA_NOT_FOUND = 202--><!--Device-ListenerStatus-DATA_NOT_FOUND = 202-End-->
 
@@ -78,7 +78,7 @@ The task is completed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-FINISHED = 0--><!--Device-ListenerStatus-FINISHED = 0-End-->
 
@@ -96,7 +96,7 @@ An internal error occurs.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-INNER_ERROR = 200--><!--Device-ListenerStatus-INNER_ERROR = 200-End-->
 
@@ -114,7 +114,7 @@ INVALID_PARAMETERS = 201
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-INVALID_PARAMETERS = 201--><!--Device-ListenerStatus-INVALID_PARAMETERS = 201-End-->
 
@@ -132,7 +132,7 @@ The task is being processed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-PROCESSING = 1--><!--Device-ListenerStatus-PROCESSING = 1-End-->
 
@@ -150,7 +150,7 @@ Failed to sync data.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-ListenerStatus-SYNC_FAILED = 203--><!--Device-ListenerStatus-SYNC_FAILED = 203-End-->
 

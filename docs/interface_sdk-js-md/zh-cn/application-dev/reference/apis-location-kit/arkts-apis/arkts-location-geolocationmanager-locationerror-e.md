@@ -22,7 +22,7 @@ LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3--><!--Device-LocationError-LOCATING_FAILED_BACKGROUND_PERMISSION_DENIED = -3-End-->
 
@@ -38,7 +38,7 @@ LOCATING_FAILED_DEFAULT = -1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1--><!--Device-LocationError-LOCATING_FAILED_DEFAULT = -1-End-->
 
@@ -54,7 +54,7 @@ LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5--><!--Device-LocationError-LOCATING_FAILED_INTERNET_ACCESS_FAILURE = -5-End-->
 
@@ -70,7 +70,7 @@ LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2--><!--Device-LocationError-LOCATING_FAILED_LOCATION_PERMISSION_DENIED = -2-End-->
 
@@ -86,7 +86,7 @@ LOCATING_FAILED_LOCATION_SWITCH_OFF = -4
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4--><!--Device-LocationError-LOCATING_FAILED_LOCATION_SWITCH_OFF = -4-End-->
 

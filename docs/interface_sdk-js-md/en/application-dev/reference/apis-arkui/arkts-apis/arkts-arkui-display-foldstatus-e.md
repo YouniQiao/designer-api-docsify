@@ -30,7 +30,7 @@ The device is fully open. For dual-fold axis devices, the first fold axis is ful
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FoldStatus-FOLD_STATUS_EXPANDED = 1--><!--Device-FoldStatus-FOLD_STATUS_EXPANDED = 1-End-->
 
@@ -46,7 +46,7 @@ For dual-fold axis devices, both the first and second fold axes are fully open.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_EXPANDED_WITH_SECOND_EXPANDED = 11--><!--Device-FoldStatus-FOLD_STATUS_EXPANDED_WITH_SECOND_EXPANDED = 11-End-->
 
@@ -62,7 +62,7 @@ For dual-fold axis devices, the first fold axis is fully open, and the second fo
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_EXPANDED_WITH_SECOND_HALF_FOLDED = 21--><!--Device-FoldStatus-FOLD_STATUS_EXPANDED_WITH_SECOND_HALF_FOLDED = 21-End-->
 
@@ -78,7 +78,7 @@ The device is folded (completely closed). For dual-fold axis devices, both the f
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2--><!--Device-FoldStatus-FOLD_STATUS_FOLDED = 2-End-->
 
@@ -94,7 +94,7 @@ For dual-fold axis devices, the first fold axis is folded, and the second fold a
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_EXPANDED = 12--><!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_EXPANDED = 12-End-->
 
@@ -110,7 +110,7 @@ For dual-fold axis devices, the first fold axis is folded, and the second fold a
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22--><!--Device-FoldStatus-FOLD_STATUS_FOLDED_WITH_SECOND_HALF_FOLDED = 22-End-->
 
@@ -126,7 +126,7 @@ The device is half-folded, somehow between fully open and completely closed. For
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED = 3-End-->
 
@@ -142,7 +142,7 @@ For dual-fold axis devices, the first fold axis is half-folded, and the second f
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_EXPANDED = 13-End-->
 
@@ -158,7 +158,7 @@ For dual-fold axis devices, both the first and second fold axes are half-folded.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23--><!--Device-FoldStatus-FOLD_STATUS_HALF_FOLDED_WITH_SECOND_HALF_FOLDED = 23-End-->
 
@@ -174,7 +174,7 @@ The fold status of the device is unknown or the device cannot be folded.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0--><!--Device-FoldStatus-FOLD_STATUS_UNKNOWN = 0-End-->
 

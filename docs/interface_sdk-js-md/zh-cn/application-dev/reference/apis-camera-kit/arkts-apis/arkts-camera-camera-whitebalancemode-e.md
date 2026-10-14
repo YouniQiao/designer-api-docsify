@@ -22,7 +22,7 @@ AUTO = 0
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-AUTO = 0--><!--Device-WhiteBalanceMode-AUTO = 0-End-->
 
@@ -38,7 +38,7 @@ CLOUDY = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-CLOUDY = 1--><!--Device-WhiteBalanceMode-CLOUDY = 1-End-->
 
@@ -54,7 +54,7 @@ DAYLIGHT = 4
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-DAYLIGHT = 4--><!--Device-WhiteBalanceMode-DAYLIGHT = 4-End-->
 
@@ -70,7 +70,7 @@ FLUORESCENT =3
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-FLUORESCENT =3--><!--Device-WhiteBalanceMode-FLUORESCENT =3-End-->
 
@@ -86,7 +86,7 @@ INCANDESCENT =2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-INCANDESCENT =2--><!--Device-WhiteBalanceMode-INCANDESCENT =2-End-->
 
@@ -102,7 +102,7 @@ LOCKED = 6
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-LOCKED = 6--><!--Device-WhiteBalanceMode-LOCKED = 6-End-->
 
@@ -118,7 +118,7 @@ MANUAL = 5
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WhiteBalanceMode-MANUAL = 5--><!--Device-WhiteBalanceMode-MANUAL = 5-End-->
 

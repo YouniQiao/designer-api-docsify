@@ -22,7 +22,7 @@ The boundary measurement values (such as **top**, **bottom**, **xMin**, and **xM
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4--><!--Device-FontMetricsFlags-BOUNDS_INVALID = 1 << 4-End-->
 
@@ -38,7 +38,7 @@ The **strikethroughPosition** field is valid.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3--><!--Device-FontMetricsFlags-STRIKETHROUGH_POSITION_VALID = 1 << 3-End-->
 
@@ -54,7 +54,7 @@ The **strikethroughThickness** field is valid.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2--><!--Device-FontMetricsFlags-STRIKETHROUGH_THICKNESS_VALID = 1 << 2-End-->
 
@@ -70,7 +70,7 @@ The **underlinePosition** field is valid.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1--><!--Device-FontMetricsFlags-UNDERLINE_POSITION_VALID = 1 << 1-End-->
 
@@ -86,7 +86,7 @@ The **underlineThickness** field is valid.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0--><!--Device-FontMetricsFlags-UNDERLINE_THICKNESS_VALID = 1 << 0-End-->
 

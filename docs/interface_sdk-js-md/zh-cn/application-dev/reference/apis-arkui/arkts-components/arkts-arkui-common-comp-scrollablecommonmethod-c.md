@@ -6,7 +6,7 @@ declare class ScrollableCommonMethod<T> extends CommonMethod<T>
 
 CommonScrollableMethod
 
-@extends CommonMethod&lt;T&gt;
+@extends CommonMethod<T>
 
 **继承/实现关系：** ScrollableCommonMethod extends CommonMethod&lt;T&gt;
 
@@ -902,7 +902,7 @@ scrollBarColor(color: Color | number | string): T
 scrollBarColor(color: Color | number | string | Resource): T
 ```
 
-设置滚动条的颜色。与[scrollBarColor&lt;sup&gt;11+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarcolor11)相比，color参数开始支持Resource类型。
+设置滚动条的颜色。与[scrollBarColor<sup>11+</sup>](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#scrollbarcolor11)相比，color参数开始支持Resource类型。
 
 **起始版本：** 22
 

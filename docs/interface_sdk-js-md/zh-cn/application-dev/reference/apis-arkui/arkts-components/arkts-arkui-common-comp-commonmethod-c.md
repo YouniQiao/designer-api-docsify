@@ -886,7 +886,7 @@ allowDrop(value: Array<UniformDataType>  | null | Array<string>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | 是 | 设置该组件上允许落入的数据类型。从API version 12开始，允许设置成null使该组件不接受所有的数据类型。从API version 23开始，支持设置自定义数据类型Array&lt;string&gt;，自定义数据类型为应用自行定义的数据类型字符串，字符串无明确格式要求，但不应与UniformDataType标准类型格式重复，建议以易记易区分为原则来定义。<br>**适用版本：** 23 |
+| value | Array&lt;[UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md)&gt; &#124; null &#124; Array&lt;string&gt; | 是 | 设置该组件上允许落入的数据类型。从API version 12开始，允许设置成null使该组件不接受所有的数据类型。从API version 23开始，支持设置自定义数据类型Array<string>，自定义数据类型为应用自行定义的数据类型字符串，字符串无明确格式要求，但不应与UniformDataType标准类型格式重复，建议以易记易区分为原则来定义。<br>**适用版本：** 23 |
 
 **返回值：**
 
@@ -1107,7 +1107,7 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur&lt;sup&gt;18+&lt;/sup&gt;](#backdropblur2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur<sup>18+</sup>](#backdropblur2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -1220,7 +1220,7 @@ backgroundBlurStyle(value: BlurStyle, options?: BackgroundBlurStyleOptions): T
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle&lt;sup&gt;9+&lt;/sup&gt;](#backgroundblurstyle1)相比，style参数新增了对undefined类型的支持。
+为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle<sup>9+</sup>](#backgroundblurstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -1255,7 +1255,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#backgroundblurstyle2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle<sup>18+</sup>](#backgroundblurstyle2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -1323,7 +1323,7 @@ backgroundBrightness(params: BackgroundBrightnessOptions): T
 backgroundBrightness(options: Optional<BackgroundBrightnessOptions>): T
 ```
 
-设置组件背景提亮效果，通过调整亮度变化速率和提亮程度改变组件背景的亮度表现。与[backgroundBrightness&lt;sup&gt;12+&lt;/sup&gt;](#backgroundbrightness1)相比，options参数新增了对undefined类型的支持。
+设置组件背景提亮效果，通过调整亮度变化速率和提亮程度改变组件背景的亮度表现。与[backgroundBrightness<sup>12+</sup>](#backgroundbrightness1)相比，options参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -1503,7 +1503,7 @@ backgroundEffect(options: BackgroundEffectOptions): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect&lt;sup&gt;11+&lt;/sup&gt;](#backgroundeffect1)相比，options参数新增了对undefined类型的支持。
+设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect<sup>11+</sup>](#backgroundeffect1)相比，options参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -1535,7 +1535,7 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect&lt;sup&gt;18+&lt;/sup&gt;](#backgroundeffect2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect<sup>18+</sup>](#backgroundeffect2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 > **说明：** 
 > 
@@ -1930,7 +1930,7 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| isShow | boolean | 是 | true表示显示内容，false表示隐藏内容，默认为false。<p>&lt;strong&gt;注意&lt;/strong&gt;：<br>只有在构建了相关页面后，菜单才能正常显示。如果设置了该参数在构建完成之前设置为true，显示问题，如错位、扭曲或无法弹出上，可能会发生。不支持长按拖动。</p>. |
+| isShow | boolean | 是 | true表示显示内容，false表示隐藏内容，默认为false。<p><strong>注意</strong>：<br>只有在构建了相关页面后，菜单才能正常显示。如果设置了该参数在构建完成之前设置为true，显示问题，如错位、扭曲或无法弹出上，可能会发生。不支持长按拖动。</p>. |
 | content | [CustomBuilder](arkts-arkui-common-comp-custombuilder-t.md) &#124; Array&lt;[MenuElement](arkts-arkui-common-comp-menuelement-i.md)&gt; | 是 | 上下文菜单的内容。 |
 | options | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 否 | 上下文菜单选项。 |
 
@@ -2111,7 +2111,7 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control <p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
+Popup control <p><strong>NOTE</strong>: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
 **起始版本：** 11
 
@@ -2228,7 +2228,7 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [BlendMode](arkts-arkui-common-comp-blendmode-e.md) | 是 | 混合模式。<br>默认值：BlendMode.NONE <br>**说明：** <br>混合模式设置为BlendMode.NONE时，blend效果实际为默认的BlendMode.SRC_OVER，且BlendApplyType不生效。 |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。<br>默认值：BlendApplyType.FAST <br>**说明：** <br>1. 设置BlendApplyType.FAST时，不离屏。<br>2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方画布已有内容进行混合。使用该实现方式时，将导致[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1)、[backgroundEffect](#backgroundeffect1)、[brightness](#brightness1)、[blur](#blur1)等需要截屏的接口无法截取到正确的画面。<br>3. 混合模式设置为BlendMode.NONE时，BlendApplyType不生效。 |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。<br>默认值：BlendApplyType.FAST <br>**说明：** <br>1. 设置BlendApplyType.FAST时，不离屏。<br>2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方画布已有内容进行混合。使用该实现方式时，将导致[linearGradientBlur<sup>12+</sup>](#lineargradientblur1)、[backgroundEffect](#backgroundeffect1)、[brightness](#brightness1)、[blur](#blur1)等需要截屏的接口无法截取到正确的画面。<br>3. 混合模式设置为BlendMode.NONE时，BlendApplyType不生效。 |
 
 **返回值：**
 
@@ -2244,7 +2244,7 @@ blendMode(value: BlendMode, type?: BlendApplyType): T
 blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 ```
 
-将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。与[blendMode&lt;sup&gt;11+&lt;/sup&gt;](#blendmode1)相比，mode参数新增了对undefined类型的支持。
+将当前控件的内容（包含子节点内容）与下方画布（可能为离屏画布）已有内容进行混合。与[blendMode<sup>11+</sup>](#blendmode1)相比，mode参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -2263,7 +2263,7 @@ blendMode(mode: Optional<BlendMode>, type?: BlendApplyType): T
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | mode | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[BlendMode](arkts-arkui-common-comp-blendmode-e.md)&gt; | 是 | 混合模式。<br>默认值：BlendMode.NONE <br>当mode的值为undefined时，恢复为内容不进行混合的效果。<br>**说明：** <br>混合模式设置为BlendMode.NONE时，blend效果实际为默认的BlendMode.SRC_OVER，且BlendApplyType不生效。 |
-| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。<br>默认值：BlendApplyType.FAST <br>**说明：** <br>1. 设置BlendApplyType.FAST时，不离屏。<br>2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方画布已有内容进行混合。使用该实现方式时，将导致[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1)、[backgroundEffect](#backgroundeffect1)、[brightness](#brightness1)、[blur](#blur1)等需要截屏的接口无法截取到正确的画面。<br>3. 混合模式设置为BlendMode.NONE时，BlendApplyType不生效。 |
+| type | [BlendApplyType](arkts-arkui-common-comp-blendapplytype-e.md) | 否 | blendMode实现方式是否离屏。<br>默认值：BlendApplyType.FAST <br>**说明：** <br>1. 设置BlendApplyType.FAST时，不离屏。<br>2. 设置BlendApplyType.OFFSCREEN时，会创建当前组件大小的离屏画布，再将当前组件（含子组件）的内容绘制到离屏画布上，再用指定的混合模式与下方画布已有内容进行混合。使用该实现方式时，将导致[linearGradientBlur<sup>12+</sup>](#lineargradientblur1)、[backgroundEffect](#backgroundeffect1)、[brightness](#brightness1)、[blur](#blur1)等需要截屏的接口无法截取到正确的画面。<br>3. 混合模式设置为BlendMode.NONE时，BlendApplyType不生效。 |
 
 **返回值：**
 
@@ -2347,7 +2347,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur&lt;sup&gt;18+&lt;/sup&gt;](#blur2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加内容模糊效果。与[blur<sup>18+</sup>](#blur2)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -2845,7 +2845,7 @@ clip(value: boolean): T
 clip(clip: Optional<boolean>): T
 ```
 
-是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。与[clip&lt;sup&gt;12+&lt;/sup&gt;](#clip1)相比，新增了对undefined类型的支持。
+是否对子组件超出当前组件范围外的区域进行裁剪。不设置该接口时，默认不对子组件超出当前组件范围外的区域进行裁剪。与[clip<sup>12+</sup>](#clip1)相比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -2959,7 +2959,7 @@ clipShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 clipShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与[clipShape&lt;sup&gt;12+&lt;/sup&gt;](#clipshape1)相比，新增了对undefined类型的支持。
+按指定的形状（形状中可包含位置信息）对当前组件进行裁剪。与[clipShape<sup>12+</sup>](#clipshape1)相比，新增了对undefined类型的支持。
 
 > **说明：** 
 > 
@@ -3998,7 +3998,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供内容模糊能力。与[foregroundBlurStyle&lt;sup&gt;18+&lt;/sup&gt;](#foregroundblurstyle2)相比，新增了sysOptions参数，即支持系统自适应调节参数，系统可根据设备性能或显示策略等条件自动调节前景模糊的渲染效果。
+为当前组件提供内容模糊能力。与[foregroundBlurStyle<sup>18+</sup>](#foregroundblurstyle2)相比，新增了sysOptions参数，即支持系统自适应调节参数，系统可根据设备性能或显示策略等条件自动调节前景模糊的渲染效果。
 
 > **说明：** 
 > 
@@ -4989,7 +4989,7 @@ lightUpEffect(value: number): T
 lightUpEffect(degree: Optional<number>): T
 ```
 
-设置组件图像亮起程度。与[lightUpEffect&lt;sup&gt;12+&lt;/sup&gt;](#lightupeffect1)相比，degree参数新增了对undefined类型的支持。
+设置组件图像亮起程度。与[lightUpEffect<sup>12+</sup>](#lightupeffect1)相比，degree参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -5120,7 +5120,7 @@ linearGradientBlur(value: number, options: LinearGradientBlurOptions): T
 linearGradientBlur(blurRadius: Optional<number>, options: Optional<LinearGradientBlurOptions>): T
 ```
 
-为组件添加内容线性渐变模糊效果。与[linearGradientBlur&lt;sup&gt;12+&lt;/sup&gt;](#lineargradientblur1)相比，新增了对undefined类型的支持。
+为组件添加内容线性渐变模糊效果。与[linearGradientBlur<sup>12+</sup>](#lineargradientblur1)相比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -5247,7 +5247,7 @@ mask(value: ProgressMask): T
 mask(mask: Optional<ProgressMask>): T
 ```
 
-为组件添加可调节进度的遮罩，遮罩覆盖在组件内容上方，通过进度值控制遮罩的显示范围。与[mask&lt;sup&gt;12+&lt;/sup&gt;](#mask1)相比，新增了对undefined类型的支持。
+为组件添加可调节进度的遮罩，遮罩覆盖在组件内容上方，通过进度值控制遮罩的显示范围。与[mask<sup>12+</sup>](#mask1)相比，新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -5357,7 +5357,7 @@ maskShape(value: CircleShape | EllipseShape | PathShape | RectShape): T
 maskShape(shape: Optional<CircleShape | EllipseShape | PathShape | RectShape>): T
 ```
 
-为组件添加指定形状的遮罩，在组件上叠加指定形状的覆盖层。与[maskShape&lt;sup&gt;12+&lt;/sup&gt;](#maskshape1)相比，新增了对undefined类型的支持。
+为组件添加指定形状的遮罩，在组件上叠加指定形状的覆盖层。与[maskShape<sup>12+</sup>](#maskshape1)相比，新增了对undefined类型的支持。
 
 > **说明：** 
 > 
@@ -5655,7 +5655,7 @@ obscured(reasons: Array<ObscuredReasons>): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：[]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在[Image](arkts-arkui-image-comp.md)组件、[Text](arkts-arkui-text-comp.md)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md)组件&lt;sup&gt;12+&lt;/sup&gt;<!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styledstring.md#styled_string)时，不支持隐私遮罩。 |
+| reasons | Array&lt;[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)&gt; | 是 | 设置组件内容的遮罩类型，在屏幕录制或屏幕共享等场景下对组件内容进行隐私遮挡。取值原则：请参考[ObscuredReasons](../arkts-apis/arkts-arkui-obscuredreasons-e.md)枚举定义，如PLACEHOLDER表示使用占位图遮罩。<br>默认值：[]，未设置遮罩原因时，不对组件内容进行隐私遮罩处理。<br>隐私遮罩效果仅在[Image](arkts-arkui-image-comp.md)组件、[Text](arkts-arkui-text-comp.md)组件<!--Del-->和[FormComponent](arkts-arkui-formcomponent-comp-sys.md)组件<sup>12+</sup><!--DelEnd-->上生效。<br>**说明：** <br>如需在图片加载过程中显示隐私遮罩，需要设置Image组件的宽度和高度；若未设置宽度和高度，图片加载过程中将不会显示隐私遮罩效果。<br>Text组件设置子组件或设置[属性字符串](../arkts-apis/arkts-arkui-styledstring.md#styled_string)时，不支持隐私遮罩。 |
 
 **返回值：**
 
@@ -7151,7 +7151,7 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 > 
 > - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](#overlay)能力挂载的自定义节点。
 > 
-> - 不支持[scale](#scale1)属性，如果想要支持[scale](#scale1)，则需使用[onVisibleAreaChange&lt;sup&gt;22+&lt;/sup&gt;](#onvisibleareachange2)，将measureFromViewport设置为true。
+> - 不支持[scale](#scale1)属性，如果想要支持[scale](#scale1)，则需使用[onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange2)，将measureFromViewport设置为true。
 
 **起始版本：** 9
 
@@ -7799,7 +7799,7 @@ pixelStretchEffect(options: PixelStretchEffectOptions): T
 pixelStretchEffect(options: Optional<PixelStretchEffectOptions>): T
 ```
 
-设置组件的图像边缘像素扩展距离。与[pixelStretchEffect&lt;sup&gt;12+&lt;/sup&gt;](#pixelstretcheffect1)相比，options参数新增了对undefined类型的支持。
+设置组件的图像边缘像素扩展距离。与[pixelStretchEffect<sup>12+</sup>](#pixelstretcheffect1)相比，options参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -8083,7 +8083,7 @@ renderGroup(isGroup: Optional<boolean>): T
 > 
 > 与[freeze](#freeze1)不同，renderGroup在缓存绘制结果后仍允许内部属性更新（更新时缓存失效），适用于组件需要动态更新的场景；
 > freeze则完全停止内部属性更新，适用于组件内容稳定不需要更新的场景。
-> 与[renderGroup&lt;sup&gt;10+&lt;/sup&gt;](#rendergroup1)相比，isGroup参数新增了对undefined类型的支持。
+> 与[renderGroup<sup>10+</sup>](#rendergroup1)相比，isGroup参数新增了对undefined类型的支持。
 
 不设置该属性时，默认不组成节点组。
 
@@ -8873,7 +8873,7 @@ sphericalEffect(value: number): T
 sphericalEffect(effect: Optional<number>): T
 ```
 
-设置组件的图像球面化程度。球面化效果将组件内容映射到球面曲面上，使图像呈现出类似球体的立体视觉效果，值越大球面弧度越高、立体感越强。与[sphericalEffect&lt;sup&gt;12+&lt;/sup&gt;](#sphericaleffect1)相比，effect参数新增了对undefined类型的支持。
+设置组件的图像球面化程度。球面化效果将组件内容映射到球面曲面上，使图像呈现出类似球体的立体视觉效果，值越大球面弧度越高、立体感越强。与[sphericalEffect<sup>12+</sup>](#sphericaleffect1)相比，effect参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -9193,7 +9193,7 @@ transform(value: object): T
 transform(transform: Optional<object>): T
 ```
 
-设置二维变换矩阵。包含三维变换时应使用[transform3D](#transform3d)接口。与[transform](#transform1)相比，transform&lt;sup&gt;18+&lt;/sup&gt;参数新增了对undefined类型的支持。
+设置二维变换矩阵。包含三维变换时应使用[transform3D](#transform3d)接口。与[transform](#transform1)相比，transform<sup>18+</sup>参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -9425,7 +9425,7 @@ useEffect(useEffect: boolean, effectType: EffectType): T
 useEffect(useEffect: Optional<boolean>, effectType?: EffectType): T
 ```
 
-用于设置组件是否应用<!--Del-->父级[EffectComponent](arkts-arkui-effectcomponent-comp-sys.md)或<!--DelEnd-->窗口定义的效果模板。与[useEffect&lt;sup&gt;14+&lt;/sup&gt;](#useeffect1)相比，useEffect参数新增了对undefined类型的支持。effectType为DEFAULT时，必须在EffectComponent的子组件上使用且EffectComponent需配置特效属性才能生效；effectType为WINDOW_EFFECT时，需配合窗口效果模板使用。不在对应容器内使用时，useEffect将不产生任何效果。
+用于设置组件是否应用<!--Del-->父级[EffectComponent](arkts-arkui-effectcomponent-comp-sys.md)或<!--DelEnd-->窗口定义的效果模板。与[useEffect<sup>14+</sup>](#useeffect1)相比，useEffect参数新增了对undefined类型的支持。effectType为DEFAULT时，必须在EffectComponent的子组件上使用且EffectComponent需配置特效属性才能生效；effectType为WINDOW_EFFECT时，需配合窗口效果模板使用。不在对应容器内使用时，useEffect将不产生任何效果。
 
 **起始版本：** 18
 
@@ -9524,7 +9524,7 @@ useShadowBatching(value: boolean): T
 useShadowBatching(use: Optional<boolean>): T
 ```
 
-控件内部子节点的阴影是否进行同层绘制，同层绘制时子节点阴影不会产生重叠覆盖效果。需配合[shadow](#shadow1)方法使用，当子节点设置了shadow效果时，useShadowBatching可控制子节点阴影进行同层绘制，实现同层阴影不重叠效果。调用顺序：先在子节点上设置shadow属性，再在父容器上设置useShadowBatching(true)。与[useShadowBatching&lt;sup&gt;11+&lt;/sup&gt;](#useshadowbatching1)相比，use参数新增了对undefined类型的支持。
+控件内部子节点的阴影是否进行同层绘制，同层绘制时子节点阴影不会产生重叠覆盖效果。需配合[shadow](#shadow1)方法使用，当子节点设置了shadow效果时，useShadowBatching可控制子节点阴影进行同层绘制，实现同层阴影不重叠效果。调用顺序：先在子节点上设置shadow属性，再在父容器上设置useShadowBatching(true)。与[useShadowBatching<sup>11+</sup>](#useshadowbatching1)相比，use参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

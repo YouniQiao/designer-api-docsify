@@ -8,7 +8,7 @@ declare class DatePickerAttribute extends CommonMethod<DatePickerAttribute>
 
 除支持[通用事件](arkts-arkui-common-comp.md)外，还支持以下事件：
 
-@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
+@extends CommonMethod [since 8 - 10] @extends CommonMethod<DatePickerAttribute> [since 11]
 
 **继承/实现关系：** DatePickerAttribute extends CommonMethod&lt;DatePickerAttribute&gt;
 
@@ -100,7 +100,7 @@ disappearTextStyle(value: PickerTextStyle)
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本样式。与[disappearTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本样式。与[disappearTextStyle<sup>10+</sup>](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -236,7 +236,7 @@ onDateChange(callback: Callback<Date>)
 onDateChange(callback: Optional<Callback<Date>>)
 ```
 
-滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。与[onDateChange&lt;sup&gt;10+&lt;/sup&gt;](#ondatechange1)相比，callback参数新增了对undefined类型的支持。
+滑动DatePicker文本内容后，选项完全归位至选中项位置时，触发该回调。不能通过双向绑定的状态变量触发。与[onDateChange<sup>10+</sup>](#ondatechange1)相比，callback参数新增了对undefined类型的支持。
 
 > **说明：** 
 > 
@@ -292,7 +292,7 @@ selectedTextStyle(value: PickerTextStyle)
 selectedTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置选中项的文本样式。与[selectedTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
+设置选中项的文本样式。与[selectedTextStyle<sup>10+</sup>](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -344,7 +344,7 @@ textStyle(value: PickerTextStyle)
 textStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本样式。与[textStyle&lt;sup&gt;10+&lt;/sup&gt;](#textstyle1)相比，style参数新增了对undefined类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本样式。与[textStyle<sup>10+</sup>](#textstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

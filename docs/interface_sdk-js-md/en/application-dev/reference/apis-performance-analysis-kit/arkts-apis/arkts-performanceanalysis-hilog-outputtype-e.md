@@ -6,8 +6,6 @@ enum OutputType
 
 Enumerates output type of hilog.
 
-@enum { int }
-
 **Since:** 26.0.0
 
 <!--Device-hilog-enum OutputType--><!--Device-hilog-enum OutputType-End-->
@@ -26,7 +24,7 @@ CONSOLE_ONLY Hilog is output to the console only, equivalent to DEFAULT.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-CONSOLE_ONLY = 0--><!--Device-OutputType-CONSOLE_ONLY = 0-End-->
 
@@ -44,7 +42,7 @@ DEFAULT Default output type, equivalent to CONSOLE_ONLY.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-DEFAULT = 0--><!--Device-OutputType-DEFAULT = 0-End-->
 
@@ -62,7 +60,7 @@ PRIVATE_SANDBOX_ONLY Hilog is output to files in its own private sandbox.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-PRIVATE_SANDBOX_ONLY = 1--><!--Device-OutputType-PRIVATE_SANDBOX_ONLY = 1-End-->
 
@@ -80,7 +78,7 @@ PRIVATE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and PRIVATE_SANDBOX_ONLY a
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3--><!--Device-OutputType-PRIVATE_SANDBOX_WITH_CONSOLE = 3-End-->
 
@@ -98,7 +96,7 @@ SHARE_SANDBOX_ONLY Hilog is output to files in its own sandbox, accessible to it
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-SHARE_SANDBOX_ONLY = 2--><!--Device-OutputType-SHARE_SANDBOX_ONLY = 2-End-->
 
@@ -116,7 +114,7 @@ SHARE_SANDBOX_WITH_CONSOLE Enable both CONSOLE_ONLY and SHARE_SANGBOX_ONLY at th
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-OutputType-SHARE_SANDBOX_WITH_CONSOLE = 4--><!--Device-OutputType-SHARE_SANDBOX_WITH_CONSOLE = 4-End-->
 

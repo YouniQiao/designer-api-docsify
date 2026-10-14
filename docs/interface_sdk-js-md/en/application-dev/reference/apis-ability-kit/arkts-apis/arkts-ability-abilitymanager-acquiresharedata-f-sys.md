@@ -28,7 +28,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID on the target application. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
+| missionId | number | Yes | Mission ID on the target application. The maximum value is 2<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>31</sup>-1. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | Yes | Callback used to return the result. If the API call is successful, **err** is **undefined** and **data** is the shared data obtained. Otherwise, **err** is an error object. You can perform error handling or other custom processing.<br>**Since:** 11 |
 
 **Error codes:**
@@ -62,7 +62,7 @@ Called by a system dialog box to obtain shared data, which is set by the target 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| missionId | number | Yes | Mission ID on the target application. The maximum value is 2&lt;sup&gt;31&lt;/sup&gt;-1. |
+| missionId | number | Yes | Mission ID on the target application. The maximum value is 2<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>31</sup>-1. |
 
 **Return value:**
 

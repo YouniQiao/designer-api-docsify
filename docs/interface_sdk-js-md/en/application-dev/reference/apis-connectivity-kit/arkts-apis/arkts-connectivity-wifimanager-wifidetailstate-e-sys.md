@@ -4,7 +4,7 @@
 enum WifiDetailState
 ```
 
-Wi-Fi detail state. @enum { int } WifiDetailState
+Wi-Fi detail state.
 
 **Since:** 12
 

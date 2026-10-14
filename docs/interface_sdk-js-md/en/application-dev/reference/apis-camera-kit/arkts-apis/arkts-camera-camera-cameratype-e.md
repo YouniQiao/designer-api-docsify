@@ -22,7 +22,7 @@ Default camera type.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_DEFAULT = 0--><!--Device-CameraType-CAMERA_TYPE_DEFAULT = 0-End-->
 
@@ -38,7 +38,7 @@ Telephoto camera.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_TELEPHOTO = 3--><!--Device-CameraType-CAMERA_TYPE_TELEPHOTO = 3-End-->
 
@@ -54,7 +54,7 @@ Camera with depth of field information.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_TRUE_DEPTH = 4--><!--Device-CameraType-CAMERA_TYPE_TRUE_DEPTH = 4-End-->
 
@@ -70,7 +70,7 @@ Ultra-wide camera.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2--><!--Device-CameraType-CAMERA_TYPE_ULTRA_WIDE = 2-End-->
 
@@ -86,7 +86,7 @@ Wide camera.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1--><!--Device-CameraType-CAMERA_TYPE_WIDE_ANGLE = 1-End-->
 

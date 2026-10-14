@@ -20,7 +20,7 @@ function connectToCandidateConfig(networkId: number): void
 
 **需要权限：** ohos.permission.SET_WIFI_INFO
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-wifiManager-function connectToCandidateConfig(networkId: int): void--><!--Device-wifiManager-function connectToCandidateConfig(networkId: int): void-End-->
 
@@ -72,7 +72,7 @@ function connectToCandidateConfig(settings: ConnectSettings): Promise<void>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-wifiManager-function connectToCandidateConfig(settings: ConnectSettings): Promise<void>--><!--Device-wifiManager-function connectToCandidateConfig(settings: ConnectSettings): Promise<void>-End-->
 

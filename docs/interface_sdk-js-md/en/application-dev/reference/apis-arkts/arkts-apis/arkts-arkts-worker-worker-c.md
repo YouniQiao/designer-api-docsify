@@ -146,7 +146,7 @@ Adds an event listener to the worker and removes the event listener automaticall
 
 **Deprecated since:** 9
 
-**Substitutes:** once
+**Substitutes:** [once](arkts-arkts-worker-threadworker-c.md#once)
 
 <!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
 

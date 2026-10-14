@@ -30,7 +30,7 @@ Shell命令的结果码。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ShellCmdResult-exitCode: int--><!--Device-ShellCmdResult-exitCode: int-End-->
 
@@ -48,7 +48,7 @@ Shell命令的标准输出内容。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ShellCmdResult-stdResult: string--><!--Device-ShellCmdResult-stdResult: string-End-->
 

@@ -32,7 +32,7 @@ Policy for the APP_CRASH event the value true means to the minidump capture capa
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-collectMinidump?: boolean--><!--Device-AppCrashPolicy-collectMinidump?: boolean-End-->
 
@@ -56,7 +56,7 @@ The default value is **false**.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-extendPcLrPrinting?: boolean--><!--Device-AppCrashPolicy-extendPcLrPrinting?: boolean-End-->
 
@@ -76,7 +76,7 @@ The policy for APP_CRASH event. Truncation size for crash logs. The value ranges
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int--><!--Device-AppCrashPolicy-logFileCutoffSzBytes?: int-End-->
 
@@ -104,7 +104,7 @@ Note: The enabling behavior of an application takes effect only in its current l
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean--><!--Device-AppCrashPolicy-pageSwitchLogEnable?: boolean-End-->
 
@@ -124,7 +124,7 @@ Policy for the APP_CRASH event the value true means the application will receive
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-AppCrashPolicy-publishOnNextLaunch?: boolean--><!--Device-AppCrashPolicy-publishOnNextLaunch?: boolean-End-->
 
@@ -150,7 +150,7 @@ The default value is **false**.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AppCrashPolicy-simplifyVmaPrinting?: boolean--><!--Device-AppCrashPolicy-simplifyVmaPrinting?: boolean-End-->
 

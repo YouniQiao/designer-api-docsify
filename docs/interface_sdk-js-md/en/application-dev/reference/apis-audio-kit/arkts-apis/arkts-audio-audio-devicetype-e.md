@@ -22,7 +22,7 @@ Bluetooth device using Advanced Audio Distribution Profile (A2DP) links.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-BLUETOOTH_A2DP = 8--><!--Device-DeviceType-BLUETOOTH_A2DP = 8-End-->
 
@@ -38,7 +38,7 @@ Bluetooth device using Synchronous Connection Oriented (SCO) links.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-BLUETOOTH_SCO = 7--><!--Device-DeviceType-BLUETOOTH_SCO = 7-End-->
 
@@ -54,7 +54,7 @@ Default device type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-DEFAULT = 1000--><!--Device-DeviceType-DEFAULT = 1000-End-->
 
@@ -70,7 +70,7 @@ Display port (DP), which is used to connect to external devices.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-DISPLAY_PORT = 23--><!--Device-DeviceType-DISPLAY_PORT = 23-End-->
 
@@ -86,7 +86,7 @@ Built-in earpiece.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-EARPIECE = 1--><!--Device-DeviceType-EARPIECE = 1-End-->
 
@@ -130,7 +130,7 @@ Invalid device.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-INVALID = 0--><!--Device-DeviceType-INVALID = 0-End-->
 
@@ -160,7 +160,7 @@ Built-in microphone.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-MIC = 15--><!--Device-DeviceType-MIC = 15-End-->
 
@@ -190,7 +190,7 @@ Remote cast device.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-REMOTE_CAST = 24--><!--Device-DeviceType-REMOTE_CAST = 24-End-->
 
@@ -206,7 +206,7 @@ Distributed device.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-DeviceType-REMOTE_DAUDIO = 29--><!--Device-DeviceType-REMOTE_DAUDIO = 29-End-->
 
@@ -222,7 +222,7 @@ Built-in speaker.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-SPEAKER = 2--><!--Device-DeviceType-SPEAKER = 2-End-->
 
@@ -266,7 +266,7 @@ USB Type-C headset.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-USB_HEADSET = 22--><!--Device-DeviceType-USB_HEADSET = 22-End-->
 
@@ -282,7 +282,7 @@ Wired headset without a microphone.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-WIRED_HEADPHONES = 4--><!--Device-DeviceType-WIRED_HEADPHONES = 4-End-->
 
@@ -298,7 +298,7 @@ Wired headset with a microphone.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-DeviceType-WIRED_HEADSET = 3--><!--Device-DeviceType-WIRED_HEADSET = 3-End-->
 

@@ -50,7 +50,7 @@ canLoop(value: boolean)
 canLoop(isLoop: Optional<boolean>)
 ```
 
-设置是否可循环滚动。与[canLoop&lt;sup&gt;10+&lt;/sup&gt;](#canloop1)相比，isLoop参数新增了对undefined类型的支持。
+设置是否可循环滚动。与[canLoop<sup>10+</sup>](#canloop1)相比，isLoop参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -226,7 +226,7 @@ disappearTextStyle(value: PickerTextStyle)
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。与[disappearTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。与[disappearTextStyle<sup>10+</sup>](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -252,7 +252,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle&lt;sup&gt;18+&lt;/sup&gt;](#disappeartextstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle<sup>18+</sup>](#disappeartextstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -306,7 +306,7 @@ divider(value: DividerOptions | null)
 divider(textDivider: Optional<DividerOptions | null>)
 ```
 
-设置分割线样式，不设置该属性则按“默认值”展示分割线。与[divider&lt;sup&gt;12+&lt;/sup&gt;](#divider1)相比，textDivider参数新增了对undefined类型的支持。
+设置分割线样式，不设置该属性则按“默认值”展示分割线。与[divider<sup>12+</sup>](#divider1)相比，textDivider参数新增了对undefined类型的支持。
 
 [DividerOptions](arkts-arkui-textpicker-comp-divideroptions-i.md)中startMargin + endMargin 超过组件宽度后，startMargin和endMargin会被置0。
 
@@ -384,7 +384,7 @@ gradientHeight(value: Dimension)
 gradientHeight(height: Optional<Dimension>)
 ```
 
-设置渐隐效果的高度。若未设置该属性，则显示默认渐隐效果。与[gradientHeight&lt;sup&gt;12+&lt;/sup&gt;](#gradientheight1)相比，height参数新增了对undefined类型的支持。
+设置渐隐效果的高度。若未设置该属性，则显示默认渐隐效果。与[gradientHeight<sup>12+</sup>](#gradientheight1)相比，height参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -534,7 +534,7 @@ onScrollStop(callback: TextPickerScrollStopCallback)
 onScrollStop(callback: Optional<TextPickerScrollStopCallback>)
 ```
 
-文本选择器的选项列滑动停止时触发该事件。与[onScrollStop&lt;sup&gt;14+&lt;/sup&gt;](#onscrollstop1)相比，callback参数新增了对undefined类型的支持。
+文本选择器的选项列滑动停止时触发该事件。与[onScrollStop<sup>14+</sup>](#onscrollstop1)相比，callback参数新增了对undefined类型的支持。
 
 手指拖动选项列触发的滑动，手指离开屏幕且滑动停止时会触发该事件。
 
@@ -618,7 +618,7 @@ selectedIndex(value: number[])
 selectedIndex(index: Optional<number[]>)
 ```
 
-设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md)中的"value"属性。单列数据选择器使用number类型，多列数据选择器使用number[]类型。与[selectedIndex&lt;sup&gt;10+&lt;/sup&gt;] [selectedIndex](#selectedindex1)相比，index参数新增了对undefined类型的支持。
+设置选中项在数据选择列表中的索引值，优先级高于[TextPickerOptions](arkts-arkui-textpicker-comp-textpickeroptions-i.md)中的"value"属性。单列数据选择器使用number类型，多列数据选择器使用number[]类型。与[selectedIndex<sup>10+</sup>] [selectedIndex](#selectedindex1)相比，index参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -670,7 +670,7 @@ selectedTextStyle(value: PickerTextStyle)
 selectedTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号、字体粗细。与[selectedTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
+设置选中项的文本颜色、字号、字体粗细。与[selectedTextStyle<sup>10+</sup>](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -696,7 +696,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle&lt;sup&gt;18+&lt;/sup&gt;](#selectedtextstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle<sup>18+</sup>](#selectedtextstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -748,7 +748,7 @@ textStyle(value: PickerTextStyle)
 textStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。与[textStyle&lt;sup&gt;10+&lt;/sup&gt;](#textstyle1)相比，style参数新增了对undefined类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。与[textStyle<sup>10+</sup>](#textstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -774,7 +774,7 @@ textStyle(style: Optional<PickerTextStyle>)
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle&lt;sup&gt;18+&lt;/sup&gt;](#textstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle<sup>18+</sup>](#textstyle2)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 

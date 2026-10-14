@@ -22,7 +22,7 @@ EXPANDED = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FoldStatus-EXPANDED = 1--><!--Device-FoldStatus-EXPANDED = 1-End-->
 
@@ -38,7 +38,7 @@ FOLDED = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FoldStatus-FOLDED = 2--><!--Device-FoldStatus-FOLDED = 2-End-->
 
@@ -54,7 +54,7 @@ NON_FOLDABLE = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FoldStatus-NON_FOLDABLE = 0--><!--Device-FoldStatus-NON_FOLDABLE = 0-End-->
 

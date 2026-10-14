@@ -117,7 +117,7 @@ Converts data into an asymmetric key pair. This API uses an asynchronous callbac
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null, callback: AsyncCallback<KeyPair>): void-End-->
 
@@ -270,7 +270,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertKey(pubKey: DataBlob | null, priKey: DataBlob | null): Promise<KeyPair>-End-->
 
@@ -338,7 +338,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair--><!--Device-AsyKeyGenerator-convertKeySync(pubKey: DataBlob | null, priKey: DataBlob | null): KeyPair-End-->
 
@@ -412,7 +412,7 @@ Converts data into an asymmetric key pair. This API uses a promise to return the
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null): Promise<KeyPair>-End-->
 
@@ -500,7 +500,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>--><!--Device-AsyKeyGenerator-convertPemKey(pubKey: string | null, priKey: string | null, password: string): Promise<KeyPair>-End-->
 
@@ -585,7 +585,7 @@ Converts data into an asymmetric key pair. This API returns the result synchrono
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null): KeyPair-End-->
 
@@ -676,7 +676,7 @@ Converts data into an asymmetric key pair. Encrypted private keys are supported.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair--><!--Device-AsyKeyGenerator-convertPemKeySync(pubKey: string | null, priKey: string | null, password: string): KeyPair-End-->
 
@@ -756,7 +756,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void--><!--Device-AsyKeyGenerator-generateKeyPair(callback: AsyncCallback<KeyPair>): void-End-->
 
@@ -805,7 +805,7 @@ Generates a random key pair using this asymmetric key generator. This API uses a
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>--><!--Device-AsyKeyGenerator-generateKeyPair(): Promise<KeyPair>-End-->
 
@@ -855,7 +855,7 @@ Generates a random key pair using this asymmetric key generator. This API return
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair--><!--Device-AsyKeyGenerator-generateKeyPairSync(): KeyPair-End-->
 
@@ -905,7 +905,7 @@ The algName of the AsyKeyGenerator.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeyGenerator-readonly algName: string--><!--Device-AsyKeyGenerator-readonly algName: string-End-->
 

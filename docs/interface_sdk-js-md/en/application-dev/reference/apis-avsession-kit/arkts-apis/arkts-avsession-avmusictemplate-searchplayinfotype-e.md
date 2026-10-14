@@ -6,8 +6,6 @@ enum SearchPlayInfoType
 
 Enumeration of SearchPlayInfoType.
 
-@enum { string }
-
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum SearchPlayInfoType--><!--Device-avMusicTemplate-enum SearchPlayInfoType-End-->

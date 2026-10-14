@@ -41,7 +41,7 @@ Cancels this authentication. This API is commonly used in the following scenario
 
 **Required permissions:** ohos.permission.ACCESS_BIOMETRIC
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthInstance-cancel(): void--><!--Device-UserAuthInstance-cancel(): void-End-->
 
@@ -394,7 +394,7 @@ Starts authentication. This API is commonly used in the following service scenar
 - API version 20 and later: ohos.permission.ACCESS_BIOMETRIC or ohos.permission.USER_AUTH_FROM_BACKGROUND
 - API versions 10 to 19: ohos.permission.ACCESS_BIOMETRIC
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserAuthInstance-start(): void--><!--Device-UserAuthInstance-start(): void-End-->
 

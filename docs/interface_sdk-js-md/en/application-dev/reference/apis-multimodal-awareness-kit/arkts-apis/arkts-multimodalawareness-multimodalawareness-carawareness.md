@@ -4,8 +4,6 @@ This module provides car awareness capabilities, including spatial motion intera
 
 **Since:** 26.0.1
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace carAwareness--><!--Device-unnamed-declare namespace carAwareness-End-->
 
 **System capability:** SystemCapability.MultimodalAwareness.CarAwareness
@@ -22,24 +20,24 @@ import { carAwareness } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllCapabilityList](arkts-multimodalawareness-carawareness-getallcapabilitylist-f.md) | Obtains the list of all car awareness capabilities supported by the current device. |
-| [offRealTimeWeather](arkts-multimodalawareness-carawareness-offrealtimeweather-f.md) | Unsubscribes from real-time weather results. |
-| [offRefueling](arkts-multimodalawareness-carawareness-offrefueling-f.md) | Unsubscribes from the refueling status result. |
-| [offSpatialMotion](arkts-multimodalawareness-carawareness-offspatialmotion-f.md) | Unsubscribes from spatial motion results. |
-| [onRealTimeWeather](arkts-multimodalawareness-carawareness-onrealtimeweather-f.md) | Subscribes to real-time weather awareness results. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
-| [onRefueling](arkts-multimodalawareness-carawareness-onrefueling-f.md) | Subscribes to the refueling status awareness result. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
-| [onSpatialMotion](arkts-multimodalawareness-carawareness-onspatialmotion-f.md) | Subscribes to spatial motion awareness results. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
+| [getAllCapabilityList](arkts-multimodalawareness-carawareness-getallcapabilitylist-f.md#getallcapabilitylist) | Obtains the list of all car awareness capabilities supported by the current device. |
+| [offRealTimeWeather](arkts-multimodalawareness-carawareness-offrealtimeweather-f.md#offrealtimeweather) | Unsubscribes from real-time weather results. |
+| [offRefueling](arkts-multimodalawareness-carawareness-offrefueling-f.md#offrefueling) | Unsubscribes from the refueling status result. |
+| [offSpatialMotion](arkts-multimodalawareness-carawareness-offspatialmotion-f.md#offspatialmotion) | Unsubscribes from spatial motion results. |
+| [onRealTimeWeather](arkts-multimodalawareness-carawareness-onrealtimeweather-f.md#onrealtimeweather) | Subscribes to real-time weather awareness results. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
+| [onRefueling](arkts-multimodalawareness-carawareness-onrefueling-f.md#onrefueling) | Subscribes to the refueling status awareness result. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
+| [onSpatialMotion](arkts-multimodalawareness-carawareness-onspatialmotion-f.md#onspatialmotion) | Subscribes to spatial motion awareness results. If the device does not support this capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getCarAwareness](arkts-multimodalawareness-carawareness-getcarawareness-f-sys.md) | Obtains the car awareness result of the specified type once. |
-| [offCarAwareness](arkts-multimodalawareness-carawareness-offcarawareness-f-sys.md) | Unsubscribes from the specific car awareness capability result. |
-| [onCarAwareness](arkts-multimodalawareness-carawareness-oncarawareness-f-sys.md) | Subscribes to car awareness results. If the device does not support the capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
-| [updateSpatialActionEnableStatus](arkts-multimodalawareness-carawareness-updatespatialactionenablestatus-f-sys.md) | Updates the start/stop status of spatial action awareness. |
-| [updateSpatialActionZone](arkts-multimodalawareness-carawareness-updatespatialactionzone-f-sys.md) | Updates the voice zone information for spatial action awareness. |
+| [getCarAwareness](arkts-multimodalawareness-carawareness-getcarawareness-f-sys.md#getcarawareness) | Obtains the car awareness result of the specified type once. |
+| [offCarAwareness](arkts-multimodalawareness-carawareness-offcarawareness-f-sys.md#offcarawareness) | Unsubscribes from the specific car awareness capability result. |
+| [onCarAwareness](arkts-multimodalawareness-carawareness-oncarawareness-f-sys.md#oncarawareness) | Subscribes to car awareness results. If the device does not support the capability, error code 34000002 is thrown. You can obtain the supported capabilities by calling the getAllCapabilityList method. The data is returned asynchronously through the callback. |
+| [updateSpatialActionEnableStatus](arkts-multimodalawareness-carawareness-updatespatialactionenablestatus-f-sys.md#updatespatialactionenablestatus) | Updates the start/stop status of spatial action awareness. |
+| [updateSpatialActionZone](arkts-multimodalawareness-carawareness-updatespatialactionzone-f-sys.md#updatespatialactionzone) | Updates the voice zone information for spatial action awareness. |
 <!--DelEnd-->
 
 ### Interfaces

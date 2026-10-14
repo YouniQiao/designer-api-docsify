@@ -24,7 +24,7 @@ COMMERCIAL = 3
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HiTraceOutputLevel-COMMERCIAL = 3--><!--Device-HiTraceOutputLevel-COMMERCIAL = 3-End-->
 
@@ -40,7 +40,7 @@ CRITICAL = 2
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HiTraceOutputLevel-CRITICAL = 2--><!--Device-HiTraceOutputLevel-CRITICAL = 2-End-->
 
@@ -56,7 +56,7 @@ DEBUG = 0
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HiTraceOutputLevel-DEBUG = 0--><!--Device-HiTraceOutputLevel-DEBUG = 0-End-->
 
@@ -72,7 +72,7 @@ INFO = 1
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HiTraceOutputLevel-INFO = 1--><!--Device-HiTraceOutputLevel-INFO = 1-End-->
 
@@ -88,7 +88,7 @@ MAX = COMMERCIAL
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-HiTraceOutputLevel-MAX = COMMERCIAL--><!--Device-HiTraceOutputLevel-MAX = COMMERCIAL-End-->
 

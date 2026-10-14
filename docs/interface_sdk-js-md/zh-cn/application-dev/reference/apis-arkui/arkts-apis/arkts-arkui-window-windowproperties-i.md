@@ -30,7 +30,7 @@ brightness: number
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-brightness: double--><!--Device-WindowProperties-brightness: double-End-->
 
@@ -48,7 +48,7 @@ displayId?: number
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-displayId?: long--><!--Device-WindowProperties-displayId?: long-End-->
 
@@ -66,7 +66,7 @@ drawableRect: Rect
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-drawableRect: Rect--><!--Device-WindowProperties-drawableRect: Rect-End-->
 
@@ -84,7 +84,7 @@ focusable: boolean
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-focusable: boolean--><!--Device-WindowProperties-focusable: boolean-End-->
 
@@ -118,7 +118,7 @@ id: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-id: int--><!--Device-WindowProperties-id: int-End-->
 
@@ -136,7 +136,7 @@ isFullScreen: boolean
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-isFullScreen: boolean--><!--Device-WindowProperties-isFullScreen: boolean-End-->
 
@@ -154,7 +154,7 @@ isKeepScreenOn: boolean
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-isKeepScreenOn: boolean--><!--Device-WindowProperties-isKeepScreenOn: boolean-End-->
 
@@ -176,7 +176,7 @@ isLayoutFullScreen: boolean
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-isLayoutFullScreen: boolean--><!--Device-WindowProperties-isLayoutFullScreen: boolean-End-->
 
@@ -194,7 +194,7 @@ isPrivacyMode: boolean
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-isPrivacyMode: boolean--><!--Device-WindowProperties-isPrivacyMode: boolean-End-->
 
@@ -212,7 +212,7 @@ isTransparent: boolean
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-isTransparent: boolean--><!--Device-WindowProperties-isTransparent: boolean-End-->
 
@@ -230,7 +230,7 @@ name?: string
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-name?: string--><!--Device-WindowProperties-name?: string-End-->
 
@@ -248,7 +248,7 @@ touchable: boolean
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-touchable: boolean--><!--Device-WindowProperties-touchable: boolean-End-->
 
@@ -266,7 +266,7 @@ windowRect: Rect
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-windowRect: Rect--><!--Device-WindowProperties-windowRect: Rect-End-->
 
@@ -286,7 +286,7 @@ windowType?: WindowType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-windowType?: WindowType--><!--Device-WindowProperties-windowType?: WindowType-End-->
 
@@ -350,7 +350,7 @@ type: WindowType
 
 **替代接口：** [windowType](#windowtype)
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowProperties-type: WindowType--><!--Device-WindowProperties-type: WindowType-End-->
 

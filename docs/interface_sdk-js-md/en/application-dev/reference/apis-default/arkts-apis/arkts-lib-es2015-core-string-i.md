@@ -134,7 +134,7 @@ Returns true if the sequence of elements of searchString converted to a String i
 anchor(name: string): string
 ```
 
-Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the text value
+Returns an `<a>` HTML anchor element and sets the name attribute to the text value
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -152,7 +152,7 @@ Returns an `&lt;a&gt;` HTML anchor element and sets the name attribute to the te
 big(): string
 ```
 
-Returns a `&lt;big&gt;` HTML element
+Returns a `<big>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -164,7 +164,7 @@ Returns a `&lt;big&gt;` HTML element
 blink(): string
 ```
 
-Returns a `&lt;blink&gt;` HTML element
+Returns a `<blink>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -176,7 +176,7 @@ Returns a `&lt;blink&gt;` HTML element
 bold(): string
 ```
 
-Returns a `&lt;b&gt;` HTML element
+Returns a `<b>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -188,7 +188,7 @@ Returns a `&lt;b&gt;` HTML element
 fixed(): string
 ```
 
-Returns a `&lt;tt&gt;` HTML element
+Returns a `<tt>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -200,7 +200,7 @@ Returns a `&lt;tt&gt;` HTML element
 fontcolor(color: string): string
 ```
 
-Returns a `&lt;font&gt;` HTML element and sets the color attribute value
+Returns a `<font>` HTML element and sets the color attribute value
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -220,7 +220,7 @@ Returns a `&lt;font&gt;` HTML element and sets the color attribute value
 fontsize(size: number): string
 ```
 
-Returns a `&lt;font&gt;` HTML element and sets the size attribute value
+Returns a `<font>` HTML element and sets the size attribute value
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -240,7 +240,7 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 fontsize(size: string): string
 ```
 
-Returns a `&lt;font&gt;` HTML element and sets the size attribute value
+Returns a `<font>` HTML element and sets the size attribute value
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -258,7 +258,7 @@ Returns a `&lt;font&gt;` HTML element and sets the size attribute value
 italics(): string
 ```
 
-Returns an `&lt;i&gt;` HTML element
+Returns an `<i>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -270,7 +270,7 @@ Returns an `&lt;i&gt;` HTML element
 link(url: string): string
 ```
 
-Returns an `&lt;a&gt;` HTML element and sets the href attribute value
+Returns an `<a>` HTML element and sets the href attribute value
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -288,7 +288,7 @@ Returns an `&lt;a&gt;` HTML element and sets the href attribute value
 small(): string
 ```
 
-Returns a `&lt;small&gt;` HTML element
+Returns a `<small>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -300,7 +300,7 @@ Returns a `&lt;small&gt;` HTML element
 strike(): string
 ```
 
-Returns a `&lt;strike&gt;` HTML element
+Returns a `<strike>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -312,7 +312,7 @@ Returns a `&lt;strike&gt;` HTML element
 sub(): string
 ```
 
-Returns a `&lt;sub&gt;` HTML element
+Returns a `<sub>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 
@@ -324,7 +324,7 @@ Returns a `&lt;sub&gt;` HTML element
 sup(): string
 ```
 
-Returns a `&lt;sup&gt;` HTML element
+Returns a `<sup>` HTML element
 
 **Deprecated since:** legacy feature for browser compatibility
 

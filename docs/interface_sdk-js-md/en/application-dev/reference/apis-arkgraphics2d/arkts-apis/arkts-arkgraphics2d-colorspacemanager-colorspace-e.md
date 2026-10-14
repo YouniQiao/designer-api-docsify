@@ -26,7 +26,7 @@ The encoding range is of the Full type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-ADOBE_RGB_1998 = 1--><!--Device-ColorSpace-ADOBE_RGB_1998 = 1-End-->
 
@@ -46,7 +46,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-ADOBE_RGB_1998_LIMIT = 13--><!--Device-ColorSpace-ADOBE_RGB_1998_LIMIT = 13-End-->
 
@@ -66,7 +66,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_HLG = 9--><!--Device-ColorSpace-BT2020_HLG = 9-End-->
 
@@ -86,7 +86,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_HLG_LIMIT = 19--><!--Device-ColorSpace-BT2020_HLG_LIMIT = 19-End-->
 
@@ -106,7 +106,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_PQ = 10--><!--Device-ColorSpace-BT2020_PQ = 10-End-->
 
@@ -126,7 +126,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT2020_PQ_LIMIT = 20--><!--Device-ColorSpace-BT2020_PQ_LIMIT = 20-End-->
 
@@ -146,7 +146,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_EBU = 7--><!--Device-ColorSpace-BT601_EBU = 7-End-->
 
@@ -166,7 +166,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_EBU_LIMIT = 17--><!--Device-ColorSpace-BT601_EBU_LIMIT = 17-End-->
 
@@ -186,7 +186,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_SMPTE_C = 8--><!--Device-ColorSpace-BT601_SMPTE_C = 8-End-->
 
@@ -206,7 +206,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT601_SMPTE_C_LIMIT = 18--><!--Device-ColorSpace-BT601_SMPTE_C_LIMIT = 18-End-->
 
@@ -226,7 +226,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT709 = 6--><!--Device-ColorSpace-BT709 = 6-End-->
 
@@ -246,7 +246,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-BT709_LIMIT = 16--><!--Device-ColorSpace-BT709_LIMIT = 16-End-->
 
@@ -262,7 +262,7 @@ Custom type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-CUSTOM = 5--><!--Device-ColorSpace-CUSTOM = 5-End-->
 
@@ -282,7 +282,7 @@ The encoding range is of the Full type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DCI_P3 = 2--><!--Device-ColorSpace-DCI_P3 = 2-End-->
 
@@ -320,7 +320,7 @@ The encoding range is of the Full type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3 = 3--><!--Device-ColorSpace-DISPLAY_P3 = 3-End-->
 
@@ -342,7 +342,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_HLG = P3_HLG--><!--Device-ColorSpace-DISPLAY_P3_HLG = P3_HLG-End-->
 
@@ -362,7 +362,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_LIMIT = 14--><!--Device-ColorSpace-DISPLAY_P3_LIMIT = 14-End-->
 
@@ -384,7 +384,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_PQ = P3_PQ--><!--Device-ColorSpace-DISPLAY_P3_PQ = P3_PQ-End-->
 
@@ -406,7 +406,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_P3_SRGB = DISPLAY_P3--><!--Device-ColorSpace-DISPLAY_P3_SRGB = DISPLAY_P3-End-->
 
@@ -428,7 +428,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-DISPLAY_SRGB = SRGB--><!--Device-ColorSpace-DISPLAY_SRGB = SRGB-End-->
 
@@ -462,7 +462,7 @@ The conversion function is of the Linear type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_BT2020 = 25--><!--Device-ColorSpace-LINEAR_BT2020 = 25-End-->
 
@@ -482,7 +482,7 @@ The conversion function is of the Linear type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_BT709 = LINEAR_SRGB--><!--Device-ColorSpace-LINEAR_BT709 = LINEAR_SRGB-End-->
 
@@ -500,7 +500,7 @@ The conversion function is of the Linear type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_P3 = 23--><!--Device-ColorSpace-LINEAR_P3 = 23-End-->
 
@@ -518,7 +518,7 @@ The conversion function is of the Linear type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-LINEAR_SRGB = 24--><!--Device-ColorSpace-LINEAR_SRGB = 24-End-->
 
@@ -538,7 +538,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_HLG = 11--><!--Device-ColorSpace-P3_HLG = 11-End-->
 
@@ -558,7 +558,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_HLG_LIMIT = 21--><!--Device-ColorSpace-P3_HLG_LIMIT = 21-End-->
 
@@ -578,7 +578,7 @@ The encoding range is of the Full type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_PQ = 12--><!--Device-ColorSpace-P3_PQ = 12-End-->
 
@@ -598,7 +598,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-P3_PQ_LIMIT = 22--><!--Device-ColorSpace-P3_PQ_LIMIT = 22-End-->
 
@@ -620,7 +620,7 @@ This is the default color space type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-SRGB = 4--><!--Device-ColorSpace-SRGB = 4-End-->
 
@@ -640,7 +640,7 @@ The encoding range is of the Limit type.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-SRGB_LIMIT = 15--><!--Device-ColorSpace-SRGB_LIMIT = 15-End-->
 
@@ -656,7 +656,7 @@ Unknown type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ColorSpace-UNKNOWN = 0--><!--Device-ColorSpace-UNKNOWN = 0-End-->
 

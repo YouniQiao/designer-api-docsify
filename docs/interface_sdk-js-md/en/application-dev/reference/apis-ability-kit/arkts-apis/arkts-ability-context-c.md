@@ -26,7 +26,7 @@ Creates the application context with a specific data encryption level. Developer
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Context-createAreaModeContext(areaMode: contextConstant.AreaMode): Context--><!--Device-Context-createAreaModeContext(areaMode: contextConstant.AreaMode): Context-End-->
 
@@ -79,7 +79,7 @@ Creates an application context based on the specified display ID with screen inf
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-Context-createDisplayContext(displayId: long): Context--><!--Device-Context-createDisplayContext(displayId: long): Context-End-->
 
@@ -137,7 +137,7 @@ Obtains the current application context. It provides capabilities such as applic
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-getApplicationContext(): ApplicationContext--><!--Device-Context-getApplicationContext(): ApplicationContext-End-->
 
@@ -189,7 +189,7 @@ Obtains the shared directory based on a group ID. This API uses an asynchronous 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void--><!--Device-Context-getGroupDir(dataGroupID: string, callback: AsyncCallback<string>): void-End-->
 
@@ -246,7 +246,7 @@ Obtains the shared directory based on a group ID. This API uses a promise to ret
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-getGroupDir(dataGroupID: string): Promise<string>--><!--Device-Context-getGroupDir(dataGroupID: string): Promise<string>-End-->
 
@@ -306,7 +306,7 @@ Checks whether the current context is of the specified ContextType.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Context-isContextOf(contextType: contextConstant.ContextType): boolean--><!--Device-Context-isContextOf(contextType: contextConstant.ContextType): boolean-End-->
 
@@ -425,7 +425,7 @@ Application information.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-applicationInfo: ApplicationInfo--><!--Device-Context-applicationInfo: ApplicationInfo-End-->
 
@@ -465,7 +465,7 @@ Bundle code directory. Do not access resource files using concatenated paths. Us
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-bundleCodeDir: string--><!--Device-Context-bundleCodeDir: string-End-->
 
@@ -485,7 +485,7 @@ Cache directory. For details, see [Application Sandbox](../../../file-management
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-cacheDir: string--><!--Device-Context-cacheDir: string-End-->
 
@@ -505,7 +505,7 @@ Cloud file directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Context-cloudFileDir: string--><!--Device-Context-cloudFileDir: string-End-->
 
@@ -525,7 +525,7 @@ Database directory. For details, see [Application Sandbox](../../../file-managem
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-databaseDir: string--><!--Device-Context-databaseDir: string-End-->
 
@@ -545,7 +545,7 @@ Distributed file directory. For details, see [Application Sandbox](../../../file
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-distributedFilesDir: string--><!--Device-Context-distributedFilesDir: string-End-->
 
@@ -565,7 +565,7 @@ Event hub that implements event subscription, unsubscription, and triggering.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-eventHub: EventHub--><!--Device-Context-eventHub: EventHub-End-->
 
@@ -585,7 +585,7 @@ File directory. For details, see [Application Sandbox](../../../file-management/
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-filesDir: string--><!--Device-Context-filesDir: string-End-->
 
@@ -605,7 +605,7 @@ Directory for storing log files.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Context-get logFileDir(): string--><!--Device-Context-get logFileDir(): string-End-->
 
@@ -625,7 +625,7 @@ Preferences directory. For details, see [Application Sandbox](../../../file-mana
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-preferencesDir: string--><!--Device-Context-preferencesDir: string-End-->
 
@@ -645,7 +645,7 @@ Process name of the current application.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Context-processName: string--><!--Device-Context-processName: string-End-->
 
@@ -661,7 +661,7 @@ Resource directory.
 
 > **NOTE:** 
 > 
-> You are required to manually create the resfile directory in **&lt;module-name&gt;\resource**.
+> You are required to manually create the resfile directory in **<module-name>\resource**.
 > The **resfile** directory can be accessed only in read-only mode.
 
 **Type:** string
@@ -670,7 +670,7 @@ Resource directory.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-resourceDir: string--><!--Device-Context-resourceDir: string-End-->
 
@@ -690,7 +690,7 @@ Object for resource management.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-resourceManager: resmgr.ResourceManager--><!--Device-Context-resourceManager: resmgr.ResourceManager-End-->
 
@@ -710,7 +710,7 @@ Temporary directory. For details, see [Application Sandbox](../../../file-manage
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Context-tempDir: string--><!--Device-Context-tempDir: string-End-->
 

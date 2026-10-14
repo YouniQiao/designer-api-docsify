@@ -632,11 +632,11 @@ fontFeature(value: string)
 
 Sets the font feature, for example, monospaced digits.
 
-Format: normal \| \&lt;feature-tag-value\&gt;
+Format: normal \| \<feature-tag-value\>
 
-Format of **\&lt;feature-tag-value\&gt;**: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
+Format of **\<feature-tag-value\>**: \<string\> \[ \<integer\> \| on \| off ]
 
-There can be multiple **\&lt;feature-tag-value\&gt;** values, which are separated by commas (,).
+There can be multiple **\<feature-tag-value\>** values, which are separated by commas (,).
 
 For example, the input format for monospaced clock fonts is "ss01" on.
 
@@ -679,7 +679,7 @@ For example, the input format for monospaced clock fonts is "ss01" on.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text feature effect. The format is normal &#124; &lt;feature-tag-value&gt;. The format of &lt;feature- tag-value&gt; is &lt;string&gt; [&lt;integer&gt; &#124; on &#124; off]. Multiple values are separated by commas (,). For example, "ss01"on. |
+| value | string | Yes | Text feature effect. The format is normal &#124;<feature-tag-value>. The format of <feature- tag-value> is <string> [<integer> &#124; on &#124; off]. Multiple values are separated by commas (,). For example, "ss01"on. |
 
 ## fontSize
 

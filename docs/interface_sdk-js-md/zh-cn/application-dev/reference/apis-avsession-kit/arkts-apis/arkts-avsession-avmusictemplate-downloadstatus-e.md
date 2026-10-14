@@ -6,8 +6,6 @@ enum DownloadStatus
 
 表示下载状态类型的枚举。
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum DownloadStatus--><!--Device-avMusicTemplate-enum DownloadStatus-End-->

@@ -19,7 +19,7 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>--><!--Device-bundleManager-function getProfileByAbilitySync(moduleName: string, abilityName: string, metadataName?: string): Array<string>-End-->
 
@@ -37,7 +37,7 @@ function getProfileByAbilitySync(moduleName: string, abilityName: string, metada
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 数组对象，返回Array&lt;string&gt;。 |
+| Array&lt;string&gt; | 数组对象，返回Array<string>。 |
 
 **错误码：**
 

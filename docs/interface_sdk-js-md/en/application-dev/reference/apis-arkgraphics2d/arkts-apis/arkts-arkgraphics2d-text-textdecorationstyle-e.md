@@ -22,7 +22,7 @@ Dashed style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationStyle-DASHED = 3--><!--Device-TextDecorationStyle-DASHED = 3-End-->
 
@@ -38,7 +38,7 @@ Dotted style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationStyle-DOTTED = 2--><!--Device-TextDecorationStyle-DOTTED = 2-End-->
 
@@ -54,7 +54,7 @@ Double style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationStyle-DOUBLE = 1--><!--Device-TextDecorationStyle-DOUBLE = 1-End-->
 
@@ -70,7 +70,7 @@ Solid style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationStyle-SOLID = 0--><!--Device-TextDecorationStyle-SOLID = 0-End-->
 
@@ -86,7 +86,7 @@ Wavy style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationStyle-WAVY = 4--><!--Device-TextDecorationStyle-WAVY = 4-End-->
 

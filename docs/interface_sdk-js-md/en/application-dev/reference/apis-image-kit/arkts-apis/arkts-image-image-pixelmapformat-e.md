@@ -22,9 +22,9 @@ The color information consists of only the alpha component, which occupies eight
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-ALPHA_8 = 6--><!--Device-PixelMapFormat-ALPHA_8 = 6-End-->
 
@@ -42,7 +42,7 @@ Indicates that each pixel is stored on 16 bits. Each pixel contains 1 component:
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PixelMapFormat-ALPHA_F16 = 16--><!--Device-PixelMapFormat-ALPHA_F16 = 16-End-->
 
@@ -60,7 +60,7 @@ Indicates that each pixel is stored on 8 bits, without 4-byte stride alignment. 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PixelMapFormat-ALPHA_U8 = 15--><!--Device-PixelMapFormat-ALPHA_U8 = 15-End-->
 
@@ -104,9 +104,9 @@ The color information consists of four components: B (Blue), G (Green), R (Red),
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-BGRA_8888 = 4--><!--Device-PixelMapFormat-BGRA_8888 = 4-End-->
 
@@ -122,9 +122,9 @@ YUV pixel arrangement, where the U component precedes the V component. The color
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-NV12 = 9--><!--Device-PixelMapFormat-NV12 = 9-End-->
 
@@ -140,9 +140,9 @@ YVU pixel arrangement, where the V component precedes the U component. The color
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-NV21 = 8--><!--Device-PixelMapFormat-NV21 = 8-End-->
 
@@ -158,9 +158,9 @@ The color information consists of three components: R (Red), G (Green), and B (B
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-RGB_565 = 2--><!--Device-PixelMapFormat-RGB_565 = 2-End-->
 
@@ -176,9 +176,9 @@ The color information consists of three components: R (Red), G (Green), and B (B
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-RGB_888 = 5--><!--Device-PixelMapFormat-RGB_888 = 5-End-->
 
@@ -208,9 +208,9 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-RGBA_8888 = 3--><!--Device-PixelMapFormat-RGBA_8888 = 3-End-->
 
@@ -226,9 +226,9 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-RGBA_F16 = 7--><!--Device-PixelMapFormat-RGBA_F16 = 7-End-->
 
@@ -244,9 +244,9 @@ Unknown format.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-PixelMapFormat-UNKNOWN = 0--><!--Device-PixelMapFormat-UNKNOWN = 0-End-->
 

@@ -22,7 +22,7 @@ The system automatically selects a video stabilization algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-VideoStabilizationMode-AUTO = 4--><!--Device-VideoStabilizationMode-AUTO = 4-End-->
 
@@ -38,7 +38,7 @@ A video stabilization algorithm with a stabilization effect better than that of 
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-VideoStabilizationMode-HIGH = 3--><!--Device-VideoStabilizationMode-HIGH = 3-End-->
 
@@ -54,7 +54,7 @@ The basic video stabilization algorithm is used.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-VideoStabilizationMode-LOW = 1--><!--Device-VideoStabilizationMode-LOW = 1-End-->
 
@@ -70,7 +70,7 @@ A video stabilization algorithm with a stabilization effect better than that of 
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-VideoStabilizationMode-MIDDLE = 2--><!--Device-VideoStabilizationMode-MIDDLE = 2-End-->
 
@@ -86,7 +86,7 @@ Video stabilization is disabled.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-VideoStabilizationMode-OFF = 0--><!--Device-VideoStabilizationMode-OFF = 0-End-->
 

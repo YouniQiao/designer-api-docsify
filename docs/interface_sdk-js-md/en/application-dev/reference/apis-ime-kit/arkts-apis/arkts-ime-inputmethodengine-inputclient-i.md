@@ -1655,7 +1655,7 @@ sendExtendAction(action: ExtendAction): Promise<void>
 Sends an extended edit action. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
-> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] [on_handleExtendAction](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) for further processing. <br>
+> The input method applications call this API to send extended edit actions to the edit box. The edit box listens for the corresponding event using [on('handleExtendAction')] [on](arkts-ime-inputmethod-inputmethodcontroller-i.md#onhandleextendaction) for further processing. <br>
 > <br>
 > When the edit box responds to the **PASTE** command of [ExtendAction](arkts-ime-inputmethodengine-extendaction-e.md), the edit box application needs to apply for the [ohos.permission.READ_PASTEBOARD](../../../security/AccessToken/restricted-permissions.md#ohospermissionread_pasteboard) permission.
 

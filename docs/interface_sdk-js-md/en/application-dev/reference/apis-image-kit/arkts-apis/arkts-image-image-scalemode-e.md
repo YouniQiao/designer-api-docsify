@@ -22,9 +22,9 @@ Scales the image so that it fills the requested bounds of the target and crops t
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-ScaleMode-CENTER_CROP = 1--><!--Device-ScaleMode-CENTER_CROP = 1-End-->
 
@@ -40,9 +40,9 @@ Reduces the image size to the dimensions of the target.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-ScaleMode-FIT_TARGET_SIZE = 0--><!--Device-ScaleMode-FIT_TARGET_SIZE = 0-End-->
 

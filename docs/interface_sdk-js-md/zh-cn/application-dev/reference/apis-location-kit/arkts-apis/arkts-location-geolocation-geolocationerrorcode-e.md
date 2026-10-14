@@ -10,7 +10,7 @@ export enum GeoLocationErrorCode
 
 **废弃版本：** 9
 
-**需要权限：** ohos.permission.LOCATION @enum { number }
+**需要权限：** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum GeoLocationErrorCode--><!--Device-geolocation-export enum GeoLocationErrorCode-End-->
 

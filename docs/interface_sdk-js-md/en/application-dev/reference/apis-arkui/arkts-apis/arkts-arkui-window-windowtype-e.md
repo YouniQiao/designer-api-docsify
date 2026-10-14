@@ -40,7 +40,7 @@ Modal window.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowType-TYPE_DIALOG = 16--><!--Device-WindowType-TYPE_DIALOG = 16-End-->
 
@@ -58,7 +58,7 @@ Global floating window.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowType-TYPE_FLOAT = 8--><!--Device-WindowType-TYPE_FLOAT = 8-End-->
 

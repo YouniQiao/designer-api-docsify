@@ -22,7 +22,7 @@ ACCELEROMETER = 1
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorId-ACCELEROMETER = 1--><!--Device-SensorId-ACCELEROMETER = 1-End-->
 
@@ -122,7 +122,7 @@ GYROSCOPE = 2
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorId-GYROSCOPE = 2--><!--Device-SensorId-GYROSCOPE = 2-End-->
 
@@ -236,7 +236,7 @@ ORIENTATION = 256
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorId-ORIENTATION = 256--><!--Device-SensorId-ORIENTATION = 256-End-->
 

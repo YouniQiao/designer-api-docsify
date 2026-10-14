@@ -22,7 +22,7 @@ STREAM_USAGE_ACCESSIBILITY = 8
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_ACCESSIBILITY = 8--><!--Device-StreamUsage-STREAM_USAGE_ACCESSIBILITY = 8-End-->
 
@@ -38,7 +38,7 @@ STREAM_USAGE_ALARM = 4
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_ALARM = 4--><!--Device-StreamUsage-STREAM_USAGE_ALARM = 4-End-->
 
@@ -54,7 +54,7 @@ STREAM_USAGE_AUDIOBOOK = 12
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12--><!--Device-StreamUsage-STREAM_USAGE_AUDIOBOOK = 12-End-->
 
@@ -70,7 +70,7 @@ STREAM_USAGE_GAME = 11
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_GAME = 11--><!--Device-StreamUsage-STREAM_USAGE_GAME = 11-End-->
 
@@ -86,7 +86,7 @@ STREAM_USAGE_MOVIE = 10
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10--><!--Device-StreamUsage-STREAM_USAGE_MOVIE = 10-End-->
 
@@ -102,7 +102,7 @@ STREAM_USAGE_MUSIC = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_MUSIC = 1--><!--Device-StreamUsage-STREAM_USAGE_MUSIC = 1-End-->
 
@@ -118,7 +118,7 @@ STREAM_USAGE_NAVIGATION = 13
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13--><!--Device-StreamUsage-STREAM_USAGE_NAVIGATION = 13-End-->
 
@@ -134,7 +134,7 @@ STREAM_USAGE_NOTIFICATION = 7
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7--><!--Device-StreamUsage-STREAM_USAGE_NOTIFICATION = 7-End-->
 
@@ -150,7 +150,7 @@ STREAM_USAGE_RINGTONE = 6
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_RINGTONE = 6--><!--Device-StreamUsage-STREAM_USAGE_RINGTONE = 6-End-->
 
@@ -166,7 +166,7 @@ STREAM_USAGE_UNKNOWN = 0
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_UNKNOWN = 0--><!--Device-StreamUsage-STREAM_USAGE_UNKNOWN = 0-End-->
 
@@ -182,7 +182,7 @@ VoIP视频通话（该流类型起播时，会触发开启3A算法）。
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_VIDEO_COMMUNICATION = 17--><!--Device-StreamUsage-STREAM_USAGE_VIDEO_COMMUNICATION = 17-End-->
 
@@ -198,7 +198,7 @@ STREAM_USAGE_VOICE_ASSISTANT = 3
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT = 3--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT = 3-End-->
 
@@ -214,7 +214,7 @@ VoIP语音通话（该流类型起播时，会触发开启3A算法）。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2--><!--Device-StreamUsage-STREAM_USAGE_VOICE_COMMUNICATION = 2-End-->
 
@@ -230,7 +230,7 @@ STREAM_USAGE_VOICE_MESSAGE = 5
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_MESSAGE = 5--><!--Device-StreamUsage-STREAM_USAGE_VOICE_MESSAGE = 5-End-->
 

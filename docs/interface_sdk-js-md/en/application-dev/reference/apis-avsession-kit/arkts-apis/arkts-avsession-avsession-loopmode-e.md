@@ -22,7 +22,7 @@ Custom playback mode supported by application
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopMode-LOOP_MODE_CUSTOM = 4--><!--Device-LoopMode-LOOP_MODE_CUSTOM = 4-End-->
 
@@ -38,7 +38,7 @@ List loop mode
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopMode-LOOP_MODE_LIST = 2--><!--Device-LoopMode-LOOP_MODE_LIST = 2-End-->
 
@@ -54,7 +54,7 @@ The default mode is sequential playback
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0--><!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0-End-->
 
@@ -70,7 +70,7 @@ Shuffle playback mode
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3--><!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3-End-->
 
@@ -86,7 +86,7 @@ Single loop mode
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-LoopMode-LOOP_MODE_SINGLE = 1--><!--Device-LoopMode-LOOP_MODE_SINGLE = 1-End-->
 

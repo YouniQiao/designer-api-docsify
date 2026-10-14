@@ -50,7 +50,7 @@ PERMISSION_GRANTED_OPER = 1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1--><!--Device-PermissionStateChangeType-PERMISSION_GRANTED_OPER = 1-End-->
 
@@ -68,7 +68,7 @@ PERMISSION_REVOKED_OPER = 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0--><!--Device-PermissionStateChangeType-PERMISSION_REVOKED_OPER = 0-End-->
 

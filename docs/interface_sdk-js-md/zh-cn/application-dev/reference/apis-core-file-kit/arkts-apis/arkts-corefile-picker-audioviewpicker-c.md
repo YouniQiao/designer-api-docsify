@@ -30,7 +30,7 @@ constructor()
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
@@ -54,7 +54,7 @@ constructor(context: Context)
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
@@ -106,7 +106,7 @@ save(option?: AudioSaveOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>-End-->
 
@@ -252,7 +252,7 @@ select(option?: AudioSelectOptions): Promise<Array<string>>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>-End-->
 

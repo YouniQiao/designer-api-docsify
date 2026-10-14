@@ -31,8 +31,8 @@ Enumerates the flags of intent information ([InsightIntentInfo](arkts-ability-in
 > | subIntentInfo | Yes| Yes|
 > | parameters | Yes| Yes|
 > | entities | No| No|
-> | developType&lt;sup&gt;23+&lt;/sup&gt; | Yes| Yes|
-> | subIntentInfoForConfiguration&lt;sup&gt;23+&lt;/sup&gt; | No| No|
+> | developType<sup>23+</sup> | Yes| Yes|
+> | subIntentInfoForConfiguration<sup>23+</sup> | No| No|
 
 **Since:** 20
 

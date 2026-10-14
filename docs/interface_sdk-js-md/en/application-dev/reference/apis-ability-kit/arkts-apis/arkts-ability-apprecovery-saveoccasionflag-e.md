@@ -22,7 +22,7 @@ Saving the application state when the application is switched to the background.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002--><!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002-End-->
 
@@ -38,7 +38,7 @@ Saving the application state when an application fault occurs.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001--><!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001-End-->
 

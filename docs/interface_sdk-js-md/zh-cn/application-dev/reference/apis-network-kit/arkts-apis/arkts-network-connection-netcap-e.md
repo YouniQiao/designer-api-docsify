@@ -22,7 +22,7 @@ NET_CAPABILITY_CHECKING_CONNECTIVITY = 31
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31--><!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31-End-->
 
@@ -38,7 +38,7 @@ NET_CAPABILITY_INTERNET = 12
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_INTERNET = 12--><!--Device-NetCap-NET_CAPABILITY_INTERNET = 12-End-->
 
@@ -54,7 +54,7 @@ NET_CAPABILITY_MMS = 0
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_MMS = 0--><!--Device-NetCap-NET_CAPABILITY_MMS = 0-End-->
 
@@ -70,7 +70,7 @@ NET_CAPABILITY_NOT_METERED = 11
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11--><!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11-End-->
 
@@ -86,7 +86,7 @@ NET_CAPABILITY_NOT_VPN = 15
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15--><!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15-End-->
 
@@ -102,7 +102,7 @@ NET_CAPABILITY_PORTAL = 17
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_PORTAL = 17--><!--Device-NetCap-NET_CAPABILITY_PORTAL = 17-End-->
 
@@ -116,11 +116,11 @@ NET_CAPABILITY_VALIDATED = 16
 
 表示网络管理通过该网络与华为云地址成功建立连接，此能力由网络管理模块设置。
 
-**注意：** 网络管理可能会与华为云地址建立连接失败，导致网络能力不具备此标记位，但不完全代表该网络无法访问互联网。另外，对于新完成连接的网络，由于网络正在进行连通性验证，此值可能无法反映真实的验证结果。对此，应用可以通过NET_CAPABILITY_CHECKING_CONNECTIVITY&lt;sup&gt;12+&lt;/sup&gt;检查网络是否正在检测连通性。
+**注意：** 网络管理可能会与华为云地址建立连接失败，导致网络能力不具备此标记位，但不完全代表该网络无法访问互联网。另外，对于新完成连接的网络，由于网络正在进行连通性验证，此值可能无法反映真实的验证结果。对此，应用可以通过NET_CAPABILITY_CHECKING_CONNECTIVITY<sup>12+</sup>检查网络是否正在检测连通性。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16--><!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16-End-->
 

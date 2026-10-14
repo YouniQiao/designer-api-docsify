@@ -22,7 +22,7 @@ DRAG = 4
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-DRAG = 4--><!--Device-RectChangeReason-DRAG = 4-End-->
 
@@ -38,7 +38,7 @@ DRAG_END = 6
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-DRAG_END = 6--><!--Device-RectChangeReason-DRAG_END = 6-End-->
 
@@ -54,7 +54,7 @@ DRAG_START = 5
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-DRAG_START = 5--><!--Device-RectChangeReason-DRAG_START = 5-End-->
 
@@ -70,7 +70,7 @@ MAXIMIZE = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-MAXIMIZE = 1--><!--Device-RectChangeReason-MAXIMIZE = 1-End-->
 
@@ -86,7 +86,7 @@ MOVE = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-MOVE = 3--><!--Device-RectChangeReason-MOVE = 3-End-->
 
@@ -102,7 +102,7 @@ RECOVER = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-RECOVER = 2--><!--Device-RectChangeReason-RECOVER = 2-End-->
 
@@ -118,7 +118,7 @@ UNDEFINED = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RectChangeReason-UNDEFINED = 0--><!--Device-RectChangeReason-UNDEFINED = 0-End-->
 

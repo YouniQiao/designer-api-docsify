@@ -154,7 +154,7 @@ AUDIO = 'general.audio'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-AUDIO = 'general.audio'--><!--Device-UniformDataType-AUDIO = 'general.audio'-End-->
 
@@ -684,7 +684,7 @@ FILE = 'general.file'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-FILE = 'general.file'--><!--Device-UniformDataType-FILE = 'general.file'-End-->
 
@@ -766,7 +766,7 @@ FOLDER = 'general.folder'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-FOLDER = 'general.folder'--><!--Device-UniformDataType-FOLDER = 'general.folder'-End-->
 
@@ -864,7 +864,7 @@ HTML文本类型，归属类型为TEXT。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-HTML = 'general.html'--><!--Device-UniformDataType-HTML = 'general.html'-End-->
 
@@ -882,7 +882,7 @@ HYPERLINK = 'general.hyperlink'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'--><!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'-End-->
 
@@ -932,7 +932,7 @@ IMAGE = 'general.image'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-IMAGE = 'general.image'--><!--Device-UniformDataType-IMAGE = 'general.image'-End-->
 
@@ -1494,7 +1494,7 @@ OPENHARMONY_APP_ITEM = 'openharmony.app-item'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'--><!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'-End-->
 
@@ -1528,7 +1528,7 @@ OPENHARMONY_FORM = 'openharmony.form'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'--><!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'-End-->
 
@@ -1610,7 +1610,7 @@ OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'--><!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'-End-->
 
@@ -1788,7 +1788,7 @@ PLAIN_TEXT = 'general.plain-text'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'--><!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'-End-->
 
@@ -2382,7 +2382,7 @@ TEXT = 'general.text'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-TEXT = 'general.text'--><!--Device-UniformDataType-TEXT = 'general.text'-End-->
 
@@ -2544,7 +2544,7 @@ VIDEO = 'general.video'
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UniformDataType-VIDEO = 'general.video'--><!--Device-UniformDataType-VIDEO = 'general.video'-End-->
 

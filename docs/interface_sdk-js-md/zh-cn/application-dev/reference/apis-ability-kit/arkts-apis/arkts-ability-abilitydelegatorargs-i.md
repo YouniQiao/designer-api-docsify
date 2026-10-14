@@ -30,7 +30,7 @@ bundleName: string
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityDelegatorArgs-bundleName: string--><!--Device-AbilityDelegatorArgs-bundleName: string-End-->
 
@@ -48,7 +48,7 @@ parameters: Record<string, string>
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityDelegatorArgs-parameters: Record<string, string>--><!--Device-AbilityDelegatorArgs-parameters: Record<string, string>-End-->
 
@@ -66,7 +66,7 @@ testCaseNames: string
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityDelegatorArgs-testCaseNames: string--><!--Device-AbilityDelegatorArgs-testCaseNames: string-End-->
 
@@ -84,7 +84,7 @@ testRunnerClassName: string
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityDelegatorArgs-testRunnerClassName: string--><!--Device-AbilityDelegatorArgs-testRunnerClassName: string-End-->
 

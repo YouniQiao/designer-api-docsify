@@ -6,8 +6,6 @@ export enum ActionType
 
 Action 类型枚举。
 
-@enum { string }
-
 **起始版本：** 26.2.0
 
 <!--Device-behaviorAwareness-export enum ActionType--><!--Device-behaviorAwareness-export enum ActionType-End-->

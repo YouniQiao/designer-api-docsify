@@ -22,7 +22,7 @@ FLASH_MODE_ALWAYS_OPEN = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FlashMode-FLASH_MODE_ALWAYS_OPEN = 3--><!--Device-FlashMode-FLASH_MODE_ALWAYS_OPEN = 3-End-->
 
@@ -38,7 +38,7 @@ FLASH_MODE_AUTO = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FlashMode-FLASH_MODE_AUTO = 2--><!--Device-FlashMode-FLASH_MODE_AUTO = 2-End-->
 
@@ -54,7 +54,7 @@ FLASH_MODE_CLOSE = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FlashMode-FLASH_MODE_CLOSE = 0--><!--Device-FlashMode-FLASH_MODE_CLOSE = 0-End-->
 
@@ -70,7 +70,7 @@ FLASH_MODE_OPEN = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-FlashMode-FLASH_MODE_OPEN = 1--><!--Device-FlashMode-FLASH_MODE_OPEN = 1-End-->
 

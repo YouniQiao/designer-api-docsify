@@ -24,7 +24,7 @@ NEW_PASSWORD = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AutoFillType-NEW_PASSWORD = 3--><!--Device-AutoFillType-NEW_PASSWORD = 3-End-->
 
@@ -42,7 +42,7 @@ PASSWORD = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AutoFillType-PASSWORD = 1--><!--Device-AutoFillType-PASSWORD = 1-End-->
 
@@ -60,7 +60,7 @@ UNSPECIFIED = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AutoFillType-UNSPECIFIED = 0--><!--Device-AutoFillType-UNSPECIFIED = 0-End-->
 
@@ -78,7 +78,7 @@ USER_NAME = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AutoFillType-USER_NAME = 2--><!--Device-AutoFillType-USER_NAME = 2-End-->
 

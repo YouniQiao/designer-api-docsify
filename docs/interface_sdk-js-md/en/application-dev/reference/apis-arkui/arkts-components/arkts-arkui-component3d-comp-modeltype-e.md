@@ -4,7 +4,7 @@
 declare enum ModelType
 ```
 
-The enum of model type @enum { number }
+The enum of model type
 
 **Since:** 12
 

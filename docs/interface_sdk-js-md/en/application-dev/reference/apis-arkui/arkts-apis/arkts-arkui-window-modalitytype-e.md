@@ -24,7 +24,7 @@ This enumeration can be called properly on a device that supports [freeform wind
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ModalityType-APPLICATION_MODALITY = 1--><!--Device-ModalityType-APPLICATION_MODALITY = 1-End-->
 
@@ -40,7 +40,7 @@ Select this value when only the parent window should not respond to user operati
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-ModalityType-WINDOW_MODALITY = 0--><!--Device-ModalityType-WINDOW_MODALITY = 0-End-->
 

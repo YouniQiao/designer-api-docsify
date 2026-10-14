@@ -38,7 +38,7 @@ Unique ID of a group of burst photos.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-BURST_KEY = 'burst_key'--><!--Device-PhotoKeys-BURST_KEY = 'burst_key'-End-->
 
@@ -68,7 +68,7 @@ Position of the moving photo cover, which is the video timestamp (in μs) corres
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-COVER_POSITION = 'cover_position'--><!--Device-PhotoKeys-COVER_POSITION = 'cover_position'-End-->
 
@@ -84,7 +84,7 @@ Unix timestamp when the file was created, in seconds.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_ADDED = 'date_added'--><!--Device-PhotoKeys-DATE_ADDED = 'date_added'-End-->
 
@@ -104,7 +104,7 @@ The photos queried cannot be sorted based on this field.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'--><!--Device-PhotoKeys-DATE_ADDED_MS = 'date_added_ms'-End-->
 
@@ -120,7 +120,7 @@ Unix timestamp when the file content (not the file name) was last modified, in s
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'--><!--Device-PhotoKeys-DATE_MODIFIED = 'date_modified'-End-->
 
@@ -140,7 +140,7 @@ The photos queried cannot be sorted based on this field.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'--><!--Device-PhotoKeys-DATE_MODIFIED_MS = 'date_modified_ms'-End-->
 
@@ -156,7 +156,7 @@ Unix timestamp when the photo was taken, in seconds.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'--><!--Device-PhotoKeys-DATE_TAKEN = 'date_taken'-End-->
 
@@ -172,7 +172,7 @@ Unix timestamp when the image was captured, in milliseconds.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DATE_TAKEN_MS  = 'date_taken_ms'--><!--Device-PhotoKeys-DATE_TAKEN_MS  = 'date_taken_ms'-End-->
 
@@ -188,7 +188,7 @@ Detailed time. The value is a string of time when the image or video was taken i
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'--><!--Device-PhotoKeys-DETAIL_TIME = 'detail_time'-End-->
 
@@ -208,7 +208,7 @@ File name displayed. The file name must meet the following requirements:
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'--><!--Device-PhotoKeys-DISPLAY_NAME = 'display_name'-End-->
 
@@ -224,7 +224,7 @@ Duration, in ms.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DURATION = 'duration'--><!--Device-PhotoKeys-DURATION = 'duration'-End-->
 
@@ -240,7 +240,7 @@ Dynamic range type of the media asset.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'--><!--Device-PhotoKeys-DYNAMIC_RANGE_TYPE = 'dynamic_range_type'-End-->
 
@@ -256,7 +256,7 @@ Whether the file is marked as favorites.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-FAVORITE = 'is_favorite'--><!--Device-PhotoKeys-FAVORITE = 'is_favorite'-End-->
 
@@ -272,7 +272,7 @@ Image height, in pixels.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-HEIGHT = 'height'--><!--Device-PhotoKeys-HEIGHT = 'height'-End-->
 
@@ -288,7 +288,7 @@ Width and height of an LCD image, in the format of a **width:height** string.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'--><!--Device-PhotoKeys-LCD_SIZE = 'lcd_size'-End-->
 
@@ -334,7 +334,7 @@ Orientation of the file, in degrees.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-ORIENTATION = 'orientation'--><!--Device-PhotoKeys-ORIENTATION = 'orientation'-End-->
 
@@ -364,7 +364,7 @@ Subtype of the media file.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'--><!--Device-PhotoKeys-PHOTO_SUBTYPE = 'subtype'-End-->
 
@@ -380,7 +380,7 @@ Type of the file.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'--><!--Device-PhotoKeys-PHOTO_TYPE = 'media_type'-End-->
 
@@ -396,7 +396,7 @@ File location type.
 
 **Since:** 16
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-POSITION = 'position'--><!--Device-PhotoKeys-POSITION = 'position'-End-->
 
@@ -412,7 +412,7 @@ File size, in bytes. The size of a moving photo includes the total size of the i
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-SIZE = 'size'--><!--Device-PhotoKeys-SIZE = 'size'-End-->
 
@@ -428,7 +428,7 @@ Width and height of a thumbnail image, in the format of a **width:height** strin
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-THM_SIZE = 'thm_size'--><!--Device-PhotoKeys-THM_SIZE = 'thm_size'-End-->
 
@@ -444,7 +444,7 @@ Title of the file.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-TITLE = 'title'--><!--Device-PhotoKeys-TITLE = 'title'-End-->
 
@@ -464,7 +464,7 @@ Only the [DataSharePredicates.equalTo](../../apis-arkdata/arkts-apis/arkts-arkda
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-URI = 'uri'--><!--Device-PhotoKeys-URI = 'uri'-End-->
 
@@ -480,7 +480,7 @@ Image width, in pixels.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PhotoKeys-WIDTH = 'width'--><!--Device-PhotoKeys-WIDTH = 'width'-End-->
 

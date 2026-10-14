@@ -34,7 +34,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onBackground(): void--><!--Device-UIAbility-onBackground(): void-End-->
 
@@ -71,7 +71,7 @@ will be moved to the background and will not be destroyed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onBackPressed(): boolean--><!--Device-UIAbility-onBackPressed(): boolean-End-->
 
@@ -81,7 +81,7 @@ will be moved to the background and will not be destroyed.
 
 | Type | Description |
 | --- | --- |
-| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
+| boolean | The value<code>true</code> means that the UIAbility instance will be moved to the background and will not be destroyed, and <code>false</code> means that the UIAbility instance will be destroyed. |
 
 **Examples**
 
@@ -160,7 +160,7 @@ Called when a UIAbility is to be migrated across devices. You can save service d
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>--><!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>-End-->
 
@@ -233,7 +233,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
@@ -331,7 +331,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIAbility-onDidBackground(): void--><!--Device-UIAbility-onDidBackground(): void-End-->
 
@@ -403,7 +403,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIAbility-onDidForeground(): void--><!--Device-UIAbility-onDidForeground(): void-End-->
 
@@ -425,7 +425,7 @@ Called when UIAbility data is dumped by running the dump command during applicat
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onDump(params: Array<string>): Array<string>--><!--Device-UIAbility-onDump(params: Array<string>): Array<string>-End-->
 
@@ -470,7 +470,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onForeground(): void--><!--Device-UIAbility-onForeground(): void-End-->
 
@@ -503,7 +503,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
@@ -549,7 +549,7 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onPrepareToTerminate(): boolean--><!--Device-UIAbility-onPrepareToTerminate(): boolean-End-->
 
@@ -559,7 +559,7 @@ Triggered by the system just before the UIAbility is about to close (for example
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| boolean | Whether to terminate the UIAbility.<br>The value <code>true</code> means that the termination process is canceled. <br>The value <code>false</code> means to continue terminating the UIAbility. |
 
 **Examples**
 
@@ -618,7 +618,7 @@ You can return **true** to block the current closure attempt and then manually c
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>--><!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>-End-->
 
@@ -628,7 +628,7 @@ You can return **true** to block the current closure attempt and then manually c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value <code>true</code> means that the termination process is canceled. <br>The value <code>false</code> means to continue terminating the UIAbility. |
 
 **Examples**
 
@@ -794,7 +794,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIAbility-onWillBackground(): void--><!--Device-UIAbility-onWillBackground(): void-End-->
 
@@ -844,7 +844,7 @@ This API returns the result synchronously and does not support asynchronous call
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-UIAbility-onWillForeground(): void--><!--Device-UIAbility-onWillForeground(): void-End-->
 
@@ -916,7 +916,7 @@ The system triggers this callback after a [WindowStage](../../apis-arkui/arkts-a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void-End-->
 
@@ -963,7 +963,7 @@ The callback is invoked only when the UIAbility exits gracefully. It is not invo
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onWindowStageDestroy(): void--><!--Device-UIAbility-onWindowStageDestroy(): void-End-->
 
@@ -1003,7 +1003,7 @@ Called when the page stack is restored for the target UIAbility during cross-dev
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void-End-->
 
@@ -1041,7 +1041,7 @@ Called when the WindowStage instance is about to be destroyed. You can cancel th
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void-End-->
 
@@ -1099,7 +1099,7 @@ Context of the UIAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-context: UIAbilityContext--><!--Device-UIAbility-context: UIAbilityContext-End-->
 
@@ -1142,7 +1142,7 @@ Want in the most recent request to launch the UIAbility.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-lastRequestWant: Want--><!--Device-UIAbility-lastRequestWant: Want-End-->
 
@@ -1162,7 +1162,7 @@ Want in the request used to [cold start](../../../application-models/uiability-i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UIAbility-launchWant: Want--><!--Device-UIAbility-launchWant: Want-End-->
 

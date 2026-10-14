@@ -25,14 +25,14 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 | --- | --- |
 | [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md#isidlestate1) | Checks whether the application with a specified bundle name is in the idle state. |
 | [isIdleState](arkts-backgroundtasks-usagestatistics-isidlestate-f-sys.md#isidlestate2) | Checks whether the application with a specified bundle name is in the idle state. |
-| [isIdleStateSync](arkts-backgroundtasks-usagestatistics-isidlestatesync-f-sys.md) | Checks whether the application with a specified bundle name is in the idle state. |
+| [isIdleStateSync](arkts-backgroundtasks-usagestatistics-isidlestatesync-f-sys.md#isidlestatesync) | Checks whether the application with a specified bundle name is in the idle state. |
 | [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup1) | Queries the app group of the calling application. |
 | [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup2) | Queries the app group of the calling application. |
 | [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup3) | Queries the usage priority group by bundleName. |
 | [queryAppGroup](arkts-backgroundtasks-usagestatistics-queryappgroup-f-sys.md#queryappgroup4) | Queries the usage priority group by bundleName. |
 | [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md#queryappgroupsync1) | Queries the app group of the calling application. |
 | [queryAppGroupSync](arkts-backgroundtasks-usagestatistics-queryappgroupsync-f-sys.md#queryappgroupsync2) | Queries the usage priority group by bundleName. |
-| [queryAppStatsInfos](arkts-backgroundtasks-usagestatistics-queryappstatsinfos-f-sys.md) | Queries usage information about each application within a specified period. |
+| [queryAppStatsInfos](arkts-backgroundtasks-usagestatistics-queryappstatsinfos-f-sys.md#queryappstatsinfos) | Queries usage information about each application within a specified period. |
 | [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents1) | Queries state data of all bundles within a specified period identified by the start and end time. |
 | [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents2) | Queries state data of all bundles within a specified period identified by the start and end time. |
 | [queryBundleEvents](arkts-backgroundtasks-usagestatistics-querybundleevents-f-sys.md#querybundleevents3) | Queries state data of all bundles within a specified period identified by the start and end time. |
@@ -45,7 +45,7 @@ import { usageStatistics } from '@kit.BackgroundTasksKit';
 | [queryCurrentBundleEvents](arkts-backgroundtasks-usagestatistics-querycurrentbundleevents-f-sys.md#querycurrentbundleevents3) | Queries state data of the current bundle within a specified period. |
 | [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md#querydeviceeventstats1) | Queries device event states data within a specified period identified by the start and end time. |
 | [queryDeviceEventStats](arkts-backgroundtasks-usagestatistics-querydeviceeventstats-f-sys.md#querydeviceeventstats2) | Queries device event states data within a specified period identified by the start and end time. |
-| [queryLastUseTime](arkts-backgroundtasks-usagestatistics-querylastusetime-f-sys.md) | Queries the last usage timestamp by bundleName and app index. |
+| [queryLastUseTime](arkts-backgroundtasks-usagestatistics-querylastusetime-f-sys.md#querylastusetime) | Queries the last usage timestamp by bundleName and app index. |
 | [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords1) | Queries recently module usage records with maxNum. |
 | [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords2) | Queries recently module usage records with maxNum. |
 | [queryModuleUsageRecords](arkts-backgroundtasks-usagestatistics-querymoduleusagerecords-f-sys.md#querymoduleusagerecords3) | Queries recently module usage records. |

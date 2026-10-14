@@ -6,8 +6,6 @@ export enum GeometryType
 
 Enumerates the geometry types.
 
-@enum { int }
-
 **Since:** 18
 
 <!--Device-unnamed-export enum GeometryType--><!--Device-unnamed-export enum GeometryType-End-->

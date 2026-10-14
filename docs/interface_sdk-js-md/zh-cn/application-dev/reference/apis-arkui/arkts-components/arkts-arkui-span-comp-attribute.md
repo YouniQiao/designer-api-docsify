@@ -6,7 +6,7 @@ declare class SpanAttribute extends BaseSpan<SpanAttribute>
 
 属性继承自[BaseSpan](arkts-arkui-span-comp-basespan-c.md)。
 
-@extends CommonMethod&lt;SpanAttribute&gt; [since 7 - 10] @extends BaseSpan&lt;SpanAttribute&gt; [since 11]
+@extends CommonMethod<SpanAttribute> [since 7 - 10] @extends BaseSpan<SpanAttribute> [since 11]
 
 **继承/实现关系：** SpanAttribute extends BaseSpan&lt;SpanAttribute&gt;
 

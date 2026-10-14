@@ -4,9 +4,9 @@
 
 访问在线网页时需添加网络权限：ohos.permission.INTERNET，具体申请方式请参考[声明权限](../../../security/AccessToken/declare-permissions.md)。
 
-<p>&lt;strong&gt;接口说明&lt;/strong&gt;:
+<p><strong>接口说明</strong>:
 
-&lt;strong&gt;性能说明&lt;/strong&gt;: <p>有关如何优化编译、资源加载和JSBridge性能的详细信息，请参见Web加载性能优化 <p>当由于复杂的网页解析导致白屏时间较长时，可以开启[optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget)以减少首帧渲染内容。</p> </p>
+<strong>性能说明</strong>: <p>有关如何优化编译、资源加载和JSBridge性能的详细信息，请参见Web加载性能优化 <p>当由于复杂的网页解析导致白屏时间较长时，可以开启[optimizeParserBudget](arkts-arkweb-web-comp-attribute.md#optimizeparserbudget)以减少首帧渲染内容。</p> </p>
 
 ## Web
 

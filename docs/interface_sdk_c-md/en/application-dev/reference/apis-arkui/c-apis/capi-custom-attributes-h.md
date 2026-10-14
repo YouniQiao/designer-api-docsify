@@ -18,7 +18,7 @@ Provides custom node event definitions for <b>NativeNode</b> APIs.
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_NodeCustomEventType](#arkui_nodecustomeventtype) | ArkUI_NodeCustomEventType | Defines the custom component event type. |
+| [ArkUI_NodeCustomEventType](#arkui_nodecustomeventtype) | ArkUI_NodeCustomEventType | Enumerates custom component event types. |
 
 ## Enum type description
 
@@ -30,7 +30,7 @@ enum ArkUI_NodeCustomEventType
 
 **Description**
 
-Defines the custom component event type.
+Enumerates custom component event types.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

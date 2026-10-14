@@ -28,7 +28,7 @@ The returned type is ArrayBuffer.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpDataType-ARRAY_BUFFER = 2--><!--Device-HttpDataType-ARRAY_BUFFER = 2-End-->
 
@@ -44,7 +44,7 @@ The returned type is Object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpDataType-OBJECT = 1--><!--Device-HttpDataType-OBJECT = 1-End-->
 
@@ -60,7 +60,7 @@ The returned type is string.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-HttpDataType-STRING = 0--><!--Device-HttpDataType-STRING = 0-End-->
 

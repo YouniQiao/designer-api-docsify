@@ -4,7 +4,7 @@
 enum EapMethod
 ```
 
-Wi-Fi EAP method. @enum { int }
+Wi-Fi EAP method.
 
 **Since:** 10
 

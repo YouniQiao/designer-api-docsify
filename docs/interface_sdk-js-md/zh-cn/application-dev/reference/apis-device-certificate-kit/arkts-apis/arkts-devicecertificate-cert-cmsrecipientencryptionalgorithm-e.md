@@ -22,7 +22,7 @@ AES_128_CBC算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0-End-->
 
@@ -38,7 +38,7 @@ AES_128_GCM算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3-End-->
 
@@ -54,7 +54,7 @@ AES_192_CBC算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
 
@@ -70,7 +70,7 @@ AES_192_GCM算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
 
@@ -86,7 +86,7 @@ AES_256_CBC算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
@@ -102,7 +102,7 @@ AES_256_GCM算法。
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5-End-->
 

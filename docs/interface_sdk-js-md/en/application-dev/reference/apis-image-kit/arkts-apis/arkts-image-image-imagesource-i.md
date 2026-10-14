@@ -136,7 +136,7 @@ async function CreatePicture(imageSourceObj : image.ImageSource) {
 createPictureAtIndex(index: number): Promise<Picture>
 ```
 
-Creates a **Picture** object using a specified image (only GIF and HEIF&lt;sup&gt;23+&lt;/sup&gt; images currently). This API uses a promise to return the result.
+Creates a **Picture** object using a specified image (only GIF and HEIF<sup>23+</sup> images currently). This API uses a promise to return the result.
 
 Images occupy a large amount of memory. When you finish using a Picture instance, call [release](arkts-image-image-picture-i.md#release) to free the memory promptly.
 
@@ -1387,7 +1387,7 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 Obtains the values of properties with the given names in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF, WEBP<sup>23+</sup>, or DNG<sup>23+</sup>format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 12
 
@@ -1442,7 +1442,7 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/ sup&gt; format and contain Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, WEBP<sup>23+</sup>, or DNG<sup>23+</ sup> format and contain Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 11
 
@@ -1506,7 +1506,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 Obtains the value of a property with the specified index in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1556,7 +1556,7 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 Obtains the value of a property with the specified index in this image. This API uses an asynchronous callback to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1599,7 +1599,7 @@ async function GetImageProperty(imageSourceObj : image.ImageSource) {
 getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncCallback<string>): void
 ```
 
-Obtains the value of a property in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+Obtains the value of a property in this image. This API uses an asynchronous callback to return the result. This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 **Since:** 7
 
@@ -1646,7 +1646,7 @@ Obtains the value of a specified Exif property. This API returns the result sync
 
 > **NOTE:** 
 > 
-> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP&lt;sup&gt;23+&lt;/sup&gt;, or DNG&lt;sup&gt;23+&lt;/sup&gt;format and contain Exif information. (The supported formats may vary depending on the hardware.)
+> - This API applies only to images that are in JPEG, PNG, HEIF, WEBP<sup>23+</sup>, or DNG<sup>23+</sup>format and contain Exif information. (The supported formats may vary depending on the hardware.)
 > 
 > - Exif information is metadata of the image, including shooting time, camera model, aperture, focal length, and ISO.
 > 
@@ -1703,7 +1703,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 Modifies the values of properties in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE:** 
 > 
@@ -1837,7 +1837,7 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 Modifies the value of a property in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE:** 
 > 
@@ -1902,7 +1902,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 Modifies the value of a property in this image. This API uses a promise to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE:** 
 > 
@@ -1959,7 +1959,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 Modifies the value of a property in this image. This API uses an asynchronous callback to return the result.
 
-This API applies only to images that are in JPEG, PNG, HEIF&lt;sup&gt;12+&lt;/sup&gt;, or WEBP&lt;sup&gt;23+&lt;/sup&gt; format and contain the Exif information. (The supported formats may vary depending on the hardware.)
+This API applies only to images that are in JPEG, PNG, HEIF<sup>12+</sup>, or WEBP<sup>23+</sup> format and contain the Exif information. (The supported formats may vary depending on the hardware.)
 
 > **NOTE:** 
 > 
@@ -2195,7 +2195,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-ImageSource-release(callback: AsyncCallback<void>): void--><!--Device-ImageSource-release(callback: AsyncCallback<void>): void-End-->
 
@@ -2239,7 +2239,7 @@ Before releasing the instance, ensure that all asynchronous operations associate
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-ImageSource-release(): Promise<void>--><!--Device-ImageSource-release(): Promise<void>-End-->
 

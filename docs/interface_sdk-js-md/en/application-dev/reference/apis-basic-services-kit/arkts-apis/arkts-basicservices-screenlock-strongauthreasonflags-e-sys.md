@@ -6,8 +6,6 @@ enum StrongAuthReasonFlags
 
 Indicates the strong authentication reason flags used to request.
 
-@enum { int }
-
 **Since:** 12
 
 <!--Device-screenLock-enum StrongAuthReasonFlags--><!--Device-screenLock-enum StrongAuthReasonFlags-End-->

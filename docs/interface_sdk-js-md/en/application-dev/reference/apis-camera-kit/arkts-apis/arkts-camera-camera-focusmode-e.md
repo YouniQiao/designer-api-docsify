@@ -22,7 +22,7 @@ Auto focus. The focal point can be set by calling [Focus.setFocusPoint](arkts-ca
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusMode-FOCUS_MODE_AUTO = 2--><!--Device-FocusMode-FOCUS_MODE_AUTO = 2-End-->
 
@@ -38,7 +38,7 @@ Continuous auto focus. The focal point cannot be set.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusMode-FOCUS_MODE_CONTINUOUS_AUTO = 1--><!--Device-FocusMode-FOCUS_MODE_CONTINUOUS_AUTO = 1-End-->
 
@@ -54,7 +54,7 @@ Focus locked. The focal point cannot be set.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusMode-FOCUS_MODE_LOCKED = 3--><!--Device-FocusMode-FOCUS_MODE_LOCKED = 3-End-->
 
@@ -70,7 +70,7 @@ Manual focus. The focal length of the camera can be manually set to change the f
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusMode-FOCUS_MODE_MANUAL = 0--><!--Device-FocusMode-FOCUS_MODE_MANUAL = 0-End-->
 

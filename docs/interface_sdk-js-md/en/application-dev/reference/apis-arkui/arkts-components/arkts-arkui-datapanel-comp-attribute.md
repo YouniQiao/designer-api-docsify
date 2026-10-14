@@ -6,7 +6,7 @@ declare class DataPanelAttribute extends CommonMethod<DataPanelAttribute>
 
 In addition to the [universal attributes](arkts-arkui-common-comp.md), the following attributes are supported.
 
-@extends CommonMethod [since 7 - 10] @extends CommonMethod&lt;DataPanelAttribute&gt; [since 11]
+@extends CommonMethod [since 7 - 10] @extends CommonMethod<DataPanelAttribute> [since 11]
 
 **Inheritance/Implementation:** DataPanelAttribute extends CommonMethod&lt;DataPanelAttribute&gt;
 

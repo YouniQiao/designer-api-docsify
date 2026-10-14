@@ -1919,7 +1919,7 @@ read(size: number, isBlockingRead: boolean, callback: AsyncCallback<ArrayBuffer>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[on('readData')](#onreaddata)替代。
+> 从API version 8开始支持，从API version 11开始废弃，建议使用on('readData')替代。
 
 **起始版本：** 8
 
@@ -1970,7 +1970,7 @@ read(size: number, isBlockingRead: boolean): Promise<ArrayBuffer>
 
 > **说明：** 
 > 
-> 从API version 8开始支持，从API version 11开始废弃，建议使用[on('readData')](#onreaddata)替代。
+> 从API version 8开始支持，从API version 11开始废弃，建议使用on('readData')替代。
 
 **起始版本：** 8
 

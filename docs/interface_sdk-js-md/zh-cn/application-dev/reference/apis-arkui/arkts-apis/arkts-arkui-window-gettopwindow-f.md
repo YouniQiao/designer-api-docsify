@@ -149,7 +149,7 @@ import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage) {
+  onWindowStageCreate(windowStage: window.WindowStage) {
     console.info('onWindowStageCreate');
     let windowClass: window.Window | undefined = undefined;
     let promise = window.getTopWindow(this.context);
@@ -204,7 +204,7 @@ import { UIAbility } from '@kit.AbilityKit';
 import { BusinessError } from '@kit.BasicServicesKit';
 
 export default class EntryAbility extends UIAbility {
-  onWindowStageCreate(windowStage:window.WindowStage){
+  onWindowStageCreate(windowStage: window.WindowStage){
     console.info('onWindowStageCreate');
     let windowClass: window.Window | undefined = undefined;
     try {

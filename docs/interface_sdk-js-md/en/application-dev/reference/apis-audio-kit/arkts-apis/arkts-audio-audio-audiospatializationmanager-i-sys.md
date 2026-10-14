@@ -885,7 +885,7 @@ Unsubscribes to the spatialization enable state change events.
 
 **Deprecated since:** 12
 
-**Substitutes:** [off](#offspatializationenabledchange)
+**Substitutes:** [off](arkts-audio-audio-audiospatializationmanager-i.md#off)
 
 <!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'spatializationEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -939,7 +939,7 @@ Unsubscribes to the head tracking enable state change events.
 
 **Deprecated since:** 12
 
-**Substitutes:** [off](#offspatializationenabledchange)
+**Substitutes:** [off](arkts-audio-audio-audiospatializationmanager-i.md#off)
 
 <!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void--><!--Device-AudioSpatializationManager-off(type: 'headTrackingEnabledChange', callback?: Callback<boolean>): void-End-->
 
@@ -1217,7 +1217,7 @@ Subscribes to the spatialization enable state change events. When the spatializa
 
 **Deprecated since:** 12
 
-**Substitutes:** [on](#onspatializationenabledchange)
+**Substitutes:** [on](arkts-audio-audio-audiospatializationmanager-i.md#on)
 
 <!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'spatializationEnabledChange', callback: Callback<boolean>): void-End-->
 
@@ -1265,7 +1265,7 @@ Subscribes to the head tracking enable state change events. When the head tracki
 
 **Deprecated since:** 12
 
-**Substitutes:** [on](#onspatializationenabledchange)
+**Substitutes:** [on](arkts-audio-audio-audiospatializationmanager-i.md#on)
 
 <!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void--><!--Device-AudioSpatializationManager-on(type: 'headTrackingEnabledChange', callback: Callback<boolean>): void-End-->
 

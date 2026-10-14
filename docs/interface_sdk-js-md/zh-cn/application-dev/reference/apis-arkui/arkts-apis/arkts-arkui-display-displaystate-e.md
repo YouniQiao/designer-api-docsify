@@ -22,7 +22,7 @@ STATE_DOZE = 3
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_DOZE = 3--><!--Device-DisplayState-STATE_DOZE = 3-End-->
 
@@ -38,7 +38,7 @@ STATE_DOZE_SUSPEND = 4
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_DOZE_SUSPEND = 4--><!--Device-DisplayState-STATE_DOZE_SUSPEND = 4-End-->
 
@@ -54,7 +54,7 @@ STATE_OFF = 1
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_OFF = 1--><!--Device-DisplayState-STATE_OFF = 1-End-->
 
@@ -70,7 +70,7 @@ STATE_ON = 2
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_ON = 2--><!--Device-DisplayState-STATE_ON = 2-End-->
 
@@ -86,7 +86,7 @@ STATE_ON_SUSPEND = 6
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_ON_SUSPEND = 6--><!--Device-DisplayState-STATE_ON_SUSPEND = 6-End-->
 
@@ -102,7 +102,7 @@ STATE_UNKNOWN = 0
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_UNKNOWN = 0--><!--Device-DisplayState-STATE_UNKNOWN = 0-End-->
 
@@ -118,7 +118,7 @@ STATE_VR = 5
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-DisplayState-STATE_VR = 5--><!--Device-DisplayState-STATE_VR = 5-End-->
 

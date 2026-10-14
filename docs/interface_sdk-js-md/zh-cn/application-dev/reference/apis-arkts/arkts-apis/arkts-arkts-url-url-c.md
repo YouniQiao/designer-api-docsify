@@ -30,7 +30,7 @@ URL的无参构造函数，不建议直接调用。请使用parseURL方法创建
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-URL-constructor()--><!--Device-URL-constructor()-End-->
 
@@ -113,7 +113,7 @@ static parseURL(url: string, base?: string | URL): URL
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-URL-static parseURL(url: string, base?: string | URL): URL--><!--Device-URL-static parseURL(url: string, base?: string | URL): URL-End-->
 
@@ -165,7 +165,7 @@ toJSON(): string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-URL-toJSON(): string--><!--Device-URL-toJSON(): string-End-->
 
@@ -196,7 +196,7 @@ toString(): string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-URL-toString(): string--><!--Device-URL-toString(): string-End-->
 

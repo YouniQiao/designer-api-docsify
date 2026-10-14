@@ -28,7 +28,7 @@ Note: If a continuous task of the **MODE_AUDIO_PLAYBACK** type is requested or u
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BackgroundTaskMode-MODE_AUDIO_PLAYBACK = 2--><!--Device-BackgroundTaskMode-MODE_AUDIO_PLAYBACK = 2-End-->
 
@@ -64,7 +64,7 @@ Use scenarios: audio/video playback, recording, and audio/video calls. The scena
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BackgroundTaskMode-MODE_AV_PLAYBACK_AND_RECORD = 12--><!--Device-BackgroundTaskMode-MODE_AV_PLAYBACK_AND_RECORD = 12-End-->
 
@@ -119,7 +119,7 @@ Positioning and navigation.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BackgroundTaskMode-MODE_LOCATION = 4--><!--Device-BackgroundTaskMode-MODE_LOCATION = 4-End-->
 
@@ -137,7 +137,7 @@ Use scenario: distributed service connection and casting.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-BackgroundTaskMode-MODE_MULTI_DEVICE_CONNECTION = 6--><!--Device-BackgroundTaskMode-MODE_MULTI_DEVICE_CONNECTION = 6-End-->
 

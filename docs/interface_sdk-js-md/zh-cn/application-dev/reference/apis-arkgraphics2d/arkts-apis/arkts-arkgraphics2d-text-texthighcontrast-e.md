@@ -22,7 +22,7 @@ TEXT_APP_DISABLE_HIGH_CONTRAST = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHighContrast-TEXT_APP_DISABLE_HIGH_CONTRAST = 1--><!--Device-TextHighContrast-TEXT_APP_DISABLE_HIGH_CONTRAST = 1-End-->
 
@@ -38,7 +38,7 @@ TEXT_APP_ENABLE_HIGH_CONTRAST = 2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHighContrast-TEXT_APP_ENABLE_HIGH_CONTRAST = 2--><!--Device-TextHighContrast-TEXT_APP_ENABLE_HIGH_CONTRAST = 2-End-->
 
@@ -54,7 +54,7 @@ TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST = 0
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextHighContrast-TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST = 0--><!--Device-TextHighContrast-TEXT_FOLLOW_SYSTEM_HIGH_CONTRAST = 0-End-->
 

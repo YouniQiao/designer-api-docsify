@@ -721,11 +721,11 @@ fontFeature(value: string)
 
 Sets the font feature of the text style, such as monospaced digits.
 
-The format is: normal \| \&lt;feature-tag-value\&gt;
+The format is: normal \| \<feature-tag-value\>
 
-The format of \&lt;feature-tag-value\&gt; is: \&lt;string\&gt; \[ \&lt;integer\&gt; \| on \| off ]
+The format of \<feature-tag-value\> is: \<string\> \[ \<integer\> \| on \| off ]
 
-There can be multiple \&lt;feature-tag-value\&gt; values, separated by commas (,).
+There can be multiple \<feature-tag-value\> values, separated by commas (,).
 
 For example, the input format for using monospaced digits is "ss01" on.
 
@@ -743,7 +743,7 @@ For example, the input format for using monospaced digits is "ss01" on.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string | Yes | Text feature effect, used to set the advanced typography capabilities of OpenType fonts (such as monospaced digits and ligatures). The format is normal or &lt;feature-tag-value&gt;, for example, "ss01" on. |
+| value | string | Yes | Text feature effect, used to set the advanced typography capabilities of OpenType fonts (such as monospaced digits and ligatures). The format is normal or<feature-tag-value>, for example, "ss01" on. |
 
 ## fontSize
 

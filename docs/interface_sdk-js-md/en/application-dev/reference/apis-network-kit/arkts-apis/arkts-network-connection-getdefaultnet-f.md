@@ -33,7 +33,7 @@ Obtains the network handle used by the system by default, including the network 
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void--><!--Device-connection-function getDefaultNet(callback: AsyncCallback<NetHandle>): void-End-->
 
@@ -97,7 +97,7 @@ Obtains the network handle used by the system by default, including the network 
 
 **Required permissions:** ohos.permission.GET_NETWORK_INFO
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-connection-function getDefaultNet(): Promise<NetHandle>--><!--Device-connection-function getDefaultNet(): Promise<NetHandle>-End-->
 

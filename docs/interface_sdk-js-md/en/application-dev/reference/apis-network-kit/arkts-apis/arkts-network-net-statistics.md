@@ -41,7 +41,7 @@ import { statistics } from '@kit.NetworkKit';
 | [getIfaceRxBytes](arkts-network-statistics-getifacerxbytes-f.md#getifacerxbytes2) | Obtains the total downlink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
 | [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes1) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses an asynchronous callback to return the result. |
 | [getIfaceTxBytes](arkts-network-statistics-getifacetxbytes-f.md#getifacetxbytes2) | Obtains the total uplink traffic (in bytes) of the specified NIC from the last startup to the time when this API is called. This API uses a promise to return the result. |
-| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result. |
+| [getSelfTrafficStats](arkts-network-statistics-getselftrafficstats-f.md#getselftrafficstats) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This API uses a promise to return the result. |
 | [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes1) | Obtains the downlink traffic (in bytes) of the specified socket. This API uses an asynchronous callback to return the result. |
 | [getSockfdRxBytes](arkts-network-statistics-getsockfdrxbytes-f.md#getsockfdrxbytes2) | Obtains the downlink traffic (in bytes) of the specified socket. This API uses a promise to return the result. |
 | [getSockfdTxBytes](arkts-network-statistics-getsockfdtxbytes-f.md#getsockfdtxbytes1) | Obtains the uplink traffic of the specified socket (in bytes). This API uses an asynchronous callback to return the result. |
@@ -56,20 +56,20 @@ import { statistics } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md) | Get this month traffic data of the cellular network. |
-| [getTrafficPlanInfo](arkts-network-statistics-gettrafficplaninfo-f-sys.md) | Get traffic plan info. |
+| [getMonthTrafficStats](arkts-network-statistics-getmonthtrafficstats-f-sys.md#getmonthtrafficstats) | Get this month traffic data of the cellular network. |
+| [getTrafficPlanInfo](arkts-network-statistics-gettrafficplaninfo-f-sys.md#gettrafficplaninfo) | Get traffic plan info. |
 | [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface1) | Obtains the historical data traffic of the specified NIC. This API uses an asynchronous callback to return the result. |
 | [getTrafficStatsByIface](arkts-network-statistics-gettrafficstatsbyiface-f-sys.md#gettrafficstatsbyiface2) | Obtains the historical data traffic of the specified NIC. This API uses a promise to return the result. |
-| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md) | Obtains the traffic statistics of all applications on the specified network within the specified period. This API uses a promise to return the result. |
+| [getTrafficStatsByNetwork](arkts-network-statistics-gettrafficstatsbynetwork-f-sys.md#gettrafficstatsbynetwork) | Obtains the traffic statistics of all applications on the specified network within the specified period. This API uses a promise to return the result. |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid1) | Obtains the historical data traffic of the specified application. This API uses an asynchronous callback to return the result. |
 | [getTrafficStatsByUid](arkts-network-statistics-gettrafficstatsbyuid-f-sys.md#gettrafficstatsbyuid2) | Obtains the historical data traffic of the specified application. This API uses a promise to return the result. |
-| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result. |
+| [getTrafficStatsByUidNetwork](arkts-network-statistics-gettrafficstatsbyuidnetwork-f-sys.md#gettrafficstatsbyuidnetwork) | Obtains the traffic statistics of the specified application on the specified network within the specified period. This method uses a promise to return the result. |
 | [off](arkts-network-statistics-off-f-sys.md#offnetstatschange) | Unsubscribes from traffic change events. This API uses an asynchronous callback to return the result. |
 | [on](arkts-network-statistics-on-f-sys.md#onnetstatschange) | Subscribes to traffic change events. This API uses an asynchronous callback to return the result. |
-| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md) | Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result. |
-| [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md) | Set traffic plan info. |
-| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md) | Updates network interface statistics data. |
-| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md) | Updates network statistics data. |
+| [setCalibrationTraffic](arkts-network-statistics-setcalibrationtraffic-f-sys.md#setcalibrationtraffic) | Sets traffic calibration data. You can use this API to set traffic data during traffic calibration. This API uses a promise to return the result. |
+| [setTrafficPlanInfo](arkts-network-statistics-settrafficplaninfo-f-sys.md#settrafficplaninfo) | Set traffic plan info. |
+| [updateIfacesStats](arkts-network-statistics-updateifacesstats-f-sys.md#updateifacesstats) | Updates network interface statistics data. |
+| [updateStatsData](arkts-network-statistics-updatestatsdata-f-sys.md#updatestatsdata) | Updates network statistics data. |
 <!--DelEnd-->
 
 ### Interfaces

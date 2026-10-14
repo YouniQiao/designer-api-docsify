@@ -34,7 +34,7 @@ getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | number
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int--><!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int-End-->
 
@@ -118,7 +118,7 @@ getEncodedDer(format: string): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PubKey-getEncodedDer(format: string): DataBlob--><!--Device-PubKey-getEncodedDer(format: string): DataBlob-End-->
 
@@ -172,7 +172,7 @@ getEncodedPem(format: string): string
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PubKey-getEncodedPem(format: string): string--><!--Device-PubKey-getEncodedPem(format: string): string-End-->
 
@@ -233,7 +233,7 @@ getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>--><!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>-End-->
 
@@ -288,7 +288,7 @@ getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array--><!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array-End-->
 

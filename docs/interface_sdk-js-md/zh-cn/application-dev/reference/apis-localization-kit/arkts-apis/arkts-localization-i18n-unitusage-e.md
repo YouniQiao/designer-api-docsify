@@ -24,7 +24,7 @@ AREA_LAND_AGRICULT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-AREA_LAND_AGRICULT = 1--><!--Device-UnitUsage-AREA_LAND_AGRICULT = 1-End-->
 
@@ -42,7 +42,7 @@ AREA_LAND_COMMERCL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-AREA_LAND_COMMERCL = 2--><!--Device-UnitUsage-AREA_LAND_COMMERCL = 2-End-->
 
@@ -60,7 +60,7 @@ AREA_LAND_RESIDNTL = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-AREA_LAND_RESIDNTL = 3--><!--Device-UnitUsage-AREA_LAND_RESIDNTL = 3-End-->
 
@@ -78,7 +78,7 @@ ELAPSED_TIME_SECOND = 21
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21--><!--Device-UnitUsage-ELAPSED_TIME_SECOND = 21-End-->
 
@@ -96,7 +96,7 @@ LENGTH_PERSON = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_PERSON = 4--><!--Device-UnitUsage-LENGTH_PERSON = 4-End-->
 
@@ -114,7 +114,7 @@ LENGTH_PERSON_INFORMAL = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13--><!--Device-UnitUsage-LENGTH_PERSON_INFORMAL = 13-End-->
 
@@ -132,7 +132,7 @@ LENGTH_PERSON_SMALL = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5--><!--Device-UnitUsage-LENGTH_PERSON_SMALL = 5-End-->
 
@@ -150,7 +150,7 @@ LENGTH_PERSON_SMALL_INFORMAL = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14--><!--Device-UnitUsage-LENGTH_PERSON_SMALL_INFORMAL = 14-End-->
 
@@ -168,7 +168,7 @@ LENGTH_RAINFALL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_RAINFALL = 6--><!--Device-UnitUsage-LENGTH_RAINFALL = 6-End-->
 
@@ -186,7 +186,7 @@ LENGTH_ROAD = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_ROAD = 7--><!--Device-UnitUsage-LENGTH_ROAD = 7-End-->
 
@@ -204,7 +204,7 @@ LENGTH_ROAD_INFORMAL = 15
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15--><!--Device-UnitUsage-LENGTH_ROAD_INFORMAL = 15-End-->
 
@@ -222,7 +222,7 @@ LENGTH_ROAD_SMALL = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_ROAD_SMALL = 8--><!--Device-UnitUsage-LENGTH_ROAD_SMALL = 8-End-->
 
@@ -240,7 +240,7 @@ LENGTH_SNOWFALL = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_SNOWFALL = 9--><!--Device-UnitUsage-LENGTH_SNOWFALL = 9-End-->
 
@@ -258,7 +258,7 @@ LENGTH_VEHICLE = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_VEHICLE = 10--><!--Device-UnitUsage-LENGTH_VEHICLE = 10-End-->
 
@@ -276,7 +276,7 @@ LENGTH_VISIBLTY = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_VISIBLTY = 11--><!--Device-UnitUsage-LENGTH_VISIBLTY = 11-End-->
 
@@ -294,7 +294,7 @@ LENGTH_VISIBLTY_SMALL = 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-LENGTH_VISIBLTY_SMALL = 12--><!--Device-UnitUsage-LENGTH_VISIBLTY_SMALL = 12-End-->
 
@@ -312,7 +312,7 @@ SIZE_FILE_BYTE = 22
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-SIZE_FILE_BYTE = 22--><!--Device-UnitUsage-SIZE_FILE_BYTE = 22-End-->
 
@@ -330,7 +330,7 @@ SIZE_SHORTFILE_BYTE = 23
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23--><!--Device-UnitUsage-SIZE_SHORTFILE_BYTE = 23-End-->
 
@@ -348,7 +348,7 @@ SPEED_ROAD_TRAVEL = 16
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-SPEED_ROAD_TRAVEL = 16--><!--Device-UnitUsage-SPEED_ROAD_TRAVEL = 16-End-->
 
@@ -366,7 +366,7 @@ SPEED_WIND = 17
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-SPEED_WIND = 17--><!--Device-UnitUsage-SPEED_WIND = 17-End-->
 
@@ -384,7 +384,7 @@ TEMPERATURE_PERSON = 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-TEMPERATURE_PERSON = 18--><!--Device-UnitUsage-TEMPERATURE_PERSON = 18-End-->
 
@@ -402,7 +402,7 @@ TEMPERATURE_WEATHER = 19
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-TEMPERATURE_WEATHER = 19--><!--Device-UnitUsage-TEMPERATURE_WEATHER = 19-End-->
 
@@ -420,7 +420,7 @@ VOLUME_VEHICLE_FUEL = 20
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20--><!--Device-UnitUsage-VOLUME_VEHICLE_FUEL = 20-End-->
 

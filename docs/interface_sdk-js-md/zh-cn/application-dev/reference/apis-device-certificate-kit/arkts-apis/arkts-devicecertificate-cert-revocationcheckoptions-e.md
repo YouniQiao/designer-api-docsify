@@ -22,7 +22,7 @@ REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_ACCESS_NETWORK = 1-End-->
 
@@ -42,7 +42,7 @@ REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_CHECK_INTERMEDIATE_CA_ONLINE = 4-End-->
 
@@ -58,7 +58,7 @@ REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_LOCAL = 3-End-->
 
@@ -74,7 +74,7 @@ REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_FALLBACK_NO_PREFER = 2-End-->
 
@@ -90,7 +90,7 @@ REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6
 
 **起始版本：** 23
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_IGNORE_NETWORK_ERROR = 6-End-->
 
@@ -110,7 +110,7 @@ REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_LOCAL_CRL_ONLY_CHECK_END_ENTITY_CERT = 5-End-->
 
@@ -126,7 +126,7 @@ REVOCATION_CHECK_OPTION_PREFER_OCSP = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0--><!--Device-RevocationCheckOptions-REVOCATION_CHECK_OPTION_PREFER_OCSP = 0-End-->
 

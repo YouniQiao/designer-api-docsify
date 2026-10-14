@@ -24,7 +24,7 @@ File descriptor.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RawFileDescriptor-fd: int--><!--Device-RawFileDescriptor-fd: int-End-->
 
@@ -42,7 +42,7 @@ File length, indicating the size of the `rawfile` file. The unit is bytes.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RawFileDescriptor-length: long--><!--Device-RawFileDescriptor-length: long-End-->
 
@@ -60,7 +60,7 @@ Start offset, indicating the start position of the `rawfile` file in the HAP. Th
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RawFileDescriptor-offset: long--><!--Device-RawFileDescriptor-offset: long-End-->
 

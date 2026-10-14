@@ -3203,7 +3203,7 @@ write(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 
 > **说明：** 
 > 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[on('writeData')](#onwritedata)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用on('writeData')替代。
 
 **起始版本：** 8
 
@@ -3281,7 +3281,7 @@ write(buffer: ArrayBuffer): Promise<number>
 
 > **说明：** 
 > 
-> 从 API version 8开始支持，从API version 11开始废弃。建议使用[on('writeData')](#onwritedata)替代。
+> 从 API version 8开始支持，从API version 11开始废弃。建议使用on('writeData')替代。
 
 **起始版本：** 8
 

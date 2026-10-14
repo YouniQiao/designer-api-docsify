@@ -22,7 +22,7 @@ A CDATA sections.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-CDSECT--><!--Device-EventType-CDSECT-End-->
 
@@ -38,7 +38,7 @@ An XML comment.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-COMMENT--><!--Device-EventType-COMMENT-End-->
 
@@ -54,7 +54,7 @@ An XML document type declaration.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-DOCDECL--><!--Device-EventType-DOCDECL-End-->
 
@@ -70,7 +70,7 @@ End a document.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-END_DOCUMENT--><!--Device-EventType-END_DOCUMENT-End-->
 
@@ -86,7 +86,7 @@ End a tag.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-END_TAG--><!--Device-EventType-END_TAG-End-->
 
@@ -102,7 +102,7 @@ An entity reference.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-ENTITY_REFERENCE--><!--Device-EventType-ENTITY_REFERENCE-End-->
 
@@ -118,7 +118,7 @@ An XML processing instruction declaration.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-INSTRUCTION--><!--Device-EventType-INSTRUCTION-End-->
 
@@ -134,7 +134,7 @@ Start a document.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-START_DOCUMENT--><!--Device-EventType-START_DOCUMENT-End-->
 
@@ -150,7 +150,7 @@ Start a tag.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-START_TAG--><!--Device-EventType-START_TAG-End-->
 
@@ -166,7 +166,7 @@ Character data.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-TEXT--><!--Device-EventType-TEXT-End-->
 
@@ -182,7 +182,7 @@ A whitespace.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-EventType-WHITESPACE--><!--Device-EventType-WHITESPACE-End-->
 

@@ -22,7 +22,7 @@ Parallel decompression strategy.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ParallelStrategy-PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1--><!--Device-ParallelStrategy-PARALLEL_STRATEGY_PARALLEL_DECOMPRESSION = 1-End-->
 
@@ -38,7 +38,7 @@ Serial compression/decompression strategy (default).
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-ParallelStrategy-PARALLEL_STRATEGY_SEQUENTIAL = 0--><!--Device-ParallelStrategy-PARALLEL_STRATEGY_SEQUENTIAL = 0-End-->
 

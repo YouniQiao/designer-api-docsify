@@ -38,7 +38,7 @@ For details, see [Principles for Classifying Biometric Authentication Trust Leve
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AuthParam-authTrustLevel: AuthTrustLevel--><!--Device-AuthParam-authTrustLevel: AuthTrustLevel-End-->
 
@@ -56,7 +56,7 @@ Authentication type list, which specifies the types of authentication provided o
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AuthParam-authType: UserAuthType[]--><!--Device-AuthParam-authType: UserAuthType[]-End-->
 
@@ -74,7 +74,7 @@ Random challenge value, which can be used to prevent replay attacks. It cannot e
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AuthParam-challenge: Uint8Array--><!--Device-AuthParam-challenge: Uint8Array-End-->
 
@@ -92,7 +92,7 @@ Information about the authentication result reuse. After this parameter is set, 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AuthParam-reuseUnlockResult?: ReuseUnlockResult--><!--Device-AuthParam-reuseUnlockResult?: ReuseUnlockResult-End-->
 
@@ -115,7 +115,7 @@ retrying the authentication mode or manually switching.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AuthParam-skipLockedBiometricAuth?: boolean--><!--Device-AuthParam-skipLockedBiometricAuth?: boolean-End-->
 

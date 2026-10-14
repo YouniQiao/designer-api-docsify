@@ -22,7 +22,7 @@ Seeks to the frame closest to the specified position. You are advised to use thi
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SeekMode-SEEK_CLOSEST = 2--><!--Device-SeekMode-SEEK_CLOSEST = 2-End-->
 
@@ -46,7 +46,7 @@ To exit this seeking mode, applications must call **seek(-1, SeekMode.SEEK_CONTI
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-SeekMode-SEEK_CONTINUOUS = 3--><!--Device-SeekMode-SEEK_CONTINUOUS = 3-End-->
 
@@ -62,7 +62,7 @@ Seeks to the next key frame at the specified position. You are advised to use th
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SeekMode-SEEK_NEXT_SYNC = 0--><!--Device-SeekMode-SEEK_NEXT_SYNC = 0-End-->
 
@@ -78,7 +78,7 @@ Seeks to the previous key frame at the specified position. You are advised to us
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SeekMode-SEEK_PREV_SYNC = 1--><!--Device-SeekMode-SEEK_PREV_SYNC = 1-End-->
 

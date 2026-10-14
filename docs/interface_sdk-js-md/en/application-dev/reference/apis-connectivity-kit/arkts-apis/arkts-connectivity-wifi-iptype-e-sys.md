@@ -6,8 +6,6 @@ enum IpType
 
 Wi-Fi IP type enumeration.
 
-@enum { number } IpType
-
 **Since:** 7
 
 **Deprecated since:** 9

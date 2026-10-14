@@ -24,7 +24,7 @@ This parameter controls the redirection-back logic across applications, altering
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'--><!--Device-Params-ABILITY_BACK_TO_OTHER_MISSION_STACK = 'ability.params.backToOtherMissionStack'-End-->
 
@@ -40,7 +40,7 @@ Whether the ability has been restarted due to a fault.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'--><!--Device-Params-ABILITY_RECOVERY_RESTART = 'ohos.ability.params.abilityRecoveryRestart'-End-->
 
@@ -58,7 +58,7 @@ If the Want contains a URI authorization flag (for example, [FLAG_AUTH_READ_URI_
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'--><!--Device-Params-ABILITY_UNIFIED_DATA_KEY = 'ohos.param.ability.udKey'-End-->
 
@@ -74,7 +74,7 @@ Indicates the index of an app clone. An app clone refers to multiple independent
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'--><!--Device-Params-APP_CLONE_INDEX_KEY = 'ohos.extra.param.key.appCloneIndex'-End-->
 
@@ -108,7 +108,7 @@ Only applications in the list are matched during implicit launch. The value is a
 
 **Since:** 17
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 17.
+**Atomic service API:** This API can be used in atomic services since API version 17.
 
 <!--Device-Params-APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'--><!--Device-Params-APP_LAUNCH_TRUSTLIST = 'ohos.params.appLaunchTrustList'-End-->
 
@@ -128,7 +128,7 @@ For example, an atomic service contains a home page and a second page. If you wa
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Params-ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'--><!--Device-Params-ATOMIC_SERVICE_SHARE_ROUTER = 'ohos.params.atomicservice.shareRouter'-End-->
 
@@ -146,7 +146,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'--><!--Device-Params-BUILD_FUNCTION = 'ohos.param.atomicservice.buildFunction'-End-->
 
@@ -178,7 +178,7 @@ that uniquely identifies the caller of startAbilityForResult or [openLink](arkts
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'--><!--Device-Params-CALLER_REQUEST_CODE = 'ohos.extra.param.key.callerRequestCode'-End-->
 
@@ -196,7 +196,7 @@ You can set the sharing title using this field in the [onShare](arkts-ability-ap
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'--><!--Device-Params-CONTENT_TITLE_KEY = 'ohos.extra.param.key.contentTitle'-End-->
 
@@ -250,7 +250,7 @@ The caller must be a system application and must request the ohos.permission.SET
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Params-LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'--><!--Device-Params-LAUNCH_REASON_MESSAGE = 'ohos.params.launchReasonMessage'-End-->
 
@@ -268,7 +268,7 @@ If page redirection in an atomic service is implemented using [router](../../../
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'--><!--Device-Params-PAGE_PATH = 'ohos.param.atomicservice.pagePath'-End-->
 
@@ -286,7 +286,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'--><!--Device-Params-PAGE_SOURCE_FILE = 'ohos.param.atomicservice.pageSourceFile'-End-->
 
@@ -302,7 +302,7 @@ List of file URIs authorized to the target. The value must be an array of file U
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-PARAMS_STREAM = 'ability.params.stream'--><!--Device-Params-PARAMS_STREAM = 'ability.params.stream'-End-->
 
@@ -320,7 +320,7 @@ If page redirection in an atomic service is implemented using [Navigation](../..
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'--><!--Device-Params-ROUTER_NAME = 'ohos.param.atomicservice.routerName'-End-->
 
@@ -338,7 +338,7 @@ You can set the sharing abstract using this field in the [onShare](arkts-ability
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'--><!--Device-Params-SHARE_ABSTRACT_KEY = 'ohos.extra.param.key.shareAbstract'-End-->
 
@@ -356,7 +356,7 @@ You can set the URL link using this field in the [onShare](arkts-ability-app-abi
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'--><!--Device-Params-SHARE_URL_KEY = 'ohos.extra.param.key.shareUrl'-End-->
 
@@ -372,7 +372,7 @@ Display mode of the [EmbeddableUIAbility](arkts-ability-app-ability-embeddableui
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'--><!--Device-Params-SHOW_MODE_KEY = 'ohos.extra.param.key.showMode'-End-->
 
@@ -390,7 +390,7 @@ When you open an atomic service, you can use this parameter to activate the spec
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'--><!--Device-Params-SUB_PACKAGE_NAME = 'ohos.param.atomicservice.subpackageName'-End-->
 
@@ -406,7 +406,7 @@ Whether to migrate the page stack information during cross-device migration. The
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'--><!--Device-Params-SUPPORT_CONTINUE_PAGE_STACK_KEY = 'ohos.extra.param.key.supportContinuePageStack'-End-->
 
@@ -422,7 +422,7 @@ Whether the source application exits during cross-device migration. The default 
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'--><!--Device-Params-SUPPORT_CONTINUE_SOURCE_EXIT_KEY = 'ohos.extra.param.key.supportContinueSourceExit'-End-->
 

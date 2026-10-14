@@ -22,7 +22,7 @@ import { mdns } from '@kit.NetworkKit';
 | --- | --- |
 | [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice1) | Adds an MDNS service. This API uses an asynchronous callback to return the result. |
 | [addLocalService](arkts-network-mdns-addlocalservice-f.md#addlocalservice2) | Adds an MDNS service. This API uses a promise to return the result. |
-| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md) | Creates a **DiscoveryService** object, which is used to discover MDNS services of the specified type. |
+| [createDiscoveryService](arkts-network-mdns-creatediscoveryservice-f.md#creatediscoveryservice) | Creates a **DiscoveryService** object, which is used to discover MDNS services of the specified type. |
 | [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice1) | Removes an MDNS service. This API uses an asynchronous callback to return the result. |
 | [removeLocalService](arkts-network-mdns-removelocalservice-f.md#removelocalservice2) | Removes an MDNS service. This API uses a promise to return the result. |
 | [resolveLocalService](arkts-network-mdns-resolvelocalservice-f.md#resolvelocalservice1) | Resolves an MDNS service. This API uses an asynchronous callback to return the result. |

@@ -24,7 +24,7 @@ This component group is mutually exclusive with the previous/next component grou
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102--><!--Device-VideoPlayControlGroup-FAST_FORWARD_BACKWARD = 102-End-->
 
@@ -42,7 +42,7 @@ This component group is mutually exclusive with the fast-forward/rewind componen
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101--><!--Device-VideoPlayControlGroup-VIDEO_PREVIOUS_NEXT = 101-End-->
 

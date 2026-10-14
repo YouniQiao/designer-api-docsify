@@ -32,7 +32,7 @@ validate(certChain: CertChainData, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertChainValidator-validate(certChain: CertChainData, callback: AsyncCallback<void>): void--><!--Device-CertChainValidator-validate(certChain: CertChainData, callback: AsyncCallback<void>): void-End-->
 
@@ -167,7 +167,7 @@ validate(certChain: CertChainData): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertChainValidator-validate(certChain: CertChainData): Promise<void>--><!--Device-CertChainValidator-validate(certChain: CertChainData): Promise<void>-End-->
 
@@ -312,7 +312,7 @@ validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidati
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertChainValidator-validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>--><!--Device-CertChainValidator-validateCert(cert: X509Cert, params: CertValidationParams): Promise<CertValidationResult>-End-->
 
@@ -490,7 +490,7 @@ X.509证书链校验器算法名称。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CertChainValidator-readonly algorithm: string--><!--Device-CertChainValidator-readonly algorithm: string-End-->
 

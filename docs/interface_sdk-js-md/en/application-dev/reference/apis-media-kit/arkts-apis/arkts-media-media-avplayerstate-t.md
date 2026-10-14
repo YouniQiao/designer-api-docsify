@@ -8,7 +8,7 @@ Describes the state of the [AVPlayer](arkts-media-multimedia-media.md). Your app
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-media-type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'stopped' | 'released' | 'error'--><!--Device-media-type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'stopped' | 'released' | 'error'-End-->
 
@@ -16,8 +16,8 @@ Describes the state of the [AVPlayer](arkts-media-multimedia-media.md). Your app
 
 | Type | Description |
 | --- | --- |
-| 'idle' | The AVPlayer enters this state after [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) or [reset()](arkts-media-media-avplayer-i.md#reset1) is called. <br>In case [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) is used, all properties are set to their default values. <br>In case [reset()](arkts-media-media-avplayer-i.md#reset1) The AVPlayer enters this state after [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) or [reset()](arkts-media-media-avplayer-i.md#reset1) is called. <br>In case [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) is used, all properties are set to their default values. <br>In case [reset()](arkts-media-media-avplayer-i.md#reset1) is called, the **url&lt;sup&gt;9+&lt;/sup&gt;**, **fdSrc&lt;sup&gt;9+&lt;/sup&gt;**, or **dataSrc&lt;sup&gt;10+&lt;/sup&gt;** property and the **loop** property are reset, and other properties are retained. |
-| 'initialized' | The AVPlayer enters this state after **url&lt;sup&gt;9+&lt;/sup&gt;** or **fdSrc&lt;sup&gt;9+&lt;/sup&gt;** property is set in the idle state. In this case, you can configure static properties such as the window and audio. |
+| 'idle' | The AVPlayer enters this state after [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) or [reset()](arkts-media-media-avplayer-i.md#reset1) is called. <br>In case [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) is used, all properties are set to their default values. <br>In case [reset()](arkts-media-media-avplayer-i.md#reset1) The AVPlayer enters this state after [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) or [reset()](arkts-media-media-avplayer-i.md#reset1) is called. <br>In case [createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1) is used, all properties are set to their default values. <br>In case [reset()](arkts-media-media-avplayer-i.md#reset1) is called, the **url<sup>9+</sup>**, **fdSrc<sup>9+</sup>**, or **dataSrc<sup>10+</sup>** property and the **loop** property are reset, and other properties are retained. |
+| 'initialized' | The AVPlayer enters this state after **url<[sup](../../apis-default/arkts-apis/arkts-lib-es2015-core-string-i.md)>9+</sup>** or **fdSrc<sup>9+</sup>** property is set in the idle state. In this case, you can configure static properties such as the window and audio. |
 | 'prepared' | The AVPlayer enters this state when [prepare()](arkts-media-media-avplayer-i.md#prepare1) The AVPlayer enters this state when [prepare()](arkts-media-media-avplayer-i.md#prepare1) is called in the initialized state. In this case, the playback engine has prepared the resources. |
 | 'playing' | The AVPlayer enters this state when [play()](arkts-media-media-avplayer-i.md#play1) The AVPlayer enters this state when [play()](arkts-media-media-avplayer-i.md#play1) is called in the prepared, paused, or completed state. |
 | 'paused' | The AVPlayer enters this state when **pause()** is called in the playing state. |

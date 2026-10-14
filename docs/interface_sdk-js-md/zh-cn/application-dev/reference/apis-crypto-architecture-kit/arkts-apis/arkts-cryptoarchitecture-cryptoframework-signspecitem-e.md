@@ -28,7 +28,7 @@ ML_DSA_CONTEXT_UINT8ARR = 108
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-ML_DSA_CONTEXT_UINT8ARR = 108--><!--Device-SignSpecItem-ML_DSA_CONTEXT_UINT8ARR = 108-End-->
 
@@ -46,7 +46,7 @@ ML_DSA_DETERMINISTIC_BOOL = 106
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-ML_DSA_DETERMINISTIC_BOOL = 106--><!--Device-SignSpecItem-ML_DSA_DETERMINISTIC_BOOL = 106-End-->
 
@@ -64,7 +64,7 @@ ML_DSA_MU_BOOL = 107
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-ML_DSA_MU_BOOL = 107--><!--Device-SignSpecItem-ML_DSA_MU_BOOL = 107-End-->
 
@@ -80,7 +80,7 @@ PSS_MD_NAME_STR = 100
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-PSS_MD_NAME_STR = 100--><!--Device-SignSpecItem-PSS_MD_NAME_STR = 100-End-->
 
@@ -98,7 +98,7 @@ PSS_MGF1_MD_STR = 102
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-PSS_MGF1_MD_STR = 102--><!--Device-SignSpecItem-PSS_MGF1_MD_STR = 102-End-->
 
@@ -116,7 +116,7 @@ PSS_MGF_NAME_STR = 101
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101--><!--Device-SignSpecItem-PSS_MGF_NAME_STR = 101-End-->
 
@@ -145,7 +145,7 @@ PSS_SALT_LEN_NUM = 103
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103--><!--Device-SignSpecItem-PSS_SALT_LEN_NUM = 103-End-->
 
@@ -163,7 +163,7 @@ PSS_TRAILER_FIELD_NUM = 104
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-PSS_TRAILER_FIELD_NUM = 104--><!--Device-SignSpecItem-PSS_TRAILER_FIELD_NUM = 104-End-->
 
@@ -181,7 +181,7 @@ SM2_USER_ID_UINT8ARR = 105
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105--><!--Device-SignSpecItem-SM2_USER_ID_UINT8ARR = 105-End-->
 

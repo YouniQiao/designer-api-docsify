@@ -61,7 +61,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Yes | Placeholder image displayed during loading. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
+| value | string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) | Yes | Placeholder image displayed during loading. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path.<br>Default value: **null**<br>When the value is switched from a valid one (an image resource that can be parsed and loaded correctly) to an invalid one (an image path that cannot be parsed or loaded), the component retains the previously successfully loaded image content without clearing or resetting it.<br>**Since:** 12 |
 
 <a id="alt2"></a>
 
@@ -99,7 +99,7 @@ This attribute does not take effect when the parameter type of the component is 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ImageAlt](arkts-arkui-image-comp-imagealt-i.md) | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
+| src | [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ImageAlt](arkts-arkui-image-comp-imagealt-i.md) | Yes | Placeholder image displayed during loading or in case of loading failure. Local images (in PNG, JPG, BMP, SVG, GIF, or HEIF format) and [PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) objects are supported, but online images are not.<br>- Base64 strings are supported.<br>- Strings prefixed with the **file://** path are supported (application sandbox URI: **file://<bundleName>/<sandboxPath>**). For details about how to construct the application sandbox path URI, see [constructor](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-fileuri-c.md#constructor). The sandbox path must be converted to an application sandbox URI using the [fileUri.getUriFromPath(path)](../../apis-core-file-kit/arkts-apis/arkts-corefile-fileuri-geturifrompath-f.md) API before being passed in for display. In addition, ensure that the application has the read permission to the files in the specified path. |
 
 ## antialiased
 
@@ -205,7 +205,7 @@ colorFilter(value: ColorFilter | DrawingColorFilter | ResourceColor)
 
 Sets the color filter for the image.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>When this attribute is set, renderMode is not effective. <br>When value is ResourceColor type, it will be converted to ColorFilter with blend mode. </p>
+<p><strong>NOTE</strong>: <br>When this attribute is set, renderMode is not effective. <br>When value is ResourceColor type, it will be converted to ColorFilter with blend mode. </p>
 
 **Since:** 26.0.0
 
@@ -931,7 +931,7 @@ onComplete(
 
 Triggered when an image is successfully loaded or decoded. The size of the image source that is successfully loaded is returned, in pixels.
 
-<p>&lt;strong&gt;NOTE&lt;/strong&gt;: <br>This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. </p>
+<p><strong>NOTE</strong>: <br>This event is not triggered if the parameter type of the component is AnimatedDrawableDescriptor. </p>
 
 **Since:** 11
 

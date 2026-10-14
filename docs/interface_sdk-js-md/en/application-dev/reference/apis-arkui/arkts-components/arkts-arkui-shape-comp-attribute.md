@@ -106,7 +106,7 @@ The coordinate array is stored in row-major order. After the original image is e
 > 
 > **mesh** takes effect only when a **pixelMap** object is passed to the shape, and the effect applies to the
 > passed **pixelMap** object. It produces the same result as
-> [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh) in the
+> [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh) in the
 > [drawing module](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md). It is recommended that you use
 > **drawPixelMapMesh**.
 

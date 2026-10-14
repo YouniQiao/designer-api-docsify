@@ -48,21 +48,21 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | --- | --- |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage1) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用callback异步回调。 |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage2) | 获取壁纸图片的像素图，且只能获取使用setImage设置的静态壁纸。使用Promise异步回调。 |
-| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md) | 获取壁纸的最小高度值。 |
-| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md) | 获取壁纸的最小宽度值。 |
-| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -> unfolded-port ->normal-port。使用Promise异步回调。 |
+| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md#getminheightsync) | 获取壁纸的最小高度值。 |
+| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md#getminwidthsync) | 获取壁纸的最小宽度值。 |
+| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md#getwallpaperbystate) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -> unfolded-port ->normal-port。使用Promise异步回调。 |
 | [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore1) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。 |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore2) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。 |
-| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md) | 设置设备所有形态的壁纸。使用Promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |
+| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md#setallwallpapers) | 设置设备所有形态的壁纸。使用Promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |
 | [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper1) | 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目录获取设置的资源。使用callback异步回调。 |
 | [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper2) | 将指定的zip资源包设置为桌面或锁屏的壁纸资源，仅当com.ohos.sceneboard存在时，支持使用该接口。且具有ohos.permission.GET_WALLPAPER权限的应用可以访问/data/wallpaper/目录获取设置的资源。使用Promise异步回调。 |
 | [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage1) | 将指定资源设置为指定类型的壁纸。使用callback异步回调。 |
 | [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage2) | 将指定资源设置为指定类型的壁纸。使用Promise异步回调。 |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo1) | 将视频资源设置为桌面或锁屏的动态壁纸。使用callback异步回调。 |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo2) | 将视频资源设置为桌面或锁屏的动态壁纸。使用Promise异步回调。 |
-| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md) | 获取指定类型壁纸的主要颜色信息。<br> |
+| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md#getcolorssync) | 获取指定类型壁纸的主要颜色信息。<br> |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap1) | 获取壁纸图片的像素图。使用callback异步回调。<br> |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap2) | 获取壁纸图片的像素图。使用Promise异步回调。<br> |
 <!--DelEnd-->

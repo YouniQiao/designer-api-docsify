@@ -4,7 +4,7 @@
 declare enum AccessibilityRoleType
 ```
 
-Enumerates the component role types used by screen readers. @enum { number }
+Enumerates the component role types used by screen readers.
 
 **Since:** 18
 

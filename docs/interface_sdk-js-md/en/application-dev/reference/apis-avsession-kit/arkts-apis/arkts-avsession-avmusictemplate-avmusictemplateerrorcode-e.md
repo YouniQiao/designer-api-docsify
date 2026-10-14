@@ -6,8 +6,6 @@ enum AVMusicTemplateErrorCode
 
 Enumeration ErrorCode types, returns in BusinessError.code.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode--><!--Device-avMusicTemplate-enum AVMusicTemplateErrorCode-End-->

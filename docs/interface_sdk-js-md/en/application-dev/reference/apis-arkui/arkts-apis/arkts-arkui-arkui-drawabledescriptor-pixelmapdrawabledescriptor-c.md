@@ -96,7 +96,7 @@ A constructor used to create a **PixelMapDrawableDescriptor** object through the
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; [ResourceStr](arkts-arkui-resourcestr-t.md) | No | Image resource. A PixelMap image data, application resource, system resource, sandbox path (**file://&lt;bundleName&gt;/&lt;sandboxPath&gt;**), and Base64 character string can be passed to create a **PixelMapDrawableDescriptor** object. |
+| src | [image.PixelMap](../../apis-image-kit/arkts-apis/arkts-image-image-pixelmap-i.md) &#124; [ResourceStr](arkts-arkui-resourcestr-t.md) | No | Image resource. A PixelMap image data, application resource, system resource, sandbox path (**file://<bundleName>/<sandboxPath>**), and Base64 character string can be passed to create a **PixelMapDrawableDescriptor** object. |
 
 **Examples**
 

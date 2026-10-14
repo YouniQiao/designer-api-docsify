@@ -172,7 +172,7 @@ This type belongs to **MEDIA**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-AUDIO = 'general.audio'--><!--Device-UniformDataType-AUDIO = 'general.audio'-End-->
 
@@ -768,7 +768,7 @@ This type belongs to **ENTITY**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-FILE = 'general.file'--><!--Device-UniformDataType-FILE = 'general.file'-End-->
 
@@ -860,7 +860,7 @@ This type belongs to **DIRECTORY**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-FOLDER = 'general.folder'--><!--Device-UniformDataType-FOLDER = 'general.folder'-End-->
 
@@ -970,7 +970,7 @@ This type belongs to **TEXT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-HTML = 'general.html'--><!--Device-UniformDataType-HTML = 'general.html'-End-->
 
@@ -990,7 +990,7 @@ This type belongs to **TEXT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'--><!--Device-UniformDataType-HYPERLINK = 'general.hyperlink'-End-->
 
@@ -1046,7 +1046,7 @@ This type belongs to **MEDIA**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-IMAGE = 'general.image'--><!--Device-UniformDataType-IMAGE = 'general.image'-End-->
 
@@ -1678,7 +1678,7 @@ This type belongs to **OBJECT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'--><!--Device-UniformDataType-OPENHARMONY_APP_ITEM = 'openharmony.app-item'-End-->
 
@@ -1716,7 +1716,7 @@ This type belongs to **OBJECT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'--><!--Device-UniformDataType-OPENHARMONY_FORM = 'openharmony.form'-End-->
 
@@ -1808,7 +1808,7 @@ This type belongs to **IMAGE**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'--><!--Device-UniformDataType-OPENHARMONY_PIXEL_MAP = 'openharmony.pixel-map'-End-->
 
@@ -2008,7 +2008,7 @@ This type belongs to **TEXT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'--><!--Device-UniformDataType-PLAIN_TEXT = 'general.plain-text'-End-->
 
@@ -2676,7 +2676,7 @@ This type belongs to **OBJECT**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-TEXT = 'general.text'--><!--Device-UniformDataType-TEXT = 'general.text'-End-->
 
@@ -2858,7 +2858,7 @@ This type belongs to **MEDIA**.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UniformDataType-VIDEO = 'general.video'--><!--Device-UniformDataType-VIDEO = 'general.video'-End-->
 

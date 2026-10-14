@@ -4,8 +4,6 @@ AbilityConstant提供Ability相关的枚举，包括应用启动原因[LaunchRea
 
 **起始版本：** 9
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace AbilityConstant--><!--Device-unnamed-declare namespace AbilityConstant-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

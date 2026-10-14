@@ -18,7 +18,7 @@ Obtains the operation type of a WantAgent object. This API uses an asynchronous 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void--><!--Device-wantAgent-function getOperationType(agent: WantAgent, callback: AsyncCallback<int>): void-End-->
 
@@ -122,7 +122,7 @@ Obtains the operation type of a WantAgent object. This API uses a promise to ret
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>--><!--Device-wantAgent-function getOperationType(agent: WantAgent): Promise<int>-End-->
 

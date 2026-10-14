@@ -24,7 +24,7 @@ DOWN = 3
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-DOWN = 3--><!--Device-ResizeDirection-DOWN = 3-End-->
 
@@ -42,7 +42,7 @@ LEFT = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-LEFT = 0--><!--Device-ResizeDirection-LEFT = 0-End-->
 
@@ -60,7 +60,7 @@ LEFT_DOWN = 5
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-LEFT_DOWN = 5--><!--Device-ResizeDirection-LEFT_DOWN = 5-End-->
 
@@ -78,7 +78,7 @@ LEFT_UP = 4
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-LEFT_UP = 4--><!--Device-ResizeDirection-LEFT_UP = 4-End-->
 
@@ -96,7 +96,7 @@ RIGHT = 1
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-RIGHT = 1--><!--Device-ResizeDirection-RIGHT = 1-End-->
 
@@ -114,7 +114,7 @@ RIGHT_DOWN = 7
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-RIGHT_DOWN = 7--><!--Device-ResizeDirection-RIGHT_DOWN = 7-End-->
 
@@ -132,7 +132,7 @@ RIGHT_UP = 6
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-RIGHT_UP = 6--><!--Device-ResizeDirection-RIGHT_UP = 6-End-->
 
@@ -150,7 +150,7 @@ UP = 2
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResizeDirection-UP = 2--><!--Device-ResizeDirection-UP = 2-End-->
 

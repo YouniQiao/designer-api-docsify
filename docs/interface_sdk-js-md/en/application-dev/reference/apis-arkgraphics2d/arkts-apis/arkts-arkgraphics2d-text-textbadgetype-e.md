@@ -22,7 +22,7 @@ Disables the superscript and subscript.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextBadgeType-TEXT_BADGE_NONE = 0--><!--Device-TextBadgeType-TEXT_BADGE_NONE = 0-End-->
 
@@ -38,7 +38,7 @@ Enables the subscript.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextBadgeType-TEXT_SUBSCRIPT = 2--><!--Device-TextBadgeType-TEXT_SUBSCRIPT = 2-End-->
 
@@ -54,7 +54,7 @@ Enables the superscript.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextBadgeType-TEXT_SUPERSCRIPT = 1--><!--Device-TextBadgeType-TEXT_SUPERSCRIPT = 1-End-->
 

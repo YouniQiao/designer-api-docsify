@@ -371,7 +371,7 @@ on(type: 'volumeChange', callback: Callback<VolumeEvent>): void
 > **说明：** 
 > 
 > 从 API version 8 开始支持，从 API version 9 开始废弃，建议使用AudioVolumeManager中的
-> [on('volumeChange')](arkts-audio-audio-audiovolumemanager-i.md#onvolumechange)替代。
+> on('volumeChange')替代。
 > 监听系统音量变化事件（当系统音量发生变化时触发）。使用callback异步回调。
 > 目前此订阅接口在单进程多AudioManager实例的使用场景下，仅最后一个实例的订阅生效，其他实例的订阅会被覆盖（即使最后一个实例没有进行订阅），因此推荐使用单一AudioManager实例进行开发。
 
@@ -418,7 +418,7 @@ on(type: 'ringerModeChange', callback: Callback<AudioRingMode>): void
 > **说明：** 
 > 
 > 从 API version 8 开始支持，从 API version 9 开始废弃，建议使用AudioVolumeGroupManager中的
-> [on('ringerModeChange')](arkts-audio-audio-audiovolumegroupmanager-i.md#onringermodechange)替代。
+> on('ringerModeChange')替代。
 
 **起始版本：** 8
 

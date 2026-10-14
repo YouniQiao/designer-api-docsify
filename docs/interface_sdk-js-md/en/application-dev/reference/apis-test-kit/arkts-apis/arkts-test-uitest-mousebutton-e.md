@@ -24,7 +24,7 @@ Left button on the mouse.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0--><!--Device-MouseButton-MOUSE_BUTTON_LEFT = 0-End-->
 
@@ -42,7 +42,7 @@ MIDDLE button on the mouse.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2--><!--Device-MouseButton-MOUSE_BUTTON_MIDDLE = 2-End-->
 
@@ -60,7 +60,7 @@ Right button on the mouse.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1--><!--Device-MouseButton-MOUSE_BUTTON_RIGHT = 1-End-->
 

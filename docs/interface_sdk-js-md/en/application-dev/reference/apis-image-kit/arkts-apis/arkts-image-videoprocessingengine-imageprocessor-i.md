@@ -30,7 +30,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Since:** 18
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -85,7 +85,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Since:** 18
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 <!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>--><!--Device-ImageProcessor-enhanceDetail(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): Promise<image.PixelMap>-End-->
 
@@ -139,7 +139,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Since:** 18
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, width: int, height: int, level?: QualityLevel): image.PixelMap-End-->
 
@@ -195,7 +195,7 @@ The function generate the destinationImage from sourceImage with necessary scali
 
 **Since:** 18
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 18.
+**Widget capability:** This API can be used in ArkTS widgets since API version 18.
 
 <!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap--><!--Device-ImageProcessor-enhanceDetailSync(sourceImage: image.PixelMap, scale: double, level?: QualityLevel): image.PixelMap-End-->
 

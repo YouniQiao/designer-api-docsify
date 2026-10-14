@@ -22,7 +22,7 @@ CAMERA_SWITCH = 302
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302--><!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302-End-->
 
@@ -38,7 +38,7 @@ HANG_UP_BUTTON = 301
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
 
@@ -54,7 +54,7 @@ MICROPHONE_SWITCH = 304
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304--><!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304-End-->
 
@@ -70,7 +70,7 @@ MUTE_SWITCH = 303
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
 

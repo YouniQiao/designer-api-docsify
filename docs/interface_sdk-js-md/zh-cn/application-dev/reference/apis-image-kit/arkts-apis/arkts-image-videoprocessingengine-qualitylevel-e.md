@@ -4,7 +4,7 @@
 enum QualityLevel
 ```
 
-细节增强的处理质量等级。@enum {int}
+细节增强的处理质量等级。
 
 **起始版本：** 18
 
@@ -22,7 +22,7 @@ HIGH = 3
 
 **起始版本：** 18
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-QualityLevel-HIGH = 3--><!--Device-QualityLevel-HIGH = 3-End-->
 
@@ -38,7 +38,7 @@ LOW = 1
 
 **起始版本：** 18
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-QualityLevel-LOW = 1--><!--Device-QualityLevel-LOW = 1-End-->
 
@@ -54,7 +54,7 @@ MEDIUM = 2
 
 **起始版本：** 18
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-QualityLevel-MEDIUM = 2--><!--Device-QualityLevel-MEDIUM = 2-End-->
 
@@ -70,7 +70,7 @@ NONE = 0
 
 **起始版本：** 18
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本18开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-QualityLevel-NONE = 0--><!--Device-QualityLevel-NONE = 0-End-->
 

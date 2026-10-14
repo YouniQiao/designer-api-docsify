@@ -26,7 +26,7 @@ Searching for recommended words by time and location.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_GEO = 1--><!--Device-SearchSuggestionType-TIME_GEO = 1-End-->
 
@@ -46,7 +46,7 @@ Searching for recommended words by time, location, and label.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0--><!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0-End-->
 
@@ -66,7 +66,7 @@ Searching for recommended words by time and label.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_LABEL = 2--><!--Device-SearchSuggestionType-TIME_LABEL = 2-End-->
 
@@ -86,7 +86,7 @@ Searching for recommended words by time and people.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE = 6--><!--Device-SearchSuggestionType-TIME_PEOPLE = 6-End-->
 
@@ -106,7 +106,7 @@ Searching for recommended words by time, people and label.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4-End-->
 
@@ -126,7 +126,7 @@ Searching for recommended words by time, people, location and label.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3-End-->
 
@@ -146,7 +146,7 @@ Searching for recommended words by time, people and label.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5--><!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5-End-->
 

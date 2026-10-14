@@ -24,7 +24,7 @@ Module name of the AbilityStage object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityStageMonitor-moduleName: string--><!--Device-AbilityStageMonitor-moduleName: string-End-->
 
@@ -42,7 +42,7 @@ Source path of the AbilityStage object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityStageMonitor-srcEntrance: string--><!--Device-AbilityStageMonitor-srcEntrance: string-End-->
 

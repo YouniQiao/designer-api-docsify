@@ -27,7 +27,7 @@ import { windowAnimationManager } from '@kit.ArkUI';
 | --- | --- |
 | [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation1) | Minimize the window target with animation. |
 | [minimizeWindowWithAnimation](arkts-arkui-windowanimationmanager-minimizewindowwithanimation-f-sys.md#minimizewindowwithanimation2) | Minimize the window target with animation. |
-| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md) | Set the window animation controller. |
+| [setController](arkts-arkui-windowanimationmanager-setcontroller-f-sys.md#setcontroller) | Set the window animation controller. |
 <!--DelEnd-->
 
 <!--Del-->

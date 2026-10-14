@@ -32,7 +32,7 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void--><!--Device-Mac-doFinal(callback: AsyncCallback<DataBlob>): void-End-->
 
@@ -57,6 +57,8 @@ doFinal(callback: AsyncCallback<DataBlob>): void
 
 此外，更多HMAC的完整示例可参考开发指导中[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
+ArkTS示例：
+
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
@@ -78,6 +80,111 @@ function hmacByCallback() {
 }
 ```
 
+JS示例：
+
+在Lite Wearable侧HMAC消息认证码支持的摘要算法只有SHA256。
+
+下述样例以摘要算法为SHA256，对称算法为HMAC为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="HmacTest">Hmac异步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+let plainText = "hmacTestMessage";
+ 
+function hmacTest() {
+  try {
+      let hmacSpec = { algName: 'HMAC', mdName: 'SHA256' };
+      let keyData = StringToUint8Array("12345678abcdefgh");
+      let mac = cryptoFramework.createMac(hmacSpec);
+      console.info('createMac ' + typeof mac);
+  
+      let symKeyGenerator = cryptoFramework.createSymKeyGenerator('HMAC');
+      symKeyGenerator.convertKey({ data: keyData }, function (err, symKey) {
+          if (err) {
+              console.error('convertKey failed. Code: ' + err.code + " : " + err.message);
+              return;
+          }
+          mac.init(symKey, function (err) {
+              if (err) {
+                  console.error('Mac init failed. Code: ' + err.code + " : " + err.message);
+                  return;
+              }
+              mac.update({ data: StringToUint8Array(plainText) }, function (err) {
+                  if (err) {
+                      console.error('Mac update failed. Code: ' + err.code + " : " + err.message);
+                      return;
+                  }
+                  mac.doFinal(function (err, output) {
+                      if (err) {
+                          console.error('Mac doFinal failed. Code: ' + err.code + " : " + err.message);
+                      } else {
+                          console.info('Mac doFinal successfully: ' + output.data);
+                          console.info('Mac len: ' + mac.getMacLength());
+                      }
+                  })
+              })
+          })
+      })
+    } catch (error) {
+        console.error(`hmacTest failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    HmacTest() {
+        hmacTest();
+    }
+};
+```
+
 <a id="dofinal2"></a>
 
 ## doFinal
@@ -90,7 +197,7 @@ doFinal(): Promise<DataBlob>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-doFinal(): Promise<DataBlob>--><!--Device-Mac-doFinal(): Promise<DataBlob>-End-->
 
@@ -145,7 +252,7 @@ doFinalSync(): DataBlob
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-doFinalSync(): DataBlob--><!--Device-Mac-doFinalSync(): DataBlob-End-->
 
@@ -170,6 +277,8 @@ doFinalSync(): DataBlob
 
 此外，更多HMAC的完整示例可参考开发指导[消息认证码计算](../../../security/CryptoArchitectureKit/crypto-compute-hmac.md#分段hmac)。
 
+ArkTS示例：
+
 ```TypeScript
 import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 import { buffer } from '@kit.ArkTS';
@@ -187,6 +296,87 @@ function hmacBySync() {
 }
 ```
 
+JS示例：
+
+在Lite Wearable侧HMAC消息认证码支持的摘要算法只有SHA256。
+
+下述样例以摘要算法为SHA256，对称算法为HMAC为例。
+
+```TypeScript
+<div class="container">
+    <text class="TestTitle">Crypto测试</text>
+    <input class="btn" @click="HmacTestSync">Hmac同步测试</input>
+</div>
+```
+
+```TypeScript
+.container {
+  width: 100%;
+  height: 2000px;
+  align-items: center;
+  background-color: #fffefcfc;
+  flex-direction: column;
+  display: flex;
+}
+ 
+.TestTitle {
+  width: 300px;
+  height: 80px;
+  text-align: center;
+  background-color: white;
+  color: #fff61515;
+  font-size: 15fp;
+}
+ 
+.btn {
+  width: 90%;
+  height: 80px;
+  text-align: center;
+  background-color: #fff17f04;
+  margin-top: 3px;
+  color: white;
+  font-size: 20fp;
+}
+```
+
+```TypeScript
+import cryptoFramework from '@ohos.security.cryptoFramework';
+ 
+function StringToUint8Array(str) {
+    let arr = [];
+    for (let i = 0, j = str.length; i < j; ++i) {
+        arr.push(str.charCodeAt(i));
+    }
+    return new Uint8Array(arr);
+}
+ 
+function hmacTestSync() {
+  try {
+      let hmacSpec = { algName: 'HMAC', mdName: 'SHA256' };
+      let keyData = StringToUint8Array("12345678abcdefgh");
+      let message = "hmacTestMessage";
+      let mac = cryptoFramework.createMac(hmacSpec);
+      let symKeyGenerator = cryptoFramework.createSymKeyGenerator('HMAC');
+      let symKey = symKeyGenerator.convertKeySync({ data: keyData });
+      mac.initSync(symKey);
+      mac.updateSync({ data: StringToUint8Array(message) });
+      let macOutput = mac.doFinalSync();
+      console.info('Mac doFinal successfully: ' + macOutput.data);
+  } catch (error) {
+      console.error(`GenerateRandom random number failed. Code: ${error.code}, message: ${error.message}`);
+  }
+}
+ 
+export default {
+    data: {
+        result: ''
+    },
+    HmacTestSync() {
+        hmacTestSync();
+    }
+};
+```
+
 ## getMacLength
 
 ```TypeScript
@@ -197,7 +387,7 @@ getMacLength(): number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-getMacLength(): int--><!--Device-Mac-getMacLength(): int-End-->
 
@@ -267,7 +457,7 @@ init(key: SymKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void--><!--Device-Mac-init(key: SymKey, callback: AsyncCallback<void>): void-End-->
 
@@ -302,7 +492,7 @@ init(key: SymKey): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-init(key: SymKey): Promise<void>--><!--Device-Mac-init(key: SymKey): Promise<void>-End-->
 
@@ -343,7 +533,7 @@ initSync(key: SymKey): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-initSync(key: SymKey): void--><!--Device-Mac-initSync(key: SymKey): void-End-->
 
@@ -379,7 +569,7 @@ update(input: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Mac-update(input: DataBlob, callback: AsyncCallback<void>): void-End-->
 
@@ -418,7 +608,7 @@ update(input: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-update(input: DataBlob): Promise<void>--><!--Device-Mac-update(input: DataBlob): Promise<void>-End-->
 
@@ -464,7 +654,7 @@ updateSync(input: DataBlob): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-updateSync(input: DataBlob): void--><!--Device-Mac-updateSync(input: DataBlob): void-End-->
 
@@ -496,7 +686,7 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Mac-readonly algName: string--><!--Device-Mac-readonly algName: string-End-->
 

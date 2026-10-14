@@ -20,7 +20,7 @@ Requests a continuous task of a specific type. This API uses an asynchronous cal
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent, callback: AsyncCallback<void>): void-End-->
 
@@ -118,7 +118,7 @@ Requests a continuous task of a specific type. This API uses a promise to return
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgMode: BackgroundMode, wantAgent: WantAgent): Promise<void>-End-->
 
@@ -217,7 +217,7 @@ Requests continuous tasks of multiple types. This API uses a promise to return t
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, bgModes: string[], wantAgent: WantAgent): Promise<ContinuousTaskNotification>-End-->
 
@@ -364,7 +364,7 @@ If a continuous task requested via this API includes multiple task types (includ
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>--><!--Device-backgroundTaskManager-function startBackgroundRunning(context: Context, request: ContinuousTaskRequest): Promise<ContinuousTaskNotification>-End-->
 

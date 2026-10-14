@@ -28,7 +28,7 @@ destroy(): void
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-HttpRequest-destroy(): void--><!--Device-HttpRequest-destroy(): void-End-->
 
@@ -290,7 +290,7 @@ off(type: "headerReceive", callback?: AsyncCallback<Object>): void
 
 **废弃版本：** 8
 
-**替代接口：** [off_headersReceive](#offheadersreceive)
+**替代接口：** off_headersReceive
 
 <!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void--><!--Device-HttpRequest-off(type: "headerReceive", callback?: AsyncCallback<Object>): void-End-->
 
@@ -499,7 +499,7 @@ on(type: "headerReceive", callback: AsyncCallback<Object>): void
 
 **废弃版本：** 8
 
-**替代接口：** [on_headersReceive](#onheadersreceive)
+**替代接口：** on_headersReceive
 
 <!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void--><!--Device-HttpRequest-on(type: "headerReceive", callback: AsyncCallback<Object>): void-End-->
 
@@ -582,7 +582,7 @@ request(url: string, callback: AsyncCallback<HttpResponse>): void
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, callback: AsyncCallback<HttpResponse>): void-End-->
 
@@ -679,7 +679,7 @@ request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpRe
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void--><!--Device-HttpRequest-request(url: string, options: HttpRequestOptions, callback: AsyncCallback<HttpResponse>): void-End-->
 
@@ -800,7 +800,7 @@ request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>
 
 **需要权限：** ohos.permission.INTERNET
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>--><!--Device-HttpRequest-request(url: string, options?: HttpRequestOptions): Promise<HttpResponse>-End-->
 

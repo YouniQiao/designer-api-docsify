@@ -22,7 +22,7 @@ FORM_INVISIBLE = 2
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-VisibilityType-FORM_INVISIBLE = 2--><!--Device-VisibilityType-FORM_INVISIBLE = 2-End-->
 
@@ -38,7 +38,7 @@ FORM_VISIBLE = 1
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-VisibilityType-FORM_VISIBLE = 1--><!--Device-VisibilityType-FORM_VISIBLE = 1-End-->
 
@@ -54,7 +54,7 @@ UNKNOWN = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-VisibilityType-UNKNOWN = 0--><!--Device-VisibilityType-UNKNOWN = 0-End-->
 

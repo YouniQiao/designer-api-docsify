@@ -32,7 +32,7 @@ false：表示仅提供基础AgentCard。不传入时默认为false。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-AgentCapabilities-extendedAgentCard?: boolean--><!--Device-AgentCapabilities-extendedAgentCard?: boolean-End-->
 
@@ -52,7 +52,7 @@ Agent支持的协议扩展。用于存储自定义的扩展能力配置，格式
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-AgentCapabilities-extension?: string--><!--Device-AgentCapabilities-extension?: string-End-->
 
@@ -76,7 +76,7 @@ false：表示不支持，客户端需要轮询查询任务状态。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-AgentCapabilities-pushNotifications?: boolean--><!--Device-AgentCapabilities-pushNotifications?: boolean-End-->
 
@@ -100,7 +100,7 @@ false：表示不支持状态历史查询。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-AgentCapabilities-stateTransitionHistory?: boolean--><!--Device-AgentCapabilities-stateTransitionHistory?: boolean-End-->
 
@@ -124,7 +124,7 @@ false：表示不支持流式，仅支持一次性返回完整结果。启用流
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-AgentCapabilities-streaming?: boolean--><!--Device-AgentCapabilities-streaming?: boolean-End-->
 

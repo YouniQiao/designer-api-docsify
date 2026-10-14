@@ -24,7 +24,7 @@ fd: number
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RawFileDescriptor-fd: int--><!--Device-RawFileDescriptor-fd: int-End-->
 
@@ -42,7 +42,7 @@ length: number
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RawFileDescriptor-length: long--><!--Device-RawFileDescriptor-length: long-End-->
 
@@ -60,7 +60,7 @@ offset: number
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RawFileDescriptor-offset: long--><!--Device-RawFileDescriptor-offset: long-End-->
 

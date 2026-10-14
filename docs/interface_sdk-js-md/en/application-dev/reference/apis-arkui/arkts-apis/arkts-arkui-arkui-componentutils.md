@@ -8,8 +8,6 @@ The **componentUtils** module provides API for obtaining the coordinates and siz
 
 **Since:** 10
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace componentUtils--><!--Device-unnamed-declare namespace componentUtils-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -26,14 +24,14 @@ import { componentUtils } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md) | Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid) | Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. |
 
 <!--Del-->
 ### Functions(System API)
 
 | Name | Description |
 | --- | --- |
-| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md) | Get the image objects located within the selected area. |
+| [getItemsInShapePath](arkts-arkui-componentutils-getitemsinshapepath-f-sys.md#getitemsinshapepath) | Get the image objects located within the selected area. |
 <!--DelEnd-->
 
 ### Interfaces

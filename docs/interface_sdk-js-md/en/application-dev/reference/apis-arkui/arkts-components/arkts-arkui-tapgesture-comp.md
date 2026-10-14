@@ -8,7 +8,7 @@ Defines TapGesture Component.
 TapGesture(value?: TapGestureParameters)
 ```
 
-Creates a tap gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
+Creates a tap gesture. Inherits from [GestureInterface<T>](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
 
 When triggered by keyboard or gamepad input, the gesture event's [SourceTool](arkts-arkui-common-comp-sourcetool-e.md) is **Unknown**, and SourceType is **KEY** or **JOYSTICK**.
 

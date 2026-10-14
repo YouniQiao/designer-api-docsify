@@ -24,7 +24,7 @@ The WindowStage gains focus, for example, the state of the application window af
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-ACTIVE = 2--><!--Device-WindowStageEventType-ACTIVE = 2-End-->
 
@@ -42,7 +42,7 @@ The WindowStage is running in the background, for example, when the application 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-HIDDEN = 4--><!--Device-WindowStageEventType-HIDDEN = 4-End-->
 
@@ -60,7 +60,7 @@ The WindowStage loses focus, for example, the state of the window that was in fo
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-INACTIVE = 3--><!--Device-WindowStageEventType-INACTIVE = 3-End-->
 
@@ -78,7 +78,7 @@ The WindowStage is in the foreground but not interactive, for example, when the 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-PAUSED = 6--><!--Device-WindowStageEventType-PAUSED = 6-End-->
 
@@ -96,7 +96,7 @@ The WindowStage is in the foreground and interactive, for example, when the appl
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-RESUMED = 5--><!--Device-WindowStageEventType-RESUMED = 5-End-->
 
@@ -114,7 +114,7 @@ The WindowStage is shown in the foreground, for example, when launching from the
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-WindowStageEventType-SHOWN = 1--><!--Device-WindowStageEventType-SHOWN = 1-End-->
 

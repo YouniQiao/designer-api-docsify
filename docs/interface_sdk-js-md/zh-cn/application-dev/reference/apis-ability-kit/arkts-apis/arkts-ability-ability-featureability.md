@@ -4,8 +4,6 @@ FeatureAbility模块提供与用户进行交互的Ability的能力，包括启�
 
 **起始版本：** 6
 
-**模型约束：** 此接口仅可在FA模型下使用。
-
 <!--Device-unnamed-declare namespace featureAbility--><!--Device-unnamed-declare namespace featureAbility-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -22,11 +20,11 @@ import { featureAbility } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md) | 获取dataAbilityHelper对象。 |
-| [connectAbility](arkts-ability-featureability-connectability-f.md) | 将当前Ability与指定的ServiceAbility进行连接。 |
+| [acquireDataAbilityHelper](arkts-ability-featureability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) | 获取dataAbilityHelper对象。 |
+| [connectAbility](arkts-ability-featureability-connectability-f.md#connectability) | 将当前Ability与指定的ServiceAbility进行连接。 |
 | [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectability1) | 断开与指定ServiceAbility的连接。使用callback异步回调。 |
 | [disconnectAbility](arkts-ability-featureability-disconnectability-f.md#disconnectability2) | 断开与指定ServiceAbility的连接。使用Promise异步回调。 |
-| [getContext](arkts-ability-featureability-getcontext-f.md) | 获取应用上下文。 |
+| [getContext](arkts-ability-featureability-getcontext-f.md#getcontext) | 获取应用上下文。 |
 | [getWant](arkts-ability-featureability-getwant-f.md#getwant1) | 获取要拉起的Ability对应的Want。使用callback异步回调。 |
 | [getWant](arkts-ability-featureability-getwant-f.md#getwant2) | 获取要拉起的Ability对应的Want。使用Promise异步回调。 |
 | [getWindow](arkts-ability-featureability-getwindow-f.md#getwindow1) | 获取当前Ability对应的窗口。使用callback异步回调。 |

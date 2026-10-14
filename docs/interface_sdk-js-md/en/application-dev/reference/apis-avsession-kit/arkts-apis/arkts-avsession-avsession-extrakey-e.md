@@ -24,7 +24,7 @@ Key for DLNA CurrentURIMetadata extra parameter.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'--><!--Device-ExtraKey-DLNA_CURRENT_URI_METADATA = 'CurrentURIMetadata'-End-->
 
@@ -42,7 +42,7 @@ Key for DLNA DIDL-Lite extra parameter.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'--><!--Device-ExtraKey-DLNA_DIDL_LITE = 'DIDL-Lite'-End-->
 
@@ -60,7 +60,7 @@ Set required abilities to the system.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'--><!--Device-ExtraKey-REQUIRE_ABILITY_LIST = 'requireAbilityList'-End-->
 
@@ -78,7 +78,7 @@ Informs the system that the app supports URL casting.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'--><!--Device-ExtraKey-SUPPORT_URL_CASTING = 'url-cast'-End-->
 

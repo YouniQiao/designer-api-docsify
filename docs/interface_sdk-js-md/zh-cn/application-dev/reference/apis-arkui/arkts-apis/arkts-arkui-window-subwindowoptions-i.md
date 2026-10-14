@@ -30,7 +30,7 @@ decorEnabled: boolean
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-decorEnabled: boolean--><!--Device-SubWindowOptions-decorEnabled: boolean-End-->
 
@@ -48,7 +48,7 @@ isModal?: boolean
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-isModal?: boolean--><!--Device-SubWindowOptions-isModal?: boolean-End-->
 
@@ -68,7 +68,7 @@ maximizeSupported?: boolean
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-maximizeSupported?: boolean--><!--Device-SubWindowOptions-maximizeSupported?: boolean-End-->
 
@@ -86,7 +86,7 @@ modalityType?: ModalityType
 
 **起始版本：** 14
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-modalityType?: ModalityType--><!--Device-SubWindowOptions-modalityType?: ModalityType-End-->
 
@@ -106,7 +106,7 @@ outlineEnabled?: boolean
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-outlineEnabled?: boolean--><!--Device-SubWindowOptions-outlineEnabled?: boolean-End-->
 
@@ -124,7 +124,7 @@ title: string
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-title: string--><!--Device-SubWindowOptions-title: string-End-->
 
@@ -142,7 +142,7 @@ windowRect?: Rect
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-windowRect?: Rect--><!--Device-SubWindowOptions-windowRect?: Rect-End-->
 
@@ -160,7 +160,7 @@ zLevel?: number
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-zLevel?: int--><!--Device-SubWindowOptions-zLevel?: int-End-->
 
@@ -180,7 +180,7 @@ zLevelAboveParentLoosened?: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SubWindowOptions-zLevelAboveParentLoosened?: boolean--><!--Device-SubWindowOptions-zLevelAboveParentLoosened?: boolean-End-->
 

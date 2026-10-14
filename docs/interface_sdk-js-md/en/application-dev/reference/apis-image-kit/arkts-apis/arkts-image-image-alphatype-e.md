@@ -22,9 +22,9 @@ There is no alpha or the image is opaque.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-AlphaType-OPAQUE = 1--><!--Device-AlphaType-OPAQUE = 1-End-->
 
@@ -40,9 +40,9 @@ Premultiplied alpha.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-AlphaType-PREMUL = 2--><!--Device-AlphaType-PREMUL = 2-End-->
 
@@ -58,9 +58,9 @@ Unknown alpha type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-AlphaType-UNKNOWN = 0--><!--Device-AlphaType-UNKNOWN = 0-End-->
 
@@ -76,9 +76,9 @@ RGB non-premultiplied alpha.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 12.
+**Widget capability:** This API can be used in ArkTS widgets since API version 12.
 
 <!--Device-AlphaType-UNPREMUL = 3--><!--Device-AlphaType-UNPREMUL = 3-End-->
 

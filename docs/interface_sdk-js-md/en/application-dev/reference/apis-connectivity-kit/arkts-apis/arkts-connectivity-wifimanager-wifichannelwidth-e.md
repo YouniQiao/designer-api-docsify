@@ -4,7 +4,7 @@
 enum WifiChannelWidth
 ```
 
-Describes the wifi channel width. @enum { int }
+Describes the wifi channel width.
 
 **Since:** 9
 

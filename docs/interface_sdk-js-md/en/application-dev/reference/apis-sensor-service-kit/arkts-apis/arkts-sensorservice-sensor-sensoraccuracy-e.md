@@ -24,7 +24,7 @@ High-accuracy sensor data, which is of high accuracy and is applicable to scenar
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
 
@@ -40,7 +40,7 @@ Low-accuracy sensor data, which is of low accuracy and is applicable only to rou
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SensorAccuracy-ACCURACY_LOW = 1--><!--Device-SensorAccuracy-ACCURACY_LOW = 1-End-->
 
@@ -56,7 +56,7 @@ Medium-accuracy sensor data, which is of medium accuracy and is applicable to co
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2--><!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2-End-->
 
@@ -72,7 +72,7 @@ Unreliable sensor data, which has the lowest accuracy level. The data reliabilit
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
 

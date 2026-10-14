@@ -22,7 +22,7 @@ Initializing the audio renderer failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001-End-->
 
@@ -38,7 +38,7 @@ Unspecified errors related to the audio renderer.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000-End-->
 
@@ -54,7 +54,7 @@ The audio renderer fails to write data.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002-End-->
 
@@ -70,7 +70,7 @@ The playback position falls behind the live window.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002-End-->
 
@@ -86,7 +86,7 @@ Decoding the media samples failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003-End-->
 
@@ -102,7 +102,7 @@ The format of the content to decode exceeds the capabilities of the device.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004-End-->
 
@@ -118,7 +118,7 @@ The format of the content to decode is not supported.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005-End-->
 
@@ -134,7 +134,7 @@ Decoder initialization failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001-End-->
 
@@ -150,7 +150,7 @@ Decoder query failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002-End-->
 
@@ -166,7 +166,7 @@ Unspecified decoding error.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000-End-->
 
@@ -182,7 +182,7 @@ The action failed because either the media source device or the media sink devic
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105-End-->
 
@@ -198,7 +198,7 @@ The DRM-protected content to play is incompatible.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003-End-->
 
@@ -214,7 +214,7 @@ The device has revoked DRM privileges.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007-End-->
 
@@ -230,7 +230,7 @@ The operation is disallowed by the license policy.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005-End-->
 
@@ -246,7 +246,7 @@ Failed to obtain a license.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004-End-->
 
@@ -262,7 +262,7 @@ The DRM license being loaded into the open DRM session has expired.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008-End-->
 
@@ -278,7 +278,7 @@ An error occurs when the DRM processes the key response.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVIDE_KEY_RESPONSE_ERROR = 6616100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVIDE_KEY_RESPONSE_ERROR = 6616100-End-->
 
@@ -294,7 +294,7 @@ Device provisioning failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002-End-->
 
@@ -310,7 +310,7 @@ The chosen DRM protection scheme is not supported by the device.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001-End-->
 
@@ -326,7 +326,7 @@ An error occurs in the DRM system.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SYSTEM_ERROR = 6616006--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SYSTEM_ERROR = 6616006-End-->
 
@@ -342,7 +342,7 @@ Unspecified error related to DRM.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000-End-->
 
@@ -358,7 +358,7 @@ The position to seek to is out of the range of the media asset or the specified 
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102-End-->
 
@@ -374,7 +374,7 @@ The parameter is invalid, for example, the url is illegal to play.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106-End-->
 
@@ -390,7 +390,7 @@ The HTTP server returns an unexpected HTTP response status code.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_BAD_HTTP_STATUS = 6612004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_BAD_HTTP_STATUS = 6612004-End-->
 
@@ -406,7 +406,7 @@ Access to cleartext HTTP traffic is not allowed by the app's network security co
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007-End-->
 
@@ -422,7 +422,7 @@ This resource is already in use.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102-End-->
 
@@ -438,7 +438,7 @@ The content using the validity interval has expired.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103-End-->
 
@@ -454,7 +454,7 @@ The number of times this content has been used as requested has reached the maxi
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106-End-->
 
@@ -470,7 +470,7 @@ The file does not exist.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005-End-->
 
@@ -486,7 +486,7 @@ Invalid "Content-Type" HTTP header.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003-End-->
 
@@ -502,7 +502,7 @@ Network connection failure.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001-End-->
 
@@ -518,7 +518,7 @@ Network timeout.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002-End-->
 
@@ -534,7 +534,7 @@ An error occurs when sending packet from source device to sink device.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107-End-->
 
@@ -550,7 +550,7 @@ The media does not contain any contents that can be played.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100-End-->
 
@@ -566,7 +566,7 @@ No permission is granted to perform the IO operation.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006-End-->
 
@@ -582,7 +582,7 @@ The use of the allowed content cannot be verified.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105-End-->
 
@@ -598,7 +598,7 @@ The media cannot be read, for example, because of dust or scratches.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101-End-->
 
@@ -614,7 +614,7 @@ Reading data out of the data bound.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008-End-->
 
@@ -630,7 +630,7 @@ An unspecified input/output error occurs.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000-End-->
 
@@ -646,7 +646,7 @@ Using the requested content to play is not allowed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104-End-->
 
@@ -662,7 +662,7 @@ Allocation of memory failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107-End-->
 
@@ -678,7 +678,7 @@ Operation is not allowed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108-End-->
 
@@ -694,7 +694,7 @@ Parsing error associated with media container format bit streams.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001-End-->
 
@@ -710,7 +710,7 @@ An error occurs when attempting to extract a file with an unsupported media cont
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003-End-->
 
@@ -726,7 +726,7 @@ Parsing error associated with the media manifest.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002-End-->
 
@@ -742,7 +742,7 @@ Unsupported feature in the media manifest.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004-End-->
 
@@ -758,7 +758,7 @@ Unspecified error related to content parsing.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000-End-->
 
@@ -774,7 +774,7 @@ The specified playback mode is not supported.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103-End-->
 
@@ -790,7 +790,7 @@ The specified playback speed is not supported.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104-End-->
 
@@ -806,7 +806,7 @@ Cross-device data transmission is locked.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100-End-->
 
@@ -822,7 +822,7 @@ An unspecified error occurs in the remote player.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001-End-->
 
@@ -838,7 +838,7 @@ The runtime check failed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004-End-->
 
@@ -854,7 +854,7 @@ The specified seek mode is not supported.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101-End-->
 
@@ -870,7 +870,7 @@ The process of cast control times out.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003-End-->
 
@@ -886,7 +886,7 @@ The error code for cast control is unspecified.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000-End-->
 
@@ -902,7 +902,7 @@ Invalid session command.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_COMMAND_INVALID = 6600105--><!--Device-AVSessionErrorCode-ERR_CODE_COMMAND_INVALID = 6600105-End-->
 
@@ -918,7 +918,7 @@ The session controller does not exist.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 6600103--><!--Device-AVSessionErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 6600103-End-->
 
@@ -936,7 +936,7 @@ The desktop lyrics feature of this application is not enabled.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110--><!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110-End-->
 
@@ -954,7 +954,7 @@ The desktop lyrics feature is not supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111--><!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111-End-->
 
@@ -970,7 +970,7 @@ Device connecting failed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108--><!--Device-AVSessionErrorCode-ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108-End-->
 
@@ -986,7 +986,7 @@ Too many commands or events.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_MESSAGE_OVERLOAD = 6600107--><!--Device-AVSessionErrorCode-ERR_CODE_MESSAGE_OVERLOAD = 6600107-End-->
 
@@ -1002,7 +1002,7 @@ The remote session connection failed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_ERR = 6600104--><!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_ERR = 6600104-End-->
 
@@ -1018,7 +1018,7 @@ The remote connection is not established.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109--><!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109-End-->
 
@@ -1034,7 +1034,7 @@ Session service exception.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SERVICE_EXCEPTION = 6600101--><!--Device-AVSessionErrorCode-ERR_CODE_SERVICE_EXCEPTION = 6600101-End-->
 
@@ -1066,7 +1066,7 @@ The session is not activated.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SESSION_INACTIVE = 6600106--><!--Device-AVSessionErrorCode-ERR_CODE_SESSION_INACTIVE = 6600106-End-->
 
@@ -1082,7 +1082,7 @@ The session does not exist.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SESSION_NOT_EXIST = 6600102--><!--Device-AVSessionErrorCode-ERR_CODE_SESSION_NOT_EXIST = 6600102-End-->
 

@@ -4,8 +4,6 @@ This module provides the capability of managing self-distributed plugins for an 
 
 **Since:** 26.0.0
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace pluginBundleManager--><!--Device-unnamed-declare namespace pluginBundleManager-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
@@ -22,9 +20,9 @@ import { pluginBundleManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md) | Queries the information about all self-distributed plugins in the current app. This API uses a promise to return the result. |
-| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md) | Installs a self-distributed plugin (that is, a plugin distributed and managed by the app through its own channels) for the current app. This API uses a promise to return the result. |
-| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md) | Uninstalls the specified plugin installed by the current app through self-distribution. This API uses a promise to return the result. |
+| [getAllLocalPluginInfoForSelf](arkts-ability-pluginbundlemanager-getalllocalplugininfoforself-f.md#getalllocalplugininfoforself) | Queries the information about all self-distributed plugins in the current app. This API uses a promise to return the result. |
+| [installLocalPlugin](arkts-ability-pluginbundlemanager-installlocalplugin-f.md#installlocalplugin) | Installs a self-distributed plugin (that is, a plugin distributed and managed by the app through its own channels) for the current app. This API uses a promise to return the result. |
+| [uninstallLocalPlugin](arkts-ability-pluginbundlemanager-uninstalllocalplugin-f.md#uninstalllocalplugin) | Uninstalls the specified plugin installed by the current app through self-distribution. This API uses a promise to return the result. |
 
 ### Types
 

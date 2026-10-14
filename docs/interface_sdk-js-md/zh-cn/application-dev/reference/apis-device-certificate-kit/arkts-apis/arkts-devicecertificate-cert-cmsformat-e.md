@@ -22,7 +22,7 @@ DER格式。
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsFormat-DER = 1--><!--Device-CmsFormat-DER = 1-End-->
 
@@ -38,7 +38,7 @@ PEM格式。
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsFormat-PEM = 0--><!--Device-CmsFormat-PEM = 0-End-->
 

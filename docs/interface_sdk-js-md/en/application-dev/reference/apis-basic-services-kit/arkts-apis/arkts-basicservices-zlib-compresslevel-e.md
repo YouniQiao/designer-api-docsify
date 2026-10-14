@@ -22,7 +22,7 @@ Compression level 9 that gives the best compression.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_COMPRESSION = 9-End-->
 
@@ -38,7 +38,7 @@ Compression level 1 that gives the best speed.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1--><!--Device-CompressLevel-COMPRESS_LEVEL_BEST_SPEED = 1-End-->
 
@@ -54,7 +54,7 @@ Default compression level.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1--><!--Device-CompressLevel-COMPRESS_LEVEL_DEFAULT_COMPRESSION = -1-End-->
 
@@ -70,7 +70,7 @@ Compress level 0 that indicates uncompressed.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0--><!--Device-CompressLevel-COMPRESS_LEVEL_NO_COMPRESSION = 0-End-->
 

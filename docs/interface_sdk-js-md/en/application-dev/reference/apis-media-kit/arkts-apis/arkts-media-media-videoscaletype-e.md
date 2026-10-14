@@ -22,7 +22,7 @@ Default mode. The video will be stretched to fit the window.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT = 0--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT = 0-End-->
 
@@ -38,7 +38,7 @@ Maintains the video's aspect ratio, and scales to fill the shortest side of the 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT_CROP = 1--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_FIT_CROP = 1-End-->
 
@@ -54,7 +54,7 @@ Maintains the video's aspect ratio, and scales to fill the longer side of the wi
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2--><!--Device-VideoScaleType-VIDEO_SCALE_TYPE_SCALED_ASPECT = 2-End-->
 

@@ -26,7 +26,7 @@ DARK_COLOR_PICTURE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3--><!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3-End-->
 
@@ -46,7 +46,7 @@ EXTREMELY_DARK_COLOR_PICTURE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4--><!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4-End-->
 
@@ -66,7 +66,7 @@ EXTREMELY_FLOWERY_PICTURE = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
 
@@ -86,7 +86,7 @@ EXTREMELY_LIGHT_COLOR_PICTURE = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
 
@@ -106,7 +106,7 @@ FLOWERY_PICTURE = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-FLOWERY_PICTURE = 5--><!--Device-PictureLightDegree-FLOWERY_PICTURE = 5-End-->
 
@@ -126,7 +126,7 @@ LIGHT_COLOR_PICTURE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
 
@@ -146,7 +146,7 @@ UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本26.0.0开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
 

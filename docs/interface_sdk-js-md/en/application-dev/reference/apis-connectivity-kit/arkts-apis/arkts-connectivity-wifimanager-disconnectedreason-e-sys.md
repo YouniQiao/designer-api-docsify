@@ -4,7 +4,7 @@
 enum DisconnectedReason
 ```
 
-Wi-Fi disconnected reason. @enum { int }
+Wi-Fi disconnected reason.
 
 **Since:** 10
 

@@ -46,7 +46,7 @@ disableMathML?: boolean
 
 是否禁用MathML。true表示禁用，false表示不禁用。默认值：false。
 
-MathML是内核中一个相对陈旧的渲染模块，往往缺乏足够的自动化审计和模糊测试，容易成为侧信道攻击或属性注入跨站脚本攻击（Cross-Site Scripting，XSS）的跳板。建议禁用，禁用后`&lt;math&gt;`标签内容将无法正确解析展示，可能影响极少数未进行JS适配的科学网站公式排版。
+MathML是内核中一个相对陈旧的渲染模块，往往缺乏足够的自动化审计和模糊测试，容易成为侧信道攻击或属性注入跨站脚本攻击（Cross-Site Scripting，XSS）的跳板。建议禁用，禁用后`<math>`标签内容将无法正确解析展示，可能影响极少数未进行JS适配的科学网站公式排版。
 
 **类型：** boolean
 

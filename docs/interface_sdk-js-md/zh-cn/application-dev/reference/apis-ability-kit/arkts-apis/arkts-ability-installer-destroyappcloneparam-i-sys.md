@@ -26,7 +26,7 @@ import { installer } from '@kit.AbilityKit';
 parameters?: Array<Parameters>
 ```
 
-指定删除分身应用扩展参数，默认值为空，不支持CLI沙箱应用。Parameters.key取值支持：&lt;/br&gt; - "ohos.bms.param.clone.isKeepData"：从API version 21开始支持，若对应value值为"true"，表示删除分身时会保留分身的用户数据，否则不会保留分身的用户数据。
+指定删除分身应用扩展参数，默认值为空，不支持CLI沙箱应用。Parameters.key取值支持：</br> - "ohos.bms.param.clone.isKeepData"：从API version 21开始支持，若对应value值为"true"，表示删除分身时会保留分身的用户数据，否则不会保留分身的用户数据。
 
 **类型：** Array&lt;Parameters&gt;
 

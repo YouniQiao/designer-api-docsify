@@ -22,7 +22,7 @@ CAMERA_STATUS_APPEAR = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0--><!--Device-CameraStatus-CAMERA_STATUS_APPEAR = 0-End-->
 
@@ -38,7 +38,7 @@ CAMERA_STATUS_AVAILABLE = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2--><!--Device-CameraStatus-CAMERA_STATUS_AVAILABLE = 2-End-->
 
@@ -54,7 +54,7 @@ CAMERA_STATUS_DISAPPEAR = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1--><!--Device-CameraStatus-CAMERA_STATUS_DISAPPEAR = 1-End-->
 
@@ -70,7 +70,7 @@ CAMERA_STATUS_UNAVAILABLE = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3--><!--Device-CameraStatus-CAMERA_STATUS_UNAVAILABLE = 3-End-->
 

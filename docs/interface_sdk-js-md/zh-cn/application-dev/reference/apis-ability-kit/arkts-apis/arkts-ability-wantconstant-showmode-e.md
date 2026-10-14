@@ -22,7 +22,7 @@ EMBEDDED_FULL = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ShowMode-EMBEDDED_FULL = 1--><!--Device-ShowMode-EMBEDDED_FULL = 1-End-->
 
@@ -40,7 +40,7 @@ EMBEDDED_HALF = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-ShowMode-EMBEDDED_HALF = 2--><!--Device-ShowMode-EMBEDDED_HALF = 2-End-->
 
@@ -56,7 +56,7 @@ WINDOW = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
 

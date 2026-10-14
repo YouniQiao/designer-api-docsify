@@ -26,7 +26,7 @@ OAEP_MD_NAME_STR = 100
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CipherSpecItem-OAEP_MD_NAME_STR = 100--><!--Device-CipherSpecItem-OAEP_MD_NAME_STR = 100-End-->
 
@@ -44,7 +44,7 @@ OAEP_MGF1_MD_STR = 102
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CipherSpecItem-OAEP_MGF1_MD_STR = 102--><!--Device-CipherSpecItem-OAEP_MGF1_MD_STR = 102-End-->
 
@@ -62,7 +62,7 @@ OAEP_MGF1_PSRC_UINT8ARR = 103
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103--><!--Device-CipherSpecItem-OAEP_MGF1_PSRC_UINT8ARR = 103-End-->
 
@@ -80,7 +80,7 @@ OAEP_MGF_NAME_STR = 101
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101--><!--Device-CipherSpecItem-OAEP_MGF_NAME_STR = 101-End-->
 
@@ -98,7 +98,7 @@ SM2_MD_NAME_STR = 104
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CipherSpecItem-SM2_MD_NAME_STR = 104--><!--Device-CipherSpecItem-SM2_MD_NAME_STR = 104-End-->
 

@@ -22,7 +22,7 @@ Camera on/off component.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
 
@@ -38,7 +38,7 @@ Rewind component in video scenarios.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-FAST_BACKWARD = 4--><!--Device-PiPControlType-FAST_BACKWARD = 4-End-->
 
@@ -54,7 +54,7 @@ Fast-forward component in video scenarios.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
 
@@ -70,7 +70,7 @@ Hang-up component.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-HANG_UP_BUTTON = 5--><!--Device-PiPControlType-HANG_UP_BUTTON = 5-End-->
 
@@ -86,7 +86,7 @@ Microphone on/off component.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-MICROPHONE_SWITCH = 6--><!--Device-PiPControlType-MICROPHONE_SWITCH = 6-End-->
 
@@ -102,7 +102,7 @@ Mute/Unmute component.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-MUTE_SWITCH = 8--><!--Device-PiPControlType-MUTE_SWITCH = 8-End-->
 
@@ -118,7 +118,7 @@ Next component in video scenarios.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
 
@@ -134,7 +134,7 @@ Play/Pause component group for live video.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
 
@@ -150,7 +150,7 @@ Previous component in video scenarios.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
 

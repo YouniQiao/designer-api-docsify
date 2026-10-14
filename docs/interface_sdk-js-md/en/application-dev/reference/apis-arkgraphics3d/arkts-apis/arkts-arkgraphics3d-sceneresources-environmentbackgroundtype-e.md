@@ -4,7 +4,7 @@
 export enum EnvironmentBackgroundType
 ```
 
-Enumerates the environment background types, which are used to define how the background of a scene is presented. @enum { int }
+Enumerates the environment background types, which are used to define how the background of a scene is presented.
 
 **Since:** 12
 

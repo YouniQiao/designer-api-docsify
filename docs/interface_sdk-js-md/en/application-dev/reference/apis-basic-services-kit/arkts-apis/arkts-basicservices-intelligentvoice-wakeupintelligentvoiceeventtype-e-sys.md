@@ -4,7 +4,7 @@
 enum WakeupIntelligentVoiceEventType
 ```
 
-Enumerates wakeup intelligent voice event type. @enum {number}
+Enumerates wakeup intelligent voice event type.
 
 **Since:** 10
 

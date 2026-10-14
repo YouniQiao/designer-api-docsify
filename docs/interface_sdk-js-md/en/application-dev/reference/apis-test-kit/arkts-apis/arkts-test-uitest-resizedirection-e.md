@@ -24,7 +24,7 @@ Down.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-DOWN = 3--><!--Device-ResizeDirection-DOWN = 3-End-->
 
@@ -42,7 +42,7 @@ Left.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-LEFT = 0--><!--Device-ResizeDirection-LEFT = 0-End-->
 
@@ -60,7 +60,7 @@ Lower left.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-LEFT_DOWN = 5--><!--Device-ResizeDirection-LEFT_DOWN = 5-End-->
 
@@ -78,7 +78,7 @@ Upper left.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-LEFT_UP = 4--><!--Device-ResizeDirection-LEFT_UP = 4-End-->
 
@@ -96,7 +96,7 @@ Right.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-RIGHT = 1--><!--Device-ResizeDirection-RIGHT = 1-End-->
 
@@ -114,7 +114,7 @@ Lower right.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-RIGHT_DOWN = 7--><!--Device-ResizeDirection-RIGHT_DOWN = 7-End-->
 
@@ -132,7 +132,7 @@ Upper right.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-RIGHT_UP = 6--><!--Device-ResizeDirection-RIGHT_UP = 6-End-->
 
@@ -150,7 +150,7 @@ Up.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ResizeDirection-UP = 2--><!--Device-ResizeDirection-UP = 2-End-->
 

@@ -152,7 +152,7 @@ Sets the size of the **Select** component.
 controlSize(size: Optional<ControlSize>)
 ```
 
-Sets the size of the **Select** component. Compared with [controlSize](#controlsize1)&lt;sup&gt;12+&lt;/sup&gt;, this API supports the **undefined** type for **size** parameter.
+Sets the size of the **Select** component. Compared with [controlSize](#controlsize1)<sup>12+</sup>, this API supports the **undefined** type for **size** parameter.
 
 **Since:** 18
 
@@ -381,7 +381,7 @@ Sets the alignment between the drop-down button and the drop-down menu.
 menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 ```
 
-Sets the alignment between the drop-down button and the drop-down menu. Compared with [menuAlign](#menualign1)&lt;sup&gt;10+&lt;/sup&gt;, this API supports the **undefined** type for the **alignType** parameter.
+Sets the alignment between the drop-down button and the drop-down menu. Compared with [menuAlign](#menualign1)<sup>10+</sup>, this API supports the **undefined** type for the **alignType** parameter.
 
 **Since:** 18
 
@@ -438,7 +438,7 @@ Sets the background blur style of the drop-down menu.
 menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 ```
 
-Sets the background blur style of the drop-down menu. Compared with [menuBackgroundBlurStyle](#menubackgroundblurstyle1)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **style** parameter.
+Sets the background blur style of the drop-down menu. Compared with [menuBackgroundBlurStyle](#menubackgroundblurstyle1)<sup>11+</sup>, this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -518,7 +518,7 @@ Sets the background color of the drop-down menu.
 menuBackgroundColor(resColor: Optional<ResourceColor>)
 ```
 
-Sets the background color of the drop-down menu. Compared with [menuBackgroundColor](#menubackgroundcolor1)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **resColor** parameter.
+Sets the background color of the drop-down menu. Compared with [menuBackgroundColor](#menubackgroundcolor1)<sup>11+</sup>, this API supports the **undefined** type for the **resColor** parameter.
 
 **Since:** 18
 
@@ -598,7 +598,7 @@ Creates a content modifier for the drop-down menu. After **menuItemContentModifi
 menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>)
 ```
 
-Creates a content modifier for the drop-down menu. Compared with [menuItemContentModifier](#menuitemcontentmodifier1) &lt;sup&gt;12+&lt;/sup&gt;, this API supports the **undefined** type for **modifier** parameter. After **menuItemContentModifier** is applied, the drop-down menu content will be completely customized by the developer, and the **Select** component's attributes, including the divider, option color, and drop-down menu font color, will not take effect.
+Creates a content modifier for the drop-down menu. Compared with [menuItemContentModifier](#menuitemcontentmodifier1) <sup>12+</sup>, this API supports the **undefined** type for **modifier** parameter. After **menuItemContentModifier** is applied, the drop-down menu content will be completely customized by the developer, and the **Select** component's attributes, including the divider, option color, and drop-down menu font color, will not take effect.
 
 > **NOTE:** 
 > 
@@ -942,7 +942,7 @@ If the actual height of all drop-down menu options is less than the set height, 
 optionHeight(height: Optional<Dimension>)
 ```
 
-Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit. Compared with [optionHeight](#optionheight1)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **height** parameter.
+Sets the maximum height for the drop-down menu. Percentage values are not supported. The default maximum height is 80% of the available screen height, and any custom maximum height setting must not exceed this limit. Compared with [optionHeight](#optionheight1)<sup>11+</sup>, this API supports the **undefined** type for the **height** parameter.
 
 This attribute has no effect when set to abnormal values or zero.
 
@@ -1032,7 +1032,7 @@ The **Select** component maintains 16 vp spacing from both left and right screen
 optionWidth(width: Optional<Dimension | OptionWidthMode> )
 ```
 
-Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button. Compared with [optionWidth](#optionwidth1)&lt;sup&gt;11+&lt;/sup&gt;, this API supports the **undefined** type for the **width** parameter.
+Sets the width for the drop-down menu option. Percentage values are not supported. **OptionWidthMode** specifies whether to inherit the width of the drop-down button. Compared with [optionWidth](#optionwidth1)<sup>11+</sup>, this API supports the **undefined** type for the **width** parameter.
 
 If an invalid value or a value less than the minimum width of 56 vp is set, the attribute has no effect. In this case, the option width uses the default value, which is the width of two columns.
 

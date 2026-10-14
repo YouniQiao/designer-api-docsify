@@ -22,7 +22,7 @@ SEND_COMMON_EVENT
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-SEND_COMMON_EVENT--><!--Device-OperationType-SEND_COMMON_EVENT-End-->
 
@@ -38,7 +38,7 @@ START_ABILITIES
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-START_ABILITIES--><!--Device-OperationType-START_ABILITIES-End-->
 
@@ -54,7 +54,7 @@ START_ABILITY
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-START_ABILITY--><!--Device-OperationType-START_ABILITY-End-->
 
@@ -70,7 +70,7 @@ START_SERVICE
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-START_SERVICE--><!--Device-OperationType-START_SERVICE-End-->
 
@@ -86,7 +86,7 @@ UNKNOWN_TYPE = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-UNKNOWN_TYPE = 0--><!--Device-OperationType-UNKNOWN_TYPE = 0-End-->
 

@@ -22,7 +22,7 @@ AI_SUGGESTION = 7
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-AI_SUGGESTION = 7--><!--Device-FormLocation-AI_SUGGESTION = 7-End-->
 
@@ -38,7 +38,7 @@ DESKTOP = 0
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-DESKTOP = 0--><!--Device-FormLocation-DESKTOP = 0-End-->
 
@@ -54,7 +54,7 @@ FORM_CENTER = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-FORM_CENTER = 1--><!--Device-FormLocation-FORM_CENTER = 1-End-->
 
@@ -70,7 +70,7 @@ FORM_MANAGER = 2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-FORM_MANAGER = 2--><!--Device-FormLocation-FORM_MANAGER = 2-End-->
 
@@ -86,7 +86,7 @@ NEGATIVE_SCREEN = 3
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-NEGATIVE_SCREEN = 3--><!--Device-FormLocation-NEGATIVE_SCREEN = 3-End-->
 
@@ -102,7 +102,7 @@ SCREEN_LOCK = 6
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-SCREEN_LOCK = 6--><!--Device-FormLocation-SCREEN_LOCK = 6-End-->
 
@@ -120,7 +120,7 @@ STANDBY = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-FormLocation-STANDBY = 8--><!--Device-FormLocation-STANDBY = 8-End-->
 

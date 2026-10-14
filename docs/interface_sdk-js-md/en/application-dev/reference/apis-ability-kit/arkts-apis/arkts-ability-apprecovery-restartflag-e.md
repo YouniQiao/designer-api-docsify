@@ -22,7 +22,7 @@ The application is restarted in all cases.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RestartFlag-ALWAYS_RESTART = 0--><!--Device-RestartFlag-ALWAYS_RESTART = 0-End-->
 
@@ -38,7 +38,7 @@ The application is not restarted in any case.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
 
@@ -54,7 +54,7 @@ The application is restarted in the case of APP_FREEZE.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002--><!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002-End-->
 
@@ -72,7 +72,7 @@ Restart if the current app process encounters a cppcrash
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004--><!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004-End-->
 
@@ -88,7 +88,7 @@ The application is restarted in the case of JS_CRASH.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
 

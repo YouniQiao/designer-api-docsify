@@ -22,7 +22,7 @@ Image.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'--><!--Device-PhotoViewMIMETypes-IMAGE_TYPE = 'image/*'-End-->
 
@@ -38,7 +38,7 @@ Image and video.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'--><!--Device-PhotoViewMIMETypes-IMAGE_VIDEO_TYPE = '*/*'-End-->
 
@@ -54,7 +54,7 @@ Moving photo.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'--><!--Device-PhotoViewMIMETypes-MOVING_PHOTO_IMAGE_TYPE = 'image/movingPhoto'-End-->
 
@@ -70,7 +70,7 @@ Video.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'--><!--Device-PhotoViewMIMETypes-VIDEO_TYPE = 'video/*'-End-->
 

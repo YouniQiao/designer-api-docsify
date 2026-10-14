@@ -105,7 +105,7 @@ mesh(value: Array<any>, column: number, row: number)
 > **说明：** 
 > 
 > mesh只对shape传入pixelMap时生效，且效果作用于传入的pixelMap。与[绘制模块](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-graphics-drawing.md)的
-> [drawPixelMapMesh&lt;sup&gt;12+&lt;/sup&gt;](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh)效果一致，建议使用
+> [drawPixelMapMesh<sup>12+</sup>](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-drawing-canvas-c.md#drawpixelmapmesh)效果一致，建议使用
 > drawPixelMapMesh。
 
 **起始版本：** 8

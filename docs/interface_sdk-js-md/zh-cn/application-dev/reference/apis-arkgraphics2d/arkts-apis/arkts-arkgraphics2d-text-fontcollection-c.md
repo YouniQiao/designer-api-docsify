@@ -28,9 +28,9 @@ clearCaches(): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-clearCaches(): void--><!--Device-FontCollection-clearCaches(): void-End-->
 
@@ -64,7 +64,7 @@ static getGlobalInstance(): FontCollection
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontCollection-static getGlobalInstance(): FontCollection--><!--Device-FontCollection-static getGlobalInstance(): FontCollection-End-->
 
@@ -109,9 +109,9 @@ static getLocalInstance(): FontCollection
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-static getLocalInstance(): FontCollection--><!--Device-FontCollection-static getLocalInstance(): FontCollection-End-->
 
@@ -121,7 +121,7 @@ static getLocalInstance(): FontCollection
 
 | 类型 | 说明 |
 | --- | --- |
-| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 本地FontCollection实例对象，推荐卡片场景使用，可用于管理字体加载、卸载和排版等操作。@static |
+| [FontCollection](arkts-arkgraphics2d-text-fontcollection-c.md) | 本地FontCollection实例对象，推荐卡片场景使用，可用于管理字体加载、卸载和排版等操作。 |
 
 **示例**
 
@@ -140,9 +140,9 @@ loadFont(name: string, path: string | Resource): Promise<void>
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-loadFont(name: string, path: string | Resource): Promise<void>--><!--Device-FontCollection-loadFont(name: string, path: string | Resource): Promise<void>-End-->
 
@@ -204,9 +204,9 @@ loadFontSync(name: string, path: string | Resource): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-loadFontSync(name: string, path: string | Resource): void--><!--Device-FontCollection-loadFontSync(name: string, path: string | Resource): void-End-->
 
@@ -265,9 +265,9 @@ loadFontSyncWithCheck(name: string, path: string | Resource, index?: number): vo
 
 **起始版本：** 23
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void--><!--Device-FontCollection-loadFontSyncWithCheck(name: string, path: string | Resource, index?: int): void-End-->
 
@@ -343,9 +343,9 @@ loadFontWithCheck(name: string, path: string | Resource, index?: number): Promis
 
 **起始版本：** 23
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<void>--><!--Device-FontCollection-loadFontWithCheck(name: string, path: string | Resource, index?: int): Promise<void>-End-->
 
@@ -432,7 +432,7 @@ setParagraphCachesEnabled(enable: boolean): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontCollection-setParagraphCachesEnabled(enable: boolean): void--><!--Device-FontCollection-setParagraphCachesEnabled(enable: boolean): void-End-->
 
@@ -483,9 +483,9 @@ unloadFont(name: string): Promise<void>
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-unloadFont(name: string): Promise<void>--><!--Device-FontCollection-unloadFont(name: string): Promise<void>-End-->
 
@@ -553,9 +553,9 @@ unloadFontSync(name: string): void
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
-**卡片能力（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
+**卡片能力：** 从API版本22开始，该接口支持在ArkTS卡片中使用。
 
 <!--Device-FontCollection-unloadFontSync(name: string): void--><!--Device-FontCollection-unloadFontSync(name: string): void-End-->
 

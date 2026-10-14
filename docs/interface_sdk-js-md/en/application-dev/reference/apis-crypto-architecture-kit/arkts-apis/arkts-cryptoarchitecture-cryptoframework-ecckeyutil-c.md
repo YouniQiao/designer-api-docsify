@@ -36,7 +36,7 @@ Converts the specified point data into a **Point** object based on the curve nam
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point--><!--Device-ECCKeyUtil-static convertPoint(curveName: string, encodedPoint: Uint8Array): Point-End-->
 
@@ -88,7 +88,7 @@ Generates common parameters for an asymmetric key pair based on the specified na
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ECCKeyUtil-static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec--><!--Device-ECCKeyUtil-static genECCCommonParamsSpec(curveName: string): ECCCommonParamsSpec-End-->
 
@@ -140,7 +140,7 @@ Obtains the point data in the specified format from a **Point** object. Currentl
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array--><!--Device-ECCKeyUtil-static getEncodedPoint(curveName: string, point: Point, format: string): Uint8Array-End-->
 

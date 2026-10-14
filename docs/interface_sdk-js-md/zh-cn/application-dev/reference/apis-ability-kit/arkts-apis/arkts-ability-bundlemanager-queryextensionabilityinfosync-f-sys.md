@@ -145,7 +145,7 @@ function queryExtensionAbilityInfoSync(want: Want, extensionAbilityType: string,
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | 同步返回Array<[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)>。 |
 
 **错误码：**
 
@@ -247,7 +247,7 @@ function queryExtensionAbilityInfoSync(extensionAbilityType: string, extensionAb
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | 同步返回Array&lt;ExtensionAbilityInfo&gt;。 |
+| Array&lt;[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)&gt; | 同步返回Array<[ExtensionAbilityInfo](arkts-ability-bundlemanager-extensionabilityinfo-t.md)>。 |
 
 **错误码：**
 

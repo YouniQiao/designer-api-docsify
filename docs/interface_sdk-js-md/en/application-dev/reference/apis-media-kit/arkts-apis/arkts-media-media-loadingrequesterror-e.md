@@ -22,7 +22,7 @@ Returned by the client to indicate that the client does not have permission to r
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_DENIED = 4-End-->
 
@@ -38,7 +38,7 @@ Returned by the client to indicate that the access to the resource times out.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5--><!--Device-LoadingRequestError-LOADING_ERROR_ACCESS_TIMEOUT = 5-End-->
 
@@ -54,7 +54,7 @@ Returned by the client to indicate that authorization fails.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6--><!--Device-LoadingRequestError-LOADING_ERROR_AUTHORIZE_FAILED = 6-End-->
 
@@ -70,7 +70,7 @@ Returned by the client to indicate that the ID of the requested resource handle 
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3--><!--Device-LoadingRequestError-LOADING_ERROR_INVAID_HANDLE = 3-End-->
 
@@ -86,7 +86,7 @@ Returned by the client to indicate that the requested resource URL does not exis
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2--><!--Device-LoadingRequestError-LOADING_ERROR_NO_RESOURCE = 2-End-->
 
@@ -102,7 +102,7 @@ Returned by the client to indicate that the resource is not ready for access.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1--><!--Device-LoadingRequestError-LOADING_ERROR_NOT_READY = 1-End-->
 
@@ -118,7 +118,7 @@ Returned by the client to indicate that the end of the resource.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0--><!--Device-LoadingRequestError-LOADING_ERROR_SUCCESS = 0-End-->
 

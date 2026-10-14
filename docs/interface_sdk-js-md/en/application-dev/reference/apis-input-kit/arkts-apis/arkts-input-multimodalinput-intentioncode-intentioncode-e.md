@@ -22,7 +22,7 @@ Back
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_BACK = 7--><!--Device-IntentionCode-INTENTION_BACK = 7-End-->
 
@@ -38,7 +38,7 @@ Down
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_DOWN = 2--><!--Device-IntentionCode-INTENTION_DOWN = 2-End-->
 
@@ -54,7 +54,7 @@ Escape
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_ESCAPE = 6--><!--Device-IntentionCode-INTENTION_ESCAPE = 6-End-->
 
@@ -70,7 +70,7 @@ Forward
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_FORWARD = 8--><!--Device-IntentionCode-INTENTION_FORWARD = 8-End-->
 
@@ -86,7 +86,7 @@ Left
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_LEFT = 3--><!--Device-IntentionCode-INTENTION_LEFT = 3-End-->
 
@@ -102,7 +102,7 @@ Menu
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_MENU = 9--><!--Device-IntentionCode-INTENTION_MENU = 9-End-->
 
@@ -118,7 +118,7 @@ Page down
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12--><!--Device-IntentionCode-INTENTION_PAGE_DOWN = 12-End-->
 
@@ -134,7 +134,7 @@ Page up
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_PAGE_UP = 11--><!--Device-IntentionCode-INTENTION_PAGE_UP = 11-End-->
 
@@ -150,7 +150,7 @@ Right
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_RIGHT = 4--><!--Device-IntentionCode-INTENTION_RIGHT = 4-End-->
 
@@ -166,7 +166,7 @@ Select
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_SELECT = 5--><!--Device-IntentionCode-INTENTION_SELECT = 5-End-->
 
@@ -182,7 +182,7 @@ Unknown intent
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_UNKNOWN = -1--><!--Device-IntentionCode-INTENTION_UNKNOWN = -1-End-->
 
@@ -198,7 +198,7 @@ Up
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_UP = 1--><!--Device-IntentionCode-INTENTION_UP = 1-End-->
 
@@ -214,7 +214,7 @@ Zoom in
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_ZOOM_IN = 14--><!--Device-IntentionCode-INTENTION_ZOOM_IN = 14-End-->
 
@@ -230,7 +230,7 @@ Zoom out
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13--><!--Device-IntentionCode-INTENTION_ZOOM_OUT = 13-End-->
 

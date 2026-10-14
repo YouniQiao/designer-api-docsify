@@ -39,13 +39,13 @@ iv: DataBlob
 
 - AES的CBC|CTR|OFB|CFB模式：iv长度为16字节。  
 - 3DES的CBC|OFB|CFB模式：iv长度为8字节。  
-- SM4&lt;sup&gt;10+&lt;/sup&gt;的CBC|CTR|OFB|CFB模式：iv长度为16字节。
+- SM4<sup>10+</sup>的CBC|CTR|OFB|CFB模式：iv长度为16字节。
 
 **类型：** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-IvParamsSpec-iv: DataBlob--><!--Device-IvParamsSpec-iv: DataBlob-End-->
 

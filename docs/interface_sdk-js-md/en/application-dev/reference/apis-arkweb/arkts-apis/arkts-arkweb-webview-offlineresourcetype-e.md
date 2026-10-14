@@ -18,7 +18,7 @@ Enumerates the offline resource types corresponding to the [OfflineResourceMap](
 CLASSIC_JS
 ```
 
-JavaScript resources loaded via the &lt;script src="" /&gt; tag.
+JavaScript resources loaded via the <script src="" /> tag.
 
 **Since:** 12
 
@@ -60,7 +60,7 @@ Resource of the image type.
 MODULE_JS
 ```
 
-JavaScript resources loaded via the &lt;script src="" type="module" /&gt; tag.
+JavaScript resources loaded via the <script src="" type="module" /> tag.
 
 **Since:** 12
 

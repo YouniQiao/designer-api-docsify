@@ -24,7 +24,7 @@ COMPACT = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-GridLevel-COMPACT = 2--><!--Device-GridLevel-COMPACT = 2-End-->
 
@@ -42,7 +42,7 @@ SPACIOUS = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-GridLevel-SPACIOUS = 0--><!--Device-GridLevel-SPACIOUS = 0-End-->
 
@@ -60,7 +60,7 @@ STANDARD = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-GridLevel-STANDARD = 1--><!--Device-GridLevel-STANDARD = 1-End-->
 

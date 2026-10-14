@@ -6,8 +6,6 @@ enum PlaybackState
 
 表示媒体资源的播放状态的枚举。
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->

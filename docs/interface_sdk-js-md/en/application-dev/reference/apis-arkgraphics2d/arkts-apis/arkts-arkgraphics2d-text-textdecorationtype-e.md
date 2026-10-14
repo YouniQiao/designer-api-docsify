@@ -22,7 +22,7 @@ A strikethrough is used for decoration.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationType-LINE_THROUGH = 4--><!--Device-TextDecorationType-LINE_THROUGH = 4-End-->
 
@@ -38,7 +38,7 @@ No decoration is used.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationType-NONE = 0--><!--Device-TextDecorationType-NONE = 0-End-->
 
@@ -54,7 +54,7 @@ An overline is used for decoration.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationType-OVERLINE = 2--><!--Device-TextDecorationType-OVERLINE = 2-End-->
 
@@ -70,7 +70,7 @@ An underline is used for decoration.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-TextDecorationType-UNDERLINE = 1--><!--Device-TextDecorationType-UNDERLINE = 1-End-->
 

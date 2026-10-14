@@ -22,7 +22,7 @@ GNSS = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationSourceType-GNSS = 1--><!--Device-LocationSourceType-GNSS = 1-End-->
 
@@ -38,7 +38,7 @@ INDOOR = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationSourceType-INDOOR = 3--><!--Device-LocationSourceType-INDOOR = 3-End-->
 
@@ -54,7 +54,7 @@ NETWORK = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationSourceType-NETWORK = 2--><!--Device-LocationSourceType-NETWORK = 2-End-->
 
@@ -70,7 +70,7 @@ RTK = 4
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationSourceType-RTK = 4--><!--Device-LocationSourceType-RTK = 4-End-->
 

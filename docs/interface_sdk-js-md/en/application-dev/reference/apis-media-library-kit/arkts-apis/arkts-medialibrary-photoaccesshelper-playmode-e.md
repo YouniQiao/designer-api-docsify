@@ -24,7 +24,7 @@ The automatic playback of the moving photo is supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlayMode-AUTO_PLAY = 1--><!--Device-PlayMode-AUTO_PLAY = 1-End-->
 
@@ -42,7 +42,7 @@ The automatic playback of the moving photo is not supported.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-PlayMode-DEFAULT = 0--><!--Device-PlayMode-DEFAULT = 0-End-->
 

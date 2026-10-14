@@ -40,7 +40,7 @@ load(uri: string, callback: AsyncCallback<number>): void
 
 通过callback异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
 
-该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
+该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](#load)或者[load(fd: number, offset: number, length: number): Promise\<number>](#load)实现。
 
 > **说明：** 
 > 
@@ -81,7 +81,7 @@ load(uri: string): Promise<number>
 
 通过Promise异步回调获取资源ID，入参URL通过获取文件fd生成以"fd://"开头的文件描述字符串。
 
-该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load)或者[load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load)实现。
+该方法不支持加载rawfile目录资源，需要通过[load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](#load)或者[load(fd: number, offset: number, length: number): Promise\<number>](#load)实现。
 
 > **说明：** 
 > 

@@ -21,8 +21,8 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [createAVAdsController](arkts-media-media-createavadscontroller-f.md) | Creates an ad playback controller associated with a player instance. This API uses a promise to return the result. |
-| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md) | Creates an offline download task manager instance. This API uses a promise to return the result. |
+| [createAVAdsController](arkts-media-media-createavadscontroller-f.md#createavadscontroller) | Creates an ad playback controller associated with a player instance. This API uses a promise to return the result. |
+| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md#createavdownloadermanager) | Creates an offline download task manager instance. This API uses a promise to return the result. |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator1) | Creates an AVImageGenerator instance. This API uses a promise to return the result. |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator3) | Creates an AVImageGenerator instance. This API uses an asynchronous callback to return the result. |
 | [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor1) | Creates an AVMetadataExtractor instance. This API uses a promise to return the result. |
@@ -31,17 +31,17 @@ import { media } from '@kit.MediaKit';
 | [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer3) | Creates an AVPlayer instance. This API uses a promise to return the result. |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder1) | Creates an AVRecorder instance. This API uses an asynchronous callback to return the result. |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder3) | Creates an AVRecorder instance. This API uses a promise to return the result. |
-| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md) | Creates an AVScreenCaptureRecorder instance. This API uses a promise to return the result. |
-| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md) | Creates an AVTranscoder instance. This API uses a promise to return the result. |
-| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md) | Creates a media source from a custom data source. |
-| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md) | Create a MediaSource object from the given directory. |
-| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md) | Creates a media source from file descriptor. |
-| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md) | Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported. |
-| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) | Creates a media source for streaming media to be pre-downloaded. |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder) | Creates an AVScreenCaptureRecorder instance. This API uses a promise to return the result. |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createavtranscoder) | Creates an AVTranscoder instance. This API uses a promise to return the result. |
+| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createmediasourcewithdatasource) | Creates a media source from a custom data source. |
+| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md#createmediasourcewithdirectory) | Create a MediaSource object from the given directory. |
+| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createmediasourcewithfd) | Creates a media source from file descriptor. |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createmediasourcewithstreamdata) | Creates a multi-bitrate media source for streaming media. Currently, only the HTTP-FLV multi-bitrate media source is supported. |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl) | Creates a media source for streaming media to be pre-downloaded. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool1) | Creates a SoundPool instance. This API uses an asynchronous callback to return the result. |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool3) | Creates a SoundPool instance. This API uses a promise to return the result. |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | Creates an AudioPlayer instance in synchronous mode. |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per device. |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createaudioplayer) | Creates an AudioPlayer instance in synchronous mode. |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) | Creates an AudioRecorder instance to control audio recording. Only one AudioRecorder instance can be created per device. |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) | Creates a **VideoPlayer** instance. This API uses an asynchronous callback to return the result. |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer2) | Creates a VideoPlayer instance. This API uses a promise to return the result. |
 
@@ -50,12 +50,12 @@ import { media } from '@kit.MediaKit';
 
 | Name | Description |
 | --- | --- |
-| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md) | Creates a **SoundPool** instance. This API uses a promise to return the result. |
+| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createparallelsoundpool) | Creates a **SoundPool** instance. This API uses a promise to return the result. |
 | [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder1) | The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance. |
 | [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder3) | The maintenance of this interface has been stopped since version api 9. Please use AVRecorder Creates an VideoRecorder instance. |
-| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md) | get Configurations which user can changes from AVScreenCapture server |
-| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md) | Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result. |
-| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md) | Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box. |
+| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getavscreencaptureconfigurableparameters) | get Configurations which user can changes from AVScreenCapture server |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getscreencapturemonitor) | Obtains a **ScreenCaptureMonitor** instance. This API uses a promise to return the result. |
+| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportavscreencaptureuserchoice) | Reports the user selection result in the screen capture privacy dialog box to the AVScreenCapture server to determine whether to start screen capture. Screen capture starts only when the user touches a button to continue the operation. This API is called by the system application that creates the dialog box. |
 <!--DelEnd-->
 
 ### Interfaces

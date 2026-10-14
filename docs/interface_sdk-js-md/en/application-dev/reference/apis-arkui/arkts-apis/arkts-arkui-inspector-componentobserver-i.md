@@ -91,7 +91,7 @@ Unregisters the child component drawing completion callback through this handle.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'drawChildren' | Yes | Event type. The value is fixed at **'drawChildren'**.<br> **drawChildren**: completion of child component drawing. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. The callback must be the same object as the one registered with the [on('drawChildren')&lt;sup&gt;20+&lt;/sup&gt;](#ondrawchildren) API to successfully unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. The callback must be the same object as the one registered with the [on('drawChildren')<sup>20+</sup>](#ondrawchildren) API to successfully unregister. |
 
 ## offDrawChildren
 
@@ -176,7 +176,7 @@ Unregisters the callback used to listen for the **layoutChildren** event. <br>To
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. The callback must be the same object as the one in the [onLayoutChildren&lt;sup&gt;23+&lt;/sup&gt;](#onlayoutchildren) API to successfully unregister. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback to unregister. If this parameter is not specified, all callbacks under this handle are unregistered. The callback must be the same object as the one in the [onLayoutChildren<sup>23+</sup>](#onlayoutchildren) API to successfully unregister. |
 
 **Examples**
 
@@ -328,7 +328,7 @@ Registers a child component drawing completion callback through ComponentObserve
 onDrawChildren(callback: Callback<number[]>): void
 ```
 
-Registers a callback used to listen for the **drawChildren** event through ComponentObserver. This API uses an asynchronous callback to return the result. Compared with [on('drawChildren')](#ondrawchildren), this API additionally returns the **uniqueId** information of the child components in the callback (**Callback&lt;number[]&gt;**), making it easier for you to locate specific child components. If you need to obtain child component identifiers, this API is recommended. If child component information is not required, either API can be used. <br>With the node where the event callback is currently registered being used as the root node, when the child component of the component is in the main tree of the UI component and completes drawing, this callback is triggered. When multiple **drawChildren** callbacks exist in the component tree, only the topmost callback will be triggered. After the topmost callback is canceled, other **drawChildren** callbacks will not take effect. After a callback is registered on the current node, changing its hierarchical position in the main tree of the UI component is not supported. If adjustment is needed, unregister the event callback first and then register it again.
+Registers a callback used to listen for the **drawChildren** event through ComponentObserver. This API uses an asynchronous callback to return the result. Compared with [on('drawChildren')](#ondrawchildren), this API additionally returns the **uniqueId** information of the child components in the callback (**Callback<number[]>**), making it easier for you to locate specific child components. If you need to obtain child component identifiers, this API is recommended. If child component information is not required, either API can be used. <br>With the node where the event callback is currently registered being used as the root node, when the child component of the component is in the main tree of the UI component and completes drawing, this callback is triggered. When multiple **drawChildren** callbacks exist in the component tree, only the topmost callback will be triggered. After the topmost callback is canceled, other **drawChildren** callbacks will not take effect. After a callback is registered on the current node, changing its hierarchical position in the main tree of the UI component is not supported. If adjustment is needed, unregister the event callback first and then register it again.
 
 **Since:** 24
 

@@ -31,7 +31,7 @@ import { formHost } from '@kit.FormKit';
 | [acquireFormData](arkts-form-formhost-acquireformdata-f-sys.md#acquireformdata2) | 请求卡片提供方数据。使用Promise异步回调。 |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate1) | 获取卡片状态。使用callback异步回调。 |
 | [acquireFormState](arkts-form-formhost-acquireformstate-f-sys.md#acquireformstate2) | 获取卡片状态。使用Promise异步回调。 |
-| [addForm](arkts-form-formhost-addform-f-sys.md) | Add a form. |
+| [addForm](arkts-form-formhost-addform-f-sys.md#addform) | Add a form. |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md#casttonormalform1) | 将指定的临时卡片转换为普通卡片。使用callback异步回调。 |
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md#casttonormalform2) | 将指定的临时卡片转换为普通卡片。使用Promise异步回调。 |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md#clearrouterproxy1) | 清除卡片跳转代理。使用callback异步回调。 |
@@ -46,13 +46,13 @@ import { formHost } from '@kit.FormKit';
 | [enableFormsUpdate](arkts-form-formhost-enableformsupdate-f-sys.md#enableformsupdate2) | 向卡片框架发送通知以使指定的卡片可以更新。该方法调用成功后，卡片刷新状态设置为使能，卡片可以接收来自卡片提供方的更新。使用Promise异步回调。 |
 | [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo1) | 获取设备上所有应用提供的卡片信息（不包含模板卡片）。使用callback异步回调。 |
 | [getAllFormsInfo](arkts-form-formhost-getallformsinfo-f-sys.md#getallformsinfo2) | 获取设备上所有应用提供的卡片信息（不包含模板卡片）。使用Promise异步回调。 |
-| [getAllTemplateFormsInfo](arkts-form-formhost-getalltemplateformsinfo-f-sys.md) | 获取设备上所有应用提供的模板卡片信息。使用Promise异步回调。 |
-| [getFormIdsByFormLocation](arkts-form-formhost-getformidsbyformlocation-f-sys.md) | 获取设备上指定卡片位置的卡片标识列表。使用Promise异步回调。 |
+| [getAllTemplateFormsInfo](arkts-form-formhost-getalltemplateformsinfo-f-sys.md#getalltemplateformsinfo) | 获取设备上所有应用提供的模板卡片信息。使用Promise异步回调。 |
+| [getFormIdsByFormLocation](arkts-form-formhost-getformidsbyformlocation-f-sys.md#getformidsbyformlocation) | 获取设备上指定卡片位置的卡片标识列表。使用Promise异步回调。 |
 | [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo1) | 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用callback异步回调。 |
 | [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo2) | 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用callback异步回调。 |
 | [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo3) | 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用Promise异步回调。 |
 | [getFormsInfo](arkts-form-formhost-getformsinfo-f-sys.md#getformsinfo4) | 获取设备上指定应用程序提供的卡片信息（不包含模板卡片）。使用Promise异步回调。 |
-| [getTemplateFormsInfo](arkts-form-formhost-gettemplateformsinfo-f-sys.md) | 获取设备上指定应用程序提供的模板卡片信息。使用Promise异步回调。 |
+| [getTemplateFormsInfo](arkts-form-formhost-gettemplateformsinfo-f-sys.md#gettemplateformsinfo) | 获取设备上指定应用程序提供的模板卡片信息。使用Promise异步回调。 |
 | [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready1) | 检查系统是否准备好。使用callback异步回调。 |
 | [isSystemReady](arkts-form-formhost-issystemready-f-sys.md#issystemready2) | 检查系统是否准备好。使用Promise异步回调。 |
 | [notifyFormsEnableUpdate](arkts-form-formhost-notifyformsenableupdate-f-sys.md#notifyformsenableupdate1) | 通知卡片是否启用更新状态。使用callback异步回调。 |
@@ -70,38 +70,38 @@ import { formHost } from '@kit.FormKit';
 | [off](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) | 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
 | [off](arkts-form-formhost-off-f-sys.md#offgetformrect) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
 | [off](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) | Cancels Listening to the event of get live form status. |
-| [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md) | 取消订阅删除卡片事件。使用callback异步回调。 |
-| [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md) | 取消订阅获取卡片参数事件。使用callback异步回调。 |
-| [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md) | 取消订阅模板卡片静态配置信息变化。使用callback异步回调。 |
-| [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md) | 取消订阅更新卡片配置事件。使用callback异步回调。 |
+| [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md#offdeleteformscallback) | 取消订阅删除卡片事件。使用callback异步回调。 |
+| [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md#offgetwantparamscallback) | 取消订阅获取卡片参数事件。使用callback异步回调。 |
+| [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md#offtemplateformdetailinfochange) | 取消订阅模板卡片静态配置信息变化。使用callback异步回调。 |
+| [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md#offupdateformsconfigcallback) | 取消订阅更新卡片配置事件。使用callback异步回调。 |
 | [on](arkts-form-formhost-on-f-sys.md#onformuninstall) | 订阅卡片卸载事件。使用callback异步回调。 |
 | [on](arkts-form-formhost-on-f-sys.md#onformoverflow) | 订阅互动卡片动效请求事件。使用callback异步回调。 |
 | [on](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) | 订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
 | [on](arkts-form-formhost-on-f-sys.md#ongetformrect) | 订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
 | [on](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) | Listens to the event of get live form status. |
-| [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md) | 订阅删除卡片事件。使用callback异步回调。 |
-| [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md) | 订阅获取卡片参数事件。使用callback异步回调。 |
-| [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md) | 订阅模板卡片静态配置信息变化。使用callback异步回调。 |
-| [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md) | 订阅更新卡片配置事件。使用callback异步回调。 |
+| [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md#ondeleteformscallback) | 订阅删除卡片事件。使用callback异步回调。 |
+| [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md#ongetwantparamscallback) | 订阅获取卡片参数事件。使用callback异步回调。 |
+| [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md#ontemplateformdetailinfochange) | 订阅模板卡片静态配置信息变化。使用callback异步回调。 |
+| [onUpdateFormsConfigCallback](arkts-form-formhost-onupdateformsconfigcallback-f-sys.md#onupdateformsconfigcallback) | 订阅更新卡片配置事件。使用callback异步回调。 |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms1) | 恢复被回收的卡片，并将它的状态更新为不可回收，如果卡片未被回收则只更新状态为不可回收。使用Promise异步回调。 |
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms2) | 恢复被回收的卡片，并将它的状态更新为不可回收。如果卡片未被回收，则只更新状态为不可回收。使用callback异步回调。 |
-| [recycleForms](arkts-form-formhost-recycleforms-f-sys.md) | 立即回收卡片内存。使用Promise异步回调。 |
-| [registerFormHostService](arkts-form-formhost-registerformhostservice-f-sys.md) | 注册卡片使用方服务信息。注册成功后，可用于跨设备卡片发布。使用Promise异步回调。 |
+| [recycleForms](arkts-form-formhost-recycleforms-f-sys.md#recycleforms) | 立即回收卡片内存。使用Promise异步回调。 |
+| [registerFormHostService](arkts-form-formhost-registerformhostservice-f-sys.md#registerformhostservice) | 注册卡片使用方服务信息。注册成功后，可用于跨设备卡片发布。使用Promise异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform1) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，但卡片管理器服务仍然保留有关该卡片的缓存信息和存储信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform2) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用callback异步回调。 |
 | [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform3) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用Promise异步回调。 |
 | [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform1) | 请求卡片更新。使用callback异步回调。 |
 | [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform2) | 请求卡片更新。使用Promise异步回调。 |
-| [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md) | 携带参数请求卡片更新。使用Promise异步回调。 |
+| [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md#requestformwithparams) | 携带参数请求卡片更新。使用Promise异步回调。 |
 | [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md#setformsrecyclable1) | 设置卡片可回收。使用Promise异步回调。 |
 | [setFormsRecyclable](arkts-form-formhost-setformsrecyclable-f-sys.md#setformsrecyclable2) | 设置卡片可回收。使用callback异步回调。 |
-| [setPublishFormResult](arkts-form-formhost-setpublishformresult-f-sys.md) | 设置卡片加桌结果。 |
+| [setPublishFormResult](arkts-form-formhost-setpublishformresult-f-sys.md#setpublishformresult) | 设置卡片加桌结果。 |
 | [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md#setrouterproxy1) | 设置卡片跳转代理。使用callback异步回调，返回卡片跳转所需要Want信息。 |
 | [setRouterProxy](arkts-form-formhost-setrouterproxy-f-sys.md#setrouterproxy2) | 设置卡片跳转代理。使用Promise异步回调，返回卡片跳转所需要Want信息。 |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform1) | 指定formId和远程设备Id进行卡片分享。使用callback异步回调。 |
 | [shareForm](arkts-form-formhost-shareform-f-sys.md#shareform2) | 指定formId和远程设备Id进行卡片分享。使用Promise异步回调。 |
-| [unregisterFormHostService](arkts-form-formhost-unregisterformhostservice-f-sys.md) | 注销卡片使用方服务信息。注销后，对应的卡片使用方服务不可用于跨设备卡片发布。使用Promise异步回调。 |
-| [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md) | 更新卡片位置。 |
-| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md) | 通知卡片管控状态更新。使用Promise异步回调。 |
-| [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md) | 调整卡片尺寸。 |
+| [unregisterFormHostService](arkts-form-formhost-unregisterformhostservice-f-sys.md#unregisterformhostservice) | 注销卡片使用方服务信息。注销后，对应的卡片使用方服务不可用于跨设备卡片发布。使用Promise异步回调。 |
+| [updateFormLocation](arkts-form-formhost-updateformlocation-f-sys.md#updateformlocation) | 更新卡片位置。 |
+| [updateFormLockedState](arkts-form-formhost-updateformlockedstate-f-sys.md#updateformlockedstate) | 通知卡片管控状态更新。使用Promise异步回调。 |
+| [updateFormSize](arkts-form-formhost-updateformsize-f-sys.md#updateformsize) | 调整卡片尺寸。 |
 <!--DelEnd-->

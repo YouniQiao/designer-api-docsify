@@ -29,7 +29,7 @@ import { installer } from '@kit.AbilityKit';
 | --- | --- |
 | [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller1) | 获取BundleInstaller对象。使用callback异步回调。 |
 | [getBundleInstaller](arkts-ability-installer-getbundleinstaller-f-sys.md#getbundleinstaller2) | 获取BundleInstaller对象。使用Promise异步回调。 |
-| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md) | 获取并返回BundleInstaller对象。接口调用失败时可能返回null，需校验返回值后使用。 |
+| [getBundleInstallerSync](arkts-ability-installer-getbundleinstallersync-f-sys.md#getbundleinstallersync) | 获取并返回BundleInstaller对象。接口调用失败时可能返回null，需校验返回值后使用。 |
 <!--DelEnd-->
 
 <!--Del-->

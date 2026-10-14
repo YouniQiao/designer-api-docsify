@@ -24,7 +24,7 @@ The recognized user matches the active OS user.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-UserRecognitionStatus-MATCH = 2--><!--Device-UserRecognitionStatus-MATCH = 2-End-->
 
@@ -42,7 +42,7 @@ The recognized user does not match the active OS user.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-UserRecognitionStatus-MISMATCH = 1--><!--Device-UserRecognitionStatus-MISMATCH = 1-End-->
 
@@ -60,7 +60,7 @@ Uncertain recognition status. It indicates that recognition is in progress or ha
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-UserRecognitionStatus-UNCERTAIN = 0--><!--Device-UserRecognitionStatus-UNCERTAIN = 0-End-->
 

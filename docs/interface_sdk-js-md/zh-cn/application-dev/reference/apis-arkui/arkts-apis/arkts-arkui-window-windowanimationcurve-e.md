@@ -24,7 +24,7 @@ CUBIC_BEZIER = 2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2--><!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2-End-->
 
@@ -44,7 +44,7 @@ INTERPOLATION_SPRING = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1--><!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1-End-->
 
@@ -64,7 +64,7 @@ LINEAR = 0
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowAnimationCurve-LINEAR = 0--><!--Device-WindowAnimationCurve-LINEAR = 0-End-->
 

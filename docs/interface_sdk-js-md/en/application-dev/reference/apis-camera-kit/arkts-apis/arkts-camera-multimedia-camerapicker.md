@@ -20,8 +20,8 @@ import { cameraPicker } from '@kit.CameraKit';
 
 | Name | Description |
 | --- | --- |
-| [isC2PASignatureSupported](arkts-camera-camerapicker-isc2pasignaturesupported-f.md) | Checks whether C2PA signature is supported. |
-| [pick](arkts-camera-camerapicker-pick-f.md) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
+| [isC2PASignatureSupported](arkts-camera-camerapicker-isc2pasignaturesupported-f.md#isc2pasignaturesupported) | Checks whether C2PA signature is supported. |
+| [pick](arkts-camera-camerapicker-pick-f.md#pick) | Starts the camera picker and enters the corresponding mode based on the media type. This API uses a promise to return the result. |
 
 ### Classes
 

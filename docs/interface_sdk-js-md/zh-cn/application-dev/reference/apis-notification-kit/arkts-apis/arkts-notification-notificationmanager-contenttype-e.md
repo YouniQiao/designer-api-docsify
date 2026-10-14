@@ -22,7 +22,7 @@ NOTIFICATION_CONTENT_BASIC_TEXT
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_BASIC_TEXT-End-->
 
@@ -38,7 +38,7 @@ NOTIFICATION_CONTENT_CONVERSATION
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION--><!--Device-ContentType-NOTIFICATION_CONTENT_CONVERSATION-End-->
 
@@ -54,7 +54,7 @@ NOTIFICATION_CONTENT_LIVE_VIEW
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_LIVE_VIEW-End-->
 
@@ -70,7 +70,7 @@ NOTIFICATION_CONTENT_LONG_TEXT
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT--><!--Device-ContentType-NOTIFICATION_CONTENT_LONG_TEXT-End-->
 
@@ -86,7 +86,7 @@ NOTIFICATION_CONTENT_MULTILINE
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE--><!--Device-ContentType-NOTIFICATION_CONTENT_MULTILINE-End-->
 
@@ -102,7 +102,7 @@ NOTIFICATION_CONTENT_PICTURE
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE--><!--Device-ContentType-NOTIFICATION_CONTENT_PICTURE-End-->
 
@@ -118,7 +118,7 @@ NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW--><!--Device-ContentType-NOTIFICATION_CONTENT_SYSTEM_LIVE_VIEW-End-->
 

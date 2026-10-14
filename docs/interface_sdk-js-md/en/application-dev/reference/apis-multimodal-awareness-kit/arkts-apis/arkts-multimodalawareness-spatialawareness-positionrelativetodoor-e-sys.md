@@ -6,8 +6,6 @@ export enum PositionRelativeToDoor
 
 Enum for identification result inside and outside the door
 
-@enum { int } PositionRelativeToDoor
-
 **Since:** 23
 
 <!--Device-spatialAwareness-export enum PositionRelativeToDoor--><!--Device-spatialAwareness-export enum PositionRelativeToDoor-End-->

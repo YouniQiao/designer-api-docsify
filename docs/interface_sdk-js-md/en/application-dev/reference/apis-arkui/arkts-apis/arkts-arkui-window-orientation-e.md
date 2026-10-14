@@ -22,7 +22,7 @@ Automatically rotates with the sensor to four orientations: portrait, landscape,
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Orientation-AUTO_ROTATION = 5--><!--Device-Orientation-AUTO_ROTATION = 5-End-->
 
@@ -38,7 +38,7 @@ Automatically rotates with the sensor to two orientations: landscape and reverse
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_LANDSCAPE = 7--><!--Device-Orientation-AUTO_ROTATION_LANDSCAPE = 7-End-->
 
@@ -54,7 +54,7 @@ Automatically rotates with the sensor to two orientations: landscape and reverse
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10--><!--Device-Orientation-AUTO_ROTATION_LANDSCAPE_RESTRICTED = 10-End-->
 
@@ -70,7 +70,7 @@ Automatically rotates with the sensor to two orientations: portrait and reverse 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_PORTRAIT = 6--><!--Device-Orientation-AUTO_ROTATION_PORTRAIT = 6-End-->
 
@@ -86,7 +86,7 @@ Automatically rotates with the sensor to two orientations: portrait and reverse 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 9--><!--Device-Orientation-AUTO_ROTATION_PORTRAIT_RESTRICTED = 9-End-->
 
@@ -102,7 +102,7 @@ Automatically rotates with the sensor to four orientations: portrait, landscape,
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_RESTRICTED = 8--><!--Device-Orientation-AUTO_ROTATION_RESTRICTED = 8-End-->
 
@@ -118,7 +118,7 @@ Automatically rotates with the sensor, under the restriction of the rotation swi
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-AUTO_ROTATION_UNSPECIFIED = 12--><!--Device-Orientation-AUTO_ROTATION_UNSPECIFIED = 12-End-->
 
@@ -134,7 +134,7 @@ Follows the orientation of the home screen, where the window will rotate if the 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-FOLLOW_DESKTOP = 17--><!--Device-Orientation-FOLLOW_DESKTOP = 17-End-->
 
@@ -150,7 +150,7 @@ Landscape.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-LANDSCAPE = 2--><!--Device-Orientation-LANDSCAPE = 2-End-->
 
@@ -166,7 +166,7 @@ Reverse landscape.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-LANDSCAPE_INVERTED = 4--><!--Device-Orientation-LANDSCAPE_INVERTED = 4-End-->
 
@@ -182,7 +182,7 @@ Locked mode, where the window orientation is consistent with the current screen 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-LOCKED = 11--><!--Device-Orientation-LOCKED = 11-End-->
 
@@ -198,7 +198,7 @@ Portrait.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Orientation-PORTRAIT = 1--><!--Device-Orientation-PORTRAIT = 1-End-->
 
@@ -214,7 +214,7 @@ Reverse portrait.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-PORTRAIT_INVERTED = 3--><!--Device-Orientation-PORTRAIT_INVERTED = 3-End-->
 
@@ -230,7 +230,7 @@ Unspecified. The orientation is determined by the system.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-UNSPECIFIED = 0--><!--Device-Orientation-UNSPECIFIED = 0-End-->
 
@@ -246,7 +246,7 @@ Temporarily rotates to landscape mode, and then automatically rotates with the s
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-USER_ROTATION_LANDSCAPE = 14--><!--Device-Orientation-USER_ROTATION_LANDSCAPE = 14-End-->
 
@@ -262,7 +262,7 @@ Temporarily rotates to reverse landscape mode, and then automatically rotates wi
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-USER_ROTATION_LANDSCAPE_INVERTED = 16--><!--Device-Orientation-USER_ROTATION_LANDSCAPE_INVERTED = 16-End-->
 
@@ -278,7 +278,7 @@ Temporarily rotates to portrait mode, and then automatically rotates with the se
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-USER_ROTATION_PORTRAIT = 13--><!--Device-Orientation-USER_ROTATION_PORTRAIT = 13-End-->
 
@@ -294,7 +294,7 @@ Temporarily rotates to reverse portrait mode, and then automatically rotates wit
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Orientation-USER_ROTATION_PORTRAIT_INVERTED = 15--><!--Device-Orientation-USER_ROTATION_PORTRAIT_INVERTED = 15-End-->
 

@@ -30,7 +30,7 @@ Adds data of a specified data type and content to the current data record. You c
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void--><!--Device-UnifiedRecord-addEntry(type: string, value: ValueType): void-End-->
 
@@ -90,7 +90,7 @@ Defines a constructor used to create a **UnfiedRecord** object.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UnifiedRecord-constructor()--><!--Device-UnifiedRecord-constructor()-End-->
 
@@ -120,7 +120,7 @@ If **value** is of the [Want](../../apis-ability-kit/arkts-apis/arkts-ability-ap
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UnifiedRecord-constructor(type: string, value: ValueType)--><!--Device-UnifiedRecord-constructor(type: string, value: ValueType)-End-->
 
@@ -186,7 +186,7 @@ Obtains all the data in the current data record.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>--><!--Device-UnifiedRecord-getEntries(): Record<string, ValueType>-End-->
 
@@ -259,7 +259,7 @@ Obtains data of the specified type from the data record.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UnifiedRecord-getEntry(type: string): ValueType--><!--Device-UnifiedRecord-getEntry(type: string): ValueType-End-->
 
@@ -345,7 +345,7 @@ Obtains the type of this **UnfiedRecord**. The data obtained by [getRecords](ark
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UnifiedRecord-getType(): string--><!--Device-UnifiedRecord-getType(): string-End-->
 
@@ -389,7 +389,7 @@ Obtains all the data types in the data record. This API can be called using the 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-UnifiedRecord-getTypes(): Array<string>--><!--Device-UnifiedRecord-getTypes(): Array<string>-End-->
 
@@ -457,7 +457,7 @@ Obtains the value of this data record.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UnifiedRecord-getValue(): ValueType--><!--Device-UnifiedRecord-getValue(): ValueType-End-->
 

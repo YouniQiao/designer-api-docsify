@@ -24,7 +24,7 @@ REASON_NEW_DEVICE_AVAILABLE = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamDeviceChangeReason-REASON_NEW_DEVICE_AVAILABLE = 1--><!--Device-AudioStreamDeviceChangeReason-REASON_NEW_DEVICE_AVAILABLE = 1-End-->
 
@@ -42,7 +42,7 @@ REASON_OLD_DEVICE_UNAVAILABLE = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamDeviceChangeReason-REASON_OLD_DEVICE_UNAVAILABLE = 2--><!--Device-AudioStreamDeviceChangeReason-REASON_OLD_DEVICE_UNAVAILABLE = 2-End-->
 
@@ -60,7 +60,7 @@ REASON_OVERRODE = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamDeviceChangeReason-REASON_OVERRODE = 3--><!--Device-AudioStreamDeviceChangeReason-REASON_OVERRODE = 3-End-->
 
@@ -106,7 +106,7 @@ REASON_UNKNOWN = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0--><!--Device-AudioStreamDeviceChangeReason-REASON_UNKNOWN = 0-End-->
 

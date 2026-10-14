@@ -8,8 +8,6 @@ webNativeMessagingExtensionManager模块是ArkWeb提供的Web原生消息扩展�
 
 **起始版本：** 21
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace webNativeMessagingExtensionManager--><!--Device-unnamed-declare namespace webNativeMessagingExtensionManager-End-->
 
 **系统能力：** SystemCapability.Web.Webview.Core
@@ -26,8 +24,8 @@ import { webNativeMessagingExtensionManager } from '@kit.ArkWeb';
 
 | 名称 | 说明 |
 | --- | --- |
-| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md) | 将当前Ability连接到指定的Web原生消息扩展Ability。 |
-| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md) | 断开指定Web原生消息扩展连接。 |
+| [connectNative](arkts-arkweb-webnativemessagingextensionmanager-connectnative-f.md#connectnative) | 将当前Ability连接到指定的Web原生消息扩展Ability。 |
+| [disconnectNative](arkts-arkweb-webnativemessagingextensionmanager-disconnectnative-f.md#disconnectnative) | 断开指定Web原生消息扩展连接。 |
 
 ### 接口
 

@@ -4,7 +4,7 @@
 enum EvaluationResultCode
 ```
 
-Enumerates evaluation result code. @enum {number}
+Enumerates evaluation result code.
 
 **Since:** 12
 

@@ -22,7 +22,7 @@ CONCURRENCY_DEFAULT = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0--><!--Device-AudioConcurrencyMode-CONCURRENCY_DEFAULT = 0-End-->
 
@@ -38,7 +38,7 @@ CONCURRENCY_DUCK_OTHERS = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2--><!--Device-AudioConcurrencyMode-CONCURRENCY_DUCK_OTHERS = 2-End-->
 
@@ -54,7 +54,7 @@ CONCURRENCY_MIX_WITH_OTHERS = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1--><!--Device-AudioConcurrencyMode-CONCURRENCY_MIX_WITH_OTHERS = 1-End-->
 
@@ -70,7 +70,7 @@ CONCURRENCY_PAUSE_OTHERS = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3--><!--Device-AudioConcurrencyMode-CONCURRENCY_PAUSE_OTHERS = 3-End-->
 

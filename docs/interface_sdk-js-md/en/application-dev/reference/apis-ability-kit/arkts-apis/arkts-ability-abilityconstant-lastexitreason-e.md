@@ -24,7 +24,7 @@ The ability exits due to [application freeze](../../../dfx/appfreeze-guidelines.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-APP_FREEZE = 5--><!--Device-LastExitReason-APP_FREEZE = 5-End-->
 
@@ -42,7 +42,7 @@ The ability exits due to [process crash](../../../dfx/cppcrash-guidelines.md).
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-CPP_CRASH = 3--><!--Device-LastExitReason-CPP_CRASH = 3-End-->
 
@@ -60,7 +60,7 @@ The ability exits due to a JS_ERROR fault triggered when an application has a JS
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-JS_ERROR = 4--><!--Device-LastExitReason-JS_ERROR = 4-End-->
 
@@ -80,7 +80,7 @@ Note: If the application process is forcibly terminated using methods not provid
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-NORMAL = 2--><!--Device-LastExitReason-NORMAL = 2-End-->
 
@@ -100,7 +100,7 @@ Note: This API will be deprecated. You are advised to use **RESOURCE_CONTROL** i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-PERFORMANCE_CONTROL = 6--><!--Device-LastExitReason-PERFORMANCE_CONTROL = 6-End-->
 
@@ -126,7 +126,7 @@ priority.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-RESOURCE_CONTROL = 7--><!--Device-LastExitReason-RESOURCE_CONTROL = 7-End-->
 
@@ -144,7 +144,7 @@ The ability exits because it receives a kill signal from the system.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LastExitReason-SIGNAL = 10--><!--Device-LastExitReason-SIGNAL = 10-End-->
 
@@ -162,7 +162,7 @@ Unknown reason.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-UNKNOWN = 0--><!--Device-LastExitReason-UNKNOWN = 0-End-->
 
@@ -180,7 +180,7 @@ The application exits due to an upgrade.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LastExitReason-UPGRADE = 8--><!--Device-LastExitReason-UPGRADE = 8-End-->
 
@@ -198,7 +198,7 @@ The ability exits because it receives a request from the multitasking center.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-LastExitReason-USER_REQUEST = 9--><!--Device-LastExitReason-USER_REQUEST = 9-End-->
 

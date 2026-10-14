@@ -8,7 +8,7 @@ type CombinedOptions<T extends ViewModel, Data> = object &
 
 Used for ide.
 
-@typedef { object & Options&lt;T, Data&gt; & ThisType&lt;T & ViewModel & Data&gt; } CombinedOptions&lt;T extends ViewModel, Data&gt;
+@typedef { object & Options<T, Data> & ThisType<T & ViewModel & Data> } CombinedOptions<T extends ViewModel, Data>
 
 **Since:** 4
 

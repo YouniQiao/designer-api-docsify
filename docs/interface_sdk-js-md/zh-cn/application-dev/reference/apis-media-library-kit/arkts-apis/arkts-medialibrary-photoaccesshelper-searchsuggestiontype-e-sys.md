@@ -26,7 +26,7 @@ TIME_GEO = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_GEO = 1--><!--Device-SearchSuggestionType-TIME_GEO = 1-End-->
 
@@ -46,7 +46,7 @@ TIME_GEO_LABEL = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0--><!--Device-SearchSuggestionType-TIME_GEO_LABEL = 0-End-->
 
@@ -66,7 +66,7 @@ TIME_LABEL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_LABEL = 2--><!--Device-SearchSuggestionType-TIME_LABEL = 2-End-->
 
@@ -86,7 +86,7 @@ TIME_PEOPLE = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE = 6--><!--Device-SearchSuggestionType-TIME_PEOPLE = 6-End-->
 
@@ -106,7 +106,7 @@ TIME_PEOPLE_GEO = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO = 4-End-->
 
@@ -126,7 +126,7 @@ TIME_PEOPLE_GEO_LABEL = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3--><!--Device-SearchSuggestionType-TIME_PEOPLE_GEO_LABEL = 3-End-->
 
@@ -146,7 +146,7 @@ TIME_PEOPLE_LABEL = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5--><!--Device-SearchSuggestionType-TIME_PEOPLE_LABEL = 5-End-->
 

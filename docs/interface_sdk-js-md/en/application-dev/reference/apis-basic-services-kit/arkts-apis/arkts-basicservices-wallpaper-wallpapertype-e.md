@@ -6,8 +6,6 @@ enum WallpaperType
 
 Indicates wallpaper type.
 
-@enum { int } WallpaperType
-
 **Since:** 7
 
 <!--Device-wallpaper-enum WallpaperType--><!--Device-wallpaper-enum WallpaperType-End-->

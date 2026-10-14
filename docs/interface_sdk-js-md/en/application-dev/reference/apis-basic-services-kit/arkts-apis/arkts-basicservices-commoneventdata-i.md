@@ -24,7 +24,7 @@ Bundle name of the common event publisher. The default value is an empty string.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventData-bundleName?: string--><!--Device-CommonEventData-bundleName?: string-End-->
 
@@ -44,7 +44,7 @@ Common event data received by the subscriber. The value of this field is the sam
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventData-code?: int--><!--Device-CommonEventData-code?: int-End-->
 
@@ -62,7 +62,7 @@ Common event data received by the subscriber. The data size cannot exceed 64 KB.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventData-data?: string--><!--Device-CommonEventData-data?: string-End-->
 
@@ -80,7 +80,7 @@ Name of the common event that is being received.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-CommonEventData-event: string--><!--Device-CommonEventData-event: string-End-->
 

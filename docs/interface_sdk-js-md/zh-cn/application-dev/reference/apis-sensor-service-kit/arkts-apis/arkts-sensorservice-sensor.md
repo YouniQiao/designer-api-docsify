@@ -60,12 +60,12 @@ import { sensor } from '@kit.SensorServiceKit';
 | [getRotationMatrix](arkts-sensorservice-sensor-getrotationmatrix-f.md#getrotationmatrix4) | 根据重力矢量和地磁矢量计算旋转矩阵。使用Promise异步回调。 |
 | [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist1) | 获取设备上的所有传感器信息。使用callback异步回调。如果需要同步获取传感器列表，请使用getSensorListSync。 |
 | [getSensorList](arkts-sensorservice-sensor-getsensorlist-f.md#getsensorlist2) | 获取设备上的所有传感器信息。使用Promise异步回调。 |
-| [getSensorListByDeviceSync](arkts-sensorservice-sensor-getsensorlistbydevicesync-f.md) | 同步获取设备的所有传感器信息。getSensorListByDeviceSync返回设备上所有传感器信息，getSingleSensorByDeviceSync返回指定单个传感器信息。 |
-| [getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md) | 获取设备上的所有传感器信息，使用同步方式返回结果。 |
+| [getSensorListByDeviceSync](arkts-sensorservice-sensor-getsensorlistbydevicesync-f.md#getsensorlistbydevicesync) | 同步获取设备的所有传感器信息。getSensorListByDeviceSync返回设备上所有传感器信息，getSingleSensorByDeviceSync返回指定单个传感器信息。 |
+| [getSensorListSync](arkts-sensorservice-sensor-getsensorlistsync-f.md#getsensorlistsync) | 获取设备上的所有传感器信息，使用同步方式返回结果。 |
 | [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor1) | 获取指定传感器类型的属性信息。使用callback异步回调。 |
 | [getSingleSensor](arkts-sensorservice-sensor-getsinglesensor-f.md#getsinglesensor2) | 获取指定类型的传感器信息。使用Promise异步回调。 |
-| [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md) | 同步获取指定设备和类型的传感器信息。如果存在外设且未指定设备ID，获取到的传感器将是所有符合指定传感器类型的本地和外设传感器。如果不存在外设，则仅获取本地的传感器。 |
-| [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md) | 获取指定类型的传感器信息，使用同步方式返回结果。 |
+| [getSingleSensorByDeviceSync](arkts-sensorservice-sensor-getsinglesensorbydevicesync-f.md#getsinglesensorbydevicesync) | 同步获取指定设备和类型的传感器信息。如果存在外设且未指定设备ID，获取到的传感器将是所有符合指定传感器类型的本地和外设传感器。如果不存在外设，则仅获取本地的传感器。 |
+| [getSingleSensorSync](arkts-sensorservice-sensor-getsinglesensorsync-f.md#getsinglesensorsync) | 获取指定类型的传感器信息，使用同步方式返回结果。 |
 | [off](arkts-sensorservice-sensor-off-f.md#off5) | 取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
 | [off](arkts-sensorservice-sensor-off-f.md#off6) | 取消订阅加速度传感器数据。当不再需要接收加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
 | [off](arkts-sensorservice-sensor-off-f.md#off7) | 取消订阅未校准加速度传感器数据。当不再需要接收未校准加速度传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |

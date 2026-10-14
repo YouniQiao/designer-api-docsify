@@ -30,7 +30,7 @@ Discriminates the light and dark degree of the picture. When the light and dark 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree--><!--Device-ColorPicker-discriminatePictureLightDegree(): PictureLightDegree-End-->
 
@@ -85,7 +85,7 @@ Obtains the proportion of fully transparent pixels with alpha=0 in the image.
 
 **Since:** 23
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 23.
+**Widget capability:** This API can be used in ArkTS widgets since API version 23.
 
 <!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double--><!--Device-ColorPicker-getAlphaZeroTransparentProportion(): double-End-->
 
@@ -146,7 +146,7 @@ Obtains the complexity degree of the image. When the complexity degree cannot be
 
 **Since:** 22
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 22.
+**Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
 <!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree--><!--Device-ColorPicker-getComplexityDegree(): PictureComplexityDegree-End-->
 
@@ -209,7 +209,7 @@ Generates a stronger immersion color that merges with the background color and i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-getDeepenImmersionColor(): Color--><!--Device-ColorPicker-getDeepenImmersionColor(): Color-End-->
 
@@ -266,7 +266,7 @@ Generates an immersive background color that creates an immersive visual effect,
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-getImmersiveBackgroundColor(): Color--><!--Device-ColorPicker-getImmersiveBackgroundColor(): Color-End-->
 
@@ -323,7 +323,7 @@ Generates an immersive foreground color that creates an immersive visual effect 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-getImmersiveForegroundColor(): Color--><!--Device-ColorPicker-getImmersiveForegroundColor(): Color-End-->
 
@@ -380,7 +380,7 @@ Obtains the Morandi shadow color from the dominant color of the image and writes
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-getMorandiShadowColor(): Color--><!--Device-ColorPicker-getMorandiShadowColor(): Color-End-->
 
@@ -437,7 +437,7 @@ Generates a reverse color based on the image brightness discrimination result, a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-ColorPicker-getReverseColor(): Color--><!--Device-ColorPicker-getReverseColor(): Color-End-->
 
@@ -492,7 +492,7 @@ Obtains the shade degree of the image. When the shade degree cannot be determine
 
 **Since:** 22
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 22.
+**Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
 <!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree--><!--Device-ColorPicker-getShadeDegree(): PictureShadeDegree-End-->
 
@@ -553,7 +553,7 @@ Synchronously returns the top proportion colors and their corresponding percenta
 
 **Since:** 22
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 22.
+**Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
 <!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>--><!--Device-ColorPicker-getTopProportionColorsAndPercentage(colorCount: int): Map<Color | null, double | null>-End-->
 

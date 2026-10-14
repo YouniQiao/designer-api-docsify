@@ -36,8 +36,8 @@ import { preferences } from '@kit.ArkData';
 | [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences2) | 获取Preferences实例，通过Options进行参数设置，使用callback异步回调。 |
 | [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences3) | 获取Preferences实例，通过name进行参数设置，使用Promise异步回调。 |
 | [getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences4) | 获取Preferences实例，通过Options进行参数设置，使用Promise异步回调。 |
-| [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md) | 获取Preferences实例，此为同步接口。 |
-| [isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md) | 判断当前平台是否支持传入的存储模式，此为同步接口。如果当前平台支持传入的存储模式时，该接口返回true；反之，返回false。 |
+| [getPreferencesSync](arkts-arkdata-preferences-getpreferencessync-f.md#getpreferencessync) | 获取Preferences实例，此为同步接口。 |
+| [isStorageTypeSupported](arkts-arkdata-preferences-isstoragetypesupported-f.md#isstoragetypesupported) | 判断当前平台是否支持传入的存储模式，此为同步接口。如果当前平台支持传入的存储模式时，该接口返回true；反之，返回false。 |
 | [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache1) | 从缓存中移除指定的Preferences实例，通过name进行参数设置，使用callback异步回调。 |
 | [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache2) | 从缓存中移除指定的Preferences实例，通过Options进行参数设置，使用callback异步回调。 |
 | [removePreferencesFromCache](arkts-arkdata-preferences-removepreferencesfromcache-f.md#removepreferencesfromcache3) | 从缓存中移除指定的Preferences实例，通过name进行参数设置，使用Promise异步回调。 |

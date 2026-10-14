@@ -515,7 +515,7 @@ Network ID. The value **0** indicates that there is no default network. The othe
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetHandle-netId: int--><!--Device-NetHandle-netId: int-End-->
 

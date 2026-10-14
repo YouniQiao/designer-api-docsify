@@ -30,7 +30,7 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-constructor()--><!--Device-AudioViewPicker-constructor()-End-->
 
@@ -54,7 +54,7 @@ A constructor used to create an **AudioViewPicker** instance. This constructor i
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-constructor(context: Context)--><!--Device-AudioViewPicker-constructor(context: Context)-End-->
 
@@ -106,7 +106,7 @@ Starts an **audioPicker** page (currently, a **documentPicker** page is displaye
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-save(option?: AudioSaveOptions): Promise<Array<string>>-End-->
 
@@ -252,7 +252,7 @@ Starts an **audioPicker** page for the user to select one or more audio clips. T
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>--><!--Device-AudioViewPicker-select(option?: AudioSelectOptions): Promise<Array<string>>-End-->
 

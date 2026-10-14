@@ -40,13 +40,13 @@ IV parameter for encryption/decryption. Common lengths are listed below:
 
 - In the CBC, CTR, OFB, or CFB mode of AES: The IV length is 16 bytes.  
 - In the CBC, OFB, or CFB mode of 3DES: The IV length is 8 bytes.  
-- In the CBC, CTR, OFB, or CFB mode of SM4&lt;sup&gt;10+&lt;/sup&gt;: The IV length is 16 bytes.
+- In the CBC, CTR, OFB, or CFB mode of SM4<sup>10+</sup>: The IV length is 16 bytes.
 
 **Type:** [DataBlob](arkts-cryptoarchitecture-cryptoframework-datablob-i.md)
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-IvParamsSpec-iv: DataBlob--><!--Device-IvParamsSpec-iv: DataBlob-End-->
 

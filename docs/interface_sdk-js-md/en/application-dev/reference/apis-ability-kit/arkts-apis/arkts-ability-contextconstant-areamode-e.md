@@ -24,7 +24,7 @@ Device-level encryption. Directories with this encryption level are accessible a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AreaMode-EL1 = 0--><!--Device-AreaMode-EL1 = 0-End-->
 
@@ -42,7 +42,7 @@ User-level encryption. Directories with this encryption level are accessible onl
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AreaMode-EL2 = 1--><!--Device-AreaMode-EL2 = 1-End-->
 
@@ -60,7 +60,7 @@ User-level encryption area. The file permissions in different scenarios are as f
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AreaMode-EL3 = 2--><!--Device-AreaMode-EL3 = 2-End-->
 
@@ -78,7 +78,7 @@ User-level encryption area. The file permissions in different scenarios are as f
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AreaMode-EL4 = 3--><!--Device-AreaMode-EL4 = 3-End-->
 
@@ -96,7 +96,7 @@ Application-level encryption area. The file permissions in different scenarios a
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AreaMode-EL5 = 4--><!--Device-AreaMode-EL5 = 4-End-->
 

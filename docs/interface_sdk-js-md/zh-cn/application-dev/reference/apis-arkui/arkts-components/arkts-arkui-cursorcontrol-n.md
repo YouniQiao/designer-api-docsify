@@ -8,8 +8,6 @@ declare namespace cursorControl
 
 **起始版本：** 11
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace cursorControl--><!--Device-unnamed-declare namespace cursorControl-End-->
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
@@ -20,8 +18,8 @@ declare namespace cursorControl
 
 | 名称 | 说明 |
 | --- | --- |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | 方法语句中可使用的全局接口，调用此接口可将鼠标光标恢复成默认箭头样式。 |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | 方法语句中可使用的全局接口，调用该接口可更改当前的鼠标光标样式。 |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md#restoredefault) | 方法语句中可使用的全局接口，调用此接口可将鼠标光标恢复成默认箭头样式。 |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md#setcursor) | 方法语句中可使用的全局接口，调用该接口可更改当前的鼠标光标样式。 |
 
 ## 示例
 
@@ -9438,7 +9436,7 @@ struct ContextMenuGridStyleExample {
 
 ### 示例1（获取鼠标事件相关参数）
 
-该示例通过按钮设置了鼠标事件，通过鼠标点击按钮可以触发[onMouse](#onmouse)事件，获取鼠标事件相关参数。从API version 15开始，可以获取鼠标事件[MouseEvent](#mouseevent对象说明)的rawDeltaX、rawDeltaY、pressedButtons等参数。
+该示例通过按钮设置了鼠标事件，通过鼠标点击按钮可以触发[onMouse](arkts-arkui-common-comp-commonmethod-c.md#onmouse)事件，获取鼠标事件相关参数。从API version 15开始，可以获取鼠标事件[MouseEvent](#mouseevent对象说明)的rawDeltaX、rawDeltaY、pressedButtons等参数。
 
 鼠标滚轮的处理请参考[轴事件示例](ts-universal-events-axis.md#示例)。
 

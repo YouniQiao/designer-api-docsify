@@ -31,7 +31,7 @@ Connects to this tag. Call this API to set up a connection before reading data f
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-connect(): void--><!--Device-TagSession-connect(): void-End-->
 
@@ -73,7 +73,7 @@ Obtains the maximum length of the data that can be sent to this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-getMaxTransmitSize(): int--><!--Device-TagSession-getMaxTransmitSize(): int-End-->
 
@@ -121,7 +121,7 @@ Obtains the timeout period for sending data to this tag, in milliseconds.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-getTimeout(): int--><!--Device-TagSession-getTimeout(): int-End-->
 
@@ -167,7 +167,7 @@ Checks whether the tag is connected. If you receive a message indicating that th
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-isConnected(): boolean--><!--Device-TagSession-isConnected(): boolean-End-->
 
@@ -213,7 +213,7 @@ Resets the connection to this tag.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-resetConnection(): void--><!--Device-TagSession-resetConnection(): void-End-->
 
@@ -255,7 +255,7 @@ Sets the maximum time allowed for sending data to this tag, in ms.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-setTimeout(timeout: int): void--><!--Device-TagSession-setTimeout(timeout: int): void-End-->
 
@@ -307,7 +307,7 @@ Sends data to the tag. This API uses a promise to return the result.
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-transmit(data: int[]): Promise<int[]>--><!--Device-TagSession-transmit(data: int[]): Promise<int[]>-End-->
 
@@ -383,7 +383,7 @@ Sends data to the tag. This API uses an asynchronous callback to return the resu
 
 **Required permissions:** ohos.permission.NFC_TAG
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void--><!--Device-TagSession-transmit(data: int[], callback: AsyncCallback<int[]>): void-End-->
 

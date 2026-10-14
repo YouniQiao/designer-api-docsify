@@ -24,43 +24,43 @@ import { sim } from '@kit.TelephonyKit';
 | [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md#getactivesimaccountinfolist2) | 获取激活SIM卡账户信息列表。使用Promise异步回调。 |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md#getcardtype1) | 获取指定卡槽SIM卡的卡类型。使用callback异步回调。 |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md#getcardtype2) | 获取指定卡槽SIM卡的卡类型。使用Promise异步回调。 |
-| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md) | 获取指定卡槽SIM卡的卡类型。 |
+| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md#getcardtypesync) | 获取指定卡槽SIM卡的卡类型。 |
 | [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md#getdefaultvoicesimid1) | 获取默认语音业务的SIM卡ID。使用callback异步回调。 |
 | [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md#getdefaultvoicesimid2) | 获取默认语音业务的SIM卡ID。使用Promise异步回调。 |
 | [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md#getdefaultvoiceslotid1) | 获取默认语音业务的卡槽ID。使用callback异步回调。 |
 | [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md#getdefaultvoiceslotid2) | 获取默认语音业务的卡槽ID。使用Promise异步回调。 |
 | [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md#getisocountrycodeforsim1) | 获取指定卡槽SIM卡的ISO国家码。使用callback异步回调。 |
 | [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md#getisocountrycodeforsim2) | 获取指定卡槽SIM卡的ISO国家码。使用Promise异步回调。 |
-| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md) | 获取指定卡槽SIM卡的ISO国家码。 |
-| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md) | 获取卡槽数量。 |
+| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md#getisocountrycodeforsimsync) | 获取指定卡槽SIM卡的ISO国家码。 |
+| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md#getmaxsimcount) | 获取卡槽数量。 |
 | [getOpKey](arkts-telephony-sim-getopkey-f.md#getopkey1) | 获取指定卡槽中SIM卡的opkey。使用callback异步回调。 |
 | [getOpKey](arkts-telephony-sim-getopkey-f.md#getopkey2) | 获取指定卡槽中SIM卡的opkey。使用Promise异步回调。 |
-| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md) | 获取指定卡槽中SIM卡的opkey。 |
+| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md#getopkeysync) | 获取指定卡槽中SIM卡的opkey。 |
 | [getOpName](arkts-telephony-sim-getopname-f.md#getopname1) | 获取指定卡槽中SIM卡的OpName。使用callback异步回调。 |
 | [getOpName](arkts-telephony-sim-getopname-f.md#getopname2) | 获取指定卡槽中SIM卡的OpName。使用Promise异步回调。 |
-| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | 获取指定卡槽中SIM卡的OpName。 |
+| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md#getopnamesync) | 获取指定卡槽中SIM卡的OpName。 |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo1) | 获取SIM卡账户信息。使用callback异步回调。 |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo2) | 获取SIM卡账户信息。使用Promise异步回调。 |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel1) | 查看卡槽ID和SIM卡的对应关系： |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel2) | 获取SIM卡的标签信息。使用Promise异步回调。 |
-| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | 通过传入SIM卡槽的ID，获取对应的SIM卡标签。 |
+| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md#getsimlabelsync) | 通过传入SIM卡槽的ID，获取对应的SIM卡标签。 |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric1) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。使用callback异步回调。 |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric2) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。使用Promise异步回调。 |
-| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。 |
+| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md#getsimoperatornumericsync) | 获取指定卡槽SIM卡的归属PLMN(Public Land Mobile Network)号。 |
 | [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn1) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用callback异步回调。 |
 | [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn2) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。使用Promise异步回调。 |
-| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。 |
+| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md#getsimspnsync) | 获取指定卡槽SIM卡的服务提供商名称(Service Provider Name，SPN)。 |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate1) | 获取指定卡槽的SIM卡状态。使用callback异步回调。 |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate2) | 获取指定卡槽的SIM卡状态。使用Promise异步回调。 |
-| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md) | 获取指定卡槽的SIM卡状态。 |
+| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md#getsimstatesync) | 获取指定卡槽的SIM卡状态。 |
 | [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md#hasoperatorprivileges1) | 检查应用(调用者)是否已被授予运营商权限。使用callback异步回调。 |
 | [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md#hasoperatorprivileges2) | 检查应用(调用者)是否已被授予运营商权限。使用Promise异步回调。 |
 | [hasSimCard](arkts-telephony-sim-hassimcard-f.md#hassimcard1) | 获取指定卡槽SIM卡是否插卡。使用callback异步回调。 |
 | [hasSimCard](arkts-telephony-sim-hassimcard-f.md#hassimcard2) | 获取指定卡槽SIM卡是否插卡。使用Promise异步回调。 |
-| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md) | 获取指定卡槽SIM卡是否插卡。 |
+| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md#hassimcardsync) | 获取指定卡槽SIM卡是否插卡。 |
 | [isSimActive](arkts-telephony-sim-issimactive-f.md#issimactive1) | 获取指定卡槽SIM卡是否激活。使用callback异步回调。 |
 | [isSimActive](arkts-telephony-sim-issimactive-f.md#issimactive2) | 获取指定卡槽SIM卡是否激活。使用Promise异步回调。 |
-| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md) | 获取指定卡槽SIM卡是否激活。 |
+| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md#issimactivesync) | 获取指定卡槽SIM卡是否激活。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -93,7 +93,7 @@ import { sim } from '@kit.TelephonyKit';
 | [getShowName](arkts-telephony-sim-getshowname-f-sys.md#getshowname2) | Gets the name of the SIM card in the specified slot. |
 | [getShowNumber](arkts-telephony-sim-getshownumber-f-sys.md#getshownumber1) | Get the SIM card number of the specified card slot. |
 | [getShowNumber](arkts-telephony-sim-getshownumber-f-sys.md#getshownumber2) | Get the SIM card number of the specified card slot. |
-| [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md) | Performs SIM card authentication. |
+| [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md#getsimauthentication) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid11) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid12) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid1) | Obtains the ICCID of the SIM card in a specified slot. |
@@ -104,7 +104,7 @@ import { sim } from '@kit.TelephonyKit';
 | [getVoiceMailIdentifier](arkts-telephony-sim-getvoicemailidentifier-f-sys.md#getvoicemailidentifier2) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |
 | [getVoiceMailNumber](arkts-telephony-sim-getvoicemailnumber-f-sys.md#getvoicemailnumber1) | Obtains the voice mailbox number of the SIM card in a specified slot. |
 | [getVoiceMailNumber](arkts-telephony-sim-getvoicemailnumber-f-sys.md#getvoicemailnumber2) | Obtains the voice mailbox number of the SIM card in a specified slot. |
-| [isOperatorSimCard](arkts-telephony-sim-isoperatorsimcard-f-sys.md) | Indicates whether the SIM card in a specified slot is a specified operator. |
+| [isOperatorSimCard](arkts-telephony-sim-isoperatorsimcard-f-sys.md#isoperatorsimcard) | Indicates whether the SIM card in a specified slot is a specified operator. |
 | [queryIccDiallingNumbers](arkts-telephony-sim-queryiccdiallingnumbers-f-sys.md#queryiccdiallingnumbers1) | Query dialing number information on SIM card. |
 | [queryIccDiallingNumbers](arkts-telephony-sim-queryiccdiallingnumbers-f-sys.md#queryiccdiallingnumbers2) | Query dialing number information on SIM card. |
 | [sendEnvelopeCmd](arkts-telephony-sim-sendenvelopecmd-f-sys.md#sendenvelopecmd1) | Send envelope command to SIM card. |
@@ -119,7 +119,7 @@ import { sim } from '@kit.TelephonyKit';
 | [setShowName](arkts-telephony-sim-setshowname-f-sys.md#setshowname2) | Set the SIM card display name of the specified card slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber1) | Set the SIM card number in the specified slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber2) | Set the SIM card number in the specified slot. |
-| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md) | 设置SIM卡标签索引。 |
+| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | 设置SIM卡标签索引。 |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo1) | Sets the voice mail information. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo2) | Sets the voice mail information. |
 | [unlockPin](arkts-telephony-sim-unlockpin-f-sys.md#unlockpin1) | Unlock the SIM card password of the specified card slot. |

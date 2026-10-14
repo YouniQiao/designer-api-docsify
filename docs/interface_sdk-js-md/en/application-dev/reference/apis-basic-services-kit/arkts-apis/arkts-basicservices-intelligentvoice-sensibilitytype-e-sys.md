@@ -4,7 +4,7 @@
 enum SensibilityType
 ```
 
-Enumerates sensibility type. @enum {number}
+Enumerates sensibility type.
 
 **Since:** 10
 

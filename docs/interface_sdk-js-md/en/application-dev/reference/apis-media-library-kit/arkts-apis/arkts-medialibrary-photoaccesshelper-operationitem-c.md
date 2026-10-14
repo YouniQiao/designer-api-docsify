@@ -38,7 +38,7 @@ This field is not involved in non-conditional predicates such as **and**, **or**
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationItem-field?: PhotoKeys--><!--Device-OperationItem-field?: PhotoKeys-End-->
 
@@ -58,7 +58,7 @@ Predicates.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationItem-operationType: OperationType--><!--Device-OperationItem-operationType: OperationType-End-->
 
@@ -82,7 +82,7 @@ The maximum length is 10; if exceeded, only the first 10 values are considered.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-OperationItem-value?: Array<OperationValueType>--><!--Device-OperationItem-value?: Array<OperationValueType>-End-->
 

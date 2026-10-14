@@ -4,7 +4,7 @@
 declare enum ModelType
 ```
 
-模型类型枚举@enum { number }
+模型类型枚举
 
 **起始版本：** 12
 

@@ -4,7 +4,7 @@
 enum ProxyMethod
 ```
 
-Wi-Fi Proxy method. @enum { int }
+Wi-Fi Proxy method.
 
 **Since:** 10
 

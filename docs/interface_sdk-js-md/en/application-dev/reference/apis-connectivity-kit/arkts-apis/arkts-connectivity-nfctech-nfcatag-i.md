@@ -30,7 +30,7 @@ Obtains the ATQA value of this NFC-A tag.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcATag-getAtqa(): int[]--><!--Device-NfcATag-getAtqa(): int[]-End-->
 
@@ -62,7 +62,7 @@ Obtains the SAK value of this NFC-A tag.
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NfcATag-getSak(): int--><!--Device-NfcATag-getSak(): int-End-->
 

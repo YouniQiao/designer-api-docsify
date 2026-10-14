@@ -4,8 +4,6 @@ The **DataShare** module allows an application to manage its own data and share 
 
 **Since:** 20
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace dataShare--><!--Device-unnamed-declare namespace dataShare-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -22,7 +20,7 @@ import { dataShare } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md) | Creates a **DataProxyHandle** instance. This API uses a promise to return the result. |
+| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle) | Creates a **DataProxyHandle** instance. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)
@@ -32,8 +30,8 @@ import { dataShare } from '@kit.ArkData';
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper1) | Creates a **DataShareHelper** instance. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper2) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses an asynchronous callback to return the result. |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper3) | Creates a **DataShareHelper** instance. **DataShareHelperOptions** specifies whether **DataShareHelper** is in proxy mode. This API uses a promise to return the result. |
-| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md) | Disables silent access. This API uses a promise to return the result. |
-| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md) | Enables silent access. This API uses a promise to return the result. |
+| [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md#disablesilentproxy) | Disables silent access. This API uses a promise to return the result. |
+| [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md#enablesilentproxy) | Enables silent access. This API uses a promise to return the result. |
 <!--DelEnd-->
 
 ### Interfaces

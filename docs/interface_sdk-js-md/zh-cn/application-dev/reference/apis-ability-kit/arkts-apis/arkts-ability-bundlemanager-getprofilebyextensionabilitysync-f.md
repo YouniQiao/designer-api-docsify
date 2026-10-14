@@ -19,7 +19,7 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-bundleManager-function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: string): Array<string>--><!--Device-bundleManager-function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityName: string, metadataName?: string): Array<string>-End-->
 
@@ -37,7 +37,7 @@ function getProfileByExtensionAbilitySync(moduleName: string, extensionAbilityNa
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;string&gt; | 返回Array&lt;string&gt;对象。 |
+| Array&lt;string&gt; | 返回Array<string>对象。 |
 
 **错误码：**
 

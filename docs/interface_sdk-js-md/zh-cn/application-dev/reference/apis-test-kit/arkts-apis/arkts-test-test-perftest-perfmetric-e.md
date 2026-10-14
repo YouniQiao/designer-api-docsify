@@ -37,8 +37,6 @@ declare enum PerfMetric
 > 
 > - 单次测试期间，仅指定应用内第一次列表滑动的帧率数据会被采集。
 
-@enum { int }
-
 **起始版本：** 20
 
 <!--Device-unnamed-declare enum PerfMetric--><!--Device-unnamed-declare enum PerfMetric-End-->
@@ -57,7 +55,7 @@ APP_START_COMPLETE_TIME = 6
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6--><!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6-End-->
 
@@ -75,7 +73,7 @@ APP_START_RESPONSE_TIME = 5
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
 
@@ -93,7 +91,7 @@ CPU_LOAD = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-CPU_LOAD = 1--><!--Device-PerfMetric-CPU_LOAD = 1-End-->
 
@@ -111,7 +109,7 @@ CPU_USAGE = 2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-CPU_USAGE = 2--><!--Device-PerfMetric-CPU_USAGE = 2-End-->
 
@@ -129,7 +127,7 @@ DURATION = 0
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-DURATION = 0--><!--Device-PerfMetric-DURATION = 0-End-->
 
@@ -147,7 +145,7 @@ LIST_SWIPE_FPS = 8
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-LIST_SWIPE_FPS = 8--><!--Device-PerfMetric-LIST_SWIPE_FPS = 8-End-->
 
@@ -165,7 +163,7 @@ MEMORY_PSS = 4
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-MEMORY_PSS = 4--><!--Device-PerfMetric-MEMORY_PSS = 4-End-->
 
@@ -183,7 +181,7 @@ MEMORY_RSS = 3
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
 
@@ -201,7 +199,7 @@ PAGE_SWITCH_COMPLETE_TIME = 7
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7--><!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7-End-->
 

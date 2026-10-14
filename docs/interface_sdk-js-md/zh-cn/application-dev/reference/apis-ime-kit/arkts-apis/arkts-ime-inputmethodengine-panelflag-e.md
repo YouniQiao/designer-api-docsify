@@ -10,7 +10,7 @@ export enum PanelFlag
 | ------------ | -- | ------------------ |  
 | FLG_FIXED | 0 | 固定态面板类型。 |
 | FLG_FLOATING | 1 | 悬浮态面板类型。 |
-| FLAG_CANDIDATE&lt;sup&gt;15+&lt;/sup&gt; | 2 | 候选词态面板类型。 |
+| FLAG_CANDIDATE<sup>15+</sup> | 2 | 候选词态面板类型。 |
 
 **起始版本：** 10
 

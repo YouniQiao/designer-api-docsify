@@ -538,7 +538,7 @@ Unsubscribes from changes in the state of the specified permissions for the toke
 
 When unsubscribing, if no callback is passed in, all listening callbacks that completely match the tokenIDList and permissionList will be unsubscribed in batches.
 
-This API is usually used together with [on](#onpermissionstatechange) to cancel the listening relationship created by on.
+This API is usually used together with [on](arkts-ability-abilityaccessctrl-atmanager-i.md#on) to cancel the listening relationship created by on.
 
 **Since:** 9
 
@@ -557,9 +557,9 @@ This API is usually used together with [on](#onpermissionstatechange) to cancel 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'permissionStateChange' | Yes | Event type. The value is **'permissionStateChange'**, which indicates the permission state changes. |
-| tokenIDList | Array&lt;number&gt; | Yes | List of token IDs to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from permission state changes of all apps. This parameter must be consistent with the input of [on](#onpermissionstatechange). The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from all permission state changes. This parameter must be consistent with the input of [on](#onpermissionstatechange). Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [on](#onpermissionstatechange). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
+| tokenIDList | Array&lt;number&gt; | Yes | List of token IDs to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from permission state changes of all apps. This parameter must be consistent with the input of [on](arkts-ability-abilityaccessctrl-atmanager-i.md#on). The app identity can be obtained through the [accessTokenId](arkts-ability-applicationinfo-i.md#accesstokenid) field in ApplicationInfo of BundleInfo. Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each token ID in the list must be an integer greater than 0. <br>For BundleInfo acquisition, please refer to: [bundleManager.getBundleInfoSync](arkts-ability-bundlemanager-getbundleinfosync-f.md). |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If this parameter is left empty, it indicates unsubscribing from all permission state changes. This parameter must be consistent with the input of [on](arkts-ability-abilityaccessctrl-atmanager-i.md#on). Passing an invalid value returns error code 12100001. <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback used to return the object for unsubscribing from state change events of the specified tokenID and permission name. This callback must be consistent with the callback registered in [on](arkts-ability-abilityaccessctrl-atmanager-i.md#on). If this parameter is not passed, all listener callbacks that exactly match tokenIDList and permissionList will be canceled. |
 
 **Error codes:**
 
@@ -609,7 +609,7 @@ Multiple callbacks can be registered for the specified **tokenIDList** and **per
 
 If a new subscription overlaps with an existing subscription in terms of the tokenID list and permission list, the same callback cannot be used for subscription.
 
-This API is usually used together with [off](#offpermissionstatechange). When listening is no longer needed, off should be called to unsubscribe.
+This API is usually used together with [off](arkts-ability-abilityaccessctrl-atmanager-i.md#off). When listening is no longer needed, off should be called to unsubscribe.
 
 **Since:** 9
 

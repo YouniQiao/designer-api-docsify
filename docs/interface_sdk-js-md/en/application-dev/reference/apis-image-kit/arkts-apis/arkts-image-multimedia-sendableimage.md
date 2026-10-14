@@ -20,16 +20,16 @@ import { sendableImage } from '@kit.ImageKit';
 
 | Name | Description |
 | --- | --- |
-| [convertFromPixelMap](arkts-image-sendableimage-convertfrompixelmap-f.md) | Creates a sendable image PixelMap from image PixelMap. |
-| [convertToPixelMap](arkts-image-sendableimage-converttopixelmap-f.md) | Creates a image PixelMap from sendable image PixelMap. |
-| [createImageReceiver](arkts-image-sendableimage-createimagereceiver-f.md) | Creates an ImageReceiver instance based on the specified image size, format, and capacity. |
+| [convertFromPixelMap](arkts-image-sendableimage-convertfrompixelmap-f.md#convertfrompixelmap) | Creates a sendable image PixelMap from image PixelMap. |
+| [convertToPixelMap](arkts-image-sendableimage-converttopixelmap-f.md#converttopixelmap) | Creates a image PixelMap from sendable image PixelMap. |
+| [createImageReceiver](arkts-image-sendableimage-createimagereceiver-f.md#createimagereceiver) | Creates an ImageReceiver instance based on the specified image size, format, and capacity. |
 | [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource1) | Creates an ImageSource instance based on a given URI. |
 | [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource2) | Creates an ImageSource instance based on a given file descriptor. |
 | [createImageSource](arkts-image-sendableimage-createimagesource-f.md#createimagesource3) | Creates an ImageSource instance based on buffers. The data passed by **buf** must be undecoded. Do not pass the pixel buffer data such as RBGA and YUV. If you want to create a PixelMap based on the pixel buffer data, call [sendableImage.createPixelMap](arkts-image-sendableimage-createpixelmap-f.md). |
-| [createPixelMap](arkts-image-sendableimage-createpixelmap-f.md) | Create PixelMap by data buffer. |
-| [createPixelMapFromParcel](arkts-image-sendableimage-createpixelmapfromparcel-f.md) | Creates a PixelMap object based on MessageSequence parameter. |
-| [createPixelMapFromSurface](arkts-image-sendableimage-createpixelmapfromsurface-f.md) | Creates a PixelMap object from surface id. |
-| [createPixelMapSync](arkts-image-sendableimage-createpixelmapsync-f.md) | Create PixelMap by data buffer. |
+| [createPixelMap](arkts-image-sendableimage-createpixelmap-f.md#createpixelmap) | Create PixelMap by data buffer. |
+| [createPixelMapFromParcel](arkts-image-sendableimage-createpixelmapfromparcel-f.md#createpixelmapfromparcel) | Creates a PixelMap object based on MessageSequence parameter. |
+| [createPixelMapFromSurface](arkts-image-sendableimage-createpixelmapfromsurface-f.md#createpixelmapfromsurface) | Creates a PixelMap object from surface id. |
+| [createPixelMapSync](arkts-image-sendableimage-createpixelmapsync-f.md#createpixelmapsync) | Create PixelMap by data buffer. |
 
 ### Interfaces
 

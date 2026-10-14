@@ -22,7 +22,7 @@ Camera on/off component group.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302--><!--Device-VideoMeetingControlGroup-CAMERA_SWITCH = 302-End-->
 
@@ -38,7 +38,7 @@ Hang-up component group.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301--><!--Device-VideoMeetingControlGroup-HANG_UP_BUTTON = 301-End-->
 
@@ -54,7 +54,7 @@ Microphone on/off component group.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304--><!--Device-VideoMeetingControlGroup-MICROPHONE_SWITCH = 304-End-->
 
@@ -70,7 +70,7 @@ Mute/Unmute component group.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303--><!--Device-VideoMeetingControlGroup-MUTE_SWITCH = 303-End-->
 

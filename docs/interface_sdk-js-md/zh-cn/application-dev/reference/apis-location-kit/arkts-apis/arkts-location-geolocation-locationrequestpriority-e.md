@@ -12,7 +12,7 @@ export enum LocationRequestPriority
 
 **替代接口：** [LocationRequestPriority](arkts-location-geolocationmanager-locationrequestpriority-e.md)
 
-**需要权限：** ohos.permission.LOCATION @enum { number }
+**需要权限：** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum LocationRequestPriority--><!--Device-geolocation-export enum LocationRequestPriority-End-->
 

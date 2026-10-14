@@ -28,10 +28,10 @@ import { audio } from '@kit.AudioKit';
 | --- | --- |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer1) | 创建音频采集器。使用callback异步回调。 |
 | [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer3) | 创建音频采集器。使用Promise异步回调。 |
-| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md) | 创建音频返听器。使用Promise异步回调。 |
+| [createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md#createaudioloopback) | 创建音频返听器。使用Promise异步回调。 |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer1) | 创建音频渲染器。使用callback异步回调。 |
 | [createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer3) | 创建音频渲染器。使用Promise异步回调。 |
-| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md) | 获取音频管理器。 |
+| [getAudioManager](arkts-audio-audio-getaudiomanager-f.md#getaudiomanager) | 获取音频管理器。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -40,8 +40,8 @@ import { audio } from '@kit.AudioKit';
 | --- | --- |
 | [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createasrprocessingcontroller1) | 获取自动语音识别（ASR）处理控制器。用于系统语音助手应用。支持SourceType为[SOURCE_TYPE_VOICE_RECOGNITION](arkts-audio-audio-sourcetype-e.md)或[SOURCE_TYPE_WAKEUP](arkts-audio-audio-sourcetype-e.md)的音频采集器。 |
 | [createAsrProcessingController](arkts-audio-audio-createasrprocessingcontroller-f-sys.md#createasrprocessingcontroller2) | 获取自动语音识别（ASR）处理控制器。 |
-| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md) | 创建一个全局音频回环实例，该实例提供低延迟的入耳监听功能。 |
-| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md) | 创建音频采集器。使用Promise异步回调。 |
+| [createGlobalAudioLoopback](arkts-audio-audio-createglobalaudioloopback-f-sys.md#createglobalaudioloopback) | 创建一个全局音频回环实例，该实例提供低延迟的入耳监听功能。 |
+| [createMicInAudioCapturer](arkts-audio-audio-createmicinaudiocapturer-f-sys.md#createmicinaudiocapturer) | 创建音频采集器。使用Promise异步回调。 |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer1) | 创建DTMF播放器。使用callback异步回调。 |
 | [createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer3) | 创建DTMF播放器。使用Promise异步回调。 |
 <!--DelEnd-->

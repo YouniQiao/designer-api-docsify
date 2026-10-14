@@ -1,57 +1,57 @@
-# @ohos.arkui.ArcSwiper
+# ArcSwiper
 
-## Modules to Import
+Defines the ArcSwiper Component that can provide the ability for sub components to swipe and display.
+
+## ArcSwiper
 
 ```TypeScript
-import { ArcSwiper, ArcSwiperAttribute, ArcDotIndicator, ArcDirection, ArcSwiperController } from '@kit.ArkUI';
+ArcSwiper(controller?: ArcSwiperController)
 ```
 
-## Summary
+**起始版本：** 18
 
-### Classes
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
-| Name | Description |
+<!--Device-ArcSwiperInterface-(controller?: ArcSwiperController): ArcSwiperAttribute--><!--Device-ArcSwiperInterface-(controller?: ArcSwiperController): ArcSwiperAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Circle
+
+**参数:**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| controller | [ArcSwiperController](arkts-arkui-arcswiper-comp-arcswipercontroller-c.md) | 否 | Controller bound to the component to control the page turning. |
+
+## 汇总
+
+### 接口
+
+| 名称 | 说明 |
 | --- | --- |
-| [ArcDotIndicator](arkts-arkui-arkui-arcswiper-arcdotindicator-c.md) | Describes the properties and behavior of the arc dot navigation indicator. |
-| [ArcSwiperAttribute](arkts-arkui-arkui-arcswiper-arcswiperattribute-c.md) | In addition to the [universal attributes](../arkts-components/arkts-arkui-common-comp.md), the following attributes are supported. |
-| [ArcSwiperController](arkts-arkui-arkui-arcswiper-arcswipercontroller-c.md) | Implements the controller of the **ArcSwiper** component. You can bind this object to the **ArcSwiper** component and use it to control page switching. |
+| [SwiperContentAnimatedTransition](arkts-arkui-arcswiper-comp-swipercontentanimatedtransition-i.md) | ArcSwiper自定义切换动画相关信息。 |
+| [SwiperContentTransitionProxy](arkts-arkui-arcswiper-comp-swipercontenttransitionproxy-i.md) | ArcSwiper自定义切换动画执行过程中，返回给开发者的proxy对象。开发者可通过该对象获取自定义动画视窗内的页面信息，同时，也可以通过调用该对象的finishTransition接口通知ArcSwiper组件页面自定义动画已结束。 |
 
-### Interfaces
+### 类型
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [ArcSwiperInterface](arkts-arkui-arkui-arcswiper-arcswiperinterface-i.md) | Provide an interface for ArcSwiper. |
-| [SwiperContentAnimatedTransition](arkts-arkui-arkui-arcswiper-swipercontentanimatedtransition-i.md) | Provides the information about the custom page transition animation. |
-| [SwiperContentTransitionProxy](arkts-arkui-arkui-arcswiper-swipercontenttransitionproxy-i.md) | Implements the proxy object returned during the execution of the custom page transition animation of the **ArcSwiper** component. You can use this object to obtain the page information in the custom animation viewport. You can also call the **finishTransition** API of this object to notify the **ArcSwiper** component that the custom animation has finished playing. |
+| [AnimationEndHandler](arkts-arkui-arcswiper-comp-animationendhandler-t.md) | 切换动画结束时的回调。 |
+| [AnimationStartHandler](arkts-arkui-arcswiper-comp-animationstarthandler-t.md) | 切换动画开始时的回调。 |
+| [FinishAnimationHandler](arkts-arkui-arcswiper-comp-finishanimationhandler-t.md) | 停止播放动画时，告知应用。 |
+| [GestureSwipeHandler](arkts-arkui-arcswiper-comp-gestureswipehandler-t.md) | 在页面跟手滑动过程中，逐帧触发的回调。 |
+| [IndexChangedHandler](arkts-arkui-arcswiper-comp-indexchangedhandler-t.md) | 当前显示元素的索引变化时，告知应用。index序列从0开始。 |
 
-### Types
+### 枚举
 
-| Name | Description |
+| 名称 | 说明 |
 | --- | --- |
-| [AnimationEndHandler](arkts-arkui-animationendhandler-t.md) | Defines the callback triggered when the page transition animation ends. |
-| [AnimationStartHandler](arkts-arkui-animationstarthandler-t.md) | Defines the callback triggered when the page transition animation starts. |
-| [FinishAnimationHandler](arkts-arkui-finishanimationhandler-t.md) | Defines the callback to notify the application when the animation stops playing. |
-| [GestureSwipeHandler](arkts-arkui-gestureswipehandler-t.md) | Defines the callback triggered on a frame-by-frame basis during a swipe-based page turn. |
-| [IndexChangedHandler](arkts-arkui-indexchangedhandler-t.md) | Notifies the app when the index of the currently displayed element changes. The index sequence starts from 0. |
+| [ArcDirection](arkts-arkui-arcswiper-comp-arcdirection-e.md) | 弧形方向。 |
 
-### Enums
+## 示例
 
-| Name | Description |
-| --- | --- |
-| [ArcDirection](arkts-arkui-arkui-arcswiper-arcdirection-e.md) | Declare the direction of arc indicator. |
+### 示例1（设置ArcSwiper基本属性）
 
-### Properties
-
-| Name | Description |
-| --- | --- |
-| [ArcSwiper](arkts-arkui-arkui-arcswiper-p.md) | Defines the ArcSwiper Component that can provide the ability for sub components to swipe and display. |
-| [ArcSwiperInstance](arkts-arkui-arkui-arcswiper-p.md) | Defines ArcSwiper Component instance. |
-
-## Examples
-
-### Example 1: Configuring the Basic Attributes of ArcSwiper
-
-This example demonstrates the basic functionality of the component by configuring the basic attributes of ArcSwiper.
+该示例通过设置ArcSwiper的基本属性，展示了组件的基本功能。
 
 
 
@@ -65,7 +65,7 @@ import {
   ArcDirection,
   ArcSwiperController
 } from '@kit.ArkUI';
-// Starting from API version 22, you do not need to manually import ArcSwiperAttribute. For details, refer to the Modules to Import section of the ArcSwiper reference document.
+// 从API version 22开始，无需手动导入ArcSwiperAttribute。具体请参考ArcSwiper的导入模块说明
 
 class MyDataSource implements IDataSource {
   private list: Color[] = [];
@@ -143,11 +143,11 @@ struct TestNewInterface {
           console.info('velocity: ' + extraInfo.velocity);
         })
         .onGestureRecognizerJudgeBegin((event: BaseGestureEvent, current: GestureRecognizer,
-          others: Array<GestureRecognizer>): GestureJudgeResult => { // When the implementation is about to succeed, set the recognizer enabling state based on the current component state.
+          others: Array<GestureRecognizer>): GestureJudgeResult => { // 在识别器即将要成功时，根据当前组件状态，设置识别器使能状态
           if (current) {
             let target = current.getEventTargetInfo();
             if (target && current.isBuiltIn() && current.getType() == GestureControl.GestureType.PAN_GESTURE) {
-              // Check whether the ArcSwiper has scrolled to the beginning: swiperTarget.isBegin() or innerSelectedIndex === 0.
+              // 此处判断swiperTarget.isBegin()或innerSelectedIndex === 0，表明ArcSwiper滑动到开头
               let swiperTarget = target as ScrollableTargetInfo;
               if (swiperTarget instanceof ScrollableTargetInfo &&
                 (swiperTarget.isBegin() || this.innerSelectedIndex === 0)) {
@@ -171,15 +171,15 @@ struct TestNewInterface {
 }
 ```
 
-### Example 2: Customizing a Page Transition Animation for ArcSwiper
+### 示例2（设置ArcSwiper自定义页面切换动画）
 
-In this example, the customContentTransition API is used to define a custom switching animation for the ArcSwiper component.
+该示例通过[customContentTransition](#customcontenttransition)接口，实现了自定义ArcSwiper页面切换动画。
 
 ```TypeScript
 import { Decimal } from '@kit.ArkTS';
 import { CircleShape, ArcSwiper, ArcSwiperAttribute } from '@kit.ArkUI';
 
-// Starting from API version 22, you do not need to manually import ArcSwiperAttribute. For details, refer to the Modules to Import section of the ArcSwiper reference document.
+// 从API version 22开始，无需手动导入ArcSwiperAttribute。具体请参考ArcSwiper的导入模块说明
 @Entry
 @Component
 struct TestNewInterface {
@@ -213,12 +213,12 @@ struct TestNewInterface {
           console.info('onChange:' + index.toString());
         })
         .customContentTransition({
-          // The page is removed from the render tree when 1000 ms (timeout time) has elapsed.
+          // 页面移除视窗时超时1000ms下渲染树
           timeout: 1000,
-          // Trigger the transition callback frame by frame for all pages within the viewport; modify the scale property value within the callback to implement a custom animation.
+          // 对视窗内所有页面逐帧回调transition，在回调中修改scale属性值，实现自定义动画
           transition: (proxy: SwiperContentTransitionProxy) => {
             if (proxy.position <= -1 || proxy.position >= 1) {
-              // When a group of pages is completely scrolled out of the viewport, reset the attribute values.
+              // 页面完全滑出视窗外时，重置属性值
               this.scaleList[proxy.index] = 1.0;
             } else {
               let position: number = Decimal.abs(proxy.position).toNumber();

@@ -22,7 +22,7 @@ LANDSCAPE = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Orientation-LANDSCAPE = 1--><!--Device-Orientation-LANDSCAPE = 1-End-->
 
@@ -38,7 +38,7 @@ LANDSCAPE_INVERTED = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Orientation-LANDSCAPE_INVERTED = 3--><!--Device-Orientation-LANDSCAPE_INVERTED = 3-End-->
 
@@ -54,7 +54,7 @@ PORTRAIT = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Orientation-PORTRAIT = 0--><!--Device-Orientation-PORTRAIT = 0-End-->
 
@@ -70,7 +70,7 @@ PORTRAIT_INVERTED = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Orientation-PORTRAIT_INVERTED = 2--><!--Device-Orientation-PORTRAIT_INVERTED = 2-End-->
 

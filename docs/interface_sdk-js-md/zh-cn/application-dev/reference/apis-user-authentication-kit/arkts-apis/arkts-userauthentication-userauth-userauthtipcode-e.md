@@ -22,7 +22,7 @@ COMPARE_FAILURE = 1
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-COMPARE_FAILURE = 1--><!--Device-UserAuthTipCode-COMPARE_FAILURE = 1-End-->
 
@@ -38,7 +38,7 @@ COMPARE_FAILURE_WITH_FROZEN = 7
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7--><!--Device-UserAuthTipCode-COMPARE_FAILURE_WITH_FROZEN = 7-End-->
 
@@ -54,7 +54,7 @@ PERMANENTLY_LOCKED = 4
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4--><!--Device-UserAuthTipCode-PERMANENTLY_LOCKED = 4-End-->
 
@@ -70,7 +70,7 @@ TEMPORARILY_LOCKED = 3
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3--><!--Device-UserAuthTipCode-TEMPORARILY_LOCKED = 3-End-->
 
@@ -86,7 +86,7 @@ TIMEOUT = 2
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-TIMEOUT = 2--><!--Device-UserAuthTipCode-TIMEOUT = 2-End-->
 
@@ -102,7 +102,7 @@ WIDGET_LOADED = 5
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-WIDGET_LOADED = 5--><!--Device-UserAuthTipCode-WIDGET_LOADED = 5-End-->
 
@@ -118,7 +118,7 @@ WIDGET_RELEASED = 6
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserAuthTipCode-WIDGET_RELEASED = 6--><!--Device-UserAuthTipCode-WIDGET_RELEASED = 6-End-->
 

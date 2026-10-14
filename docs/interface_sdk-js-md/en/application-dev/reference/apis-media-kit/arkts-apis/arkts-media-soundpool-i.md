@@ -43,7 +43,7 @@ Loads a sound. This API uses an asynchronous callback to return the result.
 
 This API uses an asynchronous callback to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](#load) or [load(fd: number, offset: number, length: number): Promise\<number>](#load).
 
 > **NOTE:** 
 > 
@@ -84,7 +84,7 @@ Loads a sound. This API uses a promise to return the result.
 
 This API uses a promise to obtain the resource ID. The input parameter URL is a string starting with **fd://**, which is generated based on the file descriptor (FD) obtained.
 
-This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\&lt;number&gt;): void](#load) or [load(fd: number, offset: number, length: number): Promise\&lt;number&gt;](#load).
+This API cannot be used to load resources in the **rawfile** directory. Instead, use [load(fd: number, offset: number, length: number, callback: AsyncCallback\<number>): void](#load) or [load(fd: number, offset: number, length: number): Promise\<number>](#load).
 
 > **NOTE:** 
 > 

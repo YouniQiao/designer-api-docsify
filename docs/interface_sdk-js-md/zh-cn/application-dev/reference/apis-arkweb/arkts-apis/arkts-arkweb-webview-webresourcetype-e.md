@@ -144,7 +144,7 @@ OBJECT = 7
 PING = 14
 ```
 
-&lt;a ping&gt;/sendBeacon的Ping请求。
+<a ping>/sendBeacon的Ping请求。
 
 **起始版本：** 12
 

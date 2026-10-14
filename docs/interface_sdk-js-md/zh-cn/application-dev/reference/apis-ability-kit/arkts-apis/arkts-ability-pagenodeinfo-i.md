@@ -26,7 +26,7 @@ autoFillType: AutoFillType
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-autoFillType: AutoFillType--><!--Device-PageNodeInfo-autoFillType: AutoFillType-End-->
 
@@ -46,7 +46,7 @@ The id of page node.取值限定为整数。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-id: int--><!--Device-PageNodeInfo-id: int-End-->
 
@@ -66,7 +66,7 @@ isFocus: boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-isFocus: boolean--><!--Device-PageNodeInfo-isFocus: boolean-End-->
 
@@ -86,7 +86,7 @@ placeholder?: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-placeholder?: string--><!--Device-PageNodeInfo-placeholder?: string-End-->
 
@@ -106,7 +106,7 @@ rect: AutoFillRect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-rect: AutoFillRect--><!--Device-PageNodeInfo-rect: AutoFillRect-End-->
 
@@ -126,7 +126,7 @@ value: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-PageNodeInfo-value: string--><!--Device-PageNodeInfo-value: string-End-->
 

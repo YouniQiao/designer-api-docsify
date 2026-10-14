@@ -280,7 +280,7 @@ FORM = 0
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ExtensionAbilityType-FORM = 0--><!--Device-ExtensionAbilityType-FORM = 0-End-->
 
@@ -338,7 +338,7 @@ LIVE_FORM = 30
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-ExtensionAbilityType-LIVE_FORM = 30--><!--Device-ExtensionAbilityType-LIVE_FORM = 30-End-->
 

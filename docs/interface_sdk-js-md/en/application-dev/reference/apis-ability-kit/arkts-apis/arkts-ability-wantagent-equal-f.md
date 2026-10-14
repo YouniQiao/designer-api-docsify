@@ -18,7 +18,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent, callback: AsyncCallback<boolean>): void-End-->
 
@@ -30,7 +30,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 | --- | --- | --- | --- |
 | agent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | The first WantAgent object. |
 | otherAgent | [WantAgent](arkts-ability-wantagent-t.md) | Yes | The second WantAgent object. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value &lt;code&gt;true&lt;/code&gt; means that the two WantAgent objects are equal, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value<code>true</code> means that the two WantAgent objects are equal, and <code>false</code> means the opposite. |
 
 **Error codes:**
 
@@ -122,7 +122,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>--><!--Device-wantAgent-function equal(agent: WantAgent, otherAgent: WantAgent): Promise<boolean>-End-->
 
@@ -139,7 +139,7 @@ Checks whether two WantAgent objects are equal, so as to determine whether the s
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. The value &lt;code&gt;true&lt;/code&gt; means that the two WantAgent objects are equal, and &lt;code&gt;false&lt;/code&gt; means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value<code>true</code> means that the two WantAgent objects are equal, and <code>false</code> means the opposite. |
 
 **Error codes:**
 

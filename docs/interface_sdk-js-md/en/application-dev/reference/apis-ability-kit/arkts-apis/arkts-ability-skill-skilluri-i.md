@@ -24,7 +24,7 @@ Host address of the URI. This parameter takes effect only when **scheme** is spe
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly host: string--><!--Device-SkillUri-readonly host: string-End-->
 
@@ -42,7 +42,7 @@ readonly linkFeature: string
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly linkFeature: string--><!--Device-SkillUri-readonly linkFeature: string-End-->
 
@@ -60,7 +60,7 @@ Maximum number of files of a specified type that can be received or opened at a 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly maxFileSupported: int--><!--Device-SkillUri-readonly maxFileSupported: int-End-->
 
@@ -78,7 +78,7 @@ Path of the URI. This parameter takes effect only when both **scheme** and **hos
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly path: string--><!--Device-SkillUri-readonly path: string-End-->
 
@@ -96,7 +96,7 @@ Regular expression of the path of the URI. This parameter takes effect only when
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly pathRegex: string--><!--Device-SkillUri-readonly pathRegex: string-End-->
 
@@ -114,7 +114,7 @@ Prefix of the path of the URI. This parameter takes effect only when both **sche
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly pathStartWith: string--><!--Device-SkillUri-readonly pathStartWith: string-End-->
 
@@ -150,7 +150,7 @@ Scheme of the URI, such as HTTP, HTTPS, file, and FTP.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly scheme: string--><!--Device-SkillUri-readonly scheme: string-End-->
 
@@ -168,7 +168,7 @@ Data type that matches the Want, using the MIME (Multipurpose Internet Mail Exte
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly type: string--><!--Device-SkillUri-readonly type: string-End-->
 
@@ -186,7 +186,7 @@ Standard data type of the URI that matches Want. This parameter applies to shari
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-SkillUri-readonly utd: string--><!--Device-SkillUri-readonly utd: string-End-->
 

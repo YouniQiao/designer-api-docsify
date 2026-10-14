@@ -26,7 +26,7 @@ Cryptographic operation error.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Result-ERR_CRYPTO_OPERATION = 17630001--><!--Device-Result-ERR_CRYPTO_OPERATION = 17630001-End-->
 
@@ -44,7 +44,7 @@ Invalid function call.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Result-ERR_INVALID_CALL = 17620004--><!--Device-Result-ERR_INVALID_CALL = 17620004-End-->
 
@@ -64,7 +64,7 @@ The memory operation failed.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Result-ERR_OUT_OF_MEMORY = 17620001--><!--Device-Result-ERR_OUT_OF_MEMORY = 17620001-End-->
 
@@ -82,7 +82,7 @@ The parameter check failed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-Result-ERR_PARAMETER_CHECK_FAILED = 17620003--><!--Device-Result-ERR_PARAMETER_CHECK_FAILED = 17620003-End-->
 
@@ -102,7 +102,7 @@ Failed to obtain the native object or convert parameters.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Result-ERR_RUNTIME_ERROR = 17620002--><!--Device-Result-ERR_RUNTIME_ERROR = 17620002-End-->
 
@@ -122,7 +122,7 @@ Invalid parameter.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Result-INVALID_PARAMS = 401--><!--Device-Result-INVALID_PARAMS = 401-End-->
 
@@ -142,7 +142,7 @@ Unsupported operation.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Result-NOT_SUPPORT = 801--><!--Device-Result-NOT_SUPPORT = 801-End-->
 

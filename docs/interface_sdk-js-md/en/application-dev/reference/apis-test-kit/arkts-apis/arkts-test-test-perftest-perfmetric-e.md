@@ -17,8 +17,6 @@ APP_START_COMPLETE_TIME**):
 > - Supported scenarios: list scrolling of the **List**, **Grid**, **Scroll**, and **WaterFlow** components in the ArkUI subsystem.
 > - During a test, only the first list scrolling frame rate in the specified application is collected.
 
-@enum { int }
-
 **Since:** 20
 
 <!--Device-unnamed-declare enum PerfMetric--><!--Device-unnamed-declare enum PerfMetric-End-->
@@ -39,7 +37,7 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6--><!--Device-PerfMetric-APP_START_COMPLETE_TIME = 6-End-->
 
@@ -59,7 +57,7 @@ Marks: 1) Delay calculation is restricted by system dotting reporting. The start
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5--><!--Device-PerfMetric-APP_START_RESPONSE_TIME = 5-End-->
 
@@ -77,7 +75,7 @@ CPU load of the application process, in percentage.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-CPU_LOAD = 1--><!--Device-PerfMetric-CPU_LOAD = 1-End-->
 
@@ -95,7 +93,7 @@ CPU usage of the application process, in percentage.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-CPU_USAGE = 2--><!--Device-PerfMetric-CPU_USAGE = 2-End-->
 
@@ -113,7 +111,7 @@ Execution duration of a code segment, in milliseconds.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-DURATION = 0--><!--Device-PerfMetric-DURATION = 0-End-->
 
@@ -133,7 +131,7 @@ Mark: 1) List sliding frame rate: refers to the frequency at which the screen ca
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-LIST_SWIPE_FPS = 8--><!--Device-PerfMetric-LIST_SWIPE_FPS = 8-End-->
 
@@ -151,7 +149,7 @@ Physical memory (the proportionally allocated memory occupied by shared librarie
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-MEMORY_PSS = 4--><!--Device-PerfMetric-MEMORY_PSS = 4-End-->
 
@@ -169,7 +167,7 @@ Physical memory (including the shared library) occupied by the application proce
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-MEMORY_RSS = 3--><!--Device-PerfMetric-MEMORY_RSS = 3-End-->
 
@@ -189,7 +187,7 @@ Marks: 1) Delay calculation is restricted by system dotting and reporting. The s
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7--><!--Device-PerfMetric-PAGE_SWITCH_COMPLETE_TIME = 7-End-->
 

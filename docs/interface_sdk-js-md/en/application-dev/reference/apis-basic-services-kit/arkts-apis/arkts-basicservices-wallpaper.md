@@ -50,21 +50,21 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | --- | --- |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage1) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. Only the static wallpaper set by using setImage can be obtained. |
 | [getImage](arkts-basicservices-wallpaper-getimage-f-sys.md#getimage2) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. Only the static wallpaper set by using setImage can be obtained. |
-| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md) | Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md) | Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
-| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md) | Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map. Only the static wallpaper set by using setAllWallpapers can be obtained. |
+| [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md#getminheightsync) | Obtains the minimum height of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
+| [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md#getminwidthsync) | Obtains the minimum width of the wallpaper. in pixels. returns 0 if no wallpaper has been set. |
+| [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md#getwallpaperbystate) | Obtains the default pixel map of a wallpaper of the specified device type. Returns the default pixel map. Only the static wallpaper set by using setAllWallpapers can be obtained. |
 | [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | Unregisters a listener for wallpaper changes. |
 | [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | Registers a listener for wallpaper changes to receive notifications about the changes. |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore1) | Removes a wallpaper of the specified type and restores the default one. |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore2) | Removes a wallpaper of the specified type and restores the default one. |
-| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md) | Set wallpapers for all forms of devices. |
+| [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md#setallwallpapers) | Set wallpapers for all forms of devices. |
 | [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper1) | Sets wallpaper of the specified type based on the uri path of the custom wallpaper. |
 | [setCustomWallpaper](arkts-basicservices-wallpaper-setcustomwallpaper-f-sys.md#setcustomwallpaper2) | Sets wallpaper of the specified type based on the uri path of the custom wallpaper. |
 | [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage1) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
 | [setImage](arkts-basicservices-wallpaper-setimage-f-sys.md#setimage2) | Sets a wallpaper of the specified type based on the uri path from a JPEG or PNG file or the pixel map of a PNG file. |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo1) | Sets live wallpaper of the specified type based on the uri path of the MP4 file. |
 | [setVideo](arkts-basicservices-wallpaper-setvideo-f-sys.md#setvideo2) | Sets live wallpaper of the specified type based on the uri path of the MP4 file. |
-| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md) | Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function. |
+| [getColorsSync](arkts-basicservices-wallpaper-getcolorssync-f-sys.md#getcolorssync) | Obtains the wallpaper colors for the wallpaper of the specified type. Returns rgbaColor type of array callback function. |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap1) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
 | [getPixelMap](arkts-basicservices-wallpaper-getpixelmap-f-sys.md#getpixelmap2) | Obtains the default pixel map of a wallpaper of the specified type. Returns the default pixel map. |
 <!--DelEnd-->

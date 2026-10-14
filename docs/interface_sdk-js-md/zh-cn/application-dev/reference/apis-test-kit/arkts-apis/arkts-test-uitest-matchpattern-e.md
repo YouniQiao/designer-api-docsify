@@ -26,7 +26,7 @@ CONTAINS = 1
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-CONTAINS = 1--><!--Device-MatchPattern-CONTAINS = 1-End-->
 
@@ -46,7 +46,7 @@ ENDS_WITH = 3
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-ENDS_WITH = 3--><!--Device-MatchPattern-ENDS_WITH = 3-End-->
 
@@ -66,7 +66,7 @@ EQUALS = 0
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-EQUALS = 0--><!--Device-MatchPattern-EQUALS = 0-End-->
 
@@ -86,7 +86,7 @@ REG_EXP = 4
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-REG_EXP = 4--><!--Device-MatchPattern-REG_EXP = 4-End-->
 
@@ -106,7 +106,7 @@ REG_EXP_ICASE = 5
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-REG_EXP_ICASE = 5--><!--Device-MatchPattern-REG_EXP_ICASE = 5-End-->
 
@@ -126,7 +126,7 @@ STARTS_WITH = 2
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MatchPattern-STARTS_WITH = 2--><!--Device-MatchPattern-STARTS_WITH = 2-End-->
 

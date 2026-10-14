@@ -22,7 +22,7 @@ LOOP_MODE_CUSTOM = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LoopMode-LOOP_MODE_CUSTOM = 4--><!--Device-LoopMode-LOOP_MODE_CUSTOM = 4-End-->
 
@@ -38,7 +38,7 @@ LOOP_MODE_LIST = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LoopMode-LOOP_MODE_LIST = 2--><!--Device-LoopMode-LOOP_MODE_LIST = 2-End-->
 
@@ -54,7 +54,7 @@ LOOP_MODE_SEQUENCE = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0--><!--Device-LoopMode-LOOP_MODE_SEQUENCE = 0-End-->
 
@@ -70,7 +70,7 @@ LOOP_MODE_SHUFFLE = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3--><!--Device-LoopMode-LOOP_MODE_SHUFFLE = 3-End-->
 
@@ -86,7 +86,7 @@ LOOP_MODE_SINGLE = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-LoopMode-LOOP_MODE_SINGLE = 1--><!--Device-LoopMode-LOOP_MODE_SINGLE = 1-End-->
 

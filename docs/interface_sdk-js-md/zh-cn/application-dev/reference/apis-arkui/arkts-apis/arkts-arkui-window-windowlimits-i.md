@@ -51,7 +51,7 @@ maxHeight?: number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowLimits-maxHeight?: int--><!--Device-WindowLimits-maxHeight?: int-End-->
 
@@ -69,7 +69,7 @@ maxWidth?: number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowLimits-maxWidth?: int--><!--Device-WindowLimits-maxWidth?: int-End-->
 
@@ -87,7 +87,7 @@ minHeight?: number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowLimits-minHeight?: int--><!--Device-WindowLimits-minHeight?: int-End-->
 
@@ -105,7 +105,7 @@ minWidth?: number
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowLimits-minWidth?: int--><!--Device-WindowLimits-minWidth?: int-End-->
 

@@ -3209,7 +3209,7 @@ getOriginalUrl(): string
 
 Obtains the original URL of the current page.
 
-Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl).
+Risk warning: If you want to obtain the URL for JavaScriptProxy communication API authentication, use [getLastJavascriptProxyCallingFrameUrl<sup>12+</sup>](#getlastjavascriptproxycallingframeurl).
 
 **Since:** 9
 
@@ -5145,7 +5145,7 @@ If **encoding** is not base64 (including null values), ASCII encoding is used fo
 > - If the rich text in HTML contains special characters such as hash (#), you are advised to set the values of
 > **baseUrl** and **historyUrl** to spaces.
 > 
-> - To load texts, you need to set `&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;` to avoid inconsistent font sizes.
+> - To load texts, you need to set `<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">` to avoid inconsistent font sizes.
 
 **Since:** 9
 
@@ -9852,7 +9852,7 @@ When **enable** is set to **true**, an error page is displayed when a mainframe 
 > 
 > - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled regardless of the value of **includeSubframe**.
 > 
-> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled1)&lt;sup&gt;20+&lt;/sup&gt;, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
+> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled1)<sup>20+</sup>, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
 > 
 > - You can use [errorPageEvent.request.isMainFrame()](../arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe) to determine whether the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
 > **onOverrideErrorPage** callback.

@@ -24,7 +24,7 @@ Exterior front position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT = 1--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_FRONT = 1-End-->
 
@@ -42,7 +42,7 @@ Exterior left position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_LEFT = 3-End-->
 
@@ -60,7 +60,7 @@ Exterior other position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_OTHER = 0-End-->
 
@@ -78,7 +78,7 @@ Exterior rear position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_REAR = 2-End-->
 
@@ -96,7 +96,7 @@ Exterior right position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_RIGHT = 4--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_EXTERIOR_RIGHT = 4-End-->
 
@@ -114,7 +114,7 @@ Interior other position.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_OTHER = 5--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_OTHER = 5-End-->
 
@@ -132,7 +132,7 @@ Interior center side position of the first row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_CENTER = 7-End-->
 
@@ -150,7 +150,7 @@ Interior left side position of the first row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_LEFT = 6-End-->
 
@@ -168,7 +168,7 @@ Interior right side position of the first row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_RIGHT = 8--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_1_RIGHT = 8-End-->
 
@@ -186,7 +186,7 @@ Interior center side position of the second row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_CENTER = 10-End-->
 
@@ -204,7 +204,7 @@ Interior left side position of the second row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_LEFT = 9-End-->
 
@@ -222,7 +222,7 @@ Interior right side position of the second row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_RIGHT = 11--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_2_RIGHT = 11-End-->
 
@@ -240,7 +240,7 @@ Interior center side position of the third row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_CENTER = 13-End-->
 
@@ -258,7 +258,7 @@ Interior left side position of the third row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_LEFT = 12-End-->
 
@@ -276,7 +276,7 @@ Interior right side position of the third row.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_RIGHT = 14--><!--Device-AutomotiveCameraPosition-AUTOMOTIVE_CAMERA_POSITION_INTERIOR_ROW_3_RIGHT = 14-End-->
 

@@ -28,10 +28,10 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md) | Configures feature parameters. |
-| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md) | Queries device-supported atomic capabilities. |
-| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md) | Subscribes to user status monitoring. |
-| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md) | Unsubscribes from user status monitoring. |
+| [configure](arkts-multimodalawareness-userstatus-configure-f-sys.md#configure) | Configures feature parameters. |
+| [queryCapabilities](arkts-multimodalawareness-userstatus-querycapabilities-f-sys.md#querycapabilities) | Queries device-supported atomic capabilities. |
+| [subscribe](arkts-multimodalawareness-userstatus-subscribe-f-sys.md#subscribe) | Subscribes to user status monitoring. |
+| [unsubscribe](arkts-multimodalawareness-userstatus-unsubscribe-f-sys.md#unsubscribe) | Unsubscribes from user status monitoring. |
 <!--DelEnd-->
 
 ### Interfaces

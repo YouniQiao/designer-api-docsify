@@ -1,4 +1,4 @@
-# @ohos.file.sendablePhotoAccessHelper(Helper functions to access image and video assets)
+# @ohos.file.sendablePhotoAccessHelper(基于Sendable对象的相册管理模块)
 
 该模块基于[Sendable](../../../arkts-utils/arkts-sendable.md)对象，提供相册管理功能，包括创建相册和访问、修改相册中的媒体数据。
 

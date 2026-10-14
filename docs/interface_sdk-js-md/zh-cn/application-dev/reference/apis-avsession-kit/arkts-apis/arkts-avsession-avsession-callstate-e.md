@@ -22,7 +22,7 @@ CALL_STATE_ACTIVE = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_ACTIVE = 2--><!--Device-CallState-CALL_STATE_ACTIVE = 2-End-->
 
@@ -38,7 +38,7 @@ CALL_STATE_DIALING = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_DIALING = 3--><!--Device-CallState-CALL_STATE_DIALING = 3-End-->
 
@@ -54,7 +54,7 @@ CALL_STATE_DISCONNECTING = 6
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_DISCONNECTING = 6--><!--Device-CallState-CALL_STATE_DISCONNECTING = 6-End-->
 
@@ -70,7 +70,7 @@ CALL_STATE_HOLDING = 5
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_HOLDING = 5--><!--Device-CallState-CALL_STATE_HOLDING = 5-End-->
 
@@ -86,7 +86,7 @@ CALL_STATE_IDLE = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
 
@@ -102,7 +102,7 @@ CALL_STATE_INCOMING = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
 
@@ -118,7 +118,7 @@ CALL_STATE_WAITING = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-CallState-CALL_STATE_WAITING = 4--><!--Device-CallState-CALL_STATE_WAITING = 4-End-->
 

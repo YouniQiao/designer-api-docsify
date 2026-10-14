@@ -22,7 +22,7 @@ ITALIC = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontStyle-ITALIC = 1--><!--Device-FontStyle-ITALIC = 1-End-->
 
@@ -38,7 +38,7 @@ NORMAL = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontStyle-NORMAL = 0--><!--Device-FontStyle-NORMAL = 0-End-->
 
@@ -54,7 +54,7 @@ OBLIQUE = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-FontStyle-OBLIQUE = 2--><!--Device-FontStyle-OBLIQUE = 2-End-->
 

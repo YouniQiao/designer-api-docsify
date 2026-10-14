@@ -22,7 +22,7 @@ All certificates.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsCertType-ALL_CERTS = 1--><!--Device-CmsCertType-ALL_CERTS = 1-End-->
 
@@ -38,7 +38,7 @@ Signer certificates.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsCertType-SIGNER_CERTS = 0--><!--Device-CmsCertType-SIGNER_CERTS = 0-End-->
 

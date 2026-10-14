@@ -150,7 +150,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 
 依照传入的对象创建组件树，并持有组件树的根节点。无状态的UI方法[@Builder](../../../ui/state-management/arkts-builder.md)最多拥有一个根节点。
 
-支持自定义组件。相比[build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](#build1)接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)。
+支持自定义组件。相比[build(builder: WrappedBuilder\<Args>, arg?: Object)](#build1)接口，本接口支持builder的配置参数，用于配置Builder的构建行为，具体属性见[BuildOptions](arkts-arkui-buildernode-buildoptions-i.md)。
 
 > **说明：** 
 > 

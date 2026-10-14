@@ -22,7 +22,7 @@ Audio mode.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-MergeTypeMode-AUDIO = 1--><!--Device-MergeTypeMode-AUDIO = 1-End-->
 
@@ -38,7 +38,7 @@ Default mode, indicating that this parameter does not take effect.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-MergeTypeMode-DEFAULT = 0--><!--Device-MergeTypeMode-DEFAULT = 0-End-->
 
@@ -54,7 +54,7 @@ Document mode.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-MergeTypeMode-DOCUMENT = 3--><!--Device-MergeTypeMode-DOCUMENT = 3-End-->
 
@@ -70,7 +70,7 @@ Image mode.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-MergeTypeMode-PICTURE = 4--><!--Device-MergeTypeMode-PICTURE = 4-End-->
 
@@ -86,7 +86,7 @@ Video mode.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-MergeTypeMode-VIDEO = 2--><!--Device-MergeTypeMode-VIDEO = 2-End-->
 

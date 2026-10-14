@@ -26,7 +26,7 @@ DAILY_LIFE_SERVICE = 0x404
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
 
@@ -46,7 +46,7 @@ NAVIGATION = 0x401
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserActivityScenario-NAVIGATION = 0x401--><!--Device-UserActivityScenario-NAVIGATION = 0x401-End-->
 
@@ -66,7 +66,7 @@ SPORT = 0x402
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserActivityScenario-SPORT = 0x402--><!--Device-UserActivityScenario-SPORT = 0x402-End-->
 
@@ -86,7 +86,7 @@ TRANSPORT = 0x403
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
 

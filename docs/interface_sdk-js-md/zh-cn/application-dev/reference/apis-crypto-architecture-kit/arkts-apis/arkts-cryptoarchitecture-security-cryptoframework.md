@@ -4,10 +4,6 @@
 
 **起始版本：** 9
 
-**模型约束：** 
-- API版本12+：此接口可在Stage模型和FA模型下使用。
-- API版本9-11：此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace cryptoFramework--><!--Device-unnamed-declare namespace cryptoFramework-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework
@@ -24,19 +20,19 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md) | 创建对应算法的非对称密钥生成器实例。 |
-| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md) | 创建指定密钥规格的非对称密钥生成器实例。 |
-| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md) | 创建加解密实例。 |
-| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md) | 创建密钥派生函数实例。 |
-| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md) | 创建一个用于密钥封装和解封装操作的Kem实例。 |
-| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md) | 创建密钥协商实例。 |
+| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator) | 创建对应算法的非对称密钥生成器实例。 |
+| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) | 创建指定密钥规格的非对称密钥生成器实例。 |
+| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) | 创建加解密实例。 |
+| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf) | 创建密钥派生函数实例。 |
+| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem) | 创建一个用于密钥封装和解封装操作的Kem实例。 |
+| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement) | 创建密钥协商实例。 |
 | [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac1) | 创建消息认证码实例。 |
 | [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac2) | 创建消息认证码实例。 |
-| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md) | 创建消息摘要实例。 |
-| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md) | 创建随机数实例。 |
-| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md) | 创建签名实例。 |
-| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md) | 创建对应算法的对称密钥生成器实例。 |
-| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md) | 创建验签实例。 |
+| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd) | 创建消息摘要实例。 |
+| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom) | 创建随机数实例。 |
+| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) | 创建签名实例。 |
+| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) | 创建对应算法的对称密钥生成器实例。 |
+| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) | 创建验签实例。 |
 
 ### 类
 

@@ -22,7 +22,7 @@ Sends a common event.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OperationType-SEND_COMMON_EVENT--><!--Device-OperationType-SEND_COMMON_EVENT-End-->
 
@@ -38,7 +38,7 @@ Starts multiple abilities with a UI.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OperationType-START_ABILITIES--><!--Device-OperationType-START_ABILITIES-End-->
 
@@ -54,7 +54,7 @@ Starts an ability with a UI.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OperationType-START_ABILITY--><!--Device-OperationType-START_ABILITY-End-->
 
@@ -70,7 +70,7 @@ Starts an ability without a UI (valid only in the FA model).
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OperationType-START_SERVICE--><!--Device-OperationType-START_SERVICE-End-->
 
@@ -86,7 +86,7 @@ Unknown operation type.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-OperationType-UNKNOWN_TYPE = 0--><!--Device-OperationType-UNKNOWN_TYPE = 0-End-->
 

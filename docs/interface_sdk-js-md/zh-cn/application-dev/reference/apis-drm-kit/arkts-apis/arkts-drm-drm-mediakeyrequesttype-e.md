@@ -22,7 +22,7 @@ MEDIA_KEY_REQUEST_TYPE_INITIAL = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_INITIAL = 1-End-->
 
@@ -38,7 +38,7 @@ MEDIA_KEY_REQUEST_TYPE_NONE = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_NONE = 4-End-->
 
@@ -54,7 +54,7 @@ MEDIA_KEY_REQUEST_TYPE_RELEASE = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RELEASE = 3-End-->
 
@@ -70,7 +70,7 @@ MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_RENEWAL = 2-End-->
 
@@ -86,7 +86,7 @@ MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UNKNOWN = 0-End-->
 
@@ -102,7 +102,7 @@ MEDIA_KEY_REQUEST_TYPE_UPDATE = 5
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5--><!--Device-MediaKeyRequestType-MEDIA_KEY_REQUEST_TYPE_UPDATE = 5-End-->
 

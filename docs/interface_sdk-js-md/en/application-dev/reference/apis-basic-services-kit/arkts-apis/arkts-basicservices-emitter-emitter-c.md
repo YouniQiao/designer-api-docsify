@@ -28,7 +28,7 @@ Defines a constructor.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-constructor()--><!--Device-Emitter-constructor()-End-->
 
@@ -56,7 +56,7 @@ After an event is published using this API, the event may not be executed immedi
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-emit(eventId: string, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, data?: EventData): void-End-->
 
@@ -99,7 +99,7 @@ After an event is published using this API, the event may not be executed immedi
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, data?: GenericEventData<T>): void-End-->
 
@@ -151,7 +151,7 @@ After an event is published using this API, the event may not be executed immedi
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void--><!--Device-Emitter-emit(eventId: string, options: Options, data?: EventData): void-End-->
 
@@ -199,7 +199,7 @@ After an event is published using this API, the event may not be executed immedi
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void--><!--Device-Emitter-emit<T>(eventId: string, options: Options, data?: GenericEventData<T>): void-End-->
 
@@ -249,7 +249,7 @@ Obtains the number of subscriptions to a specified event of the Emitter instance
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-getListenerCount(eventId: string): long--><!--Device-Emitter-getListenerCount(eventId: string): long-End-->
 
@@ -284,11 +284,11 @@ off(eventId: string): void
 
 Unsubscribes from all events with the specified event ID of the Emitter instance.
 
-After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
+After this API is used to unsubscribe from an event, the event that has been published through the [emit](#emit1) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-Emitter-off(eventId: string): void--><!--Device-Emitter-off(eventId: string): void-End-->
 
@@ -318,7 +318,7 @@ off(eventId: string, callback: Callback<EventData>): void
 
 Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#on1) or [once](#once1) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
-After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
+After this API is used to unsubscribe from an event, the event that has been published through the [emit](#emit1) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 
@@ -359,7 +359,7 @@ off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 
 Unsubscribes from an event of the Emitter instance. This API takes effect only when the [on](#on2) or [once](#once2) API is used to subscribe to the event with specified event ID and a callback is used to process the event.
 
-After this API is used to unsubscribe from an event, the event that has been published through the emit API but has not been executed will be unsubscribed.
+After this API is used to unsubscribe from an event, the event that has been published through the [emit](#emit2) API but has not been executed will be unsubscribed.
 
 **Since:** 22
 

@@ -4,8 +4,6 @@ The particleAbility module provides APIs for operating a DataAbility and Service
 
 **Since:** 7
 
-**Model restriction:** This API can be used only in the FA model.
-
 <!--Device-unnamed-declare namespace particleAbility--><!--Device-unnamed-declare namespace particleAbility-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.FAModel
@@ -22,8 +20,8 @@ import { particleAbility } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md) | Obtains a dataAbilityHelper object. |
-| [connectAbility](arkts-ability-particleability-connectability-f.md) | Connects this ability to a ServiceAbility. |
+| [acquireDataAbilityHelper](arkts-ability-particleability-acquiredataabilityhelper-f.md#acquiredataabilityhelper) | Obtains a dataAbilityHelper object. |
+| [connectAbility](arkts-ability-particleability-connectability-f.md#connectability) | Connects this ability to a ServiceAbility. |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability1) | Disconnects this ability from a specific ServiceAbility. This API uses an asynchronous callback to return the result. |
 | [disconnectAbility](arkts-ability-particleability-disconnectability-f.md#disconnectability2) | Disconnects this ability from a specific ServiceAbility. This API uses a promise to return the result. |
 | [startAbility](arkts-ability-particleability-startability-f.md#startability1) | Starts a ParticleAbility. This API uses an asynchronous callback to return the result. |

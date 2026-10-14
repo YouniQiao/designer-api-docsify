@@ -4,10 +4,6 @@ The **cryptoFramework** module provides APIs for cryptographic operations, shiel
 
 **Since:** 9
 
-**Model restriction:** 
-- API version 12 and later: This API can be used in both the stage model and FA model.
-- API versions 9 to 11: This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace cryptoFramework--><!--Device-unnamed-declare namespace cryptoFramework-End-->
 
 **System capability:** SystemCapability.Security.CryptoFramework
@@ -24,19 +20,19 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 | Name | Description |
 | --- | --- |
-| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md) | Creates an **AsyKeyGenerator** instance based on the specified algorithm. |
-| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md) | Creates an **AsyKeyGeneratorBySpec** instance based on the specified key specifications. |
-| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md) | Creates a **Cipher** instance. |
-| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md) | Creates a key derivation function instance. |
-| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md) | Creates a Kem instance for key encapsulation and decapsulation operations. |
-| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md) | Creates a **KeyAgreement** instance. |
+| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator) | Creates an **AsyKeyGenerator** instance based on the specified algorithm. |
+| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) | Creates an **AsyKeyGeneratorBySpec** instance based on the specified key specifications. |
+| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) | Creates a **Cipher** instance. |
+| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf) | Creates a key derivation function instance. |
+| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem) | Creates a Kem instance for key encapsulation and decapsulation operations. |
+| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement) | Creates a **KeyAgreement** instance. |
 | [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac1) | Creates a **Mac** instance. |
 | [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac2) | Creates a **Mac** instance. |
-| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md) | Creates an **Md** instance. |
-| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md) | Creates a **Random** instance. |
-| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md) | Creates a **Sign** instance. |
-| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md) | Creates a symmetric key generator instance with the specified algorithm. |
-| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md) | Creates a **Verify** instance. |
+| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd) | Creates an **Md** instance. |
+| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom) | Creates a **Random** instance. |
+| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) | Creates a **Sign** instance. |
+| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) | Creates a symmetric key generator instance with the specified algorithm. |
+| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) | Creates a **Verify** instance. |
 
 ### Classes
 

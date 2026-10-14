@@ -24,7 +24,7 @@ Window adding event.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
 
@@ -42,7 +42,7 @@ Window bounds change event.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
@@ -60,7 +60,7 @@ Window removing event.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
 
@@ -78,7 +78,7 @@ Non-window change event. <br>Note: This value can only be used as a return value
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 

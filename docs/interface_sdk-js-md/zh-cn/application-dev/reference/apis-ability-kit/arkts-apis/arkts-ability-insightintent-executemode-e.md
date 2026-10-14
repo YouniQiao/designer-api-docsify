@@ -24,7 +24,7 @@ UI_ABILITY_BACKGROUND = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1--><!--Device-ExecuteMode-UI_ABILITY_BACKGROUND = 1-End-->
 
@@ -42,7 +42,7 @@ UI_ABILITY_FOREGROUND = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0--><!--Device-ExecuteMode-UI_ABILITY_FOREGROUND = 0-End-->
 

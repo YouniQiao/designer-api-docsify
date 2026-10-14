@@ -10,7 +10,7 @@ Before calling any API in ImagePacker, you must use [image.createImagePacker](ar
 
 Images occupy a large amount of memory. When you finish using an ImagePacker instance, call [release](#release1) to free the memory promptly. Before releasing the instance, ensure that all asynchronous operations associated with the instance have finished and the instance is no longer needed.
 
-Currently, the following formats are supported: jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
+Currently, the following formats are supported: jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The supported formats may vary depending on the hardware. You can refer to the **supportedFormats** property of ImagePacker to see which ones are supported.)
 
 **Since:** 6
 
@@ -485,7 +485,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -556,7 +556,7 @@ Compresses or re-encodes an image. This API uses a promise to return the result.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -1175,7 +1175,7 @@ async function Release() {
 readonly supportedFormats: Array<string>
 ```
 
-Supported formats for image encoding, including jpeg, webp, png, heic&lt;sup&gt;12+&lt;/sup&gt;, and gif&lt;sup&gt;18+&lt;/sup&gt;. (The supported formats may vary depending on the hardware.)
+Supported formats for image encoding, including jpeg, webp, png, heic<sup>12+</sup>, and gif<sup>18+</sup>. (The supported formats may vary depending on the hardware.)
 
 **Type:** Array&lt;string&gt;
 

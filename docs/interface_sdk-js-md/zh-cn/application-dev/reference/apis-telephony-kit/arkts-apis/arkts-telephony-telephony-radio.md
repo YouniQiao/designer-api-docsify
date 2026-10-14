@@ -22,7 +22,7 @@ import { radio } from '@kit.TelephonyKit';
 | --- | --- |
 | [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork1) | 获取注册网络所在国家的ISO国家码。使用callback异步回调。 |
 | [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork2) | 获取注册网络所在国家的ISO国家码。使用Promise异步回调。 |
-| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md) | 获取注册网络所在国家的ISO国家码。 |
+| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md#getisocountrycodefornetworksync) | 获取注册网络所在国家的ISO国家码。 |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode1) | 获取当前选网模式。使用callback异步回调。 |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode2) | 获取当前选网模式。使用Promise异步回调。 |
 | [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate1) | 获取网络状态。使用callback异步回调。 |
@@ -30,15 +30,15 @@ import { radio } from '@kit.TelephonyKit';
 | [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate3) | 获取网络状态。使用callback异步回调。 |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname1) | 获取运营商名称。使用callback异步回调。 |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname2) | 获取运营商名称。使用Promise异步回调。 |
-| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md) | 获取运营商名称。 |
+| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md#getoperatornamesync) | 获取运营商名称。 |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid1) | 获取主卡所在卡槽的索引号。使用callback异步回调。 |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid2) | 获取主卡所在卡槽的索引号。使用Promise异步回调。 |
 | [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech1) | 获取当前接入的CS域和PS域无线接入技术。使用callback异步回调。其中，CS域为电路交换域，PS为分组交换域。 |
 | [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech2) | 获取当前接入的CS域和PS域无线接入技术。使用Promise异步回调。其中，CS域为电路交换域，PS为分组交换域。 |
-| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md) | 获取当前接入的CS域和PS域无线接入技术。CS域为电路交换域，PS为分组交换域。 |
+| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md#getradiotechsync) | 获取当前接入的CS域和PS域无线接入技术。CS域为电路交换域，PS为分组交换域。 |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation1) | 获取指定SIM卡槽对应的注册网络信号强度信息列表。使用callback异步回调。 |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation2) | 获取指定SIM卡槽对应的注册网络信号强度信息列表。使用Promise异步回调。 |
-| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md) | 获取指定SIM卡槽对应的注册网络信号强度信息列表。 |
+| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md#getsignalinformationsync) | 获取指定SIM卡槽对应的注册网络信号强度信息列表。 |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported1) | 判断当前设备是否支持NR(New Radio)。 |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported2) | 判断当前设备是否支持NR(New Radio)。 |
 | [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon1) | 判断指定卡槽位的Radio是否打开。使用callback异步回调。 |
@@ -52,7 +52,7 @@ import { radio } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md) | Reset all network settings of telephony. |
+| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md#factoryreset) | Reset all network settings of telephony. |
 | [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion1) | Get the version of Baseband. |
 | [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion2) | Get the version of Baseband. |
 | [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getcellinformation1) | Get the current cell information. |
@@ -61,7 +61,7 @@ import { radio } from '@kit.TelephonyKit';
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei1) | Obtains the IMEI of a specified card slot of the device. |
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei2) | Obtains the IMEI of a specified card slot of the device. |
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei3) | Obtains the IMEI of a specified card slot of the device. |
-| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md) | Obtains the software version number of a specified card slot of the device. |
+| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md#getimeisv) | Obtains the software version number of a specified card slot of the device. |
 | [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo1) | Get the IMS registration state info of specified IMS service type. |
 | [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo2) | Get the IMS registration state info of specified IMS service type. |
 | [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getmeid1) | Obtains the MEID of a specified card slot of the device. |
@@ -78,7 +78,7 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid1) | Obtains the unique device ID of a specified card slot of the device. |
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid2) | Obtains the unique device ID of a specified card slot of the device. |
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid3) | Obtains the unique device ID of a specified card slot of the device. |
-| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) | 确定当前手动网络扫描是否正在进行 |
+| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md#ismanualnetworkscanning) | 确定当前手动网络扫描是否正在进行 |
 | [off](arkts-telephony-radio-off-f-sys.md#offimsregstatechange) | Unsubscribe from imsRegStateChange event. |
 | [on](arkts-telephony-radio-on-f-sys.md#onimsregstatechange) | Called when the IMS registration state of specified IMS service type corresponding to a monitored `slotId` updates. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendupdatecelllocationrequest1) | Actively requests to update location information. |
@@ -94,8 +94,8 @@ import { radio } from '@kit.TelephonyKit';
 | [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setpreferrednetwork2) | Set the preferred network for the specified SIM card slot. |
 | [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid1) | Set the index number of the main SIM card slot. |
 | [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid2) | Set the index number of the main SIM card slot. |
-| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md) | 启动手动网络扫描，实时报告 |
-| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md) | 停止手动搜网 |
+| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md#startmanualnetworkscan) | 启动手动网络扫描，实时报告 |
+| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md#stopmanualnetworkscan) | 停止手动搜网 |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio1) | Turn off the radio service. |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio2) | Turn off the radio service. |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio3) | Turn off the radio service. |
@@ -104,7 +104,7 @@ import { radio } from '@kit.TelephonyKit';
 | [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio3) | Turn on the radio service. |
 | [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode1) | Get the option mode of NR. |
 | [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode2) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
 <!--DelEnd-->
 
 ### 接口

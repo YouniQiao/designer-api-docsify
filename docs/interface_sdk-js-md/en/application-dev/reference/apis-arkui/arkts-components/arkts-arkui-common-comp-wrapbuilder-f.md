@@ -32,4 +32,4 @@ For details about the development guide, see [wrapBuilder: Encapsulating Global 
 
 | Type | Description |
 | --- | --- |
-| [WrappedBuilder](arkts-arkui-common-comp-wrappedbuilder-c.md)&lt;Args&gt; | An instance of `WrappedBuilder&lt;Args&gt;`, used to reuse or pass a global `@Builder` function between components. This instance encapsulates the specified global `@Builder` function, and the encapsulated builder function can be invoked through its `builder` property, making it convenient to pass as a parameter between components or assign to a variable. |
+| [WrappedBuilder](arkts-arkui-common-comp-wrappedbuilder-c.md)&lt;Args&gt; | An instance of `WrappedBuilder<Args>`, used to reuse or pass a global `@Builder` function between components. This instance encapsulates the specified global `@Builder` function, and the encapsulated builder function can be invoked through its `builder` property, making it convenient to pass as a parameter between components or assign to a variable. |

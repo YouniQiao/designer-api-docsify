@@ -4,7 +4,7 @@
 enum WifiBandType
 ```
 
-Wi-Fi band type. @enum { int }
+Wi-Fi band type.
 
 **Since:** 10
 

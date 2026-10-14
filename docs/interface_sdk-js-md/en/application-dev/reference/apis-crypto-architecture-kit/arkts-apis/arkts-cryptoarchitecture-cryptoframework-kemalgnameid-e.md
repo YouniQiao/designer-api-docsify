@@ -24,7 +24,7 @@ Indicates the ML_KEM_1024 algorithm name ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-KemAlgNameId-ML_KEM_1024 = 2--><!--Device-KemAlgNameId-ML_KEM_1024 = 2-End-->
 
@@ -42,7 +42,7 @@ Indicates the ML_KEM_512 algorithm name ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-KemAlgNameId-ML_KEM_512 = 0--><!--Device-KemAlgNameId-ML_KEM_512 = 0-End-->
 
@@ -60,7 +60,7 @@ Indicates the ML_KEM_768 algorithm name ID.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-KemAlgNameId-ML_KEM_768 = 1--><!--Device-KemAlgNameId-ML_KEM_768 = 1-End-->
 

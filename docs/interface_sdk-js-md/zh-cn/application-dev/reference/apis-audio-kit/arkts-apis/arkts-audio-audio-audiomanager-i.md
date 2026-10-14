@@ -242,7 +242,7 @@ getSessionManager(): AudioSessionManager
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioManager-getSessionManager(): AudioSessionManager--><!--Device-AudioManager-getSessionManager(): AudioSessionManager-End-->
 
@@ -322,7 +322,7 @@ getVolumeManager(): AudioVolumeManager
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-AudioManager-getVolumeManager(): AudioVolumeManager--><!--Device-AudioManager-getVolumeManager(): AudioVolumeManager-End-->
 
@@ -359,7 +359,7 @@ off(type: 'audioSceneChange', callback?: Callback<AudioScene>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'audioSceneChange' | 是 | 事件回调类型，支持的事件为'audioSceneChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('audioSceneChange')](#onaudioscenechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AudioScene](arkts-audio-audio-audioscene-e.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('audioSceneChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -388,7 +388,7 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [off('deviceChange')](arkts-audio-audio-audioroutingmanager-i.md#offdevicechange)替代。
+> off('deviceChange')替代。
 
 **起始版本：** 7
 
@@ -405,7 +405,7 @@ off(type: 'deviceChange', callback?: Callback<DeviceChangeAction>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'deviceChange' | 是 | 事件回调类型，支持的事件为'deviceChange'。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('deviceChange')](#ondevicechange)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[DeviceChangeAction](arkts-audio-audio-devicechangeaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('deviceChange')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -453,7 +453,7 @@ off(type: 'interrupt', interrupt: AudioInterrupt, callback?: Callback<InterruptA
 | --- | --- | --- | --- |
 | type | 'interrupt' | 是 | 事件回调类型，支持的事件为'interrupt'。 |
 | interrupt | [AudioInterrupt](arkts-audio-audio-audiointerrupt-i.md) | 是 | 音频打断事件类型的参数。 |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与[on('interrupt')](#oninterrupt)绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[InterruptAction](arkts-audio-audio-interruptaction-i.md)&gt; | 否 | 回调函数。传入回调函数时，仅取消该回调对应的监听事件，需与on('interrupt')绑定同一回调函数；不传参数时，取消此事件类型下所有已订阅的监听事件。 |
 
 **示例**
 
@@ -519,7 +519,7 @@ on(type: 'deviceChange', callback: Callback<DeviceChangeAction>): void
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [on('deviceChange')](arkts-audio-audio-audioroutingmanager-i.md#ondevicechange)替代。
+> on('deviceChange')替代。
 
 **起始版本：** 7
 
@@ -552,12 +552,12 @@ audioManager.on('deviceChange', (deviceChanged: audio.DeviceChangeAction) => {
 on(type: 'interrupt', interrupt: AudioInterrupt, callback: Callback<InterruptAction>): void
 ```
 
-监听音频打断事件（当音频焦点发生变化时触发）。使用callback异步回调。与[on('audioInterrupt')](arkts-audio-audio-audiorenderer-i.md#onaudiointerrupt)作用一致，均用于监听焦点变化。为无音频流的场景（未曾创建AudioRenderer对象），比如FM、语音唤醒等提供焦点变化监听功能。
+监听音频打断事件（当音频焦点发生变化时触发）。使用callback异步回调。与on('audioInterrupt')作用一致，均用于监听焦点变化。为无音频流的场景（未曾创建AudioRenderer对象），比如FM、语音唤醒等提供焦点变化监听功能。
 
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 11开始废弃，建议使用
-> [on('audioInterrupt')](arkts-audio-audio-audiocapturer-i.md#onaudiointerrupt)替代。
+> on('audioInterrupt')替代。
 
 **起始版本：** 7
 

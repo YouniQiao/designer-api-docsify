@@ -50,7 +50,7 @@ dateTimeOptions(value: DateTimeOptions)
 dateTimeOptions(timeFormat: Optional<DateTimeOptions>)
 ```
 
-设置时分秒是否显示前导0。与[dateTimeOptions&lt;sup&gt;12+&lt;/sup&gt;](#datetimeoptions1)相比，timeFormat参数新增了对undefined类型的支持。
+设置时分秒是否显示前导0。与[dateTimeOptions<sup>12+</sup>](#datetimeoptions1)相比，timeFormat参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -126,7 +126,7 @@ disappearTextStyle(value: PickerTextStyle)
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。与[disappearTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细。与[disappearTextStyle<sup>10+</sup>](#disappeartextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -208,7 +208,7 @@ enableHapticFeedback(enable: boolean)
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-设置是否开启触控反馈。与[enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback1)相比，enable参数新增了对undefined类型的支持。
+设置是否开启触控反馈。与[enableHapticFeedback<sup>12+</sup>](#enablehapticfeedback1)相比，enable参数新增了对undefined类型的支持。
 
 开启触控反馈时，需要在工程的src/main/module.json5文件的"module"内配置requestPermissions字段开启振动权限，配置如下：
 
@@ -262,7 +262,7 @@ loop(value: boolean)
 loop(isLoop: Optional<boolean>)
 ```
 
-设置是否启用循环模式。与[loop&lt;sup&gt;11+&lt;/sup&gt;](#loop1)相比，isLoop参数新增了对undefined类型的支持。
+设置是否启用循环模式。与[loop<sup>11+</sup>](#loop1)相比，isLoop参数新增了对undefined类型的支持。
 
 > **说明：** 
 > 
@@ -404,7 +404,7 @@ selectedTextStyle(value: PickerTextStyle)
 selectedTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号及字体粗细。与[selectedTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
+设置选中项的文本颜色、字号及字体粗细。与[selectedTextStyle<sup>10+</sup>](#selectedtextstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -456,7 +456,7 @@ textStyle(value: PickerTextStyle)
 textStyle(style: Optional<PickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。与[textStyle&lt;sup&gt;10+&lt;/sup&gt;](#textstyle1)相比，style参数新增了对undefined类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细。与[textStyle<sup>10+</sup>](#textstyle1)相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 

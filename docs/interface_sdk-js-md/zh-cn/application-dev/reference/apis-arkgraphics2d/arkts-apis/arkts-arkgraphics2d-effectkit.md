@@ -32,7 +32,7 @@ import { effectKit } from '@kit.ArkGraphics2D';
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker2) | 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用Promise异步回调。 |
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker3) | 通过传入的PixelMap创建ColorPicker实例，使用callback异步回调。 |
 | [createColorPicker](arkts-arkgraphics2d-effectkit-createcolorpicker-f.md#createcolorpicker4) | 通过传入的PixelMap创建选定取色区域的ColorPicker实例，使用callback异步回调。 |
-| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md) | 通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
+| [createEffect](arkts-arkgraphics2d-effectkit-createeffect-f.md#createeffect) | 通过传入的PixelMap创建Filter实例。后续可通过链式调用添加各种图像效果，最终通过[getEffectPixelMap](arkts-arkgraphics2d-effectkit-filter-i.md#geteffectpixelmap)获取处理后的图像。 |
 
 ### 接口
 

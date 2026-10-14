@@ -6,8 +6,6 @@ export enum RenderingPipelineType
 
 Enumerates the rendering pipeline types.
 
-@enum { int }
-
 **Since:** 21
 
 <!--Device-unnamed-export enum RenderingPipelineType--><!--Device-unnamed-export enum RenderingPipelineType-End-->

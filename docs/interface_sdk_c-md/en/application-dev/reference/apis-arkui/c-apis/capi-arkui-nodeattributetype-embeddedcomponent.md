@@ -2,7 +2,7 @@
 
 ## Overview
 
-Defines the ArkUI style attributes that can be set on the native side.
+Enumerates the attribute types that can be set by ArkUI on the native side.
 
 **Since**: 12
 
@@ -30,7 +30,7 @@ NODE_EMBEDDED_COMPONENT_OPTION
 
 **Description**
 
-Set onError and onTerminated callbacks for EMBEDDED_COMPONENT. This attribute can be set as required through APIs.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: The option for EmbeddedComponent, with parameter type {@ArkUI_EmbeddedComponentOption}.</li> </ul>
+Runtime option of **EmbeddedComponent**, which is used to control the UI display behavior of the EmbeddedAbility. This attribute can be set.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.object: List of options for **EmbeddedComponent**. The parameter type is [ArkUI_EmbeddedComponentOption](capi-arkui-nativemodule-arkui-embeddedcomponentoption.md). The default value is **nullptr**.</li> </ul>
 
 **Since**: 20
 

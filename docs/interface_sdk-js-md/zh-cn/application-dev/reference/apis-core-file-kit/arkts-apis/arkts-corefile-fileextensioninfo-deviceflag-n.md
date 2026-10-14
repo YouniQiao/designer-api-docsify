@@ -10,8 +10,6 @@ namespace DeviceFlag
 
 **废弃版本：** 23
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-fileExtensionInfo-namespace DeviceFlag--><!--Device-fileExtensionInfo-namespace DeviceFlag-End-->
 
 **系统能力：** SystemCapability.FileManagement.UserFileService

@@ -32,7 +32,7 @@ Enables the hardware entropy source. Secure random numbers obtained from TEE wil
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 21.
+**Atomic service API:** This API can be used in atomic services since API version 21.
 
 <!--Device-Random-enableHardwareEntropy(): void--><!--Device-Random-enableHardwareEntropy(): void-End-->
 
@@ -86,7 +86,7 @@ Generates a random number of the specified length. This API uses an asynchronous
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void--><!--Device-Random-generateRandom(len: int, callback: AsyncCallback<DataBlob>): void-End-->
 
@@ -138,7 +138,7 @@ Generates a random number of the specified length. This API uses a promise to re
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Random-generateRandom(len: int): Promise<DataBlob>--><!--Device-Random-generateRandom(len: int): Promise<DataBlob>-End-->
 
@@ -265,7 +265,7 @@ Generates a random number of the specified length. This API returns the result s
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 10 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Random-generateRandomSync(len: int): DataBlob--><!--Device-Random-generateRandomSync(len: int): DataBlob-End-->
 
@@ -396,7 +396,7 @@ Sets a seed.
 - API version 12 and later: This API can be used in both the stage model and FA model.
 - API versions 9 to 11: This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Random-setSeed(seed: DataBlob): void--><!--Device-Random-setSeed(seed: DataBlob): void-End-->
 
@@ -452,7 +452,7 @@ Indicates the random generation algorithm name. Currently, only CTR_DRBG is supp
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Random-readonly algName: string--><!--Device-Random-readonly algName: string-End-->
 

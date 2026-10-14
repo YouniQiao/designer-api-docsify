@@ -26,10 +26,10 @@ import { sms } from '@kit.TelephonyKit';
 | [getDefaultSmsSimId](arkts-telephony-sms-getdefaultsmssimid-f.md#getdefaultsmssimid2) | 获取发送短信的默认SIM卡ID。使用Promise异步回调。 |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid1) | 获取发送短信的默认SIM卡槽ID。使用callback异步回调。 |
 | [getDefaultSmsSlotId](arkts-telephony-sms-getdefaultsmsslotid-f.md#getdefaultsmsslotid2) | 获取发送短信的默认SIM卡槽ID。使用Promise异步回调。 |
-| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md) | 检查当前设备是否具备短信发送和接收能力，该方法是同步方法。 |
+| [hasSmsCapability](arkts-telephony-sms-hassmscapability-f.md#hassmscapability) | 检查当前设备是否具备短信发送和接收能力，该方法是同步方法。 |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage1) | 发送短信。使用callback异步回调。 |
 | [sendShortMessage](arkts-telephony-sms-sendshortmessage-f.md#sendshortmessage2) | 发送短信。使用Promise异步回调。 |
-| [sendMessage](arkts-telephony-sms-sendmessage-f.md) | 发送短信。 |
+| [sendMessage](arkts-telephony-sms-sendmessage-f.md#sendmessage) | 发送短信。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -54,14 +54,14 @@ import { sms } from '@kit.TelephonyKit';
 | [getSmscAddr](arkts-telephony-sms-getsmscaddr-f-sys.md#getsmscaddr2) | 获取短信服务中心（SMSC）地址。使用Promise异步回调。 |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo1) | 获取短信段信息。使用callback异步回调。 |
 | [getSmsSegmentsInfo](arkts-telephony-sms-getsmssegmentsinfo-f-sys.md#getsmssegmentsinfo2) | 获取短信段信息。使用Promise异步回调。 |
-| [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md) | 获取拟发送短信的目标地址短码类型 |
+| [getSmsShortCodeType](arkts-telephony-sms-getsmsshortcodetype-f-sys.md#getsmsshortcodetype) | 获取拟发送短信的目标地址短码类型 |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported1) | 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用callback异步回调。 |
 | [isImsSmsSupported](arkts-telephony-sms-isimssmssupported-f-sys.md#isimssmssupported2) | 如果IMS已注册并且在IMS上支持SMS，则支持通过IMS发送SMS。使用Promise异步回调。 |
 | [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms1) | 发送彩信。使用callback异步回调。 |
 | [sendMms](arkts-telephony-sms-sendmms-f-sys.md#sendmms2) | 发送彩信。使用Promise异步回调。 |
 | [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig1) | 设置小区广播配置。使用callback异步回调。 |
 | [setCBConfig](arkts-telephony-sms-setcbconfig-f-sys.md#setcbconfig2) | 设置小区广播配置。使用Promise异步回调。 |
-| [setCBConfigList](arkts-telephony-sms-setcbconfiglist-f-sys.md) | 打开小区广播列表 |
+| [setCBConfigList](arkts-telephony-sms-setcbconfiglist-f-sys.md#setcbconfiglist) | 打开小区广播列表 |
 | [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid1) | 设置发送短信的默认SIM卡槽ID。使用callback异步回调。 |
 | [setDefaultSmsSlotId](arkts-telephony-sms-setdefaultsmsslotid-f-sys.md#setdefaultsmsslotid2) | 设置发送短信的默认SIM卡槽ID。使用Promise异步回调。 |
 | [setSmscAddr](arkts-telephony-sms-setsmscaddr-f-sys.md#setsmscaddr1) | 设置短信服务中心（SMSC）地址。使用callback异步回调。 |

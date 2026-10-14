@@ -19,7 +19,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions, callback: AsyncCallb
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist1)
+> [huks.isKeyItemExist<sup>9+</sup>](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist1)
 > 替代。
 
 **起始版本：** 8
@@ -68,7 +68,7 @@ function isKeyExist(keyAlias: string, options: HuksOptions): Promise<boolean>
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.isKeyItemExist&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist2)替代。
+> [huks.isKeyItemExist<sup>9+</sup>](arkts-universalkeystore-huks-iskeyitemexist-f.md#iskeyitemexist2)替代。
 
 **起始版本：** 8
 

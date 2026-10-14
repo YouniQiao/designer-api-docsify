@@ -26,7 +26,7 @@ DISCONNECTED = 0x00
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-DISCONNECTED = 0x00--><!--Device-Faults-DISCONNECTED = 0x00-End-->
 
@@ -42,7 +42,7 @@ DNS = 0x50
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-DNS = 0x50--><!--Device-Faults-DNS = 0x50-End-->
 
@@ -58,7 +58,7 @@ FSIO = 0x40
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-FSIO = 0x40--><!--Device-Faults-FSIO = 0x40-End-->
 
@@ -88,7 +88,7 @@ OTHERS = 0xFF
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-OTHERS = 0xFF--><!--Device-Faults-OTHERS = 0xFF-End-->
 
@@ -104,7 +104,7 @@ PARAM = 0x30
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-PARAM = 0x30--><!--Device-Faults-PARAM = 0x30-End-->
 
@@ -120,7 +120,7 @@ PROTOCOL = 0x20
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-PROTOCOL = 0x20--><!--Device-Faults-PROTOCOL = 0x20-End-->
 
@@ -136,7 +136,7 @@ REDIRECT = 0x80
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-REDIRECT = 0x80--><!--Device-Faults-REDIRECT = 0x80-End-->
 
@@ -152,7 +152,7 @@ SSL = 0x70
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-SSL = 0x70--><!--Device-Faults-SSL = 0x70-End-->
 
@@ -168,7 +168,7 @@ TCP = 0x60
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-TCP = 0x60--><!--Device-Faults-TCP = 0x60-End-->
 
@@ -184,7 +184,7 @@ TIMEOUT = 0x10
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Faults-TIMEOUT = 0x10--><!--Device-Faults-TIMEOUT = 0x10-End-->
 

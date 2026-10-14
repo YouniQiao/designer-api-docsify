@@ -24,7 +24,7 @@ The device is already started.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-CONFLICT_CAMERA = 7400107--><!--Device-CameraErrorCode-CONFLICT_CAMERA = 7400107-End-->
 
@@ -40,7 +40,7 @@ The camera is disabled for security reasons.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108--><!--Device-CameraErrorCode-DEVICE_DISABLED = 7400108-End-->
 
@@ -56,7 +56,7 @@ The camera is preempted.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-DEVICE_PREEMPTED = 7400109--><!--Device-CameraErrorCode-DEVICE_PREEMPTED = 7400109-End-->
 
@@ -72,7 +72,7 @@ The device setting is locked.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106--><!--Device-CameraErrorCode-DEVICE_SETTING_LOCKED = 7400106-End-->
 
@@ -88,7 +88,7 @@ A parameter is missing or the parameter type is incorrect.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-INVALID_ARGUMENT = 7400101--><!--Device-CameraErrorCode-INVALID_ARGUMENT = 7400101-End-->
 
@@ -104,7 +104,7 @@ The operation is not allowed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102--><!--Device-CameraErrorCode-OPERATION_NOT_ALLOWED = 7400102-End-->
 
@@ -122,7 +122,7 @@ Parameter out of range.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-CameraErrorCode-PARAM_OUT_OF_RANGE = 7400115--><!--Device-CameraErrorCode-PARAM_OUT_OF_RANGE = 7400115-End-->
 
@@ -138,7 +138,7 @@ The camera service is abnormal.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-SERVICE_FATAL_ERROR = 7400201--><!--Device-CameraErrorCode-SERVICE_FATAL_ERROR = 7400201-End-->
 
@@ -154,7 +154,7 @@ The session configuration is locked.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-SESSION_CONFIG_LOCKED = 7400105--><!--Device-CameraErrorCode-SESSION_CONFIG_LOCKED = 7400105-End-->
 
@@ -170,7 +170,7 @@ The session is not configured.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-SESSION_NOT_CONFIG = 7400103--><!--Device-CameraErrorCode-SESSION_NOT_CONFIG = 7400103-End-->
 
@@ -186,7 +186,7 @@ The session is not running.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104--><!--Device-CameraErrorCode-SESSION_NOT_RUNNING = 7400104-End-->
 
@@ -202,7 +202,7 @@ The configuration conflicts with the current configuration.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110--><!--Device-CameraErrorCode-UNRESOLVED_CONFLICTS_WITH_CURRENT_CONFIGURATIONS = 7400110-End-->
 
@@ -220,7 +220,7 @@ Unsupported multiple camera combination.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.1.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
 
 <!--Device-CameraErrorCode-UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400113--><!--Device-CameraErrorCode-UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400113-End-->
 

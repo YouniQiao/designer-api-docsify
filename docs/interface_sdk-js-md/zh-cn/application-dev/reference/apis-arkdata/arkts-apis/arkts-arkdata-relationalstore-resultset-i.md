@@ -1562,7 +1562,7 @@ columnCount: int
 columnNames: Array<string>
 ```
 
-columnNames: Array\&lt;string\&gt;
+columnNames: Array\<string\>
 
 获取结果集中所有列的名称。当结果集中包含重名列时，获取的列名会不符合预期，建议使用[getColumnNames](#getcolumnnames)接口获取。
 

@@ -22,7 +22,7 @@ Friday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-FRI = 5--><!--Device-WeekDay-FRI = 5-End-->
 
@@ -38,7 +38,7 @@ Monday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-MON = 1--><!--Device-WeekDay-MON = 1-End-->
 
@@ -54,7 +54,7 @@ Saturday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-SAT = 6--><!--Device-WeekDay-SAT = 6-End-->
 
@@ -70,7 +70,7 @@ Sunday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-SUN = 7--><!--Device-WeekDay-SUN = 7-End-->
 
@@ -86,7 +86,7 @@ Thursday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-THU = 4--><!--Device-WeekDay-THU = 4-End-->
 
@@ -102,7 +102,7 @@ Tuesday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-TUE = 2--><!--Device-WeekDay-TUE = 2-End-->
 
@@ -118,7 +118,7 @@ Wednesday.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-WeekDay-WED = 3--><!--Device-WeekDay-WED = 3-End-->
 

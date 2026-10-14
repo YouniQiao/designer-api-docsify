@@ -18,7 +18,7 @@ Determine whether the randomized device address application can still be used.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 16.
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
 <!--Device-access-function isValidRandomDeviceId(deviceId: string): boolean--><!--Device-access-function isValidRandomDeviceId(deviceId: string): boolean-End-->
 

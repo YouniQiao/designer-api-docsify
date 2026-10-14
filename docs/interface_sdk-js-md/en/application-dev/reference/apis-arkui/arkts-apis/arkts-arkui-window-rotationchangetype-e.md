@@ -22,7 +22,7 @@ The window has finished rotating.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1--><!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1-End-->
 
@@ -38,7 +38,7 @@ The window is about to rotate.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0--><!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0-End-->
 

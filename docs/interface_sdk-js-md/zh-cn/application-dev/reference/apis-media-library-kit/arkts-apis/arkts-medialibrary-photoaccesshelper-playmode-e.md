@@ -24,7 +24,7 @@ AUTO_PLAY = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-PlayMode-AUTO_PLAY = 1--><!--Device-PlayMode-AUTO_PLAY = 1-End-->
 
@@ -42,7 +42,7 @@ DEFAULT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-PlayMode-DEFAULT = 0--><!--Device-PlayMode-DEFAULT = 0-End-->
 

@@ -20,7 +20,7 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md) | 根据上下文获取CalendarManager对象，用于管理日历。 |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) | 根据上下文获取CalendarManager对象，用于管理日历。 |
 
 ### 类
 

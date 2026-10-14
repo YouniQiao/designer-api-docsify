@@ -6,8 +6,6 @@ export declare enum DownloadDescription
 
 Enum for DownloadDescription
 
-@enum { number }
-
 **Since:** 12
 
 <!--Device-unnamed-export declare enum DownloadDescription--><!--Device-unnamed-export declare enum DownloadDescription-End-->

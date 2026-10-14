@@ -34,7 +34,7 @@ The added service and its characteristics are provided by the local device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-addService(service: GattService): void--><!--Device-GattServer-addService(service: GattService): void-End-->
 
@@ -105,7 +105,7 @@ Closes this `GattServer` object and unregisters its callbacks.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-close(): void--><!--Device-GattServer-close(): void-End-->
 
@@ -147,7 +147,7 @@ Connects to a BLE central device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GattServer-connect(deviceId: string, autoConnect?: boolean): void--><!--Device-GattServer-connect(deviceId: string, autoConnect?: boolean): void-End-->
 
@@ -197,7 +197,7 @@ Disconnects from or stops an ongoing connection to a BLE central device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GattServer-disconnect(deviceId: string): void--><!--Device-GattServer-disconnect(deviceId: string): void-End-->
 
@@ -414,7 +414,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void--><!--Device-GattServer-notifyCharacteristicChanged(      deviceId: string,      notifyCharacteristic: NotifyCharacteristic,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -482,7 +482,7 @@ This method should be called for every BLE peripheral device that has requested 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>--><!--Device-GattServer-notifyCharacteristicChanged(deviceId: string, notifyCharacteristic: NotifyCharacteristic): Promise<void>-End-->
 
@@ -1331,7 +1331,7 @@ Removes all services from the list of GATT services offered by this device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GattServer-removeAllServices(): void--><!--Device-GattServer-removeAllServices(): void-End-->
 
@@ -1372,7 +1372,7 @@ Removes a specified service from the list of GATT services provided by this devi
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-removeService(serviceUuid: string): void--><!--Device-GattServer-removeService(serviceUuid: string): void-End-->
 
@@ -1422,7 +1422,7 @@ Sends a response to a specified read or write request to a given BLE peripheral 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void--><!--Device-GattServer-sendResponse(serverResponse: ServerResponse): void-End-->
 

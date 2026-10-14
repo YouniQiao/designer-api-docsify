@@ -4,8 +4,6 @@ The **workScheduler** module provides the APIs for registering, canceling, and q
 
 **Since:** 9
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace workScheduler--><!--Device-unnamed-declare namespace workScheduler-End-->
 
 **System capability:** SystemCapability.ResourceSchedule.WorkScheduler
@@ -28,9 +26,9 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 | [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout3) | Checks whether the last execution of a task timed out. This API uses a promise to return the result. |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks2) | Obtains all the deferred tasks. This API uses an asynchronous callback to return the result. |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks3) | Obtains all the deferred tasks. This API uses a promise to return the result. |
-| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md) | Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be executed by the system once the trigger conditions are met. |
-| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md) | Stops and clears all the deferred tasks. |
-| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md) | Stops a deferred task. |
+| [startWork](arkts-backgroundtasks-workscheduler-startwork-f.md#startwork) | Requests a deferred task. Upon successful request, the deferred task is added to the execution queue and will be executed by the system once the trigger conditions are met. |
+| [stopAndClearWorks](arkts-backgroundtasks-workscheduler-stopandclearworks-f.md#stopandclearworks) | Stops and clears all the deferred tasks. |
+| [stopWork](arkts-backgroundtasks-workscheduler-stopwork-f.md#stopwork) | Stops a deferred task. |
 | [isLastWorkTimeOut](arkts-backgroundtasks-workscheduler-islastworktimeout-f.md#islastworktimeout1) | Checks whether the last execution of a task timed out. This API uses an asynchronous callback to return the result. |
 | [obtainAllWorks](arkts-backgroundtasks-workscheduler-obtainallworks-f.md#obtainallworks1) | Obtains all the deferred tasks. This API uses an asynchronous callback to return the result. |
 
@@ -39,8 +37,8 @@ import { workScheduler } from '@kit.BackgroundTasksKit';
 
 | Name | Description |
 | --- | --- |
-| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md) | Reset the execution frequency. |
-| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md) | Set the execution frequency. |
+| [resetExecFrequency](arkts-backgroundtasks-workscheduler-resetexecfrequency-f-sys.md#resetexecfrequency) | Reset the execution frequency. |
+| [setExecFrequency](arkts-backgroundtasks-workscheduler-setexecfrequency-f-sys.md#setexecfrequency) | Set the execution frequency. |
 <!--DelEnd-->
 
 ### Interfaces

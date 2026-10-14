@@ -22,7 +22,7 @@ Within the specified range.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-BETWEEN = 6--><!--Device-FilterOperator-BETWEEN = 6-End-->
 
@@ -38,7 +38,7 @@ Equal to.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-EQUAL_TO = 0--><!--Device-FilterOperator-EQUAL_TO = 0-End-->
 
@@ -54,7 +54,7 @@ Less than.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-LESS_THAN = 3--><!--Device-FilterOperator-LESS_THAN = 3-End-->
 
@@ -70,7 +70,7 @@ Less than or equal to.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5--><!--Device-FilterOperator-LESS_THAN_OR_EQUAL_TO = 5-End-->
 
@@ -86,7 +86,7 @@ Greater than.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-MORE_THAN = 2--><!--Device-FilterOperator-MORE_THAN = 2-End-->
 
@@ -102,7 +102,7 @@ Greater than or equal to.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4--><!--Device-FilterOperator-MORE_THAN_OR_EQUAL_TO = 4-End-->
 
@@ -118,7 +118,7 @@ Not equal to.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FilterOperator-NOT_EQUAL_TO = 1--><!--Device-FilterOperator-NOT_EQUAL_TO = 1-End-->
 

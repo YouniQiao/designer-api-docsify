@@ -22,7 +22,7 @@ ALL_CERTS = 1
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsCertType-ALL_CERTS = 1--><!--Device-CmsCertType-ALL_CERTS = 1-End-->
 
@@ -38,7 +38,7 @@ SIGNER_CERTS = 0
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsCertType-SIGNER_CERTS = 0--><!--Device-CmsCertType-SIGNER_CERTS = 0-End-->
 

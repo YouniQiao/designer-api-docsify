@@ -34,7 +34,7 @@ This method unregisters the device and clears the registered callbacks and handl
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-close(): void--><!--Device-GattClientDevice-close(): void-End-->
 
@@ -78,7 +78,7 @@ The 'BLEConnectionStateChange' event is subscribed to return the connection stat
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-connect(): void--><!--Device-GattClientDevice-connect(): void-End-->
 
@@ -120,7 +120,7 @@ Disconnects from or stops an ongoing connection to a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-disconnect(): void--><!--Device-GattClientDevice-disconnect(): void-End-->
 
@@ -210,7 +210,7 @@ Obtains the name of BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void--><!--Device-GattClientDevice-getDeviceName(callback: AsyncCallback<string>): void-End-->
 
@@ -272,7 +272,7 @@ Obtains the name of BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getDeviceName(): Promise<string>--><!--Device-GattClientDevice-getDeviceName(): Promise<string>-End-->
 
@@ -334,7 +334,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<int>): void--><!--Device-GattClientDevice-getRssiValue(callback: AsyncCallback<int>): void-End-->
 
@@ -390,7 +390,7 @@ Get the RSSI value of this BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getRssiValue(): Promise<int>--><!--Device-GattClientDevice-getRssiValue(): Promise<int>-End-->
 
@@ -444,7 +444,7 @@ Starts discovering services.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void--><!--Device-GattClientDevice-getServices(callback: AsyncCallback<Array<GattService>>): void-End-->
 
@@ -515,7 +515,7 @@ Starts discovering services.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>--><!--Device-GattClientDevice-getServices(): Promise<Array<GattService>>-End-->
 
@@ -1057,7 +1057,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic, callback: AsyncCallback<BLECharacteristic>): void-End-->
 
@@ -1138,7 +1138,7 @@ Reads the characteristic of a BLE peripheral device.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>--><!--Device-GattClientDevice-readCharacteristicValue(characteristic: BLECharacteristic): Promise<BLECharacteristic>-End-->
 
@@ -1215,7 +1215,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<BLEDescriptor>): void-End-->
 
@@ -1289,7 +1289,7 @@ Reads the descriptor of a BLE peripheral device.
 
 **Required permissions:** ohos.permission.ACCESS_BLUETOOTH
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>--><!--Device-GattClientDevice-readDescriptorValue(descriptor: BLEDescriptor): Promise<BLEDescriptor>-End-->
 
@@ -1406,7 +1406,7 @@ Asynchronous interface for setting the mtu size of a BLE peripheral device. The 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-GattClientDevice-setBLEMtu(mtu: int): Promise<int>--><!--Device-GattClientDevice-setBLEMtu(mtu: int): Promise<int>-End-->
 
@@ -1461,7 +1461,7 @@ Set the mtu size of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-setBLEMtuSize(mtu: int): void--><!--Device-GattClientDevice-setBLEMtuSize(mtu: int): void-End-->
 
@@ -1515,7 +1515,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeIndication(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -1587,7 +1587,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>--><!--Device-GattClientDevice-setCharacteristicChangeIndication(characteristic: BLECharacteristic, enable: boolean): Promise<void>-End-->
 
@@ -1662,7 +1662,7 @@ Enables or disables notification of a characteristic when value changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-setCharacteristicChangeNotification(      characteristic: BLECharacteristic,      enable: boolean,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -1734,7 +1734,7 @@ Enables or disables indication of a characteristic when value changed.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>--><!--Device-GattClientDevice-setCharacteristicChangeNotification(characteristic: BLECharacteristic, enable: boolean): Promise<void>-End-->
 
@@ -1917,7 +1917,7 @@ Writes the characteristic of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void--><!--Device-GattClientDevice-writeCharacteristicValue(      characteristic: BLECharacteristic,      writeType: GattWriteType,      callback: AsyncCallback<void>    ): void-End-->
 
@@ -1997,7 +1997,7 @@ Writes the characteristic of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>--><!--Device-GattClientDevice-writeCharacteristicValue(characteristic: BLECharacteristic, writeType: GattWriteType): Promise<void>-End-->
 
@@ -2076,7 +2076,7 @@ Writes the descriptor of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): void--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor, callback: AsyncCallback<void>): void-End-->
 
@@ -2149,7 +2149,7 @@ Writes the descriptor of a BLE peripheral device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>--><!--Device-GattClientDevice-writeDescriptorValue(descriptor: BLEDescriptor): Promise<void>-End-->
 

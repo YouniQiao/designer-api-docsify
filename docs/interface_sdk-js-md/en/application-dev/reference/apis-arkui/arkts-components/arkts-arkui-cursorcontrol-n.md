@@ -16,8 +16,6 @@ Mouse cursor control is used to set the display style of the mouse cursor. It su
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace cursorControl--><!--Device-unnamed-declare namespace cursorControl-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -28,8 +26,8 @@ Mouse cursor control is used to set the display style of the mouse cursor. It su
 
 | Name | Description |
 | --- | --- |
-| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md) | A global API that can be used in component methods or event callbacks. Calling this API restores the mouse cursor to the default arrow style, for example, restoring the default cursor when the mouse leaves a hover area, when a component loses focus, or when an interaction ends. |
-| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md) | A global API that can be used in component methods or event callbacks. Calling this API sets the current mouse cursor style, for example, displaying an I-beam cursor when hovering over a text editing area, displaying a move cursor on a draggable element, or displaying a pointing-hand cursor when hovering over a map marker. |
+| [restoreDefault](arkts-arkui-cursorcontrol-restoredefault-f.md#restoredefault) | A global API that can be used in component methods or event callbacks. Calling this API restores the mouse cursor to the default arrow style, for example, restoring the default cursor when the mouse leaves a hover area, when a component loses focus, or when an interaction ends. |
+| [setCursor](arkts-arkui-cursorcontrol-setcursor-f.md#setcursor) | A global API that can be used in component methods or event callbacks. Calling this API sets the current mouse cursor style, for example, displaying an I-beam cursor when hovering over a text editing area, displaying a move cursor on a draggable element, or displaying a pointing-hand cursor when hovering over a map marker. |
 
 ## Examples
 
@@ -4581,7 +4579,7 @@ struct KeyEventExample {
 
 ### Example 1: Obtaining Parameters Related to a Mouse Event
 
-This example demonstrates how to set a mouse event on a button. When the button is clicked using a mouse device, the [onMouse](#onmouse) event is triggered to obtain relevant mouse event parameters. Starting from API version 15, the [MouseEvent](#mouseevent) object provides access to the targetDisplayId, rawDeltaX, rawDeltaY, and pressedButtons parameters.
+This example demonstrates how to set a mouse event on a button. When the button is clicked using a mouse device, the [onMouse](arkts-arkui-common-comp-commonmethod-c.md#onmouse) event is triggered to obtain relevant mouse event parameters. Starting from API version 15, the [MouseEvent](#mouseevent) object provides access to the targetDisplayId, rawDeltaX, rawDeltaY, and pressedButtons parameters.
 
 For mouse wheel event examples, see [Axis Event](ts-universal-events-axis.md#example).
 

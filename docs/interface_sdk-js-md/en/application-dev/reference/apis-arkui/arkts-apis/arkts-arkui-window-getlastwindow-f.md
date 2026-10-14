@@ -20,7 +20,7 @@ If no child window exists or the child window is not displayed by calling [showW
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void--><!--Device-window-function getLastWindow(ctx: BaseContext, callback: AsyncCallback<Window>): void-End-->
 
@@ -101,7 +101,7 @@ If no child window exists or the child window is not displayed by calling [showW
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>--><!--Device-window-function getLastWindow(ctx: BaseContext): Promise<Window>-End-->
 

@@ -22,7 +22,7 @@ VIDEO_CALL = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPTemplateType-VIDEO_CALL = 1--><!--Device-PiPTemplateType-VIDEO_CALL = 1-End-->
 
@@ -38,7 +38,7 @@ VIDEO_LIVE = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPTemplateType-VIDEO_LIVE = 3--><!--Device-PiPTemplateType-VIDEO_LIVE = 3-End-->
 
@@ -54,7 +54,7 @@ VIDEO_MEETING = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPTemplateType-VIDEO_MEETING = 2--><!--Device-PiPTemplateType-VIDEO_MEETING = 2-End-->
 
@@ -70,7 +70,7 @@ VIDEO_PLAY = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPTemplateType-VIDEO_PLAY = 0--><!--Device-PiPTemplateType-VIDEO_PLAY = 0-End-->
 

@@ -22,7 +22,7 @@ The moving photo effect is disabled.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2-End-->
 
@@ -38,7 +38,7 @@ The moving photo effect is enabled.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1-End-->
 
@@ -54,7 +54,7 @@ The media file is not a moving photo.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0--><!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0-End-->
 

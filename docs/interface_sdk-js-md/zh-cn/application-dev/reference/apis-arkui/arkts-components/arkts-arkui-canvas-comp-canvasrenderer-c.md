@@ -1374,15 +1374,15 @@ filter: string
 支持的滤镜效果如下：
 
 - **'none'**: 无滤镜效果。  
-- **'blur(\&lt;length&gt;)'**：给图像设置高斯模糊，取值范围≥0，支持单位px、vp、rem，默认值：blur(0px)。  
-- **'brightness([\&lt;number&gt;\|\&lt;percentage&gt;])'**：给图片应用一种线性乘法，使其看起来更亮或更暗，支持数字和百分比参数，取值范围≥0，默认值：brightness(1)。  
-- **'contrast([\&lt;number&gt;\|\&lt;percentage&gt;])'**：调整图像的对比度，支持数字和百分比参数，取值范围≥0，默认值：contrast(1)。  
-- **'grayscale([\&lt;number&gt;\|\&lt;percentage&gt;])'**：将图像转换为灰度图像，支持数字和百分比参数，取值范围[0, 1]，默认值：grayscale(0)。  
-- **'hue-rotate(\&lt;angle&gt;)'**：给图像应用色相旋转，取值范围0deg-360deg，默认值：hue-rotate(0deg)。  
-- **'invert([\&lt;number&gt;\|\&lt;percentage&gt;])'**：反转输入图像，支持数字和百分比参数，取值范围[0, 1]，默认值：invert(0)。  
-- **'opacity([\&lt;number&gt;\|\&lt;percentage&gt;])'**：调整图像的透明程度，支持数字和百分比参数，取值范围[0, 1]，默认值：opacity(1)。  
-- **'saturate([\&lt;number&gt;\|\&lt;percentage&gt;])'**：转换图像饱和度，支持数字和百分比参数，取值范围≥0，默认值：saturate(1)。  
-- **'sepia([\&lt;number&gt;\|\&lt;percentage&gt;])'**：将图像转换为深褐色，支持数字和百分比参数，取值范围[0, 1]，默认值：sepia(0)。
+- **'blur(\<length>)'**：给图像设置高斯模糊，取值范围≥0，支持单位px、vp、rem，默认值：blur(0px)。  
+- **'brightness([\<number>\|\<percentage>])'**：给图片应用一种线性乘法，使其看起来更亮或更暗，支持数字和百分比参数，取值范围≥0，默认值：brightness(1)。  
+- **'contrast([\<number>\|\<percentage>])'**：调整图像的对比度，支持数字和百分比参数，取值范围≥0，默认值：contrast(1)。  
+- **'grayscale([\<number>\|\<percentage>])'**：将图像转换为灰度图像，支持数字和百分比参数，取值范围[0, 1]，默认值：grayscale(0)。  
+- **'hue-rotate(\<angle>)'**：给图像应用色相旋转，取值范围0deg-360deg，默认值：hue-rotate(0deg)。  
+- **'invert([\<number>\|\<percentage>])'**：反转输入图像，支持数字和百分比参数，取值范围[0, 1]，默认值：invert(0)。  
+- **'opacity([\<number>\|\<percentage>])'**：调整图像的透明程度，支持数字和百分比参数，取值范围[0, 1]，默认值：opacity(1)。  
+- **'saturate([\<number>\|\<percentage>])'**：转换图像饱和度，支持数字和百分比参数，取值范围≥0，默认值：saturate(1)。  
+- **'sepia([\<number>\|\<percentage>])'**：将图像转换为深褐色，支持数字和百分比参数，取值范围[0, 1]，默认值：sepia(0)。
 
 **类型：** string
 

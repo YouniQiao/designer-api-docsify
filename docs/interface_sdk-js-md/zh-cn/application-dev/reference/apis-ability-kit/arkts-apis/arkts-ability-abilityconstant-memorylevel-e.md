@@ -35,7 +35,7 @@ MEMORY_LEVEL_BACKGROUND_CRITICAL = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6--><!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_CRITICAL = 6-End-->
 
@@ -53,7 +53,7 @@ MEMORY_LEVEL_BACKGROUND_LOW = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_LOW = 5--><!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_LOW = 5-End-->
 
@@ -71,7 +71,7 @@ MEMORY_LEVEL_BACKGROUND_MODERATE = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_MODERATE = 4--><!--Device-MemoryLevel-MEMORY_LEVEL_BACKGROUND_MODERATE = 4-End-->
 
@@ -89,7 +89,7 @@ MEMORY_LEVEL_CRITICAL = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_CRITICAL = 2--><!--Device-MemoryLevel-MEMORY_LEVEL_CRITICAL = 2-End-->
 
@@ -107,7 +107,7 @@ MEMORY_LEVEL_LOW = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_LOW = 1--><!--Device-MemoryLevel-MEMORY_LEVEL_LOW = 1-End-->
 
@@ -125,7 +125,7 @@ MEMORY_LEVEL_MODERATE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_MODERATE = 0--><!--Device-MemoryLevel-MEMORY_LEVEL_MODERATE = 0-End-->
 
@@ -143,7 +143,7 @@ MEMORY_LEVEL_UI_HIDDEN = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-MemoryLevel-MEMORY_LEVEL_UI_HIDDEN = 3--><!--Device-MemoryLevel-MEMORY_LEVEL_UI_HIDDEN = 3-End-->
 

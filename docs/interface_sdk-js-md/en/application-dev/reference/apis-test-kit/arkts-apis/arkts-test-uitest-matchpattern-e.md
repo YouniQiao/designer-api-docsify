@@ -24,7 +24,7 @@ Contains the given value.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MatchPattern-CONTAINS = 1--><!--Device-MatchPattern-CONTAINS = 1-End-->
 
@@ -42,7 +42,7 @@ Ends with the given value.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MatchPattern-ENDS_WITH = 3--><!--Device-MatchPattern-ENDS_WITH = 3-End-->
 
@@ -60,7 +60,7 @@ Equals the given value.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MatchPattern-EQUALS = 0--><!--Device-MatchPattern-EQUALS = 0-End-->
 
@@ -78,7 +78,7 @@ Uses regular expression matching.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-MatchPattern-REG_EXP = 4--><!--Device-MatchPattern-REG_EXP = 4-End-->
 
@@ -96,7 +96,7 @@ Uses case-insensitive regular expression matching.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-MatchPattern-REG_EXP_ICASE = 5--><!--Device-MatchPattern-REG_EXP_ICASE = 5-End-->
 
@@ -114,7 +114,7 @@ Starts with the given value.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-MatchPattern-STARTS_WITH = 2--><!--Device-MatchPattern-STARTS_WITH = 2-End-->
 

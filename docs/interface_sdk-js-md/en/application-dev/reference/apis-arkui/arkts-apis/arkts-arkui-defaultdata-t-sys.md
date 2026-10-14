@@ -6,7 +6,7 @@ type DefaultData<T> = object
 
 Used for ide.
 
-@typedef { object } DefaultData&lt;T&gt;
+@typedef { object } DefaultData<T>
 
 **Since:** 4
 

@@ -24,7 +24,7 @@ New password type.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AutoFillType-NEW_PASSWORD = 3--><!--Device-AutoFillType-NEW_PASSWORD = 3-End-->
 
@@ -42,7 +42,7 @@ Password type.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AutoFillType-PASSWORD = 1--><!--Device-AutoFillType-PASSWORD = 1-End-->
 
@@ -60,7 +60,7 @@ Unspecified type.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AutoFillType-UNSPECIFIED = 0--><!--Device-AutoFillType-UNSPECIFIED = 0-End-->
 
@@ -78,7 +78,7 @@ Username type.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AutoFillType-USER_NAME = 2--><!--Device-AutoFillType-USER_NAME = 2-End-->
 

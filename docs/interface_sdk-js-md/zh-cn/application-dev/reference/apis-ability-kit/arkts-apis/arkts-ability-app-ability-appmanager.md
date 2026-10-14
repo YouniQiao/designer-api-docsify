@@ -24,7 +24,7 @@ import { appManager } from '@kit.AbilityKit';
 | [getAppMemorySize](arkts-ability-appmanager-getappmemorysize-f.md#getappmemorysize2) | 获取当前应用程序可以使用的最大内存（RAM）值。使用callback异步回调。 |
 | [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation1) | 获取当前应用运行进程的相关信息。使用Promise异步回调。 |
 | [getRunningProcessInformation](arkts-ability-appmanager-getrunningprocessinformation-f.md#getrunningprocessinformation2) | 获取当前应用运行进程的相关信息。使用callback异步回调。 |
-| [isAppRunning](arkts-ability-appmanager-isapprunning-f.md) | 判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 |
+| [isAppRunning](arkts-ability-appmanager-isapprunning-f.md#isapprunning) | 判断所有用户下指定包名和分身应用索引的应用是否正在运行。使用Promise异步回调。 |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice1) | 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用Promise异步回调。 |
 | [isRamConstrainedDevice](arkts-ability-appmanager-isramconstraineddevice-f.md#isramconstraineddevice2) | 查询当前设备是否为RAM受限设备（内存资源严重受限的设备）。使用callback异步回调。 |
 | [isRunningInStabilityTest](arkts-ability-appmanager-isrunninginstabilitytest-f.md#isrunninginstabilitytest1) | 查询当前系统是否处于稳定性测试场景。使用callback异步回调。 |
@@ -40,29 +40,29 @@ import { appManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [clearUpAppData](arkts-ability-appmanager-clearupappdata-f-sys.md) | 根据Bundle名称和应用分身索引，清除指定应用的数据。使用Promise异步回调。 |
+| [clearUpAppData](arkts-ability-appmanager-clearupappdata-f-sys.md#clearupappdata) | 根据Bundle名称和应用分身索引，清除指定应用的数据。使用Promise异步回调。 |
 | [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata1) | 通过Bundle名称清除应用数据。使用Promise异步回调。 |
 | [clearUpApplicationData](arkts-ability-appmanager-clearupapplicationdata-f-sys.md#clearupapplicationdata2) | 通过Bundle名称清除应用数据。使用callback异步回调。 |
 | [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications1) | 获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用callback异步回调。 |
 | [getForegroundApplications](arkts-ability-appmanager-getforegroundapplications-f-sys.md#getforegroundapplications2) | 获取当前所有前台应用的信息。该应用信息由[AppStateData](arkts-ability-appstatedata-c.md)定义。使用Promise异步回调。 |
-| [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md) | 获取所有保活的AppServiceExtensionAbility应用信息，此信息由[KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)定义。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
-| [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md) | 获取指定用户下指定类型的保活应用信息。该应用信息由[KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)定义。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。**需要权限**：ohos.permission.MANAGE_APP_KEEP_ALIVE |
+| [getKeepAliveAppServiceExtensions](arkts-ability-appmanager-getkeepaliveappserviceextensions-f-sys.md#getkeepaliveappserviceextensions) | 获取所有保活的AppServiceExtensionAbility应用信息，此信息由[KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)定义。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
+| [getKeepAliveBundles](arkts-ability-appmanager-getkeepalivebundles-f-sys.md#getkeepalivebundles) | 获取指定用户下指定类型的保活应用信息。该应用信息由[KeepAliveBundleInfo](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)定义。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。**需要权限**：ohos.permission.MANAGE_APP_KEEP_ALIVE |
 | [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getprocessmemorybypid1) | 通过pid查询对应进程占用的内存大小。使用Promise异步回调。 |
 | [getProcessMemoryByPid](arkts-ability-appmanager-getprocessmemorybypid-f-sys.md#getprocessmemorybypid2) | 通过pid查询对应进程占用的内存大小。使用callback异步回调。 |
-| [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md) | 根据应用包名获取系统中运行态的应用多开（即在一个设备上运行多个相同的应用）的相关信息。使用Promise异步回调。 |
+| [getRunningMultiAppInfo](arkts-ability-appmanager-getrunningmultiappinfo-f-sys.md#getrunningmultiappinfo) | 根据应用包名获取系统中运行态的应用多开（即在一个设备上运行多个相同的应用）的相关信息。使用Promise异步回调。 |
 | [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename1) | 通过bundleName获取有关运行进程的信息。使用callback异步回调。 |
 | [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename2) | 通过bundleName和userId获取有关运行进程的信息。使用callback异步回调。 |
 | [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename3) | 通过bundleName获取有关运行进程的信息。使用Promise异步回调。 |
 | [getRunningProcessInfoByBundleName](arkts-ability-appmanager-getrunningprocessinfobybundlename-f-sys.md#getrunningprocessinfobybundlename4) | 通过bundleName和userId获取有关运行进程的信息。使用Promise异步回调。 |
-| [getRunningProcessInformationByBundleType](arkts-ability-appmanager-getrunningprocessinformationbybundletype-f-sys.md) | 根据包类型获取当前运行进程的有关信息。使用Promise异步回调。 |
-| [getSupportedProcessCachePids](arkts-ability-appmanager-getsupportedprocesscachepids-f-sys.md) | 查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。 |
+| [getRunningProcessInformationByBundleType](arkts-ability-appmanager-getrunningprocessinformationbybundletype-f-sys.md#getrunningprocessinformationbybundletype) | 根据包类型获取当前运行进程的有关信息。使用Promise异步回调。 |
+| [getSupportedProcessCachePids](arkts-ability-appmanager-getsupportedprocesscachepids-f-sys.md#getsupportedprocesscachepids) | 查询当前应用中支持缓存后快速启动的进程PID。使用Promise异步回调。 |
 | [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isapplicationrunning1) | 查询所有用户下指定包名的应用是否正在运行。使用Promise异步回调。 |
 | [isApplicationRunning](arkts-ability-appmanager-isapplicationrunning-f-sys.md#isapplicationrunning2) | 查询所有用户下指定包名的应用是否正在运行。使用callback异步回调。 |
 | [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#issharedbundlerunning1) | 检查共享库是否正在使用。使用Promise异步回调。 |
 | [isSharedBundleRunning](arkts-ability-appmanager-issharedbundlerunning-f-sys.md#issharedbundlerunning2) | 检查共享库是否正在使用。使用callback异步回调。 |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename1) | 通过Bundle名称终止进程。使用Promise异步回调。 |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename3) | 通过Bundle名称终止进程。使用callback异步回调。 |
-| [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md) | 批量终止进程。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。**需要权限**：ohos.permission.KILL_APP_PROCESSES |
+| [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md#killprocessesinbatch) | 批量终止进程。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。**需要权限**：ohos.permission.KILL_APP_PROCESSES |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount1) | 终止account进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount2) | 终止account进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount3) | 终止account进程。使用callback异步回调。 |
@@ -71,10 +71,10 @@ import { appManager } from '@kit.AbilityKit';
 | [on](arkts-ability-appmanager-on-f-sys.md#onapplicationstate) | 注册应用程序的状态监听器，并通过设置过滤条件来筛选所需监听的应用生命周期变化事件。 |
 | [on](arkts-ability-appmanager-on-f-sys.md#onappforegroundstate) | 注册应用启动和退出的监听器，可用于系统应用监听所有应用的启动和退出。 |
 | [on](arkts-ability-appmanager-on-f-sys.md#onabilityfirstframestate) | 注册监听Ability首帧绘制完成事件观察者对象，可用于系统应用监听Ability首帧绘制事件。 |
-| [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md) | 预加载应用进程。接口返回成功并不代表预加载成功，具体结果以目标应用进程是否创建成功为准。使用Promise异步回调。 |
-| [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md) | 为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
-| [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md) | 为指定用户下的应用设置或取消保活。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。 |
-| [terminateMission](arkts-ability-appmanager-terminatemission-f-sys.md) | 关闭指定的任务。使用Promise异步回调。 |
+| [preloadApplication](arkts-ability-appmanager-preloadapplication-f-sys.md#preloadapplication) | 预加载应用进程。接口返回成功并不代表预加载成功，具体结果以目标应用进程是否创建成功为准。使用Promise异步回调。 |
+| [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md#setkeepaliveforappserviceextension) | 为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
+| [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md#setkeepaliveforbundle) | 为指定用户下的应用设置或取消保活。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。 |
+| [terminateMission](arkts-ability-appmanager-terminatemission-f-sys.md#terminatemission) | 关闭指定的任务。使用Promise异步回调。 |
 <!--DelEnd-->
 
 <!--Del-->

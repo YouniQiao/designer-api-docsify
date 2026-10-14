@@ -24,7 +24,7 @@ Downward.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-DOWN = 3--><!--Device-UiDirection-DOWN = 3-End-->
 
@@ -42,7 +42,7 @@ Leftward.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-LEFT = 0--><!--Device-UiDirection-LEFT = 0-End-->
 
@@ -60,7 +60,7 @@ Rightward.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-RIGHT = 1--><!--Device-UiDirection-RIGHT = 1-End-->
 
@@ -78,7 +78,7 @@ Upward.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-UiDirection-UP = 2--><!--Device-UiDirection-UP = 2-End-->
 

@@ -26,7 +26,7 @@ CAR_HAILING = 0x303
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-CAR_HAILING = 0x303--><!--Device-LocationRequestScenario-CAR_HAILING = 0x303-End-->
 
@@ -46,7 +46,7 @@ DAILY_LIFE_SERVICE = 0x304
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304-End-->
 
@@ -66,7 +66,7 @@ NAVIGATION = 0x301
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-NAVIGATION = 0x301--><!--Device-LocationRequestScenario-NAVIGATION = 0x301-End-->
 
@@ -82,7 +82,7 @@ NO_POWER = 0x305
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-NO_POWER = 0x305--><!--Device-LocationRequestScenario-NO_POWER = 0x305-End-->
 
@@ -102,7 +102,7 @@ TRAJECTORY_TRACKING = 0x302
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302-End-->
 
@@ -120,7 +120,7 @@ UNSET = 0x300
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 

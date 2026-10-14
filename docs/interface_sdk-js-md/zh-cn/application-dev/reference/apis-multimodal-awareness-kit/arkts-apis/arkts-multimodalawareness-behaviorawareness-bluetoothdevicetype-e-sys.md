@@ -6,8 +6,6 @@ export enum BluetoothDeviceType
 
 蓝牙设备类型枚举。
 
-@enum { number }
-
 **起始版本：** 26.2.0
 
 <!--Device-behaviorAwareness-export enum BluetoothDeviceType--><!--Device-behaviorAwareness-export enum BluetoothDeviceType-End-->

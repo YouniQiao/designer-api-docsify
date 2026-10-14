@@ -22,7 +22,7 @@ The original page is about to restore.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-ABOUT_TO_RESTORE = 5--><!--Device-PiPState-ABOUT_TO_RESTORE = 5-End-->
 
@@ -38,7 +38,7 @@ PiP is about to start.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-ABOUT_TO_START = 1--><!--Device-PiPState-ABOUT_TO_START = 1-End-->
 
@@ -54,7 +54,7 @@ PiP is about to stop.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-ABOUT_TO_STOP = 3--><!--Device-PiPState-ABOUT_TO_STOP = 3-End-->
 
@@ -70,7 +70,7 @@ An error occurs during the execution of the PiP lifecycle.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-ERROR = 6--><!--Device-PiPState-ERROR = 6-End-->
 
@@ -86,7 +86,7 @@ PiP is started.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-STARTED = 2--><!--Device-PiPState-STARTED = 2-End-->
 
@@ -102,7 +102,7 @@ PiP is stopped.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPState-STOPPED = 4--><!--Device-PiPState-STOPPED = 4-End-->
 

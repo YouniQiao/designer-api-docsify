@@ -140,7 +140,7 @@ createPictureAtIndex(index: number): Promise<Picture>
 
 > **说明：** 
 > 
-> - 支持GIF和HEIF&lt;sup&gt;23+&lt;/sup&gt;图像序列格式。从API版本26.0.0开始，增加支持AVIS格式。
+> - 支持GIF和HEIF<sup>23+</sup>图像序列格式。从API版本26.0.0开始，增加支持AVIS格式。
 > 
 > - 由于图片占用内存较大，所以当Picture对象使用完成后，应主动调用[release](arkts-image-image-picture-i.md#release)方法，及时释放内存。
 > 
@@ -1409,7 +1409,7 @@ getImageProperties(key: Array<PropertyKey>): Promise<Record<PropertyKey, string|
 
 批量获取图片中的指定属性键的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF、WEBP<sup>23+</sup>和DNG<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 12
 
@@ -1470,7 +1470,7 @@ getImageProperty(key: PropertyKey, options?: ImagePropertyOptions): Promise<stri
 
 获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>、WEBP<sup>23+</sup>和DNG<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 **起始版本：** 11
 
@@ -1534,7 +1534,7 @@ getImageProperty(key: string, options?: GetImagePropertyOptions): Promise<string
 
 获取图片中给定索引处图像的指定属性键的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -1590,7 +1590,7 @@ getImageProperty(key: string, callback: AsyncCallback<string>): void
 
 获取图片中给定索引处图像的指定属性键的值。使用callback异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -1641,7 +1641,7 @@ getImageProperty(key: string, options: GetImagePropertyOptions, callback: AsyncC
 
 获取图片指定属性键的值。使用callback异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -1694,7 +1694,7 @@ getImagePropertySync(key: PropertyKey): string
 
 > **说明：** 
 > 
-> - 该方法仅支持JPEG、PNG、HEIF、WEBP&lt;sup&gt;23+&lt;/sup&gt;和DNG&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+> - 该方法仅支持JPEG、PNG、HEIF、WEBP<sup>23+</sup>和DNG<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 > 
 > - Exif信息是图片的元数据，包含拍摄时间、相机型号、光圈、焦距、ISO等。
 > 
@@ -1751,7 +1751,7 @@ modifyImageProperties(records: Record<PropertyKey, string|null>): Promise<void>
 
 批量通过指定的键修改图片属性的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -1887,7 +1887,7 @@ modifyImageProperty(key: PropertyKey, value: string): Promise<void>
 
 通过指定的键修改图片属性的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -1952,7 +1952,7 @@ modifyImageProperty(key: string, value: string): Promise<void>
 
 通过指定的键修改图片属性的值。使用Promise异步回调。
 
-该接口仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+该接口仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -2013,7 +2013,7 @@ modifyImageProperty(key: string, value: string, callback: AsyncCallback<void>): 
 
 通过指定的键修改图片属性的值。使用callback异步回调。
 
-仅支持JPEG、PNG、HEIF&lt;sup&gt;12+&lt;/sup&gt;和WEBP&lt;sup&gt;23+&lt;/sup&gt;（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
+仅支持JPEG、PNG、HEIF<sup>12+</sup>和WEBP<sup>23+</sup>（不同硬件设备支持情况不同）文件，且需要包含Exif信息。
 
 > **说明：** 
 > 
@@ -2487,7 +2487,7 @@ readonly supportedFormats: Array<string>
 
 支持的图片格式。
 
-包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、WBMP&lt;sup&gt;23+&lt;/sup&gt;、HEIFS&lt;sup&gt;23+&lt;/sup&gt;、TIFF&lt;sup&gt;23+&lt;/sup&gt;。从API版本26.0.0开始，增加支持AVIF、AVIS格式。
+包括：PNG、JPEG、BMP、GIF、WebP、DNG、HEIC<sup>12+</sup>、WBMP<sup>23+</sup>、HEIFS<sup>23+</sup>、TIFF<sup>23+</sup>。从API版本26.0.0开始，增加支持AVIF、AVIS格式。
 
 部分格式的解码能力依赖于具体的设备硬件，建议在调用前使用[image.getImageSourceSupportedFormats](arkts-image-image-getimagesourcesupportedformats-f.md)接口，动态查询当前设备上的解码能力。
 

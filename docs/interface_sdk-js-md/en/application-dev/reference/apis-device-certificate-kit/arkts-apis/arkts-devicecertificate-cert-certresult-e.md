@@ -24,7 +24,7 @@ Email address mismatch in the certificate.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CERT_EMAIL_ADDRESS_MISMATCH = 19030013--><!--Device-CertResult-ERR_CERT_EMAIL_ADDRESS_MISMATCH = 19030013-End-->
 
@@ -40,7 +40,7 @@ The certificate has expired.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_CERT_HAS_EXPIRED = 19030004--><!--Device-CertResult-ERR_CERT_HAS_EXPIRED = 19030004-End-->
 
@@ -58,7 +58,7 @@ The certificate has been revoked.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CERT_HAS_REVOKED = 19030010--><!--Device-CertResult-ERR_CERT_HAS_REVOKED = 19030010-End-->
 
@@ -76,7 +76,7 @@ Hostname mismatch in the certificate.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CERT_HOSTNAME_MISMATCH = 19030012--><!--Device-CertResult-ERR_CERT_HOSTNAME_MISMATCH = 19030012-End-->
 
@@ -94,7 +94,7 @@ Key usage mismatch in the certificate.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CERT_KEYUSAGE_MISMATCH = 19030014--><!--Device-CertResult-ERR_CERT_KEYUSAGE_MISMATCH = 19030014-End-->
 
@@ -110,7 +110,7 @@ The certificate has not taken effect.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_CERT_NOT_YET_VALID = 19030003--><!--Device-CertResult-ERR_CERT_NOT_YET_VALID = 19030003-End-->
 
@@ -126,7 +126,7 @@ The certificate signature verification failed.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_CERT_SIGNATURE_FAILURE = 19030002--><!--Device-CertResult-ERR_CERT_SIGNATURE_FAILURE = 19030002-End-->
 
@@ -144,7 +144,7 @@ Untrusted certificate.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CERT_UNTRUSTED = 19030009--><!--Device-CertResult-ERR_CERT_UNTRUSTED = 19030009-End-->
 
@@ -162,7 +162,7 @@ The certificate revocation list has expired.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CRL_HAS_EXPIRED = 19030017--><!--Device-CertResult-ERR_CRL_HAS_EXPIRED = 19030017-End-->
 
@@ -180,7 +180,7 @@ Failed to find the issuer of the certificate revocation list.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CRL_ISSUER_NOT_FOUND = 19030019--><!--Device-CertResult-ERR_CRL_ISSUER_NOT_FOUND = 19030019-End-->
 
@@ -198,7 +198,7 @@ Failed to obtain the certificate revocation list.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CRL_NOT_FOUND = 19030015--><!--Device-CertResult-ERR_CRL_NOT_FOUND = 19030015-End-->
 
@@ -216,7 +216,7 @@ The certificate revocation list has not taken effect.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CRL_NOT_YET_VALID = 19030016--><!--Device-CertResult-ERR_CRL_NOT_YET_VALID = 19030016-End-->
 
@@ -234,7 +234,7 @@ Failed to verify the signature of the certificate revocation list.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_CRL_SIGNATURE_FAILURE = 19030018--><!--Device-CertResult-ERR_CRL_SIGNATURE_FAILURE = 19030018-End-->
 
@@ -250,7 +250,7 @@ Crypto operation error.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_CRYPTO_OPERATION = 19030001--><!--Device-CertResult-ERR_CRYPTO_OPERATION = 19030001-End-->
 
@@ -266,7 +266,7 @@ The key cannot be used for signing a certificate.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_KEYUSAGE_NO_CERTSIGN = 19030006--><!--Device-CertResult-ERR_KEYUSAGE_NO_CERTSIGN = 19030006-End-->
 
@@ -282,7 +282,7 @@ The key cannot be used for a digital signature.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_KEYUSAGE_NO_DIGITAL_SIGNATURE = 19030007--><!--Device-CertResult-ERR_KEYUSAGE_NO_DIGITAL_SIGNATURE = 19030007-End-->
 
@@ -298,7 +298,7 @@ The password for the private key may be incorrect.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-CertResult-ERR_MAYBE_WRONG_PASSWORD = 19030008--><!--Device-CertResult-ERR_MAYBE_WRONG_PASSWORD = 19030008-End-->
 
@@ -316,7 +316,7 @@ Network connection timed out.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_NETWORK_TIMEOUT = 19030024--><!--Device-CertResult-ERR_NETWORK_TIMEOUT = 19030024-End-->
 
@@ -334,7 +334,7 @@ Unknown OCSP certificate status.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_OCSP_CERT_STATUS_UNKNOWN = 19030023--><!--Device-CertResult-ERR_OCSP_CERT_STATUS_UNKNOWN = 19030023-End-->
 
@@ -352,7 +352,7 @@ Invalid OCSP response.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_OCSP_RESPONSE_INVALID = 19030021--><!--Device-CertResult-ERR_OCSP_RESPONSE_INVALID = 19030021-End-->
 
@@ -370,7 +370,7 @@ Failed to obtain the OCSP response.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_OCSP_RESPONSE_NOT_FOUND = 19030020--><!--Device-CertResult-ERR_OCSP_RESPONSE_NOT_FOUND = 19030020-End-->
 
@@ -388,7 +388,7 @@ Failed to verify the OCSP signature.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_OCSP_SIGNATURE_FAILURE = 19030022--><!--Device-CertResult-ERR_OCSP_SIGNATURE_FAILURE = 19030022-End-->
 
@@ -404,7 +404,7 @@ Memory error.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_OUT_OF_MEMORY = 19020001--><!--Device-CertResult-ERR_OUT_OF_MEMORY = 19020001-End-->
 
@@ -420,7 +420,7 @@ Parameter check failed.
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-CertResult-ERR_PARAMETER_CHECK_FAILED = 19020003--><!--Device-CertResult-ERR_PARAMETER_CHECK_FAILED = 19020003-End-->
 
@@ -436,7 +436,7 @@ Runtime error.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_RUNTIME_ERROR = 19020002--><!--Device-CertResult-ERR_RUNTIME_ERROR = 19020002-End-->
 
@@ -452,7 +452,7 @@ Failed to obtain the certificate issuer.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY = 19030005--><!--Device-CertResult-ERR_UNABLE_TO_GET_ISSUER_CERT_LOCALLY = 19030005-End-->
 
@@ -470,7 +470,7 @@ Unsupported critical extension.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-CertResult-ERR_UNKNOWN_CRITICAL_EXTENSION = 19030011--><!--Device-CertResult-ERR_UNKNOWN_CRITICAL_EXTENSION = 19030011-End-->
 
@@ -486,7 +486,7 @@ Invalid parameters.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-INVALID_PARAMS = 401--><!--Device-CertResult-INVALID_PARAMS = 401-End-->
 
@@ -502,7 +502,7 @@ This operation is not supported.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertResult-NOT_SUPPORT = 801--><!--Device-CertResult-NOT_SUPPORT = 801-End-->
 

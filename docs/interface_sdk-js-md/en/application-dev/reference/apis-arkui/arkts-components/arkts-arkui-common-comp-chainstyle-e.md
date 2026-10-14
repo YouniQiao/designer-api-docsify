@@ -6,8 +6,6 @@ declare enum ChainStyle
 
 Enumerates the chain styles in relative container.
 
-@enum { number }
-
 **Since:** 12
 
 <!--Device-unnamed-declare enum ChainStyle--><!--Device-unnamed-declare enum ChainStyle-End-->

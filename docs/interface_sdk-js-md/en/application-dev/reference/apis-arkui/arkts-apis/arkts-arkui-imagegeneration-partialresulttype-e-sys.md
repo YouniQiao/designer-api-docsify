@@ -6,8 +6,6 @@ enum PartialResultType
 
 Provides stream output result type definition.
 
-@enum { int } Constants
-
 **Since:** 23
 
 <!--Device-imageGeneration-enum PartialResultType--><!--Device-imageGeneration-enum PartialResultType-End-->

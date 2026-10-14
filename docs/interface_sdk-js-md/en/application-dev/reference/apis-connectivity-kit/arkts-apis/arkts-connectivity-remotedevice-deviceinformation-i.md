@@ -32,7 +32,7 @@ The manufacturer data of the remote device. The maximum length is 255.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-DeviceInformation-manufacturerData: string--><!--Device-DeviceInformation-manufacturerData: string-End-->
 
@@ -52,7 +52,7 @@ The model data of the remote device. The maximum length is 255.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-DeviceInformation-modelData: string--><!--Device-DeviceInformation-modelData: string-End-->
 

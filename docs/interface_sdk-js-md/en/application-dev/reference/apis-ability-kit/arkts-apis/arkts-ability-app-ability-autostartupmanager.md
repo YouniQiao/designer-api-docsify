@@ -20,8 +20,8 @@ import { autoStartupManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md) | Checks whether the current application is enabled for automatic startup at boot time. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 801. |
-| [isAutoStartupSupported](arkts-ability-autostartupmanager-isautostartupsupported-f.md) | Check whether the current device supports auto startup on this device. |
+| [getAutoStartupStatusForSelf](arkts-ability-autostartupmanager-getautostartupstatusforself-f.md#getautostartupstatusforself) | Checks whether the current application is enabled for automatic startup at boot time. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, tablets, and wearables. On other devices, it returns the error code 801. |
+| [isAutoStartupSupported](arkts-ability-autostartupmanager-isautostartupsupported-f.md#isautostartupsupported) | Check whether the current device supports auto startup on this device. |
 
 <!--Del-->
 ### Functions(System API)

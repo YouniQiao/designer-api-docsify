@@ -24,7 +24,7 @@ ACCURACY_HIGH = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorAccuracy-ACCURACY_HIGH = 3--><!--Device-SensorAccuracy-ACCURACY_HIGH = 3-End-->
 
@@ -40,7 +40,7 @@ ACCURACY_LOW = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorAccuracy-ACCURACY_LOW = 1--><!--Device-SensorAccuracy-ACCURACY_LOW = 1-End-->
 
@@ -56,7 +56,7 @@ ACCURACY_MEDIUM = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2--><!--Device-SensorAccuracy-ACCURACY_MEDIUM = 2-End-->
 
@@ -72,7 +72,7 @@ ACCURACY_UNRELIABLE = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0--><!--Device-SensorAccuracy-ACCURACY_UNRELIABLE = 0-End-->
 

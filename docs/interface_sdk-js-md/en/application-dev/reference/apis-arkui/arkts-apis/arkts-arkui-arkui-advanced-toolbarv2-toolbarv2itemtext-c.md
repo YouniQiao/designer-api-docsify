@@ -52,7 +52,7 @@ activatedColor?: ColorMetrics
 
 Font color of the toolbar item in the activated state.
 
-&lt;/div&gt;Default value: **$r('sys.color.font_emphasize')**.
+</div>Default value: **$r('sys.color.font_emphasize')**.
 
 Decorator: @Trace
 

@@ -22,7 +22,7 @@ BAR_CODE_DETECTION = 7
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-BAR_CODE_DETECTION = 7--><!--Device-MetadataObjectType-BAR_CODE_DETECTION = 7-End-->
 
@@ -38,7 +38,7 @@ BASIC_FACE_DETECTION = 8
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8--><!--Device-MetadataObjectType-BASIC_FACE_DETECTION = 8-End-->
 
@@ -54,7 +54,7 @@ CAT_BODY = 3
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-CAT_BODY = 3--><!--Device-MetadataObjectType-CAT_BODY = 3-End-->
 
@@ -70,7 +70,7 @@ CAT_FACE = 2
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-CAT_FACE = 2--><!--Device-MetadataObjectType-CAT_FACE = 2-End-->
 
@@ -86,7 +86,7 @@ DOG_BODY = 5
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-DOG_BODY = 5--><!--Device-MetadataObjectType-DOG_BODY = 5-End-->
 
@@ -102,7 +102,7 @@ DOG_FACE = 4
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-DOG_FACE = 4--><!--Device-MetadataObjectType-DOG_FACE = 4-End-->
 
@@ -118,7 +118,7 @@ FACE_DETECTION = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-FACE_DETECTION = 0--><!--Device-MetadataObjectType-FACE_DETECTION = 0-End-->
 
@@ -134,7 +134,7 @@ HUMAN_BODY = 1
 
 **起始版本：** 23
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-HUMAN_BODY = 1--><!--Device-MetadataObjectType-HUMAN_BODY = 1-End-->
 
@@ -150,7 +150,7 @@ SALIENT_DETECTION = 6
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-MetadataObjectType-SALIENT_DETECTION = 6--><!--Device-MetadataObjectType-SALIENT_DETECTION = 6-End-->
 

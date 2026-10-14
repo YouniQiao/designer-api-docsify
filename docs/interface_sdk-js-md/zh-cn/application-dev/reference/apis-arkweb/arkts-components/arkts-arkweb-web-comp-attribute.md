@@ -447,9 +447,9 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 在[onMenuItemClick](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#onmenuitemclick)中，可以自定义菜单选项的回调函数。该函数在菜单选项被点击后触发，并根据返回值决定是否执行系统默认的回调。返回true不执行系统回调，返回false继续执行系统回调。
 
-在[onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。
+在[onPrepareMenu<sup>20+</sup>](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#属性-1)中，当文本选择区域变化后显示菜单之前触发该回调，可在该回调中进行修改、增加、删除菜单选项，实现动态更新菜单。
 
-本接口在与[selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions)同时使用时，会使selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;不生效。
+本接口在与[selectionMenuOptions<sup>(deprecated)</sup>](#selectionmenuoptions)同时使用时，会使selectionMenuOptions<sup>(deprecated)</sup>不生效。
 
 **起始版本：** 12
 
@@ -912,7 +912,7 @@ forceEnableZoom(enable: boolean)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| enable | boolean | 是 | 设置是否遵从网页中`&lt;meta name="viewport"&gt;`标签设置的缩放限制。<br>设置为`true`时，不遵从网页缩放限制；设置为`false`时，遵从网页缩放限制。<br>传入`undefined`与`null`时属性设置不生效。 |
+| enable | boolean | 是 | 设置是否遵从网页中`<meta name="viewport">`标签设置的缩放限制。<br>设置为`true`时，不遵从网页缩放限制；设置为`false`时，遵从网页缩放限制。<br>传入`undefined`与`null`时属性设置不生效。 |
 
 ## geolocationAccess
 
@@ -1129,7 +1129,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 > **说明：** 
 > 
 > javaScriptProxy接口需要和
-> [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
+> [deleteJavaScriptRegister<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
 > 接口配合使用，防止内存泄漏。
 > 
 > javaScriptProxy对象的所有参数不支持更新。
@@ -1137,7 +1137,7 @@ javaScriptProxy(javaScriptProxy: JavaScriptProxy)
 > 注册javaScriptProxy对象时，同步与异步列表请至少选择一项不为空，可同时注册两类方法。
 > 
 > 此接口只支持注册一个对象，若需要注册多个对象请使用
-> [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy)
+> [registerJavaScriptProxy<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy)
 > 。
 
 **起始版本：** 8
@@ -1495,7 +1495,7 @@ Web页面触发window.open(url, name)时，会根据name查找是否存在已绑
 > 
 > - 通过name绑定Web实例‌：需在[onWindowNew](#onwindownew)回调中调用event.handler.setWebController方法，并传入新Web实例的controller，以完成绑定。
 > 
-> - name‌命名需符合正则表达式[a-zA-Z0-9_]+。当该name被用作\&lt;a&gt;或\&lt;form&gt;标签的target属性值时，已绑定的Web实例同样会触发此回调。
+> - name‌命名需符合正则表达式[a-zA-Z0-9_]+。当该name被用作\<a>或\<form>标签的target属性值时，已绑定的Web实例同样会触发此回调。
 
 **起始版本：** 20
 
@@ -2337,7 +2337,7 @@ onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 
 通知应用当前网页中麦克风状态，麦克风有三个状态：未工作、捕获中、暂停中。使用callback异步回调。
 
-可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见[resumeMicrophone&lt;sup&gt;23+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
+可以通过resumeMicrophone，pauseMicrophone，stopMicrophone这三个接口来切换麦克风的状态。这三个接口功能分别对应解除暂停，暂停，停止麦克风。示例使用场景详见[resumeMicrophone<sup>23+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#resumemicrophone)。
 
 > **说明：** 
 > 
@@ -2466,7 +2466,7 @@ onNativeEmbedObjectParamChange(callback: OnNativeEmbedObjectParamChangeCallback)
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-当网页中同层标签（例如&lt;embed\&gt;标签或&lt;object\&gt;标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置[nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md)中的supportCssDisplayChange参数设为true。
+当网页中同层标签（例如<embed\>标签或<object\>标签）在视口内的可见性发生变化时，将触发该回调。同层标签默认不可见，若在页面首次加载时已可见，则会上报；若不可见，则不会上报。同层标签全部不可见才视为不可见，部分可见或全部可见则视为可见。获取因同层标签CSS属性（包括visibility、display以及尺寸变化）导致的可见状态变化，需配置[nativeEmbedOptions](#nativeembedoptions)，并将[EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md)中的supportCssDisplayChange参数设为true。
 
 **起始版本：** 12
 
@@ -2512,7 +2512,7 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 
 > **说明：** 
 > 
-> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled1)&lt;sup &gt; &gt;20+&lt;/sup&gt;启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled2)接口并将includeSubframe设置为true。
+> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled1)<sup > &gt;20+</sup>启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled2)接口并将includeSubframe设置为true。
 > 
 > - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中分别设置对应的自定义错误页。
 > 
@@ -3194,7 +3194,7 @@ onTextSelectionChange(callback: TextSelectionChangeCallback)
 onTitleReceive(callback: Callback<OnTitleReceiveEvent>)
 ```
 
-当页面文档标题`&lt;title&gt;`元素发生变更时，触发回调。若当前页面未显示设置标题，ArkWeb将在加载完成前基于页面的URL生成标题并返回给应用。
+当页面文档标题`<title>`元素发生变更时，触发回调。若当前页面未显示设置标题，ArkWeb将在加载完成前基于页面的URL生成标题并返回给应用。
 
 **起始版本：** 8
 
@@ -3390,7 +3390,7 @@ optimizeParserBudget(optimizeParserBudget: boolean)
 
 ArkWeb内核在解析HTML文档结构时采取分段解析策略，旨在避免过多占用主线程资源，并使网页具有渐进式加载能力。ArkWeb内核默认使用解析时间作为分段点，当单次解析时间超过阈值时，会中断解析，随后进行布局和渲染操作。
 
-开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`&lt;div&gt;`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实现FCP时间提前。
+开启优化后，ArkWeb内核将不仅检查解析时间是否超出限制，还会额外判断解析的Token（HTML文档的最小解析单位，例如`<div>`、`attr="xxx"`等）数量是否超过内核规定的阈值，并下调此阈值。当页面的FCP（First Contentful Paint 首次内容绘制）触发时会恢复成默认的中断判断逻辑。这将使得网页在FCP到来之前的解析操作更频繁，从而提高首帧内容被提前解析完成并进入渲染阶段的可能性，同时有效缩减首帧渲染的工作量，最终实现FCP时间提前。
 
 由于页面的FCP触发时会恢复成默认分段解析逻辑，因此分段解析HTML优化仅对每个Web组件加载的首个页面生效。
 
@@ -3478,11 +3478,11 @@ pinchSmooth(isEnabled: boolean)
 registerNativeEmbedRule(tag: string, type:string)
 ```
 
-注册使用同层渲染的HTML标签名和类型。标签名仅支持使用&lt;object\&gt;和&lt;embed\&gt;。标签类型只能使用ASCII可显示字符。
+注册使用同层渲染的HTML标签名和类型。标签名仅支持使用<object\>和<embed\>。标签类型只能使用ASCII可显示字符。
 
-若指定类型与W3C定义的&lt;object\&gt;或&lt;embed\&gt;标准类型重合，ArkWeb内核将其识别为非同层标签。
+若指定类型与W3C定义的<object\>或<embed\>标准类型重合，ArkWeb内核将其识别为非同层标签。
 
-本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的&lt;embed\&gt;标签识别为同层标签。
+本接口同样受enableNativeEmbedMode接口控制，在未使能同层渲染时本接口无效。在不使用本接口的情况下，ArkWeb内核默认将"native/"前缀类型的<embed\>标签识别为同层标签。
 
 具体使用详情请参考[同层渲染](../../../web/web-same-layer.md#web页面中同层渲染输入框)指南。
 

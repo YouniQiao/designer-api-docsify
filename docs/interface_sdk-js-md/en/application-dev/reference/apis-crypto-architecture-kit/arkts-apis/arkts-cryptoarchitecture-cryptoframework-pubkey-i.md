@@ -34,7 +34,7 @@ Obtains a key parameter. This API returns the result synchronously.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int--><!--Device-PubKey-getAsyKeySpec(itemType: AsyKeySpecItem): bigint | string | int-End-->
 
@@ -118,7 +118,7 @@ Obtains the public key data that complies with the ASN.1 syntax and DER encoding
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PubKey-getEncodedDer(format: string): DataBlob--><!--Device-PubKey-getEncodedDer(format: string): DataBlob-End-->
 
@@ -172,7 +172,7 @@ Obtains the public key data in PEM encoding. This API returns the result synchro
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PubKey-getEncodedPem(format: string): string--><!--Device-PubKey-getEncodedPem(format: string): string-End-->
 
@@ -233,7 +233,7 @@ Obtains the public key data based on the specified key data type. This API uses 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>--><!--Device-PubKey-getKeyData(itemType: AsyKeyDataItem): Promise<Uint8Array>-End-->
 
@@ -288,7 +288,7 @@ Obtains the public key data based on the specified key data type. This API retur
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array--><!--Device-PubKey-getKeyDataSync(itemType: AsyKeyDataItem): Uint8Array-End-->
 

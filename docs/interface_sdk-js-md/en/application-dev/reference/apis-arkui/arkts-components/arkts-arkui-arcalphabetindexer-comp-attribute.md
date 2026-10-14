@@ -223,7 +223,7 @@ Sets the font style of the pop-up window.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| font | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Font style of the pop-up window, which sets the display effect of the currently selected letter shown in the pop-up window, including font size, font weight, tilt angle, font family, etc.&lt;br/ &gt;Default value:<br>{<br>size:'19.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
+| font | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;Font&gt; | Yes | Font style of the pop-up window, which sets the display effect of the currently selected letter shown in the pop-up window, including font size, font weight, tilt angle, font family, etc.<br/>Default value:<br>{<br>size:'19.0fp',<br> style:FontStyle.Normal,<br> weight:500,<br> family:'HarmonyOS Sans'<br>} |
 
 ## selected
 

@@ -22,7 +22,7 @@ Certificate extensions, each of which is identified by a unique object identifie
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertItemType-CERT_ITEM_TYPE_EXTENSIONS = 4--><!--Device-CertItemType-CERT_ITEM_TYPE_EXTENSIONS = 4-End-->
 
@@ -38,7 +38,7 @@ Unique ID of the certificate issuer.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertItemType-CERT_ITEM_TYPE_ISSUER_UNIQUE_ID = 2--><!--Device-CertItemType-CERT_ITEM_TYPE_ISSUER_UNIQUE_ID = 2-End-->
 
@@ -54,7 +54,7 @@ Public key of the certificate.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertItemType-CERT_ITEM_TYPE_PUBLIC_KEY = 1--><!--Device-CertItemType-CERT_ITEM_TYPE_PUBLIC_KEY = 1-End-->
 
@@ -70,7 +70,7 @@ Unique ID of the certificate subject.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertItemType-CERT_ITEM_TYPE_SUBJECT_UNIQUE_ID = 3--><!--Device-CertItemType-CERT_ITEM_TYPE_SUBJECT_UNIQUE_ID = 3-End-->
 
@@ -86,7 +86,7 @@ Information to be signed.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CertItemType-CERT_ITEM_TYPE_TBS = 0--><!--Device-CertItemType-CERT_ITEM_TYPE_TBS = 0-End-->
 

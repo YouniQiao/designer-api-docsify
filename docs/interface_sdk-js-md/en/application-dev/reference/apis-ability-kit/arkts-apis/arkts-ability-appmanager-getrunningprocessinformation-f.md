@@ -28,7 +28,7 @@ Obtains information about the running processes of the current application. This
 - API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>--><!--Device-appManager-function getRunningProcessInformation(): Promise<Array<ProcessInformation>>-End-->
 
@@ -82,7 +82,7 @@ Obtains information about the running processes of the current application. This
 - API version 11 and later: N/A
 - API versions 9 to 10: ohos.permission.GET_RUNNING_INFO
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void--><!--Device-appManager-function getRunningProcessInformation(callback: AsyncCallback<Array<ProcessInformation>>): void-End-->
 

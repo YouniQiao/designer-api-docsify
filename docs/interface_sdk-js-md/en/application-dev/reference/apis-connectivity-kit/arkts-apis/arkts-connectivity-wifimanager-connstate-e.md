@@ -6,8 +6,6 @@ export enum ConnState
 
 The state of Wi-Fi connection enumeration.
 
-@enum { int }
-
 **Since:** 9
 
 <!--Device-wifiManager-export enum ConnState--><!--Device-wifiManager-export enum ConnState-End-->

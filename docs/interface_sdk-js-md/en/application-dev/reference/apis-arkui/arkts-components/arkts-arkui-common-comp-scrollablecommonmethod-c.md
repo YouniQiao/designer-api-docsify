@@ -6,7 +6,7 @@ declare class ScrollableCommonMethod<T> extends CommonMethod<T>
 
 CommonScrollableMethod
 
-@extends CommonMethod&lt;T&gt;
+@extends CommonMethod<T>
 
 **Inheritance/Implementation:** ScrollableCommonMethod extends CommonMethod&lt;T&gt;
 
@@ -910,7 +910,7 @@ Sets the scrollbar color.
 scrollBarColor(color: Color | number | string | Resource): T
 ```
 
-Sets the scrollbar color. Compared with [scrollBarColor&lt;sup&gt;11+&lt;/sup&gt;](#scrollbarcolor1), this API supports the Resource type for the **color** parameter.
+Sets the scrollbar color. Compared with [scrollBarColor<sup>11+</sup>](#scrollbarcolor1), this API supports the Resource type for the **color** parameter.
 
 **Since:** 22
 

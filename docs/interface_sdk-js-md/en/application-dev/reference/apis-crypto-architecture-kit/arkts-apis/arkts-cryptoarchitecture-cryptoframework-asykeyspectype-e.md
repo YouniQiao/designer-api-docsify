@@ -24,7 +24,7 @@ Common parameters of the public and private keys. You can use [generateKeyPair](
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0--><!--Device-AsyKeySpecType-COMMON_PARAMS_SPEC = 0-End-->
 
@@ -42,7 +42,7 @@ Full parameters of the public and private keys. You can use [generateKeyPair](ar
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3--><!--Device-AsyKeySpecType-KEY_PAIR_SPEC = 3-End-->
 
@@ -60,7 +60,7 @@ Parameter of the private key. You can use [generatePriKey](arkts-cryptoarchitect
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1--><!--Device-AsyKeySpecType-PRIVATE_KEY_SPEC = 1-End-->
 
@@ -78,7 +78,7 @@ Parameter of the public key. You can use [generatePubKey](arkts-cryptoarchitectu
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2--><!--Device-AsyKeySpecType-PUBLIC_KEY_SPEC = 2-End-->
 

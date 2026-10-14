@@ -18,7 +18,7 @@ function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void--><!--Device-cert-function createX509Cert(inStream: EncodingBlob, callback: AsyncCallback<X509Cert>): void-End-->
 
@@ -93,7 +93,7 @@ function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>--><!--Device-cert-function createX509Cert(inStream: EncodingBlob): Promise<X509Cert>-End-->
 

@@ -40,7 +40,7 @@ Obtains signature verification specifications. Currently, only RSA is supported.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int--><!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int-End-->
 
@@ -95,7 +95,7 @@ Initializes the **Verify** object using a public key. This API uses an asynchron
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void--><!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void-End-->
 
@@ -132,7 +132,7 @@ Initializes the **Verify** object using a public key. This API uses a promise to
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-init(pubKey: PubKey): Promise<void>--><!--Device-Verify-init(pubKey: PubKey): Promise<void>-End-->
 
@@ -174,7 +174,7 @@ Initializes the **Verify** instance with a public key. This API returns the resu
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-initSync(pubKey: PubKey): void--><!--Device-Verify-initSync(pubKey: PubKey): void-End-->
 
@@ -210,7 +210,7 @@ Recovers the original data from a signature. This API uses a promise to return t
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>--><!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>-End-->
 
@@ -332,7 +332,7 @@ Recovers the original data from a signature. This API returns the result synchro
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null--><!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null-End-->
 
@@ -438,7 +438,7 @@ Sets the specified parameter for the Verify instance.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
 
@@ -565,7 +565,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
@@ -624,7 +624,7 @@ Updates the data for signature verification. This API uses a promise to return t
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-update(data: DataBlob): Promise<void>--><!--Device-Verify-update(data: DataBlob): Promise<void>-End-->
 
@@ -688,7 +688,7 @@ Updates the data for signature verification. This API returns the result synchro
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-updateSync(data: DataBlob): void--><!--Device-Verify-updateSync(data: DataBlob): void-End-->
 
@@ -760,7 +760,7 @@ Verifies the signature of the data. This API uses an asynchronous callback to re
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
 
@@ -841,7 +841,7 @@ Verifies the signature of the data. This API uses a promise to return the result
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>-End-->
 
@@ -884,7 +884,7 @@ Verifies the signature. This API returns the verification result synchronously.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean--><!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean-End-->
 
@@ -1147,7 +1147,7 @@ Indicates the algorithm name of the Verify instance.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Verify-readonly algName: string--><!--Device-Verify-readonly algName: string-End-->
 

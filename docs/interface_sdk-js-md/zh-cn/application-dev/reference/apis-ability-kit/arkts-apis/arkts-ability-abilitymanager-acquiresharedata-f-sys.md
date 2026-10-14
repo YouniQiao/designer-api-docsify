@@ -28,7 +28,7 @@ function acquireShareData(missionId: number, callback: AsyncCallback<Record<stri
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| missionId | number | 是 | 目标应用的missionId，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
+| missionId | number | 是 | 目标应用的missionId，最大为2<sup>31</sup>-1。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Record&lt;string, Object&gt;&gt; | 是 | 回调函数。当接口调用成功，err为undefined，data为获取到的分享数据；否则为错误对象。可进行错误处理或其他自定义处理。<br>**适用版本：** 11 |
 
 **错误码：**
@@ -62,7 +62,7 @@ function acquireShareData(missionId: number): Promise<Record<string, Object>>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| missionId | number | 是 | 目标应用的missionId，最大为2&lt;sup&gt;31&lt;/sup&gt;-1。 |
+| missionId | number | 是 | 目标应用的missionId，最大为2<sup>31</sup>-1。 |
 
 **返回值：**
 

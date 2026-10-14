@@ -32,7 +32,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>--><!--Device-AtManager-checkAccessToken(tokenID: int, permissionName: Permissions): Promise<GrantStatus>-End-->
 
@@ -96,7 +96,7 @@ Applicable to scenarios where a pre-permission check is performed before an app 
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus--><!--Device-AtManager-checkAccessTokenSync(tokenID: int, permissionName: Permissions): GrantStatus-End-->
 
@@ -154,7 +154,7 @@ Applicable to scenarios such as before determining whether to request a permissi
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus--><!--Device-AtManager-getSelfPermissionStatus(permissionName: Permissions): PermissionStatus-End-->
 
@@ -213,7 +213,7 @@ This API can be called to unsubscribe in scenarios such as when there is no need
 
 When the callback parameter is not passed in, all callback functions associated with the permissionList will be deleted in batch.
 
-This API is usually used in conjunction with [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) to cancel the monitoring relationship created through on.
+This API is usually used in conjunction with on to cancel the monitoring relationship created through on.
 
 **Since:** 18
 
@@ -230,7 +230,7 @@ This API is usually used in conjunction with [on](arkts-ability-abilityaccessctr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | 'selfPermissionStateChange' | Yes | Type of the unsubscription event, which is fixed as'selfPermissionStateChange', indicating a permission status change event. |
-| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during [on](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#on) subscription (order insensitive). <br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
+| permissionList | Array&lt;[Permissions](arkts-ability-permissions-t.md)&gt; | Yes | List of permission names to unsubscribe from. If empty, it indicates unsubscribing from all permission status changes, and must match the permission list used during on subscription (order insensitive).<br>The maximum length is 1024. Value constraint: Each permission name in the list must be a valid permission name, and its length cannot exceed 256 characters. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PermissionStateChangeInfo](arkts-ability-abilityaccessctrl-permissionstatechangeinfo-i.md)&gt; | No | Callback function. Callback for unsubscribing from the status change event of the specified permission names. If this parameter is not passed, all callback functions associated with permissionList will be deleted in batch. |
 
 **Error codes:**
@@ -270,7 +270,7 @@ on(
     ): void
 ```
 
-Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off) to unsubscribe.
+Subscribes to permission authorization status change events for a specified permission list of this app, using an asynchronous callback. It can be used in scenarios such as updating the UI or service logic in real time based on permission status, and monitoring user authorization behavior. When monitoring is no longer needed, call off to unsubscribe.
 
 - When this subscription API is called for multiple times, if the subscribed permission lists are the same but  
 the callbacks are different, the subscription is successful.  
@@ -283,7 +283,7 @@ There are two possible scenarios when the permission status changes from "author
 - System actively reclaims: The app process will not be terminated. A typical scenario is the one-time  
 authorization of a security component, which is automatically reclaimed by the system after the authorization period ends.
 
-This API is usually used in conjunction with [off](arkts-ability-abilityaccessctrl-atmanager-i-sys.md#off). When monitoring is no longer needed, call off to unsubscribe.
+This API is usually used in conjunction with off. When monitoring is no longer needed, call off to unsubscribe.
 
 **Since:** 18
 
@@ -416,7 +416,7 @@ When an app needs to use functions such as the camera, microphone, or location t
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>--><!--Device-AtManager-requestGlobalSwitch(context: Context, type: SwitchType): Promise<boolean>-End-->
 
@@ -486,7 +486,7 @@ Before calling this API, the app needs to call [requestPermissionsFromUser](#req
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>--><!--Device-AtManager-requestPermissionOnSetting(context: Context, permissionList: Array<Permissions>): Promise<Array<GrantStatus>>-End-->
 
@@ -560,7 +560,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>, requestCallback: AsyncCallback<PermissionRequestResult>) : void-End-->
 
@@ -628,7 +628,7 @@ If the user denies authorization, the authorization dialog box cannot be brought
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>--><!--Device-AtManager-requestPermissionsFromUser(context: Context, permissionList: Array<Permissions>) : Promise<PermissionRequestResult>-End-->
 

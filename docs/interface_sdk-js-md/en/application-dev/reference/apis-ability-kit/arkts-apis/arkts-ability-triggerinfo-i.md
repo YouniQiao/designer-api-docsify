@@ -24,7 +24,7 @@ Common event code to pass. This field takes effect only when the [OperationType]
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TriggerInfo-code: int--><!--Device-TriggerInfo-code: int-End-->
 
@@ -78,7 +78,7 @@ Permission of the common event subscriber. This field takes effect only when the
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TriggerInfo-permission?: string--><!--Device-TriggerInfo-permission?: string-End-->
 
@@ -96,7 +96,7 @@ Carrier for information transfer between objects (application components).
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-TriggerInfo-want?: Want--><!--Device-TriggerInfo-want?: Want-End-->
 

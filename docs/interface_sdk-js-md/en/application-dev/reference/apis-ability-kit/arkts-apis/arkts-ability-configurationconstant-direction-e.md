@@ -22,7 +22,7 @@ Horizontal direction.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Direction-DIRECTION_HORIZONTAL = 1--><!--Device-Direction-DIRECTION_HORIZONTAL = 1-End-->
 
@@ -38,7 +38,7 @@ Unspecified direction.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Direction-DIRECTION_NOT_SET = -1--><!--Device-Direction-DIRECTION_NOT_SET = -1-End-->
 
@@ -54,7 +54,7 @@ Vertical direction.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Direction-DIRECTION_VERTICAL = 0--><!--Device-Direction-DIRECTION_VERTICAL = 0-End-->
 

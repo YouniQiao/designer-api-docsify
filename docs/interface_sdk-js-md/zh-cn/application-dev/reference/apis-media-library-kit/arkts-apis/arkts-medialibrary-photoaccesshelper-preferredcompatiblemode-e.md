@@ -24,7 +24,7 @@ COMPATIBLE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreferredCompatibleMode-COMPATIBLE = 2--><!--Device-PreferredCompatibleMode-COMPATIBLE = 2-End-->
 
@@ -42,7 +42,7 @@ CURRENT = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreferredCompatibleMode-CURRENT = 1--><!--Device-PreferredCompatibleMode-CURRENT = 1-End-->
 
@@ -60,7 +60,7 @@ DEFAULT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-PreferredCompatibleMode-DEFAULT = 0--><!--Device-PreferredCompatibleMode-DEFAULT = 0-End-->
 

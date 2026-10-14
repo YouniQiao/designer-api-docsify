@@ -34,7 +34,7 @@ entityId: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-IntentEntity-entityId: string--><!--Device-IntentEntity-entityId: string-End-->
 

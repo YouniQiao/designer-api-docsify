@@ -34,7 +34,7 @@ onBackground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onBackground(): void--><!--Device-UIAbility-onBackground(): void-End-->
 
@@ -69,7 +69,7 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onBackPressed(): boolean--><!--Device-UIAbility-onBackPressed(): boolean-End-->
 
@@ -79,7 +79,7 @@ UIAbility生命周期回调，当UIAbility侧滑返回时触发，根据返回�
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | The value &lt;code&gt;true&lt;/code&gt; means that the UIAbility instance will be moved to the background and will not be destroyed, and &lt;code&gt;false&lt;/code&gt; means that the UIAbility instance will be destroyed. |
+| boolean | The value<code>true</code> means that the UIAbility instance will be moved to the background and will not be destroyed, and <code>false</code> means that the UIAbility instance will be destroyed. |
 
 **示例**
 
@@ -157,7 +157,7 @@ onContinue(wantParam: Record<string, Object>):AbilityConstant.OnContinueResult |
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>--><!--Device-UIAbility-onContinue(wantParam: Record<string, Object>):    AbilityConstant.OnContinueResult | Promise<AbilityConstant.OnContinueResult>-End-->
 
@@ -230,7 +230,7 @@ onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onCreate(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
@@ -328,7 +328,7 @@ UIAbility生命周期回调，当应用从前台转到后台后触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onDidBackground(): void--><!--Device-UIAbility-onDidBackground(): void-End-->
 
@@ -400,7 +400,7 @@ UIAbility生命周期回调，应用转到前台后触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onDidForeground(): void--><!--Device-UIAbility-onDidForeground(): void-End-->
 
@@ -422,7 +422,7 @@ onDump(params: Array<string>): Array<string>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onDump(params: Array<string>): Array<string>--><!--Device-UIAbility-onDump(params: Array<string>): Array<string>-End-->
 
@@ -467,7 +467,7 @@ onForeground(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onForeground(): void--><!--Device-UIAbility-onForeground(): void-End-->
 
@@ -500,7 +500,7 @@ onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void--><!--Device-UIAbility-onNewWant(want: Want, launchParam: AbilityConstant.LaunchParam): void-End-->
 
@@ -546,7 +546,7 @@ onPrepareToTerminate(): boolean
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onPrepareToTerminate(): boolean--><!--Device-UIAbility-onPrepareToTerminate(): boolean-End-->
 
@@ -556,7 +556,7 @@ onPrepareToTerminate(): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Whether to terminate the UIAbility.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| boolean | Whether to terminate the UIAbility.<br>The value <code>true</code> means that the termination process is canceled. <br>The value <code>false</code> means to continue terminating the UIAbility. |
 
 **示例**
 
@@ -615,7 +615,7 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本15开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本15开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>--><!--Device-UIAbility-onPrepareToTerminateAsync(): Promise<boolean>-End-->
 
@@ -625,7 +625,7 @@ onPrepareToTerminateAsync(): Promise<boolean>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value &lt;code&gt;true&lt;/code&gt; means that the termination process is canceled. <br>The value &lt;code&gt;false&lt;/code&gt; means to continue terminating the UIAbility. |
+| Promise&lt;boolean&gt; | Promise used to return the result.<br>The value <code>true</code> means that the termination process is canceled. <br>The value <code>false</code> means to continue terminating the UIAbility. |
 
 **示例**
 
@@ -791,7 +791,7 @@ UIAbility生命周期回调，当应用从前台转到后台前触发，在[onBa
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWillBackground(): void--><!--Device-UIAbility-onWillBackground(): void-End-->
 
@@ -841,7 +841,7 @@ UIAbility生命周期回调，应用转到前台前触发，在[onForeground](#o
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWillForeground(): void--><!--Device-UIAbility-onWillForeground(): void-End-->
 
@@ -913,7 +913,7 @@ onWindowStageCreate(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageCreate(windowStage: window.WindowStage): void-End-->
 
@@ -960,7 +960,7 @@ onWindowStageDestroy(): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWindowStageDestroy(): void--><!--Device-UIAbility-onWindowStageDestroy(): void-End-->
 
@@ -999,7 +999,7 @@ onWindowStageRestore(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageRestore(windowStage: window.WindowStage): void-End-->
 
@@ -1037,7 +1037,7 @@ onWindowStageWillDestroy(windowStage: window.WindowStage): void
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void--><!--Device-UIAbility-onWindowStageWillDestroy(windowStage: window.WindowStage): void-End-->
 
@@ -1095,7 +1095,7 @@ UIAbility的上下文。
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-context: UIAbilityContext--><!--Device-UIAbility-context: UIAbilityContext-End-->
 
@@ -1138,7 +1138,7 @@ lastRequestWant: Want
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-lastRequestWant: Want--><!--Device-UIAbility-lastRequestWant: Want-End-->
 
@@ -1158,7 +1158,7 @@ UIAbility[冷启动](../../../application-models/uiability-intra-device-interact
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-UIAbility-launchWant: Want--><!--Device-UIAbility-launchWant: Want-End-->
 

@@ -22,7 +22,7 @@ QUALITY_LEVEL_HIGH = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-QualityLevel-QUALITY_LEVEL_HIGH = 0--><!--Device-QualityLevel-QUALITY_LEVEL_HIGH = 0-End-->
 
@@ -38,7 +38,7 @@ QUALITY_LEVEL_LOW = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-QualityLevel-QUALITY_LEVEL_LOW = 2--><!--Device-QualityLevel-QUALITY_LEVEL_LOW = 2-End-->
 
@@ -54,7 +54,7 @@ QUALITY_LEVEL_MEDIUM = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-QualityLevel-QUALITY_LEVEL_MEDIUM = 1--><!--Device-QualityLevel-QUALITY_LEVEL_MEDIUM = 1-End-->
 

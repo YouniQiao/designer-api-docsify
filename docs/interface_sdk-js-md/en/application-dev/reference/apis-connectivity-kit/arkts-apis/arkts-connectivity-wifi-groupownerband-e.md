@@ -6,8 +6,6 @@ enum GroupOwnerBand
 
 P2P group owner band.
 
-@enum { number } GroupOwnerBand
-
 **Since:** 8
 
 **Deprecated since:** 9

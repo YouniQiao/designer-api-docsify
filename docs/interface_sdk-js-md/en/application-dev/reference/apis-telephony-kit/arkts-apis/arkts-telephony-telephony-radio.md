@@ -22,7 +22,7 @@ import { radio } from '@kit.TelephonyKit';
 | --- | --- |
 | [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork1) | Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result. |
 | [getISOCountryCodeForNetwork](arkts-telephony-radio-getisocountrycodefornetwork-f.md#getisocountrycodefornetwork2) | Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result. |
-| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md) | Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. |
+| [getISOCountryCodeForNetworkSync](arkts-telephony-radio-getisocountrycodefornetworksync-f.md#getisocountrycodefornetworksync) | Obtains the ISO country code of the network with which the SIM card in the specified slot is registered. |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode1) | Obtains the network selection mode of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getNetworkSelectionMode](arkts-telephony-radio-getnetworkselectionmode-f.md#getnetworkselectionmode2) | Obtains the network selection mode of the SIM card in the specified slot. This API uses a promise to return the result. |
 | [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate1) | Obtains the network status of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
@@ -30,15 +30,15 @@ import { radio } from '@kit.TelephonyKit';
 | [getNetworkState](arkts-telephony-radio-getnetworkstate-f.md#getnetworkstate3) | Obtains the network status. This API uses an asynchronous callback to return the result. |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname1) | Obtains the carrier name of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getOperatorName](arkts-telephony-radio-getoperatorname-f.md#getoperatorname2) | Obtains the carrier name of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md) | Obtains the carrier name of the SIM card in the specified slot. |
+| [getOperatorNameSync](arkts-telephony-radio-getoperatornamesync-f.md#getoperatornamesync) | Obtains the carrier name of the SIM card in the specified slot. |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid1) | Obtains the ID of the slot in which the primary card is located. This API uses an asynchronous callback to return the result. |
 | [getPrimarySlotId](arkts-telephony-radio-getprimaryslotid-f.md#getprimaryslotid2) | Obtains the ID of the slot in which the primary card is located. This API uses a promise to return the result. |
 | [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech1) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses an asynchronous callback to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
 | [getRadioTech](arkts-telephony-radio-getradiotech-f.md#getradiotech2) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. This API uses a promise to return the result. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
-| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
+| [getRadioTechSync](arkts-telephony-radio-getradiotechsync-f.md#getradiotechsync) | Obtains the RAT used in the CS and PS domains for the SIM card in the specified slot. The CS domain refers to the Circuit Switched domain, and the PS domain refers to the Packet Switched domain. |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation1) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses an asynchronous callback to return the result. |
 | [getSignalInformation](arkts-telephony-radio-getsignalinformation-f.md#getsignalinformation2) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. This API uses a promise to return the result. |
-| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. |
+| [getSignalInformationSync](arkts-telephony-radio-getsignalinformationsync-f.md#getsignalinformationsync) | Obtains a list of signal strengths of the network with which the SIM card in the specified slot is registered. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported1) | Checks whether the current device supports NR. |
 | [isNRSupported](arkts-telephony-radio-isnrsupported-f.md#isnrsupported2) | Checks whether the SIM card in the specified slot supports NR. |
 | [isRadioOn](arkts-telephony-radio-isradioon-f.md#isradioon1) | Checks whether the radio service is enabled on the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
@@ -52,7 +52,7 @@ import { radio } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md) | Reset all network settings of telephony. |
+| [factoryReset](arkts-telephony-radio-factoryreset-f-sys.md#factoryreset) | Reset all network settings of telephony. |
 | [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion1) | Get the version of Baseband. |
 | [getBasebandVersion](arkts-telephony-radio-getbasebandversion-f-sys.md#getbasebandversion2) | Get the version of Baseband. |
 | [getCellInformation](arkts-telephony-radio-getcellinformation-f-sys.md#getcellinformation1) | Get the current cell information. |
@@ -61,7 +61,7 @@ import { radio } from '@kit.TelephonyKit';
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei1) | Obtains the IMEI of a specified card slot of the device. |
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei2) | Obtains the IMEI of a specified card slot of the device. |
 | [getIMEI](arkts-telephony-radio-getimei-f-sys.md#getimei3) | Obtains the IMEI of a specified card slot of the device. |
-| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md) | Obtains the software version number of a specified card slot of the device. |
+| [getIMEISV](arkts-telephony-radio-getimeisv-f-sys.md#getimeisv) | Obtains the software version number of a specified card slot of the device. |
 | [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo1) | Get the IMS registration state info of specified IMS service type. |
 | [getImsRegInfo](arkts-telephony-radio-getimsreginfo-f-sys.md#getimsreginfo2) | Get the IMS registration state info of specified IMS service type. |
 | [getMEID](arkts-telephony-radio-getmeid-f-sys.md#getmeid1) | Obtains the MEID of a specified card slot of the device. |
@@ -78,7 +78,7 @@ import { radio } from '@kit.TelephonyKit';
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid1) | Obtains the unique device ID of a specified card slot of the device. |
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid2) | Obtains the unique device ID of a specified card slot of the device. |
 | [getUniqueDeviceId](arkts-telephony-radio-getuniquedeviceid-f-sys.md#getuniquedeviceid3) | Obtains the unique device ID of a specified card slot of the device. |
-| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md) | Determine whether the current manual network scan is in progress. |
+| [isManualNetworkScanning](arkts-telephony-radio-ismanualnetworkscanning-f-sys.md#ismanualnetworkscanning) | Determine whether the current manual network scan is in progress. |
 | [off](arkts-telephony-radio-off-f-sys.md#offimsregstatechange) | Unsubscribe from imsRegStateChange event. |
 | [on](arkts-telephony-radio-on-f-sys.md#onimsregstatechange) | Called when the IMS registration state of specified IMS service type corresponding to a monitored `slotId` updates. |
 | [sendUpdateCellLocationRequest](arkts-telephony-radio-sendupdatecelllocationrequest-f-sys.md#sendupdatecelllocationrequest1) | Actively requests to update location information. |
@@ -94,8 +94,8 @@ import { radio } from '@kit.TelephonyKit';
 | [setPreferredNetwork](arkts-telephony-radio-setpreferrednetwork-f-sys.md#setpreferrednetwork2) | Set the preferred network for the specified SIM card slot. |
 | [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid1) | Set the index number of the main SIM card slot. |
 | [setPrimarySlotId](arkts-telephony-radio-setprimaryslotid-f-sys.md#setprimaryslotid2) | Set the index number of the main SIM card slot. |
-| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md) | start ManualNetworkScan , Real-time report. |
-| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md) | Stop ManualNetworkScan. |
+| [startManualNetworkScan](arkts-telephony-radio-startmanualnetworkscan-f-sys.md#startmanualnetworkscan) | start ManualNetworkScan , Real-time report. |
+| [stopManualNetworkScan](arkts-telephony-radio-stopmanualnetworkscan-f-sys.md#stopmanualnetworkscan) | Stop ManualNetworkScan. |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio1) | Turn off the radio service. |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio2) | Turn off the radio service. |
 | [turnOffRadio](arkts-telephony-radio-turnoffradio-f-sys.md#turnoffradio3) | Turn off the radio service. |
@@ -104,7 +104,7 @@ import { radio } from '@kit.TelephonyKit';
 | [turnOnRadio](arkts-telephony-radio-turnonradio-f-sys.md#turnonradio3) | Turn on the radio service. |
 | [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode1) | Get the option mode of NR. |
 | [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode2) | Get the option mode of NR. |
-| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md) | Get the option mode of NR. |
+| [getNrOptionMode](arkts-telephony-radio-getnroptionmode-f-sys.md#getnroptionmode) | Get the option mode of NR. |
 <!--DelEnd-->
 
 ### Interfaces

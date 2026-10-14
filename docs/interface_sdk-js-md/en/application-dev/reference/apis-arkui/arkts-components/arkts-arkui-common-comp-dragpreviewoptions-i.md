@@ -80,7 +80,7 @@ Default value: empty (unmodifiable).
 numberBadge?: boolean | number
 ```
 
-Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is [0, 2&lt;sup&gt;31&lt;/sup&gt;-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed.
+Whether to display the number badge or the number displayed on the badge. For a number badge, the value range is [0, 2<sup>31</sup>-1]. Values outside this range will be processed as the default state. If the value specified is a floating-point number, only the integer part is displayed.
 
 **NOTE:** 
 

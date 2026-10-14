@@ -50,8 +50,8 @@ import { resourceManager } from '@kit.LocalizationKit';
 | [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager2) | Obtains the **ResourceManager** object of the specified application. This API uses an asynchronous callback to return the result. |
 | [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager3) | Obtains the **ResourceManager** object of the current application. This API uses a promise to return the result. |
 | [getResourceManager](arkts-localization-resourcemanager-getresourcemanager-f.md#getresourcemanager4) | Obtains the **ResourceManager** object of the specified application. This API uses a promise to return the result. |
-| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md) | Obtains a system resource management object for accessing preset system resources. |
-| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md) | Obtains a system resource management object for accessing preset system resources. |
+| [getSysResourceManager](arkts-localization-resourcemanager-getsysresourcemanager-f.md#getsysresourcemanager) | Obtains a system resource management object for accessing preset system resources. |
+| [getSystemResourceManager](arkts-localization-resourcemanager-getsystemresourcemanager-f.md#getsystemresourcemanager) | Obtains a system resource management object for accessing preset system resources. |
 
 ### Classes
 

@@ -6,7 +6,7 @@ declare class CommonShapeMethod<T> extends CommonMethod<T>
 
 CommonShapeMethod
 
-@extends CommonMethod&lt;T&gt;
+@extends CommonMethod<T>
 
 **继承/实现关系：** CommonShapeMethod extends CommonMethod&lt;T&gt;
 

@@ -24,7 +24,7 @@ AND = 7
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-AND = 7--><!--Device-OperationType-AND = 7-End-->
 
@@ -42,7 +42,7 @@ BEGIN_WRAP = 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-BEGIN_WRAP = 11--><!--Device-OperationType-BEGIN_WRAP = 11-End-->
 
@@ -62,7 +62,7 @@ BETWEEN = 13
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-BETWEEN = 13--><!--Device-OperationType-BETWEEN = 13-End-->
 
@@ -80,7 +80,7 @@ END_WRAP = 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-END_WRAP = 12--><!--Device-OperationType-END_WRAP = 12-End-->
 
@@ -98,7 +98,7 @@ EQUAL_TO = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-EQUAL_TO = 1--><!--Device-OperationType-EQUAL_TO = 1-End-->
 
@@ -116,7 +116,7 @@ GREATER_THAN = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-GREATER_THAN = 3--><!--Device-OperationType-GREATER_THAN = 3-End-->
 
@@ -134,7 +134,7 @@ GREATER_THAN_OR_EQUAL_TO = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5--><!--Device-OperationType-GREATER_THAN_OR_EQUAL_TO = 5-End-->
 
@@ -152,7 +152,7 @@ IN = 9
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-IN = 9--><!--Device-OperationType-IN = 9-End-->
 
@@ -170,7 +170,7 @@ LESS_THAN = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-LESS_THAN = 4--><!--Device-OperationType-LESS_THAN = 4-End-->
 
@@ -188,7 +188,7 @@ LESS_THAN_OR_EQUAL_TO = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6--><!--Device-OperationType-LESS_THAN_OR_EQUAL_TO = 6-End-->
 
@@ -208,7 +208,7 @@ NOT_BETWEEN = 14
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-NOT_BETWEEN = 14--><!--Device-OperationType-NOT_BETWEEN = 14-End-->
 
@@ -226,7 +226,7 @@ NOT_EQUAL_TO = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-NOT_EQUAL_TO = 2--><!--Device-OperationType-NOT_EQUAL_TO = 2-End-->
 
@@ -244,7 +244,7 @@ NOT_IN = 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-NOT_IN = 10--><!--Device-OperationType-NOT_IN = 10-End-->
 
@@ -262,7 +262,7 @@ OR = 8
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-OperationType-OR = 8--><!--Device-OperationType-OR = 8-End-->
 

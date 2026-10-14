@@ -22,7 +22,7 @@ The existing WantAgent object should be canceled before a new object is generate
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG--><!--Device-WantAgentFlags-CANCEL_PRESENT_FLAG-End-->
 
@@ -38,7 +38,7 @@ The WantAgent object is immutable.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-CONSTANT_FLAG--><!--Device-WantAgentFlags-CONSTANT_FLAG-End-->
 
@@ -50,11 +50,11 @@ The WantAgent object is immutable.
 NO_BUILD_FLAG
 ```
 
-The WantAgent object does not exist and hence it is not created. In this case, &lt;code&gt;null&lt;/code&gt; is returned.
+The WantAgent object does not exist and hence it is not created. In this case, <code>null</code> is returned.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-NO_BUILD_FLAG--><!--Device-WantAgentFlags-NO_BUILD_FLAG-End-->
 
@@ -70,7 +70,7 @@ The WantAgent object can be used only once.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-ONE_TIME_FLAG = 0--><!--Device-WantAgentFlags-ONE_TIME_FLAG = 0-End-->
 
@@ -86,7 +86,7 @@ The action property in the current Want can be replaced by the action property i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-REPLACE_ACTION--><!--Device-WantAgentFlags-REPLACE_ACTION-End-->
 
@@ -98,11 +98,11 @@ The action property in the current Want can be replaced by the action property i
 REPLACE_BUNDLE
 ```
 
-The &lt;code&gt;bundleName&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;bundleName&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+The <code>bundleName</code> property in the current Want can be replaced by the <code>bundleName</code> property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-REPLACE_BUNDLE--><!--Device-WantAgentFlags-REPLACE_BUNDLE-End-->
 
@@ -118,7 +118,7 @@ The element property in the current Want can be replaced by the element property
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-REPLACE_ELEMENT--><!--Device-WantAgentFlags-REPLACE_ELEMENT-End-->
 
@@ -130,11 +130,11 @@ The element property in the current Want can be replaced by the element property
 REPLACE_ENTITIES
 ```
 
-The &lt;code&gt;entities&lt;/code&gt; property in the current Want can be replaced by the &lt;code&gt;entities&lt;/code&gt; property in the Want passed in WantAgent.trigger().This processing is not supported yet.
+The <code>entities</code> property in the current Want can be replaced by the <code>entities</code> property in the Want passed in WantAgent.trigger().This processing is not supported yet.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-REPLACE_ENTITIES--><!--Device-WantAgentFlags-REPLACE_ENTITIES-End-->
 
@@ -150,7 +150,7 @@ The uri property in the current Want can be replaced by the uri property in the 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-REPLACE_URI--><!--Device-WantAgentFlags-REPLACE_URI-End-->
 
@@ -166,7 +166,7 @@ Extra information of the existing WantAgent object is replaced with that of the 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG--><!--Device-WantAgentFlags-UPDATE_PRESENT_FLAG-End-->
 

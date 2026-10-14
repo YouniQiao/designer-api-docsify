@@ -21,6 +21,7 @@ Defines native api of ArkTS native module.
 | [napi_critical_scope](capi-arkts-napi-nativemodule-napi-critical-scope.md) | napi_critical_scope | Native critical scope provides a scope within that an ArkTS string buffer cache can be obtained. |
 | [napi_strong_ref](capi-arkts-napi-nativemodule-napi-strong-ref.md) | napi_strong_ref | Native strong reference of an ArkTS object. |
 | [napi_callsite_info](capi-arkts-napi-nativemodule-napi-callsite-info.md) | napi_callsite_info | Callsite info handle for caching inline cache (IC) information of property access. |
+| [napi_microtask_scope](capi-arkts-napi-nativemodule-napi-microtask-scope.md) | napi_microtask_scope | Microtask scope provides a scope to pause the execution of microtasks in the runtime. |
 | [napi_sendable_ref](capi-arkts-napi-nativemodule-napi-sendable-ref.md) | napi_sendable_ref | Native strong sendable reference of an sendable ArkTS object. |
 
 ### Function
@@ -218,6 +219,8 @@ NAPI_EXTERN napi_status napi_queue_async_work_with_qos(napi_env env, napi_async_
 | [NAPI_EXTERN napi_status napi_get_property_with_callsite_info(napi_env env, napi_value object, napi_value key, napi_callsite_info info, napi_value* result, bool* hit)](#napi_get_property_with_callsite_info) | - | Uses callsite info to quickly get an object property value. When the IC hits (the object has the same hidden class), it skips the regular hash table lookup and prototype chain traversal. The info parameter can be NULL, in which case the behavior is equivalent to napi_get_property. |
 | [NAPI_EXTERN napi_status napi_set_property_with_callsite_info(napi_env env, napi_value object, napi_value key, napi_value value, napi_callsite_info info, bool* hit)](#napi_set_property_with_callsite_info) | - | Uses callsite info to quickly set an object property value. When the IC hits (the object has the same hidden class), it skips the regular property setting process. The info parameter can be NULL, in which case the behavior is equivalent to napi_set_property. |
 | [NAPI_EXTERN napi_status napi_get_global_handle_count(napi_env env, size_t* count)](#napi_get_global_handle_count) | - | To obtain the count of global object in current ArkTS runtime thread. |
+| [napi_status napi_open_microtask_scope(napi_env env, napi_microtask_scope* scope)](#napi_open_microtask_scope) | - | Creates a microtask scope in the current ArkTS runtime. Within this scope, microtask execution is paused. |
+| [napi_status napi_close_microtask_scope(napi_env env, napi_microtask_scope scope)](#napi_close_microtask_scope) | - | To destroy the microtask scope in current ArkTS runtime. After the scope is destroyed, microtasks will be triggered to execute immediately. |
 
 ### Variable
 
@@ -5478,5 +5481,67 @@ To obtain the count of global object in current ArkTS runtime thread.
 | Type | Description |
 | -- | -- |
 | NAPI_EXTERN napi_status | Returns the function execution status. <ul><li>napi_ok If the function executed successfully.</li> <li>napi_invalid_arg If env or count is nullptr.</li> <li>napi_pending_exception There is an uncaught exception occurred before execution.</li></ul> |
+
+### napi_open_microtask_scope()
+
+```c
+napi_status napi_open_microtask_scope(napi_env env, napi_microtask_scope* scope)
+```
+
+**Description**
+
+Creates a microtask scope in the current ArkTS runtime. Within this scope, microtask execution is paused.
+
+> **Note**:
+>
+> This API must be called before [napi_close_microtask_scope](capi-native-api-h.md#napi_close_microtask_scope). Each call to this API must be paired with a call to [napi_close_microtask_scope](capi-native-api-h.md#napi_close_microtask_scope).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Napi
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| napi_env env | [in] Current running virtual machine context. |
+| [napi_microtask_scope](capi-arkts-napi-nativemodule-napi-microtask-scope.md)* scope | [out] The microtask scope generated. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| napi_status | Returns the function execution status. <ul><li>napi_ok If the function executed successfully.</li> <li>napi_invalid_arg If env or scope is nullptr.</li> <li>napi_pending_exception If there is an uncaught exception.</li></ul> |
+
+### napi_close_microtask_scope()
+
+```c
+napi_status napi_close_microtask_scope(napi_env env, napi_microtask_scope scope)
+```
+
+**Description**
+
+To destroy the microtask scope in current ArkTS runtime. After the scope is destroyed, microtasks will be triggered to execute immediately.
+
+> **Note**:
+>
+> This API must be called after [napi_open_microtask_scope](capi-native-api-h.md#napi_open_microtask_scope).
+
+**System capability**: SystemCapability.ArkUI.ArkUI.Napi
+
+**Since**: 26.2.0
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| napi_env env | [in] Current running virtual machine context. |
+| [napi_microtask_scope](capi-arkts-napi-nativemodule-napi-microtask-scope.md) scope | [in] The microtask scope needs to be recycled. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| napi_status | Returns the function execution status. <ul><li>napi_ok If the function executed successfully.</li> <li>napi_invalid_arg If env or scope is nullptr.</li> <li>napi_pending_exception If there is an uncaught exception.</li></ul> |
 
 

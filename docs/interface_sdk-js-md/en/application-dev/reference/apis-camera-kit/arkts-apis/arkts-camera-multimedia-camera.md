@@ -24,7 +24,7 @@ import { camera } from '@kit.CameraKit';
 
 | Name | Description |
 | --- | --- |
-| [getCameraManager](arkts-camera-camera-getcameramanager-f.md) | Obtains a CameraManager instance. This API returns the result synchronously. |
+| [getCameraManager](arkts-camera-camera-getcameramanager-f.md#getcameramanager) | Obtains a CameraManager instance. This API returns the result synchronously. |
 
 <!--Del-->
 ### Classes(System API)

@@ -22,7 +22,7 @@ AES_128_CBC.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_CBC = 0-End-->
 
@@ -38,7 +38,7 @@ AES_128_GCM.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3--><!--Device-CmsRecipientEncryptionAlgorithm-AES_128_GCM = 3-End-->
 
@@ -54,7 +54,7 @@ AES_192_CBC.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_CBC = 1-End-->
 
@@ -70,7 +70,7 @@ AES_192_GCM.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4--><!--Device-CmsRecipientEncryptionAlgorithm-AES_192_GCM = 4-End-->
 
@@ -86,7 +86,7 @@ AES_256_CBC.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_CBC = 2-End-->
 
@@ -102,7 +102,7 @@ AES_256_GCM.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5--><!--Device-CmsRecipientEncryptionAlgorithm-AES_256_GCM = 5-End-->
 

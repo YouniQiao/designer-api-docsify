@@ -134,7 +134,7 @@
   - [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
   - [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
   - [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
-- [@ohos.multimodalInput.pointer(Mouse Pointer)](arkts-input-multimodalinput-pointer.md)
+- [@ohos.multimodalInput.pointer(Mouse Pointer and pointer-type external devices)](arkts-input-multimodalinput-pointer.md)
   <!--Del-->
   - [getHoverScrollState(system api)](arkts-input-pointer-gethoverscrollstate-f-sys.md)<!--DelEnd-->
   <!--Del-->

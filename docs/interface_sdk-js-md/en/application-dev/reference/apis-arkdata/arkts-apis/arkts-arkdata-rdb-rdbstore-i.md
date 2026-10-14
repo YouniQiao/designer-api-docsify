@@ -721,7 +721,7 @@ Unregisters the observer of the specified type from the RDB store. This API uses
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
 | type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Data change observer registered. **Array<string>** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 
@@ -763,7 +763,7 @@ Registers an observer for this RDB store. When the data in the RDB store changes
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Event to observe. The value is **dataChange**, which indicates a data change event. |
 | type | [SubscribeType](arkts-arkdata-rdb-subscribetype-e.md) | Yes | Subscription type to register. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array&lt;string&gt;** indicates the ID of the peer device whose data in the database is changed. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | Observer that listens for the data changes in the RDB store. **Array<string>** indicates the ID of the peer device whose data in the database is changed. |
 
 **Examples**
 

@@ -813,8 +813,6 @@ static of(...items: number[]): Int8Array
 
 通过可变数量的参数创建一个新的ArkTS Int8Array对象。
 
-@static [since 18 - 21]
-
 **起始版本：** 18
 
 **原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。

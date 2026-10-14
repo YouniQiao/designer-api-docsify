@@ -1529,7 +1529,7 @@ Reads the integer from this **MessageSequence** object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-readInt(): int--><!--Device-MessageSequence-readInt(): int-End-->
 
@@ -2408,7 +2408,7 @@ Reads the string from this **MessageSequence** object.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-readString(): string--><!--Device-MessageSequence-readString(): string-End-->
 
@@ -3447,7 +3447,7 @@ Writes an integer to this **MessageSequence** object. After this method is calle
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-writeInt(val: int): void--><!--Device-MessageSequence-writeInt(val: int): void-End-->
 
@@ -4173,7 +4173,7 @@ bytes.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-MessageSequence-writeString(val: string): void--><!--Device-MessageSequence-writeString(val: string): void-End-->
 

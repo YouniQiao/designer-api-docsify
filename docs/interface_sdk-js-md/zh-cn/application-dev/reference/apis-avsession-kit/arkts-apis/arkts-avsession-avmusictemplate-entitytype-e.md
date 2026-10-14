@@ -6,8 +6,6 @@ enum EntityType
 
 表示媒体资源类型的枚举。
 
-@enum { int }
-
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-enum EntityType--><!--Device-avMusicTemplate-enum EntityType-End-->

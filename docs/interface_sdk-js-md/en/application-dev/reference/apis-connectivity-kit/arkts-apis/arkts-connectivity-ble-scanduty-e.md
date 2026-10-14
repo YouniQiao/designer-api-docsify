@@ -24,7 +24,7 @@ balanced power mode
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScanDuty-SCAN_MODE_BALANCED = 1--><!--Device-ScanDuty-SCAN_MODE_BALANCED = 1-End-->
 
@@ -42,7 +42,7 @@ Scan using highest duty cycle
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2--><!--Device-ScanDuty-SCAN_MODE_LOW_LATENCY = 2-End-->
 
@@ -60,7 +60,7 @@ low power mode
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0--><!--Device-ScanDuty-SCAN_MODE_LOW_POWER = 0-End-->
 

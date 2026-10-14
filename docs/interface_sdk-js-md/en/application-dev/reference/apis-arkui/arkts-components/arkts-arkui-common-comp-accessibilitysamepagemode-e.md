@@ -4,7 +4,7 @@
 declare enum AccessibilitySamePageMode
 ```
 
-Enumerates the same-page modes for cross-process embedded components and their host applications. @enum { number }
+Enumerates the same-page modes for cross-process embedded components and their host applications.
 
 **Since:** 18
 

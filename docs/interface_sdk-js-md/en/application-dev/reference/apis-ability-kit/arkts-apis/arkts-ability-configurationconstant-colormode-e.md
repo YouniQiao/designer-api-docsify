@@ -22,7 +22,7 @@ Dark mode.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ColorMode-COLOR_MODE_DARK = 0--><!--Device-ColorMode-COLOR_MODE_DARK = 0-End-->
 
@@ -38,7 +38,7 @@ Light mode.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ColorMode-COLOR_MODE_LIGHT = 1--><!--Device-ColorMode-COLOR_MODE_LIGHT = 1-End-->
 
@@ -54,7 +54,7 @@ Unspecified color mode.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ColorMode-COLOR_MODE_NOT_SET = -1--><!--Device-ColorMode-COLOR_MODE_NOT_SET = -1-End-->
 

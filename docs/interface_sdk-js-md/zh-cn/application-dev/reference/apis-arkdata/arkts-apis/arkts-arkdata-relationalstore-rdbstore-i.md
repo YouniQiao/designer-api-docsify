@@ -1920,7 +1920,7 @@ createTransaction(options?: TransactionOptions): Promise<Transaction>
 
 创建一个事务对象并开始事务，使用Promise异步回调。
 
-与[beginTransaction](#begintransaction)的区别在于：createTransaction接口会返回一个事务对象，不同事务对象之间是隔离的。使用事务对象进行插入、删除或更新数据等操作，无法被注册数据变更通知[on('dataChange')](#on)监听到。
+与[beginTransaction](#begintransaction)的区别在于：createTransaction接口会返回一个事务对象，不同事务对象之间是隔离的。使用事务对象进行插入、删除或更新数据等操作，无法被注册数据变更通知[on('dataChange')](../../apis-arkui/arkts-components/arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatachange)监听到。
 
 一个store最多支持同时存在四个事务对象，超过后会返回14800015错误码，此时需要检查是否持有事务对象时间过长或并发事务过多，若确认无法通过上述优化解决问题，建议等待现有事务释放后，再尝试新建事务对象。
 
@@ -2409,7 +2409,7 @@ emit(event: string): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| event | string | 是 | 通知订阅事件的名称，可自定义事件名称，不能与系统已有事件[dataChange](#on)，[autoSyncProgress](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onautosyncprogress11)，[statistics](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onstatistics12)名称重复。 |
+| event | string | 是 | 通知订阅事件的名称，可自定义事件名称，不能与系统已有事件[dataChange](../../apis-arkui/arkts-components/arkts-arkui-lazyforeach-comp-datachangelistener-i.md#ondatachange)，[autoSyncProgress](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onautosyncprogress11)，[statistics](https://gitcode.com/openharmony/docs/blob/master/zh-cn/application-dev/reference/apis-arkdata/arkts-apis-data-relationalStore-RdbStore.md#onstatistics12)名称重复。 |
 
 **错误码：**
 
@@ -3923,7 +3923,7 @@ off(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>)
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指已注册的数据更改观察者。Array<string>为数据库中的数据发生改变的对端设备ID。 |
 
 **错误码：**
 
@@ -3989,7 +3989,7 @@ off(
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | 否 | 回调函数。<br>当type为SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback&lt;Array<string>&gt;，其中Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。<br> 当type为SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback&lt;Array<string>&gt;，其中Array&lt;string&gt;为数据库中的数据发生改变的云端账号。<br> 当type为SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;，其中Array&lt;ChangeInfo&gt;为数据库端云同步过程的详情。<br>当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;，其中Array&lt;ChangeInfo&gt;为本地数据库中的数据更改的详情。<br>当observer没有传入时，表示取消当前type类型下所有数据变更的事件监听。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | 否 | 回调函数。<br>当type为SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback<Array<string>&gt;，其中Array<string>为数据库中的数据发生改变的对端设备ID。<br> 当type为SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback<Array<string>&gt;，其中Array<string>为数据库中的数据发生改变的云端账号。<br> 当type为SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback<Array<ChangeInfo>&gt;，其中Array<ChangeInfo>为数据库端云同步过程的详情。<br>当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback<Array<ChangeInfo>&gt;，其中Array<ChangeInfo>为本地数据库中的数据更改的详情。<br>当observer没有传入时，表示取消当前type类型下所有数据变更的事件监听。 |
 
 **错误码：**
 
@@ -4203,7 +4203,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>>):
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | 是 | 指分布式数据库中数据更改事件的观察者。Array<string>为数据库中的数据发生改变的对端设备ID。 |
 
 **错误码：**
 
@@ -4255,7 +4255,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> |
 | --- | --- | --- | --- |
 | event | 'dataChange' | 是 | 取值为'dataChange'，表示数据更改。 |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | 是 | 订阅类型。 |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | 是 | 回调函数。<br>当type为SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback&lt;Array<string>&gt;，其中Array&lt;string&gt;为数据库中的数据发生改变的对端设备ID。<br>当type为SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback&lt;Array<string>&gt;，其中Array&lt;string&gt;为数据库中的数据发生改变的云端账号。<br>当type为SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;，其中Array&lt;ChangeInfo&gt;为数据库端云同步过程的详情。<br>当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback&lt;Array<ChangeInfo>&gt;，其中Array&lt;ChangeInfo&gt;为本地数据库中的数据更改的详情。 |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | 是 | 回调函数。<br>当type为SUBSCRIBE_TYPE_REMOTE，observer类型需为Callback<Array<string>&gt;，其中Array<string>为数据库中的数据发生改变的对端设备ID。<br>当type为SUBSCRIBE_TYPE_CLOUD，observer类型需为Callback<Array<string>&gt;，其中Array<string>为数据库中的数据发生改变的云端账号。<br>当type为SUBSCRIBE_TYPE_CLOUD_DETAILS，observer类型需为Callback<Array<ChangeInfo>&gt;，其中Array<ChangeInfo>为数据库端云同步过程的详情。<br>当type为SUBSCRIBE_TYPE_LOCAL_DETAILS，observer类型需为Callback<Array<ChangeInfo>&gt;，其中Array<ChangeInfo>为本地数据库中的数据更改的详情。 |
 
 **错误码：**
 
@@ -4278,7 +4278,7 @@ on(event: 'dataChange', type: SubscribeType, observer: Callback<Array<string>> |
 on(event: string, interProcess: boolean, observer: Callback<void>): void
 ```
 
-注册数据库的进程内或者进程间事件监听。当调用emit接口时，将调用回调。
+注册数据库的进程内或者进程间事件监听。当调用[emit](#emit)接口时，将调用回调。
 
 **起始版本：** 10
 

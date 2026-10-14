@@ -60,7 +60,7 @@ readonly bundleName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
@@ -78,7 +78,7 @@ Ability的描述，对应[module.json5](../../../quick-start/module-configuratio
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
 
@@ -96,7 +96,7 @@ Ability的描述资源id，编译构建时根据应用配置abilities下的descr
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly descriptionId: long--><!--Device-AbilityInfo-readonly descriptionId: long-End-->
 
@@ -114,7 +114,7 @@ Ability支持的设备类型，来源于module.json5配置的[deviceTypes](../..
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -132,7 +132,7 @@ Ability是否可用，可用表示可以拉起或者查询，不可用时调用[
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
@@ -152,7 +152,7 @@ readonly excludeFromDock: boolean
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly excludeFromDock: boolean--><!--Device-AbilityInfo-readonly excludeFromDock: boolean-End-->
 
@@ -170,7 +170,7 @@ readonly exported: boolean
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly exported: boolean--><!--Device-AbilityInfo-readonly exported: boolean-End-->
 
@@ -188,7 +188,7 @@ Ability的图标资源描述符，对应[module.json5](../../../quick-start/modu
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
@@ -206,7 +206,7 @@ Ability的图标资源id，是编译构建时根据应用配置abilities下的ic
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly iconId: long--><!--Device-AbilityInfo-readonly iconId: long-End-->
 
@@ -226,7 +226,7 @@ Ability对用户显示的名称的资源描述符，对应[module.json5](../../.
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
 
@@ -244,7 +244,7 @@ Ability的标签资源id，是编译构建时根据应用配置abilities下的la
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly labelId: long--><!--Device-AbilityInfo-readonly labelId: long-End-->
 
@@ -262,7 +262,7 @@ Ability的启动模式，在启动的时候是否以多实例启动，详情参�
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType--><!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType-End-->
 
@@ -280,7 +280,7 @@ Ability的元信息。可以配置成系统定义的参数，使用系统提供�
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly metadata: Array<Metadata>--><!--Device-AbilityInfo-readonly metadata: Array<Metadata>-End-->
 
@@ -298,7 +298,7 @@ Ability所属的模块名称。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
@@ -316,7 +316,7 @@ Ability名称，对应[module.json5](../../../quick-start/module-configuration-f
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
@@ -334,7 +334,7 @@ Ability的显示模式。来源于[module.json5](../../../quick-start/module-con
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation-End-->
 
@@ -352,7 +352,7 @@ Ability的显示模式资源id。来源于[module.json5](../../../quick-start/mo
 
 **起始版本：** 14
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly orientationId: long--><!--Device-AbilityInfo-readonly orientationId: long-End-->
 
@@ -370,7 +370,7 @@ readonly permissions: Array<string>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
@@ -388,7 +388,7 @@ Ability的进程名称。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
@@ -426,7 +426,7 @@ Ability的Skills信息，标识UIAbility组件或者ExtensionAbility组件能够
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly skills: Array<Skill>--><!--Device-AbilityInfo-readonly skills: Array<Skill>-End-->
 
@@ -444,7 +444,7 @@ Ability支持的窗口模式。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>--><!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>-End-->
 
@@ -502,7 +502,7 @@ Ability窗口尺寸。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AbilityInfo-readonly windowSize: WindowSize--><!--Device-AbilityInfo-readonly windowSize: WindowSize-End-->
 

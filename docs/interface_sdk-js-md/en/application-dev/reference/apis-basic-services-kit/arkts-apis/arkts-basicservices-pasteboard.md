@@ -22,16 +22,16 @@ import { pasteboard } from '@kit.BasicServicesKit';
 | --- | --- |
 | [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata1) | Creates a **PasteData** object of the specified type. |
 | [createData](arkts-basicservices-pasteboard-createdata-f.md#createdata2) | Creates a **PasteData** object that contains multiple types of data. |
-| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md) | Creates a **PasteDataRecord** object of the specified type. |
-| [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md) | Obtains **SystemPasteboard** object. |
-| [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md) | Creates a **PasteData** object of the HTML type. |
-| [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md) | Creates a **PasteDataRecord** object of the HTML text type. |
-| [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md) | Creates a **PasteData** object of the plain text type. |
-| [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md) | Creates a **PasteDataRecord** object of the plain text type. |
-| [createUriData](arkts-basicservices-pasteboard-createuridata-f.md) | Creates a **PasteData** object of the URI type. |
-| [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md) | Creates a **PasteDataRecord** object of the URI type. |
-| [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md) | Creates a **PasteData** object of the Want type. |
-| [createWantRecord](arkts-basicservices-pasteboard-createwantrecord-f.md) | Creates a **PasteDataRecord** object of the Want type. |
+| [createRecord](arkts-basicservices-pasteboard-createrecord-f.md#createrecord) | Creates a **PasteDataRecord** object of the specified type. |
+| [getSystemPasteboard](arkts-basicservices-pasteboard-getsystempasteboard-f.md#getsystempasteboard) | Obtains **SystemPasteboard** object. |
+| [createHtmlData](arkts-basicservices-pasteboard-createhtmldata-f.md#createhtmldata) | Creates a **PasteData** object of the HTML type. |
+| [createHtmlTextRecord](arkts-basicservices-pasteboard-createhtmltextrecord-f.md#createhtmltextrecord) | Creates a **PasteDataRecord** object of the HTML text type. |
+| [createPlainTextData](arkts-basicservices-pasteboard-createplaintextdata-f.md#createplaintextdata) | Creates a **PasteData** object of the plain text type. |
+| [createPlainTextRecord](arkts-basicservices-pasteboard-createplaintextrecord-f.md#createplaintextrecord) | Creates a **PasteDataRecord** object of the plain text type. |
+| [createUriData](arkts-basicservices-pasteboard-createuridata-f.md#createuridata) | Creates a **PasteData** object of the URI type. |
+| [createUriRecord](arkts-basicservices-pasteboard-createurirecord-f.md#createurirecord) | Creates a **PasteDataRecord** object of the URI type. |
+| [createWantData](arkts-basicservices-pasteboard-createwantdata-f.md#createwantdata) | Creates a **PasteData** object of the Want type. |
+| [createWantRecord](arkts-basicservices-pasteboard-createwantrecord-f.md#createwantrecord) | Creates a **PasteDataRecord** object of the Want type. |
 
 ### Classes
 

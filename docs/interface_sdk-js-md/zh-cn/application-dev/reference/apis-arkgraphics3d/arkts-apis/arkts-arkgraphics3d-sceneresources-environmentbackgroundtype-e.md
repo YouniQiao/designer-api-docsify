@@ -4,7 +4,7 @@
 export enum EnvironmentBackgroundType
 ```
 
-环境背景类型枚举，用于定义场景的背景呈现方式。@enum { int }
+环境背景类型枚举，用于定义场景的背景呈现方式。
 
 **起始版本：** 12
 

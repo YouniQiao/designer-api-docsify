@@ -35,7 +35,7 @@ addCert(cert: X509Cert): void
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-addCert(cert: X509Cert): void--><!--Device-CmsGenerator-addCert(cert: X509Cert): void-End-->
 
@@ -125,7 +125,7 @@ addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>--><!--Device-CmsGenerator-addRecipientInfo(recipientInfo: CmsRecipientInfo): Promise<void>-End-->
 
@@ -249,7 +249,7 @@ addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): voi
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void--><!--Device-CmsGenerator-addSigner(cert: X509Cert, keyInfo: PrivateKeyInfo, config: CmsSignerConfig): void-End-->
 
@@ -369,7 +369,7 @@ doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | s
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>--><!--Device-CmsGenerator-doFinal(data: Uint8Array, options?: CmsGeneratorOptions): Promise<Uint8Array | string>-End-->
 
@@ -506,7 +506,7 @@ doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | strin
 
 **起始版本：** 18
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本18开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本18开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string--><!--Device-CmsGenerator-doFinalSync(data: Uint8Array, options?: CmsGeneratorOptions): Uint8Array | string-End-->
 
@@ -642,7 +642,7 @@ getEncryptedContentData(): Promise<Uint8Array>
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>--><!--Device-CmsGenerator-getEncryptedContentData(): Promise<Uint8Array>-End-->
 
@@ -771,7 +771,7 @@ setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): voi
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void--><!--Device-CmsGenerator-setRecipientEncryptionAlgorithm(algorithm: CmsRecipientEncryptionAlgorithm): void-End-->
 

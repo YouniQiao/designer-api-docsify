@@ -4,9 +4,6 @@
 
 **起始版本：** 9
 
-**模型约束：** 
-- API版本11+：此接口可在Stage模型和FA模型下使用。
-
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core

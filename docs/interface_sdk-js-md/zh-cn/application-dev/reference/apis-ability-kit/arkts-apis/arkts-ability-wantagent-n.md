@@ -38,19 +38,19 @@ import { wantAgent, WantAgent } from '@kit.AbilityKit';
 | [getUid](arkts-ability-wantagent-getuid-f.md#getuid2) | 获取WantAgent实例所属应用的UID。使用Promise异步回调。 |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent1) | 创建WantAgent，使用callback异步回调。创建成功返回WantAgent对象，创建失败返回空值。 |
 | [getWantAgent](arkts-ability-wantagent-getwantagent-f.md#getwantagent2) | 创建WantAgent。使用Promise异步回调。创建成功返回WantAgent对象，创建失败返回空值。 |
-| [trigger](arkts-ability-wantagent-trigger-f.md) | 触发WantAgent实例，执行指定的操作（启动Ability、发送公共事件等）。使用callback异步回调。 |
+| [trigger](arkts-ability-wantagent-trigger-f.md#trigger) | 触发WantAgent实例，执行指定的操作（启动Ability、发送公共事件等）。使用callback异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
 
 | 名称 | 说明 |
 | --- | --- |
-| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md) | 创建本地WantAgent实例。 |
+| [createLocalWantAgent](arkts-ability-wantagent-createlocalwantagent-f-sys.md#createlocalwantagent) | 创建本地WantAgent实例。 |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant1) | 获取WantAgent对象的want。使用callback异步回调。 |
 | [getWant](arkts-ability-wantagent-getwant-f-sys.md#getwant2) | 获取WantAgent对象的want。使用Promise异步回调。 |
-| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md) | 判断WantAgent实例是否为本地实例。 |
-| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md) | 开启或者关闭WantAgent多线程传递功能。 |
-| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md) | 主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
+| [isLocalWantAgent](arkts-ability-wantagent-islocalwantagent-f-sys.md#islocalwantagent) | 判断WantAgent实例是否为本地实例。 |
+| [setWantAgentMultithreading](arkts-ability-wantagent-setwantagentmultithreading-f-sys.md#setwantagentmultithreading) | 开启或者关闭WantAgent多线程传递功能。 |
+| [triggerAsync](arkts-ability-wantagent-triggerasync-f-sys.md#triggerasync) | 主动触发WantAgent实例，即按照WantAgent实例中已封装的指定操作和参数等信息执行。使用Promise异步回调。仅当入参agent为本地WantAgent实例时需要申请: ohos.permission.TRIGGER_LOCAL_WANTAGENT permission. |
 <!--DelEnd-->
 
 ### 接口

@@ -22,7 +22,7 @@ Plays the video at 0.125 times the normal speed.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_125_X = 9-End-->
 
@@ -38,7 +38,7 @@ Plays the video at 0.25 times the normal speed.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_25_X = 8-End-->
 
@@ -54,7 +54,7 @@ Plays the video at 0.50 times the normal speed.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_50_X = 5-End-->
 
@@ -70,7 +70,7 @@ Plays the video at 0.75 times the normal speed.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_0_75_X = 0--><!--Device-PlaybackSpeed-SPEED_FORWARD_0_75_X = 0-End-->
 
@@ -86,7 +86,7 @@ Plays the video at the normal speed.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_1_00_X = 1--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_00_X = 1-End-->
 
@@ -102,7 +102,7 @@ Plays the video at 1.25 times the normal speed.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_1_25_X = 2--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_25_X = 2-End-->
 
@@ -118,7 +118,7 @@ Plays the video at 1.50 times the normal speed.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_50_X = 6-End-->
 
@@ -134,7 +134,7 @@ Plays the video at 1.75 times the normal speed.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_1_75_X = 3--><!--Device-PlaybackSpeed-SPEED_FORWARD_1_75_X = 3-End-->
 
@@ -150,7 +150,7 @@ Plays the video at 2.00 times the normal speed.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_2_00_X = 4--><!--Device-PlaybackSpeed-SPEED_FORWARD_2_00_X = 4-End-->
 
@@ -166,7 +166,7 @@ Plays the video at 3.00 times the normal speed.
 
 **Since:** 13
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 13.
+**Atomic service API:** This API can be used in atomic services since API version 13.
 
 <!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7--><!--Device-PlaybackSpeed-SPEED_FORWARD_3_00_X = 7-End-->
 

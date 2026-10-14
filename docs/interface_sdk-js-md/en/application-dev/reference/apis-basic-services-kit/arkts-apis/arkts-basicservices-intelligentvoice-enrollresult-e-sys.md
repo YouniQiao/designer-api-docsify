@@ -4,7 +4,7 @@
 enum EnrollResult
 ```
 
-Enumerates enroll result. @enum {number}
+Enumerates enroll result.
 
 **Since:** 10
 

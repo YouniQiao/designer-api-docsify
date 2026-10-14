@@ -112,7 +112,7 @@ Creates a content modifier.
 contentModifier(modifier: Optional<ContentModifier<RadioConfiguration>>)
 ```
 
-Creates a content modifier. Compared with [contentModifier](#contentmodifier1)&lt;sup&gt;12+&lt;/sup &gt;, this API supports the **undefined** type for the **modifier** parameter.
+Creates a content modifier. Compared with [contentModifier](#contentmodifier1)<sup>12+</sup >, this API supports the **undefined** type for the **modifier** parameter.
 
 **Since:** 18
 

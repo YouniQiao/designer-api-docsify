@@ -24,7 +24,7 @@ ACTIVE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-ACTIVE = 2--><!--Device-WindowStageEventType-ACTIVE = 2-End-->
 
@@ -42,7 +42,7 @@ HIDDEN = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-HIDDEN = 4--><!--Device-WindowStageEventType-HIDDEN = 4-End-->
 
@@ -60,7 +60,7 @@ INACTIVE = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-INACTIVE = 3--><!--Device-WindowStageEventType-INACTIVE = 3-End-->
 
@@ -78,7 +78,7 @@ PAUSED = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-PAUSED = 6--><!--Device-WindowStageEventType-PAUSED = 6-End-->
 
@@ -96,7 +96,7 @@ RESUMED = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-RESUMED = 5--><!--Device-WindowStageEventType-RESUMED = 5-End-->
 
@@ -114,7 +114,7 @@ SHOWN = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStageEventType-SHOWN = 1--><!--Device-WindowStageEventType-SHOWN = 1-End-->
 

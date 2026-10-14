@@ -152,7 +152,7 @@ controlSize(value: ControlSize)
 controlSize(size: Optional<ControlSize>)
 ```
 
-设置Select组件的尺寸。与[controlSize](#controlsize1)&lt;sup&gt;12+&lt;/sup&gt;相比，size参数新增了对undefined类型的支持。
+设置Select组件的尺寸。与[controlSize](#controlsize1)<sup>12+</sup>相比，size参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -381,7 +381,7 @@ menuAlign(alignType: MenuAlignType, offset?: Offset)
 menuAlign(alignType: Optional<MenuAlignType>, offset?: Offset)
 ```
 
-设置下拉按钮与下拉菜单间的对齐方式。与[menuAlign](#menualign1)&lt;sup&gt;10+&lt;/sup&gt;相比，alignType参数新增了对undefined类型的支持。
+设置下拉按钮与下拉菜单间的对齐方式。与[menuAlign](#menualign1)<sup>10+</sup>相比，alignType参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -438,7 +438,7 @@ menuBackgroundBlurStyle(value: BlurStyle)
 menuBackgroundBlurStyle(style: Optional<BlurStyle>)
 ```
 
-设置下拉菜单的背景模糊材质。与[menuBackgroundBlurStyle](#menubackgroundblurstyle1)&lt;sup&gt;11+&lt;/ sup&gt;相比，style参数新增了对undefined类型的支持。
+设置下拉菜单的背景模糊材质。与[menuBackgroundBlurStyle](#menubackgroundblurstyle1)<sup>11+</ sup>相比，style参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -518,7 +518,7 @@ menuBackgroundColor(value: ResourceColor)
 menuBackgroundColor(resColor: Optional<ResourceColor>)
 ```
 
-设置下拉菜单的背景色。与[menuBackgroundColor](#menubackgroundcolor1)&lt;sup&gt;11+&lt;/sup&gt;相比，resColor参数新增了对undefined类型的支持。
+设置下拉菜单的背景色。与[menuBackgroundColor](#menubackgroundcolor1)<sup>11+</sup>相比，resColor参数新增了对undefined类型的支持。
 
 **起始版本：** 18
 
@@ -598,7 +598,7 @@ menuItemContentModifier(modifier: ContentModifier<MenuItemConfiguration>)
 menuItemContentModifier(modifier: Optional<ContentModifier<MenuItemConfiguration>>)
 ```
 
-定制Select下拉菜单项内容区的方法。与[menuItemContentModifier](#menuitemcontentmodifier1) &lt;sup&gt;12+&lt;/sup&gt;相比，modifier参数新增了对undefined类型的支持。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。
+定制Select下拉菜单项内容区的方法。与[menuItemContentModifier](#menuitemcontentmodifier1) <sup>12+</sup>相比，modifier参数新增了对undefined类型的支持。在应用了menuItemContentModifier后，下拉菜单的内容将完全由开发者自定义，此时为Select组件设置的分割线、选项颜色及下拉菜单的字体颜色等属性将不再生效。
 
 > **说明：** 
 > 
@@ -916,7 +916,7 @@ optionHeight(value: Dimension)
 optionHeight(height: Optional<Dimension>)
 ```
 
-设置下拉菜单显示的最大高度，不支持设置百分比。默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度。与[optionHeight](#optionheight1)&lt;sup&gt;11+&lt;/sup&gt;相比，height参数新增了对undefined类型的支持。
+设置下拉菜单显示的最大高度，不支持设置百分比。默认最大高度是屏幕可用高度的80%，设置的菜单最大高度不能超过默认最大高度。与[optionHeight](#optionheight1)<sup>11+</sup>相比，height参数新增了对undefined类型的支持。
 
 当设置为无效值或零时，属性不生效。
 
@@ -1006,7 +1006,7 @@ Select组件距屏幕边缘的左右间距为16vp，建议将组件本身及菜�
 optionWidth(width: Optional<Dimension | OptionWidthMode> )
 ```
 
-设置下拉菜单项的宽度，不支持设置百分比。OptionWidthMode类型为枚举类型，OptionWidthMode决定下拉菜单是否继承下拉按钮宽度。与[optionWidth](#optionwidth1)&lt;sup&gt;11+&lt;/sup&gt;相比，width参数新增了对undefined类型的支持。
+设置下拉菜单项的宽度，不支持设置百分比。OptionWidthMode类型为枚举类型，OptionWidthMode决定下拉菜单是否继承下拉按钮宽度。与[optionWidth](#optionwidth1)<sup>11+</sup>相比，width参数新增了对undefined类型的支持。
 
 当设置为无效值或小于最小宽度56vp时，属性无效，菜单项宽度设为默认值，即2栅格。
 

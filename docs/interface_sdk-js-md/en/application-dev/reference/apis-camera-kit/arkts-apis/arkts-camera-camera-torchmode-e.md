@@ -22,7 +22,7 @@ The system automatically adjusts the flashlight brightness according to the envi
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-TorchMode-AUTO = 2--><!--Device-TorchMode-AUTO = 2-End-->
 
@@ -38,7 +38,7 @@ The flashlight is off.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-TorchMode-OFF = 0--><!--Device-TorchMode-OFF = 0-End-->
 
@@ -54,7 +54,7 @@ The flashlight is on.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-TorchMode-ON = 1--><!--Device-TorchMode-ON = 1-End-->
 

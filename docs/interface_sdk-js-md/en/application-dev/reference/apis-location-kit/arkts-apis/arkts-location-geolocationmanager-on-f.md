@@ -13,7 +13,7 @@ function on(type: 'locationChange', request: LocationRequest | ContinuousLocatio
       callback: Callback<Location>): void
 ```
 
-Subscribe location changed. You are advised to use the [onLocationChange](#onlocationchange) instead.
+Subscribe location changed. You are advised to use the [onLocationChange](arkts-location-geolocationmanager-onlocationchange-f.md) instead.
 
 **Since:** 9
 

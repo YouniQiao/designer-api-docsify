@@ -12,7 +12,7 @@ ImagePacker类，用于图片压缩和编码。
 
 由于图片占用内存较大，所以当ImagePacker实例使用完成后，应主动调用[release](#release1)方法及时释放内存。释放时应确保该实例的所有异步方法均执行完成，且后续不再使用该实例。
 
-当前支持的格式有：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
+当前支持的格式有：JPEG、WebP、PNG、HEIC<sup>12+</sup>、GIF<sup>18+</sup>、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同，可通过ImagePacker的supportedFormats属性查看）。
 
 **起始版本：** 6
 
@@ -499,7 +499,7 @@ packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: ImageSource, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -568,7 +568,7 @@ packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>--><!--Device-ImagePacker-packToData(source: PixelMap, options: PackingOption): Promise<ArrayBuffer>-End-->
 
@@ -1183,7 +1183,7 @@ async function Release() {
 readonly supportedFormats: Array<string>
 ```
 
-图片编码支持的格式，包括：JPEG、WebP、PNG、HEIC&lt;sup&gt;12+&lt;/sup&gt;、GIF&lt;sup&gt;18+&lt;/sup&gt;、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同）。
+图片编码支持的格式，包括：JPEG、WebP、PNG、HEIC<sup>12+</sup>、GIF<sup>18+</sup>、从API版本26.0.0开始支持TIFF格式（不同硬件设备支持情况不同）。
 
 **类型：** Array&lt;string&gt;
 

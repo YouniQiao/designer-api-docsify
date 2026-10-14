@@ -4,7 +4,7 @@
 enum IntelligentVoiceEngineType
 ```
 
-Enumerates intelligent voice engine type. @enum {number}
+Enumerates intelligent voice engine type.
 
 **Since:** 10
 

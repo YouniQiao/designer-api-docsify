@@ -50,7 +50,7 @@ Sets whether to display a leading zero for the hour, minute, and second. '2-digi
 dateTimeOptions(timeFormat: Optional<DateTimeOptions>)
 ```
 
-Sets whether to display a leading zero for the hours, minutes, and seconds. Compared with [dateTimeOptions&lt;sup&gt;12+&lt;/sup&gt;](#datetimeoptions1), this API supports the **undefined** type for the **timeFormat** parameter.
+Sets whether to display a leading zero for the hours, minutes, and seconds. Compared with [dateTimeOptions<sup>12+</sup>](#datetimeoptions1), this API supports the **undefined** type for the **timeFormat** parameter.
 
 **Since:** 18
 
@@ -126,7 +126,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text color, font size, and font weight of edge items (the second item above or below the selected item). Compared with [disappearTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#disappeartextstyle1), this API supports the **undefined** type for the **style** parameter.
+Sets the text color, font size, and font weight of edge items (the second item above or below the selected item). Compared with [disappearTextStyle<sup>10+</sup>](#disappeartextstyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -208,7 +208,7 @@ To enable haptic feedback, you must declare the following permission under **req
 enableHapticFeedback(enable: Optional<boolean>)
 ```
 
-Sets whether to enable haptic feedback. Compared with [enableHapticFeedback&lt;sup&gt;12+&lt;/sup&gt;](#enablehapticfeedback1), the enable parameter additionally supports the undefined type.
+Sets whether to enable haptic feedback. Compared with [enableHapticFeedback<sup>12+</sup>](#enablehapticfeedback1), the enable parameter additionally supports the undefined type.
 
 To enable haptic feedback, you must declare the following permission under **requestPermissions** in **module** in **src/main/module.json5** of the project.
 
@@ -262,7 +262,7 @@ Sets whether to enable loop mode. Loop mode is suitable for scenarios where the 
 loop(isLoop: Optional<boolean>)
 ```
 
-Sets whether to enable loop scrolling. Compared with [loop&lt;sup&gt;11+&lt;/sup&gt;](#loop1), this API supports the **undefined** type for the **isLoop** parameter.
+Sets whether to enable loop scrolling. Compared with [loop<sup>11+</sup>](#loop1), this API supports the **undefined** type for the **isLoop** parameter.
 
 > **NOTE:** 
 > 
@@ -404,7 +404,7 @@ Sets the text color, font size, and font weight of the selected item.
 selectedTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text color, font size, and font weight of the selected item. Compared with [selectedTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#selectedtextstyle1), the **style** parameter additionally supports the **undefined** type.
+Sets the text color, font size, and font weight of the selected item. Compared with [selectedTextStyle<sup>10+</sup>](#selectedtextstyle1), the **style** parameter additionally supports the **undefined** type.
 
 **Since:** 18
 
@@ -456,7 +456,7 @@ Sets the text color, font size, and font weight of candidate items (the item imm
 textStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text color, font size, and font weight of candidate items (the item immediately adjacent to the selected item, above or below). Compared with [textStyle&lt;sup&gt;10+&lt;/sup&gt;](#textstyle1), this API supports the **undefined** type for the **style** parameter.
+Sets the text color, font size, and font weight of candidate items (the item immediately adjacent to the selected item, above or below). Compared with [textStyle<sup>10+</sup>](#textstyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 

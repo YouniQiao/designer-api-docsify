@@ -29,7 +29,7 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | --- | --- |
 | [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate1) | 启动键鼠穿越，使用Callback异步回调。 |
 | [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate2) | 启动键鼠穿越，使用Promise异步回调。 |
-| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md) | 启动键鼠穿越，使用选项开始屏幕跳转。 |
+| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md#activatecooperatewithoptions) | 启动键鼠穿越，使用选项开始屏幕跳转。 |
 | [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate1) | 停止键鼠穿越，使用Callback异步回调。 |
 | [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate2) | 停止键鼠穿越，使用Promise异步回调。 |
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate1) | 获取目标设备键鼠穿越开关的状态，使用Callback异步回调。 |

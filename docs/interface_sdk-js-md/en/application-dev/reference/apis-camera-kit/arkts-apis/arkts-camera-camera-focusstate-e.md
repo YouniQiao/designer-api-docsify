@@ -22,7 +22,7 @@ Focused.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusState-FOCUS_STATE_FOCUSED = 1--><!--Device-FocusState-FOCUS_STATE_FOCUSED = 1-End-->
 
@@ -38,7 +38,7 @@ Focusing.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusState-FOCUS_STATE_SCAN = 0--><!--Device-FocusState-FOCUS_STATE_SCAN = 0-End-->
 
@@ -54,7 +54,7 @@ Unfocused.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-FocusState-FOCUS_STATE_UNFOCUSED = 2--><!--Device-FocusState-FOCUS_STATE_UNFOCUSED = 2-End-->
 

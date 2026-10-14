@@ -22,7 +22,7 @@ WINDOW_DID_ROTATE = 1
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1--><!--Device-RotationChangeType-WINDOW_DID_ROTATE = 1-End-->
 
@@ -38,7 +38,7 @@ WINDOW_WILL_ROTATE = 0
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0--><!--Device-RotationChangeType-WINDOW_WILL_ROTATE = 0-End-->
 

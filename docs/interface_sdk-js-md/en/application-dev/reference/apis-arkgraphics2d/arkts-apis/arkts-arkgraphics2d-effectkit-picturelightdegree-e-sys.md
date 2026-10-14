@@ -26,7 +26,7 @@ Dark image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3--><!--Device-PictureLightDegree-DARK_COLOR_PICTURE = 3-End-->
 
@@ -46,7 +46,7 @@ Extremely dark image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4--><!--Device-PictureLightDegree-EXTREMELY_DARK_COLOR_PICTURE = 4-End-->
 
@@ -66,7 +66,7 @@ Extremely colorful image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6--><!--Device-PictureLightDegree-EXTREMELY_FLOWERY_PICTURE = 6-End-->
 
@@ -86,7 +86,7 @@ Extremely bright image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1--><!--Device-PictureLightDegree-EXTREMELY_LIGHT_COLOR_PICTURE = 1-End-->
 
@@ -106,7 +106,7 @@ Colorful image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-FLOWERY_PICTURE = 5--><!--Device-PictureLightDegree-FLOWERY_PICTURE = 5-End-->
 
@@ -126,7 +126,7 @@ Bright image.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2--><!--Device-PictureLightDegree-LIGHT_COLOR_PICTURE = 2-End-->
 
@@ -146,7 +146,7 @@ Image with unknown brightness.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 26.0.0.
+**Widget capability:** This API can be used in ArkTS widgets since API version 26.0.0.
 
 <!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0--><!--Device-PictureLightDegree-UNKNOWN_LIGHT_COLOR_DEGREE_PICTURE = 0-End-->
 

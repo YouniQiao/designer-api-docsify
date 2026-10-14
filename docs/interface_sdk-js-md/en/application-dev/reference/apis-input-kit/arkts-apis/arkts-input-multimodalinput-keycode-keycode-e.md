@@ -2772,7 +2772,7 @@ Media key: Fast forward key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15--><!--Device-KeyCode-KEYCODE_MEDIA_FAST_FORWARD = 15-End-->
 
@@ -2788,7 +2788,7 @@ Media key: Next key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12--><!--Device-KeyCode-KEYCODE_MEDIA_NEXT = 12-End-->
 
@@ -2804,7 +2804,7 @@ Media: Pause Key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086--><!--Device-KeyCode-KEYCODE_MEDIA_PAUSE = 2086-End-->
 
@@ -2820,7 +2820,7 @@ Play key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY = 2085-End-->
 
@@ -2836,7 +2836,7 @@ Media key: Play/Pause key<br>Difference between this key and **KEYCODE_PLAYPAUSE
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10--><!--Device-KeyCode-KEYCODE_MEDIA_PLAY_PAUSE = 10-End-->
 
@@ -2852,7 +2852,7 @@ Media key: Previous key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13--><!--Device-KeyCode-KEYCODE_MEDIA_PREVIOUS = 13-End-->
 
@@ -2896,7 +2896,7 @@ Media key: Rewind key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14--><!--Device-KeyCode-KEYCODE_MEDIA_REWIND = 14-End-->
 
@@ -2912,7 +2912,7 @@ Media key: Stop key
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11--><!--Device-KeyCode-KEYCODE_MEDIA_STOP = 11-End-->
 

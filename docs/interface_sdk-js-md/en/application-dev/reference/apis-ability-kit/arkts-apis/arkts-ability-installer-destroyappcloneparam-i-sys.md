@@ -26,7 +26,7 @@ import { installer } from '@kit.AbilityKit';
 parameters?: Array<Parameters>
 ```
 
-Extended parameters for deleting the app clone. The default value is empty. This parameter is not supported for CLI sandbox apps. The supported values of Parameters.key are as follows:&lt;/br&gt; - "ohos.bms.param.clone.isKeepData": supported since API version 21. If the corresponding value is "true", the user data of the app clone is retained when the app clone is deleted; otherwise, the user data is not retained.
+Extended parameters for deleting the app clone. The default value is empty. This parameter is not supported for CLI sandbox apps. The supported values of Parameters.key are as follows:</br> - "ohos.bms.param.clone.isKeepData": supported since API version 21. If the corresponding value is "true", the user data of the app clone is retained when the app clone is deleted; otherwise, the user data is not retained.
 
 **Type:** Array&lt;Parameters&gt;
 

@@ -50,7 +50,7 @@ DENIED = -1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStatus-DENIED = -1--><!--Device-PermissionStatus-DENIED = -1-End-->
 
@@ -68,7 +68,7 @@ GRANTED = 0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStatus-GRANTED = 0--><!--Device-PermissionStatus-GRANTED = 0-End-->
 
@@ -86,7 +86,7 @@ INVALID = 2
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStatus-INVALID = 2--><!--Device-PermissionStatus-INVALID = 2-End-->
 
@@ -104,7 +104,7 @@ NOT_DETERMINED = 1
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStatus-NOT_DETERMINED = 1--><!--Device-PermissionStatus-NOT_DETERMINED = 1-End-->
 
@@ -122,7 +122,7 @@ RESTRICTED = 3
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-PermissionStatus-RESTRICTED = 3--><!--Device-PermissionStatus-RESTRICTED = 3-End-->
 

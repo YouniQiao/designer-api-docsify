@@ -22,7 +22,7 @@ Indicates the key specifying the name of the ability to be obtained, which is re
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-ABILITY_NAME_KEY = "ohos.extra.param.key.ability_name"--><!--Device-FormParam-ABILITY_NAME_KEY = "ohos.extra.param.key.ability_name"-End-->
 
@@ -38,7 +38,7 @@ Indicates the key specifying the name of the bundle to be obtained, which is rep
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-BUNDLE_NAME_KEY = "ohos.extra.param.key.bundle_name"--><!--Device-FormParam-BUNDLE_NAME_KEY = "ohos.extra.param.key.bundle_name"-End-->
 
@@ -54,7 +54,7 @@ Indicates the key specifying the grid style of the form to be obtained, which is
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-DIMENSION_KEY = "ohos.extra.param.key.form_dimension"--><!--Device-FormParam-DIMENSION_KEY = "ohos.extra.param.key.form_dimension"-End-->
 
@@ -70,7 +70,7 @@ Indicates the key specifying the edit form id, used in conjunction with LaunchRe
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-FormParam-EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'--><!--Device-FormParam-EDIT_FORM_KEY = 'ohos.extra.param.key.edit_form_id'-End-->
 
@@ -100,7 +100,7 @@ Indicates the key specifying whether the user granted, which is represented as w
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FormParam-FORM_PERMISSION_GRANTED_KEY = 'ohos.extra.param.key.permission_granted'--><!--Device-FormParam-FORM_PERMISSION_GRANTED_KEY = 'ohos.extra.param.key.permission_granted'-End-->
 
@@ -116,7 +116,7 @@ Indicates the key specifying the user granted permission name, which is represen
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FormParam-FORM_PERMISSION_NAME_KEY = 'ohos.extra.param.key.permission_name'--><!--Device-FormParam-FORM_PERMISSION_NAME_KEY = 'ohos.extra.param.key.permission_name'-End-->
 
@@ -132,7 +132,7 @@ Indicates the key specifying the form rendering mode, which is represented as wa
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FormParam-FORM_RENDERING_MODE_KEY = 'ohos.extra.param.key.form_rendering_mode'--><!--Device-FormParam-FORM_RENDERING_MODE_KEY = 'ohos.extra.param.key.form_rendering_mode'-End-->
 
@@ -148,7 +148,7 @@ Indicates the key specifying the height of the form to be obtained, which is rep
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-HEIGHT_KEY = "ohos.extra.param.key.form_height"--><!--Device-FormParam-HEIGHT_KEY = "ohos.extra.param.key.form_height"-End-->
 
@@ -164,7 +164,7 @@ Indicates the key specifying the inverse of the host background color, which is 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-FormParam-HOST_BG_INVERSE_COLOR_KEY = 'ohos.extra.param.key.host_bg_inverse_color'--><!--Device-FormParam-HOST_BG_INVERSE_COLOR_KEY = 'ohos.extra.param.key.host_bg_inverse_color'-End-->
 
@@ -180,7 +180,7 @@ Indicates the key specifying the ID of the form to be obtained, which is represe
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-IDENTITY_KEY = "ohos.extra.param.key.form_identity"--><!--Device-FormParam-IDENTITY_KEY = "ohos.extra.param.key.form_identity"-End-->
 
@@ -196,7 +196,7 @@ Indicates the key specifying the launch reason of the form to be obtained, which
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-LAUNCH_REASON_KEY = "ohos.extra.param.key.form_launch_reason"--><!--Device-FormParam-LAUNCH_REASON_KEY = "ohos.extra.param.key.form_launch_reason"-End-->
 
@@ -212,7 +212,7 @@ Indicates the key specifying the name of the module to which the form to be obta
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-MODULE_NAME_KEY = "ohos.extra.param.key.module_name"--><!--Device-FormParam-MODULE_NAME_KEY = "ohos.extra.param.key.module_name"-End-->
 
@@ -228,7 +228,7 @@ Indicates the key specifying the name of the form to be obtained, which is repre
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-NAME_KEY = "ohos.extra.param.key.form_name"--><!--Device-FormParam-NAME_KEY = "ohos.extra.param.key.form_name"-End-->
 
@@ -244,7 +244,7 @@ Indicates the key specifying the original form id, used in conjunction with Laun
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-FormParam-ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'--><!--Device-FormParam-ORIGINAL_FORM_KEY = 'ohos.extra.param.key.original_form_id'-End-->
 
@@ -260,7 +260,7 @@ Indicates the key specifying the custom data of the form to be obtained, which i
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-PARAM_FORM_CUSTOMIZE_KEY = "ohos.extra.param.key.form_customize"--><!--Device-FormParam-PARAM_FORM_CUSTOMIZE_KEY = "ohos.extra.param.key.form_customize"-End-->
 
@@ -276,7 +276,7 @@ Indicates the key specifying whether a form is temporary, which is represented a
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-TEMPORARY_KEY = "ohos.extra.param.key.form_temporary"--><!--Device-FormParam-TEMPORARY_KEY = "ohos.extra.param.key.form_temporary"-End-->
 
@@ -294,7 +294,7 @@ Indicates the key specifying the reason for the form update. which is represente
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 24.
+**Atomic service API:** This API can be used in atomic services since API version 24.
 
 <!--Device-FormParam-UPDATE_FORM_REASON_KEY = 'ohos.extra.param.key.update_form_reason'--><!--Device-FormParam-UPDATE_FORM_REASON_KEY = 'ohos.extra.param.key.update_form_reason'-End-->
 
@@ -310,7 +310,7 @@ Indicates the key specifying the width of the form to be obtained, which is repr
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-FormParam-WIDTH_KEY = "ohos.extra.param.key.form_width"--><!--Device-FormParam-WIDTH_KEY = "ohos.extra.param.key.form_width"-End-->
 

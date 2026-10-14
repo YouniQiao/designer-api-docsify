@@ -22,7 +22,7 @@ RESOLUTION_1080P = 2
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResolutionLevel-RESOLUTION_1080P = 2--><!--Device-ResolutionLevel-RESOLUTION_1080P = 2-End-->
 
@@ -38,7 +38,7 @@ RESOLUTION_2K = 3
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResolutionLevel-RESOLUTION_2K = 3--><!--Device-ResolutionLevel-RESOLUTION_2K = 3-End-->
 
@@ -54,7 +54,7 @@ RESOLUTION_480P = 0
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResolutionLevel-RESOLUTION_480P = 0--><!--Device-ResolutionLevel-RESOLUTION_480P = 0-End-->
 
@@ -70,7 +70,7 @@ RESOLUTION_4K = 4
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResolutionLevel-RESOLUTION_4K = 4--><!--Device-ResolutionLevel-RESOLUTION_4K = 4-End-->
 
@@ -86,7 +86,7 @@ RESOLUTION_720P = 1
 
 **起始版本：** 19
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ResolutionLevel-RESOLUTION_720P = 1--><!--Device-ResolutionLevel-RESOLUTION_720P = 1-End-->
 

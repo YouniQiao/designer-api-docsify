@@ -24,7 +24,7 @@ bundleName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Resource-bundleName: string--><!--Device-Resource-bundleName: string-End-->
 
@@ -45,7 +45,7 @@ id: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Resource-id: long--><!--Device-Resource-id: long-End-->
 
@@ -63,7 +63,7 @@ moduleName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Resource-moduleName: string--><!--Device-Resource-moduleName: string-End-->
 
@@ -99,7 +99,7 @@ type?: number
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-Resource-type?: int--><!--Device-Resource-type?: int-End-->
 

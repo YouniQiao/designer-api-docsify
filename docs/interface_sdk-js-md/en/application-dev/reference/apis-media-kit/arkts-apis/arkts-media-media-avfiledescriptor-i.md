@@ -30,7 +30,7 @@ The file descriptor of audio or video source from file system. The caller is res
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVFileDescriptor-fd: int--><!--Device-AVFileDescriptor-fd: int-End-->
 
@@ -48,7 +48,7 @@ The length in bytes of the data to be read. By default, the length is the rest o
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVFileDescriptor-length?: long--><!--Device-AVFileDescriptor-length?: long-End-->
 
@@ -66,7 +66,7 @@ The offset into the file where the data to be read, in bytes. By default, the of
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVFileDescriptor-offset?: long--><!--Device-AVFileDescriptor-offset?: long-End-->
 

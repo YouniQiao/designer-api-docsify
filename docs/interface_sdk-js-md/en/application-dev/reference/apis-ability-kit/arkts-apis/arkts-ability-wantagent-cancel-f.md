@@ -18,7 +18,7 @@ Cancels a WantAgent object. This API uses an asynchronous callback to return the
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void--><!--Device-wantAgent-function cancel(agent: WantAgent, callback: AsyncCallback<void>): void-End-->
 
@@ -125,7 +125,7 @@ Cancels a WantAgent object. This API uses a promise to return the result.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>--><!--Device-wantAgent-function cancel(agent: WantAgent): Promise<void>-End-->
 

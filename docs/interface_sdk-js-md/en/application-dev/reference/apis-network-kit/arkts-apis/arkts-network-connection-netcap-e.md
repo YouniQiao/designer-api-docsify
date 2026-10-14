@@ -22,7 +22,7 @@ The network management module is verifying the network connectivity. This flag r
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31--><!--Device-NetCap-NET_CAPABILITY_CHECKING_CONNECTIVITY = 31-End-->
 
@@ -38,7 +38,7 @@ The network is capable of Internet access but the network connectivity is not su
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCap-NET_CAPABILITY_INTERNET = 12--><!--Device-NetCap-NET_CAPABILITY_INTERNET = 12-End-->
 
@@ -54,7 +54,7 @@ The network can connect to the carrier's Multimedia Messaging Service Center (MM
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCap-NET_CAPABILITY_MMS = 0--><!--Device-NetCap-NET_CAPABILITY_MMS = 0-End-->
 
@@ -70,7 +70,7 @@ The network traffic is not metered.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11--><!--Device-NetCap-NET_CAPABILITY_NOT_METERED = 11-End-->
 
@@ -86,7 +86,7 @@ The network does not use a virtual private network (VPN).
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15--><!--Device-NetCap-NET_CAPABILITY_NOT_VPN = 15-End-->
 
@@ -102,7 +102,7 @@ The network is found to have a captive portal and user login authentication is r
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-NetCap-NET_CAPABILITY_PORTAL = 17--><!--Device-NetCap-NET_CAPABILITY_PORTAL = 17-End-->
 
@@ -116,11 +116,11 @@ NET_CAPABILITY_VALIDATED = 16
 
 The network management module successfully connects to the Huawei Cloud address through this network. This capability is configured by the network management module.
 
-Note: If the network management module fails to connect to the Huawei Cloud address, this flag is not available in the network capability, but this does not mean a complete loss in Internet access. Note that for a newly connected network, this value may not reflect the actual verification result as network connectivity verification is in progress. Your application can use **NET_CAPABILITY_CHECKING_CONNECTIVITY**&lt;sup&gt;12+&lt;/sup&gt; to check whether network connectivity verification is in progress.
+Note: If the network management module fails to connect to the Huawei Cloud address, this flag is not available in the network capability, but this does not mean a complete loss in Internet access. Note that for a newly connected network, this value may not reflect the actual verification result as network connectivity verification is in progress. Your application can use **NET_CAPABILITY_CHECKING_CONNECTIVITY**<sup>12+</sup> to check whether network connectivity verification is in progress.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16--><!--Device-NetCap-NET_CAPABILITY_VALIDATED = 16-End-->
 

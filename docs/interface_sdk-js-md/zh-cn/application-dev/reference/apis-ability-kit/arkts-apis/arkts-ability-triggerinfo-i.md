@@ -24,7 +24,7 @@ code: number
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-TriggerInfo-code: int--><!--Device-TriggerInfo-code: int-End-->
 
@@ -78,7 +78,7 @@ permission?: string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-TriggerInfo-permission?: string--><!--Device-TriggerInfo-permission?: string-End-->
 
@@ -96,7 +96,7 @@ want?: Want
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-TriggerInfo-want?: Want--><!--Device-TriggerInfo-want?: Want-End-->
 

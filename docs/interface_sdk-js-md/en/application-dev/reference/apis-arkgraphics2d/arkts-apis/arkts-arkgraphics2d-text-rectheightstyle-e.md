@@ -22,7 +22,7 @@ Includes the line spacing to the bottom of the rectangle.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_BOTTOM = 4-End-->
 
@@ -38,7 +38,7 @@ Includes half of the line spacing to both the top and bottom of the rectangle.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_MIDDLE = 2--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_MIDDLE = 2-End-->
 
@@ -54,7 +54,7 @@ Includes the line spacing to the top of the rectangle.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_TOP = 3--><!--Device-RectHeightStyle-INCLUDE_LINE_SPACE_TOP = 3-End-->
 
@@ -70,7 +70,7 @@ Extends the height to match the highest rectangle in all lines.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-MAX = 1--><!--Device-RectHeightStyle-MAX = 1-End-->
 
@@ -86,7 +86,7 @@ Sets the height according to the strut style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-STRUT = 5--><!--Device-RectHeightStyle-STRUT = 5-End-->
 
@@ -102,7 +102,7 @@ Tight style.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-RectHeightStyle-TIGHT = 0--><!--Device-RectHeightStyle-TIGHT = 0-End-->
 

@@ -28,7 +28,7 @@ A blender for changing the background color of the component. Currently, only th
 
 **Since:** 12
 
-**Widget capability (ArkTS-Dyn only) :** This API can be used in ArkTS widgets since version 22.
+**Widget capability:** This API can be used in ArkTS widgets since API version 22.
 
 <!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect--><!--Device-VisualEffect-backgroundColorBlender(blender: BrightnessBlender): VisualEffect-End-->
 

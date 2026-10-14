@@ -450,9 +450,9 @@ You can use [onCreateMenu](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptio
 
 You can use [onMenuItemClick](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md#onmenuitemclick) to customize the callback for menu options. This function is triggered after a menu option is clicked and determines whether to execute the default callback based on the return value. If **true** is returned, the system callback is not executed. If **false** is returned, the system callback is executed.
 
-In [onPrepareMenu&lt;sup&gt;20+&lt;/sup&gt;](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#properties-1), this callback is triggered after the text selection area changes and before the menu is displayed. You can modify, add, or delete menu options in the callback to dynamically update the menu.
+In [onPrepareMenu<sup>20+</sup>](../../../reference/apis-arkui/arkui-ts/ts-text-common.md#properties-1), this callback is triggered after the text selection area changes and before the menu is displayed. You can modify, add, or delete menu options in the callback to dynamically update the menu.
 
-If this method is used together with [selectionMenuOptions&lt;sup&gt;(deprecated)&lt;/sup&gt;](#selectionmenuoptions), the **selectionMenuOptions&lt;sup&gt; (deprecated) &lt;/sup&gt;** method does not take effect.
+If this method is used together with [selectionMenuOptions<sup>(deprecated)</sup>](#selectionmenuoptions), the **selectionMenuOptions<sup> (deprecated) </sup>** method does not take effect.
 
 **Since:** 12
 
@@ -919,7 +919,7 @@ Sets whether to enable the forcible zoom functionality for the **Web** component
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to comply with the zoom restriction specified by the **&lt;meta name="viewport"&gt;** tag on the web page.<br>The value **true** means to not comply with the web page zoom restriction, and **false** means the opposite. <br>When **undefined** or **null** is passed in, the attribute setting does not take effect. |
+| enable | boolean | Yes | Whether to comply with the zoom restriction specified by the **<meta name="viewport">** tag on the web page. <br>The value **true** means to not comply with the web page zoom restriction, and **false** means the opposite. <br>When **undefined** or **null** is passed in, the attribute setting does not take effect. |
 
 ## geolocationAccess
 
@@ -1137,7 +1137,7 @@ Registers the ArkTS object in **javaScriptProxy** with the **Web** component. Th
 > **NOTE:** 
 > 
 > The **javaScriptProxy** API must be used together with
-> [deleteJavaScriptRegister&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
+> [deleteJavaScriptRegister<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#deletejavascriptregister)
 > to prevent memory leaks.
 > 
 > All parameters of the **javaScriptProxy** object cannot be updated.
@@ -1146,7 +1146,7 @@ Registers the ArkTS object in **javaScriptProxy** with the **Web** component. Th
 > be non-empty. Both types of methods can be registered simultaneously.
 > 
 > This API supports registering only one object. To register multiple objects, use
-> [registerJavaScriptProxy&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy).
+> [registerJavaScriptProxy<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#registerjavascriptproxy).
 
 **Since:** 8
 
@@ -1324,7 +1324,7 @@ Sets whether the **viewport** attribute of the **meta** tag is enabled. When thi
 
 > **NOTE:** 
 > 
-> - Whether the **viewport** attribute of the **\&lt;meta&gt;** tag in the frontend HTML page is enabled is determined by checking whether the User-Agent contains the "Mobile" field. When the User-Agent does not contain the "Mobile"field, the **viewport** attribute in the **\&lt;meta&gt;** tag is disabled by default. In this case, you can explicitly set the **metaViewport** attribute to **true** to override the disabled state.
+> - Whether the **viewport** attribute of the **\<meta>** tag in the frontend HTML page is enabled is determined by checking whether the User-Agent contains the "Mobile" field. When the User-Agent does not contain the "Mobile"field, the **viewport** attribute in the **\<meta>** tag is disabled by default. In this case, you can explicitly set the **metaViewport** attribute to **true** to override the disabled state.
 
 **Since:** 12
 
@@ -1505,7 +1505,7 @@ Triggered to check whether a bound **Web** instance exists based on the name whe
 > - Binding a **Web** instance by name: Call the **event.handler.setWebController** method in the [onWindowNew] (#onwindownew9) callback and transfer the controller of the new **Web** instance.
 > 
 > - The name must comply with the regular expression **[a-zA-Z0-9_]+**. When the name is used as the value of the
-> **target** attribute of the \&lt;a&gt; or \&lt;form&gt; tag, the bound **Web** instance also triggers this callback function.
+> **target** attribute of the \<a> or \<form> tag, the bound **Web** instance also triggers this callback function.
 
 **Since:** 20
 
@@ -2271,7 +2271,7 @@ Triggered to notify the host application that the page has been loaded. This met
 > 
 > - If the main frame is automatically redirected before the page is fully loaded, **onLoadFinished** is triggered only once. **onPageEnd** is triggered each time the main frame is navigated.
 > 
-> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure. &lt;b class=" &gt; + topic/ph hi-d/b " id="b145733136532"&gt;onPageBegin&lt;/b&gt; will not be simulated.
+> - When the document of the pop-up window is modified by JavaScript before being loaded, **onLoadStarted** is simulated and the URL is set to null, because displaying the URL that is being loaded may be insecure. <b class=" > + topic/ph hi-d/b " id="b145733136532"&gt;onPageBegin</b> will not be simulated.
 
 **Since:** 20
 
@@ -2468,7 +2468,7 @@ Called when the **param** element embedded in the same-layer rendering tag **obj
 onNativeEmbedVisibilityChange(callback: OnNativeEmbedVisibilityChangeCallback)
 ```
 
-Triggered when the visibility of a same-layer tag (such as an **\&lt;embed&gt;** tag or an **\&lt;object&gt;** tag) on a web page changes in the viewport. Same-layer tags are invisible by default. If a tag is visible when the page is loaded for the first time, it is reported. If a tag is invisible, it is not reported. Same-layer tags are considered invisible only when they are all invisible. Partially visible or all visible tags are considered visible. To obtain the visible status change caused by the CSS attributes (including visibility, display, and size change) of the same -layer tag, configure [nativeEmbedOptions](#nativeembedoptions) and set **supportCssDisplayChange** in [EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md) to **true**.
+Triggered when the visibility of a same-layer tag (such as an **\<embed>** tag or an **\<object>** tag) on a web page changes in the viewport. Same-layer tags are invisible by default. If a tag is visible when the page is loaded for the first time, it is reported. If a tag is invisible, it is not reported. Same-layer tags are considered invisible only when they are all invisible. Partially visible or all visible tags are considered visible. To obtain the visible status change caused by the CSS attributes (including visibility, display, and size change) of the same -layer tag, configure [nativeEmbedOptions](#nativeembedoptions) and set **supportCssDisplayChange** in [EmbedOptions](arkts-arkweb-web-comp-embedoptions-i.md) to **true**.
 
 **Since:** 12
 
@@ -3187,7 +3187,7 @@ Triggered when the text selection of the **Web** component changes. This API use
 onTitleReceive(callback: Callback<OnTitleReceiveEvent>)
 ```
 
-Called when the **\&lt;title&gt;** element of the page document changes. If no title is set on the current page, ArkWeb generates a title based on the page URL and returns it to the application before the loading is complete.
+Called when the **\<title>** element of the page document changes. If no title is set on the current page, ArkWeb generates a title based on the page URL and returns it to the application before the loading is complete.
 
 **Since:** 8
 
@@ -3383,7 +3383,7 @@ Sets whether to enable segment-based HTML parsing optimization. If no attribute 
 
 To avoid occupying too many main thread resources and enable progressive loading of web pages, the ArkWeb kernel uses the segment-based parsing policy when parsing the HTML files. By default, the ArkWeb kernel uses the parsing time as the segment point. When the parsing time exceeds the threshold, the parsing is interrupted and then the layout and rendering operations are performed.
 
-After optimization is enabled, the ArkWeb kernel not only checks whether the parsing time exceeds the limit, but also additionally determines whether the number of parsed tokens (the smallest parsing units of an HTML document, such as `&lt;div&gt;`, `attr="xxx"`, etc.) exceeds the threshold specified by the kernel, and lowers this threshold. When the FCP (First Contentful Paint) of the page is triggered, the default interrupt judgment logic is restored. This makes the parsing operations before FCP more frequent, thereby increasing the possibility that the first-frame content is parsed and enters the rendering phase earlier, while effectively reducing the rendering workload of the first frame, ultimately advancing the FCP time.
+After optimization is enabled, the ArkWeb kernel not only checks whether the parsing time exceeds the limit, but also additionally determines whether the number of parsed tokens (the smallest parsing units of an HTML document, such as `<div>`, `attr="xxx"`, etc.) exceeds the threshold specified by the kernel, and lowers this threshold. When the FCP (First Contentful Paint) of the page is triggered, the default interrupt judgment logic is restored. This makes the parsing operations before FCP more frequent, thereby increasing the possibility that the first-frame content is parsed and enters the rendering phase earlier, while effectively reducing the rendering workload of the first frame, ultimately advancing the FCP time.
 
 When the FCP of a page is triggered, the default segment parsing logic is restored. Therefore, the segment-based HTML parsing optimization takes effect only for the first page loaded by each **Web** component.
 
@@ -3471,11 +3471,11 @@ Sets whether to enable pinch smooth mode for the web page. When this attribute i
 registerNativeEmbedRule(tag: string, type:string)
 ```
 
-Registers the HTML tag name and type for same-layer rendering. The tag name only supports &lt;object\&gt; and &lt;embed\&gt;. The tag type only supports visible ASCII characters.
+Registers the HTML tag name and type for same-layer rendering. The tag name only supports <object\> and <embed\>. The tag type only supports visible ASCII characters.
 
-If the specified type is the same as the W3C standard &lt;object\&gt; or &lt;embed\&gt; type, the ArkWeb kernel identifies the type as a non-same-layer tag.
+If the specified type is the same as the W3C standard <object\> or <embed\> type, the ArkWeb kernel identifies the type as a non-same-layer tag.
 
-This API is also controlled by **enableNativeEmbedMode** and does not take effect when same-layer rendering is disabled. When this API is not used, the ArkWeb kernel recognizes the &lt;embed\&gt; tags with the "native/" prefix as same-layer tags.
+This API is also controlled by **enableNativeEmbedMode** and does not take effect when same-layer rendering is disabled. When this API is not used, the ArkWeb kernel recognizes the <embed\> tags with the "native/" prefix as same-layer tags.
 
 For details, see [Using Same-Layer Rendering](../../../web/web-same-layer.md#rendering-text-boxes-at-the-same-layer-on-web-pages).
 
@@ -4097,7 +4097,7 @@ Sets the user agent.
 wideViewModeAccess(wideViewModeAccess: boolean)
 ```
 
-Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;** tag. This API is an empty API.
+Sets whether to support the **viewport** attribute of the HTML **\<meta>** tag. This API is an empty API.
 
 **Since:** 8
 
@@ -4113,4 +4113,4 @@ Sets whether to support the **viewport** attribute of the HTML **\&lt;meta&gt;**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag.<br>The value **true** means to support the **viewport** attribute of the HTML **&lt;meta&gt;** tag, and **false** means the opposite. |
+| wideViewModeAccess | boolean | Yes | Whether to support the **viewport** attribute of the HTML **<meta>** tag. <br>The value **true** means to support the **viewport** attribute of the HTML **<meta>** tag, and **false** means the opposite. |

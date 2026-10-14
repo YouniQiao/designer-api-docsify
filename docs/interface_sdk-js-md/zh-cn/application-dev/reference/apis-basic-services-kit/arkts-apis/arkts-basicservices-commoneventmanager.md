@@ -56,12 +56,12 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 | --- | --- |
 | [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber1) | 创建订阅者。使用callback异步回调。 |
 | [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber2) | 创建订阅者。使用Promise异步回调。 |
-| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) | 同步创建订阅者的接口。 |
+| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md#createsubscribersync) | 同步创建订阅者的接口。 |
 | [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish1) | 发布公共事件。使用callback异步回调。 |
 | [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish2) | 发布公共事件。使用callback异步回调。 |
-| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) | 订阅公共事件。使用callback异步回调。 |
-| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) | 订阅公共事件，并返回订阅成功或失败信息。使用Promise异步回调。 |
-| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) | 取消订阅公共事件。使用callback异步回调。 |
+| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md#subscribe) | 订阅公共事件。使用callback异步回调。 |
+| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md#subscribetoevent) | 订阅公共事件，并返回订阅成功或失败信息。使用Promise异步回调。 |
+| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe) | 取消订阅公共事件。使用callback异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

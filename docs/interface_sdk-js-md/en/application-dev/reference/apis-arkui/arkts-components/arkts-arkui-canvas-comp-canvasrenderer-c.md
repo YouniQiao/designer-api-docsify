@@ -1397,23 +1397,23 @@ Sets image filters. Any number of filters can be combined. This is a write-only 
 Available values are as follows:
 
 - **'none'**: No filter effect.  
-- **'blur(`&lt;length&gt;`)'**: Applies Gaussian blur to the image. The value range is  
+- **'blur(`<length>`)'**: Applies Gaussian blur to the image. The value range is  
 > = 0. Supported units: px, vp, rem. Default value: **blur(0px)**.
-- **'brightness([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Applies a linear multiplier to the  
+- **'brightness([`<number>`\|`<percentage>`])'**: Applies a linear multiplier to the  
 image, making it appear brighter or darker. Supports numeric and percentage parameters. The value range is &gt;= 0. Default value: **brightness(1)**.  
-- **'contrast([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Adjusts the contrast of the image. Supports  
+- **'contrast([`<number>`\|`<percentage>`])'**: Adjusts the contrast of the image. Supports  
 numeric and percentage parameters. The value range is &gt;= 0. Default value: **contrast(1)**.  
-- **'grayscale([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Converts the image to grayscale. Supports  
+- **'grayscale([`<number>`\|`<percentage>`])'**: Converts the image to grayscale. Supports  
 numeric and percentage parameters. The value range is [0, 1]. Default value: **grayscale(0)**.  
-- **'hue-rotate(`&lt;angle&gt;`)'**: Applies hue rotation to the image. The value range is  
+- **'hue-rotate(`<angle>`)'**: Applies hue rotation to the image. The value range is  
 0deg-360deg. Default value: **hue-rotate(0deg)**.  
-- **'invert([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Inverts the input image. Supports numeric and  
+- **'invert([`<number>`\|`<percentage>`])'**: Inverts the input image. Supports numeric and  
 percentage parameters. The value range is [0, 1]. Default value: **invert(0)**.  
-- **'opacity([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Adjusts the transparency of the image. Supports  
+- **'opacity([`<number>`\|`<percentage>`])'**: Adjusts the transparency of the image. Supports  
 numeric and percentage parameters. The value range is [0, 1]. Default value: **opacity(1)**.  
-- **'saturate([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Adjusts the saturation of the image. Supports  
+- **'saturate([`<number>`\|`<percentage>`])'**: Adjusts the saturation of the image. Supports  
 numeric and percentage parameters. The value range is &gt;= 0. Default value: **saturate(1)**.  
-- **'sepia([`&lt;number&gt;`\|`&lt;percentage&gt;`])'**: Converts the image to sepia. Supports numeric and  
+- **'sepia([`<number>`\|`<percentage>`])'**: Converts the image to sepia. Supports numeric and  
 percentage parameters. The value range is [0, 1]. Default value: **sepia(0)**.
 
 **Type:** string

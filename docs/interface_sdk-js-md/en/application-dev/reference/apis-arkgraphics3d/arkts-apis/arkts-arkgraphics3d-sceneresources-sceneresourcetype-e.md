@@ -6,8 +6,6 @@ export enum SceneResourceType
 
 Enumerates the scene resource types, which are used to classify resources in a scene.
 
-@enum { int }
-
 **Since:** 12
 
 <!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->

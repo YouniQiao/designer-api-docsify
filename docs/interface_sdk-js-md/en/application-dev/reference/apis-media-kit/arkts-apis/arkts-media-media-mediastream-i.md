@@ -30,7 +30,7 @@ biterate of this mediaStream.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-MediaStream-bitrate: int--><!--Device-MediaStream-bitrate: int-End-->
 
@@ -48,7 +48,7 @@ video height.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-MediaStream-height: int--><!--Device-MediaStream-height: int-End-->
 
@@ -66,7 +66,7 @@ url for this mediaStream
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-MediaStream-url: string--><!--Device-MediaStream-url: string-End-->
 
@@ -84,7 +84,7 @@ video width.
 
 **Since:** 19
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 19.
+**Atomic service API:** This API can be used in atomic services since API version 19.
 
 <!--Device-MediaStream-width: int--><!--Device-MediaStream-width: int-End-->
 

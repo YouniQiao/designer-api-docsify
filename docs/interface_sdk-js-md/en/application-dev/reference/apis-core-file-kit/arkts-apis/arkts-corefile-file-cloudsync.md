@@ -20,9 +20,9 @@ import { cloudSync } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md) | Obtains the upload sync state of a cloud file. This API returns the result synchronously. |
-| [registerChange](arkts-corefile-cloudsync-registerchange-f.md) | Subscribes to the change of a file. The callback returns the changed data. |
-| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md) | Unsubscribes from the change of a file. |
+| [getCoreFileSyncState](arkts-corefile-cloudsync-getcorefilesyncstate-f.md#getcorefilesyncstate) | Obtains the upload sync state of a cloud file. This API returns the result synchronously. |
+| [registerChange](arkts-corefile-cloudsync-registerchange-f.md#registerchange) | Subscribes to the change of a file. The callback returns the changed data. |
+| [unregisterChange](arkts-corefile-cloudsync-unregisterchange-f.md#unregisterchange) | Unsubscribes from the change of a file. |
 
 <!--Del-->
 ### Functions(System API)
@@ -32,9 +32,9 @@ import { cloudSync } from '@kit.CoreFileKit';
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate1) | Obtains the file sync state. This API uses a promise to return the result. |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate2) | Obtains the file sync state. This API uses an asynchronous callback to return the result. |
 | [getFileSyncState](arkts-corefile-cloudsync-getfilesyncstate-f-sys.md#getfilesyncstate3) | Obtains the file sync state. |
-| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |
-| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. |
-| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md) | Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**. |
+| [optimizeStorage](arkts-corefile-cloudsync-optimizestorage-f-sys.md#optimizestorage) | Optimizes the resources that have been synced to the cloud from the local Gallery and executes the automatic aging policy according to the remaining local space. This API uses a promise to return the result. |
+| [startOptimizeSpace](arkts-corefile-cloudsync-startoptimizespace-f-sys.md#startoptimizespace) | Optimizes local resources that have been synced to the cloud and optimizes local images and videos that have not been accessed before the aging period expires. This API uses a promise to return the result. The callback returns the optimization progress. |
+| [stopOptimizeSpace](arkts-corefile-cloudsync-stopoptimizespace-f-sys.md#stopoptimizespace) | Synchronously stops optimizing cloud resource space. This method is used with **startOptimizeSpace**. |
 <!--DelEnd-->
 
 ### Classes

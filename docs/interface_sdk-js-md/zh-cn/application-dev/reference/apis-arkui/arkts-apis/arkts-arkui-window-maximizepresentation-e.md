@@ -22,7 +22,7 @@ ENTER_IMMERSIVE = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MaximizePresentation-ENTER_IMMERSIVE = 2--><!--Device-MaximizePresentation-ENTER_IMMERSIVE = 2-End-->
 
@@ -38,7 +38,7 @@ ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3
 
 **起始版本：** 14
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本14开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本14开始，该接口支持在原子化服务中使用。
 
 <!--Device-MaximizePresentation-ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3--><!--Device-MaximizePresentation-ENTER_IMMERSIVE_DISABLE_TITLE_AND_DOCK_HOVER = 3-End-->
 
@@ -54,7 +54,7 @@ EXIT_IMMERSIVE = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MaximizePresentation-EXIT_IMMERSIVE = 1--><!--Device-MaximizePresentation-EXIT_IMMERSIVE = 1-End-->
 
@@ -70,7 +70,7 @@ FOLLOW_APP_IMMERSIVE_SETTING = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MaximizePresentation-FOLLOW_APP_IMMERSIVE_SETTING = 0--><!--Device-MaximizePresentation-FOLLOW_APP_IMMERSIVE_SETTING = 0-End-->
 

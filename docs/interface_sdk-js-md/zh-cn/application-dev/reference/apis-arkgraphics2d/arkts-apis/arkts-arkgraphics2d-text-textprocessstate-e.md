@@ -24,7 +24,7 @@ FORMATTED = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-FORMATTED = 4--><!--Device-TextProcessState-FORMATTED = 4-End-->
 
@@ -42,7 +42,7 @@ INDEXED = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-INDEXED = 1--><!--Device-TextProcessState-INDEXED = 1-End-->
 
@@ -60,7 +60,7 @@ INIT = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-INIT = 0--><!--Device-TextProcessState-INIT = 0-End-->
 
@@ -78,7 +78,7 @@ LINE_BROKEN = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-LINE_BROKEN = 3--><!--Device-TextProcessState-LINE_BROKEN = 3-End-->
 
@@ -96,7 +96,7 @@ PAINT = 5
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-PAINT = 5--><!--Device-TextProcessState-PAINT = 5-End-->
 
@@ -114,7 +114,7 @@ SHAPED = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-SHAPED = 2--><!--Device-TextProcessState-SHAPED = 2-End-->
 
@@ -132,7 +132,7 @@ UPDATE_ATTRIBUTE = 6
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6--><!--Device-TextProcessState-UPDATE_ATTRIBUTE = 6-End-->
 

@@ -22,7 +22,7 @@ Video call template. A PiP window will be started during a video call, and the v
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPTemplateType-VIDEO_CALL = 1--><!--Device-PiPTemplateType-VIDEO_CALL = 1-End-->
 
@@ -38,7 +38,7 @@ Live template. A PiP window will be started during a live, and the live template
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPTemplateType-VIDEO_LIVE = 3--><!--Device-PiPTemplateType-VIDEO_LIVE = 3-End-->
 
@@ -54,7 +54,7 @@ Video meeting template. A PiP window will be started during a video meeting, and
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPTemplateType-VIDEO_MEETING = 2--><!--Device-PiPTemplateType-VIDEO_MEETING = 2-End-->
 
@@ -70,7 +70,7 @@ Video playback template. A PiP window will be started during video playback, and
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-PiPTemplateType-VIDEO_PLAY = 0--><!--Device-PiPTemplateType-VIDEO_PLAY = 0-End-->
 

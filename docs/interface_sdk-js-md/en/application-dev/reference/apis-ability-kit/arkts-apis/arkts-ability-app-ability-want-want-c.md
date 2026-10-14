@@ -30,7 +30,7 @@ Name of the Ability component of the application. In the application startup sce
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-abilityName?: string--><!--Device-Want-abilityName?: string-End-->
 
@@ -48,7 +48,7 @@ Action to take, such as viewing and sharing application details. In implicit Wan
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-action?: string--><!--Device-Want-action?: string-End-->
 
@@ -66,7 +66,7 @@ Bundle name of the application. It represents the bundle name of the target appl
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-bundleName?: string--><!--Device-Want-bundleName?: string-End-->
 
@@ -84,7 +84,7 @@ Device ID. It indicates the device ID of the target application in the applicati
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-deviceId?: string--><!--Device-Want-deviceId?: string-End-->
 
@@ -102,7 +102,7 @@ Additional category information (such as browser and video player) of the abilit
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-entities?: Array<string>--><!--Device-Want-entities?: Array<string>-End-->
 
@@ -122,7 +122,7 @@ This API can be used in atomic services since API version 15.
 
 **Since:** 15
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 15.
+**Atomic service API:** This API can be used in atomic services since API version 15.
 
 <!--Device-Want-readonly fds?: Record<string, int>--><!--Device-Want-readonly fds?: Record<string, int>-End-->
 
@@ -142,7 +142,7 @@ For example, if the value is 0x00000001 (**wantConstant.Flags.FLAG_AUTH_READ_URI
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-flags?: int--><!--Device-Want-flags?: int-End-->
 
@@ -164,7 +164,7 @@ If the ability belongs to a [HAR](../../../quick-start/har-package.md) module, *
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-moduleName?: string--><!--Device-Want-moduleName?: string-End-->
 
@@ -236,7 +236,7 @@ MIME type, that is, the type of the file to open, for example, **'text/xml'** an
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-type?: string--><!--Device-Want-type?: string-End-->
 
@@ -254,7 +254,7 @@ URI, which is used with **type** to specify the data type to be processed in the
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Want-uri?: string--><!--Device-Want-uri?: string-End-->
 

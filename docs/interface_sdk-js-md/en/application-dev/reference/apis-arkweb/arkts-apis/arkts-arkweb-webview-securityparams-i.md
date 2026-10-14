@@ -42,7 +42,7 @@ Whether to disable JIT compilation. true means disabled, and false means the opp
 disableMathML?: boolean
 ```
 
-Whether to disable MathML. true means disabled, and false means the opposite. Default value: false. MathML is an outdated rendering module in the kernel and often lacks sufficient automated auditing and fuzzing. It is prone to becoming a stepping stone for side-channel attacks or attribute injection XSS. Disabling it prevents proper parsing and rendering of &lt;math&gt; tag content, which may affect formula layout on a small number of science websites that have not been adapted for JavaScript. Disabling it is recommended.
+Whether to disable MathML. true means disabled, and false means the opposite. Default value: false. MathML is an outdated rendering module in the kernel and often lacks sufficient automated auditing and fuzzing. It is prone to becoming a stepping stone for side-channel attacks or attribute injection XSS. Disabling it prevents proper parsing and rendering of <math> tag content, which may affect formula layout on a small number of science websites that have not been adapted for JavaScript. Disabling it is recommended.
 
 **Type:** boolean
 

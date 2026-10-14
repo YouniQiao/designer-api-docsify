@@ -6,8 +6,6 @@ export enum SceneResourceType
 
 场景资源类型枚举，对场景中的资源进行分类。
 
-@enum { int }
-
 **起始版本：** 12
 
 <!--Device-unnamed-export enum SceneResourceType--><!--Device-unnamed-export enum SceneResourceType-End-->

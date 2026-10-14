@@ -18,7 +18,7 @@ function write(info: AppEventInfo): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-hiAppEvent-function write(info: AppEventInfo): Promise<void>--><!--Device-hiAppEvent-function write(info: AppEventInfo): Promise<void>-End-->
 
@@ -86,7 +86,7 @@ function write(info: AppEventInfo, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-hiAppEvent-function write(info: AppEventInfo, callback: AsyncCallback<void>): void--><!--Device-hiAppEvent-function write(info: AppEventInfo, callback: AsyncCallback<void>): void-End-->
 

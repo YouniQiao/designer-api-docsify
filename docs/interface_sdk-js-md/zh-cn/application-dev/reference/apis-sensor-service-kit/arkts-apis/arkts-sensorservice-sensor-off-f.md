@@ -3312,7 +3312,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
-> [off_SensorId.ACCELEROMETER](#off5)
+> [off](#off5)
 > 替代。
 
 **起始版本：** 8
@@ -3363,7 +3363,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
-> [off_SensorId.ACCELEROMETER_UNCALIBRATED](#off7)
+> [off](#off7)
 > 替代。
 
 **起始版本：** 8
@@ -3416,7 +3416,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> [off_SensorId.AMBIENT_LIGHT](#off9)
+> [off](#off9)
 > 替代。
 
 **起始版本：** 8
@@ -3462,7 +3462,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_TEMPERATURE]
-> [off_SensorId.AMBIENT_TEMPERATURE](#off11)
+> [off](#off11)
 > 替代。
 
 **起始版本：** 8
@@ -3508,7 +3508,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
-> [off_SensorId.BAROMETER](#off13)
+> [off](#off13)
 > 替代。
 
 **起始版本：** 8
@@ -3554,7 +3554,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
-> [off_SensorId.GRAVITY](#off15)
+> [off](#off15)
 > 替代。
 
 **起始版本：** 8
@@ -3602,7 +3602,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
-> [off_SensorId.GYROSCOPE](#off17)
+> [off](#off17)
 > 替代。
 
 **起始版本：** 8
@@ -3652,7 +3652,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
-> [off_SensorId.GYROSCOPE_UNCALIBRATED](#off19)
+> [off](#off19)
 > 替代。
 
 **起始版本：** 8
@@ -3702,7 +3702,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
-> [off_SensorId.HALL](#off21)
+> [off](#off21)
 > 替代。
 
 **起始版本：** 8
@@ -3748,7 +3748,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
-> [off_SensorId.HEART_RATE](#off23)
+> [off](#off23)
 > 替代。
 
 **起始版本：** 8
@@ -3796,7 +3796,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
-> [off_SensorId.HUMIDITY](#off25)
+> [off](#off25)
 > 替代。
 
 **起始版本：** 8
@@ -3842,7 +3842,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
-> [off_SensorId.LINEAR_ACCELEROMETER](#off27)
+> [off](#off27)
 > 替代。
 
 **起始版本：** 8
@@ -3892,7 +3892,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
-> [off_SensorId.MAGNETIC_FIELD](#off29)
+> [off](#off29)
 > 替代。
 
 **起始版本：** 8
@@ -3940,7 +3940,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
-> [off_SensorId.MAGNETIC_FIELD_UNCALIBRATED](#off31)
+> [off](#off31)
 > 替代。
 
 **起始版本：** 8
@@ -3991,7 +3991,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
-> [off_SensorId.ORIENTATION](#off33)
+> [off](#off33)
 > 替代。
 
 **起始版本：** 8
@@ -4039,7 +4039,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
-> [off_SensorId.PEDOMETER](#off35)
+> [off](#off35)
 > 替代。
 
 **起始版本：** 8
@@ -4087,7 +4087,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
-> [off_SensorId.PEDOMETER_DETECTION](#off37)
+> [off](#off37)
 > 替代。
 
 **起始版本：** 8
@@ -4135,7 +4135,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
-> [off_SensorId.PROXIMITY](#off39)
+> [off](#off39)
 > 替代。
 
 **起始版本：** 8
@@ -4181,7 +4181,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
-> [off_SensorId.ROTATION_VECTOR](#off41)
+> [off](#off41)
 > 替代。
 
 **起始版本：** 8
@@ -4230,7 +4230,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
-> [off_SensorId.SIGNIFICANT_MOTION](#off43)
+> [off](#off43)
 > 替代。
 
 **起始版本：** 8
@@ -4276,7 +4276,7 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
-> [off_SensorId.WEAR_DETECTION](#off45)
+> [off](#off45)
 > 替代。
 
 **起始版本：** 8

@@ -6,8 +6,6 @@ declare enum DismissReason
 
 关闭原因类型。
 
-@enum { number }
-
 **起始版本：** 12
 
 <!--Device-unnamed-declare enum DismissReason--><!--Device-unnamed-declare enum DismissReason-End-->

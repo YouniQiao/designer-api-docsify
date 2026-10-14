@@ -22,7 +22,7 @@ MOVING_PHOTO_DISABLED = 2
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_DISABLED = 2-End-->
 
@@ -38,7 +38,7 @@ MOVING_PHOTO_ENABLED = 1
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1--><!--Device-MovingPhotoBadgeStateType-MOVING_PHOTO_ENABLED = 1-End-->
 
@@ -54,7 +54,7 @@ NOT_MOVING_PHOTO = 0
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0--><!--Device-MovingPhotoBadgeStateType-NOT_MOVING_PHOTO = 0-End-->
 

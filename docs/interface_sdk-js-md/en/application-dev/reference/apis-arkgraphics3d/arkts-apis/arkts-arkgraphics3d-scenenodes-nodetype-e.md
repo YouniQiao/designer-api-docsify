@@ -6,8 +6,6 @@ export enum NodeType
 
 Enumerates the node types.
 
-@enum { int }
-
 **Since:** 12
 
 <!--Device-unnamed-export enum NodeType--><!--Device-unnamed-export enum NodeType-End-->

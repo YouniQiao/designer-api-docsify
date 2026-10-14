@@ -21,8 +21,8 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAVAdsController](arkts-media-media-createavadscontroller-f.md) | 创建一个与播放器实例关联的广告播放控制器。使用Promise异步回调。 |
-| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md) | 创建一个离线下载任务管理器实例。使用Promise异步回调。 |
+| [createAVAdsController](arkts-media-media-createavadscontroller-f.md#createavadscontroller) | 创建一个与播放器实例关联的广告播放控制器。使用Promise异步回调。 |
+| [createAVDownloaderManager](arkts-media-media-createavdownloadermanager-f.md#createavdownloadermanager) | 创建一个离线下载任务管理器实例。使用Promise异步回调。 |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator1) | 创建AVImageGenerator对象。使用Promise异步回调。 |
 | [createAVImageGenerator](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator3) | 创建AVImageGenerator实例。使用callback异步回调。 |
 | [createAVMetadataExtractor](arkts-media-media-createavmetadataextractor-f.md#createavmetadataextractor1) | 创建AVMetadataExtractor实例。使用Promise异步回调。 |
@@ -31,17 +31,17 @@ import { media } from '@kit.MediaKit';
 | [createAVPlayer](arkts-media-media-createavplayer-f.md#createavplayer3) | 异步方式创建音视频播放实例。使用Promise异步回调。 |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder1) | 创建音视频录制实例。使用callback异步回调。 |
 | [createAVRecorder](arkts-media-media-createavrecorder-f.md#createavrecorder3) | 创建音视频录制实例。使用Promise异步回调。 |
-| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md) | 创建屏幕录制实例，使用Promise异步回调。 |
-| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md) | 创建视频转码实例。使用Promise异步回调。 |
-| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md) | 通过自定义数据源创建媒体源。 |
-| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md) | 根据指定目录路径创建一个媒体源对象。使用Promise异步回调。 |
-| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md) | 通过文件描述符创建媒体源。 |
-| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md) | 创建流媒体多码率媒体来源实例方法，当前仅支持HTTP-FLV协议格式多码率。 |
-| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md) | 创建流媒体预下载媒体来源实例方法。 |
+| [createAVScreenCaptureRecorder](arkts-media-media-createavscreencapturerecorder-f.md#createavscreencapturerecorder) | 创建屏幕录制实例，使用Promise异步回调。 |
+| [createAVTranscoder](arkts-media-media-createavtranscoder-f.md#createavtranscoder) | 创建视频转码实例。使用Promise异步回调。 |
+| [createMediaSourceWithDataSource](arkts-media-media-createmediasourcewithdatasource-f.md#createmediasourcewithdatasource) | 通过自定义数据源创建媒体源。 |
+| [createMediaSourceWithDirectory](arkts-media-media-createmediasourcewithdirectory-f.md#createmediasourcewithdirectory) | 根据指定目录路径创建一个媒体源对象。使用Promise异步回调。 |
+| [createMediaSourceWithFd](arkts-media-media-createmediasourcewithfd-f.md#createmediasourcewithfd) | 通过文件描述符创建媒体源。 |
+| [createMediaSourceWithStreamData](arkts-media-media-createmediasourcewithstreamdata-f.md#createmediasourcewithstreamdata) | 创建流媒体多码率媒体来源实例方法，当前仅支持HTTP-FLV协议格式多码率。 |
+| [createMediaSourceWithUrl](arkts-media-media-createmediasourcewithurl-f.md#createmediasourcewithurl) | 创建流媒体预下载媒体来源实例方法。 |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool1) | 创建音频池实例。使用callback异步回调。 |
 | [createSoundPool](arkts-media-media-createsoundpool-f.md#createsoundpool3) | 创建音频池实例。使用Promise异步回调。 |
-| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md) | 同步方式创建音频播放实例。 |
-| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md) | 创建音频录制的实例来控制音频的录制。一台设备只允许创建一个录制实例。 |
+| [createAudioPlayer](arkts-media-media-createaudioplayer-f.md#createaudioplayer) | 同步方式创建音频播放实例。 |
+| [createAudioRecorder](arkts-media-media-createaudiorecorder-f.md#createaudiorecorder) | 创建音频录制的实例来控制音频的录制。一台设备只允许创建一个录制实例。 |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer1) | 异步方式创建视频播放实例，使用callback异步回调。 |
 | [createVideoPlayer](arkts-media-media-createvideoplayer-f.md#createvideoplayer2) | 异步方式创建视频播放实例，通过Promise获取返回值。 |
 
@@ -50,12 +50,12 @@ import { media } from '@kit.MediaKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md) | 创建音频池实例。使用Promise异步回调。 |
+| [createParallelSoundPool](arkts-media-media-createparallelsoundpool-f-sys.md#createparallelsoundpool) | 创建音频池实例。使用Promise异步回调。 |
 | [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder1) | 创建视频录制实例（一台设备只允许创建一个录制实例）。使用callback异步回调。 |
 | [createVideoRecorder](arkts-media-media-createvideorecorder-f-sys.md#createvideorecorder3) | 创建视频录制实例（一台设备只允许创建一个录制实例）。使用Promise异步回调。 |
-| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md) | 从服务器获取用户可更改的系统隐私保护和应用隐私保护配置。使用Promise异步回调。 |
-| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md) | 获取录屏监控模块实例。使用Promise异步回调。 |
-| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md) | 上报录屏隐私弹窗的选择结果到ScreenCapture的服务端，用于判断是否开始录屏。如果用户选择“不允许”则不进行录屏，如果用户选择“允许”则开始录屏。使用Promise异步回调。 |
+| [getAVScreenCaptureConfigurableParameters](arkts-media-media-getavscreencaptureconfigurableparameters-f-sys.md#getavscreencaptureconfigurableparameters) | 从服务器获取用户可更改的系统隐私保护和应用隐私保护配置。使用Promise异步回调。 |
+| [getScreenCaptureMonitor](arkts-media-media-getscreencapturemonitor-f-sys.md#getscreencapturemonitor) | 获取录屏监控模块实例。使用Promise异步回调。 |
+| [reportAVScreenCaptureUserChoice](arkts-media-media-reportavscreencaptureuserchoice-f-sys.md#reportavscreencaptureuserchoice) | 上报录屏隐私弹窗的选择结果到ScreenCapture的服务端，用于判断是否开始录屏。如果用户选择“不允许”则不进行录屏，如果用户选择“允许”则开始录屏。使用Promise异步回调。 |
 <!--DelEnd-->
 
 ### 接口

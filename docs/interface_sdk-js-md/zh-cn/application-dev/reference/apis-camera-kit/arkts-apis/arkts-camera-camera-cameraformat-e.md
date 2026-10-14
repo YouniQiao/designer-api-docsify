@@ -22,7 +22,7 @@ DNG（数字负片）格式的图片。
 
 **起始版本：** 24
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_DNG = 4--><!--Device-CameraFormat-CAMERA_FORMAT_DNG = 4-End-->
 
@@ -38,7 +38,7 @@ CAMERA_FORMAT_DNG_XDRAW = 5
 
 **起始版本：** 26.0.0
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5--><!--Device-CameraFormat-CAMERA_FORMAT_DNG_XDRAW = 5-End-->
 
@@ -54,7 +54,7 @@ HEIF格式的图片。
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003--><!--Device-CameraFormat-CAMERA_FORMAT_HEIC = 2003-End-->
 
@@ -70,7 +70,7 @@ JPEG格式的图片。
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000--><!--Device-CameraFormat-CAMERA_FORMAT_JPEG = 2000-End-->
 
@@ -86,7 +86,7 @@ RGBA_8888格式的图片。
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3--><!--Device-CameraFormat-CAMERA_FORMAT_RGBA_8888 = 3-End-->
 
@@ -102,7 +102,7 @@ YCBCR_P010格式的图片。
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010--><!--Device-CameraFormat-CAMERA_FORMAT_YCBCR_P010-End-->
 
@@ -118,7 +118,7 @@ YCRCB_P010格式的图片。
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002--><!--Device-CameraFormat-CAMERA_FORMAT_YCRCB_P010 = 2002-End-->
 
@@ -134,7 +134,7 @@ YUV_420_SP格式的图片，对应为NV21格式的图片。
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003--><!--Device-CameraFormat-CAMERA_FORMAT_YUV_420_SP = 1003-End-->
 

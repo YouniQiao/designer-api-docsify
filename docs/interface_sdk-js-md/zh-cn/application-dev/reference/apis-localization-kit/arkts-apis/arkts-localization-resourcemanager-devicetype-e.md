@@ -24,7 +24,7 @@ DEVICE_TYPE_2IN1 = 0x07
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07--><!--Device-DeviceType-DEVICE_TYPE_2IN1 = 0x07-End-->
 
@@ -40,7 +40,7 @@ DEVICE_TYPE_CAR = 0x02
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_CAR = 0x02--><!--Device-DeviceType-DEVICE_TYPE_CAR = 0x02-End-->
 
@@ -54,7 +54,7 @@ DEVICE_TYPE_PC = 0x03
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_PC = 0x03--><!--Device-DeviceType-DEVICE_TYPE_PC = 0x03-End-->
 
@@ -70,7 +70,7 @@ DEVICE_TYPE_PHONE = 0x00
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_PHONE = 0x00--><!--Device-DeviceType-DEVICE_TYPE_PHONE = 0x00-End-->
 
@@ -86,7 +86,7 @@ DEVICE_TYPE_TABLET = 0x01
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01--><!--Device-DeviceType-DEVICE_TYPE_TABLET = 0x01-End-->
 
@@ -102,7 +102,7 @@ DEVICE_TYPE_TV = 0x04
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_TV = 0x04--><!--Device-DeviceType-DEVICE_TYPE_TV = 0x04-End-->
 
@@ -118,7 +118,7 @@ DEVICE_TYPE_WEARABLE = 0x06
 
 **起始版本：** 6
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06--><!--Device-DeviceType-DEVICE_TYPE_WEARABLE = 0x06-End-->
 

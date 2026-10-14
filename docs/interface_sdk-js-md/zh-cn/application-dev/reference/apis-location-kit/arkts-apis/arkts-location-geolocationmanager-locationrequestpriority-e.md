@@ -24,7 +24,7 @@ ACCURACY = 0x201
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestPriority-ACCURACY = 0x201--><!--Device-LocationRequestPriority-ACCURACY = 0x201-End-->
 
@@ -42,7 +42,7 @@ FIRST_FIX = 0x203
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestPriority-FIRST_FIX = 0x203--><!--Device-LocationRequestPriority-FIRST_FIX = 0x203-End-->
 
@@ -60,7 +60,7 @@ LOW_POWER = 0x202
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestPriority-LOW_POWER = 0x202--><!--Device-LocationRequestPriority-LOW_POWER = 0x202-End-->
 
@@ -76,7 +76,7 @@ UNSET = 0x200
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-LocationRequestPriority-UNSET = 0x200--><!--Device-LocationRequestPriority-UNSET = 0x200-End-->
 

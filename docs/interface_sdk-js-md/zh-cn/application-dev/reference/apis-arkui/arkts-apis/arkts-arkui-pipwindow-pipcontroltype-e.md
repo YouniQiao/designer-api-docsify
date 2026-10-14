@@ -22,7 +22,7 @@ CAMERA_SWITCH = 7
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-CAMERA_SWITCH = 7--><!--Device-PiPControlType-CAMERA_SWITCH = 7-End-->
 
@@ -38,7 +38,7 @@ FAST_BACKWARD = 4
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-FAST_BACKWARD = 4--><!--Device-PiPControlType-FAST_BACKWARD = 4-End-->
 
@@ -54,7 +54,7 @@ FAST_FORWARD = 3
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-FAST_FORWARD = 3--><!--Device-PiPControlType-FAST_FORWARD = 3-End-->
 
@@ -70,7 +70,7 @@ HANG_UP_BUTTON = 5
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-HANG_UP_BUTTON = 5--><!--Device-PiPControlType-HANG_UP_BUTTON = 5-End-->
 
@@ -86,7 +86,7 @@ MICROPHONE_SWITCH = 6
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-MICROPHONE_SWITCH = 6--><!--Device-PiPControlType-MICROPHONE_SWITCH = 6-End-->
 
@@ -102,7 +102,7 @@ MUTE_SWITCH = 8
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-MUTE_SWITCH = 8--><!--Device-PiPControlType-MUTE_SWITCH = 8-End-->
 
@@ -118,7 +118,7 @@ VIDEO_NEXT = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-VIDEO_NEXT = 2--><!--Device-PiPControlType-VIDEO_NEXT = 2-End-->
 
@@ -134,7 +134,7 @@ VIDEO_PLAY_PAUSE = 0
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0--><!--Device-PiPControlType-VIDEO_PLAY_PAUSE = 0-End-->
 
@@ -150,7 +150,7 @@ VIDEO_PREVIOUS = 1
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-PiPControlType-VIDEO_PREVIOUS = 1--><!--Device-PiPControlType-VIDEO_PREVIOUS = 1-End-->
 

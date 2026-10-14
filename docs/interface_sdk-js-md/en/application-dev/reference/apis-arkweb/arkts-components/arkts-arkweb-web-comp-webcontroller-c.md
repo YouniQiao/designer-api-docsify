@@ -169,7 +169,7 @@ struct WebComponent {
 backward()
 ```
 
-Goes backward by one page in the history stack. You are advised to call [accessBackward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
+Goes backward by one page in the history stack. You are advised to call [accessBackward<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessbackward) to check whether the current page can go backward before calling **backward**.
 
 **Since:** 8
 
@@ -292,7 +292,7 @@ struct WebComponent {
 forward()
 ```
 
-Goes forward by one page in the history stack. You are advised to call [accessForward&lt;sup&gt;9+&lt;/sup&gt;](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
+Goes forward by one page in the history stack. You are advised to call [accessForward<sup>9+</sup>](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#accessforward) to check whether the current page can go forward before calling **forward**.
 
 **Since:** 8
 

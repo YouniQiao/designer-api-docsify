@@ -146,7 +146,7 @@ once(type: string, listener: EventListener): void
 
 **废弃版本：** 9
 
-**替代接口：** once
+**替代接口：** [once](arkts-arkts-worker-threadworker-c.md#once)
 
 <!--Device-Worker-once(type: string, listener: EventListener): void--><!--Device-Worker-once(type: string, listener: EventListener): void-End-->
 

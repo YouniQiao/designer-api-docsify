@@ -22,7 +22,7 @@ MIFARE Ultralight类型。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT = 1-End-->
 
@@ -38,7 +38,7 @@ MIFARE UltralightC 类型。
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2--><!--Device-MifareUltralightType-TYPE_ULTRALIGHT_C = 2-End-->
 
@@ -54,7 +54,7 @@ TYPE_UNKNOWN = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-MifareUltralightType-TYPE_UNKNOWN = 0--><!--Device-MifareUltralightType-TYPE_UNKNOWN = 0-End-->
 

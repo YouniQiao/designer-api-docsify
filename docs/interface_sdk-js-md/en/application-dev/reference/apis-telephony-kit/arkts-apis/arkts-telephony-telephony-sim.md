@@ -24,43 +24,43 @@ import { sim } from '@kit.TelephonyKit';
 | [getActiveSimAccountInfoList](arkts-telephony-sim-getactivesimaccountinfolist-f.md#getactivesimaccountinfolist2) | Obtains the list of activated SIM card accounts. This API uses a promise to return the result. |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md#getcardtype1) | Obtains the type of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getCardType](arkts-telephony-sim-getcardtype-f.md#getcardtype2) | Obtains the type of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md) | Obtains the type of the SIM card in the specified slot. |
+| [getCardTypeSync](arkts-telephony-sim-getcardtypesync-f.md#getcardtypesync) | Obtains the type of the SIM card in the specified slot. |
 | [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md#getdefaultvoicesimid1) | Obtains the default slot ID of the SIM card that provides voice services. This API uses an asynchronous callback to return the result. |
 | [getDefaultVoiceSimId](arkts-telephony-sim-getdefaultvoicesimid-f.md#getdefaultvoicesimid2) | Obtains the default slot ID of the SIM card that provides voice services. This API uses a promise to return the result. |
 | [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md#getdefaultvoiceslotid1) | Obtains the default slot ID of the SIM card that provides voice services. This API uses an asynchronous callback to return the result. |
 | [getDefaultVoiceSlotId](arkts-telephony-sim-getdefaultvoiceslotid-f.md#getdefaultvoiceslotid2) | Obtains the default slot ID of the SIM card that provides voice services. This API uses a promise to return the result. |
 | [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md#getisocountrycodeforsim1) | Obtains the ISO country code of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getISOCountryCodeForSim](arkts-telephony-sim-getisocountrycodeforsim-f.md#getisocountrycodeforsim2) | Obtains the ISO country code of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md) | Obtains the ISO country code of the SIM card in the specified slot. |
-| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md) | Obtains the number of card slots. |
+| [getISOCountryCodeForSimSync](arkts-telephony-sim-getisocountrycodeforsimsync-f.md#getisocountrycodeforsimsync) | Obtains the ISO country code of the SIM card in the specified slot. |
+| [getMaxSimCount](arkts-telephony-sim-getmaxsimcount-f.md#getmaxsimcount) | Obtains the number of card slots. |
 | [getOpKey](arkts-telephony-sim-getopkey-f.md#getopkey1) | Obtains the opkey of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getOpKey](arkts-telephony-sim-getopkey-f.md#getopkey2) | Obtains the opkey of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md) | Obtains the opkey of the SIM card in the specified slot. |
+| [getOpKeySync](arkts-telephony-sim-getopkeysync-f.md#getopkeysync) | Obtains the opkey of the SIM card in the specified slot. |
 | [getOpName](arkts-telephony-sim-getopname-f.md#getopname1) | Obtains the OpName of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getOpName](arkts-telephony-sim-getopname-f.md#getopname2) | Obtains the OpName of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md) | Obtains the OpName of the SIM card in the specified slot. |
+| [getOpNameSync](arkts-telephony-sim-getopnamesync-f.md#getopnamesync) | Obtains the OpName of the SIM card in the specified slot. |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo1) | Obtains SIM card account information. This API uses an asynchronous callback to return the result. |
 | [getSimAccountInfo](arkts-telephony-sim-getsimaccountinfo-f.md#getsimaccountinfo2) | Obtains SIM card account information. This API uses a promise to return the result. |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel1) | Checks the mapping between card slot IDs and SIM cards. |
 | [getSimLabel](arkts-telephony-sim-getsimlabel-f.md#getsimlabel2) | Obtains the SIM card label. This API uses a promise to return the result. |
-| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md) | Obtains the SIM card label based on the specified SIM card slot ID. |
+| [getSimLabelSync](arkts-telephony-sim-getsimlabelsync-f.md#getsimlabelsync) | Obtains the SIM card label based on the specified SIM card slot ID. |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric1) | Obtains the home public land mobile network (PLMN) ID of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getSimOperatorNumeric](arkts-telephony-sim-getsimoperatornumeric-f.md#getsimoperatornumeric2) | Obtains the home PLMN ID of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md) | Obtains the home PLMN ID of the SIM card in the specified slot. This API returns the result synchronously. |
+| [getSimOperatorNumericSync](arkts-telephony-sim-getsimoperatornumericsync-f.md#getsimoperatornumericsync) | Obtains the home PLMN ID of the SIM card in the specified slot. This API returns the result synchronously. |
 | [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn1) | Obtains the service provider name (SPN) of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getSimSpn](arkts-telephony-sim-getsimspn-f.md#getsimspn2) | Obtains the SPN of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md) | Obtains the SPN of the SIM card in the specified slot. This API returns the result synchronously. |
+| [getSimSpnSync](arkts-telephony-sim-getsimspnsync-f.md#getsimspnsync) | Obtains the SPN of the SIM card in the specified slot. This API returns the result synchronously. |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate1) | Obtains the state of the SIM card in the specified slot. This API uses an asynchronous callback to return the result. |
 | [getSimState](arkts-telephony-sim-getsimstate-f.md#getsimstate2) | Obtains the state of the SIM card in the specified slot. This API uses a promise to return the result. |
-| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md) | Obtains the state of the SIM card in the specified slot. |
+| [getSimStateSync](arkts-telephony-sim-getsimstatesync-f.md#getsimstatesync) | Obtains the state of the SIM card in the specified slot. |
 | [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md#hasoperatorprivileges1) | Checks whether the application (caller) has been granted the operator permission. This API uses an asynchronous callback to return the result. |
 | [hasOperatorPrivileges](arkts-telephony-sim-hasoperatorprivileges-f.md#hasoperatorprivileges2) | Checks whether the application (caller) has been granted the operator permission. This API uses a promise to return the result. |
 | [hasSimCard](arkts-telephony-sim-hassimcard-f.md#hassimcard1) | Checks whether the SIM card in the specified slot is installed. This API uses an asynchronous callback to return the result. |
 | [hasSimCard](arkts-telephony-sim-hassimcard-f.md#hassimcard2) | Checks whether the SIM card in the specified slot is installed. This API uses a promise to return the result. |
-| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md) | Checks whether the SIM card in the specified slot is installed. |
+| [hasSimCardSync](arkts-telephony-sim-hassimcardsync-f.md#hassimcardsync) | Checks whether the SIM card in the specified slot is installed. |
 | [isSimActive](arkts-telephony-sim-issimactive-f.md#issimactive1) | Checks whether the SIM card in the specified slot is activated. This API uses an asynchronous callback to return the result. |
 | [isSimActive](arkts-telephony-sim-issimactive-f.md#issimactive2) | Checks whether the SIM card in the specified slot is activated. This API uses a promise to return the result. |
-| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md) | Checks whether the SIM card in the specified slot is activated. |
+| [isSimActiveSync](arkts-telephony-sim-issimactivesync-f.md#issimactivesync) | Checks whether the SIM card in the specified slot is activated. |
 
 <!--Del-->
 ### Functions(System API)
@@ -93,7 +93,7 @@ import { sim } from '@kit.TelephonyKit';
 | [getShowName](arkts-telephony-sim-getshowname-f-sys.md#getshowname2) | Gets the name of the SIM card in the specified slot. |
 | [getShowNumber](arkts-telephony-sim-getshownumber-f-sys.md#getshownumber1) | Get the SIM card number of the specified card slot. |
 | [getShowNumber](arkts-telephony-sim-getshownumber-f-sys.md#getshownumber2) | Get the SIM card number of the specified card slot. |
-| [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md) | Performs SIM card authentication. |
+| [getSimAuthentication](arkts-telephony-sim-getsimauthentication-f-sys.md#getsimauthentication) | Performs SIM card authentication. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid11) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimGid1](arkts-telephony-sim-getsimgid1-f-sys.md#getsimgid12) | Obtains the Group Identifier Level 1 (GID1) of the SIM card in a specified slot. The GID1 is recorded in the EFGID1 file of the SIM card. |
 | [getSimIccId](arkts-telephony-sim-getsimiccid-f-sys.md#getsimiccid1) | Obtains the ICCID of the SIM card in a specified slot. |
@@ -104,7 +104,7 @@ import { sim } from '@kit.TelephonyKit';
 | [getVoiceMailIdentifier](arkts-telephony-sim-getvoicemailidentifier-f-sys.md#getvoicemailidentifier2) | Obtains the alpha identifier of the voice mailbox of the SIM card in a specified slot. |
 | [getVoiceMailNumber](arkts-telephony-sim-getvoicemailnumber-f-sys.md#getvoicemailnumber1) | Obtains the voice mailbox number of the SIM card in a specified slot. |
 | [getVoiceMailNumber](arkts-telephony-sim-getvoicemailnumber-f-sys.md#getvoicemailnumber2) | Obtains the voice mailbox number of the SIM card in a specified slot. |
-| [isOperatorSimCard](arkts-telephony-sim-isoperatorsimcard-f-sys.md) | Indicates whether the SIM card in a specified slot is a specified operator. |
+| [isOperatorSimCard](arkts-telephony-sim-isoperatorsimcard-f-sys.md#isoperatorsimcard) | Indicates whether the SIM card in a specified slot is a specified operator. |
 | [queryIccDiallingNumbers](arkts-telephony-sim-queryiccdiallingnumbers-f-sys.md#queryiccdiallingnumbers1) | Query dialing number information on SIM card. |
 | [queryIccDiallingNumbers](arkts-telephony-sim-queryiccdiallingnumbers-f-sys.md#queryiccdiallingnumbers2) | Query dialing number information on SIM card. |
 | [sendEnvelopeCmd](arkts-telephony-sim-sendenvelopecmd-f-sys.md#sendenvelopecmd1) | Send envelope command to SIM card. |
@@ -119,7 +119,7 @@ import { sim } from '@kit.TelephonyKit';
 | [setShowName](arkts-telephony-sim-setshowname-f-sys.md#setshowname2) | Set the SIM card display name of the specified card slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber1) | Set the SIM card number in the specified slot. |
 | [setShowNumber](arkts-telephony-sim-setshownumber-f-sys.md#setshownumber2) | Set the SIM card number in the specified slot. |
-| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md) | Set the SIM card labelIndex. |
+| [setSimLabelIndex](arkts-telephony-sim-setsimlabelindex-f-sys.md#setsimlabelindex) | Set the SIM card labelIndex. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo1) | Sets the voice mail information. |
 | [setVoiceMailInfo](arkts-telephony-sim-setvoicemailinfo-f-sys.md#setvoicemailinfo2) | Sets the voice mail information. |
 | [unlockPin](arkts-telephony-sim-unlockpin-f-sys.md#unlockpin1) | Unlock the SIM card password of the specified card slot. |

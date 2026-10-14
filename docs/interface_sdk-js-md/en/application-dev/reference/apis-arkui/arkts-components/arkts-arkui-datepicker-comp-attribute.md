@@ -8,7 +8,7 @@ In addition to the [universal attributes](arkts-arkui-common-comp.md), the follo
 
 In addition to the [universal events](arkts-arkui-common-comp.md), the following events are supported.
 
-@extends CommonMethod [since 8 - 10] @extends CommonMethod&lt;DatePickerAttribute&gt; [since 11]
+@extends CommonMethod [since 8 - 10] @extends CommonMethod<DatePickerAttribute> [since 11]
 
 **Inheritance/Implementation:** DatePickerAttribute extends CommonMethod&lt;DatePickerAttribute&gt;
 
@@ -100,7 +100,7 @@ Sets the text style for edge items (the second item above or below the selected 
 disappearTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text style for edge items (the second item above or below the selected item). Compared to [disappearTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#disappeartextstyle1), this API supports the **undefined** type for the **style** parameter.
+Sets the text style for edge items (the second item above or below the selected item). Compared to [disappearTextStyle<sup>10+</sup>](#disappeartextstyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -238,7 +238,7 @@ Triggered when the options are completely settled at the selected position after
 onDateChange(callback: Optional<Callback<Date>>)
 ```
 
-Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. Compared to [onDateChange&lt;sup&gt;10+&lt;/sup&gt;](#ondatechange1), this API supports the **undefined** type for the **callback** parameter.
+Triggered when the date picker snaps to the selected item. This event cannot be triggered by two-way bound state variables. Compared to [onDateChange<sup>10+</sup>](#ondatechange1), this API supports the **undefined** type for the **callback** parameter.
 
 > **NOTE:** 
 > 
@@ -294,7 +294,7 @@ Sets the text style for the selected item.
 selectedTextStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text style for the selected item. Compared to [selectedTextStyle&lt;sup&gt;10+&lt;/sup&gt;](#selectedtextstyle1), this API supports the **undefined** type for the **style** parameter.
+Sets the text style for the selected item. Compared to [selectedTextStyle<sup>10+</sup>](#selectedtextstyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 
@@ -346,7 +346,7 @@ Sets the text style for candidate items (the first item immediately above or bel
 textStyle(style: Optional<PickerTextStyle>)
 ```
 
-Sets the text style for candidate items (the first item immediately above or below the selected item). Compared to [textStyle&lt;sup&gt;10+&lt;/sup&gt;](#textstyle1), this API supports the **undefined** type for the **style** parameter.
+Sets the text style for candidate items (the first item immediately above or below the selected item). Compared to [textStyle<sup>10+</sup>](#textstyle1), this API supports the **undefined** type for the **style** parameter.
 
 **Since:** 18
 

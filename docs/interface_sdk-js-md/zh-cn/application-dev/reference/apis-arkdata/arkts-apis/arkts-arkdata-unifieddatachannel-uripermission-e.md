@@ -50,7 +50,7 @@ NONE = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UriPermission-NONE = 0--><!--Device-UriPermission-NONE = 0-End-->
 
@@ -68,7 +68,7 @@ PERSIST = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UriPermission-PERSIST = 3--><!--Device-UriPermission-PERSIST = 3-End-->
 
@@ -86,7 +86,7 @@ READ = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UriPermission-READ = 1--><!--Device-UriPermission-READ = 1-End-->
 
@@ -104,7 +104,7 @@ WRITE = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.0.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-UriPermission-WRITE = 2--><!--Device-UriPermission-WRITE = 2-End-->
 

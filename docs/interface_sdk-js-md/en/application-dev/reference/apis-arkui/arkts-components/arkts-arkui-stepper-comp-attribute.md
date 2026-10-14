@@ -6,7 +6,7 @@ declare class StepperAttribute extends CommonMethod<StepperAttribute>
 
 Defines the stepper attribute functions
 
-@extends CommonMethod&lt;StepperAttribute&gt;
+@extends CommonMethod<StepperAttribute>
 
 **Inheritance/Implementation:** StepperAttribute extends CommonMethod&lt;StepperAttribute&gt;
 

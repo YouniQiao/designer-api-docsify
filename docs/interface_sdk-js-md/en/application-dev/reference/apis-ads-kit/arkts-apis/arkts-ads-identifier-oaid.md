@@ -34,5 +34,5 @@ import { identifier } from '@kit.AdsKit';
 
 | Name | Description |
 | --- | --- |
-| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md) | Resets the OAID. |
+| [resetOAID](arkts-ads-identifier-resetoaid-f-sys.md#resetoaid) | Resets the OAID. |
 <!--DelEnd-->

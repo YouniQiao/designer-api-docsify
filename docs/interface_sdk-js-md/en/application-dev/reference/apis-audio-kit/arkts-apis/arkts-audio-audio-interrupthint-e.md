@@ -28,7 +28,7 @@ A hint is displayed, indicating that audio ducking starts and the audio is playe
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_DUCK = 4--><!--Device-InterruptHint-INTERRUPT_HINT_DUCK = 4-End-->
 
@@ -58,7 +58,7 @@ None.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_NONE = 0--><!--Device-InterruptHint-INTERRUPT_HINT_NONE = 0-End-->
 
@@ -76,7 +76,7 @@ When the audio focus is available, the **INTERRUPT_HINT_RESUME** event is receiv
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_PAUSE = 2--><!--Device-InterruptHint-INTERRUPT_HINT_PAUSE = 2-End-->
 
@@ -94,7 +94,7 @@ This operation cannot be forcibly performed by the system, and the corresponding
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_RESUME = 1--><!--Device-InterruptHint-INTERRUPT_HINT_RESUME = 1-End-->
 
@@ -110,7 +110,7 @@ A hint is displayed, indicating that the audio stream stops and the audio focus 
 
 **Since:** 7
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_STOP = 3--><!--Device-InterruptHint-INTERRUPT_HINT_STOP = 3-End-->
 
@@ -126,7 +126,7 @@ A hint is displayed, indicating that audio ducking ends and the audio is played 
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-InterruptHint-INTERRUPT_HINT_UNDUCK = 5--><!--Device-InterruptHint-INTERRUPT_HINT_UNDUCK = 5-End-->
 

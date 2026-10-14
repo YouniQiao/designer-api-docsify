@@ -528,6 +528,9 @@
   - [ExecuteResult](arkts-ability-insightintent-executeresult-i.md)
   <!--Del-->
   - [ExecuteResult（系统接口）](arkts-ability-insightintent-executeresult-i-sys.md)<!--DelEnd-->
+  - [FileEntity](arkts-ability-insightintent-fileentity-i.md)
+  <!--Del-->
+  - [FileEntity（系统接口）](arkts-ability-insightintent-fileentity-i-sys.md)<!--DelEnd-->
   - [IntentEntity](arkts-ability-insightintent-intententity-i.md)
   - [IntentResult](arkts-ability-insightintent-intentresult-i.md)
   <!--Del-->
@@ -802,6 +805,12 @@
   - [updateAgentCard（系统接口）](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
 - [@ohos.app.agent.AgentUIExtensionAbility（带界面的智能体扩展组件）](arkts-ability-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
+- [@ohos.app.agent.taskManager](arkts-ability-app-agent-taskmanager.md)
+  <!--Del-->
+  - [finishTask（系统接口）](arkts-ability-taskmanager-finishtask-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startTask（系统接口）](arkts-ability-taskmanager-starttask-f-sys.md)<!--DelEnd-->
+  - [TaskPriority](arkts-ability-taskmanager-taskpriority-e.md)
 - [@ohos.app.appstartup.StartupConfig（启动框架配置信息）](arkts-ability-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
 - [@ohos.app.appstartup.StartupConfigEntry（启动框架配置）](arkts-ability-app-appstartup-startupconfigentry.md)

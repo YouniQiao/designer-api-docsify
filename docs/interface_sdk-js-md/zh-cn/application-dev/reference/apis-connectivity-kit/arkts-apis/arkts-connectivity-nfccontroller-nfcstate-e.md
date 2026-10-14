@@ -22,7 +22,7 @@ NFC已关闭状态。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NfcState-STATE_OFF = 1--><!--Device-NfcState-STATE_OFF = 1-End-->
 
@@ -38,7 +38,7 @@ NFC已打开状态。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NfcState-STATE_ON = 3--><!--Device-NfcState-STATE_ON = 3-End-->
 
@@ -54,7 +54,7 @@ NFC正在关闭状态。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NfcState-STATE_TURNING_OFF = 4--><!--Device-NfcState-STATE_TURNING_OFF = 4-End-->
 
@@ -70,7 +70,7 @@ NFC正在打开状态。
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NfcState-STATE_TURNING_ON = 2--><!--Device-NfcState-STATE_TURNING_ON = 2-End-->
 

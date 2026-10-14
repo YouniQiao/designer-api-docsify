@@ -6,8 +6,6 @@ export enum SuppState
 
 The state of the supplicant enumeration.
 
-@enum { int }
-
 **Since:** 9
 
 <!--Device-wifiManager-export enum SuppState--><!--Device-wifiManager-export enum SuppState-End-->

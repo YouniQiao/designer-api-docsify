@@ -439,7 +439,7 @@ The default curve for the animation is [interpolatingSpring](../arkts-apis/arkts
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Animation duration for switching between child components.<br>Default value: **400**&lt;br/ &gt;Unit: ms<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
+| value | number | Yes | Animation duration for switching between child components.<br>Default value: **400**<br/ >Unit: ms<br>Value range: [0, +∞). If a value less than 0 is set, the default value is used. |
 
 ## effectMode
 

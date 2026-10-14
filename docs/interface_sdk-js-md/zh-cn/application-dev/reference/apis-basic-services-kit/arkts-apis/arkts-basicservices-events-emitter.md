@@ -40,7 +40,7 @@ import { emitter } from '@kit.BasicServicesKit';
 | [emit](arkts-basicservices-emitter-emit-f.md#emit5) | 发送指定事件。 |
 | [emit](arkts-basicservices-emitter-emit-f.md#emit7) | 发送指定优先级事件。 |
 | [emit](arkts-basicservices-emitter-emit-f.md#emit10) | 发送指定优先级事件。 |
-| [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md) | 获取指定事件的订阅数。 |
+| [getListenerCount](arkts-basicservices-emitter-getlistenercount-f.md#getlistenercount) | 获取指定事件的订阅数。 |
 | [off](arkts-basicservices-emitter-off-f.md#off1) | 取消事件ID为eventId的所有订阅。 |
 | [off](arkts-basicservices-emitter-off-f.md#off2) | 取消事件ID为eventId的所有订阅。 |
 | [off](arkts-basicservices-emitter-off-f.md#off3) | 取消事件ID为eventId且回调处理函数为callback的订阅。仅当已使用[on](arkts-basicservices-emitter-on-f.md#on1)或[once](arkts-basicservices-emitter-once-f.md#once1)接口订阅callback时，该接口才生效。 |

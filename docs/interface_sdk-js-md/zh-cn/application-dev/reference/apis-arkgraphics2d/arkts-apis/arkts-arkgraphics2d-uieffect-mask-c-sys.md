@@ -601,8 +601,7 @@ let mask = uiEffect.Mask.createRippleMask({x: 0.5, y: 1.0}, 0.5, 0.3, 0.0);
 ## createSweepRefractionMask
 
 ```TypeScript
-static createSweepRefractionMask(param: SweepRefractionParam,
-      options?: SweepRefractionMaskOptions): Mask
+static createSweepRefractionMask(param: SweepRefractionParam, options?: SweepRefractionMaskOptions): Mask
 ```
 
 创建一个模拟棱镜色散效果的扫光折射遮罩 Mask 实例。该遮罩会在组件上生成一条带有颜色分离效果的扫光光带。
@@ -611,7 +610,7 @@ static createSweepRefractionMask(param: SweepRefractionParam,
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam,      options?: SweepRefractionMaskOptions): Mask--><!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam,      options?: SweepRefractionMaskOptions): Mask-End-->
+<!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam, options?: SweepRefractionMaskOptions): Mask--><!--Device-Mask-static createSweepRefractionMask(param: SweepRefractionParam, options?: SweepRefractionMaskOptions): Mask-End-->
 
 **系统能力：** SystemCapability.Graphics.Drawing
 

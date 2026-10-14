@@ -4,7 +4,7 @@
 enum Phase2Method
 ```
 
-Wi-Fi phase 2 method. @enum { int }
+Wi-Fi phase 2 method.
 
 **Since:** 10
 

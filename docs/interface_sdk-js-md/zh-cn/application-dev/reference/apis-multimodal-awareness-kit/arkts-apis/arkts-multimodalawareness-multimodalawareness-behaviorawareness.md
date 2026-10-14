@@ -4,8 +4,6 @@
 
 **起始版本：** 26.2.0
 
-**模型约束：** 此接口仅可在Stage模型下使用。
-
 <!--Device-unnamed-declare namespace behaviorAwareness--><!--Device-unnamed-declare namespace behaviorAwareness-End-->
 
 **系统能力：** SystemCapability.MultimodalAwareness.DeviceStatus
@@ -25,9 +23,9 @@ import { behaviorAwareness } from '@kit.MultimodalAwarenessKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [offPerception](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md) | 取消订阅。业务侧向 MSDP 注销订阅关系。 |
-| [onPerception](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md) | 发起订阅。业务侧向 MSDP 注册订阅关系，同时注册感知事件回调。 |
-| [submitFeedback](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md) | 提交用户反馈。业务侧将用户对感知事件的反馈传递给 MSDP。 |
+| [offPerception](arkts-multimodalawareness-behaviorawareness-offperception-f-sys.md#offperception) | 取消订阅。业务侧向 MSDP 注销订阅关系。 |
+| [onPerception](arkts-multimodalawareness-behaviorawareness-onperception-f-sys.md#onperception) | 发起订阅。业务侧向 MSDP 注册订阅关系，同时注册感知事件回调。 |
+| [submitFeedback](arkts-multimodalawareness-behaviorawareness-submitfeedback-f-sys.md#submitfeedback) | 提交用户反馈。业务侧将用户对感知事件的反馈传递给 MSDP。 |
 <!--DelEnd-->
 
 <!--Del-->

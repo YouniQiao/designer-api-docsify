@@ -449,7 +449,7 @@ The following table lists the enum values and their corresponding connection sta
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Support-COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'--><!--Device-Support-COMMON_EVENT_CONNECTIVITY_CHANGE = 'usual.event.CONNECTIVITY_CHANGE'-End-->
 
@@ -467,7 +467,7 @@ After the DataShare service is started, the event notification service is trigge
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'--><!--Device-Support-COMMON_EVENT_DATA_SHARE_READY = 'usual.event.DATA_SHARE_READY'-End-->
 
@@ -629,7 +629,7 @@ APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccoun
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGIN = 'common.event.DISTRIBUTED_ACCOUNT_LOGIN'-End-->
 
@@ -649,7 +649,7 @@ APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccoun
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOFF = 'common.event.DISTRIBUTED_ACCOUNT_LOGOFF'-End-->
 
@@ -669,7 +669,7 @@ APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccoun
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_LOGOUT = 'common.event.DISTRIBUTED_ACCOUNT_LOGOUT'-End-->
 
@@ -689,7 +689,7 @@ APIs related to this event: **setOsAccountDistributedInfo** and **updateOsAccoun
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID'--><!--Device-Support-COMMON_EVENT_DISTRIBUTED_ACCOUNT_TOKEN_INVALID = 'common.event.DISTRIBUTED_ACCOUNT_TOKEN_INVALID'-End-->
 
@@ -1131,7 +1131,7 @@ When the minor mode is disabled on the device, the event notification service is
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'--><!--Device-Support-COMMON_EVENT_MINORSMODE_OFF = 'usual.event.MINORSMODE_OFF'-End-->
 
@@ -1149,7 +1149,7 @@ When the minor mode is enabled on the device, the event notification service is 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-Support-COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'--><!--Device-Support-COMMON_EVENT_MINORSMODE_ON = 'usual.event.MINORSMODE_ON'-End-->
 
@@ -1583,7 +1583,7 @@ When the screen is locked, the event notification service is triggered to publis
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'--><!--Device-Support-COMMON_EVENT_SCREEN_LOCKED = 'usual.event.SCREEN_LOCKED'-End-->
 
@@ -1633,7 +1633,7 @@ When the screen is unlocked, the event notification service is triggered to publ
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Support-COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'--><!--Device-Support-COMMON_EVENT_SCREEN_UNLOCKED = 'usual.event.SCREEN_UNLOCKED'-End-->
 
@@ -1701,7 +1701,7 @@ To receive this common event, your application must have the ohos.permission.MAN
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'--><!--Device-Support-COMMON_EVENT_SKILL_CHANGED = 'usual.event.SKILL_CHANGED'-End-->
 
@@ -1737,7 +1737,7 @@ When any of the following actions is performed, the event notification service i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'--><!--Device-Support-COMMON_EVENT_SPLIT_SCREEN = 'common.event.SPLIT_SCREEN'-End-->
 

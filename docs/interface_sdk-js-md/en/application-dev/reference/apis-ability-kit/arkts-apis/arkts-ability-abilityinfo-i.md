@@ -60,7 +60,7 @@ Bundle name.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly bundleName: string--><!--Device-AbilityInfo-readonly bundleName: string-End-->
 
@@ -78,7 +78,7 @@ Ability description, which describes the content and functions of the current ab
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly description: string--><!--Device-AbilityInfo-readonly description: string-End-->
 
@@ -98,7 +98,7 @@ Description resource ID of the ability, automatically generated during compilati
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly descriptionId: long--><!--Device-AbilityInfo-readonly descriptionId: long-End-->
 
@@ -116,7 +116,7 @@ Device types supported by the ability. The value is derived from that of [device
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly deviceTypes: Array<string>--><!--Device-AbilityInfo-readonly deviceTypes: Array<string>-End-->
 
@@ -134,7 +134,7 @@ Whether the ability is available, that is, whether it can be started or queried.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly enabled: boolean--><!--Device-AbilityInfo-readonly enabled: boolean-End-->
 
@@ -154,7 +154,7 @@ Note: This field does not take effect.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbilityInfo-readonly excludeFromDock: boolean--><!--Device-AbilityInfo-readonly excludeFromDock: boolean-End-->
 
@@ -172,7 +172,7 @@ Whether the ability can be launched by other applications. **true** if the abili
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly exported: boolean--><!--Device-AbilityInfo-readonly exported: boolean-End-->
 
@@ -190,7 +190,7 @@ Resource descriptor of the ability icon. It corresponds to the **icon** field un
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly icon: string--><!--Device-AbilityInfo-readonly icon: string-End-->
 
@@ -208,7 +208,7 @@ Resource ID of the ability icon. It is automatically generated during compilatio
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly iconId: long--><!--Device-AbilityInfo-readonly iconId: long-End-->
 
@@ -228,7 +228,7 @@ Note: Starting from API version 20, if [bundleManager.getAbilityInfo](arkts-abil
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly label: string--><!--Device-AbilityInfo-readonly label: string-End-->
 
@@ -246,7 +246,7 @@ Resource ID of the ability label. It is automatically generated during compilati
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly labelId: long--><!--Device-AbilityInfo-readonly labelId: long-End-->
 
@@ -266,7 +266,7 @@ Launch mode of the ability, indicating whether to start with multiple instances 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType--><!--Device-AbilityInfo-readonly launchType: bundleManager.LaunchType-End-->
 
@@ -284,7 +284,7 @@ Metadata of the ability. You can configure the system-defined parameters to use 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly metadata: Array<Metadata>--><!--Device-AbilityInfo-readonly metadata: Array<Metadata>-End-->
 
@@ -302,7 +302,7 @@ Module name to which the ability belongs.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly moduleName: string--><!--Device-AbilityInfo-readonly moduleName: string-End-->
 
@@ -322,7 +322,7 @@ Ability name, corresponding to the name field configured under abilities in [mod
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly name: string--><!--Device-AbilityInfo-readonly name: string-End-->
 
@@ -342,7 +342,7 @@ Display mode of the ability. Derived from the orientation field configured under
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation--><!--Device-AbilityInfo-readonly orientation: bundleManager.DisplayOrientation-End-->
 
@@ -360,7 +360,7 @@ Resource ID of the ability display mode. It is derived from the **orientation** 
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 14.
+**Atomic service API:** This API can be used in atomic services since API version 14.
 
 <!--Device-AbilityInfo-readonly orientationId: long--><!--Device-AbilityInfo-readonly orientationId: long-End-->
 
@@ -378,7 +378,7 @@ Array of permissions that other applications must request to start or access thi
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly permissions: Array<string>--><!--Device-AbilityInfo-readonly permissions: Array<string>-End-->
 
@@ -396,7 +396,7 @@ Process name of the ability.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly process: string--><!--Device-AbilityInfo-readonly process: string-End-->
 
@@ -434,7 +434,7 @@ Skills information of the ability. It represents the feature set of [wants](../.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AbilityInfo-readonly skills: Array<Skill>--><!--Device-AbilityInfo-readonly skills: Array<Skill>-End-->
 
@@ -452,7 +452,7 @@ Window modes supported by the ability.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>--><!--Device-AbilityInfo-readonly supportWindowModes: Array<bundleManager.SupportWindowMode>-End-->
 
@@ -510,7 +510,7 @@ Window size.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AbilityInfo-readonly windowSize: WindowSize--><!--Device-AbilityInfo-readonly windowSize: WindowSize-End-->
 

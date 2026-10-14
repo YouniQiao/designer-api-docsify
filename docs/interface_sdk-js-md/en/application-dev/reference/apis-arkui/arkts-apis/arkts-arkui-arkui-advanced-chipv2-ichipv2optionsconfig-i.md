@@ -584,7 +584,7 @@ Size of **ChipV2**.
 
 Default value: **ChipV2Size.NORMAL**
 
-The **SizeT&lt;LengthMetrics&gt;** type does not support percentage setting. If an invalid value is passed, the default value will be used.
+The **SizeT<LengthMetrics>** type does not support percentage setting. If an invalid value is passed, the default value will be used.
 
 **NOTE:** 
 

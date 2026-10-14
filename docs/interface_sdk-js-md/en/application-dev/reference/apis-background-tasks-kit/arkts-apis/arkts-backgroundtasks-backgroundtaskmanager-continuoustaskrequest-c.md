@@ -168,7 +168,7 @@ Checks whether **BackgroundTaskMode** specified in [ContinuousTaskRequest](arkts
 
 **Required permissions:** ohos.permission.KEEP_BACKGROUND_RUNNING
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-isModeSupported(): boolean--><!--Device-ContinuousTaskRequest-isModeSupported(): boolean-End-->
 
@@ -355,7 +355,7 @@ Note: The main type must match the subtype.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskModes(): BackgroundTaskMode[]-End-->
 
@@ -373,7 +373,7 @@ Note: The main type must match the subtype.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskModes(value: BackgroundTaskMode[])-End-->
 
@@ -393,7 +393,7 @@ Note: The main type must match the subtype.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]--><!--Device-ContinuousTaskRequest-get backgroundTaskSubmodes(): BackgroundTaskSubmode[]-End-->
 
@@ -411,7 +411,7 @@ Note: The main type must match the subtype.
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])--><!--Device-ContinuousTaskRequest-set backgroundTaskSubmodes(value: BackgroundTaskSubmode[])-End-->
 
@@ -493,7 +493,7 @@ Notification parameters, which are used to specify the target page that is redir
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent--><!--Device-ContinuousTaskRequest-get wantAgent(): WantAgent-End-->
 
@@ -509,7 +509,7 @@ Notification parameters, which are used to specify the target page that is redir
 
 **Since:** 21
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)--><!--Device-ContinuousTaskRequest-set wantAgent(value: WantAgent)-End-->
 

@@ -40,10 +40,10 @@ import { taskpool } from '@kit.ArkTS';
 | [executeDelayed](arkts-arkts-taskpool-executedelayed-f.md#executedelayed2) | 延时执行泛型任务，使用Promise异步回调。executeDelayed任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。 |
 | [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically1) | 周期任务每隔period时长执行一次。当前执行模式支持设置任务优先级，可通过cancel取消任务。 |
 | [executePeriodically](arkts-arkts-taskpool-executeperiodically-f.md#executeperiodically2) | 周期执行泛型任务，使用Promise异步回调。executePeriodically任务的类型校验与GenericsTask的构造类型相关联，参数类型和返回值类型需与new GenericsTask时指定的类型保持一致。 |
-| [getTask](arkts-arkts-taskpool-gettask-f.md) | 通过taskId或taskId与taskName获取对应的Task实例。 |
-| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md) | 获取任务池的线程信息和任务信息。 |
-| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md) | 检查函数是否为并发函数。 |
-| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md) | 终止任务池中的长时任务，在长时任务执行完成后调用。终止后，执行长时任务的线程可能会被回收。 |
+| [getTask](arkts-arkts-taskpool-gettask-f.md#gettask) | 通过taskId或taskId与taskName获取对应的Task实例。 |
+| [getTaskPoolInfo](arkts-arkts-taskpool-gettaskpoolinfo-f.md#gettaskpoolinfo) | 获取任务池的线程信息和任务信息。 |
+| [isConcurrent](arkts-arkts-taskpool-isconcurrent-f.md#isconcurrent) | 检查函数是否为并发函数。 |
+| [terminateTask](arkts-arkts-taskpool-terminatetask-f.md#terminatetask) | 终止任务池中的长时任务，在长时任务执行完成后调用。终止后，执行长时任务的线程可能会被回收。 |
 
 ### 类
 

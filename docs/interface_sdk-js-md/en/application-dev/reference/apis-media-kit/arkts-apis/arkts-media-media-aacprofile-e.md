@@ -22,7 +22,7 @@ Standard AAC High Efficiency profile.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AacProfile-AAC_HE = 1--><!--Device-AacProfile-AAC_HE = 1-End-->
 
@@ -38,7 +38,7 @@ AAC High Efficiency Version 2 profile (also known as HE-AAC v2).
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AacProfile-AAC_HE_V2 = 2--><!--Device-AacProfile-AAC_HE_V2 = 2-End-->
 
@@ -54,7 +54,7 @@ Standard AAC Low Complexity profile.
 
 **Since:** 22
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-AacProfile-AAC_LC = 0--><!--Device-AacProfile-AAC_LC = 0-End-->
 

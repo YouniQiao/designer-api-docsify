@@ -19,7 +19,7 @@ function getKeyProperties(keyAlias: string, options: HuksOptions, callback: Asyn
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties1)
+> [huks.getKeyItemProperties<sup>9+</sup>](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties1)
 > 替代。
 
 **起始版本：** 8
@@ -68,7 +68,7 @@ function getKeyProperties(keyAlias: string, options: HuksOptions): Promise<HuksR
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [huks.getKeyItemProperties&lt;sup&gt;9+&lt;/sup&gt;](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties2)
+> [huks.getKeyItemProperties<sup>9+</sup>](arkts-universalkeystore-huks-getkeyitemproperties-f.md#getkeyitemproperties2)
 > 替代。
 
 **起始版本：** 8

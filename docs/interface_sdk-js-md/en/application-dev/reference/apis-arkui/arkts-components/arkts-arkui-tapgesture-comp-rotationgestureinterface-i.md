@@ -22,7 +22,7 @@ interface RotationGestureInterface extends GestureInterface<RotationGestureInter
 (value?: { fingers?: number; angle?: number }): RotationGestureInterface
 ```
 
-Sets the parameters for the rotation gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
+Sets the parameters for the rotation gesture. Inherits from [GestureInterface<T>](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
 
 **Since:** 7
 

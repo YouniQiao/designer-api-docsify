@@ -124,7 +124,7 @@ Voice assistant broadcast usage for system app.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27--><!--Device-StreamUsage-STREAM_USAGE_VOICE_ASSISTANT_SYSTEM = 27-End-->
 

@@ -10,7 +10,7 @@ Enumerates the connection states with a remote device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-dataTransfer-type ConnectionState = nearlinkConstant.ConnectionState--><!--Device-dataTransfer-type ConnectionState = nearlinkConstant.ConnectionState-End-->
 

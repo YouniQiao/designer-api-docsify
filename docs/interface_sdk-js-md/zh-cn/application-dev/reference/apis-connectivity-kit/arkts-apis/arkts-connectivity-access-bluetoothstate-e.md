@@ -22,7 +22,7 @@ STATE_BLE_ON = 5
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_BLE_ON = 5--><!--Device-BluetoothState-STATE_BLE_ON = 5-End-->
 
@@ -38,7 +38,7 @@ STATE_BLE_TURNING_OFF = 6
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6--><!--Device-BluetoothState-STATE_BLE_TURNING_OFF = 6-End-->
 
@@ -54,7 +54,7 @@ STATE_BLE_TURNING_ON = 4
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4--><!--Device-BluetoothState-STATE_BLE_TURNING_ON = 4-End-->
 
@@ -70,7 +70,7 @@ STATE_OFF = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_OFF = 0--><!--Device-BluetoothState-STATE_OFF = 0-End-->
 
@@ -86,7 +86,7 @@ STATE_ON = 2
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_ON = 2--><!--Device-BluetoothState-STATE_ON = 2-End-->
 
@@ -102,7 +102,7 @@ STATE_TURNING_OFF = 3
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_TURNING_OFF = 3--><!--Device-BluetoothState-STATE_TURNING_OFF = 3-End-->
 
@@ -118,7 +118,7 @@ STATE_TURNING_ON = 1
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BluetoothState-STATE_TURNING_ON = 1--><!--Device-BluetoothState-STATE_TURNING_ON = 1-End-->
 

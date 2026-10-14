@@ -3672,7 +3672,7 @@ Remove specified observer of specified type from the database.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the data change observer already registered. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array<string>}: the data change observer already registered. |
 
 **Error codes:**
 
@@ -3738,7 +3738,7 @@ Remove specified observer of specified type from the database.
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | indicates the event must be string 'dataChange'. |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | Yes | indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | No | {Array&lt;string&gt;}: the data change observer already registered. {Array&lt;ChangeInfo&gt;}: the change info already registered. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | No | {Array<string>}: the data change observer already registered. {Array<ChangeInfo>}: the change info already registered. |
 
 **Error codes:**
 
@@ -3952,7 +3952,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; | Yes | {Array<string>}: the observer of data change events in the distributed database. |
 
 **Error codes:**
 
@@ -4004,7 +4004,7 @@ Subscribes to data changes of this RDB store. The registered callback will be ca
 | --- | --- | --- | --- |
 | event | 'dataChange' | Yes | Indicates the event must be string 'dataChange'. |
 | type | [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md) | Yes | Indicates the subscription type, which is defined in [SubscribeType](arkts-arkdata-relationalstore-subscribetype-e.md). If its value is SUBSCRIBE_TYPE_REMOTE, ohos.permission.DISTRIBUTED_DATASYNC is required. |
-| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | Yes | {Array&lt;string&gt;}: the observer of data change events in the distributed database. {Array&lt;ChangeInfo&gt;}: The change info of data change events in the distributed database. |
+| observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;string&gt;&gt; &#124; [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;Array&lt;[ChangeInfo](arkts-arkdata-relationalstore-changeinfo-i.md)&gt;&gt; | Yes | {Array<string>}: the observer of data change events in the distributed database. {Array<ChangeInfo>}: The change info of data change events in the distributed database. |
 
 **Error codes:**
 
@@ -4039,7 +4039,7 @@ Registers an observer for the database.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| event | string | Yes | Event type, which must match the event type in emit. |
+| event | string | Yes | Event type, which must match the event type in [emit](#emit). |
 | interProcess | boolean | Yes | Indicates whether it is an interprocess subscription or an in-process subscription. |
 | observer | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | Yes | The observer of data change events in the database. |
 

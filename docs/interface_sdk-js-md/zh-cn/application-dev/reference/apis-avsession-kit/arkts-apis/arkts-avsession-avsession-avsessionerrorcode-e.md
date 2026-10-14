@@ -22,7 +22,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_INIT_FAILED = 6615001-End-->
 
@@ -38,7 +38,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_UNSPECIFIED = 6615000-End-->
 
@@ -54,7 +54,7 @@ ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_AUDIO_RENDERER_WRITE_FAILED = 6615002-End-->
 
@@ -70,7 +70,7 @@ ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_BEHIND_LIVE_WINDOW = 6611002-End-->
 
@@ -86,7 +86,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FAILED = 6614003-End-->
 
@@ -102,7 +102,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_EXCEEDS_CAPABILITIES = 6614004-End-->
 
@@ -118,7 +118,7 @@ ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_FORMAT_UNSUPPORTED = 6614005-End-->
 
@@ -134,7 +134,7 @@ ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_INIT_FAILED = 6614001-End-->
 
@@ -150,7 +150,7 @@ ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_QUERY_FAILED = 6614002-End-->
 
@@ -166,7 +166,7 @@ ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DECODING_UNSPECIFIED = 6614000-End-->
 
@@ -182,7 +182,7 @@ ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DEVICE_MISSING = 6611105-End-->
 
@@ -198,7 +198,7 @@ ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_CONTENT_ERROR = 6616003-End-->
 
@@ -214,7 +214,7 @@ ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DEVICE_REVOKED = 6616007-End-->
 
@@ -230,7 +230,7 @@ ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_DISALLOWED_OPERATION = 6616005-End-->
 
@@ -246,7 +246,7 @@ ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_ACQUISITION_FAILED = 6616004-End-->
 
@@ -262,7 +262,7 @@ ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_LICENSE_EXPIRED = 6616008-End-->
 
@@ -278,7 +278,7 @@ DRM处理密钥响应时发生错误。
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVIDE_KEY_RESPONSE_ERROR = 6616100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVIDE_KEY_RESPONSE_ERROR = 6616100-End-->
 
@@ -294,7 +294,7 @@ ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_PROVISIONING_FAILED = 6616002-End-->
 
@@ -310,7 +310,7 @@ ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SCHEME_UNSUPPORTED = 6616001-End-->
 
@@ -326,7 +326,7 @@ DRM系统中发生错误。
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SYSTEM_ERROR = 6616006--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_SYSTEM_ERROR = 6616006-End-->
 
@@ -342,7 +342,7 @@ ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_DRM_UNSPECIFIED = 6616000-End-->
 
@@ -358,7 +358,7 @@ ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_ILLEGAL_SEEK_TARGET = 6611102-End-->
 
@@ -374,7 +374,7 @@ ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_INVALID_PARAM = 6611106-End-->
 
@@ -390,7 +390,7 @@ HTTP服务器返回一个意外的HTTP响应状态码。
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_BAD_HTTP_STATUS = 6612004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_BAD_HTTP_STATUS = 6612004-End-->
 
@@ -406,7 +406,7 @@ ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CLEARTEXT_NOT_PERMITTED = 6612007-End-->
 
@@ -422,7 +422,7 @@ ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_BUSY = 6612102-End-->
 
@@ -438,7 +438,7 @@ ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_CONTENT_EXPIRED = 6612103-End-->
 
@@ -454,7 +454,7 @@ ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_EXHAUSTED_ALLOWED_USES = 6612106-End-->
 
@@ -470,7 +470,7 @@ ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_FILE_NOT_FOUND = 6612005-End-->
 
@@ -486,7 +486,7 @@ ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_INVALID_HTTP_CONTENT_TYPE = 6612003-End-->
 
@@ -502,7 +502,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_FAILED = 6612001-End-->
 
@@ -518,7 +518,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_CONNECTION_TIMEOUT = 6612002-End-->
 
@@ -534,7 +534,7 @@ ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NETWORK_PACKET_SENDING_FAILED = 6612107-End-->
 
@@ -550,7 +550,7 @@ ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_CONTENTS = 6612100-End-->
 
@@ -566,7 +566,7 @@ ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NO_PERMISSION = 6612006-End-->
 
@@ -582,7 +582,7 @@ ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_NOT_VERIFIED = 6612105-End-->
 
@@ -598,7 +598,7 @@ ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_ERROR = 6612101-End-->
 
@@ -614,7 +614,7 @@ ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_READ_POSITION_OUT_OF_RANGE = 6612008-End-->
 
@@ -630,7 +630,7 @@ ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_UNSPECIFIED = 6612000-End-->
 
@@ -646,7 +646,7 @@ ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_IO_USE_FORBIDDEN = 6612104-End-->
 
@@ -662,7 +662,7 @@ ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_NO_MEMORY = 6611107-End-->
 
@@ -678,7 +678,7 @@ ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_OPERATION_NOT_ALLOWED = 6611108-End-->
 
@@ -694,7 +694,7 @@ ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_MALFORMED = 6613001-End-->
 
@@ -710,7 +710,7 @@ ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_CONTAINER_UNSUPPORTED = 6613003-End-->
 
@@ -726,7 +726,7 @@ ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_MALFORMED = 6613002-End-->
 
@@ -742,7 +742,7 @@ ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_MANIFEST_UNSUPPORTED = 6613004-End-->
 
@@ -758,7 +758,7 @@ ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PARSING_UNSPECIFIED = 6613000-End-->
 
@@ -774,7 +774,7 @@ ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_MODE_UNSUPPORTED = 6611103-End-->
 
@@ -790,7 +790,7 @@ ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAY_SPEED_UNSUPPORTED = 6611104-End-->
 
@@ -806,7 +806,7 @@ ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_PLAYER_NOT_WORKING = 6611100-End-->
 
@@ -822,7 +822,7 @@ ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_REMOTE_ERROR = 6611001-End-->
 
@@ -838,7 +838,7 @@ ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_RUNTIME_CHECK_FAILED = 6611004-End-->
 
@@ -854,7 +854,7 @@ ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_SEEK_MODE_UNSUPPORTED = 6611101-End-->
 
@@ -870,7 +870,7 @@ ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_TIMEOUT = 6611003-End-->
 
@@ -886,7 +886,7 @@ ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000
 
 **起始版本：** 13
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本13开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本13开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000--><!--Device-AVSessionErrorCode-ERR_CODE_CAST_CONTROL_UNSPECIFIED = 6611000-End-->
 
@@ -902,7 +902,7 @@ ERR_CODE_COMMAND_INVALID = 6600105
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_COMMAND_INVALID = 6600105--><!--Device-AVSessionErrorCode-ERR_CODE_COMMAND_INVALID = 6600105-End-->
 
@@ -918,7 +918,7 @@ ERR_CODE_CONTROLLER_NOT_EXIST = 6600103
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 6600103--><!--Device-AVSessionErrorCode-ERR_CODE_CONTROLLER_NOT_EXIST = 6600103-End-->
 
@@ -936,7 +936,7 @@ ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110--><!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_ENABLED = 6600110-End-->
 
@@ -954,7 +954,7 @@ ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111--><!--Device-AVSessionErrorCode-ERR_CODE_DESKTOP_LYRIC_NOT_SUPPORTED = 6600111-End-->
 
@@ -970,7 +970,7 @@ ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108--><!--Device-AVSessionErrorCode-ERR_CODE_DEVICE_CONNECTION_FAILED = 6600108-End-->
 
@@ -986,7 +986,7 @@ ERR_CODE_MESSAGE_OVERLOAD = 6600107
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_MESSAGE_OVERLOAD = 6600107--><!--Device-AVSessionErrorCode-ERR_CODE_MESSAGE_OVERLOAD = 6600107-End-->
 
@@ -1002,7 +1002,7 @@ ERR_CODE_REMOTE_CONNECTION_ERR = 6600104
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_ERR = 6600104--><!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_ERR = 6600104-End-->
 
@@ -1018,7 +1018,7 @@ ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109--><!--Device-AVSessionErrorCode-ERR_CODE_REMOTE_CONNECTION_NOT_EXIST = 6600109-End-->
 
@@ -1034,7 +1034,7 @@ ERR_CODE_SERVICE_EXCEPTION = 6600101
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SERVICE_EXCEPTION = 6600101--><!--Device-AVSessionErrorCode-ERR_CODE_SERVICE_EXCEPTION = 6600101-End-->
 
@@ -1050,7 +1050,7 @@ ERR_CODE_SESSION_INACTIVE = 6600106
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SESSION_INACTIVE = 6600106--><!--Device-AVSessionErrorCode-ERR_CODE_SESSION_INACTIVE = 6600106-End-->
 
@@ -1066,7 +1066,7 @@ ERR_CODE_SESSION_NOT_EXIST = 6600102
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AVSessionErrorCode-ERR_CODE_SESSION_NOT_EXIST = 6600102--><!--Device-AVSessionErrorCode-ERR_CODE_SESSION_NOT_EXIST = 6600102-End-->
 

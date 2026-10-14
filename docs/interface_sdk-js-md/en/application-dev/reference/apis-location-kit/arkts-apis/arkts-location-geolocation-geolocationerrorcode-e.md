@@ -10,7 +10,7 @@ Enum for error code
 
 **Deprecated since:** 9
 
-**Required permissions:** ohos.permission.LOCATION @enum { number }
+**Required permissions:** ohos.permission.LOCATION
 
 <!--Device-geolocation-export enum GeoLocationErrorCode--><!--Device-geolocation-export enum GeoLocationErrorCode-End-->
 

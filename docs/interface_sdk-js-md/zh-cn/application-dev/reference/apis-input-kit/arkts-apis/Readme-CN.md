@@ -134,7 +134,7 @@
   - [Axis](arkts-input-multimodalinput-mouseevent-axis-e.md)
   - [Button](arkts-input-multimodalinput-mouseevent-button-e.md)
   - [ToolType](arkts-input-multimodalinput-mouseevent-tooltype-e.md)
-- [@ohos.multimodalInput.pointer（鼠标光标）](arkts-input-multimodalinput-pointer.md)
+- [@ohos.multimodalInput.pointer（鼠标光标和光标类的外设）](arkts-input-multimodalinput-pointer.md)
   <!--Del-->
   - [getHoverScrollState（系统接口）](arkts-input-pointer-gethoverscrollstate-f-sys.md)<!--DelEnd-->
   <!--Del-->

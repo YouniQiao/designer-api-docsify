@@ -22,7 +22,7 @@ Daily life scenarios. Low requirements on positioning precision.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404--><!--Device-UserActivityScenario-DAILY_LIFE_SERVICE = 0x404-End-->
 
@@ -38,7 +38,7 @@ Navigation scenario. High positioning precision and real-time performance are re
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserActivityScenario-NAVIGATION = 0x401--><!--Device-UserActivityScenario-NAVIGATION = 0x401-End-->
 
@@ -54,7 +54,7 @@ Sport scenario. High positioning precision is required.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserActivityScenario-SPORT = 0x402--><!--Device-UserActivityScenario-SPORT = 0x402-End-->
 
@@ -70,7 +70,7 @@ Transport scenario. High positioning precision and real-time performance are req
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-UserActivityScenario-TRANSPORT = 0x403--><!--Device-UserActivityScenario-TRANSPORT = 0x403-End-->
 

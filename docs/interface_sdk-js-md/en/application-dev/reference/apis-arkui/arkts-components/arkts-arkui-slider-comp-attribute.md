@@ -296,7 +296,7 @@ Sets the minimum response distance for the slider to start sliding.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Minimum response distance for the slider to start sliding.<br>Default value: **0**&lt;br/ &gt;**Note:** <br>The unit is the same as that of the **min** and **max** attributes in [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).<br>If the value is less than 0, greater than **max** – **min**, **NaN**, or of a non-numeric type, the default value is used. |
+| value | number | Yes | Minimum response distance for the slider to start sliding.<br>Default value: **0**<br/ >**Note:** <br>The unit is the same as that of the **min** and **max** attributes in [SliderOptions](arkts-arkui-slider-comp-slideroptions-i.md).<br>If the value is less than 0, greater than **max** – **min**, **NaN**, or of a non-numeric type, the default value is used. |
 
 ## onChange
 

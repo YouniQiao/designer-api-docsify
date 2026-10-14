@@ -528,6 +528,9 @@
   - [ExecuteResult](arkts-ability-insightintent-executeresult-i.md)
   <!--Del-->
   - [ExecuteResult(system api)](arkts-ability-insightintent-executeresult-i-sys.md)<!--DelEnd-->
+  - [FileEntity](arkts-ability-insightintent-fileentity-i.md)
+  <!--Del-->
+  - [FileEntity(system api)](arkts-ability-insightintent-fileentity-i-sys.md)<!--DelEnd-->
   - [IntentEntity](arkts-ability-insightintent-intententity-i.md)
   - [IntentResult](arkts-ability-insightintent-intentresult-i.md)
   <!--Del-->
@@ -826,6 +829,12 @@
   - [updateAgentCard(system api)](arkts-ability-agentmanager-updateagentcard-f-sys.md)<!--DelEnd-->
 - [@ohos.app.agent.AgentUIExtensionAbility(UI-based Agent Extension Component)](arkts-ability-app-agent-agentuiextensionability.md)
   - [AgentUIExtensionAbility](arkts-ability-app-agent-agentuiextensionability-agentuiextensionability-c.md)
+- [@ohos.app.agent.taskManager](arkts-ability-app-agent-taskmanager.md)
+  <!--Del-->
+  - [finishTask(system api)](arkts-ability-taskmanager-finishtask-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [startTask(system api)](arkts-ability-taskmanager-starttask-f-sys.md)<!--DelEnd-->
+  - [TaskPriority](arkts-ability-taskmanager-taskpriority-e.md)
 - [@ohos.app.appstartup.StartupConfig(AppStartup Configuration)](arkts-ability-app-appstartup-startupconfig.md)
   - [StartupConfig](arkts-ability-app-appstartup-startupconfig-startupconfig-i.md)
 - [@ohos.app.appstartup.StartupConfigEntry(AppStartup Configuration Entry)](arkts-ability-app-appstartup-startupconfigentry.md)

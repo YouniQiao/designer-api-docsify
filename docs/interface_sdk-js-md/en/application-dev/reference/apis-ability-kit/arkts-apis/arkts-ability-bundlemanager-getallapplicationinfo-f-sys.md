@@ -31,7 +31,7 @@ Obtains all the application information in the system based on the given applica
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Information contained in the returned ApplicationInfo. For details about the values and meanings, see [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;ApplicationInfo&gt; obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array<ApplicationInfo> obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -95,7 +95,7 @@ Obtains all the application information in the system based on the given applica
 | --- | --- | --- | --- |
 | appFlags | number | Yes | Information contained in the returned ApplicationInfo. For details about the values and meanings, see [ApplicationFlag](arkts-ability-bundlemanager-applicationflag-e-sys.md). |
 | userId | number | Yes | User ID, which can be obtained by calling [getOsAccountLocalId](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-osaccount-accountmanager-i.md#getosaccountlocalid). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array&lt;ApplicationInfo&gt; obtained. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[ApplicationInfo](arkts-ability-bundlemanager-applicationinfo-t.md)&gt;&gt; | Yes | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md). If the operation is successful, **err** is **undefined**, and data is the Array<ApplicationInfo> obtained. Otherwise, **err** is an error object. |
 
 **Error codes:**
 

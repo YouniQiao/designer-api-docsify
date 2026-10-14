@@ -4,7 +4,7 @@
 export enum TrackingEvent
 ```
 
-Enumerates the tracking events. @enum { int }
+Enumerates the tracking events.
 
 **Since:** 20
 

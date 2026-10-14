@@ -36,7 +36,7 @@ Add a new playback source to the player's playlist.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>--><!--Device-AVPlayer-addPlaybackMediaSource(src: MediaSource, id?: string): Promise<string>-End-->
 
@@ -85,7 +85,7 @@ Adds an external subtitle to a video based on the FD. Currently, the external su
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>--><!--Device-AVPlayer-addSubtitleFromFd(fd: int, offset?: long, length?: long): Promise<void>-End-->
 
@@ -134,7 +134,7 @@ Adds an external subtitle to a video based on the URL. Currently, the external s
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>--><!--Device-AVPlayer-addSubtitleFromUrl(url: string): Promise<void>-End-->
 
@@ -181,7 +181,7 @@ Ends playback of the current mediasource and starts playback of the specified me
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-advanceToMediaSource(id: string): Promise<void>--><!--Device-AVPlayer-advanceToMediaSource(id: string): Promise<void>-End-->
 
@@ -237,7 +237,7 @@ Ends playback of the current mediasource and starts playback of the next mediaso
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-advanceToNextMediaSource() : Promise<void>--><!--Device-AVPlayer-advanceToNextMediaSource() : Promise<void>-End-->
 
@@ -286,7 +286,7 @@ Ends playback of the current mediasource and starts playback of the previous med
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-advanceToPrevMediaSource(): Promise<void>--><!--Device-AVPlayer-advanceToPrevMediaSource(): Promise<void>-End-->
 
@@ -338,7 +338,7 @@ Clears all the items in the player's playlist. Currently playing media will be t
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-clearPlaybackList(): Promise<void>--><!--Device-AVPlayer-clearPlaybackList(): Promise<void>-End-->
 
@@ -380,7 +380,7 @@ Deselects the specified track when the AVPlayer plays multimedia resources with 
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-deselectTrack(index: int): Promise<void>--><!--Device-AVPlayer-deselectTrack(index: int): Promise<void>-End-->
 
@@ -443,7 +443,7 @@ Return the current mediasource.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-getCurrentMediaSource(): MediaSource | undefined--><!--Device-AVPlayer-getCurrentMediaSource(): MediaSource | undefined-End-->
 
@@ -485,7 +485,7 @@ Obtains the current playback time. This API can be called only when the AVPlayer
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AVPlayer-getCurrentPresentationTimestamp() : long--><!--Device-AVPlayer-getCurrentPresentationTimestamp() : long-End-->
 
@@ -630,7 +630,7 @@ Obtains the media key system information of the media asset that is being played
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>--><!--Device-AVPlayer-getMediaKeySystemInfos(): Array<drm.MediaKeySystemInfo>-End-->
 
@@ -671,7 +671,7 @@ Return the array of mediasources in the playlist.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-getMediaSources(): Array<MediaSource | undefined>--><!--Device-AVPlayer-getMediaSources(): Array<MediaSource | undefined>-End-->
 
@@ -758,7 +758,7 @@ Obtains the current playback position. This API can be called only when the AVPl
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-getPlaybackPosition() : int--><!--Device-AVPlayer-getPlaybackPosition() : int-End-->
 
@@ -923,7 +923,7 @@ Obtains the indexes of the selected audio or video tracks. This API can be calle
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>--><!--Device-AVPlayer-getSelectedTracks(): Promise<Array<int>>-End-->
 
@@ -969,7 +969,7 @@ Obtains the audio and video track information. This API can be called only when 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-AVPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -1017,7 +1017,7 @@ Obtains the audio and video track information. This API can be called only when 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>--><!--Device-AVPlayer-getTrackDescription(): Promise<Array<MediaDescription>>-End-->
 
@@ -1104,7 +1104,7 @@ Checks whether the media source supports [seek](#seek) in SEEK_CONTINUOUS mode (
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-isSeekContinuousSupported() : boolean--><!--Device-AVPlayer-isSeekContinuousSupported() : boolean-End-->
 
@@ -1931,7 +1931,7 @@ Unregisters listener to detect when changes occur in the playback content.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void--><!--Device-AVPlayer-offPlaybackContentChanged(callback?: Callback<string>):void-End-->
 
@@ -1969,7 +1969,7 @@ Unregister listener to detect time-based metadata, Currently, only the #EXT-X-DA
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-offTimedMetaData(callback?: Callback<AVTimedMetaData>): void-End-->
 
@@ -2949,7 +2949,7 @@ Registers a listener to detect when the playback content has changed. The value 
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void--><!--Device-AVPlayer-onPlaybackContentChanged(callback: Callback<string>):void-End-->
 
@@ -2984,7 +2984,7 @@ Register listener to detect time-based metadata, Currently, only the #EXT-X-DATE
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void--><!--Device-AVPlayer-onTimedMetaData(callback: Callback<AVTimedMetaData>): void-End-->
 
@@ -3019,7 +3019,7 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -3067,7 +3067,7 @@ Pauses audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-pause(): Promise<void>--><!--Device-AVPlayer-pause(): Promise<void>-End-->
 
@@ -3113,7 +3113,7 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-play(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-play(callback: AsyncCallback<void>): void-End-->
 
@@ -3161,7 +3161,7 @@ Starts to play an audio and video asset. This API can be called only when the AV
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-play(): Promise<void>--><!--Device-AVPlayer-play(): Promise<void>-End-->
 
@@ -3207,7 +3207,7 @@ Prepares for audio and video playback. This API can be called only when the AVPl
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -3258,7 +3258,7 @@ If your application frequently switches between short videos, you can create mul
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-prepare(): Promise<void>--><!--Device-AVPlayer-prepare(): Promise<void>-End-->
 
@@ -3305,7 +3305,7 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-release(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -3353,7 +3353,7 @@ Releases the playback resources. This API can be called when the AVPlayer is in 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-release(): Promise<void>--><!--Device-AVPlayer-release(): Promise<void>-End-->
 
@@ -3399,7 +3399,7 @@ Removes the specified playback media source from the player's playlist. If the i
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-removePlaybackMediaSource(id: string): Promise<void>--><!--Device-AVPlayer-removePlaybackMediaSource(id: string): Promise<void>-End-->
 
@@ -3448,7 +3448,7 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -3496,7 +3496,7 @@ Resets audio and video playback. This API can be called only when the AVPlayer i
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-reset(): Promise<void>--><!--Device-AVPlayer-reset(): Promise<void>-End-->
 
@@ -3546,7 +3546,7 @@ Seeks to the specified playback position. This API can be called only when the A
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void--><!--Device-AVPlayer-seek(timeMs: int, mode?: SeekMode): void-End-->
 
@@ -3633,7 +3633,7 @@ Selects a track when the AVPlayer plays multimedia resources with multiple audio
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>--><!--Device-AVPlayer-selectTrack(index: int, mode?: SwitchMode): Promise<void>-End-->
 
@@ -3696,7 +3696,7 @@ Sets the bitrate for the streaming media. This API is valid only for HLS/DASH st
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setBitrate(bitrate: int): void--><!--Device-AVPlayer-setBitrate(bitrate: int): void-End-->
 
@@ -3729,7 +3729,7 @@ Sets the decryption configuration. When receiving an [on('mediaKeySystemInfoUpda
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void--><!--Device-AVPlayer-setDecryptionConfig(mediaKeySession: drm.MediaKeySession, secureVideoPath: boolean): void-End-->
 
@@ -3834,7 +3834,7 @@ This API can be called only when the AVPlayer is in the prepared, playing, pause
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>--><!--Device-AVPlayer-setMediaMuted(mediaType: MediaType, muted: boolean): Promise<void>-End-->
 
@@ -3888,7 +3888,7 @@ Sets a source of streaming media that can be pre-downloaded, downloads the media
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setMediaSource(src: MediaSource, strategy?: PlaybackStrategy): Promise<void>-End-->
 
@@ -3943,7 +3943,7 @@ Sets the playback range and seeks to the start position of the range based on th
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>--><!--Device-AVPlayer-setPlaybackRange(startTimeMs: int, endTimeMs: int, mode?: SeekMode) : Promise<void>-End-->
 
@@ -3999,7 +3999,7 @@ Set playback rate. Sets the playback rate. This API can be called only when the 
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-AVPlayer-setPlaybackRate(rate: double): void--><!--Device-AVPlayer-setPlaybackRate(rate: double): void-End-->
 
@@ -4038,7 +4038,7 @@ Sets a playback strategy. This API can be called only when the AVPlayer is in th
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>--><!--Device-AVPlayer-setPlaybackStrategy(strategy: PlaybackStrategy): Promise<void>-End-->
 
@@ -4098,7 +4098,7 @@ Sets the playback speed. This API can be called only when the AVPlayer is in the
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setSpeed(speed: PlaybackSpeed): void--><!--Device-AVPlayer-setSpeed(speed: PlaybackSpeed): void-End-->
 
@@ -4132,7 +4132,7 @@ Before calling [prepare()](#prepare1), enable super resolution by using [Playbac
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-setSuperResolution(enabled: boolean) : Promise<void>--><!--Device-AVPlayer-setSuperResolution(enabled: boolean) : Promise<void>-End-->
 
@@ -4252,7 +4252,7 @@ Before calling [prepare()](#prepare1), enable super resolution by using [Playbac
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-AVPlayer-setVideoWindowSize(width: int, height: int) : Promise<void>--><!--Device-AVPlayer-setVideoWindowSize(width: int, height: int) : Promise<void>-End-->
 
@@ -4307,7 +4307,7 @@ Sets the playback volume. This API can be called only when the AVPlayer is in th
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-setVolume(volume: double): void--><!--Device-AVPlayer-setVolume(volume: double): void-End-->
 
@@ -4341,7 +4341,7 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-AVPlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -4389,7 +4389,7 @@ Stops audio and video playback. This API can be called only when the AVPlayer is
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-stop(): Promise<void>--><!--Device-AVPlayer-stop(): Promise<void>-End-->
 
@@ -4435,7 +4435,7 @@ Audio effect mode. The audio effect mode is a dynamic property and is restored t
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode--><!--Device-AVPlayer-audioEffectMode ?: audio.AudioEffectMode-End-->
 
@@ -4457,7 +4457,7 @@ To take effect, this property must be set before [play()](#play1) is called for 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode--><!--Device-AVPlayer-audioInterruptMode?: audio.InterruptMode-End-->
 
@@ -4479,7 +4479,7 @@ To take effect, this property must be set before [prepare()](#prepare1) is calle
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-audioRendererInfo?: audio.AudioRendererInfo--><!--Device-AVPlayer-audioRendererInfo?: audio.AudioRendererInfo-End-->
 
@@ -4501,7 +4501,7 @@ In live mode, **-1** is returned by default.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly currentTime: int--><!--Device-AVPlayer-readonly currentTime: int-End-->
 
@@ -4539,7 +4539,7 @@ WebM is no longer supported since API version 11.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-dataSrc?: AVDataSrcDescriptor--><!--Device-AVPlayer-dataSrc?: AVDataSrcDescriptor-End-->
 
@@ -4561,7 +4561,7 @@ In live mode, **-1** is returned by default.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-readonly duration: int--><!--Device-AVPlayer-readonly duration: int-End-->
 
@@ -4603,7 +4603,7 @@ WebM is no longer supported since API version 11.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-fdSrc?: AVFileDescriptor--><!--Device-AVPlayer-fdSrc?: AVFileDescriptor-End-->
 
@@ -4623,7 +4623,7 @@ The value **0** indicates an invalid value.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly height: int--><!--Device-AVPlayer-readonly height: int-End-->
 
@@ -4645,7 +4645,7 @@ This setting is not supported in live mode.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-loop: boolean--><!--Device-AVPlayer-loop: boolean-End-->
 
@@ -4665,7 +4665,7 @@ Set the loop mode when playing the media source playlist. <br>Default value:PLAY
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AVPlayer-playlistLoopMode?: PlaylistLoopMode--><!--Device-AVPlayer-playlistLoopMode?: PlaylistLoopMode-End-->
 
@@ -4701,7 +4701,7 @@ AVPlayer state. It can be used as a query parameter when the AVPlayer is in any 
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly state: AVPlayerState--><!--Device-AVPlayer-readonly state: AVPlayerState-End-->
 
@@ -4727,7 +4727,7 @@ It can be updated when the AVPlayer is in the prepared, playing, paused, complet
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-surfaceId?: string--><!--Device-AVPlayer-surfaceId?: string-End-->
 
@@ -4766,7 +4766,7 @@ perform other read and write operations, including but not limited to transferri
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVPlayer-url?: string--><!--Device-AVPlayer-url?: string-End-->
 
@@ -4786,7 +4786,7 @@ and can be set only when the AVPlayer is in the prepared, playing, paused, or co
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-videoScaleType?: VideoScaleType--><!--Device-AVPlayer-videoScaleType?: VideoScaleType-End-->
 
@@ -4806,7 +4806,7 @@ The value **0** indicates an invalid value.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AVPlayer-readonly width: int--><!--Device-AVPlayer-readonly width: int-End-->
 

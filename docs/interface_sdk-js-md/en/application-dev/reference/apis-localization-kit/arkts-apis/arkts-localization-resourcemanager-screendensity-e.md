@@ -22,7 +22,7 @@ Large-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_LDPI = 240--><!--Device-ScreenDensity-SCREEN_LDPI = 240-End-->
 
@@ -38,7 +38,7 @@ Medium-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_MDPI = 160--><!--Device-ScreenDensity-SCREEN_MDPI = 160-End-->
 
@@ -54,7 +54,7 @@ Small-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_SDPI = 120--><!--Device-ScreenDensity-SCREEN_SDPI = 120-End-->
 
@@ -70,7 +70,7 @@ Extra-large-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_XLDPI = 320--><!--Device-ScreenDensity-SCREEN_XLDPI = 320-End-->
 
@@ -86,7 +86,7 @@ Extra-extra-large-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_XXLDPI = 480--><!--Device-ScreenDensity-SCREEN_XXLDPI = 480-End-->
 
@@ -102,7 +102,7 @@ Extra-extra-extra-large-scale DPI.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ScreenDensity-SCREEN_XXXLDPI = 640--><!--Device-ScreenDensity-SCREEN_XXXLDPI = 640-End-->
 

@@ -22,7 +22,7 @@ BUFFERING_END = 2
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BufferingInfoType-BUFFERING_END = 2--><!--Device-BufferingInfoType-BUFFERING_END = 2-End-->
 
@@ -38,7 +38,7 @@ BUFFERING_PERCENT = 3
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BufferingInfoType-BUFFERING_PERCENT = 3--><!--Device-BufferingInfoType-BUFFERING_PERCENT = 3-End-->
 
@@ -54,7 +54,7 @@ BUFFERING_START = 1
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BufferingInfoType-BUFFERING_START = 1--><!--Device-BufferingInfoType-BUFFERING_START = 1-End-->
 
@@ -70,7 +70,7 @@ CACHED_DURATION = 4
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BufferingInfoType-CACHED_DURATION = 4--><!--Device-BufferingInfoType-CACHED_DURATION = 4-End-->
 

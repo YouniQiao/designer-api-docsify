@@ -4,7 +4,7 @@
 enum WifiSecurityType
 ```
 
-Describes the wifi security type. @enum { int }
+Describes the wifi security type.
 
 **Since:** 12
 
@@ -64,7 +64,7 @@ Open
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1--><!--Device-WifiSecurityType-WIFI_SEC_TYPE_OPEN = 1-End-->
 

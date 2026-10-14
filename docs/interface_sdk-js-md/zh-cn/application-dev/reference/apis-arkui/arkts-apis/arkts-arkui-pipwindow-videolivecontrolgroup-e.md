@@ -22,7 +22,7 @@ MUTE_SWITCH = 402
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoLiveControlGroup-MUTE_SWITCH = 402--><!--Device-VideoLiveControlGroup-MUTE_SWITCH = 402-End-->
 
@@ -38,7 +38,7 @@ VIDEO_PLAY_PAUSE = 401
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-VideoLiveControlGroup-VIDEO_PLAY_PAUSE = 401--><!--Device-VideoLiveControlGroup-VIDEO_PLAY_PAUSE = 401-End-->
 

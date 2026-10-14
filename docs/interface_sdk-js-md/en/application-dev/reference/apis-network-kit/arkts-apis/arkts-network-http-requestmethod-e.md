@@ -22,7 +22,7 @@ Establishes a tunnel to the server identified by the target resource.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-CONNECT = "CONNECT"--><!--Device-RequestMethod-CONNECT = "CONNECT"-End-->
 
@@ -38,7 +38,7 @@ Deletes the specified resource.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-DELETE = "DELETE"--><!--Device-RequestMethod-DELETE = "DELETE"-End-->
 
@@ -54,7 +54,7 @@ Requests the representation of the specified resource. The GET request should on
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-GET = "GET"--><!--Device-RequestMethod-GET = "GET"-End-->
 
@@ -70,7 +70,7 @@ Requests the same response (but does not have a response body) as the GET reques
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-HEAD = "HEAD"--><!--Device-RequestMethod-HEAD = "HEAD"-End-->
 
@@ -86,7 +86,7 @@ Describes the communication options of the target resource.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-OPTIONS = "OPTIONS"--><!--Device-RequestMethod-OPTIONS = "OPTIONS"-End-->
 
@@ -120,7 +120,7 @@ Submits an entity to a specified resource, which usually causes a status change 
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-POST = "POST"--><!--Device-RequestMethod-POST = "POST"-End-->
 
@@ -136,7 +136,7 @@ Replaces all current representations of the target resource with the requested c
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-PUT = "PUT"--><!--Device-RequestMethod-PUT = "PUT"-End-->
 
@@ -152,7 +152,7 @@ Performs a message loopback test along the path to the target resource.
 
 **Since:** 6
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-RequestMethod-TRACE = "TRACE"--><!--Device-RequestMethod-TRACE = "TRACE"-End-->
 

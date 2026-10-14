@@ -6,8 +6,6 @@ enum AuthState
 
 Indicates the screen lock authentication state.
 
-@enum { int }
-
 **Since:** 12
 
 <!--Device-screenLock-enum AuthState--><!--Device-screenLock-enum AuthState-End-->

@@ -24,7 +24,7 @@ Metadata name.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Metadata-name: string--><!--Device-Metadata-name: string-End-->
 
@@ -42,7 +42,7 @@ Metadata resource descriptor. For example, $profile:config_file indicates that t
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Metadata-resource: string--><!--Device-Metadata-resource: string-End-->
 
@@ -60,7 +60,7 @@ Metadata value.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-Metadata-value: string--><!--Device-Metadata-value: string-End-->
 
@@ -78,7 +78,7 @@ Metadata value ID. When valueId is not 0, the current metadata value is a custom
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 18.
+**Atomic service API:** This API can be used in atomic services since API version 18.
 
 <!--Device-Metadata-readonly valueId?: long--><!--Device-Metadata-readonly valueId?: long-End-->
 

@@ -22,7 +22,7 @@ BANK_CARD = 7
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-BANK_CARD = 7--><!--Device-RecommendationType-BANK_CARD = 7-End-->
 
@@ -38,7 +38,7 @@ BAR_CODE = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-BAR_CODE = 3--><!--Device-RecommendationType-BAR_CODE = 3-End-->
 
@@ -54,7 +54,7 @@ DRIVER_LICENSE = 8
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-DRIVER_LICENSE = 8--><!--Device-RecommendationType-DRIVER_LICENSE = 8-End-->
 
@@ -70,7 +70,7 @@ DRIVING_LICENSE = 9
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-DRIVING_LICENSE = 9--><!--Device-RecommendationType-DRIVING_LICENSE = 9-End-->
 
@@ -86,7 +86,7 @@ FEATURED_SINGLE_PORTRAIT = 10
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10--><!--Device-RecommendationType-FEATURED_SINGLE_PORTRAIT = 10-End-->
 
@@ -102,7 +102,7 @@ ID_CARD = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-ID_CARD = 4--><!--Device-RecommendationType-ID_CARD = 4-End-->
 
@@ -118,7 +118,7 @@ PASSPORT = 6
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-PASSPORT = 6--><!--Device-RecommendationType-PASSPORT = 6-End-->
 
@@ -134,7 +134,7 @@ PROFILE_PICTURE = 5
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-PROFILE_PICTURE = 5--><!--Device-RecommendationType-PROFILE_PICTURE = 5-End-->
 
@@ -150,7 +150,7 @@ QR_CODE = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-QR_CODE = 2--><!--Device-RecommendationType-QR_CODE = 2-End-->
 
@@ -166,7 +166,7 @@ QR_OR_BAR_CODE = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RecommendationType-QR_OR_BAR_CODE = 1--><!--Device-RecommendationType-QR_OR_BAR_CODE = 1-End-->
 

@@ -22,7 +22,7 @@ BEARER_BLUETOOTH = 2
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetBearType-BEARER_BLUETOOTH = 2--><!--Device-NetBearType-BEARER_BLUETOOTH = 2-End-->
 
@@ -38,7 +38,7 @@ BEARER_CELLULAR = 0
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetBearType-BEARER_CELLULAR = 0--><!--Device-NetBearType-BEARER_CELLULAR = 0-End-->
 
@@ -54,7 +54,7 @@ BEARER_ETHERNET = 3
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetBearType-BEARER_ETHERNET = 3--><!--Device-NetBearType-BEARER_ETHERNET = 3-End-->
 
@@ -84,7 +84,7 @@ Wi-Fi网络。
 
 **起始版本：** 8
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-NetBearType-BEARER_WIFI = 1--><!--Device-NetBearType-BEARER_WIFI = 1-End-->
 

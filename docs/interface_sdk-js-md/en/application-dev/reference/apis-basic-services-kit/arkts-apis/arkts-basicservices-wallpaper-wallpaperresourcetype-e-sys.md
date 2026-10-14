@@ -6,8 +6,6 @@ enum WallpaperResourceType
 
 Indicates the resource type of the wallpaper.
 
-@enum { int } WallpaperResourceType
-
 **Since:** 10
 
 <!--Device-wallpaper-enum WallpaperResourceType--><!--Device-wallpaper-enum WallpaperResourceType-End-->

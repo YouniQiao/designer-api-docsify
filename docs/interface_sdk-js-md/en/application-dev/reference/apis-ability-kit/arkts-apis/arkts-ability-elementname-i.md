@@ -24,7 +24,7 @@ Name of the ability.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-abilityName: string--><!--Device-ElementName-abilityName: string-End-->
 
@@ -44,7 +44,7 @@ Bundle name.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-bundleName: string--><!--Device-ElementName-bundleName: string-End-->
 
@@ -62,7 +62,7 @@ Device ID.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-deviceId?: string--><!--Device-ElementName-deviceId?: string-End-->
 
@@ -82,7 +82,7 @@ Module name of the HAP file to which the ability belongs.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-moduleName?: string--><!--Device-ElementName-moduleName?: string-End-->
 
@@ -100,7 +100,7 @@ Short name of the ability. It is a string starting with a period (.).
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-shortName?: string--><!--Device-ElementName-shortName?: string-End-->
 
@@ -118,7 +118,7 @@ Resource ID.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ElementName-uri?: string--><!--Device-ElementName-uri?: string-End-->
 

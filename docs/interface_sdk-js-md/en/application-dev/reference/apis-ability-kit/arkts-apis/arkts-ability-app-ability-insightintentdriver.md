@@ -10,8 +10,6 @@ The module provides APIs for executing intent calls. The system executes intent 
 
 **Since:** 11
 
-**Model restriction:** This API can be used only in the stage model.
-
 <!--Device-unnamed-declare namespace insightIntentDriver--><!--Device-unnamed-declare namespace insightIntentDriver-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
@@ -33,11 +31,11 @@ import { insightIntentDriver } from '@kit.AbilityKit';
 | --- | --- |
 | [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute1) | Executes a call to an intent. This API uses an asynchronous callback to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md) of the intent call is set to **UI_ABILITY_BACKGROUND**, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. On API 26.0.0 and above, intent can be executed across devices. When the intent call is cross-device, the ohos.permission.EXECUTE_DISTRIBUTED_INTENT permission is required. |
 | [execute](arkts-ability-insightintentdriver-execute-f-sys.md#execute2) | Executes a call to an intent. This API uses a promise to return the result. When the caller is in the background, the ohos.permission.START_ABILITIES_FROM_BACKGROUND permission is required. When [ExecuteMode](arkts-ability-insightintent-executemode-e.md)of the intent call is set to UI_ABILITY_BACKGROUND, the ohos.permission.ABILITY_BACKGROUND_COMMUNICATION permission is required. |
-| [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md) | Obtains the information about all intents on the current device. This API uses a promise to return the result. |
-| [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md) | Obtains the intent information on the current device based on the given bundle name. This API uses a promise to return the result. |
-| [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md) | Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. |
-| [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md) | Obtains the intent information on the current device based on the bundle name, module name, and intent name. This API uses a promise to return the result. |
-| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md) | Queries the dynamic intent entity information of an application based on [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md). This API uses a promise to return the result asynchronously. If the user ID of the calling application is different from the target user ID, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS is required. |
+| [getAllInsightIntentInfo](arkts-ability-insightintentdriver-getallinsightintentinfo-f-sys.md#getallinsightintentinfo) | Obtains the information about all intents on the current device. This API uses a promise to return the result. |
+| [getInsightIntentInfoByBundleName](arkts-ability-insightintentdriver-getinsightintentinfobybundlename-f-sys.md#getinsightintentinfobybundlename) | Obtains the intent information on the current device based on the given bundle name. This API uses a promise to return the result. |
+| [getInsightIntentInfoByFilter](arkts-ability-insightintentdriver-getinsightintentinfobyfilter-f-sys.md#getinsightintentinfobyfilter) | Obtains the intent information on the current device based on the given intent filter. This API uses a promise to return the result.<br>If the user ID of the calling application is different from the user ID of the intent, the calling application must request the ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS permission. |
+| [getInsightIntentInfoByIntentName](arkts-ability-insightintentdriver-getinsightintentinfobyintentname-f-sys.md#getinsightintentinfobyintentname) | Obtains the intent information on the current device based on the bundle name, module name, and intent name. This API uses a promise to return the result. |
+| [queryEntityInfo](arkts-ability-insightintentdriver-queryentityinfo-f-sys.md#queryentityinfo) | Queries the dynamic intent entity information of an application based on [QueryParam](arkts-ability-insightintentdriver-queryparam-i-sys.md). This API uses a promise to return the result asynchronously. If the user ID of the calling application is different from the target user ID, the permission ohos.permission.INTERACT_ACROSS_LOCAL_ACCOUNTS is required. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -20,7 +20,7 @@ Enables NearLink with the specified options. Before calling this API, you may ca
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
 
 <!--Device-manager-function enableWithOptions(options?: EnableOptions): void--><!--Device-manager-function enableWithOptions(options?: EnableOptions): void-End-->
 

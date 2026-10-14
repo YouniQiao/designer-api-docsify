@@ -8,7 +8,7 @@ type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' 
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-media-type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'stopped' | 'released' | 'error'--><!--Device-media-type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' | 'completed' | 'stopped' | 'released' | 'error'-End-->
 
@@ -16,8 +16,8 @@ type AVPlayerState = 'idle' | 'initialized' | 'prepared' | 'playing' | 'paused' 
 
 | 类型 | 说明 |
 | --- | --- |
-| 'idle' | 闲置状态，AVPlayer刚被创建[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1)或者调用了[reset()](arkts-media-media-avplayer-i.md#reset1)方法之后，进入idle状态。首次创建[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1)，所有属性都为默认值。调用[reset()](arkts-media-media-avplayer-i.md#reset1)方法，url &lt;sup&gt;9+&lt;/sup&gt; 或 fdSrc&lt;sup&gt;9+&lt;/sup&gt;或dataSrc&lt;sup&gt;10+&lt;/sup&gt;属性及loop属性会被重置，其他用户设置的属性将被保留。 |
-| 'initialized' | 资源初始化，在idle状态设置 url&lt;sup&gt;9+&lt;/sup&gt; 或 fdSrc&lt;sup&gt;9+&lt;/sup&gt;属性，AVPlayer会进入initialized状态，此时可以配置窗口、音频等静态属性。 |
+| 'idle' | 闲置状态，AVPlayer刚被创建[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1)或者调用了[reset()](arkts-media-media-avplayer-i.md#reset1)方法之后，进入idle状态。首次创建[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer1)，所有属性都为默认值。调用[reset()](arkts-media-media-avplayer-i.md#reset1)方法，url <sup>9+</sup> 或 fdSrc<sup>9+</sup>或dataSrc<sup>10+</sup>属性及loop属性会被重置，其他用户设置的属性将被保留。 |
+| 'initialized' | 资源初始化，在idle状态设置 url<sup>9+</sup> 或 fdSrc<sup>9+</sup>属性，AVPlayer会进入initialized状态，此时可以配置窗口、音频等静态属性。 |
 | 'prepared' | 已准备状态，AVPlayer在initialized状态调用[prepare()](arkts-media-media-avplayer-i.md#prepare1)方法，AVPlayer会进入prepared状态，此时播放引擎的资源已准备就绪。 |
 | 'playing' | 正在播放状态，AVPlayer在prepared/paused/completed状态调用[play()](arkts-media-media-avplayer-i.md#play1)方法，AVPlayer会进入playing状态。 |
 | 'paused' | 暂停状态，在playing状态调用pause方法，AVPlayer会进入paused状态。 |

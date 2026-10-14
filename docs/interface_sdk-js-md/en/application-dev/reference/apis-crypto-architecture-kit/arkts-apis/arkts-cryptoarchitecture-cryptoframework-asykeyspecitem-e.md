@@ -24,7 +24,7 @@ Parameter **g** in the DH algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DH_G_BN = 402--><!--Device-AsyKeySpecItem-DH_G_BN = 402-End-->
 
@@ -42,7 +42,7 @@ Length of the private key in the DH algorithm, in bits.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DH_L_NUM = 403--><!--Device-AsyKeySpecItem-DH_L_NUM = 403-End-->
 
@@ -60,7 +60,7 @@ Prime **p** in the DH algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DH_P_BN = 401--><!--Device-AsyKeySpecItem-DH_P_BN = 401-End-->
 
@@ -78,7 +78,7 @@ Public key **pk** in the DH algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DH_PK_BN = 405--><!--Device-AsyKeySpecItem-DH_PK_BN = 405-End-->
 
@@ -96,7 +96,7 @@ Private key **sk** in the DH algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DH_SK_BN = 404--><!--Device-AsyKeySpecItem-DH_SK_BN = 404-End-->
 
@@ -114,7 +114,7 @@ Parameter **g** in the DSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DSA_G_BN = 103--><!--Device-AsyKeySpecItem-DSA_G_BN = 103-End-->
 
@@ -132,7 +132,7 @@ Prime modulus **p** in the DSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DSA_P_BN = 101--><!--Device-AsyKeySpecItem-DSA_P_BN = 101-End-->
 
@@ -150,7 +150,7 @@ Public key **pk** in the DSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DSA_PK_BN = 105--><!--Device-AsyKeySpecItem-DSA_PK_BN = 105-End-->
 
@@ -168,7 +168,7 @@ Parameter **q**, prime factor of (p - 1) in the DSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DSA_Q_BN = 102--><!--Device-AsyKeySpecItem-DSA_Q_BN = 102-End-->
 
@@ -186,7 +186,7 @@ Private key **sk** in the DSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-DSA_SK_BN = 104--><!--Device-AsyKeySpecItem-DSA_SK_BN = 104-End-->
 
@@ -204,7 +204,7 @@ First coefficient **a** of the elliptic curve in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_A_BN = 202--><!--Device-AsyKeySpecItem-ECC_A_BN = 202-End-->
 
@@ -222,7 +222,7 @@ Second coefficient **b** of the elliptic curve in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_B_BN = 203--><!--Device-AsyKeySpecItem-ECC_B_BN = 203-End-->
 
@@ -240,7 +240,7 @@ Standards for Efficient Cryptography Group (SECG) curve name in the ECC algorith
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_CURVE_NAME_STR = 213--><!--Device-AsyKeySpecItem-ECC_CURVE_NAME_STR = 213-End-->
 
@@ -260,7 +260,7 @@ Note: The size of the **Fp** field is the length of the prime **p**, in bits.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_FIELD_SIZE_NUM = 212--><!--Device-AsyKeySpecItem-ECC_FIELD_SIZE_NUM = 212-End-->
 
@@ -278,7 +278,7 @@ Elliptic curve field type in the ECC algorithm. Currently, only the **Fp** field
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_FIELD_TYPE_STR = 211--><!--Device-AsyKeySpecItem-ECC_FIELD_TYPE_STR = 211-End-->
 
@@ -296,7 +296,7 @@ Prime number **p** in the **Fp** field of the elliptic curve in the ECC algorith
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_FP_P_BN = 201--><!--Device-AsyKeySpecItem-ECC_FP_P_BN = 201-End-->
 
@@ -314,7 +314,7 @@ X coordinate of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_G_X_BN = 204--><!--Device-AsyKeySpecItem-ECC_G_X_BN = 204-End-->
 
@@ -332,7 +332,7 @@ Y coordinate of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_G_Y_BN = 205--><!--Device-AsyKeySpecItem-ECC_G_Y_BN = 205-End-->
 
@@ -350,7 +350,7 @@ Cofactor **h** in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_H_NUM = 207--><!--Device-AsyKeySpecItem-ECC_H_NUM = 207-End-->
 
@@ -368,7 +368,7 @@ Order **n** of the base point **g** in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_N_BN = 206--><!--Device-AsyKeySpecItem-ECC_N_BN = 206-End-->
 
@@ -386,7 +386,7 @@ X coordinate of the public key **pk** (a point on the elliptic curve) in the ECC
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_PK_X_BN = 209--><!--Device-AsyKeySpecItem-ECC_PK_X_BN = 209-End-->
 
@@ -404,7 +404,7 @@ Y coordinate of the public key **pk** (a point on the elliptic curve) in the ECC
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_PK_Y_BN = 210--><!--Device-AsyKeySpecItem-ECC_PK_Y_BN = 210-End-->
 
@@ -422,7 +422,7 @@ Private key **sk** in the ECC algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ECC_SK_BN = 208--><!--Device-AsyKeySpecItem-ECC_SK_BN = 208-End-->
 
@@ -440,7 +440,7 @@ Public key **pk** in the Ed25519 algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ED25519_PK_BN = 502--><!--Device-AsyKeySpecItem-ED25519_PK_BN = 502-End-->
 
@@ -458,7 +458,7 @@ Private key **sk** in the Ed25519 algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-ED25519_SK_BN = 501--><!--Device-AsyKeySpecItem-ED25519_SK_BN = 501-End-->
 
@@ -476,7 +476,7 @@ Modulus **n** in the RSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-RSA_N_BN = 301--><!--Device-AsyKeySpecItem-RSA_N_BN = 301-End-->
 
@@ -494,7 +494,7 @@ Public key **pk** (public key exponent **e**) in the RSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-RSA_PK_BN = 303--><!--Device-AsyKeySpecItem-RSA_PK_BN = 303-End-->
 
@@ -512,7 +512,7 @@ Private key **sk** (private key exponent **d**) in the RSA algorithm.
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-RSA_SK_BN = 302--><!--Device-AsyKeySpecItem-RSA_SK_BN = 302-End-->
 
@@ -530,7 +530,7 @@ Public key **pk** in the X25519 algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-X25519_PK_BN = 602--><!--Device-AsyKeySpecItem-X25519_PK_BN = 602-End-->
 
@@ -548,7 +548,7 @@ Private key **sk** in the X25519 algorithm.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-AsyKeySpecItem-X25519_SK_BN = 601--><!--Device-AsyKeySpecItem-X25519_SK_BN = 601-End-->
 

@@ -108,7 +108,7 @@ declare interface AttributeModifier<T>
 | WaterFlowAttribute | WaterFlow的[属性](arkts-arkui-waterflow-comp-attribute.md)。 |
 | XComponentAttribute | XComponent的[属性](arkts-arkui-xcomponent-comp-attribute.md)。 |
 | ParticleAttribute | Particle的[属性](arkts-arkui-particle-comp-attribute.md)。 |
-| UIPickerComponentAttribute&lt;sup&gt;22+&lt;/sup&gt; | UIPickerComponent的[属性](arkts-arkui-uipickercomponent-comp-attribute.md)。 |
+| UIPickerComponentAttribute<sup>22+</sup> | UIPickerComponent的[属性](arkts-arkui-uipickercomponent-comp-attribute.md)。 |
 | <!--DelRow-->EffectComponentAttribute | EffectComponent的[属性](arkts-arkui-effectcomponent-comp-attribute.md#effectcomponentattribute系统接口)。 |
 | <!--DelRow-->FormComponentAttribute | FormComponent的[属性](arkts-arkui-formcomponent-comp-attribute.md#formcomponentattribute系统接口)。 |
 | <!--DelRow-->PluginComponentAttribute | PluginComponent的[属性](arkts-arkui-plugincomponent-comp-attribute.md#plugincomponentattribute系统接口)。 |
@@ -132,7 +132,7 @@ declare interface AttributeModifier<T>
 > 6. 不支持已废弃属性。<!--Del-->
 > 7. 不支持系统组件属性。<!--DelEnd-->不支持或者未实现的属性在使用时会抛出"Method not implemented."、"is not callable"、"Builder is not supported."等异常信息。具体Modifier支持范围可参考[属性或事件对attributeModifier的支持情况](../../../ui/arkts-user-defined-extension-attributeModifier.md#属性或事件对attributemodifier的支持情况)。
 
-@interface AttributeModifier&lt;T&gt;
+@interface AttributeModifier<T>
 
 ## applyDisabledAttribute
 

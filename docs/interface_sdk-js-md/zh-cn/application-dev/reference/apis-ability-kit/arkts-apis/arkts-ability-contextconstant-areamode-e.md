@@ -24,7 +24,7 @@ EL1 = 0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AreaMode-EL1 = 0--><!--Device-AreaMode-EL1 = 0-End-->
 
@@ -42,7 +42,7 @@ EL2 = 1
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AreaMode-EL2 = 1--><!--Device-AreaMode-EL2 = 1-End-->
 
@@ -66,7 +66,7 @@ EL3 = 2
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AreaMode-EL3 = 2--><!--Device-AreaMode-EL3 = 2-End-->
 
@@ -90,7 +90,7 @@ EL4 = 3
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-AreaMode-EL4 = 3--><!--Device-AreaMode-EL4 = 3-End-->
 
@@ -114,7 +114,7 @@ EL5 = 4
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-AreaMode-EL5 = 4--><!--Device-AreaMode-EL5 = 4-End-->
 

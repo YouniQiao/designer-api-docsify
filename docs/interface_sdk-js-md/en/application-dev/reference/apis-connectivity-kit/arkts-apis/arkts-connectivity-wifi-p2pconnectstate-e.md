@@ -6,8 +6,6 @@ enum P2pConnectState
 
 P2P connection status.
 
-@enum { number } P2pConnectState
-
 **Since:** 8
 
 **Deprecated since:** 9

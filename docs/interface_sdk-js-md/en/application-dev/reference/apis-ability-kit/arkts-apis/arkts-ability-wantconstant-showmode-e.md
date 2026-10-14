@@ -22,7 +22,7 @@ An embedded full-screen is used to show the ability startup.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShowMode-EMBEDDED_FULL = 1--><!--Device-ShowMode-EMBEDDED_FULL = 1-End-->
 
@@ -40,7 +40,7 @@ An embedded half-screen is used to show the ability startup.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-ShowMode-EMBEDDED_HALF = 2--><!--Device-ShowMode-EMBEDDED_HALF = 2-End-->
 
@@ -56,7 +56,7 @@ An independent window is used to show the ability startup.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-ShowMode-WINDOW = 0--><!--Device-ShowMode-WINDOW = 0-End-->
 

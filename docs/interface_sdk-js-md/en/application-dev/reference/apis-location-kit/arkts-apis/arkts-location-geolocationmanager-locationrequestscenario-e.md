@@ -22,7 +22,7 @@ Car hailing scenario. High positioning precision and real-time performance are r
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-CAR_HAILING = 0x303--><!--Device-LocationRequestScenario-CAR_HAILING = 0x303-End-->
 
@@ -38,7 +38,7 @@ Daily life scenarios. Low requirements on positioning precision and real-time pe
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304--><!--Device-LocationRequestScenario-DAILY_LIFE_SERVICE = 0x304-End-->
 
@@ -54,7 +54,7 @@ Navigation scenario. High positioning precision and real-time performance are re
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-NAVIGATION = 0x301--><!--Device-LocationRequestScenario-NAVIGATION = 0x301-End-->
 
@@ -70,7 +70,7 @@ Power saving scenarios.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-NO_POWER = 0x305--><!--Device-LocationRequestScenario-NO_POWER = 0x305-End-->
 
@@ -86,7 +86,7 @@ Trajectory tracking scenario. High positioning precision is required.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302--><!--Device-LocationRequestScenario-TRAJECTORY_TRACKING = 0x302-End-->
 
@@ -102,7 +102,7 @@ Default scenario.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-LocationRequestScenario-UNSET = 0x300--><!--Device-LocationRequestScenario-UNSET = 0x300-End-->
 

@@ -22,7 +22,7 @@ SAVE_WHEN_BACKGROUND = 0x0002
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002--><!--Device-SaveOccasionFlag-SAVE_WHEN_BACKGROUND = 0x0002-End-->
 
@@ -38,7 +38,7 @@ SAVE_WHEN_ERROR = 0x0001
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001--><!--Device-SaveOccasionFlag-SAVE_WHEN_ERROR = 0x0001-End-->
 

@@ -46,33 +46,33 @@ import { settings } from '@kit.BasicServicesKit';
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue5) | Get value from settingsdata [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync2) | Get value from settingsdata(synchronous method) |
 | [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync3) | Get value from settingsdata(synchronous method). [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md) | 1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself. |
-| [openAboutDeviceSettingsPage](arkts-basicservices-settings-openaboutdevicesettingspage-f.md) | Open the about device settings page. |
-| [openAppDetailSettingsPage](arkts-basicservices-settings-openappdetailsettingspage-f.md) | Open the app detail settings page. |
-| [openBiometricsSettingsPage](arkts-basicservices-settings-openbiometricssettingspage-f.md) | Open the biometrics and password settings page. |
-| [openDisplaySettingsPage](arkts-basicservices-settings-opendisplaysettingspage-f.md) | Open the display settings page. |
-| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md) | 1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key. |
-| [openInputMethodDetail](arkts-basicservices-settings-openinputmethoddetail-f.md) | Open the input method detail page. |
-| [openInputMethodSettings](arkts-basicservices-settings-openinputmethodsettings-f.md) | Open the input method settings page. |
-| [openMobileNetworkSettingsPage](arkts-basicservices-settings-openmobilenetworksettingspage-f.md) | Open the mobile network settings page. |
-| [openNetworkManagerSettings](arkts-basicservices-settings-opennetworkmanagersettings-f.md) | Open the network manager settings page. |
-| [openNfcSettingsPage](arkts-basicservices-settings-opennfcsettingspage-f.md) | Open the NFC settings page. |
-| [openScreenRefreshRateSettingsPage](arkts-basicservices-settings-openscreenrefreshratesettingspage-f.md) | Open the screen refresh rate settings page. |
-| [openSoundSettingsPage](arkts-basicservices-settings-opensoundsettingspage-f.md) | Open the sound settings page. |
-| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md) | Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [isDoubleClickAppForSelf](arkts-basicservices-settings-isdoubleclickappforself-f.md#isdoubleclickappforself) | 1. Checks whether the application started by double-pressing the Down key is the application itself. 2. This API is triggered to check whether double-pressing the Down key starts the application itself. |
+| [openAboutDeviceSettingsPage](arkts-basicservices-settings-openaboutdevicesettingspage-f.md#openaboutdevicesettingspage) | Open the about device settings page. |
+| [openAppDetailSettingsPage](arkts-basicservices-settings-openappdetailsettingspage-f.md#openappdetailsettingspage) | Open the app detail settings page. |
+| [openBiometricsSettingsPage](arkts-basicservices-settings-openbiometricssettingspage-f.md#openbiometricssettingspage) | Open the biometrics and password settings page. |
+| [openDisplaySettingsPage](arkts-basicservices-settings-opendisplaysettingspage-f.md#opendisplaysettingspage) | Open the display settings page. |
+| [openDoubleClickSettingsPage](arkts-basicservices-settings-opendoubleclicksettingspage-f.md#opendoubleclicksettingspage) | 1. Opens the settings page for double-pressing the Down key. 2. This API is used to set the default application started by double-pressing the Down key. |
+| [openInputMethodDetail](arkts-basicservices-settings-openinputmethoddetail-f.md#openinputmethoddetail) | Open the input method detail page. |
+| [openInputMethodSettings](arkts-basicservices-settings-openinputmethodsettings-f.md#openinputmethodsettings) | Open the input method settings page. |
+| [openMobileNetworkSettingsPage](arkts-basicservices-settings-openmobilenetworksettingspage-f.md#openmobilenetworksettingspage) | Open the mobile network settings page. |
+| [openNetworkManagerSettings](arkts-basicservices-settings-opennetworkmanagersettings-f.md#opennetworkmanagersettings) | Open the network manager settings page. |
+| [openNfcSettingsPage](arkts-basicservices-settings-opennfcsettingspage-f.md#opennfcsettingspage) | Open the NFC settings page. |
+| [openScreenRefreshRateSettingsPage](arkts-basicservices-settings-openscreenrefreshratesettingspage-f.md#openscreenrefreshratesettingspage) | Open the screen refresh rate settings page. |
+| [openSoundSettingsPage](arkts-basicservices-settings-opensoundsettingspage-f.md#opensoundsettingspage) | Open the sound settings page. |
+| [registerKeyObserver](arkts-basicservices-settings-registerkeyobserver-f.md#registerkeyobserver) | Monitor registration key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue3) | Set settingsdata value. |
 | [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue4) | Set settingsdata value. |
 | [setValue](arkts-basicservices-settings-setvalue-f.md#setvalue5) | Set settingsdata value. [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync2) | Set settingsdata value(synchronous method) |
 | [setValueSync](arkts-basicservices-settings-setvaluesync-f.md#setvaluesync3) | Set settingsdata value(synchronous method). [DEVICE_SHARED, USER_PROPERTY] domain need ohos.permission.MANAGE_SETTINGS permission. [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
-| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md) | Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
+| [unregisterKeyObserver](arkts-basicservices-settings-unregisterkeyobserver-f.md#unregisterkeyobserver) | Monitor unregister key(synchronous method) [USER_SECURE] domain need ohos.permission.MANAGE_SECURE_SETTINGS permission. |
 | [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canshowfloating1) | Checks whether a specified application can show as a floating window. |
 | [canShowFloating](arkts-basicservices-settings-canshowfloating-f.md#canshowfloating2) | Checks whether a specified application can show as a floating window. |
 | [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode1) | Enables or disables airplane mode. |
 | [enableAirplaneMode](arkts-basicservices-settings-enableairplanemode-f.md#enableairplanemode2) | Enables or disables airplane mode. |
 | [getURI](arkts-basicservices-settings-geturi-f.md#geturi1) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
 | [getURI](arkts-basicservices-settings-geturi-f.md#geturi2) | Constructs a URI for a specific name-value pair for monitoring data of the ability that uses the Data template. |
-| [getUriSync](arkts-basicservices-settings-geturisync-f.md) | Get settingsdata uri (synchronous method) |
+| [getUriSync](arkts-basicservices-settings-geturisync-f.md#geturisync) | Get settingsdata uri (synchronous method) |
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue1) | Obtains the value of a specified character string in the database. |
 | [getValue](arkts-basicservices-settings-getvalue-f.md#getvalue2) | Obtains the value of a specified character string in the database. |
 | [getValueSync](arkts-basicservices-settings-getvaluesync-f.md#getvaluesync1) | Get value from settingsdata(synchronous method) |

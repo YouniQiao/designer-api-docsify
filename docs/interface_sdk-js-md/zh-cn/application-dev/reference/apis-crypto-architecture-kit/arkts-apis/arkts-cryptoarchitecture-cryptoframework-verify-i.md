@@ -40,7 +40,7 @@ getVerifySpec(itemType: SignSpecItem): string | number
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int--><!--Device-Verify-getVerifySpec(itemType: SignSpecItem): string | int-End-->
 
@@ -95,7 +95,7 @@ init(pubKey: PubKey, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void--><!--Device-Verify-init(pubKey: PubKey, callback: AsyncCallback<void>): void-End-->
 
@@ -132,7 +132,7 @@ init(pubKey: PubKey): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-init(pubKey: PubKey): Promise<void>--><!--Device-Verify-init(pubKey: PubKey): Promise<void>-End-->
 
@@ -174,7 +174,7 @@ initSync(pubKey: PubKey): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-initSync(pubKey: PubKey): void--><!--Device-Verify-initSync(pubKey: PubKey): void-End-->
 
@@ -210,7 +210,7 @@ recover(signatureData: DataBlob): Promise<DataBlob | null>
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>--><!--Device-Verify-recover(signatureData: DataBlob): Promise<DataBlob | null>-End-->
 
@@ -332,7 +332,7 @@ recoverSync(signatureData: DataBlob): DataBlob | null
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null--><!--Device-Verify-recoverSync(signatureData: DataBlob): DataBlob | null-End-->
 
@@ -438,7 +438,7 @@ setVerifySpec(itemType: SignSpecItem, itemValue: number | Uint8Array): void
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void--><!--Device-Verify-setVerifySpec(itemType: SignSpecItem, itemValue: int | Uint8Array): void-End-->
 
@@ -562,7 +562,7 @@ update(data: DataBlob, callback: AsyncCallback<void>): void
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void--><!--Device-Verify-update(data: DataBlob, callback: AsyncCallback<void>): void-End-->
 
@@ -617,7 +617,7 @@ update(data: DataBlob): Promise<void>
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-update(data: DataBlob): Promise<void>--><!--Device-Verify-update(data: DataBlob): Promise<void>-End-->
 
@@ -677,7 +677,7 @@ updateSync(data: DataBlob): void
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-updateSync(data: DataBlob): void--><!--Device-Verify-updateSync(data: DataBlob): void-End-->
 
@@ -749,7 +749,7 @@ verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<b
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob, callback: AsyncCallback<boolean>): void-End-->
 
@@ -830,7 +830,7 @@ verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>--><!--Device-Verify-verify(data: DataBlob | null, signatureData: DataBlob): Promise<boolean>-End-->
 
@@ -873,7 +873,7 @@ verifySync(data: DataBlob | null, signatureData: DataBlob): boolean
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean--><!--Device-Verify-verifySync(data: DataBlob | null, signatureData: DataBlob): boolean-End-->
 
@@ -1136,7 +1136,7 @@ readonly algName: string
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-Verify-readonly algName: string--><!--Device-Verify-readonly algName: string-End-->
 

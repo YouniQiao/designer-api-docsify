@@ -58,12 +58,12 @@ import { commonEventManager } from '@kit.BasicServicesKit';
 | --- | --- |
 | [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber1) | Creates a subscriber. This API uses an asynchronous callback to return the result. |
 | [createSubscriber](arkts-basicservices-commoneventmanager-createsubscriber-f.md#createsubscriber2) | Creates a subscriber. This API uses a promise to return the result. |
-| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md) | Creates a subscriber synchronously. |
+| [createSubscriberSync](arkts-basicservices-commoneventmanager-createsubscribersync-f.md#createsubscribersync) | Creates a subscriber synchronously. |
 | [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish1) | Publishes a common event. This API uses an asynchronous callback to return the result. |
 | [publish](arkts-basicservices-commoneventmanager-publish-f.md#publish2) | Publishes a common event. This API uses an asynchronous callback to return the result. |
-| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md) | Subscribes to a common event. This API uses an asynchronous callback to return the result. |
-| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md) | Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure. |
-| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md) | Unsubscribes from a common event. This API uses an asynchronous callback to return the result. |
+| [subscribe](arkts-basicservices-commoneventmanager-subscribe-f.md#subscribe) | Subscribes to a common event. This API uses an asynchronous callback to return the result. |
+| [subscribeToEvent](arkts-basicservices-commoneventmanager-subscribetoevent-f.md#subscribetoevent) | Subscribes to a common event. This API uses a promise to return the result, indicating subscription success or failure. |
+| [unsubscribe](arkts-basicservices-commoneventmanager-unsubscribe-f.md#unsubscribe) | Unsubscribes from a common event. This API uses an asynchronous callback to return the result. |
 
 <!--Del-->
 ### Functions(System API)

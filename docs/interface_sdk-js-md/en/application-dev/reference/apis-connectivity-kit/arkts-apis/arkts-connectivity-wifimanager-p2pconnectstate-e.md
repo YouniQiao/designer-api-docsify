@@ -6,8 +6,6 @@ enum P2pConnectState
 
 P2P connection status.
 
-@enum { int }
-
 **Since:** 9
 
 <!--Device-wifiManager-enum P2pConnectState--><!--Device-wifiManager-enum P2pConnectState-End-->

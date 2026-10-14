@@ -6,8 +6,6 @@ export enum PolicyType
 
 Indicates the policy type of the path.
 
-@enum { int } policyType
-
 **Since:** 15
 
 <!--Device-fileShare-export enum PolicyType--><!--Device-fileShare-export enum PolicyType-End-->

@@ -18,7 +18,7 @@ enum OfflineResourceType
 CLASSIC_JS
 ```
 
-通过&lt;script src="" /&gt;标签加载的JavaScript资源。
+通过<script src="" />标签加载的JavaScript资源。
 
 **起始版本：** 12
 
@@ -60,7 +60,7 @@ IMAGE
 MODULE_JS
 ```
 
-通过&lt;script src="" type="module" /&gt;标签加载的JavaScript资源。
+通过<script src="" type="module" />标签加载的JavaScript资源。
 
 **起始版本：** 12
 

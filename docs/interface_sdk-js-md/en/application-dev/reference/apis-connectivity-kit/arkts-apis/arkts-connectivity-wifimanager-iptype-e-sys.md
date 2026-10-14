@@ -6,8 +6,6 @@ enum IpType
 
 Wi-Fi IP type enumeration.
 
-@enum { int }
-
 **Since:** 9
 
 <!--Device-wifiManager-enum IpType--><!--Device-wifiManager-enum IpType-End-->

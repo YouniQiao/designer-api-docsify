@@ -26,7 +26,7 @@ bundleName: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ViewData-bundleName: string--><!--Device-ViewData-bundleName: string-End-->
 
@@ -46,7 +46,7 @@ pageNodeInfos: Array<PageNodeInfo>
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>--><!--Device-ViewData-pageNodeInfos: Array<PageNodeInfo>-End-->
 
@@ -66,7 +66,7 @@ pageRect: AutoFillRect
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ViewData-pageRect: AutoFillRect--><!--Device-ViewData-pageRect: AutoFillRect-End-->
 
@@ -86,7 +86,7 @@ pageUrl: string
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-ViewData-pageUrl: string--><!--Device-ViewData-pageUrl: string-End-->
 

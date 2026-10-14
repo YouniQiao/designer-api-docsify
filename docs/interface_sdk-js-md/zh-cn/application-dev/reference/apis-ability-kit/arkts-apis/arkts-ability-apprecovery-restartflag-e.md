@@ -22,7 +22,7 @@ ALWAYS_RESTART = 0
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-ALWAYS_RESTART = 0--><!--Device-RestartFlag-ALWAYS_RESTART = 0-End-->
 
@@ -38,7 +38,7 @@ NO_RESTART = 0xFFFF
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-NO_RESTART = 0xFFFF--><!--Device-RestartFlag-NO_RESTART = 0xFFFF-End-->
 
@@ -54,7 +54,7 @@ RESTART_WHEN_APP_FREEZE = 0x0002
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002--><!--Device-RestartFlag-RESTART_WHEN_APP_FREEZE = 0x0002-End-->
 
@@ -74,7 +74,7 @@ RESTART_WHEN_CPP_CRASH = 0x0004
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本24开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本24开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004--><!--Device-RestartFlag-RESTART_WHEN_CPP_CRASH = 0x0004-End-->
 
@@ -90,7 +90,7 @@ RESTART_WHEN_JS_CRASH = 0x0001
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001--><!--Device-RestartFlag-RESTART_WHEN_JS_CRASH = 0x0001-End-->
 

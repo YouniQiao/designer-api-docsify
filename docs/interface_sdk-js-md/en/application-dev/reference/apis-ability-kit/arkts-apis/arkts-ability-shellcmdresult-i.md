@@ -30,7 +30,7 @@ Result code of the shell command.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ShellCmdResult-exitCode: int--><!--Device-ShellCmdResult-exitCode: int-End-->
 
@@ -48,7 +48,7 @@ Standard output of the shell command.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-ShellCmdResult-stdResult: string--><!--Device-ShellCmdResult-stdResult: string-End-->
 

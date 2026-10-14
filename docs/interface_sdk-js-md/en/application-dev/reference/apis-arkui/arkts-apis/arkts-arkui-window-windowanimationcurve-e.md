@@ -24,7 +24,7 @@ When this curve type is used, **param** and **duration** in [WindowAnimationConf
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2--><!--Device-WindowAnimationCurve-CUBIC_BEZIER = 2-End-->
 
@@ -44,7 +44,7 @@ When this curve type is used, **param** in [WindowAnimationConfig](arkts-arkui-w
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1--><!--Device-WindowAnimationCurve-INTERPOLATION_SPRING = 1-End-->
 
@@ -64,7 +64,7 @@ When this curve type is used, **param** in [WindowAnimationConfig](arkts-arkui-w
 
 **Since:** 20
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 20.
+**Atomic service API:** This API can be used in atomic services since API version 20.
 
 <!--Device-WindowAnimationCurve-LINEAR = 0--><!--Device-WindowAnimationCurve-LINEAR = 0-End-->
 

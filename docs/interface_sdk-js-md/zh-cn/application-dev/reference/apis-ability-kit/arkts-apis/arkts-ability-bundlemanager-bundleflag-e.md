@@ -22,7 +22,7 @@ GET_BUNDLE_INFO_DEFAULT = 0x00000000
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_DEFAULT = 0x00000000--><!--Device-BundleFlag-GET_BUNDLE_INFO_DEFAULT = 0x00000000-End-->
 
@@ -54,7 +54,7 @@ GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ABILITY = 0x00000004-End-->
 
@@ -70,7 +70,7 @@ GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_APPLICATION = 0x00000001-End-->
 
@@ -86,7 +86,7 @@ GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_DISABLE = 0x00000040-End-->
 
@@ -102,7 +102,7 @@ GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000
 
 **起始版本：** 23
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本23开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本23开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ENTRY_MODULE = 0x00010000-End-->
 
@@ -118,7 +118,7 @@ GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_EXTENSION_ABILITY = 0x00000008-End-->
 
@@ -134,7 +134,7 @@ GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_HAP_MODULE = 0x00000002-End-->
 
@@ -150,7 +150,7 @@ GET_BUNDLE_INFO_WITH_MENU = 0x00000100
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_MENU = 0x00000100-End-->
 
@@ -174,7 +174,7 @@ GET_BUNDLE_INFO_WITH_METADATA = 0x00000020
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_METADATA = 0x00000020--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_METADATA = 0x00000020-End-->
 
@@ -190,7 +190,7 @@ GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_REQUESTED_PERMISSION = 0x00000010-End-->
 
@@ -206,7 +206,7 @@ GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_ROUTER_MAP = 0x00000200-End-->
 
@@ -222,7 +222,7 @@ GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080
 
 **起始版本：** 9
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SIGNATURE_INFO = 0x00000080-End-->
 
@@ -238,7 +238,7 @@ GET_BUNDLE_INFO_WITH_SKILL = 0x00000800
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SKILL = 0x00000800--><!--Device-BundleFlag-GET_BUNDLE_INFO_WITH_SKILL = 0x00000800-End-->
 

@@ -24,7 +24,7 @@ bundleName?: string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-CommonEventData-bundleName?: string--><!--Device-CommonEventData-bundleName?: string-End-->
 
@@ -44,7 +44,7 @@ code?: number
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-CommonEventData-code?: int--><!--Device-CommonEventData-code?: int-End-->
 
@@ -62,7 +62,7 @@ data?: string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-CommonEventData-data?: string--><!--Device-CommonEventData-data?: string-End-->
 
@@ -80,7 +80,7 @@ event: string
 
 **起始版本：** 7
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本11开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
 <!--Device-CommonEventData-event: string--><!--Device-CommonEventData-event: string-End-->
 

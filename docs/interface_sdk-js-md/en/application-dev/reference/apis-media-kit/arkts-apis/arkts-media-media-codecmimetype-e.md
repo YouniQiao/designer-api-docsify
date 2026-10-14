@@ -22,7 +22,7 @@ Audio in MP4A-LATM format.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'--><!--Device-CodecMimeType-AUDIO_AAC = 'audio/mp4a-latm'-End-->
 
@@ -138,7 +138,7 @@ Video in AVC format.
 
 **Since:** 8
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'--><!--Device-CodecMimeType-VIDEO_AVC = 'video/avc'-End-->
 
@@ -168,7 +168,7 @@ Video in H.265 format.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'--><!--Device-CodecMimeType-VIDEO_HEVC = 'video/hevc'-End-->
 

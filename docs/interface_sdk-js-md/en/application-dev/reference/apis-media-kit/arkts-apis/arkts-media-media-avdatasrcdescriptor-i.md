@@ -28,7 +28,7 @@ Callback function implemented by users, which is used to fill data. buffer - The
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int--><!--Device-AVDataSrcDescriptor-callback: (buffer: ArrayBuffer, length: long, pos?: long) => int-End-->
 
@@ -54,7 +54,7 @@ Size of the file, -1 means the file size is unknown, in this case, seek and setS
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-AVDataSrcDescriptor-fileSize: long--><!--Device-AVDataSrcDescriptor-fileSize: long-End-->
 

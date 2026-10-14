@@ -24,7 +24,7 @@ WINDOW_ADDED = 1
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowChangeType-WINDOW_ADDED = 1--><!--Device-WindowChangeType-WINDOW_ADDED = 1-End-->
 
@@ -42,7 +42,7 @@ WINDOW_BOUNDS_CHANGED = 3
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3--><!--Device-WindowChangeType-WINDOW_BOUNDS_CHANGED = 3-End-->
 
@@ -60,7 +60,7 @@ WINDOW_REMOVED = 2
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowChangeType-WINDOW_REMOVED = 2--><!--Device-WindowChangeType-WINDOW_REMOVED = 2-End-->
 
@@ -80,7 +80,7 @@ WINDOW_UNDEFINED = 0
 
 **起始版本：** 22
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本22开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本22开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowChangeType-WINDOW_UNDEFINED = 0--><!--Device-WindowChangeType-WINDOW_UNDEFINED = 0-End-->
 

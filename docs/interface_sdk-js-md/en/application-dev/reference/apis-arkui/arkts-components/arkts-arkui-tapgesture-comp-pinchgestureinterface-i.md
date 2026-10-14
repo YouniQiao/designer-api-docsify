@@ -27,7 +27,7 @@ interface PinchGestureInterface extends GestureInterface<PinchGestureInterface>
 (value?: { fingers?: number; distance?: number }): PinchGestureInterface
 ```
 
-Sets the parameters for the pinch gesture. Inherits from [GestureInterface&lt;T&gt;](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
+Sets the parameters for the pinch gesture. Inherits from [GestureInterface<T>](arkts-arkui-tapgesture-comp-gestureinterface-i.md).
 
 **Since:** 7
 

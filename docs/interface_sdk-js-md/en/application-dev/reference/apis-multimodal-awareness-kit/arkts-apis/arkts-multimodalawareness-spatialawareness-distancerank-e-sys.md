@@ -6,8 +6,6 @@ export enum DistanceRank
 
 Enum for distance rank.
 
-@enum { string } DistanceRank
-
 **Since:** 23
 
 <!--Device-spatialAwareness-export enum DistanceRank--><!--Device-spatialAwareness-export enum DistanceRank-End-->

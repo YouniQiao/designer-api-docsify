@@ -821,8 +821,6 @@ static of(...items: number[]): Int8Array
 
 Creates an ArkTS Int8Array with a variable number of parameters.
 
-@static [since 18 - 21]
-
 **Since:** 18
 
 **Atomic service API:** This API can be used in atomic services since API version 18.

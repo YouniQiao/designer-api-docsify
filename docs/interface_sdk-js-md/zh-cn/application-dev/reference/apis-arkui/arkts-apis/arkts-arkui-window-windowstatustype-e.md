@@ -22,7 +22,7 @@ FLOATING = 4
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-FLOATING = 4--><!--Device-WindowStatusType-FLOATING = 4-End-->
 
@@ -46,7 +46,7 @@ FULL_SCREEN = 1
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-FULL_SCREEN = 1--><!--Device-WindowStatusType-FULL_SCREEN = 1-End-->
 
@@ -62,7 +62,7 @@ MAXIMIZE = 2
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-MAXIMIZE = 2--><!--Device-WindowStatusType-MAXIMIZE = 2-End-->
 
@@ -78,7 +78,7 @@ MINIMIZE = 3
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-MINIMIZE = 3--><!--Device-WindowStatusType-MINIMIZE = 3-End-->
 
@@ -94,7 +94,7 @@ SPLIT_SCREEN = 5
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-SPLIT_SCREEN = 5--><!--Device-WindowStatusType-SPLIT_SCREEN = 5-End-->
 
@@ -110,7 +110,7 @@ UNDEFINED = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-WindowStatusType-UNDEFINED = 0--><!--Device-WindowStatusType-UNDEFINED = 0-End-->
 

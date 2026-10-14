@@ -6,8 +6,6 @@ export enum RecurrenceType
 
 重复周期枚举。
 
-@enum { string }
-
 **起始版本：** 26.2.0
 
 <!--Device-behaviorAwareness-export enum RecurrenceType--><!--Device-behaviorAwareness-export enum RecurrenceType-End-->

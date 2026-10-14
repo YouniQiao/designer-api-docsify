@@ -79,7 +79,7 @@ Obtains the name or alias of the Bluetooth peer device.
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 16.
+**Atomic service API:** This API can be used in atomic services since API version 16.
 
 <!--Device-connection-function getRemoteDeviceName(deviceId: string, alias?: boolean): string--><!--Device-connection-function getRemoteDeviceName(deviceId: string, alias?: boolean): string-End-->
 

@@ -22,7 +22,7 @@ All font types, including the system font type, style font type, and user-instal
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-SystemFontType-ALL = 1 << 0--><!--Device-SystemFontType-ALL = 1 << 0-End-->
 
@@ -38,7 +38,7 @@ Custom font type.
 
 **Since:** 18
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-SystemFontType-CUSTOMIZED = 1 << 4--><!--Device-SystemFontType-CUSTOMIZED = 1 << 4-End-->
 
@@ -54,7 +54,7 @@ System font type.
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-SystemFontType-GENERIC = 1 << 1--><!--Device-SystemFontType-GENERIC = 1 << 1-End-->
 
@@ -70,7 +70,7 @@ Font type that has been installed.
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-SystemFontType-INSTALLED = 1 << 3--><!--Device-SystemFontType-INSTALLED = 1 << 3-End-->
 
@@ -86,7 +86,7 @@ Style font type. The style font type is designed for 2-in-1 devices.
 
 **Since:** 14
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 22.
+**Atomic service API:** This API can be used in atomic services since API version 22.
 
 <!--Device-SystemFontType-STYLISH = 1 << 2--><!--Device-SystemFontType-STYLISH = 1 << 2-End-->
 

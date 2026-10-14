@@ -3201,7 +3201,7 @@ getOriginalUrl(): string
 
 获取当前页面的原始URL地址。
 
-风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用[getLastJavascriptProxyCallingFrameUrl&lt;sup&gt;12+&lt;/sup&gt;](#getlastjavascriptproxycallingframeurl)
+风险提示：如果想获取URL来做JavascriptProxy通信接口认证，请使用[getLastJavascriptProxyCallingFrameUrl<sup>12+</sup>](#getlastjavascriptproxycallingframeurl)
 
 **起始版本：** 9
 
@@ -4242,6 +4242,29 @@ getZoomFactor(): number
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
 
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('get zoom factor')
+        .onClick(() => {
+          console.info(`zoom factor: ${this.controller.getZoomFactor()}`);
+        })
+      Web({ src: 'https://www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
 <a id="hasimage1"></a>
 
 ## hasImage
@@ -5137,7 +5160,7 @@ data数据必须使用base64编码或将内容中的任何#字符编码为%23。
 > 
 > - 若html中的富文本中带有注入#等特殊字符，建议将baseUrl和historyUrl两个参数的值设置为"空格"。
 > 
-> - 加载文字场景，需主动设置`&lt;meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8"&gt;`避免文本字体大小不一致。
+> - 加载文字场景，需主动设置`<meta name="viewport" content="width=device-width, initial-scale=1.0" charset="utf-8">`避免文本字体大小不一致。
 
 **起始版本：** 9
 
@@ -7369,7 +7392,7 @@ static removeAllCache(clearRom: boolean): void
 
 > **说明：** 
 > 
-> 可以通过在data/app/el2/100/base/\&lt;applicationPackageName\&gt;/cache/web/目录下查看Webview的缓存。
+> 可以通过在data/app/el2/100/base/\<applicationPackageName\>/cache/web/目录下查看Webview的缓存。
 
 **起始版本：** 18
 
@@ -11345,6 +11368,29 @@ setZoomFactor(zoomFactor: number): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | Init error. The WebviewController must be associated with a Web component. |
+
+**示例**
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Button('set zoom factor to 1.5')
+        .onClick(() => {
+          this.controller.setZoomFactor(1.5);
+        })
+      Web({ src: 'https://www.example.com', controller: this.controller })
+    }
+  }
+}
+```
 
 ## slideScroll
 

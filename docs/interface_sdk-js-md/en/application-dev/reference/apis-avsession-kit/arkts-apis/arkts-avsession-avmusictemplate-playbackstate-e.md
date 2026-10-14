@@ -6,8 +6,6 @@ enum PlaybackState
 
 Enumeration of play state.
 
-@enum { int }
-
 **Since:** 23
 
 <!--Device-avMusicTemplate-enum PlaybackState--><!--Device-avMusicTemplate-enum PlaybackState-End-->

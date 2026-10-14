@@ -130,7 +130,7 @@ try {
 getDebuggingManager(): AudioDebuggingManager
 ```
 
-Obtains an AudioDebuggingManager instance. <p>&lt;strong&gt;NOTE&lt;/strong&gt;: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) instance is a singleton. </p>
+Obtains an AudioDebuggingManager instance. <p><strong>NOTE</strong>: The [AudioDebuggingManager](arkts-audio-audio-audiodebuggingmanager-i.md) instance is a singleton. </p>
 
 **Since:** 26.0.0
 
@@ -251,7 +251,7 @@ Obtains an AudioSessionManager instance.
 
 **Since:** 12
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 26.0.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.0.0.
 
 <!--Device-AudioManager-getSessionManager(): AudioSessionManager--><!--Device-AudioManager-getSessionManager(): AudioSessionManager-End-->
 
@@ -336,7 +336,7 @@ Obtains an AudioVolumeManager instance.
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 23.
+**Atomic service API:** This API can be used in atomic services since API version 23.
 
 <!--Device-AudioManager-getVolumeManager(): AudioVolumeManager--><!--Device-AudioManager-getVolumeManager(): AudioVolumeManager-End-->
 

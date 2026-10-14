@@ -62,7 +62,7 @@ Unsubscribes from micIn audio data callback.
 onReadMicInData(callback: Callback<AudioCapturerMicInData>): void
 ```
 
-Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback. If this callback and 'readData' callback are both subscribed, only this callback will be triggered. See onReadData for more details. The event is triggered when an audio buffer is available for reading more data.
+Subscribes to micIn audio data callback. This callback has higher priority than 'readData' callback. If this callback and 'readData' callback are both subscribed, only this callback will be triggered. See [onReadData](../../apis-connectivity-kit/arkts-apis/arkts-connectivity-datatransfer-onreaddata-f.md) for more details. The event is triggered when an audio buffer is available for reading more data.
 
 **Since:** 24
 

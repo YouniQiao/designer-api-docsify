@@ -29,7 +29,7 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | --- | --- |
 | [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate1) | Starts screen hopping. This API uses an asynchronous callback to return the result. |
 | [activateCooperate](arkts-distributedservice-cooperate-activatecooperate-f-sys.md#activatecooperate2) | Starts screen hopping. This API uses a promise to return the result. |
-| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md) | Starts screen hopping based on the specified options. This API uses a promise to return the result. |
+| [activateCooperateWithOptions](arkts-distributedservice-cooperate-activatecooperatewithoptions-f-sys.md#activatecooperatewithoptions) | Starts screen hopping based on the specified options. This API uses a promise to return the result. |
 | [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate1) | Stops screen hopping. This API uses an asynchronous callback to return the result. |
 | [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate2) | Stops screen hopping. This API uses a promise to return the result. |
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate1) | Obtains the screen hopping status of the target device. This API uses an asynchronous callback to return the result. |

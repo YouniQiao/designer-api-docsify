@@ -22,7 +22,7 @@ Active state in calling.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_ACTIVE = 2--><!--Device-CallState-CALL_STATE_ACTIVE = 2-End-->
 
@@ -38,7 +38,7 @@ Dialing state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_DIALING = 3--><!--Device-CallState-CALL_STATE_DIALING = 3-End-->
 
@@ -54,7 +54,7 @@ Disconnecting state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_DISCONNECTING = 6--><!--Device-CallState-CALL_STATE_DISCONNECTING = 6-End-->
 
@@ -70,7 +70,7 @@ Holding state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_HOLDING = 5--><!--Device-CallState-CALL_STATE_HOLDING = 5-End-->
 
@@ -86,7 +86,7 @@ Idle state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_IDLE = 0--><!--Device-CallState-CALL_STATE_IDLE = 0-End-->
 
@@ -102,7 +102,7 @@ Incoming state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_INCOMING = 1--><!--Device-CallState-CALL_STATE_INCOMING = 1-End-->
 
@@ -118,7 +118,7 @@ Waiting state.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-CallState-CALL_STATE_WAITING = 4--><!--Device-CallState-CALL_STATE_WAITING = 4-End-->
 

@@ -22,7 +22,7 @@ PCM模式。表示媒体正在其他设备上展示。
 
 **起始版本：** 20
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本20开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本20开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_AUDIO = 8--><!--Device-ProtocolType-TYPE_CAST_PLUS_AUDIO = 8-End-->
 
@@ -38,7 +38,7 @@ Cast+的Stream模式。表示媒体正在其他设备上展示。
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2--><!--Device-ProtocolType-TYPE_CAST_PLUS_STREAM = 2-End-->
 
@@ -54,7 +54,7 @@ DLNA协议。表示媒体正在其他设备上展示。
 
 **起始版本：** 12
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProtocolType-TYPE_DLNA = 4--><!--Device-ProtocolType-TYPE_DLNA = 4-End-->
 
@@ -70,7 +70,7 @@ TYPE_LOCAL = 0
 
 **起始版本：** 11
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本12开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
 <!--Device-ProtocolType-TYPE_LOCAL = 0--><!--Device-ProtocolType-TYPE_LOCAL = 0-End-->
 

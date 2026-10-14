@@ -22,7 +22,7 @@ ROTATION_0 = 0
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImageRotation-ROTATION_0 = 0--><!--Device-ImageRotation-ROTATION_0 = 0-End-->
 
@@ -38,7 +38,7 @@ ROTATION_180 = 180
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImageRotation-ROTATION_180 = 180--><!--Device-ImageRotation-ROTATION_180 = 180-End-->
 
@@ -54,7 +54,7 @@ ROTATION_270 = 270
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImageRotation-ROTATION_270 = 270--><!--Device-ImageRotation-ROTATION_270 = 270-End-->
 
@@ -70,7 +70,7 @@ ROTATION_90 = 90
 
 **起始版本：** 10
 
-**原子化服务API（仅ArkTS-Dyn）：** 从API版本19开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本19开始，该接口支持在原子化服务中使用。
 
 <!--Device-ImageRotation-ROTATION_90 = 90--><!--Device-ImageRotation-ROTATION_90 = 90-End-->
 

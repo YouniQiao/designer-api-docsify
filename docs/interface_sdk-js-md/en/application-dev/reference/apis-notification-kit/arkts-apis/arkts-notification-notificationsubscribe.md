@@ -23,7 +23,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 
 | Name | Description |
 | --- | --- |
-| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md) | Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result. |
+| [distributeOperation](arkts-notification-notificationsubscribe-distributeoperation-f-sys.md#distributeoperation) | Triggers a notification for cross-device operations, such as tap-to-redirect and quick reply. This API uses a promise to return the result. |
 | [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove1) | Removes a notification based on the bundle information and notification key. This API uses an asynchronous callback to return the result. |
 | [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove2) | Removes a notification based on the bundle information and notification key. This API uses a promise to return the result. |
 | [remove](arkts-notification-notificationsubscribe-remove-f-sys.md#remove3) | Removes a notification based on the specified unique notification ID. This API uses an asynchronous callback to return the result. |
@@ -37,7 +37,7 @@ import { notificationSubscribe } from '@kit.NotificationKit';
 | [removeAll](arkts-notification-notificationsubscribe-removeall-f-sys.md#removeall5) | Removes all notifications for a specified application. This API uses a promise to return the result. |
 | [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification1) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
 | [subscribeNotification](arkts-notification-notificationsubscribe-subscribenotification-f-sys.md#subscribenotification2) | Subscribes to notifications. After the subscription, the new message is received through the callback in the subscriber. This API uses a promise to return the result. |
-| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md) | Subscribes to notifications of the application and specifies subscription information. This API uses a promise to return the result. |
+| [subscribeSelf](arkts-notification-notificationsubscribe-subscribeself-f-sys.md#subscribeself) | Subscribes to notifications of the application and specifies subscription information. This API uses a promise to return the result. |
 | [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe1) | Unsubscribes from a notification. This API uses an asynchronous callback to return the result. |
 | [unsubscribe](arkts-notification-notificationsubscribe-unsubscribe-f-sys.md#unsubscribe2) | Unsubscribes from a notification. This API uses a promise to return the result. |
 | [subscribe](arkts-notification-notificationsubscribe-subscribe-f-sys.md#subscribe1) | Subscribes to notifications of all applications under this user. This API uses an asynchronous callback to return the result. |

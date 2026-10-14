@@ -4,7 +4,7 @@
 interface VibratorStatusEvent
 ```
 
-振动设备上线、下线状态事件信息。当马达设备上线或下线时，通过[vibrator.on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange)回调传递此对象。
+振动设备上线、下线状态事件信息。当马达设备上线或下线时，通过vibrator.on回调传递此对象。
 
 **起始版本：** 19
 

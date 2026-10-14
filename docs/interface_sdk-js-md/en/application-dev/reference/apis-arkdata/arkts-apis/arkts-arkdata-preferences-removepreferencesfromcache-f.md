@@ -18,7 +18,7 @@ Removes a **Preferences** instance from the cache. This API uses an asynchronous
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-preferences-function removePreferencesFromCache(context: Context, name: string, callback: AsyncCallback<void>): void--><!--Device-preferences-function removePreferencesFromCache(context: Context, name: string, callback: AsyncCallback<void>): void-End-->
 
@@ -91,7 +91,7 @@ Removes a **Preferences** instance from the cache. This API uses an asynchronous
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-preferences-function removePreferencesFromCache(context: Context, options: Options, callback: AsyncCallback<void>): void--><!--Device-preferences-function removePreferencesFromCache(context: Context, options: Options, callback: AsyncCallback<void>): void-End-->
 
@@ -169,7 +169,7 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 **Since:** 9
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-preferences-function removePreferencesFromCache(context: Context, name: string): Promise<void>--><!--Device-preferences-function removePreferencesFromCache(context: Context, name: string): Promise<void>-End-->
 
@@ -245,7 +245,7 @@ Removes a **Preferences** instance from the cache. This API uses a promise to re
 
 **Since:** 10
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 11.
+**Atomic service API:** This API can be used in atomic services since API version 11.
 
 <!--Device-preferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>--><!--Device-preferences-function removePreferencesFromCache(context: Context, options: Options): Promise<void>-End-->
 

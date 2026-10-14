@@ -24,7 +24,7 @@ import { statfs } from '@kit.CoreFileKit';
 | --- | --- |
 | [getFreeSize](arkts-corefile-statfs-getfreesize-f.md#getfreesize1) | 获取指定文件或目录所在文件系统的空闲字节数。使用Promise异步回调。 |
 | [getFreeSize](arkts-corefile-statfs-getfreesize-f.md#getfreesize2) | 获取指定文件或目录所在文件系统的空闲字节数。使用callback异步回调。 |
-| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md) | 以同步方法获取指定文件或目录所在文件系统的空闲字节数。 |
+| [getFreeSizeSync](arkts-corefile-statfs-getfreesizesync-f.md#getfreesizesync) | 以同步方法获取指定文件或目录所在文件系统的空闲字节数。 |
 | [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md#gettotalsize1) | 获取指定文件或目录所在文件系统的总字节数。使用Promise异步回调。 |
 | [getTotalSize](arkts-corefile-statfs-gettotalsize-f.md#gettotalsize2) | 获取指定文件或目录所在文件系统的总字节数。使用callback异步回调。 |
-| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md) | 以同步方法获取指定文件或目录所在文件系统的总字节数。 |
+| [getTotalSizeSync](arkts-corefile-statfs-gettotalsizesync-f.md#gettotalsizesync) | 以同步方法获取指定文件或目录所在文件系统的总字节数。 |

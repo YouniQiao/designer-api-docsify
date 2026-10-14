@@ -29,8 +29,8 @@ import { cloudSyncManager } from '@kit.CoreFileKit';
 | [disableCloud](arkts-corefile-cloudsyncmanager-disablecloud-f-sys.md#disablecloud2) | 异步方法去使能端云协同能力。使用callback异步回调。 |
 | [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud1) | 异步方法使能端云协同能力。使用Promise异步回调。 |
 | [enableCloud](arkts-corefile-cloudsyncmanager-enablecloud-f-sys.md#enablecloud2) | 异步方法使能端云协同能力。使用callback异步回调。 |
-| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md) | 对接入云盘的应用，检测其在云盘存储空间内是否存在未上云文件，支持同时查询多个应用。使用Promise异步回调。 |
-| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md) | 查询接入云盘的应用的全量下载任务状态。使用Promise异步回调。 |
+| [getBundlesLocalFilePresentStatus](arkts-corefile-cloudsyncmanager-getbundleslocalfilepresentstatus-f-sys.md#getbundleslocalfilepresentstatus) | 对接入云盘的应用，检测其在云盘存储空间内是否存在未上云文件，支持同时查询多个应用。使用Promise异步回调。 |
+| [getDowngradeDownloadTaskState](arkts-corefile-cloudsyncmanager-getdowngradedownloadtaskstate-f-sys.md#getdowngradedownloadtaskstate) | 查询接入云盘的应用的全量下载任务状态。使用Promise异步回调。 |
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange1) | 通知端云服务指定账号下的特定应用云数据已发生变更。使用Promise异步回调。 |
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange2) | 通知端云服务指定账号下的特定应用云数据已发生变更。使用callback异步回调。 |
 | [notifyDataChange](arkts-corefile-cloudsyncmanager-notifydatachange-f-sys.md#notifydatachange3) | 通知端云服务应用指定用户的云数据变更信息。使用Promise异步回调。 |

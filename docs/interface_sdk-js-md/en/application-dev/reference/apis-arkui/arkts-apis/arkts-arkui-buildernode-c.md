@@ -150,7 +150,7 @@ build(builder: WrappedBuilder<Args>, arg: Object, options: BuildOptions): void
 
 Creates a component tree based on the passed object and holds the root node of the component tree. The stateless UI method [@Builder](../../../ui/state-management/arkts-builder.md) has at most one root node.
 
-Custom components are allowed. Compared with the [build(builder: WrappedBuilder\&lt;Args&gt;, arg?: Object)](#build1) API, this API supports builder configuration parameters to configure the build behavior of **@Builder**. For details about the attributes, see [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md).
+Custom components are allowed. Compared with the [build(builder: WrappedBuilder\<Args>, arg?: Object)](#build1) API, this API supports builder configuration parameters to configure the build behavior of **@Builder**. For details about the attributes, see [BuildOptions](arkts-arkui-buildernode-buildoptions-i.md).
 
 > **NOTE:** 
 > 

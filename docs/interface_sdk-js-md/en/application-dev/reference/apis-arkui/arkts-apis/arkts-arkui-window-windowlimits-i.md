@@ -52,7 +52,7 @@ Maximum window height.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowLimits-maxHeight?: int--><!--Device-WindowLimits-maxHeight?: int-End-->
 
@@ -70,7 +70,7 @@ Maximum window width.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowLimits-maxWidth?: int--><!--Device-WindowLimits-maxWidth?: int-End-->
 
@@ -88,7 +88,7 @@ Minimum window height.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowLimits-minHeight?: int--><!--Device-WindowLimits-minHeight?: int-End-->
 
@@ -106,7 +106,7 @@ Minimum window width.
 
 **Since:** 11
 
-**Atomic service API (ArkTS-Dyn only) :** This API can be used in atomic services since version 12.
+**Atomic service API:** This API can be used in atomic services since API version 12.
 
 <!--Device-WindowLimits-minWidth?: int--><!--Device-WindowLimits-minWidth?: int-End-->
 
