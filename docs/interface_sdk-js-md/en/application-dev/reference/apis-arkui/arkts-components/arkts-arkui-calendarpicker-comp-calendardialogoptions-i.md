@@ -350,6 +350,30 @@ Default value: **false**
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## firstDayOfWeek
+
+```TypeScript
+firstDayOfWeek?: CalendarFirstDayOfWeek
+```
+
+Sets the first day of the week for the calendar picker dialog.
+
+Default value: **CalendarFirstDayOfWeek.LOCAL** (follows the system region).
+
+**Type:** [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md)
+
+**Default:** CalendarFirstDayOfWeek.LOCAL
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek--><!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## hoverModeArea
 
 ```TypeScript

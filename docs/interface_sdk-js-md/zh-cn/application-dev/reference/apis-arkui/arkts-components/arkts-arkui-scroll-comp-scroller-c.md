@@ -258,6 +258,36 @@ getItemRect(index: number): RectResult
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | Controller not bound to a component. |
 
+## getScrollState
+
+```TypeScript
+getScrollState(): ScrollState
+```
+
+获取绑定到此Scroller的可滚动组件的当前滚动状态。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-Scroller-getScrollState(): ScrollState--><!--Device-Scroller-getScrollState(): ScrollState-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | 当前滚动状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [100004](../errorcode-router.md#100004-命名路由页面跳转时输入的name错误) | 控制器未绑定到组件。 |
+
 ## isAtEnd
 
 ```TypeScript

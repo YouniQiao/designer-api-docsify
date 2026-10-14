@@ -1,4 +1,4 @@
-# CliCmdInfo (System API)
+# CliCmdInfo
 
 ```TypeScript
 interface CliCmdInfo
@@ -11,8 +11,6 @@ CLI command information.
 <!--Device-abilityToolAccessCtrl-interface CliCmdInfo--><!--Device-abilityToolAccessCtrl-interface CliCmdInfo-End-->
 
 **System capability:** SystemCapability.Security.Asset
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -37,8 +35,6 @@ CLI main command name.
 
 **System capability:** SystemCapability.Security.Asset
 
-**System API:** This is a system API.
-
 ## subCliCmdName
 
 ```TypeScript
@@ -56,5 +52,3 @@ CLI subcommand name.
 <!--Device-CliCmdInfo-subCliCmdName: string--><!--Device-CliCmdInfo-subCliCmdName: string-End-->
 
 **System capability:** SystemCapability.Security.Asset
-
-**System API:** This is a system API.

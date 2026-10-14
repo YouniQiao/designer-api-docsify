@@ -6,6 +6,8 @@ export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options
 
 Defines the type alias of the left avatar item configuration options.
 
+**Type:** [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md)
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Defines the type alias of the left avatar item configuration options.
 <!--Device-unnamed-export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options--><!--Device-unnamed-export type EditableTitleBarItemV2Options = EditableTitleBarMenuItemV2Options-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** [EditableTitleBarMenuItemV2Options](arkts-arkui-arkui-advanced-editabletitlebarv2-editabletitlebarmenuitemv2options-i.md)

@@ -1094,6 +1094,22 @@ Reserved.
 
 **System capability:** SystemCapability.Security.Huks.Core
 
+## HUKS_TAG_TIMEOUT
+
+```TypeScript
+HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529
+```
+
+Asynchronous timeout duration in seconds, customizable by business logic.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used in both the stage model and FA model.
+
+<!--Device-HuksTag-HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529--><!--Device-HuksTag-HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529-End-->
+
+**System capability:** SystemCapability.Security.Huks.CryptoExtension
+
 ## HUKS_TAG_UNWRAP_ALGORITHM_SUITE
 
 ```TypeScript

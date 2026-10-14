@@ -1524,6 +1524,8 @@
 - index-full
 - [matrix2d](arkts-arkui-matrix2d.md)
   - [Matrix2D](arkts-arkui-matrix2d-c.md)
+- [scroll_common](arkts-arkui-scrollcommon.md)
+  - [ScrollSnapOffsetProvider](arkts-arkui-scrollsnapoffsetprovider-i.md)
 - [security_component](arkts-arkui-securitycomponent.md)
   - [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)
   <!--Del-->

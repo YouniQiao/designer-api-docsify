@@ -65,7 +65,7 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 | [getAuthorizedAppList](arkts-devicecertificate-certificatemanager-getauthorizedapplist-f-sys.md#getauthorizedapplist) | 获取用户公共凭据的授权应用列表，仅证书管理应用调用。使用Promise异步回调。 |
 | [getSystemAppCertificate](arkts-devicecertificate-certificatemanager-getsystemappcertificate-f-sys.md#getsystemappcertificate) | 获取系统应用的凭据详情，仅证书管理应用调用。使用Promise异步回调。 |
 | [getSystemTrustedCertificate](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificate-f-sys.md#getsystemtrustedcertificate) | 获取系统信任的CA证书详情，仅证书管理应用调用。使用Promise异步回调。 |
-| [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist) | 获取系统信任的CA证书列表，仅证书管理应用调用。使用Promise异步回调。 |
+| [getSystemTrustedCertificateList](arkts-devicecertificate-certificatemanager-getsystemtrustedcertificatelist-f-sys.md#getsystemtrustedcertificatelist) | 获取系统信任的CA证书列表。该接口仅由证书管理应用调用。该接口使用Promise返回结果。 |
 | [grantPublicCertificate](arkts-devicecertificate-certificatemanager-grantpubliccertificate-f-sys.md#grantpubliccertificate) | 授予应用使用用户公共凭据的权限，仅证书管理应用调用。使用Promise异步回调。 |
 | [installPublicCertificate](arkts-devicecertificate-certificatemanager-installpubliccertificate-f-sys.md#installpubliccertificate) | 安装用户的公共凭据，仅证书管理应用调用。使用Promise异步回调。 |
 | [installSystemAppCertificate](arkts-devicecertificate-certificatemanager-installsystemappcertificate-f-sys.md#installsystemappcertificate) | 安装系统应用凭据，仅证书管理应用调用。使用Promise异步回调。 |

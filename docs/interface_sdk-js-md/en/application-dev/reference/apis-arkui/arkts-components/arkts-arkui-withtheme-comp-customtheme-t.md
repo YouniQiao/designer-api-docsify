@@ -6,6 +6,8 @@ declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme
 
 Customizes the color scheme of components within the **WithTheme** scope. The specific color items are configured through the **CustomColors** interface.
 
+**Type:** import('../api/@ohos.arkui.theme').CustomTheme
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Customizes the color scheme of components within the **WithTheme** scope. The sp
 <!--Device-unnamed-declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme--><!--Device-unnamed-declare type CustomTheme = import('../api/@ohos.arkui.theme').CustomTheme-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.arkui.theme').CustomTheme

@@ -44,7 +44,7 @@ OH_AudioCapturer提供音频录制流功能，目前主要用于录制PCM（Puls
 | [typedef void (\*OH_AudioCapturer_OnPlaybackCaptureStartCallback)(OH_AudioCapturer* capturer, void* userData, OH_AudioStream_PlaybackCaptureStartState state)](#oh_audiocapturer_onplaybackcapturestartcallback) | OH_AudioCapturer_OnPlaybackCaptureStartCallback | 内录（录制系统内部音频）启动结果回调函数的原型定义。 <br>该API最初仅对特定系统应用可用，从API版本26.0.0开始，支持任意应用使用。 |
 | [OH_AudioStream_Result OH_AudioCapturer_RequestPlaybackCaptureStart(OH_AudioCapturer* capturer, OH_AudioCapturer_OnPlaybackCaptureStartCallback callback, void* userData)](#oh_audiocapturer_requestplaybackcapturestart) | - |  |
 | [OH_AudioStream_Result OH_AudioCapturer_SetMuteHint(OH_AudioCapturer* capturer, bool mute)](#oh_audiocapturer_setmutehint) | - | 将当前录制流的自身静音状态传递给音频系统。 <br>该接口用于在语音通话和语音会议场景，应用可向音频系统告知其进入录音静音状态（应用内实现录音静音）， 系统不会对录制流进行静音处理，而是会基于设置的状态调整数据处理策略以降低功耗。当前仅在部分PC/2in1设备上具备此效果。 <br>该接口仅在录制流处于运行态时允许调用，否则返回状态错误。 <br>应用同时设置音频流级静音提示接口（本接口） 和会话级静音提示接口OH_AudioSessionManager_SetCaptureMuteHint时，本接口优先级更高。 |
-| [OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_AudioCapturer* capturer, const OH_AudioSession_Strategy *strategy, uint32_t behavior)](#oh_audiocapturer_setindependentaudiosessionstrategy) | - | 设置音频录制流的独立音频会话策略和行为参数，这些参数主要用于扩展音频流的默认并发策略。 <br>建议在音频流处于运行状态前设置。当在音频流运行时调用此接口， 只会在下次调用接口[OH_AudioCapturer_Start](capi-native-audiocapturer-h.md#oh_audiocapturer_start)启动音频流后参数才会生效。 |
+| [OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_AudioCapturer* capturer, const OH_AudioSession_Strategy* strategy, uint32_t behavior)](#oh_audiocapturer_setindependentaudiosessionstrategy) | - | 设置音频录制流的独立音频会话策略和行为参数，这些参数主要用于扩展音频流的默认并发策略。 <br>建议在音频流处于运行状态前设置。当在音频流运行时调用此接口， 只会在下次调用接口[OH_AudioCapturer_Start](capi-native-audiocapturer-h.md#oh_audiocapturer_start)启动音频流后参数才会生效。 |
 | [typedef void (\*OH_AudioCapturer_SensitiveRecordPermitCallback)(OH_AudioCapturer* capturer, void* userData, bool isPermitted)](#oh_audiocapturer_sensitiverecordpermitcallback) | OH_AudioCapturer_SensitiveRecordPermitCallback | 蜂窝通话录音场景下，风险提示语播放结束回调函数的原型定义。 <br>应用必须等待回调返回许可结果，且isPermitted为true时，方可开始蜂窝通话录音。 |
 | [OH_AudioStream_Result OH_AudioCapturer_SetNoiseReductionMode(OH_AudioCapturer* capturer, OH_AudioNoiseReductionMode noiseReductionMode)](#oh_audiocapturer_setnoisereductionmode) | - | 设置当前录制流的降噪模式。 建议先调用[OH_AudioCapturer_GetSupportedNoiseReductionModes](capi-native-audiocapturer-h.md#oh_audiocapturer_getsupportednoisereductionmodes)获取当前录制流支持的降噪模式后， 再通过本接口进行设置。 <br>当前仅支持使用[AUDIOSTREAM_SOURCE_TYPE_VOICE_MESSAGE](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype)创建的录制流进行降噪模式设置，其他录制流默认仅支持 [AUDIO_NOISE_REDUCTION_MODE_FIDELITY](capi-native-audio-common-h.md#oh_audionoisereductionmode)。降噪效果受设备平台、音频设备和录音并发情况影响。 存在多个录制流同时运行时，设置的降噪模式可能不生效。 <br>该接口仅可在录制流创建后未开始录音，或停止录音后调用； 录制流处于运行态或已释放时调用将返回[AUDIOSTREAM_ERROR_ILLEGAL_STATE](capi-native-audiostream-base-h.md#oh_audiostream_result)。 |
 | [OH_AudioStream_Result OH_AudioCapturer_GetNoiseReductionMode(OH_AudioCapturer* capturer, OH_AudioNoiseReductionMode* noiseReductionMode)](#oh_audiocapturer_getnoisereductionmode) | - | 获取当前录制流的降噪模式。返回结果仅反映当前录制流的降噪模式。 默认值为[AUDIO_NOISE_REDUCTION_MODE_FIDELITY](capi-native-audio-common-h.md#oh_audionoisereductionmode)。 |
@@ -765,7 +765,7 @@ OH_AudioStream_Result OH_AudioCapturer_SetMuteHint(OH_AudioCapturer* capturer, b
 ### OH_AudioCapturer_SetIndependentAudioSessionStrategy()
 
 ```c
-OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_AudioCapturer* capturer, const OH_AudioSession_Strategy *strategy, uint32_t behavior)
+OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_AudioCapturer* capturer, const OH_AudioSession_Strategy* strategy, uint32_t behavior)
 ```
 
 **描述：**
@@ -781,7 +781,7 @@ OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_Aud
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioCapturer](capi-ohaudio-oh-audiocapturer.md)* capturer | [in] 指向[OH_AudioStreamBuilder_GenerateCapturer](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_generatecapturer)创建的音频流实例。 |
-| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | [in] 用于设置独立的音频会话策略。 |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)* strategy | [in] 用于设置独立的音频会话策略。 |
 | uint32_t behavior | [in] 音频会话行为标志，可以是单个标志，也可以是多个标志的按位OR组合。 当前支持的音频会话行为详见[OH_AudioSession_BehaviorFlags](capi-native-audio-session-base-h.md#oh_audiosession_behaviorflags)。 |
 
 **返回值：**

@@ -6,6 +6,8 @@ export type AgentSkill = _AgentSkill
 
 Skills in an AgentCard represent the specific abilities, expertise, and proficiencies that an agent possesses for performing tasks or solving problems.
 
+**Type:** _AgentSkill
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Skills in an AgentCard represent the specific abilities, expertise, and proficie
 <!--Device-common-export type AgentSkill = _AgentSkill--><!--Device-common-export type AgentSkill = _AgentSkill-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**Type:** _AgentSkill

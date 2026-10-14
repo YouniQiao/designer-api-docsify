@@ -6,6 +6,8 @@ type BluetoothTransport = connection.BluetoothTransport
 
 表示远端设备的传输类型。
 
+**类型：** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ type BluetoothTransport = connection.BluetoothTransport
 <!--Device-ble-type BluetoothTransport = connection.BluetoothTransport--><!--Device-ble-type BluetoothTransport = connection.BluetoothTransport-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
-
-**类型：** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)

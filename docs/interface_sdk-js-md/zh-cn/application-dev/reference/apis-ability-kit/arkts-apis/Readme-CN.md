@@ -917,8 +917,6 @@
   <!--Del-->
   - [DisposedRuleConfiguration（系统接口）](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [RecoverDisposedRule（系统接口）](arkts-ability-appcontrol-recoverdisposedrule-i-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [UninstallDisposedRule（系统接口）](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ComponentType（系统接口）](arkts-ability-appcontrol-componenttype-e-sys.md)<!--DelEnd-->
@@ -928,8 +926,6 @@
   - [DisposedType（系统接口）](arkts-ability-appcontrol-disposedtype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [PageJumpMode（系统接口）](arkts-ability-appcontrol-pagejumpmode-e-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [RecoverComponentType（系统接口）](arkts-ability-appcontrol-recovercomponenttype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UninstallComponentType（系统接口）](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md)<!--DelEnd-->
 - [@ohos.bundle.bundleManager（应用程序包管理模块）](arkts-ability-bundle-bundlemanager.md)
@@ -1052,8 +1048,6 @@
   <!--Del-->
   - [isAbilityEnabledSync（系统接口）](arkts-ability-bundlemanager-isabilityenabledsync-f-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [isAlternateModuleEnabled（系统接口）](arkts-ability-bundlemanager-isalternatemoduleenabled-f-sys.md)<!--DelEnd-->
-  <!--Del-->
   - [isApplicationDisableForbidden（系统接口）](arkts-ability-bundlemanager-isapplicationdisableforbidden-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [isApplicationEnabled（系统接口）](arkts-ability-bundlemanager-isapplicationenabled-f-sys.md)<!--DelEnd-->
@@ -1084,8 +1078,6 @@
   <!--Del-->
   - [setAdditionalInfoByIndex（系统接口）](arkts-ability-bundlemanager-setadditionalinfobyindex-f-sys.md)<!--DelEnd-->
   - [setAlternateIcon](arkts-ability-bundlemanager-setalternateicon-f.md)
-  <!--Del-->
-  - [setAlternateModuleEnabled（系统接口）](arkts-ability-bundlemanager-setalternatemoduleenabled-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [setAppClonePreference（系统接口）](arkts-ability-bundlemanager-setappclonepreference-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1514,7 +1506,7 @@
   - [unregisterMissionListener（系统接口）](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
 - [@ohos.application.Want（Want）](arkts-ability-application-want.md)
   - [Want](arkts-ability-application-want-want-depr-c.md)
-- [@ohos.bundle](arkts-ability-bundle.md)
+- [@ohos.bundle（Bundle模块）](arkts-ability-bundle.md)
   <!--Del-->
   - [cleanBundleCacheFiles（系统接口）](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md)<!--DelEnd-->
   - [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md)
@@ -1921,7 +1913,6 @@
   - [ProcessRunningInfo（ProcessRunningInfo）](arkts-ability-processrunninginfo.md)
     - [ProcessRunningInfo](arkts-ability-processrunninginfo-i.md)
 - bundle<!--arkts-abilitykit-bundle-->
-  - [hapModuleInfo（HapModuleInfo）](arkts-ability-hapmoduleinfo.md)
   - [abilityInfo（AbilityInfo）](arkts-ability-abilityinfo.md)
     - [AbilityInfo](arkts-ability-abilityinfo-depr-i.md)
   - [applicationInfo（ApplicationInfo）](arkts-ability-applicationinfo.md)
@@ -1946,6 +1937,8 @@
     - [CustomizeData](arkts-ability-customizedata-depr-i.md)
   - [elementName（ElementName）](arkts-ability-elementname.md)
     - [ElementName](arkts-ability-elementname-depr-i.md)
+  - [hapModuleInfo（HapModuleInfo）](arkts-ability-hapmoduleinfo.md)
+    - [HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)
   <!--Del-->
   - [launcherAbilityInfo（LauncherAbilityInfo）](arkts-ability-launcherabilityinfo.md)<!--DelEnd-->
     <!--Del-->
@@ -2071,21 +2064,21 @@
     <!--Del-->
     - [RemoteAbilityInfo（系统接口）](arkts-ability-remoteabilityinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
-  - [SharedBundleInfo](arkts-ability-sharedbundleinfo.md)<!--DelEnd-->
+  - [SharedBundleInfo（SharedBundleInfo）](arkts-ability-sharedbundleinfo.md)<!--DelEnd-->
     <!--Del-->
     - [SharedBundleInfo（系统接口）](arkts-ability-sharedbundleinfo-i-sys.md)<!--DelEnd-->
     <!--Del-->
     - [SharedModuleInfo（系统接口）](arkts-ability-sharedbundleinfo-sharedmoduleinfo-i-sys.md)<!--DelEnd-->
-  - [ShortcutInfo](arkts-ability-shortcutinfo.md)
+  - [ShortcutInfo（ShortcutInfo）](arkts-ability-shortcutinfo.md)
     - [ParameterItem](arkts-ability-shortcutinfo-parameteritem-i.md)
     - [ShortcutInfo](arkts-ability-shortcutinfo-i.md)
     - [ShortcutWant](arkts-ability-shortcutinfo-shortcutwant-i.md)
     <!--Del-->
     - [ShortcutWant（系统接口）](arkts-ability-shortcutinfo-shortcutwant-i-sys.md)<!--DelEnd-->
-  - [Skill](arkts-ability-skill.md)
+  - [Skill（Skill）](arkts-ability-skill.md)
     - [Skill](arkts-ability-skill-i.md)
     - [SkillUri](arkts-ability-skill-skilluri-i.md)
-  - [SkillInfo](arkts-ability-skillinfo.md)
+  - [SkillInfo（SkillInfo）](arkts-ability-skillinfo.md)
     - [SkillInfo](arkts-ability-skillinfo-i.md)
     - [SkillType](arkts-ability-skillinfo-skilltype-e.md)
 - continuation<!--arkts-abilitykit-continuation-->

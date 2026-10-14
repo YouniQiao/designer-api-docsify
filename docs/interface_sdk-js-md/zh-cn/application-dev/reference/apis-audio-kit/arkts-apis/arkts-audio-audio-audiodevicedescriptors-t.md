@@ -6,6 +6,8 @@ type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>
 
 设备属性数组类型，[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)数组，只读。
 
+**类型：** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;
+
 **起始版本：** 7
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
@@ -13,5 +15,3 @@ type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>
 <!--Device-audio-type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>--><!--Device-audio-type AudioDeviceDescriptors = Array<Readonly<AudioDeviceDescriptor>>-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Device
-
-**类型：** Array&lt;Readonly&lt;[AudioDeviceDescriptor](arkts-audio-audio-audiodevicedescriptor-i.md)&gt;&gt;

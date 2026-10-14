@@ -12,7 +12,7 @@ import { certificateManager } from '@kit.DeviceCertificateKit';
 function getSystemTrustedCertificateList(): Promise<CMResult>
 ```
 
-获取系统信任的CA证书列表，仅证书管理应用调用。使用Promise异步回调。
+获取系统信任的CA证书列表。该接口仅由证书管理应用调用。该接口使用Promise返回结果。
 
 **起始版本：** 26.0.0
 
@@ -30,7 +30,7 @@ function getSystemTrustedCertificateList(): Promise<CMResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise对象，返回获取系统信任CA证书列表的结果，返回值为[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)对象中的certList属性。 |
+| Promise&lt;[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)&gt; | Promise用于返回操作结果，即[CMResult](arkts-devicecertificate-certificatemanager-cmresult-i.md)对象中的**certList**。 |
 
 **错误码：**
 

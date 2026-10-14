@@ -33,16 +33,6 @@ const transform: Matrix4 = [
 ]
 ```.
 
-**Since:** 11
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 12.
-
-<!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]--><!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]-End-->
-
-**System capability:** SystemCapability.ArkUI.ArkUI.Full
-
 **Type:** [
   number,
   number,
@@ -61,3 +51,13 @@ const transform: Matrix4 = [
   number,
   number
 ]
+
+**Since:** 11
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 12.
+
+<!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]--><!--Device-unnamed-export type Matrix4 = [  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number,  number]-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

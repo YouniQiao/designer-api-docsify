@@ -58,7 +58,7 @@ OH_AudioRenderer提供音频播放流功能，目前主要用于播放PCM（Puls
 | [OH_AudioStream_Result OH_AudioRenderer_GetLoudnessGain(OH_AudioRenderer* renderer, float* loudnessGain)](#oh_audiorenderer_getloudnessgain) | - | 获取音频播放流的响度值。 |
 | [typedef int32_t (\*OH_AudioRenderer_OnWriteDataCallbackAdvanced)(OH_AudioRenderer* renderer, void* userData, void* audioData, int32_t audioDataSize)](#oh_audiorenderer_onwritedatacallbackadvanced) | OH_AudioRenderer_OnWriteDataCallbackAdvanced | 音频播放流写入音频数据回调函数的原型定义。 <br>不同于OH_AudioRenderer_OnWriteDataCallback，此函数允许应用填充[0, audioDataSize]长度的数据。 <br>其中audioDataSize为回调buffer的长度。调用方通过返回值告知系统写入的数据长度。 <br>如果返回0，回调线程将会sleep一段时间。 <br>否则，系统可能会立刻进行下一次回调。 |
 | [OH_AudioStream_Result OH_AudioRenderer_GetLatency(OH_AudioRenderer* renderer, OH_AudioStream_LatencyType type, int32_t* latencyMs)](#oh_audiorenderer_getlatency) | - | 获取当前音频路由的估算时延（单位：ms）。无线连接的音频设备，时延估算可能存在误差，结果仅供参考。 <br>由于时延未计入实时缓冲区，建议仅在音频播放开始时获取，避免频繁调用，否则可能因路由切换而阻塞该接口调用。 <br>当音频数据输出到硬件后，建议使用[OH_AudioRenderer_GetAudioTimestampInfo](capi-native-audiorenderer-h.md#oh_audiorenderer_getaudiotimestampinfo)进行音视频同步。 |
-| [OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_AudioRenderer* renderer, const OH_AudioSession_Strategy *strategy, uint32_t behavior)](#oh_audiorenderer_setindependentaudiosessionstrategy) | - | 设置音频播放流的独立音频会话策略和行为参数，这些参数主要用于扩展音频流的默认并发策略。 <br>建议在音频流处于运行状态前设置。当在音频流运行时调用此接口， 只会在下次调用接口[OH_AudioRenderer_Start](capi-native-audiorenderer-h.md#oh_audiorenderer_start)启动音频流后参数才会生效。 |
+| [OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_AudioRenderer* renderer, const OH_AudioSession_Strategy* strategy, uint32_t behavior)](#oh_audiorenderer_setindependentaudiosessionstrategy) | - | 设置音频播放流的独立音频会话策略和行为参数，这些参数主要用于扩展音频流的默认并发策略。 <br>建议在音频流处于运行状态前设置。当在音频流运行时调用此接口， 只会在下次调用接口[OH_AudioRenderer_Start](capi-native-audiorenderer-h.md#oh_audiorenderer_start)启动音频流后参数才会生效。 |
 
 ### 变量
 
@@ -1158,7 +1158,7 @@ OH_AudioStream_Result OH_AudioRenderer_GetLatency(OH_AudioRenderer* renderer, OH
 ### OH_AudioRenderer_SetIndependentAudioSessionStrategy()
 
 ```c
-OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_AudioRenderer* renderer, const OH_AudioSession_Strategy *strategy, uint32_t behavior)
+OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_AudioRenderer* renderer, const OH_AudioSession_Strategy* strategy, uint32_t behavior)
 ```
 
 **描述：**
@@ -1174,7 +1174,7 @@ OH_AudioStream_Result OH_AudioRenderer_SetIndependentAudioSessionStrategy(OH_Aud
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AudioRenderer](capi-ohaudio-oh-audiorenderer.md)* renderer | [in] 指向[OH_AudioStreamBuilder_GenerateRenderer](capi-native-audiostreambuilder-h.md#oh_audiostreambuilder_generaterenderer)创建的音频流实例。 |
-| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md) *strategy | [in] 用于设置独立的音频会话策略。 |
+| [const OH_AudioSession_Strategy](capi-ohaudio-oh-audiosession-strategy.md)* strategy | [in] 用于设置独立的音频会话策略。 |
 | uint32_t behavior | [in] 音频会话行为标志，可以是单个标志，也可以是多个标志的按位OR组合。 当前支持的音频会话行为详见[OH_AudioSession_BehaviorFlags](capi-native-audio-session-base-h.md#oh_audiosession_behaviorflags)。 |
 
 **返回值：**

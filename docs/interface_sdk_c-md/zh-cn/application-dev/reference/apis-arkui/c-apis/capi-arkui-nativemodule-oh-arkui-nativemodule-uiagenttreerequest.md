@@ -6,7 +6,7 @@ typedef struct OH_ArkUI_NativeModule_UIAgentTreeRequest OH_ArkUI_NativeModule_UI
 
 ## 概述
 
-声明一个UI树采集请求结构体。
+声明UI树采集请求结构体。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

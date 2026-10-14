@@ -46,7 +46,7 @@ Defines the native common types of ArkWeb.
 | Name | Description |
 | -- | -- |
 | ARKWEB_MEMBER_EXISTS(s, f)  ((intptr_t) & ((s)->f) - (intptr_t)(s) + sizeof((s)->f) <= *(size_t *)(s)) | Check whether the member variables of the current struct exist.<br>**Since**: 12 |
-| ARKWEB_MEMBER_MISSING(s, f) (!ARKWEB_MEMBER_EXISTS(s, f) \|\| !((s)->f)) | Return false if the struct member does not exist, otherwise true.<br>**Since**: 12 |
+| ARKWEB_MEMBER_MISSING(s, f) (!ARKWEB_MEMBER_EXISTS(s, f) \|\| !((s)->f)) | Return true if the struct member does not exist, otherwise false.<br>**Since**: 12 |
 
 ### Function
 
@@ -179,6 +179,13 @@ Callback for receiving Web component event notifications. It is used to receive 
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 12
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| const char* webTag | Name of the **Web** component. |
+| void* userData | Pointer to user-defined data. |
 
 ### ArkWeb_OnScrollCallback()
 

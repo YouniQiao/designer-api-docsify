@@ -10,6 +10,8 @@ Used for ide.
 
 @typedef { object & Options<T, Data> & ThisType<T & ViewModel & Data> } CombinedOptions<T extends ViewModel, Data>
 
+**Type:** object & [Options](arkts-arkui-viewmodel-options-i.md)&lt;T, Data&gt; & ThisType&lt;T & [ViewModel](arkts-arkui-viewmodel-i.md) & Data&gt;
+
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.
@@ -19,5 +21,3 @@ Used for ide.
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
-
-**Type:** object & [Options](arkts-arkui-viewmodel-options-i.md)&lt;T, Data&gt; & ThisType&lt;T & [ViewModel](arkts-arkui-viewmodel-i.md) & Data&gt;

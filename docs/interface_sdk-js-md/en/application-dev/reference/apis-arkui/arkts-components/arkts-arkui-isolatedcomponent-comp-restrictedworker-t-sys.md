@@ -6,6 +6,8 @@ declare type RestrictedWorker = import('../api/@ohos.worker').default.Restricted
 
 Restricted worker that runs the .abc file.
 
+**Type:** import('../api/@ohos.worker').default.RestrictedWorker
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Restricted worker that runs the .abc file.
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Type:** import('../api/@ohos.worker').default.RestrictedWorker

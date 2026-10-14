@@ -6,6 +6,8 @@ export type PermissionRequestResult = _PermissionRequestResult
 
 Permission request result object, containing information such as the list of requested permission names, the authorization result of each permission, the dialog box display result, and the failure reason.
 
+**Type:** _PermissionRequestResult
+
 **Since:** 10
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Permission request result object, containing information such as the list of req
 <!--Device-unnamed-export type PermissionRequestResult = _PermissionRequestResult--><!--Device-unnamed-export type PermissionRequestResult = _PermissionRequestResult-End-->
 
 **System capability:** SystemCapability.Security.AccessToken
-
-**Type:** _PermissionRequestResult

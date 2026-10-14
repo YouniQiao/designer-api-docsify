@@ -6,6 +6,8 @@ export type PermissionRequestResult = _PermissionRequestResult
 
 权限请求结果对象，包含申请的权限名列表、每个权限的授权结果、弹窗展示结果及失败原因等信息。
 
+**类型：** _PermissionRequestResult
+
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type PermissionRequestResult = _PermissionRequestResult
 <!--Device-unnamed-export type PermissionRequestResult = _PermissionRequestResult--><!--Device-unnamed-export type PermissionRequestResult = _PermissionRequestResult-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
-
-**类型：** _PermissionRequestResult

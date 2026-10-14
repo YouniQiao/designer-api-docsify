@@ -176,7 +176,7 @@ readonly hapModuleInfos: Array<HapModuleInfo>
 
 模块的配置信息。
 
-**类型：** Array&lt;HapModuleInfo&gt;
+**类型：** Array&lt;[HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)&gt;
 
 **默认值：** Obtains configuration information about a module
 

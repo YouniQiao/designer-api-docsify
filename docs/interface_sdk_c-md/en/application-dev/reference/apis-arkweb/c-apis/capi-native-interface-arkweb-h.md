@@ -51,10 +51,10 @@ native_interface_arkweb.h is the core entry header file of ArkWeb Native API. It
 | [uint32_t OH_NativeArkWeb_SetBlanklessLoadingCacheCapacity(uint32_t capacity)](#oh_nativearkweb_setblanklessloadingcachecapacity) | - | Sets the persistent cache capacity for the blankless loading solution and returns the actual effective value. The default cache capacity is 30 MB, and the maximum value is 100 MB. When the actual cache exceeds the capacity, infrequently used transition frames are evicted for cleanup. Typical use cases: adjusting the cache size based on the app memory usage, optimizing storage space usage, and balancing the blankless effect with system resource consumption. |
 | [ArkWeb_ErrorCode OH_ArkWebCookieManager_SaveCookieSync()](#oh_arkwebcookiemanager_savecookiesync) | - | Persists all cookies currently accessible through the CookieManager API to the disk. If this API is used in a non-UI thread, you need to initialize the CookieManager API using [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) first. Typical use cases: saving cookie states when the app exits or at specific times, for example, saving user login states, app configuration information, and session data, to ensure that the previous state can be restored after the app restarts. |
 | [void OH_ArkWebCookieManager_SaveCookieAsync(OH_ArkWeb_OnCookieSaveCallback callback)](#oh_arkwebcookiemanager_savecookieasync) | - | Persists all cookies currently accessible through the CookieManager API to the disk. If this API is used in a non-UI thread, you need to initialize the CookieManager API using [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) first. Without initializing the CookieManager API, this API is automatically executed on the UI thread. Typical use cases: asynchronously saving cookie states, for example, saving cookies asynchronously after page loading is complete or after a user operation, to avoid blocking the main thread. |
-| [void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVersion)](#oh_nativearkweb_setactivewebengineversion) | - |  |
-| [ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()](#oh_nativearkweb_getactivewebengineversion) | - |  |
-| [void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)](#oh_nativearkweb_lazyinitializewebengineincookiemanager) | - |  |
-| [bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()](#oh_nativearkweb_isactivewebengineevergreen) | - |  |
+| [void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVersion)](#oh_nativearkweb_setactivewebengineversion) | - | Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid and the system default kernel is used (see Constraints). Used when a specific kernel version needs to be selected based on app compatibility requirements, for example, when an app depends on features of an older kernel version or needs to maintain compatibility on a newer system version, a specific legacy kernel version can be specified.<br> This API is a global static method and must be called before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting of this API is invalid. |
+| [ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()](#oh_nativearkweb_getactivewebengineversion) | - | Obtains the current ArkWeb kernel version. |
+| [void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)](#oh_nativearkweb_lazyinitializewebengineincookiemanager) | - | Sets whether to defer the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not deferred for initialization by default. Typical use cases: the **Web** function is not needed immediately at app startup, and you want to delay kernel initialization to save startup resources; the app only needs to use CookieManager without **Web** component rendering for the time being. This API is a global static method and must be called before using the **Web** component and initializing the ArkWeb kernel; otherwise, the setting is invalid. |
+| [bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()](#oh_nativearkweb_isactivewebengineevergreen) | - | Checks whether the ArkWeb kernel used by the application is the evergreen kernel, that is, the latest kernel of the system. |
 | [ArkWeb_ErrorCode OH_ArkWebCookieManager_FetchCookieSync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, char** cookieValue)](#oh_arkwebcookiemanager_fetchcookiesync) | - | Obtains the cookies corresponding to the specified URL. If this API is used in a non-UI thread, you need to initialize the CookieManager API using [OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) first. |
 | [void OH_ArkWebCookieManager_FetchCookieAsync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, OH_ArkWeb_OnCookieFetchCallback callback)](#oh_arkwebcookiemanager_fetchcookieasync) | - | Asynchronously obtains the cookies corresponding to the specified URL. Without initializing the CookieManager API, this API is automatically executed on the UI thread. |
 
@@ -562,6 +562,8 @@ void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVers
 
 **Description**
 
+Sets the ArkWeb kernel version. If the system does not support the specified version, the setting is invalid and the system default kernel is used (see Constraints). Used when a specific kernel version needs to be selected based on app compatibility requirements, for example, when an app depends on features of an older kernel version or needs to maintain compatibility on a newer system version, a specific legacy kernel version can be specified.<br> This API is a global static method and must be called before **initializeWebEngine** is called. If any **Web** component has been loaded, the setting of this API is invalid.
+
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 20
@@ -570,7 +572,7 @@ void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVers
 
 | Parameter | Description |
 | -- | -- |
-| { | ArkWebEngineVersion } webEngineVersion - ArkWeb kernel version. For details, see [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion). |
+| [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion) webEngineVersion | - ArkWeb kernel version. For details, see [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion). |
 
 ### OH_NativeArkWeb_GetActiveWebEngineVersion()
 
@@ -579,6 +581,8 @@ ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()
 ```
 
 **Description**
+
+Obtains the current ArkWeb kernel version.
 
 **System capability**: SystemCapability.Web.Webview.Core
 
@@ -598,6 +602,8 @@ void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)
 
 **Description**
 
+Sets whether to defer the initialization of the ArkWeb kernel. If this method is not called, the ArkWeb kernel is not deferred for initialization by default. Typical use cases: the **Web** function is not needed immediately at app startup, and you want to delay kernel initialization to save startup resources; the app only needs to use CookieManager without **Web** component rendering for the time being. This API is a global static method and must be called before using the **Web** component and initializing the ArkWeb kernel; otherwise, the setting is invalid.
+
 **System capability**: SystemCapability.Web.Webview.Core
 
 **Since**: 22
@@ -606,7 +612,7 @@ void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)
 
 | Parameter | Description |
 | -- | -- |
-| { | bool } lazy - Controls whether to delay the initialization of the web engine. |
+| bool lazy | - Controls whether to delay the initialization of the web engine. |
 
 ### OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 
@@ -615,6 +621,8 @@ bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 ```
 
 **Description**
+
+Checks whether the ArkWeb kernel used by the application is the evergreen kernel, that is, the latest kernel of the system.
 
 **System capability**: SystemCapability.Web.Webview.Core
 

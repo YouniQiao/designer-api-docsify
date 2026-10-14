@@ -6,6 +6,8 @@ export type Context = _Context
 
 提供Ability或Application的上下文，可用于访问应用程序的资源。
 
+**类型：** _Context
+
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type Context = _Context
 <!--Device-unnamed-export type Context = _Context--><!--Device-unnamed-export type Context = _Context-End-->
 
 **系统能力：** SystemCapability.Security.AccessToken
-
-**类型：** _Context

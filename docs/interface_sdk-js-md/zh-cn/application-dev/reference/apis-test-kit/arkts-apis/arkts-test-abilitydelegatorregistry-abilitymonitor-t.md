@@ -6,6 +6,8 @@ export type AbilityMonitor = _AbilityMonitor
 
 AbilityMonitor模块。
 
+**类型：** _AbilityMonitor
+
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
@@ -13,5 +15,3 @@ AbilityMonitor模块。
 <!--Device-abilityDelegatorRegistry-export type AbilityMonitor = _AbilityMonitor--><!--Device-abilityDelegatorRegistry-export type AbilityMonitor = _AbilityMonitor-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**类型：** _AbilityMonitor

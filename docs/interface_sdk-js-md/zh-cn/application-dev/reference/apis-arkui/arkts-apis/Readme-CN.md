@@ -886,7 +886,7 @@
   - [VideoLiveControlGroup](arkts-arkui-pipwindow-videolivecontrolgroup-e.md)
   - [VideoMeetingControlGroup](arkts-arkui-pipwindow-videomeetingcontrolgroup-e.md)
   - [VideoPlayControlGroup](arkts-arkui-pipwindow-videoplaycontrolgroup-e.md)
-- [@ohos.pluginComponent（PluginComponentManager）](arkts-arkui-plugincomponent.md)
+- [@ohos.pluginComponent（插件组件管理器）](arkts-arkui-plugincomponent.md)
   - [pluginComponentManager](arkts-arkui-plugincomponentmanager-n.md)
     - [on](arkts-arkui-plugincomponentmanager-on-f.md)
     - [push](arkts-arkui-plugincomponentmanager-push-f.md)
@@ -1180,6 +1180,7 @@
     <!--Del-->
     - [WindowCreateParams（系统接口）](arkts-arkui-window-windowcreateparams-i-sys.md)<!--DelEnd-->
     - [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md)
+    - [WindowFocusState](arkts-arkui-window-windowfocusstate-i.md)
     - [WindowInfo](arkts-arkui-window-windowinfo-i.md)
     - [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md)
     - [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md)
@@ -1203,6 +1204,7 @@
     - [ColorSpace](arkts-arkui-window-colorspace-e.md)
     <!--Del-->
     - [ExtensionWindowAttribute（系统接口）](arkts-arkui-window-extensionwindowattribute-e-sys.md)<!--DelEnd-->
+    - [FocusChangeReason](arkts-arkui-window-focuschangereason-e.md)
     - [GlobalWindowMode](arkts-arkui-window-globalwindowmode-e.md)
     - [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md)
     - [ModalityType](arkts-arkui-window-modalitytype-e.md)
@@ -1449,6 +1451,8 @@
   - [ImageAnalyzerType](arkts-arkui-imageanalyzertype-e.md)
 - [matrix2d](arkts-arkui-matrix2d.md)
   - [Matrix2D](arkts-arkui-matrix2d-c.md)
+- [scroll_common](arkts-arkui-scrollcommon.md)
+  - [ScrollSnapOffsetProvider](arkts-arkui-scrollsnapoffsetprovider-i.md)
 - [security_component](arkts-arkui-securitycomponent.md)
   - [SecurityComponentMethod](arkts-arkui-securitycomponentmethod-c.md)
   <!--Del-->

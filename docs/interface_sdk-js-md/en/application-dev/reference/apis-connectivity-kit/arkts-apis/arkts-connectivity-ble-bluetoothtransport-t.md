@@ -6,6 +6,8 @@ type BluetoothTransport = connection.BluetoothTransport
 
 Indicate the transport of a remote device.
 
+**Type:** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Indicate the transport of a remote device.
 <!--Device-ble-type BluetoothTransport = connection.BluetoothTransport--><!--Device-ble-type BluetoothTransport = connection.BluetoothTransport-End-->
 
 **System capability:** SystemCapability.Communication.Bluetooth.Core
-
-**Type:** [connection.BluetoothTransport](arkts-connectivity-connection-bluetoothtransport-e.md)

@@ -18,7 +18,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkWeb_NetError](#arkweb_neterror) | ArkWeb_NetError | 声明ArkWeb网络协议栈错误码。该枚举定义了ArkWeb网络协议栈中可能出现的各种错误类型，覆盖网络连接、SSL/TLS、证书验证、HTTP/2、QUIC、缓存等多个方面的错误场景。 开发者可以通过这些错误码快速定位网络请求失败的原因，便于进行故障诊断和错误处理。 |
+| [ArkWeb_NetError](#arkweb_neterror) | ArkWeb_NetError | 定义ArkWeb网络协议栈错误码。 |
 
 ## 枚举类型说明
 
@@ -30,12 +30,11 @@ enum ArkWeb_NetError
 
 **描述：**
 
-声明ArkWeb网络协议栈错误码。该枚举定义了ArkWeb网络协议栈中可能出现的各种错误类型，覆盖网络连接、SSL/TLS、证书验证、HTTP/2、QUIC、缓存等多个方面的错误场景。 开发者可以通过这些错误码快速定位网络请求失败的原因，便于进行故障诊断和错误处理。
+定义ArkWeb网络协议栈错误码。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**起始版本：** 12 /
-#define ARKWEB_NET_ERROR_LIST_H
+**起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |

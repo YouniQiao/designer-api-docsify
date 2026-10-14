@@ -6,6 +6,8 @@ export type AbilityStartCallback = _AbilityStartCallback
 
 定义了拉起UIExtensionAbility的回调结果，通常作为[UIAbilityContext.startAbilityByType](arkts-ability-uiabilitycontext-c.md#startabilitybytype1) / [UIExtensionContext.startAbilityByType](arkts-ability-app-ability-uiextensioncontentsession-uiextensioncontentsession-c.md#startabilitybytype1)的入参传入。
 
+**类型：** _AbilityStartCallback
+
 **起始版本：** 11
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type AbilityStartCallback = _AbilityStartCallback
 <!--Device-common-export type AbilityStartCallback = _AbilityStartCallback--><!--Device-common-export type AbilityStartCallback = _AbilityStartCallback-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**类型：** _AbilityStartCallback

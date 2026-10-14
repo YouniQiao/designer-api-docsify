@@ -6,7 +6,7 @@ typedef struct OH_ArkUI_NativeModule_ImageCollection OH_ArkUI_NativeModule_Image
 
 ## 概述
 
-ArkUI图像采集结果结构体声明
+声明ArkUI图像采集结果结构体。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

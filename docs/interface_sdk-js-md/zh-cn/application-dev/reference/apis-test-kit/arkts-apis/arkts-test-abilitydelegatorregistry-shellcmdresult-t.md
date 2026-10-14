@@ -6,6 +6,8 @@ export type ShellCmdResult = _ShellCmdResult
 
 ShellCmdResult模块。
 
+**类型：** _ShellCmdResult
+
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
@@ -13,5 +15,3 @@ ShellCmdResult模块。
 <!--Device-abilityDelegatorRegistry-export type ShellCmdResult = _ShellCmdResult--><!--Device-abilityDelegatorRegistry-export type ShellCmdResult = _ShellCmdResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**类型：** _ShellCmdResult

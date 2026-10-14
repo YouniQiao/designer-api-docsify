@@ -51,10 +51,10 @@ native_interface_arkweb.h是ArkWeb Native API的核心入口头文件，定义�
 | [uint32_t OH_NativeArkWeb_SetBlanklessLoadingCacheCapacity(uint32_t capacity)](#oh_nativearkweb_setblanklessloadingcachecapacity) | - | 设置无白屏加载方案的持久化缓存容量，返回实际生效值。默认缓存容量为30MB，最大值为100MB。当实际缓存超过容量时，将采用淘汰不常用的过渡帧的方式清理。典型使用场景：根据应用内存占用情况调整缓存大小、优化存储空间使用、 平衡无白屏效果与系统资源消耗等。 |
 | [ArkWeb_ErrorCode OH_ArkWebCookieManager_SaveCookieSync()](#oh_arkwebcookiemanager_savecookiesync) | - | 将当前可通过CookieManager API访问的所有cookie持久化到磁盘。如果要在非UI线程中使用此接口，则需要先使用[OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) 初始化CookieManager接口。典型使用场景：可在应用退出或特定时机保存cookie状态时使用。例如保存用户登录状态、应用配置信息、会话数据等，确保应用重启后能够恢复之前的状态。 |
 | [void OH_ArkWebCookieManager_SaveCookieAsync(OH_ArkWeb_OnCookieSaveCallback callback)](#oh_arkwebcookiemanager_savecookieasync) | - | 将当前可通过CookieManager API访问的所有cookie持久化到磁盘。如果要在非UI线程中使用此接口，则需要先使用[OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi) 初始化CookieManager接口；在不初始化CookieManager接口的情况下，此接口将在UI线程上自动执行。典型使用场景：需要异步保存cookie状态时使用，例如在页面加载完成、用户操作完成后异步保存cookie， 避免阻塞主线程。 |
-| [void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVersion)](#oh_nativearkweb_setactivewebengineversion) | - |  |
-| [ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()](#oh_nativearkweb_getactivewebengineversion) | - |  |
-| [void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)](#oh_nativearkweb_lazyinitializewebengineincookiemanager) | - |  |
-| [bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()](#oh_nativearkweb_isactivewebengineevergreen) | - |  |
+| [void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVersion)](#oh_nativearkweb_setactivewebengineversion) | - | 设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考约束与限制）。需要根据应用兼容性需求选择特定内核版本时使用，例如应用依赖某些旧版本内核的特性， 或需要在新版本系统上保持兼容性，可以指定使用特定的遗留内核版本。<br>该接口为全局静态方法，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。 |
+| [ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()](#oh_nativearkweb_getactivewebengineversion) | - | 获取当前使用的ArkWeb内核版本。 |
+| [void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)](#oh_nativearkweb_lazyinitializewebengineincookiemanager) | - | 设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。典型使用场景：应用启动时暂不需要使用Web功能，希望延迟内核初始化以节省启动资源； 应用只需要使用CookieManager而暂时不需要Web组件渲染等。该接口为全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。 |
+| [bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()](#oh_nativearkweb_isactivewebengineevergreen) | - | 判断应用所使用ArkWeb内核是否是常青内核，即系统的最新内核。 |
 | [ArkWeb_ErrorCode OH_ArkWebCookieManager_FetchCookieSync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, char** cookieValue)](#oh_arkwebcookiemanager_fetchcookiesync) | - | 获取指定URL对应的cookies。如果要在非UI线程中使用此接口，则需要先使用[OH_ArkWeb_GetNativeAPI](capi-arkweb-interface-h.md#oh_arkweb_getnativeapi)初始化CookieManager接口。 |
 | [void OH_ArkWebCookieManager_FetchCookieAsync(const char* url, bool incognito, bool includeHttpOnly, bool includePartitionedCookies, OH_ArkWeb_OnCookieFetchCallback callback)](#oh_arkwebcookiemanager_fetchcookieasync) | - | 异步获取指定URL对应的cookies。在不初始化CookieManager接口的情况下，此接口将在UI线程上自动执行。 |
 
@@ -562,6 +562,8 @@ void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVers
 
 **描述：**
 
+设置ArkWeb内核版本。若系统不支持指定版本，则设置无效，使用系统默认内核（可参考约束与限制）。需要根据应用兼容性需求选择特定内核版本时使用，例如应用依赖某些旧版本内核的特性， 或需要在新版本系统上保持兼容性，可以指定使用特定的遗留内核版本。<br>该接口为全局静态方法，须在调用initializeWebEngine前执行，若已加载任何Web组件，则该设置无效。
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **起始版本：** 20
@@ -570,7 +572,7 @@ void OH_NativeArkWeb_SetActiveWebEngineVersion(ArkWebEngineVersion webEngineVers
 
 | 参数项 | 描述 |
 | -- | -- |
-| { | ArkWebEngineVersion } webEngineVersion - ArkWeb内核版本。 详细说明见 [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion). |
+| [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion) webEngineVersion | - ArkWeb内核版本。 详细说明见 [ArkWebEngineVersion](capi-native-interface-arkweb-h.md#arkwebengineversion). |
 
 ### OH_NativeArkWeb_GetActiveWebEngineVersion()
 
@@ -579,6 +581,8 @@ ArkWebEngineVersion OH_NativeArkWeb_GetActiveWebEngineVersion()
 ```
 
 **描述：**
+
+获取当前使用的ArkWeb内核版本。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
@@ -598,6 +602,8 @@ void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)
 
 **描述：**
 
+设置是否延后初始化ArkWeb内核，不调用该方法时，默认不延后初始化ArkWeb内核。典型使用场景：应用启动时暂不需要使用Web功能，希望延迟内核初始化以节省启动资源； 应用只需要使用CookieManager而暂时不需要Web组件渲染等。该接口为全局静态方法，须在使用ArkWeb组件和初始化ArkWeb内核前调用，否则该设置无效。
+
 **系统能力：** SystemCapability.Web.Webview.Core
 
 **起始版本：** 22
@@ -606,7 +612,7 @@ void OH_NativeArkWeb_LazyInitializeWebEngineInCookieManager(bool lazy)
 
 | 参数项 | 描述 |
 | -- | -- |
-| { | bool } lazy - 是否延后初始化ArkWeb内核，true：延后，false：不延后。 |
+| bool lazy | - 是否延后初始化ArkWeb内核，true：延后，false：不延后。 |
 
 ### OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 
@@ -615,6 +621,8 @@ bool OH_NativeArkWeb_IsActiveWebEngineEvergreen()
 ```
 
 **描述：**
+
+判断应用所使用ArkWeb内核是否是常青内核，即系统的最新内核。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

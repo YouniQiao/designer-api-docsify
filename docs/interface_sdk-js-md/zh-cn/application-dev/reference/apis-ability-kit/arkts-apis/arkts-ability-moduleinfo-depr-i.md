@@ -14,7 +14,7 @@ export interface ModuleInfo
 
 **废弃版本：** 9
 
-**替代接口：** HapModuleInfo
+**替代接口：** [HapModuleInfo](arkts-ability-hapmoduleinfo-depr-i.md)
 
 <!--Device-unnamed-export interface ModuleInfo--><!--Device-unnamed-export interface ModuleInfo-End-->
 

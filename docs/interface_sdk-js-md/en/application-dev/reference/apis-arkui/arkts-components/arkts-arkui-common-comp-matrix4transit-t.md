@@ -6,6 +6,8 @@ declare type Matrix4Transit = import('../api/@ohos.matrix4').default.Matrix4Tran
 
 Import the Matrix4Transit type object for common method.
 
+**Type:** import('../api/@ohos.matrix4').default.Matrix4Transit
+
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Import the Matrix4Transit type object for common method.
 <!--Device-unnamed-declare type Matrix4Transit = import('../api/@ohos.matrix4').default.Matrix4Transit--><!--Device-unnamed-declare type Matrix4Transit = import('../api/@ohos.matrix4').default.Matrix4Transit-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.matrix4').default.Matrix4Transit

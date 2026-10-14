@@ -6,6 +6,8 @@ declare type Theme = import('../api/@ohos.arkui.theme').Theme
 
 Defines the **Theme** object.
 
+**Type:** import('../api/@ohos.arkui.theme').Theme
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Defines the **Theme** object.
 <!--Device-unnamed-declare type Theme = import('../api/@ohos.arkui.theme').Theme--><!--Device-unnamed-declare type Theme = import('../api/@ohos.arkui.theme').Theme-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.arkui.theme').Theme

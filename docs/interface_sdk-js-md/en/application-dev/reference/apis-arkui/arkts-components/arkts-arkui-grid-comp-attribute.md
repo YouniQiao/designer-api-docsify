@@ -1118,6 +1118,32 @@ GridItem and replaces the placeholder, keeping the scroll anchor.
 | --- | --- | --- | --- |
 | provider | [PlaceholderProvider](arkts-arkui-grid-comp-placeholderprovider-t.md) | No | Placeholder provider of the item at the given index. |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+Sets the two-stage scroll snap strategy of the Grid.
+
+START, CENTER, and END align items with the start, center, and end of the viewport along the scrolling axis. A custom provider calculates the approach distance and final target through its two callbacks. NONE or undefined clears the strategy and restores the default scrolling behavior. Snapping is disabled for unsupported layouts. Targets are constrained to the legal scroll range.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-GridAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): GridAttribute--><!--Device-GridAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): GridAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Built-in alignment or custom provider. |
+
 ## supportAnimation
 
 ```TypeScript

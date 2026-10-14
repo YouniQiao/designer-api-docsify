@@ -70,6 +70,30 @@ Sets how the picker is aligned with the entry component. Compared with [edgeAlig
 | alignType | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md)&gt; | Yes | Alignment type.<br>Default value: **CalendarAlign.END**. <br>If the value of **alignType** is **undefined**, the default value is used. |
 | offset | Offset | No | Offset of the picker relative to the entry component after alignment based on the specified alignment type.<br>Default value: **{dx: 0, dy: 0}** <br>Unit: vp. |
 
+## firstDayOfWeek
+
+```TypeScript
+firstDayOfWeek(value: CalendarFirstDayOfWeek)
+```
+
+Sets the first day of the week for the CalendarPicker.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-CalendarPickerAttribute-firstDayOfWeek(value: CalendarFirstDayOfWeek): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-firstDayOfWeek(value: CalendarFirstDayOfWeek): CalendarPickerAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md) | Yes | First day of the week.<br> Default value: **CalendarFirstDayOfWeek.LOCAL** (follows the system region). |
+
 ## markToday
 
 ```TypeScript

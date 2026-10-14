@@ -9,7 +9,11 @@ import { config } from '@kit.AccessibilityKit';
 ## enableAbilityWithCallback
 
 ```TypeScript
-function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>
+function enableAbilityWithCallback(
+    name: string,
+    capability: Array<accessibility.Capability>,
+    connectCallback: ConnectCallback
+  ): Promise<void>
 ```
 
 启用辅助扩展，并指定[ConnectCallback](arkts-accessibility-config-connectcallback-i-sys.md)作为辅助扩展连接断开事件的回调函数。使用Promise异步回调。
@@ -22,7 +26,7 @@ function enableAbilityWithCallback(name: string, capability: Array<accessibility
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-<!--Device-config-function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>--><!--Device-config-function enableAbilityWithCallback(name: string, capability: Array<accessibility.Capability>, connectCallback: ConnectCallback): Promise<void>-End-->
+<!--Device-config-function enableAbilityWithCallback(    name: string,    capability: Array<accessibility.Capability>,    connectCallback: ConnectCallback  ): Promise<void>--><!--Device-config-function enableAbilityWithCallback(    name: string,    capability: Array<accessibility.Capability>,    connectCallback: ConnectCallback  ): Promise<void>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

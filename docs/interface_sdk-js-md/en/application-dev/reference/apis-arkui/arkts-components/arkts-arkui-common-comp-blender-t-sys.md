@@ -6,6 +6,8 @@ declare type Blender = import('../api/@ohos.graphics.uiEffect').default.Blender
 
 Blender
 
+**Type:** import('../api/@ohos.graphics.uiEffect').default.Blender
+
 **Since:** 13
 
 **Model restriction:** This API can be used only in the stage model.
@@ -17,5 +19,3 @@ Blender
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
 **System API:** This is a system API.
-
-**Type:** import('../api/@ohos.graphics.uiEffect').default.Blender

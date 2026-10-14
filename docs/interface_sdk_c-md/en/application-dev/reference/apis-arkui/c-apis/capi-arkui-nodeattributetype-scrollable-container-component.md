@@ -370,6 +370,18 @@ Scrollbar height. This attribute can be set, reset, and obtained as required thr
 
 **Since**: 26.0.0
 
+### NODE_SCROLL_STATE
+
+```c
+NODE_SCROLL_STATE = 1002030
+```
+
+**Description**
+
+Obtains the current scroll state. This attribute can be obtained as required through APIs.<br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].i32: current scroll state. The parameter type is [ArkUI_ScrollState](capi-scroll-h.md#arkui_scrollstate).</li> </ul>
+
+**Since**: 26.2.0
+
 ### NODE_LIST_DIRECTION
 
 ```c

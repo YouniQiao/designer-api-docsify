@@ -12,7 +12,10 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 ## getAccessibilityExtensionList
 
 ```TypeScript
-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>
+function getAccessibilityExtensionList(
+    abilityType: AbilityType,
+    stateType: AbilityState
+  ): Promise<Array<AccessibilityAbilityInfo>>
 ```
 
 查询辅助应用列表。使用Promise异步回调。
@@ -23,7 +26,7 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState): Promise<Array<AccessibilityAbilityInfo>>-End-->
+<!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState  ): Promise<Array<AccessibilityAbilityInfo>>--><!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState  ): Promise<Array<AccessibilityAbilityInfo>>-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 
@@ -96,7 +99,11 @@ accessibility.getAccessibilityExtensionList(abilityType, abilityState).then((dat
 ## getAccessibilityExtensionList
 
 ```TypeScript
-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void
+function getAccessibilityExtensionList(
+    abilityType: AbilityType,
+    stateType: AbilityState,
+    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>
+  ): void
 ```
 
 查询辅助应用列表。使用callback异步回调。
@@ -107,7 +114,7 @@ function getAccessibilityExtensionList(abilityType: AbilityType, stateType: Abil
 
 **卡片能力：** 从API版本23开始，该接口支持在ArkTS卡片中使用。
 
-<!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void--><!--Device-accessibility-function getAccessibilityExtensionList(abilityType: AbilityType, stateType: AbilityState, callback: AsyncCallback<Array<AccessibilityAbilityInfo>>): void-End-->
+<!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void--><!--Device-accessibility-function getAccessibilityExtensionList(    abilityType: AbilityType,    stateType: AbilityState,    callback: AsyncCallback<Array<AccessibilityAbilityInfo>>  ): void-End-->
 
 **系统能力：** SystemCapability.BarrierFree.Accessibility.Core
 

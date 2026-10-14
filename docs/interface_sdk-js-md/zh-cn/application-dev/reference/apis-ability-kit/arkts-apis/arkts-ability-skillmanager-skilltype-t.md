@@ -6,6 +6,8 @@ export type SkillType = _SkillType
 
 技能类型的枚举。
 
+**类型：** _SkillType
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type SkillType = _SkillType
 <!--Device-skillManager-export type SkillType = _SkillType--><!--Device-skillManager-export type SkillType = _SkillType-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**类型：** _SkillType

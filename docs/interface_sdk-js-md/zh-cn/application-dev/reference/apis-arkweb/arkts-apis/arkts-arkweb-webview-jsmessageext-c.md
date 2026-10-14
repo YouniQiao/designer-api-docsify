@@ -8,6 +8,14 @@ JsMessageExt是ArkWeb框架中用于封装[runJavaScriptExt](arkts-arkweb-webvie
 
 JsMessageExt支持多种JavaScript返回值类型的解析：字符串（getString）、数值（getNumber）、布尔值（getBoolean）、原始二进制数据（getArrayBuffer）、数组（getArray）等。当获取的数据类型与实际存储类型不匹配时（例如对数值类型调用getString），会抛出错误码17100014。从API version 22开始，JsMessageExt还提供了getErrorDescription方法，用于获取JavaScript执行过程中的异常信息，如果返回值为object类型则统一格式化为描述字符串。
 
+> **说明：** 
+> 
+> - 本模块首批接口从API version 9开始支持。后续版本如有新增内容，则采用上角标单独标记该内容的起始版本。
+> 
+> - 本Class首批接口从API version 10开始支持。
+> 
+> - 示例效果请以真机运行为准。
+
 **起始版本：** 10
 
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->

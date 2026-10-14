@@ -1081,6 +1081,32 @@ scrollBarWidth(value: number | string | Resource)
 | --- | --- | --- | --- |
 | value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的宽度。<br>单位：vp<br>取值范围：[0, +∞)。设置为小于0的值时，按4vp处理。设置为0时，不显示滚动条。 |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+设置Grid的两阶段滚动吸附策略。
+
+START、CENTER、END分别将item对齐到滚动轴方向视口的起始、中间和末尾位置。自定义提供方通过calculateApproachOffset计算趋近距离，通过calculateSnapOffset计算最终目标。设置为NONE或undefined时清除策略，恢复默认滚动行为。不支持的布局不启用吸附。吸附目标受合法滚动范围限制。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-GridAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): GridAttribute--><!--Device-GridAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): GridAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | 否 | 内置对齐策略或自定义提供方。 |
+
 ## supportAnimation
 
 ```TypeScript

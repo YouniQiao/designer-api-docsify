@@ -1102,6 +1102,22 @@ HUKS_TAG_SYMMETRIC_KEY_DATA = HuksTagType.HUKS_TAG_TYPE_BYTES | 20001
 
 **系统能力：** SystemCapability.Security.Huks.Core
 
+## HUKS_TAG_TIMEOUT
+
+```TypeScript
+HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529
+```
+
+表示异步超时时间，单位为秒，可由业务逻辑自定义。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
+<!--Device-HuksTag-HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529--><!--Device-HuksTag-HUKS_TAG_TIMEOUT = HuksTagType.HUKS_TAG_TYPE_UINT | 529-End-->
+
+**系统能力：** SystemCapability.Security.Huks.CryptoExtension
+
 ## HUKS_TAG_UNWRAP_ALGORITHM_SUITE
 
 ```TypeScript

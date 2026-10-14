@@ -49,7 +49,6 @@ import { appControl } from '@kit.AbilityKit';
 | --- | --- |
 | [DisposedRule](arkts-ability-appcontrol-disposedrule-i-sys.md) | 标识拦截规则。 |
 | [DisposedRuleConfiguration](arkts-ability-appcontrol-disposedruleconfiguration-i-sys.md) | 标识批量设置拦截规则的配置。 |
-| [RecoverDisposedRule](arkts-ability-appcontrol-recoverdisposedrule-i-sys.md) | 描述应用程序恢复已处理的规则。 |
 | [UninstallDisposedRule](arkts-ability-appcontrol-uninstalldisposedrule-i-sys.md) | 标识卸载处置规则。 |
 <!--DelEnd-->
 
@@ -62,6 +61,5 @@ import { appControl } from '@kit.AbilityKit';
 | [ControlType](arkts-ability-appcontrol-controltype-e-sys.md) | 标识拦截指定应用程序的不同策略。 |
 | [DisposedType](arkts-ability-appcontrol-disposedtype-e-sys.md) | 标识拦截应用程序的方式，例如禁用应用的全部能力、禁用应用的指定能力、或者不禁用。 |
 | [PageJumpMode](arkts-ability-appcontrol-pagejumpmode-e-sys.md) | 标识目标应用被拦截时是否跳转到页面。 |
-| [RecoverComponentType](arkts-ability-appcontrol-recovercomponenttype-e-sys.md) | 枚举恢复期间的能力类型。 |
 | [UninstallComponentType](arkts-ability-appcontrol-uninstallcomponenttype-e-sys.md) | 标识卸载时功能组件类型。 |
 <!--DelEnd-->

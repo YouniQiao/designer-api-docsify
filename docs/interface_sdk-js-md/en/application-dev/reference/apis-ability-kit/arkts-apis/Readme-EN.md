@@ -70,8 +70,7 @@
     - [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
-<!--Del-->
-- [@ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)](arkts-ability-abilitytoolaccessctrl.md)<!--DelEnd-->
+- [@ohos.abilityToolAccessCtrl(This module provides the capabilities of tools access control)](arkts-ability-abilitytoolaccessctrl.md)
   <!--Del-->
   - [generateControlledDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -82,6 +81,7 @@
   - [grantToolPermissionsByUser(system api)](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestToolPermissions(system api)](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
+  - [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md)
   <!--Del-->
   - [updateRemoteGrantStatus(system api)](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -90,10 +90,10 @@
   - [verifyControllerDevicePackage(system api)](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthStatusInfo(system api)](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CliCmdInfo(system api)](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md)<!--DelEnd-->
+  - [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)
   <!--Del-->
   - [OperationInfo(system api)](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)<!--DelEnd-->
+  - [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)
   <!--Del-->
   - [PermissionInfo(system api)](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -112,6 +112,8 @@
   - [RemoteUserAuthResults(system api)](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TicketInfo(system api)](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)<!--DelEnd-->
+  - [TicketOpions](arkts-ability-abilitytoolaccessctrl-ticketopions-i.md)
+  - [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)
   <!--Del-->
   - [UserAuthResult(system api)](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1383,7 +1385,7 @@
   - [ParameterItem](arkts-ability-shortcutmanager-parameteritem-t.md)
   - [ShortcutInfo](arkts-ability-shortcutmanager-shortcutinfo-t.md)
   - [ShortcutWant](arkts-ability-shortcutmanager-shortcutwant-t.md)
-- [@ohos.bundle.skillManager](arkts-ability-bundle-skillmanager.md)
+- [@ohos.bundle.skillManager(skillManager Module)](arkts-ability-bundle-skillmanager.md)
   - [getAllSkillInfos](arkts-ability-skillmanager-getallskillinfos-f.md)
   - [getSkillInfo](arkts-ability-skillmanager-getskillinfo-f.md)
   - [getSkillInfoForSelf](arkts-ability-skillmanager-getskillinfoforself-f.md)
@@ -1551,7 +1553,7 @@
   - [unregisterMissionListener(system api)](arkts-ability-missionmanager-unregistermissionlistener-depr-f-sys.md)<!--DelEnd-->
 - [@ohos.application.Want(Want)](arkts-ability-application-want.md)
   - [Want](arkts-ability-application-want-want-depr-c.md)
-- [@ohos.bundle](arkts-ability-bundle.md)
+- [@ohos.bundle(Bundle Module)](arkts-ability-bundle.md)
   <!--Del-->
   - [cleanBundleCacheFiles(system api)](arkts-ability-bundle-cleanbundlecachefiles-f-sys.md)<!--DelEnd-->
   - [getAbilityIcon](arkts-ability-bundle-getabilityicon-f.md)
@@ -2073,9 +2075,9 @@
   - [DispatchInfo(DispatchInfo)](arkts-ability-dispatchinfo.md)<!--DelEnd-->
     <!--Del-->
     - [DispatchInfo(system api)](arkts-ability-dispatchinfo-i-sys.md)<!--DelEnd-->
-  - [ElementName](arkts-ability-elementname.md)
+  - [ElementName(ElementName)](arkts-ability-elementname.md)
     - [ElementName](arkts-ability-elementname-i.md)
-  - [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo.md)
+  - [ExtensionAbilityInfo(ExtensionAbilityInfo)](arkts-ability-extensionabilityinfo.md)
     - [ExtensionAbilityInfo](arkts-ability-extensionabilityinfo-i.md)
   - [HapModuleInfo(HapModuleInfo)](arkts-ability-hapmoduleinfo.md)
     - [DataItem](arkts-ability-hapmoduleinfo-dataitem-i.md)
@@ -2085,7 +2087,7 @@
     - [HapModuleInfo(system api)](arkts-ability-hapmoduleinfo-i-sys.md)<!--DelEnd-->
     - [PreloadItem](arkts-ability-hapmoduleinfo-preloaditem-i.md)
     - [RouterItem](arkts-ability-hapmoduleinfo-routeritem-i.md)
-  - [LauncherAbilityInfo](arkts-ability-launcherabilityinfo.md)
+  - [LauncherAbilityInfo(LauncherAbilityInfo)](arkts-ability-launcherabilityinfo.md)
     - [LauncherAbilityInfo](arkts-ability-launcherabilityinfo-i.md)
   <!--Del-->
   - [LauncherAbilityResourceInfo(LauncherAbilityResourceInfo)](arkts-ability-launcherabilityresourceinfo.md)<!--DelEnd-->
@@ -2093,7 +2095,7 @@
     - [LauncherAbilityResourceInfo(system api)](arkts-ability-launcherabilityresourceinfo-i-sys.md)<!--DelEnd-->
   - [Metadata(Metadata)](arkts-ability-metadata.md)
     - [Metadata](arkts-ability-metadata-i.md)
-  - [OverlayModuleInfo](arkts-ability-overlaymoduleinfo.md)
+  - [OverlayModuleInfo(OverlayModuleInfo)](arkts-ability-overlaymoduleinfo.md)
     - [OverlayModuleInfo](arkts-ability-overlaymoduleinfo-i.md)
   <!--Del-->
   - [PermissionDef(PermissionDef)](arkts-ability-permissiondef.md)<!--DelEnd-->

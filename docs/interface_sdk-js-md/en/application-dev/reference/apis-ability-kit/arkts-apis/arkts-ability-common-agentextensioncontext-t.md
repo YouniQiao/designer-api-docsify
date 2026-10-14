@@ -8,6 +8,8 @@ The context of the agent service ability.
 
 @typedef { _AgentExtensionContext }
 
+**Type:** _AgentExtensionContext
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
@@ -17,5 +19,3 @@ The context of the agent service ability.
 <!--Device-common-export type AgentExtensionContext = _AgentExtensionContext--><!--Device-common-export type AgentExtensionContext = _AgentExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**Type:** _AgentExtensionContext

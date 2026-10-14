@@ -52,6 +52,7 @@ CalendarPicker(options?: CalendarOptions)
 | 名称 | 说明 |
 | --- | --- |
 | [CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md) | 对齐方式类型。 |
+| [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md) | 日历选择器每周起始日的枚举类型。 |
 
 ## 示例
 

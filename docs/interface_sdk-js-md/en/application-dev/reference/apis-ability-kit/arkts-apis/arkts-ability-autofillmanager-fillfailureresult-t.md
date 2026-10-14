@@ -6,6 +6,8 @@ export type FillFailureResult = _FillFailureResult
 
 The interface of filling failure result.
 
+**Type:** _FillFailureResult
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ The interface of filling failure result.
 <!--Device-autoFillManager-export type FillFailureResult = _FillFailureResult--><!--Device-autoFillManager-export type FillFailureResult = _FillFailureResult-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**Type:** _FillFailureResult

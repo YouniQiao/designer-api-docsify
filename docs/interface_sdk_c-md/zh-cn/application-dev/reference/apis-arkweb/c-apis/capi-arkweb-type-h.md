@@ -180,6 +180,13 @@ typedef void (*ArkWeb_OnComponentCallback)(const char* webTag, void* userData)
 
 **起始版本：** 12
 
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| const char* webTag | Web组件名称。 |
+| void* userData | 用户自定义的数据。 |
+
 ### ArkWeb_OnScrollCallback()
 
 ```c

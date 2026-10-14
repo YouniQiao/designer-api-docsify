@@ -6,6 +6,8 @@ export type AgentCard = _AgentCard
 
 The AgentCard information describes the basic information and capabilities provided by an Agent.
 
+**Type:** _AgentCard
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ The AgentCard information describes the basic information and capabilities provi
 <!--Device-common-export type AgentCard = _AgentCard--><!--Device-common-export type AgentCard = _AgentCard-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**Type:** _AgentCard

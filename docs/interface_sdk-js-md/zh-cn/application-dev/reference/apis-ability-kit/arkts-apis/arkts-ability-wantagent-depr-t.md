@@ -6,6 +6,8 @@ export type WantAgent = object
 
 WantAgent对象。
 
+**类型：** object
+
 **起始版本：** 7
 
 **废弃版本：** 23
@@ -17,5 +19,3 @@ WantAgent对象。
 <!--Device-unnamed-export type WantAgent = object--><!--Device-unnamed-export type WantAgent = object-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**类型：** object

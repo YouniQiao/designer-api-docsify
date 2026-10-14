@@ -70,6 +70,30 @@ edgeAlign(alignType: Optional<CalendarAlign>, offset?: Offset)
 | alignType | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md)&gt; | 是 | 对齐方式的类型。<br>默认值：CalendarAlign.END <br>当alignType的值为undefined时，使用默认值。 |
 | offset | Offset | 否 | 按照对齐方式对齐后，选择器相对入口组件的偏移量。<br>默认值：{dx: 0, dy: 0} <br>单位：vp |
 
+## firstDayOfWeek
+
+```TypeScript
+firstDayOfWeek(value: CalendarFirstDayOfWeek)
+```
+
+设置日历选择器每周的起始日。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarPickerAttribute-firstDayOfWeek(value: CalendarFirstDayOfWeek): CalendarPickerAttribute--><!--Device-CalendarPickerAttribute-firstDayOfWeek(value: CalendarFirstDayOfWeek): CalendarPickerAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md) | 是 | 设置日历选择器每周的起始日。<br>默认值：CalendarFirstDayOfWeek.LOCAL（跟随系统区域变化） |
+
 ## markToday
 
 ```TypeScript

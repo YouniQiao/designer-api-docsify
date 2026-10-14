@@ -6,6 +6,8 @@ export type AgentAppInfo = _AgentAppInfo
 
 Application-related information for the agent.
 
+**Type:** _AgentAppInfo
+
 **Since:** 24
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Application-related information for the agent.
 <!--Device-common-export type AgentAppInfo = _AgentAppInfo--><!--Device-common-export type AgentAppInfo = _AgentAppInfo-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
-
-**Type:** _AgentAppInfo

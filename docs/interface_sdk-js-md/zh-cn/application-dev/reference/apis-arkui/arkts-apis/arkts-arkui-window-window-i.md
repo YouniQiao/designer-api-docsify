@@ -5066,6 +5066,36 @@ windowClass.off('systemAvoidAreaChange', callback);
 windowClass.off('systemAvoidAreaChange');
 ```
 
+## offWindowFocusStateChange
+
+```TypeScript
+offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void
+```
+
+取消注册窗口焦点状态变化事件的回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void--><!--Device-Window-offWindowFocusStateChange(callback?: Callback<WindowFocusState>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowFocusState](arkts-arkui-window-windowfocusstate-i.md)&gt; | 否 | 回调函数。当窗口焦点状态发生变化时的回调，用于返回窗口的焦点状态变化信息。若传入参数，则取消对应的监听；若未传入参数，则取消该事件的所有监听。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
+
 ## on('rotationChange')
 
 ```TypeScript
@@ -6486,6 +6516,36 @@ windowClass.on('systemAvoidAreaChange', (data) => {
   console.info('Succeeded in enabling the listener for system avoid area changes. Data: ' + JSON.stringify(data));
 });
 ```
+
+## onWindowFocusStateChange
+
+```TypeScript
+onWindowFocusStateChange(callback: Callback<WindowFocusState>): void
+```
+
+注册窗口焦点状态变化事件的回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-Window-onWindowFocusStateChange(callback: Callback<WindowFocusState>): void--><!--Device-Window-onWindowFocusStateChange(callback: Callback<WindowFocusState>): void-End-->
+
+**系统能力：** SystemCapability.Window.SessionManager
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [Callback](arkts-arkui-window-callback-i.md)&lt;[WindowFocusState](arkts-arkui-window-windowfocusstate-i.md)&gt; | 是 | 回调函数。当窗口焦点状态发生变化时的回调，用于返回窗口的焦点状态变化信息，包括窗口是否获焦、变化原因，以及同一进程中相邻获焦窗口的ID。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Failed to call the API due to limited device capabilities. |
+| [1300002](../errorcode-window.md#1300002-窗口状态异常) | This window state is abnormal. Possible cause: The window is not created or destroyed. |
+| [1300003](../errorcode-window.md#1300003-系统服务工作异常) | This window manager service works abnormally. |
 
 <a id="raisetoapptop2"></a>
 

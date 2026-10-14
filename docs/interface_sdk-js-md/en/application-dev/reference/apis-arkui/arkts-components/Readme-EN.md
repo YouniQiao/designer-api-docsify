@@ -117,6 +117,7 @@
   - [CalendarDialogOptions(system api)](arkts-arkui-calendarpicker-comp-calendardialogoptions-i-sys.md)<!--DelEnd-->
   - [CalendarOptions](arkts-arkui-calendarpicker-comp-calendaroptions-i.md)
   - [CalendarAlign](arkts-arkui-calendarpicker-comp-calendaralign-e.md)
+  - [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md)
 - [Canvas](arkts-arkui-canvas-comp.md)
   - [Canvas properties/events](arkts-arkui-canvas-comp-attribute.md)
   - [CanvasGradient](arkts-arkui-canvas-comp-canvasgradient-c.md)

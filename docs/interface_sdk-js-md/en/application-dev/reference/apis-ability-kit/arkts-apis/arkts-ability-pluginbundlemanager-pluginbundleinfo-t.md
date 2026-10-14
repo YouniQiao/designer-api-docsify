@@ -6,6 +6,8 @@ export type PluginBundleInfo = _PluginBundleInfo
 
 Plugin information.
 
+**Type:** _PluginBundleInfo
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -13,5 +15,3 @@ Plugin information.
 <!--Device-pluginBundleManager-export type PluginBundleInfo = _PluginBundleInfo--><!--Device-pluginBundleManager-export type PluginBundleInfo = _PluginBundleInfo-End-->
 
 **System capability:** SystemCapability.BundleManager.BundleFramework.Core
-
-**Type:** _PluginBundleInfo

@@ -6,6 +6,8 @@ export type PacMap = _PacMap
 
 Defines the container of basic data types.
 
+**Type:** _PacMap
+
 **Since:** 9
 
 **Model restriction:** 
@@ -16,5 +18,3 @@ Defines the container of basic data types.
 <!--Device-common-export type PacMap = _PacMap--><!--Device-common-export type PacMap = _PacMap-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
-**Type:** _PacMap

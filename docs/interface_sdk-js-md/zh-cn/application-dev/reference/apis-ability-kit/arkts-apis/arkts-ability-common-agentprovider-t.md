@@ -6,6 +6,8 @@ export type AgentProvider = _AgentProvider
 
 AgentCard中的Provider是指发行和的组织或平台。管理代理的凭据。
 
+**类型：** _AgentProvider
+
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ AgentCard中的Provider是指发行和的组织或平台。管理代理的凭据
 <!--Device-common-export type AgentProvider = _AgentProvider--><!--Device-common-export type AgentProvider = _AgentProvider-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**类型：** _AgentProvider

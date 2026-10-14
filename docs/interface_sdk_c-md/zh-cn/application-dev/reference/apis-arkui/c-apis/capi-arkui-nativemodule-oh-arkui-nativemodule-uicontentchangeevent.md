@@ -6,7 +6,7 @@ typedef struct OH_ArkUI_NativeModule_UIContentChangeEvent OH_ArkUI_NativeModule_
 
 ## 概述
 
-声明ArkUI内容变更事件结构体。
+声明ArkUI内容变化事件结构体。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 

@@ -6,6 +6,8 @@ export type FillFailureResult = _FillFailureResult
 
 填充失败结果接口。
 
+**类型：** _FillFailureResult
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type FillFailureResult = _FillFailureResult
 <!--Device-autoFillManager-export type FillFailureResult = _FillFailureResult--><!--Device-autoFillManager-export type FillFailureResult = _FillFailureResult-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**类型：** _FillFailureResult

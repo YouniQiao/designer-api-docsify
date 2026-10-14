@@ -1,4 +1,4 @@
-# pluginComponentManager（PluginComponentManager）
+# pluginComponentManager（插件组件管理器）
 
 ```TypeScript
 declare namespace pluginComponentManager

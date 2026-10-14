@@ -1,4 +1,4 @@
-# @ohos.bundle.skillManager
+# @ohos.bundle.skillManager(skillManager Module)
 
 This module provides skill query capabilities for applications.
 

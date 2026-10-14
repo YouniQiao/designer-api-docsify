@@ -535,6 +535,67 @@ struct Index {
 }
 ```
 
+## dispatchInputEvent
+
+```TypeScript
+dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean
+```
+
+Dispatches a pointer input event to this FrameNode with an optional competition strategy. This API supports TouchEvent, MouseEvent, and AxisEvent. KeyEvent is dispatched by [dispatchKeyEvent](#dispatchkeyevent) instead.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-FrameNode-dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean--><!--Device-FrameNode-dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | Yes | Input event to dispatch. |
+| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | No | Competition strategy for dispatching the event. By default, the event is dispatched without a competition strategy. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether the event is successfully dispatched. Returns **true** if the event is dispatched successfully; returns **false** otherwise. |
+
+## dispatchKeyEvent
+
+```TypeScript
+dispatchKeyEvent(event: KeyEvent): boolean
+```
+
+Dispatches a key event to this FrameNode.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-FrameNode-dispatchKeyEvent(event: KeyEvent): boolean--><!--Device-FrameNode-dispatchKeyEvent(event: KeyEvent): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | Yes | Key event to be dispatched. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether the key event is consumed. Returns **true** if the key event is consumed; returns **false** otherwise. |
+
 ## dispose
 
 ```TypeScript

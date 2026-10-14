@@ -6,6 +6,8 @@ type ConnectionInterval = nearlinkConstant.ConnectionInterval
 
 Enumerates the connection intervals.
 
+**Type:** [nearlinkConstant.ConnectionInterval](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -17,5 +19,3 @@ Enumerates the connection intervals.
 **System capability:** SystemCapability.Communication.NearLink.Base
 
 **System API:** This is a system API.
-
-**Type:** [nearlinkConstant.ConnectionInterval](arkts-connectivity-nearlinkconstant-connectioninterval-e-sys.md)

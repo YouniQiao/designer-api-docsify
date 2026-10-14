@@ -6,6 +6,8 @@ export type Skill = _Skill.Skill
 
 Skill信息。
 
+**类型：** [_Skill.Skill](arkts-ability-skill-i.md)
+
 **起始版本：** 12
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
@@ -13,5 +15,3 @@ Skill信息。
 <!--Device-bundleManager-export type Skill = _Skill.Skill--><!--Device-bundleManager-export type Skill = _Skill.Skill-End-->
 
 **系统能力：** SystemCapability.BundleManager.BundleFramework.Core
-
-**类型：** [_Skill.Skill](arkts-ability-skill-i.md)

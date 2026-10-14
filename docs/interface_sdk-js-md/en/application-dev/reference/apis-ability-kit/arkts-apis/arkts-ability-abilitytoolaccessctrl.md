@@ -8,14 +8,18 @@ This module provides permission management capabilities for tools (CLI commands 
 
 **System capability:** SystemCapability.Security.Asset
 
-**System API:** This is a system API.
-
 ## Modules to Import
 
 ```TypeScript
 ```
 
 ## Summary
+
+### Functions
+
+| Name | Description |
+| --- | --- |
+| [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket) | Obtain the execution authentication ticket for CLI tools. This function retrieves the execution authentication ticket for CLI tools and their subcommands. If the user has not yet authorized the permissions required by CLI tools, a list of permissions requiring authorization along with their status will be returned. If all permissions required by CLI tools have been authorized by the user, the authenticated ticket will be returned. |
 
 <!--Del-->
 ### Functions(System API)
@@ -32,13 +36,21 @@ This module provides permission management capabilities for tools (CLI commands 
 | [verifyControllerDevicePackage](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md#verifycontrollerdevicepackage) | Verifies the authorization package from the controller device. This function verifies the remote authorization package sent by the controller device. It validates the ticket and remote device information to ensure the authorization is legitimate. |
 <!--DelEnd-->
 
+### Interfaces
+
+| Name | Description |
+| --- | --- |
+| [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) | CLI command information. |
+| [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md) | Permission information. |
+| [TicketOpions](arkts-ability-abilitytoolaccessctrl-ticketopions-i.md) | Optional parameters for the ticket. |
+| [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md) | Ticket query result. |
+
 <!--Del-->
 ### Interfaces(System API)
 
 | Name | Description |
 | --- | --- |
 | [AuthStatusInfo](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md) | Authorization status information. |
-| [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md) | CLI command information. |
 | [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md) | Operation information. |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md) | Permission information. |
 | [PermissionQuery](arkts-ability-abilitytoolaccessctrl-permissionquery-i-sys.md) | Permission query information. |

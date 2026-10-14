@@ -6,6 +6,8 @@ type ProfileConnectionState = constant.ProfileConnectionState
 
 蓝牙设备的Profile协议连接状态。
 
+**类型：** [constant.ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)
+
 **起始版本：** 10
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ type ProfileConnectionState = constant.ProfileConnectionState
 <!--Device-ble-type ProfileConnectionState = constant.ProfileConnectionState--><!--Device-ble-type ProfileConnectionState = constant.ProfileConnectionState-End-->
 
 **系统能力：** SystemCapability.Communication.Bluetooth.Core
-
-**类型：** [constant.ProfileConnectionState](arkts-connectivity-constant-profileconnectionstate-e.md)

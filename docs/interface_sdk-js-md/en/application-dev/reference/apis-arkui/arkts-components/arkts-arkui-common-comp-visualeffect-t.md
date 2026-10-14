@@ -6,6 +6,8 @@ declare type VisualEffect = import('../api/@ohos.graphics.uiEffect').default.Vis
 
 Represents a visual effect configuration object.
 
+**Type:** import('../api/@ohos.graphics.uiEffect').default.VisualEffect
+
 **Since:** 12
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Represents a visual effect configuration object.
 <!--Device-unnamed-declare type VisualEffect = import('../api/@ohos.graphics.uiEffect').default.VisualEffect--><!--Device-unnamed-declare type VisualEffect = import('../api/@ohos.graphics.uiEffect').default.VisualEffect-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.graphics.uiEffect').default.VisualEffect

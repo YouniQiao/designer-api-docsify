@@ -14,6 +14,8 @@ Defines the mouse cursor style.
 > **cursorControl** bound to the instance using the
 > getCursorController API.
 
+**Type:** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.
@@ -23,5 +25,3 @@ Defines the mouse cursor style.
 <!--Device-unnamed-declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle--><!--Device-unnamed-declare type PointerStyle = import('../api/@ohos.multimodalInput.pointer').default.PointerStyle-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.multimodalInput.pointer').default.PointerStyle

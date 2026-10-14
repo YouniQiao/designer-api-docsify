@@ -6,6 +6,8 @@ export type PacMap = _PacMap
 
 存储基础数据类型的容器。
 
+**类型：** _PacMap
+
 **起始版本：** 9
 
 **模型约束：** 
@@ -16,5 +18,3 @@ export type PacMap = _PacMap
 <!--Device-common-export type PacMap = _PacMap--><!--Device-common-export type PacMap = _PacMap-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
-**类型：** _PacMap

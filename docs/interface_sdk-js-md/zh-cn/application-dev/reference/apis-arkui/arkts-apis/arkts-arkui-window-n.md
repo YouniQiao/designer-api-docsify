@@ -122,6 +122,7 @@ import { window } from '@kit.ArkUI';
 | [WindowAnimationConfig](arkts-arkui-window-windowanimationconfig-i.md) | 窗口动画参数配置。 |
 | [WindowCreateParams](arkts-arkui-window-windowcreateparams-i.md) | 应用启动时的窗口参数配置。 |
 | [WindowDensityInfo](arkts-arkui-window-windowdensityinfo-i.md) | 窗口所在显示设备和窗口自定义的显示密度信息，是与像素单位无关的缩放系数，即显示大小缩放系数。 |
+| [WindowFocusState](arkts-arkui-window-windowfocusstate-i.md) | 描述窗口的焦点状态变化信息。 |
 | [WindowInfo](arkts-arkui-window-windowinfo-i.md) | 当前窗口的详细信息。 |
 | [WindowInfoOptions](arkts-arkui-window-windowinfooptions-i.md) | 窗口布局信息过滤选项。 |
 | [WindowLayoutInfo](arkts-arkui-window-windowlayoutinfo-i.md) | 窗口布局信息。 |
@@ -171,6 +172,7 @@ import { window } from '@kit.ArkUI';
 | [AnimationType](arkts-arkui-window-animationtype-e.md) | 窗口动画类型枚举。 |
 | [AvoidAreaType](arkts-arkui-window-avoidareatype-e.md) | 窗口内容的避让区域的类型枚举。 |
 | [ColorSpace](arkts-arkui-window-colorspace-e.md) | 色域模式。 |
+| [FocusChangeReason](arkts-arkui-window-focuschangereason-e.md) | 窗口焦点状态变化原因枚举。 |
 | [GlobalWindowMode](arkts-arkui-window-globalwindowmode-e.md) | 窗口模式。 |
 | [MaximizePresentation](arkts-arkui-window-maximizepresentation-e.md) | 窗口最大化时的布局枚举。 |
 | [ModalityType](arkts-arkui-window-modalitytype-e.md) | 子窗口模态类型枚举。 |

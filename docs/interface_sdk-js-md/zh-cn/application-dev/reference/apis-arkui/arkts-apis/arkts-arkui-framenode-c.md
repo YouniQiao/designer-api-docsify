@@ -535,6 +535,67 @@ struct Index {
 }
 ```
 
+## dispatchInputEvent
+
+```TypeScript
+dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean
+```
+
+向当前FrameNode派发输入事件，并可指定竞争策略。支持TouchEvent、MouseEvent和AxisEvent。KeyEvent请使用[dispatchKeyEvent](#dispatchkeyevent)派发。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-FrameNode-dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean--><!--Device-FrameNode-dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrategy): boolean-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [InputEventType](arkts-arkui-inputeventtype-t.md) | 是 | 需要派发的输入事件。 |
+| competitionStrategy | [CompetitionStrategy](arkts-arkui-competitionstrategy-e.md) | 否 | 派发事件时使用的竞争策略。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否成功派发事件。 |
+
+## dispatchKeyEvent
+
+```TypeScript
+dispatchKeyEvent(event: KeyEvent): boolean
+```
+
+向当前FrameNode派发按键事件。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-FrameNode-dispatchKeyEvent(event: KeyEvent): boolean--><!--Device-FrameNode-dispatchKeyEvent(event: KeyEvent): boolean-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| event | [KeyEvent](../arkts-components/arkts-arkui-common-comp-keyevent-i.md) | 是 | 需要派发的按键事件。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 按键事件是否被消费。 |
+
 ## dispose
 
 ```TypeScript

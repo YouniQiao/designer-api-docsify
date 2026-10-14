@@ -6,6 +6,8 @@ type window = import('../api/@ohos.window').default
 
 The type for window.
 
+**Type:** import('../api/@ohos.window').default
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ The type for window.
 <!--Device-unnamed-type window = import('../api/@ohos.window').default--><!--Device-unnamed-type window = import('../api/@ohos.window').default-End-->
 
 **System capability:** SystemCapability.WindowManager.WindowManager.Core
-
-**Type:** import('../api/@ohos.window').default

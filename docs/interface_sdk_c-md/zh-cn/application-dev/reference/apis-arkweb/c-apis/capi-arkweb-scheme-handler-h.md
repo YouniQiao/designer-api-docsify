@@ -80,7 +80,7 @@ arkweb_scheme_handler.h是ArkWeb中用于拦截和自定义网络请求的完整
 | [void OH_ArkWeb_DestroySchemeHandler(ArkWeb_SchemeHandler* schemeHandler)](#oh_arkweb_destroyschemehandler) | - | 销毁一个ArkWeb_SchemeHandler对象。 |
 | [int32_t OH_ArkWebSchemeHandler_SetUserData(ArkWeb_SchemeHandler* schemeHandler, void* userData)](#oh_arkwebschemehandler_setuserdata) | - | 将一个用户数据设置到ArkWeb_SchemeHandler对象中。 |
 | [void* OH_ArkWebSchemeHandler_GetUserData(const ArkWeb_SchemeHandler* schemeHandler)](#oh_arkwebschemehandler_getuserdata) | - | 从ArkWeb_SchemeHandler获取用户数据。 |
-| [int32_t OH_ArkWebSchemeHandler_SetOnRequestStart(ArkWeb_SchemeHandler* schemeHandler, ArkWeb_OnRequestStart onRequestStart)](#oh_arkwebschemehandler_setonrequeststart) | - | 为SchemeHandler设置OnRequestStart回调。 |
+| [int32_t OH_ArkWebSchemeHandler_SetOnRequestStart(ArkWeb_SchemeHandler* schemeHandler, ArkWeb_OnRequestStart onRequestStart)](#oh_arkwebschemehandler_setonrequeststart) | - | 为SchemeHandler设置OnRequestStart回调。<br> > **说明**<br>> > - 重定向后的URL无法单独拦截。如需拦截，必须同时对原始请求URL进行拦截。 |
 | [int32_t OH_ArkWebSchemeHandler_SetOnRequestStop(ArkWeb_SchemeHandler* schemeHandler, ArkWeb_OnRequestStop onRequestStop)](#oh_arkwebschemehandler_setonrequeststop) | - | 为SchemeHandler设置OnRequestStop回调。 |
 | [void OH_ArkWeb_CreateResponse(ArkWeb_Response** response)](#oh_arkweb_createresponse) | - | 为被拦截的请求创建一个ArkWeb_Response对象。 |
 | [void OH_ArkWeb_DestroyResponse(ArkWeb_Response* response)](#oh_arkweb_destroyresponse) | - | 销毁一个ArkWeb_Response对象。 |
@@ -146,6 +146,7 @@ custom scheme的配置信息。
 
 | 枚举项 | 描述 |
 | -- | -- |
+| OH_ARKWEB_SCHEME_OPTION_NONE = 0 | 表示注册自定义scheme时不赋予它任何特殊行为或能力。 |
 | ARKWEB_SCHEME_OPTION_STANDARD = 1 << 0 | 如果设置了ARKWEB_SCHEME_OPTION_STANDARD，那么该scheme将被视为标准scheme来处理。 |
 | ARKWEB_SCHEME_OPTION_LOCAL = 1 << 1 | 如果设置了ARKWEB_SCHEME_OPTION_LOCAL，则将使用与“file” URL相同的安全规则来处理该scheme。 |
 | ARKWEB_SCHEME_OPTION_DISPLAY_ISOLATED = 1 << 2 | 如果设置了ARKWEB_SCHEME_OPTION_DISPLAY_ISOLATED，则该scheme的请求只能由使用相同scheme加载的页面中发起。 |
@@ -1239,7 +1240,7 @@ int32_t OH_ArkWebSchemeHandler_SetOnRequestStart(ArkWeb_SchemeHandler* schemeHan
 
 **描述：**
 
-为SchemeHandler设置OnRequestStart回调。
+为SchemeHandler设置OnRequestStart回调。<br> > **说明**<br>> > - 重定向后的URL无法单独拦截。如需拦截，必须同时对原始请求URL进行拦截。
 
 **系统能力：** SystemCapability.Web.Webview.Core
 

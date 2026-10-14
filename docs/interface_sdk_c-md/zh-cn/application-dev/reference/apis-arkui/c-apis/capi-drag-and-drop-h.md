@@ -47,7 +47,7 @@
 | [int32_t OH_ArkUI_DragEvent_GetUdmfData(ArkUI_DragEvent* event, OH_UdmfData *data)](#oh_arkui_dragevent_getudmfdata) | 从ArkUI_DragEvent中获取拖拽默认相关数据。 |
 | [int32_t OH_ArkUI_DragEvent_GetDataTypeCount(ArkUI_DragEvent* event, int32_t* count)](#oh_arkui_dragevent_getdatatypecount) | 从ArkUI_DragEvent中获取所拖拽的数据类型种类个数。 |
 | [int32_t OH_ArkUI_DragEvent_GetDataTypes(ArkUI_DragEvent *event, char *eventTypeArray[], int32_t length, int32_t maxStrLen)](#oh_arkui_dragevent_getdatatypes) | 从ArkUI_DragEvent中获取拖拽数据的类型列表。 |
-| [int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent* event, OH_UDMF_Summary* summary)](#oh_arkui_dragevent_getsummary) | 从ArkUI_DragEvent中获取数据摘要。 |
+| [int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent *event, OH_UDMF_Summary *summary)](#oh_arkui_dragevent_getsummary) | 从ArkUI_DragEvent中获取统一数据摘要。 |
 | [int32_t OH_ArkUI_DragEvent_GetDragResult(ArkUI_DragEvent* event, ArkUI_DragResult* result)](#oh_arkui_dragevent_getdragresult) | 从ArkUI_DragEvent中获取拖拽结果。 |
 | [int32_t OH_ArkUI_DragEvent_GetDropOperation(ArkUI_DragEvent* event, ArkUI_DropOperation* operation)](#oh_arkui_dragevent_getdropoperation) | 从ArkUI_DragEvent中获取数据处理方式。 |
 | [float OH_ArkUI_DragEvent_GetPreviewTouchPointX(ArkUI_DragEvent* event)](#oh_arkui_dragevent_getpreviewtouchpointx) | 从ArkUI_DragEvent中获取预览图跟手点的x轴坐标。 |
@@ -489,12 +489,12 @@ int32_t OH_ArkUI_DragEvent_GetDataTypes(ArkUI_DragEvent *event, char *eventTypeA
 ### OH_ArkUI_DragEvent_GetSummary()
 
 ```c
-int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent* event, OH_UDMF_Summary* summary)
+int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent *event, OH_UDMF_Summary *summary)
 ```
 
 **描述：**
 
-从ArkUI_DragEvent中获取数据摘要。
+从ArkUI_DragEvent中获取统一数据摘要。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -504,14 +504,14 @@ int32_t OH_ArkUI_DragEvent_GetSummary(ArkUI_DragEvent* event, OH_UDMF_Summary* s
 
 | 参数项 | 描述 |
 | -- | -- |
-| [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md)* event | ArkUI_DragEvent事件指针。 |
-| [OH_UDMF_Summary](../../apis-arkdata/c-apis/capi-udmf-oh-udmf-summary.md)* summary | 出参，用于接收数据摘要的OH_UDMF_Summary对象指针。调用本接口前需由调用方创建该对象， 使用完毕后由调用方销毁；操作失败时，对象内容不保证有效。 |
+| [ArkUI_DragEvent](capi-arkui-nativemodule-arkui-dragevent.md) *event | [in] ArkUI_DragEvent事件指针，不能为空。 |
+| [OH_UDMF_Summary](../../apis-arkdata/c-apis/capi-udmf-oh-udmf-summary.md) *summary | [out] 出参，用于接收统一数据摘要的OH_UDMF_Summary对象指针，不能为空， 调用本接口前需由调用方创建该对象，使用完毕后由调用方销毁；操作失败时，对象内容不保证有效。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| int32_t | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常，例如入参指针为空或摘要对象无效。<br>ARKUI_ERROR_CODE_INTERNAL_ERROR 内部错误，例如拖拽事件未携带摘要数据。 |
+| int32_t | 错误码。<ul> <li>ARKUI_ERROR_CODE_NO_ERROR 成功。</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。</li> <li>ARKUI_ERROR_CODE_INTERNAL_ERROR 内部错误。</li> </ul> |
 
 ### OH_ArkUI_DragEvent_GetDragResult()
 

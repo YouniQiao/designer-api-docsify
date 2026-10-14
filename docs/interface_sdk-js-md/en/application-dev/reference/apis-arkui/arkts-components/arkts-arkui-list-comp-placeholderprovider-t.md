@@ -6,6 +6,8 @@ declare type PlaceholderProvider = import('../api/@ohos.arkui.placeholderRegiste
 
 Provides the placeholder description for an item of a scrollable component.
 
+**Type:** import('../api/@ohos.arkui.placeholderRegister').PlaceholderProvider
+
 **Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Provides the placeholder description for an item of a scrollable component.
 <!--Device-unnamed-declare type PlaceholderProvider = import('../api/@ohos.arkui.placeholderRegister').PlaceholderProvider--><!--Device-unnamed-declare type PlaceholderProvider = import('../api/@ohos.arkui.placeholderRegister').PlaceholderProvider-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
-
-**Type:** import('../api/@ohos.arkui.placeholderRegister').PlaceholderProvider

@@ -6,6 +6,8 @@ export type AutoFillRect = _AutoFillRect.default
 
 用于自动填充的矩形区域。
 
+**类型：** _AutoFillRect.default
+
 **起始版本：** 26.0.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ export type AutoFillRect = _AutoFillRect.default
 <!--Device-autoFillManager-export type AutoFillRect = _AutoFillRect.default--><!--Device-autoFillManager-export type AutoFillRect = _AutoFillRect.default-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.AbilityCore
-
-**类型：** _AutoFillRect.default

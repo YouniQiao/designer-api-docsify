@@ -241,6 +241,36 @@ Obtains the size and position of a child component relative to its container.
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
 
+## getScrollState
+
+```TypeScript
+getScrollState(): ScrollState
+```
+
+Obtains the current scroll state of the scrollable component bound to this scroller.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-Scroller-getScrollState(): ScrollState--><!--Device-Scroller-getScrollState(): ScrollState-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | Current scroll state. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [100004](../errorcode-router.md#100004-incorrect-route-name) | Controller not bound to a component. |
+
 ## isAtEnd
 
 ```TypeScript

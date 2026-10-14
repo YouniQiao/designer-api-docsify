@@ -130,7 +130,7 @@ The certificate or credential does not exist.
 CM_ERROR_NO_PERMISSION = 201
 ```
 
-The application does not have the permission to call the API.
+Permission verification failed. The application does not have the permission required to call the API.
 
 **Since:** 11
 

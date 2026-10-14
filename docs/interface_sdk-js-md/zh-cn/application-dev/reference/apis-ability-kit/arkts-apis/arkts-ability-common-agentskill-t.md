@@ -6,6 +6,8 @@ export type AgentSkill = _AgentSkill
 
 AgentCard中的技能表示特定的 skills、专业知识和熟练程度用于执行任务或解决问题的代理。
 
+**类型：** _AgentSkill
+
 **起始版本：** 24
 
 **模型约束：** 此接口仅可在Stage模型下使用。
@@ -15,5 +17,3 @@ AgentCard中的技能表示特定的 skills、专业知识和熟练程度用于�
 <!--Device-common-export type AgentSkill = _AgentSkill--><!--Device-common-export type AgentSkill = _AgentSkill-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core
-
-**类型：** _AgentSkill

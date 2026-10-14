@@ -1,4 +1,4 @@
-# Skill
+# Skill(Skill)
 
 The module defines a skill object. Such an object can be obtained through
  [bundleManager.getBundleInfoForSelf](arkts-ability-bundlemanager-getbundleinfoforself-f.md#getbundleinfoforself1)

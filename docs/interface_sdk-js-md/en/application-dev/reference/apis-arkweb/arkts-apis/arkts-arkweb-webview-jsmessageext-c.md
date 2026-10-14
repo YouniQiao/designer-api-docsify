@@ -8,6 +8,14 @@ JsMessageExt is a data class in the ArkWeb framework used to encapsulate the res
 
 JsMessageExt supports parsing of multiple JavaScript return value types: string (getString), number (getNumber), boolean (getBoolean), raw binary data (getArrayBuffer), array (getArray), and more. When the obtained data type does not match the actual stored type (for example, calling getString on a numeric type), error code 17100014 is thrown. Starting from API version 22, JsMessageExt also provides the getErrorDescription method for obtaining exception information during JavaScript execution. If the return value is of the object type, it is uniformly formatted into a description string.
 
+> **NOTE:** 
+> 
+> - The initial APIs of this module are supported since API version 9. Updates will be marked with a superscript to indicate their earliest API version.
+> 
+> - The initial APIs of this class are supported since API version 10.
+> 
+> - The sample effect is subject to the actual device.
+
 **Since:** 10
 
 <!--Device-webview-class JsMessageExt--><!--Device-webview-class JsMessageExt-End-->

@@ -1,4 +1,4 @@
-# @ohos.graphics.text
+# @ohos.graphics.text(Text Module)
 
 The Text module provides a set of APIs for text layout and font management. It aims to deliver high-quality typesetting through features like character-to-glyph conversion, kerning, line breaking, alignment, and text measurement. Additionally, it provides font management capabilities, including font registration, font descriptors, and font collection management.
 

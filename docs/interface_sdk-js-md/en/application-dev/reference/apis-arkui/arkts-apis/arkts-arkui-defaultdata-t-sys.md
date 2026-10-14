@@ -8,6 +8,8 @@ Used for ide.
 
 @typedef { object } DefaultData<T>
 
+**Type:** object
+
 **Since:** 4
 
 **Model restriction:** This API can be used only in the FA model.
@@ -17,5 +19,3 @@ Used for ide.
 **System capability:** SystemCapability.ArkUI.ArkUI.Lite
 
 **System API:** This is a system API.
-
-**Type:** object

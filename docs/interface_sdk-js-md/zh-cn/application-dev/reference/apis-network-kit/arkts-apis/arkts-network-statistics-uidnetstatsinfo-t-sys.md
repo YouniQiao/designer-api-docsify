@@ -6,6 +6,8 @@ export type UidNetStatsInfo = Record<number, NetStatsInfo>
 
 [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md) for every UID. Key is UID. [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md) for every UID. Key is UID.
 
+**类型：** Record&lt;number, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt;
+
 **起始版本：** 12
 
 <!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>--><!--Device-statistics-export type UidNetStatsInfo = Record<int, NetStatsInfo>-End-->
@@ -15,5 +17,3 @@ export type UidNetStatsInfo = Record<number, NetStatsInfo>
 - SystemCapability.Communication.NetManager.Core
 
 **系统接口：** 此接口为系统接口。
-
-**类型：** Record&lt;number, [NetStatsInfo](arkts-network-statistics-netstatsinfo-i.md)&gt;

@@ -329,6 +329,30 @@ enableHoverMode?: boolean
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
+## firstDayOfWeek
+
+```TypeScript
+firstDayOfWeek?: CalendarFirstDayOfWeek
+```
+
+设置日历选择器弹窗每周的起始日。
+
+默认值：**CalendarFirstDayOfWeek.LOCAL**（跟随系统区域变化）。
+
+**类型：** [CalendarFirstDayOfWeek](arkts-arkui-calendarpicker-comp-calendarfirstdayofweek-e.md)
+
+**默认值：** CalendarFirstDayOfWeek.LOCAL
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek--><!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
 ## hoverModeArea
 
 ```TypeScript

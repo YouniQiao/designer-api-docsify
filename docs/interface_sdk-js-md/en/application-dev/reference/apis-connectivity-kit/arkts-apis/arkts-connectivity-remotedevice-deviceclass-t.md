@@ -6,6 +6,8 @@ type DeviceClass = nearlinkConstant.DeviceClass
 
 Enumerates the device types.
 
+**Type:** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -15,5 +17,3 @@ Enumerates the device types.
 <!--Device-remoteDevice-type DeviceClass = nearlinkConstant.DeviceClass--><!--Device-remoteDevice-type DeviceClass = nearlinkConstant.DeviceClass-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
-
-**Type:** [nearlinkConstant.DeviceClass](arkts-connectivity-nearlinkconstant-deviceclass-e.md)

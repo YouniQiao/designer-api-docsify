@@ -18,7 +18,7 @@ Declares the ArkWeb network protocol stack error codes. This enumeration defines
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkWeb_NetError](#arkweb_neterror) | ArkWeb_NetError | Declares the ArkWeb network protocol stack error codes. This enumeration defines various error types that may occur in the ArkWeb network protocol stack, covering error scenarios in network connections, SSL/TLS, certificate verification, HTTP/2, QUIC, caching, and other aspects. Developers can use these error codes to quickly identify the cause of network request failures, facilitating troubleshooting and error handling. |
+| [ArkWeb_NetError](#arkweb_neterror) | ArkWeb_NetError | Enumerates the error codes of the ArkWeb network protocol stack. |
 
 ## Enum type description
 
@@ -30,12 +30,11 @@ enum ArkWeb_NetError
 
 **Description**
 
-Declares the ArkWeb network protocol stack error codes. This enumeration defines various error types that may occur in the ArkWeb network protocol stack, covering error scenarios in network connections, SSL/TLS, certificate verification, HTTP/2, QUIC, caching, and other aspects. Developers can use these error codes to quickly identify the cause of network request failures, facilitating troubleshooting and error handling.
+Enumerates the error codes of the ArkWeb network protocol stack.
 
 **System capability**: SystemCapability.Web.Webview.Core
 
-**Since**: 12 /
-#define ARKWEB_NET_ERROR_LIST_H
+**Since**: 12
 
 | Enum item | Description |
 | -- | -- |
