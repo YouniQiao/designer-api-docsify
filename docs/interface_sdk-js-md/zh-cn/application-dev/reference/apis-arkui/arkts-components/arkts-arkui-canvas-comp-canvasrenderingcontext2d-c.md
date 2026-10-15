@@ -665,7 +665,7 @@ readonly canvas: FrameNode
 readonly height: number
 ```
 
-组件高度。
+**CanvasRenderingContext2D**的组件高度。
 
 默认单位为vp。
 
@@ -689,7 +689,7 @@ readonly height: number
 readonly width: number
 ```
 
-组件宽度。
+**CanvasRenderingContext2D**的组件宽度。
 
 默认单位为vp。
 

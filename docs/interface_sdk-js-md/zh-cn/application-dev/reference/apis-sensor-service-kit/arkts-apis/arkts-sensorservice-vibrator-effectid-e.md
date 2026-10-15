@@ -9,8 +9,8 @@ enum EffectId
 > **说明：** 
 > 
 > 由于设备存在多样性，不同的设备可能预置不同的效果，建议使用预置效果前先使用
-> [vibrator.isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect1)&lt;
-> sup&gt;10+</sup>或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)接口查询当前设备是否支持该预置效果。
+> [vibrator.isSupportEffect<sup>10+</sup>](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect1)
+> 或[vibrator.isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md)接口查询当前设备是否支持该预置效果。
 
 **起始版本：** 8
 

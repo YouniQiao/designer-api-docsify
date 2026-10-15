@@ -251,8 +251,6 @@ function stopVibration(callback: AsyncCallback<void>): void
 
 停止所有模式的马达振动。调用成功后马达停止振动。使用callback异步回调。用于停止设备上所有类型的振动（包括VibrateTime、VibratePreset、VibrateFromFile、VibrateFromPattern），适用于应用退出、页面切换等需立即终止所有振动的场景。与vibrator.stopVibration (#vibratorstopvibration9)（需传入stopMode）不同，本接口无需指定停止模式，可停止包括自定义振动在内的所有振动。
 
-**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 10
 
 **需要权限：** ohos.permission.VIBRATE
@@ -307,8 +305,6 @@ function stopVibration(): Promise<void>
 ```
 
 停止所有模式的马达振动。调用成功后马达停止振动。使用promise异步回调。用于停止设备上所有类型的振动（包括VibrateTime、VibratePreset、VibrateFromFile、VibrateFromPattern），适用于应用退出、页面切换等需立即终止所有振动的场景。调用成功返回Promise resolve，失败返回错误对象。与vibrator.stopVibration (#vibratorstopvibration9-1)（需传入stopMode）不同，本接口无需指定停止模式，可停止包括自定义振动在内的所有振动。
-
-**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 10
 

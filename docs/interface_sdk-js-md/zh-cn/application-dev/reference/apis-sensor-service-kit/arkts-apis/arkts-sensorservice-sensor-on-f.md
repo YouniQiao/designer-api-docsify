@@ -17,8 +17,6 @@ function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerRespon
 
 订阅加速度传感器数据。使用callback异步回调。加速度传感器用于测量设备在X、Y、Z三个方向上的加速度，包含重力加速度分量。适用于需要感知设备运动状态、实现屏幕旋转、游戏操控、计步等场景。调用后，系统会按设定频率通过callback持续上报加速度数据。
 
-**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 **需要权限：** ohos.permission.ACCELEROMETER
@@ -363,8 +361,6 @@ function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,
 ```
 
 订阅校准的陀螺仪传感器数据。使用callback异步回调。陀螺仪传感器用于测量设备绕X、Y、Z轴的旋转角速度，适用于设备旋转检测、姿态跟踪、游戏操控等场景。调用后，系统会按设定频率通过callback持续上报角速度数据。
-
-**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。
 
 **起始版本：** 9
 
@@ -839,8 +835,6 @@ function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,
 > 
 > 调用本接口的应用或服务可以通过提示用户使用8字校准法来提高应用获取的方向传感器的精度，此传感器理论误差正负5度，具体的精度根据不同的驱动及算法实现可能存在差异。
 
-**原子化服务API**：从API version 11开始，该接口支持在原子化服务中使用。
-
 **起始版本：** 9
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
@@ -1292,8 +1286,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<Ac
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
-> [on](#on3)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.ACCELEROMETER](#on3)
 > 替代。
 
 **起始版本：** 8
@@ -1344,8 +1338,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
-> [on](#on4)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.ACCELEROMETER_UNCALIBRATED](#on4)
 > 替代。
 
 **起始版本：** 8
@@ -1399,8 +1393,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<Li
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> [on](#on5)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.AMBIENT_LIGHT](#on5)
 > 替代。
 
 **起始版本：** 8
@@ -1447,8 +1441,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callb
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_TEMPERATURE]
-> [on](#on6)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.AMBIENT_TEMPERATURE](#on6)
 > 替代。
 
 **起始版本：** 8
@@ -1495,8 +1489,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Barome
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
-> [on](#on7)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.BAROMETER](#on7)
 > 替代。
 
 **起始版本：** 8
@@ -1543,8 +1537,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityR
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
-> [on](#on8)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.GRAVITY](#on8)
 > 替代。
 
 **起始版本：** 8
@@ -1593,8 +1587,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
-> [on](#on9)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.GYROSCOPE](#on9)
 > 替代。
 
 **起始版本：** 8
@@ -1645,8 +1639,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Ca
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
-> [on](#on10)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.GYROSCOPE_UNCALIBRATED](#on10)
 > 替代。
 
 **起始版本：** 8
@@ -1700,8 +1694,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
-> [on](#on11)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.HALL](#on11)
 > 替代。
 
 **起始版本：** 8
@@ -1748,8 +1742,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
-> [on](#on12)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.HEART_RATE](#on12)
 > 替代。
 
 **起始版本：** 8
@@ -1786,8 +1780,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humidit
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
-> [on](#on13)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.HUMIDITY](#on13)
 > 替代。
 
 **起始版本：** 8
@@ -1834,8 +1828,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
-> [on](#on14)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.LINEAR_ACCELEROMETER](#on14)
 > 替代。
 
 **起始版本：** 8
@@ -1872,8 +1866,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<M
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
-> [on](#on15)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.MAGNETIC_FIELD](#on15)
 > 替代。
 
 **起始版本：** 8
@@ -1922,8 +1916,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
-> [on](#on16)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.MAGNETIC_FIELD_UNCALIBRATED](#on16)
 > 替代。
 
 **起始版本：** 8
@@ -1975,8 +1969,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Orie
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
-> [on](#on17)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.ORIENTATION](#on17)
 > 替代。
 
 **起始版本：** 8
@@ -2025,8 +2019,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedome
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
-> [on](#on18)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.PEDOMETER](#on18)
 > 替代。
 
 **起始版本：** 8
@@ -2075,8 +2069,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callb
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
-> [on](#on19)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.PEDOMETER_DETECTION](#on19)
 > 替代。
 
 **起始版本：** 8
@@ -2125,8 +2119,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Proxim
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
-> [on](#on20)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.PROXIMITY](#on20)
 > 替代。
 
 **起始版本：** 8
@@ -2173,8 +2167,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
-> [on](#on21)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.ROTATION_VECTOR](#on21)
 > 替代。
 
 **起始版本：** 8
@@ -2224,8 +2218,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callba
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
-> [on](#on22)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.SIGNIFICANT_MOTION](#on22)
 > 替代。
 
 **起始版本：** 8
@@ -2272,8 +2266,8 @@ function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<W
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
-> [on](#on23)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.on.WEAR_DETECTION](#on23)
 > 替代。
 
 **起始版本：** 8

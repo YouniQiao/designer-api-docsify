@@ -1783,6 +1783,30 @@ Triggered when a context menu is displayed after the user clicks the right mouse
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnContextMenuShowEvent](arkts-arkweb-web-comp-oncontextmenushowevent-i.md), boolean&gt; | Yes | Callback invoked during a call to allow for the display of a custom context menu.<br>Return value: boolean <br> The value **true** means that a custom menu is triggered, and **false** means that the custom menu is ineffective.<br>**Since:** 12 |
 
+## onContextMenuUpdate
+
+```TypeScript
+onContextMenuUpdate(callback: OnContextMenuUpdateCallback)
+```
+
+Registers a callback to be invoked when the context menu item status is updated by the kernel asynchronously. The callback is triggered after the kernel completes asynchronous processing, notifying the application to update the display status of menu items.
+
+The shouldOfferLinkToText() method returns a synchronous initial value, while this callback provides the asynchronous final value. The two are complementary.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-onContextMenuUpdate(callback: OnContextMenuUpdateCallback): WebAttribute--><!--Device-WebAttribute-onContextMenuUpdate(callback: OnContextMenuUpdateCallback): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnContextMenuUpdateCallback](arkts-arkweb-web-comp-oncontextmenuupdatecallback-t.md) | Yes | Callback function that receives the menu item ID and options. |
+
 ## onControllerAttached
 
 ```TypeScript

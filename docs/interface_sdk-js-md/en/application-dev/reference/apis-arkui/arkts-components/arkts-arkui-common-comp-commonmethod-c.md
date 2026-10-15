@@ -3593,8 +3593,8 @@ Controls a component to expand its safe area to achieve an immersive effect.
 > 1. When type is SafeAreaType.KEYBOARD, it takes effect by default, meaning that the component does not avoid the keyboard.<br>
 > 2. When other types are set, the component can extend under the safe area only when the component boundary coincides with the safe area. For example, if the height of the status bar at the top of the device is 100, the absolute position of the component on the screen must satisfy 0 &lt;= y &lt;= 100.
 > 
-> - When a component extends into a non-safe area, events in the non-safe area, such as click events, may be intercepted by the system and preferentially responded to by system components such as the status bar. &gt;
-
+> - When a component extends into a non-safe area, events in the non-safe area, such as click events, may be intercepted by the system and preferentially responded to by system components such as the status bar.
+> 
 > - It is not recommended to set the **expandSafeArea** attribute on components in a scrollable container. If it is set, the **expandSafeArea** attribute must be set on all direct nodes from the current node to the scrollable ancestor container according to the component nesting relationship. Otherwise, the **expandSafeArea** attribute may become invalid after scrolling.
 > 
 > - The **expandSafeArea** attribute takes effect only on the current component and is not passed to parent or child components. Therefore, developers must configure this attribute separately for all related components.
@@ -3699,7 +3699,12 @@ flexShrink(value: number): T
 
 Sets the proportion of the shrink size allocated to the component where this attribute resides when the parent container runs out of space. This attribute can be set only when the component is a child of a Flex, Column, Row, or DynamicLayout container. When the parent container is Column or Row, the parent container must set the size along the main axis (that is, width/height/size) for flexShrink to take effect. When the main axis size (width/height/size) is not set, Column and Row still follow the default layout behavior and adapt to the child component size on the main axis, in which case flexShrink does not take effect. Setting this attribute triggers a second layout. In scenarios with strict performance requirements, use **layoutWeight** instead.
 
-When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9) is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value of **1** is returned by default (consistent with the default value of the Flex container, but different from the default value **0** of the Column and Row containers).
+> **NOTE:** 
+> 
+> When [getInspectorByKey](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-component-id.md#getinspectorbykey9)
+> is used to obtain the **flexShrink** attribute, if the node does not have **flexShrink** set, the default value
+> of **1** is returned by default (consistent with the default value of the Flex container, but different from
+> the default value **0** of the Column and Row containers).
 
 **Since:** 7
 
@@ -9841,7 +9846,7 @@ useSizeType(value: {
   }): T
 ```
 
-Sets the number of occupied columns and offset columns for a specific device width type.
+Sets the column count and offset column count under a specific device width type. span: column count (must be a non-negative integer). When passing a negative number or a value exceeding the total column count of GridContainer, use the default value. offset: offset column count (must be a non-negative integer). When passing a negative number, use the default value 0. <br>When the value is of the number type, only the column count is set. When the value is in the format {"span":&nbsp;1,&nbsp;"offset":&nbsp;0}, both the column count and the offset column count are set. <br>-&nbsp;xs: refers to the column count and offset column count when the device width type is SizeType.XS (&lt;320vp). <br>-&nbsp;sm: refers to the column count and offset column count when the device width type is SizeType.SM (320vp-600vp). <br>-&nbsp;md: refers to the column count and offset column count when the device width type is SizeType.MD (600vp-840vp). <br>-&nbsp;lg: refers to the column count and offset column count when the device width type is SizeType.LG (≥840vp). <br>For details about the breakpoint configuration of each size type, see [GridContainer](ts-container-gridcontainer.md). <br>**NOTE:** <br>- When calling this attribute, its parent component or ancestor component must be GridContainer.
 
 **Since:** 7
 

@@ -178,7 +178,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback<void>): void
 ```
 
-通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。
+通过指定包名（bundleName）的方式将指定应用的任务从源设备迁移到目标设备。使用callback异步回调。
 
 **起始版本：** 10
 
@@ -251,7 +251,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo): Promise<void>
 ```
 
-通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。
+通过指定包名（bundleName）的方式将指定应用的任务从源设备迁移到目标设备。使用Promise异步回调。
 
 **起始版本：** 10
 

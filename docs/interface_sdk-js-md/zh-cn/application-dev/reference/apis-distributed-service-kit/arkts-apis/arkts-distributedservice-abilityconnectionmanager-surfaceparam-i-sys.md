@@ -28,7 +28,7 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 flip?: FlipOptions
 ```
 
-视频是否翻转。
+表示视频是否反转。HORIZONTAL表示水平翻转（适合镜像场景），VERTICAL表示垂直翻转。
 
 **类型：** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 

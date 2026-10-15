@@ -319,7 +319,7 @@ Creates a shader based on the scene resource parameters. This API uses a promise
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the shader. For details about the .shader file format, see Requirements on the .shader File Format. |
+| params | [SceneResourceParameters](arkts-arkgraphics3d-scene-sceneresourceparameters-i.md) | Yes | Parameters for creating the shader. For details about the .shader file format, see [Requirements on the .shader File Format](../../../graphics3d/arkgraphics3D-shader-resource.md). |
 
 **Return value:**
 

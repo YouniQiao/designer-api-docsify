@@ -48,6 +48,14 @@ iconSize(size: Dimension | SizeOptions)
 
 Sets the icon size of the **SaveButton** component.
 
+> **NOTE:** 
+> 
+> In API version 10, developers can set the icon size through the security component universal attribute
+> [iconSize](../arkts-apis/arkts-arkui-securitycomponentmethod-c.md#iconsize), where the size type supports only
+> Dimension.<br>
+> Since API version 20, developers can set the icon size through this API, and the size type additionally
+> supports SizeOptions.
+
 **Since:** 20
 
 **Model restriction:** This API can be used only in the stage model.

@@ -2435,7 +2435,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的边框圆角半径，支持百分比，百分比依据组件宽度，默认单位：vp。<br>默认值：0。设置圆角后，可搭配[clip](#clip)属性进行裁剪，避免子组件超出组件自身。<br>**说明：** <br>使用LocalizedBorderRadiuses类型时，在不同语言方向下边框圆角半径设置会有差异，具体参见示例2。<br>设置四个不同圆角值，若某个圆角值超过高度和宽度中的最小值的一半时，按值的比例绘制异形圆角，效果参见示例4。<br>**适用版本：** 12 |
+| value | [ResourceColor](../arkts-apis/arkts-arkui-resourcecolor-t.md) &#124; EdgeColors &#124; [LocalizedEdgeColors](../arkts-apis/arkts-arkui-localizededgecolors-i.md) | 是 | 设置元素的边框颜色，设置后边框显示为相应颜色。<br>默认值：Color.Black <br>**说明：** <br>使用LocalizedEdgeColors类型时，在不同语言方向下边框颜色设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -2570,7 +2570,7 @@ borderStyle(value: BorderStyle | EdgeStyles): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid           - Border style.<br>Default value: **BorderStyle.Solid**.<br>**适用版本：** 9 |
+| value | [BorderStyle](../arkts-apis/arkts-arkui-borderstyle-e.md) &#124; EdgeStyles | 是 | 设置元素的边框样式。<br>默认值：BorderStyle.Solid |
 
 **返回值：**
 
@@ -2600,7 +2600,7 @@ borderWidth(value: Length | EdgeWidths | LocalizedEdgeWidths): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | 是 | Border width. This parameter cannot be set in percentage.<br>**适用版本：** 12 |
+| value | [Length](../arkts-apis/arkts-arkui-length-t.md) &#124; EdgeWidths &#124; [LocalizedEdgeWidths](../arkts-apis/arkts-arkui-localizededgewidths-i.md) | 是 | 设置元素的边框宽度，不支持百分比。默认单位：vp。<br>默认值：0。<br>**说明：** 使用LocalizedEdgeWidths类型时，在不同语言方向下边框宽度设置会有差异，具体参见示例2。<br>**适用版本：** 12 |
 
 **返回值：**
 
@@ -3710,7 +3710,9 @@ flexShrink(value: number): T
 
 设置父容器压缩尺寸分配给此属性所在组件的比例。当父容器为Column、Row时，需设置主轴方向的尺寸。
 
-使用[getInspectorByKey](ts-universal-attributes-component-id.md#getinspectorbykey9)获取flexShrink属性时，如果该节点未设置flexShrink属性，默认返回1。
+> **说明：** 
+> 
+> 使用[getInspectorByKey](ts-universal-attributes-component-id.md#getinspectorbykey9)获取**flexShrink**属性时，如果该节点未设置**flexShrink**属性，默认返回**1**（与Flex容器的默认值一致，但与Column和Row容器的默认值**0**不同）。
 
 **起始版本：** 7
 

@@ -1773,6 +1773,30 @@ onContextMenuShow(callback: Callback<OnContextMenuShowEvent, boolean>)
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnContextMenuShowEvent](arkts-arkweb-web-comp-oncontextmenushowevent-i.md), boolean&gt; | 是 | 调用时触发的回调，以允许自定义显示上下文菜单。<br>返回值boolean。返回true表示触发自定义菜单，返回false表示触发的自定义菜单无效，将使用系统默认菜单。<br>**适用版本：** 12 |
 
+## onContextMenuUpdate
+
+```TypeScript
+onContextMenuUpdate(callback: OnContextMenuUpdateCallback)
+```
+
+注册回调，在内核异步更新上下文菜单项状态时调用。内核完成异步处理后触发该回调，通知应用更新菜单项的显示状态。
+
+shouldOfferLinkToText()方法返回同步初始值，此回调提供异步最终值，两者互补。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-onContextMenuUpdate(callback: OnContextMenuUpdateCallback): WebAttribute--><!--Device-WebAttribute-onContextMenuUpdate(callback: OnContextMenuUpdateCallback): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnContextMenuUpdateCallback](arkts-arkweb-web-comp-oncontextmenuupdatecallback-t.md) | 是 | 接收菜单项ID和选项的回调函数。 |
+
 ## onControllerAttached
 
 ```TypeScript

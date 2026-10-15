@@ -1392,6 +1392,41 @@ try {
 }
 ```
 
+## refreshServices
+
+```TypeScript
+refreshServices(): Promise<void>
+```
+
+Refreshes the service cache of a connected BLE peripheral device.
+
+The cached services of the peer device are cleared and rediscovered after the refresh. The promise is resolved when the refresh request is delivered to the service, and the rediscovery proceeds asynchronously. Call getServices to obtain the refreshed service list.
+
+**Since:** 26.2.0
+
+**Required permissions:** ohos.permission.ACCESS_BLUETOOTH
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-GattClientDevice-refreshServices(): Promise<void>--><!--Device-GattClientDevice-refreshServices(): Promise<void>-End-->
+
+**System capability:** SystemCapability.Communication.Bluetooth.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;void&gt; | Promise that returns no value. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Capability not supported. |
+| 2900099 | Operation failed. |
+| 2901003 | The connection is not established. |
+
 ## setBLEMtu
 
 ```TypeScript

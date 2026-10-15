@@ -178,7 +178,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo, callback: AsyncCallback<void>): void
 ```
 
-Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result.
+Continues the task of a specified application from the source device to the target device by specifying the bundle name. This API uses an asynchronous callback to return the result.
 
 **Since:** 10
 
@@ -251,7 +251,7 @@ try {
 function continueMission(parameter: ContinueMissionInfo): Promise<void>
 ```
 
-Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result.
+Continues the task of a specified application from the source device to the target device by specifying the bundle name. This API uses a promise to return the result.
 
 **Since:** 10
 

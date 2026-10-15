@@ -240,7 +240,7 @@ The color information consists of four components: R (Red), G (Green), B (Blue),
 UNKNOWN = 0
 ```
 
-Unknown format.
+Indicates an unknown pixel format.
 
 **Since:** 7
 

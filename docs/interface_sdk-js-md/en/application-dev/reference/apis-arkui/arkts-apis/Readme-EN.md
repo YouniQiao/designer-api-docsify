@@ -240,7 +240,7 @@
   - [FilterResult](arkts-arkui-arkui-advanced-filter-filterresult-c.md)
   - [Filter](arkts-arkui-arkui-advanced-filter-filter-s.md)
   - [FilterType](arkts-arkui-arkui-advanced-filter-filtertype-e.md)
-- [@ohos.arkui.advanced.FoldSplitContainer(Defines FoldSplitContainer component.)](arkts-arkui-arkui-advanced-foldsplitcontainer.md)
+- [@ohos.arkui.advanced.FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer.md)
   - [FoldSplitContainer](arkts-arkui-arkui-advanced-foldsplitcontainer-foldsplitcontainer-s.md)
   - [ExpandedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-expandedregionlayoutoptions-i.md)
   - [FoldedRegionLayoutOptions](arkts-arkui-arkui-advanced-foldsplitcontainer-foldedregionlayoutoptions-i.md)

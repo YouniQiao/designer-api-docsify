@@ -28,7 +28,7 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 flip?: FlipOptions
 ```
 
-This value indicates whether the video is reversed.
+Indicates whether the video is reversed. HORIZONTAL indicates horizontal flip (suitable for mirror scenarios), and VERTICAL indicates vertical flip.
 
 **Type:** [FlipOptions](arkts-distributedservice-abilityconnectionmanager-flipoptions-e-sys.md)
 

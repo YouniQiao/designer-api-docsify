@@ -1,4 +1,4 @@
-# CliCmdInfo（系统接口）
+# CliCmdInfo
 
 ```TypeScript
 interface CliCmdInfo
@@ -12,11 +12,10 @@ CLI命令信息。
 
 **系统能力：** SystemCapability.Security.Asset
 
-**系统接口：** 此接口为系统接口。
-
 ## 导入模块
 
 ```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 ```
 
 ## cliCmdName
@@ -37,8 +36,6 @@ CLI主命令名称。
 
 **系统能力：** SystemCapability.Security.Asset
 
-**系统接口：** 此接口为系统接口。
-
 ## subCliCmdName
 
 ```TypeScript
@@ -56,5 +53,3 @@ CLI子命令名。
 <!--Device-CliCmdInfo-subCliCmdName: string--><!--Device-CliCmdInfo-subCliCmdName: string-End-->
 
 **系统能力：** SystemCapability.Security.Asset
-
-**系统接口：** 此接口为系统接口。

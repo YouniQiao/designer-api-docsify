@@ -11,6 +11,7 @@ This module provides permission management capabilities for tools (CLI commands 
 ## Modules to Import
 
 ```TypeScript
+import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 ```
 
 ## Summary

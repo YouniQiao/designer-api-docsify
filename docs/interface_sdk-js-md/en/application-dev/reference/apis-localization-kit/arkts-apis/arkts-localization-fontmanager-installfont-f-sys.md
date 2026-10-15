@@ -16,7 +16,7 @@ Installs a font file from a specified path into the system font library. This AP
 
 > **NOTE:** 
 > - After successful installation, applications can use the font by its font name. The same font path cannot be installed repeatedly.
-> - A maximum of 200 font files can be installed. In version 26.0.1 and later, a maximum of 800 font files can be installed on PCs and 2-in-1 devices.
+> - A maximum of 200 font files can be installed. In version 26.0.1 and later, a maximum of 800 font files can be installed on PCs, 2-in-1 devices, and tablets.
 
 **Since:** 19
 

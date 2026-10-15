@@ -221,9 +221,9 @@ Common()
 | [UIScrollableCommonEvent](arkts-arkui-common-comp-uiscrollablecommonevent-i.md) | 用于设置滚动事件回调。 |
 | [VerticalAlignParam](arkts-arkui-common-comp-verticalalignparam-i.md) | 定义相对容器的垂直对齐规则。 |
 | [VisibleAreaEventOptions](arkts-arkui-common-comp-visibleareaeventoptions-i.md) | 关于区域变化相关的参数。 |
-| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息 |
+| [LayoutBorderInfo](arkts-arkui-common-comp-layoutborderinfo-i.md) | 子组件边框信息。 |
 | [LayoutChild](arkts-arkui-common-comp-layoutchild-i.md) | 布局和测量发生时，框架传递给子组件的信息。 |
-| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息 |
+| [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息。 |
 | [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
 
 ### 类型

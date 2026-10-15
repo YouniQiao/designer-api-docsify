@@ -269,6 +269,12 @@ onMeasureSize?(selfLayoutInfo: GeometryInfo, children: Array<Measurable>, constr
 
 ArkUI框架会在自定义组件确定尺寸时，将该自定义组件的节点信息和尺寸范围通过onMeasureSize传递给该开发者。不允许在onMeasureSize函数中改变状态变量。
 
+> **说明：** 
+> 
+> - 使用自定义布局方法时，推荐同时实现onMeasureSize和onPlaceChildren方法，否则可能出现布局异常。
+> - 自定义布局内不支持使用懒加载（包含Repeat和LazyForEach）。
+> - 父容器（自定义组件）上设置的尺寸信息，除aspectRatio之外，优先级小于onMeasureSize设置的尺寸信息。
+
 **起始版本：** 18
 
 **模型约束：** 此接口仅可在Stage模型下使用。

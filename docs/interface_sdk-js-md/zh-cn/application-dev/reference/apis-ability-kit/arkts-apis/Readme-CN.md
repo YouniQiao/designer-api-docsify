@@ -70,8 +70,7 @@
     - [SwitchType](arkts-ability-abilityaccessctrl-switchtype-e.md)
   - [Context](arkts-ability-context-t.md)
   - [PermissionRequestResult](arkts-ability-permissionrequestresult-t.md)
-<!--Del-->
-- [@ohos.abilityToolAccessCtrl（This module provides the capabilities of tools access control）](arkts-ability-abilitytoolaccessctrl.md)<!--DelEnd-->
+- [@ohos.abilityToolAccessCtrl（This module provides the capabilities of tools access control）](arkts-ability-abilitytoolaccessctrl.md)
   <!--Del-->
   - [generateControlledDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-generatecontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -82,6 +81,7 @@
   - [grantToolPermissionsByUser（系统接口）](arkts-ability-abilitytoolaccessctrl-granttoolpermissionsbyuser-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [requestToolPermissions（系统接口）](arkts-ability-abilitytoolaccessctrl-requesttoolpermissions-f-sys.md)<!--DelEnd-->
+  - [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md)
   <!--Del-->
   - [updateRemoteGrantStatus（系统接口）](arkts-ability-abilitytoolaccessctrl-updateremotegrantstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -90,10 +90,10 @@
   - [verifyControllerDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [AuthStatusInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [CliCmdInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i-sys.md)<!--DelEnd-->
+  - [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)
   <!--Del-->
   - [OperationInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md)<!--DelEnd-->
+  - [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md)
   <!--Del-->
   - [PermissionInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -112,6 +112,8 @@
   - [RemoteUserAuthResults（系统接口）](arkts-ability-abilitytoolaccessctrl-remoteuserauthresults-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [TicketInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-ticketinfo-i-sys.md)<!--DelEnd-->
+  - [TicketOpions](arkts-ability-abilitytoolaccessctrl-ticketopions-i.md)
+  - [TicketQueryResult](arkts-ability-abilitytoolaccessctrl-ticketqueryresult-i.md)
   <!--Del-->
   - [UserAuthResult（系统接口）](arkts-ability-abilitytoolaccessctrl-userauthresult-i-sys.md)<!--DelEnd-->
   <!--Del-->

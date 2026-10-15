@@ -674,7 +674,7 @@ Default value: **null**
 readonly height: number
 ```
 
-Component height.
+Component height of **CanvasRenderingContext2D**.
 
 Default unit: vp
 
@@ -698,7 +698,7 @@ Default unit: vp
 readonly width: number
 ```
 
-Component width.
+Component width of **CanvasRenderingContext2D**.
 
 Default unit: vp
 

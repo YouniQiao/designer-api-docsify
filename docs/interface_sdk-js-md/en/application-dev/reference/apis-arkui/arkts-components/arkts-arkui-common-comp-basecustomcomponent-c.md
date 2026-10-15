@@ -272,9 +272,9 @@ Invoked when the custom component needs to determine its size. Through this call
 
 > **NOTE:** 
 > 
-> - When a custom layout is created in builder mode, only **this.builder()** is allowed in the **build()** method of a custom component, as shown in the recommended usage in the example below.
-> - The size parameters of the parent component (custom component), except **aspectRatio**, are at a lower priority than those specified by [onMeasureSize](#onmeasuresize).
-> - The position parameters of the child component, except **offset**, **position**, and **markAnchor**, are at a lower priority than those specified by [onPlaceChildren](#onplacechildren),and do not take effect.
+> - When using custom layout methods, you are advised to implement both **onMeasureSize** and **onPlaceChildren**. Otherwise, layout exceptions may occur.
+> - Lazy loading (including Repeat and **LazyForEach**) is not supported in a custom layout.
+> - The size information set on the parent container (custom component), except **aspectRatio**, has a lower priority than the size information set by **onMeasureSize**.
 
 **Since:** 10
 

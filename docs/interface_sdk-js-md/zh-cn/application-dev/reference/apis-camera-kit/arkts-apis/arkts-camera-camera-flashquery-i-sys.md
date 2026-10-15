@@ -28,7 +28,7 @@ import { camera } from '@kit.CameraKit';
 isLcdFlashSupported(): boolean
 ```
 
-Checks whether the LCD flash is supported.
+检测是否支持LCD闪光灯。
 
 **起始版本：** 12
 
@@ -42,7 +42,7 @@ Checks whether the LCD flash is supported.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Check result for the support of the LCD flash. **true** if supported, **false** otherwise. |
+| boolean | 检测是否支持LCD闪光灯的结果。**true**表示支持，**false**表示不支持。 |
 
 **错误码：**
 

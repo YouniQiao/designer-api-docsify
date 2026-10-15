@@ -74,12 +74,12 @@ import { camera } from '@kit.CameraKit';
 | [Location](arkts-camera-camera-location-i.md) | 图片地理位置信息。 |
 | [Macro](arkts-camera-camera-macro-i.md) | Macro继承自[MacroQuery](arkts-camera-camera-macroquery-i.md)。 |
 | [MacroQuery](arkts-camera-camera-macroquery-i.md) | 提供查询设备是否支持相机微距拍摄的方法。 |
-| [ManualExposure](arkts-camera-camera-manualexposure-i.md) | ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration. |
-| [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) | Provides APIs to obtain the manual exposure range supported. |
-| [ManualFocus](arkts-camera-camera-manualfocus-i.md) | ManualFocus object. |
-| [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md) | Manual Focus Query object. |
-| [ManualIso](arkts-camera-camera-manualiso-i.md) | ManualIso object. |
-| [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md) | Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device. |
+| [ManualExposure](arkts-camera-camera-manualexposure-i.md) | ManualExposure继承自[ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md)。提供了获取和设置曝光时长的方法。 |
+| [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) | 提供了获取支持的手动曝光范围的方法。 |
+| [ManualFocus](arkts-camera-camera-manualfocus-i.md) | 手动对焦对象。 |
+| [ManualFocusQuery](arkts-camera-camera-manualfocusquery-i.md) | 手动对焦查询对象。 |
+| [ManualIso](arkts-camera-camera-manualiso-i.md) | 手动ISO对象。 |
+| [ManualIsoQuery](arkts-camera-camera-manualisoquery-i.md) | 提供了查询相机设备是否支持手动ISO设置以及获取设备支持的ISO范围的方法。 |
 | [MetadataBarcodeObject](arkts-camera-camera-metadatabarcodeobject-i.md) | 相机检测到的二维码元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable)接口获取。 |
 | [MetadataBasicFaceObject](arkts-camera-camera-metadatabasicfaceobject-i.md) | 相机检测到的基础人脸元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable)接口获取。 |
 | [MetadataCatBodyObject](arkts-camera-camera-metadatacatbodyobject-i.md) | 相机检测到的猫的身体元数据信息，继承自[MetadataObject](arkts-camera-camera-metadataobject-i.md)。[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput. [on('metadataObjectsAvailable')](arkts-camera-camera-metadataoutput-i.md#onmetadataobjectsavailable)接口获取。 |
@@ -153,21 +153,21 @@ import { camera } from '@kit.CameraKit';
 | [EffectSuggestion](arkts-camera-camera-effectsuggestion-i-sys.md) | EffectSuggestion object. |
 | [Flash](arkts-camera-camera-flash-i-sys.md) | Flash继承自[FlashQuery](arkts-camera-camera-flashquery-i.md)。 |
 | [FlashQuery](arkts-camera-camera-flashquery-i-sys.md) | 提供了查询设备的闪光灯状态和模式的能力。 |
-| [FluorescencePhotoSession](arkts-camera-camera-fluorescencephotosession-i-sys.md) | Fluorescence photo session object. |
+| [FluorescencePhotoSession](arkts-camera-camera-fluorescencephotosession-i-sys.md) | 荧光拍照会话对象。 |
 | [Focus](arkts-camera-camera-focus-i-sys.md) | Focus继承自[FocusQuery](arkts-camera-camera-focusquery-i.md)。 |
 | [FocusQuery](arkts-camera-camera-focusquery-i-sys.md) | 提供了查询是否支持当前对焦模式的方法。 |
-| [FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md) | Describes the focus tracking information, which is obtained by calling VideoSessionForSys. [on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i-sys.md#onfocustrackinginfoavailable). |
-| [HighResolutionPhotoSession](arkts-camera-camera-highresolutionphotosession-i-sys.md) | HighResolutionPhotoSession extends Session, AutoExposure, Focus Implements a high-resolution photo session, which sets the parameters of the high-resolution photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md) | Implements imaging mode. |
-| [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md) | Imaging mode query object. |
-| [LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md) | Describes the LCD flash information. |
-| [LightPaintingPhotoSession](arkts-camera-camera-lightpaintingphotosession-i-sys.md) | LightPaintingPhotoSession extends Session, Flash, Focus, Zoom, ColorEffect Implements a light painting photo session, which sets the parameters of the light painting photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md) | Describes the illumination information. |
-| [MacroPhotoSession](arkts-camera-camera-macrophotosession-i-sys.md) | Implements a macro photo session, which sets the parameters of the macro photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [MacroVideoSession](arkts-camera-camera-macrovideosession-i-sys.md) | Implements a macro video session, which sets the parameters of the macro video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
-| [ManualExposure](arkts-camera-camera-manualexposure-i-sys.md) | ManualExposure extends [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md) Provides APIs to obtain and set the exposure duration. |
-| [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i-sys.md) | Provides APIs to obtain the manual exposure range supported. |
-| [ManualIsoQuery](arkts-camera-camera-manualisoquery-i-sys.md) | Provides APIs to check whether a camera device supports manual ISO setting and obtain the ISO range supported by the device. |
+| [FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md) | 描述焦点跟踪信息，通过调用VideoSessionForSys的[on('focusTrackingInfoAvailable')](arkts-camera-camera-videosession-i-sys.md#onfocustrackinginfoavailable)获取。 |
+| [HighResolutionPhotoSession](arkts-camera-camera-highresolutionphotosession-i-sys.md) | HighResolutionPhotoSession继承自[Session](arkts-camera-camera-session-i.md)、[AutoExposure](arkts-camera-camera-autoexposure-i.md)、[Focus](arkts-camera-camera-focus-i.md)。实现高分辨率拍照会话，用于设置高分辨率拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
+| [ImagingMode](arkts-camera-camera-imagingmode-i-sys.md) | 实现成像模式功能。 |
+| [ImagingModeQuery](arkts-camera-camera-imagingmodequery-i-sys.md) | 成像模式查询对象。 |
+| [LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md) | 描述LCD闪光灯信息。 |
+| [LightPaintingPhotoSession](arkts-camera-camera-lightpaintingphotosession-i-sys.md) | LightPaintingPhotoSession extends Session, Flash, Focus, Zoom, ColorEffect实现光绘拍照会话，用于设置光绘拍照模式的参数，并保存运行相机所需的所有[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
+| [LuminationInfo](arkts-camera-camera-luminationinfo-i-sys.md) | 描述光照信息。 |
+| [MacroPhotoSession](arkts-camera-camera-macrophotosession-i-sys.md) | 实现微距拍照会话，用于设置微距拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
+| [MacroVideoSession](arkts-camera-camera-macrovideosession-i-sys.md) | 实现微距录像会话，用于设置微距录像模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
+| [ManualExposure](arkts-camera-camera-manualexposure-i-sys.md) | ManualExposure继承自[ManualExposureQuery](arkts-camera-camera-manualexposurequery-i.md)。提供了获取和设置曝光时长的方法。 |
+| [ManualExposureQuery](arkts-camera-camera-manualexposurequery-i-sys.md) | 提供了获取支持的手动曝光范围的方法。 |
+| [ManualIsoQuery](arkts-camera-camera-manualisoquery-i-sys.md) | 提供了查询相机设备是否支持手动ISO设置以及获取设备支持的ISO范围的方法。 |
 | [MetadataObject](arkts-camera-camera-metadataobject-i-sys.md) | 相机元能力信息，[CameraInput](arkts-camera-camera-camerainput-i.md)相机信息中的数据来源，通过metadataOutput.on('metadataObjectsAvailable')接口获取。 |
 | [NightPhotoSession](arkts-camera-camera-nightphotosession-i-sys.md) | NightPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ColorManagement, ManualExposure Implements a night photo session, which sets the parameters of the night photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md), [CameraOutput](arkts-camera-camera-cameraoutput-i.md), and [PhotoOutput](arkts-camera-camera-photooutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). For night photo capture scenarios, you must listen for the [onCaptureEnd](arkts-camera-camera-photooutput-i.md#oncaptureend) event to mark the end of the photo capture session. |
 | [PanoramaPhotoSession](arkts-camera-camera-panoramaphotosession-i-sys.md) | PanoramaPhotoSession extends Session, Focus, AutoExposure, WhiteBalance, ColorEffect Implements a panoramic photo session, which sets the parameters of the panoramic photo mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |

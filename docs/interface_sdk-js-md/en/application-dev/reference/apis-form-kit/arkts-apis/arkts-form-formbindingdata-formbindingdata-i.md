@@ -38,6 +38,26 @@ Data for updating.
 
 **System capability:** SystemCapability.Ability.Form
 
+## isSupportMoreImages
+
+```TypeScript
+isSupportMoreImages?: boolean
+```
+
+Indicates whether to support updating more images if the widget data is updated using shared memory. When set to false , the maximum number of normally displayed images is 20. Default value: false. When set to true, the maximum number of normally displayed images is 30.<br>**NOTE:** <br>The total size of more images may exceed 10 MB, causing the form data update to fail. Default value: false.
+
+**Type:** boolean
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.0.1.
+
+<!--Device-FormBindingData-isSupportMoreImages?: boolean--><!--Device-FormBindingData-isSupportMoreImages?: boolean-End-->
+
+**System capability:** SystemCapability.Ability.Form
+
 ## proxies
 
 ```TypeScript

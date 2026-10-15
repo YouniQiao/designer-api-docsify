@@ -88,7 +88,7 @@ name: string
 role: StreamRole
 ```
 
-流传输角色，可以是接收流或发送流。
+表示流传输的方式（可以是接收流或发送流）。bitrate参数仅在role为SOURCE时有效。
 
 **类型：** [StreamRole](arkts-distributedservice-abilityconnectionmanager-streamrole-e-sys.md)
 

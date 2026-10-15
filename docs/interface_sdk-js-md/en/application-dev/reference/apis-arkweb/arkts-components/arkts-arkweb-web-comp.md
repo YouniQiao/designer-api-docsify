@@ -112,6 +112,7 @@ Sets Value.
 | [SslErrorEvent](arkts-arkweb-web-comp-sslerrorevent-i.md) | Callback details triggered when an SSL error occurs during resource loading by the user, including the URL, error type, and certificate chain. It is suitable for scenarios where detailed analysis of SSL errors is required, improving security issue diagnosis and troubleshooting efficiency. |
 | [UrlRegexRule](arkts-arkweb-web-comp-urlregexrule-i.md) | Defines the URL regular expression rule. |
 | [VerifyPinEvent](arkts-arkweb-web-comp-verifypinevent-i.md) | Defines the callback triggered to notify the user of PIN verification. |
+| [WebContextMenuOptions](arkts-arkweb-web-comp-webcontextmenuoptions-i.md) | Defines the options for a context menu item. |
 | [WebKeyboardCallbackInfo](arkts-arkweb-web-comp-webkeyboardcallbackinfo-i.md) | Input parameters of the callback used to intercept the soft keyboard started from editable elements on a web page, including [WebKeyboardController](arkts-arkweb-web-comp.md) and the attributes of the editable element. It is suitable for scenarios where custom keyboard interaction is required, improving input experience customization and flexibility. |
 | [WebKeyboardOptions](arkts-arkweb-web-comp-webkeyboardoptions-i.md) | Return value of the callback that intercepts the soft keyboard started from editable elements on the web page, including the keyboard type and custom keyboard. It is suitable for scenarios where controlling soft keyboard behavior is required. |
 | [WebMediaOptions](arkts-arkweb-web-comp-webmediaoptions-i.md) | Configures the media policy of the **Web** component, including the audio playback continuation validity period, audio exclusive mode, and more. It is suitable for scenarios where audio playback experience optimization and multi- instance audio management are required, improving media playback stability and user experience. |
@@ -128,6 +129,7 @@ Sets Value.
 | [OnAISessionCallback](arkts-arkweb-web-comp-onaisessioncallback-t.md) | AI session operation result callback function type. Used to report the result of session creation or execution. |
 | [OnCameraCaptureStateChangeCallback](arkts-arkweb-web-comp-oncameracapturestatechangecallback-t.md) | This callback is triggered when the camera device state of the page changes. |
 | [OnContextMenuHideCallback](arkts-arkweb-web-comp-oncontextmenuhidecallback-t.md) | Defines a callback invoked when the context menu is hidden. |
+| [OnContextMenuUpdateCallback](arkts-arkweb-web-comp-oncontextmenuupdatecallback-t.md) | Defines the callback type for context menu item status updates. |
 | [OnCreateAISession](arkts-arkweb-web-comp-oncreateaisession-t.md) | AI session creation callback function type. Allows custom model initialization and result processing. |
 | [OnDestroyAISession](arkts-arkweb-web-comp-ondestroyaisession-t.md) | AI session destruction callback function type. Used to clean up resources associated with the custom AI model. |
 | [OnDetectBlankScreenCallback](arkts-arkweb-web-comp-ondetectblankscreencallback-t.md) | Defines a callback triggered when a blank screen is detected. |
@@ -196,6 +198,7 @@ Sets Value.
 | [ViewportFit](arkts-arkweb-web-comp-viewportfit-e.md) | Enumerates the viewport types available for **viewport-fit** in the web page **\<meta>** tag. |
 | [WebBypassVsyncCondition](arkts-arkweb-web-comp-webbypassvsynccondition-e.md) | Enumerates whether to allow the rendering process to bypass the vsync scheduling. |
 | [WebCaptureMode](arkts-arkweb-web-comp-webcapturemode-e.md) | Enumerates the web screen capture modes. |
+| [WebContextMenuItemId](arkts-arkweb-web-comp-webcontextmenuitemid-e.md) | Enumerates the context menu item IDs. |
 | [WebDarkMode](arkts-arkweb-web-comp-webdarkmode-e.md) | Configures the web dark mode, which controls the dark theme display of web content and helps developers improve visual experience and readability based on user preferences and system themes. |
 | [WebElementType](arkts-arkweb-web-comp-webelementtype-e.md) | Enumerates the web element types. |
 | [WebKeyboardAppearanceMode](arkts-arkweb-web-comp-webkeyboardappearancemode-e.md) | Defines the input method immersive mode in the WebView, which controls the display style of the soft keyboard and helps developers provide a consistent visual experience based on the app theme and user preferences. It supports the default appearance, system-following, light immersive, and dark immersive styles. |

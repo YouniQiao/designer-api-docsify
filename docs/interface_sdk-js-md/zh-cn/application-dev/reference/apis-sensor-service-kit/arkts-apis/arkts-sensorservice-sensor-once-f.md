@@ -797,7 +797,7 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | [SensorId.PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md) | 是 | Sensor type. 传感器类型，该值固定为SensorId.PEDOMETER。 |
+| type | [SensorId.PEDOMETER](arkts-sensorservice-sensor-sensorid-e.md) | 是 | 传感器类型，该值固定为SensorId.PEDOMETER。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[PedometerResponse](arkts-sensorservice-sensor-pedometerresponse-i.md)&gt; | 是 | 回调函数，异步上报的传感器数据固定为PedometerResponse。 |
 
 **错误码：**
@@ -1084,8 +1084,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER]
-> [once](#once1)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.ACCELEROMETER](#once1)
 > 替代。
 
 **起始版本：** 8
@@ -1132,8 +1132,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ACCELEROMETER_UNCALIBRATED]
-> [once](#once2)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once2)
 > 替代。
 
 **起始版本：** 8
@@ -1183,8 +1183,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> [once](#once3)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.AMBIENT_LIGHT](#once3)
 > 替代。
 
 **起始版本：** 8
@@ -1227,8 +1227,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.AMBIENT_LIGHT]
-> [once](#once3)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.AMBIENT_TEMPERATURE](#once4)
 > 替代。
 
 **起始版本：** 8
@@ -1271,8 +1271,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.BAROMETER]
-> [once](#once5)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.BAROMETER](#once5)
 > 替代。
 
 **起始版本：** 8
@@ -1315,8 +1315,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GRAVITY]
-> [once](#once6)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.GRAVITY](#once6)
 > 替代。
 
 **起始版本：** 8
@@ -1361,8 +1361,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE]
-> [once](#once7)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.GYROSCOPE](#once7)
 > 替代。
 
 **起始版本：** 8
@@ -1409,8 +1409,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.GYROSCOPE_UNCALIBRATED]
-> [once](#once8)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.GYROSCOPE_UNCALIBRATED](#once8)
 > 替代。
 
 **起始版本：** 8
@@ -1460,8 +1460,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HALL]
-> [once](#once9)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.HALL](#once9)
 > 替代。
 
 **起始版本：** 8
@@ -1504,8 +1504,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HEART_RATE]
-> [once](#once10)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.HEART_RATE](#once10)
 > 替代。
 
 **起始版本：** 8
@@ -1550,8 +1550,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.HUMIDITY]
-> [once](#once11)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.HUMIDITY](#once11)
 > 替代。
 
 **起始版本：** 8
@@ -1594,8 +1594,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.LINEAR_ACCELEROMETER]
-> [once](#once12)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.LINEAR_ACCELEROMETER](#once12)
 > 替代。
 
 **起始版本：** 8
@@ -1630,8 +1630,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD]
-> [once](#once13)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.MAGNETIC_FIELD](#once13)
 > 替代。
 
 **起始版本：** 8
@@ -1676,8 +1676,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.MAGNETIC_FIELD_UNCALIBRATED]
-> [once](#once14)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once14)
 > 替代。
 
 **起始版本：** 8
@@ -1725,8 +1725,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ORIENTATION]
-> [once](#once15)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.ORIENTATION](#once15)
 > 替代。
 
 **起始版本：** 8
@@ -1771,8 +1771,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER]
-> [once](#once16)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.PEDOMETER](#once16)
 > 替代。
 
 **起始版本：** 8
@@ -1817,8 +1817,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PEDOMETER_DETECTION]
-> [once](#once17)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.PEDOMETER_DETECTION](#once17)
 > 替代。
 
 **起始版本：** 8
@@ -1863,8 +1863,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.PROXIMITY]
-> [once](#once18)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.PROXIMITY](#once18)
 > 替代。
 
 **起始版本：** 8
@@ -1908,8 +1908,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.ROTATION_VECTOR]
-> [once](#once19)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.ROTATION_VECTOR](#once19)
 > 替代。
 
 **起始版本：** 8
@@ -1955,8 +1955,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.SIGNIFICANT_MOTION]
-> [once](#once20)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.SIGNIFICANT_MOTION](#once20)
 > 替代。
 
 **起始版本：** 8
@@ -1999,8 +1999,8 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 
 > **说明：** 
 > 
-> 从API version 8 开始支持，从API version 9 开始废弃，建议使用[sensor.on.WEAR_DETECTION]
-> [once](#once21)
+> 从API version 8 开始支持，从API version 9 开始废弃，建议使用
+> [sensor.once.WEAR_DETECTION](#once21)
 > 替代。
 
 **起始版本：** 8

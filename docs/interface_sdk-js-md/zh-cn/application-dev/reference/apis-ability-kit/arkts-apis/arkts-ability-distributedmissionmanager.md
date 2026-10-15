@@ -25,8 +25,8 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | --- | --- |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission1) | 通过指定任务ID（missionId）的方式进行迁移任务。使用callback异步回调。 |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission2) | 通过指定任务ID（missionId）的方式进行迁移任务。使用promise异步回调。 |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission3) | 通过指定包名（bundleName）的方式进行迁移任务。使用callback异步回调。 |
-| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission4) | 通过指定包名（bundleName）的方式进行迁移任务。使用Promise异步回调。 |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission3) | 通过指定包名（bundleName）的方式将指定应用的任务从源设备迁移到目标设备。使用callback异步回调。 |
+| [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission4) | 通过指定包名（bundleName）的方式将指定应用的任务从源设备迁移到目标设备。使用Promise异步回调。 |
 | [off('continueStateChange')](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) | 取消当前任务流转的状态监听。此接口需与on('continueStateChange')成对使用，在不需要监听时应及时调用以释放资源。 |
 | [on('continueStateChange')](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) | 注册当前任务流转状态的监听。此接口需与off('continueStateChange')成对使用，不再监听时应及时取消；调用顺序为先通过on注册监听，不需要时再调用off取消监听。 |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener1) | 注册任务状态监听。使用callback异步回调。调用成功后，系统将开始监听指定设备上的任务状态变化，该监听需与unRegisterMissionListener成对使用，注册后应在不需要监听任务状态时及时取消。 |
@@ -56,7 +56,7 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [ContinueCallback](arkts-ability-distributedmissionmanager-continuecallback-t-sys.md) | 表示跨设备迁移Mission完成后，返回迁移结果的回调函数，迁移Mission详见：[continueMission接口](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission1) |
 | [ContinueDeviceInfo](arkts-ability-distributedmissionmanager-continuedeviceinfo-t-sys.md) | 迁移任务所需的参数。 |
 | [ContinueMissionInfo](arkts-ability-distributedmissionmanager-continuemissioninfo-t-sys.md) | 迁移任务所需的参数。 |
-| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为可以[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener1)的入参，用于监听任务状态变化的回调函数，包含任务列表变化通知、任务快照通知和断开连接通知等功能。表示注册监听后建立的回调函数。 |
+| [MissionCallback](arkts-ability-distributedmissionmanager-missioncallback-t-sys.md) | 作为[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener1)的入参，用于监听任务状态变化的回调函数，包含任务列表变化通知、任务快照通知和断开连接通知等功能。表示注册监听后建立的回调函数。 |
 | [MissionDeviceInfo](arkts-ability-distributedmissionmanager-missiondeviceinfo-t-sys.md) | 可以作为[registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener1)的入参，表示注册监听时所需参数的对象，包含deviceId等设备标识符字段。 |
 | [MissionParameter](arkts-ability-distributedmissionmanager-missionparameter-t-sys.md) | 作为[startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions1)的入参，表示同步远端设备任务列表时所需的参数对象，包含deviceId、fixConflict和tag等字段。 |
 <!--DelEnd-->
