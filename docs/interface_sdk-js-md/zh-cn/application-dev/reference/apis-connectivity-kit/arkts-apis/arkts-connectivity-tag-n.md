@@ -47,10 +47,10 @@ import { tag } from '@kit.ConnectivityKit';
 | [getNfcF](arkts-connectivity-tag-getnfcf-f.md#getnfcf) | 获取NFC F类型Tag对象，通过该对象可访问NfcF技术类型的Tag。 |
 | [getNfcV](arkts-connectivity-tag-getnfcv-f.md#getnfcv) | 获取NFC V类型Tag对象，通过该对象可访问NfcV技术类型的Tag。 |
 | [getTagInfo](arkts-connectivity-tag-gettaginfo-f.md#gettaginfo) | 从Want中获取TagInfo，Want是被NFC服务初始化，包含了TagInfo所需的属性值。 |
-| [off](arkts-connectivity-tag-off-f.md#offreadermode) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。 |
-| [off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)进行取消。使用callback异步回调。 |
-| [on](arkts-connectivity-tag-on-f.md#onreadermode) | 订阅NFC Tag读卡事件，实现前台应用优先分发。设备会进入读卡器模式，同时关闭卡模拟。通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息。需要与取消读卡器模式的[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)。使用callback异步回调。与注册读卡器模式的tag.on互斥使用。 |
-| [on](arkts-connectivity-tag-on-f.md#onreadermodewithinterval) | 订阅NFC Tag读卡事件，实现前台应用优先分发，并支持卡在位检测间隔设置。使用callback异步回调。 |
+| [off('readerMode')](arkts-connectivity-tag-off-f.md#offreadermode) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用off进行取消。 |
+| [off('readerModeWithInterval')](arkts-connectivity-tag-off-f.md#offreadermodewithinterval) | 取消订阅NFC Tag读卡事件。设备退出读卡模式，并恢复卡模拟。如果已通过tag.on设置NFC的读卡器模式，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermodewithinterval)进行取消。使用callback异步回调。 |
+| [on('readerMode')](arkts-connectivity-tag-on-f.md#onreadermode) | 订阅NFC Tag读卡事件，实现前台应用优先分发。设备会进入读卡器模式，同时关闭卡模拟。通过discTech设置支持的读卡技术类型，通过callback方式获取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息。需要与取消读卡器模式的[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)成对使用，如果已通过on进行设置，需要在页面退出前台或页面销毁时调用[tag.off](arkts-connectivity-tag-off-f.md#offreadermode)。使用callback异步回调。与注册读卡器模式的tag.on互斥使用。 |
+| [on('readerModeWithInterval')](arkts-connectivity-tag-on-f.md#onreadermodewithinterval) | 订阅NFC Tag读卡事件，实现前台应用优先分发，并支持卡在位检测间隔设置。使用callback异步回调。 |
 | [registerForegroundDispatch](arkts-connectivity-tag-registerforegrounddispatch-f.md#registerforegrounddispatch) | 注册对NFC Tag读卡事件的监听，实现前台应用优先分发的目的。通过discTech设置支持的读卡技术类型，通过callback方式获取读取到Tag的[TagInfo](arkts-connectivity-tag-taginfo-i.md)信息。应用必须在前台才能调用。需要与取消监听接口[tag.unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md)成对使用。如果已注册事件监听，需要在页面退出前台或页面销毁前调用取消注册。使用callback异步回调。 |
 | [unregisterForegroundDispatch](arkts-connectivity-tag-unregisterforegrounddispatch-f.md#unregisterforegrounddispatch) | 取消注册对NFC Tag读卡事件的监听，退出前台应用优先分发。如果已注册事件监听，需要在页面退出前台或页面销毁前调用取消注册。 |
 | [getNfcATag](arkts-connectivity-tag-getnfcatag-f.md#getnfcatag) | 获取NFC A类型Tag对象，通过该对象可访问NfcA技术类型的Tag。 |

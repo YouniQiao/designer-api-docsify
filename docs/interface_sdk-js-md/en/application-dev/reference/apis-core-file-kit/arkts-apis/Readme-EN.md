@@ -123,6 +123,8 @@
   - [State(system api)](arkts-corefile-cloudsync-state-e-sys.md)<!--DelEnd-->
   - [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
   <!--Del-->
+  - [SyncType(system api)](arkts-corefile-cloudsync-synctype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [UploadState(system api)](arkts-corefile-cloudsync-uploadstate-e-sys.md)<!--DelEnd-->
 - [@ohos.file.cloudSyncManager(Device-Cloud Sync Management)](arkts-corefile-file-cloudsyncmanager.md)
   <!--Del-->

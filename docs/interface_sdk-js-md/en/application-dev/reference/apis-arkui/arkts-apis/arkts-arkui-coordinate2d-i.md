@@ -4,7 +4,7 @@
 declare interface Coordinate2D
 ```
 
-Describes a two-dimension coordinate. Responsive layout fill mode, used for the WaterFlow, Grid, List, Swiper, and LazyVWaterFlowLayout components. The LazyVWaterFlowLayout component is supported since API version 26.0.0.
+Describes a two-dimension coordinate.
 
 **Since:** 26.0.0
 

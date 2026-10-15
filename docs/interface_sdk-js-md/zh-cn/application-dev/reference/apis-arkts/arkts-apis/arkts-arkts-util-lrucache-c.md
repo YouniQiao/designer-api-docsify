@@ -262,7 +262,7 @@ for (let value of pair) {
 get(key: K): V | undefined
 ```
 
-获取 key 对应的值。如果该 key 不在缓存中，则调用[createDefault<sup>9+</sup>](#createdefault) 创建该 key。如果 **createDefault** 中指定的值不为 **undefined**，则调用 [afterRemoval<sup>9+</sup>](#afterremoval) 返回 **createDefault**中指定的值。
+获取 key 对应的值。如果该 key 不在缓存中，则调用[createDefault<sup>9+</sup>](#createdefault) 创建该 key 对应的值。如果 **createDefault** 中指定的值不为 **undefined**，则调用 [afterRemoval<sup>9+</sup>](#afterremoval) 返回 **createDefault**中指定的值。
 
 **起始版本：** 9
 
@@ -639,7 +639,7 @@ remove(key: K): V | undefined
 
 | 类型 | 说明 |
 | --- | --- |
-| V &#124; undefined | 如果 key 存在于缓存中，则返回包含被移除键值对的 **Optional** 对象；如果 key 不存在则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
+| V &#124; undefined | 如果 key 存在于缓存中，则返回与该 key 关联的值；如果 key 不存在则返回 **undefined**；如果 **key** 传入 **null**，则抛出错误。 |
 
 **示例**
 

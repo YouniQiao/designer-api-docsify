@@ -16,6 +16,6 @@ type Value = string | number | Decimal
 
 | 类型 | 说明 |
 | --- | --- |
-| string |  |
-| double |  |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) |  |
+| string | 构造时可接受的数字格式字符串。 |
+| double | 有限数字值。 |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | Decimal对象。 |

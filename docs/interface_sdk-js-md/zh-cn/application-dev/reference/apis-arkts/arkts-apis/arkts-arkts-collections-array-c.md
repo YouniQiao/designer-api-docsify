@@ -319,7 +319,7 @@ copyWithin(target: number, start: number, end?: number): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 修改后的ArkTS Array。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
+| Array&lt;T&gt; | 修改后的ArkTS Array。 |
 
 **错误码：**
 
@@ -860,7 +860,7 @@ static isArray(value: Object | undefined | null): boolean
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
+| boolean | 检查结果。如果传入的参数是ArkTS Array，则返回**true**；否则返回**false**。 |
 
 ## join
 
@@ -1023,7 +1023,7 @@ static of<T>(...items: T[]): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 新创建的ArkTS Array实例。可能的原因：         1. 必填参数未指定。         2. 参数类型不正确。         3. 参数校验失败。 |
+| Array&lt;T&gt; | 新创建的ArkTS Array实例。 |
 
 ## pop
 
@@ -1196,7 +1196,7 @@ reduceRight<U = T>(callbackFn: ArrayReduceCallback<U, T, Array<T>>, initialValue
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 回调函数执行后的最终结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| U | 回调函数执行后的最终结果。 |
 
 **错误码：**
 
@@ -1233,7 +1233,7 @@ reduceRight(callbackFn: ArrayReduceCallback<T, T, Array<T>>): T
 
 | 类型 | 说明 |
 | --- | --- |
-| T | 回调函数执行后的最终结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| T | 回调函数执行后的最终结果。 |
 
 **错误码：**
 
@@ -1580,7 +1580,7 @@ splice(start: number): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除，返回一个空的**Array**对象。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除，返回一个空的**Array**对象。 |
 
 **错误码：**
 
@@ -1619,7 +1619,7 @@ splice(start: number, deleteCount: number, ...items: T[]): Array<T>
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除，返回一个空的**Array**对象。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| Array&lt;T&gt; | 返回一个新的包含被删除元素的**Array**对象。如果没有元素被删除，返回一个空的**Array**对象。 |
 
 **错误码：**
 

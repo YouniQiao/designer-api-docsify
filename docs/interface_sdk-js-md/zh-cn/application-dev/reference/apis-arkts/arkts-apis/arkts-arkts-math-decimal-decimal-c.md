@@ -153,7 +153,7 @@ static acos(n: Value): Decimal
 acosh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲余弦的倒数。
+返回一个新的Decimal对象，其值是此Decimal值的反双曲余弦值。
 
 **起始版本：** 12
 
@@ -183,7 +183,7 @@ acosh(): Decimal
 static acosh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲余弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
+返回一个新的Decimal对象，其值是n的反双曲余弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 12
 
@@ -360,7 +360,7 @@ static asin(n: Value): Decimal
 asinh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲正弦的倒数。
+返回一个新的Decimal对象，其值是此Decimal值的反双曲正弦值。
 
 **起始版本：** 12
 
@@ -390,7 +390,7 @@ asinh(): Decimal
 static asinh(n: Value): Decimal
 ```
 
-返回一个新的Decimal对象，其值是n的双曲正弦的倒数。按照precision设置有效位数，按照rounding设置舍入模式。
+返回一个新的Decimal对象，其值是n的反双曲正弦值。按照precision设置有效位数，按照rounding设置舍入模式。
 
 **起始版本：** 12
 
@@ -404,7 +404,7 @@ static asinh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 需要求反双曲函数的数值。 |
 
 **返回值：**
 
@@ -530,7 +530,7 @@ static atan2(y: Value, x: Value): Decimal
 atanh(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是此Decimal值的双曲正切的倒数。
+返回一个新的Decimal对象，其值是此Decimal值的反双曲正切值。
 
 **起始版本：** 12
 
@@ -574,7 +574,7 @@ static atanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 需要求反双曲函数的数值。 |
 
 **返回值：**
 
@@ -954,7 +954,7 @@ static cosh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 需要求双曲函数的数值。 |
 
 **返回值：**
 
@@ -1778,7 +1778,7 @@ static log2(n: Value): Decimal
 static max(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值是所有参数中的最大值。
+返回一个新的Decimal对象，其值是所有参数中的最大值。未传入参数时会抛出运行时异常。
 
 **起始版本：** 12
 
@@ -1812,7 +1812,7 @@ static max(...n: Value[]): Decimal
 static min(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值是所有参数中的最小值。
+返回一个新的Decimal对象，其值是所有参数中的最小值。未传入参数时会抛出运行时异常。
 
 **起始版本：** 12
 
@@ -2300,8 +2300,8 @@ static sign(n: Value): number
 
 | 类型 | 说明 |
 | --- | --- |
-| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | the Decimal type<br>**适用版本：** 12 - 17 |
-| number | the Decimal type<br>**适用版本：** 18 |
+| [Decimal](arkts-arkts-math-decimal-decimal-c.md) | 参数的符号判断结果<br>**适用版本：** 12 - 17 |
+| number | 参数的符号判断结果<br>**适用版本：** 18 |
 
 **错误码：**
 
@@ -2568,7 +2568,7 @@ static sub(x: Value, y: Value): Decimal
 static sum(...n: Value[]): Decimal
 ```
 
-返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。
+返回一个新的Decimal对象，其值为参数的和。按照precision设置有效位数，按照rounding设置舍入模式。未传入参数时会抛出运行时异常。
 
 仅对结果进行舍入，不对中间计算结果进行舍入。
 
@@ -2704,7 +2704,7 @@ static tanh(n: Value): Decimal
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 以弧度为单位的值。 |
+| n | [Value](arkts-arkts-value-t.md) | 是 | {double &#124; string &#124; Decimal} 需要求双曲函数的数值。 |
 
 **返回值：**
 
@@ -3405,7 +3405,7 @@ toOctal(significantDigits: number): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| significantDigits | number | 是 | {double &#124; string &#124; Decimal} |
+| significantDigits | number | 是 | 转换时保留的有效数字，取值范围为[1, 1e9]的整数。 |
 
 **返回值：**
 
@@ -3441,7 +3441,7 @@ toOctal(significantDigits: number, rounding: Rounding): string
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| significantDigits | number | 是 | {double &#124; string &#124; Decimal} |
+| significantDigits | number | 是 | 转换时保留的有效数字，取值范围为[1, 1e9]的整数。 |
 | rounding | [Rounding](arkts-arkts-rounding-t.md) | 是 | 转换时使用的舍入模式。取值范围为0到8的整数。 |
 
 **返回值：**
@@ -3680,7 +3680,7 @@ toString(): string
 trunc(): Decimal
 ```
 
-返回一个新的Decimal对象，其值是将参数n截断为整数部分。
+返回一个新的Decimal对象，其值是将当前Decimal截断为整数部分。
 
 **起始版本：** 12
 

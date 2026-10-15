@@ -26,12 +26,12 @@ import { backgroundTaskManager } from '@kit.BackgroundTasksKit';
 | [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getremainingdelaytime1) | 获取本次短时任务的剩余时间，使用callback异步回调。 |
 | [getRemainingDelayTime](arkts-backgroundtasks-backgroundtaskmanager-getremainingdelaytime-f.md#getremainingdelaytime2) | 获取本次短时任务的剩余时间，使用Promise异步回调。 |
 | [getTransientTaskInfo](arkts-backgroundtasks-backgroundtaskmanager-gettransienttaskinfo-f.md#gettransienttaskinfo) | 获取所有短时任务信息，如当日剩余总配额等，使用Promise异步回调。 |
-| [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskcancel) | 解除长时任务取消的监听，使用callback异步回调。 |
-| [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustasksuspend) | 取消长时任务暂停的监听，使用callback异步回调。 |
-| [off](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskactive) | 取消长时任务激活的监听，使用callback异步回调。 |
-| [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskcancel) | 注册长时任务取消的监听，使用callback异步回调。 |
-| [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustasksuspend) | 注册长时任务暂停的监听，使用callback异步回调。注册该回调后，如果系统首次检测到应用未执行相应的业务，不会直接取消长时任务，而是将长时任务标记为暂停状态，如果连续检测失败，仍会取消长时任务。 |
-| [on](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskactive) | 注册长时任务激活的监听，使用callback异步回调。暂停的长时任务激活时回调。 |
+| [off('continuousTaskCancel')](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskcancel) | 解除长时任务取消的监听，使用callback异步回调。 |
+| [off('continuousTaskSuspend')](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustasksuspend) | 取消长时任务暂停的监听，使用callback异步回调。 |
+| [off('continuousTaskActive')](arkts-backgroundtasks-backgroundtaskmanager-off-f.md#offcontinuoustaskactive) | 取消长时任务激活的监听，使用callback异步回调。 |
+| [on('continuousTaskCancel')](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskcancel) | 注册长时任务取消的监听，使用callback异步回调。 |
+| [on('continuousTaskSuspend')](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustasksuspend) | 注册长时任务暂停的监听，使用callback异步回调。注册该回调后，如果系统首次检测到应用未执行相应的业务，不会直接取消长时任务，而是将长时任务标记为暂停状态，如果连续检测失败，仍会取消长时任务。 |
+| [on('continuousTaskActive')](arkts-backgroundtasks-backgroundtaskmanager-on-f.md#oncontinuoustaskactive) | 注册长时任务激活的监听，使用callback异步回调。暂停的长时任务激活时回调。 |
 | [requestSuspendDelay](arkts-backgroundtasks-backgroundtaskmanager-requestsuspenddelay-f.md#requestsuspenddelay) | 申请短时任务。适用于应用即将退至后台、需要短暂延迟挂起以便完成关键操作（如保存数据、上传进度等）等场景。 |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning1) | 申请长时任务，支持申请一种类型，使用callback异步回调。长时任务申请成功后，会有通知栏消息，没有提示音。一个UIAbility（FA模型则为ServiceAbility）同一时刻仅支持通过本接口支持申请一个长时任务，可以通过API version 21新增接口[startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning4)申请多个长时任务。<br>从API版本26.0.1开始，通过本接口申请的长时任务，包含数据传输类型时，可以通过[updateDataTransferProgress()](arkts-backgroundtasks-backgroundtaskmanager-updatedatatransferprogress-f.md)接口更新长时任务通知，可选择通知是否有进度环，进度为100时是否响铃。 |
 | [startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning2) | 申请长时任务，支持申请一种类型，使用Promise异步回调。长时任务申请成功后，会有通知栏消息，没有提示音。一个UIAbility（FA模型则为ServiceAbility）同一时刻仅支持通过本接口支持申请一个长时任务，可以通过API version 21新增接口[startBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-startbackgroundrunning-f.md#startbackgroundrunning4)申请多个长时任务。<br>从API版本26.0.1开始，通过本接口申请的长时任务，包含数据传输类型时，可以通过[updateDataTransferProgress()](arkts-backgroundtasks-backgroundtaskmanager-updatedatatransferprogress-f.md)接口更新长时任务通知，可选择通知是否有进度环，进度为100时是否响铃。 |

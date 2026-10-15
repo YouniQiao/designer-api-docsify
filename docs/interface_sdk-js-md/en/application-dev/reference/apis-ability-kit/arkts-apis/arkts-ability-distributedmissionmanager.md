@@ -27,8 +27,8 @@ import { distributedMissionManager } from '@kit.AbilityKit';
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission2) | Continues a mission on a remote device, with the mission ID specified. This API uses a promise to return the result. |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission3) | Continues a mission on a remote device, with the bundle name specified. This API uses an asynchronous callback to return the result. |
 | [continueMission](arkts-ability-distributedmissionmanager-continuemission-f-sys.md#continuemission4) | Continues a mission on a remote device, with the bundle name specified. This API uses a promise to return the result. |
-| [off](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) | Unsubscribes from continuation state change events of the current mission. |
-| [on](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) | Subscribes to continuation state change events of the current mission. |
+| [off('continueStateChange')](arkts-ability-distributedmissionmanager-off-f-sys.md#offcontinuestatechange) | Unsubscribes from continuation state change events of the current mission. |
+| [on('continueStateChange')](arkts-ability-distributedmissionmanager-on-f-sys.md#oncontinuestatechange) | Subscribes to continuation state change events of the current mission. |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener1) | Registers a mission status listener. This API uses an asynchronous callback to return the result. |
 | [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener2) | Registers a mission status listener. This API uses a promise to return the result. |
 | [startSyncRemoteMissions](arkts-ability-distributedmissionmanager-startsyncremotemissions-f-sys.md#startsyncremotemissions1) | Starts to synchronize the remote mission list. This API uses an asynchronous callback to return the result. |

@@ -99,5 +99,6 @@ import { cloudSync } from '@kit.CoreFileKit';
 | [FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md) | Enumerates the device-cloud file sync states. |
 | [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md) | Enumerates the space optimization states. |
 | [State](arkts-corefile-cloudsync-state-e-sys.md) | Enumerates the download states of a cloud file. |
+| [SyncType](arkts-corefile-cloudsync-synctype-e-sys.md) | Enumerates the device-cloud sync types for Gallery. |
 | [UploadState](arkts-corefile-cloudsync-uploadstate-e-sys.md) | Describes the State type of file upload. |
 <!--DelEnd-->

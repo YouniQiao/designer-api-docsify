@@ -4,7 +4,7 @@
 export enum LaunchReason
 ```
 
-Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据launchParam.launchReason的不同类型执行相应操作。
+Ability启动原因，该类型为枚举，可配合UIAbility的[onCreate(want, launchParam)](arkts-ability-app-ability-uiability-uiability-c.md#oncreate)方法根据[LaunchParam.launchReason](arkts-ability-abilityconstant-launchparam-i.md)的不同类型执行相应操作。
 
 **起始版本：** 9
 

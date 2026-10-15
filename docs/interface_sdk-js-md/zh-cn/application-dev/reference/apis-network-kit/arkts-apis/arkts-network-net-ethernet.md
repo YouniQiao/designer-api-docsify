@@ -37,8 +37,8 @@ import { ethernet } from '@kit.NetworkKit';
 | [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isethernetenabled) | 检查全局以太网开关是否启用。 |
 | [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive1) | 判断接口是否已激活，使用callback异步回调。 |
 | [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive2) | 判断接口是否已激活，使用Promise异步回调。 |
-| [off](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) | 注销网卡热插拔事件，使用callback异步回调。 |
-| [on](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) | 注册网卡热插拔事件，使用callback异步回调。 |
+| [off('interfaceStateChange')](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) | 注销网卡热插拔事件，使用callback异步回调。 |
+| [on('interfaceStateChange')](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) | 注册网卡热插拔事件，使用callback异步回调。 |
 | [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig1) | 设置网络接口配置信息，使用callback异步回调。 |
 | [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig2) | 设置网络接口配置信息，使用Promise异步回调。 |
 <!--DelEnd-->

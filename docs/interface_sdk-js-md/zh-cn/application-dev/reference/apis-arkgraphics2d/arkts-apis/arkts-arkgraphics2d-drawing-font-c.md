@@ -1056,12 +1056,6 @@ measureTextWithFallback(text: string, encoding: TextEncoding): number
 | --- | --- |
 | number | 返回包含回退字体的文本宽度，浮点数。单位为物理像素px。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-参数值异常) | Parameter error. Possible causes: Incorrect parameter range. |
-
 **示例**
 
 ```TypeScript

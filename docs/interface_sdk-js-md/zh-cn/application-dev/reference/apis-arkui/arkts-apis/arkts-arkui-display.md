@@ -38,22 +38,22 @@ import { display } from '@kit.ArkUI';
 | [isCaptured](arkts-arkui-display-iscaptured-f.md#iscaptured2) | 检查该设备是否被bundle名称列表中的任何应用抓拍、投影或录制。 |
 | [isFoldable](arkts-arkui-display-isfoldable-f.md#isfoldable) | 判断设备是否可折叠。 |
 | [makeUnique](arkts-arkui-display-makeunique-f.md#makeunique) | 将屏幕设置为异源模式，使用Promise异步回调。 |
-| [off](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offfoldstatuschange) | 关闭折叠设备折叠状态变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offfoldanglechange) | 关闭折叠设备折叠角度变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offcapturestatuschange) | 关闭设备的屏幕显示信息是否被获取的监听。 |
-| [off](arkts-arkui-display-off-f.md#offfolddisplaymodechange) | 关闭折叠设备屏幕显示模式变化的监听。 |
-| [off](arkts-arkui-display-off-f.md#offbrightnessinfochange) | 关闭所有屏幕亮度信息状态变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onfoldstatuschange) | 开启折叠设备折叠状态变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onfoldanglechange) | 开启折叠设备折叠角度变化的监听。如果是双折轴设备，则有两个角度值；在充电口朝下的状态下，从右到左分别是折轴一和折轴二。 |
-| [on](arkts-arkui-display-on-f.md#oncapturestatuschange) | 开启设备的屏幕显示信息是否被获取的监听。 |
-| [on](arkts-arkui-display-on-f.md#onfolddisplaymodechange) | 开启折叠设备屏幕显示模式变化的监听。 |
-| [on](arkts-arkui-display-on-f.md#onbrightnessinfochange) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
+| [off('add' | 'remove' | 'change')](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
+| [off('add' | 'remove' | 'change')](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
+| [off('add' | 'remove' | 'change')](arkts-arkui-display-off-f.md#offadd-remove-change) | 关闭显示设备变化的监听。 |
+| [off('foldStatusChange')](arkts-arkui-display-off-f.md#offfoldstatuschange) | 关闭折叠设备折叠状态变化的监听。 |
+| [off('foldAngleChange')](arkts-arkui-display-off-f.md#offfoldanglechange) | 关闭折叠设备折叠角度变化的监听。 |
+| [off('captureStatusChange')](arkts-arkui-display-off-f.md#offcapturestatuschange) | 关闭设备的屏幕显示信息是否被获取的监听。 |
+| [off('foldDisplayModeChange')](arkts-arkui-display-off-f.md#offfolddisplaymodechange) | 关闭折叠设备屏幕显示模式变化的监听。 |
+| [off('brightnessInfoChange')](arkts-arkui-display-off-f.md#offbrightnessinfochange) | 关闭所有屏幕亮度信息状态变化的监听。 |
+| [on('add' | 'remove' | 'change')](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
+| [on('add' | 'remove' | 'change')](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
+| [on('add' | 'remove' | 'change')](arkts-arkui-display-on-f.md#onadd-remove-change) | 开启显示设备变化的监听。 |
+| [on('foldStatusChange')](arkts-arkui-display-on-f.md#onfoldstatuschange) | 开启折叠设备折叠状态变化的监听。 |
+| [on('foldAngleChange')](arkts-arkui-display-on-f.md#onfoldanglechange) | 开启折叠设备折叠角度变化的监听。如果是双折轴设备，则有两个角度值；在充电口朝下的状态下，从右到左分别是折轴一和折轴二。 |
+| [on('captureStatusChange')](arkts-arkui-display-on-f.md#oncapturestatuschange) | 开启设备的屏幕显示信息是否被获取的监听。 |
+| [on('foldDisplayModeChange')](arkts-arkui-display-on-f.md#onfolddisplaymodechange) | 开启折叠设备屏幕显示模式变化的监听。 |
+| [on('brightnessInfoChange')](arkts-arkui-display-on-f.md#onbrightnessinfochange) | 开启所有屏幕亮度信息变化的监听。如果屏幕不支持HDR，监听到的[BrightnessInfo](arkts-arkui-display-brightnessinfo-i.md)对象中的currentHeadroom和maxHeadroom为默认值。虚拟屏的BrightnessInfo对象中sdrNits为默认值。 |
 | [onChangeWithAttribute](arkts-arkui-display-onchangewithattribute-f.md#onchangewithattribute) | 开启显示设备指定属性变化的监听。 |
 | [setVirtualScreenSurface](arkts-arkui-display-setvirtualscreensurface-f.md#setvirtualscreensurface) | 设置虚拟屏幕的surfaceId。使用Promise异步回调。 |
 | [getAllDisplay](arkts-arkui-display-getalldisplay-f.md#getalldisplay1) | 获取当前所有的Display对象，使用callback异步回调。 |
@@ -69,8 +69,8 @@ import { display } from '@kit.ArkUI';
 | [addVirtualScreenBlocklist](arkts-arkui-display-addvirtualscreenblocklist-f-sys.md#addvirtualscreenblocklist) | 将窗口添加到禁止投屏显示的名单中，被添加的窗口无法在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。 |
 | [addVirtualScreenSurface](arkts-arkui-display-addvirtualscreensurface-f-sys.md#addvirtualscreensurface) | 为虚拟屏幕添加surface。 |
 | [hasPrivateWindow](arkts-arkui-display-hasprivatewindow-f-sys.md#hasprivatewindow) | 查询指定display对象上是否有可见的隐私窗口。可通过[setWindowPrivacyMode()](../../../reference/apis-arkui/arkts-apis-window-Window.md#setwindowprivacymode9)接口设置隐私窗口。隐私窗口内容将无法被截屏或录屏。 |
-| [off](arkts-arkui-display-off-f-sys.md#offprivatemodechange) | 关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
-| [on](arkts-arkui-display-on-f-sys.md#onprivatemodechange) | 开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
+| [off('privateModeChange')](arkts-arkui-display-off-f-sys.md#offprivatemodechange) | 关闭屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
+| [on('privateModeChange')](arkts-arkui-display-on-f-sys.md#onprivatemodechange) | 开启屏幕隐私模式变化的监听。当屏幕前台有隐私窗口，则屏幕处于隐私模式，屏幕中的隐私窗口内容无法被截屏或录屏。 |
 | [removeVirtualScreenBlocklist](arkts-arkui-display-removevirtualscreenblocklist-f-sys.md#removevirtualscreenblocklist) | 将窗口从禁止投屏显示的名单中移除，被移除的窗口可以在投屏时显示。仅对应用主窗或系统窗口生效。使用Promise异步回调。 |
 | [removeVirtualScreenSurface](arkts-arkui-display-removevirtualscreensurface-f-sys.md#removevirtualscreensurface) | 删除虚拟屏的surface。 |
 | [setFoldDisplayMode](arkts-arkui-display-setfolddisplaymode-f-sys.md#setfolddisplaymode1) | 更改可折叠设备的显示模式。 |

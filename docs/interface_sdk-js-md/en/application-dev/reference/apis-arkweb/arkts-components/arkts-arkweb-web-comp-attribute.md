@@ -849,6 +849,30 @@ Sets whether to enable access to the file system in the application. This settin
 | --- | --- | --- | --- |
 | fileAccess | boolean | Yes | Whether to enable access to the file system in the app. <br>The value **true** means to enable, and **false** means to disable. <br>In addition, when fileAccess is **false**, resources in the read-only resource directory `/data/storage/el1/bundle/entry/resources/resfile` can still be accessed through the file protocol, which is not controlled by fileAccess. <br>In API version 11 and earlier, the value is **true** when undefined or null is passed. In API version 12 and later, the value is **false** when undefined or null is passed. |
 
+## flingSpeedLimit
+
+```TypeScript
+flingSpeedLimit(speedLimit: number)
+```
+
+Sets the maximum fling speed for the Web component.
+
+The value configured through this TypeScript API takes precedence over values configured through other APIs.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-flingSpeedLimit(speedLimit: number): WebAttribute--><!--Device-WebAttribute-flingSpeedLimit(speedLimit: number): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| speedLimit | number | Yes | Maximum fling speed, in vp/s. If the value is less than or equal to 0, `NaN`, `+Infinity`, or `-Infinity`, the default value is used: 9000 vp/s on PCs and 17000 vp/s on non-PC devices. |
+
 ## forceDarkAccess
 
 ```TypeScript

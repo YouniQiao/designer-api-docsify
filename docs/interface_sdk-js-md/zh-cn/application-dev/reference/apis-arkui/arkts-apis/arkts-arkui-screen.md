@@ -28,7 +28,9 @@ import { screen } from '@kit.ArkUI';
 | [destroyVirtualScreen](arkts-arkui-screen-destroyvirtualscreen-f-sys.md#destroyvirtualscreen1) | 销毁虚拟屏幕，使用callback异步回调。 |
 | [destroyVirtualScreen](arkts-arkui-screen-destroyvirtualscreen-f-sys.md#destroyvirtualscreen2) | 销毁虚拟屏幕，使用Promise异步回调。 |
 | [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens1) | 获取所有的屏幕，使用callback异步回调。 |
-| [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens2) | 获取所有的屏幕，使用Promise异步回调。 |
+| [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens2) | 获取所有的屏幕，使用callback异步回调。 |
+| [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens3) | 获取所有的屏幕，使用Promise异步回调。 |
+| [getAllScreens](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens4) | 获取所有的屏幕，使用Promise异步回调。 |
 | [isScreenRotationLocked](arkts-arkui-screen-isscreenrotationlocked-f-sys.md#isscreenrotationlocked1) | 查询当前自动转屏是否锁定，使用callback异步回调。 |
 | [isScreenRotationLocked](arkts-arkui-screen-isscreenrotationlocked-f-sys.md#isscreenrotationlocked2) | 查询当前自动转屏是否锁定，使用Promise异步回调。 |
 | [makeMirror](arkts-arkui-screen-makemirror-f-sys.md#makemirror1) | 将屏幕设置为镜像模式，使用callback异步回调。 |

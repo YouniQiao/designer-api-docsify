@@ -45,18 +45,18 @@ import { geolocation } from '@kit.LocationKit';
 | [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable2) | Obtain geocode service status |
 | [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled1) | Obtain current location switch status |
 | [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled2) | Obtain current location switch status |
-| [off](arkts-location-geolocation-off-f.md#offlocationchange) | Unsubscribe location changed |
-| [off](arkts-location-geolocation-off-f.md#offlocationservicestate) | Unsubscribe location switch changed |
-| [off](arkts-location-geolocation-off-f.md#offcachedgnsslocationsreporting) | Unsubscribe to cache GNSS locations update messages |
-| [off](arkts-location-geolocation-off-f.md#offgnssstatuschange) | Unsubscribe gnss status changed |
-| [off](arkts-location-geolocation-off-f.md#offnmeamessagechange) | Unsubscribe nmea message changed |
-| [off](arkts-location-geolocation-off-f.md#offfencestatuschange) | Remove a geofence and unsubscribe geo fence status changed |
-| [on](arkts-location-geolocation-on-f.md#onlocationchange) | Subscribe location changed |
-| [on](arkts-location-geolocation-on-f.md#onlocationservicestate) | Subscribe location switch changed |
-| [on](arkts-location-geolocation-on-f.md#oncachedgnsslocationsreporting) | Subscribe to cache GNSS locations update messages |
-| [on](arkts-location-geolocation-on-f.md#ongnssstatuschange) | Subscribe gnss status changed |
-| [on](arkts-location-geolocation-on-f.md#onnmeamessagechange) | Subscribe nmea message changed |
-| [on](arkts-location-geolocation-on-f.md#onfencestatuschange) | Add a geofence and subscribe geo fence status changed |
+| [off('locationChange')](arkts-location-geolocation-off-f.md#offlocationchange) | Unsubscribe location changed |
+| [off('locationServiceState')](arkts-location-geolocation-off-f.md#offlocationservicestate) | Unsubscribe location switch changed |
+| [off('cachedGnssLocationsReporting')](arkts-location-geolocation-off-f.md#offcachedgnsslocationsreporting) | Unsubscribe to cache GNSS locations update messages |
+| [off('gnssStatusChange')](arkts-location-geolocation-off-f.md#offgnssstatuschange) | Unsubscribe gnss status changed |
+| [off('nmeaMessageChange')](arkts-location-geolocation-off-f.md#offnmeamessagechange) | Unsubscribe nmea message changed |
+| [off('fenceStatusChange')](arkts-location-geolocation-off-f.md#offfencestatuschange) | Remove a geofence and unsubscribe geo fence status changed |
+| [on('locationChange')](arkts-location-geolocation-on-f.md#onlocationchange) | Subscribe location changed |
+| [on('locationServiceState')](arkts-location-geolocation-on-f.md#onlocationservicestate) | Subscribe location switch changed |
+| [on('cachedGnssLocationsReporting')](arkts-location-geolocation-on-f.md#oncachedgnsslocationsreporting) | Subscribe to cache GNSS locations update messages |
+| [on('gnssStatusChange')](arkts-location-geolocation-on-f.md#ongnssstatuschange) | Subscribe gnss status changed |
+| [on('nmeaMessageChange')](arkts-location-geolocation-on-f.md#onnmeamessagechange) | Subscribe nmea message changed |
+| [on('fenceStatusChange')](arkts-location-geolocation-on-f.md#onfencestatuschange) | Add a geofence and subscribe geo fence status changed |
 | [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation1) | Request enable location |
 | [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation2) | Request enable location |
 | [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand1) | Send extended commands to location subsystem. |

@@ -1057,12 +1057,6 @@ Measures the width of text with font fallback support. When the typeface of the 
 | --- | --- |
 | number | Width of the text including fallback fonts. The value is a floating point number. |
 
-**Error codes:**
-
-| Error Code ID | Error Message |
-| --- | --- |
-| [25900001](../errorcode-drawing.md#25900001-abnormal-parameter-value) | Parameter error. Possible causes: Incorrect parameter range. |
-
 ## setBaselineSnap
 
 ```TypeScript

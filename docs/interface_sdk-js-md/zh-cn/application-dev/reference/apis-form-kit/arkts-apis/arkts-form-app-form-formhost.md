@@ -65,20 +65,20 @@ import { formHost } from '@kit.FormKit';
 | [notifyInvisibleForms](arkts-form-formhost-notifyinvisibleforms-f-sys.md#notifyinvisibleforms2) | 向卡片框架发送通知以使指定的卡片不可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms1) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用callback异步回调。 |
 | [notifyVisibleForms](arkts-form-formhost-notifyvisibleforms-f-sys.md#notifyvisibleforms2) | 向卡片框架发送通知以使指定的卡片可见。该方法调用成功后，会调用onVisibilityChange通知卡片提供方。使用Promise异步回调。 |
-| [off](arkts-form-formhost-off-f-sys.md#offformuninstall) | 取消订阅卡片卸载事件。使用callback异步回调。 |
-| [off](arkts-form-formhost-off-f-sys.md#offformoverflow) | 取消订阅互动卡片动效请求事件。使用callback异步回调。 |
-| [off](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) | 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
-| [off](arkts-form-formhost-off-f-sys.md#offgetformrect) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
-| [off](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) | Cancels Listening to the event of get live form status. |
+| [off("formUninstall")](arkts-form-formhost-off-f-sys.md#offformuninstall) | 取消订阅卡片卸载事件。使用callback异步回调。 |
+| [off('formOverflow')](arkts-form-formhost-off-f-sys.md#offformoverflow) | 取消订阅互动卡片动效请求事件。使用callback异步回调。 |
+| [off('changeSceneAnimationState')](arkts-form-formhost-off-f-sys.md#offchangesceneanimationstate) | 取消订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
+| [off('getFormRect')](arkts-form-formhost-off-f-sys.md#offgetformrect) | 取消订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
+| [off('getLiveFormStatus')](arkts-form-formhost-off-f-sys.md#offgetliveformstatus) | Cancels Listening to the event of get live form status. |
 | [offDeleteFormsCallback](arkts-form-formhost-offdeleteformscallback-f-sys.md#offdeleteformscallback) | 取消订阅删除卡片事件。使用callback异步回调。 |
 | [offGetWantParamsCallback](arkts-form-formhost-offgetwantparamscallback-f-sys.md#offgetwantparamscallback) | 取消订阅获取卡片参数事件。使用callback异步回调。 |
 | [offTemplateFormDetailInfoChange](arkts-form-formhost-offtemplateformdetailinfochange-f-sys.md#offtemplateformdetailinfochange) | 取消订阅模板卡片静态配置信息变化。使用callback异步回调。 |
 | [offUpdateFormsConfigCallback](arkts-form-formhost-offupdateformsconfigcallback-f-sys.md#offupdateformsconfigcallback) | 取消订阅更新卡片配置事件。使用callback异步回调。 |
-| [on](arkts-form-formhost-on-f-sys.md#onformuninstall) | 订阅卡片卸载事件。使用callback异步回调。 |
-| [on](arkts-form-formhost-on-f-sys.md#onformoverflow) | 订阅互动卡片动效请求事件。使用callback异步回调。 |
-| [on](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) | 订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
-| [on](arkts-form-formhost-on-f-sys.md#ongetformrect) | 订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
-| [on](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) | Listens to the event of get live form status. |
+| [on("formUninstall")](arkts-form-formhost-on-f-sys.md#onformuninstall) | 订阅卡片卸载事件。使用callback异步回调。 |
+| [on('formOverflow')](arkts-form-formhost-on-f-sys.md#onformoverflow) | 订阅互动卡片动效请求事件。使用callback异步回调。 |
+| [on('changeSceneAnimationState')](arkts-form-formhost-on-f-sys.md#onchangesceneanimationstate) | 订阅互动卡片状态切换请求事件。互动卡片状态分为激活态和非激活态，非激活态下，互动卡片同普通卡片一致；激活态下，互动卡片支持拉起卡片提供方所开发的LiveFormExtensionAbility进程，实现互动卡片动效。使用callback异步回调。 |
+| [on('getFormRect')](arkts-form-formhost-on-f-sys.md#ongetformrect) | 订阅卡片位置尺寸查询请求事件。使用callback异步回调。 |
+| [on('getLiveFormStatus')](arkts-form-formhost-on-f-sys.md#ongetliveformstatus) | Listens to the event of get live form status. |
 | [onDeleteFormsCallback](arkts-form-formhost-ondeleteformscallback-f-sys.md#ondeleteformscallback) | 订阅删除卡片事件。使用callback异步回调。 |
 | [onGetWantParamsCallback](arkts-form-formhost-ongetwantparamscallback-f-sys.md#ongetwantparamscallback) | 订阅获取卡片参数事件。使用callback异步回调。 |
 | [onTemplateFormDetailInfoChange](arkts-form-formhost-ontemplateformdetailinfochange-f-sys.md#ontemplateformdetailinfochange) | 订阅模板卡片静态配置信息变化。使用callback异步回调。 |

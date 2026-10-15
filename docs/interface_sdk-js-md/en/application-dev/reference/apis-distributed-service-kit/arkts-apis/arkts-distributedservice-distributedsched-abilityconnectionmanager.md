@@ -26,14 +26,14 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession) | Destroys a collaboration session between applications. |
 | [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) | Disconnects the UIAbility connection to end the collaboration session. |
 | [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid) | Obtains information about the peer application in the specified session. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offconnect) | Disables listening for **connect** events. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offdisconnect) | Disables listening for **disconnect** events. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivemessage) | Disables listening for **receiveMessage** events. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivedata) | Disables listening for **receiveData** events. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onconnect) | Enables listening for **connect** events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#ondisconnect) | Enables listening for **disconnect** events. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivemessage) | Enables listening for **receiveMessage** events. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivedata) | Enables listening for **receiveData** events. |
+| [off('connect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offconnect) | Disables listening for **connect** events. |
+| [off('disconnect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offdisconnect) | Disables listening for **disconnect** events. |
+| [off('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivemessage) | Disables listening for **receiveMessage** events. |
+| [off('receiveData')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivedata) | Disables listening for **receiveData** events. |
+| [on('connect')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onconnect) | Enables listening for **connect** events. This API uses an asynchronous callback to return the result. |
+| [on('disconnect')](arkts-distributedservice-abilityconnectionmanager-on-f.md#ondisconnect) | Enables listening for **disconnect** events. |
+| [on('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivemessage) | Enables listening for **receiveMessage** events. |
+| [on('receiveData')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivedata) | Enables listening for **receiveData** events. |
 | [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned. |
 | [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
 | [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | Sends text messages after a collaboration session is set up. |
@@ -46,10 +46,10 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [createStream](arkts-distributedservice-abilityconnectionmanager-createstream-f-sys.md#createstream) | Creating a Stream. |
 | [destroyStream](arkts-distributedservice-abilityconnectionmanager-destroystream-f-sys.md#destroystream) | Destroy the Stream. |
 | [getSurfaceId](arkts-distributedservice-abilityconnectionmanager-getsurfaceid-f-sys.md#getsurfaceid) | Obtains the transmission surface. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offreceiveimage) | Unregisters receiveImage event. |
-| [off](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offcollaborateevent) | Unregisters collaborateEvent event. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#onreceiveimage) | Registers receiveImage event. |
-| [on](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#oncollaborateevent) | Registers collaborateEvent event. |
+| [off('receiveImage')](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offreceiveimage) | Unregisters receiveImage event. |
+| [off('collaborateEvent')](arkts-distributedservice-abilityconnectionmanager-off-f-sys.md#offcollaborateevent) | Unregisters collaborateEvent event. |
+| [on('receiveImage')](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#onreceiveimage) | Registers receiveImage event. |
+| [on('collaborateEvent')](arkts-distributedservice-abilityconnectionmanager-on-f-sys.md#oncollaborateevent) | Registers collaborateEvent event. |
 | [sendImage](arkts-distributedservice-abilityconnectionmanager-sendimage-f-sys.md#sendimage) | Send image data. |
 | [setSurfaceId](arkts-distributedservice-abilityconnectionmanager-setsurfaceid-f-sys.md#setsurfaceid) | Sets the transmission surface. |
 | [startStream](arkts-distributedservice-abilityconnectionmanager-startstream-f-sys.md#startstream) | Start Streaming |

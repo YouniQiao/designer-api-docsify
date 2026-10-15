@@ -45,7 +45,7 @@ compare(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | target | Buffer &#124; Uint8Array | 是 | 要比较的实例对象。 |
-| targetStart | number | 否 | target实例中开始的偏移量。默认值：0。 |
+| targetStart | number | 否 | target实例中开始的偏移量。取值范围：&gt;= 0且&lt;= target的字节长度。默认值：0。 |
 | targetEnd | number | 否 | target实例中结束的偏移量（不包含结束位置）。默认值：目标对象的字节长度。 |
 | sourceStart | number | 否 | this实例中开始的偏移量。默认值：0。 |
 | sourceEnd | number | 否 | this实例中结束的偏移量（不包含结束位置）。默认值：当前对象的字节长度。 |
@@ -1522,7 +1522,7 @@ console.info("result = " + result);
 subarray(start?: number, end?: number): Buffer
 ```
 
-截取当前对象指定位置的数据并返回。
+截取当前对象指定位置的数据并返回。返回的Buffer与原Buffer共享内存，修改任一对象都会影响另一个对象。
 
 **起始版本：** 9
 
@@ -2479,7 +2479,7 @@ writeIntBE(value: number, offset: number, byteLength: number): number
 | --- | --- | --- | --- |
 | value | number | 是 | 写入Buffer的数据。 |
 | offset | number | 是 | 偏移量。默认值：0。取值范围：0 &lt;= offset &lt;= Buffer.length - byteLength。 |
-| byteLength | number | 是 | 要写入的字节数。 |
+| byteLength | number | 是 | 要写入的字节数，取值范围：1 &lt;= byteLength &lt;= 6。 |
 
 **返回值：**
 

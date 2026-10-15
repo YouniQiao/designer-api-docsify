@@ -4,7 +4,9 @@
 enum UserRecognitionStatus
 ```
 
-Enumerates the user recognition status.
+Enumerates the user recognition statuses.
+
+**Device behavior difference:** This API can be called normally only on car devices and returns null on other device types.
 
 **Since:** 26.0.1
 

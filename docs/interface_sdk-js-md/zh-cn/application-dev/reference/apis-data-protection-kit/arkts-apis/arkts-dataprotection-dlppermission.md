@@ -49,8 +49,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [isDLPFile](arkts-dataprotection-dlppermission-isdlpfile-f.md#isdlpfile2) | 根据文件的fd，查询该文件是否是DLP文件。调用成功后返回查询结果，true表示是DLP文件，false表示非DLP文件。使用callback异步回调。 |
 | [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isinsandbox1) | 查询当前应用是否运行在DLP沙箱环境。使用Promise异步回调。 |
 | [isInSandbox](arkts-dataprotection-dlppermission-isinsandbox-f.md#isinsandbox2) | 查询当前应用是否运行在DLP沙箱环境。使用callback异步回调。 |
-| [off](arkts-dataprotection-dlppermission-off-f.md#offopendlpfile) | 取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。 |
-| [on](arkts-dataprotection-dlppermission-on-f.md#onopendlpfile) | 监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。 |
+| [off('openDLPFile')](arkts-dataprotection-dlppermission-off-f.md#offopendlpfile) | 取消监听打开DLP文件。仅支持在非DLP沙箱应用中调用。调用成功后，将不再接收DLP文件打开事件的通知。 |
+| [on('openDLPFile')](arkts-dataprotection-dlppermission-on-f.md#onopendlpfile) | 监听打开DLP文件。调用成功后，当DLP文件被打开时会触发回调通知当前应用。仅支持在非DLP沙箱应用中调用。 |
 | [processPluginCommand](arkts-dataprotection-dlppermission-processplugincommand-f.md#processplugincommand) | 处理透明加解密场景下的插件相关命令。使用Promise异步回调。 |
 | [queryDlpPolicy](arkts-dataprotection-dlppermission-querydlppolicy-f.md#querydlppolicy) | 在DLP文件中解析文件头，获取DLP明文策略。返回的策略JSON字符串包含[DLPProperty](arkts-dataprotection-dlppermission-dlpproperty-i.md)和[CustomProperty](arkts-dataprotection-dlppermission-customproperty-i.md)信息。使用Promise异步回调。 |
 | [queryOpenedEnterpriseDlpFiles](arkts-dataprotection-dlppermission-queryopenedenterprisedlpfiles-f.md#queryopenedenterprisedlpfiles) | 查询已打开且符合指定选项的企业DLP文件的URI列表。使用Promise异步回调。 |
@@ -73,8 +73,8 @@ import { dlpPermission } from '@kit.DataProtectionKit';
 | [getDLPGatheringPolicy](arkts-dataprotection-dlppermission-getdlpgatheringpolicy-f-sys.md#getdlpgatheringpolicy2) | 查询DLP沙箱聚合策略。使用callback异步回调。 |
 | [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installdlpsandbox1) | 安装一个应用的DLP沙箱。DLP沙箱为受保护的DLP文件创建独立的运行环境，与原应用进程隔离，确保数据在授权范围内安全流转。沙箱应用继承原应用的功能但仅能访问授权的DLP文件。使用Promise异步回调。 |
 | [installDLPSandbox](arkts-dataprotection-dlppermission-installdlpsandbox-f-sys.md#installdlpsandbox2) | 安装一个应用的DLP沙箱。使用callback异步回调。调用成功后，系统为应用创建DLP沙箱环境并返回沙箱信息。 |
-| [off](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox) | 取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 |
-| [on](arkts-dataprotection-dlppermission-on-f-sys.md#onuninstalldlpsandbox) | 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。 |
+| [off('uninstallDLPSandbox')](arkts-dataprotection-dlppermission-off-f-sys.md#offuninstalldlpsandbox) | 取消监听DLP沙箱卸载事件。调用成功后，应用不再接收DLP沙箱卸载事件的回调通知。 |
+| [on('uninstallDLPSandbox')](arkts-dataprotection-dlppermission-on-f-sys.md#onuninstalldlpsandbox) | 注册监听DLP沙箱卸载事件，用于感知沙箱环境的变化。注册成功后，当DLP沙箱被卸载时，系统会通过回调函数通知应用。 |
 | [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile1) | DLP管理应用调用该接口，打开DLP文件。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用Promise异步回调。 |
 | [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile2) | DLP管理应用调用该接口，打开DLP文件。使用callback异步回调。调用成功后返回DLPFile管理对象，可用于管理DLP文件的权限和进行相关操作。使用完DLPFile对象后，应调用closeDLPFile释放对象，避免资源泄漏。 |
 | [uninstallDLPSandbox](arkts-dataprotection-dlppermission-uninstalldlpsandbox-f-sys.md#uninstalldlpsandbox1) | 卸载一个应用的DLP沙箱。使用Promise异步回调。调用成功后，系统销毁指定的DLP沙箱环境并释放相关资源。 |

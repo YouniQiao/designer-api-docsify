@@ -28,7 +28,7 @@ import { util } from '@kit.ArkTS';
 onFinalization(heldValue: T): void
 ```
 
-开发者自定义的用于释放资源的回调。
+开发者自定义的用于释放资源的回调。当注册对象被回收时自动触发，并将heldValue传递给onFinalization。
 
 **起始版本：** 22
 

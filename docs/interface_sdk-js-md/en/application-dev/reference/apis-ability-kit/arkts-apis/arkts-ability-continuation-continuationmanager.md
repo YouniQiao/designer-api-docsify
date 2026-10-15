@@ -24,14 +24,14 @@ import { continuationManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceselected) | Unsubscribes from device connection events. |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceunselected) | Unsubscribes from device disconnection events. |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceconnect) | Unsubscribes from device connection events. This API uses an asynchronous callback to return the result. |
-| [off](arkts-ability-continuationmanager-off-f.md#offdevicedisconnect) | Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceselected) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceunselected) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceconnect) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-ability-continuationmanager-on-f.md#ondevicedisconnect) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
+| [off('deviceSelected')](arkts-ability-continuationmanager-off-f.md#offdeviceselected) | Unsubscribes from device connection events. |
+| [off('deviceUnselected')](arkts-ability-continuationmanager-off-f.md#offdeviceunselected) | Unsubscribes from device disconnection events. |
+| [off('deviceConnect')](arkts-ability-continuationmanager-off-f.md#offdeviceconnect) | Unsubscribes from device connection events. This API uses an asynchronous callback to return the result. |
+| [off('deviceDisconnect')](arkts-ability-continuationmanager-off-f.md#offdevicedisconnect) | Unsubscribes from device disconnection events. This API uses an asynchronous callback to return the result. |
+| [on('deviceSelected')](arkts-ability-continuationmanager-on-f.md#ondeviceselected) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
+| [on('deviceUnselected')](arkts-ability-continuationmanager-on-f.md#ondeviceunselected) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
+| [on('deviceConnect')](arkts-ability-continuationmanager-on-f.md#ondeviceconnect) | Subscribes to device connection events. This API uses an asynchronous callback to return the result. |
+| [on('deviceDisconnect')](arkts-ability-continuationmanager-on-f.md#ondevicedisconnect) | Subscribes to device disconnection events. This API uses an asynchronous callback to return the result. |
 | [register](arkts-ability-continuationmanager-register-f.md#register1) | Registers the continuation management service and obtains a token. This API does not involve any filter parameters and uses an asynchronous callback to return the result. |
 | [register](arkts-ability-continuationmanager-register-f.md#register2) | Registers the continuation management service and obtains a token. This API uses an asynchronous callback to return the result. |
 | [register](arkts-ability-continuationmanager-register-f.md#register3) | Registers the continuation management service and obtains a token. This API uses a promise to return the result. |

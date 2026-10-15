@@ -23,6 +23,10 @@ Dumps VM heap data.
 
 **Since:** 9
 
+**Deprecated since:** 26.2.0
+
+**Substitutes:** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
+
 <!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
 
 **System capability:** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -69,6 +73,10 @@ Dumps VM heap data and clears the nodeId cache.
 > call this API in the release version. Otherwise, the application screen may freeze, affecting user experience.
 
 **Since:** 24
+
+**Deprecated since:** 26.2.0
+
+**Substitutes:** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 
 **Model restriction:** This API can be used only in the stage model.
 

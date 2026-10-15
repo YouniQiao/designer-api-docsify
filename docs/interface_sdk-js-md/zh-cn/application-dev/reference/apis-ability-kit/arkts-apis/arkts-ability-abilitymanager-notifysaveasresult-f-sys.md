@@ -16,10 +16,6 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callb
 
 该接口仅供[DLP](../../apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)（Data Loss Prevention, 数据丢失防护）管理应用使用，其他应用禁止使用，DLP管理应用通过该接口通知沙箱应用另存为结果。使用callback异步回调。
 
-> **说明：** 
-> 
-> 从API version 10开始支持，从API version 24开始废弃。
-
 **起始版本：** 10
 
 **废弃版本：** 24
@@ -36,7 +32,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number, callb
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用方的相关信息。 |
 | requestCode | number | 是 | DLP管理应用传入的请求代码。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当另存为结果通知成功，err为undefined，否则为错误对象。 |
 
@@ -76,7 +72,7 @@ function notifySaveAsResult(parameter: AbilityResult, requestCode: number): Prom
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用startAbilityForResult?接口调用方的相关信息。 |
+| parameter | [AbilityResult](arkts-ability-abilityresult-i.md) | 是 | 返回给调用方的相关信息。 |
 | requestCode | number | 是 | DLP管理应用传入的请求代码。 |
 
 **返回值：**

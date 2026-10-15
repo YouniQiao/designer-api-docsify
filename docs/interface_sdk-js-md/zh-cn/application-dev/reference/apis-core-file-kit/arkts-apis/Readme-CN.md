@@ -56,9 +56,19 @@
 <!--Del-->
 - [@ohos.file.cloudDiskManager（云盘管理）](arkts-corefile-file-clouddiskmanager.md)<!--DelEnd-->
   <!--Del-->
+  - [CloudDiskSystemAccessor（系统接口）](arkts-corefile-clouddiskmanager-clouddisksystemaccessor-c-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SyncFolderAccessor（系统接口）](arkts-corefile-clouddiskmanager-syncfolderaccessor-c-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [HydrateProgress（系统接口）](arkts-corefile-clouddiskmanager-hydrateprogress-i-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [SyncFolder（系统接口）](arkts-corefile-clouddiskmanager-syncfolder-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [CallbackType（系统接口）](arkts-corefile-clouddiskmanager-callbacktype-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [HydratePriority（系统接口）](arkts-corefile-clouddiskmanager-hydratepriority-e-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [HydrateProgressState（系统接口）](arkts-corefile-clouddiskmanager-hydrateprogressstate-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [SyncFolderState（系统接口）](arkts-corefile-clouddiskmanager-syncfolderstate-e-sys.md)<!--DelEnd-->
 - [@ohos.file.cloudSync（端云同步能力）](arkts-corefile-file-cloudsync.md)
@@ -112,6 +122,8 @@
   <!--Del-->
   - [State（系统接口）](arkts-corefile-cloudsync-state-e-sys.md)<!--DelEnd-->
   - [SyncState](arkts-corefile-cloudsync-syncstate-e.md)
+  <!--Del-->
+  - [SyncType（系统接口）](arkts-corefile-cloudsync-synctype-e-sys.md)<!--DelEnd-->
   <!--Del-->
   - [UploadState（系统接口）](arkts-corefile-cloudsync-uploadstate-e-sys.md)<!--DelEnd-->
 - [@ohos.file.cloudSyncManager（端云同步管理能力）](arkts-corefile-file-cloudsyncmanager.md)

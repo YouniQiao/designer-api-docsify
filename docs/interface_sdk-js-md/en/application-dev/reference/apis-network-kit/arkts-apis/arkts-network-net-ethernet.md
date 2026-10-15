@@ -37,8 +37,8 @@ import { ethernet } from '@kit.NetworkKit';
 | [isEthernetEnabled](arkts-network-ethernet-isethernetenabled-f-sys.md#isethernetenabled) | Check whether the global ethernet switch is enabled. |
 | [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive1) | Checks whether the interface is activated. This API uses an asynchronous callback to return the result. |
 | [isIfaceActive](arkts-network-ethernet-isifaceactive-f-sys.md#isifaceactive2) | Checks whether the interface is activated. This API uses a promise to return the result. |
-| [off](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) | Unregisters the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
-| [on](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) | Registers the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
+| [off('interfaceStateChange')](arkts-network-ethernet-off-f-sys.md#offinterfacestatechange) | Unregisters the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
+| [on('interfaceStateChange')](arkts-network-ethernet-on-f-sys.md#oninterfacestatechange) | Registers the observer for NIC hot swap events. This API uses an asynchronous callback to return the result. |
 | [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig1) | Sets the network interface configuration information. This API uses an asynchronous callback to return the result. |
 | [setIfaceConfig](arkts-network-ethernet-setifaceconfig-f-sys.md#setifaceconfig2) | Sets the network interface configuration information. This API uses a promise to return the result. |
 <!--DelEnd-->

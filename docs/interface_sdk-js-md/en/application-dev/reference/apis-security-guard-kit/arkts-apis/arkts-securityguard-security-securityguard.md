@@ -26,8 +26,8 @@ import { securityGuard } from '@kit.SecurityGuardKit';
 | Name | Description |
 | --- | --- |
 | [getModelResult](arkts-securityguard-securityguard-getmodelresult-f-sys.md#getmodelresult) | Request security model result from security guard. |
-| [off](arkts-securityguard-securityguard-off-f-sys.md#offsecurityeventoccur) | Unsubscribe the security event. |
-| [on](arkts-securityguard-securityguard-on-f-sys.md#onsecurityeventoccur) | Subscribe the security event. |
+| [off('securityEventOccur')](arkts-securityguard-securityguard-off-f-sys.md#offsecurityeventoccur) | Unsubscribe the security event. |
+| [on('securityEventOccur')](arkts-securityguard-securityguard-on-f-sys.md#onsecurityeventoccur) | Subscribe the security event. |
 | [querySecurityEvent](arkts-securityguard-securityguard-querysecurityevent-f-sys.md#querysecurityevent) | Query security event information from security guard. |
 | [reportSecurityEvent](arkts-securityguard-securityguard-reportsecurityevent-f-sys.md#reportsecurityevent) | Report security information to the security guard. |
 | [startSecurityEventCollector](arkts-securityguard-securityguard-startsecurityeventcollector-f-sys.md#startsecurityeventcollector) | start the collector to collect data |

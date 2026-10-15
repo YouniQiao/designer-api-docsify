@@ -37,8 +37,8 @@ import { innerBundleManager, BundleStatusCallback } from '@kit.AbilityKit';
 | [getLauncherAbilityInfos](arkts-ability-innerbundlemanager-getlauncherabilityinfos-f-sys.md#getlauncherabilityinfos2) | 根据给定的Bundle名称获取LauncherAbilityInfos，使用Promise异步回调。 |
 | [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos1) | 根据给定的Bundle名称获取快捷方式信息，使用callback异步回调。 |
 | [getShortcutInfos](arkts-ability-innerbundlemanager-getshortcutinfos-f-sys.md#getshortcutinfos2) | 根据给定的Bundle名称获取快捷方式信息，使用Promise异步回调。 |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
-| [off](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) | 注册Callback。 |
-| [on](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) | 注册Callback。 |
+| [off('BundleStatusChange')](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
+| [off('BundleStatusChange')](arkts-ability-innerbundlemanager-off-f-sys.md#offbundlestatuschange) | 取消注册Callback。 |
+| [on('BundleStatusChange')](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) | 注册Callback。 |
+| [on('BundleStatusChange')](arkts-ability-innerbundlemanager-on-f-sys.md#onbundlestatuschange) | 注册Callback。 |
 <!--DelEnd-->

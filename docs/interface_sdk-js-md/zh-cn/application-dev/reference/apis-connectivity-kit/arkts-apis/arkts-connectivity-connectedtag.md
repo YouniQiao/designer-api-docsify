@@ -21,8 +21,8 @@ import { connectedTag } from '@kit.ConnectivityKit';
 | 名称 | 说明 |
 | --- | --- |
 | [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize) | 初始化有源标签芯片。对有源标签进行读写操作前需调用本接口初始化一次，若想再次初始化需先调用[uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md)。 |
-| [off](arkts-connectivity-connectedtag-off-f.md#offnotify) | 取消NFC场强状态事件的注册。 |
-| [on](arkts-connectivity-connectedtag-on-f.md#onnotify) | 注册NFC场强状态事件。 |
+| [off('notify')](arkts-connectivity-connectedtag-off-f.md#offnotify) | 取消NFC场强状态事件的注册。 |
+| [on('notify')](arkts-connectivity-connectedtag-on-f.md#onnotify) | 注册NFC场强状态事件。 |
 | [read](arkts-connectivity-connectedtag-read-f.md#read1) | 读取有源标签内容。使用Promise异步回调。 |
 | [read](arkts-connectivity-connectedtag-read-f.md#read2) | 读取有源标签内容，使用AsyncCallback方式作为异步方法。 |
 | [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md#uninitialize) | 卸载有源标签芯片资源。 |

@@ -34,8 +34,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [isChangePermitted](arkts-basicservices-wallpaper-ischangepermitted-f.md#ischangepermitted2) | 是否允许应用改变当前用户的壁纸。使用Promise异步回调。<br> |
 | [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed1) | 是否允许用户设置壁纸。使用callback异步回调。<br> |
 | [isOperationAllowed](arkts-basicservices-wallpaper-isoperationallowed-f.md#isoperationallowed2) | 是否允许用户设置壁纸。使用Promise异步回调。<br> |
-| [off](arkts-basicservices-wallpaper-off-f.md#offcolorchange) | 取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br> |
-| [on](arkts-basicservices-wallpaper-on-f.md#oncolorchange) | 订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br> |
+| [off('colorChange')](arkts-basicservices-wallpaper-off-f.md#offcolorchange) | 取消订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br> |
+| [on('colorChange')](arkts-basicservices-wallpaper-on-f.md#oncolorchange) | 订阅壁纸颜色变化结果上报事件。不支持多线程并发调用。<br> |
 | [reset](arkts-basicservices-wallpaper-reset-f.md#reset1) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。<br> |
 | [reset](arkts-basicservices-wallpaper-reset-f.md#reset2) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。<br> |
 | [setWallpaper](arkts-basicservices-wallpaper-setwallpaper-f.md#setwallpaper1) | 将指定资源设置为指定类型的壁纸。使用callback异步回调。<br> |
@@ -51,8 +51,8 @@ import { wallpaper } from '@kit.BasicServicesKit';
 | [getMinHeightSync](arkts-basicservices-wallpaper-getminheightsync-f-sys.md#getminheightsync) | 获取壁纸的最小高度值。 |
 | [getMinWidthSync](arkts-basicservices-wallpaper-getminwidthsync-f-sys.md#getminwidthsync) | 获取壁纸的最小宽度值。 |
 | [getWallpaperByState](arkts-basicservices-wallpaper-getwallpaperbystate-f-sys.md#getwallpaperbystate) | 获取指定壁纸类型、折展态、横竖屏的壁纸图片的像素图，如果指定的壁纸不存在，会逐步降级匹配，unfolded-land -> unfolded-port ->normal-port。使用Promise异步回调。 |
-| [off](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
-| [on](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [off('wallpaperChange')](arkts-basicservices-wallpaper-off-f-sys.md#offwallpaperchange) | 取消订阅壁纸变化通知事件。不支持多线程并发调用。 |
+| [on('wallpaperChange')](arkts-basicservices-wallpaper-on-f-sys.md#onwallpaperchange) | 订阅壁纸变化通知事件。不支持多线程并发调用。 |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore1) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用callback异步回调。 |
 | [restore](arkts-basicservices-wallpaper-restore-f-sys.md#restore2) | 移除指定类型的壁纸，恢复为默认显示的壁纸。使用Promise异步回调。 |
 | [setAllWallpapers](arkts-basicservices-wallpaper-setallwallpapers-f-sys.md#setallwallpapers) | 设置设备所有形态的壁纸。使用Promise异步回调。（包括折展状态、横竖屏状态、资源路径，其中NORMAL-PORT为必选） |

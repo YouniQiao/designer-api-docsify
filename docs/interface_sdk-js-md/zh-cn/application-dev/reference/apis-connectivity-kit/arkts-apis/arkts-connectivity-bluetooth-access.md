@@ -31,8 +31,8 @@ import { access } from '@kit.ConnectivityKit';
 | [getState](arkts-connectivity-access-getstate-f.md#getstate) | 获取蓝牙开关状态。 |
 | [isBluetoothSupported](arkts-connectivity-access-isbluetoothsupported-f.md#isbluetoothsupported) | 查询本机是否支持蓝牙能力。 |
 | [isValidRandomDeviceId](arkts-connectivity-access-isvalidrandomdeviceid-f.md#isvalidrandomdeviceid) | 判断对端蓝牙设备的虚拟MAC地址是否有效。 |
-| [off](arkts-connectivity-access-off-f.md#offstatechange) | 取消订阅本端蓝牙开关状态变化事件。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
-| [on](arkts-connectivity-access-on-f.md#onstatechange) | 订阅本端蓝牙开关状态变化事件。使用Callback异步回调。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
+| [off('stateChange')](arkts-connectivity-access-off-f.md#offstatechange) | 取消订阅本端蓝牙开关状态变化事件。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
+| [on('stateChange')](arkts-connectivity-access-on-f.md#onstatechange) | 订阅本端蓝牙开关状态变化事件。使用Callback异步回调。从API18开始不再校验ohos.permission.ACCESS_BLUETOOTH权限。 |
 
 <!--Del-->
 ### 函数（系统接口）

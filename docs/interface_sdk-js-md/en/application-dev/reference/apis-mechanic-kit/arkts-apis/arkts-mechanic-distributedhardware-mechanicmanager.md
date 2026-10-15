@@ -26,10 +26,10 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled) | Checks whether camera tracking is enabled for this mechanical device. |
 | [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout) | Obtains the camera tracking layout of this mechanical device. |
 | [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported) | Checks whether the current device supports embodied control for a specific type of device. |
-| [off](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) | Unsubscribes from device attachment state change events. |
-| [off](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | Unsubscribes from tracking events. |
-| [on](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) | Subscribes to device attachment state change events. |
-| [on](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) | Subscribes to tracking events. |
+| [off('attachStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) | Unsubscribes from device attachment state change events. |
+| [off('trackingStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | Unsubscribes from tracking events. |
+| [on('attachStateChange')](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) | Subscribes to device attachment state change events. |
+| [on('trackingStateChange')](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) | Subscribes to tracking events. |
 | [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled) | Enables or disables camera tracking. |
 
 <!--Del-->
@@ -49,9 +49,9 @@ import { mechanicManager } from '@kit.MechanicKit';
 | [isSupportAction](arkts-mechanic-mechanicmanager-issupportaction-f-sys.md#issupportaction) | Check whether the specific action type is supported. |
 | [move](arkts-mechanic-mechanicmanager-move-f-sys.md#move) | Move a mechanical device with the specified parameters. |
 | [moveBySpeed](arkts-mechanic-mechanicmanager-movebyspeed-f-sys.md#movebyspeed) | Move a mechanical device at the specified speed. |
-| [off](arkts-mechanic-mechanicmanager-off-f-sys.md#offrotationaxesstatuschange) | Unregister a listener for axis state changes. |
+| [off('rotationAxesStatusChange')](arkts-mechanic-mechanicmanager-off-f-sys.md#offrotationaxesstatuschange) | Unregister a listener for axis state changes. |
 | [offBatteryLevelChange](arkts-mechanic-mechanicmanager-offbatterylevelchange-f-sys.md#offbatterylevelchange) | Unsubscribes to device battery level change information. |
-| [on](arkts-mechanic-mechanicmanager-on-f-sys.md#onrotationaxesstatuschange) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
+| [on('rotationAxesStatusChange')](arkts-mechanic-mechanicmanager-on-f-sys.md#onrotationaxesstatuschange) | Register a listener for axis state changes. The status of the rotation axis changes dynamically, which needs to be monitored. |
 | [onBatteryLevelChange](arkts-mechanic-mechanicmanager-onbatterylevelchange-f-sys.md#onbatterylevelchange) | Subscribes to device battery level change information. Before calling this method, ensure that the device is connected. |
 | [rotate](arkts-mechanic-mechanicmanager-rotate-f-sys.md#rotate) | Rotates a mechanical device to the relative angles. |
 | [rotateBySpeed](arkts-mechanic-mechanicmanager-rotatebyspeed-f-sys.md#rotatebyspeed) | Rotates a mechanical device at the specified speed. |

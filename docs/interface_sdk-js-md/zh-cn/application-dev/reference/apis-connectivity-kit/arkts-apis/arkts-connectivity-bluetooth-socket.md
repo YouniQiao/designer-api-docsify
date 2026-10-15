@@ -31,8 +31,8 @@ import { socket } from '@kit.ConnectivityKit';
 | [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md#getmaxreceivedatasize) | 客户端和服务端均可使用，获取当前套接字链路类型下最大接收数据的大小。通过[socket.sppReadAsync](arkts-connectivity-socket-sppreadasync-f.md)或[socket.on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread)接收数据时，单次接收的数据大小受此返回值约束（SPP_RFCOMM链路类型无此限制）。例如在文件传输、数据同步等需要接收大量数据的场景中，可调用此接口获取单次接收的最大数据量，以便对接收数据进行分片处理。 |
 | [getMaxTransmitDataSize](arkts-connectivity-socket-getmaxtransmitdatasize-f.md#getmaxtransmitdatasize) | 客户端和服务端均可使用，获取套接字当前链路类型下最大发送数据的大小。调用[socket.sppWrite](arkts-connectivity-socket-sppwrite-f.md)或[socket.sppWriteAsync](arkts-connectivity-socket-sppwriteasync-f.md)发送数据时，单次发送的数据大小不应超过此返回值（SPP_RFCOMM链路类型无此限制）。例如在文件传输、音视频数据传输等需要发送大量数据的场景中，可调用此接口获取单次发送的最大数据量，以便对发送数据进行分片处理。 |
 | [isConnected](arkts-connectivity-socket-isconnected-f.md#isconnected) | 客户端和服务端均可使用，检查当前链路是否已连接。 |
-| [off](arkts-connectivity-socket-off-f.md#offsppread) | 取消订阅套接字读请求事件。 |
-| [on](arkts-connectivity-socket-on-f.md#onsppread) | 客户端和服务端均可使用，订阅套接字读请求事件。调用该接口后，当收到对端发送的数据会执行订阅的回调函数。 |
+| [off('sppRead')](arkts-connectivity-socket-off-f.md#offsppread) | 取消订阅套接字读请求事件。 |
+| [on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread) | 客户端和服务端均可使用，订阅套接字读请求事件。调用该接口后，当收到对端发送的数据会执行订阅的回调函数。 |
 | [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept) | 服务端使用，接受客户端的套接字连接请求。使用Callback异步回调。 |
 | [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppcloseclientsocket) | 客户端和服务端均可使用，关闭指定的客户端套接字，并断开客户端和服务端之间的连接。 |
 | [sppCloseServerSocket](arkts-connectivity-socket-sppcloseserversocket-f.md#sppcloseserversocket) | 服务端使用，删除指定的服务端套接字。 |

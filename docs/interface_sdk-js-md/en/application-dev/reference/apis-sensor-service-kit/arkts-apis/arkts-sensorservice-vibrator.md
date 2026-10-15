@@ -26,8 +26,8 @@ import { vibrator } from '@kit.SensorServiceKit';
 | [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect1) | Checks whether an effect ID is supported. This API uses an asynchronous callback to return the result. |
 | [isSupportEffect](arkts-sensorservice-vibrator-issupporteffect-f.md#issupporteffect2) | Checks whether an effect ID is supported. This API uses a promise to return the result. |
 | [isSupportEffectSync](arkts-sensorservice-vibrator-issupporteffectsync-f.md#issupporteffectsync) | Checks whether the preset vibration effect is supported. |
-| [off](arkts-sensorservice-vibrator-off-f.md#offvibratorstatechange) | Disables listening for vibrator status changes. |
-| [on](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) | Enables listening for vibrator status changes. |
+| [off('vibratorStateChange')](arkts-sensorservice-vibrator-off-f.md#offvibratorstatechange) | Disables listening for vibrator status changes. |
+| [on('vibratorStateChange')](arkts-sensorservice-vibrator-on-f.md#onvibratorstatechange) | Enables listening for vibrator status changes. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration1) | Starts vibration based on a specified effect and attribute. This API uses an asynchronous callback to return the result. |
 | [startVibration](arkts-sensorservice-vibrator-startvibration-f.md#startvibration2) | Starts vibration based on a specified effect and attribute. This API uses a promise to return the result. |
 | [stopVibration](arkts-sensorservice-vibrator-stopvibration-f.md#stopvibration1) | Stops vibration in the specified mode. This API uses a promise to return the result. |

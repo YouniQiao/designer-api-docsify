@@ -61,28 +61,28 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md#ismeteredhotspot) | Whether the hotspot is metered hotspot or not. |
 | [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive) | Query the Wi-Fi status |
 | [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md#iswlansupported) | Query whether Wi-Fi is available |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | Unsubscribe Wi-Fi status change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | Unsubscribe Wi-Fi connection change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | Unsubscribe Wi-Fi scan status change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifirssichange) | Unsubscribe Wi-Fi rssi change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offhotspotstatechange) | Unsubscribe Wi-Fi hotspot state change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pstatechange) | Unsubscribe P2P status change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pconnectionchange) | Unsubscribe P2P connection change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pdevicechange) | Unsubscribe P2P local device change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2ppeerdevicechange) | Unsubscribe P2P peer device change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2ppersistentgroupchange) | Unsubscribe P2P persistent group change events. |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pdiscoverychange) | Unsubscribe P2P discovery events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifistatechange) | Subscribe Wi-Fi status change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwificonnectionchange) | Subscribe Wi-Fi connection change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange) | Subscribe Wi-Fi scan status change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifirssichange) | Subscribe Wi-Fi rssi change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onhotspotstatechange) | Subscribe Wi-Fi hotspot state change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pstatechange) | Subscribe P2P status change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pconnectionchange) | Subscribe P2P connection change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pdevicechange) | Subscribe P2P local device change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) | Subscribe P2P peer device change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) | Subscribe P2P persistent group change events. |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) | Subscribe P2P discovery events. |
+| [off('wifiStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | Unsubscribe Wi-Fi status change events. |
+| [off('wifiConnectionChange')](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | Unsubscribe Wi-Fi connection change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('wifiScanStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | Unsubscribe Wi-Fi scan status change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('wifiRssiChange')](arkts-connectivity-wifimanager-off-f.md#offwifirssichange) | Unsubscribe Wi-Fi rssi change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('hotspotStateChange')](arkts-connectivity-wifimanager-off-f.md#offhotspotstatechange) | Unsubscribe Wi-Fi hotspot state change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('p2pStateChange')](arkts-connectivity-wifimanager-off-f.md#offp2pstatechange) | Unsubscribe P2P status change events. |
+| [off('p2pConnectionChange')](arkts-connectivity-wifimanager-off-f.md#offp2pconnectionchange) | Unsubscribe P2P connection change events. |
+| [off('p2pDeviceChange')](arkts-connectivity-wifimanager-off-f.md#offp2pdevicechange) | Unsubscribe P2P local device change events. |
+| [off('p2pPeerDeviceChange')](arkts-connectivity-wifimanager-off-f.md#offp2ppeerdevicechange) | Unsubscribe P2P peer device change events. |
+| [off('p2pPersistentGroupChange')](arkts-connectivity-wifimanager-off-f.md#offp2ppersistentgroupchange) | Unsubscribe P2P persistent group change events. |
+| [off('p2pDiscoveryChange')](arkts-connectivity-wifimanager-off-f.md#offp2pdiscoverychange) | Unsubscribe P2P discovery events. |
+| [on('wifiStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifistatechange) | Subscribe Wi-Fi status change events. |
+| [on('wifiConnectionChange')](arkts-connectivity-wifimanager-on-f.md#onwificonnectionchange) | Subscribe Wi-Fi connection change events. |
+| [on('wifiScanStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange) | Subscribe Wi-Fi scan status change events. |
+| [on('wifiRssiChange')](arkts-connectivity-wifimanager-on-f.md#onwifirssichange) | Subscribe Wi-Fi rssi change events. |
+| [on('hotspotStateChange')](arkts-connectivity-wifimanager-on-f.md#onhotspotstatechange) | Subscribe Wi-Fi hotspot state change events. |
+| [on('p2pStateChange')](arkts-connectivity-wifimanager-on-f.md#onp2pstatechange) | Subscribe P2P status change events. |
+| [on('p2pConnectionChange')](arkts-connectivity-wifimanager-on-f.md#onp2pconnectionchange) | Subscribe P2P connection change events. |
+| [on('p2pDeviceChange')](arkts-connectivity-wifimanager-on-f.md#onp2pdevicechange) | Subscribe P2P local device change events. |
+| [on('p2pPeerDeviceChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) | Subscribe P2P peer device change events. |
+| [on('p2pPersistentGroupChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) | Subscribe P2P persistent group change events. |
+| [on('p2pDiscoveryChange')](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) | Subscribe P2P discovery events. |
 | [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pcancelconnect) | Stop an ongoing p2p connection that is being established. |
 | [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect) | Initiate a P2P connection to a device with the specified configuration. |
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig1) | Remove a specified candidate hotspot configuration, only the configuration which is added by ourself is allowed to be removed. The app must be in the foreground. |
@@ -132,14 +132,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported) | Check whether a device serving as a Wi-Fi hotspot supports both the 2.4 GHz and 5 GHz Wi-Fi. |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md#isopensoftapallowed) | Check whether Wi-Fi hotspot is can be operated under some situation. When the airplane mode is turned on and does not support the coexistence of softap and sta, nor does it support signal bridge, the hotspot switch cannot be operated. |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md#israndommacdisabled) | is random mac disabled |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | Unsubscribe Wi-Fi stream change events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | Subscribe Wi-Fi device config change events. |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregistered If there is no specific callback parameter. |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | Unsubscribe Wi-Fi hotspot sta leave events. |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | Subscribe Wi-Fi stream change events. |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | Subscribe Wi-Fi device config change events. |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | Subscribe Wi-Fi hotspot sta join events. |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | Subscribe Wi-Fi hotspot sta leave events. |
+| [off('streamChange')](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | Unsubscribe Wi-Fi stream change events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('deviceConfigChange')](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | Subscribe Wi-Fi device config change events. |
+| [off('hotspotStaJoin')](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | Unsubscribe Wi-Fi hotspot sta join events. All callback functions will be deregistered If there is no specific callback parameter. |
+| [off('hotspotStaLeave')](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | Unsubscribe Wi-Fi hotspot sta leave events. |
+| [on('streamChange')](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | Subscribe Wi-Fi stream change events. |
+| [on('deviceConfigChange')](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | Subscribe Wi-Fi device config change events. |
+| [on('hotspotStaJoin')](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | Subscribe Wi-Fi hotspot sta join events. |
+| [on('hotspotStaLeave')](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | Subscribe Wi-Fi hotspot sta leave events. |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md#reassociate) | Re-associate to current network. |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md#reconnect) | Re-connect to current network. |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md#removeallnetwork) | Remove all the saved Wi-Fi configurations. |

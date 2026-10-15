@@ -25,8 +25,8 @@ import { nfcController } from '@kit.ConnectivityKit';
 | [getNfcState](arkts-connectivity-nfccontroller-getnfcstate-f.md#getnfcstate) | Obtains the NFC state. |
 | [isNfcOpen](arkts-connectivity-nfccontroller-isnfcopen-f.md#isnfcopen) | Checks whether NFC is open. |
 | [isNfcSupported](arkts-connectivity-nfccontroller-isnfcsupported-f.md#isnfcsupported) | Checks whether the device supports NFC. |
-| [off](arkts-connectivity-nfccontroller-off-f.md#offnfcstatechange) | Unsubscribes from the NFC state changes. Upon successful unsubscription, the subscriber will not receive NFC state change notifications. This API uses an asynchronous callback to return the result. |
-| [on](arkts-connectivity-nfccontroller-on-f.md#onnfcstatechange) | Enables listening for NFC state changes. This API uses an asynchronous callback to return the result. |
+| [off('nfcStateChange')](arkts-connectivity-nfccontroller-off-f.md#offnfcstatechange) | Unsubscribes from the NFC state changes. Upon successful unsubscription, the subscriber will not receive NFC state change notifications. This API uses an asynchronous callback to return the result. |
+| [on('nfcStateChange')](arkts-connectivity-nfccontroller-on-f.md#onnfcstatechange) | Enables listening for NFC state changes. This API uses an asynchronous callback to return the result. |
 | [closeNfc](arkts-connectivity-nfccontroller-closenfc-f.md#closenfc) | Closes NFC. |
 | [isNfcAvailable](arkts-connectivity-nfccontroller-isnfcavailable-f.md#isnfcavailable) | Checks whether the device supports NFC. |
 | [openNfc](arkts-connectivity-nfccontroller-opennfc-f.md#opennfc) | Opens NFC. |

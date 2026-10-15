@@ -12,10 +12,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getUserRecognitionMgr(): UserRecognitionMgr | null
 ```
 
-获取一个[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。
-
-> **说明：** 
-> 每次调用都会返回一个新的**UserRecognitionMgr**实例。需使用同一实例进行订阅和取消订阅。
+获取[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。每次调用返回新的UserRecognitionMgr实例。
 
 **起始版本：** 26.0.1
 
@@ -33,7 +30,7 @@ function getUserRecognitionMgr(): UserRecognitionMgr | null
 
 | 类型 | 说明 |
 | --- | --- |
-| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) &#124; null | 用户识别管理器实例。如果设备不支持此能力则返回null。 |
+| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) &#124; null | 用户识别管理实例。如果设备不支持此能力则返回null。 |
 
 **错误码：**
 

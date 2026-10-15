@@ -36,7 +36,7 @@ ALL_AGREE = 0
 ALL_REJECT = 5
 ```
 
-Always rejected to save the status.
+总是拒绝保存状态。
 
 **起始版本：** 9
 

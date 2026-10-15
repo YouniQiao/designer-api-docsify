@@ -19,7 +19,7 @@
 - [Connectivity Kit (898)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-connectivity-kit/arkts-apis/arkts-connectivity-bluetooth-a2dp.md)
 - [Contacts Kit (53)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-contacts-kit/arkts-apis/arkts-contacts-contact.md)
 - [Content Embed Kit (23)](interface_sdk_c-md/zh-cn/application-dev/reference/apis-content-embed-kit/c-apis/capi-contentembed.md)
-- [Core File Kit (474)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md)
+- [Core File Kit (480)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-core-file-kit/arkts-apis/arkts-corefile-application-backupextensionability.md)
 - [Crypto Architecture Kit (141)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-crypto-architecture-kit/arkts-apis/arkts-cryptoarchitecture-security-cryptoframework.md)
 - [Data Protection Kit (79)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-data-protection-kit/arkts-apis/arkts-dataprotection-dlppermission.md)
 - [Device Certificate Kit (173)](interface_sdk-js-md/zh-cn/application-dev/reference/apis-device-certificate-kit/arkts-apis/arkts-devicecertificate-security-cert.md)

@@ -22,6 +22,10 @@ function dumpJsHeapData(filename : string) : void
 
 **起始版本：** 9
 
+**废弃版本：** 26.2.0
+
+**替代接口：** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
+
 <!--Device-hidebug-function dumpJsHeapData(filename : string) : void--><!--Device-hidebug-function dumpJsHeapData(filename : string) : void-End-->
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
@@ -67,6 +71,10 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 > 由于虚拟机堆导出极其耗时，且该接口为同步接口，建议不要在上架版本中调用该接口，以避免应用冻屏，影响用户体验。
 
 **起始版本：** 24
+
+**废弃版本：** 26.2.0
+
+**替代接口：** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

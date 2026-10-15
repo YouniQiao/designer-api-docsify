@@ -12,13 +12,7 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 function getUserRecognitionMgr(): UserRecognitionMgr | null
 ```
 
-Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) instance, which is used to query and subscribe to the user recognition result.
-
-> **NOTE:** 
-
-> Each call returns a new **UserRecognitionMgr** instance. Keep the same instance for paired on/off calls.
-
-> If the device does not support this capability, **null** is returned.
+Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) instance for querying and subscribing to user recognition results. A new **UserRecognitionMgr** instance is returned each time this API is called.
 
 **Since:** 26.0.1
 
@@ -36,7 +30,7 @@ Obtains a [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognition
 
 | Type | Description |
 | --- | --- |
-| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) &#124; null | User recognition manager instance. Returns **null** if the device does not support this capability. |
+| [UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md) &#124; null | User recognition manager instance. If the device does not support this capability, null is returned. |
 
 **Error codes:**
 

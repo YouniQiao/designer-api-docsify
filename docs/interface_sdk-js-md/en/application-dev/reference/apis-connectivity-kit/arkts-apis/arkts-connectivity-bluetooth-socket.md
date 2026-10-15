@@ -25,8 +25,8 @@ import { socket } from '@kit.ConnectivityKit';
 | [getMaxReceiveDataSize](arkts-connectivity-socket-getmaxreceivedatasize-f.md#getmaxreceivedatasize) | Obtain the maximum data size that can be received through this socket channel. |
 | [getMaxTransmitDataSize](arkts-connectivity-socket-getmaxtransmitdatasize-f.md#getmaxtransmitdatasize) | Obtain the maximum data size that can be transmitted through this socket channel. |
 | [isConnected](arkts-connectivity-socket-isconnected-f.md#isconnected) | Check whether the current socket connection has been established. |
-| [off](arkts-connectivity-socket-off-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
-| [on](arkts-connectivity-socket-on-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
+| [off('sppRead')](arkts-connectivity-socket-off-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
+| [on('sppRead')](arkts-connectivity-socket-on-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
 | [sppAccept](arkts-connectivity-socket-sppaccept-f.md#sppaccept) | Waits for a remote device to connect. |
 | [sppCloseClientSocket](arkts-connectivity-socket-sppcloseclientsocket-f.md#sppcloseclientsocket) | Disables an spp client socket and releases related resources. |
 | [sppCloseServerSocket](arkts-connectivity-socket-sppcloseserversocket-f.md#sppcloseserversocket) | Disables an spp server socket and releases related resources. |

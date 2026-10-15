@@ -45,16 +45,16 @@ import { bluetooth } from '@kit.ConnectivityKit';
 | [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getremotedeviceclass) | Obtains the class of a peer Bluetooth device. |
 | [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getremotedevicename) | Obtains the name of a peer Bluetooth device. |
 | [getState](arkts-connectivity-bluetooth-getstate-f.md#getstate) | Obtains the Bluetooth status of a device. |
-| [off](arkts-connectivity-bluetooth-off-f.md#offbluetoothdevicefind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
-| [off](arkts-connectivity-bluetooth-off-f.md#offbondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
-| [off](arkts-connectivity-bluetooth-off-f.md#offpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
-| [off](arkts-connectivity-bluetooth-off-f.md#offstatechange) | Unsubscribe the event reported when the Bluetooth state changes. |
-| [off](arkts-connectivity-bluetooth-off-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
-| [on](arkts-connectivity-bluetooth-on-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
-| [on](arkts-connectivity-bluetooth-on-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
-| [on](arkts-connectivity-bluetooth-on-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
-| [on](arkts-connectivity-bluetooth-on-f.md#onstatechange) | Subscribe the event reported when the Bluetooth state changes. |
-| [on](arkts-connectivity-bluetooth-on-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
+| [off('bluetoothDeviceFind')](arkts-connectivity-bluetooth-off-f.md#offbluetoothdevicefind) | Unsubscribe the event reported when a remote Bluetooth device is discovered. |
+| [off('bondStateChange')](arkts-connectivity-bluetooth-off-f.md#offbondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
+| [off('pinRequired')](arkts-connectivity-bluetooth-off-f.md#offpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
+| [off('stateChange')](arkts-connectivity-bluetooth-off-f.md#offstatechange) | Unsubscribe the event reported when the Bluetooth state changes. |
+| [off('sppRead')](arkts-connectivity-bluetooth-off-f.md#offsppread) | Unsubscribe the event reported when data is read from the socket. |
+| [on('bluetoothDeviceFind')](arkts-connectivity-bluetooth-on-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
+| [on('bondStateChange')](arkts-connectivity-bluetooth-on-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
+| [on('pinRequired')](arkts-connectivity-bluetooth-on-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
+| [on('stateChange')](arkts-connectivity-bluetooth-on-f.md#onstatechange) | Subscribe the event reported when the Bluetooth state changes. |
+| [on('sppRead')](arkts-connectivity-bluetooth-on-f.md#onsppread) | Subscribe the event reported when data is read from the socket. |
 | [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairdevice) | Starts pairing with a remote Bluetooth device. |
 | [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setbluetoothscanmode) | Sets the Bluetooth scan mode for a device. |
 | [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation) | Sets the confirmation of pairing with a certain device. |

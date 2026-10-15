@@ -24,14 +24,14 @@ import { continuationManager } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceselected) | 取消监听设备连接状态。 |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceunselected) | 取消监听设备断开状态。 |
-| [off](arkts-ability-continuationmanager-off-f.md#offdeviceconnect) | 异步方法，取消监听设备连接状态，使用Callback形式返回连接的设备信息。 |
-| [off](arkts-ability-continuationmanager-off-f.md#offdevicedisconnect) | 异步方法，取消监听设备断开状态，使用Callback形式返回连接的设备信息。 |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceselected) | 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。 |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceunselected) | 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。 |
-| [on](arkts-ability-continuationmanager-on-f.md#ondeviceconnect) | 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。 |
-| [on](arkts-ability-continuationmanager-on-f.md#ondevicedisconnect) | 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。 |
+| [off('deviceSelected')](arkts-ability-continuationmanager-off-f.md#offdeviceselected) | 取消监听设备连接状态。 |
+| [off('deviceUnselected')](arkts-ability-continuationmanager-off-f.md#offdeviceunselected) | 取消监听设备断开状态。 |
+| [off('deviceConnect')](arkts-ability-continuationmanager-off-f.md#offdeviceconnect) | 异步方法，取消监听设备连接状态，使用Callback形式返回连接的设备信息。 |
+| [off('deviceDisconnect')](arkts-ability-continuationmanager-off-f.md#offdevicedisconnect) | 异步方法，取消监听设备断开状态，使用Callback形式返回连接的设备信息。 |
+| [on('deviceSelected')](arkts-ability-continuationmanager-on-f.md#ondeviceselected) | 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。 |
+| [on('deviceUnselected')](arkts-ability-continuationmanager-on-f.md#ondeviceunselected) | 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。 |
+| [on('deviceConnect')](arkts-ability-continuationmanager-on-f.md#ondeviceconnect) | 异步方法，监听设备连接状态，使用Callback形式返回连接的设备信息。 |
+| [on('deviceDisconnect')](arkts-ability-continuationmanager-on-f.md#ondevicedisconnect) | 异步方法，监听设备断开状态，使用Callback形式返回断开的设备信息。 |
 | [register](arkts-ability-continuationmanager-register-f.md#register1) | 注册流转管理服务，并获取对应的注册token，无过滤条件，使用AsyncCallback方式作为异步方法。 |
 | [register](arkts-ability-continuationmanager-register-f.md#register2) | 连接流转管理服务，并获取对应的注册token，使用AsyncCallback方式作为异步方法。 |
 | [register](arkts-ability-continuationmanager-register-f.md#register3) | 连接流转管理服务，并获取对应的注册token，使用Promise方式作为异步方法。 |

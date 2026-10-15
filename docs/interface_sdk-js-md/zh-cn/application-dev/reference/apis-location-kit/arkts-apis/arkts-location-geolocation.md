@@ -45,18 +45,18 @@ import { geolocation } from '@kit.LocationKit';
 | [isGeoServiceAvailable](arkts-location-geolocation-isgeoserviceavailable-f.md#isgeoserviceavailable2) | 判断（逆）地理编码服务状态，使用Promise异步回调。 |
 | [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled1) | 判断位置服务是否已经打开，使用callback异步回调。 |
 | [isLocationEnabled](arkts-location-geolocation-islocationenabled-f.md#islocationenabled2) | 判断位置服务是否已经开启，使用Promise异步回调。 |
-| [off](arkts-location-geolocation-off-f.md#offlocationchange) | 关闭位置变化订阅，并删除对应的定位请求。 |
-| [off](arkts-location-geolocation-off-f.md#offlocationservicestate) | 取消订阅位置服务状态变化。 |
-| [off](arkts-location-geolocation-off-f.md#offcachedgnsslocationsreporting) | 取消订阅缓存GNSS定位结果上报事件。 |
-| [off](arkts-location-geolocation-off-f.md#offgnssstatuschange) | 取消订阅GNSS卫星状态信息上报事件。 |
-| [off](arkts-location-geolocation-off-f.md#offnmeamessagechange) | 取消订阅GNSS NMEA信息上报事件。 |
-| [off](arkts-location-geolocation-off-f.md#offfencestatuschange) | 删除一个围栏，并取消订阅该围栏事件。 |
-| [on](arkts-location-geolocation-on-f.md#onlocationchange) | 开启位置变化订阅，并发起定位请求。使用callback异步回调。 |
-| [on](arkts-location-geolocation-on-f.md#onlocationservicestate) | 订阅位置服务状态变化。使用callback异步回调。 |
-| [on](arkts-location-geolocation-on-f.md#oncachedgnsslocationsreporting) | 订阅缓存GNSS定位结果上报事件。使用callback异步回调。 |
-| [on](arkts-location-geolocation-on-f.md#ongnssstatuschange) | 订阅GNSS卫星状态信息上报事件。使用callback异步回调。 |
-| [on](arkts-location-geolocation-on-f.md#onnmeamessagechange) | 订阅GNSS NMEA信息上报事件。使用callback异步回调。 |
-| [on](arkts-location-geolocation-on-f.md#onfencestatuschange) | 添加一个围栏，并订阅地理围栏事件。使用callback异步回调。 |
+| [off('locationChange')](arkts-location-geolocation-off-f.md#offlocationchange) | 关闭位置变化订阅，并删除对应的定位请求。 |
+| [off('locationServiceState')](arkts-location-geolocation-off-f.md#offlocationservicestate) | 取消订阅位置服务状态变化。 |
+| [off('cachedGnssLocationsReporting')](arkts-location-geolocation-off-f.md#offcachedgnsslocationsreporting) | 取消订阅缓存GNSS定位结果上报事件。 |
+| [off('gnssStatusChange')](arkts-location-geolocation-off-f.md#offgnssstatuschange) | 取消订阅GNSS卫星状态信息上报事件。 |
+| [off('nmeaMessageChange')](arkts-location-geolocation-off-f.md#offnmeamessagechange) | 取消订阅GNSS NMEA信息上报事件。 |
+| [off('fenceStatusChange')](arkts-location-geolocation-off-f.md#offfencestatuschange) | 删除一个围栏，并取消订阅该围栏事件。 |
+| [on('locationChange')](arkts-location-geolocation-on-f.md#onlocationchange) | 开启位置变化订阅，并发起定位请求。使用callback异步回调。 |
+| [on('locationServiceState')](arkts-location-geolocation-on-f.md#onlocationservicestate) | 订阅位置服务状态变化。使用callback异步回调。 |
+| [on('cachedGnssLocationsReporting')](arkts-location-geolocation-on-f.md#oncachedgnsslocationsreporting) | 订阅缓存GNSS定位结果上报事件。使用callback异步回调。 |
+| [on('gnssStatusChange')](arkts-location-geolocation-on-f.md#ongnssstatuschange) | 订阅GNSS卫星状态信息上报事件。使用callback异步回调。 |
+| [on('nmeaMessageChange')](arkts-location-geolocation-on-f.md#onnmeamessagechange) | 订阅GNSS NMEA信息上报事件。使用callback异步回调。 |
+| [on('fenceStatusChange')](arkts-location-geolocation-on-f.md#onfencestatuschange) | 添加一个围栏，并订阅地理围栏事件。使用callback异步回调。 |
 | [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation1) | 请求打开位置服务，使用callback异步回调。 |
 | [requestEnableLocation](arkts-location-geolocation-requestenablelocation-f.md#requestenablelocation2) | 请求打开位置服务，使用Promise异步回调。 |
 | [sendCommand](arkts-location-geolocation-sendcommand-f.md#sendcommand1) | 给位置服务子系统的各个部件发送扩展命令。使用callback异步回调。 |

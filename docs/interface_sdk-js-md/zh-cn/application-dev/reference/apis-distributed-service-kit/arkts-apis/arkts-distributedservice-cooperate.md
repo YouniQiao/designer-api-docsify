@@ -34,10 +34,10 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | [deactivateCooperate](arkts-distributedservice-cooperate-deactivatecooperate-f-sys.md#deactivatecooperate2) | 停止键鼠穿越，使用Promise异步回调。 |
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate1) | 获取目标设备键鼠穿越开关的状态，使用Callback异步回调。 |
 | [getCooperateSwitchState](arkts-distributedservice-cooperate-getcooperateswitchstate-f-sys.md#getcooperateswitchstate2) | 获取目标设备键鼠穿越开关的状态，使用Promise异步方式返回结果。 |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemessage) | 取消监听键鼠穿越状态。 |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemouse) | 取消监听指定设备鼠标光标位置。 |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemessage) | 注册监听键鼠穿越状态。 |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemouse) | 注册监听指定设备鼠标光标位置。 |
+| [off('cooperateMessage')](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemessage) | 取消监听键鼠穿越状态。 |
+| [off('cooperateMouse')](arkts-distributedservice-cooperate-off-f-sys.md#offcooperatemouse) | 取消监听指定设备鼠标光标位置。 |
+| [on('cooperateMessage')](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemessage) | 注册监听键鼠穿越状态。 |
+| [on('cooperateMouse')](arkts-distributedservice-cooperate-on-f-sys.md#oncooperatemouse) | 注册监听指定设备鼠标光标位置。 |
 | [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate1) | 准备键鼠穿越，使用Callback异步回调。 |
 | [prepareCooperate](arkts-distributedservice-cooperate-preparecooperate-f-sys.md#preparecooperate2) | 准备键鼠穿越，使用Promise异步方式返回结果。 |
 | [unprepareCooperate](arkts-distributedservice-cooperate-unpreparecooperate-f-sys.md#unpreparecooperate1) | 取消键鼠穿越准备，使用Callback异步回调。 |
@@ -48,8 +48,8 @@ import { cooperate } from '@kit.DistributedServiceKit';
 | [deactivate](arkts-distributedservice-cooperate-deactivate-f-sys.md#deactivate2) | 停止键鼠穿越，使用Promise异步回调。 |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getcrossingswitchstate1) | 获取目标设备键鼠穿越开关的状态，使用Callback异步回调。 |
 | [getCrossingSwitchState](arkts-distributedservice-cooperate-getcrossingswitchstate-f-sys.md#getcrossingswitchstate2) | 获取目标设备键鼠穿越开关的状态，使用Promise异步方式返回结果。 |
-| [off](arkts-distributedservice-cooperate-off-f-sys.md#offcooperate) | 取消监听键鼠穿越状态。 |
-| [on](arkts-distributedservice-cooperate-on-f-sys.md#oncooperate) | 注册监听键鼠穿越状态。 |
+| [off('cooperate')](arkts-distributedservice-cooperate-off-f-sys.md#offcooperate) | 取消监听键鼠穿越状态。 |
+| [on('cooperate')](arkts-distributedservice-cooperate-on-f-sys.md#oncooperate) | 注册监听键鼠穿越状态。 |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare1) | 准备键鼠穿越，使用Callback异步回调。 |
 | [prepare](arkts-distributedservice-cooperate-prepare-f-sys.md#prepare2) | 准备键鼠穿越，使用Promise异步方式返回结果。 |
 | [unprepare](arkts-distributedservice-cooperate-unprepare-f-sys.md#unprepare1) | 取消键鼠穿越准备，使用Callback异步回调。 |

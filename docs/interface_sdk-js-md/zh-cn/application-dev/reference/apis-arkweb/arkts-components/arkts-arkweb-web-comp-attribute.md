@@ -842,6 +842,30 @@ fileAccess(fileAccess: boolean)
 | --- | --- | --- | --- |
 | fileAccess | boolean | 是 | 设置是否开启应用中文件系统的访问。<br>true表示开启，false表示不开启。<br>同时，当fileAccess为false的时候，仅只读资源目录`/data/storage/el1/bundle/entry/resources/resfile`里面的资源依然可以通过file协议访问，不受fileAccess管控。<br>API version 11及以前，传入undefined或null时为true，API version 12及以后传入undefined或null时为false。 |
 
+## flingSpeedLimit
+
+```TypeScript
+flingSpeedLimit(speedLimit: number)
+```
+
+设置Web组件惯性滚动的最大速度。
+
+通过该TypeScript API配置的值优先于通过其他API配置的值生效。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-flingSpeedLimit(speedLimit: number): WebAttribute--><!--Device-WebAttribute-flingSpeedLimit(speedLimit: number): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| speedLimit | number | 是 | 惯性滚动最大速度，单位vp/s。当值小于等于0、`NaN`、`+Infinity`或`-Infinity`时，使用默认值：PC设备为9000 vp/s，非PC设备为17000 vp/s。 |
+
 ## forceDarkAccess
 
 ```TypeScript

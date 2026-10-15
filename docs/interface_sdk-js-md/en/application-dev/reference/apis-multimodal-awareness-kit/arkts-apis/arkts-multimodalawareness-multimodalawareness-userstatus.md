@@ -20,8 +20,8 @@ import { userStatus } from '@kit.MultimodalAwarenessKit';
 
 | Name | Description |
 | --- | --- |
-| [off](arkts-multimodalawareness-userstatus-off-f.md#offuseragegroupdetected) | Disables the age group detection function. |
-| [on](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) | Enables the age group detection function. |
+| [off('userAgeGroupDetected')](arkts-multimodalawareness-userstatus-off-f.md#offuseragegroupdetected) | Disables the age group detection function. |
+| [on('userAgeGroupDetected')](arkts-multimodalawareness-userstatus-on-f.md#onuseragegroupdetected) | Enables the age group detection function. |
 
 <!--Del-->
 ### Functions(System API)

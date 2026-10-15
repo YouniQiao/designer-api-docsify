@@ -259,7 +259,7 @@ while (!nextResult.done) {
 forEach(callbackFn: (value?: V, key?: K, map?: TreeMap<K, V>) => void, thisArg?: Object): void
 ```
 
-通过回调函数来遍历实例对象上的元素及其下标。不会对已删除的key执行回调。
+通过回调函数来遍历实例对象上的元素及其键。不会对已删除的key执行回调。
 
 **起始版本：** 8
 

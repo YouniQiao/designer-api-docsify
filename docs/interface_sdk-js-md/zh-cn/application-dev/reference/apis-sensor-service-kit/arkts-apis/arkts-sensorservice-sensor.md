@@ -109,7 +109,7 @@ import { sensor } from '@kit.SensorServiceKit';
 | [off](arkts-sensorservice-sensor-off-f.md#off45) | 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
 | [off](arkts-sensorservice-sensor-off-f.md#off46) | 取消订阅融合压力传感器数据。当不再需要接收融合压力传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
 | [off](arkts-sensorservice-sensor-off-f.md#off47) | 取消订阅佩戴检测传感器数据。当不再需要接收佩戴检测传感器数据时调用此接口取消订阅。off取消订阅必须与on订阅成对出现。 |
-| [off](arkts-sensorservice-sensor-off-f.md#offsensorstatuschange) | 取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。 |
+| [off('sensorStatusChange')](arkts-sensorservice-sensor-off-f.md#offsensorstatuschange) | 取消监听传感器上线下线状态的变化。当不再需要感知传感器上下线状态时调用此接口取消监听。off取消监听必须与on监听成对出现。 |
 | [on](arkts-sensorservice-sensor-on-f.md#on3) | 订阅加速度传感器数据。使用callback异步回调。加速度传感器用于测量设备在X、Y、Z三个方向上的加速度，包含重力加速度分量。适用于需要感知设备运动状态、实现屏幕旋转、游戏操控、计步等场景。调用后，系统会按设定频率通过callback持续上报加速度数据。 |
 | [on](arkts-sensorservice-sensor-on-f.md#on4) | 订阅未校准加速度传感器数据。使用callback异步回调。未校准加速度传感器与加速度传感器的区别在于，其上报的偏移值(biasX/biasY/biasZ)未经系统校准补偿，适用于需要获取原始加速度数据或自行实现校准算法的场景。与sensor.on('SensorId.ACCELEROMETER')相比，本接口额外提供偏移值信息，适用于需要分析设备校准偏差的场景。 |
 | [on](arkts-sensorservice-sensor-on-f.md#on5) | 订阅环境光传感器数据。使用callback异步回调。环境光传感器用于测量周围环境的光照强度，适用于自动调节屏幕亮度、判断环境明暗等场景。调用后，系统会按设定频率通过callback持续上报环境光强度数据。 |
@@ -132,7 +132,7 @@ import { sensor } from '@kit.SensorServiceKit';
 | [on](arkts-sensorservice-sensor-on-f.md#on22) | 订阅有效运动传感器数据，用于检测用户拿起设备、明显移动或剧烈摇晃等有效运动事件。使用callback异步回调。适用于需要根据用户活动状态唤醒设备、启动应用或切换模式的场景。调用后，系统会通过callback持续上报有效运动事件数据。 |
 | [on](arkts-sensorservice-sensor-on-f.md#on23) | 订阅佩戴检测传感器数据。使用callback异步回调。佩戴检测传感器用于检测设备是否被用户佩戴，适用于智能手表等可穿戴设备的佩戴状态检测，以便自动切换工作模式。调用后，系统会按设定频率通过callback持续上报佩戴状态数据。 |
 | [on](arkts-sensorservice-sensor-on-f.md#on24) | 订阅融合压力传感器数据。使用callback异步回调。融合压力传感器用于获取经融合算法处理的压力数据，仅适用于智能手表设备。适用于需要获取手腕压力数据的健康监测场景。调用后，系统会按设定频率通过callback持续上报融合压力数据。 |
-| [on](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) | 监听传感器上线下线状态的变化。使用callback异步回调。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。 |
+| [on('sensorStatusChange')](arkts-sensorservice-sensor-on-f.md#onsensorstatuschange) | 监听传感器上线下线状态的变化。使用callback异步回调。适用于需要感知传感器设备动态上下线的场景，如远程传感器连接或断开时自动更新传感器列表或订阅状态。 |
 | [once](arkts-sensorservice-sensor-once-f.md#once1) | 获取一次加速度传感器数据。适用于无需持续监听、仅需一次性获取当前加速度数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
 | [once](arkts-sensorservice-sensor-once-f.md#once2) | 获取一次未校准加速度传感器数据。适用于仅需一次性获取原始加速度及偏移数据的场景。调用后，callback仅触发一次，自动取消订阅。 |
 | [once](arkts-sensorservice-sensor-once-f.md#once3) | 获取一次环境光传感器数据。适用于仅需一次性获取当前环境光强度的场景。调用后，callback仅触发一次，自动取消订阅。 |

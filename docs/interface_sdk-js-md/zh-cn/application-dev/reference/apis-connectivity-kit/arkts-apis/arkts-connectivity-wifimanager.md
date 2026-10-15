@@ -60,28 +60,28 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md#ismeteredhotspot) | 查询设备当前连接的wifi是否是手机热点。 |
 | [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive) | 查询Wi-Fi开关是否已激活。 |
 | [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md#iswlansupported) | 查询是否可用Wi-Fi网络。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | 取消注册Wi-Fi状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | 取消注册Wi-Fi连接状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | 取消注册扫描状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offwifirssichange) | 取消注册Wi-Fi接收信号强度(RSSI)变化事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offhotspotstatechange) | 取消注册热点状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pstatechange) | 取消注册P2P开关状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pconnectionchange) | 取消注册P2P连接状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pdevicechange) | 取消注册P2P设备状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2ppeerdevicechange) | 取消注册P2P对端设备状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2ppersistentgroupchange) | 取消注册P2P永久组状态改变事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f.md#offp2pdiscoverychange) | 取消注册发现设备状态改变事件。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifistatechange) | 注册Wi-Fi状态改变事件，在业务退出时，要调用off(type: 'wifiStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwificonnectionchange) | 注册Wi-Fi连接状态改变事件，在业务退出时，要调用off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange) | 注册扫描状态改变事件，在业务退出时，要调用off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onwifirssichange) | 注册Wi-Fi接收信号强度(RSSI)变化事件，在业务退出时，要调用off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onhotspotstatechange) | 注册热点状态改变事件，在业务退出时，要调用off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pstatechange) | 注册P2P开关状态改变事件，在业务退出时，要调用off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pconnectionchange) | 注册P2P连接状态改变事件，在业务退出时，要调用off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pdevicechange) | 注册P2P设备状态改变事件，在业务退出时，要调用off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) | 注册P2P对端设备状态改变事件，在业务退出时，要调用off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) | 注册P2P永久组状态改变事件，在业务退出时，要调用off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) | 注册发现设备状态改变事件，在业务退出时，要调用off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [off('wifiStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | 取消注册Wi-Fi状态改变事件。使用callback异步回调。 |
+| [off('wifiConnectionChange')](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | 取消注册Wi-Fi连接状态改变事件。使用callback异步回调。 |
+| [off('wifiScanStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | 取消注册扫描状态改变事件。使用callback异步回调。 |
+| [off('wifiRssiChange')](arkts-connectivity-wifimanager-off-f.md#offwifirssichange) | 取消注册Wi-Fi接收信号强度(RSSI)变化事件。使用callback异步回调。 |
+| [off('hotspotStateChange')](arkts-connectivity-wifimanager-off-f.md#offhotspotstatechange) | 取消注册热点状态改变事件。使用callback异步回调。 |
+| [off('p2pStateChange')](arkts-connectivity-wifimanager-off-f.md#offp2pstatechange) | 取消注册P2P开关状态改变事件。使用callback异步回调。 |
+| [off('p2pConnectionChange')](arkts-connectivity-wifimanager-off-f.md#offp2pconnectionchange) | 取消注册P2P连接状态改变事件。使用callback异步回调。 |
+| [off('p2pDeviceChange')](arkts-connectivity-wifimanager-off-f.md#offp2pdevicechange) | 取消注册P2P设备状态改变事件。使用callback异步回调。 |
+| [off('p2pPeerDeviceChange')](arkts-connectivity-wifimanager-off-f.md#offp2ppeerdevicechange) | 取消注册P2P对端设备状态改变事件。使用callback异步回调。 |
+| [off('p2pPersistentGroupChange')](arkts-connectivity-wifimanager-off-f.md#offp2ppersistentgroupchange) | 取消注册P2P永久组状态改变事件。使用callback异步回调。 |
+| [off('p2pDiscoveryChange')](arkts-connectivity-wifimanager-off-f.md#offp2pdiscoverychange) | 取消注册发现设备状态改变事件。使用callback异步回调。 |
+| [on('wifiStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifistatechange) | 注册Wi-Fi状态改变事件，在业务退出时，要调用off(type: 'wifiStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('wifiConnectionChange')](arkts-connectivity-wifimanager-on-f.md#onwificonnectionchange) | 注册Wi-Fi连接状态改变事件，在业务退出时，要调用off(type: 'wifiConnectionChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('wifiScanStateChange')](arkts-connectivity-wifimanager-on-f.md#onwifiscanstatechange) | 注册扫描状态改变事件，在业务退出时，要调用off(type: 'wifiScanStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('wifiRssiChange')](arkts-connectivity-wifimanager-on-f.md#onwifirssichange) | 注册Wi-Fi接收信号强度(RSSI)变化事件，在业务退出时，要调用off(type: 'wifiRssiChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('hotspotStateChange')](arkts-connectivity-wifimanager-on-f.md#onhotspotstatechange) | 注册热点状态改变事件，在业务退出时，要调用off(type: 'hotspotStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pStateChange')](arkts-connectivity-wifimanager-on-f.md#onp2pstatechange) | 注册P2P开关状态改变事件，在业务退出时，要调用off(type: 'p2pStateChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pConnectionChange')](arkts-connectivity-wifimanager-on-f.md#onp2pconnectionchange) | 注册P2P连接状态改变事件，在业务退出时，要调用off(type: 'p2pConnectionChange', callback?: Callback&lt;WifiP2pLinkedInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pDeviceChange')](arkts-connectivity-wifimanager-on-f.md#onp2pdevicechange) | 注册P2P设备状态改变事件，在业务退出时，要调用off(type: 'p2pDeviceChange', callback?: Callback&lt;WifiP2pDevice&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pPeerDeviceChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) | 注册P2P对端设备状态改变事件，在业务退出时，要调用off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pPersistentGroupChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) | 注册P2P永久组状态改变事件，在业务退出时，要调用off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('p2pDiscoveryChange')](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) | 注册发现设备状态改变事件，在业务退出时，要调用off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
 | [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pcancelconnect) | 在P2P连接过程中，取消P2P连接。 |
 | [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect) | 执行P2P连接。调用此方法连接后，如需取消可调用[p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md)。 |
 | [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig1) | 移除候选网络配置，使用Promise异步回调。 |
@@ -128,14 +128,14 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [isHotspotDualBandSupported](arkts-connectivity-wifimanager-ishotspotdualbandsupported-f-sys.md#ishotspotdualbandsupported) | 检查当前设备的Wi-Fi热点功能是否支持双频段（同时支持2.4GHz和5GHz频段）。 |
 | [isOpenSoftApAllowed](arkts-connectivity-wifimanager-isopensoftapallowed-f-sys.md#isopensoftapallowed) | 检查在某些情况下是否能够操作Wi-Fi热点。当飞行模式开启时，如果系统不支持SoftAP和STA共存，也不支持信号桥接，则无法操作热点开关。 |
 | [isRandomMacDisabled](arkts-connectivity-wifimanager-israndommacdisabled-f-sys.md#israndommacdisabled) | 随机MAC地址是否被禁用。 |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | 取消注册Wi-Fi流变更事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | 取消注册Wi-Fi设备配置更改事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | 取消注册Wi-Fi热点的STA加入事件。使用callback异步回调。 |
-| [off](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | 取消注册Wi-Fi热点STA离开事件。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | 注册Wi-Fi流变更事件，在业务退出时，要调用off(type: 'streamChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | 注册Wi-Fi设备配置更改事件，在业务退出时，要调用off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | 注册Wi-Fi热点STA加入事件，在业务退出时，要调用off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [on](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | 注册Wi-Fi热点STA离开事件，在业务退出时，要调用off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [off('streamChange')](arkts-connectivity-wifimanager-off-f-sys.md#offstreamchange) | 取消注册Wi-Fi流变更事件。使用callback异步回调。 |
+| [off('deviceConfigChange')](arkts-connectivity-wifimanager-off-f-sys.md#offdeviceconfigchange) | 取消注册Wi-Fi设备配置更改事件。使用callback异步回调。 |
+| [off('hotspotStaJoin')](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstajoin) | 取消注册Wi-Fi热点的STA加入事件。使用callback异步回调。 |
+| [off('hotspotStaLeave')](arkts-connectivity-wifimanager-off-f-sys.md#offhotspotstaleave) | 取消注册Wi-Fi热点STA离开事件。使用callback异步回调。 |
+| [on('streamChange')](arkts-connectivity-wifimanager-on-f-sys.md#onstreamchange) | 注册Wi-Fi流变更事件，在业务退出时，要调用off(type: 'streamChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('deviceConfigChange')](arkts-connectivity-wifimanager-on-f-sys.md#ondeviceconfigchange) | 注册Wi-Fi设备配置更改事件，在业务退出时，要调用off(type: 'deviceConfigChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('hotspotStaJoin')](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstajoin) | 注册Wi-Fi热点STA加入事件，在业务退出时，要调用off(type: 'hotspotStaJoin', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
+| [on('hotspotStaLeave')](arkts-connectivity-wifimanager-on-f-sys.md#onhotspotstaleave) | 注册Wi-Fi热点STA离开事件，在业务退出时，要调用off(type: 'hotspotStaLeave', callback?: Callback&lt;StationInfo&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
 | [reassociate](arkts-connectivity-wifimanager-reassociate-f-sys.md#reassociate) | 重新关联网络。 |
 | [reconnect](arkts-connectivity-wifimanager-reconnect-f-sys.md#reconnect) | 重新连接网络。 |
 | [removeAllNetwork](arkts-connectivity-wifimanager-removeallnetwork-f-sys.md#removeallnetwork) | 移除所有网络配置。 |

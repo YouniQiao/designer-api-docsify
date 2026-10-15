@@ -33,7 +33,7 @@ function onChangeWithAttribute(displayAttributeOption: Array<string>, callback: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Function onChangeWithAttribute can not work correctly due to limited device capabilities. |
+| [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. |
 | [1400003](../errorcode-display.md#1400003-系统服务工作异常) | This display manager service works abnormally. Possible causes: Internal IPC error. |
 
 **示例**

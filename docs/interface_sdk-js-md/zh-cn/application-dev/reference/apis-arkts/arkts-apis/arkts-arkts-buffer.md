@@ -39,7 +39,7 @@ import { buffer } from '@kit.ArkTS';
 
 | 名称 | 说明 |
 | --- | --- |
-| [Blob](arkts-arkts-buffer-blob-c.md) | 将数据处理为blob类型。 |
+| [Blob](arkts-arkts-buffer-blob-c.md) | 将数据处理为不可变的blob类型，用于封装大量二进制数据。 |
 | [Buffer](arkts-arkts-buffer-buffer-c.md) | Buffer对象是处理二进制数据的缓冲区。 |
 
 ### 接口

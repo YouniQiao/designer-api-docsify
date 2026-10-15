@@ -831,7 +831,7 @@ static of(...items: number[]): Uint32Array
 
 | 类型 | 说明 |
 | --- | --- |
-| Uint32Array | 新的ArkTS Uint32Array实例。可能的原因：1.必填参数未指定；<br>2.参数类型不正确；3.参数校验失败。 |
+| Uint32Array | 新的ArkTS Uint32Array实例。 |
 
 <a id="reduce1"></a>
 
@@ -975,7 +975,7 @@ reduceRight<U = number>(callbackFn: TypedArrayReduceCallback<U, number, Uint32Ar
 
 | 类型 | 说明 |
 | --- | --- |
-| U | 由归约函数最后一次调用返回的结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| U | 由归约函数最后一次调用返回的结果。 |
 
 **错误码：**
 
@@ -1012,7 +1012,7 @@ reduceRight(callbackFn: TypedArrayReduceCallback<number, number, Uint32Array>): 
 
 | 类型 | 说明 |
 | --- | --- |
-| number | 由归约函数最后一次调用返回的结果。可能的原因：1.必填参数未指定。2.参数类型不正确。 |
+| number | 由归约函数最后一次调用返回的结果。 |
 
 **错误码：**
 

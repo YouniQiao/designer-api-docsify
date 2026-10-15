@@ -68,12 +68,12 @@ import { window } from '@kit.ArkUI';
 | [minimizeAllWithExclusion](arkts-arkui-window-minimizeallwithexclusion-f-sys.md#minimizeallwithexclusion) | Minimizes all main windows on a display while keeping one window open. This API uses a promise to return the result. |
 | [moveMainWindowToTargetDisplay](arkts-arkui-window-movemainwindowtotargetdisplay-f-sys.md#movemainwindowtotargetdisplay) | Move a window to the target display. The window must be a main window. |
 | [notifyScreenshotEvent](arkts-arkui-window-notifyscreenshotevent-f-sys.md#notifyscreenshotevent) | Notifies a screenshot event. This API uses a promise to return the result. |
-| [off](arkts-arkui-window-off-f-sys.md#offsystembartintchange) | Unsubscribes from the property change event of the status bar and navigation bar. |
-| [off](arkts-arkui-window-off-f-sys.md#offgesturenavigationenabledchange) | Unsubscribes from the gesture navigation status change event. |
-| [off](arkts-arkui-window-off-f-sys.md#offwatermarkflagchange) | Unsubscribes from the watermark status change event. |
-| [on](arkts-arkui-window-on-f-sys.md#onsystembartintchange) | Subscribes to the property change event of the status bar and navigation bar. |
-| [on](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) | Subscribes to the gesture navigation status change event. |
-| [on](arkts-arkui-window-on-f-sys.md#onwatermarkflagchange) | Subscribes to the watermark status change event. |
+| [off('systemBarTintChange')](arkts-arkui-window-off-f-sys.md#offsystembartintchange) | Unsubscribes from the property change event of the status bar and navigation bar. |
+| [off('gestureNavigationEnabledChange')](arkts-arkui-window-off-f-sys.md#offgesturenavigationenabledchange) | Unsubscribes from the gesture navigation status change event. |
+| [off('waterMarkFlagChange')](arkts-arkui-window-off-f-sys.md#offwatermarkflagchange) | Unsubscribes from the watermark status change event. |
+| [on('systemBarTintChange')](arkts-arkui-window-on-f-sys.md#onsystembartintchange) | Subscribes to the property change event of the status bar and navigation bar. |
+| [on('gestureNavigationEnabledChange')](arkts-arkui-window-on-f-sys.md#ongesturenavigationenabledchange) | Subscribes to the gesture navigation status change event. |
+| [on('waterMarkFlagChange')](arkts-arkui-window-on-f-sys.md#onwatermarkflagchange) | Subscribes to the watermark status change event. |
 | [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setgesturenavigationenabled1) | Enables or disables gesture navigation. This API uses an asynchronous callback to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation. |
 | [setGestureNavigationEnabled](arkts-arkui-window-setgesturenavigationenabled-f-sys.md#setgesturenavigationenabled2) | Enables or disables gesture navigation. This API uses a promise to return the result. For security purposes, the system does not interfere with the disabling and enabling of gesture navigation. If an application exits abnormally after it disables gesture navigation and wants to restore gesture navigation, it must implement automatic launch and call this API again to enable gesture navigation. |
 | [setSpecificSystemWindowZIndex](arkts-arkui-window-setspecificsystemwindowzindex-f-sys.md#setspecificsystemwindowzindex) | Sets the z-level of a system window. This API uses a promise to return the result. |

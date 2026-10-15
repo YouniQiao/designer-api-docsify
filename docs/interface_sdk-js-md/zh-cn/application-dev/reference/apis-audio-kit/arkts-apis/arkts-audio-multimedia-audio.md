@@ -199,7 +199,7 @@ import { audio } from '@kit.AudioKit';
 | [DeviceRole](arkts-audio-audio-devicerole-e.md) | 表示设备角色的枚举。 |
 | [DeviceType](arkts-audio-audio-devicetype-e.md) | 表示设备类型的枚举。 |
 | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 表示音频设备类型的枚举（根据用途分类）。 |
-| [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | 表示音频打断类型的枚举。当用户监听到音频中断（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示音频打断是否已由系统强制执行，具体操作信息（如音频暂停、停止等）可通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)获取。关于音频打断策略的详细说明可参考文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
+| [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | 表示音频打断强制类型的枚举。当用户监听到音频打断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示音频打断提示[InterruptHint](arkts-audio-audio-interrupthint-e.md)是否已由系统强制执行，具体操作信息（如音频暂停、停止等）可通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)获取。其中，INTERRUPT_HINT_RESUME对应的forceType一定为INTERRUPT_SHARE，即恢复操作无法由系统强制执行，需应用自行触发。关于音频打断策略的详细说明可参考文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptHint](arkts-audio-audio-interrupthint-e.md) | 表示中断提示的枚举。当用户监听到音频中断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示根据焦点策略，对音频流执行的具体操作（如暂停、调整音量等）。可以结合InterruptEvent中的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)信息，判断该操作是否已由系统强制执行。详情请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | 表示焦点模型的枚举。 |
 | [InterruptType](arkts-audio-audio-interrupttype-e.md) | 表示中断类型的枚举。 |

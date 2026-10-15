@@ -21,8 +21,8 @@ import { connectedTag } from '@kit.ConnectivityKit';
 | Name | Description |
 | --- | --- |
 | [initialize](arkts-connectivity-connectedtag-initialize-f.md#initialize) | Initializes the active tag chip. |
-| [off](arkts-connectivity-connectedtag-off-f.md#offnotify) | Unregisters the NFC field strength state events. |
-| [on](arkts-connectivity-connectedtag-on-f.md#onnotify) | Registers the NFC field strength state events. |
+| [off('notify')](arkts-connectivity-connectedtag-off-f.md#offnotify) | Unregisters the NFC field strength state events. |
+| [on('notify')](arkts-connectivity-connectedtag-on-f.md#onnotify) | Registers the NFC field strength state events. |
 | [read](arkts-connectivity-connectedtag-read-f.md#read1) | Reads the content of this active tag. This API uses a promise to return the result. |
 | [read](arkts-connectivity-connectedtag-read-f.md#read2) | Reads the content of this active tag. This API uses an asynchronous callback to return the result. |
 | [uninitialize](arkts-connectivity-connectedtag-uninitialize-f.md#uninitialize) | Uninitializes the active tag resources. |

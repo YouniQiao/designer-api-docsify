@@ -47,16 +47,16 @@ import { bluetooth } from '@kit.ConnectivityKit';
 | [getRemoteDeviceClass](arkts-connectivity-bluetooth-getremotedeviceclass-f.md#getremotedeviceclass) | 获取对端蓝牙设备的类别。 |
 | [getRemoteDeviceName](arkts-connectivity-bluetooth-getremotedevicename-f.md#getremotedevicename) | 获取对端蓝牙设备的名称。 |
 | [getState](arkts-connectivity-bluetooth-getstate-f.md#getstate) | 获取蓝牙开关状态。 |
-| [off](arkts-connectivity-bluetooth-off-f.md#offbluetoothdevicefind) | 取消订阅蓝牙设备发现上报事件。 |
-| [off](arkts-connectivity-bluetooth-off-f.md#offbondstatechange) | 取消订阅蓝牙配对状态改变事件。 |
-| [off](arkts-connectivity-bluetooth-off-f.md#offpinrequired) | 取消订阅远端蓝牙设备的配对请求事件。 |
-| [off](arkts-connectivity-bluetooth-off-f.md#offstatechange) | 取消订阅蓝牙连接状态改变事件。 |
-| [off](arkts-connectivity-bluetooth-off-f.md#offsppread) | 取消订阅spp读请求事件，入参clientSocket由sppAccept或sppConnect接口获取。 |
-| [on](arkts-connectivity-bluetooth-on-f.md#onbluetoothdevicefind) | 订阅蓝牙设备发现上报事件。 |
-| [on](arkts-connectivity-bluetooth-on-f.md#onbondstatechange) | 订阅蓝牙配对状态改变事件。 |
-| [on](arkts-connectivity-bluetooth-on-f.md#onpinrequired) | 订阅远端蓝牙设备的配对请求事件。 |
-| [on](arkts-connectivity-bluetooth-on-f.md#onstatechange) | 订阅蓝牙连接状态改变事件。 |
-| [on](arkts-connectivity-bluetooth-on-f.md#onsppread) | 从API version 8开始支持，从API version 9开始废弃。订阅spp读请求事件，入参clientSocket由sppAccept或sppConnect接口获取。 |
+| [off('bluetoothDeviceFind')](arkts-connectivity-bluetooth-off-f.md#offbluetoothdevicefind) | 取消订阅蓝牙设备发现上报事件。 |
+| [off('bondStateChange')](arkts-connectivity-bluetooth-off-f.md#offbondstatechange) | 取消订阅蓝牙配对状态改变事件。 |
+| [off('pinRequired')](arkts-connectivity-bluetooth-off-f.md#offpinrequired) | 取消订阅远端蓝牙设备的配对请求事件。 |
+| [off('stateChange')](arkts-connectivity-bluetooth-off-f.md#offstatechange) | 取消订阅蓝牙连接状态改变事件。 |
+| [off('sppRead')](arkts-connectivity-bluetooth-off-f.md#offsppread) | 取消订阅spp读请求事件，入参clientSocket由sppAccept或sppConnect接口获取。 |
+| [on('bluetoothDeviceFind')](arkts-connectivity-bluetooth-on-f.md#onbluetoothdevicefind) | 订阅蓝牙设备发现上报事件。 |
+| [on('bondStateChange')](arkts-connectivity-bluetooth-on-f.md#onbondstatechange) | 订阅蓝牙配对状态改变事件。 |
+| [on('pinRequired')](arkts-connectivity-bluetooth-on-f.md#onpinrequired) | 订阅远端蓝牙设备的配对请求事件。 |
+| [on('stateChange')](arkts-connectivity-bluetooth-on-f.md#onstatechange) | 订阅蓝牙连接状态改变事件。 |
+| [on('sppRead')](arkts-connectivity-bluetooth-on-f.md#onsppread) | 从API version 8开始支持，从API version 9开始废弃。订阅spp读请求事件，入参clientSocket由sppAccept或sppConnect接口获取。 |
 | [pairDevice](arkts-connectivity-bluetooth-pairdevice-f.md#pairdevice) | 发起蓝牙配对。 |
 | [setBluetoothScanMode](arkts-connectivity-bluetooth-setbluetoothscanmode-f.md#setbluetoothscanmode) | 设置蓝牙扫描模式，可以被远端设备发现。 |
 | [setDevicePairingConfirmation](arkts-connectivity-bluetooth-setdevicepairingconfirmation-f.md#setdevicepairingconfirmation) | 设置设备配对请求确认。 |

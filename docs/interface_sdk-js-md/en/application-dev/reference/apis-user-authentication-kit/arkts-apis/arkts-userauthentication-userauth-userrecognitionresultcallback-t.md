@@ -4,7 +4,7 @@
 type UserRecognitionResultCallback = (result: UserRecognitionResult) => void
 ```
 
-Defines the callback used to receive the user recognition result.
+Defines the callback for the user recognition result.
 
 **Since:** 26.0.1
 
@@ -20,4 +20,4 @@ Defines the callback used to receive the user recognition result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| result | [UserRecognitionResult](arkts-userauthentication-userauth-userrecognitionresult-i.md) | Yes | Recognition result. |
+| result | [UserRecognitionResult](arkts-userauthentication-userauth-userrecognitionresult-i.md) | Yes | User recognition result. |

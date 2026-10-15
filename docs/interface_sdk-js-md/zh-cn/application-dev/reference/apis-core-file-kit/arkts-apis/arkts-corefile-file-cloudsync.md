@@ -99,5 +99,6 @@ import { cloudSync } from '@kit.CoreFileKit';
 | [FileSyncState](arkts-corefile-cloudsync-filesyncstate-e-sys.md) | 端云文件同步状态，为枚举类型。 |
 | [OptimizeState](arkts-corefile-cloudsync-optimizestate-e-sys.md) | 优化空间状态，为枚举类型。 |
 | [State](arkts-corefile-cloudsync-state-e-sys.md) | 云文件下载状态，为枚举类型。 |
+| [SyncType](arkts-corefile-cloudsync-synctype-e-sys.md) | 枚举Gallery的端云同步类型。 |
 | [UploadState](arkts-corefile-cloudsync-uploadstate-e-sys.md) | 文件上传状态的枚举。 |
 <!--DelEnd-->

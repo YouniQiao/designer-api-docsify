@@ -50,7 +50,7 @@ The authentication is canceled. It indicates that the user or the system cancels
 CANCELED_FROM_WIDGET = 12500011
 ```
 
-The user cancels the system authentication and selects a custom authentication of the application. It indicates that the user taps the navigation button on the authentication screen and chooses to use the custom authentication type provided by the application. The application needs to launch the custom authentication page.
+The user cancels the system authentication mode and selects the application-defined authentication. It indicates that the user taps the navigation button on the authentication API and selects the custom authentication mode provided by the application. The application needs to bring up the custom authentication API.
 
 **Since:** 10
 
@@ -82,7 +82,7 @@ The authentication fails. It indicates that the user characteristics do not matc
 GENERAL_ERROR = 12500002
 ```
 
-A general operation error occurred. It indicates that an unknown error occurs during authentication. It is recommended that the user be prompted to try again later or contact the system administrator.
+A general operation error occurs. It indicates that an unknown error occurs during authentication. You are advised to try again later or contact the system administrator.
 
 **Since:** 9
 
@@ -98,7 +98,7 @@ A general operation error occurred. It indicates that an unknown error occurs du
 INVALID_PARAMETERS = 12500008
 ```
 
-Parameter verification failed. It indicates that the input parameter does not meet the requirements, for example, the parameter type is incorrect or the parameter value is out of range. You are advised to check the parameter and call the API again.
+The parameter verification fails. It indicates that the passed parameters do not meet the requirements, for example, the parameter type is incorrect or the parameter value is out of range. You are advised to check the parameters and call the API again.
 
 **Since:** 20
 
@@ -114,7 +114,7 @@ Parameter verification failed. It indicates that the input parameter does not me
 LOCKED = 12500009
 ```
 
-The authentication executor is locked. It indicates that the authenticator is locked due to consecutive authentication failures. The user can continue the authentication only after waiting for unlocking or using the PIN. You can call [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md) to query the lock status.
+The authenticator is locked. It indicates that the authenticator enters the freeze state because authentication fails for multiple consecutive times. The user needs to wait until the freeze is removed or use the PIN to unlock before continuing authentication. You can call [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md) to query the specific freeze state.
 
 **Since:** 9
 
@@ -130,7 +130,7 @@ The authentication executor is locked. It indicates that the authenticator is lo
 NOT_ENROLLED = 12500010
 ```
 
-The user has not enrolled the specified system identity authentication credential. It indicates that the user has not enrolled the requested authentication type. For example, the fingerprint authentication is requested but the user has not enrolled the fingerprint. You are advised to guide the user to register the corresponding credential first.
+The user has not enrolled the specified system identity authentication credential. It indicates that the user has not enrolled the requested authentication type (for example, fingerprint authentication is requested but the user has not enrolled a fingerprint). You are advised to guide the user to enroll the corresponding credential first.
 
 **Since:** 9
 
@@ -146,7 +146,7 @@ The user has not enrolled the specified system identity authentication credentia
 PIN_EXPIRED = 12500013
 ```
 
-The PIN has expired. It indicates that the system PIN has expired. For example, the enterprise policy requires that the PIN be changed periodically. In this case, the user needs to change the PIN before using the authentication function.
+The lock screen password has expired. It indicates that the system lock screen password has expired (for example, an enterprise policy requires the password to be changed periodically). The user needs to update the lock screen password before continuing to use the authentication function.
 
 **Since:** 12
 
@@ -194,7 +194,7 @@ The authentication has timed out. It indicates that the user does not complete t
 TRUST_LEVEL_NOT_SUPPORT = 12500006
 ```
 
-The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level supported by the current authentication type. You are advised to lower the authentication trust level or use a more secure authentication type.
+The authentication trust level is not supported. It indicates that the specified authentication trust level is higher than the highest level that the current authentication type can achieve. You are advised to lower the authentication trust level or use a more secure authentication type.
 
 **Since:** 9
 

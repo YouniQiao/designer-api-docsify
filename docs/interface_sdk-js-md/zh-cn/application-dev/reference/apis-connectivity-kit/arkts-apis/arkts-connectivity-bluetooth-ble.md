@@ -32,10 +32,10 @@ import { ble } from '@kit.ConnectivityKit';
 | [enableAdvertising](arkts-connectivity-ble-enableadvertising-f.md#enableadvertising2) | 重新启动指定标识的BLE广播。使用Promise异步回调。 |
 | [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getconnectedbledevices) | 获取和本机设备已连接GATT的BLE设备集合。 |
 | [getConnectedBLEDevices](arkts-connectivity-ble-getconnectedbledevices-f.md#getconnectedbledevices) | 根据指定的本机设备Profile协议类型，获取和本机设备已连接GATT的BLE设备集合。 |
-| [off](arkts-connectivity-ble-off-f.md#offadvertisingstatechange) | 取消订阅BLE广播状态。广播停止或启动将不再收到通知。 |
-| [off](arkts-connectivity-ble-off-f.md#offbledevicefind) | 取消订阅BLE设备扫描结果上报事件。 |
-| [on](arkts-connectivity-ble-on-f.md#onadvertisingstatechange) | 订阅BLE广播状态。使用Callback异步回调。 |
-| [on](arkts-connectivity-ble-on-f.md#onbledevicefind) | 订阅BLE设备扫描结果上报事件。使用Callback异步回调。 |
+| [off('advertisingStateChange')](arkts-connectivity-ble-off-f.md#offadvertisingstatechange) | 取消订阅BLE广播状态。广播停止或启动将不再收到通知。 |
+| [off('BLEDeviceFind')](arkts-connectivity-ble-off-f.md#offbledevicefind) | 取消订阅BLE设备扫描结果上报事件。 |
+| [on('advertisingStateChange')](arkts-connectivity-ble-on-f.md#onadvertisingstatechange) | 订阅BLE广播状态。使用Callback异步回调。 |
+| [on('BLEDeviceFind')](arkts-connectivity-ble-on-f.md#onbledevicefind) | 订阅BLE设备扫描结果上报事件。使用Callback异步回调。 |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising1) | 开始发送BLE广播报文。 |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising2) | 首次启动发送BLE广播报文。使用Callback异步回调。 |
 | [startAdvertising](arkts-connectivity-ble-startadvertising-f.md#startadvertising3) | 首次启动发送BLE广播报文。使用Promise异步回调。 |
