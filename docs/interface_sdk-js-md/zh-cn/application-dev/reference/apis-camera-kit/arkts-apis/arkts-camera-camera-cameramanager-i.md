@@ -271,7 +271,7 @@ createPhotoOutput(profile?: Profile): PhotoOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。<br>API version 11时，该参数必填；从API version 12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | 否 | 支持的拍照配置信息，通过[getSupportedOutputCapability](#getsupportedoutputcapability2)接口获取。<br>API版本11时，该参数必填；从API版本12开始，如果使用[preconfig](arkts-camera-camera-photosession-i.md#preconfig)进行预配置，传入profile参数会覆盖preconfig的预配置参数。 |
 
 **返回值：**
 
@@ -317,7 +317,7 @@ createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput
 
 > **说明：** 
 > 
-> - 从API version 10开始支持，从API version 11开始废弃。
+> - 从API版本10开始支持，从API版本11开始废弃。
 > 
 > - 该接口只支持创建JPEG格式的拍照输出对象。
 
@@ -940,7 +940,7 @@ getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1515,7 +1515,7 @@ createCaptureSession(): CaptureSession
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 

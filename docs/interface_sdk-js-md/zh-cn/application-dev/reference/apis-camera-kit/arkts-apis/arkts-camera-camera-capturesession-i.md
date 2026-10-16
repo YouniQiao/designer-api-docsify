@@ -8,7 +8,7 @@ interface CaptureSession
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -36,7 +36,7 @@ addInput(cameraInput: CameraInput): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -71,7 +71,7 @@ addOutput(cameraOutput: CameraOutput): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -106,7 +106,7 @@ beginConfig(): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -136,7 +136,7 @@ commitConfig(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -173,7 +173,7 @@ commitConfig(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -208,7 +208,7 @@ getActiveVideoStabilizationMode(): VideoStabilizationMode
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -242,7 +242,7 @@ getExposureBiasRange(): Array<number>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -276,7 +276,7 @@ getExposureMode(): ExposureMode
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -310,7 +310,7 @@ getExposureValue(): number
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -344,7 +344,7 @@ getFlashMode(): FlashMode
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -378,7 +378,7 @@ getFocalLength(): number
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -412,7 +412,7 @@ getFocusMode(): FocusMode
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -446,7 +446,7 @@ getFocusPoint(): Point
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -480,7 +480,7 @@ getMeteringPoint(): Point
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -514,7 +514,7 @@ getZoomRatio(): number
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -548,7 +548,7 @@ getZoomRatioRange(): Array<number>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -582,7 +582,7 @@ hasFlash(): boolean
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -616,7 +616,7 @@ isExposureModeSupported(aeMode: ExposureMode): boolean
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -656,7 +656,7 @@ isFlashModeSupported(flashMode: FlashMode): boolean
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -696,7 +696,7 @@ isFocusModeSupported(afMode: FocusMode): boolean
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -736,7 +736,7 @@ isVideoStabilizationModeSupported(vsMode: VideoStabilizationMode): boolean
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -776,7 +776,7 @@ off(type: 'focusStateChange', callback?: AsyncCallback<FocusState>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -805,7 +805,7 @@ off(type: 'error', callback?: ErrorCallback): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -834,7 +834,7 @@ on(type: 'focusStateChange', callback: AsyncCallback<FocusState>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 
@@ -867,7 +867,7 @@ on(type: 'error', callback: ErrorCallback): void
 > 
 > 当前注册监听接口，不支持在on监听的回调方法里，调用off注销回调。
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -898,7 +898,7 @@ release(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -934,7 +934,7 @@ release(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -968,7 +968,7 @@ removeInput(cameraInput: CameraInput): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1003,7 +1003,7 @@ removeOutput(cameraOutput: CameraOutput): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1040,7 +1040,7 @@ setExposureBias(exposureBias: number): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1074,7 +1074,7 @@ setExposureMode(aeMode: ExposureMode): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1113,7 +1113,7 @@ setFlashMode(flashMode: FlashMode): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1149,7 +1149,7 @@ setFocusMode(afMode: FocusMode): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1185,7 +1185,7 @@ setFocusPoint(point: Point): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1221,7 +1221,7 @@ setMeteringPoint(point: Point): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1255,7 +1255,7 @@ setVideoStabilizationMode(mode: VideoStabilizationMode): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1289,7 +1289,7 @@ setZoomRatio(zoomRatio: number): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1325,7 +1325,7 @@ start(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1362,7 +1362,7 @@ start(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1399,7 +1399,7 @@ stop(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -1435,7 +1435,7 @@ stop(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 

@@ -72,5 +72,6 @@ import { sendablePhotoAccessHelper } from '@kit.MediaLibraryKit';
 | [MovingPhotoEffectMode](arkts-medialibrary-sendablephotoaccesshelper-movingphotoeffectmode-e-sys.md) | Enumeration of moving photo effect mode. |
 | [PhotoSubtype](arkts-medialibrary-sendablephotoaccesshelper-photosubtype-e-sys.md) | Enumerates the [PhotoAsset](arkts-medialibrary-sendablephotoaccesshelper-photoasset-i.md) types. |
 | [PositionType](arkts-medialibrary-sendablephotoaccesshelper-positiontype-e-sys.md) | Photo asset position |
+| [ShareAlbumRiskStatus](arkts-medialibrary-sendablephotoaccesshelper-sharealbumriskstatus-e-sys.md) | Enumerates the risk status of share album. |
 | [ThumbnailVisibility](arkts-medialibrary-sendablephotoaccesshelper-thumbnailvisibility-e-sys.md) | Ability to access thumbnail |
 <!--DelEnd-->

@@ -200,8 +200,8 @@ Fetches a scaled thumbnail from the video at a particular timestamp. This API us
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) |  |
-| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) |  |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. Returned by promise. |
+| [5400106](../../apis-media-kit/errorcode-media.md#5400106-format-not-supported) | Unsupported format. Returned by promise. |
 
 **Examples**
 

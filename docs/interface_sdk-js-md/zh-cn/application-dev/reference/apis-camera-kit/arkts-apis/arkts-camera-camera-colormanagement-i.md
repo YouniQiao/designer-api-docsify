@@ -88,7 +88,7 @@ P3广色域与HDR高动态范围成像：
 
 在录像模式下，通过设置色彩空间为H_LOG, 可以录制LOG视频（不支持前置与微距）。
 
-从API version 23开始，可以通过接口[getSupportedFullOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedfulloutputcapability)查询是否支持拍照模式下的预览P010格式。
+从API版本23开始，可以通过接口[getSupportedFullOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedfulloutputcapability)查询是否支持拍照模式下的预览P010格式。
 
 - 若应用不主动设置色彩空间，在拍照模式下，当预览输出格式为CAMERA_FORMAT_YUV_420_SP时，色彩空间默认为SRGB；当预览输出格式为CAMERA_FORMAT_YCRCB_P010/  
 CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。  
@@ -123,7 +123,7 @@ CAMERA_FORMAT_YCBCR_P010时，色彩空间默认为BT2020_HLG。
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| colorSpace | [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 是 | The type of color space. |
+| colorSpace | [colorSpaceManager.ColorSpace](../../apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-colorspacemanager-colorspace-e.md) | 是 | 色彩空间的类型。 |
 
 **错误码：**
 

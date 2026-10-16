@@ -233,7 +233,7 @@ getPreviewRotation(displayRotation?: number): ImageRotation
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| displayRotation | number | 否 | 显示设备的屏幕旋转角度，通过[display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md)获得。<br> 从API version 23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。<br> 单位为度数（degree），取值范围为[0, 360]。<br>**适用版本：** 23 |
+| displayRotation | number | 否 | 显示设备的屏幕旋转角度，通过[display.getDefaultDisplaySync](../../apis-arkui/arkts-apis/arkts-arkui-display-getdefaultdisplaysync-f.md)获得。<br> 从API版本23开始，入参displayRotation为可选参数，当不传入参数时，由系统获取displayRotation进行预览旋转角度计算。<br> 单位为度数（degree），取值范围为[0, 360]。<br>**适用版本：** 23 |
 
 **返回值：**
 
@@ -778,7 +778,7 @@ start(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -830,7 +830,7 @@ start(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -880,7 +880,7 @@ stop(callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
@@ -926,7 +926,7 @@ stop(): Promise<void>
 
 > **说明：** 
 > 
-> 从 API version 10开始支持，从API version 11开始废弃。
+> 从 API版本10开始支持，从API版本11开始废弃。
 
 **起始版本：** 10
 
