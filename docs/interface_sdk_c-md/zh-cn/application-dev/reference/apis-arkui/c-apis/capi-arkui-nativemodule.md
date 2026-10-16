@@ -47,7 +47,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [progress.h](capi-progress-h.md) | 定义Progress相关的枚举和接口，支持线性、环形、圆形、胶囊等多种进度条类型，并提供线性进度条样式选项的自定义能力（平滑动效、扫光效果、宽度、圆角），适用于需要展示任务进度、加载状态等场景， 帮助开发者快速实现多样化的进度展示和交互反馈。 |
 | [slider.h](capi-slider-h.md) | Provides Slider node type definitions for <b>NativeNode</b> APIs. |
 | [image_animator.h](capi-image-animator-h.md) | 为NativeNode API提供ImageAnimator节点类型定义。 |
-| [layout.h](capi-layout-h.md) | Defines the layout-related types for the native module. |
+| [layout.h](capi-layout-h.md) | 定义布局相关的枚举和接口。 |
 | [text_common.h](capi-text-common-h.md) | 定义文本类组件通用的枚举和接口，涵盖文本对齐、装饰线样式、复制粘贴、溢出处理、断行策略、菜单定制等多种能力，适用于文本输入框、文本显示等场景，帮助开发者灵活控制文本样式与交互行为，降低开发复杂度。 |
 | [text_input.h](capi-text-input-h.md) | 定义TextInput相关的枚举。支持多种输入类型配置（包括文本、数字、密码、邮箱、电话号码等）、清除按钮样式定制、自动填充内容类型设置和输入框风格选择，适用于登录注册、表单填写、搜索输入等需要用户交互输入的场景， 帮助开发者快速实现符合业务需求的单行文本输入功能。 |
 | [checkbox.h](capi-checkbox-h.md) | Provides Checkbox node type definitions for <b>NativeNode</b> APIs. |

@@ -26,7 +26,7 @@ import { connection } from '@kit.ConnectivityKit';
 | [getBluetoothScanMode](arkts-connectivity-connection-getbluetoothscanmode-f.md#getbluetoothscanmode) | Obtains the Bluetooth scanning mode of a device. |
 | [getLastConnectionTime](arkts-connectivity-connection-getlastconnectiontime-f.md#getlastconnectiontime) | Get latest connection time of device. |
 | [getLocalName](arkts-connectivity-connection-getlocalname-f.md#getlocalname) | Obtains the Bluetooth local name of a device. |
-| [getPairedDevices](arkts-connectivity-connection-getpaireddevices-f.md#getpaireddevices) | Obtains the list of Bluetooth devices that have been paired with the current device. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
+| [getPairedDevices](arkts-connectivity-connection-getpaireddevices-f.md#getpaireddevices) | Obtains the list of Bluetooth devices that have been paired with the current device. |
 | [getPairState](arkts-connectivity-connection-getpairstate-f.md#getpairstate) | Obtains the pair state of a specified device. |
 | [getProfileConnectionState](arkts-connectivity-connection-getprofileconnectionstate-f.md#getprofileconnectionstate) | Get the profile connection state of the current device. |
 | [getRemoteDeviceBatteryInfo](arkts-connectivity-connection-getremotedevicebatteryinfo-f.md#getremotedevicebatteryinfo) | Get remote device battery information. |
@@ -43,14 +43,14 @@ import { connection } from '@kit.ConnectivityKit';
 | [off('bondStateChange')](arkts-connectivity-connection-off-f.md#offbondstatechange) | Unsubscribe the event reported when a remote Bluetooth device is bonded. |
 | [off('pinRequired')](arkts-connectivity-connection-off-f.md#offpinrequired) | Unsubscribe the event of a pairing request from a remote Bluetooth device. |
 | [off('batteryChange')](arkts-connectivity-connection-off-f.md#offbatterychange) | Unsubscribe the event of battery state changed from a remote device. |
-| [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md#offaclstatechange) | Unsubscribe the event of acl state changed from a remote device. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
+| [offAclStateChange](arkts-connectivity-connection-offaclstatechange-f.md#offaclstatechange) | Unsubscribe the event of acl state changed from a remote device. |
 | [offScanModeChange](arkts-connectivity-connection-offscanmodechange-f.md#offscanmodechange) | Unsubscribe to an event indicating that the scanning mode of the local device has changed. |
-| [on('bluetoothDeviceFind')](arkts-connectivity-connection-on-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
-| [on('discoveryResult')](arkts-connectivity-connection-on-f.md#ondiscoveryresult) | Subscribe the event reported when a remote Bluetooth device is discovered. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
-| [on('bondStateChange')](arkts-connectivity-connection-on-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
-| [on('pinRequired')](arkts-connectivity-connection-on-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. On API 26.0.0 and above, if the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
+| [on('bluetoothDeviceFind')](arkts-connectivity-connection-on-f.md#onbluetoothdevicefind) | Subscribe the event reported when a remote Bluetooth device is discovered. |
+| [on('discoveryResult')](arkts-connectivity-connection-on-f.md#ondiscoveryresult) | Subscribe the event reported when a remote Bluetooth device is discovered. |
+| [on('bondStateChange')](arkts-connectivity-connection-on-f.md#onbondstatechange) | Subscribe the event reported when a remote Bluetooth device is bonded. |
+| [on('pinRequired')](arkts-connectivity-connection-on-f.md#onpinrequired) | Subscribe the event of a pairing request from a remote Bluetooth device. |
 | [on('batteryChange')](arkts-connectivity-connection-on-f.md#onbatterychange) | Subscribe the event of battery state changed from a remote device. |
-| [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md#onaclstatechange) | Subscribe the event of acl state changed from a remote device. If the application has ohos.permission.GET_BLUETOOTH_PEERS_MAC, the type of the peer device address is real. Otherwise, the type of the peer device address is virtual. |
+| [onAclStateChange](arkts-connectivity-connection-onaclstatechange-f.md#onaclstatechange) | Subscribe the event of acl state changed from a remote device. |
 | [onScanModeChange](arkts-connectivity-connection-onscanmodechange-f.md#onscanmodechange) | Subscribe to an event indicating that the scanning mode of the local device has changed. |
 | [pairDevice](arkts-connectivity-connection-pairdevice-f.md#pairdevice1) | Starts pairing with a remote Bluetooth device. |
 | [pairDevice](arkts-connectivity-connection-pairdevice-f.md#pairdevice2) | Starts pairing with a remote Bluetooth device. |

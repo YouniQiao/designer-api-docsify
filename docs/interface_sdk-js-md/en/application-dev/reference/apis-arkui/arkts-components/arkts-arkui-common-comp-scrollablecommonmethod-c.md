@@ -269,6 +269,36 @@ Sets whether to support scroll gestures.
 | --- | --- |
 | T | Current scrollable component. |
 
+## enableScrollWithKeyboard
+
+```TypeScript
+enableScrollWithKeyboard(enabled: boolean | undefined): T
+```
+
+Sets whether to enable scrolling with keyboard arrow keys. When enabled, the component will scroll in response to arrow key presses when focused but not in active focus state.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-ScrollableCommonMethod-enableScrollWithKeyboard(enabled: boolean | undefined): T--><!--Device-ScrollableCommonMethod-enableScrollWithKeyboard(enabled: boolean | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean &#124; undefined | Yes | Whether to enable scrolling with keyboard arrow keys.<br>Default value: true. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T |  |
+
 ## enableScrollWithMouse
 
 ```TypeScript

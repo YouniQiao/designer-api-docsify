@@ -112,6 +112,8 @@ import { audio } from '@kit.AudioKit';
 | [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | Implements audio effect management. @typedef AudioEffectManager |
 | [AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md) | Describes an audio effect property. |
 | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | Anonymous personalzied HRTF file descriptor for cross-process transfer. |
+| [AudioLoopback](arkts-audio-audio-audioloopback-i-sys.md) | This interface provides APIs for audio monitoring. |
+| [AudioLoopbackAvailableStatus](arkts-audio-audio-audioloopbackavailablestatus-i-sys.md) | Defines the availability status of global audio loopback. |
 | [AudioManager](arkts-audio-audio-audiomanager-i-sys.md) | This interface implements audio volume and device management. |
 | [AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md) | This interface is used to notify the listener of personalized spatialization enabled state change of any device. |
 | [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) | Provides recording strategy management, including collaborative recording and recording control capabilities. |
@@ -121,6 +123,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i-sys.md) | Describes audio renderer configurations. |
 | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | Options for setting the render target of an audio renderer. This parameter takes effect only when the target is non-PLAYBACK. In other cases, this parameter does not need to be specified and does not take effect even if specified. Both uid and streamId must be specified. |
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i-sys.md) | This interface implements audio routing management. |
+| [AudioSeparationEffectAvailableStatus](arkts-audio-audio-audioseparationeffectavailablestatus-i-sys.md) | Indicates the available status of audio separation effect. |
 | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | Describes spatial device state. |
 | [AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md) | This interface is used to notify the listener of any device Spatialization or Head Tracking enable or Adaptive Spatial Rendering state change. |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i-sys.md) | Implements audio spatialization management. @typedef AudioSpatializationManager This interface implements spatial audio management. |
@@ -225,6 +228,7 @@ import { audio } from '@kit.AudioKit';
 | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | ASR voice mute mode. |
 | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | ASR whisper detection mode. |
 | [AudioDevcieSelectStrategy](arkts-audio-audio-audiodevcieselectstrategy-e-sys.md) | Enumerates the device select strategy. |
+| [AudioLoopbackUnavailableReason](arkts-audio-audio-audioloopbackunavailablereason-e-sys.md) | Enumerates the reasons why audio loopback is unavailable. |
 | [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e-sys.md) | Defines mode for playback capture, each mode means different target streams to capture. |
 | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | Volume type for audio separation effect. |
 | [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e-sys.md) | Enumerates audio session behavior flags. |

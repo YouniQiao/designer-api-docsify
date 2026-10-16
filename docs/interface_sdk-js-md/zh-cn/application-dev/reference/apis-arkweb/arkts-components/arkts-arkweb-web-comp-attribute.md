@@ -228,6 +228,36 @@ cacheMode(cacheMode: CacheMode)
 | --- | --- | --- | --- |
 | cacheMode | [CacheMode](arkts-arkweb-web-comp-cachemode-e.md) | 是 | 要设置的缓存模式。<br>传入undefined或null时为CacheMode.Default。 |
 
+## caretColor
+
+```TypeScript
+caretColor(value: ResourceColor)
+```
+
+设置Web组件网页文本输入光标及选择手柄的颜色。
+
+当该属性没有显式调用或已重置时，光标使用页面CSS `caret-color` 的结果；CSS为 **auto** 或未设置时，使用内置默认光标颜色（当前为 **#0A59F7**）。选择手柄使用当前主题默认色。
+
+> **说明：** 
+> 
+> - 优先级为：该API设置的非零值网页设置的 `caret-color` CSS属性内置默认颜色。该API设置的 非零值也会覆盖网页显式设置的颜色或 transparent。
+> 
+> - 精确颜色值 **#00000000** 保留为重置哨兵值。重置后使用网页CSS `caret-color`；CSS为 **auto** 或未设置时使用内置默认颜色。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-caretColor(value: ResourceColor): WebAttribute--><!--Device-WebAttribute-caretColor(value: ResourceColor): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | 是 | 网页文本输入光标及选择手柄的颜色。<br>传入undefined或null时重置该属性。 |
+
 ## copyOptions
 
 ```TypeScript

@@ -173,6 +173,38 @@ Marks the node as an independent render layer. Once marked, the component and it
 | --- | --- |
 | T | Current component. |
 
+## safeAreaInset
+
+```TypeScript
+safeAreaInset(options?: SafeAreaInsetOptions): T
+```
+
+Places custom content at one or more component edges and reserves component-level safe area for it. Use this attribute for edge toolbars, action areas, or placeholders. Each call replaces the complete four-edge configuration; omitted edges do not retain their previous content. Content is attached to the inner boundary of the component's ordinary `padding`. On each physical edge of the same component, the effective safe area is the greater of the declared `safeAreaPadding` and the inset extent, not their sum. Ancestor and system safe areas retain their existing accumulation rules. The effective safe area is included when calculating the component's adaptive size perpendicular to the edge.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-CommonMethod-safeAreaInset(options?: SafeAreaInsetOptions): T--><!--Device-CommonMethod-safeAreaInset(options?: SafeAreaInsetOptions): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**System API:** This is a system API.
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| options | [SafeAreaInsetOptions](arkts-arkui-common-comp-safeareainsetoptions-i-sys.md) | No | Complete four-edge configuration. Default value: `undefined`, which resets all edges. Passing `null`, a non-object value, or an object without a valid edge also resets all edges. An invalid edge structure or `content`, or an empty build result, clears only that edge. Invalid `spacing` falls back to `0vp` and invalid `alignment` falls back to `SafeAreaInsetAlignment.CENTER`, without clearing valid content on the same edge. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## spatialEffect
 
 ```TypeScript

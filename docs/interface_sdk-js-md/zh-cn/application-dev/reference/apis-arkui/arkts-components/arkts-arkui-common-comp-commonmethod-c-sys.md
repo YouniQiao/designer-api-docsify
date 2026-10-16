@@ -144,6 +144,38 @@ excludeFromRenderGroup(exclude: boolean | undefined): T
 | --- | --- |
 | T | 返回当前组件，用于链式调用。 |
 
+## safeAreaInset
+
+```TypeScript
+safeAreaInset(options?: SafeAreaInsetOptions): T
+```
+
+在组件的一个或多个边缘放置自定义内容，并按其实际占用为主体内容留出组件级安全区域。适用于边缘工具栏、操作区或占位内容。再次调用时整体替换四边配置，未提供的边不保留旧内容。内容从宿主普通 `padding` 的内边界附着；同宿主同物理边的有效安全区取已有 `safeAreaPadding`与边缘内容占用的较大值，不将两者相加。跨祖先和系统安全区沿用既有累计规则。计算组件在垂直于附着边方向上的自适应尺寸时，会计入有效安全区。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-CommonMethod-safeAreaInset(options?: SafeAreaInsetOptions): T--><!--Device-CommonMethod-safeAreaInset(options?: SafeAreaInsetOptions): T-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**系统接口：** 此接口为系统接口。
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| options | [SafeAreaInsetOptions](arkts-arkui-common-comp-safeareainsetoptions-i-sys.md) | 否 | 四边完整配置。默认值：`undefined`，重置四边。传入 `null`、非对象或没有有效边的对象时也重置四边。单边结构或 `content` 非法、构建结果为空时只清除该边；`spacing` 非法时回退为 `0vp`，`alignment` 非法时回退为 `SafeAreaInsetAlignment.CENTER`，两者均不清除该边的有效内容。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| T | 当前组件。 |
+
 ## spatialEffect
 
 ```TypeScript

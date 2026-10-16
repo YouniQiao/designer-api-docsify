@@ -35,7 +35,7 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the file exists; the value **false** means the opposite. |
+| boolean | The value<b>true</b> means the file or directory exists; the value <b>false</b> means the opposite. |
 
 **Error codes:**
 
@@ -77,7 +77,7 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path of the file to check. |
+| path | string | Yes | Application sandbox path of the file or directory. |
 | mode | [AccessModeType](arkts-corefile-file-fs-accessmodetype-e.md) | Yes | Permission on the file or directory to check. |
 | flag | [AccessFlagType](arkts-corefile-file-fs-accessflagtype-e.md) | Yes | Position of the file or directory to check. |
 
@@ -85,7 +85,7 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Type | Description |
 | --- | --- |
-| boolean | The value **true** means the file is a local file and has the related permission. The value **false** means the file does not exist or is on the cloud or a distributed device. |
+| boolean | The value<b>true</b> means the file or directory is a local one and has the related permission. The value <b>false</b> means the file or directory does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 

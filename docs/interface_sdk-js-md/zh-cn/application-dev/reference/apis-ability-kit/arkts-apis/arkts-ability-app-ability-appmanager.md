@@ -75,6 +75,8 @@ import { appManager } from '@kit.AbilityKit';
 | [setKeepAliveForAppServiceExtension](arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md#setkeepaliveforappserviceextension) | 为AppServiceExtensionAbility设置保活或取消保活。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
 | [setKeepAliveForBundle](arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md#setkeepaliveforbundle) | 为指定用户下的应用设置或取消保活。使用Promise异步回调。从API version 18开始，该接口仅在2in1和Wearable设备上生效。对于API version 18之前版本，该接口仅在2in1设备上生效。其他情况下调用该接口将返回错误码801。 |
 | [terminateMission](arkts-ability-appmanager-terminatemission-f-sys.md#terminatemission) | 关闭指定的任务。使用Promise异步回调。 |
+| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md#getprocessrunninginfos1) |  |
+| [getProcessRunningInfos](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md#getprocessrunninginfos2) |  |
 <!--DelEnd-->
 
 <!--Del-->

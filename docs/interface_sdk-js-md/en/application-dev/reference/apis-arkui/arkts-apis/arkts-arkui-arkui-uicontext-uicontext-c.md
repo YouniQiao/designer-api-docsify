@@ -3411,6 +3411,30 @@ struct Index {
 }
 ```
 
+## isWindowInfoInitialized
+
+```TypeScript
+isWindowInfoInitialized(): boolean
+```
+
+Checks whether the window information has been initialized.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-UIContext-isWindowInfoInitialized(): boolean--><!--Device-UIContext-isWindowInfoInitialized(): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns **true** if valid window width and height information has been initialized, returns **false** otherwise. |
+
 ## keyframeAnimateTo
 
 ```TypeScript

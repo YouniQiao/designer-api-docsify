@@ -12,7 +12,7 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 declare function mkdirSync(path: string): void
 ```
 
-Creates a directory. This API returns the result synchronously.
+Creates a single-level directory synchronously. If the parent directory does not exist, an error is reported.
 
 **Since:** 9
 

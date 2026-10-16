@@ -12,7 +12,7 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 declare function stat(file: string | number): Promise<Stat>
 ```
 
-Obtains detailed attribute information of a file or directory. This API uses a promise to return the result.
+Obtains detailed attributes of a file or directory. The returned <b>Stat</b> object contains attributes such as the file size, permission mode, access time, and modification time. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -61,7 +61,7 @@ Obtains detailed attribute information of a file or directory. This API uses a p
 declare function stat(file: string | number, callback: AsyncCallback<Stat>): void
 ```
 
-Obtains detailed attribute information of a file or directory. This API uses an asynchronous callback to return the result.
+Obtains detailed attributes of a file or directory. The returned <b>Stat</b> object contains attributes such as the file size, permission mode, access time, and modification time. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 

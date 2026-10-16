@@ -4,7 +4,7 @@
 declare interface Stream
 ```
 
-Provides API for stream operations. Before calling any API of **Stream**, you need to create a **Stream** instance by using [fileIo.createStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiocreatestream) or [fileIo.fdopenStream](../../../reference/apis-core-file-kit/js-apis-file-fs.md#fileiofdopenstream).
+Provides APIs for stream operations, such as reading and writing data streams of files. After using an API of the <b>Stream</b> class, you need to call <b>close</b> to close the file stream. Before calling an API of the <b>Stream</b> class, you need to create a <b>Stream</b> instance by using createStream or fdopenStream synchronously or asynchronously.
 
 **Since:** 9
 
@@ -26,7 +26,7 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 close(): Promise<void>
 ```
 
-Closes the file stream. This API uses a promise to return the result.
+Closes the file stream. After the stream is closed, it cannot be used for read or write operations. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -75,7 +75,7 @@ stream.close().then(() => {
 close(callback: AsyncCallback<void>): void
 ```
 
-Closes the file stream. This API uses an asynchronous callback to return the result.
+Closes the file stream. After the stream is closed, it cannot be used for read or write operations. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -89,7 +89,7 @@ Closes the file stream. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked immediately after the stream is closed. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -124,7 +124,7 @@ stream.close((err: BusinessError) => {
 closeSync(): void
 ```
 
-Closes the file stream. This API returns the result synchronously.
+Closes the file stream synchronously. After the stream is closed, it cannot be used for read or write operations.
 
 **Since:** 9
 
@@ -161,7 +161,7 @@ stream.closeSync();
 flush(): Promise<void>
 ```
 
-Flushes the file stream. This API uses a promise to return the result.
+Flushes all data from this stream. This API uses a promise to return the result.
 
 **Since:** 9
 
@@ -175,7 +175,7 @@ Flushes the file stream. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;void&gt; | Promise used to return the result. |
+| Promise&lt;void&gt; | Promise used to return the file stream flushed. |
 
 **Error codes:**
 
@@ -231,7 +231,7 @@ Flushes the file stream. This API uses an asynchronous callback to return the re
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback invoked when the stream is asynchronously flushed. |
 
 **Error codes:**
 
@@ -335,7 +335,7 @@ Reads data from a stream file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>           - **length** (number): length of the data to read , in bytes. This parameter is optional.   The default value is the buffer length.<br>           - **offset** (number): position of the data to read in the file, in bytes.   This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -389,7 +389,7 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
 read(buffer: ArrayBuffer, callback: AsyncCallback<number>): void
 ```
 
-Reads data from a stream file. This API uses an asynchronous callback to return the result.
+Reads data from a stream file and returns the number of bytes read. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -403,8 +403,8 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
+| buffer | ArrayBuffer | Yes | Buffer used for reading the file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the data read, in bytes. |
 
 **Error codes:**
 
@@ -467,7 +467,7 @@ Reads data from a stream file. This API uses an asynchronous callback to return 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | Yes | The options are as follows:<br>           - **length** (number): length of the data to read , in bytes. This parameter is optional.   The default value is the buffer length.<br>           - **offset** (number): position of the data to read in the file, in bytes.   This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the data read, in bytes. |
 
 **Error codes:**
@@ -533,7 +533,7 @@ Reads data from a stream file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer | Yes | Buffer used to store the file read. |
-| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to read, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): position of the data to read in the file, in bytes. This parameter is optional. By default, data is read from the current position.<br><br>**Since:** 11 |
+| options | [ReadOptions](arkts-corefile-file-fs-readoptions-i.md) | No | The options are as follows:<br>           - **length** (number): length of the data to read , in bytes. This parameter is optional.   The default value is the buffer length.<br>           - **offset** (number): position of the data to read in the file, in bytes.   This parameter is optional. By default, data is read from the current position.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -598,7 +598,7 @@ Writes data to a stream file. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer &#124; string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>           - **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>           - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional.   By default, data is written from the current position.<br>           - **encoding** (string): format of the data to be encoded when the data is a string. The default value is   **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 
@@ -652,7 +652,7 @@ stream.write("hello, world", writeOption).then((number: number) => {
 write(buffer: ArrayBuffer | string, callback: AsyncCallback<number>): void
 ```
 
-Writes data to a stream file. This API uses an asynchronous callback to return the result.
+Writes data to a stream file and returns the number of bytes written. This API uses an asynchronous callback to return the result.
 
 **Since:** 9
 
@@ -666,8 +666,8 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| buffer | ArrayBuffer &#124; string | Yes | Data to write. It can be a string or data from a buffer. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
+| buffer | ArrayBuffer &#124; string | Yes | A string or data from a buffer to be written to the file. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the length of the data written, in bytes. |
 
 **Error codes:**
 
@@ -732,7 +732,7 @@ Writes data to a stream file. This API uses an asynchronous callback to return t
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer &#124; string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | Yes | The options are as follows:<br>           - **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>           - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional.   By default, data is written from the current position.<br>           - **encoding** (string): format of the data to be encoded when the data is a string. The default value is   **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | Yes | Callback used to return the result. The callback returns the length of the data written, in bytes. |
 
 **Error codes:**
@@ -801,7 +801,7 @@ Writes data to a stream file. This API returns the result synchronously.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | buffer | ArrayBuffer &#124; string | Yes | Data to write. It can be a string or data from a buffer. |
-| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>- **length** (number): length of the data to write, in bytes. This parameter is optional. The default value is the buffer length.<br>- **offset** (number): start position to write the data in the file, in bytes. This parameter is optional. By default, data is written from the current position.<br>- **encoding** (string): format of the data to be encoded when the data is a string. The default value is **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
+| options | [WriteOptions](arkts-corefile-file-fs-writeoptions-i.md) | No | The options are as follows:<br>           - **length** (number): length of the data to write, in bytes. The default value is the buffer length.<br>           - **offset** (number): start position to write the data in the file, in bytes. This parameter is optional.   By default, data is written from the current position.<br>           - **encoding** (string): format of the data to be encoded when the data is a string. The default value is   **'utf-8'**, which is the only value supported.<br>**Since:** 11 |
 
 **Return value:**
 

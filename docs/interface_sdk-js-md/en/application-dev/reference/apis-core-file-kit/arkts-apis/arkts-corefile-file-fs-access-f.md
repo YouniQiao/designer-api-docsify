@@ -12,7 +12,7 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 declare function access(path: string, mode?: AccessModeType): Promise<boolean>
 ```
 
-Checks whether the file or directory exists or has the operation permission. This API uses a promise to return the result.
+Checks whether a file or directory exists or has the operation permission. This API uses a promise to return the result.
 
 If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
@@ -35,7 +35,7 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file exists; the value **false** means the opposite. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value<b>true</b> means the file or directory exists; the value <b>false</b> means the opposite. |
 
 **Error codes:**
 
@@ -78,7 +78,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means the file exists; the value **false** means the opposite. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value<b>true</b> means the file or directory exists; the value <b>false</b> means the opposite. |
 
 **Error codes:**
 
@@ -106,7 +106,7 @@ Checks whether a file or directory exists. This API uses an asynchronous callbac
 declare function access(path: string, mode: AccessModeType, flag: AccessFlagType): Promise<boolean>
 ```
 
-Checks whether the file or directory is stored locally or has the operation permission. This API uses a promise to return the result.
+Checks whether the file or directory is on the local host or verifies the operation permission. This API uses a promise to return the result.
 
 If the read, write, or read and write permission verification fails, the error code 13900012 (Permission denied) will be thrown.
 
@@ -128,7 +128,7 @@ If the read, write, or read and write permission verification fails, the error c
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return a Boolean value. The value **true** means the file or directory is a local one and has the related permission. The value **false** means the file or directory does not exist or is on the cloud or a distributed device. |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value<b>true</b> means the file or directory is a local one and has the related permission. The value <b>false</b> means the file or directory does not exist or is on the cloud or a distributed device. |
 
 **Error codes:**
 

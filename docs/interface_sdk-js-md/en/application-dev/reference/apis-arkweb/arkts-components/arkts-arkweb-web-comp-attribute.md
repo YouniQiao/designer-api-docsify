@@ -228,6 +228,36 @@ Sets the cache mode. When this attribute is not explicitly called, the default v
 | --- | --- | --- | --- |
 | cacheMode | [CacheMode](arkts-arkweb-web-comp-cachemode-e.md) | Yes | Cache mode to set.<br>When **undefined** or **null** is passed in, the value is **CacheMode.Default**. |
 
+## caretColor
+
+```TypeScript
+caretColor(value: ResourceColor)
+```
+
+Sets the color of the text input caret and selection handles of the **Web** component.
+
+When this attribute is not explicitly called or is reset, the caret uses the page's CSS `caret-color` result. If the CSS value is **auto** or not set, the caret uses the built-in default color (currently **#0A59F7**). Selection handles use the current theme colors.
+
+> **NOTE:** 
+> 
+> - The priority is: a non-zero value set by this API the `caret-color` CSS property set by the web page the built-in default color. A non-zero value set by this API also overrides an explicit CSS color or transparent.
+> 
+> - The exact color value **#00000000** is reserved as the reset sentinel. After reset, the CSS `caret-color` value is used. If the CSS value is **auto** or not set, the built-in default color is used.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-caretColor(value: ResourceColor): WebAttribute--><!--Device-WebAttribute-caretColor(value: ResourceColor): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| value | [ResourceColor](../../apis-arkui/arkts-apis/arkts-arkui-resourcecolor-t.md) | Yes | Color of the text input caret and selection handles.<br>When **undefined** or **null** is passed in, this attribute is reset. |
+
 ## copyOptions
 
 ```TypeScript

@@ -12,7 +12,7 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 declare function readLines(filePath: string, options?: Options): Promise<ReaderIterator>
 ```
 
-Reads the text content of a file line by line. This API uses a promise to return the result. Only the files in UTF-8 format are supported.
+Reads a file text line by line. Only the files in UTF-8 format are supported. This API uses a promise to return the result.
 
 **Since:** 11
 
@@ -25,13 +25,13 @@ Reads the text content of a file line by line. This API uses a promise to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | No | Options. The options are as follows:<br>           - <b>encoding</b> (string): format of the string to be encoded. The default value is <b>'utf-8'</b>,   which is the only value supported. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise used to return a **ReaderIterator** object. |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise used to return the<b>ReaderIterator</b> object. |
 
 **Error codes:**
 
@@ -60,7 +60,7 @@ Reads the text content of a file line by line. This API uses a promise to return
 declare function readLines(filePath: string, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8 format are supported.
+Reads a file text line by line. Only the files in UTF-8 format are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -73,7 +73,7 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the<b>ReaderIterator</b> object. |
 
 **Error codes:**
 
@@ -101,7 +101,7 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 declare function readLines(filePath: string, options: Options, callback: AsyncCallback<ReaderIterator>): void
 ```
 
-Reads a file text line by line. This API uses an asynchronous callback to return the result. Only the files in UTF-8 format are supported.
+Reads a file text line by line. Read options can be configured. Only the files in UTF-8 format are supported. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -114,8 +114,8 @@ Reads a file text line by line. This API uses an asynchronous callback to return
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| options | [Options](arkts-corefile-file-fs-options-i.md) | Yes | Options for reading the text. The options are as follows:<br>- **encoding** (string): format of the data to be encoded.<br>It is valid only when the data is of the string type.<br>The default value is **'utf-8'**, which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return a **ReaderIterator** object. |
+| options | [Options](arkts-corefile-file-fs-options-i.md) | Yes | Options. The options are as follows:<br>           - <b>encoding</b> (string): format of the string to be encoded. The default value is <b>'utf-8'</b>,   which is the only value supported. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the<b>ReaderIterator</b> object. |
 
 **Error codes:**
 

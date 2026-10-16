@@ -35,7 +35,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AutoPlayScene](arkts-medialibrary-photoaccesshelper-autoplayscene-c.md) | 动态照片在不同场景中的播放模式。 |
-| [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md) | 图库选择选项基类。 |
+| [BaseSelectOptions](arkts-medialibrary-photoaccesshelper-baseselectoptions-c.md) | 图库选择选项基类，用于配置图片选择器的各项参数，适用于社交分享、媒体管理、头像选择等需要选择图片或视频的场景。 |
 | [ContextRecoveryInfo](arkts-medialibrary-photoaccesshelper-contextrecoveryinfo-c.md) | 介绍退出PhotoPicker的上下文信息。可以在后续的发射中使用的PhotoPicker，以从上一个出口恢复状态。 |
 | [FileSizeFilter](arkts-medialibrary-photoaccesshelper-filesizefilter-c.md) | 可选择媒体文件大小的过滤配置。 |
 | [GridPinchMode](arkts-medialibrary-photoaccesshelper-gridpinchmode-c.md) | picker内宫格的捏合模式。 |

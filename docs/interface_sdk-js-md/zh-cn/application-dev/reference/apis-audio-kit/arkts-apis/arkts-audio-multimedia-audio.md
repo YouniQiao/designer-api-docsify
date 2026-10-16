@@ -111,6 +111,8 @@ import { audio } from '@kit.AudioKit';
 | [AudioEffectManager](arkts-audio-audio-audioeffectmanager-i-sys.md) | 音频效果管理，支持查询和设置系统音效模式、管理音频分离效果。适用于需要定制音频播放效果、实现人声分离、管理设备音效的场景。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取AudioEffectManager实例。 |
 | [AudioEffectProperty](arkts-audio-audio-audioeffectproperty-i-sys.md) | 音效属性。 |
 | [AudioHRTFAnonymousDescriptor](arkts-audio-audio-audiohrtfanonymousdescriptor-i-sys.md) | 用于跨进程传输的匿名个性化HRTF文件描述符。 |
+| [AudioLoopback](arkts-audio-audio-audioloopback-i-sys.md) | 提供音频返听的相关接口。在使用AudioLoopback的接口之前，需先通过[audio.createAudioLoopback](arkts-audio-audio-createaudioloopback-f.md)获取AudioLoopback实例。当启用音频返听时，系统会创建低时延渲染器与低时延采集器，实现低时延耳返功能。采集的音频直接通过内部路由返回到渲染器。对于渲染器，其音频焦点策略与[STREAM_USAGE_MUSIC](arkts-audio-audio-streamusage-e.md)相匹配。对于采集器，其音频焦点策略与[SOURCE_TYPE_MIC](arkts-audio-audio-sourcetype-e.md)相匹配。输入/输出设备由系统自动选择。如果当前输入/输出不支持低时延，则音频返听无法启用。在运行过程中，如果音频焦点被另一个音频流抢占，输入/输出设备切换到不支持低时延的设备，系统会自动禁用音频返听。 |
+| [AudioLoopbackAvailableStatus](arkts-audio-audio-audioloopbackavailablestatus-i-sys.md) | 定义全局音频返听的可用状态。 |
 | [AudioManager](arkts-audio-audio-audiomanager-i-sys.md) | 管理音频音量和音频设备。在调用AudioManager的接口前，需要先通过[getAudioManager](arkts-audio-audio-getaudiomanager-f.md)创建实例。 |
 | [AudioPersonalizedSpatialEnabledChangeForAnyDevice](arkts-audio-audio-audiopersonalizedspatialenabledchangeforanydevice-i-sys.md) | 此接口用于通知监听器任何设备个性化空间化启用状态的变化。 |
 | [AudioRecordingManager](arkts-audio-audio-audiorecordingmanager-i-sys.md) | 录音策略管理，提供协同录音和录音控制能力。通过[getRecordingManager](arkts-audio-audio-audiomanager-i.md#getrecordingmanager)获取AudioRecordingManager实例。 |
@@ -120,6 +122,7 @@ import { audio } from '@kit.AudioKit';
 | [AudioRendererOptions](arkts-audio-audio-audiorendereroptions-i-sys.md) | 音频渲染器选项信息。 |
 | [AudioRendererTargetParams](arkts-audio-audio-audiorenderertargetparams-i-sys.md) | 设置音频渲染器渲染目标的选项。 |
 | [AudioRoutingManager](arkts-audio-audio-audioroutingmanager-i-sys.md) | 音频路由管理，支持选择输入输出设备、管理设备过滤、查询首选设备等。适用于需要灵活控制音频流设备路由、实现特定应用或音频流的设备选择、或排除特定设备的场景。在使用AudioRoutingManager的接口前，需要使用[getRoutingManager](arkts-audio-audio-audiomanager-i.md#getroutingmanager)获取AudioRoutingManager实例。 |
+| [AudioSeparationEffectAvailableStatus](arkts-audio-audio-audioseparationeffectavailablestatus-i-sys.md) | 音频分离效果可用状态。 |
 | [AudioSpatialDeviceState](arkts-audio-audio-audiospatialdevicestate-i-sys.md) | 空间化设备状态。 |
 | [AudioSpatialEnabledStateForDevice](arkts-audio-audio-audiospatialenabledstatefordevice-i-sys.md) | 监听设备空间音频开关状态。 |
 | [AudioSpatializationManager](arkts-audio-audio-audiospatializationmanager-i-sys.md) | 空间音频管理。在使用AudioSpatializationManager的接口前，需要使用[getSpatializationManager](arkts-audio-audio-audiomanager-i.md#getspatializationmanager)获取AudioSpatializationManager实例。 |
@@ -199,7 +202,7 @@ import { audio } from '@kit.AudioKit';
 | [DeviceRole](arkts-audio-audio-devicerole-e.md) | 表示设备角色的枚举。 |
 | [DeviceType](arkts-audio-audio-devicetype-e.md) | 表示设备类型的枚举。 |
 | [DeviceUsage](arkts-audio-audio-deviceusage-e.md) | 表示音频设备类型的枚举（根据用途分类）。 |
-| [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | 表示音频打断强制类型的枚举。当用户监听到音频打断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示音频打断提示[InterruptHint](arkts-audio-audio-interrupthint-e.md)是否已由系统强制执行，具体操作信息（如音频暂停、停止等）可通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)获取。其中，INTERRUPT_HINT_RESUME对应的forceType一定为INTERRUPT_SHARE，即恢复操作无法由系统强制执行，需应用自行触发。关于音频打断策略的详细说明可参考文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
+| [InterruptForceType](arkts-audio-audio-interruptforcetype-e.md) | 表示音频打断是否由系统强制执行的枚举。当用户监听到音频打断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示音频打断提示[InterruptHint](arkts-audio-audio-interrupthint-e.md)是否已由系统强制执行，具体操作信息（如音频暂停、停止等）可通过[InterruptHint](arkts-audio-audio-interrupthint-e.md)获取。其中，INTERRUPT_HINT_RESUME对应的forceType一定为INTERRUPT_SHARE，即恢复操作无法由系统强制执行，需应用自行触发。关于音频打断策略的详细说明可参考文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptHint](arkts-audio-audio-interrupthint-e.md) | 表示中断提示的枚举。当用户监听到音频中断事件（即收到[InterruptEvent](arkts-audio-audio-interruptevent-i.md)事件）时，获取此信息。此类型表示根据焦点策略，对音频流执行的具体操作（如暂停、调整音量等）。可以结合InterruptEvent中的[InterruptForceType](arkts-audio-audio-interruptforcetype-e.md)信息，判断该操作是否已由系统强制执行。详情请参阅文档[音频焦点介绍](../../../media/audio/audio-playback-concurrency.md)。 |
 | [InterruptMode](arkts-audio-audio-interruptmode-e.md) | 表示焦点模型的枚举。 |
 | [InterruptType](arkts-audio-audio-interrupttype-e.md) | 表示中断类型的枚举。 |
@@ -223,6 +226,7 @@ import { audio } from '@kit.AudioKit';
 | [AsrVoiceMuteMode](arkts-audio-audio-asrvoicemutemode-e-sys.md) | 枚举，自动语音识别（ASR）场景下，音频通路的静音模式。 |
 | [AsrWhisperDetectionMode](arkts-audio-audio-asrwhisperdetectionmode-e-sys.md) | 枚举，自动语音识别（ASR）的耳语检测模式。 |
 | [AudioDevcieSelectStrategy](arkts-audio-audio-audiodevcieselectstrategy-e-sys.md) | 表示设备选择策略的枚举。 |
+| [AudioLoopbackUnavailableReason](arkts-audio-audio-audioloopbackunavailablereason-e-sys.md) | 枚举音频返听功能不可用的原因。 |
 | [AudioPlaybackCaptureMode](arkts-audio-audio-audioplaybackcapturemode-e-sys.md) | 表示内录（录制设备内部应用的声音）模式的枚举。不同模式决定可录制的目标播放流类型。支持通过按位或组合枚举值，当前仅支持MODE_DEFAULT（0x0）、MODE_MEDIA（0x1）、MODE_EXCLUDING_SELF（0x 8000），以及MODE_MEDIA和MODE_EXCLUDING_SELF的按位或组合（0x8001）。 |
 | [AudioSeparationVolumeType](arkts-audio-audio-audioseparationvolumetype-e-sys.md) | 表示音频分离效果的音量类型。 |
 | [AudioSessionBehaviorFlags](arkts-audio-audio-audiosessionbehaviorflags-e-sys.md) | 表示音频会话行为的枚举。 |

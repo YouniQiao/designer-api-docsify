@@ -485,6 +485,32 @@ the water flow item and replaces the placeholder, keeping the scroll anchor.
 | --- | --- | --- | --- |
 | provider | [PlaceholderProvider](arkts-arkui-waterflow-comp-placeholderprovider-t.md) | No | Placeholder provider of the item at the given index. |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+Sets the scroll snap strategy used after user scrolling in the WaterFlow.
+
+Supports top-down, segmented, and sliding-window layouts. START, CENTER, and END align items with the start, center, and end of the viewport along the scrolling axis. A custom provider calculates the approach distance and absolute final scroll target in vp. Targets are constrained to the legal scroll range. No snapping is enabled by default. NONE or undefined clears the strategy and restores the default scrolling behavior.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-WaterFlowAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): WaterFlowAttribute--><!--Device-WaterFlowAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): WaterFlowAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | No | Built-in alignment or custom provider. |
+
 ## supportEmptyBranchInLazyLoading
 
 ```TypeScript

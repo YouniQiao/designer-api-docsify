@@ -194,6 +194,8 @@ Constructor
 | [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | Reuse options, used to configure the reuse ID. Components with the same reuse ID are reused with each other, improving the precision of reuse matching. |
 | [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) | Rotation parameter option of the rotation angle on each axis. |
 | [RotateOptions](arkts-arkui-common-comp-rotateoptions-i.md) | Defines component rotation parameters. |
+| [SafeAreaInsetEdgeConfig](arkts-arkui-common-comp-safeareainsetedgeconfig-i-sys.md) | Defines custom content and layout settings for one safe area inset edge. |
+| [SafeAreaInsetOptions](arkts-arkui-common-comp-safeareainsetoptions-i-sys.md) | Defines the complete inset configuration for all four edges of a component. |
 | [ScaleOptions](arkts-arkui-common-comp-scaleoptions-i.md) | Defines the options of scale. |
 | [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | Provides the configuration options for text selection. |
 | [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) | Provides the shadow attributes, including the blur radius, color, and offset along the x-axis and y-axis. |
@@ -349,6 +351,7 @@ Constructor
 | [RepeatMode](arkts-arkui-common-comp-repeatmode-e.md) | Defines the Border Image Repeat Mode. |
 | [ReusableMemOptStrategy](arkts-arkui-common-comp-reusablememoptstrategy-e.md) | Enumerates the memory optimization strategies of reusable custom components. |
 | [SafeAreaEdge](arkts-arkui-common-comp-safeareaedge-e.md) | Edge of the safe area for expanding the layout. |
+| [SafeAreaInsetAlignment](arkts-arkui-common-comp-safeareainsetalignment-e-sys.md) | Enumerates alignment positions for safe area inset content along its attachment edge. The alignment axis is horizontal for the top and bottom edges and vertical for the start and end edges. |
 | [SafeAreaType](arkts-arkui-common-comp-safeareatype-e.md) | Enumerates the types for expanding layout safe areas. |
 | [ScrollSizeMode](arkts-arkui-common-comp-scrollsizemode-e.md) | Define the scroll size mode of the sheet. |
 | [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md) | enum Shadow style |

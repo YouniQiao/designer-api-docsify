@@ -278,6 +278,8 @@
   <!--Del-->
   - [terminateMission（系统接口）](arkts-ability-appmanager-terminatemission-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getProcessRunningInfos（系统接口）](arkts-ability-appmanager-getprocessrunninginfos-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [AppStateFilter（系统接口）](arkts-ability-appmanager-appstatefilter-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [KeepAliveBundleInfo（系统接口）](arkts-ability-appmanager-keepalivebundleinfo-i-sys.md)<!--DelEnd-->

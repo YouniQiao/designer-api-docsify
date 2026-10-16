@@ -33,6 +33,7 @@ import { i18n } from '@kit.LocalizationKit';
 | --- | --- |
 | [getCalendar](arkts-localization-i18n-getcalendar-f.md#getcalendar) | Obtains the **Calendar** object for the specified locale and calendar type. |
 | [getChineseCalendar](arkts-localization-i18n-getchinesecalendar-f.md#getchinesecalendar) | Obtains the ChineseCalendar object for the specified locale. |
+| [getCurrency](arkts-localization-i18n-getcurrency-f.md#getcurrency) | Obtains the **currency** object of the specified locale environment. |
 | [getInstance](arkts-localization-i18n-getinstance-f.md#getinstance) | Creates an **IndexUtil** object. |
 | [getLineInstance](arkts-localization-i18n-getlineinstance-f.md#getlineinstance) | Obtains a **BreakIterator** object. The **BreakIterator** object maintains an internal break iterator that can be used to access various line break points. |
 | [getSimpleDateTimeFormatByPattern](arkts-localization-i18n-getsimpledatetimeformatbypattern-f.md#getsimpledatetimeformatbypattern1) | Obtains a **SimpleDateTimeFormat** object based on the specified pattern string. For details about the difference between the objects obtained by this API and [getSimpleDateTimeFormatBySkeleton](arkts-localization-i18n-getsimpledatetimeformatbyskeleton-f.md#getsimpledatetimeformatbyskeleton1), see the examples in [SimpleDateTimeFormat.format](arkts-localization-i18n-simpledatetimeformat-c.md#format). |
@@ -63,6 +64,7 @@ import { i18n } from '@kit.LocalizationKit';
 | [BreakIterator](arkts-localization-i18n-breakiterator-c.md) | Provides text line breaking capabilities, such as obtaining, moving, and identifying break points. |
 | [Calendar](arkts-localization-i18n-calendar-c.md) | Provides calendar management capabilities, such as calendar name retrieval and date calculation. |
 | [ChineseCalendar](arkts-localization-i18n-chinesecalendar-c.md) | Provide a ChineseCalendar interface which could handle unique characteristics of the chinese calendar, such as leap month. |
+| [Currency](arkts-localization-i18n-currency-c.md) | Provides currency management capabilities, such as obtaining ISO 4217 currency codes. |
 | [EntityRecognizer](arkts-localization-i18n-entityrecognizer-c.md) | Provides entity recognition capabilities, which can be used to obtain the type and start and end positions of an entity in the text. Currently, supported entities include phone numbers, and date and time. |
 | [HolidayManager](arkts-localization-i18n-holidaymanager-c.md) | Provides holiday data parsing capabilities, such as determining holidays and obtaining the holiday list of a specified year. |
 | [I18NUtil](arkts-localization-i18n-i18nutil-c.md) | Internationalization utility class, which provides the capabilities of unit conversion, date sequence retrieval, time segment name retrieval, region matching, and path localization. |

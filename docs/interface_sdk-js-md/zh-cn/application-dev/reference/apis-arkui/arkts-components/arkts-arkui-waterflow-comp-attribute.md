@@ -455,6 +455,32 @@ rowsTemplate(value: string)
 | --- | --- | --- | --- |
 | value | string | 是 | 当前瀑布流组件布局行的数量。<br>默认值：'1fr' |
 
+## scrollSnapStrategy
+
+```TypeScript
+scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider)
+```
+
+设置用户滚动结束后WaterFlow使用的滚动吸附策略。
+
+支持从上到下、分段和滑动窗口布局。START、CENTER、END分别将item对齐到滚动轴方向视口的起始、中间和末尾位置。自定义提供方计算趋近距离和最终绝对滚动目标，单位为vp。吸附目标受合法滚动范围限制。默认不启用吸附。设置为NONE或undefined时清除策略，恢复默认滚动行为。
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-WaterFlowAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): WaterFlowAttribute--><!--Device-WaterFlowAttribute-scrollSnapStrategy(strategy?: ScrollSnapAlign | ScrollSnapOffsetProvider): WaterFlowAttribute-End-->
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| strategy | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) &#124; [ScrollSnapOffsetProvider](../arkts-apis/arkts-arkui-scrollsnapoffsetprovider-i.md) | 否 | 内置对齐策略或自定义提供方。 |
+
 ## supportEmptyBranchInLazyLoading
 
 ```TypeScript

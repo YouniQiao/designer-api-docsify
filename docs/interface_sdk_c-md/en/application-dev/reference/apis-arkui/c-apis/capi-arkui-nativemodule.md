@@ -37,7 +37,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [swiper.h](capi-swiper-h.md) | Defines the enumerations and APIs of the **Swiper** component for implementing scenarios such as carousel display and content navigation. It supports custom navigation indicators (dot/number types), navigation arrow styles, nested scrolling modes, mouse wheel page-turning modes, and animation modes, helping users quickly build carousel interaction experiences. |
 | [common_attributes.h](capi-common-attributes-h.md) | Defines the types of common attributes and events of **NativeModule**, used to support the configuration of common component attributes and event handling, making it easier for native developers to manage component behavior in a unified manner. |
 | [navigation_router.h](capi-navigation-router-h.md) | Defines the enumerations related to the **NavDestination** and **Router** components. |
-| [scroll.h](capi-scroll-h.md) | Provides shared scroll-related enum definitions for <b>NativeNode</b> APIs. |
+| [scroll.h](capi-scroll-h.md) | Defines the enumerations related to the **Scroll** component, such as the scrolling direction, edge effect, scrollbar state, content clipping, nested scrolling, scrolling state, and scrolling source, which are used to configure and listen for the behavior of the **Scroll** component and related scrollable components. |
 | [list_item.h](capi-list-item-h.md) | Provides shared list item-related type and function definitions for <b>NativeNode</b> APIs. |
 | [node_grid.h](capi-node-grid-h.md) | Defines enumerations and APIs related to **Grid**. |
 | [custom_attributes.h](capi-custom-attributes-h.md) | Provides custom node event definitions for <b>NativeNode</b> APIs. |
