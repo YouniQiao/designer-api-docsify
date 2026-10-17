@@ -28,6 +28,7 @@ import { insightIntent } from '@kit.AbilityKit';
 | --- | --- |
 | [ExecuteResult](arkts-ability-insightintent-executeresult-i.md) | Return result of intent execution. |
 | [FileEntity](arkts-ability-insightintent-fileentity-i.md) | Defines the struct of a file entity. It represents key file objects involved during intent execution, including intent parameters and execution results. |
+| [InsightIntentExecutionInfo](arkts-ability-insightintent-insightintentexecutioninfo-i.md) | The insight intent execute information. |
 | [IntentEntity](arkts-ability-insightintent-intententity-i.md) | Defines the struct of an intent entity. It represents key information objects involved during intent execution, including intent parameters and execution results. |
 | [IntentResult](arkts-ability-insightintent-intentresult-i.md) | Defines the return result of intent execution. The [generic type](../../../quick-start/introduction-to-arkts.md#generic-class-and-interface) is supported. |
 | [QueryEntityParam](arkts-ability-insightintent-queryentityparam-i.md) | Parameter for query entity. |

@@ -70,6 +70,7 @@ import { socket } from '@kit.NetworkKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [NetAddress](arkts-network-socket-netaddress-t.md) | 定义网络地址。 |
 | [X509CertRawData](arkts-network-socket-x509certrawdata-t.md) | 存储证书的数据。 |
 
 ### 枚举
@@ -78,9 +79,3 @@ import { socket } from '@kit.NetworkKit';
 | --- | --- |
 | [Protocol](arkts-network-socket-protocol-e.md) | TLS通信的协议版本。 |
 | [ProxyTypes](arkts-network-socket-proxytypes-e.md) | Socket代理类型。 |
-
-### 属性
-
-| 名称 | 说明 |
-| --- | --- |
-| [NetAddress](arkts-network-socket-p.md#netaddress) | 定义网络地址。 |

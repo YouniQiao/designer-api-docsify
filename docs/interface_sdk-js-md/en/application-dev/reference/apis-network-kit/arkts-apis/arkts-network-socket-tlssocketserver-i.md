@@ -347,7 +347,7 @@ Obtains the local socket address of a **TLSSocketServer** connection. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-netaddress-t.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 

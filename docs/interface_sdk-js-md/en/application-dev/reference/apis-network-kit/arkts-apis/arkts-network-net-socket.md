@@ -71,6 +71,7 @@ import { socket } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
+| [NetAddress](arkts-network-socket-netaddress-t.md) | Define a network address. |
 | [X509CertRawData](arkts-network-socket-x509certrawdata-t.md) | Defines the certificate raw data. |
 
 ### Enums
@@ -79,9 +80,3 @@ import { socket } from '@kit.NetworkKit';
 | --- | --- |
 | [Protocol](arkts-network-socket-protocol-e.md) | Enumerates TLS protocol versions. |
 | [ProxyTypes](arkts-network-socket-proxytypes-e.md) | Enumerates socket proxy types. |
-
-### Properties
-
-| Name | Description |
-| --- | --- |
-| [NetAddress](arkts-network-socket-p.md#netaddress) | Define a network address. |

@@ -48,7 +48,7 @@ addMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -108,7 +108,7 @@ addMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 
@@ -172,7 +172,7 @@ dropMembership(multicastAddress: NetAddress, callback: AsyncCallback<void>): voi
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败返回错误码、错误信息。 |
 
 **错误码：**
@@ -233,7 +233,7 @@ dropMembership(multicastAddress: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| multicastAddress | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
+| multicastAddress | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息，参考[NetAddress](../../../reference/apis-network-kit/js-apis-socket.md#netaddress)。 |
 
 **返回值：**
 

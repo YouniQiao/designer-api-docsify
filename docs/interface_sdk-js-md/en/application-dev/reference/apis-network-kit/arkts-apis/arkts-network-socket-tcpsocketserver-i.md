@@ -100,7 +100,7 @@ Obtains the local socket address of a **TCPSocketServer** connection. This API u
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | Promise used to return the result. |
+| Promise&lt;[NetAddress](arkts-network-socket-netaddress-t.md)&gt; | Promise used to return the result. |
 
 **Error codes:**
 
@@ -347,7 +347,7 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-socket-p.md) | Yes | Destination address. |
+| address | [NetAddress](arkts-network-socket-netaddress-t.md) | Yes | Destination address. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation fails, an error message is returned. |
 
 **Error codes:**
@@ -410,7 +410,7 @@ Binds the IP address and port number. The port number can be specified or random
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-socket-p.md) | Yes | Destination address. |
+| address | [NetAddress](arkts-network-socket-netaddress-t.md) | Yes | Destination address. |
 
 **Return value:**
 

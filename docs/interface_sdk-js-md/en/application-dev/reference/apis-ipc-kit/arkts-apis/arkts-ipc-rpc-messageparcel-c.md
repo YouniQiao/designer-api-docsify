@@ -1610,7 +1610,7 @@ Reads raw data from this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the raw data to read. |
+| size | number | Yes | Size of the original data to read, in bytes. |
 
 **Return value:**
 
@@ -3406,7 +3406,7 @@ Writes a **Sequenceable** object to this **MessageParcel** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | **Sequenceable** object to write. |
+| val | [Sequenceable](arkts-ipc-rpc-sequenceable-i.md) | Yes | **Sequenceable** object to write. It is advised that you ensure data integrity when implementing the **marshalling** and **unmarshalling** methods. The data structures for serialization and deserialization must be consistent. |
 
 **Return value:**
 

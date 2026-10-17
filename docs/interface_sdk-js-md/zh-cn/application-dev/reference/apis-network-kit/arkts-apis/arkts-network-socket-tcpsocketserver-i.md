@@ -99,7 +99,7 @@ getLocalAddress(): Promise<NetAddress>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[NetAddress](arkts-network-socket-p.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
+| Promise&lt;[NetAddress](arkts-network-socket-netaddress-t.md)&gt; | 以Promise形式返回获取本地socket地址的结果。 |
 
 **错误码：**
 
@@ -345,7 +345,7 @@ listen(address: NetAddress, callback: AsyncCallback<void>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息。 |
+| address | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。失败时返回错误码、错误信息。 |
 
 **错误码：**
@@ -407,7 +407,7 @@ listen(address: NetAddress): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| address | [NetAddress](arkts-network-socket-p.md) | 是 | 目标地址信息。 |
+| address | [NetAddress](arkts-network-socket-netaddress-t.md) | 是 | 目标地址信息。 |
 
 **返回值：**
 

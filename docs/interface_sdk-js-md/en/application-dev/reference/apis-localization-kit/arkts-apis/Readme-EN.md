@@ -91,6 +91,7 @@
   - [TimeZoneCityItem(system api)](arkts-localization-i18n-timezonecityitem-i-sys.md)<!--DelEnd-->
   - [UnitInfo](arkts-localization-i18n-unitinfo-i.md)
   - [Util](arkts-localization-i18n-util-i.md)
+  - [BilingualIndexMode](arkts-localization-i18n-bilingualindexmode-e.md)
   - [NormalizerMode](arkts-localization-i18n-normalizermode-e.md)
   <!--Del-->
   - [SuggestionType(system api)](arkts-localization-i18n-suggestiontype-e-sys.md)<!--DelEnd-->

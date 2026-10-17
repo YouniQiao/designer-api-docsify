@@ -56,6 +56,24 @@ displayName?: string
 
 **系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
 
+## extras
+
+```TypeScript
+extras?: string
+```
+
+资源的扩展数据。
+
+**类型：** string
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SearchPlayMusicInfo-extras?: string--><!--Device-SearchPlayMusicInfo-extras?: string-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
 ## items
 
 ```TypeScript

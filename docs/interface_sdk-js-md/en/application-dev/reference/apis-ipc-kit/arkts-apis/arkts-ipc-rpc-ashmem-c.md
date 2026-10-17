@@ -823,7 +823,7 @@ Reads data from the shared file associated with this **Ashmem** object.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| size | number | Yes | Size of the data to read. |
+| size | number | Yes | Size of the data to read, in bytes. |
 | offset | number | Yes | Start position of the data to read in the memory region associated with this **Ashmem** object. |
 
 **Return value:**

@@ -38,7 +38,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [common_attributes.h](capi-common-attributes-h.md) | Defines the common property and method types for the native module. |
 | [navigation_router.h](capi-navigation-router-h.md) | 定义Navigation或Router组件的枚举和接口。 |
 | [scroll.h](capi-scroll-h.md) | 提供滚动方向、边缘效果、滚动条状态、内容裁剪、嵌套滚动、滚动状态和滚动来源等枚举，用于配置和监听Scroll组件及相关可滚动组件的行为。 |
-| [list_item.h](capi-list-item-h.md) | Provides shared list item-related type and function definitions for <b>NativeNode</b> APIs. |
+| [list_item.h](capi-list-item-h.md) | 为<b>NativeNode</b>API提供共享的列表项相关类型和函数定义。 |
 | [grid.h](capi-grid-h.md) | 定义Grid组件相关的枚举和接口。 |
 | [custom_attributes.h](capi-custom-attributes-h.md) | 为NativeNode API提供自定义节点事件定义。 |
 | [xcomponent.h](capi-xcomponent-h.md) | XComponent组件枚举类型定义，用于描述XComponent的渲染类型，支持EGL/OpenGLES绘制及媒体数据写入场景，可满足开发者定制内容单独或与组件合成展示的渲染需求。 |

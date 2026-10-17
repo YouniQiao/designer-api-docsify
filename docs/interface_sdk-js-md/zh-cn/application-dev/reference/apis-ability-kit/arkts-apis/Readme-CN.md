@@ -535,6 +535,7 @@
   - [FileEntity](arkts-ability-insightintent-fileentity-i.md)
   <!--Del-->
   - [FileEntity（系统接口）](arkts-ability-insightintent-fileentity-i-sys.md)<!--DelEnd-->
+  - [InsightIntentExecutionInfo](arkts-ability-insightintent-insightintentexecutioninfo-i.md)
   - [IntentEntity](arkts-ability-insightintent-intententity-i.md)
   - [IntentResult](arkts-ability-insightintent-intentresult-i.md)
   <!--Del-->

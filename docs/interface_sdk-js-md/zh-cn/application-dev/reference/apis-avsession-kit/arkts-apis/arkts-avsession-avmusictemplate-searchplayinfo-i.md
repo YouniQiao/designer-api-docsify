@@ -20,6 +20,24 @@ interface SearchPlayInfo
 import { avMusicTemplate } from '@kit.AVSessionKit';
 ```
 
+## karaokeInfo
+
+```TypeScript
+karaokeInfo?: SearchPlayKaraokeInfo
+```
+
+搜播K歌信息的定义
+
+**类型：** [SearchPlayKaraokeInfo](arkts-avsession-avmusictemplate-searchplaykaraokeinfo-i.md)
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SearchPlayInfo-karaokeInfo?: SearchPlayKaraokeInfo--><!--Device-SearchPlayInfo-karaokeInfo?: SearchPlayKaraokeInfo-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVMusicTemplate
+
 ## musicInfo
 
 ```TypeScript

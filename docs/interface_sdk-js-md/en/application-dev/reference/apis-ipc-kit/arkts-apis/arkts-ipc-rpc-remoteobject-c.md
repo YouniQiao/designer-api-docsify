@@ -114,7 +114,7 @@ Obtains the UID of the remote process.
 
 | Type | Description |
 | --- | --- |
-| number | Return the UID of the [RemoteProxy](arkts-ipc-rpc-remoteproxy-c.md) object. |
+| number | UID of the remote process obtained. |
 
 **Examples**
 

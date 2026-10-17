@@ -1,9 +1,7 @@
-# Properties
-
-## NetAddress
+# NetAddress
 
 ```TypeScript
-export import NetAddress = connection.NetAddress
+export type NetAddress = connection.NetAddress
 ```
 
 Define a network address.
@@ -14,6 +12,6 @@ Define a network address.
 
 **Model restriction:** This API can be used only in the stage model.
 
-<!--Device-socket-export import NetAddress = connection.NetAddress--><!--Device-socket-export import NetAddress = connection.NetAddress-End-->
+<!--Device-socket-export type NetAddress = connection.NetAddress--><!--Device-socket-export type NetAddress = connection.NetAddress-End-->
 
 **System capability:** SystemCapability.Communication.NetStack

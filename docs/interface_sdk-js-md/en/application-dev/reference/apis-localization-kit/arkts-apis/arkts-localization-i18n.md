@@ -130,6 +130,7 @@ import { i18n } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
+| [BilingualIndexMode](arkts-localization-i18n-bilingualindexmode-e.md) | Enumerates bilingual index modes, which determine the combination of local index and English index. |
 | [NormalizerMode](arkts-localization-i18n-normalizermode-e.md) | Enumerates text normalization modes. |
 | [TemperatureType](arkts-localization-i18n-temperaturetype-e.md) | Enumerates temperature units. |
 | [UnitUsage](arkts-localization-i18n-unitusage-e.md) | Enumerates unit formatting scenarios. |

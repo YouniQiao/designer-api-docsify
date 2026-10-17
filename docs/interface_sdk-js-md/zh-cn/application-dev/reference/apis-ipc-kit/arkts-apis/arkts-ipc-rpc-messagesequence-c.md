@@ -509,7 +509,7 @@ readArrayBuffer(typeCode: TypeCode): ArrayBuffer
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作(会根据业务传递的类型枚举值去决定底层的读取方式，需要业务正确传递枚举值，读写枚举值不匹配会导致数据异常。) |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作（会根据业务传递的类型枚举值去决定底层的读取方式，需要业务正确传递枚举值，读写枚举值不匹配会导致数据异常。） |
 
 **返回值：**
 
@@ -1998,7 +1998,7 @@ readRawDataBuffer(size: number): ArrayBuffer
 从MessageSequence读取原始数据。
 
 - 需与写入时的数据大小匹配。  
-- 该接口是一次性接口,不允许在一次parcel通信中多次调用。  
+- 该接口是一次性接口，不允许在一次parcel通信中多次调用。  
 - 大数据量传输时注意系统资源占用。  
 - 必须与[writeRawDataBuffer](#writerawdatabuffer)配对使用。
 
@@ -2780,7 +2780,7 @@ writeArrayBuffer(buf: ArrayBuffer, typeCode: TypeCode): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | buf | ArrayBuffer | 是 | 要写入的ArrayBuffer数据，数据将根据typeCode指定的TypedArray类型进行格式化写入。 |
-| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作(会根据业务传递的类型枚举值去决定底层的写入方式，需要业务正确传递枚举值。) |
+| typeCode | [TypeCode](arkts-ipc-rpc-typecode-e.md) | 是 | ArrayBuffer数据具体是以哪一种TypedArray来访问和操作（会根据业务传递的类型枚举值去决定底层的写入方式，需要业务正确传递枚举值。） |
 
 **错误码：**
 
