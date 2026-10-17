@@ -4,7 +4,7 @@
 export enum PanelType
 ```
 
-Enumerates the types of the input method panel.<br> <br>
+Enumerates the types of the input method panel. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  

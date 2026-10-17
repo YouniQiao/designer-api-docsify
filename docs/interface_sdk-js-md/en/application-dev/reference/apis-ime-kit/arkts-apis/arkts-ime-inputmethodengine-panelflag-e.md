@@ -4,7 +4,7 @@
 export enum PanelFlag
 ```
 
-Enumerates the state types of the input method panel.<br> <br>
+Enumerates the state types of the input method panel. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  

@@ -4,7 +4,7 @@
 export enum CapitalizeMode
 ```
 
-Enumerates the modes of capitalizing the first letter of a text.<br> <br>
+Enumerates the modes of capitalizing the first letter of a text. <br>
 
 | Name| Value| Description|  
 | -------- | -- | -------- |  

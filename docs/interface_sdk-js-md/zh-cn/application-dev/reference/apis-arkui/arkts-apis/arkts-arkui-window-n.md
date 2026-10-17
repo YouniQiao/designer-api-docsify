@@ -190,6 +190,7 @@ import { window } from '@kit.ArkUI';
 | [WindowAnimationCurve](arkts-arkui-window-windowanimationcurve-e.md) | 窗口动画曲线类型。 |
 | [WindowEventType](arkts-arkui-window-windoweventtype-e.md) | 窗口生命周期。 |
 | [WindowPosition](arkts-arkui-window-windowposition-e.md) | 主窗口z序调整的目标位置枚举。 |
+| [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md) | 窗口姿态模式枚举。 |
 | [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md) | WindowStage生命周期状态枚举。 |
 | [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md) | WindowStage生命周期的状态类型枚举。 |
 | [WindowStatusType](arkts-arkui-window-windowstatustype-e.md) | 窗口模式枚举。 |

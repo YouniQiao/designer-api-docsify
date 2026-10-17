@@ -40,8 +40,7 @@ this.context.startAbility(targetWant);
 <br> <br>  
 > **说明：** <br>
 > <br>
-> `InputMethodExtensionContext`实例通过`InputMethodExtensionAbility`子类的`this.context`属性获取，不可直接创建。`destroy()`通常在<br>
-> `onDestroy`生命周期回调中调用，也可在其他时机主动调用以终止输入法ExtensionAbility。
+> `InputMethodExtensionContext`实例通过`InputMethodExtensionAbility`子类的`this.context`属性获取，不可直接创建。`destroy()`通常在`onDestroy`生命周期回调中调用，也可在其他时机主动调用以终止输入法ExtensionAbility。<br> <br> ## 使用说明<br> <br>在使用InputMethodExtensionContext的功能前，需要通过InputMethodExtensionAbility子类实例获取。<br> <br>```ts <br>import { InputMethodExtensionAbility, InputMethodExtensionContext } from '@kit.IMEKit'; <br>import { Want } from '@kit.AbilityKit'; <br> <br>class InputMethodExtAbility extends InputMethodExtensionAbility {<br> onCreate(want: Want): void {<br> console.info('onCreate, want:' + want.abilityName); <br> } <br>} <br>```
 
 **继承/实现关系：** InputMethodExtensionContext extends [ExtensionContext](../../apis-ability-kit/arkts-apis/arkts-ability-extensioncontext-c.md)
 
@@ -301,7 +300,10 @@ disconnectAbility(connection: number): Promise<void>
 disconnectServiceExtensionAbility(connection: number, callback: AsyncCallback<void>): void
 ```
 
-断开与ServiceExtensionAbility的连接。使用callback异步回调。
+断开与ServiceExtensionAbility的连接。使用callback异步回调。<br> <br>  
+> **说明：** <br>
+> <br>
+> 从API version 9开始支持，从API version 10开始废弃。无替代接口。配合connectServiceExtensionAbility使用，两者均已废弃，不建议使用连接/断开ServiceExtensionAbility的模式。
 
 **起始版本：** 9
 
@@ -341,7 +343,7 @@ disconnectServiceExtensionAbility(connection: number): Promise<void>
 断开与ServiceExtensionAbility的连接。使用Promise异步回调。<br> <br>  
 > **说明：** <br>
 > <br>
-> 配合connectServiceExtensionAbility使用，两者均已废弃，不建议使用连接/断开ServiceExtensionAbility的模式。
+> 从API version 9开始支持，从API version 10开始废弃。无替代接口。配合connectServiceExtensionAbility使用，两者均已废弃，不建议使用连接/断开ServiceExtensionAbility的模式。
 
 **起始版本：** 9
 

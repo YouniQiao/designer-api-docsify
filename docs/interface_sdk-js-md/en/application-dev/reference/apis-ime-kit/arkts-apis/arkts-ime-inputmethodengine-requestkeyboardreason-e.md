@@ -4,7 +4,7 @@
 export enum RequestKeyboardReason
 ```
 
-Enumerates the reasons for requesting keyboard input.<br> <br>
+Enumerates the reasons for requesting keyboard input. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  

@@ -26,6 +26,29 @@
  <br>本模块为纯数据定义模块，`PanelInfo`作为面板属性配置需与其他模块的API组合使用。典型组合为：在`@ohos.inputMethodEngine`模块中，通过
  `InputMethodAbility.createPanel()`创建面板时传入`PanelInfo`指定面板类型和状态。
  <br>
+ <br>```typescript
+ <br>// 以下为阐述调用逻辑的伪代码
+ <br>import { PanelType, PanelFlag } from '@kit.IMEKit';
+ <br>
+ <br>// 1. 配置固定态软键盘面板属性
+ <br>let softKeyboardFixed = {
+ <br> type: PanelType.SOFT_KEYBOARD,
+ <br> flag: PanelFlag.FLAG_FIXED
+ <br>};
+ <br>
+ <br>// 2. 配置悬浮态软键盘面板属性
+ <br>let softKeyboardFloating = {
+ <br> type: PanelType.SOFT_KEYBOARD,
+ <br> flag: PanelFlag.FLAG_FLOATING
+ <br>};
+ <br>
+ <br>// 3. 配置候选词态面板属性
+ <br>let candidatePanel = {
+ <br> type: PanelType.SOFT_KEYBOARD,
+ <br> flag: PanelFlag.FLAG_CANDIDATE
+ <br>};
+ <br>```
+ <br>
  <br> > **说明：**
  <br> >
  <br> > `FLAG_CANDIDATE`（候选词态）面板的显示和隐藏不受系统控制，开发者需根据应用场景自行管理候选词面板的显隐时机。
@@ -51,4 +74,4 @@ import { PanelInfo, PanelType, PanelFlag } from '@kit.IMEKit';
 | 名称 | 说明 |
 | --- | --- |
 | [PanelFlag](arkts-ime-inputmethod-panel-panelflag-e.md) | 输入法面板状态类型枚举。定义面板的显示状态形态，决定面板是固定态、悬浮态还是候选词态。<br> <br> |
-| [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md) | 输入法面板类型枚举。定义面板的类别，决定面板是软键盘还是状态栏。<br> <br>PanelType使用建议：<br> <br>- 选取原则：输入法应用通常需要创建一个`SOFT_KEYBOARD`面板作为主键盘界面。`STATUS_BAR`面板为可选面板，仅在需要显示输入法状态信息时创建。<br>- 规格限制：单个输入法应用仅允许创建一个`SOFT_KEYBOARD`类型和一个`STATUS_BAR`类型的面板。重复创建同类型面板将返回错误。<br>- 相关接口间的配合/制约关系：`PanelType`需配合`PanelFlag`使用。当前`PanelFlag`仅用于描述`SOFT_KEYBOARD`类型面板的状态；对`STATUS_BAR`类型面板，`PanelFlag`的设置不产生实际效果。 |
+| [PanelType](arkts-ime-inputmethod-panel-paneltype-e.md) | 输入法面板类型枚举。定义面板的类别，决定面板是软键盘还是状态栏。<br> <br>&#124; 名称 &#124; 值 &#124; 说明 &#124; 使用场景 &#124; |

@@ -114,8 +114,8 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor | ImageContent, reloadKey
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) | 是 |  |
-| reloadKey | string | 否 |  |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) &#124; [ImageContent](arkts-arkui-image-comp-imagecontent-e.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。<br>PixelMap、ResourceStr和DrawableDescriptor的使用请参考[Image](arkts-arkui-image-comp.md)的src参数说明。<br>传入[ImageContent](arkts-arkui-image-comp-imagecontent-e.md)类型，指定图像内容。<br>**说明：** <br>- ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。<br>- ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| reloadKey | string | 否 | 图片重新加载的标识。当reloadKey的值发生变化时，将不使用缓存重新加载图片。适用于图片源地址不变但图片内容已更新的场景（例如本地图片内容被重写）。<br>默认值：空字符串。 |
 
 ## Image
 
@@ -165,9 +165,9 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | 是 |  |
-| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 否 |  |
-| reloadKey | string | 否 |  |
+| src | [PixelMap](arkts-arkui-common-comp-pixelmap-t.md) &#124; [ResourceStr](../arkts-apis/arkts-arkui-resourcestr-t.md) &#124; [DrawableDescriptor](arkts-arkui-image-comp-drawabledescriptor-t.md) | 是 | 图片的数据源，支持本地图片和网络图片，引用方式请参考[加载图片资源](../../../ui/arkts-graphics-display.md#加载图片资源)。<br>PixelMap、ResourceStr和DrawableDescriptor的使用请参考[Image](arkts-arkui-image-comp.md)的src参数说明。<br>**说明：** <br>- ArkTS卡片上支持gif图片格式动效，但仅在显示时播放一次。<br>- ArkTS卡片上不支持http://等网络相关路径前缀和file://路径前缀的字符串。 |
+| imageAIOptions | [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-i.md) | 否 | 给组件设置一个AI分析选项，通过此项可配置分析类型或绑定一个分析控制器。 |
+| reloadKey | string | 否 | 图片重新加载的标识。当reloadKey的值发生变化时，将不使用缓存重新加载图片。适用于图片源地址不变但图片内容已更新的场景（例如本地图片内容被重写）。<br>默认值：空字符串。 |
 
 ## 汇总
 

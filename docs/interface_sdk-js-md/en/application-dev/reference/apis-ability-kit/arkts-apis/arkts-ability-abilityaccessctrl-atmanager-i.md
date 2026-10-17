@@ -197,6 +197,43 @@ try {
 }
 ```
 
+## isPermissionSupported
+
+```TypeScript
+isPermissionSupported(permissionName: Permissions): boolean
+```
+
+Checks whether the specified permission is supported on the current device. This API returns the result synchronously and can be called before requesting permissions to decide whether to show the authorization dialog.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-AtManager-isPermissionSupported(permissionName: Permissions): boolean--><!--Device-AtManager-isPermissionSupported(permissionName: Permissions): boolean-End-->
+
+**System capability:** SystemCapability.Security.AccessToken
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| permissionName | [Permissions](arkts-ability-permissions-t.md) | Yes | Name of the permission to be checked. The value must be a non-empty string of no more than 256 characters. Passing an invalid value returns error code 12100001. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns `true` if the permission is supported on the current device; returns `false` otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [12100001](../errorcode-access-token.md#12100001-invalid-parameters) | Invalid parameter. The permissionName is empty or exceeds 256 characters. |
+| [12100007](../errorcode-access-token.md#12100007-system-service-not-working-properly) | Service exception. |
+
 ## off('selfPermissionStateChange')
 
 ```TypeScript

@@ -26,7 +26,7 @@ import { inputMethodEngine } from '@kit.IMEKit';
 exitCurrentInputType(callback: AsyncCallback<void>): void
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. On API 26.0.1 and above, it can also be called by the input method that provides system-level input capability. This API uses an asynchronous callback to return the result.
+Exits this input type. This API can be called only by the preconfigured default input method. This API uses an asynchronous callback to return the result.
 
 **Since:** 11
 
@@ -69,7 +69,7 @@ keyboardController.exitCurrentInputType((err: BusinessError) => {
 exitCurrentInputType(): Promise<void>
 ```
 
-Exits this input type. This API can be called only by the preconfigured default input method. On API 26.0.1 and above, it can also be called by the input method that provides system-level input capability. This API uses a promise to return the result.
+Exits this input type. This API can be called only by the preconfigured default input method. This API uses a promise to return the result.
 
 **Since:** 11
 

@@ -4,7 +4,7 @@
 export enum ImmersiveMode
 ```
 
-Enumerates the immersive modes of the input method.<br> <br>
+Enumerates the immersive modes of the input method. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  

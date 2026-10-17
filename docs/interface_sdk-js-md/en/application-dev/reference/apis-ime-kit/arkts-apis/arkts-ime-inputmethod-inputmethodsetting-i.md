@@ -4,7 +4,7 @@
 interface InputMethodSetting
 ```
 
-In the following API examples, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+**InputMethodSetting** provides input method configuration and query capabilities, and offers the following features for foreground applications: <br> <br>- Input method change subscription: subscribe to input method and subtype change events through [on('imeChange')](#onimechange), and receive a notification when the user switches the input method. <br>- Input method list query: query the list of enabled/disabled input methods through [getInputMethods](#getinputmethods1), query the list of all installed input methods through [getAllInputMethods](#getallinputmethods1), and query the subtype list of a specified input method through [listInputMethodSubtype](#listinputmethodsubtype1). <br>- Panel visibility query: query whether the input method panel is displayed through **isPanelShown**. <br>- Input method selection dialog: display the input method selection dialog through **showOptionalInputMethods** (deprecated; **InputMethodListDialog** is recommended). <br> <br>It must be used after you obtain the **InputMethodSetting** instance through [getSetting](arkts-ime-inputmethod-getsetting-f.md). <br> <br>For the following APIs, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -38,7 +38,7 @@ Obtains a list of all input methods. This API uses an asynchronous callback to r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of all input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback function. When the list of all input methods is returned successfully, **err** is **undefined** and data is the obtained list of **InputMethodProperty** objects; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -81,7 +81,7 @@ Obtains a list of all input methods. This API uses a promise to return the resul
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise used to return a list of all input methods. |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise object, returns the list of all input methods. |
 
 **Error codes:**
 
@@ -110,7 +110,10 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
 getAllInputMethodsSync(): Array<InputMethodProperty>
 ```
 
-Obtains a list of all input methods. This API returns the result synchronously.
+Obtains a list of all input methods. This API returns the result synchronously. <br> <br>  
+> **NOTE:** <br>
+> <br>
+> The synchronous API blocks the main thread and may easily affect UI interaction. Use it with caution.
 
 **Since:** 11
 
@@ -148,9 +151,11 @@ getInputMethods(enable: boolean, callback: AsyncCallback<Array<InputMethodProper
 Obtains a list of activated or deactivated input methods. This API uses an asynchronous callback to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> An activated input method refers to an input method that is enabled. The default input method is enabled by <br>
+> default. Other input methods can be enabled or disabled as needed. <br>
 > <br>
-> The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
+> The list of activated input methods includes the default input method and enabled input methods. The list of <br>
+> deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 9
 
@@ -162,8 +167,8 @@ Obtains a list of activated or deactivated input methods. This API uses an async
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to return a list of activated input methods. The value **true** means to return a list of activated input methods, and **false** means to return a list of deactivated input methods. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return a list of activated or deactivated input methods. |
+| enable | boolean | Yes | The value **true** indicates returning the list of activated input methods, and the value **false** indicates returning the list of inactivated input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return the result. If the list of activated/inactivated input methods is obtained successfully, **err** is **undefined** and data is the obtained list of **InputMethodProperty** objects; otherwise, **err** is an error object. |
 
 **Error codes:**
 
@@ -198,9 +203,11 @@ getInputMethods(enable: boolean): Promise<Array<InputMethodProperty>>
 Obtains a list of activated or deactivated input methods. This API uses a promise to return the result. <br> <br>  
 > **NOTE:** <br>
 > <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> An activated input method refers to an input method that is enabled. The default input method is enabled by <br>
+> default. Other input methods can be enabled or disabled as needed. <br>
 > <br>
-> The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
+> The list of activated input methods includes the default input method and enabled input methods. The list of <br>
+> deactivated input methods includes all installed input methods except the enabled ones.
 
 **Since:** 9
 
@@ -212,13 +219,13 @@ Obtains a list of activated or deactivated input methods. This API uses a promis
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to return a list of activated input methods. The value **true** means to return a list of activated input methods, and **false** means to return a list of deactivated input methods. |
+| enable | boolean | Yes | **true** indicates returning the list of activated input methods, and **false** indicates returning the list of inactivated input methods. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise used to return a list of activated or deactivated input methods. |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise object, returns the list of activated/inactivated input methods. |
 
 **Error codes:**
 
@@ -251,9 +258,14 @@ getInputMethodsSync(enable: boolean): Array<InputMethodProperty>
 Obtains a list of activated or deactivated input methods. This API returns the result synchronously. <br> <br>  
 > **NOTE:** <br>
 > <br>
-> An activated input method refers to an input method that is enabled. The default input method is enabled by default. Other input methods can be enabled or disabled as needed. <br>
+> The synchronous API blocks the main thread and may easily affect UI interaction. Use it with caution. <br>
 > <br>
-> The list of activated input methods includes the default input method and enabled input methods. The list of deactivated input methods includes all installed input methods except the enabled ones.
+> Enabled input methods are input method applications that are enabled. The default input method is enabled by <br>
+> default, and other input methods can be set to enabled or disabled. <br>
+> <br>
+> The enabled input method list includes the default input method and input method applications that have been <br>
+> set to enabled. The disabled input method list includes other installed input methods except the enabled input <br>
+> methods.
 
 **Since:** 11
 
@@ -265,7 +277,7 @@ Obtains a list of activated or deactivated input methods. This API returns the r
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to return a list of activated input methods. The value **true** means to return a list of activated input methods, and **false** means to return a list of deactivated input methods. |
+| enable | boolean | Yes | **true** indicates returning the enabled input method list, and **false** indicates returning the disabled input method list. |
 
 **Return value:**
 
@@ -305,7 +317,7 @@ Obtains the input method state. This API uses a promise to return the result.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise used to return the result. **EnabledState.DISABLED** indicates that the input method is disabled, **EnabledState.BASIC_MODE** indicates that the input method is in basic mode, and **EnabledState.FULL_EXPERIENCE_MODE** indicates that the input method is in full experience mode. |
+| Promise&lt;[EnabledState](arkts-ime-inputmethod-enabledstate-e.md)&gt; | Promise object. Returns **EnabledState.DISABLED** to indicate that the input method is not enabled; returns **EnabledState.BASIC_MODE** to indicate basic mode; returns **EnabledState.FULL_EXPERIENCE_MODE** to indicate full experience mode. |
 
 **Error codes:**
 
@@ -346,7 +358,7 @@ Obtains all subtypes of this input method. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the current input method. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback function. When all subtypes of the current input method application are returned successfully, err is undefined and data is the obtained list of InputMethodSubtype; otherwise, it is an error object. |
 
 **Error codes:**
 
@@ -391,7 +403,7 @@ Obtains all subtypes of this input method. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise used to return all subtypes of the current input method. |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise object, which returns all subtypes of the current input method application. |
 
 **Error codes:**
 
@@ -438,8 +450,8 @@ Obtains all subtypes of a specified input method. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Input method. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the specified input method. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Input method application. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Yes | Callback used to return all subtypes of the specified input method application. |
 
 **Error codes:**
 
@@ -493,13 +505,13 @@ Obtains all subtypes of a specified input method. This API uses a promise to ret
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Input method. |
+| inputMethodProperty | [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Yes | Input method application. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise used to return all subtypes of the specified input method. |
+| Promise&lt;Array&lt;[InputMethodSubtype](arkts-ime-inputmethodsubtype-i.md)&gt;&gt; | Promise object, which returns all subtypes of the specified input method application. |
 
 **Error codes:**
 
@@ -551,8 +563,8 @@ Disables listening for the input method and subtype change event. This API uses 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | Listening type. The value is fixed at **'imeChange'**. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback used to return the input method attributes and subtype. |
+| type | 'imeChange' | Yes | Set the listening type. The value is fixed to 'imeChange'. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | No | Callback used to return the unsubscribed input method attribute object and subtype object. |
 
 **Examples**
 
@@ -581,8 +593,8 @@ Enables listening for the input method and subtype change event. This API uses a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'imeChange' | Yes | Listening type. The value is fixed at **'imeChange'**. |
-| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method attributes and subtype. |
+| type | 'imeChange' | Yes | Type of the listener to set. The value is fixed at 'imeChange'. |
+| callback | (inputMethodProperty: InputMethodProperty, inputMethodSubtype: InputMethodSubtype) =&gt; void | Yes | Callback used to return the input method attribute object and subtype object. |
 
 **Examples**
 
@@ -620,7 +632,7 @@ Displays a dialog box for selecting an input method. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the input method selection dialog box is displayed successfully, **err** is **undefined**; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -698,7 +710,7 @@ Obtains a list of installed input methods. This API uses an asynchronous callbac
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return the list of installed input methods. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Yes | Callback used to return the result. If the list of installed input methods is returned successfully, **err** is **undefined** and data is the obtained list of **InputMethodProperty** objects; otherwise, **err** is an error object. |
 
 **Examples**
 
@@ -738,7 +750,7 @@ Obtains a list of installed input methods. This API uses a promise to return the
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise used to return the list of installed input methods. |
+| Promise&lt;Array&lt;[InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md)&gt;&gt; | Promise object, which returns the list of installed input methods. |
 
 **Examples**
 
@@ -776,7 +788,7 @@ Displays a dialog box for selecting an input method. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the input method selection dialog box is displayed successfully, err is undefined and data is true; otherwise, err is an error object. |
 
 **Error codes:**
 
@@ -826,7 +838,7 @@ Displays a dialog box for selecting an input method. This API uses a promise to 
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;boolean&gt; | Promise used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
+| Promise&lt;boolean&gt; | Promise object. Returns **true** if the input method selection dialog is displayed successfully, and **false** otherwise. |
 
 **Error codes:**
 

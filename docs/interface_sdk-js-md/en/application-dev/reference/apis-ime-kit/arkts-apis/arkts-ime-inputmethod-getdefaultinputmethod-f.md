@@ -26,7 +26,7 @@ Obtains the default input method.
 
 | Type | Description |
 | --- | --- |
-| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method. |
+| [InputMethodProperty](arkts-ime-inputmethod-inputmethodproperty-i.md) | Default input method property object. |
 
 **Error codes:**
 

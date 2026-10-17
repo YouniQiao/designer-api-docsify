@@ -4,7 +4,7 @@
 export enum GradientMode
 ```
 
-Enumerates the gradient modes of the input method.<br> <br>
+Enumerates the gradient modes of the input method. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  

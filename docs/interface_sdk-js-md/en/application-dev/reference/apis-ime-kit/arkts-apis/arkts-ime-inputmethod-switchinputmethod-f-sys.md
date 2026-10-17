@@ -14,7 +14,7 @@ import { inputMethod } from '@kit.IMEKit';
 function switchInputMethod(bundleName: string, subtypeId?: string): Promise<void>
 ```
 
-Switches to another input method. This API uses a promise to return the result.
+Switches the input method. This API uses a promise to return the result.
 
 **Since:** 11
 

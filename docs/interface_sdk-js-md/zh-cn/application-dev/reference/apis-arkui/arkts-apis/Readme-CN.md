@@ -1226,6 +1226,7 @@
     <!--Del-->
     - [WindowMode（系统接口）](arkts-arkui-window-windowmode-e-sys.md)<!--DelEnd-->
     - [WindowPosition](arkts-arkui-window-windowposition-e.md)
+    - [WindowPostureMode](arkts-arkui-window-windowposturemode-e.md)
     - [WindowStageEventType](arkts-arkui-window-windowstageeventtype-e.md)
     - [WindowStageLifecycleEventType](arkts-arkui-window-windowstagelifecycleeventtype-e.md)
     - [WindowStatusType](arkts-arkui-window-windowstatustype-e.md)
