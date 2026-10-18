@@ -377,7 +377,7 @@ Query the device operating system type by device network ID.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| networkId | string | Yes | The device's network ID |
+| networkId | string | Yes | The device's network ID. |
 
 **Return value:**
 
@@ -400,7 +400,7 @@ Query the device operating system type by device network ID.
 off(type: 'replyResult', callback?: Callback<{ param: string; }>): void
 ```
 
-Unsubscribes from the reply to the UI operation result.
+Unsubscribes from the reply to the UI operation result. This API returns the result asynchronously through a callback.
 
 **Since:** 10
 
@@ -451,7 +451,7 @@ try {
 on(type: 'replyResult', callback: Callback<{ param: string; }>): void
 ```
 
-Subscribes to the reply to the UI operation result.
+Subscribes to the reply to the UI operation result. This API returns the result asynchronously through a callback.
 
 **Since:** 10
 
@@ -637,7 +637,7 @@ try {
 restoreLocalDeviceName(): void
 ```
 
-Restores the local device name.
+Restores the local device name by resetting the network settings.
 
 **Since:** 24
 
