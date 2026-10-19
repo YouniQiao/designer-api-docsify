@@ -990,7 +990,11 @@
   <!--Del-->
   - [off（系统接口）](arkts-arkui-screen-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [offDisconnectWithInfo（系统接口）](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [on（系统接口）](arkts-arkui-screen-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onDisconnectWithInfo（系统接口）](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [resizeVirtualScreen（系统接口）](arkts-arkui-screen-resizevirtualscreen-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1019,6 +1023,8 @@
   - [Rect（系统接口）](arkts-arkui-screen-rect-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Screen（系统接口）](arkts-arkui-screen-screen-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ScreenDisconnectInfo（系统接口）](arkts-arkui-screen-screendisconnectinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ScreenModeInfo（系统接口）](arkts-arkui-screen-screenmodeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -1,4 +1,4 @@
-# @ohos.multimedia.image
+# @ohos.multimedia.image(图片)
 
 本模块提供图片的解码、编码、编辑、元数据处理和图片接收等能力。
 

@@ -20,7 +20,9 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 
 | Name | Description |
 | --- | --- |
+| [disableUserGrantedByBundle](arkts-notification-notificationextensionsubscription-disableusergrantedbybundle-f.md#disableusergrantedbybundle-1) | Disables the switch status of a specified app in the list of obtained local notifications in this app. This API uses a promise to return the result. |
 | [getSubscribeInfo](arkts-notification-notificationextensionsubscription-getsubscribeinfo-f.md#getsubscribeinfo-1) | Obtains the subscription information about the notification extension of this application. This API uses a promise to return the result. |
+| [getUserGrantedBundleIcon](arkts-notification-notificationextensionsubscription-getusergrantedbundleicon-f.md#getusergrantedbundleicon-1) | Queries the icons of apps whose switch is turned on in the list of obtained local notifications in this app. This API uses a promise to return the result. |
 | [getUserGrantedEnabledBundles](arkts-notification-notificationextensionsubscription-getusergrantedenabledbundles-f.md#getusergrantedenabledbundles-1) | Obtains the applications that are allowed to access device notifications for the current application. This API uses a promise to return the result. |
 | [isUserGranted](arkts-notification-notificationextensionsubscription-isusergranted-f.md#isusergranted-1) | Checks whether the **Allow access to notifications on this device** switch is toggled on. This API uses a promise to return the result. |
 | [openSubscriptionSettings](arkts-notification-notificationextensionsubscription-opensubscriptionsettings-f.md#opensubscriptionsettings-1) | Opens the settings screen of notification extension subscription in a semi-modal dialog box. On this screen, the user can toggle on the **Allow access to notifications on this device** switch and grant access to notifications for specified applications. This API uses a promise to return the result. |
@@ -55,4 +57,4 @@ import { notificationExtensionSubscription } from '@kit.NotificationKit';
 
 | Name | Description |
 | --- | --- |
-| [SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md) | Describes the type that enables notification extension subscription. |
+| [SubscribeType](arkts-notification-notificationextensionsubscription-subscribetype-e.md) |  |

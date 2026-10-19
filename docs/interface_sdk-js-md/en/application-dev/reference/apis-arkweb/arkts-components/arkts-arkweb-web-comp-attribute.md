@@ -524,6 +524,28 @@ Sets whether to enable web page autofill. By default, this feature is enabled.
 | --- | --- | --- | --- |
 | value | boolean | Yes | Whether to enable autofill for web pages. The value **true** means to enable autofill, and **false** means the opposite. <br>When **undefined** or **null** is passed in, the value is **true**. |
 
+## enableBlankScreenMonitor
+
+```TypeScript
+enableBlankScreenMonitor(enable: boolean)
+```
+
+Enables or disables the blank screen monitor. When the monitor is enabled, the onMonitoredBlankScreen callback will be triggered after blank screen is monitored.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-enableBlankScreenMonitor(enable: boolean): WebAttribute--><!--Device-WebAttribute-enableBlankScreenMonitor(enable: boolean): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable the blank screen monitor. The value **true** means to enable the monitor, and **false** means to disable it. |
+
 ## enableDataDetector
 
 ```TypeScript
@@ -2452,6 +2474,28 @@ You can use the **resumeMicrophone**, **pauseMicrophone**, and **stopMicrophone*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [OnMicrophoneCaptureStateChangeCallback](arkts-arkweb-web-comp-onmicrophonecapturestatechangecallback-t.md) | Yes | Callback triggered when the microphone capture state changes. It returns the original and new states. |
+
+## onMonitoredBlankScreen
+
+```TypeScript
+onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback)
+```
+
+Registers a callback for blank screen monitoring attribution. The callback is triggered when the Web component monitors a blank screen and completes root cause attribution.
+
+**Since:** 26.0.1
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebAttribute-onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback): WebAttribute--><!--Device-WebAttribute-onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback): WebAttribute-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| callback | [OnMonitorBlankScreenCallback](arkts-arkweb-web-comp-onmonitorblankscreencallback-t.md) | Yes | Callback for blank screen monitoring attribution. |
 
 ## onNativeEmbedGestureEvent
 

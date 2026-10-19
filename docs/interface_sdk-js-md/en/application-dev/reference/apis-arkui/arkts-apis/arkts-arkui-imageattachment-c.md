@@ -80,6 +80,26 @@ Image color filter of the styled string.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## imageTag
+
+```TypeScript
+readonly imageTag?: string
+```
+
+Image text tag.
+
+**Type:** string
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-ImageAttachment-readonly imageTag?: string--><!--Device-ImageAttachment-readonly imageTag?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## layoutStyle
 
 ```TypeScript

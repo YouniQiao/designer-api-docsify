@@ -31,7 +31,7 @@ Obtains the resource information based on the given file path and resource flags
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Path where the file is stored. The path must be the relative path of the current bundle's data directory. |
-| resourceFlags | number | No | Type of the resource information to obtain. For details, see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md). |
+| resourceFlags | number | No | Type of the resource information to obtain. For details. see [ResourceFlag](arkts-ability-bundleresourcemanager-resourceflag-e-sys.md). |
 
 **Return value:**
 
@@ -43,7 +43,7 @@ Obtains the resource information based on the given file path and resource flags
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied. |
-| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission denied, non-system app called system api. |
-| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The input source file is invalid. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. |
+| [202](../../errorcode-universal.md#202-permission-verification-failed-for-calling-a-system-api) | Permission verification failed. A non-system application calls a system api. |
+| [17700022](../errorcode-bundle.md#17700022-invalid-source-file) | The filePath is invalid. |
 | [17700101](../errorcode-bundle.md#17700101-bundle-manager-service-abnormal) | Bundle manager service is excepted. |

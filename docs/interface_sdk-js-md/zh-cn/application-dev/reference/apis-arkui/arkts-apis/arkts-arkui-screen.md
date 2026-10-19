@@ -40,9 +40,11 @@ import { screen } from '@kit.ArkUI';
 | [off](arkts-arkui-screen-off-f-sys.md#off-1) | 关闭屏幕状态变化的监听。 |
 | [off](arkts-arkui-screen-off-f-sys.md#off-2) | 关闭屏幕状态变化的监听。 |
 | [off](arkts-arkui-screen-off-f-sys.md) | 关闭屏幕状态变化的监听。 |
+| [offDisconnectWithInfo](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md#offdisconnectwithinfo) | 关闭屏幕断连事件的监听。 |
 | [on](arkts-arkui-screen-on-f-sys.md#on-1) | 开启屏幕状态变化的监听。 |
 | [on](arkts-arkui-screen-on-f-sys.md#on-2) | 开启屏幕状态变化的监听。 |
 | [on](arkts-arkui-screen-on-f-sys.md) | 开启屏幕状态变化的监听。 |
+| [onDisconnectWithInfo](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md#ondisconnectwithinfo) | 开启屏幕断连事件的监听。屏幕断连时，调用回调函数返回断连信息。 |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md#resizevirtualscreen) | 修改指定虚拟屏的尺寸，使用Promise异步回调。 |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md#setmultiscreenmode) | 设置扩展屏幕的显示模式（镜像/扩展），使用Promise异步回调。primaryScreenId和secondaryScreenId均为0时，仅在扩展屏显示。 |
 | [setMultiScreenRelativePosition](arkts-arkui-screen-setmultiscreenrelativeposition-f-sys.md#setmultiscreenrelativeposition) | 仅在扩展模式下，设置主屏和扩展屏幕的位置信息，使用Promise异步回调。 |
@@ -69,6 +71,7 @@ import { screen } from '@kit.ArkUI';
 | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | 设置旋转行为的参数 |
 | [Rect](arkts-arkui-screen-rect-i-sys.md) | 矩形信息。 |
 | [Screen](arkts-arkui-screen-screen-i-sys.md) | [物理屏](../../../displaymanager/display-terminology.md#物理屏)屏幕实例。 |
+| [ScreenDisconnectInfo](arkts-arkui-screen-screendisconnectinfo-i-sys.md) | 屏幕断连信息。 |
 | [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md) | 屏幕显示模式信息。 |
 | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | 创建虚拟屏幕的参数。 |
 <!--DelEnd-->

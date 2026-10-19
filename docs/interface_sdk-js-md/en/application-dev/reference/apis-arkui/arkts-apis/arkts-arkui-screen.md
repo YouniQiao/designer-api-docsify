@@ -40,9 +40,11 @@ import { screen } from '@kit.ArkUI';
 | [off](arkts-arkui-screen-off-f-sys.md#off-1) | Unsubscribes from events related to the screen state. |
 | [off](arkts-arkui-screen-off-f-sys.md#off-2) | Unsubscribes from events related to the screen state. |
 | [off](arkts-arkui-screen-off-f-sys.md) | Unsubscribes from events related to the screen state. |
+| [offDisconnectWithInfo](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md#offdisconnectwithinfo) | Unsubscribes from screen disconnect events. |
 | [on](arkts-arkui-screen-on-f-sys.md#on-1) | Subscribes to events related to the screen state. |
 | [on](arkts-arkui-screen-on-f-sys.md#on-2) | Subscribes to events related to the screen state. |
 | [on](arkts-arkui-screen-on-f-sys.md) | Subscribes to events related to the screen state. |
+| [onDisconnectWithInfo](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md#ondisconnectwithinfo) | Subscribes to screen disconnect events, When a screen is disconnected, the callback is invoked to return the disconnection information. |
 | [resizeVirtualScreen](arkts-arkui-screen-resizevirtualscreen-f-sys.md#resizevirtualscreen) | Resizes the virtual screen. This API uses a promise to return the result. |
 | [setMultiScreenMode](arkts-arkui-screen-setmultiscreenmode-f-sys.md#setmultiscreenmode) | Sets the display mode (mirror or extend) of the secondary screen. This API uses a promise to return the result. If both **primaryScreenId** and **secondaryScreenId** are set to **0**, the content is displayed only on the secondary screen. |
 | [setMultiScreenRelativePosition](arkts-arkui-screen-setmultiscreenrelativeposition-f-sys.md#setmultiscreenrelativeposition) | Sets the positions of the primary and secondary screens in extend mode. This API uses a promise to return the result. |
@@ -69,6 +71,7 @@ import { screen } from '@kit.ArkUI';
 | [OrientationOptions](arkts-arkui-screen-orientationoptions-i-sys.md) | The parameters for setting orientation |
 | [Rect](arkts-arkui-screen-rect-i-sys.md) | Describes the rectangle information. |
 | [Screen](arkts-arkui-screen-screen-i-sys.md) | Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance. |
+| [ScreenDisconnectInfo](arkts-arkui-screen-screendisconnectinfo-i-sys.md) | Defines the screen disconnect information. |
 | [ScreenModeInfo](arkts-arkui-screen-screenmodeinfo-i-sys.md) | Defines the screen mode information. |
 | [VirtualScreenOption](arkts-arkui-screen-virtualscreenoption-i-sys.md) | Defines virtual screen parameters. |
 <!--DelEnd-->

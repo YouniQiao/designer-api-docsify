@@ -90,7 +90,7 @@ enableColorCube(lutData: Uint8Array): void
 getSessionConflictFunctions(): Array<VideoConflictFunctions>
 ```
 
-Gets session conflict functions.
+获取会话冲突功能列表。
 
 **起始版本：** 13
 
@@ -104,7 +104,7 @@ Gets session conflict functions.
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i-sys.md)&gt; | List of session conflict functions. |
+| Array&lt;[VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i-sys.md)&gt; | 会话冲突功能列表。 |
 
 **错误码：**
 
@@ -118,7 +118,7 @@ Gets session conflict functions.
 getSessionFunctions(outputCapability: CameraOutputCapability): Array<VideoFunctions>
 ```
 
-Gets session functions.
+获取会话功能列表。
 
 **起始版本：** 13
 
@@ -132,13 +132,13 @@ Gets session functions.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| outputCapability | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 是 | CameraOutputCapability to set. |
+| outputCapability | [CameraOutputCapability](arkts-camera-camera-cameraoutputcapability-i.md) | 是 | 要设置的CameraOutputCapability。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| Array&lt;[VideoFunctions](arkts-camera-camera-videofunctions-i-sys.md)&gt; | List of session functions. |
+| Array&lt;[VideoFunctions](arkts-camera-camera-videofunctions-i-sys.md)&gt; | 会话功能列表。 |
 
 **错误码：**
 
@@ -215,7 +215,7 @@ isColorCubeSupported(): boolean
 off(type: 'lcdFlashStatus', callback?: AsyncCallback<LcdFlashStatus>): void
 ```
 
-Unsubscribes from LCD flash status change events.
+取消订阅 LCD 闪光灯状态变化事件。
 
 **起始版本：** 13
 
@@ -229,8 +229,8 @@ Unsubscribes from LCD flash status change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'lcdFlashStatus' | 是 | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lcdFlashStatus')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'lcdFlashStatus' | 是 | 事件类型，固定为 **'lcdFlashStatus'**。创建会话后可监听此事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 否 | 用于接收结果的回调函数。此参数可选。如果指定此参数，则取消订阅通过 **on('lcdFlashStatus')** 注册的、使用该回调函数的事件。回调函数不能是匿名函数。 |
 
 **错误码：**
 
@@ -255,7 +255,7 @@ function unregisterLcdFlashStatus(videoSession: camera.VideoSession): void {
 off(type: 'focusTrackingInfoAvailable', callback?: Callback<FocusTrackingInfo>): void
 ```
 
-Unsubscribes from focus tracking information events.
+取消订阅对焦跟踪信息事件。
 
 **起始版本：** 15
 
@@ -269,8 +269,8 @@ Unsubscribes from focus tracking information events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'focusTrackingInfoAvailable' | 是 | Event type. The value is fixed at **'focusTrackingInfoAvailable'**. The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('focusTrackingInfoAvailable')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'focusTrackingInfoAvailable' | 是 | 事件类型，固定为 **'focusTrackingInfoAvailable'**。创建 VideoSessionForSys 对象后可监听此事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 否 | 用于接收结果的回调函数。此参数可选。如果指定此参数，则取消订阅通过 **on('focusTrackingInfoAvailable')** 注册的、使用该回调函数的事件。回调函数不能是匿名函数。 |
 
 **错误码：**
 
@@ -295,7 +295,7 @@ function unregisterFocusTrackingInfoChanged(session: camera.VideoSessionForSys):
 off(type: 'effectSuggestionChange', callback?: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Unsubscribes from effect suggestion change events.
+取消订阅效果建议事件回调。
 
 **起始版本：** 18
 
@@ -310,7 +310,7 @@ Unsubscribes from effect suggestion change events.
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | type | 'effectSuggestionChange' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 | Callback used to return the result. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 否 | 回调函数，用于返回结果。 |
 
 **错误码：**
 
@@ -324,7 +324,7 @@ Unsubscribes from effect suggestion change events.
 off(type: 'lightStatusChange', callback?: AsyncCallback<LightStatus>): void
 ```
 
-Unsubscribes from camera light status changes.
+取消订阅相机补光灯状态变化事件。
 
 **起始版本：** 18
 
@@ -338,8 +338,8 @@ Unsubscribes from camera light status changes.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'lightStatusChange' | 是 | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 否 | Callback used to return the result. This parameter is optional. If this parameter is specified, the subscription to the specified event **on('lightStatusChange')** with the specified callback is canceled. (The callback object cannot be an anonymous function.) |
+| type | 'lightStatusChange' | 是 | 事件类型，固定为 **'lightStatusChange'**。创建 VideoSessionForSys 对象后可监听此事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 否 | 用于接收结果的回调函数。此参数可选。如果指定此参数，则取消订阅通过 **on('lightStatusChange')** 注册的、使用该回调函数的事件。回调函数不能是匿名函数。 |
 
 **错误码：**
 
@@ -380,7 +380,7 @@ function handleLightStatusOff(mSession: camera.VideoSessionForSys): void {
 offApertureInfoChange(callback?: Callback<ApertureInfo>): void
 ```
 
-Unsubscribes from aperture info event callback.
+取消订阅光圈信息事件回调。
 
 **起始版本：** 26.0.1
 
@@ -396,7 +396,7 @@ Unsubscribes from aperture info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | 否 | Callback used to get the aperture info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | 否 | 用于获取光圈信息的回调函数。 |
 
 **错误码：**
 
@@ -410,7 +410,7 @@ Unsubscribes from aperture info event callback.
 on(type: 'lcdFlashStatus', callback: AsyncCallback<LcdFlashStatus>): void
 ```
 
-Subscribes to LCD flash status change events. This API uses an asynchronous callback to return the result.
+订阅 LCD 闪光灯状态变化事件。此接口通过异步回调返回结果。
 
 **起始版本：** 13
 
@@ -424,8 +424,8 @@ Subscribes to LCD flash status change events. This API uses an asynchronous call
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'lcdFlashStatus' | 是 | Event type. The value is fixed at **'lcdFlashStatus'**. The event can be listened for when a session is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 | Callback used to return the LCD flash status change. |
+| type | 'lcdFlashStatus' | 是 | 事件类型，固定为 **'lcdFlashStatus'**。创建会话后可监听此事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LcdFlashStatus](arkts-camera-camera-lcdflashstatus-i-sys.md)&gt; | 是 | 用于接收 LCD 闪光灯状态变化信息的回调函数。 |
 
 **错误码：**
 
@@ -461,7 +461,7 @@ function registerLcdFlashStatus(videoSession: camera.VideoSession): void {
 on(type: 'focusTrackingInfoAvailable', callback: Callback<FocusTrackingInfo>): void
 ```
 
-Subscribes to focus tracking information events. This API uses an asynchronous callback to return the result.
+订阅对焦跟踪信息事件。此接口通过异步回调返回结果。
 
 **起始版本：** 15
 
@@ -475,8 +475,8 @@ Subscribes to focus tracking information events. This API uses an asynchronous c
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'focusTrackingInfoAvailable' | 是 | Event type. The value is fixed at **'focusTrackingInfoAvailable'**. The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 是 | Callback used to return the focus tracking information. |
+| type | 'focusTrackingInfoAvailable' | 是 | 事件类型，固定为 **'focusTrackingInfoAvailable'**。创建 VideoSessionForSys 对象后可监听此事件。 |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[FocusTrackingInfo](arkts-camera-camera-focustrackinginfo-i-sys.md)&gt; | 是 | 用于接收对焦跟踪信息的回调函数。 |
 
 **错误码：**
 
@@ -509,7 +509,7 @@ function registerFocusTrackingInfoChanged(session: camera.VideoSessionForSys): v
 on(type: 'effectSuggestionChange', callback: AsyncCallback<EffectSuggestionType>): void
 ```
 
-Subscribes to effect suggestion change events.
+订阅效果建议事件回调。
 
 **起始版本：** 18
 
@@ -523,8 +523,8 @@ Subscribes to effect suggestion change events.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'effectSuggestionChange' | 是 | Event type. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 | Callback used to return the result. |
+| type | 'effectSuggestionChange' | 是 | 事件类型。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[EffectSuggestionType](arkts-camera-camera-effectsuggestiontype-e-sys.md)&gt; | 是 | 回调函数，用于返回结果。 |
 
 **错误码：**
 
@@ -538,7 +538,7 @@ Subscribes to effect suggestion change events.
 on(type: 'lightStatusChange', callback: AsyncCallback<LightStatus>): void
 ```
 
-Subscribes to camera light status changes. This API uses an asynchronous callback to return the result.
+订阅相机补光灯状态变化事件。此接口通过异步回调返回结果。
 
 **起始版本：** 18
 
@@ -552,8 +552,8 @@ Subscribes to camera light status changes. This API uses an asynchronous callbac
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'lightStatusChange' | 是 | Event type. The value is fixed at **'lightStatusChange'**. <br>The event can be listened for when a VideoSessionForSys object is created. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 是 | Callback used to return the light status information. |
+| type | 'lightStatusChange' | 是 | 事件类型，固定为 **'lightStatusChange'**。创建 VideoSessionForSys 对象后可监听此事件。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[LightStatus](arkts-camera-camera-lightstatus-e-sys.md)&gt; | 是 | 用于接收补光灯状态信息的回调函数。 |
 
 **错误码：**
 
@@ -594,7 +594,7 @@ function handleLightStatusOn(mSession: camera.VideoSessionForSys): void {
 onApertureInfoChange(callback: Callback<ApertureInfo>): void
 ```
 
-Subscribes aperture info event callback.
+订阅光圈信息事件回调。
 
 **起始版本：** 26.0.1
 
@@ -610,7 +610,7 @@ Subscribes aperture info event callback.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | 是 | Callback used to get the aperture info. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ApertureInfo](arkts-camera-camera-apertureinfo-i-sys.md)&gt; | 是 | 用于获取光圈信息的回调函数。 |
 
 **错误码：**
 

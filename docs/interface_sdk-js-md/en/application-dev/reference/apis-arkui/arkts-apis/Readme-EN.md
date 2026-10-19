@@ -1058,7 +1058,11 @@
   <!--Del-->
   - [off(system api)](arkts-arkui-screen-off-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [offDisconnectWithInfo(system api)](arkts-arkui-screen-offdisconnectwithinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [on(system api)](arkts-arkui-screen-on-f-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [onDisconnectWithInfo(system api)](arkts-arkui-screen-ondisconnectwithinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [resizeVirtualScreen(system api)](arkts-arkui-screen-resizevirtualscreen-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -1087,6 +1091,8 @@
   - [Rect(system api)](arkts-arkui-screen-rect-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [Screen(system api)](arkts-arkui-screen-screen-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ScreenDisconnectInfo(system api)](arkts-arkui-screen-screendisconnectinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->
   - [ScreenModeInfo(system api)](arkts-arkui-screen-screenmodeinfo-i-sys.md)<!--DelEnd-->
   <!--Del-->

@@ -28,7 +28,7 @@ import { camera } from '@kit.CameraKit';
 isZoomCenterPointSupported(): boolean
 ```
 
-Checks whether zoom center point is supported.
+检查是否支持变焦中心点。
 
 **起始版本：** 20
 
@@ -42,7 +42,7 @@ Checks whether zoom center point is supported.
 
 | 类型 | 说明 |
 | --- | --- |
-| boolean | Is the zoom center point supported. |
+| boolean | 是否支持变焦中心点。 |
 
 **错误码：**
 

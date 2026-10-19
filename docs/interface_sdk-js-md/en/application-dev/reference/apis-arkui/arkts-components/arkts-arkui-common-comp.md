@@ -233,10 +233,10 @@ Constructor
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityActionInterceptCallback](arkts-arkui-common-comp-accessibilityactioninterceptcallback-t.md) | Defines the callback type used in accessibility action intercept. The value of action indicates the accessibility action type. |
-| [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | Defines the callback type used in accessibility hover events. The value of isHover indicates whether the touch is hovering over the component. The value of event contains information about AccessibilityHoverEvent. |
-| [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | Defines the callback type used in accessibility focus. The value of isFocus indicates whether the current component is focused |
-| [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | Defines the callback type used in accessibility hover transparent event. |
+| [AccessibilityActionInterceptCallback](arkts-arkui-common-comp-accessibilityactioninterceptcallback-t.md) | Defines the callback type used in onAccessibilityActionIntercept. |
+| [AccessibilityCallback](arkts-arkui-common-comp-accessibilitycallback-t.md) | Defines the callback type for accessibility hover events, active in accessibility mode. |
+| [AccessibilityFocusCallback](arkts-arkui-common-comp-accessibilityfocuscallback-t.md) | Defines the callback type used in **onAccessibilityFocus**. |
+| [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | Provides the callback type for touch events that are not responded to by the accessibility hover event after a screen-reading accessibility application is enabled. |
 | [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | Sets the relative scale ratio at the start and end of the animation compared to the original preview image. |
 | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | Callback type for the component area change event. |
 | [Blender](arkts-arkui-common-comp-blender-t-sys.md) | Blender |
@@ -310,8 +310,8 @@ Constructor
 
 | Name | Description |
 | --- | --- |
-| [AccessibilityAction](arkts-arkui-common-comp-accessibilityaction-e.md) | Enum for accessibility action type |
-| [AccessibilityActionInterceptResult](arkts-arkui-common-comp-accessibilityactioninterceptresult-e.md) | Enum for the result of accessibility action intercept function |
+| [AccessibilityAction](arkts-arkui-common-comp-accessibilityaction-e.md) | Enumerates types of accessibility control operations triggered by components. |
+| [AccessibilityActionInterceptResult](arkts-arkui-common-comp-accessibilityactioninterceptresult-e.md) | Enumerates possible results for accessibility action interception. |
 | [AccessibilityRoleType](arkts-arkui-common-comp-accessibilityroletype-e.md) | Enumerates the component role types used by screen readers. |
 | [AccessibilitySamePageMode](arkts-arkui-common-comp-accessibilitysamepagemode-e.md) | Enumerates the same-page modes for cross-process embedded components and their host applications. |
 | [AdaptiveColor](arkts-arkui-common-comp-adaptivecolor-e.md) | Enumerates the adaptive color modes used for the background blur effect. |

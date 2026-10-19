@@ -1,4 +1,4 @@
-# @ohos.multimedia.image
+# @ohos.multimedia.image(Image)
 
 The module provides capabilities for image decoding, encoding, editing, metadata processing, and image receiving. This module contains the following classes:
 

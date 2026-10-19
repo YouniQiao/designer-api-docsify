@@ -193,17 +193,17 @@ import { camera } from '@kit.CameraKit';
 | [SceneDetectionQuery](arkts-camera-camera-scenedetectionquery-i-sys.md) | Provides the scene detection and query capabilities. |
 | [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) | Describes the scene feature detection result. |
 | [Session](arkts-camera-camera-session-i-sys.md) | 会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能（录像，拍照）。 |
-| [SettingParam](arkts-camera-camera-settingparam-i-sys.md) | Defines the effect parameters used to preheat an image. |
-| [SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md) | Defines the PiP status data. |
-| [SlowMotionVideoSession](arkts-camera-camera-slowmotionvideosession-i-sys.md) | SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect Implements a slow-motion video session, which sets the parameters of the slow-motion video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
+| [SettingParam](arkts-camera-camera-settingparam-i-sys.md) | 定义用于预热图像的效果参数。 |
+| [SketchStatusData](arkts-camera-camera-sketchstatusdata-i-sys.md) | 定义画中画状态数据。 |
+| [SlowMotionVideoSession](arkts-camera-camera-slowmotionvideosession-i-sys.md) | SlowMotionVideoSession extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect实现慢动作录像会话，设置慢动作录像模式的参数，并保存运行相机所需的所有[CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。 |
 | [TimeLapsePhotoSession](arkts-camera-camera-timelapsephotosession-i-sys.md) | TimeLapsePhotoSession 继承 Session, Focus, ManualFocus, AutoExposure, ManualExposure, ManualIso, WhiteBalance, Zoom, ColorEffect实现延时拍照会话，用于设置延时拍照模式的参数，并保存运行相机所需的所有[CameraInput](arkts-camera-camera-camerainput-i.md) 和 [CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自 [Session](arkts-camera-camera-session-i.md)。 |
-| [TripodDetectionResult](arkts-camera-camera-tripoddetectionresult-i-sys.md) | TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md) Describes the tripod detection result. |
+| [TripodDetectionResult](arkts-camera-camera-tripoddetectionresult-i-sys.md) | TripodDetectionResult extends [SceneFeatureDetectionResult](arkts-camera-camera-scenefeaturedetectionresult-i-sys.md)描述三脚架检测结果。 |
 | [TryAEInfo](arkts-camera-camera-tryaeinfo-i-sys.md) | 描述 Try AE 参数。Try AE 表示硬件在延时拍摄过程中根据环境光照变化上报状态。 |
-| [VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i-sys.md) | Video Conflict Functions object. |
-| [VideoFunctions](arkts-camera-camera-videofunctions-i-sys.md) | Video Functions object. |
+| [VideoConflictFunctions](arkts-camera-camera-videoconflictfunctions-i-sys.md) | 视频冲突功能对象。 |
+| [VideoFunctions](arkts-camera-camera-videofunctions-i-sys.md) | 视频功能对象。 |
 | [VideoOutput](arkts-camera-camera-videooutput-i-sys.md) | 录像会话中使用的输出信息，继承[CameraOutput](arkts-camera-camera-cameraoutput-i.md)。 |
 | [VideoSession](arkts-camera-camera-videosession-i-sys.md) | VideoSession继承自[Session](arkts-camera-camera-session-i.md)、[Flash](arkts-camera-camera-flash-i.md)、[AutoExposure](arkts-camera-camera-autoexposure-i.md)、[WhiteBalance](arkts-camera-camera-whitebalance-i.md)、[Focus](arkts-camera-camera-focus-i.md)、[Zoom](arkts-camera-camera-zoom-i.md)、[Stabilization](arkts-camera-camera-stabilization-i.md)、[ColorManagement](arkts-camera-camera-colormanagement-i.md)、[AutoDeviceSwitch](arkts-camera-camera-autodeviceswitch-i.md)、[Macro](arkts-camera-camera-macro-i.md)、[ControlCenter](arkts-camera-camera-controlcenter-i.md)、[ManualExposure](arkts-camera-camera-manualexposure-i.md)、[ManualFocus](arkts-camera-camera-manualfocus-i.md)、[ManualIso](arkts-camera-camera-manualiso-i.md)、[OIS](arkts-camera-camera-ois-i.md)、and [Aperture](arkts-camera-camera-aperture-i.md)。 |
-| [VideoSessionForSys](arkts-camera-camera-videosessionforsys-i-sys.md) | Implements a video session for system applications, which sets the parameters of the normal video mode and saves all [CameraInput](arkts-camera-camera-camerainput-i.md) and [CameraOutput](arkts-camera-camera-cameraoutput-i.md) instances required to run the camera. It inherits from [Session](arkts-camera-camera-session-i.md). |
+| [VideoSessionForSys](arkts-camera-camera-videosessionforsys-i-sys.md) | 为系统应用实现视频会话，用于设置普通视频模式的参数，并保存运行相机所需的所有[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。此接口继承自[Session](arkts-camera-camera-session-i.md)。 |
 | [Zoom](arkts-camera-camera-zoom-i-sys.md) | Zoom继承自[ZoomQuery](arkts-camera-camera-zoomquery-i.md)。 |
 | [ZoomQuery](arkts-camera-camera-zoomquery-i-sys.md) | 提供了与设备的缩放相关的查询功能，包括获取支持的缩放比例范围。 |
 | [CaptureSession](arkts-camera-camera-capturesession-i-sys.md) | 拍照会话类，保存一次相机运行所需要的所有资源[CameraInput](arkts-camera-camera-camerainput-i.md)、[CameraOutput](arkts-camera-camera-cameraoutput-i.md)，并向相机设备申请完成相机功能(录像，拍照)。 |
@@ -262,8 +262,8 @@ import { camera } from '@kit.CameraKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AuxiliaryStatus](arkts-camera-camera-auxiliarystatus-e-sys.md) | Enum for auxiliary status. |
-| [AuxiliaryType](arkts-camera-camera-auxiliarytype-e-sys.md) | Enum for auxiliary type. |
+| [AuxiliaryStatus](arkts-camera-camera-auxiliarystatus-e-sys.md) | 辅助镜头状态枚举。 |
+| [AuxiliaryType](arkts-camera-camera-auxiliarytype-e-sys.md) | 辅助镜头类型枚举。 |
 | [BeautyType](arkts-camera-camera-beautytype-e-sys.md) | 枚举美颜类型。 |
 | [CameraErrorCode](arkts-camera-camera-cameraerrorcode-e-sys.md) | 相机错误码。 |
 | [CameraFormat](arkts-camera-camera-cameraformat-e-sys.md) | 枚举，输出格式。 |

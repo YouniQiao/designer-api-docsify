@@ -26,7 +26,7 @@ import { hardwareManager } from '@kit.DistributedServiceKit';
 srcNetworkId?: string
 ```
 
-表示源端设备，缺省时表示所有源端设备。
+表示源端设备，为有效设备网络ID字符串时操作指定源端设备的指定类型硬件，未提供或传空字符串时表示所有源端设备。传入无效值时返回错误码401。
 
 **类型：** string
 

@@ -32,6 +32,26 @@ Color filter effect of the image in the styled string. If this parameter is not 
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## imageTag
+
+```TypeScript
+imageTag?: string
+```
+
+Image text tag.
+
+**Type:** string
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-ResourceImageAttachmentOptions-imageTag?: string--><!--Device-ResourceImageAttachmentOptions-imageTag?: string-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## layoutStyle
 
 ```TypeScript
