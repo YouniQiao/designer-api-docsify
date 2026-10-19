@@ -2,8 +2,6 @@
 
 Module for AI-generated images using UI Component.
 
-@namespace imageGeneration
-
 **Since:** 23
 
 <!--Device-unnamed-declare namespace imageGeneration--><!--Device-unnamed-declare namespace imageGeneration-End-->

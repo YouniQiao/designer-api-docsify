@@ -4,7 +4,7 @@
 interface Panel
 ```
 
-In the following API examples, you must first use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel1) to obtain a **Panel** instance, and then call the APIs using the obtained instance.
+In the following API examples, you must first use [createPanel](arkts-ime-inputmethodengine-inputmethodability-i.md#createpanel) to obtain a **Panel** instance, and then call the APIs using the obtained instance.
 
 **Since:** 10
 
@@ -17,8 +17,6 @@ In the following API examples, you must first use [createPanel](arkts-ime-inputm
 ```TypeScript
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
-
-<a id="adjustpanelrect1"></a>
 
 ## adjustPanelRect
 
@@ -88,8 +86,6 @@ let panelRect: inputMethodEngine.PanelRect = {
 panel.adjustPanelRect(panelFlag, panelRect);
 ```
 
-<a id="adjustpanelrect2"></a>
-
 ## adjustPanelRect
 
 ```TypeScript
@@ -101,9 +97,9 @@ Adjusts the panel rectangle, and customizes the avoid area and touch area. <br> 
 > <br>
 > This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** <br>
 > state. This API is compatible with <br>
-> [adjustPanelRect](#adjustpanelrect1). If the <br>
+> [adjustPanelRect](#adjustpanelrect). If the <br>
 > input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, <br>
-> [adjustPanelRect](#adjustpanelrect1) is called by <br>
+> [adjustPanelRect](#adjustpanelrect) is called by <br>
 > default. <br>
 > <br>
 > This API returns the result synchronously. The return only indicates that the system receives the setting <br>
@@ -322,8 +318,6 @@ inputMethodAbility.createPanel(this.context, panelConfig).then( (panel: inputMet
 })
 ```
 
-<a id="hide1"></a>
-
 ## hide
 
 ```TypeScript
@@ -358,8 +352,6 @@ panel.hide((err: BusinessError) => {
 });
 ```
 
-<a id="hide2"></a>
-
 ## hide
 
 ```TypeScript
@@ -391,8 +383,6 @@ panel.hide().then(() => {
   console.error(`Failed to hide panel. Code is ${err.code}, message is ${err.message}`);
 });
 ```
-
-<a id="moveto1"></a>
 
 ## moveTo
 
@@ -435,8 +425,6 @@ panel.moveTo(300, 300, (err: BusinessError) => {
   console.info('Succeeded in moving the panel.');
 });
 ```
-
-<a id="moveto2"></a>
 
 ## moveTo
 
@@ -564,7 +552,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 > the actual panel size to refresh the panel layout. <br>
 > <br>
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect2) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-1) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
 
 **Since:** 12
 
@@ -662,7 +650,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 > the actual panel size to refresh the panel layout. <br>
 > <br>
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect2) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-1) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
 
 **Since:** 12
 
@@ -691,8 +679,6 @@ panel.on('sizeChange', (windowSize: window.Size, keyboardArea: inputMethodEngine
     `keyboardArea: ${keyboardArea.top}, ${keyboardArea.bottom}, ${keyboardArea.left}, ${keyboardArea.right}`);
 });
 ```
-
-<a id="resize1"></a>
 
 ## resize
 
@@ -743,8 +729,6 @@ panel.resize(500, 1000, (err: BusinessError) => {
   console.info('Succeeded in changing the panel size.');
 });
 ```
-
-<a id="resize2"></a>
 
 ## resize
 
@@ -805,7 +789,7 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br>- [adjustPanelRect](#adjustpanelrect1) (available since API version 12) <br>- [adjustPanelRect](#adjustpanelrect2) (available since API version 15) <br>- [resize](#resize) (available since API version 10)
+Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br>- [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br>- [adjustPanelRect](#adjustpanelrect-1) (available since API version 15) <br>- [resize](#resize) (available since API version 10)
 
 **Since:** 20
 
@@ -941,7 +925,7 @@ Sets the input method panel to privacy mode. In privacy mode, screenshot and scr
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode.<br> - **true**: privacy mode. <br> - **false**: non-privacy mode. |
+| isPrivacyMode | boolean | Yes | Whether to set the input method panel to privacy mode. <br> - **true**: privacy mode. <br> - **false**: non-privacy mode. |
 
 **Error codes:**
 
@@ -1003,8 +987,6 @@ try {
 }
 ```
 
-<a id="setuicontent1"></a>
-
 ## setUiContent
 
 ```TypeScript
@@ -1045,8 +1027,6 @@ panel.setUiContent('pages/page2/page2', (err: BusinessError) => {
   console.info('Succeeded in setting the content.');
 });
 ```
-
-<a id="setuicontent2"></a>
 
 ## setUiContent
 
@@ -1092,8 +1072,6 @@ panel.setUiContent('pages/page2/page2').then(() => {
 });
 ```
 
-<a id="setuicontent3"></a>
-
 ## setUiContent
 
 ```TypeScript
@@ -1137,8 +1115,6 @@ panel.setUiContent('pages/page2/page2', storage, (err: BusinessError) => {
   console.info('Succeeded in setting the content.');
 });
 ```
-
-<a id="setuicontent4"></a>
 
 ## setUiContent
 
@@ -1187,8 +1163,6 @@ panel.setUiContent('pages/page2/page2', storage).then(() => {
 });
 ```
 
-<a id="show1"></a>
-
 ## show
 
 ```TypeScript
@@ -1222,8 +1196,6 @@ panel.show((err: BusinessError) => {
   console.info('Succeeded in showing the panel.');
 });
 ```
-
-<a id="show2"></a>
 
 ## show
 
@@ -1286,8 +1258,6 @@ Sends a command to start moving the window. The window can be moved only when th
 panel.startMoving();
 ```
 
-<a id="updatepanelrect1"></a>
-
 ## updatePanelRect
 
 ```TypeScript
@@ -1328,8 +1298,6 @@ Update the panel rectangle. This API uses a promise to return the result. <br>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
-<a id="updatepanelrect2"></a>
-
 ## updatePanelRect
 
 ```TypeScript
@@ -1339,7 +1307,7 @@ updatePanelRect(flag: PanelFlag, rect: EnhancedPanelRect): Promise<void>
 Update the panel rectangle, and customizes the avoid area and touch area. This API uses a promise to return the result. <br>  
 > **NOTE:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRect](#updatepanelrect1). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRect](#updatepanelrect1) is called by default. <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRect](#updatepanelrect). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRect](#updatepanelrect) is called by default. <br>
 > <br>
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
@@ -1370,8 +1338,6 @@ Update the panel rectangle, and customizes the avoid area and touch area. This A
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 | [12800017](../errorcode-inputmethod-framework.md#12800017-invalid-panel-type-or-panel-flag) | invalid panel type or panel flag. |
-
-<a id="updatepanelrectsync1"></a>
 
 ## updatePanelRectSync
 
@@ -1407,8 +1373,6 @@ Update the panel rectangle. <br>
 | --- | --- |
 | [12800013](../errorcode-inputmethod-framework.md#12800013-window-manager-service-error) | window manager service error. |
 
-<a id="updatepanelrectsync2"></a>
-
 ## updatePanelRectSync
 
 ```TypeScript
@@ -1418,7 +1382,7 @@ updatePanelRectSync(flag: PanelFlag, rect: EnhancedPanelRect): void
 Update the panel rectangle, and customizes the avoid area and touch area. <br>  
 > **NOTE:** <br>
 > <br>
-> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRectSync](#updatepanelrectsync1). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRectSync](#updatepanelrectsync1) is called by default. <br>
+> This API applies only to the panels of the **SOFT_KEYBOARD** type in the **FLG_FIXED** or **FLG_FLOATING** state. This API is compatible with [updatePanelRectSync](#updatepanelrectsync). If the input parameter **rect** contains only the **landscapeRect** and **portraitRect** attributes, [updatePanelRectSync](#updatepanelrectsync) is called by default. <br>
 > <br>
 > When the **PanelFlag** of a smartphone is **FLG_FLOATING** and the panel width is between 0 and 288 vp, the function buttons at the bottom of the panel will dynamically update their size according to the panel width. To ensure the optimal user experience, it is recommended that the panel width be no less than 90 vp.
 
@@ -1469,7 +1433,7 @@ Updates the hot zone on the input method panel in the current state. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events.<br> - The array size is limited to [1, 4]. <br> - The input hot zone is relative to the left vertex of the input method panel window. |
+| inputRegion | Array&lt;[window.Rect](../../apis-arkui/arkts-apis/arkts-arkui-window-rect-i.md)&gt; | Yes | Region for receiving input events. <br> - The array size is limited to [1, 4]. <br> - The input hot zone is relative to the left vertex of the input method panel window. |
 
 **Error codes:**
 

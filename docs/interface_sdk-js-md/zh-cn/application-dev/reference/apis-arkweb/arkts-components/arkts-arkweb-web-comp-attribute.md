@@ -1695,7 +1695,7 @@ onClientAuthenticationRequest(callback: Callback<OnClientAuthenticationEvent>)
 
 > **说明：** 
 > 
-> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm2)（继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel)（取消）或[ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore)（忽略）。
+> - Web组件有三种响应方式：[ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm-1)（继续）、[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel)（取消）或[ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore)（忽略）。
 > 
 > - 如果调用ClientAuthenticationHandler.confirm或ClientAuthenticationHandler.cancel，ArkWeb会将认证结果存储在内存中（在应用程序的生命周期内），并且不会对相同的主机和端口再次调用onClientAuthenticationRequest()。如果调用onClientAuthenticationRequest.ignore，ArkWeb则不会存储该认证结果。
 > 
@@ -2590,7 +2590,7 @@ onOverrideErrorPage(callback: OnOverrideErrorPageCallback)
 
 > **说明：** 
 > 
-> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled1)<sup > &gt;20+</sup>启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled2)接口并将includeSubframe设置为true。
+> - 该功能需通过调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)<sup > &gt;20+</sup>启用mainframe错误页功能后才会生效。如需同时启用subframe错误页功能，请调用[setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled-1)接口并将includeSubframe设置为true。
 > 
 > - 通过[errorPageEvent.request.isMainFrame()](arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe)判断请求来源是mainframe还是subframe，以便在回调中分别设置对应的自定义错误页。
 > 
@@ -2854,8 +2854,6 @@ onRefreshAccessedHistory(callback: Callback<OnRefreshAccessedHistoryEvent>)
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRefreshAccessedHistoryEvent](arkts-arkweb-web-comp-onrefreshaccessedhistoryevent-i.md)&gt; | 是 | 在导航完成时触发。<br>**适用版本：** 12 |
 
-<a id="onrenderexited1"></a>
-
 ## onRenderExited
 
 ```TypeScript
@@ -2883,8 +2881,6 @@ onRenderExited(callback: Callback<OnRenderExitedEvent>)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | Callback&lt;[OnRenderExitedEvent](arkts-arkweb-web-comp-onrenderexitedevent-i.md)&gt; | 是 | 渲染过程退出时触发。<br>**适用版本：** 12 |
-
-<a id="onrenderexited2"></a>
 
 ## onRenderExited
 

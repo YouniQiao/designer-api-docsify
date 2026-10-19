@@ -10,7 +10,7 @@
 
  | Kit | 模块 |  
  | -------- | -------- |  
-| Ability Kit | [@ohos.ability.featureAbility (FeatureAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-ability-featureability.md)</br>[@ohos.ability.particleAbility (ParticleAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-ability-particleability.md) |
+ | Ability Kit | [@ohos.ability.featureAbility (FeatureAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-ability-featureability.md)</br>[@ohos.ability.particleAbility (ParticleAbility模块)](../../apis-ability-kit/arkts-apis/arkts-ability-ability-particleability.md) |
 
  | Background Tasks Kit | [@ohos.resourceschedule.backgroundTaskManager (后台任务管理)](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-resourceschedule-backgroundtaskmanager.md)</br>[@ohos.reminderAgentManager (后台代理提醒)](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagentmanager.md)</br> [@ohos.reminderAgent (后台代理提醒)](../../apis-background-tasks-kit/arkts-apis/arkts-backgroundtasks-reminderagent.md) |
 

@@ -6,8 +6,6 @@ declare class ImageSpanAttribute extends BaseSpan<ImageSpanAttribute>
 
 The attributes inherit from [BaseSpan](arkts-arkui-span-comp-basespan-c.md). Among the universal attributes, [size](arkts-arkui-common-comp.md), [background](arkts-arkui-common-comp.md), and [border](arkts-arkui-common-comp.md) are supported.
 
-@extends CommonMethod<ImageSpanAttribute> [since 10 - 10] @extends BaseSpan<ImageSpanAttribute> [since 11]
-
 **Inheritance/Implementation:** ImageSpanAttribute extends BaseSpan&lt;ImageSpanAttribute&gt;
 
 **Since:** 10
@@ -62,7 +60,7 @@ Sets the color filter for the image.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-image-comp-drawingcolorfilter-t.md) | Yes | 1. Sets a color filter effect for the image. The input parameter is a 4x5 RGBA conversion matrix. <br>The first row of the matrix is used to calculate R' (the new red component), the second row to calculate G'(the new green component), the third row to calculate B' (the new blue component), and the fourth row to calculate A' (the new alpha component). The four rows represent different RGBA components.<br>When the diagonal values of the matrix are 1 and the other values are 0, the original colors of the image are retained. <br> **Calculation rule:** <br>If the input filter matrix is: <br>![image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png) <br>and the pixel is [R, G, B, A] with color values in the range [0, 255], <br>then the filtered color is [R', G', B', A'] <br>![image-matrix-2](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_2.png) <br>2. Supports the ColorFilter type of @ohos.graphics.drawing as the input parameter. <br>**NOTE:** <br>The DrawingColorFilter type in this API can be used in atomic services. For SVG image sources, the filter takes effect only on the stroke attribute. |
+| filter | [ColorFilter](../arkts-apis/arkts-arkui-colorfilter-c.md) &#124; [DrawingColorFilter](arkts-arkui-image-comp-drawingcolorfilter-t.md) | Yes | 1. Sets a color filter effect for the image. The input parameter is a 4x5 RGBA conversion matrix. <br>The first row of the matrix is used to calculate R' (the new red component), the second row to calculate G'(the new green component), the third row to calculate B' (the new blue component), and the fourth row to calculate A' (the new alpha component). The four rows represent different RGBA components. <br>When the diagonal values of the matrix are 1 and the other values are 0, the original colors of the image are retained. <br> **Calculation rule:** <br>If the input filter matrix is: <br>![image-matrix-1](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_1.png) <br>and the pixel is [R, G, B, A] with color values in the range [0, 255], <br>then the filtered color is [R', G', B', A'] <br>![image-matrix-2](../../../reference/apis-arkui/arkui-ts/figures/image_matrix_2.png) <br>2. Supports the ColorFilter type of @ohos.graphics.drawing as the input parameter. <br>**NOTE:** <br>The DrawingColorFilter type in this API can be used in atomic services. For SVG image sources, the filter takes effect only on the stroke attribute. |
 
 ## objectFit
 

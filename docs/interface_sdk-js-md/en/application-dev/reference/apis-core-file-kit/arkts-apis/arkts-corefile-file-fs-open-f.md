@@ -33,7 +33,7 @@ Opens a file or directory. This API supports the use of a URI. This API uses a p
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Promise used to return the<b>File</b> object. |
+| Promise&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Promise used to return the <b>File</b> object. |
 
 **Error codes:**
 
@@ -68,8 +68,6 @@ Opens a file or directory. This API supports the use of a URI. This API uses a p
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="open2"></a>
-
 ## open
 
 ```TypeScript
@@ -91,7 +89,7 @@ Opens a file or directory. This API supports the use of a URI. This API uses an 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of the file or directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the<b>File</b> object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the <b>File</b> object. |
 
 **Error codes:**
 
@@ -125,8 +123,6 @@ Opens a file or directory. This API supports the use of a URI. This API uses an 
 | 13900042 | Unknown error |
 
 
-<a id="open3"></a>
-
 ## open
 
 ```TypeScript
@@ -151,7 +147,7 @@ This API supports the use of a URI.
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path or URI of the file or directory. |
 | mode | number | Yes | [Mode](arkts-corefile-fileio-openmode-n.md) for opening the file or directory. You must specify one of the following options. By default, the file is opened in read-only mode.<br>           - <b>OpenMode.READ_ONLY(0o0)</b>: Open the file in read-only mode. <br>           - <b>OpenMode.WRITE_ONLY(0o1)</b>: Open the file in write-only mode. <br>           - <b>OpenMode.READ_WRITE(0o2)</b>: Open the file in read/write mode. <br>You can specify the following options,   separated using a bitwise OR operator (&#124;). By default, no extra option is specified. <br>           - <b>OpenMode.CREATE(0o100)</b>: If the file does not exist, create it. <br>           - <b>OpenMode.TRUNC(0o1000)</b>: If the file exists and is opened in write mode,   truncate the file length to 0. <br>           - <b>OpenMode.APPEND(0o2000)</b>: Open the file in append mode. New data will be added to the   end of the file. <br>           - <b>OpenMode.NONBLOCK(0o4000)</b>: If <b>path</b> points to a named pipe (also known as a FIFO),   block special file, or character special file, perform non-blocking operations on the open file and in subsequent I/Os. <br>           - <b>OpenMode.DIR(0o200000)</b>: If <b>path</b> does not point to a directory, throw an   exception. The write permission is not allowed. <br>           - <b>OpenMode.NOFOLLOW(0o400000)</b>: If <b>path</b> points to a symbolic link, throw an exception. <br>           - <b>OpenMode.SYNC(0o4010000)</b>: Open the file in synchronous I/O mode. <br>           - <b>OpenMode.UNCACHE(0o10000000000)</b>: Disable the page cache for reading and writing a file. This   option is supported since API version 26.0.0. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the<b>File</b> object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[File](arkts-corefile-file-fs-file-i.md)&gt; | Yes | Callback used to return the <b>File</b> object. |
 
 **Error codes:**
 

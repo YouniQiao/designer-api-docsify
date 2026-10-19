@@ -928,7 +928,7 @@ Sets the maximum nesting depth for asynchronous invocations.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t depth | [in] Maximum asynchronous nesting depth allowed. |
+| uint32_t depth | [in] Maximum allowed asynchronous nesting depth, ranging from 1 to 16. |
 
 **Returns**:
 
@@ -955,7 +955,7 @@ Sets the maximum stack depth for each asynchronous task function.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t depth | [in] Maximum asynchronous task stack depth. |
+| uint32_t depth | [in] Maximum stack depth of asynchronous tasks, ranging from 1 to 256. |
 
 **Returns**:
 
@@ -982,7 +982,7 @@ Sets the sampling interval in bytes.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t bytes | [in] Sample interval in bytes. |
+| uint32_t bytes | [in] Sampling interval, ranging from [384, 4294967295], in bytes. |
 
 **Returns**:
 
@@ -1009,7 +1009,7 @@ Sets the statistics interval in seconds.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t seconds | [in] Statistics interval in seconds. |
+| uint32_t seconds | [in] Statistics interval, ranging from [1, 3600], in seconds. |
 
 **Returns**:
 
@@ -1036,7 +1036,7 @@ Sets the maximum backtrace stack depth.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t depth | [in] Maximum backtrace stack depth. |
+| uint32_t depth | [in] Maximum stack depth, ranging from [1, 30]. |
 
 **Returns**:
 
@@ -1063,7 +1063,7 @@ Sets the filter size for allocations.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t size | [in] Filter size threshold in bytes. |
+| uint32_t size | [in] Filter size threshold, ranging from 1 to 4294967295, in bytes. |
 
 **Returns**:
 
@@ -1090,7 +1090,7 @@ Sets the maximum profiling duration in seconds.
 | Parameter | Description |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] Pointer to the OH_HiDebug_ProfilerOptions structure. It must not be NULL. |
-| uint32_t seconds | [in] Maximum duration in seconds. |
+| uint32_t seconds | [in] Maximum collection duration, ranging from [1, 3600], in seconds. |
 
 **Returns**:
 

@@ -10,8 +10,6 @@ This module provides the capability to manage and organize script information, a
 > [ArkTSScriptInfo](arkts-ability-scriptmanager-arktsscriptinfo-i.md), which is used to receive the script context information passed
 > by the system. Developers can add custom parameters after the first parameter.
 
-@namespace scriptManager
-
 **Since:** 26.0.0
 
 <!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
@@ -30,7 +28,7 @@ import { scriptManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp) | Completes the ArkTS script execution of an app and reports the execution result. This API uses a promise to return the result. |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp-1) | Completes the ArkTS script execution of an app and reports the execution result. This API uses a promise to return the result. |
 
 ### Interfaces
 

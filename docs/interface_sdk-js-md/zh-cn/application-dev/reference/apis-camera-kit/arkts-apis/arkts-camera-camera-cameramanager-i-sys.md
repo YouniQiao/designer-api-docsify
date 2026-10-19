@@ -113,7 +113,7 @@ createDepthDataOutput(profile: DepthProfile): DepthDataOutput
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | 是 | 支持的预览profile，通过[getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability2) 获取。 |
+| profile | [DepthProfile](arkts-camera-camera-depthprofile-i-sys.md) | 是 | 支持的预览profile，通过[getSupportedOutputCapability](arkts-camera-camera-cameramanager-i.md#getsupportedoutputcapability-1) 获取。 |
 
 **返回值：**
 

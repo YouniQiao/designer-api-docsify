@@ -30,7 +30,7 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source file. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | No | Move mode. The value<b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
+| mode | number | No | Move mode. The value <b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
 
 **Return value:**
 
@@ -63,8 +63,6 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | 13900042 | Unknown error |
 
 
-<a id="movefile2"></a>
-
 ## moveFile
 
 ```TypeScript
@@ -89,7 +87,7 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source file. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -116,8 +114,6 @@ Moves a file and forcibly overwrites the file with the same name in the destinat
 | 13900042 | Unknown error |
 
 
-<a id="movefile3"></a>
-
 ## moveFile
 
 ```TypeScript
@@ -142,8 +138,8 @@ Moves a file to the target path. You can set the conflict handling mode. This AP
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source file. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | Yes | Move mode. The value<b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| mode | number | Yes | Move mode. The value <b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is moved successfully, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

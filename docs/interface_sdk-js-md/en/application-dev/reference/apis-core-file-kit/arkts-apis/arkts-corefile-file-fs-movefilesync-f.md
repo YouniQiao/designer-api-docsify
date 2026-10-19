@@ -32,7 +32,7 @@ Moves a file to the destination path. This API returns the result synchronously.
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source file. |
 | dest | string | Yes | Application sandbox path of the destination file. |
-| mode | number | No | Move mode. The value<b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
+| mode | number | No | Move mode. The value <b>0</b> means to overwrite the file with the same name in the destination directory; the value <b>1</b> means to throw an exception. The default value is <b>0</b>. |
 
 **Error codes:**
 

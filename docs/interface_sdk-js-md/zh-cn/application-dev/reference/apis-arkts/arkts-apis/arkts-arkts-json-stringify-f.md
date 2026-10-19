@@ -6,8 +6,6 @@
 import { JSON } from '@kit.ArkTS';
 ```
 
-<a id="stringify1"></a>
-
 ## stringify
 
 ```TypeScript
@@ -38,8 +36,6 @@ function stringify(value: Object, replacer?: (number | string)[] | null, space?:
 | --- | --- |
 | string | 表示对象或数组经序列化处理后生成的JSON格式文本字符串。 |
 
-
-<a id="stringify2"></a>
 
 ## stringify
 

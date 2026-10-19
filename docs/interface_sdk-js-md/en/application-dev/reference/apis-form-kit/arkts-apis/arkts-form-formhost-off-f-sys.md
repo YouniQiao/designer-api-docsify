@@ -32,7 +32,7 @@ Unsubscribes from widget uninstall events. This API uses an asynchronous callbac
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | type | "formUninstall" | Yes | Event type. The value **"formUninstall"** indicates a widget uninstall event. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to return the widget ID. If it is left unspecified, it indicates the callback for all the events that have been subscribed.<br> To cancel the subscription with a given callback, this parameter must be set to the same value as **callback** in **on("formUninstall")**. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;string&gt; | No | Callback used to return the widget ID. If it is left unspecified, it indicates the callback for all the events that have been subscribed. <br> To cancel the subscription with a given callback, this parameter must be set to the same value as **callback** in **on("formUninstall")**. |
 
 **Error codes:**
 

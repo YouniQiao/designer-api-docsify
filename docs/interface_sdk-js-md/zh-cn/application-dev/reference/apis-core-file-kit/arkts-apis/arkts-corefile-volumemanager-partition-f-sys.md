@@ -6,8 +6,6 @@
 import { volumeManager } from '@kit.CoreFileKit';
 ```
 
-<a id="partition1"></a>
-
 ## partition
 
 ```TypeScript
@@ -40,13 +38,11 @@ function partition(diskId: string, type: number, callback: AsyncCallback<void>):
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
-
-<a id="partition2"></a>
 
 ## partition
 
@@ -85,7 +81,7 @@ function partition(diskId: string, type: number): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified;<br>2.Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | The input parameter is invalid.Possible causes: 1.Mandatory parameters are left unspecified; <br>2.Incorrect parameter types. |
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |

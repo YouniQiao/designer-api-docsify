@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="unsubscribe1"></a>
-
 ## unsubscribe
 
 ```TypeScript
@@ -36,8 +34,6 @@ function unsubscribe(subscriber: NotificationSubscriber, callback: AsyncCallback
 | subscriber | [NotificationSubscriber](arkts-notification-notificationsubscriber-i-sys.md) | 是 | 通知订阅对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 取消订阅动作回调函数。 |
 
-
-<a id="unsubscribe2"></a>
 
 ## unsubscribe
 

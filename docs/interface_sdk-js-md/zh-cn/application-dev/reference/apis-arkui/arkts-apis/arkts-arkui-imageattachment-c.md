@@ -12,8 +12,6 @@ declare class ImageAttachment
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor1"></a>
-
 ## constructor
 
 ```TypeScript
@@ -37,8 +35,6 @@ constructor(value: ImageAttachmentInterface)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | 是 | 图片设置项。 |
-
-<a id="constructor2"></a>
 
 ## constructor
 

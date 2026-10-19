@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="cancel1"></a>
-
 ## cancel
 
 ```TypeScript
@@ -32,8 +30,6 @@ Cancels a notification with the specified ID. This API uses an asynchronous call
 | id | number | Yes | Notification ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="cancel2"></a>
 
 ## cancel
 
@@ -61,8 +57,6 @@ Cancels a notification with the specified ID and label. This API uses an asynchr
 | label | string | Yes | Notification label. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="cancel3"></a>
 
 ## cancel
 

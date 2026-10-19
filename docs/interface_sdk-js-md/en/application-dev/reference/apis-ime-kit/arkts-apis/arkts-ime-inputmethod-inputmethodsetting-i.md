@@ -4,7 +4,7 @@
 interface InputMethodSetting
 ```
 
-**InputMethodSetting** provides input method configuration and query capabilities, and offers the following features for foreground applications: <br> <br>- Input method change subscription: subscribe to input method and subtype change events through [on('imeChange')](#onimechange), and receive a notification when the user switches the input method. <br>- Input method list query: query the list of enabled/disabled input methods through [getInputMethods](#getinputmethods1), query the list of all installed input methods through [getAllInputMethods](#getallinputmethods1), and query the subtype list of a specified input method through [listInputMethodSubtype](#listinputmethodsubtype1). <br>- Panel visibility query: query whether the input method panel is displayed through **isPanelShown**. <br>- Input method selection dialog: display the input method selection dialog through **showOptionalInputMethods** (deprecated; **InputMethodListDialog** is recommended). <br> <br>It must be used after you obtain the **InputMethodSetting** instance through [getSetting](arkts-ime-inputmethod-getsetting-f.md). <br> <br>For the following APIs, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+**InputMethodSetting** provides input method configuration and query capabilities, and offers the following features for foreground applications: <br> <br>- Input method change subscription: subscribe to input method and subtype change events through [on('imeChange')](#onimechange), and receive a notification when the user switches the input method. <br>- Input method list query: query the list of enabled/disabled input methods through [getInputMethods](#getinputmethods), query the list of all installed input methods through [getAllInputMethods](#getallinputmethods), and query the subtype list of a specified input method through [listInputMethodSubtype](#listinputmethodsubtype). <br>- Panel visibility query: query whether the input method panel is displayed through **isPanelShown**. <br>- Input method selection dialog: display the input method selection dialog through **showOptionalInputMethods** (deprecated; **InputMethodListDialog** is recommended). <br> <br>It must be used after you obtain the **InputMethodSetting** instance through [getSetting](arkts-ime-inputmethod-getsetting-f.md). <br> <br>For the following APIs, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -17,8 +17,6 @@ interface InputMethodSetting
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
 ```
-
-<a id="getallinputmethods1"></a>
 
 ## getAllInputMethods
 
@@ -61,8 +59,6 @@ inputMethod.getSetting().getAllInputMethods((err: BusinessError, data: Array<inp
 });
 ```
 
-<a id="getallinputmethods2"></a>
-
 ## getAllInputMethods
 
 ```TypeScript
@@ -102,8 +98,6 @@ inputMethod.getSetting().getAllInputMethods().then((data: Array<inputMethod.Inpu
 })
 ```
 
-<a id="getallinputmethodssync1"></a>
-
 ## getAllInputMethodsSync
 
 ```TypeScript
@@ -139,8 +133,6 @@ Obtains a list of all input methods. This API returns the result synchronously. 
 ```TypeScript
 let imeProperty: Array<inputMethod.InputMethodProperty> = inputMethod.getSetting().getAllInputMethodsSync();
 ```
-
-<a id="getinputmethods1"></a>
 
 ## getInputMethods
 
@@ -191,8 +183,6 @@ inputMethod.getSetting().getInputMethods(true, (err: BusinessError, data: Array<
   console.info('Succeeded in getting inputMethods.');
 });
 ```
-
-<a id="getinputmethods2"></a>
 
 ## getInputMethods
 
@@ -246,8 +236,6 @@ inputMethod.getSetting().getInputMethods(true).then((data: Array<inputMethod.Inp
   console.error(`Failed to getInputMethods, code: ${err.code}, message: ${err.message}`);
 })
 ```
-
-<a id="getinputmethodssync1"></a>
 
 ## getInputMethodsSync
 
@@ -338,8 +326,6 @@ inputMethod.getSetting().getInputMethodState().then((status: inputMethod.Enabled
 });
 ```
 
-<a id="listcurrentinputmethodsubtype1"></a>
-
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -383,8 +369,6 @@ inputMethodSetting.listCurrentInputMethodSubtype((err: BusinessError, data: Arra
 });
 ```
 
-<a id="listcurrentinputmethodsubtype2"></a>
-
 ## listCurrentInputMethodSubtype
 
 ```TypeScript
@@ -426,8 +410,6 @@ inputMethodSetting.listCurrentInputMethodSubtype().then((data: Array<InputMethod
   console.error(`Failed to listCurrentInputMethodSubtype, code: ${err.code}, message: ${err.message}`);
 })
 ```
-
-<a id="listinputmethodsubtype1"></a>
 
 ## listInputMethodSubtype
 
@@ -484,8 +466,6 @@ inputMethodSetting.listInputMethodSubtype(inputMethodProperty,
     console.info('Succeeded in listing inputMethodSubtype.');
   });
 ```
-
-<a id="listinputmethodsubtype2"></a>
 
 ## listInputMethodSubtype
 
@@ -608,8 +588,6 @@ inputMethod.getSetting()
   });
 ```
 
-<a id="displayoptionalinputmethod1"></a>
-
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -648,8 +626,6 @@ inputMethod.getSetting().displayOptionalInputMethod((err: BusinessError) => {
 });
 ```
 
-<a id="displayoptionalinputmethod2"></a>
-
 ## displayOptionalInputMethod
 
 ```TypeScript
@@ -685,8 +661,6 @@ inputMethod.getSetting().displayOptionalInputMethod().then(() => {
   console.error(`Failed to displayOptionalInputMethod, code: ${err.code}, message: ${err.message}`);
 })
 ```
-
-<a id="listinputmethod1"></a>
 
 ## listInputMethod
 
@@ -726,8 +700,6 @@ inputMethod.getSetting().listInputMethod((err: BusinessError, data: Array<inputM
 });
 ```
 
-<a id="listinputmethod2"></a>
-
 ## listInputMethod
 
 ```TypeScript
@@ -763,8 +735,6 @@ inputMethod.getSetting().listInputMethod().then((data: Array<inputMethod.InputMe
   console.error(`Failed to listInputMethod, code: ${err.code}, message: ${err.message}`);
 })
 ```
-
-<a id="showoptionalinputmethods1"></a>
 
 ## showOptionalInputMethods
 
@@ -813,8 +783,6 @@ inputMethod.getSetting().showOptionalInputMethods((err: BusinessError, result: b
   }
 });
 ```
-
-<a id="showoptionalinputmethods2"></a>
 
 ## showOptionalInputMethods
 

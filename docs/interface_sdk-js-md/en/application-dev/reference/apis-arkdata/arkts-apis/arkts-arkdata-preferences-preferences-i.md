@@ -4,7 +4,7 @@
 interface Preferences
 ```
 
-Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences1).
+Provides APIs for obtaining and modifying the stored data. Before calling any API of **Preferences**, you must obtain a **Preferences** instance by using [preferences.getPreferences](arkts-arkdata-preferences-getpreferences-f.md#getpreferences-1).
 
 **Since:** 9
 
@@ -18,15 +18,13 @@ Provides APIs for obtaining and modifying the stored data. Before calling any AP
 import { preferences } from '@kit.ArkData';
 ```
 
-<a id="clear1"></a>
-
 ## clear
 
 ```TypeScript
 clear(callback: AsyncCallback<void>): void
 ```
 
-Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -62,15 +60,13 @@ dataPreferences.clear((err: BusinessError) =>{
 })
 ```
 
-<a id="clear2"></a>
-
 ## clear
 
 ```TypeScript
 clear(): Promise<void>
 ```
 
-Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -111,7 +107,7 @@ promise.then(() => {
 clearSync(): void
 ```
 
-Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush1) to persist the **Preferences** instance.
+Clears this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -127,15 +123,13 @@ Clears this **Preferences** instance. This API returns the result synchronously.
 dataPreferences.clearSync();
 ```
 
-<a id="delete1"></a>
-
 ## delete
 
 ```TypeScript
 delete(key: string, callback: AsyncCallback<void>): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -156,7 +150,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses an asynchron
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -173,15 +167,13 @@ dataPreferences.delete('startup', (err: BusinessError) => {
 })
 ```
 
-<a id="delete2"></a>
-
 ## delete
 
 ```TypeScript
 delete(key: string): Promise<void>
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -207,7 +199,7 @@ Deletes a KV pair from this **Preferences** instance. This API uses a promise to
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -229,7 +221,7 @@ deleteStartupPromise.then(() => {
 deleteSync(key: string): void
 ```
 
-Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush1) to persist the **Preferences** instance.
+Deletes a KV pair from this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -249,7 +241,7 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -257,8 +249,6 @@ Deletes a KV pair from this **Preferences** instance. This API returns the resul
 ```TypeScript
 dataPreferences.deleteSync('startup');
 ```
-
-<a id="flush1"></a>
 
 ## flush
 
@@ -301,8 +291,6 @@ dataPreferences.flush((err: BusinessError) => {
   console.info("Succeeded in flushing.");
 })
 ```
-
-<a id="flush2"></a>
 
 ## flush
 
@@ -373,8 +361,6 @@ Flushes the data in the cached **Preferences** instance to the persistent file.
 dataPreferences.flushSync();
 ```
 
-<a id="get1"></a>
-
 ## get
 
 ```TypeScript
@@ -403,7 +389,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses an 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -419,8 +405,6 @@ dataPreferences.get('startup', 'default', (err: BusinessError, val: preferences.
   console.info("Succeeded in getting value of 'startup'. val: " + val);
 })
 ```
-
-<a id="get2"></a>
 
 ## get
 
@@ -455,7 +439,7 @@ Obtains the value of a key from this **Preferences** instance. This API uses a p
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -470,8 +454,6 @@ data.then((data: preferences.ValueType) => {
   console.error("Failed to get value of 'startup'. code =" + err.code + ", message = " + err.message);
 })
 ```
-
-<a id="getall1"></a>
 
 ## getAll
 
@@ -523,8 +505,6 @@ dataPreferences.getAll((err: BusinessError, value: Object) => {
   console.info("getAll object = " + JSON.stringify(value));
 })
 ```
-
-<a id="getall2"></a>
 
 ## getAll
 
@@ -653,7 +633,7 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -661,8 +641,6 @@ Obtains the value of a key from this **Preferences** instance. This API returns 
 ```TypeScript
 let value: preferences.ValueType = dataPreferences.getSync('startup', 'default');
 ```
-
-<a id="has1"></a>
 
 ## has
 
@@ -691,7 +669,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -711,8 +689,6 @@ dataPreferences.has('startup', (err: BusinessError, val: boolean) => {
   }
 })
 ```
-
-<a id="has2"></a>
 
 ## has
 
@@ -746,7 +722,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -798,7 +774,7 @@ Checks whether this **Preferences** instance contains the KV pair of the given k
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -839,7 +815,7 @@ Unsubscribes from data changes.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -889,7 +865,7 @@ Unsubscribes from inter-process data changes. This API is provided for applicati
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -940,7 +916,7 @@ Unsubscribes from changes of specific data.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -974,7 +950,7 @@ dataPreferences.off('dataChange', keys, observer);
 on(type: 'change', callback: Callback<string>): void
 ```
 
-Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](#flush1).
+Subscribes to data changes. The registered callback will be invoked to return the new value if the data change is [flushed](#flush).
 
 **Since:** 9
 
@@ -995,7 +971,7 @@ Subscribes to data changes. The registered callback will be invoked to return th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -1023,7 +999,7 @@ dataPreferences.flush((err: BusinessError) => {
 on(type: 'multiProcessChange', callback: Callback<string>): void
 ```
 
-Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush1) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
+Subscribes to data changes between processes. When multiple processes hold the same preference file, calling [flush](#flush) in any process (including the current process) will trigger the callback in this API. This API is provided for applications that have applied for [dataGroupId](arkts-arkdata-preferences-options-i.md). Avoid using this API for the applications that have not applied for **dataGroupId** because calling it in multiple process may damage the persistent files and cause data loss.
 
 **Since:** 10
 
@@ -1044,7 +1020,7 @@ Subscribes to data changes between processes. When multiple processes hold the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500019](../errorcode-preferences.md#15500019-failed-to-obtain-the-subscription-service) | Failed to obtain the subscription service. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
@@ -1073,7 +1049,7 @@ dataPreferences.flush((err: BusinessError) => {
 on(type: 'dataChange', keys: Array<string>, callback: Callback<Record<string, ValueType>>): void
 ```
 
-Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](#flush1).
+Subscribes to changes of specific data. The registered callback will be invoked only after the values of the specified keys are changed and [flushed](#flush).
 
 **Since:** 12
 
@@ -1095,7 +1071,7 @@ Subscribes to changes of specific data. The registered callback will be invoked 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | [Sync] Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | [Sync] Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error. |
 
 **Examples**
@@ -1122,15 +1098,13 @@ dataPreferences.flush((err: BusinessError) => {
 })
 ```
 
-<a id="put1"></a>
-
 ## put
 
 ```TypeScript
 put(key: string, value: ValueType, callback: AsyncCallback<void>): void
 ```
 
-Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses an asynchronous callback to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -1152,7 +1126,7 @@ Writes data to this **Preferences** instance. This API uses an asynchronous call
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -1169,15 +1143,13 @@ dataPreferences.put('startup', 'auto', (err: BusinessError) => {
 })
 ```
 
-<a id="put2"></a>
-
 ## put
 
 ```TypeScript
 put(key: string, value: ValueType): Promise<void>
 ```
 
-Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API uses a promise to return the result. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 9
 
@@ -1204,7 +1176,7 @@ Writes data to this **Preferences** instance. This API uses a promise to return 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**
@@ -1226,7 +1198,7 @@ putStartupPref.then(() => {
 putSync(key: string, value: ValueType): void
 ```
 
-Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush1) to persist the **Preferences** instance.
+Writes data to this **Preferences** instance. This API returns the result synchronously. You can use [flush](#flush) to persist the **Preferences** instance.
 
 **Since:** 10
 
@@ -1247,7 +1219,7 @@ Writes data to this **Preferences** instance. This API returns the result synchr
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [15500000](../errorcode-preferences.md#15500000-internal-error) | Inner error.<br>**Applicable version:** 11 and later |
 
 **Examples**

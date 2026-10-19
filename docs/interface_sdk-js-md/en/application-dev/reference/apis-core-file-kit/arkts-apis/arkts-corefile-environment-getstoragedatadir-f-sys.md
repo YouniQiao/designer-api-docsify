@@ -6,8 +6,6 @@
 import { Environment } from '@kit.CoreFileKit';
 ```
 
-<a id="getstoragedatadir1"></a>
-
 ## getStorageDataDir
 
 ```TypeScript
@@ -38,8 +36,6 @@ Obtains the root directory of the memory. This API uses a promise to return the 
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-
-<a id="getstoragedatadir2"></a>
 
 ## getStorageDataDir
 

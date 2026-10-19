@@ -193,7 +193,7 @@ Obtains the height of a preview image.
 
 | Type | Description |
 | --- | --- |
-| number | Height of a preview image.<br>Unit: px (physical pixel) |
+| number | Height of a preview image. <br>Unit: px (physical pixel) |
 
 ## getPreviewWidth
 
@@ -213,7 +213,7 @@ Obtains the width of a preview image.
 
 | Type | Description |
 | --- | --- |
-| number | Width of a preview image.<br>Unit: px (physical pixel) |
+| number | Width of a preview image. <br>Unit: px (physical pixel) |
 
 ## getSelectionText
 
@@ -417,7 +417,7 @@ X coordinate of the context menu, which is the horizontal distance relative to t
 
 | Type | Description |
 | --- | --- |
-| number | Non-negative integer if successful; -1 otherwise.<br>Unit: px (physical pixel). |
+| number | Non-negative integer if successful; -1 otherwise. <br>Unit: px (physical pixel). |
 
 ## y
 
@@ -439,4 +439,4 @@ Y coordinate of the context menu, which is the vertical distance relative to the
 
 | Type | Description |
 | --- | --- |
-| number | Non-negative integer when obtained successfully, and -1 otherwise.<br>Unit: px (physical pixel). |
+| number | Non-negative integer when obtained successfully, and -1 otherwise. <br>Unit: px (physical pixel). |

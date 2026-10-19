@@ -6,8 +6,6 @@
 import { emitter } from '@kit.BasicServicesKit';
 ```
 
-<a id="emit1"></a>
-
 ## emit
 
 ```TypeScript
@@ -54,8 +52,6 @@ emitter.emit(innerEvent, eventData);
 ```
 
 
-<a id="emit2"></a>
-
 ## emit
 
 ```TypeScript
@@ -96,8 +92,6 @@ let eventData: emitter.EventData = {
 emitter.emit('eventId', eventData);
 ```
 
-
-<a id="emit5"></a>
 
 ## emit
 
@@ -147,8 +141,6 @@ emitter.emit('eventId', eventData);
 ```
 
 
-<a id="emit7"></a>
-
 ## emit
 
 ```TypeScript
@@ -194,8 +186,6 @@ let options: emitter.Options = {
 emitter.emit('eventId', options, eventData);
 ```
 
-
-<a id="emit10"></a>
 
 ## emit
 

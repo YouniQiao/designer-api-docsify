@@ -6,8 +6,6 @@ interface SurfaceParam
 
 Surface配置参数。
 
-@interface SurfaceParam
-
 **起始版本：** 18
 
 <!--Device-abilityConnectionManager-interface SurfaceParam--><!--Device-abilityConnectionManager-interface SurfaceParam-End-->

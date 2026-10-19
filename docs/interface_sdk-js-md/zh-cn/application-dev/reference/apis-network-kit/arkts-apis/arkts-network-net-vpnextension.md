@@ -40,10 +40,10 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection) | 创建一个三方VPN连接对象。 |
-| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver) | 创建一个VPN观察者对象。用于监听VPN相关事件。 |
-| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability) | 启动新的三方VPN功能。使用Promise异步回调。 |
-| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability) | 停止同一应用程序中的服务。使用Promise异步回调。 |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection-1) | 创建一个三方VPN连接对象。 |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver-1) | 创建一个VPN观察者对象。用于监听VPN相关事件。 |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability-1) | 启动新的三方VPN功能。使用Promise异步回调。 |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability-1) | 停止同一应用程序中的服务。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

@@ -68,8 +68,6 @@ Opens a file stream based on the file descriptor. This API uses a promise to ret
 | 13900042 | Unknown error |
 
 
-<a id="fdopenstream2"></a>
-
 ## fdopenStream
 
 ```TypeScript
@@ -92,7 +90,7 @@ Opens a stream based on the file descriptor. To close the stream, use <b>close()
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
 | mode | string | Yes | <b>r</b>: Open a file for reading. The file must exist. <br>           - <b>r+</b>: Open a file for both reading and writing. The file must exist. <br>           - <b>w</b>: Open a file for writing. If the file exists, clear its content. If the file does not exist,   create a file. <br>           - <b>w+</b>: Open a file for both reading and writing. If the file exists, clear its content.   If the file does not exist, create a file. <br>           - <b>a</b>: Open a file in append mode for writing at the end of the file. If the file does not exist,   create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). <br>           - <b>a+</b>: Open a file in append mode for reading or updating at the end of the file. If the file does not exist,   create a file. If the file exists, write data to the end of the file (the original content of the file is reserved). |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Yes | Callback used to return the<b>Stream</b> object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stream](arkts-corefile-file-fs-stream-i.md)&gt; | Yes | Callback used to return the <b>Stream</b> object. |
 
 **Error codes:**
 

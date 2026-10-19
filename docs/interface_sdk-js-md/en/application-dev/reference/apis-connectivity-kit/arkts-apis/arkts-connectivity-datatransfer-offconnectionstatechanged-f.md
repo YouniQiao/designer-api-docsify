@@ -24,13 +24,13 @@ Unsubscribes from the connection state change event of the port channel. This AP
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**See also:** [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md) Subscribes to the connection state change event of the port channel.
+**See also:** [onConnectionStateChanged](arkts-connectivity-datatransfer-onconnectionstatechanged-f.md#onconnectionstatechanged-1) Subscribes to the connection state change event of the port channel.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | No | Callback used to return the result of port connection parameter negotiation with a remote device.<br>If this parameter is set, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ConnectionResult](arkts-connectivity-datatransfer-connectionresult-i.md)&gt; | No | Callback used to return the result of port connection parameter negotiation with a remote device. <br>If this parameter is set, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

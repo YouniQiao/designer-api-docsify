@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="cancelgroup1"></a>
-
 ## cancelGroup
 
 ```TypeScript
@@ -32,8 +30,6 @@ Cancels notifications under a notification group of this application. This API u
 | groupName | string | Yes | Name of the notification group, which is specified through [NotificationRequest](arkts-notification-notificationrequest-i.md) when the notification is published. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="cancelgroup2"></a>
 
 ## cancelGroup
 

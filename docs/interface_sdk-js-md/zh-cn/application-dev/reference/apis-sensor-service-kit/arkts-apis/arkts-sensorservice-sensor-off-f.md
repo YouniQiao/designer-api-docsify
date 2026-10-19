@@ -6,8 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="off5"></a>
-
 ## off
 
 ```TypeScript
@@ -37,8 +35,8 @@ function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -68,8 +66,6 @@ try {
 }
 ```
 
-
-<a id="off6"></a>
 
 ## off
 
@@ -101,8 +97,8 @@ function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -165,8 +161,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off7"></a>
-
 ## off
 
 ```TypeScript
@@ -194,8 +188,8 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<Acce
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -226,8 +220,6 @@ try {
 ```
 
 
-<a id="off8"></a>
-
 ## off
 
 ```TypeScript
@@ -256,8 +248,8 @@ function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: Sensor
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -320,8 +312,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off9"></a>
-
 ## off
 
 ```TypeScript
@@ -347,7 +337,7 @@ function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -378,8 +368,6 @@ try {
 ```
 
 
-<a id="off10"></a>
-
 ## off
 
 ```TypeScript
@@ -406,7 +394,7 @@ function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, ca
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -469,8 +457,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off11"></a>
-
 ## off
 
 ```TypeScript
@@ -496,7 +482,7 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -527,8 +513,6 @@ try {
 ```
 
 
-<a id="off12"></a>
-
 ## off
 
 ```TypeScript
@@ -555,7 +539,7 @@ function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoPar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -618,8 +602,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off13"></a>
-
 ## off
 
 ```TypeScript
@@ -645,7 +627,7 @@ function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -676,8 +658,6 @@ try {
 ```
 
 
-<a id="off14"></a>
-
 ## off
 
 ```TypeScript
@@ -704,7 +684,7 @@ function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -767,8 +747,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off15"></a>
-
 ## off
 
 ```TypeScript
@@ -794,7 +772,7 @@ function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -825,8 +803,6 @@ try {
 ```
 
 
-<a id="off16"></a>
-
 ## off
 
 ```TypeScript
@@ -853,7 +829,7 @@ function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -916,8 +892,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off17"></a>
-
 ## off
 
 ```TypeScript
@@ -947,8 +921,8 @@ function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -978,8 +952,6 @@ try {
 }
 ```
 
-
-<a id="off18"></a>
 
 ## off
 
@@ -1011,8 +983,8 @@ function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1075,8 +1047,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off19"></a>
-
 ## off
 
 ```TypeScript
@@ -1104,8 +1074,8 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<Gyroscop
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1136,8 +1106,6 @@ try {
 ```
 
 
-<a id="off20"></a>
-
 ## off
 
 ```TypeScript
@@ -1166,8 +1134,8 @@ function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1230,8 +1198,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off21"></a>
-
 ## off
 
 ```TypeScript
@@ -1257,7 +1223,7 @@ function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1288,8 +1254,6 @@ try {
 ```
 
 
-<a id="off22"></a>
-
 ## off
 
 ```TypeScript
@@ -1316,7 +1280,7 @@ function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1379,8 +1343,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off23"></a>
-
 ## off
 
 ```TypeScript
@@ -1408,8 +1370,8 @@ function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1440,8 +1402,6 @@ try {
 ```
 
 
-<a id="off24"></a>
-
 ## off
 
 ```TypeScript
@@ -1470,8 +1430,8 @@ function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callb
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1534,8 +1494,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off25"></a>
-
 ## off
 
 ```TypeScript
@@ -1561,7 +1519,7 @@ function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1592,8 +1550,6 @@ try {
 ```
 
 
-<a id="off26"></a>
-
 ## off
 
 ```TypeScript
@@ -1620,7 +1576,7 @@ function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callbac
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1683,8 +1639,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off27"></a>
-
 ## off
 
 ```TypeScript
@@ -1712,8 +1666,8 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAcce
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1744,8 +1698,6 @@ try {
 ```
 
 
-<a id="off28"></a>
-
 ## off
 
 ```TypeScript
@@ -1774,8 +1726,8 @@ function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoPa
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1838,8 +1790,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off29"></a>
-
 ## off
 
 ```TypeScript
@@ -1865,7 +1815,7 @@ function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -1896,8 +1846,6 @@ try {
 ```
 
 
-<a id="off30"></a>
-
 ## off
 
 ```TypeScript
@@ -1924,7 +1872,7 @@ function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1987,8 +1935,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off31"></a>
-
 ## off
 
 ```TypeScript
@@ -2014,7 +1960,7 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<Mag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2045,8 +1991,6 @@ try {
 ```
 
 
-<a id="off32"></a>
-
 ## off
 
 ```TypeScript
@@ -2073,7 +2017,7 @@ function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: Senso
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2136,8 +2080,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off33"></a>
-
 ## off
 
 ```TypeScript
@@ -2165,7 +2107,7 @@ function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2196,8 +2138,6 @@ try {
 ```
 
 
-<a id="off34"></a>
-
 ## off
 
 ```TypeScript
@@ -2226,7 +2166,7 @@ function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, call
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2289,8 +2229,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off35"></a>
-
 ## off
 
 ```TypeScript
@@ -2318,8 +2256,8 @@ function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2350,8 +2288,6 @@ try {
 ```
 
 
-<a id="off36"></a>
-
 ## off
 
 ```TypeScript
@@ -2380,8 +2316,8 @@ function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2444,8 +2380,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off37"></a>
-
 ## off
 
 ```TypeScript
@@ -2473,8 +2407,8 @@ function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2505,8 +2439,6 @@ try {
 ```
 
 
-<a id="off38"></a>
-
 ## off
 
 ```TypeScript
@@ -2535,8 +2467,8 @@ function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoPar
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2599,8 +2531,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off39"></a>
-
 ## off
 
 ```TypeScript
@@ -2626,7 +2556,7 @@ function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2657,8 +2587,6 @@ try {
 ```
 
 
-<a id="off40"></a>
-
 ## off
 
 ```TypeScript
@@ -2685,7 +2613,7 @@ function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callba
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2748,8 +2676,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off41"></a>
-
 ## off
 
 ```TypeScript
@@ -2775,7 +2701,7 @@ function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorR
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2806,8 +2732,6 @@ try {
 ```
 
 
-<a id="off42"></a>
-
 ## off
 
 ```TypeScript
@@ -2834,7 +2758,7 @@ function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -2897,8 +2821,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off43"></a>
-
 ## off
 
 ```TypeScript
@@ -2924,7 +2846,7 @@ function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -2955,8 +2877,6 @@ try {
 ```
 
 
-<a id="off44"></a>
-
 ## off
 
 ```TypeScript
@@ -2983,7 +2903,7 @@ function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoPara
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -3046,8 +2966,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off45"></a>
-
 ## off
 
 ```TypeScript
@@ -3073,7 +2991,7 @@ function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **示例**
 
@@ -3104,8 +3022,6 @@ try {
 ```
 
 
-<a id="off46"></a>
-
 ## off
 
 ```TypeScript
@@ -3132,8 +3048,8 @@ function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -3196,8 +3112,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off47"></a>
-
 ## off
 
 ```TypeScript
@@ -3224,7 +3138,7 @@ function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, c
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -3287,8 +3201,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off48"></a>
-
 ## off
 
 ```TypeScript
@@ -3300,14 +3212,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ACCELEROMETER](#off5)
+> [sensor.off.ACCELEROMETER](#off-5)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off5)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
+**替代接口：** [off](#off-5)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3337,8 +3249,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback);
 ```
 
 
-<a id="off49"></a>
-
 ## off
 
 ```TypeScript
@@ -3351,14 +3261,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ACCELEROMETER_UNCALIBRATED](#off7)
+> [sensor.off.ACCELEROMETER_UNCALIBRATED](#off-7)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off7)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**替代接口：** [off](#off-7)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3391,8 +3301,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 ```
 
 
-<a id="off50"></a>
-
 ## off
 
 ```TypeScript
@@ -3404,14 +3312,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.AMBIENT_LIGHT](#off9)
+> [sensor.off.AMBIENT_LIGHT](#off-9)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off9)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
+**替代接口：** [off](#off-9)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void-End-->
 
@@ -3437,8 +3345,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback);
 ```
 
 
-<a id="off51"></a>
-
 ## off
 
 ```TypeScript
@@ -3450,14 +3356,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.AMBIENT_TEMPERATURE](#off11)
+> [sensor.off.AMBIENT_TEMPERATURE](#off-11)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off11)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
+**替代接口：** [off](#off-11)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -3483,8 +3389,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback);
 ```
 
 
-<a id="off52"></a>
-
 ## off
 
 ```TypeScript
@@ -3496,14 +3400,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.BAROMETER](#off13)
+> [sensor.off.BAROMETER](#off-13)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off13)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
+**替代接口：** [off](#off-13)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void-End-->
 
@@ -3529,8 +3433,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, callback);
 ```
 
 
-<a id="off53"></a>
-
 ## off
 
 ```TypeScript
@@ -3542,14 +3444,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GRAVITY](#off15)
+> [sensor.off.GRAVITY](#off-15)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off15)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
+**替代接口：** [off](#off-15)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void-End-->
 
@@ -3577,8 +3479,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, callback);
 ```
 
 
-<a id="off54"></a>
-
 ## off
 
 ```TypeScript
@@ -3590,14 +3490,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GYROSCOPE](#off17)
+> [sensor.off.GYROSCOPE](#off-17)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off17)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**替代接口：** [off](#off-17)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -3627,8 +3527,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback);
 ```
 
 
-<a id="off55"></a>
-
 ## off
 
 ```TypeScript
@@ -3640,14 +3538,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GYROSCOPE_UNCALIBRATED](#off19)
+> [sensor.off.GYROSCOPE_UNCALIBRATED](#off-19)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off19)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**替代接口：** [off](#off-19)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -3677,8 +3575,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback);
 ```
 
 
-<a id="off56"></a>
-
 ## off
 
 ```TypeScript
@@ -3690,14 +3586,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HALL](#off21)
+> [sensor.off.HALL](#off-21)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off21)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
+**替代接口：** [off](#off-21)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void-End-->
 
@@ -3723,8 +3619,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HALL, callback);
 ```
 
 
-<a id="off57"></a>
-
 ## off
 
 ```TypeScript
@@ -3736,14 +3630,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HEART_RATE](#off23)
+> [sensor.off.HEART_RATE](#off-23)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off23)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**替代接口：** [off](#off-23)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **需要权限：** ohos.permission.HEALTH_DATA
 
@@ -3771,8 +3665,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, callback);
 ```
 
 
-<a id="off58"></a>
-
 ## off
 
 ```TypeScript
@@ -3784,14 +3676,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HUMIDITY](#off25)
+> [sensor.off.HUMIDITY](#off-25)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off25)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
+**替代接口：** [off](#off-25)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void-End-->
 
@@ -3817,8 +3709,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, callback);
 ```
 
 
-<a id="off59"></a>
-
 ## off
 
 ```TypeScript
@@ -3830,14 +3720,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.LINEAR_ACCELEROMETER](#off27)
+> [sensor.off.LINEAR_ACCELEROMETER](#off-27)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off27)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
+**替代接口：** [off](#off-27)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3867,8 +3757,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback);
 ```
 
 
-<a id="off60"></a>
-
 ## off
 
 ```TypeScript
@@ -3880,14 +3768,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.MAGNETIC_FIELD](#off29)
+> [sensor.off.MAGNETIC_FIELD](#off-29)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off29)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
+**替代接口：** [off](#off-29)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
 
@@ -3915,8 +3803,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback);
 ```
 
 
-<a id="off61"></a>
-
 ## off
 
 ```TypeScript
@@ -3928,14 +3814,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#off31)
+> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#off-31)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off31)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**替代接口：** [off](#off-31)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -3966,8 +3852,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 ```
 
 
-<a id="off62"></a>
-
 ## off
 
 ```TypeScript
@@ -3979,14 +3863,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ORIENTATION](#off33)
+> [sensor.off.ORIENTATION](#off-33)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off33)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [off](#off-33)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void-End-->
 
@@ -4014,8 +3898,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, callback);
 ```
 
 
-<a id="off63"></a>
-
 ## off
 
 ```TypeScript
@@ -4027,14 +3909,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PEDOMETER](#off35)
+> [sensor.off.PEDOMETER](#off-35)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off35)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
+**替代接口：** [off](#off-35)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -4062,8 +3944,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, callback);
 ```
 
 
-<a id="off64"></a>
-
 ## off
 
 ```TypeScript
@@ -4075,14 +3955,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PEDOMETER_DETECTION](#off37)
+> [sensor.off.PEDOMETER_DETECTION](#off-37)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off37)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
+**替代接口：** [off](#off-37)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -4110,8 +3990,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback);
 ```
 
 
-<a id="off65"></a>
-
 ## off
 
 ```TypeScript
@@ -4123,14 +4001,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PROXIMITY](#off39)
+> [sensor.off.PROXIMITY](#off-39)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off39)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
+**替代接口：** [off](#off-39)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void-End-->
 
@@ -4156,8 +4034,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, callback);
 ```
 
 
-<a id="off66"></a>
-
 ## off
 
 ```TypeScript
@@ -4169,14 +4045,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ROTATION_VECTOR](#off41)
+> [sensor.off.ROTATION_VECTOR](#off-41)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off41)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
+**替代接口：** [off](#off-41)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void-End-->
 
@@ -4205,8 +4081,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback);
 ```
 
 
-<a id="off67"></a>
-
 ## off
 
 ```TypeScript
@@ -4218,14 +4092,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.SIGNIFICANT_MOTION](#off43)
+> [sensor.off.SIGNIFICANT_MOTION](#off-43)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off43)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
+**替代接口：** [off](#off-43)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void-End-->
 
@@ -4251,8 +4125,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback);
 ```
 
 
-<a id="off68"></a>
-
 ## off
 
 ```TypeScript
@@ -4264,14 +4136,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.WEAR_DETECTION](#off45)
+> [sensor.off.WEAR_DETECTION](#off-45)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off45)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
+**替代接口：** [off](#off-45)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void-End-->
 
@@ -4322,7 +4194,7 @@ function off(type: 'sensorStatusChange', callback?: Callback<SensorStatusEvent>)
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 

@@ -6,8 +6,6 @@ export interface MissionCallback
 
 MissionCallback registered by app.
 
-@interface MissionCallback
-
 **Since:** 9
 
 <!--Device-unnamed-export interface MissionCallback--><!--Device-unnamed-export interface MissionCallback-End-->

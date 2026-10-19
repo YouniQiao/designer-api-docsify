@@ -26,7 +26,7 @@ Closes a file or directory. After the file or directory is closed, the FD become
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number &#124; [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. After the function is disabled, the<b>File</b> object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
+| file | number &#124; [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. After the function is disabled, the <b>File</b> object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
 
 **Return value:**
 
@@ -45,8 +45,6 @@ Closes a file or directory. After the file or directory is closed, the FD become
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="close2"></a>
 
 ## close
 
@@ -68,8 +66,8 @@ Closes a file or directory. After the file or directory is closed, the FD become
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| file | number &#124; [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. After the function is disabled, the<b>File</b> object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. When the file or directory is successfully closed asynchronously,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| file | number &#124; [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. After the function is disabled, the <b>File</b> object or FD cannot be used for read and write operations. If the file object or file descriptor is still used, an error may occur or the operation may fail. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. When the file or directory is successfully closed asynchronously, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

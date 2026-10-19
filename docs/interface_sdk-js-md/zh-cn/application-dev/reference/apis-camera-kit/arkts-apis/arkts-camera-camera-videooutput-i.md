@@ -49,7 +49,6 @@ enableMirror(enabled: boolean): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application.<br>**适用版本：** 12 - 14 |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
 | [7400103](../errorcode-camera.md#7400103-会话未配置) | Session not config. |
 
@@ -305,12 +304,6 @@ isMirrorSupported(): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 返回是否支持镜像录像，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
-
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application.<br>**适用版本：** 12 - 14 |
 
 **示例**
 
@@ -592,8 +585,6 @@ function setFrameRateRange(videoOutput: camera.VideoOutput, frameRateRange: Arra
 }
 ```
 
-<a id="start1"></a>
-
 ## start
 
 ```TypeScript
@@ -639,8 +630,6 @@ function startVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
-<a id="start2"></a>
-
 ## start
 
 ```TypeScript
@@ -684,8 +673,6 @@ function startVideoOutput(videoOutput: camera.VideoOutput): void {
 }
 ```
 
-<a id="stop1"></a>
-
 ## stop
 
 ```TypeScript
@@ -717,8 +704,6 @@ function stopVideoOutput(videoOutput: camera.VideoOutput): void {
   });
 }
 ```
-
-<a id="stop2"></a>
 
 ## stop
 

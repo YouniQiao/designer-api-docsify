@@ -58,8 +58,6 @@ Writes data into a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="write2"></a>
-
 ## write
 
 ```TypeScript
@@ -101,8 +99,6 @@ Writes data to a file and returns the number of bytes written. This API uses an 
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="write3"></a>
 
 ## write
 

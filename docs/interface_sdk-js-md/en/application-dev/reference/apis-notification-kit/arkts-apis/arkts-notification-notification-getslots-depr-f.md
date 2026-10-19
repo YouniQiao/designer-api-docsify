@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getslots1"></a>
-
 ## getSlots
 
 ```TypeScript
@@ -31,8 +29,6 @@ Obtains all notification slots. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
-
-<a id="getslots2"></a>
 
 ## getSlots
 

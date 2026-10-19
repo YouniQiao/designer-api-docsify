@@ -182,8 +182,6 @@ Connects this ability to a ServiceExtensionAbility.
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI.<br>**Applicable version:** 10 and later |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out.<br>**Applicable version:** 10 and later |
 
-<a id="disconnectability1"></a>
-
 ## disconnectAbility
 
 ```TypeScript
@@ -218,8 +216,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed. 2. System service failed to communicate with dependency module. |
-
-<a id="disconnectability2"></a>
 
 ## disconnectAbility
 
@@ -261,8 +257,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed. 2. System service failed to communicate with dependency module. |
 
-<a id="disconnectserviceextensionability1"></a>
-
 ## disconnectServiceExtensionAbility
 
 ```TypeScript
@@ -297,8 +291,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed. 2. System service failed to communicate with dependency module. |
-
-<a id="disconnectserviceextensionability2"></a>
 
 ## disconnectServiceExtensionAbility
 
@@ -339,8 +331,6 @@ Disconnects this ability from a ServiceExtensionAbility and after the successful
 | [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; 2. Incorrect parameter types; 3. Parameter verification failed. |
 | [16000011](../../apis-ability-kit/errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
 | [16000050](../../apis-ability-kit/errorcode-ability.md#16000050-internal-error) | Internal error. Possible causes: 1. Connect to system service failed. 2. System service failed to communicate with dependency module. |
-
-<a id="startabilitywithaccount1"></a>
 
 ## startAbilityWithAccount
 
@@ -394,8 +384,6 @@ Starts an ability with a specified account. This API uses an asynchronous callba
 | [16000053](../../apis-ability-kit/errorcode-ability.md#16000053-ability-not-in-the-foreground) | The ability is not on the top of the UI. |
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
-
-<a id="startabilitywithaccount2"></a>
 
 ## startAbilityWithAccount
 
@@ -455,8 +443,6 @@ Starts an ability with a specified account. This API uses a promise to return th
 | [16000055](../../apis-ability-kit/errorcode-ability.md#16000055-installation-free-timeout) | Installation-free timed out. |
 | [16200001](../../apis-ability-kit/errorcode-ability.md#16200001-caller-released) | The caller has been released. |
 
-<a id="terminateself1"></a>
-
 ## terminateSelf
 
 ```TypeScript
@@ -469,7 +455,7 @@ Destroys this input method extension. This API uses an asynchronous callback to 
 
 **Deprecated since:** 10
 
-**Substitutes:** [destroy](arkts-ime-inputmethodextensioncontext-c.md#destroy1)(callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [destroy](arkts-ime-inputmethodextensioncontext-c.md#destroy)(callback: AsyncCallback&lt;void&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -484,8 +470,6 @@ Destroys this input method extension. This API uses an asynchronous callback to 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
-
-<a id="terminateself2"></a>
 
 ## terminateSelf
 

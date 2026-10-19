@@ -126,7 +126,7 @@ Adds the specified elements to the end of this array and returns the new length 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Array of button information to be added.<br>Default value: no button information elements are passed in. |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Array of button information to be added. <br>Default value: no button information elements are passed in. |
 
 **Return value:**
 
@@ -182,7 +182,7 @@ Changes the contents of this array by removing the specified number of elements 
 | --- | --- | --- | --- |
 | start | number | Yes | Start position of the element to delete, counting from 0. |
 | deleteCount | number | Yes | Number of elements to delete. The value range is greater than or equal to 0. If **deleteCount** exceeds the remaining length of the array, all remaining elements starting from the start position are deleted. |
-| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start.<br>Default value: If no element is specified, the element is deleted from the array. |
+| items | [SegmentButtonItemOptions](arkts-arkui-arkui-advanced-segmentbutton-segmentbuttonitemoptions-c.md)[] | Yes | Element to be added to the array from start. <br>Default value: If no element is specified, the element is deleted from the array. |
 
 **Return value:**
 
@@ -212,7 +212,7 @@ Adds new elements to the beginning of the array and returns the length of the ar
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Array of button information to add.<br>Default value: no button information elements are passed in. |
+| items | [SegmentButtonItemArray](arkts-arkui-segmentbuttonitemarray-t.md) | Yes | Array of button information to add. <br>Default value: no button information elements are passed in. |
 
 **Return value:**
 

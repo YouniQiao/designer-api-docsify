@@ -6,8 +6,6 @@ declare interface LayoutChild
 
 Provides the child component layout information.
 
-@interface LayoutChild
-
 **Since:** 9
 
 **Deprecated since:** 10

@@ -18,8 +18,6 @@ export interface BaseProfile
 import { baseProfile } from '@kit.ConnectivityKit';
 ```
 
-<a id="getconnectionstrategy1"></a>
-
 ## getConnectionStrategy
 
 ```TypeScript
@@ -59,8 +57,6 @@ getConnectionStrategy(deviceId: string, callback: AsyncCallback<ConnectionStrate
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-<a id="getconnectionstrategy2"></a>
 
 ## getConnectionStrategy
 
@@ -107,8 +103,6 @@ getConnectionStrategy(deviceId: string): Promise<ConnectionStrategy>
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
 
-<a id="setconnectionstrategy1"></a>
-
 ## setConnectionStrategy
 
 ```TypeScript
@@ -154,8 +148,6 @@ setConnectionStrategy(deviceId: string, strategy: ConnectionStrategy): Promise<v
 | [2900003](../errorcode-bluetoothManager.md#2900003-蓝牙开关关闭) | Bluetooth disabled. |
 | [2900004](../errorcode-bluetoothManager.md#2900004-配置文件不支持) | Profile not supported. |
 | [2900099](../errorcode-bluetoothManager.md#2900099-操作失败) | Operation failed. |
-
-<a id="setconnectionstrategy2"></a>
 
 ## setConnectionStrategy
 

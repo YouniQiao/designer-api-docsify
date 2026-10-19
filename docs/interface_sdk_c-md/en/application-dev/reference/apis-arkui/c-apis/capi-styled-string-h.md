@@ -386,7 +386,7 @@ Creates a pointer to the ArkUI_StyledString object.
 
 | Parameter | Description |
 | -- | -- |
-| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
+| [OH_Drawing_TypographyStyle](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-typographystyle.md)* style | A pointer to OH_Drawing_TypographyStyle, obtained by [OH_Drawing_CreateTypographyStyle](capi-drawing-text-typography-h.md#oh_drawing_createtypographystyle). |
 | [OH_Drawing_FontCollection](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-fontcollection.md)* collection | A pointer to OH_Drawing_FontCollection, obtained by [OH_Drawing_CreateFontCollection](capi-drawing-font-collection-h.md#oh_drawing_createfontcollection). |
 
 **Returns**:
@@ -6739,7 +6739,7 @@ Sets the resizable image slice in the image style.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 26.2.0
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -6773,7 +6773,7 @@ Obtains the resizable image slice in the image style.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 26.2.0
+**Since**: 26.0.1
 
 **Parameters**:
 
@@ -6807,14 +6807,14 @@ Sets the resizable image lattice in the image style.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 26.2.0
+**Since**: 26.0.1
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
 | [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
+| [const OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [in] Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 
@@ -6838,14 +6838,14 @@ Obtains the resizable image lattice in the image style.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 
-**Since**: 26.2.0
+**Since**: 26.0.1
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
 | [const OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md)* imageAttachment | [in] Pointer to the [OH_ArkUI_ImageAttachment](capi-arkui-nativemodule-oh-arkui-imageattachment.md) object. |
-| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](capi-drawing-oh-drawing-lattice.md). |
+| [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)* lattice | [out] Output parameter. Pointer to the image resizable lattice. The type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md). |
 
 **Returns**:
 

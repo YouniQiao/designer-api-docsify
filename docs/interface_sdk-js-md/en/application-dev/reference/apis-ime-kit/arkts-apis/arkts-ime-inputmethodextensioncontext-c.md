@@ -31,8 +31,6 @@ extending the interaction between the input method app and other apps. <br> <br>
 import { InputMethodExtensionContext } from '@kit.IMEKit';
 ```
 
-<a id="destroy1"></a>
-
 ## destroy
 
 ```TypeScript
@@ -78,8 +76,6 @@ class InputMethodExtAbility extends InputMethodExtensionAbility {
   }
 }
 ```
-
-<a id="destroy2"></a>
 
 ## destroy
 

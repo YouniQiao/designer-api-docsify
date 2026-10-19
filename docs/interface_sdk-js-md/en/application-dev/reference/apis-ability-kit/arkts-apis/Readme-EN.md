@@ -1223,6 +1223,8 @@
   <!--Del-->
   - [getAllUninstalledBundleResourceInfo(system api)](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getBundleResourceArchiveInfo(system api)](arkts-ability-bundleresourcemanager-getbundleresourcearchiveinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getBundleResourceInfo(system api)](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getExtensionAbilityResourceInfo(system api)](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md)<!--DelEnd-->

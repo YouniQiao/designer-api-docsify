@@ -39,10 +39,10 @@ import { vpnExtension } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection) | Creates a **VpnConnection** object. |
-| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver) | Creates a VPN observer object. It is used to listen for VPN-related events. |
-| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability) | Enables the VPN extension ability. This API uses a promise to return the result. |
-| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability) | Stops the VPN extension ability. This API uses a promise to return the result. |
+| [createVpnConnection](arkts-network-vpnextension-createvpnconnection-f.md#createvpnconnection-1) | Creates a **VpnConnection** object. |
+| [createVpnObserver](arkts-network-vpnextension-createvpnobserver-f.md#createvpnobserver-1) | Creates a VPN observer object. It is used to listen for VPN-related events. |
+| [startVpnExtensionAbility](arkts-network-vpnextension-startvpnextensionability-f.md#startvpnextensionability-1) | Enables the VPN extension ability. This API uses a promise to return the result. |
+| [stopVpnExtensionAbility](arkts-network-vpnextension-stopvpnextensionability-f.md#stopvpnextensionability-1) | Stops the VPN extension ability. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

@@ -24,7 +24,7 @@ import { componentUtils } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid) | Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid-1) | Obtains a **ComponentInfo** object based on the component ID and synchronously returns the geometric properties of the component. |
 
 <!--Del-->
 ### Functions(System API)

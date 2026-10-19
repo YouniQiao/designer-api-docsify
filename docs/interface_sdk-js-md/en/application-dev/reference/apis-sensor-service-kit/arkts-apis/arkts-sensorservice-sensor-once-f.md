@@ -6,8 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="once1"></a>
-
 ## once
 
 ```TypeScript
@@ -35,9 +33,9 @@ Obtains data of the acceleration sensor once. This method applies to scenarios w
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -58,8 +56,6 @@ try {
 }
 ```
 
-
-<a id="once2"></a>
 
 ## once
 
@@ -88,9 +84,9 @@ Obtains data of the uncalibrated acceleration sensor once. This method applies t
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -114,8 +110,6 @@ try {
 }
 ```
 
-
-<a id="once3"></a>
 
 ## once
 
@@ -142,8 +136,8 @@ Obtains data of the ambient light sensor once. This method applies to scenarios 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -162,8 +156,6 @@ try {
 }
 ```
 
-
-<a id="once4"></a>
 
 ## once
 
@@ -190,8 +182,8 @@ Obtains data of the temperature sensor once. This method applies to scenarios wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -210,8 +202,6 @@ try {
 }
 ```
 
-
-<a id="once5"></a>
 
 ## once
 
@@ -238,8 +228,8 @@ Obtains data of the barometer sensor once. This method applies to scenarios wher
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -258,8 +248,6 @@ try {
 }
 ```
 
-
-<a id="once6"></a>
 
 ## once
 
@@ -286,8 +274,8 @@ Obtains data of the gravity sensor once. This method applies to the scenario whe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -308,8 +296,6 @@ try {
 }
 ```
 
-
-<a id="once7"></a>
 
 ## once
 
@@ -338,9 +324,9 @@ Obtains data of the gyroscope sensor once. This method applies to scenarios wher
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -361,8 +347,6 @@ try {
 }
 ```
 
-
-<a id="once8"></a>
 
 ## once
 
@@ -391,9 +375,9 @@ Obtains data of the uncalibrated gyroscope sensor once. This method applies to s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -417,8 +401,6 @@ try {
 }
 ```
 
-
-<a id="once9"></a>
 
 ## once
 
@@ -445,8 +427,8 @@ Obtains data of the Hall effect sensor once. This method applies to scenarios wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -465,8 +447,6 @@ try {
 }
 ```
 
-
-<a id="once10"></a>
 
 ## once
 
@@ -495,9 +475,9 @@ Obtains data of the heart rate sensor once. This method applies to scenarios whe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -516,8 +496,6 @@ try {
 }
 ```
 
-
-<a id="once11"></a>
 
 ## once
 
@@ -544,8 +522,8 @@ Obtains data of the humidity sensor once. This method applies to the scenario wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -564,8 +542,6 @@ try {
 }
 ```
 
-
-<a id="once12"></a>
 
 ## once
 
@@ -594,9 +570,9 @@ Obtains data of the linear acceleration sensor once. This method applies to scen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -617,8 +593,6 @@ try {
 }
 ```
 
-
-<a id="once13"></a>
 
 ## once
 
@@ -645,8 +619,8 @@ Obtains data of the magnetic field sensor once. This method applies to scenarios
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -667,8 +641,6 @@ try {
 }
 ```
 
-
-<a id="once14"></a>
 
 ## once
 
@@ -695,8 +667,8 @@ Obtains data of the uncalibrated magnetic field sensor once. This method applies
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -720,8 +692,6 @@ try {
 }
 ```
 
-
-<a id="once15"></a>
 
 ## once
 
@@ -748,8 +718,8 @@ Obtains data of the orientation sensor once. This method applies to scenarios wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -770,8 +740,6 @@ try {
 }
 ```
 
-
-<a id="once16"></a>
 
 ## once
 
@@ -805,9 +773,9 @@ Obtains data of the pedometer sensor once. The step counter sensor's data report
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -826,8 +794,6 @@ try {
 }
 ```
 
-
-<a id="once17"></a>
 
 ## once
 
@@ -856,9 +822,9 @@ Obtains data of the pedometer sensor once. This method applies to scenarios wher
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -877,8 +843,6 @@ try {
 }
 ```
 
-
-<a id="once18"></a>
 
 ## once
 
@@ -905,8 +869,8 @@ Obtains data of the proximity sensor once. This method applies to scenarios wher
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -925,8 +889,6 @@ try {
 }
 ```
 
-
-<a id="once19"></a>
 
 ## once
 
@@ -953,8 +915,8 @@ Obtains data of the rotation vector sensor once. This method applies to scenario
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -976,8 +938,6 @@ try {
 }
 ```
 
-
-<a id="once20"></a>
 
 ## once
 
@@ -1004,8 +964,8 @@ Obtains the significant motion sensor data once. This API applies to scenarios w
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1024,8 +984,6 @@ try {
 }
 ```
 
-
-<a id="once21"></a>
 
 ## once
 
@@ -1052,8 +1010,8 @@ Obtains data of the wear detection sensor once. This API applies to scenarios wh
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1073,8 +1031,6 @@ try {
 ```
 
 
-<a id="once22"></a>
-
 ## once
 
 ```TypeScript
@@ -1086,14 +1042,14 @@ Subscribes to only one data change of the acceleration sensor. This method appli
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.ACCELEROMETER](#once1)
+> [sensor.once.ACCELEROMETER](#once-1)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once1)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
+**Substitutes:** [once](#once-1)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -1121,8 +1077,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.Accele
 ```
 
 
-<a id="once23"></a>
-
 ## once
 
 ```TypeScript
@@ -1134,14 +1088,14 @@ Subscribes to only one data change of the uncalibrated acceleration sensor. This
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once2)
+> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once-2)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once2)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**Substitutes:** [once](#once-2)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -1172,8 +1126,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: 
 ```
 
 
-<a id="once24"></a>
-
 ## once
 
 ```TypeScript
@@ -1185,14 +1137,14 @@ Subscribes to only one data change of the ambient light sensor. This method appl
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.AMBIENT_LIGHT](#once3)
+> [sensor.once.AMBIENT_LIGHT](#once-3)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once3)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
+**Substitutes:** [once](#once-3)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
 
@@ -1216,8 +1168,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightR
 ```
 
 
-<a id="once25"></a>
-
 ## once
 
 ```TypeScript
@@ -1229,14 +1179,14 @@ Subscribes to only one data change of the ambient temperature sensor. This metho
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.AMBIENT_TEMPERATURE](#once4)
+> [sensor.once.AMBIENT_TEMPERATURE](#once-4)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once4)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
+**Substitutes:** [once](#once-4)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -1260,8 +1210,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.
 ```
 
 
-<a id="once26"></a>
-
 ## once
 
 ```TypeScript
@@ -1273,14 +1221,14 @@ Subscribes to only one data change of the barometer sensor. This method applies 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.BAROMETER](#once5)
+> [sensor.once.BAROMETER](#once-5)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once5)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
+**Substitutes:** [once](#once-5)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void-End-->
 
@@ -1304,8 +1252,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerR
 ```
 
 
-<a id="once27"></a>
-
 ## once
 
 ```TypeScript
@@ -1317,14 +1263,14 @@ Subscribes to only one data change of the gravity sensor. This method applies to
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.GRAVITY](#once6)
+> [sensor.once.GRAVITY](#once-6)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once6)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
+**Substitutes:** [once](#once-6)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void-End-->
 
@@ -1350,8 +1296,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityRespo
 ```
 
 
-<a id="once28"></a>
-
 ## once
 
 ```TypeScript
@@ -1363,14 +1307,14 @@ Subscribes to only one data change of the gyroscope sensor. This method applies 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.GYROSCOPE](#once7)
+> [sensor.once.GYROSCOPE](#once-7)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once7)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
+**Substitutes:** [once](#once-7)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -1398,8 +1342,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeR
 ```
 
 
-<a id="once29"></a>
-
 ## once
 
 ```TypeScript
@@ -1411,14 +1353,14 @@ Subscribes to only one data change of the uncalibrated gyroscope sensor. This me
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.GYROSCOPE_UNCALIBRATED](#once8)
+> [sensor.once.GYROSCOPE_UNCALIBRATED](#once-8)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once8)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**Substitutes:** [once](#once-8)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -1449,8 +1391,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sens
 ```
 
 
-<a id="once30"></a>
-
 ## once
 
 ```TypeScript
@@ -1462,14 +1402,14 @@ Subscribes to only one data change of the Hall effect sensor. This method applie
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.HALL](#once9)
+> [sensor.once.HALL](#once-9)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once9)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
+**Substitutes:** [once](#once-9)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void-End-->
 
@@ -1493,8 +1433,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) =
 ```
 
 
-<a id="once31"></a>
-
 ## once
 
 ```TypeScript
@@ -1506,14 +1444,14 @@ Subscribes to only one data change of the heart rate sensor. This method applies
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.HEART_RATE](#once10)
+> [sensor.once.HEART_RATE](#once-10)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once10)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
+**Substitutes:** [once](#once-10)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
 
 **Required permissions:** ohos.permission.HEART_RATE
 
@@ -1539,8 +1477,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRate
 ```
 
 
-<a id="once32"></a>
-
 ## once
 
 ```TypeScript
@@ -1552,14 +1488,14 @@ Subscribes to only one data change of the humidity sensor. This method applies t
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.HUMIDITY](#once11)
+> [sensor.once.HUMIDITY](#once-11)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once11)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
+**Substitutes:** [once](#once-11)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
 
@@ -1583,8 +1519,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityRes
 ```
 
 
-<a id="once33"></a>
-
 ## once
 
 ```TypeScript
@@ -1596,14 +1530,14 @@ Subscribes to only one data change of the linear acceleration sensor. This metho
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.LINEAR_ACCELEROMETER](#once12)
+> [sensor.once.LINEAR_ACCELEROMETER](#once-12)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once12)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
+**Substitutes:** [once](#once-12)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -1619,8 +1553,6 @@ Subscribes to only one data change of the linear acceleration sensor. This metho
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | Yes | One-shot callback used to return the linear acceleration sensor data. The reported data type in the callback is **LinearAccelerometerResponse**. |
 
 
-<a id="once34"></a>
-
 ## once
 
 ```TypeScript
@@ -1632,14 +1564,14 @@ Subscribes to only one data change of the magnetic field sensor. This method app
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.MAGNETIC_FIELD](#once13)
+> [sensor.once.MAGNETIC_FIELD](#once-13)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once13)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
+**Substitutes:** [once](#once-13)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
 
@@ -1665,8 +1597,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.Magne
 ```
 
 
-<a id="once35"></a>
-
 ## once
 
 ```TypeScript
@@ -1678,14 +1608,14 @@ Subscribes to only one data change of the uncalibrated magnetic field sensor. Th
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once14)
+> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once-14)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once14)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**Substitutes:** [once](#once-14)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -1714,8 +1644,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data:
 ```
 
 
-<a id="once36"></a>
-
 ## once
 
 ```TypeScript
@@ -1727,14 +1655,14 @@ Subscribes to only one data change of the orientation sensor. This method applie
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.ORIENTATION](#once15)
+> [sensor.once.ORIENTATION](#once-15)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once15)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
+**Substitutes:** [once](#once-15)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
 
@@ -1760,8 +1688,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.Orientat
 ```
 
 
-<a id="once37"></a>
-
 ## once
 
 ```TypeScript
@@ -1773,14 +1699,14 @@ Subscribes to only one data change of the pedometer sensor. This method applies 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.PEDOMETER](#once16)
+> [sensor.once.PEDOMETER](#once-16)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once16)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
+**Substitutes:** [once](#once-16)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -1806,8 +1732,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerR
 ```
 
 
-<a id="once38"></a>
-
 ## once
 
 ```TypeScript
@@ -1819,14 +1743,14 @@ Subscribes to only one data change of the pedometer detection sensor. This metho
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.PEDOMETER_DETECTION](#once17)
+> [sensor.once.PEDOMETER_DETECTION](#once-17)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once17)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
+**Substitutes:** [once](#once-17)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -1852,8 +1776,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.
 ```
 
 
-<a id="once39"></a>
-
 ## once
 
 ```TypeScript
@@ -1865,14 +1787,14 @@ Subscribes to only one data change of the proximity sensor. This method applies 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.PROXIMITY](#once18)
+> [sensor.once.PROXIMITY](#once-18)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once18)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
+**Substitutes:** [once](#once-18)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
 
@@ -1897,8 +1819,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityR
 ```
 
 
-<a id="once40"></a>
-
 ## once
 
 ```TypeScript
@@ -1910,14 +1830,14 @@ Subscribes to only one data change of the rotation vector sensor. This method ap
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.ROTATION_VECTOR](#once19)
+> [sensor.once.ROTATION_VECTOR](#once-19)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once19)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
+**Substitutes:** [once](#once-19)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
 
@@ -1944,8 +1864,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.Rota
 ```
 
 
-<a id="once41"></a>
-
 ## once
 
 ```TypeScript
@@ -1957,14 +1875,14 @@ Subscribes to only one data change of the significant motion sensor. This method
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.SIGNIFICANT_MOTION](#once20)
+> [sensor.once.SIGNIFICANT_MOTION](#once-20)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once20)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
+**Substitutes:** [once](#once-20)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
 
@@ -1988,8 +1906,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.S
 ```
 
 
-<a id="once42"></a>
-
 ## once
 
 ```TypeScript
@@ -2001,14 +1917,14 @@ Subscribes to only one data change of the wear detection sensor. This method app
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.once.WEAR_DETECTION](#once21)
+> [sensor.once.WEAR_DETECTION](#once-21)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [once](#once21)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
+**Substitutes:** [once](#once-21)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
 

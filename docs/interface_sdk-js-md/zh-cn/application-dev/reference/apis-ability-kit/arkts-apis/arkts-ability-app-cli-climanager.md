@@ -2,8 +2,6 @@
 
 本模块提供与系统命令行工具（CLI）的交互能力，可以查询工具信息、调用并执行CLI命令，以及管理会话。会话在调用execTool接口时创建，用于跟踪CLI工具的执行状态和结果。
 
-@namespace cliManager
-
 **起始版本：** 26.0.1
 
 <!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
@@ -22,14 +20,14 @@ import { cliManager, CliHook, ExecToolParam, ExecCmdParam, ExecResultWrap } from
 
 | 名称 | 说明 |
 | --- | --- |
-| [clearSession](arkts-ability-climanager-clearsession-f.md#clearsession) | 关闭指定CLI工具会话，并强制结束对应的工具进程。 |
-| [execCmd](arkts-ability-climanager-execcmd-f.md#execcmd) | 执行Shell命令，返回会话信息。使用Promise异步回调。 |
-| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f.md#gettoolinfobyname) | 根据工具名称获取单个工具的详细信息，使用Promise异步回调。 |
-| [querySession](arkts-ability-climanager-querysession-f.md#querysession) | 查询指定CLI工具会话的状态和执行结果。 |
-| [queryTools](arkts-ability-climanager-querytools-f.md#querytools) | 查询所有CLI工具的详细信息，使用Promise异步回调。 |
-| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f.md#querytoolsummaries) | 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。 |
-| [sendMessage](arkts-ability-climanager-sendmessage-f.md#sendmessage) | 向指定CLI工具会话对应的进程发送消息。 |
-| [subscribeSession](arkts-ability-climanager-subscribesession-f.md#subscribesession) | 订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 |
+| [clearSession](arkts-ability-climanager-clearsession-f.md#clearsession-1) | 关闭指定CLI工具会话，并强制结束对应的工具进程。 |
+| [execCmd](arkts-ability-climanager-execcmd-f.md#execcmd-1) | 执行Shell命令，返回会话信息。使用Promise异步回调。 |
+| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f.md#gettoolinfobyname-1) | 根据工具名称获取单个工具的详细信息，使用Promise异步回调。 |
+| [querySession](arkts-ability-climanager-querysession-f.md#querysession-1) | 查询指定CLI工具会话的状态和执行结果。 |
+| [queryTools](arkts-ability-climanager-querytools-f.md#querytools-1) | 查询所有CLI工具的详细信息，使用Promise异步回调。 |
+| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f.md#querytoolsummaries-1) | 查询所有CLI工具的摘要信息。摘要信息仅包含名称、版本和描述字段，使用Promise异步回调。 |
+| [sendMessage](arkts-ability-climanager-sendmessage-f.md#sendmessage-1) | 向指定CLI工具会话对应的进程发送消息。 |
+| [subscribeSession](arkts-ability-climanager-subscribesession-f.md#subscribesession-1) | 订阅指定CLI工具会话的事件。会话运行期间，CLI工具产生的标准输出、标准错误、退出或错误事件通过回调返回。 |
 
 <!--Del-->
 ### 函数（系统接口）

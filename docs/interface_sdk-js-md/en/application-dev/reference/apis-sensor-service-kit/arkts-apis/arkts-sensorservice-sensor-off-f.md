@@ -6,8 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="off5"></a>
-
 ## off
 
 ```TypeScript
@@ -39,8 +37,8 @@ Unsubscribes from data of the acceleration sensor. Call this method to cancel th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -70,8 +68,6 @@ try {
 }
 ```
 
-
-<a id="off6"></a>
 
 ## off
 
@@ -105,8 +101,8 @@ Unsubscribes from data of the acceleration sensor. Call this method to cancel th
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -169,8 +165,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off7"></a>
-
 ## off
 
 ```TypeScript
@@ -198,8 +192,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor. Call this method
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -230,8 +224,6 @@ try {
 ```
 
 
-<a id="off8"></a>
-
 ## off
 
 ```TypeScript
@@ -260,8 +252,8 @@ Unsubscribes from data of the uncalibrated acceleration sensor. Call this method
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -324,8 +316,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off9"></a>
-
 ## off
 
 ```TypeScript
@@ -351,7 +341,7 @@ Unsubscribes from data of the ambient light sensor. When the ambient light senso
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -382,8 +372,6 @@ try {
 ```
 
 
-<a id="off10"></a>
-
 ## off
 
 ```TypeScript
@@ -410,7 +398,7 @@ Unsubscribes from data of the ambient light sensor. When the ambient light senso
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -473,8 +461,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off11"></a>
-
 ## off
 
 ```TypeScript
@@ -500,7 +486,7 @@ Unsubscribes from data of the ambient temperature sensor. When the ambient tempe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -531,8 +517,6 @@ try {
 ```
 
 
-<a id="off12"></a>
-
 ## off
 
 ```TypeScript
@@ -559,7 +543,7 @@ Unsubscribes from data of the ambient temperature sensor. When the ambient tempe
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -622,8 +606,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off13"></a>
-
 ## off
 
 ```TypeScript
@@ -649,7 +631,7 @@ Unsubscribes from data of the barometer sensor. Call this method to cancel the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -680,8 +662,6 @@ try {
 ```
 
 
-<a id="off14"></a>
-
 ## off
 
 ```TypeScript
@@ -708,7 +688,7 @@ Unsubscribes from data of the barometer sensor. Call this method to cancel the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -771,8 +751,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off15"></a>
-
 ## off
 
 ```TypeScript
@@ -798,7 +776,7 @@ Unsubscribes from data of the gravity sensor. When the gravity sensor data is no
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -829,8 +807,6 @@ try {
 ```
 
 
-<a id="off16"></a>
-
 ## off
 
 ```TypeScript
@@ -857,7 +833,7 @@ Unsubscribes from data of the gravity sensor. When the gravity sensor data is no
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -920,8 +896,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off17"></a>
-
 ## off
 
 ```TypeScript
@@ -953,8 +927,8 @@ Unsubscribes from data of the gyroscope sensor. Call this method to cancel the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -984,8 +958,6 @@ try {
 }
 ```
 
-
-<a id="off18"></a>
 
 ## off
 
@@ -1019,8 +991,8 @@ Unsubscribes from data of the gyroscope sensor. This API is called to cancel the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1083,8 +1055,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off19"></a>
-
 ## off
 
 ```TypeScript
@@ -1112,8 +1082,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor. When the uncalibrat
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1144,8 +1114,6 @@ try {
 ```
 
 
-<a id="off20"></a>
-
 ## off
 
 ```TypeScript
@@ -1174,8 +1142,8 @@ Unsubscribes from data of the uncalibrated gyroscope sensor.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1238,8 +1206,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off21"></a>
-
 ## off
 
 ```TypeScript
@@ -1265,7 +1231,7 @@ Unsubscribes from data of the Hall effect sensor. Call this API when you no long
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1296,8 +1262,6 @@ try {
 ```
 
 
-<a id="off22"></a>
-
 ## off
 
 ```TypeScript
@@ -1324,7 +1288,7 @@ Unsubscribes from data of the Hall effect sensor. Call this method to unsubscrib
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1387,8 +1351,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off23"></a>
-
 ## off
 
 ```TypeScript
@@ -1416,8 +1378,8 @@ Unsubscribes from data of the heart rate sensor. Call this method to cancel the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1448,8 +1410,6 @@ try {
 ```
 
 
-<a id="off24"></a>
-
 ## off
 
 ```TypeScript
@@ -1478,8 +1438,8 @@ Unsubscribes from data of the heart rate sensor. Call this method to cancel the 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1542,8 +1502,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off25"></a>
-
 ## off
 
 ```TypeScript
@@ -1569,7 +1527,7 @@ Unsubscribes from data of the humidity sensor. When the humidity sensor data is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1600,8 +1558,6 @@ try {
 ```
 
 
-<a id="off26"></a>
-
 ## off
 
 ```TypeScript
@@ -1628,7 +1584,7 @@ Unsubscribes from data of the humidity sensor. When the humidity sensor data is 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1691,8 +1647,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off27"></a>
-
 ## off
 
 ```TypeScript
@@ -1720,8 +1674,8 @@ Unsubscribes from data of the linear acceleration sensor. Call this method to ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1752,8 +1706,6 @@ try {
 ```
 
 
-<a id="off28"></a>
-
 ## off
 
 ```TypeScript
@@ -1782,8 +1734,8 @@ Unsubscribes from data of the linear acceleration sensor. Call this method to ca
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1846,8 +1798,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off29"></a>
-
 ## off
 
 ```TypeScript
@@ -1873,7 +1823,7 @@ Unsubscribes from data of the magnetic field sensor. When the magnetic field sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1904,8 +1854,6 @@ try {
 ```
 
 
-<a id="off30"></a>
-
 ## off
 
 ```TypeScript
@@ -1932,7 +1880,7 @@ Unsubscribes from data of the magnetic field sensor. When the magnetic field sen
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -1995,8 +1943,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off31"></a>
-
 ## off
 
 ```TypeScript
@@ -2022,7 +1968,7 @@ Unsubscribes from data of the uncalibrated magnetic field sensor. When the uncal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2053,8 +1999,6 @@ try {
 ```
 
 
-<a id="off32"></a>
-
 ## off
 
 ```TypeScript
@@ -2081,7 +2025,7 @@ Unsubscribes from data of the uncalibrated magnetic field sensor. When the uncal
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2144,8 +2088,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off33"></a>
-
 ## off
 
 ```TypeScript
@@ -2175,7 +2117,7 @@ Unsubscribes from data of the orientation sensor. Call this method to unsubscrib
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2205,8 +2147,6 @@ try {
 }
 ```
 
-
-<a id="off34"></a>
 
 ## off
 
@@ -2238,7 +2178,7 @@ Unsubscribes from data of the orientation sensor. Call this method to unsubscrib
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2301,8 +2241,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off35"></a>
-
 ## off
 
 ```TypeScript
@@ -2330,8 +2268,8 @@ Unsubscribes from data of the pedometer sensor. Call this method to cancel the s
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2362,8 +2300,6 @@ try {
 ```
 
 
-<a id="off36"></a>
-
 ## off
 
 ```TypeScript
@@ -2392,8 +2328,8 @@ Unsubscribes from data of the pedometer sensor. When the pedometer sensor data i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2456,8 +2392,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off37"></a>
-
 ## off
 
 ```TypeScript
@@ -2485,8 +2419,8 @@ Unsubscribes from data of the pedometer detection sensor. Call this method when 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2517,8 +2451,6 @@ try {
 ```
 
 
-<a id="off38"></a>
-
 ## off
 
 ```TypeScript
@@ -2547,8 +2479,8 @@ Unsubscribes from data of the pedometer detection sensor. Call this method when 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2611,8 +2543,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off39"></a>
-
 ## off
 
 ```TypeScript
@@ -2638,7 +2568,7 @@ Unsubscribes from data of the proximity sensor. When the proximity sensor data i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2669,8 +2599,6 @@ try {
 ```
 
 
-<a id="off40"></a>
-
 ## off
 
 ```TypeScript
@@ -2697,7 +2625,7 @@ Unsubscribes from data of the proximity sensor. When the proximity sensor data i
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2760,8 +2688,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off41"></a>
-
 ## off
 
 ```TypeScript
@@ -2787,7 +2713,7 @@ Unsubscribes from data of the rotation vector sensor. Call this method to cancel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2818,8 +2744,6 @@ try {
 ```
 
 
-<a id="off42"></a>
-
 ## off
 
 ```TypeScript
@@ -2846,7 +2770,7 @@ Unsubscribes from data of the rotation vector sensor. Call this method to cancel
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -2909,8 +2833,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off43"></a>
-
 ## off
 
 ```TypeScript
@@ -2936,7 +2858,7 @@ Unsubscribes from significant motion sensor data. Call this API to unsubscribe f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2967,8 +2889,6 @@ try {
 ```
 
 
-<a id="off44"></a>
-
 ## off
 
 ```TypeScript
@@ -2995,7 +2915,7 @@ Unsubscribes from significant motion sensor data. Call this API to unsubscribe f
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -3058,8 +2978,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off45"></a>
-
 ## off
 
 ```TypeScript
@@ -3085,7 +3003,7 @@ Unsubscribes from data of the wear detection sensor. Call this method to unsubsc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
 
 **Examples**
 
@@ -3116,8 +3034,6 @@ try {
 ```
 
 
-<a id="off46"></a>
-
 ## off
 
 ```TypeScript
@@ -3144,8 +3060,8 @@ Unsubscribes from the fused pressure sensor data. Call this method to cancel the
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -3208,8 +3124,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off47"></a>
-
 ## off
 
 ```TypeScript
@@ -3236,7 +3150,7 @@ Unsubscribes from data of the wear detection sensor. Call this method to unsubsc
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 
@@ -3299,8 +3213,6 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-<a id="off48"></a>
-
 ## off
 
 ```TypeScript
@@ -3312,14 +3224,14 @@ Unsubscribes from data of the acceleration sensor. The **off** API for canceling
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.ACCELEROMETER](#off5)
+> [sensor.off.ACCELEROMETER](#off-5)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off5)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
+**Substitutes:** [off](#off-5)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -3349,8 +3261,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback);
 ```
 
 
-<a id="off49"></a>
-
 ## off
 
 ```TypeScript
@@ -3363,14 +3273,14 @@ Unsubscribes from data of the uncalibrated acceleration sensor. The **off** API 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.ACCELEROMETER_UNCALIBRATED](#off7)
+> [sensor.off.ACCELEROMETER_UNCALIBRATED](#off-7)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off7)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**Substitutes:** [off](#off-7)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -3403,8 +3313,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 ```
 
 
-<a id="off50"></a>
-
 ## off
 
 ```TypeScript
@@ -3416,14 +3324,14 @@ Unsubscribes from data of the ambient light sensor. The **off** API for cancelin
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.AMBIENT_LIGHT](#off9)
+> [sensor.off.AMBIENT_LIGHT](#off-9)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off9)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
+**Substitutes:** [off](#off-9)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void-End-->
 
@@ -3449,8 +3357,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback);
 ```
 
 
-<a id="off51"></a>
-
 ## off
 
 ```TypeScript
@@ -3462,14 +3368,14 @@ Unsubscribes from data of the ambient temperature sensor. The **off** API for ca
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.AMBIENT_TEMPERATURE](#off11)
+> [sensor.off.AMBIENT_TEMPERATURE](#off-11)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off11)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
+**Substitutes:** [off](#off-11)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -3495,8 +3401,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback);
 ```
 
 
-<a id="off52"></a>
-
 ## off
 
 ```TypeScript
@@ -3508,14 +3412,14 @@ Unsubscribes from data of the barometer sensor. The **off** API for canceling su
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.BAROMETER](#off13)
+> [sensor.off.BAROMETER](#off-13)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off13)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
+**Substitutes:** [off](#off-13)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void-End-->
 
@@ -3541,8 +3445,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, callback);
 ```
 
 
-<a id="off53"></a>
-
 ## off
 
 ```TypeScript
@@ -3554,14 +3456,14 @@ Unsubscribes from data of the gravity sensor. The **off** API for canceling subs
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.GRAVITY](#off15)
+> [sensor.off.GRAVITY](#off-15)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off15)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
+**Substitutes:** [off](#off-15)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void-End-->
 
@@ -3589,8 +3491,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, callback);
 ```
 
 
-<a id="off54"></a>
-
 ## off
 
 ```TypeScript
@@ -3602,14 +3502,14 @@ Unsubscribes from data of the gyroscope sensor. The **off** API for canceling su
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.GYROSCOPE](#off17)
+> [sensor.off.GYROSCOPE](#off-17)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off17)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**Substitutes:** [off](#off-17)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -3639,8 +3539,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback);
 ```
 
 
-<a id="off55"></a>
-
 ## off
 
 ```TypeScript
@@ -3652,14 +3550,14 @@ Unsubscribes from data of the uncalibrated gyroscope sensor. The **off** API for
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.GYROSCOPE_UNCALIBRATED](#off19)
+> [sensor.off.GYROSCOPE_UNCALIBRATED](#off-19)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off19)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**Substitutes:** [off](#off-19)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **Required permissions:** ohos.permission.GYROSCOPE
 
@@ -3689,8 +3587,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback);
 ```
 
 
-<a id="off56"></a>
-
 ## off
 
 ```TypeScript
@@ -3702,14 +3598,14 @@ Unsubscribes from data of the Hall effect sensor. The **off** API for canceling 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.HALL](#off21)
+> [sensor.off.HALL](#off-21)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off21)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
+**Substitutes:** [off](#off-21)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void-End-->
 
@@ -3735,8 +3631,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HALL, callback);
 ```
 
 
-<a id="off57"></a>
-
 ## off
 
 ```TypeScript
@@ -3748,14 +3642,14 @@ Unsubscribes from data of the heart rate sensor. The **off** API for canceling s
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.HEART_RATE](#off23)
+> [sensor.off.HEART_RATE](#off-23)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off23)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**Substitutes:** [off](#off-23)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **Required permissions:** ohos.permission.HEALTH_DATA
 
@@ -3783,8 +3677,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, callback);
 ```
 
 
-<a id="off58"></a>
-
 ## off
 
 ```TypeScript
@@ -3796,14 +3688,14 @@ Unsubscribes from data of the humidity sensor. The **off** API for canceling sub
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.HUMIDITY](#off25)
+> [sensor.off.HUMIDITY](#off-25)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off25)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
+**Substitutes:** [off](#off-25)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void-End-->
 
@@ -3829,8 +3721,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, callback);
 ```
 
 
-<a id="off59"></a>
-
 ## off
 
 ```TypeScript
@@ -3842,14 +3732,14 @@ Unsubscribes from data of the linear acceleration sensor. The **off** API for ca
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.LINEAR_ACCELEROMETER](#off27)
+> [sensor.off.LINEAR_ACCELEROMETER](#off-27)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off27)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
+**Substitutes:** [off](#off-27)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACCELEROMETER
 
@@ -3879,8 +3769,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback);
 ```
 
 
-<a id="off60"></a>
-
 ## off
 
 ```TypeScript
@@ -3892,14 +3780,14 @@ Unsubscribes from data of the magnetic field sensor. The **off** API for canceli
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.MAGNETIC_FIELD](#off29)
+> [sensor.off.MAGNETIC_FIELD](#off-29)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off29)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
+**Substitutes:** [off](#off-29)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
 
@@ -3927,8 +3815,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback);
 ```
 
 
-<a id="off61"></a>
-
 ## off
 
 ```TypeScript
@@ -3940,14 +3826,14 @@ Unsubscribes from data of the uncalibrated magnetic field sensor. The **off** AP
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#off31)
+> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#off-31)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off31)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**Substitutes:** [off](#off-31)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -3978,8 +3864,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 ```
 
 
-<a id="off62"></a>
-
 ## off
 
 ```TypeScript
@@ -3991,14 +3875,14 @@ Unsubscribes from data of the orientation sensor. The **off** API for canceling 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.ORIENTATION](#off33)
+> [sensor.off.ORIENTATION](#off-33)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off33)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**Substitutes:** [off](#off-33)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void-End-->
 
@@ -4026,8 +3910,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, callback);
 ```
 
 
-<a id="off63"></a>
-
 ## off
 
 ```TypeScript
@@ -4039,14 +3921,14 @@ Unsubscribes from data of the pedometer sensor. The **off** API for canceling su
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.PEDOMETER](#off35)
+> [sensor.off.PEDOMETER](#off-35)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off35)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
+**Substitutes:** [off](#off-35)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -4074,8 +3956,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, callback);
 ```
 
 
-<a id="off64"></a>
-
 ## off
 
 ```TypeScript
@@ -4087,14 +3967,14 @@ Unsubscribes from data of the pedometer detection sensor. The **off** API for ca
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.PEDOMETER_DETECTION](#off37)
+> [sensor.off.PEDOMETER_DETECTION](#off-37)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off37)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
+**Substitutes:** [off](#off-37)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
 
 **Required permissions:** ohos.permission.ACTIVITY_MOTION
 
@@ -4122,8 +4002,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback);
 ```
 
 
-<a id="off65"></a>
-
 ## off
 
 ```TypeScript
@@ -4135,14 +4013,14 @@ Unsubscribes from data of the proximity sensor. The **off** API for canceling su
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.PROXIMITY](#off39)
+> [sensor.off.PROXIMITY](#off-39)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off39)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
+**Substitutes:** [off](#off-39)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void-End-->
 
@@ -4168,8 +4046,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, callback);
 ```
 
 
-<a id="off66"></a>
-
 ## off
 
 ```TypeScript
@@ -4181,14 +4057,14 @@ Unsubscribes from data of the rotation vector sensor. The **off** API for cancel
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.ROTATION_VECTOR](#off41)
+> [sensor.off.ROTATION_VECTOR](#off-41)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off41)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
+**Substitutes:** [off](#off-41)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void-End-->
 
@@ -4217,8 +4093,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback);
 ```
 
 
-<a id="off67"></a>
-
 ## off
 
 ```TypeScript
@@ -4230,14 +4104,14 @@ Unsubscribes from significant motion sensor data. The **off** API for canceling 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.SIGNIFICANT_MOTION](#off43)
+> [sensor.off.SIGNIFICANT_MOTION](#off-43)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off43)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
+**Substitutes:** [off](#off-43)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void-End-->
 
@@ -4263,8 +4137,6 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback);
 ```
 
 
-<a id="off68"></a>
-
 ## off
 
 ```TypeScript
@@ -4276,14 +4148,14 @@ Unsubscribes from data of the wear detection sensor. The **off** API for canceli
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [sensor.off.WEAR_DETECTION](#off45)
+> [sensor.off.WEAR_DETECTION](#off-45)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [off](#off45)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
+**Substitutes:** [off](#off-45)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void-End-->
 
@@ -4334,7 +4206,7 @@ Disables listening for sensor status changes. Call this API when you no longer n
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [14500101](../errorcode-sensor.md#14500101-service-exception) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **Examples**
 

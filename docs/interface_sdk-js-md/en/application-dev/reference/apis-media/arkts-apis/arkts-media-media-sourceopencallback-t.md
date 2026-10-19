@@ -28,4 +28,4 @@ This callback function is implemented by applications to handle resource open re
 
 | Type | Description |
 | --- | --- |
-| number | Handle for the current resource open request. A value greater than 0 means the request is successful, whereas a value less than or equal to 0 means it fails.<br> - The handle for the request object is unique. |
+| number | Handle for the current resource open request. A value greater than 0 means the request is successful, whereas a value less than or equal to 0 means it fails. <br> - The handle for the request object is unique. |

@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="remove1"></a>
-
 ## remove
 
 ```TypeScript
@@ -43,8 +41,6 @@ function remove(
 | reason | RemoveReason | 是 | 通知删除原因。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
-
-<a id="remove2"></a>
 
 ## remove
 
@@ -83,8 +79,6 @@ function remove(bundle: BundleOption, notificationKey: NotificationKey, reason: 
 | Promise&lt;void&gt; | 无返回结果的Promise对象。 |
 
 
-<a id="remove3"></a>
-
 ## remove
 
 ```TypeScript
@@ -115,8 +109,6 @@ function remove(hashCode: string, reason: RemoveReason, callback: AsyncCallback<
 | reason | RemoveReason | 是 | 通知删除原因。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 删除指定通知回调函数。 |
 
-
-<a id="remove4"></a>
 
 ## remove
 

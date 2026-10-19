@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="setslotbybundle1"></a>
-
 ## setSlotByBundle
 
 ```TypeScript
@@ -37,8 +35,6 @@ function setSlotByBundle(bundle: BundleOption, slot: NotificationSlot, callback:
 | slot | [NotificationSlot](arkts-notification-notificationslot-i.md) | 是 | 通知通道。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 设定通知通道回调函数。 |
 
-
-<a id="setslotbybundle2"></a>
 
 ## setSlotByBundle
 

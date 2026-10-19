@@ -88,7 +88,7 @@ Adjusts the position of the readable stream offset pointer.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | offset | number | Yes | Relative offset, in bytes. |
-| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. The default value is<b>SEEK_SET</b>, which indicates the beginning of the file. |
+| whence | [WhenceType](arkts-corefile-file-fs-whencetype-e.md) | No | Where to start the offset. The default value is <b>SEEK_SET</b>, which indicates the beginning of the file. |
 
 **Return value:**
 

@@ -6,8 +6,6 @@ interface SearchPlayMusicInfo
 
 搜播的音频信息的定义。
 
-@interface SearchPlayMusicInfo
-
 **起始版本：** 23
 
 <!--Device-avMusicTemplate-interface SearchPlayMusicInfo--><!--Device-avMusicTemplate-interface SearchPlayMusicInfo-End-->

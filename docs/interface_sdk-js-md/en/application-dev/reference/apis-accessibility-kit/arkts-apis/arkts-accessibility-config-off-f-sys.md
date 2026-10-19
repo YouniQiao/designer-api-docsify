@@ -28,7 +28,7 @@ Cancels the listener for changes in the list of enabled accessibility extensions
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| type | 'enabledAccessibilityExtensionListChange' | Yes | The parameter is fixed to 'enabledAccessibilityExtensionListChange', specifying that the event type to unsubscribe from is the change ofthe enabled accessibility extension list. |
+| type | 'enabledAccessibilityExtensionListChange' | Yes | The parameter is fixed to 'enabledAccessibilityExtensionListChange', specifying that the event type to unsubscribe from is the change of the enabled accessibility extension list. |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;void&gt; | No | Callback function used to cancel the event response of the specified callback object. The value must be the same as the value of **callback** in **on('enabledAccessibilityExtensionListChange')**. If this parameter is not specified, all registered events will be unregistered. |
 
 **Error codes:**

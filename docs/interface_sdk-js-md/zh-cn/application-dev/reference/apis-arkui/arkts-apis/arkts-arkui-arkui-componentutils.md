@@ -20,7 +20,7 @@ import { componentUtils } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid) | 根据组件ID获取组件实例对象，通过组件实例对象将获取的坐标位置和大小同步返回给开发者。 |
+| [getRectangleById](arkts-arkui-componentutils-getrectanglebyid-f.md#getrectanglebyid-1) | 根据组件ID获取组件实例对象，通过组件实例对象将获取的坐标位置和大小同步返回给开发者。 |
 
 <!--Del-->
 ### 函数（系统接口）

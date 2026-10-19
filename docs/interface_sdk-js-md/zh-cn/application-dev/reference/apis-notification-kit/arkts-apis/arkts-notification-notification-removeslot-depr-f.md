@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="removeslot1"></a>
-
 ## removeSlot
 
 ```TypeScript
@@ -32,8 +30,6 @@ function removeSlot(slotType: SlotType, callback: AsyncCallback<void>): void
 | slotType | SlotType | 是 | 通知渠道类型,目前分为社交通信、服务提醒、内容咨询和其他类型。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
-
-<a id="removeslot2"></a>
 
 ## removeSlot
 

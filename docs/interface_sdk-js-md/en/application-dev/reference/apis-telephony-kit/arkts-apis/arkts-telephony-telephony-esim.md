@@ -20,8 +20,8 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | Name | Description |
 | --- | --- |
-| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile) | Launches the download page for the user to add a single profile. This API uses a promise to return the result. |
-| [isSupported](arkts-telephony-esim-issupported-f.md#issupported) | Checks whether the specified card slot supports the eSIM function. |
+| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile-1) | Launches the download page for the user to add a single profile. This API uses a promise to return the result. |
+| [isSupported](arkts-telephony-esim-issupported-f.md#issupported-1) | Checks whether the specified card slot supports the eSIM function. |
 
 <!--Del-->
 ### Functions(System API)

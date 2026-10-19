@@ -32,4 +32,4 @@ import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResul
 
 | Name | Description |
 | --- | --- |
-| [OpenMode](arkts-corefile-fileio-openmode-n.md) | Enumerates the constants of the<b>mode</b> parameter used in <b>open()</b>, which specifies the file opening mode, such as <b>READ_ONLY</b>, <b>WRITE_ONLY</b>, <b>READ_WRITE</b>, or <b>CREATE</b>. |
+| [OpenMode](arkts-corefile-fileio-openmode-n.md) | Enumerates the constants of the <b>mode</b> parameter used in <b>open()</b>, which specifies the file opening mode, such as <b>READ_ONLY</b>, <b>WRITE_ONLY</b>, <b>READ_WRITE</b>, or <b>CREATE</b>. |

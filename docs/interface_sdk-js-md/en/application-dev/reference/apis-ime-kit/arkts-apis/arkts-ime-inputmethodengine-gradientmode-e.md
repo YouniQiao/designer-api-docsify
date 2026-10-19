@@ -8,7 +8,7 @@ Enumerates the gradient modes of the input method. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
-| NONE | 0 | The gradient mode is not used.|
+| NONE | 0 | The gradient mode is not used.|  
 | LINEAR_GRADIENT | 1 | Linear gradient.|
 
 **Since:** 20

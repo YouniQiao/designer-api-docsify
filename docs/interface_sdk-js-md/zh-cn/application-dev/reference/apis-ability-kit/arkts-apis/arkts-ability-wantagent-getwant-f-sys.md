@@ -6,8 +6,6 @@
 import { wantAgent, WantAgent } from '@kit.AbilityKit';
 ```
 
-<a id="getwant1"></a>
-
 ## getWant
 
 ```TypeScript
@@ -41,8 +39,6 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 | [16000015](../errorcode-ability.md#16000015-服务超时) | Service timeout. |
 | [16000151](../errorcode-ability.md#16000151-无效wantagent对象) | Invalid wantAgent object. |
 
-
-<a id="getwant2"></a>
 
 ## getWant
 

@@ -6,8 +6,6 @@ declare class CustomComponent extends BaseCustomComponent
 
 自定义组件
 
-@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
-
 **继承/实现关系：** CustomComponent extends [BaseCustomComponent](arkts-arkui-common-comp-basecustomcomponent-c.md)
 
 **起始版本：** 7

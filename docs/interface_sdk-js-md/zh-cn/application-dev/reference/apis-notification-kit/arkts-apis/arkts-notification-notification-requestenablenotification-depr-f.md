@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="requestenablenotification1"></a>
-
 ## requestEnableNotification
 
 ```TypeScript
@@ -31,8 +29,6 @@ function requestEnableNotification(callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 应用请求通知使能的回调函数。 |
 
-
-<a id="requestenablenotification2"></a>
 
 ## requestEnableNotification
 

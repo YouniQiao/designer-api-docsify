@@ -28,13 +28,13 @@ Obtain the list of USB devices that support CD/DVD burning.This API uses a promi
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | No | queryPolicy indicates the policy of query.<br>Default value: common.QueryPolicy.SELF. |
+| queryPolicy | [common.QueryPolicy](arkts-mdm-common-querypolicy-e.md) | No | queryPolicy indicates the policy of query. <br>Default value: common.QueryPolicy.SELF. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[UsbDevice](arkts-mdm-usbmanager-usbdevice-i.md)&gt;&gt; | Promise used to return Array<[UsbDevice](arkts-mdm-usbmanager-usbdevice-i.md)>.The array of allowed USB devices. |
+| Promise&lt;Array&lt;[UsbDevice](arkts-mdm-usbmanager-usbdevice-i.md)&gt;&gt; | Promise used to return Array<UsbDevice>.The array of allowed USB devices. |
 
 **Error codes:**
 

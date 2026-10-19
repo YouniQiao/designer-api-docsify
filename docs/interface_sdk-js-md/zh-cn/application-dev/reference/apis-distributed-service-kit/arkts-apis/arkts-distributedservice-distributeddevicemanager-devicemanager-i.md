@@ -88,8 +88,6 @@ try {
 }
 ```
 
-<a id="getavailabledevicelist1"></a>
-
 ## getAvailableDeviceList
 
 ```TypeScript
@@ -141,8 +139,6 @@ try {
   console.error(`Failed to get available device list. Code: ${error.code}, message: ${error.message}`);
 }
 ```
-
-<a id="getavailabledevicelist2"></a>
 
 ## getAvailableDeviceList
 

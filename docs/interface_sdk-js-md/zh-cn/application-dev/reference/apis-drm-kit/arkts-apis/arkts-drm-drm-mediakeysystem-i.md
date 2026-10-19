@@ -4,7 +4,7 @@
 interface MediaKeySystem
 ```
 
-支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)创建一个MediaKeySystem实例。
+支持MediaKeySystem实例管理、设备证书申请与处理、会话创建、离线媒体密钥管理、获取DRM度量记录、设备属性等。在调用MediaKeySystem方法之前，必须使用[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem-1)创建一个MediaKeySystem实例。
 
 **起始版本：** 11
 
@@ -59,8 +59,6 @@ let mediaKeyId = new Uint8Array([0x00, 0x00, 0x00, 0x00]);
 mediaKeySystem.clearOfflineMediaKeys(mediaKeyId);
 ```
 
-<a id="createmediakeysession1"></a>
-
 ## createMediaKeySession
 
 ```TypeScript
@@ -106,8 +104,6 @@ import { drm } from '@kit.DrmKit';
 let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
 let mediaKeySession: drm.MediaKeySession = mediaKeySystem.createMediaKeySession(drm.ContentProtectionLevel.CONTENT_PROTECTION_LEVEL_SW_CRYPTO);
 ```
-
-<a id="createmediakeysession3"></a>
 
 ## createMediaKeySession
 
@@ -526,7 +522,7 @@ off(type: 'keySystemRequired', callback?: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 监听事件类型，通过[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)成功创建MediaKeySystem实例后可监听。 |
+| type | 'keySystemRequired' | 是 | 监听事件类型，通过[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem-1)成功创建MediaKeySystem实例后可监听。 |
 | callback | (eventInfo: EventInfo) =&gt; void | 否 | 回调函数，返回事件信息。可选参数，不传时注销该事件类型的所有监听。 |
 
 **错误码：**
@@ -565,7 +561,7 @@ on(type: 'keySystemRequired', callback: (eventInfo: EventInfo) => void): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'keySystemRequired' | 是 | 事件类型，通过[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md)成功创建MediaKeySystem实例后可监听，需要设备证书时触发该事件。 |
+| type | 'keySystemRequired' | 是 | 事件类型，通过[createMediaKeySystem](arkts-drm-drm-createmediakeysystem-f.md#createmediakeysystem-1)成功创建MediaKeySystem实例后可监听，需要设备证书时触发该事件。 |
 | callback | (eventInfo: EventInfo) =&gt; void | 是 | 回调函数，返回事件信息。只要有该事件返回就证明需请求设备证书。 |
 
 **错误码：**

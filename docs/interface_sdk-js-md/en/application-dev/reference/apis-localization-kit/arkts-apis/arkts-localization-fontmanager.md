@@ -20,11 +20,11 @@ import { fontManager } from '@kit.LocalizationKit';
 
 | Name | Description |
 | --- | --- |
-| [getFontScope](arkts-localization-fontmanager-getfontscope-f.md#getfontscope) | Queries the scope of a font by URL. This API uses a promise to return the result. |
-| [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md#installscopefont) | Install the font file in the specified path as an application-level or session-level font. This API uses a promise to return the result. |
-| [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md#offfontobserver) | Unregisters the font service status listener. |
-| [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md#onfontobserver) | Registers a listener for monitoring the font service status. |
-| [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md#uninstallscopefont) | Uninstall installed application-level or session-level fonts based on the font path. This API uses a promise to return the result. |
+| [getFontScope](arkts-localization-fontmanager-getfontscope-f.md#getfontscope-1) | Queries the scope of a font by URL. This API uses a promise to return the result. |
+| [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md#installscopefont-1) | Install the font file in the specified path as an application-level or session-level font. This API uses a promise to return the result. |
+| [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md#offfontobserver-1) | Unregisters the font service status listener. |
+| [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md#onfontobserver-1) | Registers a listener for monitoring the font service status. |
+| [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md#uninstallscopefont-1) | Uninstall installed application-level or session-level fonts based on the font path. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

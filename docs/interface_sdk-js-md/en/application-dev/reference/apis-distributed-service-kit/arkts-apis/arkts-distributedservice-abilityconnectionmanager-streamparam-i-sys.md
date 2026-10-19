@@ -6,8 +6,6 @@ interface StreamParam
 
 Streaming configuration parameters.
 
-@interface StreamParam
-
 **Since:** 18
 
 <!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->

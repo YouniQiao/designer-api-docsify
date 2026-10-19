@@ -6,8 +6,6 @@ interface StreamParam
 
 流传输配置的参数。用于配置传输流的传输方式和参数。其中role参数区分发送流（SOURCE）和接收流（SINK），发送流需要配置bitrate和colorSpaceConversionTarget等参数。
 
-@interface StreamParam
-
 **起始版本：** 18
 
 <!--Device-abilityConnectionManager-interface StreamParam--><!--Device-abilityConnectionManager-interface StreamParam-End-->

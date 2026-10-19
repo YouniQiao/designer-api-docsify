@@ -47,7 +47,6 @@ addDeferredSurface(surfaceId: string): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [7400101](../errorcode-camera.md#7400101-无效入参) | Parameter missing or parameter type incorrect. |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Permission verification failed. A non-system application calls a system API.<br>**适用版本：** 13 - 23 |
 
 **示例**
 
@@ -87,7 +86,7 @@ enableBandwidthCompression(enabled: boolean): void
 
 > **说明：** 
 > 
-> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig1)接口之前调用，否则会影响预览流
+> 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之前调用，否则会影响预览流
 > 出流格式。
 
 **起始版本：** 23
@@ -675,7 +674,7 @@ LOG视频下，使能辅助监看之前，可先使用方法[isLogViewAssistSupp
 
 > **说明：** 
 > 
-> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig1)接口之后调用。
+> - 该接口只能在使用[Session.commitConfig](arkts-camera-camera-session-i.md#commitconfig)接口之后调用。
 > 
 > - 预览辅助监看效果仅支持1080P及以下分辨率。
 
@@ -766,8 +765,6 @@ function testSetPreviewRotation(previewOutput: camera.PreviewOutput, previewRota
 }
 ```
 
-<a id="start1"></a>
-
 ## start
 
 ```TypeScript
@@ -784,7 +781,7 @@ start(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [start](arkts-camera-camera-session-i.md#start1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [start](arkts-camera-camera-session-i.md#start)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-start(callback: AsyncCallback<void>): void-End-->
 
@@ -817,8 +814,6 @@ function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
   });
 }
 ```
-
-<a id="start2"></a>
 
 ## start
 
@@ -868,8 +863,6 @@ function startPreviewOutput(previewOutput: camera.PreviewOutput): void {
 }
 ```
 
-<a id="stop1"></a>
-
 ## stop
 
 ```TypeScript
@@ -886,7 +879,7 @@ stop(callback: AsyncCallback<void>): void
 
 **废弃版本：** 11
 
-**替代接口：** [stop](arkts-camera-camera-session-i.md#stop1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [stop](arkts-camera-camera-session-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void--><!--Device-PreviewOutput-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -913,8 +906,6 @@ function stopPreviewOutput(previewOutput: camera.PreviewOutput): void {
   })
 }
 ```
-
-<a id="stop2"></a>
 
 ## stop
 

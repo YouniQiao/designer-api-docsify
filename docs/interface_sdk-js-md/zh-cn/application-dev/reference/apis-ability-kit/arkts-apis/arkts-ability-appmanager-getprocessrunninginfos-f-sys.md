@@ -6,8 +6,6 @@
 import { appManager } from '@kit.AbilityKit';
 ```
 
-<a id="getprocessrunninginfos1"></a>
-
 ## getProcessRunningInfos
 
 ```TypeScript
@@ -58,8 +56,6 @@ appManager.getProcessRunningInfos().then((data) => {
 
 <!--DelEnd-->
 
-
-<a id="getprocessrunninginfos2"></a>
 
 ## getProcessRunningInfos
 

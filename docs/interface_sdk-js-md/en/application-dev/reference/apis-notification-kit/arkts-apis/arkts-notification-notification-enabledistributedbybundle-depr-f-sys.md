@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="enabledistributedbybundle1"></a>
-
 ## enableDistributedByBundle
 
 ```TypeScript
@@ -37,8 +35,6 @@ Sets whether a specified application supports distributed notifications. This AP
 | enable | boolean | Yes | Whether the device supports distributed notifications. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="enabledistributedbybundle2"></a>
 
 ## enableDistributedByBundle
 

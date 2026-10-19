@@ -239,7 +239,7 @@ Constructor
 | [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | Defines the callback type used in accessibility hover transparent event. |
 | [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | Sets the relative scale ratio at the start and end of the animation compared to the original preview image. |
 | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | Callback type for the component area change event. |
-| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | [Blender](arkts-arkui-common-comp-blender-t-sys.md) |
+| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | Blender |
 | [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | Enumerates the border corner radius types. |
 | [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | `BuilderCallback` is a type alias of the global `@Builder` function. It serves as the input parameter type of the `mutableBuilder` function and is used to specify the global `@Builder` function to be wrapped. |
 | [BuilderMethodDecorator](arkts-arkui-common-comp-buildermethoddecorator-t.md) | Define Builder Decorator type with config. |
@@ -251,7 +251,7 @@ Constructor
 | [DataLoadParams](arkts-arkui-common-comp-dataloadparams-t.md) | Defines the data loading parameters used during a drop operation. |
 | [DataSyncOptions](arkts-arkui-common-comp-datasyncoptions-t.md) | Defines the input parameter object for **startDataLoading**. |
 | [DragSpringLoadingConfiguration](arkts-arkui-common-comp-dragspringloadingconfiguration-t.md) | Defines the configuration parameters for drag hover detection. |
-| [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) | [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) |
+| [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) | DrawContext |
 | [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) | Defines the EllipseShape type. |
 | [EnvDecorator](arkts-arkui-common-comp-envdecorator-t.md) | Defines the **EnvDecorator** property decorator type. |
 | [Filter](arkts-arkui-common-comp-filter-t.md) | Represents a filter object. |
@@ -259,7 +259,7 @@ Constructor
 | [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept). |
 | [GestureRecognizerJudgeBeginCallback](arkts-arkui-common-comp-gesturerecognizerjudgebegincallback-t.md) | Represents a custom gesture recognizer judgment callback type. |
 | [HoverCallback](arkts-arkui-common-comp-hovercallback-t.md) | Defines the callback type for hover events. |
-| [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) | [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) |
+| [ImageModifier](arkts-arkui-common-comp-imagemodifier-t.md) | ImageModifier |
 | [InputEventListener](arkts-arkui-common-comp-inputeventlistener-t.md) | Input event listener callback type. |
 | [IntentionCode](arkts-arkui-common-comp-intentioncode-t.md) | Intention corresponding to the key. |
 | [Matrix4Transit](arkts-arkui-common-comp-matrix4transit-t.md) | Import the Matrix4Transit type object for common method. |
@@ -299,7 +299,7 @@ Constructor
 | [TouchTestDoneCallback](arkts-arkui-common-comp-touchtestdonecallback-t.md) | Defines the callback event type for dynamically specifying whether a gesture recognizer participates in gesture processing. The lifecycle of the parameters in the callback follows the callback itself, and the methods in the parameters can be used only synchronously within the callback. |
 | [TransitionEffects](arkts-arkui-common-comp-transitioneffects-t.md) | Defines all transition effects. |
 | [TransitionFinishCallback](arkts-arkui-common-comp-transitionfinishcallback-t.md) | Represents the type of callback for the end of a component's transition animation. |
-| [UIContext](arkts-arkui-common-comp-uicontext-t.md) | [UIContext](arkts-arkui-common-comp-uicontext-t.md) |
+| [UIContext](arkts-arkui-common-comp-uicontext-t.md) | UIContext |
 | [UnifiedData](arkts-arkui-common-comp-unifieddata-t.md) | Defines drag-related data. |
 | [UniformDataType](arkts-arkui-common-comp-uniformdatatype-t.md) | Defines the uniform data type. |
 | [VisibleAreaChangeCallback](arkts-arkui-common-comp-visibleareachangecallback-t.md) | Represents a callback for visible area changes of the component. |
@@ -327,7 +327,7 @@ Constructor
 | [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | Enum for distortion animation mode. |
 | [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | Enumerates drag animation types. |
 | [DragBehavior](arkts-arkui-common-comp-dragbehavior-e.md) | Describes the drag behavior. When [DragResult](arkts-arkui-common-comp-dragresult-e.md) is set to **DROP_ENABLED**, you can define **DragBehavior** as either **COPY** or **MOVE**. When **DragBehavior** is set to **COPY**, a plus sign will be displayed in the badge of the dragged object. When **DragBehavior** is set to **MOVE**, the plus sign will not be displayed. **DragBehavior** is used to indicate the intended way of handling data (either copy or move) without governing the actual data processing. This behavior is reported back to the drag source through **onDragEnd**, enabling the drag initiator to distinguish whether the operation results in a copy or a move of the data. |
-| [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md) | Enumerates the transition effects for switching between the floating image (set through [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu2)) and the drag preview when both are configured on a component. |
+| [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md) | Enumerates the transition effects for switching between the floating image (set through [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1)) and the drag preview when both are configured on a component. |
 | [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) | Sets the display mode of the drag preview. |
 | [DragResult](arkts-arkui-common-comp-dragresult-e.md) | Enumerates the results of drag operations and the drop-enabled states of components. |
 | [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | Edge light animation mode enumeration. |

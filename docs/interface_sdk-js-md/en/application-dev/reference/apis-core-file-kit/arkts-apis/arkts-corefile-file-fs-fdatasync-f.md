@@ -45,8 +45,6 @@ Synchronizes data in a file. This API uses a promise to return the result.
 | 13900042 | Unknown error |
 
 
-<a id="fdatasync2"></a>
-
 ## fdatasync
 
 ```TypeScript
@@ -66,7 +64,7 @@ Synchronizes data in a file. This API uses an asynchronous callback to return th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | fd | number | Yes | FD of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file data is successfully synchronized,<b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file data is successfully synchronized, <b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

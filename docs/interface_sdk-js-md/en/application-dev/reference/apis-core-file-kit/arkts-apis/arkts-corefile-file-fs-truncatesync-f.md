@@ -27,7 +27,7 @@ Truncates a file to the specified length synchronously. Excess content will be d
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string &#124; number | Yes | Application sandbox path or FD of the file. |
-| len | number | No | File length after truncation, in bytes. The default value is<b>0</b>. |
+| len | number | No | File length after truncation, in bytes. The default value is <b>0</b>. |
 
 **Error codes:**
 

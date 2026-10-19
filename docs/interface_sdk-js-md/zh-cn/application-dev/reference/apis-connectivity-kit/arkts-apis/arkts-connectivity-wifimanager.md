@@ -21,45 +21,45 @@ import { wifiManager } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig1) | 添加候选网络配置，使用Promise异步回调，使用前先开启Wi-Fi。 |
-| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig2) | 添加候选网络配置，使用callback异步回调。 |
-| [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig1) | 添加网络配置。使用Promise异步回调。 |
-| [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig2) | 添加网络配置。使用callback异步回调。 |
-| [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md#connecttocandidateconfig1) | 应用使用该接口连接到自己添加的候选网络。 |
-| [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md#connecttocandidateconfig2) | 应用使用该接口连接到自己添加的候选网络，支持设置自定义参数。 |
-| [connectToCandidateConfigWithUserAction](arkts-connectivity-wifimanager-connecttocandidateconfigwithuseraction-f.md#connecttocandidateconfigwithuseraction) | 该接口用于应用连接到用户添加的候选网络，并在连接时提示用户进行信任确认。使用Promise异步回调。 |
-| [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md#connecttonetwork) | 应用使用该接口连接到热点。 |
-| [createGroup](arkts-connectivity-wifimanager-creategroup-f.md#creategroup) | 创建群组。创建群组后，可调用[removeGroup](arkts-connectivity-wifimanager-removegroup-f.md)移除已创建的群组。 |
-| [disableWifi](arkts-connectivity-wifimanager-disablewifi-f.md#disablewifi) | 关闭Wi-Fi。 |
-| [disconnect](arkts-connectivity-wifimanager-disconnect-f.md#disconnect) | 断开Wi-Fi连接。 |
-| [enableWifi](arkts-connectivity-wifimanager-enablewifi-f.md#enablewifi) | 启动Wi-Fi。 |
-| [getCandidateConfigs](arkts-connectivity-wifimanager-getcandidateconfigs-f.md#getcandidateconfigs) | 获取候选网络配置。 |
-| [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md#getcountrycode) | 获取国家码信息。 |
-| [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup1) | 获取P2P当前组信息。使用Promise异步回调。 |
-| [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup2) | 获取P2P当前组信息。使用callback异步回调。 |
-| [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getdeviceconfigs) | 获取网络配置。 |
-| [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md#getdevicemacaddress) | 获取设备的MAC地址。 |
-| [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getipinfo) | 获取IPV4信息。 |
-| [getIpv6Info](arkts-connectivity-wifimanager-getipv6info-f.md#getipv6info) | 获取IPV6信息。 |
-| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo1) | 获取Wi-Fi连接信息。使用Promise异步回调。 |
-| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo2) | 获取Wi-Fi连接信息。使用callback异步回调。 |
-| [getLinkedInfoSync](arkts-connectivity-wifimanager-getlinkedinfosync-f.md#getlinkedinfosync) | 获取Wi-Fi连接信息，使用同步方式返回结果。 |
-| [getMultiLinkedInfo](arkts-connectivity-wifimanager-getmultilinkedinfo-f.md#getmultilinkedinfo) | 获取MLO(Multi-Link Operation，多链路操作)Wi-Fi连接信息。 |
-| [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo1) | 获取P2P连接信息。使用Promise异步回调。 |
-| [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo2) | 获取P2P连接信息。使用callback异步回调。 |
-| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice1) | 获取P2P本端设备信息，使用Promise异步回调。 |
-| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice2) | 获取P2P本端设备信息，使用callback异步回调。 |
-| [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices1) | 获取P2P对端设备列表信息。使用Promise异步回调。 |
-| [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices2) | 获取P2P对端设备列表信息。使用callback异步回调。 |
-| [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist) | 获取包含当前时间点前30s内的缓存扫描结果。 |
-| [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getsignallevel) | 查询Wi-Fi信号强度。 |
-| [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md#isbandtypesupported) | 判断当前频段是否支持。 |
-| [isConnected](arkts-connectivity-wifimanager-isconnected-f.md#isconnected) | 查询Wi-Fi是否已连接。 |
-| [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isfeaturesupported) | 判断设备是否支持指定的Wi-Fi特性。 |
-| [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#ishotspotactive) | 热点是否已开启。 |
-| [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md#ismeteredhotspot) | 查询设备当前连接的wifi是否是手机热点。 |
-| [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive) | 查询Wi-Fi开关是否已激活。 |
-| [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md#iswlansupported) | 查询是否可用Wi-Fi网络。 |
+| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig-1) | 添加候选网络配置，使用Promise异步回调，使用前先开启Wi-Fi。 |
+| [addCandidateConfig](arkts-connectivity-wifimanager-addcandidateconfig-f.md#addcandidateconfig-2) | 添加候选网络配置，使用callback异步回调。 |
+| [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig-1) | 添加网络配置。使用Promise异步回调。 |
+| [addDeviceConfig](arkts-connectivity-wifimanager-adddeviceconfig-f.md#adddeviceconfig-2) | 添加网络配置。使用callback异步回调。 |
+| [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md#connecttocandidateconfig-1) | 应用使用该接口连接到自己添加的候选网络。 |
+| [connectToCandidateConfig](arkts-connectivity-wifimanager-connecttocandidateconfig-f.md#connecttocandidateconfig-2) | 应用使用该接口连接到自己添加的候选网络，支持设置自定义参数。 |
+| [connectToCandidateConfigWithUserAction](arkts-connectivity-wifimanager-connecttocandidateconfigwithuseraction-f.md#connecttocandidateconfigwithuseraction-1) | 该接口用于应用连接到用户添加的候选网络，并在连接时提示用户进行信任确认。使用Promise异步回调。 |
+| [connectToNetwork](arkts-connectivity-wifimanager-connecttonetwork-f.md#connecttonetwork-1) | 应用使用该接口连接到热点。 |
+| [createGroup](arkts-connectivity-wifimanager-creategroup-f.md#creategroup-1) | 创建群组。创建群组后，可调用[removeGroup](arkts-connectivity-wifimanager-removegroup-f.md)移除已创建的群组。 |
+| [disableWifi](arkts-connectivity-wifimanager-disablewifi-f.md#disablewifi-1) | 关闭Wi-Fi。 |
+| [disconnect](arkts-connectivity-wifimanager-disconnect-f.md#disconnect-1) | 断开Wi-Fi连接。 |
+| [enableWifi](arkts-connectivity-wifimanager-enablewifi-f.md#enablewifi-1) | 启动Wi-Fi。 |
+| [getCandidateConfigs](arkts-connectivity-wifimanager-getcandidateconfigs-f.md#getcandidateconfigs-1) | 获取候选网络配置。 |
+| [getCountryCode](arkts-connectivity-wifimanager-getcountrycode-f.md#getcountrycode-1) | 获取国家码信息。 |
+| [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup-1) | 获取P2P当前组信息。使用Promise异步回调。 |
+| [getCurrentGroup](arkts-connectivity-wifimanager-getcurrentgroup-f.md#getcurrentgroup-2) | 获取P2P当前组信息。使用callback异步回调。 |
+| [getDeviceConfigs](arkts-connectivity-wifimanager-getdeviceconfigs-f.md#getdeviceconfigs-1) | 获取网络配置。 |
+| [getDeviceMacAddress](arkts-connectivity-wifimanager-getdevicemacaddress-f.md#getdevicemacaddress-1) | 获取设备的MAC地址。 |
+| [getIpInfo](arkts-connectivity-wifimanager-getipinfo-f.md#getipinfo-1) | 获取IPV4信息。 |
+| [getIpv6Info](arkts-connectivity-wifimanager-getipv6info-f.md#getipv6info-1) | 获取IPV6信息。 |
+| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo-1) | 获取Wi-Fi连接信息。使用Promise异步回调。 |
+| [getLinkedInfo](arkts-connectivity-wifimanager-getlinkedinfo-f.md#getlinkedinfo-2) | 获取Wi-Fi连接信息。使用callback异步回调。 |
+| [getLinkedInfoSync](arkts-connectivity-wifimanager-getlinkedinfosync-f.md#getlinkedinfosync-1) | 获取Wi-Fi连接信息，使用同步方式返回结果。 |
+| [getMultiLinkedInfo](arkts-connectivity-wifimanager-getmultilinkedinfo-f.md#getmultilinkedinfo-1) | 获取MLO(Multi-Link Operation，多链路操作)Wi-Fi连接信息。 |
+| [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo-1) | 获取P2P连接信息。使用Promise异步回调。 |
+| [getP2pLinkedInfo](arkts-connectivity-wifimanager-getp2plinkedinfo-f.md#getp2plinkedinfo-2) | 获取P2P连接信息。使用callback异步回调。 |
+| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice-1) | 获取P2P本端设备信息，使用Promise异步回调。 |
+| [getP2pLocalDevice](arkts-connectivity-wifimanager-getp2plocaldevice-f.md#getp2plocaldevice-2) | 获取P2P本端设备信息，使用callback异步回调。 |
+| [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices-1) | 获取P2P对端设备列表信息。使用Promise异步回调。 |
+| [getP2pPeerDevices](arkts-connectivity-wifimanager-getp2ppeerdevices-f.md#getp2ppeerdevices-2) | 获取P2P对端设备列表信息。使用callback异步回调。 |
+| [getScanInfoList](arkts-connectivity-wifimanager-getscaninfolist-f.md#getscaninfolist-1) | 获取包含当前时间点前30s内的缓存扫描结果。 |
+| [getSignalLevel](arkts-connectivity-wifimanager-getsignallevel-f.md#getsignallevel-1) | 查询Wi-Fi信号强度。 |
+| [isBandTypeSupported](arkts-connectivity-wifimanager-isbandtypesupported-f.md#isbandtypesupported-1) | 判断当前频段是否支持。 |
+| [isConnected](arkts-connectivity-wifimanager-isconnected-f.md#isconnected-1) | 查询Wi-Fi是否已连接。 |
+| [isFeatureSupported](arkts-connectivity-wifimanager-isfeaturesupported-f.md#isfeaturesupported-1) | 判断设备是否支持指定的Wi-Fi特性。 |
+| [isHotspotActive](arkts-connectivity-wifimanager-ishotspotactive-f.md#ishotspotactive-1) | 热点是否已开启。 |
+| [isMeteredHotspot](arkts-connectivity-wifimanager-ismeteredhotspot-f.md#ismeteredhotspot-1) | 查询设备当前连接的wifi是否是手机热点。 |
+| [isWifiActive](arkts-connectivity-wifimanager-iswifiactive-f.md#iswifiactive-1) | 查询Wi-Fi开关是否已激活。 |
+| [isWlanSupported](arkts-connectivity-wifimanager-iswlansupported-f.md#iswlansupported-1) | 查询是否可用Wi-Fi网络。 |
 | [off('wifiStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifistatechange) | 取消注册Wi-Fi状态改变事件。使用callback异步回调。 |
 | [off('wifiConnectionChange')](arkts-connectivity-wifimanager-off-f.md#offwificonnectionchange) | 取消注册Wi-Fi连接状态改变事件。使用callback异步回调。 |
 | [off('wifiScanStateChange')](arkts-connectivity-wifimanager-off-f.md#offwifiscanstatechange) | 取消注册扫描状态改变事件。使用callback异步回调。 |
@@ -82,19 +82,19 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [on('p2pPeerDeviceChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppeerdevicechange) | 注册P2P对端设备状态改变事件，在业务退出时，要调用off(type: 'p2pPeerDeviceChange', callback?: Callback&lt;WifiP2pDevice[]&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
 | [on('p2pPersistentGroupChange')](arkts-connectivity-wifimanager-on-f.md#onp2ppersistentgroupchange) | 注册P2P永久组状态改变事件，在业务退出时，要调用off(type: 'p2pPersistentGroupChange', callback?: Callback&lt;void&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
 | [on('p2pDiscoveryChange')](arkts-connectivity-wifimanager-on-f.md#onp2pdiscoverychange) | 注册发现设备状态改变事件，在业务退出时，要调用off(type: 'p2pDiscoveryChange', callback?: Callback&lt;number&gt;)接口去掉之前的注册回调。使用callback异步回调。 |
-| [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pcancelconnect) | 在P2P连接过程中，取消P2P连接。 |
-| [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect) | 执行P2P连接。调用此方法连接后，如需取消可调用[p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md)。 |
-| [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig1) | 移除候选网络配置，使用Promise异步回调。 |
-| [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig2) | 移除指定的候选网络配置，使用callback异步回调。 |
-| [removeDevice](arkts-connectivity-wifimanager-removedevice-f.md#removedevice) | 移除网络配置。 |
-| [removeGroup](arkts-connectivity-wifimanager-removegroup-f.md#removegroup) | 移除群组。 |
-| [startDiscoverDevices](arkts-connectivity-wifimanager-startdiscoverdevices-f.md#startdiscoverdevices) | 开始发现设备。调用此方法后，可调用[stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md)停止发现设备以释放资源。 |
-| [startScan](arkts-connectivity-wifimanager-startscan-f.md#startscan) | 启动Wi-Fi扫描。 |
-| [stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md#stopdiscoverdevices) | 停止发现设备。 |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults1) | 获取扫描结果，使用Promise异步回调。 |
-| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults2) | 获取扫描结果，使用callback异步回调。 |
-| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md#getscanresultssync) | 获取扫描结果，使用同步方式返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。 |
-| [scan](arkts-connectivity-wifimanager-scan-f.md#scan) | 启动Wi-Fi扫描，使用前先开启Wi-Fi。 |
+| [p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md#p2pcancelconnect-1) | 在P2P连接过程中，取消P2P连接。 |
+| [p2pConnect](arkts-connectivity-wifimanager-p2pconnect-f.md#p2pconnect-1) | 执行P2P连接。调用此方法连接后，如需取消可调用[p2pCancelConnect](arkts-connectivity-wifimanager-p2pcancelconnect-f.md)。 |
+| [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig-1) | 移除候选网络配置，使用Promise异步回调。 |
+| [removeCandidateConfig](arkts-connectivity-wifimanager-removecandidateconfig-f.md#removecandidateconfig-2) | 移除指定的候选网络配置，使用callback异步回调。 |
+| [removeDevice](arkts-connectivity-wifimanager-removedevice-f.md#removedevice-1) | 移除网络配置。 |
+| [removeGroup](arkts-connectivity-wifimanager-removegroup-f.md#removegroup-1) | 移除群组。 |
+| [startDiscoverDevices](arkts-connectivity-wifimanager-startdiscoverdevices-f.md#startdiscoverdevices-1) | 开始发现设备。调用此方法后，可调用[stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md)停止发现设备以释放资源。 |
+| [startScan](arkts-connectivity-wifimanager-startscan-f.md#startscan-1) | 启动Wi-Fi扫描。 |
+| [stopDiscoverDevices](arkts-connectivity-wifimanager-stopdiscoverdevices-f.md#stopdiscoverdevices-1) | 停止发现设备。 |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults-1) | 获取扫描结果，使用Promise异步回调。 |
+| [getScanResults](arkts-connectivity-wifimanager-getscanresults-f.md#getscanresults-2) | 获取扫描结果，使用callback异步回调。 |
+| [getScanResultsSync](arkts-connectivity-wifimanager-getscanresultssync-f.md#getscanresultssync-1) | 获取扫描结果，使用同步方式返回一个包含多个WifiScanInfo对象的数组，每个对象表示一个Wi-Fi网络的扫描信息。 |
+| [scan](arkts-connectivity-wifimanager-scan-f.md#scan-1) | 启动Wi-Fi扫描，使用前先开启Wi-Fi。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -107,8 +107,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [deletePersistentGroup](arkts-connectivity-wifimanager-deletepersistentgroup-f-sys.md#deletepersistentgroup) | 删除指定网络ID的永久Wi-Fi组配置。该接口用于清除已保存的Wi-Fi网络配置信息，使其不再自动连接。 |
 | [delHotspotBlockList](arkts-connectivity-wifimanager-delhotspotblocklist-f-sys.md#delhotspotblocklist) | 将设备从热点的阻止列表中删除。 |
 | [disableHotspot](arkts-connectivity-wifimanager-disablehotspot-f-sys.md#disablehotspot) | 关闭热点 ，异步接口，是否关闭成功需要注册并监听hotspotStateChange的回调。 |
-| [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md#disablenetwork1) | 关闭网络配置。 |
-| [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md#disablenetwork2) | 禁用网络连接，将已连接的网络断开，且在设置的时间范围内无法自动回连。 |
+| [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md#disablenetwork) | 关闭网络配置。 |
+| [disableNetwork](arkts-connectivity-wifimanager-disablenetwork-f-sys.md#disablenetwork-1) | 禁用网络连接，将已连接的网络断开，且在设置的时间范围内无法自动回连。 |
 | [enableHiLinkHandshake](arkts-connectivity-wifimanager-enablehilinkhandshake-f-sys.md#enablehilinkhandshake) | 设置是否使能hiLink。 |
 | [enableHotspot](arkts-connectivity-wifimanager-enablehotspot-f-sys.md#enablehotspot) | 开启热点，异步接口，是否打开成功需要注册并监听hotspotStateChange的回调。 |
 | [enableSemiWifi](arkts-connectivity-wifimanager-enablesemiwifi-f-sys.md#enablesemiwifi) | 使能Wi-Fi半关闭（STA关闭，P2P、HML等功能可用），异步接口，需要通过注册"wifiStateChange"事件的回调来监听是否使能成功。 |
@@ -118,8 +118,8 @@ import { wifiManager } from '@kit.ConnectivityKit';
 | [getDisconnectedReason](arkts-connectivity-wifimanager-getdisconnectedreason-f-sys.md#getdisconnectedreason) | 获取最近一次断连原因。 |
 | [getHotspotBlockList](arkts-connectivity-wifimanager-gethotspotblocklist-f-sys.md#gethotspotblocklist) | 获取当前Wi-Fi热点的黑名单设备列表。该接口返回被热点拉黑的设备信息列表，仅在设备作为热点(AP)模式下有效。 |
 | [getHotspotConfig](arkts-connectivity-wifimanager-gethotspotconfig-f-sys.md#gethotspotconfig) | 获取Wi-Fi热点的配置信息，包括SSID、加密方式、密码、带宽、信道、最大连接STA数量等。 |
-| [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups1) | 获取创建的所有P2P群组信息，使用Promise异步回调。 |
-| [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups2) | 获取创建的所有P2P群组信息，使用callback异步回调。 |
+| [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups) | 获取创建的所有P2P群组信息，使用Promise异步回调。 |
+| [getP2pGroups](arkts-connectivity-wifimanager-getp2pgroups-f-sys.md#getp2pgroups-1) | 获取创建的所有P2P群组信息，使用callback异步回调。 |
 | [getScanAlwaysAllowed](arkts-connectivity-wifimanager-getscanalwaysallowed-f-sys.md#getscanalwaysallowed) | 获取是否始终允许扫描。 |
 | [getStations](arkts-connectivity-wifimanager-getstations-f-sys.md#getstations) | 获取当前连接到本设备热点的所有设备信息列表。 |
 | [getSupportedFeatures](arkts-connectivity-wifimanager-getsupportedfeatures-f-sys.md#getsupportedfeatures) | 查询设备支持的特性。 |

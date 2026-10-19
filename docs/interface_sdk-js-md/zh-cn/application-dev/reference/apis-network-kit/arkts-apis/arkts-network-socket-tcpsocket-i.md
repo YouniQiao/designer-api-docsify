@@ -18,8 +18,6 @@ TCPSocket连接。在调用TCPSocket的方法前，需要先通过[socket.constr
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind1"></a>
-
 ## bind
 
 ```TypeScript
@@ -77,8 +75,6 @@ tcp.bind(bindAddr, (err: BusinessError) => {
   console.info('bind success');
 })
 ```
-
-<a id="bind2"></a>
 
 ## bind
 
@@ -141,8 +137,6 @@ tcp.bind(bindAddr).then(() => {
 });
 ```
 
-<a id="close1"></a>
-
 ## close
 
 ```TypeScript
@@ -188,8 +182,6 @@ tcp.close((err: BusinessError) => {
 })
 ```
 
-<a id="close2"></a>
-
 ## close
 
 ```TypeScript
@@ -232,8 +224,6 @@ tcp.close().then(() => {
   console.error('close fail');
 });
 ```
-
-<a id="connect1"></a>
 
 ## connect
 
@@ -335,8 +325,6 @@ tcp.connect(tcpconnectoptions, (err: BusinessError) => {
   console.info('connect success');
 })
 ```
-
-<a id="connect2"></a>
 
 ## connect
 
@@ -495,8 +483,6 @@ tcp.bind(bindAddr).then(() => {
 });
 ```
 
-<a id="getremoteaddress1"></a>
-
 ## getRemoteAddress
 
 ```TypeScript
@@ -555,8 +541,6 @@ tcp.connect(tcpconnectoptions, () => {
   })
 });
 ```
-
-<a id="getremoteaddress2"></a>
 
 ## getRemoteAddress
 
@@ -617,8 +601,6 @@ tcp.connect(tcpconnectoptions).then(() => {
 });
 ```
 
-<a id="getsocketfd1"></a>
-
 ## getSocketFd
 
 ```TypeScript
@@ -631,7 +613,7 @@ getSocketFd(callback: AsyncCallback<number>): void
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
-> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close1)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 10
 
@@ -672,8 +654,6 @@ tcp.getSocketFd((err: BusinessError, data: number) => {
 })
 ```
 
-<a id="getsocketfd2"></a>
-
 ## getSocketFd
 
 ```TypeScript
@@ -686,7 +666,7 @@ getSocketFd(): Promise<number>
 > 
 > - bind或connect方法调用成功后，才可调用此方法。
 > 
-> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close1)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](arkts-network-socket-udpsocket-i.md#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 10
 
@@ -725,8 +705,6 @@ tcp.getSocketFd().then((data: number) => {
   console.info("socketFd: " + data);
 })
 ```
-
-<a id="getstate1"></a>
 
 ## getState
 
@@ -786,8 +764,6 @@ tcp.connect(tcpconnectoptions, () => {
   });
 });
 ```
-
-<a id="getstate2"></a>
 
 ## getState
 
@@ -1084,8 +1060,6 @@ tcp.on('error', (err: BusinessError) => {
 });
 ```
 
-<a id="send1"></a>
-
 ## send
 
 ```TypeScript
@@ -1149,8 +1123,6 @@ tcp.connect(tcpconnectoptions, () => {
   })
 })
 ```
-
-<a id="send2"></a>
 
 ## send
 
@@ -1218,8 +1190,6 @@ tcp.connect(tcpconnectoptions, () => {
   });
 })
 ```
-
-<a id="setextraoptions1"></a>
 
 ## setExtraOptions
 
@@ -1298,8 +1268,6 @@ tcp.connect(tcpconnectoptions, () => {
   });
 });
 ```
-
-<a id="setextraoptions2"></a>
 
 ## setExtraOptions
 

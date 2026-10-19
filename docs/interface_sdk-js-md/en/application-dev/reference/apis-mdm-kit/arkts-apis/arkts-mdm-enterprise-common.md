@@ -24,7 +24,7 @@ import { common } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md#isfeaturesupported) | Checks whether a specified feature is supported. |
+| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md#isfeaturesupported-1) | Checks whether a specified feature is supported. |
 
 ### Interfaces
 

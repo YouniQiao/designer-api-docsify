@@ -1191,6 +1191,8 @@
   <!--Del-->
   - [getAllUninstalledBundleResourceInfo（系统接口）](arkts-ability-bundleresourcemanager-getalluninstalledbundleresourceinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
+  - [getBundleResourceArchiveInfo（系统接口）](arkts-ability-bundleresourcemanager-getbundleresourcearchiveinfo-f-sys.md)<!--DelEnd-->
+  <!--Del-->
   - [getBundleResourceInfo（系统接口）](arkts-ability-bundleresourcemanager-getbundleresourceinfo-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getExtensionAbilityResourceInfo（系统接口）](arkts-ability-bundleresourcemanager-getextensionabilityresourceinfo-f-sys.md)<!--DelEnd-->

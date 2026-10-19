@@ -6,8 +6,6 @@
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="getsysteminputmethodconfigability2"></a>
-
 ## getSystemInputMethodConfigAbility
 
 ```TypeScript
@@ -30,7 +28,7 @@ Obtains ability information for the system input method configuration page of a 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID. The value is the ID of a valid user. If this parameter is not provided:<br> - If the caller is not an application of user 0, the value defaults to the caller's user ID. <br> - If the caller is an application of user 0, the value defaults to the foreground user ID of the home screen. |
+| userId | number | No | User ID. The value is the ID of a valid user. If this parameter is not provided: <br> - If the caller is not an application of user 0, the value defaults to the caller's user ID. <br> - If the caller is an application of user 0, the value defaults to the foreground user ID of the home screen. |
 
 **Return value:**
 

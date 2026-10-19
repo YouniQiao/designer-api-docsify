@@ -24,13 +24,13 @@ Unsubscribes from the logical link connection status change event. This API uses
 
 **System capability:** SystemCapability.Communication.NearLink.Base
 
-**See also:** [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md) Subscribes to the logical link connection status change event.
+**See also:** [onAcbStateChange](arkts-connectivity-remotedevice-onacbstatechange-f.md#onacbstatechange-1) Subscribes to the logical link connection status change event.
 
 **Parameters:**
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | No | Callback used to return the result of the logical link connection status change event.<br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[AcbStateParam](arkts-connectivity-remotedevice-acbstateparam-i.md)&gt; | No | Callback used to return the result of the logical link connection status change event. <br>If this parameter is specified, the current callback is unregistered. If this parameter is not specified, all callbacks corresponding to the event are unregistered. |
 
 **Error codes:**
 

@@ -33,15 +33,15 @@ Creates a file mapping object synchronously based on a file descriptor or file o
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | number &#124; [File](arkts-corefile-file-fs-file-i.md) | Yes | File object or open file descriptor fd that has been opened. |
-| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options:<br> <b>MappingMode.READ_ONLY(0)</b>: read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. <br> <b>MappingMode.READ_WRITE(1)</b>: read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). <b>MappingMode.PRIVATE(2)</b>: private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file. |
+| mode | [MappingMode](arkts-corefile-file-fs-mappingmode-e.md) | Yes | Option to create a file memory-mapped object. You must specify one of the following options: <br> <b>MappingMode.READ_ONLY(0)</b>: read-only mode. The file mapping area is not writable. An exception is thrown when the file mapping area is modified. <br> <b>MappingMode.READ_WRITE(1)</b>: read/write mode. The modification is written to the file mapping area and then synchronized to the file by the operating system (non-real-time). <b>MappingMode.PRIVATE(2)</b>: private mode. It is a copy-on-write mapping mechanism. Modifications to the mapping area are visible only to the current process and do not affect the raw file. |
 | offset | number | Yes | Start location of the file mapping area, in bytes. |
-| size | number | Yes | Size of the file mapping area, in bytes. The value must be greater than 0 and not greater than<b>INT32_MAX</b>. |
+| size | number | Yes | Size of the file mapping area, in bytes. The value must be greater than 0 and not greater than <b>INT32_MAX</b>. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | File mapping object created. Initial state of the returned object: The value of<b>position</b> is <b>0</b>, and the values of <b>limit</b> and <b>capacity</b> are equal to the value of <b>size</b>. |
+| [FileMapping](arkts-corefile-file-fs-filemapping-i.md) | File mapping object created. Initial state of the returned object: The value of <b>position</b> is <b>0</b>, and the values of <b>limit</b> and <b>capacity</b> are equal to the value of <b>size</b>. |
 
 **Error codes:**
 

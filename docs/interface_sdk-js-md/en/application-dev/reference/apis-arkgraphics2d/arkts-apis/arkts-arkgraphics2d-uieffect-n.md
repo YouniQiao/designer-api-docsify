@@ -27,8 +27,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | Name | Description |
 | --- | --- |
-| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect) | Creates a VisualEffect instance for adding multiple VisualEffect effects to a component. |
-| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter) | Creates a Filter instance for adding multiple filter effects to a component. |
+| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect-1) | Creates a VisualEffect instance for adding multiple VisualEffect effects to a component. |
+| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter-1) | Creates a Filter instance for adding multiple filter effects to a component. |
 
 <!--Del-->
 ### Functions(System API)

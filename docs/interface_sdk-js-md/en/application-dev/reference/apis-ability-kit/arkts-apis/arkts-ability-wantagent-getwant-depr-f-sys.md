@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getwant1"></a>
-
 ## getWant
 
 ```TypeScript
@@ -34,8 +32,6 @@ Obtains the Want in a WantAgent object. This API uses an asynchronous callback t
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | Yes | WantAgent object. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | Yes | Callback used to return the Want. |
 
-
-<a id="getwant2"></a>
 
 ## getWant
 

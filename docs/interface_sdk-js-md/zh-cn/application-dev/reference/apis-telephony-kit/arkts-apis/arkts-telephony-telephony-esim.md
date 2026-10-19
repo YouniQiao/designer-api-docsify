@@ -20,8 +20,8 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile) | 通过该接口拉起下载界面，允许用户添加单个配置文件。使用Promise异步回调。 |
-| [isSupported](arkts-telephony-esim-issupported-f.md#issupported) | 获取指定卡槽是否支持eSIM功能。 |
+| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile-1) | 通过该接口拉起下载界面，允许用户添加单个配置文件。使用Promise异步回调。 |
+| [isSupported](arkts-telephony-esim-issupported-f.md#issupported-1) | 获取指定卡槽是否支持eSIM功能。 |
 
 <!--Del-->
 ### 函数（系统接口）

@@ -12,8 +12,6 @@ Describes the image attachment.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="constructor1"></a>
-
 ## constructor
 
 ```TypeScript
@@ -37,8 +35,6 @@ A constructor used to create an image object.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | value | [ImageAttachmentInterface](arkts-arkui-imageattachmentinterface-i.md) | Yes | Image attachment options. |
-
-<a id="constructor2"></a>
 
 ## constructor
 

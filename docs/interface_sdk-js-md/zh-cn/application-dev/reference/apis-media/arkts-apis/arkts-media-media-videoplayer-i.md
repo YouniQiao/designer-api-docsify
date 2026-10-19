@@ -4,7 +4,7 @@
 interface VideoPlayer
 ```
 
-视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer1)构建一个VideoPlayer实例。
+视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer-1)构建一个VideoPlayer实例。
 
 > **说明：** 
 > 
@@ -25,8 +25,6 @@ interface VideoPlayer
 ```TypeScript
 ```
 
-<a id="gettrackdescription1"></a>
-
 ## getTrackDescription
 
 ```TypeScript
@@ -38,14 +36,14 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription1)
+> [AVPlayer.getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription1)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
+**替代接口：** [getTrackDescription](arkts-media-media-avplayer-i.md#gettrackdescription)(callback: AsyncCallback&lt;Array&lt;MediaDescription&gt;&gt;)
 
 <!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void--><!--Device-VideoPlayer-getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void-End-->
 
@@ -56,8 +54,6 @@ getTrackDescription(callback: AsyncCallback<Array<MediaDescription>>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[MediaDescription](arkts-media-media-mediadescription-i.md)&gt;&gt; | 是 | 回调函数。获取视频轨道信息成功时，err为undefined，data为获取到的视频轨道信息MediaDescription数组，否则为错误对象。 |
-
-<a id="gettrackdescription2"></a>
 
 ## getTrackDescription
 
@@ -274,8 +270,6 @@ on(type: 'error', callback: ErrorCallback): void
 | type | 'error' | 是 | 播放错误事件回调类型，支持的事件包括：'error'。<br>- 'error'：视频播放中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 播放错误事件回调方法。 |
 
-<a id="pause1"></a>
-
 ## pause
 
 ```TypeScript
@@ -287,13 +281,13 @@ pause(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.pause](arkts-media-media-avplayer-i.md#pause1)替代。
+> [AVPlayer.pause](arkts-media-media-avplayer-i.md#pause)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [pause](arkts-media-media-avplayer-i.md#pause1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [pause](arkts-media-media-avplayer-i.md#pause)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-pause(callback: AsyncCallback<void>): void-End-->
 
@@ -304,8 +298,6 @@ pause(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当暂停播放视频成功，err为undefined，否则为错误对象。 |
-
-<a id="pause2"></a>
 
 ## pause
 
@@ -336,8 +328,6 @@ pause(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 暂停播放视频的Promise返回值。 |
 
-<a id="play1"></a>
-
 ## play
 
 ```TypeScript
@@ -349,13 +339,13 @@ play(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.play](arkts-media-media-avplayer-i.md#play1)替代。
+> [AVPlayer.play](arkts-media-media-avplayer-i.md#play)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [play](arkts-media-media-avplayer-i.md#play1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [play](arkts-media-media-avplayer-i.md#play)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-play(callback: AsyncCallback<void>): void-End-->
 
@@ -366,8 +356,6 @@ play(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当开始播放视频成功，err为undefined，否则为错误对象。 |
-
-<a id="play2"></a>
 
 ## play
 
@@ -398,8 +386,6 @@ play(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 开始播放视频的Promise返回值。 |
 
-<a id="prepare1"></a>
-
 ## prepare
 
 ```TypeScript
@@ -411,13 +397,13 @@ prepare(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare1)替代。
+> [AVPlayer.prepare](arkts-media-media-avplayer-i.md#prepare)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [prepare](arkts-media-media-avplayer-i.md#prepare1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [prepare](arkts-media-media-avplayer-i.md#prepare)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-prepare(callback: AsyncCallback<void>): void-End-->
 
@@ -428,8 +414,6 @@ prepare(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当准备播放视频成功，err为undefined，否则为错误对象。 |
-
-<a id="prepare2"></a>
 
 ## prepare
 
@@ -460,8 +444,6 @@ prepare(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 准备播放视频的Promise返回值。 |
 
-<a id="release1"></a>
-
 ## release
 
 ```TypeScript
@@ -473,13 +455,13 @@ release(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.release](arkts-media-media-avplayer-i.md#release1)替代。
+> [AVPlayer.release](arkts-media-media-avplayer-i.md#release)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [release](arkts-media-media-avplayer-i.md#release1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [release](arkts-media-media-avplayer-i.md#release)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-release(callback: AsyncCallback<void>): void-End-->
 
@@ -490,8 +472,6 @@ release(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当释放视频资源成功，err为undefined，否则为错误对象。 |
-
-<a id="release2"></a>
 
 ## release
 
@@ -522,8 +502,6 @@ release(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 释放视频资源的Promise返回值。 |
 
-<a id="reset1"></a>
-
 ## reset
 
 ```TypeScript
@@ -535,13 +513,13 @@ reset(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.reset](arkts-media-media-avplayer-i.md#reset1)替代。
+> [AVPlayer.reset](arkts-media-media-avplayer-i.md#reset)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [reset](arkts-media-media-avplayer-i.md#reset1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [reset](arkts-media-media-avplayer-i.md#reset)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-reset(callback: AsyncCallback<void>): void-End-->
 
@@ -552,8 +530,6 @@ reset(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当重置播放视频成功，err为undefined，否则为错误对象。 |
-
-<a id="reset2"></a>
 
 ## reset
 
@@ -584,8 +560,6 @@ reset(): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | Promise对象。无返回结果的Promise对象。 |
 
-<a id="seek1"></a>
-
 ## seek
 
 ```TypeScript
@@ -614,8 +588,6 @@ seek(timeMs: number, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
-
-<a id="seek2"></a>
 
 ## seek
 
@@ -646,8 +618,6 @@ seek(timeMs: number, mode: SeekMode, callback: AsyncCallback<number>): void
 | timeMs | number | 是 | 指定的跳转时间节点，单位毫秒（ms），取值范围为[0, duration]。 |
 | mode | [SeekMode](arkts-media-media-seekmode-e.md) | 是 | 跳转模式。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。跳转到指定播放位置成功时，err为undefined，data为获取到的跳转到的播放位置，否则为错误对象。 |
-
-<a id="seek3"></a>
 
 ## seek
 
@@ -684,8 +654,6 @@ seek(timeMs: number, mode?: SeekMode): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | 跳转到指定播放位置的Promise返回值，单位ms。 |
 
-<a id="setdisplaysurface1"></a>
-
 ## setDisplaySurface
 
 ```TypeScript
@@ -716,8 +684,6 @@ setDisplaySurface(surfaceId: string, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | surfaceId | string | 是 | 指定SurfaceId，应从XComponent组件获取，获取方式请参考[XComponent](../../apis-arkui/arkts-components/arkts-arkui-xcomponent-comp.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置SurfaceId成功，err为undefined，否则为错误对象。 |
-
-<a id="setdisplaysurface2"></a>
 
 ## setDisplaySurface
 
@@ -755,8 +721,6 @@ setDisplaySurface(surfaceId: string): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 设置SurfaceId的Promise返回值。 |
 
-<a id="setspeed1"></a>
-
 ## setSpeed
 
 ```TypeScript
@@ -786,8 +750,6 @@ setSpeed(speed: number, callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | speed | number | 是 | 指定播放视频速度，具体见[PlaybackSpeed](arkts-media-media-playbackspeed-e.md)。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 回调函数。设置播放速度成功时，err为undefined，data为设置的播放速度，否则为错误对象。 |
-
-<a id="setspeed2"></a>
 
 ## setSpeed
 
@@ -824,8 +786,6 @@ setSpeed(speed: number): Promise<number>
 | --- | --- |
 | Promise&lt;number&gt; | Promise对象，返回设置的播放速度，具体见[PlaybackSpeed](arkts-media-media-playbackspeed-e.md)。 |
 
-<a id="setvolume1"></a>
-
 ## setVolume
 
 ```TypeScript
@@ -855,8 +815,6 @@ setVolume(vol: number, callback: AsyncCallback<void>): void
 | --- | --- | --- | --- |
 | vol | number | 是 | 指定的相对音量大小，取值范围为[0.00-1.00]，1表示最大音量，即100%。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当设置音量成功，err为undefined，否则为错误对象。 |
-
-<a id="setvolume2"></a>
 
 ## setVolume
 
@@ -893,8 +851,6 @@ setVolume(vol: number): Promise<void>
 | --- | --- |
 | Promise&lt;void&gt; | 设置音量的Promise返回值。 |
 
-<a id="stop1"></a>
-
 ## stop
 
 ```TypeScript
@@ -906,13 +862,13 @@ stop(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [AVPlayer.stop](arkts-media-media-avplayer-i.md#stop1)替代。
+> [AVPlayer.stop](arkts-media-media-avplayer-i.md#stop)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [stop](arkts-media-media-avplayer-i.md#stop1)(callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [stop](arkts-media-media-avplayer-i.md#stop)(callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void--><!--Device-VideoPlayer-stop(callback: AsyncCallback<void>): void-End-->
 
@@ -923,8 +879,6 @@ stop(callback: AsyncCallback<void>): void
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 回调函数。当停止播放视频成功，err为undefined，否则为错误对象。 |
-
-<a id="stop2"></a>
 
 ## stop
 

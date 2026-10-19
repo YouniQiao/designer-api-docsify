@@ -860,6 +860,6 @@ NODE_IMAGE_SPAN_RESIZABLE = 3006
 
 Resizes the image span when stretching it with array or a lattice object. This attribute can be set, reset, and obtained as required through APIs. The parameter types for setting and getting should be the same.<br> **Format of the [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md) parameter for setting the attribute:**<br><ul> <li>.value[0].f32: width of the left edge, in vp.</li> <li>.value[1].f32: width of the top edge, in vp.</li> <li>.value[2].f32: width of the right edge, in vp.</li> <li>.value[3].f32: width of the bottom edge, in vp.</li> <li>.object: The parameter type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md).</li> </ul><br> **Format of the return value [ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md):**<br><ul> <li>.value[0].f32: width of the left edge, in vp.</li> <li>.value[1].f32: width of the top edge, in vp.</li> <li>.value[2].f32: width of the right edge, in vp.</li> <li>.value[3].f32: width of the bottom edge, in vp.</li> <li>.object: The parameter type is [OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md).</li> </ul>
 
-**Since**: 26.2.0
+**Since**: 26.0.1
 
 

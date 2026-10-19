@@ -174,7 +174,7 @@ Sets Value.
 | [CameraCaptureState](arkts-arkweb-web-comp-cameracapturestate-e.md) | 定义摄像头使用状态的值，用于标识摄像头的当前工作状态，帮助开发者实时监控摄像头资源使用情况，优化资源管理和用户隐私保护。 |
 | [ConsoleMessageSource](arkts-arkweb-web-comp-consolemessagesource-e.md) | ConsoleMessage的日志来源。 |
 | [ContextMenuDataMediaType](arkts-arkweb-web-comp-contextmenudatamediatype-e.md) | 触发上下文菜单的网页元素类型（增强获取类型能力）。 |
-| [ContextMenuEditStateFlags](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | 支持以按位或的方式使用此枚举。例如，如果需要同时支持CAN_CUT、CAN_COPY和CAN_SELECT_ALL，可使用CAN_CUT | [CAN_COPY](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | CAN_SELECT_ALL或11。 |
+| [ContextMenuEditStateFlags](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | 支持以按位或的方式使用此枚举。例如，如果需要同时支持CAN_CUT、CAN_COPY和CAN_SELECT_ALL，可使用CAN_CUT | CAN_COPY | CAN_SELECT_ALL或11。 |
 | [ContextMenuInputFieldType](arkts-arkweb-web-comp-contextmenuinputfieldtype-e.md) | 输入框类型。 |
 | [ContextMenuMediaType](arkts-arkweb-web-comp-contextmenumediatype-e.md) | 触发上下文菜单的网页元素类型。 |
 | [ContextMenuSourceType](arkts-arkweb-web-comp-contextmenusourcetype-e.md) | 触发上下文菜单的事件来源。 |

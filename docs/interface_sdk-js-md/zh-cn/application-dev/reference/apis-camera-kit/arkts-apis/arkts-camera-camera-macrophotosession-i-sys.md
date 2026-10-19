@@ -7,8 +7,6 @@ interface MacroPhotoSession extends Session, Flash, AutoExposure, Focus, Zoom, C
 
 实现微距拍照会话，用于设置微距拍照模式的参数，并保存运行相机所需的[CameraInput](arkts-camera-camera-camerainput-i.md)和[CameraOutput](arkts-camera-camera-cameraoutput-i.md)实例。继承自[Session](arkts-camera-camera-session-i.md)。
 
-@extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus [since 12 - 13] @extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus, DepthFusion [since 14 - 17] @extends Session, Flash, AutoExposure, Focus, Zoom, ColorEffect, ManualFocus, DepthFusion, ColorManagement [since 18]
-
 **继承/实现关系：** MacroPhotoSession extends [Session](arkts-camera-camera-session-i.md), [Flash](arkts-camera-camera-flash-i.md), [AutoExposure](arkts-camera-camera-autoexposure-i.md), [Focus](arkts-camera-camera-focus-i.md), [Zoom](arkts-camera-camera-zoom-i.md)<!--Del-->, [ColorEffect](arkts-camera-camera-coloreffect-i-sys.md)<!--DelEnd-->, [ManualFocus](arkts-camera-camera-manualfocus-i.md)<!--Del-->, [DepthFusion](arkts-camera-camera-depthfusion-i-sys.md)<!--DelEnd-->, [ColorManagement](arkts-camera-camera-colormanagement-i.md)
 
 **起始版本：** 12

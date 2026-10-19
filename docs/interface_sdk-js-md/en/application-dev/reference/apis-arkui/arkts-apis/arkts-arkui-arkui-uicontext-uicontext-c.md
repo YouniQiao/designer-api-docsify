@@ -605,7 +605,7 @@ Closes the sheet corresponding to **bindSheetContent**. This API uses a promise 
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 
@@ -791,8 +791,6 @@ struct Index {
 }
 ```
 
-<a id="createanimator1"></a>
-
 ## createAnimator
 
 ```TypeScript
@@ -827,7 +825,7 @@ Creates an **Animator** object.
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -864,15 +862,13 @@ export default class EntryAbility extends UIAbility {
 }
 ```
 
-<a id="createanimator2"></a>
-
 ## createAnimator
 
 ```TypeScript
 createAnimator(options: AnimatorOptions | SimpleAnimatorOptions): AnimatorResult
 ```
 
-Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator1) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
+Creates an **AnimatorResult** object for animations. Compared to the previous [createAnimator](#createanimator) API, this API adds support for the [SimpleAnimatorOptions](arkts-arkui-animator-simpleanimatoroptions-c.md) type.
 
 **Since:** 18
 
@@ -900,7 +896,7 @@ Creates an **AnimatorResult** object for animations. Compared to the previous [c
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -967,7 +963,7 @@ Creates a UI instance that does not depend on a window and returns its UI contex
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. The number of parameters is incorrect. <br> 2. Invalid parameter type of context. |
 | [100001](../errorcode-internal.md#100001-internal-error) | Internal error. |
 
 **Examples**
@@ -1650,7 +1646,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>The following filter field is supported since API version 20: <br>**"isLayoutInspector"**: whether the component tree contains custom components. <br>If **filters** is omitted or <br>does not contain **"isLayoutInspector"**, the returned component tree <br>will not include custom component details. <br>Other filter fields are used only in testing scenarios. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>The following filter field is supported since API version 20: <br>**"isLayoutInspector"**: whether the component tree contains custom components. <br>If **filters** is omitted or <br>does not contain **"isLayoutInspector"**, the returned component tree <br>will not include custom component details. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -1662,7 +1658,7 @@ Obtains the component tree and component attributes. This API has a long process
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -1753,8 +1749,8 @@ Obtains the attributes of the specified component and its child components. This
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | id | string | Yes | [ID](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id) of the target component. |
-| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of<br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
-| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported:<br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
+| depth | number | Yes | Number of layers of child components. If the value is **0**, the attributes of the specified component and all its child components are obtained. If the value is **1**, only the attributes of <br>the specified component are obtained. If the value is **2**, the attributes of <br>the specified component and its <br>level-1 child components are obtained. The rest can be deduced by analogy. |
+| filters | Array&lt;string&gt; | No | List of component attributes used for filtering. Currently, only the following filter fields are supported: <br>**"id"**: unique ID of the component. <br>**"src"**: source of the resource. <br>**"content"**: information or data contained in the element, component, or object. <br>**"editable"**: whether the component is editable. <br>**"scrollable"**: whether the component is scrollable. <br>**"selectable"**: whether the component is selectable. <br>**"focusable"**: whether the component is focusable. <br>**"focused"**: whether the component is currently focused. <br>If **filters** includes one or more fields, unspecified fields will be filtered out from the results. <br>If **filters** is not provided or is an empty array, none of the aforementioned fields <br>will be filtered out. <br>Other filter fields are used only in testing scenarios. |
 
 **Return value:**
 
@@ -1766,7 +1762,7 @@ Obtains the attributes of the specified component and its child components. This
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 
 **Examples**
 
@@ -2526,7 +2522,7 @@ Obtains the root node of the page corresponding to the UIContext.
 
 | Type | Description |
 | --- | --- |
-| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode of the root node of the page or **null**.<br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
+| [FrameNode](arkts-arkui-framenode-c.md) &#124; null | FrameNode of the root node of the page or **null**. <br>If no valid FrameNode is available, **null** is returned. <br>If no page is loaded in the window, **null** is returned. |
 
 **Error codes:**
 
@@ -3624,7 +3620,7 @@ Creates a sheet whose content is as defined in **bindSheetContent** and displays
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120002](../errorcode-bindSheet.md#120002-modal-for-bindsheetcontent-already-exists) | The bindSheetContent already exists. |
 | [120004](../errorcode-bindSheet.md#120004-specified-targetid-does-not-exist) | The targetId does not exist. |
@@ -4529,7 +4525,7 @@ Sets the avoidance mode for the virtual keyboard.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard.<br>Default value: **KeyboardAvoidMode.OFFSET**. |
+| value | [KeyboardAvoidMode](arkts-arkui-arkui-uicontext-keyboardavoidmode-e.md) | Yes | Avoidance mode of the virtual keyboard. <br>Default value: **KeyboardAvoidMode.OFFSET**. |
 
 **Examples**
 
@@ -4926,8 +4922,6 @@ struct DatePickerDialogExample {
 }
 ```
 
-<a id="showtextpickerdialog1"></a>
-
 ## showTextPickerDialog
 
 ```TypeScript
@@ -5006,8 +5000,6 @@ struct TextPickerDialogExample {
   }
 }
 ```
-
-<a id="showtextpickerdialog2"></a>
 
 ## showTextPickerDialog
 
@@ -5192,8 +5184,8 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bindSheetContent | [ComponentContent](arkts-arkui-componentcontent-c.md)&lt;T&gt; | Yes | Content to display on the sheet. |
-| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-common-comp-sheetoptions-i.md) | Yes | Style of the sheet.<br>**NOTE:** <br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
-| partialUpdate | boolean | No | Whether to update the sheet in incremental mode.<br>Default value: **false** <br> **NOTE:** <br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value. <br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
+| sheetOptions | [SheetOptions](../arkts-components/arkts-arkui-common-comp-sheetoptions-i.md) | Yes | Style of the sheet. <br>**NOTE:** <br>**SheetOptions.UIContext** and **SheetOptions.mode** cannot be updated. |
+| partialUpdate | boolean | No | Whether to update the sheet in incremental mode. <br>Default value: **false** <br> **NOTE:** <br>1. **true**: incremental update, where the specified properties in **SheetOptions** are updated, and other properties stay at their current value. <br>2. **false**: full update, where all properties except those specified in **SheetOptions** are restored to default values. |
 
 **Return value:**
 
@@ -5205,7 +5197,7 @@ Updates the style of the sheet corresponding to the provided **bindSheetContent*
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameters types. <br> 3. Parameter verification failed. |
 | [120001](../errorcode-bindSheet.md#120001-incorrect-bindsheetcontent) | The bindSheetContent is incorrect. |
 | [120003](../errorcode-bindSheet.md#120003-no-matching-modal-found) | The bindSheetContent cannot be found. |
 

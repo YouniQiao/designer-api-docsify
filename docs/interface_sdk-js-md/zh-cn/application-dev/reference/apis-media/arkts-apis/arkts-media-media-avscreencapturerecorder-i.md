@@ -184,7 +184,7 @@ init(config: AVScreenCaptureRecordConfig): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br>2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br>2. Incorrect parameter types. 3. Parameter verification failed. Return by promise. |
 | [5400103](../../apis-media-kit/errorcode-media.md#5400103-出现io错误) | IO error. Return by promise. |
 | [5400105](../../apis-media-kit/errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 

@@ -6,8 +6,6 @@ interface AudioEffectManager
 
 音频效果管理，支持查询和设置系统音效模式、管理音频分离效果。适用于需要定制音频播放效果、实现人声分离、管理设备音效的场景。在使用AudioEffectManager的接口前，需要使用[getEffectManager](arkts-audio-audio-audiomanager-i-sys.md#geteffectmanager)获取AudioEffectManager实例。
 
-@typedef AudioEffectManager
-
 **起始版本：** 18
 
 <!--Device-audio-interface AudioEffectManager--><!--Device-audio-interface AudioEffectManager-End-->

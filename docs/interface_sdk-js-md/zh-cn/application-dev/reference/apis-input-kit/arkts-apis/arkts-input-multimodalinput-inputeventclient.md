@@ -20,9 +20,9 @@ import { inputEventClient } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | 创建键盘控制器，用于模拟按键操作。使用Promise异步回调。 |
-| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | 创建鼠标控制器，用于模拟鼠标操作。使用Promise异步回调。 |
-| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | 创建触控控制器，用于模拟触控操作。使用Promise异步回调。 |
+| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller-1) | 创建键盘控制器，用于模拟按键操作。使用Promise异步回调。 |
+| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller-1) | 创建鼠标控制器，用于模拟鼠标操作。使用Promise异步回调。 |
+| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller-1) | 创建触控控制器，用于模拟触控操作。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

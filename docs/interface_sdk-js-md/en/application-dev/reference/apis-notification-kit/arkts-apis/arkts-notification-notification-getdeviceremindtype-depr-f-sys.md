@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getdeviceremindtype1"></a>
-
 ## getDeviceRemindType
 
 ```TypeScript
@@ -35,8 +33,6 @@ Obtains the notification reminder type. This API uses an asynchronous callback t
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DeviceRemindType&gt; | Yes | Callback used to return the result. |
 
-
-<a id="getdeviceremindtype2"></a>
 
 ## getDeviceRemindType
 

@@ -4,7 +4,7 @@
 interface InputMethodController
 ```
 
-In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance. <br> <br>**InputMethodController** is the input method client controller, which provides foreground applications with core capabilities for interacting with the input method. After obtaining an instance through `inputMethod.getController()`, you can perform the following operations: <br> <br>- Attachment management: Use [attach](#attach1) to establish attachment to the input method, and use [detach](#detach1) to perform detachment. **attach** and **detach** must be used in pairs. <br>- Keyboard control: Use [showTextInput](#showtextinput1) to start the soft keyboard and enter the editing state, and use [hideTextInput](#hidetextinput1) to hide the soft keyboard and exit the editing state. **showTextInput** and **hideTextInput** must be used in pairs. <br>- Edit box state synchronization: Use APIs such as [updateCursor](#updatecursor1), <br> <br>[changeSelection](#changeselection), and [updateAttribute](#updateattribute1) to synchronize edit box state information such as the cursor, selection, and attributes with the input method. <br>- Event subscription: Use APIs such as **on('insertText')** and **on('deleteLeft')** to subscribe to text operation events sent by the input method application. <br> <br>Typical call sequence: `getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>  
+In the following API examples, you must first use [getController](arkts-ime-inputmethod-getcontroller-f.md) to obtain an **InputMethodController** instance, and then call the APIs using the obtained instance. <br> <br>**InputMethodController** is the input method client controller, which provides foreground applications with core capabilities for interacting with the input method. After obtaining an instance through `inputMethod.getController()`, you can perform the following operations: <br> <br>- Attachment management: Use [attach](#attach) to establish attachment to the input method, and use [detach](#detach) to perform detachment. **attach** and **detach** must be used in pairs. <br>- Keyboard control: Use [showTextInput](#showtextinput) to start the soft keyboard and enter the editing state, and use [hideTextInput](#hidetextinput) to hide the soft keyboard and exit the editing state. **showTextInput** and **hideTextInput** must be used in pairs. <br>- Edit box state synchronization: Use APIs such as [updateCursor](#updatecursor), <br> <br>[changeSelection](#changeselection), and [updateAttribute](#updateattribute) to synchronize edit box state information such as the cursor, selection, and attributes with the input method. <br>- Event subscription: Use APIs such as **on('insertText')** and **on('deleteLeft')** to subscribe to text operation events sent by the input method application. <br> <br>Typical call sequence: `getController()` → `attach()` → `showTextInput()`/`hideTextInput()` → `detach()` <br> <br>  
 > **NOTE:** <br>
 > <br>
 > **attach** and **detach** must be used in pairs, and **showTextInput** and **hideTextInput** must be used in <br>
@@ -22,8 +22,6 @@ In the following API examples, you must first use [getController](arkts-ime-inpu
 import { inputMethod } from '@kit.IMEKit';
 ```
 
-<a id="attach1"></a>
-
 ## attach
 
 ```TypeScript
@@ -39,7 +37,7 @@ Attaches a self-drawn component to the input method. This API uses an asynchrono
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable2), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
@@ -54,7 +52,7 @@ Attaches a self-drawn component to the input method. This API uses an asynchrono
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound.<br> - true: show the keyboard. <br> - false: do not show the keyboard. |
+| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound. <br> - true: show the keyboard. <br> - false: do not show the keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the input method is bound successfully, err is undefined; otherwise, err is an error object. |
 
@@ -85,8 +83,6 @@ inputMethod.getController().attach(true, textConfig, (err: BusinessError) => {
 });
 ```
 
-<a id="attach2"></a>
-
 ## attach
 
 ```TypeScript
@@ -102,7 +98,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable2), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
@@ -117,7 +113,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully.<br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
+| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully. <br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
 
 **Return value:**
@@ -151,8 +147,6 @@ inputMethod.getController().attach(true, textConfig).then(() => {
 });
 ```
 
-<a id="attach3"></a>
-
 ## attach
 
 ```TypeScript
@@ -168,7 +162,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable2), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
@@ -183,7 +177,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully.<br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
+| showKeyboard | boolean | Yes | Whether to show the input method keyboard after the input method is bound successfully. <br> - **true**: Show the keyboard. <br> - **false**: Do not show the keyboard. |
 | textConfig | [TextConfig](arkts-ime-inputmethod-textconfig-i.md) | Yes | Configuration information of the text box. |
 | requestKeyboardReason | [RequestKeyboardReason](arkts-ime-inputmethod-requestkeyboardreason-e.md) | Yes | Reason for requesting keyboard input. |
 
@@ -283,8 +277,6 @@ inputMethod.getController().attachWithUIContext(uiContext, textConfig, attachOpt
 });
 ```
 
-<a id="changeselection1"></a>
-
 ## changeSelection
 
 ```TypeScript
@@ -334,8 +326,6 @@ inputMethod.getController().changeSelection('text', 0, 5, (err: BusinessError) =
   console.info('Succeeded in changing selection.');
 });
 ```
-
-<a id="changeselection2"></a>
 
 ## changeSelection
 
@@ -390,8 +380,6 @@ inputMethod.getController().changeSelection('test', 0, 5).then(() => {
 });
 ```
 
-<a id="detach1"></a>
-
 ## detach
 
 ```TypeScript
@@ -432,8 +420,6 @@ inputMethod.getController().detach((err: BusinessError) => {
   console.info('Succeeded in detaching inputMethod.');
 });
 ```
-
-<a id="detach2"></a>
 
 ## detach
 
@@ -517,8 +503,6 @@ inputMethod.getController().discardTypingText().then(() => {
 });
 ```
 
-<a id="hidesoftkeyboard1"></a>
-
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -567,8 +551,6 @@ inputMethod.getController().hideSoftKeyboard((err: BusinessError) => {
 })
 ```
 
-<a id="hidesoftkeyboard2"></a>
-
 ## hideSoftKeyboard
 
 ```TypeScript
@@ -615,21 +597,19 @@ inputMethod.getController().hideSoftKeyboard().then(() => {
 });
 ```
 
-<a id="hidetextinput1"></a>
-
 ## hideTextInput
 
 ```TypeScript
 hideTextInput(callback: AsyncCallback<void>): void
 ```
 
-Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Hides the soft keyboard and makes the edit box exit the text editing state. <br> <br>Usage scenarios: Called when a self-drawn control no longer needs input, for example, when the user taps an area outside the edit box or switches to another page. <br> <br>Use effect: The soft keyboard is hidden, and the edit box exits the editing state. Calling this API does not unbind the input method. Calling **showTextInput** again can re-enter the editing state. <br> <br>Preconditions: Call [attach](#attach1) to complete the attachment first, and call **showTextInput** to enter the editing state. <br> <br>Usage with related APIs: **hideTextInput** and **showTextInput** must be used in pairs. If input is needed again after **hideTextInput** is called, you must call **showTextInput** first to re-enter the editing state; other editing operations cannot be called directly. <br> <br>Differences between similar APIs and selection principles: <br> <br>- **hideTextInput**: For self-drawn controls, exits the editing state without detachment, and can re-enter via **showTextInput**. It is suitable for scenarios where a self-drawn control needs to temporarily hide the keyboard. <br>- **hideSoftKeyboard**: For system applications, requires the **ohos.permission.CONNECT_IME_ABILITY** permission. It only hides the keyboard without changing the editing state. <br>- Selection principle: Self-drawn controls should preferentially use **hideTextInput**; system applications with special requirements should use **hideSoftKeyboard**. <br> <br>  
+Exits the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Hides the soft keyboard and makes the edit box exit the text editing state. <br> <br>Usage scenarios: Called when a self-drawn control no longer needs input, for example, when the user taps an area outside the edit box or switches to another page. <br> <br>Use effect: The soft keyboard is hidden, and the edit box exits the editing state. Calling this API does not unbind the input method. Calling **showTextInput** again can re-enter the editing state. <br> <br>Preconditions: Call [attach](#attach) to complete the attachment first, and call **showTextInput** to enter the editing state. <br> <br>Usage with related APIs: **hideTextInput** and **showTextInput** must be used in pairs. If input is needed again after **hideTextInput** is called, you must call **showTextInput** first to re-enter the editing state; other editing operations cannot be called directly. <br> <br>Differences between similar APIs and selection principles: <br> <br>- **hideTextInput**: For self-drawn controls, exits the editing state without detachment, and can re-enter via **showTextInput**. It is suitable for scenarios where a self-drawn control needs to temporarily hide the keyboard. <br>- **hideSoftKeyboard**: For system applications, requires the **ohos.permission.CONNECT_IME_ABILITY** permission. It only hides the keyboard without changing the editing state. <br>- Selection principle: Self-drawn controls should preferentially use **hideTextInput**; system applications with special requirements should use **hideSoftKeyboard**. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > If the soft keyboard is displayed when this API is called, it will be hidden. <br>
 > <br>
 > Calling this API does not detach the edit box from the input method. The edit box can call <br>
-> [showTextInput](#showtextinput1) again to <br>
+> [showTextInput](#showtextinput) again to <br>
 > reenter the text editing mode.
 
 **Since:** 10
@@ -666,8 +646,6 @@ inputMethod.getController().hideTextInput((err: BusinessError) => {
 });
 ```
 
-<a id="hidetextinput2"></a>
-
 ## hideTextInput
 
 ```TypeScript
@@ -680,7 +658,7 @@ Exits the text editing mode. This API uses a promise to return the result. <br> 
 > If the soft keyboard is displayed when this API is called, it will be hidden. <br>
 > <br>
 > Calling this API does not detach the edit box from the input method. The edit box can call <br>
-> [showTextInput](#showtextinput1) again to <br>
+> [showTextInput](#showtextinput) again to <br>
 > reenter the text editing mode.
 
 **Since:** 10
@@ -1684,7 +1662,7 @@ Subscribes to the event for text preview operations in an input method applicati
 > **NOTE:** <br>
 > <br>
 > To use the text preview function, you need to subscribe to this event before calling <br>
-> [attach](#attach1) <br>
+> [attach](#attach) <br>
 > and subscribe to this event together with <br>
 > [on('finishTextPreview')](#onfinishtextpreview).
 
@@ -1741,7 +1719,7 @@ Subscribes to the event of finishing text preview. This API uses an asynchronous
 > **NOTE:** <br>
 > <br>
 > To use the text preview function, you need to subscribe to this event before calling <br>
-> [attach](#attach1) <br>
+> [attach](#attach) <br>
 > and subscribe to this event together with <br>
 > [on('setPreviewText')](#onsetpreviewtext).
 
@@ -1816,7 +1794,7 @@ Registers or unregisters MessageHandler. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage2) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md) | No | This object receives custom communication data from the input method application through [onMessage](arkts-ime-inputmethod-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethod-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethod-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1901,8 +1879,6 @@ inputMethod.getController().sendMessage(msgId, msgParam).then(() => {
 });
 ```
 
-<a id="setcallingwindow1"></a>
-
 ## setCallingWindow
 
 ```TypeScript
@@ -1954,8 +1930,6 @@ inputMethod.getController().setCallingWindow(windowId, (err: BusinessError) => {
   console.info('Succeeded in setting callingWindow.');
 });
 ```
-
-<a id="setcallingwindow2"></a>
 
 ## setCallingWindow
 
@@ -2009,8 +1983,6 @@ inputMethod.getController().setCallingWindow(windowId).then(() => {
 });
 ```
 
-<a id="showsoftkeyboard1"></a>
-
 ## showSoftKeyboard
 
 ```TypeScript
@@ -2059,8 +2031,6 @@ inputMethod.getController().showSoftKeyboard((err: BusinessError) => {
 });
 ```
 
-<a id="showsoftkeyboard2"></a>
-
 ## showSoftKeyboard
 
 ```TypeScript
@@ -2107,15 +2077,13 @@ inputMethod.getController().showSoftKeyboard().then(() => {
 });
 ```
 
-<a id="showtextinput1"></a>
-
 ## showTextInput
 
 ```TypeScript
 showTextInput(callback: AsyncCallback<void>): void
 ```
 
-Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Pulls up the soft keyboard and puts the edit box into the text editing state. <br> <br>Usage scenarios: Called when a self-drawn control needs to display the soft keyboard to start text input after being attached to the input method. <br> <br>Use effect: The soft keyboard is displayed, and the edit box enters the editable text input state. <br> <br>Preconditions: Call [attach](#attach1) to complete the attachment first. Otherwise, error code 12800009 is reported. <br> <br>Usage with related APIs: **showTextInput** and **hideTextInput** must be used in pairs. After **hideTextInput** is called to exit the editing state, **showTextInput** must be called again to re-enter the editing state. <br> <br>Differences between similar APIs and selection principles: <br> <br>- **showTextInput**: For self-drawn controls. It must be called after **attach** completes the binding. It applies to self-drawn control scenarios and is the standard way to display the keyboard. <br>- **showSoftKeyboard**: For system applications. It requires the **ohos.permission.CONNECT_IME_ABILITY** permission. It applies to scenarios where a system application needs to forcibly display the keyboard. <br>- Selection principle: For self-drawn controls, use **showTextInput** preferentially. Use **showSoftKeyboard** only for system applications with special requirements. <br> <br>  
+Enters the text editing mode. This API uses an asynchronous callback to return the result. <br> <br>Meaning/Function: Pulls up the soft keyboard and puts the edit box into the text editing state. <br> <br>Usage scenarios: Called when a self-drawn control needs to display the soft keyboard to start text input after being attached to the input method. <br> <br>Use effect: The soft keyboard is displayed, and the edit box enters the editable text input state. <br> <br>Preconditions: Call [attach](#attach) to complete the attachment first. Otherwise, error code 12800009 is reported. <br> <br>Usage with related APIs: **showTextInput** and **hideTextInput** must be used in pairs. After **hideTextInput** is called to exit the editing state, **showTextInput** must be called again to re-enter the editing state. <br> <br>Differences between similar APIs and selection principles: <br> <br>- **showTextInput**: For self-drawn controls. It must be called after **attach** completes the binding. It applies to self-drawn control scenarios and is the standard way to display the keyboard. <br>- **showSoftKeyboard**: For system applications. It requires the **ohos.permission.CONNECT_IME_ABILITY** permission. It applies to scenarios where a system application needs to forcibly display the keyboard. <br>- Selection principle: For self-drawn controls, use **showTextInput** preferentially. Use **showSoftKeyboard** only for system applications with special requirements. <br> <br>  
 > **NOTE:** <br>
 > <br>
 > After the edit box is attached to an input method, this API can be called to start the soft keyboard and enter <br>
@@ -2154,8 +2122,6 @@ inputMethod.getController().showTextInput((err: BusinessError) => {
   console.info('Succeeded in showing the inputMethod.');
 });
 ```
-
-<a id="showtextinput2"></a>
 
 ## showTextInput
 
@@ -2200,8 +2166,6 @@ inputMethod.getController().showTextInput().then(() => {
   console.error(`Failed to showTextInput, code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-<a id="showtextinput3"></a>
 
 ## showTextInput
 
@@ -2255,8 +2219,6 @@ inputMethod.getController().showTextInput(requestKeyboardReason).then(() => {
 });
 ```
 
-<a id="stopinputsession1"></a>
-
 ## stopInputSession
 
 ```TypeScript
@@ -2306,8 +2268,6 @@ inputMethod.getController().stopInputSession((err: BusinessError, result: boolea
 });
 ```
 
-<a id="stopinputsession2"></a>
-
 ## stopInputSession
 
 ```TypeScript
@@ -2355,8 +2315,6 @@ inputMethod.getController().stopInputSession().then((result: boolean) => {
 });
 ```
 
-<a id="updateattribute1"></a>
-
 ## updateAttribute
 
 ```TypeScript
@@ -2401,8 +2359,6 @@ inputMethod.getController().updateAttribute(inputAttribute, (err: BusinessError)
   console.info('Succeeded in updating attribute.');
 });
 ```
-
-<a id="updateattribute2"></a>
 
 ## updateAttribute
 
@@ -2455,8 +2411,6 @@ inputMethod.getController().updateAttribute(inputAttribute).then(() => {
   console.error(`Failed to updateAttribute, code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-<a id="updatecursor1"></a>
 
 ## updateCursor
 
@@ -2511,8 +2465,6 @@ inputMethod.getController().updateCursor(cursorInfo, (err: BusinessError) => {
   console.info('Succeeded in updating cursorInfo.');
 });
 ```
-
-<a id="updatecursor2"></a>
 
 ## updateCursor
 
@@ -2571,8 +2523,6 @@ inputMethod.getController().updateCursor(cursorInfo).then(() => {
 });
 ```
 
-<a id="stopinput1"></a>
-
 ## stopInput
 
 ```TypeScript
@@ -2618,8 +2568,6 @@ inputMethod.getController().stopInput((err: BusinessError, result: boolean) => {
   }
 });
 ```
-
-<a id="stopinput2"></a>
 
 ## stopInput
 

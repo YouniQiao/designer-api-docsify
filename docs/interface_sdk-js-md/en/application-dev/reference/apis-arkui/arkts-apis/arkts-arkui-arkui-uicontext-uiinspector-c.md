@@ -21,8 +21,6 @@ import { SwiperContentInfo, SwiperItemInfo } from '@kit.ArkUI';
 import { BackPressActionProposal, BaseGestureHandlingProposal, ClickActionProposal, GestureHandlingResolution, NoneActionProposal, PageSwitchActionProposal, ScrollActionProposal, SelectActionProposal, SmartGestureController, TargetedGestureProposal } from '@kit.ArkUI';
 ```
 
-<a id="createcomponentobserver1"></a>
-
 ## createComponentObserver
 
 ```TypeScript
@@ -95,8 +93,6 @@ struct UIInspectorExample {
   }
 }
 ```
-
-<a id="createcomponentobserver2"></a>
 
 ## createComponentObserver
 

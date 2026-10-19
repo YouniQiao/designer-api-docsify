@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="addslot1"></a>
-
 ## addSlot
 
 ```TypeScript
@@ -36,8 +34,6 @@ function addSlot(slot: NotificationSlot, callback: AsyncCallback<void>): void
 | slot | [NotificationSlot](arkts-notification-notificationslot-i.md) | 是 | 要创建的通知渠道对象。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定通道的回调方法。 |
 
-
-<a id="addslot2"></a>
 
 ## addSlot
 

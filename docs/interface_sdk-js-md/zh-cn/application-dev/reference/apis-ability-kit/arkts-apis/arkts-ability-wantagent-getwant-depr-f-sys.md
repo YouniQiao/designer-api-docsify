@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getwant1"></a>
-
 ## getWant
 
 ```TypeScript
@@ -34,8 +32,6 @@ function getWant(agent: WantAgent, callback: AsyncCallback<Want>): void
 | agent | [WantAgent](arkts-ability-wantagent-depr-t.md) | 是 | Indicates the [WantAgent](arkts-ability-wantagent-depr-t.md) WantAgent信息。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Want](arkts-ability-app-ability-want-want-c.md)&gt; | 是 | 获取WantAgent中的Want的回调方法。 |
 
-
-<a id="getwant2"></a>
 
 ## getWant
 

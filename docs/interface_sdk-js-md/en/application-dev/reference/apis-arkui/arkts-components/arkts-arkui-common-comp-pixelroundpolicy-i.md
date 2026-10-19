@@ -6,8 +6,6 @@ declare interface PixelRoundPolicy
 
 Rounding strategy for the boundary of the current component.
 
-@interface PixelRoundPolicy
-
 **Since:** 11
 
 <!--Device-unnamed-declare interface PixelRoundPolicy--><!--Device-unnamed-declare interface PixelRoundPolicy-End-->

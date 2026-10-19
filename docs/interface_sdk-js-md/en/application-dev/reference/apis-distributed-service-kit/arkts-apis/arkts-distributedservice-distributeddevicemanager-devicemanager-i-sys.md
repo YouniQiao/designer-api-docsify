@@ -244,7 +244,7 @@ Query device identification by device IDs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50.<br>The maximum length is 96 character and cannot be empty. |
+| deviceIds | Array&lt;string&gt; | Yes | A list of device IDs that could be obtained by the application, with a maximum list size of 50. <br>The maximum length is 96 character and cannot be empty. |
 
 **Return value:**
 
@@ -593,7 +593,7 @@ Replies to the user's UI operation. This API can be used only by the PIN HAP of 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | User operation.<br>- **0**: Grant the permission. <br>- **1**. Remove the permission. <br>-**2**: Time out the user operation in the permission request dialog. <br>- **3**: Cancel the display of the PIN box. <br>- **4**: Cancel the display of the PIN input box. <br>- **5**: Confirm the input in the PIN input box. |
+| action | number | Yes | User operation. <br>- **0**: Grant the permission. <br>- **1**. Remove the permission. <br>-**2**: Time out the user operation in the permission request dialog. <br>- **3**: Cancel the display of the PIN box. <br>- **4**: Cancel the display of the PIN input box. <br>- **5**: Confirm the input in the PIN input box. |
 | actionResult | string | Yes | User operation result. The value is a string of 1 to 255 characters. |
 
 **Error codes:**

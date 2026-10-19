@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getactivenotificationcount1"></a>
-
 ## getActiveNotificationCount
 
 ```TypeScript
@@ -31,8 +29,6 @@ function getActiveNotificationCount(callback: AsyncCallback<number>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;number&gt; | 是 | 获取未删除通知数回调函数。 |
 
-
-<a id="getactivenotificationcount2"></a>
 
 ## getActiveNotificationCount
 

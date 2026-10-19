@@ -4,7 +4,7 @@
 interface InputMethodSetting
 ```
 
-**InputMethodSetting** provides input method configuration and query capabilities, and offers the following features for foreground applications: <br> <br>- Input method change subscription: subscribe to input method and subtype change events through [on('imeChange')](arkts-ime-inputmethod-inputmethodsetting-i.md#onimechange), and receive a notification when the user switches the input method. <br>- Input method list query: query the list of enabled/disabled input methods through [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods1), query the list of all installed input methods through [getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods1), and query the subtype list of a specified input method through [listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype1). <br>- Panel visibility query: query whether the input method panel is displayed through **isPanelShown**. <br>- Input method selection dialog: display the input method selection dialog through **showOptionalInputMethods** (deprecated; **InputMethodListDialog** is recommended). <br> <br>It must be used after you obtain the **InputMethodSetting** instance through [getSetting](arkts-ime-inputmethod-getsetting-f.md). <br> <br>For the following APIs, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
+**InputMethodSetting** provides input method configuration and query capabilities, and offers the following features for foreground applications: <br> <br>- Input method change subscription: subscribe to input method and subtype change events through [on('imeChange')](arkts-ime-inputmethod-inputmethodsetting-i.md#onimechange), and receive a notification when the user switches the input method. <br>- Input method list query: query the list of enabled/disabled input methods through [getInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getinputmethods), query the list of all installed input methods through [getAllInputMethods](arkts-ime-inputmethod-inputmethodsetting-i.md#getallinputmethods), and query the subtype list of a specified input method through [listInputMethodSubtype](arkts-ime-inputmethod-inputmethodsetting-i.md#listinputmethodsubtype). <br>- Panel visibility query: query whether the input method panel is displayed through **isPanelShown**. <br>- Input method selection dialog: display the input method selection dialog through **showOptionalInputMethods** (deprecated; **InputMethodListDialog** is recommended). <br> <br>It must be used after you obtain the **InputMethodSetting** instance through [getSetting](arkts-ime-inputmethod-getsetting-f.md). <br> <br>For the following APIs, you must first use [getSetting](arkts-ime-inputmethod-getsetting-f.md) to obtain an **InputMethodSetting** instance, and then call the APIs using the obtained instance.
 
 **Since:** 8
 
@@ -17,8 +17,6 @@ interface InputMethodSetting
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
 ```
-
-<a id="enableinputmethod1"></a>
 
 ## enableInputMethod
 
@@ -94,8 +92,6 @@ enableInputMethodSafely();
 
 <!--DelEnd-->
 
-<a id="enableinputmethod2"></a>
-
 ## enableInputMethod
 
 ```TypeScript
@@ -124,7 +120,7 @@ Modifies the enabled state of the input method for a specified user.
 | bundleName | string | Yes | Bundle name of the input method. |
 | extensionName | string | Yes | Extension name of the input method. |
 | enabledState | [EnabledState](arkts-ime-inputmethod-enabledstate-e.md) | Yes | Enabled state to be modified. |
-| userId | number | No | User ID. The value range is the IDs of valid users. If not provided:<br> - If the caller is not an application of user 0, this value defaults to the user ID of the caller. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
+| userId | number | No | User ID. The value range is the IDs of valid users. If not provided: <br> - If the caller is not an application of user 0, this value defaults to the user ID of the caller. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
 
 **Return value:**
 
@@ -160,8 +156,6 @@ inputMethod.getSetting().enableInputMethod('com.example.keyboard', 'InputMethodE
 
 <!--DelEnd-->
 
-<a id="getallinputmethodssync2"></a>
-
 ## getAllInputMethodsSync
 
 ```TypeScript
@@ -184,7 +178,7 @@ Obtains the list of all input method applications of a specified user. This is a
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| userId | number | No | User ID. The value is the ID of a valid user. If this parameter is not provided:<br> - If the caller is not an application of user 0, the value defaults to the caller's user ID. <br> - If the caller is an application of user 0, the value defaults to the foreground user ID of the home screen. |
+| userId | number | No | User ID. The value is the ID of a valid user. If this parameter is not provided: <br> - If the caller is not an application of user 0, the value defaults to the caller's user ID. <br> - If the caller is an application of user 0, the value defaults to the foreground user ID of the home screen. |
 
 **Return value:**
 
@@ -326,8 +320,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="getinputmethodssync2"></a>
-
 ## getInputMethodsSync
 
 ```TypeScript
@@ -358,8 +350,8 @@ Obtains the list of activated/deactivated input method applications for a specif
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| enable | boolean | Yes | Whether to activate the input method list:<br> - **true** indicates returning the activated input method list. <br> - **false** indicates returning the deactivated input method list. |
-| userId | number | No | User ID. The value ranges over the IDs of valid users. If not provided:<br> - If the caller is not an application of user 0, this value defaults to the caller's user ID. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
+| enable | boolean | Yes | Whether to activate the input method list: <br> - **true** indicates returning the activated input method list. <br> - **false** indicates returning the deactivated input method list. |
+| userId | number | No | User ID. The value ranges over the IDs of valid users. If not provided: <br> - If the caller is not an application of user 0, this value defaults to the caller's user ID. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
 
 **Return value:**
 
@@ -418,7 +410,7 @@ Obtains the list of input method subtypes for a specified user. This is a synchr
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | bundleName | string | Yes | Bundle name of the specified input method. |
-| userId | number | No | User ID. The value ranges over the IDs of valid users. If not provided:<br> - If the caller is not an application of user 0, this value defaults to the user ID of the caller. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
+| userId | number | No | User ID. The value ranges over the IDs of valid users. If not provided: <br> - If the caller is not an application of user 0, this value defaults to the user ID of the caller. <br> - If the caller is an application of user 0, this value defaults to the foreground user ID of the home screen. |
 
 **Return value:**
 
@@ -456,8 +448,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="ispanelshown1"></a>
-
 ## isPanelShown
 
 ```TypeScript
@@ -484,7 +474,7 @@ Checks whether the input method panel of a specified type is shown.
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown.<br> - The value **true** means that the input method panel is shown. <br> - The value **false** means that the input method panel is hidden. |
+| boolean | Whether the input method panel is shown. <br> - The value **true** means that the input method panel is shown. <br> - The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 
@@ -515,8 +505,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="ispanelshown2"></a>
-
 ## isPanelShown
 
 ```TypeScript
@@ -546,7 +534,7 @@ Checks whether the input method panel of a specified type is shown on a specifie
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the input method panel is shown.<br> - The value **true** means that the input method panel is shown. <br> - The value **false** means that the input method panel is hidden. |
+| boolean | Whether the input method panel is shown. <br> - The value **true** means that the input method panel is shown. <br> - The value **false** means that the input method panel is hidden. |
 
 **Error codes:**
 

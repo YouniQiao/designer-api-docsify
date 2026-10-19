@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="isbadgedisplayed1"></a>
-
 ## isBadgeDisplayed
 
 ```TypeScript
@@ -36,8 +34,6 @@ Checks whether the notification badge is enabled for a specified application. Th
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-
-<a id="isbadgedisplayed2"></a>
 
 ## isBadgeDisplayed
 

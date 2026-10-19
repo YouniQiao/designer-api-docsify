@@ -170,7 +170,7 @@ Sets Value.
 | [CameraCaptureState](arkts-arkweb-web-comp-cameracapturestate-e.md) | Defines the camera capture states, which identify the current working status of the camera and help developers monitor camera resource usage in real time, optimizing resource management and user privacy protection. |
 | [ConsoleMessageSource](arkts-arkweb-web-comp-consolemessagesource-e.md) | Enumerates the log sources of the console messages. |
 | [ContextMenuDataMediaType](arkts-arkweb-web-comp-contextmenudatamediatype-e.md) | Enumerates the media types that trigger the context menu (enhanced type obtaining capability). |
-| [ContextMenuEditStateFlags](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support **CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | [CAN_COPY](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | CAN_SELECT_ALL** or **11**. |
+| [ContextMenuEditStateFlags](arkts-arkweb-web-comp-contextmenueditstateflags-e.md) | Enumerates the context menu edit state flags. This enum can be used in bitwise OR mode. For example, to support **CAN_CUT**, **CAN_COPY**, and **CAN_SELECT_ALL** at the same time, use **CAN_CUT | CAN_COPY | CAN_SELECT_ALL** or **11**. |
 | [ContextMenuInputFieldType](arkts-arkweb-web-comp-contextmenuinputfieldtype-e.md) | Enumerates the input field types. |
 | [ContextMenuMediaType](arkts-arkweb-web-comp-contextmenumediatype-e.md) | Enumerates the media types that trigger the context menu. |
 | [ContextMenuSourceType](arkts-arkweb-web-comp-contextmenusourcetype-e.md) | Enumerates the event source types that trigger the context menu. |

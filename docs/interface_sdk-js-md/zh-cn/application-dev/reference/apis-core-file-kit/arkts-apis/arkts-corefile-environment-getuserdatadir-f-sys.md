@@ -6,8 +6,6 @@
 import { Environment } from '@kit.CoreFileKit';
 ```
 
-<a id="getuserdatadir1"></a>
-
 ## getUserDataDir
 
 ```TypeScript
@@ -38,8 +36,6 @@ function getUserDataDir(): Promise<string>
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-
-<a id="getuserdatadir2"></a>
 
 ## getUserDataDir
 

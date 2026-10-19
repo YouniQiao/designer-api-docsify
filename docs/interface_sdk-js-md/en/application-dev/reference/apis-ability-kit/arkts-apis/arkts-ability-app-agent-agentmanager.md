@@ -2,8 +2,6 @@
 
 The agentManager module provides agent management capabilities, supporting operations such as connecting to and disconnecting from AgentExtensionAbility, lifecycle management of LOW_CODE agents, connection management between AgentExtensionAbility and ServiceExtensionAbility, and obtaining AgentCard information on the device.
 
-@namespace agentManager
-
 **Since:** 24
 
 <!--Device-unnamed-declare namespace agentManager--><!--Device-unnamed-declare namespace agentManager-End-->

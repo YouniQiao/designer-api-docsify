@@ -58,8 +58,6 @@ Reads the text content of a file. This API uses a promise to return the result.
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="readtext2"></a>
-
 ## readText
 
 ```TypeScript
@@ -101,8 +99,6 @@ Reads the text of a file. This API uses an asynchronous callback to return the r
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="readtext3"></a>
 
 ## readText
 

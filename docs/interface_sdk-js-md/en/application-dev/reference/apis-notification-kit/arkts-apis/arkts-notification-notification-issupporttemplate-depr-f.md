@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="issupporttemplate1"></a>
-
 ## isSupportTemplate
 
 ```TypeScript
@@ -32,8 +30,6 @@ Checks whether a specified template is supported before using [NotificationTempl
 | templateName | string | Yes | Template name. Currently, only **downloadTemplate** is supported. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-
-<a id="issupporttemplate2"></a>
 
 ## isSupportTemplate
 

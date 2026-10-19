@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="cancel1"></a>
-
 ## cancel
 
 ```TypeScript
@@ -32,8 +30,6 @@ function cancel(id: number, callback: AsyncCallback<void>): void
 | id | number | 是 | 通知ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
-
-<a id="cancel2"></a>
 
 ## cancel
 
@@ -61,8 +57,6 @@ function cancel(id: number, label: string, callback: AsyncCallback<void>): void
 | label | string | 是 | 通知标签。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | 是 | 表示被指定的回调方法。 |
 
-
-<a id="cancel3"></a>
 
 ## cancel
 

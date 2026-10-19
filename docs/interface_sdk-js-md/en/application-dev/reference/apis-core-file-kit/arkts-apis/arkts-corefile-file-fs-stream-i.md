@@ -18,8 +18,6 @@ Provides APIs for stream operations, such as reading and writing data streams of
 import { fileIo, ConflictFiles, FileFilter, Filter, Options, ReaderIteratorResult, WatchEvent, WatchEventListener, Watcher, ReadOptions, ReadTextOptions, WriteOptions, ListFileExtOptions, ListFileOptions, DfsListeners, TaskSignal } from '@kit.CoreFileKit';
 ```
 
-<a id="close1"></a>
-
 ## close
 
 ```TypeScript
@@ -67,8 +65,6 @@ stream.close().then(() => {
 });
 ```
 
-<a id="close2"></a>
-
 ## close
 
 ```TypeScript
@@ -89,7 +85,7 @@ Closes the file stream. After the stream is closed, it cannot be used for read o
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file stream is closed successfully, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -153,8 +149,6 @@ let stream = fileIo.createStreamSync(filePath, "r+");
 stream.closeSync();
 ```
 
-<a id="flush1"></a>
-
 ## flush
 
 ```TypeScript
@@ -208,8 +202,6 @@ stream.flush().then(() => {
   console.error(`Failed to flush. Code: ${err.code}, message: ${err.message}`);
 });
 ```
-
-<a id="flush2"></a>
 
 ## flush
 
@@ -309,8 +301,6 @@ stream.flushSync();
 stream.close();
 ```
 
-<a id="read1"></a>
-
 ## read
 
 ```TypeScript
@@ -381,8 +371,6 @@ stream.read(arrayBuffer, readOption).then((readLen: number) => {
 });
 ```
 
-<a id="read2"></a>
-
 ## read
 
 ```TypeScript
@@ -439,8 +427,6 @@ stream.read(arrayBuffer, (err: BusinessError, readLen: number) => {
   }
 });
 ```
-
-<a id="read3"></a>
 
 ## read
 
@@ -572,8 +558,6 @@ let num = stream.readSync(buf, readOption);
 stream.close();
 ```
 
-<a id="write1"></a>
-
 ## write
 
 ```TypeScript
@@ -644,8 +628,6 @@ stream.write("hello, world", writeOption).then((number: number) => {
 });
 ```
 
-<a id="write2"></a>
-
 ## write
 
 ```TypeScript
@@ -704,8 +686,6 @@ stream.write("hello, world", (err: BusinessError, bytesWritten: number) => {
   stream.close();
 });
 ```
-
-<a id="write3"></a>
 
 ## write
 

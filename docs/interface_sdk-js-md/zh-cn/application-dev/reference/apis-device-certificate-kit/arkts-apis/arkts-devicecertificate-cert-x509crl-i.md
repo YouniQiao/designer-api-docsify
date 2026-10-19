@@ -18,8 +18,6 @@ interface X509CRL
 import { cert } from '@kit.DeviceCertificateKit';
 ```
 
-<a id="getencoded1"></a>
-
 ## getEncoded
 
 ```TypeScript
@@ -46,9 +44,9 @@ getEncoded(callback: AsyncCallback<EncodingBlob>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -97,8 +95,6 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getencoded2"></a>
-
 ## getEncoded
 
 ```TypeScript
@@ -125,9 +121,9 @@ getEncoded(): Promise<EncodingBlob>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -200,7 +196,7 @@ getExtensions(): DataBlob
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -280,7 +276,7 @@ getExtensionsObject(): CertExtension
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -332,8 +328,6 @@ async function crlGetExtensionsObject() {
 }
 ```
 
-<a id="getissuername1"></a>
-
 ## getIssuerName
 
 ```TypeScript
@@ -365,7 +359,7 @@ getIssuerName(): DataBlob
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -415,8 +409,6 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getissuername2"></a>
-
 ## getIssuerName
 
 ```TypeScript
@@ -450,8 +442,8 @@ getIssuerName(encodingType: EncodingType): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The value of encodingType is not in the EncodingType enumeration range. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -531,7 +523,7 @@ getIssuerX500DistinguishedName(): X500DistinguishedName
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -605,7 +597,7 @@ getLastUpdate(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -682,7 +674,7 @@ getNextUpdate(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -764,7 +756,7 @@ getRevokedCert(serialNumber: bigint): X509CRLEntry
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
@@ -815,8 +807,6 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getrevokedcerts1"></a>
-
 ## getRevokedCerts
 
 ```TypeScript
@@ -843,7 +833,7 @@ getRevokedCerts(callback: AsyncCallback<Array<X509CRLEntry>>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
@@ -893,8 +883,6 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="getrevokedcerts2"></a>
-
 ## getRevokedCerts
 
 ```TypeScript
@@ -921,7 +909,7 @@ getRevokedCerts(): Promise<Array<X509CRLEntry>>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
@@ -1000,7 +988,7 @@ getRevokedCertWithCert(cert: X509Cert): X509CRLEntry
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
@@ -1114,7 +1102,7 @@ getSignature(): DataBlob
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1191,7 +1179,7 @@ getSignatureAlgName(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1268,7 +1256,7 @@ getSignatureAlgOid(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1346,7 +1334,7 @@ getSignatureAlgParams(): DataBlob
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | This operation is not supported. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1423,7 +1411,7 @@ getTBSInfo(): DataBlob
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1626,7 +1614,7 @@ hashCode(): Uint8Array
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1705,7 +1693,7 @@ isRevoked(cert: X509Cert): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 
 **示例**
 
@@ -1809,7 +1797,7 @@ match(param: X509CRLMatchParameters): boolean
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
@@ -1903,8 +1891,6 @@ async function crlMatch() {
 }
 ```
 
-<a id="tostring1"></a>
-
 ## toString
 
 ```TypeScript
@@ -1932,7 +1918,7 @@ toString(): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -1979,8 +1965,6 @@ async function crlToString() {
 }
 ```
 
-<a id="tostring2"></a>
-
 ## toString
 
 ```TypeScript
@@ -2014,8 +1998,8 @@ toString(encodingType: EncodingType): string
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [19020001](../errorcode-cert.md#19020001-内存错误) | Memory malloc failed. |
-| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes:<br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
-| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes:<br>1. The value of encodingType is not in the EncodingType enumeration range. |
+| [19020002](../errorcode-cert.md#19020002-运行时错误) | Runtime error. Possible causes: <br>1. Memory copy failed; <br>2. A null pointer occurs inside the system; <br>3. Failed to obtain the native object or convert parameters. |
+| [19020003](../errorcode-cert.md#19020003-参数检查失败) | Parameter check failed. Possible causes: <br>1. The value of encodingType is not in the EncodingType enumeration range. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -2065,8 +2049,6 @@ async function crlToString() {
 }
 ```
 
-<a id="verify1"></a>
-
 ## verify
 
 ```TypeScript
@@ -2094,7 +2076,7 @@ verify(key: cryptoFramework.PubKey, callback: AsyncCallback<void>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**
@@ -2222,8 +2204,6 @@ cert.createX509CRL(encodingBlob, (error, x509CRL) => {
 });
 ```
 
-<a id="verify2"></a>
-
 ## verify
 
 ```TypeScript
@@ -2256,7 +2236,7 @@ verify(key: cryptoFramework.PubKey): Promise<void>
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes:<br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | [Sync/Async] Invalid parameters. Possible causes: <br>1. Mandatory parameters are left unspecified; <br>2. Incorrect parameter types; <br>3. Parameter verification failed. |
 | [19030001](../errorcode-cert.md#19030001-调用三方算法库api出错) | Crypto operation error. |
 
 **示例**

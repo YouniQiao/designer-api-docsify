@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getallactivenotifications1"></a>
-
 ## getAllActiveNotifications
 
 ```TypeScript
@@ -35,8 +33,6 @@ Obtains all active notifications. This API uses an asynchronous callback to retu
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
-
-<a id="getallactivenotifications2"></a>
 
 ## getAllActiveNotifications
 

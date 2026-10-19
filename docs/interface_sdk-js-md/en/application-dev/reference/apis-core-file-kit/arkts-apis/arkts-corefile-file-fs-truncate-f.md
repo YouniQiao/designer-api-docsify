@@ -27,7 +27,7 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string &#124; number | Yes | Application sandbox path or FD of the file. |
-| len | number | No | File length after truncation, in bytes. The default value is<b>0</b>. |
+| len | number | No | File length after truncation, in bytes. The default value is <b>0</b>. |
 
 **Return value:**
 
@@ -57,8 +57,6 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 | 13900042 | Unknown error |
 
 
-<a id="truncate2"></a>
-
 ## truncate
 
 ```TypeScript
@@ -80,7 +78,7 @@ Truncates a file and deletes its content. This API uses an asynchronous callback
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string &#124; number | Yes | Application sandbox path or FD of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully,<b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully, <b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -104,8 +102,6 @@ Truncates a file and deletes its content. This API uses an asynchronous callback
 | 13900042 | Unknown error |
 
 
-<a id="truncate3"></a>
-
 ## truncate
 
 ```TypeScript
@@ -127,8 +123,8 @@ Truncates a file to the specified length. Excess content will be deleted. This A
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | file | string &#124; number | Yes | Application sandbox path or FD of the file. |
-| len | number | Yes | File length after truncation, in bytes. The default value is<b>0</b>.<br>**Since:** 11 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully,<b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
+| len | number | Yes | File length after truncation, in bytes. The default value is <b>0</b>.<br>**Since:** 11 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is truncated successfully, <b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

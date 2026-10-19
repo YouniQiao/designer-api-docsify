@@ -13,8 +13,6 @@ A cylinder geometry type that inherits from GeometryDefinition.
 
 For example, with radius=0.5, height=1, and segmentCount=20, the mesh and UV layout of the generated cylinder are shown below. <br>![](../../../reference/apis-arkgraphics3d/figures/cylinder.png
 
-@extends GeometryDefinition
-
 **Inheritance/Implementation:** CylinderGeometry extends [GeometryDefinition](arkts-arkgraphics3d-scenetypes-geometrydefinition-c.md)
 
 **Since:** 23

@@ -18,8 +18,6 @@ You must first use [on('inputStart')](arkts-ime-inputmethodengine-inputmethodabi
 import { inputMethodEngine } from '@kit.IMEKit';
 ```
 
-<a id="deletebackward1"></a>
-
 ## deleteBackward
 
 ```TypeScript
@@ -67,8 +65,6 @@ inputClient.deleteBackward(length, (err: BusinessError, result: boolean) => {
   }
 });
 ```
-
-<a id="deletebackward2"></a>
 
 ## deleteBackward
 
@@ -156,8 +152,6 @@ let length: number = 1;
 inputClient.deleteBackwardSync(length);
 ```
 
-<a id="deleteforward1"></a>
-
 ## deleteForward
 
 ```TypeScript
@@ -205,8 +199,6 @@ inputClient.deleteForward(length, (err: BusinessError, result: boolean) => {
   }
 });
 ```
-
-<a id="deleteforward2"></a>
 
 ## deleteForward
 
@@ -399,8 +391,6 @@ let attachOptions: inputMethodEngine.AttachOptions = inputClient.getAttachOption
 console.info(`Succeeded in getting AttachOptions, AttachOptions is ${attachOptions}`);
 ```
 
-<a id="getbackward1"></a>
-
 ## getBackward
 
 ```TypeScript
@@ -444,8 +434,6 @@ inputClient.getBackward(length, (err: BusinessError, text: string) => {
   console.info('Succeeded in getting backward, text: ' + text);
 });
 ```
-
-<a id="getbackward2"></a>
 
 ## getBackward
 
@@ -581,8 +569,6 @@ inputClient.getCallingWindowInfo().then((windowInfo: inputMethodEngine.WindowInf
 });
 ```
 
-<a id="geteditorattribute1"></a>
-
 ## getEditorAttribute
 
 ```TypeScript
@@ -623,8 +609,6 @@ inputClient.getEditorAttribute((err: BusinessError, editorAttribute: inputMethod
   console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 });
 ```
-
-<a id="geteditorattribute3"></a>
 
 ## getEditorAttribute
 
@@ -699,8 +683,6 @@ console.info(`editorAttribute.inputPattern:  ${editorAttribute.inputPattern}`);
 console.info(`editorAttribute.enterKeyType:  ${editorAttribute.enterKeyType}`);
 ```
 
-<a id="getforward1"></a>
-
 ## getForward
 
 ```TypeScript
@@ -744,8 +726,6 @@ inputClient.getForward(length, (err: BusinessError, text: string) => {
   console.info('Succeeded in getting forward, text: ' + text);
 });
 ```
-
-<a id="getforward2"></a>
 
 ## getForward
 
@@ -836,8 +816,6 @@ let text: string = inputClient.getForwardSync(length);
 console.info(`Succeeded in getting forward, text: ${text}`);
 ```
 
-<a id="gettextindexatcursor1"></a>
-
 ## getTextIndexAtCursor
 
 ```TypeScript
@@ -878,8 +856,6 @@ inputClient.getTextIndexAtCursor((err: BusinessError, index: number) => {
   console.info('Succeeded in getTextIndexAtCursor: ' + index);
 });
 ```
-
-<a id="gettextindexatcursor2"></a>
 
 ## getTextIndexAtCursor
 
@@ -954,8 +930,6 @@ let index: number = inputClient.getTextIndexAtCursorSync();
 console.info(`Succeeded in getTextIndexAtCursorSync, index: ${index}`);
 ```
 
-<a id="inserttext1"></a>
-
 ## insertText
 
 ```TypeScript
@@ -1003,8 +977,6 @@ inputClient.insertText('test', (err: BusinessError, result: boolean) => {
   }
 });
 ```
-
-<a id="inserttext2"></a>
 
 ## insertText
 
@@ -1090,8 +1062,6 @@ Inserts text.
 inputClient.insertTextSync('test');
 ```
 
-<a id="movecursor1"></a>
-
 ## moveCursor
 
 ```TypeScript
@@ -1110,7 +1080,7 @@ Moves the cursor. This API uses an asynchronous callback to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | number | Yes | Direction in which the cursor moves.<br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
+| direction | number | Yes | Direction in which the cursor moves. <br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1134,8 +1104,6 @@ inputClient.moveCursor(inputMethodEngine.Direction.CURSOR_UP, (err: BusinessErro
 });
 ```
 
-<a id="movecursor2"></a>
-
 ## moveCursor
 
 ```TypeScript
@@ -1154,7 +1122,7 @@ Moves the cursor. This API uses a promise to return the result.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | number | Yes | Direction in which the cursor moves.<br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
+| direction | number | Yes | Direction in which the cursor moves. <br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
 
 **Return value:**
 
@@ -1199,7 +1167,7 @@ Moves the cursor.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| direction | number | Yes | Direction in which the cursor moves.<br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
+| direction | number | Yes | Direction in which the cursor moves. <br> - **1**: upward. <br> - **2**: downward. <br> - **3**: leftward. <br> - **4**: rightward. which cannot be less than 0. |
 
 **Error codes:**
 
@@ -1317,7 +1285,7 @@ Registers or unregisters MessageHandler. <br> <br>
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage2) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
+| msgHandler | [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md) | No | This object receives custom communication data from the edit box application attached to the input method application through [onMessage](arkts-ime-inputmethodengine-messagehandler-i.md#onmessage) and receives a message for terminating the subscription to this object through [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated). If no parameter is set, unregister [MessageHandler](arkts-ime-inputmethodengine-messagehandler-i.md). Its [onTerminated](arkts-ime-inputmethodengine-messagehandler-i.md#onterminated) callback will be triggered. |
 
 **Error codes:**
 
@@ -1344,8 +1312,6 @@ inputMethodEngine.getInputMethodAbility()
       inputClient.recvMessage(messageHandler);
     });
 ```
-
-<a id="selectbymovement1"></a>
 
 ## selectByMovement
 
@@ -1389,8 +1355,6 @@ inputClient.selectByMovement(movement, (err: BusinessError) => {
   console.info('Succeeded in selecting by movement.');
 });
 ```
-
-<a id="selectbymovement2"></a>
 
 ## selectByMovement
 
@@ -1472,8 +1436,6 @@ let movement: inputMethodEngine.Movement = { direction: 1 };
 inputClient.selectByMovementSync(movement);
 ```
 
-<a id="selectbyrange1"></a>
-
 ## selectByRange
 
 ```TypeScript
@@ -1516,8 +1478,6 @@ inputClient.selectByRange(range, (err: BusinessError) => {
   console.info('Succeeded in selecting by range.');
 });
 ```
-
-<a id="selectbyrange2"></a>
 
 ## selectByRange
 
@@ -1599,8 +1559,6 @@ let range: inputMethodEngine.Range = { start: 0, end: 1 };
 inputClient.selectByRangeSync(range);
 ```
 
-<a id="sendextendaction1"></a>
-
 ## sendExtendAction
 
 ```TypeScript
@@ -1654,8 +1612,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY, (err: Business
   console.info('Succeeded in sending extend action.');
 });
 ```
-
-<a id="sendextendaction2"></a>
 
 ## sendExtendAction
 
@@ -1714,8 +1670,6 @@ inputClient.sendExtendAction(inputMethodEngine.ExtendAction.COPY).then(() => {
 });
 ```
 
-<a id="sendkeyfunction1"></a>
-
 ## sendKeyFunction
 
 ```TypeScript
@@ -1734,7 +1688,7 @@ Sends the function key. This API uses an asynchronous callback to return the res
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| action | number | Yes | Action of the function key.<br> - **0**: invalid key. <br> - **1**: confirm key (Enter key). |
+| action | number | Yes | Action of the function key. <br> - **0**: invalid key. <br> - **1**: confirm key (Enter key). |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. If the operation is successful, **err** is **undefined** and **data** is **true**. Otherwise, **err** is an error object. |
 
 **Error codes:**
@@ -1763,8 +1717,6 @@ inputClient.sendKeyFunction(action, (err: BusinessError, result: boolean) => {
   }
 });
 ```
-
-<a id="sendkeyfunction2"></a>
 
 ## sendKeyFunction
 
@@ -1952,7 +1904,7 @@ Sets the preview text. This API uses a promise to return the result.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text.<br> - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br> - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br> - If **start** is not equal to **end**, **text** replaces the text of the specified range. <br> - If the values of **start** and **end** are negative values, a parameter error is returned. <br> - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br> - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text. <br> - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br> - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br> - If **start** is not equal to **end**, **text** replaces the text of the specified range. <br> - If the values of **start** and **end** are negative values, a parameter error is returned. <br> - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br> - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Return value:**
 
@@ -2000,7 +1952,7 @@ Sets the preview text.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | text | string | Yes | Preview text to set. |
-| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text.<br> - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br> - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br> - If **start** is not equal to **end**, **text** replaces the text of the specified range. <br> - If the values of **start** and **end** are negative values, a parameter error is returned. <br> - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br> - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
+| range | [Range](arkts-ime-inputmethodengine-range-i.md) | Yes | Range of the preview text. <br> - If the value is { start: -1, end: -1 }, **text** replaces the entire text in the current preview area by default. <br> - If **start** is equal to **end**, **text** is inserted into the cursor position specified by **start**. <br> - If **start** is not equal to **end**, **text** replaces the text of the specified range. <br> - If the values of **start** and **end** are negative values, a parameter error is returned. <br> - If there is preview text in the text box, the value of **range** cannot exceed the range of the preview text. Otherwise, a parameter error is returned. <br> - If there is no preview text in the text box, the value of **range** cannot exceed the text range of the text box. Otherwise, a parameter error is returned. |
 
 **Error codes:**
 

@@ -56,8 +56,6 @@ Reads file data. This API uses a promise to return the result.
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="read2"></a>
-
 ## read
 
 ```TypeScript
@@ -96,8 +94,6 @@ Reads data from a file and returns the number of bytes read. This API uses an as
 | 13900034 | Operation would block |
 | 13900042 | Unknown error |
 
-
-<a id="read3"></a>
 
 ## read
 

@@ -20,12 +20,12 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 
 | Name | Description |
 | --- | --- |
-| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect) | Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained. |
-| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) | Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API uses a promise to return the result. |
-| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession) | Creates a collaboration session between applications. |
-| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession) | Destroys a collaboration session between applications. |
-| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) | Disconnects the UIAbility connection to end the collaboration session. |
-| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid) | Obtains information about the peer application in the specified session. |
+| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect-1) | Accepts the UIAbility connection after a collaboration session is set up and the session ID is obtained. |
+| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect-1) | Sets up a UIAbility connection after a collaboration session is created and the session ID is obtained. This API uses a promise to return the result. |
+| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession-1) | Creates a collaboration session between applications. |
+| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession-1) | Destroys a collaboration session between applications. |
+| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect-1) | Disconnects the UIAbility connection to end the collaboration session. |
+| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid-1) | Obtains information about the peer application in the specified session. |
 | [off('connect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offconnect) | Disables listening for **connect** events. |
 | [off('disconnect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offdisconnect) | Disables listening for **disconnect** events. |
 | [off('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivemessage) | Disables listening for **receiveMessage** events. |
@@ -34,9 +34,9 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [on('disconnect')](arkts-distributedservice-abilityconnectionmanager-on-f.md#ondisconnect) | Enables listening for **disconnect** events. |
 | [on('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivemessage) | Enables listening for **receiveMessage** events. |
 | [on('receiveData')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivedata) | Enables listening for **receiveData** events. |
-| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned. |
-| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
-| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | Sends text messages after a collaboration session is set up. |
+| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject-1) | Rejects a connection request in a cross-device collaboration session. After a connection request sent from the peer application is rejected, a rejection reason is returned. |
+| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata-1) | Sends [ArrayBuffer](../../../arkts-utils/arraybuffer-object.md) byte streams from one device to another after a connection is successfully established. |
+| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage-1) | Sends text messages after a collaboration session is set up. |
 
 <!--Del-->
 ### Functions(System API)

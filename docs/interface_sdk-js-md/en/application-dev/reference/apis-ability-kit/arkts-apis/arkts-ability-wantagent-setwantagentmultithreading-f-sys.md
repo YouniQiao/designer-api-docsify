@@ -28,7 +28,7 @@ Enables or disables the WantAgent multithreading feature.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| isMultithreadingSupported | boolean | Yes | Whether to enable the multithreading feature. The value<code>true</code> means to enable multithreading, and <code>false</code> means the opposite. |
+| isMultithreadingSupported | boolean | Yes | Whether to enable the multithreading feature. The value <code>true</code> means to enable multithreading, and <code>false</code> means the opposite. |
 
 **Error codes:**
 

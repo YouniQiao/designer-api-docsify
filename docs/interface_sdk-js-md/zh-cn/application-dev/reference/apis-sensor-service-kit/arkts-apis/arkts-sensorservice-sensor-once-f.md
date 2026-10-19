@@ -6,8 +6,6 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-<a id="once1"></a>
-
 ## once
 
 ```TypeScript
@@ -35,9 +33,9 @@ function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -58,8 +56,6 @@ try {
 }
 ```
 
-
-<a id="once2"></a>
 
 ## once
 
@@ -88,9 +84,9 @@ function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<Acce
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -114,8 +110,6 @@ try {
 }
 ```
 
-
-<a id="once3"></a>
 
 ## once
 
@@ -142,8 +136,8 @@ function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -162,8 +156,6 @@ try {
 }
 ```
 
-
-<a id="once4"></a>
 
 ## once
 
@@ -190,8 +182,8 @@ function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemp
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -210,8 +202,6 @@ try {
 }
 ```
 
-
-<a id="once5"></a>
 
 ## once
 
@@ -238,8 +228,8 @@ function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -258,8 +248,6 @@ try {
 }
 ```
 
-
-<a id="once6"></a>
 
 ## once
 
@@ -286,8 +274,8 @@ function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -308,8 +296,6 @@ try {
 }
 ```
 
-
-<a id="once7"></a>
 
 ## once
 
@@ -338,9 +324,9 @@ function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -361,8 +347,6 @@ try {
 }
 ```
 
-
-<a id="once8"></a>
 
 ## once
 
@@ -391,9 +375,9 @@ function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<Gyroscop
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -417,8 +401,6 @@ try {
 }
 ```
 
-
-<a id="once9"></a>
 
 ## once
 
@@ -445,8 +427,8 @@ function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -465,8 +447,6 @@ try {
 }
 ```
 
-
-<a id="once10"></a>
 
 ## once
 
@@ -495,9 +475,9 @@ function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>):
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -516,8 +496,6 @@ try {
 }
 ```
 
-
-<a id="once11"></a>
 
 ## once
 
@@ -544,8 +522,8 @@ function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): vo
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -564,8 +542,6 @@ try {
 }
 ```
 
-
-<a id="once12"></a>
 
 ## once
 
@@ -594,9 +570,9 @@ function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAcce
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -617,8 +593,6 @@ try {
 }
 ```
 
-
-<a id="once13"></a>
 
 ## once
 
@@ -645,8 +619,8 @@ function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -667,8 +641,6 @@ try {
 }
 ```
 
-
-<a id="once14"></a>
 
 ## once
 
@@ -695,8 +667,8 @@ function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<Mag
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -720,8 +692,6 @@ try {
 }
 ```
 
-
-<a id="once15"></a>
 
 ## once
 
@@ -748,8 +718,8 @@ function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -770,8 +740,6 @@ try {
 }
 ```
 
-
-<a id="once16"></a>
 
 ## once
 
@@ -804,9 +772,9 @@ function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -825,8 +793,6 @@ try {
 }
 ```
 
-
-<a id="once17"></a>
 
 ## once
 
@@ -855,9 +821,9 @@ function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDe
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission<br> required to call the API. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission <br> required to call the API. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -876,8 +842,6 @@ try {
 }
 ```
 
-
-<a id="once18"></a>
 
 ## once
 
@@ -904,8 +868,8 @@ function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): 
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -924,8 +888,6 @@ try {
 }
 ```
 
-
-<a id="once19"></a>
 
 ## once
 
@@ -952,8 +914,8 @@ function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorR
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -975,8 +937,6 @@ try {
 }
 ```
 
-
-<a id="once20"></a>
 
 ## once
 
@@ -1003,8 +963,8 @@ function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantM
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1023,8 +983,6 @@ try {
 }
 ```
 
-
-<a id="once21"></a>
 
 ## once
 
@@ -1051,8 +1009,8 @@ function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionRes
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified;<br> 2. Incorrect parameter types; 3. Parameter verification failed. |
-| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception;<br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified; <br> 2. Incorrect parameter types; 3. Parameter verification failed. |
+| [14500101](../errorcode-sensor.md#14500101-传感器服务异常) | Service exception. Possible causes: 1. Sensor hdf service exception; <br> 2. Sensor service ipc exception;3. Sensor data channel exception. |
 
 **示例**
 
@@ -1072,8 +1030,6 @@ try {
 ```
 
 
-<a id="once22"></a>
-
 ## once
 
 ```TypeScript
@@ -1085,14 +1041,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ACCELEROMETER](#once1)
+> [sensor.once.ACCELEROMETER](#once-1)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once1)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
+**替代接口：** [once](#once-1)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1120,8 +1076,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.Accele
 ```
 
 
-<a id="once23"></a>
-
 ## once
 
 ```TypeScript
@@ -1133,14 +1087,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once2)
+> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once-2)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once2)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**替代接口：** [once](#once-2)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1171,8 +1125,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: 
 ```
 
 
-<a id="once24"></a>
-
 ## once
 
 ```TypeScript
@@ -1184,14 +1136,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.AMBIENT_LIGHT](#once3)
+> [sensor.once.AMBIENT_LIGHT](#once-3)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once3)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
+**替代接口：** [once](#once-3)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
 
@@ -1215,8 +1167,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightR
 ```
 
 
-<a id="once25"></a>
-
 ## once
 
 ```TypeScript
@@ -1228,14 +1178,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.AMBIENT_TEMPERATURE](#once4)
+> [sensor.once.AMBIENT_TEMPERATURE](#once-4)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once4)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
+**替代接口：** [once](#once-4)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -1259,8 +1209,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.
 ```
 
 
-<a id="once26"></a>
-
 ## once
 
 ```TypeScript
@@ -1272,14 +1220,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.BAROMETER](#once5)
+> [sensor.once.BAROMETER](#once-5)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once5)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
+**替代接口：** [once](#once-5)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void-End-->
 
@@ -1303,8 +1251,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerR
 ```
 
 
-<a id="once27"></a>
-
 ## once
 
 ```TypeScript
@@ -1316,14 +1262,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GRAVITY](#once6)
+> [sensor.once.GRAVITY](#once-6)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once6)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
+**替代接口：** [once](#once-6)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void-End-->
 
@@ -1349,8 +1295,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityRespo
 ```
 
 
-<a id="once28"></a>
-
 ## once
 
 ```TypeScript
@@ -1362,14 +1306,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GYROSCOPE](#once7)
+> [sensor.once.GYROSCOPE](#once-7)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once7)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
+**替代接口：** [once](#once-7)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1397,8 +1341,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeR
 ```
 
 
-<a id="once29"></a>
-
 ## once
 
 ```TypeScript
@@ -1410,14 +1352,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GYROSCOPE_UNCALIBRATED](#once8)
+> [sensor.once.GYROSCOPE_UNCALIBRATED](#once-8)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once8)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**替代接口：** [once](#once-8)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1448,8 +1390,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sens
 ```
 
 
-<a id="once30"></a>
-
 ## once
 
 ```TypeScript
@@ -1461,14 +1401,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HALL](#once9)
+> [sensor.once.HALL](#once-9)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once9)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
+**替代接口：** [once](#once-9)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void-End-->
 
@@ -1492,8 +1432,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) =
 ```
 
 
-<a id="once31"></a>
-
 ## once
 
 ```TypeScript
@@ -1505,14 +1443,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HEART_RATE](#once10)
+> [sensor.once.HEART_RATE](#once-10)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once10)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
+**替代接口：** [once](#once-10)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
 
 **需要权限：** ohos.permission.HEART_RATE
 
@@ -1538,8 +1476,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRate
 ```
 
 
-<a id="once32"></a>
-
 ## once
 
 ```TypeScript
@@ -1551,14 +1487,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HUMIDITY](#once11)
+> [sensor.once.HUMIDITY](#once-11)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once11)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
+**替代接口：** [once](#once-11)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
 
@@ -1582,8 +1518,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityRes
 ```
 
 
-<a id="once33"></a>
-
 ## once
 
 ```TypeScript
@@ -1595,14 +1529,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.LINEAR_ACCELEROMETER](#once12)
+> [sensor.once.LINEAR_ACCELEROMETER](#once-12)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once12)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
+**替代接口：** [once](#once-12)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1618,8 +1552,6 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | 是 | 注册一次线性加速度传感器的回调函数，上报的数据类型为LinearAccelerometerResponse。 |
 
 
-<a id="once34"></a>
-
 ## once
 
 ```TypeScript
@@ -1631,14 +1563,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.MAGNETIC_FIELD](#once13)
+> [sensor.once.MAGNETIC_FIELD](#once-13)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once13)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
+**替代接口：** [once](#once-13)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
 
@@ -1664,8 +1596,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.Magne
 ```
 
 
-<a id="once35"></a>
-
 ## once
 
 ```TypeScript
@@ -1677,14 +1607,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once14)
+> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once-14)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once14)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**替代接口：** [once](#once-14)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -1713,8 +1643,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data:
 ```
 
 
-<a id="once36"></a>
-
 ## once
 
 ```TypeScript
@@ -1726,14 +1654,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ORIENTATION](#once15)
+> [sensor.once.ORIENTATION](#once-15)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once15)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [once](#once-15)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
 
@@ -1759,8 +1687,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.Orientat
 ```
 
 
-<a id="once37"></a>
-
 ## once
 
 ```TypeScript
@@ -1772,14 +1698,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PEDOMETER](#once16)
+> [sensor.once.PEDOMETER](#once-16)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once16)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
+**替代接口：** [once](#once-16)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -1805,8 +1731,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerR
 ```
 
 
-<a id="once38"></a>
-
 ## once
 
 ```TypeScript
@@ -1818,14 +1742,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PEDOMETER_DETECTION](#once17)
+> [sensor.once.PEDOMETER_DETECTION](#once-17)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once17)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
+**替代接口：** [once](#once-17)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -1851,8 +1775,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.
 ```
 
 
-<a id="once39"></a>
-
 ## once
 
 ```TypeScript
@@ -1864,14 +1786,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PROXIMITY](#once18)
+> [sensor.once.PROXIMITY](#once-18)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once18)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
+**替代接口：** [once](#once-18)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
 
@@ -1896,8 +1818,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityR
 ```
 
 
-<a id="once40"></a>
-
 ## once
 
 ```TypeScript
@@ -1909,14 +1829,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ROTATION_VECTOR](#once19)
+> [sensor.once.ROTATION_VECTOR](#once-19)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once19)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
+**替代接口：** [once](#once-19)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
 
@@ -1943,8 +1863,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.Rota
 ```
 
 
-<a id="once41"></a>
-
 ## once
 
 ```TypeScript
@@ -1956,14 +1874,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.SIGNIFICANT_MOTION](#once20)
+> [sensor.once.SIGNIFICANT_MOTION](#once-20)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once20)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
+**替代接口：** [once](#once-20)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
 
@@ -1987,8 +1905,6 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.S
 ```
 
 
-<a id="once42"></a>
-
 ## once
 
 ```TypeScript
@@ -2000,14 +1916,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.WEAR_DETECTION](#once21)
+> [sensor.once.WEAR_DETECTION](#once-21)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once21)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
+**替代接口：** [once](#once-21)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
 

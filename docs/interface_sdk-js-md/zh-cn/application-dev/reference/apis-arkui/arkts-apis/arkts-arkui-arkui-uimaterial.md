@@ -1,6 +1,6 @@
 # @ohos.arkui.uiMaterial(系统材质)
 
-本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色[backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth)、阴影[shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow1)、材质层滤镜[materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter)效果。当前提供的系统材质为沉浸式材质类型[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)，沉浸式材质对象在不同设备上的表现存在差异，只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上可设置但无效果，可通过[uiMaterial.isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断设备是否支持沉浸式材质。在支持沉浸式材质的设备上，材质效果在不同算力的设备上有分档表现，可通过[uiMaterial.getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)获取设备的材质等级，分档效果具体参考[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)的描述。
+本模块提供系统材质的接口定义。不同的系统材质对应不同的UI效果，包括背景色[backgroundColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#backgroundcolor)、边框颜色[borderColor](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bordercolor)、边框宽度[borderWidth](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#borderwidth)、阴影[shadow](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#shadow)、材质层滤镜[materialFilter](../arkts-components/arkts-arkui-common-comp-commonmethod-c.md#materialfilter)效果。当前提供的系统材质为沉浸式材质类型[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)，沉浸式材质对象在不同设备上的表现存在差异，只有支持沉浸式材质的设备上设置才有效果，在不支持沉浸式材质的设备上可设置但无效果，可通过[uiMaterial.isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md)判断设备是否支持沉浸式材质。在支持沉浸式材质的设备上，材质效果在不同算力的设备上有分档表现，可通过[uiMaterial.getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md)获取设备的材质等级，分档效果具体参考[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)的描述。
 
 开发指导请参考[沉浸光感](../../../ui/arkts-immersive-light-sense.md)指南文档。
 
@@ -22,9 +22,9 @@ import { uiMaterial } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getglobalmateriallevel) | 获取全局材质等级，与设备算力相关。在需要根据设备算力等级选择不同材质效果实现方式时，可调用此方法获取材质等级。该配置项由设备定义，不可修改。 |
-| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getmaterialinfo) | 获取当前应用的材质配置信息。在需要根据材质使能状态决定组件是否开启或关闭沉浸式系统材质效果时，可调用此方法获取配置信息。返回的配置信息来自应用在[module.json5](../../../quick-start/module-configuration-file.md)中配置的metadata。只有在entry类型的module中配置的metadata才会生效。 |
-| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md#isimmersivematerialsupported) | 判断当前设备是否支持沉浸式系统材质[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)。在开发需要沉浸式材质效果的功能时，可先调用此方法判断设备是否支持，以决定是否为组件设置沉浸式材质。该配置项由设备定义，不可修改。 |
+| [getGlobalMaterialLevel](arkts-arkui-uimaterial-getglobalmateriallevel-f.md#getglobalmateriallevel-1) | 获取全局材质等级，与设备算力相关。在需要根据设备算力等级选择不同材质效果实现方式时，可调用此方法获取材质等级。该配置项由设备定义，不可修改。 |
+| [getMaterialInfo](arkts-arkui-uimaterial-getmaterialinfo-f.md#getmaterialinfo-1) | 获取当前应用的材质配置信息。在需要根据材质使能状态决定组件是否开启或关闭沉浸式系统材质效果时，可调用此方法获取配置信息。返回的配置信息来自应用在[module.json5](../../../quick-start/module-configuration-file.md)中配置的metadata。只有在entry类型的module中配置的metadata才会生效。 |
+| [isImmersiveMaterialSupported](arkts-arkui-uimaterial-isimmersivematerialsupported-f.md#isimmersivematerialsupported-1) | 判断当前设备是否支持沉浸式系统材质[ImmersiveMaterial](arkts-arkui-uimaterial-immersivematerial-c.md)。在开发需要沉浸式材质效果的功能时，可先调用此方法判断设备是否支持，以决定是否为组件设置沉浸式材质。该配置项由设备定义，不可修改。 |
 
 <!--Del-->
 ### 函数（系统接口）

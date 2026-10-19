@@ -46,4 +46,4 @@ Note: This function is frequently called. Do not perform time-consuming operatio
 
 | Type | Description |
 | --- | --- |
-| boolean | Whether the file is included in the returned file list.<b>true</b>: The file is included. <b>false</b>: The file is not included. |
+| boolean | Whether the file is included in the returned file list. <b>true</b>: The file is included. <b>false</b>: The file is not included. |

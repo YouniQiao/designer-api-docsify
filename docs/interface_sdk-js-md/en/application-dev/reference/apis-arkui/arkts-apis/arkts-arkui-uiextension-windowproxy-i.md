@@ -18,8 +18,6 @@ The proxy of the UIExtension window.
 import { uiExtension } from '@kit.ArkUI';
 ```
 
-<a id="createsubwindowwithoptions1"></a>
-
 ## createSubWindowWithOptions
 
 ```TypeScript
@@ -106,8 +104,6 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
   }
 }
 ```
-
-<a id="createsubwindowwithoptions2"></a>
 
 ## createSubWindowWithOptions
 

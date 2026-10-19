@@ -2,8 +2,6 @@
 
 This module provides the capability to media enhancement
 
-@namespace avMusicTemplate
-
 **Since:** 23
 
 <!--Device-unnamed-declare namespace avMusicTemplate--><!--Device-unnamed-declare namespace avMusicTemplate-End-->
@@ -22,7 +20,7 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate) | Create an AVMusicTemplate instance. |
+| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate-1) | Create an AVMusicTemplate instance. |
 
 <!--Del-->
 ### Functions(System API)

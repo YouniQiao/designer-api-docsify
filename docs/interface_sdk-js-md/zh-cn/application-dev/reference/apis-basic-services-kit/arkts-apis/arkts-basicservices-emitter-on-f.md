@@ -6,8 +6,6 @@
 import { emitter } from '@kit.BasicServicesKit';
 ```
 
-<a id="on1"></a>
-
 ## on
 
 ```TypeScript
@@ -49,8 +47,6 @@ emitter.on(innerEvent, callback);
 ```
 
 
-<a id="on2"></a>
-
 ## on
 
 ```TypeScript
@@ -86,8 +82,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter.on('eventId', callback);
 ```
 
-
-<a id="on3"></a>
 
 ## on
 

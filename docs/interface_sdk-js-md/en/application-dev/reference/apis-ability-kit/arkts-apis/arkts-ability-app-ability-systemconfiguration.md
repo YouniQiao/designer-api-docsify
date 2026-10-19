@@ -2,8 +2,6 @@
 
 The class of a system configuration.
 
-@namespace systemConfiguration
-
 **Since:** 24
 
 <!--Device-unnamed-declare namespace systemConfiguration--><!--Device-unnamed-declare namespace systemConfiguration-End-->

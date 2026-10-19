@@ -63,8 +63,6 @@ Moves the source directory and its content to the destination path. This API use
 | 13900042 | Unknown error |
 
 
-<a id="movedir2"></a>
-
 ## moveDir
 
 ```TypeScript
@@ -91,7 +89,7 @@ An exception will be thrown if a directory conflict occurs, that is, the destina
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully moved,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully moved, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -116,8 +114,6 @@ An exception will be thrown if a directory conflict occurs, that is, the destina
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="movedir3"></a>
 
 ## moveDir
 
@@ -145,7 +141,7 @@ An exception will be thrown if a directory conflict occurs, that is, the destina
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. If the directory is successfully moved,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. If the directory is successfully moved, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -153,8 +149,6 @@ An exception will be thrown if a directory conflict occurs, that is, the destina
 | --- | --- |
 | 13900015 | File exists |
 
-
-<a id="movedir4"></a>
 
 ## moveDir
 
@@ -176,8 +170,8 @@ Moves the source directory and its content to the destination path. You can set 
 | --- | --- | --- | --- |
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
-| mode | number | Yes | Move mode.<br>- <b>0</b>: Throw an exception if a directory conflict occurs. An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory. <br>           - <b>1</b>: Throw an exception if a file conflict occurs. An exception will be thrown if the destination   directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. <br>           - <b>2</b>: Forcibly overwrite the conflicting files in the destination directory. When the destination directory   contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. <br>           - <b>3</b>: Forcibly overwrite the conflicting directory. The source directory is moved to the destination   directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully moved,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| mode | number | Yes | Move mode. <br>- <b>0</b>: Throw an exception if a directory conflict occurs. An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory. <br>           - <b>1</b>: Throw an exception if a file conflict occurs. An exception will be thrown if the destination   directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. <br>           - <b>2</b>: Forcibly overwrite the conflicting files in the destination directory. When the destination directory   contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. <br>           - <b>3</b>: Forcibly overwrite the conflicting directory. The source directory is moved to the destination   directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully moved, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -202,8 +196,6 @@ Moves the source directory and its content to the destination path. You can set 
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="movedir5"></a>
 
 ## moveDir
 
@@ -230,7 +222,7 @@ Moves the source directory and its content to the destination path. You can set 
 | src | string | Yes | Application sandbox path of the source directory. |
 | dest | string | Yes | Application sandbox path of the destination directory. |
 | mode | number | Yes | Move mode. <br>- <b>0</b>: Throw an exception if a directory conflict occurs. An exception will be thrown if the destination directory contains a non-empty directory with the same name as the source directory. <br>           - <b>1</b>: Throw an exception if a file conflict occurs. An exception will be thrown if the destination   directory contains a directory with the same name as the source directory, and a file with the same name exists in the conflict directory. All the non-conflicting files in the source directory will be moved to the destination directory, and the non-conflicting files in the destination directory will be retained. The <b>data</b> attribute in the error returned provides information about the conflicting files in the Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt; format. <br>           - <b>2</b>: Forcibly overwrite the conflicting files in the destination directory. When the destination directory   contains a directory with the same name as the source directory, the files with the same names in the destination directory are overwritten forcibly; the files without conflicts in the destination directory are retained. <br>- <b>3</b>: Forcibly overwrite the conflicting directory. The source directory is moved to the destination directory, and the content of the moved directory is the same as that of the source directory. If the destination directory contains a directory with the same name as the source directory, all original files in the directory will be deleted. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. If the directory is successfully moved,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void, Array&lt;[ConflictFiles](arkts-corefile-file-fs-conflictfiles-i.md)&gt;&gt; | Yes | Callback used to return the result. If the directory is successfully moved, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

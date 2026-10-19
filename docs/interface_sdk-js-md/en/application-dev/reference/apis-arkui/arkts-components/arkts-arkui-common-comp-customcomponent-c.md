@@ -6,8 +6,6 @@ declare class CustomComponent extends BaseCustomComponent
 
 Custom Component
 
-@extends CommonAttribute [since 7 - 17] @extends BaseCustomComponent [since 18]
-
 **Inheritance/Implementation:** CustomComponent extends [BaseCustomComponent](arkts-arkui-common-comp-basecustomcomponent-c.md)
 
 **Since:** 7

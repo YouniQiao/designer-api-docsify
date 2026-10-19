@@ -26,7 +26,7 @@ When all tasks in a group are succeeded, failed, or removed and the group is del
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is, the return value of the task group created using the [request.agent.createGroup](arkts-basicservices-agent-creategroup-f.md) API. |
+| gid | string | Yes | Target group ID. The value must be the same as the ID of the created task group, that is, the return value of the task group created using the [request.agent.createGroup](arkts-basicservices-agent-creategroup-f.md#creategroup-1) API. |
 
 **Return value:**
 
@@ -38,6 +38,6 @@ When all tasks in a group are succeeded, failed, or removed and the group is del
 
 | Error Code ID | Error Message |
 | --- | --- |
-| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes:<br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
+| [401](../../errorcode-universal.md#401-parameter-check-failed) | Parameter error. Possible causes: <br> 1. Missing mandatory parameters. <br> 2. Incorrect parameter type. <br> 3. Parameter verification failed. |
 | [13400003](../errorcode-request.md#13400003-service-error) | Task service ability error. |
 | [21900008](../errorcode-request.md#21900008-task-group-not-found-or-deleted) | Group deleted or not found. |

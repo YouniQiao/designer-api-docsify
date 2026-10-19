@@ -26,7 +26,7 @@ Focus control module, used to actively request focus for a specified component t
 
 | Name | Description |
 | --- | --- |
-| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. |
+| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus-1) | Requests focus transfer to the specified component during the next frame rendering. This global API provides asynchronous focus control. |
 
 ## Examples
 

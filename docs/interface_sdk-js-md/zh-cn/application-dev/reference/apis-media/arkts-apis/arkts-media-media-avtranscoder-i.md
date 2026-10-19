@@ -199,7 +199,7 @@ off(type:'error', callback?: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。<br>- 'error'：转码过程中发生错误，触发该事件。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>- 'error'：转码过程中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 否 | 错误事件回调方法。 |
 
 **示例**
@@ -317,7 +317,7 @@ on(type:'error', callback: ErrorCallback):void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| type | 'error' | 是 | 转码错误事件回调类型'error'。<br>'error'：转码过程中发生错误，触发该事件。 |
+| type | 'error' | 是 | 转码错误事件回调类型'error'。 <br>'error'：转码过程中发生错误，触发该事件。 |
 | callback | [ErrorCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-errorcallback-i.md) | 是 | 转码错误事件回调方法。 |
 
 **错误码：**
@@ -454,7 +454,7 @@ prepare(config: AVTranscoderConfig): Promise<void>
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | 是 | 配置视频转码的相关参数。<!--RP1--><!--RP1End--> |
+| config | [AVTranscoderConfig](arkts-media-media-avtranscoderconfig-i.md) | 是 | 配置视频转码的相关参数。 <!--RP1--><!--RP1End--> |
 
 **返回值：**
 

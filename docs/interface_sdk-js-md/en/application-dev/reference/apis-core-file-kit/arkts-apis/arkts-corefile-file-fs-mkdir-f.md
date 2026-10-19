@@ -55,8 +55,6 @@ Creates a single-level directory. If the parent directory does not exist, an err
 | 13900042 | Unknown error |
 
 
-<a id="mkdir2"></a>
-
 ## mkdir
 
 ```TypeScript
@@ -78,7 +76,7 @@ Creates a directory. This API uses a promise to return the result. The value <b>
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively. The value<b>true</b> means to create a directory recursively. The value <b>false</b> means to create a single-level directory. |
+| recursion | boolean | Yes | Whether to create a directory recursively. The value <b>true</b> means to create a directory recursively. The value <b>false</b> means to create a single-level directory. |
 
 **Return value:**
 
@@ -107,8 +105,6 @@ Creates a directory. This API uses a promise to return the result. The value <b>
 | 13900042 | Unknown error |
 
 
-<a id="mkdir3"></a>
-
 ## mkdir
 
 ```TypeScript
@@ -130,7 +126,7 @@ Creates a single-level directory. If the parent directory does not exist, an err
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -153,8 +149,6 @@ Creates a single-level directory. If the parent directory does not exist, an err
 | 13900042 | Unknown error |
 
 
-<a id="mkdir4"></a>
-
 ## mkdir
 
 ```TypeScript
@@ -176,8 +170,8 @@ Creates a directory. If <b>recursion</b> is set to <b>true</b>, a directory is c
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| recursion | boolean | Yes | Whether to create a directory recursively. The value<b>true</b> means to create a directory recursively. The value <b>false</b> means to create a single-level directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| recursion | boolean | Yes | Whether to create a directory recursively. The value <b>true</b> means to create a directory recursively. The value <b>false</b> means to create a single-level directory. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully created, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

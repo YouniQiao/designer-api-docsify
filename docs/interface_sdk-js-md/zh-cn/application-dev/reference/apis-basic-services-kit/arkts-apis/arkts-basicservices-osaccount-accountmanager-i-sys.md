@@ -18,8 +18,6 @@ interface AccountManager
 import { osAccount } from '@kit.BasicServicesKit';
 ```
 
-<a id="activateosaccount1"></a>
-
 ## activateOsAccount
 
 ```TypeScript
@@ -84,8 +82,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="activateosaccount2"></a>
 
 ## activateOsAccount
 
@@ -154,8 +150,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="activateosaccount3"></a>
 
 ## activateOsAccount
 
@@ -298,8 +292,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="createosaccount1"></a>
-
 ## createOsAccount
 
 ```TypeScript
@@ -364,8 +356,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="createosaccount2"></a>
 
 ## createOsAccount
 
@@ -443,8 +433,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="createosaccountfordomain1"></a>
-
 ## createOsAccountForDomain
 
 ```TypeScript
@@ -516,8 +504,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="createosaccountfordomain2"></a>
 
 ## createOsAccountForDomain
 
@@ -632,7 +618,7 @@ deactivateOsAccount(localId: number): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 | [12300008](../errorcode-account.md#12300008-受限的账号) | Restricted Account. |
@@ -662,8 +648,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="getbundleidforuid1"></a>
-
 ## getBundleIdForUid
 
 ```TypeScript
@@ -692,7 +676,7 @@ getBundleIdForUid(uid: number, callback: AsyncCallback<number>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
@@ -720,8 +704,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="getbundleidforuid2"></a>
 
 ## getBundleIdForUid
 
@@ -756,7 +738,7 @@ getBundleIdForUid(uid: number): Promise<number>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
@@ -815,7 +797,7 @@ getBundleIdForUidSync(uid: number): number
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid uid. |
 
 <!--Del-->
@@ -873,7 +855,7 @@ getEnabledOsAccountConstraints(localId: number): Promise<Array<string>>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
@@ -962,8 +944,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="getforegroundosaccountlocalid2"></a>
-
 ## getForegroundOsAccountLocalId
 
 ```TypeScript
@@ -1025,8 +1005,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="getosaccountconstraintsourcetypes1"></a>
-
 ## getOsAccountConstraintSourceTypes
 
 ```TypeScript
@@ -1059,7 +1037,7 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string, callback:
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1087,8 +1065,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="getosaccountconstraintsourcetypes2"></a>
 
 ## getOsAccountConstraintSourceTypes
 
@@ -1127,7 +1103,7 @@ getOsAccountConstraintSourceTypes(localId: number, constraint: string): Promise<
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid name or constraint. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1153,8 +1129,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="getosaccountprofilephoto1"></a>
 
 ## getOsAccountProfilePhoto
 
@@ -1187,7 +1161,7 @@ getOsAccountProfilePhoto(localId: number, callback: AsyncCallback<string>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1217,8 +1191,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="getosaccountprofilephoto2"></a>
 
 ## getOsAccountProfilePhoto
 
@@ -1256,7 +1228,7 @@ getOsAccountProfilePhoto(localId: number): Promise<string>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -1284,8 +1256,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="getosaccounttype3"></a>
 
 ## getOsAccountType
 
@@ -1323,7 +1293,7 @@ getOsAccountType(localId: number): Promise<OsAccountType>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
@@ -1348,8 +1318,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="ismainosaccount1"></a>
 
 ## isMainOsAccount
 
@@ -1381,7 +1349,7 @@ isMainOsAccount(callback: AsyncCallback<boolean>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 <!--Del-->
@@ -1406,8 +1374,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="ismainosaccount2"></a>
 
 ## isMainOsAccount
 
@@ -1498,7 +1464,7 @@ isOsAccountActivated(localId: number): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
@@ -1525,8 +1491,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="isosaccountconstraintenabled2"></a>
 
 ## isOsAccountConstraintEnabled
 
@@ -1565,7 +1529,7 @@ isOsAccountConstraintEnabled(localId: number, constraint: string): Promise<boole
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
@@ -1593,8 +1557,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="isosaccountunlocked2"></a>
 
 ## isOsAccountUnlocked
 
@@ -1632,7 +1594,7 @@ isOsAccountUnlocked(localId: number): Promise<boolean>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
 
@@ -1690,7 +1652,7 @@ off(type: 'activate' | 'activating', name: string, callback?: Callback<number>):
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
@@ -1912,7 +1874,7 @@ on(type: 'activate' | 'activating', name: string, callback: Callback<number>): v
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid type or name. |
 
@@ -2107,8 +2069,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="queryallcreatedosaccounts1"></a>
-
 ## queryAllCreatedOsAccounts
 
 ```TypeScript
@@ -2139,7 +2099,7 @@ queryAllCreatedOsAccounts(callback: AsyncCallback<Array<OsAccountInfo>>): void
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 <!--Del-->
@@ -2164,8 +2124,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="queryallcreatedosaccounts2"></a>
 
 ## queryAllCreatedOsAccounts
 
@@ -2270,8 +2228,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="querymaxosaccountnumber1"></a>
-
 ## queryMaxOsAccountNumber
 
 ```TypeScript
@@ -2299,7 +2255,7 @@ queryMaxOsAccountNumber(callback: AsyncCallback<number>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 
 <!--Del-->
@@ -2324,8 +2280,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="querymaxosaccountnumber2"></a>
 
 ## queryMaxOsAccountNumber
 
@@ -2430,8 +2384,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="queryosaccountbyid1"></a>
-
 ## queryOsAccountById
 
 ```TypeScript
@@ -2463,7 +2415,7 @@ queryOsAccountById(localId: number, callback: AsyncCallback<OsAccountInfo>): voi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2493,8 +2445,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="queryosaccountbyid2"></a>
 
 ## queryOsAccountById
 
@@ -2532,7 +2482,7 @@ queryOsAccountById(localId: number): Promise<OsAccountInfo>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2560,8 +2510,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="removeosaccount1"></a>
 
 ## removeOsAccount
 
@@ -2627,8 +2575,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="removeosaccount2"></a>
 
 ## removeOsAccount
 
@@ -2697,8 +2643,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="removeosaccount3"></a>
 
 ## removeOsAccount
 
@@ -2773,8 +2717,6 @@ try {
 
 <!--DelEnd-->
 
-<a id="setosaccountconstraints1"></a>
-
 ## setOsAccountConstraints
 
 ```TypeScript
@@ -2808,7 +2750,7 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2840,8 +2782,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="setosaccountconstraints2"></a>
 
 ## setOsAccountConstraints
 
@@ -2881,7 +2821,7 @@ setOsAccountConstraints(localId: number, constraints: Array<string>, enable: boo
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or constraints. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2910,8 +2850,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="setosaccountname1"></a>
 
 ## setOsAccountName
 
@@ -2945,7 +2883,7 @@ setOsAccountName(localId: number, localName: string, callback: AsyncCallback<voi
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -2977,8 +2915,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="setosaccountname2"></a>
 
 ## setOsAccountName
 
@@ -3017,7 +2953,7 @@ setOsAccountName(localId: number, localName: string): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or localName. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3047,8 +2983,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="setosaccountprofilephoto1"></a>
 
 ## setOsAccountProfilePhoto
 
@@ -3082,7 +3016,7 @@ setOsAccountProfilePhoto(localId: number, photo: string, callback: AsyncCallback
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |
@@ -3117,8 +3051,6 @@ try {
 ```
 
 <!--DelEnd-->
-
-<a id="setosaccountprofilephoto2"></a>
 
 ## setOsAccountProfilePhoto
 
@@ -3157,7 +3089,7 @@ setOsAccountProfilePhoto(localId: number, photo: string): Promise<void>
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not system application. |
-| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified.<br> 2. Incorrect parameter types. |
+| [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1. Mandatory parameters are left unspecified. <br> 2. Incorrect parameter types. |
 | [12300001](../errorcode-account.md#12300001-系统服务异常) | The system service works abnormally. |
 | [12300002](../errorcode-account.md#12300002-无效参数) | Invalid localId or photo. |
 | [12300003](../errorcode-account.md#12300003-账号不存在) | Account not found. |

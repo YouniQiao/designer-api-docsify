@@ -55,8 +55,6 @@ console.info(`Succeeded in getting parent path, the parent path is: ${file.getPa
 fileIo.closeSync(file);
 ```
 
-<a id="lock1"></a>
-
 ## lock
 
 ```TypeScript
@@ -75,7 +73,7 @@ Applies an exclusive lock or a shared lock on a file in blocking mode. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Whether to apply an exclusive lock. The value<b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. The default value is <b>false</b>. |
+| exclusive | boolean | No | Whether to apply an exclusive lock. The value <b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. The default value is <b>false</b>. |
 
 **Return value:**
 
@@ -110,8 +108,6 @@ file.lock(true).then(() => {
 });
 ```
 
-<a id="lock2"></a>
-
 ## lock
 
 ```TypeScript
@@ -130,7 +126,7 @@ Applies a shared lock on a file in blocking mode. This API uses an asynchronous 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully,<b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, <b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -160,8 +156,6 @@ file.lock((err: BusinessError) => {
 });
 ```
 
-<a id="lock3"></a>
-
 ## lock
 
 ```TypeScript
@@ -180,8 +174,8 @@ Applies an exclusive lock or a shared lock on a file in blocking mode. This API 
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | Yes | Whether to apply an exclusive lock. The value<b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully,<b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
+| exclusive | boolean | Yes | Whether to apply an exclusive lock. The value <b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the file is locked successfully, <b>err</b> is <b>undefined</b>. Otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 
@@ -229,7 +223,7 @@ Applies an exclusive lock or a shared lock on a file in non-blocking mode.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| exclusive | boolean | No | Whether to apply an exclusive lock. The value<b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. The default value is <b>false</b>. |
+| exclusive | boolean | No | Whether to apply an exclusive lock. The value <b>true</b> indicates an exclusive lock is applied, and <b>false</b> indicates a shared lock is applied. The default value is <b>false</b>. |
 
 **Error codes:**
 

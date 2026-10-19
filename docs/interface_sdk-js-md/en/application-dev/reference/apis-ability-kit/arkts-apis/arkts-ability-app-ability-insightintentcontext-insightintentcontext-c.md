@@ -40,7 +40,7 @@ Get insight intent execution info.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| instanceId | number | Yes | The insight intent instance ID. It is from InsightIntentEntryExecutor.context.instanceId.<br>The value should be an integer. |
+| instanceId | number | Yes | The insight intent instance ID. It is from InsightIntentEntryExecutor.context.instanceId. <br>The value should be an integer. |
 
 **Return value:**
 
@@ -200,8 +200,6 @@ export default class InsightIntentExecutorUI extends InsightIntentExecutor {
 }
 ```
 
-<a id="startability1"></a>
-
 ## startAbility
 
 ```TypeScript
@@ -287,8 +285,6 @@ export default class IntentExecutorImpl extends InsightIntentExecutor {
   }
 }
 ```
-
-<a id="startability2"></a>
 
 ## startAbility
 

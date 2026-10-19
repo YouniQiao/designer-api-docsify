@@ -56,8 +56,6 @@ Deletes a directory and all its subdirectories and files. This API uses a promis
 | 13900042 | Unknown error |
 
 
-<a id="rmdir2"></a>
-
 ## rmdir
 
 ```TypeScript
@@ -83,7 +81,7 @@ Deletes a directory and all its subdirectories and files. This API uses an async
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | path | string | Yes | Application sandbox path of the directory. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully deleted,<b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. If the directory is successfully deleted, <b>err</b> is <b>undefined</b>; otherwise, <b>err</b> is an error object. |
 
 **Error codes:**
 

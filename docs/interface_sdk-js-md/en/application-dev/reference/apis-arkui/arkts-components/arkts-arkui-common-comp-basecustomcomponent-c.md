@@ -291,7 +291,7 @@ Invoked when the custom component needs to determine its size. Through this call
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | selfLayoutInfo | [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | Yes | Information about the component's computed layout properties after measurement.<br>During the first layout, the component will use its own set attributes as the basis for layout. |
-| children | Array&lt;[Measurable](arkts-arkui-common-comp-measurable-i.md)&gt; | Yes | Array containing layout information for all child components after measurement.<br>When a child component does not have its layout information set, it retains the previous layout settings or, if no previous layout settings are available, stays at the default size of 0. |
+| children | Array&lt;[Measurable](arkts-arkui-common-comp-measurable-i.md)&gt; | Yes | Array containing layout information for all child components after measurement. <br>When a child component does not have its layout information set, it retains the previous layout settings or, if no previous layout settings are available, stays at the default size of 0. |
 | constraint | [ConstraintSizeOptions](../arkts-apis/arkts-arkui-constraintsizeoptions-i.md) | Yes | Layout constraints applied to the component. |
 
 **Return value:**
@@ -433,8 +433,6 @@ Defines the transition animations for page entry and page exit.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="querynavdestinationinfo1"></a>
-
 ## queryNavDestinationInfo
 
 ```TypeScript
@@ -458,8 +456,6 @@ Queries the **NavDestination** information of this custom component. This API ha
 | Type | Description |
 | --- | --- |
 | [NavDestinationInfo](arkts-arkui-common-comp-navdestinationinfo-t.md) &#124; undefined | **NavDestinationInfo** instance obtained. |
-
-<a id="querynavdestinationinfo2"></a>
 
 ## queryNavDestinationInfo
 

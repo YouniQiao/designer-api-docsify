@@ -24,13 +24,13 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path or URI of the file.<br>**Note:**  URIs can be passed since API version 22. |
+| path | string | Yes | Application sandbox path or URI of the file. <br>**Note:**  URIs can be passed since API version 22. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise used to return the symbolic link information obtained. For details, see<b>Stat</b>. |
+| Promise&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Promise used to return the symbolic link information obtained. For details, see <b>Stat</b>. |
 
 **Error codes:**
 
@@ -47,8 +47,6 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 | 13900038 | Value too large for defined data type |
 | 13900042 | Unknown error |
 
-
-<a id="lstat2"></a>
 
 ## lstat
 
@@ -68,8 +66,8 @@ Obtains information about a symbolic link that is used to refer to a file or dir
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| path | string | Yes | Application sandbox path or URI of the file.<br>**Note:**  URIs can be passed since API version 22. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the<b>Stat</b> object. |
+| path | string | Yes | Application sandbox path or URI of the file. <br>**Note:**  URIs can be passed since API version 22. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[Stat](arkts-corefile-file-fs-stat-i.md)&gt; | Yes | Callback used to return the <b>Stat</b> object. |
 
 **Error codes:**
 

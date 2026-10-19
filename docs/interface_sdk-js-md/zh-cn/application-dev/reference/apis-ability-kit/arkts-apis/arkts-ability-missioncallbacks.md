@@ -2,7 +2,7 @@
 
 该模块定义了同步启动后触发的回调，这些回调可作为输入使用。
  parameters in
- [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener2)
+ [registerMissionListener](arkts-ability-distributedmissionmanager-registermissionlistener-f-sys.md#registermissionlistener-1)
 
 
 
@@ -21,7 +21,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) | @typedef { function } NotifyMissionsChangedCallback |
-| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) | @typedef { function } NotifyNetDisconnectCallback |
-| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) | @typedef { function } NotifySnapshotCallback |
+| [NotifyMissionsChangedCallback](arkts-ability-notifymissionschangedcallback-t-sys.md) |  |
+| [NotifyNetDisconnectCallback](arkts-ability-notifynetdisconnectcallback-t-sys.md) |  |
+| [NotifySnapshotCallback](arkts-ability-notifysnapshotcallback-t-sys.md) |  |
 <!--DelEnd-->

@@ -2,8 +2,6 @@
 
 Provides fileUri APIS
 
-@namespace fileUri
-
 **Since:** 15
 
 <!--Device-unnamed-declare namespace fileUri--><!--Device-unnamed-declare namespace fileUri-End-->
@@ -22,7 +20,7 @@ import { fileUri } from '@kit.CoreFileKit';
 
 | Name | Description |
 | --- | --- |
-| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath) | Get the uri from the path of file in app sandbox |
+| [getUriFromPath](arkts-corefile-fileuri-geturifrompath-f.md#geturifrompath-1) | Get the uri from the path of file in app sandbox |
 
 ### Classes
 

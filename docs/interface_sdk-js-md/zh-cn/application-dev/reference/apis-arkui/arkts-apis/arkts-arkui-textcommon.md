@@ -21,14 +21,14 @@
 | [AccessibilitySpanOptions](arkts-arkui-accessibilityspanoptions-i.md) | Span的无障碍朗读功能属性。 |
 | [CaretStyle](arkts-arkui-caretstyle-i.md) | 定义光标样式。 |
 | [DecorationStyleResult](arkts-arkui-decorationstyleresult-i.md) | 后端返回的文本装饰线样式信息。 |
-| [DeleteValue](arkts-arkui-deletevalue-i.md) | 提供从文本中删除值的接口。 |
+| [DeleteValue](arkts-arkui-deletevalue-i.md#deletevalue) | 提供从文本中删除值的接口。 |
 | [EditableTextChangeValue](arkts-arkui-editabletextchangevalue-i.md) | 文本变化的详细信息，包括预上屏。 |
 | [EditMenuOptions](arkts-arkui-editmenuoptions-i.md) | 编辑菜单选项 |
 | [FontConfigs](arkts-arkui-fontconfigs-i.md) | 字体配置项。 |
 | [FontSettingOptions](arkts-arkui-fontsettingoptions-i.md) | 字体配置项。 |
 | [FontWeightConfigs](arkts-arkui-fontweightconfigs-i.md) | 字体粗细配置项。当传入该配置对象时（包括空对象{}），未显式设置的属性将使用默认值。当传入null或undefined时，不应用默认值，字体粗细行为与父组件文本保持一致。 |
 | [IMEClient](arkts-arkui-imeclient-i.md) | 输入控件绑定输入法客户端类型。 |
-| [InsertValue](arkts-arkui-insertvalue-i.md) | 定义插入的文本值信息。 |
+| [InsertValue](arkts-arkui-insertvalue-i.md#insertvalue) | 定义插入的文本值信息。 |
 | [LayoutManager](arkts-arkui-layoutmanager-i.md) | 布局管理器对象。 |
 | [LineSpacingOptions](arkts-arkui-linespacingoptions-i.md) | 设置文本的行间距，是否仅在行与行之间生效。 |
 | [MaxLinesOptions](arkts-arkui-maxlinesoptions-i.md) | 配置TextArea组件，文本超长时的显示效果。 |

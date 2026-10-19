@@ -133,8 +133,6 @@ ws.close();
 randomAccessFile.close();
 ```
 
-<a id="read1"></a>
-
 ## read
 
 ```TypeScript
@@ -205,8 +203,6 @@ randomAccessFile.read(arrayBuffer, readOption).then((readLength: number) => {
 });
 ```
 
-<a id="read2"></a>
-
 ## read
 
 ```TypeScript
@@ -265,8 +261,6 @@ randomAccessFile.read(arrayBuffer, (err: BusinessError, readLength: number) => {
   fileIo.closeSync(file);
 });
 ```
-
-<a id="read3"></a>
 
 ## read
 
@@ -412,7 +406,7 @@ Sets the file offset pointer to specify the start position of subsequent read an
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| filePointer | number | Yes | Offset pointer to the<b>RandomAccessFile</b> instance, in bytes. |
+| filePointer | number | Yes | Offset pointer to the <b>RandomAccessFile</b> instance, in bytes. |
 
 **Error codes:**
 
@@ -432,8 +426,6 @@ let randomAccessFile = fileIo.createRandomAccessFileSync(filePath, fileIo.OpenMo
 randomAccessFile.setFilePointer(1);
 randomAccessFile.close();
 ```
-
-<a id="write1"></a>
 
 ## write
 
@@ -508,8 +500,6 @@ randomAccessFile.write(arrayBuffer, writeOption).then((bytesWritten: number) => 
 });
 ```
 
-<a id="write2"></a>
-
 ## write
 
 ```TypeScript
@@ -570,8 +560,6 @@ randomAccessFile.write(arrayBuffer, (err: BusinessError, bytesWritten: number) =
   fileIo.closeSync(file);
 });
 ```
-
-<a id="write3"></a>
 
 ## write
 

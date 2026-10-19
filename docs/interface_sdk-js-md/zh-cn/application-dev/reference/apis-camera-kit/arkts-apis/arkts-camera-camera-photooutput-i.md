@@ -20,8 +20,6 @@ interface PhotoOutput extends CameraOutput
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="capture1"></a>
-
 ## capture
 
 ```TypeScript
@@ -67,8 +65,6 @@ function capture(photoOutput: camera.PhotoOutput): void {
 }
 ```
 
-<a id="capture2"></a>
-
 ## capture
 
 ```TypeScript
@@ -111,8 +107,6 @@ function capture(photoOutput: camera.PhotoOutput): void {
   });
 }
 ```
-
-<a id="capture3"></a>
 
 ## capture
 
@@ -171,8 +165,6 @@ function capture(photoOutput: camera.PhotoOutput): void {
   });
 }
 ```
-
-<a id="capture4"></a>
 
 ## capture
 
@@ -569,7 +561,7 @@ isAutoAuxiliaryPhotoDeliverySupported(auxPhotoType: CameraAuxiliaryPhotoType): b
 
 | 错误码ID | 错误信息 |
 | --- | --- |
-| 7400115 | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
+| [7400115](../errorcode-camera.md#7400115-参数超出范围) | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
 
 ## isAutoExtendedGainmapDeliverySupported
 
@@ -1642,7 +1634,7 @@ setAutoAuxiliaryPhotosDeliveryEnabled(auxPhotoTypes: CameraAuxiliaryPhotoType[],
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [801](../../errorcode-universal.md#801-api功能在部分设备不支持) | Capability not supported. Check if the camera device supports the required auxiliary photo types by using capability query APIs. |
-| 7400115 | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
+| [7400115](../errorcode-camera.md#7400115-参数超出范围) | Parameter out of the range. The auxPhotoType value is invalid. Check the CameraAuxiliaryPhotoType enum for valid values. |
 | [7400201](../errorcode-camera.md#7400201-相机服务异常) | Camera service fatal error. |
 
 ## setMovingPhotoVideoCodecType

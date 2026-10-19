@@ -4,8 +4,6 @@ Function是定义在应用包中的一个业务逻辑单元，可以接收大模
 
 本模块提供Function的管理和调用能力，可以查询可用的Function信息、调用指定的Function执行业务逻辑。
 
-@namespace functionManager
-
 **起始版本：** 26.0.0
 
 <!--Device-unnamed-declare namespace functionManager--><!--Device-unnamed-declare namespace functionManager-End-->

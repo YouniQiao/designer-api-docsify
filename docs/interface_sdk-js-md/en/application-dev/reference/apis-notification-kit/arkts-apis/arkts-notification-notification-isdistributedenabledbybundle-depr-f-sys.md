@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="isdistributedenabledbybundle1"></a>
-
 ## isDistributedEnabledByBundle
 
 ```TypeScript
@@ -36,8 +34,6 @@ Obtains whether an application supports distributed notifications based on the b
 | bundle | BundleOption | Yes | Application bundle. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-
-<a id="isdistributedenabledbybundle2"></a>
 
 ## isDistributedEnabledByBundle
 

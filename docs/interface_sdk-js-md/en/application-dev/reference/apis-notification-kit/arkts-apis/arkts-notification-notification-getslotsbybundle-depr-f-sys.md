@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getslotsbybundle1"></a>
-
 ## getSlotsByBundle
 
 ```TypeScript
@@ -36,8 +34,6 @@ Obtains the notification slots of a specified application. This API uses an asyn
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationSlot](arkts-notification-notificationslot-i.md)&gt;&gt; | Yes | Callback used to return the result. |
 
-
-<a id="getslotsbybundle2"></a>
 
 ## getSlotsByBundle
 

@@ -49,8 +49,6 @@ Creates a single-level directory synchronously. If the parent directory does not
 | 13900042 | Unknown error |
 
 
-<a id="mkdirsync2"></a>
-
 ## mkdirSync
 
 ```TypeScript

@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="removegroupbybundle1"></a>
-
 ## removeGroupByBundle
 
 ```TypeScript
@@ -37,8 +35,6 @@ Removes notifications under a notification group of a specified application. Thi
 | groupName | string | Yes | Name of the notification group. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="removegroupbybundle2"></a>
 
 ## removeGroupByBundle
 

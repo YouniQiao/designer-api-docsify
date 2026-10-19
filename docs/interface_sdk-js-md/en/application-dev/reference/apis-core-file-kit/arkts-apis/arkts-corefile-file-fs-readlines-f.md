@@ -31,7 +31,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise used to return the<b>ReaderIterator</b> object. |
+| Promise&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Promise used to return the <b>ReaderIterator</b> object. |
 
 **Error codes:**
 
@@ -52,8 +52,6 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | 13900044 | Network is unreachable<br>**Applicable version:** 12 and later |
 
 
-<a id="readlines2"></a>
-
 ## readLines
 
 ```TypeScript
@@ -73,7 +71,7 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the<b>ReaderIterator</b> object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the <b>ReaderIterator</b> object. |
 
 **Error codes:**
 
@@ -92,8 +90,6 @@ Reads a file text line by line. Only the files in UTF-8 format are supported. Th
 | 13900041 | Quota exceeded |
 | 13900042 | Unknown error |
 
-
-<a id="readlines3"></a>
 
 ## readLines
 
@@ -115,7 +111,7 @@ Reads a file text line by line. Read options can be configured. Only the files i
 | --- | --- | --- | --- |
 | filePath | string | Yes | Application sandbox path of the file. |
 | options | [Options](arkts-corefile-file-fs-options-i.md) | Yes | Options. The options are as follows:<br>           - <b>encoding</b> (string): format of the string to be encoded. The default value is <b>'utf-8'</b>,   which is the only value supported. |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the<b>ReaderIterator</b> object. |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[ReaderIterator](arkts-corefile-file-fs-readeriterator-i.md)&gt; | Yes | Callback used to return the <b>ReaderIterator</b> object. |
 
 **Error codes:**
 

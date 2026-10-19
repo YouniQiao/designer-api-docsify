@@ -194,8 +194,6 @@ try {
 }
 ```
 
-<a id="getdevicename1"></a>
-
 ## getDeviceName
 
 ```TypeScript
@@ -255,8 +253,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="getdevicename2"></a>
 
 ## getDeviceName
 
@@ -318,8 +314,6 @@ try {
 }
 ```
 
-<a id="getrssivalue1"></a>
-
 ## getRssiValue
 
 ```TypeScript
@@ -374,8 +368,6 @@ try {
 }
 ```
 
-<a id="getrssivalue2"></a>
-
 ## getRssiValue
 
 ```TypeScript
@@ -427,8 +419,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="getservices1"></a>
 
 ## getServices
 
@@ -498,8 +488,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="getservices2"></a>
 
 ## getServices
 
@@ -1041,8 +1029,6 @@ try {
 }
 ```
 
-<a id="readcharacteristicvalue1"></a>
-
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1124,8 +1110,6 @@ try {
 }
 ```
 
-<a id="readcharacteristicvalue2"></a>
-
 ## readCharacteristicValue
 
 ```TypeScript
@@ -1201,8 +1185,6 @@ try {
 }
 ```
 
-<a id="readdescriptorvalue1"></a>
-
 ## readDescriptorValue
 
 ```TypeScript
@@ -1274,8 +1256,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="readdescriptorvalue2"></a>
 
 ## readDescriptorValue
 
@@ -1530,8 +1510,6 @@ try {
 }
 ```
 
-<a id="setcharacteristicchangeindication1"></a>
-
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1606,8 +1584,6 @@ try {
 }
 ```
 
-<a id="setcharacteristicchangeindication2"></a>
-
 ## setCharacteristicChangeIndication
 
 ```TypeScript
@@ -1676,8 +1652,6 @@ try {
   console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="setcharacteristicchangenotification1"></a>
 
 ## setCharacteristicChangeNotification
 
@@ -1752,8 +1726,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="setcharacteristicchangenotification2"></a>
 
 ## setCharacteristicChangeNotification
 
@@ -1932,8 +1904,6 @@ try {
 }
 ```
 
-<a id="writecharacteristicvalue1"></a>
-
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -2016,8 +1986,6 @@ try {
 }
 ```
 
-<a id="writecharacteristicvalue2"></a>
-
 ## writeCharacteristicValue
 
 ```TypeScript
@@ -2095,8 +2063,6 @@ try {
 }
 ```
 
-<a id="writedescriptorvalue1"></a>
-
 ## writeDescriptorValue
 
 ```TypeScript
@@ -2167,8 +2133,6 @@ try {
     console.error('errCode: ' + (err as BusinessError).code + ', errMessage: ' + (err as BusinessError).message);
 }
 ```
-
-<a id="writedescriptorvalue2"></a>
 
 ## writeDescriptorValue
 

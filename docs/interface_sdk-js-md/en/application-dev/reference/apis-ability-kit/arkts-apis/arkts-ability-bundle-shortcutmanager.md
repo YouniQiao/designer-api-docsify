@@ -20,9 +20,9 @@ import { shortcutManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllShortcutInfoForSelf](arkts-ability-shortcutmanager-getallshortcutinfoforself-f.md#getallshortcutinfoforself) | Obtains all the shortcut information defined in the [configuration](../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result. |
-| [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md#isshortcutsupported) | Checks whether the current device supports shortcuts. |
-| [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md#setshortcutvisibleforself) | Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result. |
+| [getAllShortcutInfoForSelf](arkts-ability-shortcutmanager-getallshortcutinfoforself-f.md#getallshortcutinfoforself-1) | Obtains all the shortcut information defined in the [configuration](../../../quick-start/module-configuration-file.md#shortcuts) file of the current application. This API uses a promise to return the result. |
+| [isShortcutSupported](arkts-ability-shortcutmanager-isshortcutsupported-f.md#isshortcutsupported-1) | Checks whether the current device supports shortcuts. |
+| [setShortcutVisibleForSelf](arkts-ability-shortcutmanager-setshortcutvisibleforself-f.md#setshortcutvisibleforself-1) | Sets whether to display the specified shortcut for the current application. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

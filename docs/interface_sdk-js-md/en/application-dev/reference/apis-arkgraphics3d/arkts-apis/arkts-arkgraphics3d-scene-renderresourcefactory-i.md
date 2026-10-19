@@ -6,8 +6,6 @@ export interface RenderResourceFactory
 
 Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share RenderContext.
 
-@interface RenderResourceFactory
-
 **Since:** 20
 
 <!--Device-unnamed-export interface RenderResourceFactory--><!--Device-unnamed-export interface RenderResourceFactory-End-->
@@ -249,8 +247,6 @@ function createSamplerResource(): Promise<Sampler> {
   return renderResourceFactory.createSampler(samplerParams);
 }
 ```
-
-<a id="createscene1"></a>
 
 ## createScene
 

@@ -28,7 +28,7 @@ import { distributedKVStore } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager) | 创建一个KVManager对象实例，用于管理数据库对象。 |
+| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager-1) | 创建一个KVManager对象实例，用于管理数据库对象。 |
 
 ### 类
 
@@ -52,7 +52,7 @@ import { distributedKVStore } from '@kit.ArkData';
 | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | 提供获取数据库结果集的相关方法，包括查询和移动数据读取位置等。同时允许打开的结果集的最大数量为8个。 |
 | [Options](arkts-arkdata-distributedkvstore-options-i.md) | 用于提供创建数据库的配置信息。 |
 | [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md) | SingleKVStore数据库实例，提供增加数据、删除数据和订阅数据变更、订阅数据端端同步完成的方法。 |
-| [Value](arkts-arkdata-distributedkvstore-value-i.md) | 存储在数据库中的值对象。 |
+| [Value](arkts-arkdata-distributedkvstore-value-i.md#value) | 存储在数据库中的值对象。 |
 
 <!--Del-->
 ### 接口（系统接口）

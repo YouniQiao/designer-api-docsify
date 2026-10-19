@@ -8,9 +8,9 @@ Enumerates the reasons for requesting keyboard input. <br>
 
 | Name | Value| Description |  
 | ------------ | -- | ------------------ |  
-| NONE | 0 | The keyboard request is triggered for no reason.|
-| MOUSE | 1 | The keyboard request is triggered by a mouse operation.|
-| TOUCH | 2 | The keyboard request is triggered by a touch operation.|
+| NONE | 0 | The keyboard request is triggered for no reason.|  
+| MOUSE | 1 | The keyboard request is triggered by a mouse operation.|  
+| TOUCH | 2 | The keyboard request is triggered by a touch operation.|  
 | OTHER | 20 | The keyboard request is triggered by other reasons.|
 
 **Since:** 19

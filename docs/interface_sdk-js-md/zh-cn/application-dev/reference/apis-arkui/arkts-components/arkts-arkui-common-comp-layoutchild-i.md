@@ -6,8 +6,6 @@ declare interface LayoutChild
 
 布局和测量发生时，框架传递给子组件的信息。
 
-@interface LayoutChild
-
 **起始版本：** 9
 
 **废弃版本：** 10

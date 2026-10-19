@@ -20,7 +20,7 @@ import { serial } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | Obtains the serial port list. This API uses a promise to return the result, which is a list of [SerialPort](arkts-basicservices-serial-serialport-i.md) objects. This API is used to identify available serial port devices in scenarios such as industrial device connection, IoT device management, and embedded system debugging. |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist-1) | Obtains the serial port list. This API uses a promise to return the result, which is a list of [SerialPort](arkts-basicservices-serial-serialport-i.md) objects. This API is used to identify available serial port devices in scenarios such as industrial device connection, IoT device management, and embedded system debugging. |
 
 <!--Del-->
 ### Functions(System API)

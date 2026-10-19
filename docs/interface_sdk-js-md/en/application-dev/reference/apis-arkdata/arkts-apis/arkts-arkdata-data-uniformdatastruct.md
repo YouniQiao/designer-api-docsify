@@ -26,5 +26,5 @@ import { uniformDataStruct } from '@kit.ArkData';
 | [HTML](arkts-arkdata-uniformdatastruct-html-i.md) | Represents data of the HTML type. |
 | [Hyperlink](arkts-arkdata-uniformdatastruct-hyperlink-i.md) | Represents data of the hyperlink type. |
 | [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md) | Represents data of the home screen icon type defined by the system. |
-| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md) | Represents data of the pixel map type defined by the system. |
+| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md#pixelmap) | Represents data of the pixel map type defined by the system. |
 | [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md) | Represents data of the plain text type. |

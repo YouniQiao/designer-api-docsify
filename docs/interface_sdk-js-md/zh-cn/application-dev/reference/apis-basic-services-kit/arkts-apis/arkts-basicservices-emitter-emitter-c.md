@@ -40,8 +40,6 @@ constructor()
 let emitter1: emitter.Emitter = new emitter.Emitter();
 ```
 
-<a id="emit1"></a>
-
 ## emit
 
 ```TypeScript
@@ -82,8 +80,6 @@ let eventData: emitter.EventData = {
 
 emitter1.emit('eventId', eventData);
 ```
-
-<a id="emit2"></a>
 
 ## emit
 
@@ -135,8 +131,6 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter1.emit('eventId', eventData);
 ```
 
-<a id="emit3"></a>
-
 ## emit
 
 ```TypeScript
@@ -182,8 +176,6 @@ let eventData: emitter.EventData = {
 
 emitter1.emit('eventId', options, eventData);
 ```
-
-<a id="emit4"></a>
 
 ## emit
 
@@ -274,8 +266,6 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 let count: number = emitter1.getListenerCount('eventId');
 ```
 
-<a id="off1"></a>
-
 ## off
 
 ```TypeScript
@@ -284,7 +274,7 @@ off(eventId: string): void
 
 取消当前Emitter类实例事件ID为eventId的所有订阅。
 
-使用该接口取消某个事件订阅后，已通过[emit](#emit1)接口发布但尚未被执行的事件将被取消。
+使用该接口取消某个事件订阅后，已通过[emit](#emit)接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 22
 
@@ -308,17 +298,15 @@ let emitter1: emitter.Emitter = new emitter.Emitter();
 emitter1.off('eventId');
 ```
 
-<a id="off2"></a>
-
 ## off
 
 ```TypeScript
 off(eventId: string, callback: Callback<EventData>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](#on1)或[once](#once1)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+取消订阅当前Emitter类实例的事件。仅当已使用[on](#on-1)或[once](#once-1)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
 
-使用该接口取消事件订阅后，已通过[emit](#emit1)接口发布但尚未被执行的事件将被取消。
+使用该接口取消事件订阅后，已通过[emit](#emit)接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 22
 
@@ -349,17 +337,15 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter1.off('eventId', callback);
 ```
 
-<a id="off3"></a>
-
 ## off
 
 ```TypeScript
 off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-取消订阅当前Emitter类实例的事件。仅当已使用[on](#on2)或[once](#once2)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
+取消订阅当前Emitter类实例的事件。仅当已使用[on](#on-2)或[once](#once-2)接口订阅了事件ID为eventId且回调处理函数为callback的事件时，该接口才生效。
 
-使用该接口取消事件订阅后，已通过[emit](#emit2)接口发布但尚未被执行的事件将被取消。
+使用该接口取消事件订阅后，已通过[emit](#emit-1)接口发布但尚未被执行的事件将被取消。
 
 **起始版本：** 22
 
@@ -404,8 +390,6 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.off('eventId', callback);
 ```
 
-<a id="on1"></a>
-
 ## on
 
 ```TypeScript
@@ -442,8 +426,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 
 emitter1.on('eventId', callback);
 ```
-
-<a id="on2"></a>
 
 ## on
 
@@ -496,8 +478,6 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 emitter1.on('eventId', callback);
 ```
 
-<a id="once1"></a>
-
 ## once
 
 ```TypeScript
@@ -534,8 +514,6 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 
 emitter1.once('eventId', callback);
 ```
-
-<a id="once2"></a>
 
 ## once
 

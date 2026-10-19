@@ -20,8 +20,6 @@ interface CameraInput
 import { camera } from '@kit.CameraKit';
 ```
 
-<a id="close1"></a>
-
 ## close
 
 ```TypeScript
@@ -65,8 +63,6 @@ function closeCameraInput(cameraInput: camera.CameraInput): void {
   });
 }
 ```
-
-<a id="close2"></a>
 
 ## close
 
@@ -227,12 +223,6 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可触发该事件并返回结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application.<br>**适用版本：** 12 - 22 |
-
 **示例**
 
 ```TypeScript
@@ -327,12 +317,6 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可触发该事件并返回结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
 
-**错误码：**
-
-| 错误码ID | 错误信息 |
-| --- | --- |
-| [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | Not System Application.<br>**适用版本：** 12 - 22 |
-
 **示例**
 
 ```TypeScript
@@ -355,8 +339,6 @@ function registerCameraOcclusionDetection(cameraInput: camera.CameraInput): void
   cameraInput.on('cameraOcclusionDetection', callback);
 }
 ```
-
-<a id="open1"></a>
 
 ## open
 
@@ -404,8 +386,6 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
 }
 ```
 
-<a id="open2"></a>
-
 ## open
 
 ```TypeScript
@@ -450,8 +430,6 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
   });
 }
 ```
-
-<a id="open3"></a>
 
 ## open
 
@@ -502,8 +480,6 @@ function openCameraInput(cameraInput: camera.CameraInput): void {
   });
 }
 ```
-
-<a id="open4"></a>
 
 ## open
 

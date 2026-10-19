@@ -26,5 +26,5 @@ import { uniformDataStruct } from '@kit.ArkData';
 | [HTML](arkts-arkdata-uniformdatastruct-html-i.md) | HTML类型数据，用于描述超文本标记语言数据。创建HTML对象后，可在拖拽、复制粘贴等场景中传递富文本内容，支持跨应用的HTML格式数据交互，并可通过uriAuthorizationPolicies控制URI授权策略。 |
 | [Hyperlink](arkts-arkdata-uniformdatastruct-hyperlink-i.md) | 超链接类型数据，用于描述和管理超链接信息。创建Hyperlink对象后，可用于拖拽、分享等场景，实现跨应用的超链接数据传递和跳转。 |
 | [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md) | 系统定义的桌面图标类型数据，用于跨应用共享桌面图标信息。典型使用场景包括：桌面启动器拖拽图标、应用商店分享应用图标或创建快捷方式等。 |
-| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md) | 系统定义的像素图类型数据，用于描述图像像素数据。创建PixelMap对象后，可用于图像拖拽、图像共享等场景，实现跨应用的图像数据传递。 |
+| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md#pixelmap) | 系统定义的像素图类型数据，用于描述图像像素数据。创建PixelMap对象后，可用于图像拖拽、图像共享等场景，实现跨应用的图像数据传递。 |
 | [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md) | 纯文本类型数据，用于描述和管理纯文本内容。创建PlainText对象后，可用于拖拽、复制粘贴等数据共享场景，实现跨应用的纯文本数据交互。 |

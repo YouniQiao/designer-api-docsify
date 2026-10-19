@@ -928,7 +928,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncNestingDepth(OH_HiDebug_ProfilerOptions 
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t depth | [in] 允许的最大异步嵌套深度。 |
+| uint32_t depth | [in] 允许的最大异步嵌套深度，取值范围为[1, 16]。 |
 
 **返回值：**
 
@@ -955,7 +955,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxAsyncTaskStackDepth(OH_HiDebug_ProfilerOption
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t depth | [in] 最大异步任务栈深。 |
+| uint32_t depth | [in] 最大异步任务回栈深度，取值范围为[1, 256]。 |
 
 **返回值：**
 
@@ -982,7 +982,7 @@ HiDebug_ErrorCode OH_HiDebug_SetSampleIntervalBytes(OH_HiDebug_ProfilerOptions *
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t bytes | [in] 采样间隔。 |
+| uint32_t bytes | [in] 采样间隔，取值范围为[384, 4294967295]，单位为Byte。 |
 
 **返回值：**
 
@@ -1009,7 +1009,7 @@ HiDebug_ErrorCode OH_HiDebug_SetStatisticsIntervalSec(OH_HiDebug_ProfilerOptions
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t seconds | [in] 统计时间间隔。 |
+| uint32_t seconds | [in] 统计间隔，取值范围为[1, 3600]，单位为s。 |
 
 **返回值：**
 
@@ -1036,7 +1036,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxStackDepth(OH_HiDebug_ProfilerOptions *opts, 
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t depth | [in] 最大回栈深度。 |
+| uint32_t depth | [in] 最大回栈深度，取值范围为[1, 30]。 |
 
 **返回值：**
 
@@ -1063,7 +1063,7 @@ HiDebug_ErrorCode OH_HiDebug_SetFilterSize(OH_HiDebug_ProfilerOptions *opts, uin
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t size | [in] 过滤大小（单位：字节）。 |
+| uint32_t size | [in] 过滤大小阈值，取值范围为[1, 4294967295]，单位为Byte。 |
 
 **返回值：**
 
@@ -1090,7 +1090,7 @@ HiDebug_ErrorCode OH_HiDebug_SetMaxDurationSec(OH_HiDebug_ProfilerOptions *opts,
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_HiDebug_ProfilerOptions](capi-hidebug-oh-hidebug-profileroptions.md) *opts | [in] 指向OH_HiDebug_ProfilerOptions结构体的指针，该参数须为非空指针。 |
-| uint32_t seconds | [in] 最大采集持续时间（单位：秒）。 |
+| uint32_t seconds | [in] 最大采集时长，取值范围为[1, 3600]，单位为s。 |
 
 **返回值：**
 

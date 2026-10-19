@@ -6,8 +6,6 @@ export interface AccessRule
 
 访问规则。
 
-@interface AccessRule
-
 **起始版本：** 20
 
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->

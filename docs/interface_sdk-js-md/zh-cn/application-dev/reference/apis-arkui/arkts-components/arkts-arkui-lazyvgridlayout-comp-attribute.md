@@ -16,8 +16,6 @@ declare class LazyVGridLayoutAttribute extends LazyGridLayoutAttribute<LazyVGrid
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-<a id="columnstemplate1"></a>
-
 ## columnsTemplate
 
 ```TypeScript
@@ -60,8 +58,6 @@ auto-fit模式和auto-stretch模式只支持track-size为一个有效列宽值�
 | --- | --- | --- | --- |
 | value | string | 是 | 当前网格布局列的数量、固定列宽或最小列宽值。 |
 
-<a id="columnstemplate2"></a>
-
 ## columnsTemplate
 
 ```TypeScript
@@ -70,7 +66,7 @@ columnsTemplate(template: string | ItemFillPolicy)
 
 设置当前网格布局列的数量、固定列宽或最小列宽值，不设置时默认1列。
 
-当template设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate1)。
+当template设置为string类型时，使用方法参考[columnsTemplate(value: string)](#columnstemplate)。
 
 当template设置为ItemFillPolicy类型时，将根据LazyVGridLayout内容区宽度对应的[断点类型](../../../ui/arkts-layout-development-grid-layout.md#栅格容器断点)确定列数。
 

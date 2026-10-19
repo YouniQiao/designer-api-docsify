@@ -28,8 +28,6 @@ export declare interface SoundPool
 
 **系统能力：** SystemCapability.Multimedia.Media.SoundPool
 
-<a id="load1"></a>
-
 ## load
 
 ```TypeScript
@@ -68,8 +66,6 @@ load(uri: string, callback: AsyncCallback<number>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="load2"></a>
 
 ## load
 
@@ -115,8 +111,6 @@ load(uri: string): Promise<number>
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="load3"></a>
-
 ## load
 
 ```TypeScript
@@ -155,8 +149,6 @@ load(fd: number, offset: number, length: number, callback: AsyncCallback<number>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="load4"></a>
 
 ## load
 
@@ -412,8 +404,6 @@ on(type: 'errorOccurred', callback: Callback<ErrorInfo>): void
 | type | 'errorOccurred' | 是 | 事件回调类型，支持的事件为'errorOccurred'，当用户或系统操作导致错误，触发该事件。 |
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)&gt; | 是 | 回调函数，返回错误事件回调方法。在使用播放器的过程中发生错误时，提供错误信息[ErrorInfo](arkts-media-soundpool-errorinfo-i.md)。 |
 
-<a id="play1"></a>
-
 ## play
 
 ```TypeScript
@@ -444,8 +434,6 @@ play(soundID: number, params: PlayParameters, callback: AsyncCallback<number>): 
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
 
-<a id="play2"></a>
-
 ## play
 
 ```TypeScript
@@ -474,8 +462,6 @@ play(soundID: number, callback: AsyncCallback<number>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="play3"></a>
 
 ## play
 
@@ -512,8 +498,6 @@ play(soundID: number, params?: PlayParameters): Promise<number>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="release1"></a>
-
 ## release
 
 ```TypeScript
@@ -539,8 +523,6 @@ release(callback: AsyncCallback<void>): void
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="release2"></a>
 
 ## release
 
@@ -590,8 +572,6 @@ setInterruptMode(interruptMode: media.SoundInterruptMode): void
 | --- | --- | --- | --- |
 | interruptMode | [media.SoundInterruptMode](../../apis-media/arkts-apis/arkts-media-media-soundinterruptmode-e.md) | 是 | 同一ID音频在播放时的打断模式，通过media.SoundInterruptMode枚举获取。 |
 
-<a id="setloop1"></a>
-
 ## setLoop
 
 ```TypeScript
@@ -621,8 +601,6 @@ setLoop(streamID: number, loop: number, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="setloop2"></a>
 
 ## setLoop
 
@@ -659,8 +637,6 @@ setLoop(streamID: number, loop: number): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="setpriority1"></a>
-
 ## setPriority
 
 ```TypeScript
@@ -690,8 +666,6 @@ setPriority(streamID: number, priority: number, callback: AsyncCallback<void>): 
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="setpriority2"></a>
 
 ## setPriority
 
@@ -728,8 +702,6 @@ setPriority(streamID: number, priority: number): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="setrate1"></a>
-
 ## setRate
 
 ```TypeScript
@@ -759,8 +731,6 @@ setRate(streamID: number, rate: audio.AudioRendererRate, callback: AsyncCallback
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="setrate2"></a>
 
 ## setRate
 
@@ -797,8 +767,6 @@ setRate(streamID: number, rate: audio.AudioRendererRate): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="setvolume1"></a>
-
 ## setVolume
 
 ```TypeScript
@@ -829,8 +797,6 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number, callback: A
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="setvolume2"></a>
 
 ## setVolume
 
@@ -868,8 +834,6 @@ setVolume(streamID: number, leftVolume: number, rightVolume: number): Promise<vo
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="stop1"></a>
-
 ## stop
 
 ```TypeScript
@@ -898,8 +862,6 @@ stop(streamID: number, callback: AsyncCallback<void>): void
 | [401](../../errorcode-universal.md#401-函数参数数量或参数类型不匹配) | Parameter error. Possible causes: 1.Mandatory parameters are left unspecified. 2.Incorrect parameter types. 3.Parameter verification failed. Return by callback. |
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="stop2"></a>
 
 ## stop
 
@@ -935,8 +897,6 @@ stop(streamID: number): Promise<void>
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by promise. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by promise. |
 
-<a id="unload1"></a>
-
 ## unload
 
 ```TypeScript
@@ -965,8 +925,6 @@ unload(soundID: number, callback: AsyncCallback<void>): void
 | [5400102](../errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. Return by callback. |
 | [5400103](../errorcode-media.md#5400103-出现io错误) | I/O error. Return by callback. |
 | [5400105](../errorcode-media.md#5400105-播放服务死亡) | Service died. Return by callback. |
-
-<a id="unload2"></a>
 
 ## unload
 

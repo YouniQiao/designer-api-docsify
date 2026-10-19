@@ -37,7 +37,7 @@ import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [MeasureText](arkts-arkui-measure-measuretext-c.md) | Defines the Measure interface. |
+| [MeasureText](arkts-arkui-measure-measuretext-c.md#measuretext) | Defines the Measure interface. |
 
 ### Interfaces
 

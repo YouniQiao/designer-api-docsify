@@ -6,8 +6,6 @@ declare namespace verticalPanelManager
 
 Defines a vertical domain panel manager.
 
-@namespace verticalPanelManager
-
 **Since:** 20
 
 <!--Device-unnamed-declare namespace verticalPanelManager--><!--Device-unnamed-declare namespace verticalPanelManager-End-->

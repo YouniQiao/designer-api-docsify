@@ -18,8 +18,6 @@ TLSSocket连接。在调用TLSSocket的方法前，需要先通过[socket.constr
 import { socket } from '@kit.NetworkKit';
 ```
 
-<a id="bind1"></a>
-
 ## bind
 
 ```TypeScript
@@ -75,8 +73,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
   console.info('bind success');
 });
 ```
-
-<a id="bind2"></a>
 
 ## bind
 
@@ -137,8 +133,6 @@ tls.bind(bindAddr).then(() => {
 });
 ```
 
-<a id="close1"></a>
-
 ## close
 
 ```TypeScript
@@ -185,8 +179,6 @@ tls.close((err: BusinessError) => {
 });
 ```
 
-<a id="close2"></a>
-
 ## close
 
 ```TypeScript
@@ -230,8 +222,6 @@ tls.close().then(() => {
   console.error("failed" + err);
 });
 ```
-
-<a id="connect1"></a>
 
 ## connect
 
@@ -433,8 +423,6 @@ tlsOneWay.connect(tlsOneWayConnectOptions, (err: BusinessError) => {
   console.error("connect callback error" + err);
 });
 ```
-
-<a id="connect2"></a>
 
 ## connect
 
@@ -650,8 +638,6 @@ tlsOneWay.connect(tlsOneWayConnectOptions).then(() => {
 });
 ```
 
-<a id="getcertificate1"></a>
-
 ## getCertificate
 
 ```TypeScript
@@ -710,8 +696,6 @@ tls.getCertificate().then((data: socket.X509CertRawData) => {
   console.error("failed" + err);
 });
 ```
-
-<a id="getcertificate2"></a>
 
 ## getCertificate
 
@@ -772,8 +756,6 @@ tls.getCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
-<a id="getciphersuite1"></a>
-
 ## getCipherSuite
 
 ```TypeScript
@@ -818,8 +800,6 @@ tls.getCipherSuite((err: BusinessError, data: Array<string>) => {
   }
 });
 ```
-
-<a id="getciphersuite2"></a>
 
 ## getCipherSuite
 
@@ -910,8 +890,6 @@ tls.getLocalAddress().then((localAddress: socket.NetAddress) => {
 })
 ```
 
-<a id="getprotocol1"></a>
-
 ## getProtocol
 
 ```TypeScript
@@ -956,8 +934,6 @@ tls.getProtocol((err: BusinessError, data: string) => {
 });
 ```
 
-<a id="getprotocol2"></a>
-
 ## getProtocol
 
 ```TypeScript
@@ -999,8 +975,6 @@ tls.getProtocol().then((data: string) => {
   console.error("failed" + err);
 });
 ```
-
-<a id="getremoteaddress1"></a>
 
 ## getRemoteAddress
 
@@ -1045,8 +1019,6 @@ tls.getRemoteAddress((err: BusinessError, data: socket.NetAddress) => {
 });
 ```
 
-<a id="getremoteaddress2"></a>
-
 ## getRemoteAddress
 
 ```TypeScript
@@ -1087,8 +1059,6 @@ tls.getRemoteAddress().then(() => {
   console.error('getRemoteAddress fail');
 });
 ```
-
-<a id="getremotecertificate1"></a>
 
 ## getRemoteCertificate
 
@@ -1151,8 +1121,6 @@ tls.getRemoteCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
-<a id="getremotecertificate2"></a>
-
 ## getRemoteCertificate
 
 ```TypeScript
@@ -1214,8 +1182,6 @@ tls.getRemoteCertificate().then((data: socket.X509CertRawData) => {
 });
 ```
 
-<a id="getsignaturealgorithms1"></a>
-
 ## getSignatureAlgorithms
 
 ```TypeScript
@@ -1258,8 +1224,6 @@ tls.getSignatureAlgorithms((err: BusinessError, data: Array<string>) => {
   }
 });
 ```
-
-<a id="getsignaturealgorithms2"></a>
 
 ## getSignatureAlgorithms
 
@@ -1314,7 +1278,7 @@ getSocketFd(): Promise<number>
 > 
 > - bind方法调用成功后，才可调用此方法。
 > 
-> - 文件描述符的生命周期由系统管理，应用可以通过[close](#close1)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
+> - 文件描述符的生命周期由系统管理，应用可以通过[close](#close)方法关闭Socket连接，避免直接操作文件描述符进行关闭。
 
 **起始版本：** 16
 
@@ -1349,8 +1313,6 @@ tls.getSocketFd().then((data: number) => {
   console.info("tls socket fd: " + data);
 })
 ```
-
-<a id="getstate1"></a>
 
 ## getState
 
@@ -1405,8 +1367,6 @@ tls.getState((err: BusinessError, data: socket.SocketStateBase) => {
   console.info('getState success:' + JSON.stringify(data));
 });
 ```
-
-<a id="getstate2"></a>
 
 ## getState
 
@@ -1774,8 +1734,6 @@ tls.bind(bindAddr, (err: BusinessError) => {
 });
 ```
 
-<a id="send1"></a>
-
 ## send
 
 ```TypeScript
@@ -1823,8 +1781,6 @@ tls.send("xxxx", (err: BusinessError) => {
   }
 });
 ```
-
-<a id="send2"></a>
 
 ## send
 
@@ -1876,8 +1832,6 @@ tls.send("xxxx").then(() => {
   console.error("failed" + err);
 });
 ```
-
-<a id="setextraoptions1"></a>
 
 ## setExtraOptions
 
@@ -1951,8 +1905,6 @@ tls.setExtraOptions(tcpExtraOptions, (err: BusinessError) => {
   console.info('setExtraOptions success');
 });
 ```
-
-<a id="setextraoptions2"></a>
 
 ## setExtraOptions
 

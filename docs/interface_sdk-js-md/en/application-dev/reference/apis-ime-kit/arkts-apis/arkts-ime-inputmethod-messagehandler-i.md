@@ -9,7 +9,7 @@ Represents a custom communication object. <br> <br>
 > <br>
 > You can register this object to receive custom communication data sent by the input method application. When the <br>
 > custom communication data is received, the <br>
-> [onMessage](#onmessage2) callback in this <br>
+> [onMessage](#onmessage) callback in this <br>
 > object is triggered. <br>
 > <br>
 > This object is globally unique. After multiple registrations, only the last registered object is valid and <br>
@@ -30,8 +30,6 @@ Represents a custom communication object. <br> <br>
 ```TypeScript
 import { inputMethod } from '@kit.IMEKit';
 ```
-
-<a id="onmessage2"></a>
 
 ## onMessage
 

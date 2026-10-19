@@ -22,8 +22,8 @@ import { kioskManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode) | Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
-| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitkioskmode) | Exits kiosk mode. This API uses a promise to return the result. This API takes effect only for applications that have entered kiosk mode. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
+| [enterKioskMode](arkts-ability-kioskmanager-enterkioskmode-f.md#enterkioskmode-1) | Enters kiosk mode. This API uses a promise to return the result. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
+| [exitKioskMode](arkts-ability-kioskmanager-exitkioskmode-f.md#exitkioskmode-1) | Exits kiosk mode. This API uses a promise to return the result. This API takes effect only for applications that have entered kiosk mode. This API can be properly called only on phones, PC/2-in-1 devices, and tablets. On other devices, it returns the error code 801. |
 
 <!--Del-->
 ### Functions(System API)

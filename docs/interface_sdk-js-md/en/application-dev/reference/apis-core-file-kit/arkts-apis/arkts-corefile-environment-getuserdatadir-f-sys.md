@@ -6,8 +6,6 @@
 import { Environment } from '@kit.CoreFileKit';
 ```
 
-<a id="getuserdatadir1"></a>
-
 ## getUserDataDir
 
 ```TypeScript
@@ -38,8 +36,6 @@ Obtains the root directory of user files. This API uses a promise to return the 
 | 13900020 | Invalid argument |
 | 13900042 | Unknown error |
 
-
-<a id="getuserdatadir2"></a>
 
 ## getUserDataDir
 

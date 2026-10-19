@@ -6,8 +6,6 @@ interface HardwareDescriptor
 
 表示分布式硬件的描述信息。
 
-@typedef HardwareDescriptor
-
 **起始版本：** 11
 
 <!--Device-hardwareManager-interface HardwareDescriptor--><!--Device-hardwareManager-interface HardwareDescriptor-End-->

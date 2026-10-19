@@ -4,7 +4,7 @@
 interface AVImageGenerator
 ```
 
-AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator3) to create an AVImageGenerator instance.
+AVImageGenerator is a class for video thumbnail retrieval. It provides APIs to obtain a thumbnail from a video. Before calling any API in AVImageGenerator, you must use [createAVImageGenerator()](arkts-media-media-createavimagegenerator-f.md#createavimagegenerator-2) to create an AVImageGenerator instance.
 
 For details about the demo for obtaining video thumbnails, see [Obtaining Video Thumbnails](../../../media/media/avimagegenerator.md).
 
@@ -18,8 +18,6 @@ For details about the demo for obtaining video thumbnails, see [Obtaining Video 
 
 ```TypeScript
 ```
-
-<a id="fetchframebytime1"></a>
 
 ## fetchFrameByTime
 
@@ -91,8 +89,6 @@ media.createAVImageGenerator(async (err: BusinessError, generator: media.AVImage
   }
 });
 ```
-
-<a id="fetchframebytime3"></a>
 
 ## fetchFrameByTime
 
@@ -237,8 +233,6 @@ media.createAVImageGenerator(async (err: BusinessError, generator: media.AVImage
 });
 ```
 
-<a id="release1"></a>
-
 ## release
 
 ```TypeScript
@@ -290,8 +284,6 @@ media.createAVImageGenerator((err: BusinessError, generator: media.AVImageGenera
   }
 });
 ```
-
-<a id="release2"></a>
 
 ## release
 

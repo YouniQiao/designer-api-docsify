@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="getallactivenotifications1"></a>
-
 ## getAllActiveNotifications
 
 ```TypeScript
@@ -35,8 +33,6 @@ function getAllActiveNotifications(callback: AsyncCallback<Array<NotificationReq
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;Array&lt;[NotificationRequest](arkts-notification-notificationrequest-i.md)&gt;&gt; | 是 | 获取活动通知回调函数。 |
 
-
-<a id="getallactivenotifications2"></a>
 
 ## getAllActiveNotifications
 

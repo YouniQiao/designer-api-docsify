@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="isnotificationenabled1"></a>
-
 ## isNotificationEnabled
 
 ```TypeScript
@@ -36,8 +34,6 @@ Checks whether notification is enabled for a specified application. This API use
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-
-<a id="isnotificationenabled2"></a>
 
 ## isNotificationEnabled
 
@@ -74,8 +70,6 @@ Checks whether notification is enabled for a specified application. This API use
 | Promise&lt;boolean&gt; | Promise used to return the result. |
 
 
-<a id="isnotificationenabled3"></a>
-
 ## isNotificationEnabled
 
 ```TypeScript
@@ -104,8 +98,6 @@ Checks whether notification is enabled for this application. This API uses an as
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
-
-<a id="isnotificationenabled4"></a>
 
 ## isNotificationEnabled
 
@@ -136,8 +128,6 @@ Checks whether notification is enabled for this application. This API uses a pro
 | Promise&lt;boolean&gt; | Promise used to return the result. |
 
 
-<a id="isnotificationenabled5"></a>
-
 ## isNotificationEnabled
 
 ```TypeScript
@@ -167,8 +157,6 @@ Checks whether notification is enabled for a specified user. This API uses an as
 | userId | number | Yes | User ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
 
-
-<a id="isnotificationenabled6"></a>
 
 ## isNotificationEnabled
 

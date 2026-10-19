@@ -51,8 +51,6 @@ You can configure the **recursion** parameter in **options** to recursively list
 | 13900042 | Unknown error |
 
 
-<a id="listfile2"></a>
-
 ## listFile
 
 ```TypeScript
@@ -86,8 +84,6 @@ Lists the names of all files and directories in the current path. A file name ar
 | 13900018 | Not a directory |
 | 13900042 | Unknown error |
 
-
-<a id="listfile3"></a>
 
 ## listFile
 

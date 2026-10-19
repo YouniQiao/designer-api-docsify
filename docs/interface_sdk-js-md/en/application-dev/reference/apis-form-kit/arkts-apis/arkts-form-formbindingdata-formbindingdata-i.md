@@ -6,8 +6,6 @@ interface FormBindingData
 
 Defines the createFormBindingData result interface.
 
-@typedef FormBindingData
-
 **Since:** 9
 
 <!--Device-formBindingData-interface FormBindingData--><!--Device-formBindingData-interface FormBindingData-End-->

@@ -5,8 +5,6 @@
 ```TypeScript
 ```
 
-<a id="displaybadge1"></a>
-
 ## displayBadge
 
 ```TypeScript
@@ -37,8 +35,6 @@ Sets whether to enable the notification badge for a specified application. This 
 | enable | boolean | Yes | Whether to enable notification. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
-
-<a id="displaybadge2"></a>
 
 ## displayBadge
 

@@ -2,8 +2,6 @@
 
 This module provides app domain verification info.
 
-@namespace appDomainVerify
-
 **Since:** 13
 
 <!--Device-unnamed-declare namespace appDomainVerify--><!--Device-unnamed-declare namespace appDomainVerify-End-->
