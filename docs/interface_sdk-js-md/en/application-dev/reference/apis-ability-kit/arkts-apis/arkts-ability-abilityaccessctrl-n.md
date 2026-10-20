@@ -24,7 +24,7 @@ import { abilityAccessCtrl, Context, PermissionRequestResult, Permissions } from
 
 | Name | Description |
 | --- | --- |
-| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager) | Creates a program access control management instance for scenarios such as permission verification, runtime permission request, settings page authorization guidance, and permission status change monitoring. After the call is successful, an AtManager instance is returned, which can be used for subsequent permission management operations. |
+| [createAtManager](arkts-ability-abilityaccessctrl-createatmanager-f.md#createatmanager-1) | Creates a program access control management instance for scenarios such as permission verification, runtime permission request, settings page authorization guidance, and permission status change monitoring. After the call is successful, an AtManager instance is returned, which can be used for subsequent permission management operations. |
 
 ### Interfaces
 

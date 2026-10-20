@@ -4,7 +4,7 @@
 export interface Effect extends SceneResource
 ```
 
-Effect resource, which inherits from SceneResource. It is obtained from the createEffect API.
+Effect resource, which inherits from [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md). It is obtained from the [createEffect](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md#createeffect) API.
 
 **Inheritance/Implementation:** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

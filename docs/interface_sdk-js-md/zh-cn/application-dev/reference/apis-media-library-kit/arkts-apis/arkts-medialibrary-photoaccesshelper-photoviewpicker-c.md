@@ -33,7 +33,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
@@ -99,7 +99,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10
@@ -162,7 +162,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 > **注意：**
 > 
 > 此接口返回的PhotoSelectResult对象中的photoUris具有永久授权，可通过调用接口
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > 去使用。具体操作请参考[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。
 
 **起始版本：** 10

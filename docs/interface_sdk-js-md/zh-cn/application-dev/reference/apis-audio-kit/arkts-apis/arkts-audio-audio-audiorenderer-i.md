@@ -4,7 +4,7 @@
 interface AudioRenderer
 ```
 
-音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)获取AudioRenderer实例。
+音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer-1)获取AudioRenderer实例。
 
 **起始版本：** 8
 
@@ -2400,7 +2400,7 @@ setIndependentAudioSessionStrategy(strategy: AudioSessionStrategy, behavior: num
 > **说明：** 
 > 
 > 当音频渲染器在运行状态时调用此接口后，必须重新调用接口
-> [start](#start)使其生效。
+> [start](#start-1)使其生效。
 
 **起始版本：** 24
 

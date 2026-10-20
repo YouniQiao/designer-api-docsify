@@ -50,7 +50,7 @@ cachedCount(count: number, show: boolean)
 
 Sets the number of flow items to be cached (preloaded) and specifies whether to display the preloaded nodes.
 
-This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
+This attribute can be combined with the [clip](arkts-arkui-common-comp-commonmethod-c.md#clip-1) or [clipContent](../../../reference/apis-arkui/arkui-ts/ts-container-scrollable-common.md#clipcontent14) attributes to display the preloaded nodes.
 
 This parameter takes effect only when used with [LazyForEach](../../../ui/rendering-control/arkts-rendering-control-lazyforeach.md) or the [Repeat](../../../ui/rendering-control/arkts-new-rendering-control-repeat.md) component that has virtualScroll enabled. **FlowItem** elements outside the visible area and cache range will be released.
 
@@ -131,7 +131,7 @@ columnsTemplate(value: string | ItemFillPolicy)
 
 Sets the number of columns in the layout of the current **WaterFlow** component. If this attribute is not set, one column is used by default. When [layoutDirection](#layoutdirection) is set to horizontal layout (**FlexDirection.Row** or **FlexDirection.RowReverse**), **columnsTemplate** does not take effect, and the layout is controlled by [rowsTemplate](#rowstemplate). When [sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md) is used for group mixing layout, this attribute is ignored.
 
-When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate) for the usage.
+When the value is of the string type, refer to [columnsTemplate(value: string)](#columnstemplate-1) for the usage.
 
 When the value is of the **ItemFillPolicy** type, the number of columns is determined based on the [breakpoint type](../../../ui/arkts-layout-development-grid-layout.md#breakpoints) corresponding to the width of the **WaterFlow** component.
 
@@ -421,7 +421,7 @@ Sets the gap between rows. When group layout is used, each group can set the row
 rowsTemplate(value: string)
 ```
 
-Sets the number of rows in the layout of the current **WaterFlow** component. If this attribute is not set, one row is used by default. When [layoutDirection](#layoutdirection) is set to vertical layout (**FlexDirection.Column** or **FlexDirection.ColumnReverse**) or is not set, **rowsTemplate** does not take effect, and the layout is controlled by [columnsTemplate](#columnstemplate). When [sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md) is used for group mixing layout, this attribute is ignored.
+Sets the number of rows in the layout of the current **WaterFlow** component. If this attribute is not set, one row is used by default. When [layoutDirection](#layoutdirection) is set to vertical layout (**FlexDirection.Column** or **FlexDirection.ColumnReverse**) or is not set, **rowsTemplate** does not take effect, and the layout is controlled by [columnsTemplate](#columnstemplate-1). When [sections](arkts-arkui-waterflow-comp-waterflowoptions-i.md) is used for group mixing layout, this attribute is ignored.
 
 For example, **'1fr 1fr 2fr'** indicates three rows, with the first row taking up 1/4 of the parent component's full height, the second row 1/4, and the third row 2/4.
 

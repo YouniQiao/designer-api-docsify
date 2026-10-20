@@ -4,7 +4,7 @@
 export interface Effect extends SceneResource
 ```
 
-特效类型，继承自SceneResource。由createEffect接口获得。
+特效类型，继承自[SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)。由[createEffect](arkts-arkgraphics3d-scene-sceneresourcefactory-i.md#createeffect)接口获得。
 
 **继承/实现关系：** Effect extends [SceneResource](arkts-arkgraphics3d-sceneresources-sceneresource-i.md)
 

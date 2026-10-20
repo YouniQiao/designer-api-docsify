@@ -559,6 +559,7 @@
   - [SheetKeyboardAvoidMode](arkts-arkui-common-comp-sheetkeyboardavoidmode-e.md)
   - [SheetMode](arkts-arkui-common-comp-sheetmode-e.md)
   - [SheetSize](arkts-arkui-common-comp-sheetsize-e.md)
+  - [SheetTitleBarHoverMode](arkts-arkui-common-comp-sheettitlebarhovermode-e.md)
   - [SheetType](arkts-arkui-common-comp-sheettype-e.md)
   - [SourceTool](arkts-arkui-common-comp-sourcetool-e.md)
   - [SourceType](arkts-arkui-common-comp-sourcetype-e.md)

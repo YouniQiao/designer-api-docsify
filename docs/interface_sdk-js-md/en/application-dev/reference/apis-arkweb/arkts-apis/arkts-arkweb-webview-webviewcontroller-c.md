@@ -9816,7 +9816,7 @@ When **enable** is set to **true**, an error page is displayed when a mainframe 
 > 
 > - When **enable** is set to **false**, the error page feature for both mainframe and subframe is disabled regardless of the value of **includeSubframe**.
 > 
-> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled)<sup>20+</sup>, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
+> - When **includeSubframe** is set to **false**, the behavior of this API is the same as that of [setErrorPageEnabled](#seterrorpageenabled-1)<sup>20+</sup>, that is, only the mainframe error page feature is enabled, and the subframe error page feature is not enabled.
 > 
 > - You can use [errorPageEvent.request.isMainFrame()](../arkts-components/arkts-arkweb-web-comp-webresourcerequest-c.md#ismainframe) to determine whether the error source is a mainframe or a subframe, so as to set the corresponding custom error page in the
 > **onOverrideErrorPage** callback.
@@ -11128,7 +11128,7 @@ static setWebDebuggingAccess(webDebuggingAccess: boolean, port: number): void
 
 Sets whether to enable wireless web debugging. By default, wireless web debugging is disabled.
 
-* If no port is specified, this API is equivalent to the[setWebDebuggingAccess](#setwebdebuggingaccess) API. In this case, ArkWeb starts a local domain socket listener.  
+* If no port is specified, this API is equivalent to the[setWebDebuggingAccess](#setwebdebuggingaccess-1) API. In this case, ArkWeb starts a local domain socket listener.  
 * When a port is specified, ArkWeb starts a TCP socket listener. In this case, you can debug the web page wirelessly. For details, see [Wireless Debugging](../../../web/web-debugging-with-devtools.md#wireless-debugging).
 
 A port number smaller than 1024 is a well-known or system port and can be enabled only with privileges in the operating system. Therefore, the value of port must be greater than 1024. Otherwise, the API throws an exception.

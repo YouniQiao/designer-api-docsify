@@ -6,7 +6,7 @@ interface AudioCapturer
 
 This interface provides APIs for audio capture.
 
-Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer) to create an AudioCapturer instance.
+Before calling any API in AudioCapturer, you must use [createAudioCapturer](arkts-audio-audio-createaudiocapturer-f.md#createaudiocapturer-1) to create an AudioCapturer instance.
 
 > **NOTE:** 
 > 

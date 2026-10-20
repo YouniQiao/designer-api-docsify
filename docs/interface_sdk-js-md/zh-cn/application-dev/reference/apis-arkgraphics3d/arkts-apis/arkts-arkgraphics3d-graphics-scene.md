@@ -1,4 +1,4 @@
-# @ohos.graphics.scene(3D场景模块导出)
+# @ohos.graphics.scene(ArkGraphics 3D模块)
 
 ## 导入模块
 

@@ -155,7 +155,7 @@ Specifies the display to which the target component belongs.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:**  If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
+| displayId | number | Yes | ID of the display to which the component belongs. The value is an integer greater than or equal to 0. <br>**Note:**  If the input **displayId** does not exist, the exception **17000007** is reported. You can use [getAllDisplays](../../apis-arkui/arkts-apis/arkts-arkui-display-getalldisplays-f.md#getalldisplays-1) to obtain all current **display** objects and use them to obtain the corresponding display IDs. |
 
 **Return value:**
 

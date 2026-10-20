@@ -1,4 +1,4 @@
-# @ohos.graphics.scene(3D scene module exports)
+# @ohos.graphics.scene(ArkGraphics 3D)
 
 ## Modules to Import
 

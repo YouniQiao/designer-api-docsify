@@ -305,7 +305,7 @@ isHeadTrackingEnabled(): boolean
 > **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled)
+> [isHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isheadtrackingenabled-2)
 > 替代。
 
 **起始版本：** 11
@@ -611,7 +611,7 @@ isSpatializationEnabled(): boolean
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled)
+> [isSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor): boolean](#isspatializationenabled-2)
 > 替代。
 
 **起始版本：** 11
@@ -1597,7 +1597,7 @@ setHeadTrackingEnabled(enable: boolean, callback: AsyncCallback<void>): void
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled-3)
 > 替代。
 
 **起始版本：** 11
@@ -1660,7 +1660,7 @@ setHeadTrackingEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled)
+> [setHeadTrackingEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setheadtrackingenabled-3)
 > 替代。
 
 **起始版本：** 11
@@ -1840,7 +1840,7 @@ setSpatializationEnabled(enable: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled-3)
 > 替代。
 
 **起始版本：** 11
@@ -1903,7 +1903,7 @@ setSpatializationEnabled(enable: boolean): Promise<void>
 
 > **说明：** 
 > 从 API version 11 开始支持，从 API version 12 开始废弃，建议使用
-> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled)
+> [setSpatializationEnabled(deviceDescriptor: AudioDeviceDescriptor, enabled: boolean): Promise\<void>](#setspatializationenabled-3)
 > 替代。
 
 **起始版本：** 11

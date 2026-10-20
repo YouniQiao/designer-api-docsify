@@ -65,3 +65,21 @@ The adaptable sidebar style. The tab bar can switch between bottom tab bar and s
 <!--Device-TabBarStyle-SIDEBAR_ADAPTABLE = 2--><!--Device-TabBarStyle-SIDEBAR_ADAPTABLE = 2-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+## TOP
+
+```TypeScript
+TOP = 3
+```
+
+The top floating tab bar style. The tab bar is always displayed at the top in a floating form. The **BarPosition** setting is ignored when this style is used.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabBarStyle-TOP = 3--><!--Device-TabBarStyle-TOP = 3-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full

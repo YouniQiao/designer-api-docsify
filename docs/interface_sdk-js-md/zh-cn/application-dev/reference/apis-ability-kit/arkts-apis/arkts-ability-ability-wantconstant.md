@@ -25,7 +25,6 @@ wantConstant模块提供Want常量的操作方法，并说明Flags标志位的�
 | --- | --- |
 | [Action](arkts-ability-wantconstant-action-depr-e.md) | want操作的常数。用于表示要执行的通用操作。 |
 | [Entity](arkts-ability-wantconstant-entity-depr-e.md) | want实体的常数。用于表示目标Ability额外的类别信息。 |
-| [Flags](arkts-ability-wantconstant-flags-depr-e.md) | Flags说明。用于表示处理Want的方式。 |
 
 <!--Del-->
 ### 枚举（系统接口）

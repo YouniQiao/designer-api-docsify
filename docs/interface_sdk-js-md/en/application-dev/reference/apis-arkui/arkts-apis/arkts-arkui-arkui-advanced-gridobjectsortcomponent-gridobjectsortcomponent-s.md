@@ -68,7 +68,7 @@ Callback invoked when changes are canceled.
 onSave: (select: Array<GridObjectSortComponentItem>, unselect: Array<GridObjectSortComponentItem>) => void
 ```
 
-Callback invoked when changes are saved. The data after the changes is returned.
+Callback invoked when changes are saved. **select** indicates the selected data after editing, and **unselect** indicates the unselected data after editing.
 
 **Since:** 11
 
@@ -93,7 +93,7 @@ Callback invoked when changes are saved. The data after the changes is returned.
 dataList: Array<GridObjectSortComponentItem>
 ```
 
-Data to pass. The maximum data length is 50 characters. If it is exceeded, only the first 50 characters are used.
+Data to pass. The maximum number of data entries is 50. If the number of data entries exceeds 50, only the first 50 entries are used.
 
 **Type:** Array&lt;[GridObjectSortComponentItem](arkts-arkui-arkui-advanced-gridobjectsortcomponent-gridobjectsortcomponentitem-i.md)&gt;
 

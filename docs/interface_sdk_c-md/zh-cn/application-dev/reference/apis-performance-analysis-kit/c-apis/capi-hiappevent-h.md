@@ -85,7 +85,7 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 | [HiAppEvent_Config* OH_HiAppEvent_CreateConfig(void)](#oh_hiappevent_createconfig) | - | 创建一个指向设置系统事件自定义规格的配置对象的指针。注意：创建的指向设置系统事件自定义规格的配置对象的指针不再使用后，必须通过[OH_HiAppEvent_DestroyConfig](capi-hiappevent-h.md#oh_hiappevent_destroyconfig)接口进行销毁。 |
 | [void OH_HiAppEvent_DestroyConfig(HiAppEvent_Config* config)](#oh_hiappevent_destroyconfig) | - | 销毁已创建的配置对象。注意：已创建的配置对象不再使用后，需要将其销毁，释放内存，防止内存泄漏，销毁后需要将对应指针置空。 |
 | [int OH_HiAppEvent_SetConfigItem(HiAppEvent_Config* config, const char* itemName, const char* itemValue)](#oh_hiappevent_setconfigitem) | - | 设置配置对象中的配置项。 |
-| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | 事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： MAIN_THREAD_JANK（参数配置详见主线程超时事件检测） MAIN_THREAD_JANK_V2（参数配置详见主线程超时事件检测） EVENT_APP_CRASH（参数配置详见崩溃事件介绍），从API version 24开始支持该事件。 |
+| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | 事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： **MAIN_THREAD_JANK**。 **MAIN_THREAD_JANK_V2**。 **EVENT_APP_CRASH**，从API version 24开始支持该事件。 |
 | [int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)](#oh_hiappevent_reportframeworkmemanomaly) | - | 报告应用框架内存占用异常的信息。 <br>该接口的调用频率限制为：1分钟最多能成功调用1次，超过频率限制会返回错误码HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED。 <br>当应用检测到应用框架内存占用异常，并且调用该接口返回操作成功时： <br>1. 若开发者已经订阅了事件领域domain为“HIVIEWDFX”，且事件名称names为“FW_MEM_ANOMALY”的应用事件，则应用中将会收到应用框架内存占用异常信息的回调。 <br>2. 若开发者未订阅该应用事件，则应用中将不会收到应用框架内存占用异常信息的回调。 |
 
 ### 变量
@@ -161,9 +161,9 @@ enum OH_HiAppEvent_FrameworkType
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_FLUTTER_DART = 0 |  |
-| OH_REACT_NATIVE_HERMES = 1 |  |
-| OH_KMP_KOTLIN = 2 |  |
+| OH_FLUTTER_DART = 0 | Flutter_dart类型。<br>**起始版本：** 26.0.0 |
+| OH_REACT_NATIVE_HERMES = 1 | React_native_hermes类型。<br>**起始版本：** 26.0.0 |
+| OH_KMP_KOTLIN = 2 | Kmp_kotlin类型。<br>**起始版本：** 26.0.0 |
 
 
 ## 函数说明
@@ -1436,7 +1436,7 @@ int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)
 
 **描述：**
 
-事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： MAIN_THREAD_JANK（参数配置详见主线程超时事件检测） MAIN_THREAD_JANK_V2（参数配置详见主线程超时事件检测） EVENT_APP_CRASH（参数配置详见崩溃事件介绍），从API version 24开始支持该事件。
+事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： **MAIN_THREAD_JANK**。 **MAIN_THREAD_JANK_V2**。 **EVENT_APP_CRASH**，从API version 24开始支持该事件。
 
 **系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 

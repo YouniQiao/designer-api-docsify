@@ -1727,7 +1727,7 @@ Triggered when an SSL client certificate request is received.
 
 > **NOTE:** 
 > 
-> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm),[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore).
+> - The **Web** component can respond with [ClientAuthenticationHandler.confirm](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#confirm-2),[ClientAuthenticationHandler.cancel](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#cancel), or [ClientAuthenticationHandler.ignore](arkts-arkweb-web-comp-clientauthenticationhandler-c.md#ignore).
 > 
 > - If **ClientAuthenticationHandler.confirm** or **ClientAuthenticationHandler.cancel** is called, the **Web**component stores the authentication result in the memory (within the application lifecycle) and does not call
 > **onClientAuthenticationRequest()** again for the same host and port. If **onClientAuthenticationRequest.ignore**
@@ -2637,7 +2637,7 @@ Triggered when an error occurs during web page loading of main resources. You ca
 > **NOTE:** 
 > 
 > This feature takes effect only after the default error page is enabled by calling the
-> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled)
+> [setErrorPageEnabled](../arkts-apis/arkts-arkweb-webview-webviewcontroller-c.md#seterrorpageenabled-1)
 > API.
 > 
 > If the error code obtained through [errorPageEvent.error.getErrorCode()](arkts-arkweb-web-comp-webresourceerror-c.md#geterrorcode) is

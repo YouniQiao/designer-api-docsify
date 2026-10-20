@@ -1,4 +1,4 @@
-# Flags
+# Flags（系统接口）
 
 ```TypeScript
 export enum Flags
@@ -15,6 +15,8 @@ Flags说明。用于表示处理Want的方式。
 <!--Device-wantConstant-export enum Flags--><!--Device-wantConstant-export enum Flags-End-->
 
 **系统能力：** SystemCapability.Ability.AbilityBase
+
+**系统接口：** 此接口为系统接口。
 
 ## FLAG_ABILITY_CONTINUATION_REVERSIBLE
 

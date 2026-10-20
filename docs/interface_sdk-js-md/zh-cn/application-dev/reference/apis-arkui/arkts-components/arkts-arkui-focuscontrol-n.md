@@ -18,7 +18,7 @@ declare namespace focusControl
 
 | 名称 | 说明 |
 | --- | --- |
-| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus) | 方法语句中可使用的全局接口，调用此接口可以主动让焦点在下一帧渲染时转移至参数指定的组件上。 |
+| [requestFocus](arkts-arkui-focuscontrol-requestfocus-f.md#requestfocus-1) | 方法语句中可使用的全局接口，调用此接口可以主动让焦点在下一帧渲染时转移至参数指定的组件上。 |
 
 ## 示例
 

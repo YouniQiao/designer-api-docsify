@@ -281,7 +281,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option?: PhotoSelectOptions)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-1)(option?: PhotoSelectOptions)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -299,7 +299,7 @@ select(option?: PhotoSelectOptions): Promise<PhotoSelectResult>
 
 | 类型 | 说明 |
 | --- | --- |
-| Promise&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Promise对象。返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
+| Promise&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | Promise对象。返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 **示例**
 
@@ -337,7 +337,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -350,7 +350,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | option | [PhotoSelectOptions](arkts-corefile-picker-photoselectoptions-c.md) | 是 | photoPicker选择选项。 |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 **示例**
 
@@ -390,7 +390,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-3)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -402,7 +402,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
+| callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[PhotoSelectResult](arkts-corefile-picker-photoselectresult-c.md)&gt; | 是 | callback返回photoPicker选择后的结果集。<br>**注意**：此接口返回的PhotoSelectResult对象中的photoUris只能通过临时授权的方式调用接口[photoAccessHelper.getAssets](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)去使用，具体使用方式参见用户文件URI介绍中的[媒体文件URI的使用方式](../../../file-management/user-file-uri-intro.md#媒体文件uri的使用方式)。 |
 
 **示例**
 

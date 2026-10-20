@@ -1436,6 +1436,30 @@ Sets the width of the sidebar tab bar. This attribute takes effect only when the
 | --- | --- | --- | --- |
 | value | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[Length](../arkts-apis/arkts-arkui-length-t.md)&gt; | Yes | Width of the sidebar tab bar. <br>Default value: **240vp**. |
 
+## topBarFloatingStyle
+
+```TypeScript
+topBarFloatingStyle(style: Optional<TopFloatingTabBarStyle>)
+```
+
+Enable top floating style for bar. This is effective only when **barStyle** is set to **TabBarStyle.TOP** or **TabBarStyle.TOP_ADAPTABLE**.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-TabsAttribute-topBarFloatingStyle(style: Optional<TopFloatingTabBarStyle>): TabsAttribute--><!--Device-TabsAttribute-topBarFloatingStyle(style: Optional<TopFloatingTabBarStyle>): TabsAttribute-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| style | [Optional](arkts-arkui-common-comp-optional-t.md)&lt;[TopFloatingTabBarStyle](arkts-arkui-tabs-comp-topfloatingtabbarstyle-i.md)&gt; | Yes | top floating style for bar |
+
 ## vertical
 
 ```TypeScript

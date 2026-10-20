@@ -30,7 +30,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -97,7 +97,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 
@@ -161,7 +161,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 > 
 > **photoUris** in the PhotoSelectResult object returned by this API has permanent authorization and can be used
 > only by calling
-> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets)
+> [photoAccessHelper.getAssets](arkts-medialibrary-photoaccesshelper-photoaccesshelper-i.md#getassets-1)
 > . For details, see
 > [Using a Media File URI](../../../file-management/user-file-uri-intro.md#using-a-media-file-uri).
 

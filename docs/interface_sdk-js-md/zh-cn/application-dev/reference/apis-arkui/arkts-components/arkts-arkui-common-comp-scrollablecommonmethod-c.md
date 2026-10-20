@@ -338,28 +338,28 @@ fadingEdge(enabled: Optional<boolean>, options?: FadingEdgeOptions): T
 > **说明：** 
 > 
 > fadingEdge是通过设置[overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay)属性和
-> [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode)属性（参数值为BlendMode.SRC_OVER，
+> [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode-1)属性（参数值为BlendMode.SRC_OVER，
 > BlendApplyType.OFFSCREEN）实现的。当fadingEdge生效时，会覆盖原组件的.overlay()属性和.blendMode()属性，并将导致当前组件和其子组件需要截屏的接口无法截取到正确的画面。需要截
-> 屏的接口有：[blur](arkts-arkui-common-comp-commonmethod-c.md#blur)、
-> [linearGradientBlur](arkts-arkui-common-comp-commonmethod-c.md#lineargradientblur)、
-> [brightness](arkts-arkui-common-comp-commonmethod-c.md#brightness)、[visualEffect](arkts-arkui-common-comp-commonmethod-c.md#visualeffect)、
-> [grayscale](arkts-arkui-common-comp-commonmethod-c.md#grayscale)、[saturate](arkts-arkui-common-comp-commonmethod-c.md#saturate)、
-> [contrast](arkts-arkui-common-comp-commonmethod-c.md#contrast)、
-> [invert](arkts-arkui-common-comp-commonmethod-c.md#invert)、
-> [sepia](arkts-arkui-common-comp-commonmethod-c.md#sepia)、
-> [hueRotate](arkts-arkui-common-comp-commonmethod-c.md#huerotate)、
-> [colorBlend](arkts-arkui-common-comp-commonmethod-c.md#colorblend)、
-> [lightUpEffect](arkts-arkui-common-comp-commonmethod-c.md#lightupeffect)、
-> [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect)、
-> [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode)、
-> [backgroundBrightness](arkts-arkui-common-comp-commonmethod-c.md#backgroundbrightness)。
+> 屏的接口有：[blur](arkts-arkui-common-comp-commonmethod-c.md#blur-1)、
+> [linearGradientBlur](arkts-arkui-common-comp-commonmethod-c.md#lineargradientblur-1)、
+> [brightness](arkts-arkui-common-comp-commonmethod-c.md#brightness-1)、[visualEffect](arkts-arkui-common-comp-commonmethod-c.md#visualeffect)、
+> [grayscale](arkts-arkui-common-comp-commonmethod-c.md#grayscale-1)、[saturate](arkts-arkui-common-comp-commonmethod-c.md#saturate-1)、
+> [contrast](arkts-arkui-common-comp-commonmethod-c.md#contrast-1)、
+> [invert](arkts-arkui-common-comp-commonmethod-c.md#invert-1)、
+> [sepia](arkts-arkui-common-comp-commonmethod-c.md#sepia-1)、
+> [hueRotate](arkts-arkui-common-comp-commonmethod-c.md#huerotate-1)、
+> [colorBlend](arkts-arkui-common-comp-commonmethod-c.md#colorblend-1)、
+> [lightUpEffect](arkts-arkui-common-comp-commonmethod-c.md#lightupeffect-1)、
+> [pixelStretchEffect](arkts-arkui-common-comp-commonmethod-c.md#pixelstretcheffect-1)、
+> [blendMode](arkts-arkui-common-comp-commonmethod-c.md#blendmode-1)、
+> [backgroundBrightness](arkts-arkui-common-comp-commonmethod-c.md#backgroundbrightness-1)。
 > 
 > fadingEdge生效时，建议不在设置fadingEdge属性的组件上设置[background](arkts-arkui-common-comp-commonmethod-c.md#background)相关属性，会影响渐隐的显示效果。
 > 
 > fadingEdge生效时，建议不在设置fadingEdge属性的组件以及其子组件上设置[systemMaterial](arkts-arkui-common-comp-commonmethod-c.md#systemmaterial)相关属性，会影响系统材质的显示效果，
 > 导致材质效果与预期效果不一致。
 > 
-> fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-common-comp-commonmethod-c.md#clip)属性为false不生效。
+> fadingEdge生效时，设置fadingEdge属性的组件会裁剪到边界，在该组件上设置[clip](arkts-arkui-common-comp-commonmethod-c.md#clip-1)属性为false不生效。
 
 **起始版本：** 14
 

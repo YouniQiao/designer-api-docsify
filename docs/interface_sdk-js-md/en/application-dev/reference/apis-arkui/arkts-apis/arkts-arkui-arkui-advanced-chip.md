@@ -17,7 +17,7 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 | Name | Description |
 | --- | --- |
-| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip) | Creates a **Chip** component. |
+| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip-1) | Creates a **Chip** component. |
 
 ### Interfaces
 
