@@ -4,6 +4,8 @@ This module provides basic NearLink management capabilities, including enabling 
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
 
 **System capability:** SystemCapability.Communication.NearLink.Base
@@ -20,13 +22,13 @@ import { manager } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname-1) | Queries the NearLink name on the local device. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices-1) | Obtains the devices paired with the current device. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
-| [getState](arkts-connectivity-manager-getstate-f.md#getstate-1) | Queries the NearLink status. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
-| [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md#isframetype4supported-1) | Checks whether the current device supports radio frame type 4. |
-| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported-1) | Checks whether the current device supports NearLink. |
-| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange-1) | Unsubscribes from the NearLink status change event. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
-| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange-1) | Subscribes to the NearLink status change event. This API uses an asynchronous callback to return the result. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
+| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | Queries the NearLink name on the local device. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | Obtains the devices paired with the current device. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
+| [getState](arkts-connectivity-manager-getstate-f.md#getstate) | Queries the NearLink status. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
+| [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md#isframetype4supported) | Checks whether the current device supports radio frame type 4. |
+| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | Checks whether the current device supports NearLink. |
+| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | Unsubscribes from the NearLink status change event. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
+| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange) | Subscribes to the NearLink status change event. This API uses an asynchronous callback to return the result. Before calling this API, you may call [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md) to check whether the device supports NearLink. |
 
 <!--Del-->
 ### Functions(System API)

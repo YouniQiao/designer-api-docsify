@@ -4,6 +4,8 @@ This module provides basic definitions of the [InsightIntent framework](../../..
 
 **Since:** 11
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace insightIntent--><!--Device-unnamed-declare namespace insightIntent-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

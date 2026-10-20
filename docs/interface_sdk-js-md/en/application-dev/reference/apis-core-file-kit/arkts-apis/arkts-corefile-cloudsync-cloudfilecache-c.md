@@ -204,7 +204,7 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-Removes the listener added via the [on](#on-2) API for file batch downloads.
+Removes the listener added via the [on](#on) API for file batch downloads.
 
 **Since:** 20
 

@@ -14,7 +14,7 @@ For more usage scenarios and complete examples of lazy loading layouts, see [Cre
 > **height** in [size](arkts-arkui-common-comp-commonmethod-c.md#size), **minHeight**\/**maxHeight** in
 > [constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize), [aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio),
 > [layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight), and scenarios where
-> [height](arkts-arkui-common-comp-commonmethod-c.md#height-1) takes a [LayoutPolicy](arkts-arkui-common-comp-layoutpolicy-c.md)
+> [height](arkts-arkui-common-comp-commonmethod-c.md#height) takes a [LayoutPolicy](arkts-arkui-common-comp-layoutpolicy-c.md)
 > value.
 > 
 > - When the parent component sets the main axis dimension, **LazyVGridLayout** performs lazy loading based on the visible area of the parent component. When the parent component does not set the main axis dimension,

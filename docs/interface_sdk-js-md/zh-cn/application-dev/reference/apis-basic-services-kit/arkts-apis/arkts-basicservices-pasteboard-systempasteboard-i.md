@@ -1686,7 +1686,7 @@ setPasteData(data: PasteData): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [setData](#setdata-1)(data: PasteData)
+**替代接口：** [setData](#setdata)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 

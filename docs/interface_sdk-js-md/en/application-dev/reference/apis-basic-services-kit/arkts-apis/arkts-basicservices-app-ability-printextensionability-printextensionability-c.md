@@ -40,6 +40,11 @@ Called once to remove the print job has been started.
 | --- | --- | --- | --- |
 | jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of print job. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+
 **Examples**
 
 ```TypeScript
@@ -215,6 +220,11 @@ Called once to request the printer's capabilities.
 | --- | --- |
 | [print.PrinterCapability](arkts-basicservices-print-printercapability-i.md) | printer capability. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+
 **Examples**
 
 ```TypeScript
@@ -284,6 +294,11 @@ Called once to start print job.
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of print job. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 
 **Examples**
 

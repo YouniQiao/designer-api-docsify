@@ -78,8 +78,8 @@ enum ArkUI_ErrorCode
 | ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE = 106406 | 当前渲染节点从FrameNode中获取。错误码的详细介绍请参见106406 当前渲染节点从FrameNode中获取。<br>**起始版本：** 22 |
 | ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE = 106407 | 当前渲染节点从FrameNode中获取且该FrameNode已被取消接纳为附属节点或销毁。错误码的详细介绍请参见 106407 当前渲染节点从FrameNode中获取且该FrameNode已被取消接纳为附属节点或销毁。<br>**起始版本：** 22 |
 | ARKUI_ERROR_CODE_RENDER_NOT_ADOPTED_NODE = 106408 | 当前节点不处于被接纳状态。错误码的详细介绍请参见106408 当前节点不处于被接纳状态。<br>**起始版本：** 22 |
-| ARKUI_ERROR_CODE_COMMAND_UNFINISHED = 106409 | 上一次请求尚未完成。<br>**起始版本：** 26.2.0 |
-| ARKUI_ERROR_CODE_NODE_NOT_FOUND = 106410 | 未找到uniqueId对应的节点。<br>**起始版本：** 26.2.0 |
+| ARKUI_ERROR_CODE_COMMAND_UNFINISHED = 106409 | 上一次命令未完成。<br>**起始版本：** 26.2.0 |
+| ARKUI_ERROR_CODE_NODE_NOT_FOUND = 106410 | 未找到目标节点。<br>**起始版本：** 26.2.0 |
 | ARKUI_ERROR_CODE_RESULT_TOO_LARGE = 106411 | 结果数据过大。<br>**起始版本：** 26.2.0 |
 | ARKUI_ERROR_CODE_RESOURCE_EXHAUSTED = 106412 | 资源已耗尽。<br>**起始版本：** 26.2.0 |
 | ARKUI_ERROR_CODE_DUPLICATE_NODE_ID = 106413 | 节点ID重复。<br>**起始版本：** 26.2.0 |

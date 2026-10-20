@@ -20,7 +20,7 @@ import { systemSoundManager } from '@kit.AudioKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer-1) | 创建系统音效播放器对象。使用Promise异步回调。 |
+| [createSystemSoundPlayer](arkts-audio-systemsoundmanager-createsystemsoundplayer-f.md#createsystemsoundplayer) | 创建系统音效播放器对象。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

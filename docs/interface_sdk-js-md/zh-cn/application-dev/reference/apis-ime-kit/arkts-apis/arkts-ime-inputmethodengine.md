@@ -31,10 +31,10 @@ import { inputMethodEngine } from '@kit.IMEKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability-1) | 获取输入法能力对象实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)，仅支持输入法应用调用。<br> <br>输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。 |
-| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate-1) | 获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。<br> <br>输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。 |
-| [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md#createkeyboarddelegate-1) | 获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。<br> <br> |
-| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine-1) | 获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。<br> <br>输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。<br> <br> |
+| [getInputMethodAbility](arkts-ime-inputmethodengine-getinputmethodability-f.md#getinputmethodability) | 获取输入法能力对象实例[InputMethodAbility](arkts-ime-inputmethodengine-inputmethodability-i.md)，仅支持输入法应用调用。<br> <br>输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件、创建/销毁输入法面板等。 |
+| [getKeyboardDelegate](arkts-ime-inputmethodengine-getkeyboarddelegate-f.md#getkeyboarddelegate) | 获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)（键盘代理对象）。<br> <br>输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。 |
+| [createKeyboardDelegate](arkts-ime-inputmethodengine-createkeyboarddelegate-f.md#createkeyboarddelegate) | 获取客户端编辑事件监听代理实例[KeyboardDelegate](arkts-ime-inputmethodengine-keyboarddelegate-i.md)。输入法应用获取该实例后，可订阅物理键盘按键事件、选中文本变化事件等。<br> <br> |
+| [getInputMethodEngine](arkts-ime-inputmethodengine-getinputmethodengine-f.md#getinputmethodengine) | 获取输入法应用客户端实例[InputMethodEngine](arkts-ime-inputmethodengine-inputmethodengine-i.md)（输入法引擎）。<br> <br>输入法应用获取该实例后，可订阅软键盘显示/隐藏请求事件等。<br> <br> |
 
 ### 接口
 

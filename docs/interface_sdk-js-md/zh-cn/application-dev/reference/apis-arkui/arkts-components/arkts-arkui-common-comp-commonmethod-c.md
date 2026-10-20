@@ -1077,7 +1077,7 @@ backdropBlur(radius: Optional<number>, options?: BlurOptions): T
 backdropBlur(radius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur<sup>18+</sup>](#backdropblur-1)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加背景模糊效果，支持自定义设置模糊半径和灰阶参数。与[backdropBlur<sup>18+</sup>](#backdropblur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -1219,7 +1219,7 @@ backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOpt
 backgroundBlurStyle(style: Optional<BlurStyle>, options?: BackgroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle<sup>18+</sup>](#backgroundblurstyle-1)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为当前组件提供一种背景材质模糊能力，通过枚举值的方式封装了不同的模糊半径、蒙版颜色、蒙版透明度、饱和度、亮度。与[backgroundBlurStyle<sup>18+</sup>](#backgroundblurstyle)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -1380,7 +1380,7 @@ backgroundColor(color: Optional<ResourceColor>): T
 backgroundColor(color: Optional<ResourceColor | ColorMetrics>): T
 ```
 
-设置组件背景色。与[backgroundColor](#backgroundcolor-1)相比，color参数新增了对[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型的支持。
+设置组件背景色。与[backgroundColor](#backgroundcolor)相比，color参数新增了对[ColorMetrics](../arkts-apis/arkts-arkui-graphics-colormetrics-c.md)类型的支持。
 
 > **说明：** 
 > 
@@ -1483,7 +1483,7 @@ backgroundEffect(options: Optional<BackgroundEffectOptions>): T
 backgroundEffect(options: Optional<BackgroundEffectOptions>, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect<sup>18+</sup>](#backgroundeffect-1)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+设置组件背景属性，包括背景模糊半径、亮度、饱和度和颜色等参数。与[backgroundEffect<sup>18+</sup>](#backgroundeffect)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 > **说明：** 
 > 
@@ -2265,7 +2265,7 @@ blur(blurRadius: Optional<number>, options?: BlurOptions): T
 blur(blurRadius: Optional<number>, options?: BlurOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为组件添加内容模糊效果。与[blur<sup>18+</sup>](#blur-1)相比，新增了sysOptions参数，即支持系统自适应调节参数。
+为组件添加内容模糊效果。与[blur<sup>18+</sup>](#blur)相比，新增了sysOptions参数，即支持系统自适应调节参数。
 
 **起始版本：** 19
 
@@ -3874,7 +3874,7 @@ foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOpt
 foregroundBlurStyle(style: Optional<BlurStyle>, options?: ForegroundBlurStyleOptions, sysOptions?: SystemAdaptiveOptions): T
 ```
 
-为当前组件提供内容模糊能力。与[foregroundBlurStyle<sup>18+</sup>](#foregroundblurstyle-1)相比，新增了sysOptions参数，即支持系统自适应调节参数，系统可根据设备性能或显示策略等条件自动调节前景模糊的渲染效果。
+为当前组件提供内容模糊能力。与[foregroundBlurStyle<sup>18+</sup>](#foregroundblurstyle)相比，新增了sysOptions参数，即支持系统自适应调节参数，系统可根据设备性能或显示策略等条件自动调节前景模糊的渲染效果。
 
 > **说明：** 
 > 
@@ -6708,7 +6708,7 @@ Web组件使用该方法时，如果返回值为`true`，Web组件会判断组�
 
 XComponent组件使用该方法时，如果返回值为`true`且XComponent组件使用 [OH_ArkUI_XComponent_SetNeedSoftKeyboard()](../../../reference/apis-arkui/capi-native-interface-xcomponent-h.md#oh_arkui_xcomponent_setneedsoftkeyboard)设置了需要键盘，才会保留键盘，如果返回值为`false`，无论组件如何设置，键盘都不会保留。
 
-当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
+当返回值为`true`时，应用的自绘制输入框需要在获焦时主动调用 [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法，建立输入法框架和输入法应用的通信，否则点击键盘会失去响应。说明：失焦时输入法框架和输入法应用的通信会断开，获焦时需要重新建立通信。
 
 该接口只适用于对输入法应用接续的场景，对自定义键盘不生效。自定义键盘接续详见[setCustomKeyboardContinueFeature](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#setcustomkeyboardcontinuefeature)。
 
@@ -6726,7 +6726,7 @@ XComponent组件使用该方法时，如果返回值为`true`且XComponent组件
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2)方法建立输入法通信，否则点击键盘会失去响应。 |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | 是 | 事件触发时执行的回调，系统会根据回调的返回值决定是否需要键盘。设置为undefined时，不会触发回调，输入框类组件行为等同返回true。其他组件行为等同返回false。前提条件：组件需可获焦，否则本接口不生效。当返回值为true时，自绘制输入框需在获焦时主动调用[attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach)方法建立输入法通信，否则点击键盘会失去响应。 |
 
 **返回值：**
 
@@ -6951,7 +6951,7 @@ onVisibleAreaChange(ratios: Array<number>, event: VisibleAreaChangeCallback): T
 > 
 > - 不支持非挂树节点的可见面积变化计算。例如，预加载的节点、通过[overlay](#overlay)能力挂载的自定义节点。
 > 
-> - 不支持[scale](#scale)属性，如果想要支持[scale](#scale)，则需使用[onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange-1)，将measureFromViewport设置为true。
+> - 不支持[scale](#scale)属性，如果想要支持[scale](#scale)，则需使用[onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange)，将measureFromViewport设置为true。
 
 **起始版本：** 9
 
@@ -8098,7 +8098,7 @@ rotate(options: Optional<RotateOptions>): T
 rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
-设置组件旋转效果。与[rotate](#rotate-1)相比，options参数新增了对RotateAngleOptions类型的支持。
+设置组件旋转效果。与[rotate](#rotate)相比，options参数新增了对RotateAngleOptions类型的支持。
 
 **起始版本：** 20
 

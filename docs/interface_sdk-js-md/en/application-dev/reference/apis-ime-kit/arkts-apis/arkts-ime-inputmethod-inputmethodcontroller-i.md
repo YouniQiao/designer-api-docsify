@@ -37,7 +37,7 @@ Attaches a self-drawn component to the input method. This API uses an asynchrono
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
@@ -98,7 +98,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).
@@ -162,7 +162,7 @@ Attaches a self-drawn component to the input method. This API uses a promise to 
 > method. <br>
 > <br>
 > If the window where the self-drawn component is located is set to be non-focusable via <br>
-> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable-1), <br>
+> [setWindowFocusable](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md#setwindowfocusable), <br>
 > the system cannot guarantee proper interaction between the self-drawing input component and the input method. <br>
 > If you want to draw an input box in a non-focusable window, refer to <br>
 > [Input Box and Input Method Interaction in Non-Focusable Windows](../../../inputmethod/use-inputmethod-in-not-focusable-window.md).

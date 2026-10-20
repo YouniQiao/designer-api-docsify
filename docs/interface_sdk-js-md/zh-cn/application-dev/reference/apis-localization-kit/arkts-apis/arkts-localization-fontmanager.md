@@ -22,11 +22,11 @@ import { fontManager } from '@kit.LocalizationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getFontScope](arkts-localization-fontmanager-getfontscope-f.md#getfontscope-1) | 查询指定路径字体的作用范围。使用Promise异步回调。 |
-| [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md#installscopefont-1) | 安装指定路径下的字体文件为应用级或会话级字体。使用Promise异步回调。 |
-| [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md#offfontobserver-1) | 注销字体服务状态变化监听器。 |
-| [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md#onfontobserver-1) | 注册字体服务状态变化监听器。 |
-| [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md#uninstallscopefont-1) | 根据字体路径卸载已安装的应用级或会话级字体。使用Promise异步回调。 |
+| [getFontScope](arkts-localization-fontmanager-getfontscope-f.md#getfontscope) | 查询指定路径字体的作用范围。使用Promise异步回调。 |
+| [installScopeFont](arkts-localization-fontmanager-installscopefont-f.md#installscopefont) | 安装指定路径下的字体文件为应用级或会话级字体。使用Promise异步回调。 |
+| [offFontObserver](arkts-localization-fontmanager-offfontobserver-f.md#offfontobserver) | 注销字体服务状态变化监听器。 |
+| [onFontObserver](arkts-localization-fontmanager-onfontobserver-f.md#onfontobserver) | 注册字体服务状态变化监听器。 |
+| [uninstallScopeFont](arkts-localization-fontmanager-uninstallscopefont-f.md#uninstallscopefont) | 根据字体路径卸载已安装的应用级或会话级字体。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

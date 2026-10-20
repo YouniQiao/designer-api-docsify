@@ -45,6 +45,19 @@ Unmounts a volume. This API uses an asynchronous callback to return the result.
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.unmount(volumeId, (error: BusinessError) => {
+  // Do something.
+});
+```
+
+<!--DelEnd-->
+
 
 ## unmount
 
@@ -89,3 +102,18 @@ Unmounts a volume. This API uses a promise to return the result.
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+let volumeId: string = "";
+volumeManager.unmount(volumeId).then(() => {
+  // Do something.
+}).catch((error: BusinessError) => {
+  console.error("mount failed");
+});
+```
+
+<!--DelEnd-->

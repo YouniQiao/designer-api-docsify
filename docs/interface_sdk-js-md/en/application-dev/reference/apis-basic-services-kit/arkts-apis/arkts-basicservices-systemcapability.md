@@ -24,5 +24,5 @@ import { systemCapability } from '@kit.BasicServicesKit';
 | Name | Description |
 | --- | --- |
 | [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities) | Get System Capability. |
-| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities-1) | Get System Capability. |
+| [querySystemCapabilities](arkts-basicservices-systemcapability-querysystemcapabilities-f-sys.md#querysystemcapabilities) | Get System Capability. |
 <!--DelEnd-->

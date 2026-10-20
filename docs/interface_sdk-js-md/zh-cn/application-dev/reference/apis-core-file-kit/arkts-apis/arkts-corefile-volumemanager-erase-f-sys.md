@@ -48,3 +48,20 @@ function erase(volumeId: string): Promise<void>
 | 13600002 | Not supported filesystem. |
 | 13600010 | The input parameter is invalid. |
 | 13600026 | Erase operation failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.erase(volumeId).then(() => {
+  console.info("erase successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`Failed to erase. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

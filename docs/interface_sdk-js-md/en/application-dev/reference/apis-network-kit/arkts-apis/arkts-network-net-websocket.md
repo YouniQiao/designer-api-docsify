@@ -24,8 +24,8 @@ import { webSocket } from '@kit.NetworkKit';
 
 | Name | Description |
 | --- | --- |
-| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createwebsocket-1) | Creates a **WebSocket** object, which provides methods to create or close a WebSocket connection, send data over the connection, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
-| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createwebsocketserver-1) | Creates a **WebSocketServer** object, which provides methods to start or stop the WebSocketServer service, send data over the connection, close the connection, list all connections, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
+| [createWebSocket](arkts-network-websocket-createwebsocket-f.md#createwebsocket) | Creates a **WebSocket** object, which provides methods to create or close a WebSocket connection, send data over the connection, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
+| [createWebSocketServer](arkts-network-websocket-createwebsocketserver-f.md#createwebsocketserver) | Creates a **WebSocketServer** object, which provides methods to start or stop the WebSocketServer service, send data over the connection, close the connection, list all connections, and enable or disable listening for the **open**, **close**, **message**, and **error** events. |
 
 ### Interfaces
 

@@ -4,7 +4,7 @@
 export interface Calendar
 ```
 
-In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar-1) or getCalendar() to obtain
+In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain
 
 a **Calendar** object before calling related APIs.
 

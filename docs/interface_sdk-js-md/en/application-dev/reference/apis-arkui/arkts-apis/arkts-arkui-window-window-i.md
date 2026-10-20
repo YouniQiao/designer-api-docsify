@@ -6,7 +6,7 @@ interface Window
 
 Represents a window instance, which is the basic unit managed by the window manager.
 
-In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow-1), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 6
 
@@ -615,7 +615,7 @@ Checks whether the immersive layout is enabled for this window.
 
 This API can be called only by the main window and child windows.
 
-The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1). If neither of these APIs has been called, the default return value is **false**.
+The return value is consistent with the settings applied via [setImmersiveModeEnabledState()](#setimmersivemodeenabledstate) and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen). If neither of these APIs has been called, the default return value is **false**.
 
 **Since:** 12
 
@@ -2490,7 +2490,7 @@ Loads content from a page to this window. This API uses a promise to return the 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setUIContent](#setuicontent-1)(path: string)
+**Substitutes:** [setUIContent](#setuicontent)(path: string)
 
 <!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
 
@@ -10475,7 +10475,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -11100,7 +11100,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -11256,7 +11256,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 12
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 **Atomic service API:** This API can be used in atomic services since API version 12.
 
@@ -11801,7 +11801,7 @@ Shows this window. This API uses an asynchronous callback to return the result. 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent-1). If the main window has not
+> [setUIContent](#setuicontent). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -11890,7 +11890,7 @@ Shows this window. This API uses a promise to return the result. This API takes 
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent-1). If the main window has not
+> [setUIContent](#setuicontent). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, modal window, or global floating window has finished loading and you call
 > this API directly, the window is in the foreground but is not visible.
@@ -11980,7 +11980,7 @@ This API can be used only for application child windows, application main window
 > 
 > Before calling this API, you are advised to load the page by using
 > [loadContent](#loadcontent) or
-> [setUIContent](#setuicontent-1). If the main window has not
+> [setUIContent](#setuicontent). If the main window has not
 > finished loading and you call this API directly, the starting window keeps showing. Similarly, if the system
 > window, application child window, or global floating window has finished loading and you call this API directly
 > , the window is in the foreground but is not visible.
@@ -12072,7 +12072,7 @@ export default class EntryAbility extends UIAbility {
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
+Captures this window. This API uses an asynchronous callback to return the result. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -12117,7 +12117,7 @@ windowClass.snapshot((err: BusinessError, pixelMap: image.PixelMap) => {
 snapshot(): Promise<image.PixelMap>
 ```
 
-Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
+Captures this window. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 **Since:** 9
 
@@ -12160,7 +12160,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)).
+Captures this window. This API can be called to obtain the screenshot of the current window even if privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)).
 
 **Since:** 18
 
@@ -12204,7 +12204,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshotSync(): image.PixelMap
 ```
 
-Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode-1)), taking a screenshot will result in a blank screen.
+Captures this window. This API returns the result synchronously. If privacy mode is enabled for the current window (using [setWindowPrivacyMode](#setwindowprivacymode)), taking a screenshot will result in a blank screen.
 
 In the stage model, this API must be used after the call of [loadContent](#loadcontent) or [setUIContent()](#setuicontent) takes effect.
 
@@ -12951,7 +12951,7 @@ Checks whether this window supports the wide-gamut color space. This API uses an
 
 **Deprecated since:** 9
 
-**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
+**Substitutes:** [isWindowSupportWideGamut](#iswindowsupportwidegamut)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
@@ -13409,7 +13409,7 @@ Sets a color space for this window. This API uses an asynchronous callback to re
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
 
@@ -13572,7 +13572,7 @@ Sets whether this window is focusable, that is, whether the window can gain focu
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -13616,15 +13616,15 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 > **NOTE:** 
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -13686,15 +13686,15 @@ Non-full-screen mode means that the layout avoids the status bar and <!--RP15-->
 > **NOTE:** 
 > 
 > This API is supported since API version 6 and deprecated since API version 9. You are advised to use
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> and [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)
 > to implement the full-screen mode.
 
 **Since:** 6
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;), [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
 
@@ -13800,7 +13800,7 @@ Sets whether to keep the screen always on. This API uses an asynchronous callbac
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -13845,7 +13845,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -13908,7 +13908,7 @@ A non-immersive layout means that the layout avoids the status bar and <!--RP15-
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**Substitutes:** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
@@ -14099,7 +14099,7 @@ Sets whether this window is in privacy mode. This API uses an asynchronous callb
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -14144,7 +14144,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
@@ -14208,7 +14208,7 @@ The return value does not indicate that the status bar and <!--RP15-->three-butt
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+**Substitutes:** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
 
@@ -14273,7 +14273,7 @@ This API does not take effect when it is called by a child window. The configura
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
@@ -14340,7 +14340,7 @@ This API does not take effect when it is called by a child window.
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**Substitutes:** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
@@ -14452,7 +14452,7 @@ Sets whether this window is touchable. This API uses an asynchronous callback to
 
 **Deprecated since:** 9
 
-**Substitutes:** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 

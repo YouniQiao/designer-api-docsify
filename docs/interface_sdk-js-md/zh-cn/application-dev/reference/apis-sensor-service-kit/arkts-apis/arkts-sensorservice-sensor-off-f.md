@@ -6,7 +6,7 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-## off
+## off('SensorId.ACCELEROMETER')
 
 ```TypeScript
 function off(type: SensorId.ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void
@@ -67,7 +67,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.ACCELEROMETER')
 
 ```TypeScript
 function off(type: SensorId.ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerResponse>): void
@@ -161,7 +161,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback<AccelerometerUncalibratedResponse>): void
@@ -220,7 +220,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.ACCELEROMETER_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<AccelerometerUncalibratedResponse>): void
@@ -312,7 +312,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.AMBIENT_LIGHT')
 
 ```TypeScript
 function off(type: SensorId.AMBIENT_LIGHT, callback?: Callback<LightResponse>): void
@@ -368,7 +368,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.AMBIENT_LIGHT')
 
 ```TypeScript
 function off(type: SensorId.AMBIENT_LIGHT, sensorInfoParam?: SensorInfoParam, callback?: Callback<LightResponse>): void
@@ -457,7 +457,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function off(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void
@@ -513,7 +513,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function off(type: SensorId.AMBIENT_TEMPERATURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<AmbientTemperatureResponse>): void
@@ -602,7 +602,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.BAROMETER')
 
 ```TypeScript
 function off(type: SensorId.BAROMETER, callback?: Callback<BarometerResponse>): void
@@ -658,7 +658,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.BAROMETER')
 
 ```TypeScript
 function off(type: SensorId.BAROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<BarometerResponse>): void
@@ -747,7 +747,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.GRAVITY')
 
 ```TypeScript
 function off(type: SensorId.GRAVITY, callback?: Callback<GravityResponse>): void
@@ -803,7 +803,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.GRAVITY')
 
 ```TypeScript
 function off(type: SensorId.GRAVITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<GravityResponse>): void
@@ -892,7 +892,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.GYROSCOPE')
 
 ```TypeScript
 function off(type: SensorId.GYROSCOPE, callback?: Callback<GyroscopeResponse>): void
@@ -953,7 +953,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.GYROSCOPE')
 
 ```TypeScript
 function off(type: SensorId.GYROSCOPE, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeResponse>): void
@@ -1047,7 +1047,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void
@@ -1106,7 +1106,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.GYROSCOPE_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<GyroscopeUncalibratedResponse>): void
@@ -1198,7 +1198,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.HALL')
 
 ```TypeScript
 function off(type: SensorId.HALL, callback?: Callback<HallResponse>): void
@@ -1254,7 +1254,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.HALL')
 
 ```TypeScript
 function off(type: SensorId.HALL, sensorInfoParam?: SensorInfoParam, callback?: Callback<HallResponse>): void
@@ -1343,7 +1343,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.HEART_RATE')
 
 ```TypeScript
 function off(type: SensorId.HEART_RATE, callback?: Callback<HeartRateResponse>): void
@@ -1402,7 +1402,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.HEART_RATE')
 
 ```TypeScript
 function off(type: SensorId.HEART_RATE, sensorInfoParam?: SensorInfoParam, callback?: Callback<HeartRateResponse>): void
@@ -1494,7 +1494,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.HUMIDITY')
 
 ```TypeScript
 function off(type: SensorId.HUMIDITY, callback?: Callback<HumidityResponse>): void
@@ -1550,7 +1550,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.HUMIDITY')
 
 ```TypeScript
 function off(type: SensorId.HUMIDITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<HumidityResponse>): void
@@ -1639,7 +1639,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.LINEAR_ACCELEROMETER')
 
 ```TypeScript
 function off(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback<LinearAccelerometerResponse>): void
@@ -1698,7 +1698,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.LINEAR_ACCELEROMETER')
 
 ```TypeScript
 function off(type: SensorId.LINEAR_ACCELEROMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<LinearAccelerometerResponse>): void
@@ -1790,7 +1790,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.MAGNETIC_FIELD')
 
 ```TypeScript
 function off(type: SensorId.MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void
@@ -1846,7 +1846,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.MAGNETIC_FIELD')
 
 ```TypeScript
 function off(type: SensorId.MAGNETIC_FIELD, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldResponse>): void
@@ -1935,7 +1935,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void
@@ -1991,7 +1991,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, sensorInfoParam?: SensorInfoParam, callback?: Callback<MagneticFieldUncalibratedResponse>): void
@@ -2080,7 +2080,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.ORIENTATION')
 
 ```TypeScript
 function off(type: SensorId.ORIENTATION, callback?: Callback<OrientationResponse>): void
@@ -2138,7 +2138,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.ORIENTATION')
 
 ```TypeScript
 function off(type: SensorId.ORIENTATION, sensorInfoParam?: SensorInfoParam, callback?: Callback<OrientationResponse>): void
@@ -2229,7 +2229,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.PEDOMETER')
 
 ```TypeScript
 function off(type: SensorId.PEDOMETER, callback?: Callback<PedometerResponse>): void
@@ -2288,7 +2288,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.PEDOMETER')
 
 ```TypeScript
 function off(type: SensorId.PEDOMETER, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerResponse>): void
@@ -2380,7 +2380,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.PEDOMETER_DETECTION')
 
 ```TypeScript
 function off(type: SensorId.PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void
@@ -2439,7 +2439,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.PEDOMETER_DETECTION')
 
 ```TypeScript
 function off(type: SensorId.PEDOMETER_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<PedometerDetectionResponse>): void
@@ -2531,7 +2531,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.PROXIMITY')
 
 ```TypeScript
 function off(type: SensorId.PROXIMITY, callback?: Callback<ProximityResponse>): void
@@ -2587,7 +2587,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.PROXIMITY')
 
 ```TypeScript
 function off(type: SensorId.PROXIMITY, sensorInfoParam?: SensorInfoParam, callback?: Callback<ProximityResponse>): void
@@ -2676,7 +2676,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.ROTATION_VECTOR')
 
 ```TypeScript
 function off(type: SensorId.ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void
@@ -2732,7 +2732,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.ROTATION_VECTOR')
 
 ```TypeScript
 function off(type: SensorId.ROTATION_VECTOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<RotationVectorResponse>): void
@@ -2821,7 +2821,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.SIGNIFICANT_MOTION')
 
 ```TypeScript
 function off(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void
@@ -2877,7 +2877,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.SIGNIFICANT_MOTION')
 
 ```TypeScript
 function off(type: SensorId.SIGNIFICANT_MOTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<SignificantMotionResponse>): void
@@ -2966,7 +2966,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.WEAR_DETECTION')
 
 ```TypeScript
 function off(type: SensorId.WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void
@@ -3022,7 +3022,7 @@ try {
 ```
 
 
-## off
+## off('SensorId.FUSION_PRESSURE')
 
 ```TypeScript
 function off(type: SensorId.FUSION_PRESSURE, sensorInfoParam?: SensorInfoParam, callback?: Callback<FusionPressureResponse>): void
@@ -3112,7 +3112,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorId.WEAR_DETECTION')
 
 ```TypeScript
 function off(type: SensorId.WEAR_DETECTION, sensorInfoParam?: SensorInfoParam, callback?: Callback<WearDetectionResponse>): void
@@ -3201,7 +3201,7 @@ function sensorUnsubscribe(): Ret {
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_ACCELEROMETER')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<AccelerometerResponse>): void
@@ -3212,14 +3212,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ACCELEROMETER](#off-5)
+> [sensor.off.ACCELEROMETER](#offsensoridaccelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-5)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
+**替代接口：** [off](#offsensoridaccelerometer)(type: SensorId.ACCELEROMETER, callback?: Callback&lt;AccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3249,7 +3249,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
@@ -3261,14 +3261,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED,
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ACCELEROMETER_UNCALIBRATED](#off-7)
+> [sensor.off.ACCELEROMETER_UNCALIBRATED](#offsensoridaccelerometer_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-7)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**替代接口：** [off](#offsensoridaccelerometer_uncalibrated)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback?: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3301,7 +3301,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void
@@ -3312,14 +3312,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.AMBIENT_LIGHT](#off-9)
+> [sensor.off.AMBIENT_LIGHT](#offsensoridambient_light)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-9)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
+**替代接口：** [off](#offsensoridambient_light)(type: SensorId.AMBIENT_LIGHT, callback?: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback?: Callback<LightResponse>): void-End-->
 
@@ -3345,7 +3345,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void
@@ -3356,14 +3356,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.AMBIENT_TEMPERATURE](#off-11)
+> [sensor.off.AMBIENT_TEMPERATURE](#offsensoridambient_temperature)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-11)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
+**替代接口：** [off](#offsensoridambient_temperature)(type: SensorId.AMBIENT_TEMPERATURE, callback?: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback?: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -3389,7 +3389,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_BAROMETER')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void
@@ -3400,14 +3400,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<Baro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.BAROMETER](#off-13)
+> [sensor.off.BAROMETER](#offsensoridbarometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-13)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
+**替代接口：** [off](#offsensoridbarometer)(type: SensorId.BAROMETER, callback?: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback?: Callback<BarometerResponse>): void-End-->
 
@@ -3433,7 +3433,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_GRAVITY')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void
@@ -3444,14 +3444,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<Gravit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GRAVITY](#off-15)
+> [sensor.off.GRAVITY](#offsensoridgravity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-15)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
+**替代接口：** [off](#offsensoridgravity)(type: SensorId.GRAVITY, callback?: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback?: Callback<GravityResponse>): void-End-->
 
@@ -3479,7 +3479,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_GYROSCOPE')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<GyroscopeResponse>): void
@@ -3490,14 +3490,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback?: Callback<Gyro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GYROSCOPE](#off-17)
+> [sensor.off.GYROSCOPE](#offsensoridgyroscope)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-17)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
+**替代接口：** [off](#offsensoridgyroscope)(type: SensorId.GYROSCOPE, callback?: Callback&lt;GyroscopeResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -3527,7 +3527,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: Callback<GyroscopeUncalibratedResponse>): void
@@ -3538,14 +3538,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback?: 
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.GYROSCOPE_UNCALIBRATED](#off-19)
+> [sensor.off.GYROSCOPE_UNCALIBRATED](#offsensoridgyroscope_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-19)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**替代接口：** [off](#offsensoridgyroscope_uncalibrated)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback?: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -3575,7 +3575,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_HALL')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void
@@ -3586,14 +3586,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallRespo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HALL](#off-21)
+> [sensor.off.HALL](#offsensoridhall)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-21)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
+**替代接口：** [off](#offsensoridhall)(type: SensorId.HALL, callback?: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HALL, callback?: Callback<HallResponse>): void-End-->
 
@@ -3619,7 +3619,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HALL, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_HEART_RATE')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<HeartRateResponse>): void
@@ -3630,14 +3630,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback?: Callback<Hea
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HEART_RATE](#off-23)
+> [sensor.off.HEART_RATE](#offsensoridheart_rate)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-23)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
+**替代接口：** [off](#offsensoridheart_rate)(type: SensorId.HEART_RATE, callback?: Callback&lt;HeartRateResponse&gt;)
 
 **需要权限：** ohos.permission.HEALTH_DATA
 
@@ -3665,7 +3665,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_HUMIDITY')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void
@@ -3676,14 +3676,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<Humid
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.HUMIDITY](#off-25)
+> [sensor.off.HUMIDITY](#offsensoridhumidity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-25)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
+**替代接口：** [off](#offsensoridhumidity)(type: SensorId.HUMIDITY, callback?: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback?: Callback<HumidityResponse>): void-End-->
 
@@ -3709,7 +3709,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Callback<LinearAccelerometerResponse>): void
@@ -3720,14 +3720,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.LINEAR_ACCELEROMETER](#off-27)
+> [sensor.off.LINEAR_ACCELEROMETER](#offsensoridlinear_accelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-27)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
+**替代接口：** [off](#offsensoridlinear_accelerometer)(type: SensorId.LINEAR_ACCELEROMETER, callback?: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -3757,7 +3757,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void
@@ -3768,14 +3768,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.MAGNETIC_FIELD](#off-29)
+> [sensor.off.MAGNETIC_FIELD](#offsensoridmagnetic_field)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-29)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
+**替代接口：** [off](#offsensoridmagnetic_field)(type: SensorId.MAGNETIC_FIELD, callback?: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback?: Callback<MagneticFieldResponse>): void-End-->
 
@@ -3803,7 +3803,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void
@@ -3814,14 +3814,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#off-31)
+> [sensor.off.MAGNETIC_FIELD_UNCALIBRATED](#offsensoridmagnetic_field_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-31)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**替代接口：** [off](#offsensoridmagnetic_field_uncalibrated)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback?: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -3852,7 +3852,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_ORIENTATION')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void
@@ -3863,14 +3863,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<Or
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ORIENTATION](#off-33)
+> [sensor.off.ORIENTATION](#offsensoridorientation)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-33)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [off](#offsensoridorientation)(type: SensorId.ORIENTATION, callback?: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback?: Callback<OrientationResponse>): void-End-->
 
@@ -3898,7 +3898,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_PEDOMETER')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<PedometerResponse>): void
@@ -3909,14 +3909,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback?: Callback<Pedo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PEDOMETER](#off-35)
+> [sensor.off.PEDOMETER](#offsensoridpedometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-35)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
+**替代接口：** [off](#offsensoridpedometer)(type: SensorId.PEDOMETER, callback?: Callback&lt;PedometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -3944,7 +3944,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Callback<PedometerDetectionResponse>): void
@@ -3955,14 +3955,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback?: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PEDOMETER_DETECTION](#off-37)
+> [sensor.off.PEDOMETER_DETECTION](#offsensoridpedometer_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-37)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
+**替代接口：** [off](#offsensoridpedometer_detection)(type: SensorId.PEDOMETER_DETECTION, callback?: Callback&lt;PedometerDetectionResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -3990,7 +3990,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_PROXIMITY')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void
@@ -4001,14 +4001,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<Prox
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.PROXIMITY](#off-39)
+> [sensor.off.PROXIMITY](#offsensoridproximity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-39)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
+**替代接口：** [off](#offsensoridproximity)(type: SensorId.PROXIMITY, callback?: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback?: Callback<ProximityResponse>): void-End-->
 
@@ -4034,7 +4034,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void
@@ -4045,14 +4045,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.ROTATION_VECTOR](#off-41)
+> [sensor.off.ROTATION_VECTOR](#offsensoridrotation_vector)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-41)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
+**替代接口：** [off](#offsensoridrotation_vector)(type: SensorId.ROTATION_VECTOR, callback?: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback?: Callback<RotationVectorResponse>): void-End-->
 
@@ -4081,7 +4081,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void
@@ -4092,14 +4092,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Call
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.SIGNIFICANT_MOTION](#off-43)
+> [sensor.off.SIGNIFICANT_MOTION](#offsensoridsignificant_motion)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-43)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
+**替代接口：** [off](#offsensoridsignificant_motion)(type: SensorId.SIGNIFICANT_MOTION, callback?: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback?: Callback<SignificantMotionResponse>): void-End-->
 
@@ -4125,7 +4125,7 @@ sensor.off(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback);
 ```
 
 
-## off
+## off('SensorType.SENSOR_TYPE_ID_WEAR_DETECTION')
 
 ```TypeScript
 function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void
@@ -4136,14 +4136,14 @@ function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.off.WEAR_DETECTION](#off-45)
+> [sensor.off.WEAR_DETECTION](#offsensoridwear_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [off](#off-45)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
+**替代接口：** [off](#offsensoridwear_detection)(type: SensorId.WEAR_DETECTION, callback?: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void--><!--Device-sensor-function off(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback?: Callback<WearDetectionResponse>): void-End-->
 

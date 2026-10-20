@@ -40,6 +40,11 @@ Checks whether macro photography is supported in the current state. This API mus
 | --- | --- |
 | boolean | Check result for the support of macro photography. **true** if supported, **false** otherwise. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+
 **Examples**
 
 ```TypeScript

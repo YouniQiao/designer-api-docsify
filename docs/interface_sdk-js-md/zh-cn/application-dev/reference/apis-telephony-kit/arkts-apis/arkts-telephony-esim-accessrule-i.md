@@ -1,4 +1,4 @@
-# AccessRule（系统接口）
+# AccessRule
 
 ```TypeScript
 export interface AccessRule
@@ -11,8 +11,6 @@ export interface AccessRule
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -36,8 +34,6 @@ accessType: number
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
-**系统接口：** 此接口为系统接口。
-
 ## certificateHashHexStr
 
 ```TypeScript
@@ -54,8 +50,6 @@ certificateHashHexStr: string
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
 
-**系统接口：** 此接口为系统接口。
-
 ## packageName
 
 ```TypeScript
@@ -71,5 +65,3 @@ packageName: string
 <!--Device-AccessRule-packageName: string--><!--Device-AccessRule-packageName: string-End-->
 
 **系统能力：** SystemCapability.Telephony.CoreService.Esim
-
-**系统接口：** 此接口为系统接口。

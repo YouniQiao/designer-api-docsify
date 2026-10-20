@@ -51,3 +51,26 @@ function createPartition(diskId: string, params: PartitionParams): Promise<void>
 | 13600008 | No such object. |
 | 13600010 | The input parameter is invalid. |
 | 13600022 | Create partition failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+let params: volumeManager.PartitionParams = {
+  partitionNum: 1,
+  startSector: 2048,
+  endSector: 1024000,
+  typeCode: "ext4"
+};
+volumeManager.createPartition(diskId, params).then(() => {
+  console.info("createPartition successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`createPartition failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

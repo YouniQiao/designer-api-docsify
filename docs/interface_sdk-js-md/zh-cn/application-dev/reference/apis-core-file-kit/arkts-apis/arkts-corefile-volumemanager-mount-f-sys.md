@@ -45,6 +45,24 @@ function mount(volumeId: string, callback: AsyncCallback<void>): void
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
 
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.mount(volumeId, (error: BusinessError) => {
+  if (error) {
+    console.error(`mount failed, code is: ${error.code}, message is: ${error.message}`);
+    return;
+  }
+  // 挂载指定卷设备成功后的回调
+});
+```
+
+<!--DelEnd-->
+
 
 ## mount
 
@@ -89,3 +107,19 @@ function mount(volumeId: string): Promise<void>
 | 13600005 | Incorrect volume state. |
 | 13600008 | No such object. |
 | 13900042 | Unknown error. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.mount(volumeId).then(() => {
+  // 挂载指定卷设备成功后的回调
+}).catch((error: BusinessError) => {
+  console.error(`Failed to mount. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

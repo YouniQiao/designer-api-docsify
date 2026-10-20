@@ -4,7 +4,7 @@
 interface UploadTask
 ```
 
-上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-2)获取，callback形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1)获取。
+上传任务，使用下列方法前，需要先获取UploadTask对象，promise形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取，callback形式通过[request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile)获取。
 
 **起始版本：** 6
 

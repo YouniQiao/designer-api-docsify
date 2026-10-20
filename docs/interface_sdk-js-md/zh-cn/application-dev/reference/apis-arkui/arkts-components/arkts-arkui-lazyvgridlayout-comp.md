@@ -10,7 +10,7 @@ API版本26.0.0之前，其父组件支持[WaterFlow](arkts-arkui-waterflow-comp
 
 > **说明：** 
 > 
-> - LazyVGridLayout组件高度默认自适应内容，不建议设置会固定或约束组件垂直方向尺寸的属性，设置后会导致显示异常或无法正常滚动。涉及的属性包括[height](arkts-arkui-common-comp-commonmethod-c.md#height)、[size](arkts-arkui-common-comp-commonmethod-c.md#size)中的height、[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)中的minHeight/maxHeight、[aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio)、[layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight)，以及[height](arkts-arkui-common-comp-commonmethod-c.md#height-1)取[LayoutPolicy](arkts-arkui-common-comp-layoutpolicy-c.md)值的场景。
+> - LazyVGridLayout组件高度默认自适应内容，不建议设置会固定或约束组件垂直方向尺寸的属性，设置后会导致显示异常或无法正常滚动。涉及的属性包括[height](arkts-arkui-common-comp-commonmethod-c.md#height)、[size](arkts-arkui-common-comp-commonmethod-c.md#size)中的height、[constraintSize](arkts-arkui-common-comp-commonmethod-c.md#constraintsize)中的minHeight/maxHeight、[aspectRatio](arkts-arkui-common-comp-commonmethod-c.md#aspectratio)、[layoutWeight](arkts-arkui-common-comp-commonmethod-c.md#layoutweight)，以及[height](arkts-arkui-common-comp-commonmethod-c.md#height)取[LayoutPolicy](arkts-arkui-common-comp-layoutpolicy-c.md)值的场景。
 > 
 > - 当父组件设置主轴方向尺寸时，LazyVGridLayout按照父组件可视区域进行懒加载；当父组件未设置主轴方向尺寸时，LazyVGridLayout会被内容撑开，导致所有子组件都会被加载布局。
 > 

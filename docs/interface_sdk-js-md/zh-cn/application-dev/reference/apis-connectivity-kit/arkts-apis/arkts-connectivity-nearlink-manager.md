@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace manager--><!--Device-unnamed-declare namespace manager-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -20,13 +22,13 @@ import { manager } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname-1) | 查询本机星闪名称。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
-| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices-1) | 获取与当前设备配对的设备列表。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
-| [getState](arkts-connectivity-manager-getstate-f.md#getstate-1) | 查询星闪开关状态。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
-| [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md#isframetype4supported-1) | 查询当前设备是否支持帧类型4。 |
-| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported-1) | 查询当前设备是否支持星闪服务。 |
-| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange-1) | 取消订阅星闪开关状态变化事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
-| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange-1) | 订阅星闪开关状态变化事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [getLocalName](arkts-connectivity-manager-getlocalname-f.md#getlocalname) | 查询本机星闪名称。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [getPairedDevices](arkts-connectivity-manager-getpaireddevices-f.md#getpaireddevices) | 获取与当前设备配对的设备列表。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [getState](arkts-connectivity-manager-getstate-f.md#getstate) | 查询星闪开关状态。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [isFrameType4Supported](arkts-connectivity-manager-isframetype4supported-f.md#isframetype4supported) | 查询当前设备是否支持帧类型4。 |
+| [isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md#isnearlinksupported) | 查询当前设备是否支持星闪服务。 |
+| [offStateChange](arkts-connectivity-manager-offstatechange-f.md#offstatechange) | 取消订阅星闪开关状态变化事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [onStateChange](arkts-connectivity-manager-onstatechange-f.md#onstatechange) | 订阅星闪开关状态变化事件。使用callback异步回调。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
 
 <!--Del-->
 ### 函数（系统接口）

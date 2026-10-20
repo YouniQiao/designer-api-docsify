@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function requestAccessoryRight(accessory: USBAccessory): Promise<boolean>
 ```
 
-为指定应用申请访问USB配件的访问权限。使用Promise异步回调。
+为当前应用申请访问USB配件的权限。使用Promise异步回调。
 
 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取配件列表，得到[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。
 

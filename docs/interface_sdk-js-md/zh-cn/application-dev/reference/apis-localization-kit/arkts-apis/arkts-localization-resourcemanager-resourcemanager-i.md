@@ -6325,7 +6325,7 @@ getStringSync(resource: Resource, ...args: Array<string | number>): string
 
 **废弃版本：** 20
 
-**替代接口：** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
+**替代接口：** [getStringSync](#getstringsync)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -7086,7 +7086,7 @@ closeRawFileDescriptor(path: string): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [closeRawFd](#closerawfd-1)(path: string)
+**替代接口：** [closeRawFd](#closerawfd)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -7299,7 +7299,7 @@ getPluralString(resId: number, num: number, callback: AsyncCallback<string>): vo
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](#getpluralstringvalue-2)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
+**替代接口：** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -7346,7 +7346,7 @@ getPluralString(resId: number, num: number): Promise<string>
 
 **废弃版本：** 9
 
-**替代接口：** [getPluralStringValue](#getpluralstringvalue-3)(resId: number, num: number)
+**替代接口：** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -8213,7 +8213,7 @@ getRawFile(path: string): Promise<Uint8Array>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFileContent](#getrawfilecontent-1)(path: string)
+**替代接口：** [getRawFileContent](#getrawfilecontent)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -8304,7 +8304,7 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 
 **废弃版本：** 9
 
-**替代接口：** [getRawFd](#getrawfd-1)(path: string)
+**替代接口：** [getRawFd](#getrawfd)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 

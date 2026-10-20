@@ -14,6 +14,8 @@ The **boardInfo** module provides board-level hardware information query, includ
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace boardInfo--><!--Device-unnamed-declare namespace boardInfo-End-->
 
 **System capability:** SystemCapability.Startup.BoardInfo

@@ -157,7 +157,7 @@ Creates a deferred **PreviewOutput** instance and adds it, instead of a common *
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). |
 
 **Return value:**
 
@@ -211,7 +211,7 @@ Creates a **MetadataOutput** instance. This API returns the result synchronously
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). |
+| metadataObjectTypes | Array&lt;[MetadataObjectType](arkts-camera-camera-metadataobjecttype-e.md)&gt; | Yes | Metadata object types, which are obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). |
 
 **Return value:**
 
@@ -264,7 +264,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). <br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | No | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). <br>In API version 11, this parameter is mandatory. Starting from API version 12, it will overwrite the preconfigured parameters passed in through [preconfig](arkts-camera-camera-photosession-i.md#preconfig). |
 
 **Return value:**
 
@@ -314,7 +314,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 **Deprecated since:** 11
 
-**Substitutes:** [createPhotoOutput](#createphotooutput-1)(profile?: Profile)
+**Substitutes:** [createPhotoOutput](#createphotooutput)(profile?: Profile)
 
 <!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput--><!--Device-CameraManager-createPhotoOutput(profile: Profile, surfaceId: string): PhotoOutput-End-->
 
@@ -324,7 +324,7 @@ Creates a **PhotoOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported photo profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). |
 | surfaceId | string | Yes | Surface ID, which is obtained from [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md). |
 
 **Return value:**
@@ -363,7 +363,7 @@ Creates a **PreviewOutput** instance. This API returns the result synchronously.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). |
+| profile | [Profile](arkts-camera-camera-profile-i.md) | Yes | Supported preview profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). |
 | surfaceId | string | Yes | Surface ID, which is obtained from XComponent or [ImageReceiver](../../apis-image-kit/arkts-apis/arkts-image-image-imagereceiver-i.md). |
 
 **Return value:**
@@ -531,7 +531,7 @@ In video recording mode, if SDR or HDR VIVID is enabled, the camera format and c
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability-1). |
+| profile | [VideoProfile](arkts-camera-camera-videoprofile-i.md) | Yes | Supported video profile, which is obtained through [getSupportedOutputCapability](#getsupportedoutputcapability). |
 | surfaceId | string | Yes | Surface ID, which is obtained from [AVRecorder](../../apis-media/arkts-apis/arkts-media-media-avrecorder-i.md). |
 
 **Return value:**
@@ -920,7 +920,7 @@ Obtains the output capability supported by a camera device. This API returns the
 
 **Deprecated since:** 11
 
-**Substitutes:** [getSupportedOutputCapability](#getsupportedoutputcapability-1)(camera: CameraDevice, mode: SceneMode)
+**Substitutes:** [getSupportedOutputCapability](#getsupportedoutputcapability)(camera: CameraDevice, mode: SceneMode)
 
 <!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability--><!--Device-CameraManager-getSupportedOutputCapability(camera: CameraDevice): CameraOutputCapability-End-->
 
@@ -1078,6 +1078,11 @@ Checks whether the device supports flashlight brightness control.
 | Type | Description |
 | --- | --- |
 | boolean | Whether the device supports flashlight brightness control. Returns **true** if supported, **false** if not. If the API call fails, undefined is returned. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
 
 **Examples**
 

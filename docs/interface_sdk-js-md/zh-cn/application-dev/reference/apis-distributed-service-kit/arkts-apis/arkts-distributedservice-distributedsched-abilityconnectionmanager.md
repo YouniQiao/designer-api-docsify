@@ -4,6 +4,8 @@ abilityConnectionManager模块提供了应用协同接口管理能力。设备�
 
 **起始版本：** 18
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace abilityConnectionManager--><!--Device-unnamed-declare namespace abilityConnectionManager-End-->
 
 **系统能力：** SystemCapability.DistributedSched.AppCollaboration
@@ -20,12 +22,12 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect-1) | 设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。调用此接口前，需先在两端设备分别创建协同会话。必须与设备A的connect方法配合使用：设备A调用connect会拉起设备B应用，设备B在onCollaborate生命周期中创建会话后调用acceptConnect。使用Promise异步回调。 |
-| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect-1) | 创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。调用此接口前，需先在两端设备分别创建协同会话。connect接口通过底层分布式通信服务建立连接，必须与设备B的acceptConnect配合使用才能建立成功连接，调用connect会拉起设备B应用。连接过程会触发'connect'事件通知状态变化。使用Promise异步回调。连接失败时，返回的ConnectResult对象中的errorCode字段包含具体的错误信息，可参考ConnectErrorCode枚举了解错误原因。 |
-| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession-1) | 创建应用间的协同会话。协同会话用于管理跨设备通信的连接状态，需要先在两端设备分别创建会话，然后通过connect建立连接。 |
-| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession-1) | 销毁应用间的协同会话，与createAbilityConnectionSession配对使用用于释放会话资源。此接口需在成功创建协同会话后调用。销毁会话会释放相关资源，建议先调用disconnect断开连接后再销毁会话。不调用此方法会导致资源泄漏。 |
-| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect-1) | 创建协同会话成功、应用连接成功、协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。需在connect()建立连接后调用。 |
-| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid-1) | 获取指定会话中对端应用信息。此接口需在成功创建协同会话后调用。 |
+| [acceptConnect](arkts-distributedservice-abilityconnectionmanager-acceptconnect-f.md#acceptconnect) | 设备B上的应用，在创建协同会话成功并获得会话ID后，调用acceptConnect()方法接受连接。调用此接口前，需先在两端设备分别创建协同会话。必须与设备A的connect方法配合使用：设备A调用connect会拉起设备B应用，设备B在onCollaborate生命周期中创建会话后调用acceptConnect。使用Promise异步回调。 |
+| [connect](arkts-distributedservice-abilityconnectionmanager-connect-f.md#connect) | 创建协同会话成功并获得会话ID后，设备A上可进行UIAbility的连接。调用此接口前，需先在两端设备分别创建协同会话。connect接口通过底层分布式通信服务建立连接，必须与设备B的acceptConnect配合使用才能建立成功连接，调用connect会拉起设备B应用。连接过程会触发'connect'事件通知状态变化。使用Promise异步回调。连接失败时，返回的ConnectResult对象中的errorCode字段包含具体的错误信息，可参考ConnectErrorCode枚举了解错误原因。 |
+| [createAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-createabilityconnectionsession-f.md#createabilityconnectionsession) | 创建应用间的协同会话。协同会话用于管理跨设备通信的连接状态，需要先在两端设备分别创建会话，然后通过connect建立连接。 |
+| [destroyAbilityConnectionSession](arkts-distributedservice-abilityconnectionmanager-destroyabilityconnectionsession-f.md#destroyabilityconnectionsession) | 销毁应用间的协同会话，与createAbilityConnectionSession配对使用用于释放会话资源。此接口需在成功创建协同会话后调用。销毁会话会释放相关资源，建议先调用disconnect断开连接后再销毁会话。不调用此方法会导致资源泄漏。 |
+| [disconnect](arkts-distributedservice-abilityconnectionmanager-disconnect-f.md#disconnect) | 创建协同会话成功、应用连接成功、协同业务执行完毕后，协同双端的任意一台设备，应断开UIAbility的连接，结束协同状态。需在connect()建立连接后调用。 |
+| [getPeerInfoById](arkts-distributedservice-abilityconnectionmanager-getpeerinfobyid-f.md#getpeerinfobyid) | 获取指定会话中对端应用信息。此接口需在成功创建协同会话后调用。 |
 | [off('connect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offconnect) | 取消connect事件的回调监听。 |
 | [off('disconnect')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offdisconnect) | 取消disconnect事件的回调监听。 |
 | [off('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-off-f.md#offreceivemessage) | 取消receiveMessage事件的回调监听。 |
@@ -34,9 +36,9 @@ import { abilityConnectionManager } from '@kit.DistributedServiceKit';
 | [on('disconnect')](arkts-distributedservice-abilityconnectionmanager-on-f.md#ondisconnect) | 注册disconnect事件的回调监听。 |
 | [on('receiveMessage')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivemessage) | 注册receiveMessage事件的回调监听。 |
 | [on('receiveData')](arkts-distributedservice-abilityconnectionmanager-on-f.md#onreceivedata) | 注册receiveData事件的回调监听。 |
-| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject-1) | 在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。 |
-| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata-1) | 创建协同会话成功并获得会话ID、应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。使用Promise异步回调。 |
-| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage-1) | 创建协同会话成功并获得会话ID、调用connect接口建立连接成功后，设备A或设备B可向对端设备发送文本信息。使用Promise异步回调。 |
+| [reject](arkts-distributedservice-abilityconnectionmanager-reject-f.md#reject) | 在跨端应用协同过程中，在拒绝对端的连接请求后，向对端发送拒绝原因。 |
+| [sendData](arkts-distributedservice-abilityconnectionmanager-senddata-f.md#senddata) | 创建协同会话成功并获得会话ID、应用连接成功后，设备A或设备B可向对端设备发送[ArrayBuffer](../../../arkts-utils/arraybuffer-object.md)字节流。使用Promise异步回调。 |
+| [sendMessage](arkts-distributedservice-abilityconnectionmanager-sendmessage-f.md#sendmessage) | 创建协同会话成功并获得会话ID、调用connect接口建立连接成功后，设备A或设备B可向对端设备发送文本信息。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）

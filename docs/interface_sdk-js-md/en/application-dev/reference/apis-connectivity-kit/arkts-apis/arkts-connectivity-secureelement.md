@@ -20,7 +20,7 @@ import { omapi } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [createService](arkts-connectivity-omapi-createservice-f.md#createservice-1) | Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, only asynchronous APIs are provided. This API uses a promise to return the result. |
+| [createService](arkts-connectivity-omapi-createservice-f.md#createservice) | Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, only asynchronous APIs are provided. This API uses a promise to return the result. |
 | [off('stateChanged')](arkts-connectivity-omapi-off-f.md#offstatechanged) | Disables listening for service status change events. |
 | [on('stateChanged')](arkts-connectivity-omapi-on-f.md#onstatechanged) | Enables listening for service status change events. |
 | [newSEService('serviceState')](arkts-connectivity-omapi-newseservice-f.md) | Creates an **SEService** instance for connecting to all available SEs in the system. The connection is time- consuming. Therefore, this API supports only the asynchronous mode. This API uses an asynchronous callback to return the result. |

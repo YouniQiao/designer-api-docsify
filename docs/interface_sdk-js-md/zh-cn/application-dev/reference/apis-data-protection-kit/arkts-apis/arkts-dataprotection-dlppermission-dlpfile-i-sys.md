@@ -4,7 +4,7 @@
 export interface DLPFile
 ```
 
-管理DLPFile的实例，表示一个DLP文件对象，需要通过[generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md)获取DLPFile的实例。DLPFile对象代表一个已打开的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](#closedlpfile)方法释放资源，避免文件句柄泄漏。DLPFile对象在跨进程传递时，需要进行授权。
+管理DLPFile的实例，表示一个DLP文件对象，需要通过[generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)获取DLPFile的实例。DLPFile对象代表一个已打开的DLP文件句柄，封装了对DLP文件的所有操作接口。对象在使用完毕后必须调用[closeDLPFile](#closedlpfile)方法释放资源，避免文件句柄泄漏。DLPFile对象在跨进程传递时，需要进行授权。
 
 **起始版本：** 10
 
@@ -188,7 +188,7 @@ closeDLPFile(): Promise<void>
 
 关闭DLPFile，释放对象。使用Promise异步回调。
 
-调用[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md)成功后返回DLPFile对象，必须在使用完毕后调用closeDLPFile()释放资源。
+调用[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile)成功后返回DLPFile对象，必须在使用完毕后调用closeDLPFile()释放资源。
 
 文件所有者决定关闭DLP文件时使用此接口。
 

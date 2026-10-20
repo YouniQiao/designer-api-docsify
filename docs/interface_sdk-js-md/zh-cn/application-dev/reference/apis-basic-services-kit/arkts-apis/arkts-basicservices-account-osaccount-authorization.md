@@ -14,6 +14,8 @@
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace authorization--><!--Device-unnamed-declare namespace authorization-End-->
 
 **系统能力：** SystemCapability.Account.OsAccount
@@ -30,7 +32,7 @@ import { authorization } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAuthorizationManager](arkts-basicservices-authorization-getauthorizationmanager-f.md#getauthorizationmanager-1) | 获取[AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md)实例。 |
+| [getAuthorizationManager](arkts-basicservices-authorization-getauthorizationmanager-f.md#getauthorizationmanager) | 获取[AuthorizationManager](arkts-basicservices-authorization-authorizationmanager-i.md)实例。 |
 
 ### 接口
 

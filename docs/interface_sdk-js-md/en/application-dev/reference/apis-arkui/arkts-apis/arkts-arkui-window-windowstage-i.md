@@ -1774,7 +1774,7 @@ Sets the image displayed in the multitasking view and on dock hover. This API us
 > 
 > Before calling this API, you are advised to complete page loading via
 > [loadContent](arkts-arkui-window-window-i.md#loadcontent) or
-> [setUIContent](arkts-arkui-window-window-i.md#setuicontent-1). If this API is called before the application
+> [setUIContent](arkts-arkui-window-window-i.md#setuicontent). If this API is called before the application
 > completes page loading, the intended functionality does not take effect. As a result, only the application's
 > launch page is displayed in the multitasking view.
 

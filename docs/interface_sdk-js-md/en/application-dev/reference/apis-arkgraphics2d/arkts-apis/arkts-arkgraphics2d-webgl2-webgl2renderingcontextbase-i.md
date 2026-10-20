@@ -857,7 +857,7 @@ Sets draw buffers
 | --- | --- | --- | --- |
 | buffers | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md)[] | Yes | Buffers |
 
-## drawElementsInstanced
+## drawElementsInstanced('webgl.GLenum')
 
 ```TypeScript
 drawElementsInstanced(
@@ -889,7 +889,7 @@ Draws elements instanced
 | offset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | Offset |
 | instanceCount | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Instance count |
 
-## drawRangeElements
+## drawRangeElements('webgl.GLenum')
 
 ```TypeScript
 drawRangeElements(
@@ -1769,7 +1769,7 @@ Sets sampler parameteri
 | pname | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Parameter name |
 | param | [webgl.GLint](arkts-arkgraphics2d-glint-t.md) | Yes | Parameter value |
 
-## texImage3D
+## texImage3D('webgl.GLenum')
 
 ```TypeScript
 texImage3D(
@@ -1811,7 +1811,7 @@ Sets texture image 3D from PBO offset
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
 | pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
-## texImage3D
+## texImage3D('webgl.GLenum')
 
 ```TypeScript
 texImage3D(
@@ -1853,7 +1853,7 @@ Sets texture image 3D from TexImageSource
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
 | source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
-## texImage3D
+## texImage3D('webgl.GLenum')
 
 ```TypeScript
 texImage3D(
@@ -1895,7 +1895,7 @@ Sets texture image 3D from ArrayBufferView
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
 | srcData | [ArrayBufferView](../../apis-default/arkts-apis/arkts-lib-es5-arraybufferview-i.md) &#124; null | Yes | Source data |
 
-## texImage3D
+## texImage3D('webgl.GLenum')
 
 ```TypeScript
 texImage3D(
@@ -2005,7 +2005,7 @@ Sets texture storage 3D
 | height | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Height |
 | depth | [webgl.GLsizei](arkts-arkgraphics2d-glsizei-t.md) | Yes | Depth |
 
-## texSubImage3D
+## texSubImage3D('webgl.GLenum')
 
 ```TypeScript
 texSubImage3D(
@@ -2049,7 +2049,7 @@ Sets texture sub image 3D from PBO offset
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
 | pboOffset | [webgl.GLintptr](arkts-arkgraphics2d-glintptr-t.md) | Yes | PBO offset |
 
-## texSubImage3D
+## texSubImage3D('webgl.GLenum')
 
 ```TypeScript
 texSubImage3D(
@@ -2093,7 +2093,7 @@ Sets texture sub image 3D from TexImageSource
 | type | [webgl.GLenum](arkts-arkgraphics2d-glenum-t.md) | Yes | Type |
 | source | [webgl.TexImageSource](arkts-arkgraphics2d-teximagesource-t.md) | Yes | Image source |
 
-## texSubImage3D
+## texSubImage3D('webgl.GLenum')
 
 ```TypeScript
 texSubImage3D(
@@ -2728,7 +2728,7 @@ Sets vertex attrib I4uiv value
 | index | [webgl.GLuint](arkts-arkgraphics2d-gluint-t.md) | Yes | Vertex attribute index |
 | values | [Uint32List](arkts-arkgraphics2d-uint32list-t.md) | Yes | Values |
 
-## vertexAttribIPointer
+## vertexAttribIPointer('webgl.GLenum')
 
 ```TypeScript
 vertexAttribIPointer(

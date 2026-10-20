@@ -4,6 +4,8 @@ The class of a system configuration.
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace systemConfiguration--><!--Device-unnamed-declare namespace systemConfiguration-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core

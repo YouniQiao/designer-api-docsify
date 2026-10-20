@@ -4,7 +4,7 @@
 export interface DLPFile
 ```
 
-Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the [closeDLPFile](#closedlpfile) API to release resources to prevent file handle leaks. Authorization is required when the **DLPFile** object is transferred across processes.
+Provides APIs for managing DLP files. A **DLPFile** instance indicates a DLP file object. You can use [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) or [openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to obtain a **DLPFile** instance. The **DLPFile** object represents an opened DLP file handle, which encapsulates all operation APIs for DLP files. After using the object, the system must call the [closeDLPFile](#closedlpfile) API to release resources to prevent file handle leaks. Authorization is required when the **DLPFile** object is transferred across processes.
 
 **Since:** 10
 
@@ -188,7 +188,7 @@ closeDLPFile(): Promise<void>
 
 Closes a **DLPFile** object. This API uses a promise to return the result.
 
-After calling [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
+After calling [generateDLPFile](arkts-dataprotection-dlppermission-generatedlpfile-f-sys.md#generatedlpfile) /[openDLPFile](arkts-dataprotection-dlppermission-opendlpfile-f-sys.md#opendlpfile) to return a **DLPFile** object, the system must call **closeDLPFile()** to release resources after using the object.
 
 This API is used when the file owner decides to close a DLP file.
 

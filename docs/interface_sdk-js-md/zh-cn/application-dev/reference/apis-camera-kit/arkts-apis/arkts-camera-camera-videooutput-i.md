@@ -305,6 +305,11 @@ isMirrorSupported(): boolean
 | --- | --- |
 | boolean | 返回是否支持镜像录像，true表示支持，false表示不支持。若接口调用失败，返回undefined。 |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+
 **示例**
 
 ```TypeScript

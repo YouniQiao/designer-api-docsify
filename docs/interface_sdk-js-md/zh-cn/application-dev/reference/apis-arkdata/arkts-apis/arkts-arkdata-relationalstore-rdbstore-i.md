@@ -313,7 +313,7 @@ batchInsert(table: string, values: Array<ValuesBucket>, callback: AsyncCallback<
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -423,7 +423,7 @@ batchInsert(table: string, values: Array<ValuesBucket>): Promise<number>
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -559,7 +559,7 @@ batchInsertSync(table: string, values: Array<ValuesBucket>): number
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -679,7 +679,7 @@ batchInsertWithConflictResolution(
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -797,7 +797,7 @@ batchInsertWithConflictResolutionSync(
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -915,7 +915,7 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -1003,7 +1003,7 @@ conflict参数不建议使用ON_CONFLICT_FAIL策略，可能无法返回正确�
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3049,7 +3049,7 @@ insert(table: string, values: ValuesBucket, callback: AsyncCallback<number>): vo
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3145,7 +3145,7 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution, callba
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3243,7 +3243,7 @@ insert(table: string, values: ValuesBucket): Promise<number>
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3342,7 +3342,7 @@ insert(table: string, values: ValuesBucket, conflict: ConflictResolution): Promi
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3442,7 +3442,7 @@ insertSync(table: string, values: ValuesBucket, conflict?: ConflictResolution): 
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -3541,7 +3541,7 @@ insertSync(table: string, values: sendableRelationalStore.ValuesBucket, conflict
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -5053,7 +5053,7 @@ if (store != undefined) {
 querySqlWithoutRowCount(sql: string, bindArgs?: Array<ValueType>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于[querySql](#querysql-2)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
+根据指定条件查询数据库中的数据，查询时不计算行数。使用Promise异步回调。性能优于[querySql](#querysql)接口。SQL语句中的各种表达式和操作符之间的关系操作符号不超过1000个。
 
 **起始版本：** 23
 
@@ -5248,7 +5248,7 @@ if (store != undefined) {
 queryWithoutRowCount(predicates: RdbPredicates, columns?: Array<string>): Promise<LiteResultSet>
 ```
 
-根据指定条件查询数据库中的数据，查询时不计算行数，性能优于[query](#query-2)接口。使用Promise异步回调。
+根据指定条件查询数据库中的数据，查询时不计算行数，性能优于[query](#query)接口。使用Promise异步回调。
 
 **起始版本：** 23
 
@@ -6315,7 +6315,7 @@ setDistributedTables(tables: Array<string>, type?: DistributedType, config?: Dis
 | --- | --- | --- | --- |
 | tables | Array&lt;string&gt; | 是 | 要设置的分布式数据库的表名。 |
 | type | [DistributedType](arkts-arkdata-relationalstore-distributedtype-e.md) | 否 | 表的分布式类型。默认值是relationalStore.DistributedType.DISTRIBUTED_DEVICE。 |
-| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | 否 | 表的分布式配置信息。不传入时默认autoSync为false，需要调用[cloudSync](#cloudsync-3)接口触发端云同步。 |
+| config | [DistributedConfig](arkts-arkdata-relationalstore-distributedconfig-i.md) | 否 | 表的分布式配置信息。不传入时默认autoSync为false，需要调用[cloudSync](#cloudsync)接口触发端云同步。 |
 
 **返回值：**
 
@@ -6757,7 +6757,7 @@ update(values: ValuesBucket, predicates: RdbPredicates, callback: AsyncCallback<
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -6860,7 +6860,7 @@ update(
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -6959,7 +6959,7 @@ update(values: ValuesBucket, predicates: RdbPredicates): Promise<number>
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -7060,7 +7060,7 @@ update(values: ValuesBucket, predicates: RdbPredicates, conflict: ConflictResolu
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 
@@ -7162,7 +7162,7 @@ updateSync(values: ValuesBucket, predicates: RdbPredicates, conflict?: ConflictR
 
 由于共享内存的大小限制为2MB，因此单条数据的大小也必须严格小于2MB。
 
-如果单条数据超过此限制，在后续通过RdbStore的[query](#query-1)或[querySql](#querysql-1)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
+如果单条数据超过此限制，在后续通过RdbStore的[query](#query)或[querySql](#querysql)接口获取ResultSet后，调用[getValue](arkts-arkdata-relationalstore-resultset-i.md#getvalue)、[getString](arkts-arkdata-relationalstore-resultset-i.md#getstring)等get方法时将无法成功获取数据，并可能导致操作失败或抛出异常。
 
 如需读取超过2MB的数据，请使用[queryByStep](#querybystep)接口。
 

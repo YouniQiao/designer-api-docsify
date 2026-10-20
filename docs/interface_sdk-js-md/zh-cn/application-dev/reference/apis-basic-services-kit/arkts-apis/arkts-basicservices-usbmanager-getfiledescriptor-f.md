@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getFileDescriptor(pipe: USBDevicePipe): number
 ```
 
-获取文件描述符。如果USB服务异常，可能返回错误码，注意需要对接口返回值做判空或错误码检查处理。
+获取文件描述符。该接口适用于需要通过文件描述符访问USB设备的场景，获取后可结合文件读写能力与设备进行数据交互。如果USB服务异常，会返回错误码，注意需要对接口返回值做错误码检查处理。
 
 **起始版本：** 9
 

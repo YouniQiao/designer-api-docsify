@@ -60,7 +60,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 
 **示例**
 
@@ -112,7 +112,7 @@ constructor(context: Context, window: window.Window)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 | window | [window.Window](../../apis-arkui/arkts-apis/arkts-arkui-window-window-i.md) | 是 | 应用创建的窗口实例。 |
 
 **示例**

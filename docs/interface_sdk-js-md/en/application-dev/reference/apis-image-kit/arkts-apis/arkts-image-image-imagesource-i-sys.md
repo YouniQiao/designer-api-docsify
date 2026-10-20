@@ -6,7 +6,7 @@ interface ImageSource
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 

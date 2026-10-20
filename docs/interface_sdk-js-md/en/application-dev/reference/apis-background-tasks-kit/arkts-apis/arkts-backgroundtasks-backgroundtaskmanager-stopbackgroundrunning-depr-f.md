@@ -17,7 +17,7 @@ Requests to cancel a continuous task. This API uses an asynchronous callback to 
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-1)(context: Context, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)(context: Context, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void-End-->
 
@@ -87,7 +87,7 @@ Requests to cancel a continuous task. This API uses a promise to return the resu
 
 **Deprecated since:** 9
 
-**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-2)(context: Context)
+**Substitutes:** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)(context: Context)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>-End-->
 

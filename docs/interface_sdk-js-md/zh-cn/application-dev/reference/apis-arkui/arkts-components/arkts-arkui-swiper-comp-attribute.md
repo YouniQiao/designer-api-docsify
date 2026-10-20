@@ -147,7 +147,7 @@ cachedCount(count: number, options: CachedCountOptions)
 
 > **说明：** 
 
-> - 当options的independent设置为true时，预加载子组件个数按count个数计算，与[displayCount](#displaycount-1)的分组swipeByGroup计算解耦。例如cachedCount的count为1时，会将当前显示子节点的前一个和后一个子组件预加载。
+> - 当options的independent设置为true时，预加载子组件个数按count个数计算，与[displayCount](#displaycount)的分组swipeByGroup计算解耦。例如cachedCount的count为1时，会将当前显示子节点的前一个和后一个子组件预加载。
 > 
 > - 当displayCount的swipeByGroup参数设为true，且options的independent为false（默认值）时，预加载子组件个数以组为基本单位。例如cachedCount的count为1，displayCount的value为2，displayCount的swipeByGroup为true时，会将当前显示组的前一组和后一组的各两个子组件预加载。
 > 

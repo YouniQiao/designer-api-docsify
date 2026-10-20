@@ -6333,7 +6333,7 @@ Obtains the string corresponding to the specified resource object, and replaces 
 
 **Deprecated since:** 20
 
-**Substitutes:** [getStringSync](#getstringsync-1)(resId: number, ...args: Array&lt;string | number&gt;)
+**Substitutes:** [getStringSync](#getstringsync)(resId: number, ...args: Array&lt;string | number&gt;)
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -7094,7 +7094,7 @@ Closes the file descriptor (fd) of a specific rawfile in the **resources/rawfile
 
 **Deprecated since:** 9
 
-**Substitutes:** [closeRawFd](#closerawfd-1)(path: string)
+**Substitutes:** [closeRawFd](#closerawfd)(path: string)
 
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
@@ -7307,7 +7307,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getpluralstringvalue-2)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number, callback: _AsyncCallback&lt;string&gt;)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void--><!--Device-ResourceManager-getPluralString(resId: number, num: number, callback: AsyncCallback<string>): void-End-->
 
@@ -7354,7 +7354,7 @@ Obtains the plural string based on the specified resource ID and the specified r
 
 **Deprecated since:** 9
 
-**Substitutes:** [getPluralStringValue](#getpluralstringvalue-3)(resId: number, num: number)
+**Substitutes:** [getPluralStringValue](#getpluralstringvalue)(resId: number, num: number)
 
 <!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>--><!--Device-ResourceManager-getPluralString(resId: number, num: number): Promise<string>-End-->
 
@@ -8221,7 +8221,7 @@ Obtain the content of a rawfile in the **resources/rawfile** directory. This API
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFileContent](#getrawfilecontent-1)(path: string)
+**Substitutes:** [getRawFileContent](#getrawfilecontent)(path: string)
 
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
@@ -8312,7 +8312,7 @@ Obtains the file descriptor (fd) of a specific rawfile in the **resources/rawfil
 
 **Deprecated since:** 9
 
-**Substitutes:** [getRawFd](#getrawfd-1)(path: string)
+**Substitutes:** [getRawFd](#getrawfd)(path: string)
 
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 

@@ -225,6 +225,11 @@ off(type: 'macroStatusChanged', callback?: AsyncCallback<boolean>): void
 | type | 'macroStatusChanged' | 是 | 注销监听事件，固定为'macroStatusChanged'，session创建成功可触发此事件。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则参数默认为空，取消所有callback, 返回true表示成功，false表示失败。 |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+
 **示例**
 
 ```TypeScript
@@ -565,6 +570,11 @@ on(type: 'macroStatusChanged', callback: AsyncCallback<boolean>): void
 | --- | --- | --- | --- |
 | type | 'macroStatusChanged' | 是 | 监听事件，固定为'macroStatusChanged'，session创建成功可监听。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | 是 | 回调函数，用于获取当前微距状态，返回true是开启状态，返回false是禁用状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
 
 **示例**
 

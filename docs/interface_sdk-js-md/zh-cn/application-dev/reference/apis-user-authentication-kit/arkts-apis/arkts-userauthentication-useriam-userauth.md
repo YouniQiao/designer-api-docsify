@@ -29,13 +29,13 @@ import { userAuth } from '@kit.UserAuthenticationKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate-1) | 查询指定认证类型的冻结状态，使用Promise异步回调。 |
-| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus-1) | 查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应根据错误码判断具体原因并采取相应处理。 |
-| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate-1) | 查询凭据注册的状态，以检测用户注册凭据的变更。该接口用于获取指定认证类型的凭据注册信息，包括凭据摘要和数量。应用可通过对比当前查询结果与之前保存的结果，判断用户是否新增或删除了凭据，从而采取相应的业务处理。 |
-| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance-1) | 获取[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象，执行用户身份认证，并支持使用统一用户身份认证控件。该接口用于创建一个用户认证实例，配置认证参数和界面参数后，可通过返回的实例对象启动认证、订阅认证结果等。 |
-| [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md#getuserrecognitionmgr-1) | 获取[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。每次调用返回新的UserRecognitionMgr实例。 |
-| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getauthenticator-1) | 获取Authenticator对象，用于执行用户身份认证。 |
-| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance-1) | 获取AuthInstance对象，用于执行用户身份认证。 |
+| [getAuthLockState](arkts-userauthentication-userauth-getauthlockstate-f.md#getauthlockstate) | 查询指定认证类型的冻结状态，使用Promise异步回调。 |
+| [getAvailableStatus](arkts-userauthentication-userauth-getavailablestatus-f.md#getavailablestatus) | 查询指定类型和等级的认证能力是否支持。该接口用于检查当前设备是否支持指定的认证类型和认证可信等级，帮助应用在发起认证前判断认证能力是否可用，从而避免不必要的认证不通过。若查询通过（无错误抛出），表示认证能力可用；若抛出错误，应用应根据错误码判断具体原因并采取相应处理。 |
+| [getEnrolledState](arkts-userauthentication-userauth-getenrolledstate-f.md#getenrolledstate) | 查询凭据注册的状态，以检测用户注册凭据的变更。该接口用于获取指定认证类型的凭据注册信息，包括凭据摘要和数量。应用可通过对比当前查询结果与之前保存的结果，判断用户是否新增或删除了凭据，从而采取相应的业务处理。 |
+| [getUserAuthInstance](arkts-userauthentication-userauth-getuserauthinstance-f.md#getuserauthinstance) | 获取[UserAuthInstance](arkts-userauthentication-userauth-userauthinstance-i.md)对象，执行用户身份认证，并支持使用统一用户身份认证控件。该接口用于创建一个用户认证实例，配置认证参数和界面参数后，可通过返回的实例对象启动认证、订阅认证结果等。 |
+| [getUserRecognitionMgr](arkts-userauthentication-userauth-getuserrecognitionmgr-f.md#getuserrecognitionmgr) | 获取[UserRecognitionMgr](arkts-userauthentication-userauth-userrecognitionmgr-i.md)实例，用于查询和订阅用户识别结果。每次调用返回新的UserRecognitionMgr实例。 |
+| [getAuthenticator](arkts-userauthentication-userauth-getauthenticator-f.md#getauthenticator) | 获取Authenticator对象，用于执行用户身份认证。 |
+| [getAuthInstance](arkts-userauthentication-userauth-getauthinstance-f.md#getauthinstance) | 获取AuthInstance对象，用于执行用户身份认证。 |
 
 <!--Del-->
 ### 函数（系统接口）

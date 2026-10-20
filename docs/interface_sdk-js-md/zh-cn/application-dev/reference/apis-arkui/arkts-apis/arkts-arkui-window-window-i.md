@@ -6,7 +6,7 @@ interface Window
 
 当前窗口实例，窗口管理器管理的基本单元。
 
-下列API示例中都需先使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1)、[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow-1)、[findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
+下列API示例中都需先使用[getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow)、[createWindow()](arkts-arkui-window-createwindow-f.md#createwindow)、[findWindow()](arkts-arkui-window-findwindow-f.md)中的任一方法获取到Window实例（windowClass），再通过此实例调用对应方法。
 
 **起始版本：** 6
 
@@ -617,7 +617,7 @@ getImmersiveModeEnabledState(): boolean
 
 仅支持主窗和子窗调用。
 
-返回值与[setImmersiveModeEnabledState()](#setimmersivemodeenabledstate)以及[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)设置结果一致，若未调用上述两个接口则默认返回false。
+返回值与[setImmersiveModeEnabledState()](#setimmersivemodeenabledstate)以及[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)设置结果一致，若未调用上述两个接口则默认返回false。
 
 **起始版本：** 12
 
@@ -2538,13 +2538,13 @@ loadContent(path: string): Promise<void>
 
 > **说明：** 
 > 
-> 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](#setuicontent-1)替代。
+> 从API version 7开始支持，从API version 9开始废弃，建议使用[setUIContent()](#setuicontent)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setUIContent](#setuicontent-1)(path: string)
+**替代接口：** [setUIContent](#setuicontent)(path: string)
 
 <!--Device-Window-loadContent(path: string): Promise<void>--><!--Device-Window-loadContent(path: string): Promise<void>-End-->
 
@@ -10650,13 +10650,13 @@ setWindowLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<v
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -11315,14 +11315,14 @@ setWindowSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncC
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
 > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -11477,14 +11477,14 @@ setWindowSystemBarProperties(systemBarProperties: SystemBarProperties, callback:
 > **说明：** 
 > 
 > 从API version 9开始支持，从API version 12开始废弃，建议使用Promise方式的
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
 > 替代。
 
 **起始版本：** 9
 
 **废弃版本：** 12
 
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 **原子化服务API：** 从API版本12开始，该接口支持在原子化服务中使用。
 
@@ -12032,7 +12032,7 @@ showWindow(callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 调用该接口前，建议先通过[loadContent](#loadcontent)方法或者
-> [setUIContent](#setuicontent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 9
@@ -12118,7 +12118,7 @@ showWindow(): Promise<void>
 > **说明：** 
 > 
 > 调用该接口前，建议优先通过[loadContent](#loadcontent)方法或者
-> [setUIContent](#setuicontent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口、模态窗和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 9
@@ -12205,7 +12205,7 @@ showWindow(options: ShowWindowOptions): Promise<void>
 > **说明：** 
 > 
 > 调用该接口前，建议优先通过[loadContent](../../../reference/apis-arkui/arkts-apis-window-WindowStage.md#loadcontent9)方法或者
-> [setUIContent](#setuicontent-1)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
+> [setUIContent](#setuicontent)方法完成页面加载。如果应用主窗口没有完成页面加载，直接调用该接口，界面会
 > 一直显示启动界面；如果系统窗口、应用子窗口和全局悬浮窗没有完成页面加载，直接调用该接口，窗口会处于前台，但不可见。
 
 **起始版本：** 20
@@ -12295,7 +12295,7 @@ export default class EntryAbility extends UIAbility {
 snapshot(callback: AsyncCallback<image.PixelMap>): void
 ```
 
-获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
+获取窗口截图，使用callback异步回调。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -12340,7 +12340,7 @@ windowClass.snapshot((err: BusinessError, pixelMap: image.PixelMap) => {
 snapshot(): Promise<image.PixelMap>
 ```
 
-获取当前窗口截图。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
+获取当前窗口截图。若当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
 
 **起始版本：** 9
 
@@ -12383,7 +12383,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshotIgnorePrivacy(): Promise<image.PixelMap>
 ```
 
-获取当前窗口截图。即使当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），仍可调用本接口返回当前窗口截图。
+获取当前窗口截图。即使当前窗口设置为隐私模式（可通过[setWindowPrivacyMode](#setwindowprivacymode)接口设置），仍可调用本接口返回当前窗口截图。
 
 **起始版本：** 18
 
@@ -12427,7 +12427,7 @@ promise.then((pixelMap: image.PixelMap) => {
 snapshotSync(): image.PixelMap
 ```
 
-获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（[setWindowPrivacyMode](#setwindowprivacymode-1)接口设置），截图结果为白屏。
+获取当前窗口截图，此接口为同步接口。若当前窗口设置为隐私模式（[setWindowPrivacyMode](#setwindowprivacymode)接口设置），截图结果为白屏。
 
 Stage模型下，该接口需要在[loadContent()](#loadcontent)或[setUIContent()](#setuicontent)调用生效后使用。
 
@@ -13217,13 +13217,13 @@ isSupportWideGamut(callback: AsyncCallback<boolean>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [isWindowSupportWideGamut()](#iswindowsupportwidegamut-1)替代。
+> [isWindowSupportWideGamut()](#iswindowsupportwidegamut)替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut-1)(callback: AsyncCallback&lt;boolean&gt;)
+**替代接口：** [isWindowSupportWideGamut](#iswindowsupportwidegamut)(callback: AsyncCallback&lt;boolean&gt;)
 
 <!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void--><!--Device-Window-isSupportWideGamut(callback: AsyncCallback<boolean>): void-End-->
 
@@ -13724,14 +13724,14 @@ setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 8开始支持，从API version 9开始废弃，建议使用
-> [setWindowColorSpace()](#setwindowcolorspace-1)
+> [setWindowColorSpace()](#setwindowcolorspace)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowColorSpace](#setwindowcolorspace-1)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowColorSpace](#setwindowcolorspace)(colorSpace:ColorSpace, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void--><!--Device-Window-setColorSpace(colorSpace: ColorSpace, callback: AsyncCallback<void>): void-End-->
 
@@ -13898,14 +13898,14 @@ setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowFocusable()](#setwindowfocusable-1)
+> [setWindowFocusable()](#setwindowfocusable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowFocusable](#setwindowfocusable-1)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowFocusable](#setwindowfocusable)(isFocusable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFocusable(isFocusable: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -13949,15 +13949,15 @@ setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全
 > 屏。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setFullScreen(isFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -14019,15 +14019,15 @@ setFullScreen(isFullScreen: boolean): Promise<void>
 > **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议联合使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
-> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代实现全
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
+> 和[setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代实现全
 > 屏。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status' | 'navigation'&gt;)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status' | 'navigation'&gt;)
 
 <!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>--><!--Device-Window-setFullScreen(isFullScreen: boolean): Promise<void>-End-->
 
@@ -14137,14 +14137,14 @@ setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowKeepScreenOn()](#setwindowkeepscreenon-1)
+> [setWindowKeepScreenOn()](#setwindowkeepscreenon)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon-1)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowKeepScreenOn](#setwindowkeepscreenon)(isKeepScreenOn: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setKeepScreenOn(isKeepScreenOn: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -14188,13 +14188,13 @@ setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>):
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -14256,13 +14256,13 @@ setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen-1)替代。
+> [setWindowLayoutFullScreen()](#setwindowlayoutfullscreen)替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen-1)(isLayoutFullScreen: boolean)
+**替代接口：** [setWindowLayoutFullScreen](#setwindowlayoutfullscreen)(isLayoutFullScreen: boolean)
 
 <!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>--><!--Device-Window-setLayoutFullScreen(isLayoutFullScreen: boolean): Promise<void>-End-->
 
@@ -14463,14 +14463,14 @@ setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowPrivacyMode()](#setwindowprivacymode-1)
+> [setWindowPrivacyMode()](#setwindowprivacymode)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode-1)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowPrivacyMode](#setwindowprivacymode)(isPrivacyMode: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setPrivacyMode(isPrivacyMode: boolean, callback: AsyncCallback<void>): void-End-->
 
@@ -14514,14 +14514,14 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallbac
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>, callback: AsyncCallback<void>): void-End-->
 
@@ -14584,14 +14584,14 @@ setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarEnable()](#setwindowsystembarenable-1)
+> [setWindowSystemBarEnable()](#setwindowsystembarenable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable-1)(names: Array&lt;'status'|'navigation'&gt;)
+**替代接口：** [setWindowSystemBarEnable](#setwindowsystembarenable)(names: Array&lt;'status'|'navigation'&gt;)
 
 <!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>--><!--Device-Window-setSystemBarEnable(names: Array<'status' | 'navigation'>): Promise<void>-End-->
 
@@ -14655,14 +14655,14 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: Async
 > **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties, callback: AsyncCallback<void>): void-End-->
 
@@ -14728,14 +14728,14 @@ setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>
 > **说明：** 
 > 
 > 从API version 6开始支持，从API version 9开始废弃，建议使用
-> [setWindowSystemBarProperties()](#setwindowsystembarproperties-1)
+> [setWindowSystemBarProperties()](#setwindowsystembarproperties)
 > 替代。
 
 **起始版本：** 6
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties-1)(systemBarProperties: SystemBarProperties)
+**替代接口：** [setWindowSystemBarProperties](#setwindowsystembarproperties)(systemBarProperties: SystemBarProperties)
 
 <!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>--><!--Device-Window-setSystemBarProperties(systemBarProperties: SystemBarProperties): Promise<void>-End-->
 
@@ -14851,14 +14851,14 @@ setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void
 > **说明：** 
 > 
 > 从API version 7开始支持，从API version 9开始废弃，建议使用
-> [setWindowTouchable()](#setwindowtouchable-1)
+> [setWindowTouchable()](#setwindowtouchable)
 > 替代。
 
 **起始版本：** 7
 
 **废弃版本：** 9
 
-**替代接口：** [setWindowTouchable](#setwindowtouchable-1)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [setWindowTouchable](#setwindowtouchable)(isTouchable: boolean, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void--><!--Device-Window-setTouchable(isTouchable: boolean, callback: AsyncCallback<void>): void-End-->
 

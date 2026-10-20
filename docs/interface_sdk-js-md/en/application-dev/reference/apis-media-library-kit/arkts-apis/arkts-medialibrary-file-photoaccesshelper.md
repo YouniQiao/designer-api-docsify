@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 | Name | Description |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper-1) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | Obtains a PhotoAccessHelper instance for accessing and modifying media files in the album. |
 
 <!--Del-->
 ### Functions(System API)

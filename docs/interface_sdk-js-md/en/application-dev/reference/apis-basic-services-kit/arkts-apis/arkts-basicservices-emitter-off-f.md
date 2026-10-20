@@ -14,7 +14,7 @@ function off(eventId: number): void
 
 Unsubscribes from all events with the specified event ID.
 
-After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md#emit-1) API but has not been executed will be unsubscribed.
+After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md#emit) API but has not been executed will be unsubscribed.
 
 **Since:** 7
 
@@ -69,6 +69,12 @@ After this API is used to unsubscribe from an event, the event that has been pub
 emitter.off('eventId1');
 ```
 
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+emitter1.off('eventId');
+```
+
 
 ## off
 
@@ -76,9 +82,9 @@ emitter.off('eventId1');
 function off(eventId: number, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on-1) or [once](arkts-basicservices-emitter-once-f.md#once-1) API. Otherwise, no processing is performed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on) or [once](arkts-basicservices-emitter-once-f.md#once) API. Otherwise, no processing is performed.
 
-After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md#emit-1) API but has not been executed will be unsubscribed.
+After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md#emit) API but has not been executed will be unsubscribed.
 
 **Since:** 10
 
@@ -115,7 +121,7 @@ emitter.off(1, callback);
 function off(eventId: string, callback: Callback<EventData>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on-2) or [once](arkts-basicservices-emitter-once-f.md#once-2) API. Otherwise, no processing is performed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on) or [once](arkts-basicservices-emitter-once-f.md#once) API. Otherwise, no processing is performed.
 
 After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md) API but has not been executed will be unsubscribed.
 
@@ -147,6 +153,18 @@ let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
 emitter.off('eventId1', callback);
 ```
 
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.EventData> = (eventData: emitter.EventData) => {
+  console.info(`eventData: ${JSON.stringify(eventData)}`);
+};
+
+emitter1.off('eventId', callback);
+```
+
 
 ## off
 
@@ -154,7 +172,7 @@ emitter.off('eventId1', callback);
 function off<T>(eventId: string, callback: Callback<GenericEventData<T>>): void
 ```
 
-Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on-3) or [once](arkts-basicservices-emitter-once-f.md#once-3) API. Otherwise, no processing is performed.
+Unsubscribes from an event with the specified event ID and processed by the specified callback. This API takes effect only when **Callback\<EventData>** has been registered through the [on](arkts-basicservices-emitter-on-f.md#on) or [once](arkts-basicservices-emitter-once-f.md#once) API. Otherwise, no processing is performed.
 
 After this API is used to unsubscribe from an event, the event that has been published through the [emit](arkts-basicservices-emitter-emit-f.md) API but has not been executed will be unsubscribed.
 
@@ -198,4 +216,30 @@ let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.G
 // Unregister all callbacks for events whose event ID is eventId1. The callback object must be the object used during registration.
 // If the callback has not been registered, no processing is performed.
 emitter.off('eventId1', callback);
+```
+
+```TypeScript
+import { Callback } from '@kit.BasicServicesKit';
+
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let callback: Callback<emitter.GenericEventData<Sample>> = (eventData: emitter.GenericEventData<Sample>): void => {
+  console.info(`eventData: ${JSON.stringify(eventData?.data)}`);
+  if (eventData?.data instanceof Sample) {
+    eventData?.data?.printCount();
+  }
+};
+
+emitter1.off('eventId', callback);
 ```

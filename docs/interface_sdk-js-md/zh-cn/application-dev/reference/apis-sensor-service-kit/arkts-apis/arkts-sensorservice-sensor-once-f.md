@@ -6,7 +6,7 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-## once
+## once('SensorId.ACCELEROMETER')
 
 ```TypeScript
 function once(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>): void
@@ -57,7 +57,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void
@@ -111,7 +111,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.AMBIENT_LIGHT')
 
 ```TypeScript
 function once(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>): void
@@ -157,7 +157,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function once(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void
@@ -203,7 +203,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.BAROMETER')
 
 ```TypeScript
 function once(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>): void
@@ -249,7 +249,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.GRAVITY')
 
 ```TypeScript
 function once(type: SensorId.GRAVITY, callback: Callback<GravityResponse>): void
@@ -297,7 +297,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.GYROSCOPE')
 
 ```TypeScript
 function once(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>): void
@@ -348,7 +348,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void
@@ -402,7 +402,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.HALL')
 
 ```TypeScript
 function once(type: SensorId.HALL, callback: Callback<HallResponse>): void
@@ -448,7 +448,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.HEART_RATE')
 
 ```TypeScript
 function once(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>): void
@@ -497,7 +497,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.HUMIDITY')
 
 ```TypeScript
 function once(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>): void
@@ -543,7 +543,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.LINEAR_ACCELEROMETER')
 
 ```TypeScript
 function once(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>): void
@@ -594,7 +594,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.MAGNETIC_FIELD')
 
 ```TypeScript
 function once(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void
@@ -642,7 +642,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void
@@ -693,7 +693,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.ORIENTATION')
 
 ```TypeScript
 function once(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>): void
@@ -741,7 +741,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.PEDOMETER')
 
 ```TypeScript
 function once(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>): void
@@ -794,7 +794,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.PEDOMETER_DETECTION')
 
 ```TypeScript
 function once(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void
@@ -843,7 +843,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.PROXIMITY')
 
 ```TypeScript
 function once(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>): void
@@ -889,7 +889,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.ROTATION_VECTOR')
 
 ```TypeScript
 function once(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void
@@ -938,7 +938,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.SIGNIFICANT_MOTION')
 
 ```TypeScript
 function once(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void
@@ -984,7 +984,7 @@ try {
 ```
 
 
-## once
+## once('SensorId.WEAR_DETECTION')
 
 ```TypeScript
 function once(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void
@@ -1030,7 +1030,7 @@ try {
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_ACCELEROMETER')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>): void
@@ -1041,14 +1041,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ACCELEROMETER](#once-1)
+> [sensor.once.ACCELEROMETER](#oncesensoridaccelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-1)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
+**替代接口：** [once](#oncesensoridaccelerometer)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1076,7 +1076,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.Accele
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>): void
@@ -1087,14 +1087,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ACCELEROMETER_UNCALIBRATED](#once-2)
+> [sensor.once.ACCELEROMETER_UNCALIBRATED](#oncesensoridaccelerometer_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-2)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
+**替代接口：** [once](#oncesensoridaccelerometer_uncalibrated)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1125,7 +1125,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: 
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void
@@ -1136,14 +1136,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.AMBIENT_LIGHT](#once-3)
+> [sensor.once.AMBIENT_LIGHT](#oncesensoridambient_light)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-3)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
+**替代接口：** [once](#oncesensoridambient_light)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>): void-End-->
 
@@ -1167,7 +1167,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightR
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void
@@ -1178,14 +1178,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.AMBIENT_TEMPERATURE](#once-4)
+> [sensor.once.AMBIENT_TEMPERATURE](#oncesensoridambient_temperature)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-4)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
+**替代接口：** [once](#oncesensoridambient_temperature)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>): void-End-->
 
@@ -1209,7 +1209,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_BAROMETER')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void
@@ -1220,14 +1220,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Baro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.BAROMETER](#once-5)
+> [sensor.once.BAROMETER](#oncesensoridbarometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-5)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
+**替代接口：** [once](#oncesensoridbarometer)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>): void-End-->
 
@@ -1251,7 +1251,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerR
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_GRAVITY')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void
@@ -1262,14 +1262,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<Gravit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GRAVITY](#once-6)
+> [sensor.once.GRAVITY](#oncesensoridgravity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-6)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
+**替代接口：** [once](#oncesensoridgravity)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>): void-End-->
 
@@ -1295,7 +1295,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityRespo
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_GYROSCOPE')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>): void
@@ -1306,14 +1306,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyro
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GYROSCOPE](#once-7)
+> [sensor.once.GYROSCOPE](#oncesensoridgyroscope)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-7)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
+**替代接口：** [once](#oncesensoridgyroscope)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1341,7 +1341,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeR
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>): void
@@ -1352,14 +1352,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: 
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.GYROSCOPE_UNCALIBRATED](#once-8)
+> [sensor.once.GYROSCOPE_UNCALIBRATED](#oncesensoridgyroscope_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-8)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
+**替代接口：** [once](#oncesensoridgyroscope_uncalibrated)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1390,7 +1390,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sens
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_HALL')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void
@@ -1401,14 +1401,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HALL](#once-9)
+> [sensor.once.HALL](#oncesensoridhall)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-9)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
+**替代接口：** [once](#oncesensoridhall)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>): void-End-->
 
@@ -1432,7 +1432,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) =
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_HEART_RATE')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>): void
@@ -1443,14 +1443,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Hea
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HEART_RATE](#once-10)
+> [sensor.once.HEART_RATE](#oncesensoridheart_rate)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-10)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
+**替代接口：** [once](#oncesensoridheart_rate)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;)
 
 **需要权限：** ohos.permission.HEART_RATE
 
@@ -1476,7 +1476,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HEART_RATE, (data: sensor.HeartRate
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_HUMIDITY')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void
@@ -1487,14 +1487,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humid
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.HUMIDITY](#once-11)
+> [sensor.once.HUMIDITY](#oncesensoridhumidity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-11)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
+**替代接口：** [once](#oncesensoridhumidity)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>): void-End-->
 
@@ -1518,7 +1518,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityRes
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>): void
@@ -1529,14 +1529,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.LINEAR_ACCELEROMETER](#once-12)
+> [sensor.once.LINEAR_ACCELEROMETER](#oncesensoridlinear_accelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-12)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
+**替代接口：** [once](#oncesensoridlinear_accelerometer)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1552,7 +1552,7 @@ function once(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Cal
 | callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[LinearAccelerometerResponse](arkts-sensorservice-sensor-linearaccelerometerresponse-i.md)&gt; | 是 | 注册一次线性加速度传感器的回调函数，上报的数据类型为LinearAccelerometerResponse。 |
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void
@@ -1563,14 +1563,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.MAGNETIC_FIELD](#once-13)
+> [sensor.once.MAGNETIC_FIELD](#oncesensoridmagnetic_field)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-13)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
+**替代接口：** [once](#oncesensoridmagnetic_field)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>): void-End-->
 
@@ -1596,7 +1596,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.Magne
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void
@@ -1607,14 +1607,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#once-14)
+> [sensor.once.MAGNETIC_FIELD_UNCALIBRATED](#oncesensoridmagnetic_field_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-14)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
+**替代接口：** [once](#oncesensoridmagnetic_field_uncalibrated)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>): void-End-->
 
@@ -1643,7 +1643,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data:
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_ORIENTATION')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void
@@ -1654,14 +1654,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Or
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ORIENTATION](#once-15)
+> [sensor.once.ORIENTATION](#oncesensoridorientation)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-15)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
+**替代接口：** [once](#oncesensoridorientation)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>): void-End-->
 
@@ -1687,7 +1687,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.Orientat
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_PEDOMETER')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>): void
@@ -1698,14 +1698,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedo
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PEDOMETER](#once-16)
+> [sensor.once.PEDOMETER](#oncesensoridpedometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-16)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
+**替代接口：** [once](#oncesensoridpedometer)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -1731,7 +1731,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerR
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>): void
@@ -1742,14 +1742,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Cal
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PEDOMETER_DETECTION](#once-17)
+> [sensor.once.PEDOMETER_DETECTION](#oncesensoridpedometer_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-17)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
+**替代接口：** [once](#oncesensoridpedometer_detection)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -1775,7 +1775,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_PROXIMITY')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void
@@ -1786,14 +1786,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Prox
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.PROXIMITY](#once-18)
+> [sensor.once.PROXIMITY](#oncesensoridproximity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-18)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
+**替代接口：** [once](#oncesensoridproximity)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>): void-End-->
 
@@ -1818,7 +1818,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityR
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void
@@ -1829,14 +1829,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.ROTATION_VECTOR](#once-19)
+> [sensor.once.ROTATION_VECTOR](#oncesensoridrotation_vector)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-19)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
+**替代接口：** [once](#oncesensoridrotation_vector)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>): void-End-->
 
@@ -1863,7 +1863,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.Rota
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void
@@ -1874,14 +1874,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Call
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.SIGNIFICANT_MOTION](#once-20)
+> [sensor.once.SIGNIFICANT_MOTION](#oncesensoridsignificant_motion)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-20)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
+**替代接口：** [once](#oncesensoridsignificant_motion)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>): void-End-->
 
@@ -1905,7 +1905,7 @@ sensor.once(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.S
 ```
 
 
-## once
+## once('SensorType.SENSOR_TYPE_ID_WEAR_DETECTION')
 
 ```TypeScript
 function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void
@@ -1916,14 +1916,14 @@ function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.once.WEAR_DETECTION](#once-21)
+> [sensor.once.WEAR_DETECTION](#oncesensoridwear_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [once](#once-21)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
+**替代接口：** [once](#oncesensoridwear_detection)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;)
 
 <!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void--><!--Device-sensor-function once(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>): void-End-->
 

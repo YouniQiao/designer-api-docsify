@@ -395,14 +395,14 @@ Updates the distributed account information. This API uses a promise to return t
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)
+> [setOsAccountDistributedInfo](#setosaccountdistributedinfo)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo-1)(accountInfo: DistributedInfo)
+**Substitutes:** [setOsAccountDistributedInfo](#setosaccountdistributedinfo)(accountInfo: DistributedInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

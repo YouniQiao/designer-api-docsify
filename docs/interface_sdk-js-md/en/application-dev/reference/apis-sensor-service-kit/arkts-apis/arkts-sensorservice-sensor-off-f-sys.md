@@ -6,7 +6,7 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-## off
+## off('SensorId.COLOR')
 
 ```TypeScript
 function off(type: SensorId.COLOR, callback?: Callback<ColorResponse>): void
@@ -71,7 +71,7 @@ try {
 <!--DelEnd-->
 
 
-## off
+## off('SensorId.COLOR')
 
 ```TypeScript
 function off(type: SensorId.COLOR, sensorInfoParam?: SensorInfoParam, callback?: Callback<ColorResponse>): void
@@ -168,7 +168,7 @@ function sensorUnsubscribe(): Ret {
 <!--DelEnd-->
 
 
-## off
+## off('SensorId.SAR')
 
 ```TypeScript
 function off(type: SensorId.SAR, callback?: Callback<SarResponse>): void
@@ -233,7 +233,7 @@ try {
 <!--DelEnd-->
 
 
-## off
+## off('SensorId.SAR')
 
 ```TypeScript
 function off(type: SensorId.SAR, sensorInfoParam?: SensorInfoParam, callback?: Callback<SarResponse>): void

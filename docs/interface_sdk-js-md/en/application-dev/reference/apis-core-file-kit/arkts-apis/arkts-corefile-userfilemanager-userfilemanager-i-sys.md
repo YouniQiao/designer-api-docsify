@@ -1990,7 +1990,7 @@ off(type: ChangeEvent, callback?: Callback<void>): void
 
 Unsubscribes from changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use [off](#off-2) instead.
+This API will be deprecated. Use [off](#off) instead.
 
 **Since:** 9
 
@@ -2073,7 +2073,7 @@ Unregisters the listener for the specified URI. Multiple callbacks can be regist
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | No | Callback registered by [on](#on-2). If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. <br>Note that the specified callback will not be invoked. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | No | Callback registered by [on](#on). If this parameter is not specified, all listener callbacks registered for the URI will be unregistered. <br>Note that the specified callback will not be invoked. |
 
 **Error codes:**
 
@@ -2135,7 +2135,7 @@ on(type: ChangeEvent, callback: Callback<void>): void
 
 Subscribes to changes of the file management library. This API uses a callback to return the result.
 
-This API will be deprecated. Use [on](#on-2) instead.
+This API will be deprecated. Use [on](#on) instead.
 
 **Since:** 9
 
@@ -2217,7 +2217,7 @@ Registers a listener for the specified URI. This API uses an asynchronous callba
 | --- | --- | --- | --- |
 | uri | string | Yes | URI of the file asset or album, or [DefaultChangeUri](arkts-corefile-userfilemanager-defaultchangeuri-e-sys.md). |
 | forSubUri | boolean | Yes | Whether to perform fuzzy listening. <br>If **uri** is the URI of the album, the value **true** means to listen for the file change in the album; the value **false** means to listen for the album change only. If **uri** is the URI of the file asset, there is no difference whether **forSubUri** is **true** or **false**. If **uri** is **DefaultChangeUri**, the value must be **true**, otherwise, the URI cannot be found and no message can be received. |
-| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). <br>Note that different callbacks can be registered for a URI. You can use [off](#off-2) to disable the specified callback or all callbacks for the URI. |
+| callback | [Callback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-callback-i.md)&lt;[ChangeData](arkts-corefile-cloudsync-changedata-i.md)&gt; | Yes | Callback used to return [ChangeData](arkts-corefile-userfilemanager-changedata-i-sys.md). <br>Note that different callbacks can be registered for a URI. You can use [off](#off) to disable the specified callback or all callbacks for the URI. |
 
 **Error codes:**
 

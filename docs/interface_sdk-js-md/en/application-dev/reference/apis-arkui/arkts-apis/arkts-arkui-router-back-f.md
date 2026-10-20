@@ -59,7 +59,7 @@ Returns to a specified page, and removes all pages between the current page and 
 
 **Deprecated since:** 18
 
-**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back-1)(index: number, params?: Object)
+**Substitutes:** [back](arkts-arkui-arkui-uicontext-router-c.md#back)(index: number, params?: Object)
 
 **Model restriction:** This API can be used only in the stage model.
 

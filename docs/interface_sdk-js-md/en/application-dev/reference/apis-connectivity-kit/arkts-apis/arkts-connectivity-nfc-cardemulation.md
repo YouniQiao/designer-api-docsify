@@ -2,6 +2,8 @@
 
 **Since:** 6
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 <!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->
 
 **System capability:** SystemCapability.Communication.NFC.CardEmulation
@@ -145,9 +147,9 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | Name | Description |
 | --- | --- |
-| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability-1) | Checks whether the device supports HCE. |
-| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice-1) | Checks whether an application is the default application of the specified service type. |
-| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported-1) | Checks whether a certain type of card emulation is supported. |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability) | Checks whether the device supports HCE. |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice) | Checks whether an application is the default application of the specified service type. |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported) | Checks whether a certain type of card emulation is supported. |
 
 <!--Del-->
 ### Functions(System API)

@@ -191,7 +191,7 @@ export default class EntryAbility extends EmbeddedUIExtensionAbility {
 }
 ```
 
-## getWindowAvoidArea
+## getWindowAvoidArea('window.AvoidAreaType')
 
 ```TypeScript
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea

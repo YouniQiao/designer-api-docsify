@@ -307,6 +307,11 @@ Checks whether mirror recording is supported.
 | --- | --- |
 | boolean | Check result for the support of mirror recording. **true** if supported, **false** otherwise. If the API call fails, undefined is returned. |
 
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+
 **Examples**
 
 ```TypeScript

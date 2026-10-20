@@ -4,6 +4,8 @@ abilityToolAccessCtrl的命名空间
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 <!--Device-unnamed-declare namespace abilityToolAccessCtrl--><!--Device-unnamed-declare namespace abilityToolAccessCtrl-End-->
 
 **系统能力：** SystemCapability.Security.Asset
@@ -20,7 +22,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket-1) | 获取CLI工具的执行认证票据。该函数用于获取CLI工具及子命令的执行认证票据。如果CLI工具所需权限用户尚未授权，会返回需要授权的权限列表及权限状态。如果CLI工具所需权限用户均授权，会返回授权的票据。 |
+| [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket) | 获取CLI工具的执行认证票据。该函数用于获取CLI工具及子命令的执行认证票据。如果CLI工具所需权限用户尚未授权，会返回需要授权的权限列表及权限状态。如果CLI工具所需权限用户均授权，会返回授权的票据。 |
 
 <!--Del-->
 ### 函数（系统接口）

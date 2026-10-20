@@ -4,7 +4,7 @@
 interface DownloadTask
 ```
 
-Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-2) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1).
+Implements file downloads. Before using any APIs of this class, you must obtain a **DownloadTask** object, from a promise through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile) or from a callback through [request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile).
 
 **Since:** 6
 

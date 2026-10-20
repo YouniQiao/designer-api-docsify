@@ -2706,14 +2706,14 @@ Obtains the OS account ID based on the domain account information. This API uses
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)
+> [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain-1)(domainInfo: DomainAccountInfo)
+**Substitutes:** [getOsAccountLocalIdForDomain](#getosaccountlocalidfordomain)(domainInfo: DomainAccountInfo)
 
 **Required permissions:** ohos.permission.MANAGE_LOCAL_ACCOUNTS
 

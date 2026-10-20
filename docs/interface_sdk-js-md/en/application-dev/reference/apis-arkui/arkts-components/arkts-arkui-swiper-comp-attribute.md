@@ -146,7 +146,7 @@ Sets the number of child components to be preloaded and configuration options.
 
 > **NOTE:** 
 > 
-> - When **independent** in options is set to **true**, the number of preloaded child components is calculated based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of [displayCount](#displaycount-1).For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the current child node are preloaded.
+> - When **independent** in options is set to **true**, the number of preloaded child components is calculated based on the value of **count**, which is decoupled from the **swipeByGroup** calculation of [displayCount](#displaycount).For example, if the value of **count** in **cachedCount** is **1**, the previous and next child components of the current child node are preloaded.
 > 
 > - If **swipeByGroup** of **displayCount** is set to **true** and **independent** of **options** is set to
 > **false** (default value), the number of child components to be preloaded is calculated by group. For example, if
@@ -620,7 +620,7 @@ Sets whether to enable looping. In the **LazyForEach** lazy loop loading mode, i
 > In a loop scenario, when the **prevMargin**\/**nextMargin** attributes are set, linear traversal of child
 > components by the screen reader triggers an infinite loop of "focus-scroll-expose new child node". In this
 > scenario, you are advised to set **loop** to **false** or use
-> [accessibilityGroup](arkts-arkui-common-comp-commonmethod-c.md#accessibilitygroup-1)
+> [accessibilityGroup](arkts-arkui-common-comp-commonmethod-c.md#accessibilitygroup)
 > to disable accessibility services for child components.
 
 **Since:** 7

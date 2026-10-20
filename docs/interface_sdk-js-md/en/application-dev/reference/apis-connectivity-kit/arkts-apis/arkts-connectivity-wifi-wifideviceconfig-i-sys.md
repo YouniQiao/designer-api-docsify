@@ -102,7 +102,7 @@ Allocated networkId
 
 **Deprecated since:** 9
 
-**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i-sys.md#netid)
+**Substitutes:** [netId](arkts-connectivity-wifimanager-wifideviceconfig-i.md#netid)
 
 <!--Device-WifiDeviceConfig-netId: number--><!--Device-WifiDeviceConfig-netId: number-End-->
 

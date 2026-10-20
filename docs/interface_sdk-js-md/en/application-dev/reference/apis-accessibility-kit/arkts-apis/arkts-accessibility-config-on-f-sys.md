@@ -47,8 +47,8 @@ This API must be used together with [config.off('enabledAccessibilityExtensionLi
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-config.on('enabledAccessibilityExtensionListChange', () => {
-  console.info('subscribe enabled accessibility extension list change state success');
+config.highContrastText.on((data: boolean) => {
+  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
 });
 ```
 
@@ -93,12 +93,6 @@ This API must be used together with [config.off('installedAccessibilityListChang
 <!--Del-->
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-config.on('installedAccessibilityListChange', () => {
-  console.info('subscribe installed accessibility extension list change state success');
-});
-```
+See on
 
 <!--DelEnd-->

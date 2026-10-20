@@ -1664,7 +1664,7 @@ Writes a **PasteData** object to the system pasteboard. This API uses a promise 
 
 **Deprecated since:** 9
 
-**Substitutes:** [setData](#setdata-1)(data: PasteData)
+**Substitutes:** [setData](#setdata)(data: PasteData)
 
 <!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>--><!--Device-SystemPasteboard-setPasteData(data: PasteData): Promise<void>-End-->
 

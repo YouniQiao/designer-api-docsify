@@ -11,7 +11,7 @@
 
 | 名称 | 说明 |
 | --- | --- |
-| [Fetch](arkts-network-system-fetch-fetch-depr-c.md#fetch) | **表1** data与Content-Type关系 |
+| [Fetch](arkts-network-system-fetch-fetch-depr-c.md) | **表1** data与Content-Type关系 |
 
 ### 接口
 

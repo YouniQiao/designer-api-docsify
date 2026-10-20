@@ -78,8 +78,8 @@ Enumerates error codes of ArkUI native APIs, which are used to indicate the resu
 | ARKUI_ERROR_CODE_RENDER_IS_FROM_FRAME_NODE = 106406 | The current render node is obtained from a FrameNode. For details about the error code, see 106406 Current Render Node Is Obtained from FrameNode.<br>**Since**: 22 |
 | ARKUI_ERROR_CODE_RENDER_HAS_INVALID_FRAME_NODE = 106407 | The current render node is obtained from a FrameNode and the FrameNode has not been adopted as an affiliated node or has been disposed of. For details about the error code, see 106407 Current Render Node Is Obtained from FrameNode and the FrameNode Is Disposed or No Longer Adopted.<br>**Since**: 22 |
 | ARKUI_ERROR_CODE_RENDER_NOT_ADOPTED_NODE = 106408 | The current node is not in the adopted state. For details about the error code, see 106408 Current Node Is Not in Adopted State.<br>**Since**: 22 |
-| ARKUI_ERROR_CODE_COMMAND_UNFINISHED = 106409 | The last request was not finished.<br>**Since**: 26.2.0 |
-| ARKUI_ERROR_CODE_NODE_NOT_FOUND = 106410 | The node corresponding to uniqueId is not found.<br>**Since**: 26.2.0 |
+| ARKUI_ERROR_CODE_COMMAND_UNFINISHED = 106409 | The last command was not finished.<br>**Since**: 26.2.0 |
+| ARKUI_ERROR_CODE_NODE_NOT_FOUND = 106410 | The target node was not found.<br>**Since**: 26.2.0 |
 | ARKUI_ERROR_CODE_RESULT_TOO_LARGE = 106411 | Result too large.<br>**Since**: 26.2.0 |
 | ARKUI_ERROR_CODE_RESOURCE_EXHAUSTED = 106412 | Resource exhausted.<br>**Since**: 26.2.0 |
 | ARKUI_ERROR_CODE_DUPLICATE_NODE_ID = 106413 | The node ID is duplicated.<br>**Since**: 26.2.0 |

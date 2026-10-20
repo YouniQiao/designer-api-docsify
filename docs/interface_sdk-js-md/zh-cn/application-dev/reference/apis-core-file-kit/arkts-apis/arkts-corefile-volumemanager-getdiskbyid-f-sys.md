@@ -47,3 +47,20 @@ function getDiskById(diskId: string): Promise<Disk>
 | 13600001 | IPC error. |
 | 13600008 | No such object. |
 | 13600010 | The input parameter is invalid. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+volumeManager.getDiskById(diskId).then((disk: volumeManager.Disk) => {
+  console.info("getDiskById successfully:" + JSON.stringify(disk));
+}).catch((error: BusinessError) => {
+  console.error(`getDiskById failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

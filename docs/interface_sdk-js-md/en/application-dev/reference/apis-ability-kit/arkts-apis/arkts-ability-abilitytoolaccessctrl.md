@@ -4,6 +4,8 @@ This module provides permission management capabilities for tools (CLI commands 
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used in both the stage model and FA model.
+
 <!--Device-unnamed-declare namespace abilityToolAccessCtrl--><!--Device-unnamed-declare namespace abilityToolAccessCtrl-End-->
 
 **System capability:** SystemCapability.Security.Asset
@@ -20,7 +22,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket-1) | Obtain the execution authentication ticket for CLI tools. This function retrieves the execution authentication ticket for CLI tools and their subcommands. If the user has not yet authorized the permissions required by CLI tools, a list of permissions requiring authorization along with their status will be returned. If all permissions required by CLI tools have been authorized by the user, the authenticated ticket will be returned. |
+| [requestToolTicket](arkts-ability-abilitytoolaccessctrl-requesttoolticket-f.md#requesttoolticket) | Obtain the execution authentication ticket for CLI tools. This function retrieves the execution authentication ticket for CLI tools and their subcommands. If the user has not yet authorized the permissions required by CLI tools, a list of permissions requiring authorization along with their status will be returned. If all permissions required by CLI tools have been authorized by the user, the authenticated ticket will be returned. |
 
 <!--Del-->
 ### Functions(System API)

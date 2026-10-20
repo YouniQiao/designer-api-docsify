@@ -11,7 +11,7 @@
 
 | Name | Description |
 | --- | --- |
-| [Fetch](arkts-network-system-fetch-fetch-depr-c.md#fetch) | **Table 1** Mapping between data and Content-Type |
+| [Fetch](arkts-network-system-fetch-fetch-depr-c.md) | **Table 1** Mapping between data and Content-Type |
 
 ### Interfaces
 

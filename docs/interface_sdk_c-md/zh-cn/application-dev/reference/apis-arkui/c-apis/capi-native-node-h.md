@@ -177,6 +177,7 @@ ArkUI_NodeAdapterHandle handle, uint32_t startPosition, uint32_t itemCount)](#oh
 | [int32_t OH_ArkUI_NativeModule_GetPageRootNodeHandleByContext(ArkUI_ContextHandle context, ArkUI_NodeHandle* rootNode)](#oh_arkui_nativemodule_getpagerootnodehandlebycontext) | - | 获取指定实例的页面的根节点。 |
 | [ArkUI_GestureCollectInterceptInfo* OH_ArkUI_NodeEvent_GetGestureCollectInterceptInfo(ArkUI_NodeEvent* nodeEvent)](#oh_arkui_nodeevent_getgesturecollectinterceptinfo) | - | Obtains the <b>ArkUI_GestureCollectInterceptInfo</b> object from a specified <b>ArkUI_NodeEvent</b> object. |
 | [ArkUI_ErrorCode OH_ArkUI_NativeModule_SetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy policy)](#oh_arkui_nativemodule_setchildmountpolicy) | - | Set the subnode mounting policy of the target node. |
+| [ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)](#oh_arkui_nativemodule_getchildmountpolicy) | - | 获取目标节点当前的子节点挂载策略。目标节点的默认子节点挂载策略为OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE。 |
 | [ArkUI_ErrorCode OH_ArkUI_NodeUtils_SetUiDvsyncSwitch(ArkUI_ContextHandle context, bool enable)](#oh_arkui_nodeutils_setuidvsyncswitch) | - | 设置UI Dvsync开关。开启后系统会更及时地响应Vsync请求，更频繁执行渲染任务。通常在自渲染框架中动效开始时使能，结束后关闭，以确保动画效果更加流畅，同时避免频繁的Vsync影响其他业务。在非UI线程上调用此函数将导致应用退出。 |
 
 ### 变量
@@ -3554,6 +3555,33 @@ Set the subnode mounting policy of the target node.
 | 类型 | 说明 |
 | -- | -- |
 | ArkUI_ErrorCode | Error code. <ul><li>ARKUI_ERROR_CODE_NO_ERROR Success. </li><li>ARKUI_ERROR_CODE_PARAM_INVALID Function parameter exception. </li><li>ARKUI_ERROR_CODE_CAPI_INIT_ERROR if CAPI init error.</li></ul> |
+
+### OH_ArkUI_NativeModule_GetChildMountPolicy()
+
+```c
+ArkUI_ErrorCode OH_ArkUI_NativeModule_GetChildMountPolicy(ArkUI_NodeHandle node, OH_ArkUI_NodeMountPolicy* policy)
+```
+
+**描述：**
+
+获取目标节点当前的子节点挂载策略。目标节点的默认子节点挂载策略为OH_ARKUI_NODE_MOUNT_POLICY_SINGLE_IF_RENDER_NODE。
+
+**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+
+**起始版本：** 26.0.0
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | 目标节点。 |
+| [OH_ArkUI_NodeMountPolicy](capi-native-type-h.md#oh_arkui_nodemountpolicy)* policy | 接收目标节点的子节点挂载策略的指针。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| ArkUI_ErrorCode | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。<br>ARKUI_ERROR_CODE_CAPI_INIT_ERROR CAPI初始化错误。 |
 
 ### OH_ArkUI_NodeUtils_SetUiDvsyncSwitch()
 

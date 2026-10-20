@@ -6,7 +6,7 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-## on
+## on('SensorId.COLOR')
 
 ```TypeScript
 function on(type: SensorId.COLOR, callback: Callback<ColorResponse>, options?: Options): void
@@ -62,7 +62,7 @@ try{
 <!--DelEnd-->
 
 
-## on
+## on('SensorId.SAR')
 
 ```TypeScript
 function on(type: SensorId.SAR, callback: Callback<SarResponse>, options?: Options): void

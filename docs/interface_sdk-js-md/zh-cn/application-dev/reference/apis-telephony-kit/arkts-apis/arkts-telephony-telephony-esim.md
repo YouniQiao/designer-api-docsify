@@ -20,8 +20,8 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile-1) | 通过该接口拉起下载界面，允许用户添加单个配置文件。使用Promise异步回调。 |
-| [isSupported](arkts-telephony-esim-issupported-f.md#issupported-1) | 获取指定卡槽是否支持eSIM功能。 |
+| [addProfile](arkts-telephony-esim-addprofile-f.md#addprofile) | 通过该接口拉起下载界面，允许用户添加单个配置文件。使用Promise异步回调。 |
+| [isSupported](arkts-telephony-esim-issupported-f.md#issupported) | 获取指定卡槽是否支持eSIM功能。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -53,6 +53,7 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [AccessRule](arkts-telephony-esim-accessrule-i.md) | 访问规则。 |
 | [DownloadableProfile](arkts-telephony-esim-downloadableprofile-i.md) | 可下载的配置文件。 |
 
 <!--Del-->
@@ -60,7 +61,6 @@ import { eSIM } from '@kit.TelephonyKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AccessRule](arkts-telephony-esim-accessrule-i-sys.md) | 访问规则。 |
 | [ContractRequestData](arkts-telephony-esim-contractrequestdata-i-sys.md) | 加密需要的信息。 |
 | [DownloadConfiguration](arkts-telephony-esim-downloadconfiguration-i-sys.md) | 下载过程中的属性配置。 |
 | [DownloadProfileResult](arkts-telephony-esim-downloadprofileresult-i-sys.md) | 下载配置文件的结果。 |

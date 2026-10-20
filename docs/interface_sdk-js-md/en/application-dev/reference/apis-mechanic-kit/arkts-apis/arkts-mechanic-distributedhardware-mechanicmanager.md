@@ -20,15 +20,15 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | Name | Description |
 | --- | --- |
-| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getattachedmechdevices-1) | Obtain the list of connected mechanical devices. |
-| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled-1) | Checks whether camera tracking is enabled for this mechanical device. |
-| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout-1) | Obtains the camera tracking layout of this mechanical device. |
-| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported-1) | Checks whether the current device supports embodied control for a specific type of device. |
+| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getattachedmechdevices) | Obtain the list of connected mechanical devices. |
+| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled) | Checks whether camera tracking is enabled for this mechanical device. |
+| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout) | Obtains the camera tracking layout of this mechanical device. |
+| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported) | Checks whether the current device supports embodied control for a specific type of device. |
 | [off('attachStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) | Unsubscribes from device attachment state change events. |
 | [off('trackingStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | Unsubscribes from tracking events. |
 | [on('attachStateChange')](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) | Subscribes to device attachment state change events. |
 | [on('trackingStateChange')](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) | Subscribes to tracking events. |
-| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled-1) | Enables or disables camera tracking. |
+| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled) | Enables or disables camera tracking. |
 
 <!--Del-->
 ### Functions(System API)

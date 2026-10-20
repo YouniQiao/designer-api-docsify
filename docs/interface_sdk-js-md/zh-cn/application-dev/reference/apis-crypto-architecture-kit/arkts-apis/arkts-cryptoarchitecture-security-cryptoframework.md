@@ -4,6 +4,10 @@
 
 **起始版本：** 9
 
+**模型约束：** 
+- API版本12+：此接口可在Stage模型和FA模型下使用。
+- API版本9-11：此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace cryptoFramework--><!--Device-unnamed-declare namespace cryptoFramework-End-->
 
 **系统能力：** SystemCapability.Security.CryptoFramework
@@ -20,19 +24,19 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator-1) | 创建对应算法的非对称密钥生成器实例。 |
-| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec-1) | 创建指定密钥规格的非对称密钥生成器实例。 |
-| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher-1) | 创建加解密实例。 |
-| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf-1) | 创建密钥派生函数实例。 |
-| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem-1) | 创建一个用于密钥封装和解封装操作的Kem实例。 |
-| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement-1) | 创建密钥协商实例。 |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac-1) | 创建消息认证码实例。 |
-| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac-2) | 创建消息认证码实例。 |
-| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd-1) | 创建消息摘要实例。 |
-| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom-1) | 创建随机数实例。 |
-| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign-1) | 创建签名实例。 |
-| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator-1) | 创建对应算法的对称密钥生成器实例。 |
-| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify-1) | 创建验签实例。 |
+| [createAsyKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createasykeygenerator-f.md#createasykeygenerator) | 创建对应算法的非对称密钥生成器实例。 |
+| [createAsyKeyGeneratorBySpec](arkts-cryptoarchitecture-cryptoframework-createasykeygeneratorbyspec-f.md#createasykeygeneratorbyspec) | 创建指定密钥规格的非对称密钥生成器实例。 |
+| [createCipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md#createcipher) | 创建加解密实例。 |
+| [createKdf](arkts-cryptoarchitecture-cryptoframework-createkdf-f.md#createkdf) | 创建密钥派生函数实例。 |
+| [createKem](arkts-cryptoarchitecture-cryptoframework-createkem-f.md#createkem) | 创建一个用于密钥封装和解封装操作的Kem实例。 |
+| [createKeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md#createkeyagreement) | 创建密钥协商实例。 |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac) | 创建消息认证码实例。 |
+| [createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac) | 创建消息认证码实例。 |
+| [createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md#createmd) | 创建消息摘要实例。 |
+| [createRandom](arkts-cryptoarchitecture-cryptoframework-createrandom-f.md#createrandom) | 创建随机数实例。 |
+| [createSign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md#createsign) | 创建签名实例。 |
+| [createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md#createsymkeygenerator) | 创建对应算法的对称密钥生成器实例。 |
+| [createVerify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md#createverify) | 创建验签实例。 |
 
 ### 类
 
@@ -84,7 +88,7 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [KeyAgreement](arkts-cryptoarchitecture-cryptoframework-keyagreement-i.md) | 密钥协商接口，定义基于非对称密钥对生成共享密钥的方法。调用前，需通过[createKeyAgreement(algName: string): KeyAgreement](arkts-cryptoarchitecture-cryptoframework-createkeyagreement-f.md)方法创建一个KeyAgreement实例。 |
 | [KeyEncodingConfig](arkts-cryptoarchitecture-cryptoframework-keyencodingconfig-i.md) | RSA私钥编码参数，使用获取私钥字符串时，可以添加此参数，生成指定算法、密码的编码后的私钥字符串。 |
 | [KeyPair](arkts-cryptoarchitecture-cryptoframework-keypair-i.md) | 非对称密钥对包含公钥和私钥。 |
-| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过[createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac-1)方法创建一个Mac实例。 |
+| [Mac](arkts-cryptoarchitecture-cryptoframework-mac-i.md) | 消息认证码接口，定义基于对称密钥计算消息认证码的方法。调用前，需通过[createMac](arkts-cryptoarchitecture-cryptoframework-createmac-f.md#createmac)方法创建一个Mac实例。 |
 | [MacSpec](arkts-cryptoarchitecture-cryptoframework-macspec-i.md) | 消息认证码参数，计算HMAC或CMAC时，需要构建子类对象并作为输入参数。 |
 | [Md](arkts-cryptoarchitecture-cryptoframework-md-i.md) | 消息摘要接口，定义计算消息摘要的方法。调用前，需通过[createMd](arkts-cryptoarchitecture-cryptoframework-createmd-f.md)方法创建一个Md实例。 |
 | [ParamsSpec](arkts-cryptoarchitecture-cryptoframework-paramsspec-i.md) | 加解密参数，在进行对称加解密时需要构造其子类对象，并将子类对象传入[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法。 |
@@ -98,11 +102,11 @@ import { cryptoFramework } from '@kit.CryptoArchitectureKit';
 | [RSAKeyPairSpec](arkts-cryptoarchitecture-cryptoframework-rsakeypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定RSA算法中公私钥包含的全量参数。 |
 | [RSAPubKeySpec](arkts-cryptoarchitecture-cryptoframework-rsapubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定RSA算法中公钥包含的参数。 |
 | [ScryptSpec](arkts-cryptoarchitecture-cryptoframework-scryptspec-i.md) | 密钥派生函数参数[KdfSpec](arkts-cryptoarchitecture-cryptoframework-kdfspec-i.md)的子类，作为SCRYPT密钥派生函数进行密钥派生时的输入。 |
-| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md#sign) | 签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过[createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、update（可选）、sign方法完成签名操作。签名操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |
+| [Sign](arkts-cryptoarchitecture-cryptoframework-sign-i.md) | 签名接口，定义基于私钥对数据进行签名的方法。调用前，需通过[createSign(algName: string): Sign](arkts-cryptoarchitecture-cryptoframework-createsign-f.md)方法创建一个Sign实例。按序调用Sign实例中的init、update（可选）、sign方法完成签名操作。签名操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |
 | [SM2CipherTextSpec](arkts-cryptoarchitecture-cryptoframework-sm2ciphertextspec-i.md) | SM2密文参数，使用SM2密文格式转换函数进行格式转换时，需要用到此对象。可以通过指定此参数，生成符合国密标准的ASN.1格式的SM2密文，反之，也可以从ASN.1格式的SM2密文中获取具体参数。 |
 | [SymKey](arkts-cryptoarchitecture-cryptoframework-symkey-i.md) | 对称密钥，是[Key](arkts-cryptoarchitecture-cryptoframework-key-i.md)的子类，在对称加解密时需要将其对象传入[Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md)实例的[init()](arkts-cryptoarchitecture-cryptoframework-cipher-i.md#init)方法使用。 |
 | [SymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-symkeygenerator-i.md) | 对称密钥生成器接口，定义生成对称密钥的方法。调用前，需通过[createSymKeyGenerator](arkts-cryptoarchitecture-cryptoframework-createsymkeygenerator-f.md)方法创建一个SymKeyGenerator实例。 |
-| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md#verify) | 验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |
+| [Verify](arkts-cryptoarchitecture-cryptoframework-verify-i.md) | 验签接口，定义基于公钥对签名数据进行验签的方法。调用前，需通过[createVerify(algName: string): Verify](arkts-cryptoarchitecture-cryptoframework-createverify-f.md)方法创建一个Verify实例。按序调用Verify实例中的init、update（可选）、verify方法完成验签操作。验签操作的示例代码详见[签名验签开发指导](../../../security/CryptoArchitectureKit/crypto-rsa-sign-sig-verify.md)。 |
 | [X25519KeyPairSpec](arkts-cryptoarchitecture-cryptoframework-x25519keypairspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定X25519算法中公私钥包含的全量参数。 |
 | [X25519PriKeySpec](arkts-cryptoarchitecture-cryptoframework-x25519prikeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定X25519算法中私钥包含的参数。 |
 | [X25519PubKeySpec](arkts-cryptoarchitecture-cryptoframework-x25519pubkeyspec-i.md) | 密钥参数[AsyKeySpec](arkts-cryptoarchitecture-cryptoframework-asykeyspec-i.md)的子类，用于指定X25519算法中公钥包含的参数。 |

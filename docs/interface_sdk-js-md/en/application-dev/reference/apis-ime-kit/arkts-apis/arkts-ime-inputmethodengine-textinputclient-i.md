@@ -503,7 +503,7 @@ Inserts text. This API uses a promise to return the result.
 
 **Deprecated since:** 9
 
-**Substitutes:** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext-1)(text: string): Promise&lt;boolean&gt;
+**Substitutes:** [insertText](arkts-ime-inputmethodengine-inputclient-i.md#inserttext)(text: string): Promise&lt;boolean&gt;
 
 <!--Device-TextInputClient-insertText(text: string): Promise<boolean>--><!--Device-TextInputClient-insertText(text: string): Promise<boolean>-End-->
 

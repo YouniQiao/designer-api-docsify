@@ -51,3 +51,21 @@ function createIsoImage(volumeId: string, filePath: string): Promise<void>
 | 13600010 | The input parameter is invalid. |
 | 13600024 | Empty disc. |
 | 13600025 | Failed to write the ISO file. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+let filePath: string = "";
+volumeManager.createIsoImage(volumeId, filePath).then(() => {
+  console.info("createIsoImage successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`Failed to createIsoImage. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

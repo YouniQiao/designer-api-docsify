@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function closePipe(pipe: USBDevicePipe): number
 ```
 
-关闭设备连接通道。
+关闭设备连接通道。适用于使用USBDevicePipe完成数据传输和设备控制操作后释放设备连接的场景。
 
 1. 调用[usbManager.getDevices](arkts-basicservices-usbmanager-getdevices-f.md)获取设备列表；
 2. 调用[usbManager.requestRight](arkts-basicservices-usbmanager-requestright-f.md)获取设备请求权限；

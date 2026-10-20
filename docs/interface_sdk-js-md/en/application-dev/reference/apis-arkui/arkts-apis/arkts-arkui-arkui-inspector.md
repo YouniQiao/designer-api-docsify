@@ -4,6 +4,8 @@ Provides APIs for registering the component layout and drawing completion callba
 
 **Since:** 10
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace inspector--><!--Device-unnamed-declare namespace inspector-End-->
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
@@ -20,7 +22,7 @@ import { inspector } from '@kit.ArkUI';
 
 | Name | Description |
 | --- | --- |
-| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver-1) | Binds to the specified component and returns the corresponding observation handle. |
+| [createComponentObserver](arkts-arkui-inspector-createcomponentobserver-f.md#createcomponentobserver) | Binds to the specified component and returns the corresponding observation handle. |
 
 ### Interfaces
 

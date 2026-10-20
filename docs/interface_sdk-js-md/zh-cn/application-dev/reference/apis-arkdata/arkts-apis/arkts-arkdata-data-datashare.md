@@ -7,6 +7,8 @@
 
 **起始版本：** 20
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace dataShare--><!--Device-unnamed-declare namespace dataShare-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.DataShare.Consumer
@@ -23,7 +25,7 @@ import { dataShare } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle-1) | 创建DataProxyHandle实例。使用Promise异步回调。 |
+| [createDataProxyHandle](arkts-arkdata-datashare-createdataproxyhandle-f.md#createdataproxyhandle) | 创建DataProxyHandle实例。使用Promise异步回调。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -31,8 +33,8 @@ import { dataShare } from '@kit.ArkData';
 | 名称 | 说明 |
 | --- | --- |
 | [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper) | 创建DataShareHelper实例。使用callback异步回调。<br> |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-1) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br> |
-| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper-2) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br> |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用callback异步回调。<br> |
+| [createDataShareHelper](arkts-arkdata-datashare-createdatasharehelper-f-sys.md#createdatasharehelper) | 创建DataShareHelper实例，通过DataShareHelperOptions指定是否通过代理访问。使用Promise异步回调。<br> |
 | [disableSilentProxy](arkts-arkdata-datashare-disablesilentproxy-f-sys.md#disablesilentproxy) | 关闭静默访问。使用Promise异步回调。<br> <br>使用规则： |
 | [enableSilentProxy](arkts-arkdata-datashare-enablesilentproxy-f-sys.md#enablesilentproxy) | 开启静默访问。使用Promise异步回调。<br> <br>使用规则： |
 <!--DelEnd-->

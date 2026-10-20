@@ -50,3 +50,21 @@ function deletePartition(diskId: string, partitionNum: number): Promise<void>
 | 13600008 | No such object. |
 | 13600010 | The input parameter is invalid. |
 | 13600023 | Delete partition failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+let partitionNum: number = 1;
+volumeManager.deletePartition(diskId, partitionNum).then(() => {
+  console.info("deletePartition successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`deletePartition failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

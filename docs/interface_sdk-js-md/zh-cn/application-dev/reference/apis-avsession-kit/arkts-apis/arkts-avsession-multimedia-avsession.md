@@ -18,18 +18,18 @@ import { avSession } from '@kit.AVSessionKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession-1) | 创建会话对象，一个应用程序仅允许存在一个会话，重复创建会失败，结果通过callback异步回调方式返回。 |
-| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession-2) | 创建会话对象，一个应用进程仅允许存在一个会话，重复创建会失败，结果通过Promise异步回调方式返回。 |
-| [createController](arkts-avsession-avsession-createcontroller-f.md#createcontroller-1) | 根据会话ID创建会话控制器。使用Promise异步回调。 |
-| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md#getallsessiondescriptors-1) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。 |
-| [getAVSession](arkts-avsession-avsession-getavsession-f.md#getavsession-1) | 获取会话对象。使用Promise异步回调。 |
-| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md#isdesktoplyricsupported-1) | 设备是否支持桌面歌词功能。使用Promise异步回调。 |
-| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md#offsessioncreate-1) | Unregister session create callback |
-| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md#offsessiondestroy-1) | Unregister session destroy callback |
-| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md#offtopsessionchange-1) | Unregister top session changed callback |
-| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md#onsessioncreate-1) | Register session create callback |
-| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md#onsessiondestroy-1) | Register session destroy callback |
-| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md#ontopsessionchange-1) | Register top session changed callback |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession) | 创建会话对象，一个应用程序仅允许存在一个会话，重复创建会失败，结果通过callback异步回调方式返回。 |
+| [createAVSession](arkts-avsession-avsession-createavsession-f.md#createavsession) | 创建会话对象，一个应用进程仅允许存在一个会话，重复创建会失败，结果通过Promise异步回调方式返回。 |
+| [createController](arkts-avsession-avsession-createcontroller-f.md#createcontroller) | 根据会话ID创建会话控制器。使用Promise异步回调。 |
+| [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f.md#getallsessiondescriptors) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。结果通过Promise异步回调方式返回。 |
+| [getAVSession](arkts-avsession-avsession-getavsession-f.md#getavsession) | 获取会话对象。使用Promise异步回调。 |
+| [isDesktopLyricSupported](arkts-avsession-avsession-isdesktoplyricsupported-f.md#isdesktoplyricsupported) | 设备是否支持桌面歌词功能。使用Promise异步回调。 |
+| [offSessionCreate](arkts-avsession-avsession-offsessioncreate-f.md#offsessioncreate) | Unregister session create callback |
+| [offSessionDestroy](arkts-avsession-avsession-offsessiondestroy-f.md#offsessiondestroy) | Unregister session destroy callback |
+| [offTopSessionChange](arkts-avsession-avsession-offtopsessionchange-f.md#offtopsessionchange) | Unregister top session changed callback |
+| [onSessionCreate](arkts-avsession-avsession-onsessioncreate-f.md#onsessioncreate) | Register session create callback |
+| [onSessionDestroy](arkts-avsession-avsession-onsessiondestroy-f.md#onsessiondestroy) | Register session destroy callback |
+| [onTopSessionChange](arkts-avsession-avsession-ontopsessionchange-f.md#ontopsessionchange) | Register top session changed callback |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -37,16 +37,16 @@ import { avSession } from '@kit.AVSessionKit';
 | 名称 | 说明 |
 | --- | --- |
 | [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | 投播会话到指定设备列表。结果通过callback异步回调方式返回。 |
-| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio-1) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。 |
+| [castAudio](arkts-avsession-avsession-castaudio-f-sys.md#castaudio) | 投播会话到指定设备列表。结果通过Promise异步回调方式返回。 |
 | [createController](arkts-avsession-avsession-createcontroller-f-sys.md#createcontroller) | 根据会话ID创建会话控制器。使用callback异步回调。 |
 | [getAllSessionDescriptors](arkts-avsession-avsession-getallsessiondescriptors-f-sys.md#getallsessiondescriptors) | 获取所有设置过媒体信息且注册过控制回调的会话的描述符信息。使用callback异步回调。 |
 | [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller) | 设备建立连接后，获取投播控制器。结果通过callback异步回调方式返回。 |
-| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller-1) | 设备建立连接后，获取投播控制器。结果通过Promise方式返回。 |
+| [getAVCastController](arkts-avsession-avsession-getavcastcontroller-f-sys.md#getavcastcontroller) | 设备建立连接后，获取投播控制器。结果通过Promise方式返回。 |
 | [getDistributedSessionController](arkts-avsession-avsession-getdistributedsessioncontroller-f-sys.md#getdistributedsessioncontroller) | 根据远端会话类型，获取远端分布式会话控制器。结果通过Promise异步回调方式返回。 |
 | [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos) | 获取全部的历史播放歌单。结果通过callback异步回调方式返回。 |
-| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos-1) | 获取全部的历史播放歌单。结果通过Promise异步回调方式返回。 |
+| [getHistoricalAVQueueInfos](arkts-avsession-avsession-gethistoricalavqueueinfos-f-sys.md#gethistoricalavqueueinfos) | 获取全部的历史播放歌单。结果通过Promise异步回调方式返回。 |
 | [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md#gethistoricalsessiondescriptors) | 获取所有已被销毁的会话相关描述。结果通过callback异步回调方式返回。 |
-| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md#gethistoricalsessiondescriptors-1) | 获取所有已被销毁的会话相关描述。结果通过Promise异步回调方式返回。 |
+| [getHistoricalSessionDescriptors](arkts-avsession-avsession-gethistoricalsessiondescriptors-f-sys.md#gethistoricalsessiondescriptors) | 获取所有已被销毁的会话相关描述。结果通过Promise异步回调方式返回。 |
 | [getSessionDescriptors](arkts-avsession-avsession-getsessiondescriptors-f-sys.md#getsessiondescriptors) | 根据不同的会话类别获取对应的会话描述。使用Promise异步回调。 |
 | [getSessionDescriptorsForAudioZone](arkts-avsession-avsession-getsessiondescriptorsforaudiozone-f-sys.md#getsessiondescriptorsforaudiozone) | 获取根据userid查询对应音区的会话 |
 | [off('sessionCreate')](arkts-avsession-avsession-off-f-sys.md#offsessioncreate) | 注销会话创建事件监听。注销后，不再接收该事件。 |
@@ -74,24 +74,24 @@ import { avSession } from '@kit.AVSessionKit';
 | [onAudioZoneSessionChange](arkts-avsession-avsession-onaudiozonesessionchange-f-sys.md#onaudiozonesessionchange) | 注册音区会话变化回调 |
 | [onSystemCommonEvent](arkts-avsession-avsession-onsystemcommonevent-f-sys.md#onsystemcommonevent) | 监听系统通用事件命令回调 |
 | [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md#sendsystemavkeyevent) | 发送按键事件给置顶会话。结果通过callback异步回调方式返回。 |
-| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md#sendsystemavkeyevent-1) | 发送按键事件给置顶会话。结果通过Promise异步回调方式返回。 |
+| [sendSystemAVKeyEvent](arkts-avsession-avsession-sendsystemavkeyevent-f-sys.md#sendsystemavkeyevent) | 发送按键事件给置顶会话。结果通过Promise异步回调方式返回。 |
 | [sendSystemCommonCommand](arkts-avsession-avsession-sendsystemcommoncommand-f-sys.md#sendsystemcommoncommand) | 发送通用事件命令 |
 | [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md#sendsystemcontrolcommand) | 发送控制命令给置顶会话。结果通过callback异步回调方式返回。 |
-| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md#sendsystemcontrolcommand-1) | 发送控制命令给置顶会话。结果通过Promise异步回调方式返回。 |
+| [sendSystemControlCommand](arkts-avsession-avsession-sendsystemcontrolcommand-f-sys.md#sendsystemcontrolcommand) | 发送控制命令给置顶会话。结果通过Promise异步回调方式返回。 |
 | [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md#setdiscoverable) | 设置设备是否可被发现，用于投播接收端。结果通过callback异步回调方式返回。 |
-| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md#setdiscoverable-1) | 设置设备是否可被发现，用于投播接收端。结果通过Promise异步回调方式返回。 |
+| [setDiscoverable](arkts-avsession-avsession-setdiscoverable-f-sys.md#setdiscoverable) | 设置设备是否可被发现，用于投播接收端。结果通过Promise异步回调方式返回。 |
 | [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md#startavplayback) | 启动媒体播放应用程序。结果通过Promise异步回调方式返回。 |
-| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md#startavplayback-1) | 携带启动参数的冷启动应用播放接口 |
+| [startAVPlayback](arkts-avsession-avsession-startavplayback-f-sys.md#startavplayback) | 携带启动参数的冷启动应用播放接口 |
 | [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery) | 开始设备搜索发现。结果通过callback异步回调方式返回。 |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery-1) | 指定过滤条件，开始设备搜索发现。结果通过callback异步回调方式返回。 |
-| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery-2) | 开始设备搜索发现。结果通过Promise异步回调方式返回。 |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery) | 指定过滤条件，开始设备搜索发现。结果通过callback异步回调方式返回。 |
+| [startCastDeviceDiscovery](arkts-avsession-avsession-startcastdevicediscovery-f-sys.md#startcastdevicediscovery) | 开始设备搜索发现。结果通过Promise异步回调方式返回。 |
 | [startCasting](arkts-avsession-avsession-startcasting-f-sys.md#startcasting) | 启动投播。结果通过callback异步回调方式返回。 |
-| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md#startcasting-1) | 启动投播。结果通过Promise异步回调方式返回。 |
+| [startCasting](arkts-avsession-avsession-startcasting-f-sys.md#startcasting) | 启动投播。结果通过Promise异步回调方式返回。 |
 | [startDeviceLogging](arkts-avsession-avsession-startdevicelogging-f-sys.md#startdevicelogging) | 开始将设备日志写入文件。结果通过Promise异步回调方式返回。 |
 | [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md#stopcastdevicediscovery) | 结束设备搜索发现。结果通过callback异步回调方式返回。 |
-| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md#stopcastdevicediscovery-1) | 结束设备搜索发现。结果通过Promise异步回调方式返回。 |
+| [stopCastDeviceDiscovery](arkts-avsession-avsession-stopcastdevicediscovery-f-sys.md#stopcastdevicediscovery) | 结束设备搜索发现。结果通过Promise异步回调方式返回。 |
 | [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md#stopcasting) | 结束投播。结果通过callback异步回调方式返回。 |
-| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md#stopcasting-1) | 结束投播。结果通过Promise异步回调方式返回。 |
+| [stopCasting](arkts-avsession-avsession-stopcasting-f-sys.md#stopcasting) | 结束投播。结果通过Promise异步回调方式返回。 |
 | [stopDeviceLogging](arkts-avsession-avsession-stopdevicelogging-f-sys.md#stopdevicelogging) | 停止当前设备日志写入。结果通过Promise异步回调方式返回。 |
 <!--DelEnd-->
 

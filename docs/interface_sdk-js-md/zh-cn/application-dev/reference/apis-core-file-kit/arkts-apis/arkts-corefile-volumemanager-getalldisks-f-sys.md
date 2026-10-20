@@ -39,3 +39,18 @@ function getAllDisks(): Promise<Array<Disk>>
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. |
 | [202](../../errorcode-universal.md#202-非系统应用调用系统-api) | The caller is not a system application. |
 | 13600001 | IPC error. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+volumeManager.getAllDisks().then((disks: Array<volumeManager.Disk>) => {
+  console.info("getAllDisks successfully:" + JSON.stringify(disks));
+}).catch((error: BusinessError) => {
+  console.error(`getAllDisks failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

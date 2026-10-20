@@ -20,9 +20,9 @@ import { inputEventClient } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller-1) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
-| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller-1) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
-| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller-1) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
+| [createKeyboardController](arkts-input-inputeventclient-createkeyboardcontroller-f.md#createkeyboardcontroller) | Creates a keyboard controller for simulating key operations. This API uses a promise to return the result. |
+| [createMouseController](arkts-input-inputeventclient-createmousecontroller-f.md#createmousecontroller) | Creates a mouse controller for simulating mouse operations. This API uses a promise to return the result. |
+| [createTouchController](arkts-input-inputeventclient-createtouchcontroller-f.md#createtouchcontroller) | Creates a touch controller for simulating touch operations. This API uses a promise to return the result. |
 
 <!--Del-->
 ### Functions(System API)

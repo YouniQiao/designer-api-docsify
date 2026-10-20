@@ -24,9 +24,9 @@ import { screenLockFileManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess-1) | Requests the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold. This method must be used in pair with [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md). |
-| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate-1) | Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode. |
-| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess-1) | Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero, the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold. |
+| [acquireAccess](arkts-ability-screenlockfilemanager-acquireaccess-f.md#acquireaccess) | Requests the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the request is successful, the reference count of the sensitive data key increases, preventing the key from being destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold. This method must be used in pair with [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md). |
+| [queryAppKeyState](arkts-ability-screenlockfilemanager-queryappkeystate-f.md#queryappkeystate) | Queries the status of the caller app's sensitive data key under the lock screen in synchronous mode. |
+| [releaseAccess](arkts-ability-screenlockfilemanager-releaseaccess-f.md#releaseaccess) | Releases the access permission for the caller app's sensitive data under the lock screen in synchronous mode. After the release is successful, the reference count of the sensitive data key decreases. When the count reaches zero, the key can be destroyed after the screen has been locked for a duration reaching the system-configured lock duration threshold. |
 
 <!--Del-->
 ### Functions(System API)

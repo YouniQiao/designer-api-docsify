@@ -4,6 +4,8 @@ This module provides the capability to media enhancement
 
 **Since:** 23
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace avMusicTemplate--><!--Device-unnamed-declare namespace avMusicTemplate-End-->
 
 **System capability:** SystemCapability.Multimedia.AVSession.AVMusicTemplate
@@ -20,7 +22,7 @@ import { avMusicTemplate } from '@kit.AVSessionKit';
 
 | Name | Description |
 | --- | --- |
-| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate-1) | Create an AVMusicTemplate instance. |
+| [createAVMusicTemplate](arkts-avsession-avmusictemplate-createavmusictemplate-f.md#createavmusictemplate) | Create an AVMusicTemplate instance. |
 
 <!--Del-->
 ### Functions(System API)

@@ -47,3 +47,20 @@ function eject(diskId: string): Promise<void>
 | 13600001 | IPC error. |
 | 13600002 | Not supported filesystem. |
 | 13600027 | Eject operation failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+volumeManager.eject(diskId).then(() => {
+  console.info("eject successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`Failed to eject. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

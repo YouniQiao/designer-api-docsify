@@ -4,7 +4,7 @@
 interface UploadTask
 ```
 
-Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-2) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile-1).
+Implements file uploads. Before using any APIs of this class, you must obtain an **UploadTask** object, from a promise through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile) or from a callback through [request.uploadFile](arkts-basicservices-request-uploadfile-f.md#uploadfile).
 
 **Since:** 6
 

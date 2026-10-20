@@ -6,6 +6,8 @@
 
 **起始版本：** 23
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace partnerAgent--><!--Device-unnamed-declare namespace partnerAgent-End-->
 
 **系统能力：** SystemCapability.Communication.FusionConnectivity.Core
@@ -22,12 +24,12 @@ import { partnerAgent } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md#binddevice-1) | 应用注册设备，使用Promise异步回调。 |
-| [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md#getbounddevices-1) | 获取应用当前注册过的所有设备。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
-| [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md#isdevicebound-1) | 判断当前应用是否已注册过该设备。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
-| [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md#isdevicecontrolenabled-1) | 判断当前设备的互通功能是否已经打开。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
-| [isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md#ispartneragentsupported-1) | 判断本机设备是否支持外设互通功能，若该接口返回值是false，该文件内的其他接口均无法使用。 |
-| [unbindDevice](arkts-connectivity-partneragent-unbinddevice-f.md#unbinddevice-1) | 应用解注册设备，使用Promise异步回调。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
+| [bindDevice](arkts-connectivity-partneragent-binddevice-f.md#binddevice) | 应用注册设备，使用Promise异步回调。 |
+| [getBoundDevices](arkts-connectivity-partneragent-getbounddevices-f.md#getbounddevices) | 获取应用当前注册过的所有设备。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
+| [isDeviceBound](arkts-connectivity-partneragent-isdevicebound-f.md#isdevicebound) | 判断当前应用是否已注册过该设备。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
+| [isDeviceControlEnabled](arkts-connectivity-partneragent-isdevicecontrolenabled-f.md#isdevicecontrolenabled) | 判断当前设备的互通功能是否已经打开。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
+| [isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md#ispartneragentsupported) | 判断本机设备是否支持外设互通功能，若该接口返回值是false，该文件内的其他接口均无法使用。 |
+| [unbindDevice](arkts-connectivity-partneragent-unbinddevice-f.md#unbinddevice) | 应用解注册设备，使用Promise异步回调。使用前建议先调用[isPartnerAgentSupported](arkts-connectivity-partneragent-ispartneragentsupported-f.md)判断本机是否支持外设互通功能，若不支持则本接口不可用。 |
 
 <!--Del-->
 ### 函数（系统接口）

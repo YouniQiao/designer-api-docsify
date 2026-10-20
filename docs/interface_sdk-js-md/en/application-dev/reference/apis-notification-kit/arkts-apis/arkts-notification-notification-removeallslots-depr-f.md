@@ -29,6 +29,21 @@ Removes all notification slots. This API uses an asynchronous callback to return
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;void&gt; | Yes | Callback used to return the result. |
 
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let removeAllCallback = (err: Base.BusinessError) => {
+  if (err) {
+    console.error("removeAllSlots failed " + JSON.stringify(err));
+  } else {
+    console.info("removeAllSlots success");
+  }
+}
+Notification.removeAllSlots(removeAllCallback);
+```
+
 
 ## removeAllSlots
 
@@ -53,3 +68,15 @@ Removes all notification slots. This API uses a promise to return the result.
 | Type | Description |
 | --- | --- |
 | Promise&lt;void&gt; | Promise that returns no value. |
+
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.removeAllSlots().then(() => {
+  console.info("removeAllSlots success");
+}).catch((err: Base.BusinessError) => {
+  console.error(`removeAllSlots failed, code is ${err}`);
+});
+```

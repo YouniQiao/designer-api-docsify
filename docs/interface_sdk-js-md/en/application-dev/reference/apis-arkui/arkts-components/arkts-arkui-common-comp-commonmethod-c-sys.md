@@ -103,7 +103,7 @@ Sets the edge light effect for the component.
 excludeFromRenderGroup(exclude: boolean | undefined): T
 ```
 
-Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup-1) attribute of the ancestor component.
+Sets whether the current component and its child components are removed from the render group of the ancestor component. If this attribute is used alone, no effect is achieved. It must be used with the [renderGroup](arkts-arkui-common-comp-commonmethod-c.md#rendergroup) attribute of the ancestor component.
 
 Removing the current component and its children from the render group does not affect the offscreen canvas of the ancestor component, and the cache of the render group is still valid. In this way, the render group cache can be reused. If the display area of the current component occupies only a part of the display area of the render group drawing content, and the display effect of the current component and its children is frequently updated, setting **excludeFromRenderGroup** helps optimize the drawing performance.
 

@@ -6,7 +6,7 @@ interface ImageSource
 
 The **ImageSource** class provides APIs to obtain image information.
 
-Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) to create an ImageSource instance.
+Before calling any API in ImageSource, you must use [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) to create an ImageSource instance.
 
 All APIs in ImageSource cannot be called concurrently.
 
@@ -1737,7 +1737,7 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 
@@ -2322,7 +2322,7 @@ Modifies image properties in batches. This API uses a promise to return the resu
 
 > **NOTE:** 
 > 
-> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource-1) instance by passing a URI.
+> - Calling this API to modify properties alters the property byte length. You are advised to create an [image.createImageSource](arkts-image-image-createimagesource-f.md) instance by passing a file descriptor or an [image.createImageSource](arkts-image-image-createimagesource-f.md#createimagesource) instance by passing a URI.
 > 
 > - This API modifies batch data in memory and writes the data to the file in a single operation. It is more efficient than [modifyImageProperties](#modifyimageproperties).
 > 

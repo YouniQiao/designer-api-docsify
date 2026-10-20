@@ -4,7 +4,7 @@
 interface Task
 ```
 
-上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过[request.agent.create](arkts-basicservices-agent-create-f.md#create-2)获取，callback形式通过[request.agent.create](arkts-basicservices-agent-create-f.md#create-1)获取。
+上传或下载任务。使用该方法前需要先获取Task对象，promise形式通过[request.agent.create](arkts-basicservices-agent-create-f.md#create)获取，callback形式通过[request.agent.create](arkts-basicservices-agent-create-f.md#create)获取。
 
 > **说明：** 
 > 
@@ -386,7 +386,7 @@ on(event: 'completed', callback: (progress: Progress) => void): void
 on(event: 'failed', callback: (progress: Progress) => void): void
 ```
 
-订阅任务失败事件，使用callback异步回调。可通过调用[request.agent.show](arkts-basicservices-agent-show-f.md#show-2)查看错误原因。
+订阅任务失败事件，使用callback异步回调。可通过调用[request.agent.show](arkts-basicservices-agent-show-f.md#show)查看错误原因。
 
 > **说明：** 
 > 

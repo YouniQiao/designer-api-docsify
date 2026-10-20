@@ -4,6 +4,8 @@
 
 **起始版本：** 10
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace uniformTypeDescriptor--><!--Device-unnamed-declare namespace uniformTypeDescriptor-End-->
 
 **系统能力：** SystemCapability.DistributedDataManager.UDMF.Core
@@ -20,11 +22,11 @@ import { uniformTypeDescriptor } from '@kit.ArkData';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md#gettypedescriptor-1) | 按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。 |
-| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md#getuniformdatatypebyfilenameextension-1) | 根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID，若有多个符合条件的标准化数据类型ID，则返回第一个。 |
-| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md#getuniformdatatypebymimetype-1) | 根据给定的MIME类型和所归属的标准化数据类型查询标准化数据类型ID，若有多个符合条件的标准化数据类型ID，则返回第一个。 |
-| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md#getuniformdatatypesbyfilenameextension-1) | 根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID列表。 |
-| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md#getuniformdatatypesbymimetype-1) | 根据给定的MIME类型和所归属的标准化数据类型查询标准化数据类型ID列表。 |
+| [getTypeDescriptor](arkts-arkdata-uniformtypedescriptor-gettypedescriptor-f.md#gettypedescriptor) | 按给定的标准化数据类型ID查询并返回对应的标准化数据类型描述类对象。 |
+| [getUniformDataTypeByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebyfilenameextension-f.md#getuniformdatatypebyfilenameextension) | 根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID，若有多个符合条件的标准化数据类型ID，则返回第一个。 |
+| [getUniformDataTypeByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypebymimetype-f.md#getuniformdatatypebymimetype) | 根据给定的MIME类型和所归属的标准化数据类型查询标准化数据类型ID，若有多个符合条件的标准化数据类型ID，则返回第一个。 |
+| [getUniformDataTypesByFilenameExtension](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbyfilenameextension-f.md#getuniformdatatypesbyfilenameextension) | 根据给定的文件后缀名和所归属的标准化数据类型查询标准化数据类型ID列表。 |
+| [getUniformDataTypesByMIMEType](arkts-arkdata-uniformtypedescriptor-getuniformdatatypesbymimetype-f.md#getuniformdatatypesbymimetype) | 根据给定的MIME类型和所归属的标准化数据类型查询标准化数据类型ID列表。 |
 
 <!--Del-->
 ### 函数（系统接口）

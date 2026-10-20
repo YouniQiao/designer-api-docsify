@@ -24,7 +24,7 @@ import { inputConsumer } from '@kit.InputKit';
 
 | Name | Description |
 | --- | --- |
-| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys-1) | Obtains all system hotkeys. This API uses a promise to return the result. |
+| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys) | Obtains all system hotkeys. This API uses a promise to return the result. |
 | [off('hotkeyChange')](arkts-input-inputconsumer-off-f.md#offhotkeychange) | Unsubscribes from application hotkey change events. This API uses an asynchronous callback to return the result. |
 | [off('keyPressed')](arkts-input-inputconsumer-off-f.md#offkeypressed) | Unsubscribes from key press events. This API uses an asynchronous callback to return the result. If the API call is successful, the system's default response to the key event will be resumed; that is, system-level actions, such as volume adjustment, will be triggered normally. |
 | [on('hotkeyChange')](arkts-input-inputconsumer-on-f.md#onhotkeychange) | Subscribes to application hotkey change events. This API obtains combination key input events that meet the specified conditions, and uses an asynchronous callback to return the result. |

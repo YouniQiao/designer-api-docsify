@@ -20,12 +20,12 @@ import { screenLock } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked-1) | Checks whether the screen is currently locked. |
-| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked-2) | Checks whether the screen is currently locked. |
-| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode-1) | Checks whether the screen lock of the current device is secure. |
-| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode-2) | Checks whether the screen lock of the current device is secure. |
-| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen-1) | Unlock the screen. |
-| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen-2) | Unlock the screen. |
+| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked) | Checks whether the screen is currently locked. |
+| [isScreenLocked](arkts-basicservices-screenlock-isscreenlocked-f.md#isscreenlocked) | Checks whether the screen is currently locked. |
+| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode) | Checks whether the screen lock of the current device is secure. |
+| [isSecureMode](arkts-basicservices-screenlock-issecuremode-f.md#issecuremode) | Checks whether the screen lock of the current device is secure. |
+| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen) | Unlock the screen. |
+| [unlockScreen](arkts-basicservices-screenlock-unlockscreen-f.md#unlockscreen) | Unlock the screen. |
 
 <!--Del-->
 ### Functions(System API)
@@ -39,15 +39,15 @@ import { screenLock } from '@kit.BasicServicesKit';
 | [isLocked](arkts-basicservices-screenlock-islocked-f-sys.md#islocked) | Checks whether the screen is currently locked. |
 | [isScreenLockDisabled](arkts-basicservices-screenlock-isscreenlockdisabled-f-sys.md#isscreenlockdisabled) | Check whether screen lock is disabled for os account local userId. |
 | [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock) | Lock the screen. |
-| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock-1) | Lock the screen. |
+| [lock](arkts-basicservices-screenlock-lock-f-sys.md#lock) | Lock the screen. |
 | [onSystemEvent](arkts-basicservices-screenlock-onsystemevent-f-sys.md#onsystemevent) | Register system event related to screen lock service. |
 | [requestStrongAuth](arkts-basicservices-screenlock-requeststrongauth-f-sys.md#requeststrongauth) | Request strong authentication for os account local userId. |
 | [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendscreenlockevent) | The screen lock app sends the event to the screen lock service. |
-| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendscreenlockevent-1) | The screen lock app sends the event to the screen lock service. |
+| [sendScreenLockEvent](arkts-basicservices-screenlock-sendscreenlockevent-f-sys.md#sendscreenlockevent) | The screen lock app sends the event to the screen lock service. |
 | [setScreenLockAuthState](arkts-basicservices-screenlock-setscreenlockauthstate-f-sys.md#setscreenlockauthstate) | Set the screen lock authentication state for os account local userId. |
 | [setScreenLockDisabled](arkts-basicservices-screenlock-setscreenlockdisabled-f-sys.md#setscreenlockdisabled) | Disable screen lock showing for os account local userId. This only becomes effective when there is no password. |
 | [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock) | Unlock the screen. |
-| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock-1) | Unlock the screen. |
+| [unlock](arkts-basicservices-screenlock-unlock-f-sys.md#unlock) | Unlock the screen. |
 <!--DelEnd-->
 
 <!--Del-->

@@ -4,7 +4,7 @@
 interface Cipher
 ```
 
-Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md). Call the [init()](#init-3), [update()](#update), and [doFinal()](#dofinal-1) APIs in this class as needed to complete encryption or decryption operations.
+Encryption and decryption interface, defining methods for symmetric and asymmetric encryption and decryption. Before use, you must create a **Cipher** instance by using [createCipher(transformation: string): Cipher](arkts-cryptoarchitecture-cryptoframework-createcipher-f.md). Call the [init()](#init), [update()](#update), and [doFinal()](#dofinal) APIs in this class as needed to complete encryption or decryption operations.
 
 <br>For details about the complete encryption and decryption process, see [Encryption and Decryption Overview](../../../security/CryptoArchitectureKit/crypto-encryption-decryption.md).
 
@@ -545,7 +545,7 @@ of **updateSync()** and **doFinalSync()** throughout the process will yield the 
 
 (2) Encrypts or decrypts the input data for RSA or SM2 asymmetric encryption/decryption. This API returns the encrypted or decrypted data synchronously. If a large amount of data is to be processed, call **doFinalSync()** multiple times and concatenate the results to obtain the complete plaintext or ciphertext.
 
-<br>See **NOTE:** in [doFinal()](#dofinal-1) for other precautions.
+<br>See **NOTE:** in [doFinal()](#dofinal) for other precautions.
 
 <br><br>**NOTE:** <br>It is recommended to prioritize the use of asynchronous API, doFinal. Synchronous API may take a long time and block the main thread due to system busyness, high load, and other reasons. Therefore, it is advised to invoke synchronous API within a child thread to avoid blocking the main thread.
 
@@ -938,7 +938,7 @@ update(data: DataBlob, callback: AsyncCallback<DataBlob>): void
 
 Updates the data to encrypt or decrypt by segment. This API uses an asynchronous callback to return the result.
 
-<br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init-3).
+<br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init).
 
 > **NOTE:** 
 > 
@@ -996,7 +996,7 @@ update(data: DataBlob): Promise<DataBlob>
 
 Updates the data to encrypt or decrypt by segment. This API uses a promise to return the result.
 
-<br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init-3).
+<br>This API can be called only after the [Cipher](arkts-cryptoarchitecture-cryptoframework-cipher-i.md) instance is initialized by using [init()](#init).
 
 > **NOTE:** 
 > 

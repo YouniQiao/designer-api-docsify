@@ -17,7 +17,7 @@ function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>):
 
 **废弃版本：** 9
 
-**替代接口：** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-1)(context: Context, callback: AsyncCallback&lt;void&gt;)
+**替代接口：** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)(context: Context, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context, callback: AsyncCallback<void>): void-End-->
 
@@ -87,7 +87,7 @@ function stopBackgroundRunning(context: Context): Promise<void>
 
 **废弃版本：** 9
 
-**替代接口：** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning-2)(context: Context)
+**替代接口：** [stopBackgroundRunning](arkts-backgroundtasks-backgroundtaskmanager-stopbackgroundrunning-f.md#stopbackgroundrunning)(context: Context)
 
 <!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>--><!--Device-backgroundTaskManager-function stopBackgroundRunning(context: Context): Promise<void>-End-->
 

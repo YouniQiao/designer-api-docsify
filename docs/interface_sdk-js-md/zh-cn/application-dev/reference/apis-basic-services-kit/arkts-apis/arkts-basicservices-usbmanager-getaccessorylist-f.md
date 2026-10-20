@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function getAccessoryList(): Array<Readonly<USBAccessory>>
 ```
 
-获取当前已接入主机的USB配件列表。
+获取当前已接入主机的USB配件列表。可作为调用requestAccessoryRight申请配件访问权限、openAccessory打开配件等后续操作的前置步骤。
 
 **起始版本：** 14
 

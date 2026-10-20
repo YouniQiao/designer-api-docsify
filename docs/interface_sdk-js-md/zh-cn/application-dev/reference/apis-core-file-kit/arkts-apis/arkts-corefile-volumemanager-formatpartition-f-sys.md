@@ -52,3 +52,26 @@ function formatPartition(diskId: string, partitionNum: number, params: FormatPar
 | 13600008 | No such object. |
 | 13600010 | The input parameter is invalid. |
 | 13600032 | Format partition failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+let partitionNum: number = 1;
+let params: volumeManager.FormatParams = {
+  fsType: "ext4",
+  quickFormat: true,
+  volumeName: "myVolume"
+};
+volumeManager.formatPartition(diskId, partitionNum, params).then(() => {
+  console.info("formatPartition successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`formatPartition failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

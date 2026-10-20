@@ -188,7 +188,7 @@ In other cases, the return value is **false**.
 isPrivacyMode: boolean
 ```
 
-Whether the window is in privacy mode. **true** if the window is in privacy mode, **false** otherwise. You can call [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode-1) to set the privacy mode of the window.
+Whether the window is in privacy mode. **true** if the window is in privacy mode, **false** otherwise. You can call [setWindowPrivacyMode()](arkts-arkui-window-window-i.md#setwindowprivacymode) to set the privacy mode of the window.
 
 **Type:** boolean
 

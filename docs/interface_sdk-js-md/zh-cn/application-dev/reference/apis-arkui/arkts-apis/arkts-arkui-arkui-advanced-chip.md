@@ -21,7 +21,7 @@ import { Chip, ChipOptions, ChipSize, IconCommonOptions, LabelMarginOptions, Lab
 
 | 名称 | 说明 |
 | --- | --- |
-| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip-1) | 创建Chip组件。 |
+| [Chip](arkts-arkui-arkui-advanced-chip-chip-f.md#chip) | 创建Chip组件。 |
 
 ### 接口
 

@@ -191,7 +191,14 @@ Image(src: PixelMap | ResourceStr | DrawableDescriptor,
 | [ImageErrorCallback](arkts-arkui-image-comp-imageerrorcallback-t.md) | 图片加载异常时触发此回调。 |
 | [ImageMatrix](arkts-arkui-image-comp-imagematrix-t.md) | 当前的矩阵对象。 |
 | [RequestDownloadInfo](arkts-arkui-image-comp-requestdownloadinfo-t.md) | 用于描述网络图片加载失败或异常时的下载信息。该对象包含本次下载任务的资源信息、网络信息以及性能统计信息，可用于定位加载异常的具体原因。 |
+
+<!--Del-->
+### 类型（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
 | [ResolutionQuality](arkts-arkui-image-comp-resolutionquality-t-sys.md) | 分辨率质量等级类型。 |
+<!--DelEnd-->
 
 ### 枚举
 

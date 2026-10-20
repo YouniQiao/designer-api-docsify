@@ -201,7 +201,7 @@ export default class EntryAbility extends UIExtensionAbility {
 
 <!--DelEnd-->
 
-## getWindowAvoidArea
+## getWindowAvoidArea('window.AvoidAreaType')
 
 ```TypeScript
 getWindowAvoidArea(type: window.AvoidAreaType): window.AvoidArea

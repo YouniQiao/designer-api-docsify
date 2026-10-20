@@ -34,6 +34,27 @@ Checks whether notification is enabled for a specified application. This API use
 | bundle | BundleOption | Yes | Bundle information of the application. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
 
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle, isNotificationEnabledCallback);
+```
+
+<!--DelEnd-->
+
 
 ## isNotificationEnabled
 
@@ -69,6 +90,24 @@ Checks whether notification is enabled for a specified application. This API use
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. |
 
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle).then((data) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->
+
 
 ## isNotificationEnabled
 
@@ -97,6 +136,25 @@ Checks whether notification is enabled for this application. This API uses an as
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+
+Notification.isNotificationEnabled(isNotificationEnabledCallback);
+```
+
+<!--DelEnd-->
 
 
 ## isNotificationEnabled
@@ -127,6 +185,21 @@ Checks whether notification is enabled for this application. This API uses a pro
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. |
 
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.isNotificationEnabled().then((data: boolean) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->
+
 
 ## isNotificationEnabled
 
@@ -156,6 +229,64 @@ Checks whether notification is enabled for a specified user. This API uses an as
 | --- | --- | --- | --- |
 | userId | number | Yes | User ID. |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;boolean&gt; | Yes | Callback used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+
+<!--Del-->
+**Examples**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle, isNotificationEnabledCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let bundle: Notification.BundleOption = {
+  bundle: "bundleName1",
+};
+Notification.isNotificationEnabled(bundle).then((data) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+let isNotificationEnabledCallback = (err: Base.BusinessError, data: boolean) => {
+  if (err) {
+    console.error("isNotificationEnabled failed " + JSON.stringify(err));
+  } else {
+    console.info("isNotificationEnabled success");
+  }
+}
+
+Notification.isNotificationEnabled(isNotificationEnabledCallback);
+```
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.isNotificationEnabled().then((data: boolean) => {
+  console.info("isNotificationEnabled success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`isNotificationEnabled failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->
 
 
 ## isNotificationEnabled
@@ -191,3 +322,10 @@ Checks whether notification is enabled for a specified user. This API uses a pro
 | Type | Description |
 | --- | --- |
 | Promise&lt;boolean&gt; | Promise used to return the result. The value **true** means that the notification is enabled, and **false** means the opposite. |
+
+<!--Del-->
+**Examples**
+
+See [isNotificationEnabled](#isnotificationenabled)
+
+<!--DelEnd-->

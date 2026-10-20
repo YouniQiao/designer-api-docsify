@@ -5883,7 +5883,7 @@ Allows the current component to customize the hit test and control child compone
 onClick(event: (event: ClickEvent) => void): T
 ```
 
-A click action triggers this callback. For click scenarios without a finger movement distance limit, it is recommended to use this API. If you need to limit the finger movement range during a click, it is recommended to use the [onClick](#onclick-1) API.
+A click action triggers this callback. For click scenarios without a finger movement distance limit, it is recommended to use this API. If you need to limit the finger movement range during a click, it is recommended to use the [onClick](#onclick) API.
 
 When triggered by keyboard or gamepad input, the event's **SourceTool** is **Unknown**, and [SourceType](arkts-arkui-common-comp-sourcetype-e.md) is **KEY** or **JOYSTICK**.
 
@@ -6731,7 +6731,7 @@ Called when component is focused, the return value indicates whether keyboard is
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach-2) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
+| onNeedSoftkeyboardCallback | [OnNeedSoftkeyboardCallback](arkts-arkui-common-comp-onneedsoftkeyboardcallback-t.md) &#124; undefined | Yes | Callback executed when an event is triggered. The system determines whether a keyboard is required based on the return value of the callback. If this parameter is set to undefined, no callback is triggered, and the input box component returns true. For other components, false is returned. Prerequisite: The component must be able to obtain focus. Otherwise, this interface does not take effect. When the return value is true, the self-drawn text box needs to actively invoke the [attach](../../apis-ime-kit/arkts-apis/arkts-ime-inputmethod-inputmethodcontroller-i.md#attach) method to establish input method communication when the focus is obtained. Otherwise, the keyboard does not respond. |
 
 **Return value:**
 
@@ -6976,7 +6976,7 @@ Called when the visible area of the component changes. For details about the dev
 > 
 > - It does not support visibility change calculations for nodes that are not in the component tree. For example,preloaded nodes or custom nodes mounted using the [overlay](../../../reference/apis-arkui/arkui-ts/ts-universal-attributes-overlay.md#overlay) capability.
 > 
-> - This API does not support the [scale](#scale) attribute. To enable support for the [scale](#scale) attribute, use [onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange-1)and set **measureFromViewport** to **true**.
+> - This API does not support the [scale](#scale) attribute. To enable support for the [scale](#scale) attribute, use [onVisibleAreaChange<sup>22+</sup>](#onvisibleareachange)and set **measureFromViewport** to **true**.
 
 **Since:** 9
 
@@ -8135,7 +8135,7 @@ Rotates the component. Compared with [rotate](#rotate), this API supports the **
 rotate(options: Optional<RotateOptions | RotateAngleOptions>): T
 ```
 
-Sets the component rotation effect. Compared with [rotate](#rotate-1), this API supports the **RotateAngleOptions** type for the **options** parameter.
+Sets the component rotation effect. Compared with [rotate](#rotate), this API supports the **RotateAngleOptions** type for the **options** parameter.
 
 **Since:** 20
 

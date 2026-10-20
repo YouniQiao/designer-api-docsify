@@ -769,7 +769,7 @@ Sets the style of the system status bar when the home page of the **Navigation**
 
 > **NOTE:** 
 > 
-> 1. Avoid using the **systemBarStyle** attribute in conjunction with the status bar style APIs in the **Window**module, such as [setWindowSystemBarProperties](../arkts-apis/arkts-arkui-window-window-i.md#setwindowsystembarproperties-1).
+> 1. Avoid using the **systemBarStyle** attribute in conjunction with the status bar style APIs in the **Window**module, such as [setWindowSystemBarProperties](../arkts-apis/arkts-arkui-window-window-i.md#setwindowsystembarproperties).
 > 
 > 2. When you first set the **systemBarStyle** attribute for a **Navigation** or **NavDestination** component, the current status bar style is saved for potential future restoration.
 > 

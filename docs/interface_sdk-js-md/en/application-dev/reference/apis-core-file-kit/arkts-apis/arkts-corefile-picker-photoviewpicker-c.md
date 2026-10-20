@@ -70,7 +70,7 @@ A constructor used to create a PhotoViewPicker instance. This constructor is rec
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md). |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | Yes | Application context (only **UIAbilityContext** is supported). For details about the application context of the stage model, see [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md). |
 
 **Examples**
 
@@ -341,7 +341,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-1)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 
@@ -394,7 +394,7 @@ Starts a **photoPicker** page for the user to select one or more images or video
 
 **Deprecated since:** 12
 
-**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**Substitutes:** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
 

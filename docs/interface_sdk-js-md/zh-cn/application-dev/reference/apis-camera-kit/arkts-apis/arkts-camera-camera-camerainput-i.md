@@ -223,6 +223,11 @@ off(type: 'cameraOcclusionDetection', callback?: AsyncCallback<CameraOcclusionDe
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可触发该事件并返回结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 否 | 回调函数，如果指定参数则取消对应callback（callback对象不可是匿名函数），否则取消所有callback。 |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+
 **示例**
 
 ```TypeScript
@@ -316,6 +321,11 @@ on(type: 'cameraOcclusionDetection', callback: AsyncCallback<CameraOcclusionDete
 | --- | --- | --- | --- |
 | type | 'cameraOcclusionDetection' | 是 | 监听事件，固定为'cameraOcclusionDetection'，CameraInput对象创建成功可监听。相机镜头被遮挡或有脏污可触发该事件并返回结果。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;[CameraOcclusionDetectionResult](arkts-camera-camera-cameraocclusiondetectionresult-i.md)&gt; | 是 | 回调函数，用于获取结果。返回遮挡状态。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
 
 **示例**
 

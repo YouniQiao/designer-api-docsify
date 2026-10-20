@@ -789,3 +789,14 @@ length: number
 <!--Device-LruBuffer-length: number--><!--Device-LruBuffer-length: number-End-->
 
 **系统能力：** SystemCapability.Utils.Lang
+
+**示例**
+
+```TypeScript
+let pro : util.LruBuffer<number,number>= new util.LruBuffer();
+pro.put(2,10);
+pro.put(1,8);
+let result = pro.length;
+console.info("result = " + result);
+// 输出结果：result = 2
+```

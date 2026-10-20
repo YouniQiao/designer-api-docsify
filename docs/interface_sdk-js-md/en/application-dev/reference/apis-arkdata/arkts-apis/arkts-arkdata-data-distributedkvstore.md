@@ -14,6 +14,8 @@ synchronizing data across devices. This class inherits from [SingleKVStore](arkt
 
 **Since:** 9
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace distributedKVStore--><!--Device-unnamed-declare namespace distributedKVStore-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.KVStore.DistributedKVStore
@@ -30,7 +32,7 @@ import { distributedKVStore } from '@kit.ArkData';
 
 | Name | Description |
 | --- | --- |
-| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager-1) | Creates a **KVManager** instance for KV store management. |
+| [createKVManager](arkts-arkdata-distributedkvstore-createkvmanager-f.md#createkvmanager) | Creates a **KVManager** instance for KV store management. |
 
 ### Classes
 
@@ -54,7 +56,7 @@ import { distributedKVStore } from '@kit.ArkData';
 | [KVStoreResultSet](arkts-arkdata-distributedkvstore-kvstoreresultset-i.md) | Provides APIs for obtaining the distributed KV store result sets. A maximum of eight result sets can be opened at a time. The **KVStoreResultSet** instance is not refreshed in real time. After using the result set, if the data in the database is changed (by being added, deleted, or modified), you need to query the result set again to obtain the latest data. Before calling any API in **KVStoreResultSet**, you must use ** getKVStore ** to construct a **SingleKVStore** or **DeviceKVStore** instance. |
 | [Options](arkts-arkdata-distributedkvstore-options-i.md) | Provides KV store configuration. |
 | [SingleKVStore](arkts-arkdata-distributedkvstore-singlekvstore-i.md) | Provides APIs for data management in a single KV store, such as adding data, deleting data, and subscribing to data changes or across-device data sync completion events. Before calling any method in **SingleKVStore**, you must use getKVStore to obtain a **SingleKVStore** instance. |
-| [Value](arkts-arkdata-distributedkvstore-value-i.md#value) | Defines the **value** object in a KV store. |
+| [Value](arkts-arkdata-distributedkvstore-value-i.md) | Defines the **value** object in a KV store. |
 
 <!--Del-->
 ### Interfaces(System API)

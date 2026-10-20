@@ -66,7 +66,7 @@ constructor(context: Context)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context.md)。 |
+| context | [Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-c.md) | 是 | 应用上下文（仅支持UIAbilityContext）。Stage模型的应用Context定义见[Context](../../apis-ability-kit/arkts-apis/arkts-ability-context-depr-i.md)。 |
 
 **示例**
 
@@ -337,7 +337,7 @@ select(option: PhotoSelectOptions, callback: AsyncCallback<PhotoSelectResult>): 
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-1)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(option: PhotoSelectOptions, callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -390,7 +390,7 @@ select(callback: AsyncCallback<PhotoSelectResult>): void
 
 **废弃版本：** 12
 
-**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select-2)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
+**替代接口：** [select](../../apis-media-library-kit/arkts-apis/arkts-medialibrary-photoaccesshelper-photoviewpicker-c.md#select)(callback: AsyncCallback&lt;PhotoSelectResult&gt;)
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 

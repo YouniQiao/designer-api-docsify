@@ -27,8 +27,8 @@ import { uiEffect } from '@kit.ArkGraphics2D';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect-1) | 创建VisualEffect实例用于给组件添加多种VisualEffect效果。 |
-| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter-1) | 创建Filter实例用于给组件添加多种Filter效果。 |
+| [createEffect](arkts-arkgraphics2d-uieffect-createeffect-f.md#createeffect) | 创建VisualEffect实例用于给组件添加多种VisualEffect效果。 |
+| [createFilter](arkts-arkgraphics2d-uieffect-createfilter-f.md#createfilter) | 创建Filter实例用于给组件添加多种Filter效果。 |
 
 <!--Del-->
 ### 函数（系统接口）

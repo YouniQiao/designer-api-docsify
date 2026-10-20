@@ -6,7 +6,7 @@ interface Window
 
 Represents a window instance, which is the basic unit managed by the window manager.
 
-In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow-1), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow-1), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
+In the following API examples, you must use [getLastWindow()](arkts-arkui-window-getlastwindow-f.md#getlastwindow), [createWindow()](arkts-arkui-window-createwindow-f.md#createwindow), or [findWindow()](arkts-arkui-window-findwindow-f.md) to obtain a Window instance (named windowClass in this example) and then call a method in this instance.
 
 **Since:** 6
 
@@ -2215,15 +2215,15 @@ Allows a [system window](../../../windowmanager/window-terminology.md#system-win
 
 > **NOTE:** 
 > 
-> - If the main window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)while rotation is locked, the window restores the last orientation request when brought to the foreground after unlocking.
+> - If the main window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)while rotation is locked, the window restores the last orientation request when brought to the foreground after unlocking.
 > 
-> - If the system window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1)while rotation is locked, the window restores the last orientation request when brought to the foreground with the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**does not hinder the system window at a higher level to set the display orientation by calling [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1).
+> - If the system window sets the display orientation via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation)while rotation is locked, the window restores the last orientation request when brought to the foreground with the highest level after unlocking. The rotation lock set by a lower-level window using **setRotationLocked**does not hinder the system window at a higher level to set the display orientation by calling [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation).
 > 
 > - If the sensor orientation changes while rotation is locked, the last sensor orientation is restored after unlocking.
 > 
 > - If the application calls [setOrientation()](arkts-arkui-screen-screen-i-sys.md#setorientation)to set the screen orientation while rotation is locked, that screen?orientation setting is ignored.
 > 
-> - When rotation is unlocked, the application's display orientation is determined based on the main window's display orientation set via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation-1), the sensor orientation, and more. For details, see [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
+> - When rotation is unlocked, the application's display orientation is determined based on the main window's display orientation set via [setPreferredOrientation()](arkts-arkui-window-window-i.md#setpreferredorientation), the sensor orientation, and more. For details, see [Window Rotation Overview](../../../windowmanager/window-rotation.md#overview).
 > 
 > - The API does not affect the launch orientation set by the **orientation** under [**abilities** in the module.json5 file](../../../quick-start/module-configuration-file.md#abilities) of the application.
 

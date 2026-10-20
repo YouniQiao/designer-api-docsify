@@ -533,7 +533,7 @@ Updates the data for signature verification. This API uses an asynchronous callb
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify-1)
+> [verify](#verify)
 > after [init](#init)), depending on
 > the data volume.
 > 
@@ -591,7 +591,7 @@ Updates the data for signature verification. This API uses a promise to return t
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [verify](#verify-3) after
+> [verify](#verify) after
 > [init](#init)), depending on the data volume.
 
 > The amount of the data to be passed in by **update()** (one-time or accumulative) is not limited. If there is a

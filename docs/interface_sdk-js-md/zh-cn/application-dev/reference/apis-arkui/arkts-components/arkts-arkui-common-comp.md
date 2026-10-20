@@ -90,7 +90,6 @@ Common()
 | [BaseEvent](arkts-arkui-common-comp-baseevent-i.md) | 基础事件类型。 |
 | [BindOptions](arkts-arkui-common-comp-bindoptions-i.md) | 半模态、全模态的公共配置接口。 |
 | [BlurOptions](arkts-arkui-common-comp-bluroptions-i.md) | 灰阶模糊参数。 |
-| [BlurSnapshotOptions](arkts-arkui-common-comp-blursnapshotoptions-i-sys.md) | 模糊快照优化选项。设置该对象后，将开启模糊优化。 |
 | [BlurStyleOptions](arkts-arkui-common-comp-blurstyleoptions-i.md) | 模糊样式选项，用于配置模糊效果的深浅色模式、取色模式、灰阶模糊参数和模糊程度。 |
 | [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | Border image option |
 | [Callback](arkts-arkui-common-comp-callback-i.md) | 定义基础的回调函数。 |
@@ -107,9 +106,6 @@ Common()
 | [CrownEvent](arkts-arkui-common-comp-crownevent-i.md) | 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。 |
 | [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | 弹出自定义气泡的信息。 |
 | [DateRange](arkts-arkui-common-comp-daterange-i.md) | Defines a range of dates. |
-| [DepthColorRGB](arkts-arkui-common-comp-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。用于为组件设置空间效果参数。 |
-| [DepthVector3](arkts-arkui-common-comp-depthvector3-i-sys.md) | 深度空间中的三维向量。用于为组件设置空间效果参数。 |
-| [DepthVector4](arkts-arkui-common-comp-depthvector4-i-sys.md) | 深度空间中的4D向量。用于为组件设置空间效果参数。 |
 | [DismissContentCoverAction](arkts-arkui-common-comp-dismisscontentcoveraction-i.md) |  |
 | [DismissPopupAction](arkts-arkui-common-comp-dismisspopupaction-i.md) | 气泡关闭的信息。 |
 | [DismissSheetAction](arkts-arkui-common-comp-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
@@ -119,7 +115,6 @@ Common()
 | [DragPreviewOptions](arkts-arkui-common-comp-dragpreviewoptions-i.md) | 设置拖拽过程中预览图处理模式及数量角标的显示。 |
 | [DropOptions](arkts-arkui-common-comp-dropoptions-i.md) | 设置落入过程的参数。 |
 | [EdgeEffectOptions](arkts-arkui-common-comp-edgeeffectoptions-i.md) | edgeEffect属性参数对象。 |
-| [EdgeLightParams](arkts-arkui-common-comp-edgelightparams-i-sys.md) | 定义边缘流光效果参数。 |
 | [EditModeOptions](arkts-arkui-common-comp-editmodeoptions-i.md) | List/Grid组件编辑模式选项属性参数对象。 |
 | [EntryOptions](arkts-arkui-common-comp-entryoptions-i.md) | 页面入口配置选项，用于在\@Entry装饰页面时配置路由名称、状态存储和共享存储等参数。 |
 | [EventTarget](arkts-arkui-common-comp-eventtarget-i.md) | [BaseEvent](arkts-arkui-common-comp-baseevent-i.md)中参数target的类型。 |
@@ -132,7 +127,6 @@ Common()
 | [GeometryInfo](arkts-arkui-common-comp-geometryinfo-i.md) | 父组件（自定义组件）布局信息。在onMeasureSize和onPlaceChildren方法中，可通过selfLayoutInfo参数获取GeometryInfo对象，其中包含父组件的边框宽度、外边距和内边距信息，开发者在计算子组件布局时需要考虑这些信息。 |
 | [GeometryTransitionOptions](arkts-arkui-common-comp-geometrytransitionoptions-i.md) |  |
 | [GestureModifier](arkts-arkui-common-comp-gesturemodifier-i.md) | 开发者需要自定义class实现GestureModifier接口。 |
-| [GravityCenterOptions](arkts-arkui-common-comp-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
 | [HistoricalPoint](arkts-arkui-common-comp-historicalpoint-i.md) | 历史点信息。 |
 | [HorizontalAlignParam](arkts-arkui-common-comp-horizontalalignparam-i.md) | 定义相对容器的水平对齐规则。 |
 | [HoverEvent](arkts-arkui-common-comp-hoverevent-i.md) | 继承于[BaseEvent](arkts-arkui-common-comp-baseevent-i.md)。 |
@@ -149,7 +143,6 @@ Common()
 | [KeyframeAnimateParam](arkts-arkui-common-comp-keyframeanimateparam-i.md) | 动画选项设置。 |
 | [KeyframeState](arkts-arkui-common-comp-keyframestate-i.md) | 关键帧状态设置。 |
 | [Layoutable](arkts-arkui-common-comp-layoutable-i.md) | 子组件布局信息。Layoutable对象由ArkUI框架在onPlaceChildren调用时创建并传入，包含子组件的测量结果和唯一标识。开发者通过Layoutable的layout方法设置子组件位置，通过getMargin、getPadding、getBorderWidth方法获取子组件的边距信息用于精确布局计算。 |
-| [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
 | [LinearGradient](arkts-arkui-common-comp-lineargradient-i.md) | Linear Gradient Interface |
 | [LinearGradientBlurOptions](arkts-arkui-common-comp-lineargradientbluroptions-i.md) |  |
 | [LinearGradientOptions](arkts-arkui-common-comp-lineargradientoptions-i.md) | 线性渐变的参数。 |
@@ -174,10 +167,8 @@ Common()
 | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | 浮层的定位。 |
 | [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
 | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Provide an interface for the text style of picker |
-| [PixelMapMock](arkts-arkui-common-comp-pixelmapmock-i-sys.md) | 带有release函数的像素图对象。 |
 | [PixelRoundPolicy](arkts-arkui-common-comp-pixelroundpolicy-i.md) | 指定组件级像素取整的方向。 |
 | [PixelStretchEffectOptions](arkts-arkui-common-comp-pixelstretcheffectoptions-i.md) | 像素扩展属性集合，用于描述像素扩展的信息。 |
-| [PointLightStyle](arkts-arkui-common-comp-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
 | [PopupBorderLinearGradient](arkts-arkui-common-comp-popupborderlineargradient-i.md) | 弹出边框线性渐变色。 |
 | [PopupCommonOptions](arkts-arkui-common-comp-popupcommonoptions-i.md) | 配置弹出气泡的参数。使用[UIContext](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md)中的[getPromptAction()](../arkts-apis/arkts-arkui-arkui-uicontext-uicontext-c.md#getpromptaction)方法获取到[PromptAction](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md)对象，再通过该对象调用[openPopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#openpopup)和[updatePopup](../arkts-apis/arkts-arkui-arkui-uicontext-promptaction-c.md#updatepopup)时传入的options参数。 |
 | [PopupMaskType](arkts-arkui-common-comp-popupmasktype-i.md) | 设置遮罩层颜色。 |
@@ -195,8 +186,6 @@ Common()
 | [ReuseOptions](arkts-arkui-common-comp-reuseoptions-i.md) | 复用选项，用于配置复用标识ID，相同复用标识ID的组件会被互相复用，提高复用匹配的精确度。 |
 | [RotateAngleOptions](arkts-arkui-common-comp-rotateangleoptions-i.md) | 指定各轴旋转角的旋转参数选项。 |
 | [RotateOptions](arkts-arkui-common-comp-rotateoptions-i.md) | 组件旋转参数。 |
-| [SafeAreaInsetEdgeConfig](arkts-arkui-common-comp-safeareainsetedgeconfig-i-sys.md) | 单个边缘内容及其布局配置。 |
-| [SafeAreaInsetOptions](arkts-arkui-common-comp-safeareainsetoptions-i-sys.md) | 组件四边的完整边缘内容配置。 |
 | [ScaleOptions](arkts-arkui-common-comp-scaleoptions-i.md) | 定义缩放选项。 |
 | [SelectionOptions](arkts-arkui-common-comp-selectionoptions-i.md) | setTextSelection选中文字时的配置。 |
 | [ShadowOptions](arkts-arkui-common-comp-shadowoptions-i.md) | 阴影属性集合，用于设置阴影的模糊半径、阴影的颜色、X轴和Y轴的偏移量。 |
@@ -206,8 +195,6 @@ Common()
 | [SheetTitleOptions](arkts-arkui-common-comp-sheettitleoptions-i.md) | 半模态面板的标题。 |
 | [SizeResult](arkts-arkui-common-comp-sizeresult-i.md) | 组件尺寸信息。 |
 | [SmartGestureShortcutOptions](arkts-arkui-common-comp-smartgestureshortcutoptions-i.md) | 智慧手势响应行为配置对象。 |
-| [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) | 空间效果选项。用于为组件设置空间效果参数。 |
-| [SpatialPosition](arkts-arkui-common-comp-spatialposition-i-sys.md) | 三维空间中的空间角位置。用于为组件设置空间效果参数。 |
 | [SpringBackAction](arkts-arkui-common-comp-springbackaction-i.md) | 控制半模态关闭前的回弹。 |
 | [StateStyles](arkts-arkui-common-comp-statestyles-i.md) | 组件不同状态下的样式。 |
 | [SweepGradientOptions](arkts-arkui-common-comp-sweepgradientoptions-i.md) | 角度渐变参数。 |
@@ -228,6 +215,26 @@ Common()
 | [LayoutInfo](arkts-arkui-common-comp-layoutinfo-i.md) | 子组件布局位置信息。 |
 | [TransitionOptions](arkts-arkui-common-comp-transitionoptions-i.md) | TransitionOptions通过指定结构体内的参数来指定转场效果。 |
 
+<!--Del-->
+### 接口（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [BlurSnapshotOptions](arkts-arkui-common-comp-blursnapshotoptions-i-sys.md) | 模糊快照优化选项。设置该对象后，将开启模糊优化。 |
+| [DepthColorRGB](arkts-arkui-common-comp-depthcolorrgb-i-sys.md) | 深度空间中的RGB颜色。用于为组件设置空间效果参数。 |
+| [DepthVector3](arkts-arkui-common-comp-depthvector3-i-sys.md) | 深度空间中的三维向量。用于为组件设置空间效果参数。 |
+| [DepthVector4](arkts-arkui-common-comp-depthvector4-i-sys.md) | 深度空间中的4D向量。用于为组件设置空间效果参数。 |
+| [EdgeLightParams](arkts-arkui-common-comp-edgelightparams-i-sys.md) | 定义边缘流光效果参数。 |
+| [GravityCenterOptions](arkts-arkui-common-comp-gravitycenteroptions-i-sys.md) | 定义引力中心参数。 |
+| [LightSource](arkts-arkui-common-comp-lightsource-i-sys.md) | 一个组件支持添加1个光源。 |
+| [PixelMapMock](arkts-arkui-common-comp-pixelmapmock-i-sys.md) | 带有release函数的像素图对象。 |
+| [PointLightStyle](arkts-arkui-common-comp-pointlightstyle-i-sys.md) | 通过设置光源和被照亮的类型实现点光源照亮周围组件的UI效果。 |
+| [SafeAreaInsetEdgeConfig](arkts-arkui-common-comp-safeareainsetedgeconfig-i-sys.md) | 单个边缘内容及其布局配置。 |
+| [SafeAreaInsetOptions](arkts-arkui-common-comp-safeareainsetoptions-i-sys.md) | 组件四边的完整边缘内容配置。 |
+| [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) | 空间效果选项。用于为组件设置空间效果参数。 |
+| [SpatialPosition](arkts-arkui-common-comp-spatialposition-i-sys.md) | 三维空间中的空间角位置。用于为组件设置空间效果参数。 |
+<!--DelEnd-->
+
 ### 类型
 
 | 名称 | 说明 |
@@ -238,7 +245,6 @@ Common()
 | [AccessibilityTransparentCallback](arkts-arkui-common-comp-accessibilitytransparentcallback-t.md) | 提供开启朗读类辅助应用后未能被无障碍悬浮响应的触摸事件回调类型。 |
 | [AnimationRange](arkts-arkui-common-comp-animationrange-t.md) | 动画开始和结束时相对预览原图缩放比例。 |
 | [AreaChangeCallback](arkts-arkui-common-comp-areachangecallback-t.md) | 组件区域变化事件的回调类型。 |
-| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | Blender |
 | [BorderRadiusType](arkts-arkui-common-comp-borderradiustype-t.md) | 圆角类型。 |
 | [BuilderCallback](arkts-arkui-common-comp-buildercallback-t.md) | `BuilderCallback`是全局`@Builder`函数的类型别名，作为`mutableBuilder`函数的入参类型，用于指定待封装的全局`@Builder`函数。 |
 | [CircleShape](arkts-arkui-common-comp-circleshape-t.md) | 导入CircleShape类型对象。 |
@@ -303,6 +309,14 @@ Common()
 | [VisualEffect](arkts-arkui-common-comp-visualeffect-t.md) | 导入VisualEffect类型对象。 |
 | [window](arkts-arkui-common-comp-window-t.md) |  |
 
+<!--Del-->
+### 类型（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [Blender](arkts-arkui-common-comp-blender-t-sys.md) | Blender |
+<!--DelEnd-->
+
 ### 枚举
 
 | 名称 | 说明 |
@@ -321,13 +335,10 @@ Common()
 | [ChainStyle](arkts-arkui-common-comp-chainstyle-e.md) | 定义链的风格，支持attributeModifier动态设置属性方法。 |
 | [ContentClipMode](arkts-arkui-common-comp-contentclipmode-e.md) | 表示滚动容器的内容裁剪模式。 |
 | [DismissReason](arkts-arkui-common-comp-dismissreason-e.md) | 关闭原因类型。 |
-| [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | 非线性形变动画模式的枚举。 |
-| [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | 拖拽动画类型。 |
 | [DragBehavior](arkts-arkui-common-comp-dragbehavior-e.md) | 当设置[DragResult](arkts-arkui-common-comp-dragresult-e.md)为DROP_ENABLED后，可设置DragBehavior为复制（COPY）或剪切（MOVE）。当DragBehavior为复制（COPY）时，拖拽对象的角标会显示加号；为剪切（MOVE）时，拖拽对象的角标不会显示加号。DragBehavior用来向开发者描述数据的处理方式是复制（COPY）还是剪切（MOVE），但无法最终决定对数据的实际处理方式。DragBehavior会通过onDragEnd带回给数据拖出方，发起拖拽的一方可通过DragBehavior来区分做出的是复制（COPY）还是剪切（MOVE）数据的不同行为。 |
 | [DraggingSizeChangeEffect](arkts-arkui-common-comp-draggingsizechangeeffect-e.md) | 当一个节点上同时设置长按浮起预览（参考bindContextMenu）与拖拽时，使用该字段设置长按浮起预览图与拖拽预览图过渡动效方式。 |
 | [DragPreviewMode](arkts-arkui-common-comp-dragpreviewmode-e.md) | 设置拖拽预览图的显示模式。 |
 | [DragResult](arkts-arkui-common-comp-dragresult-e.md) | 定义拖拽操作的结果及组件的落入选定状态。 |
-| [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
 | [EffectEdge](arkts-arkui-common-comp-effectedge-e.md) | 表示当前边缘效果要生效的边缘。 |
 | [EffectType](arkts-arkui-common-comp-effecttype-e.md) | 效果模板类型的枚举值。效果模板为预设的视觉效果参数配置，包含模糊半径、饱和度、亮度和颜色等参数。 |
 | [FinishCallbackType](arkts-arkui-common-comp-finishcallbacktype-e.md) | 动画中定义onFinish回调的类型。 |
@@ -348,7 +359,6 @@ Common()
 | [RepeatMode](arkts-arkui-common-comp-repeatmode-e.md) | 用于设置被切割的图片在边框上的重复方式。 |
 | [ReusableMemOptStrategy](arkts-arkui-common-comp-reusablememoptstrategy-e.md) | 可复用自定义组件内存优化策略枚举。 |
 | [SafeAreaEdge](arkts-arkui-common-comp-safeareaedge-e.md) | 扩展安全区域的边缘。 |
-| [SafeAreaInsetAlignment](arkts-arkui-common-comp-safeareainsetalignment-e-sys.md) | 沿边方向的内容对齐方式。上、下边沿水平方向对齐；起始边、结束边沿垂直方向对齐。 |
 | [SafeAreaType](arkts-arkui-common-comp-safeareatype-e.md) | 扩展安全区域的枚举类型。 |
 | [ScrollSizeMode](arkts-arkui-common-comp-scrollsizemode-e.md) | 半模态面板上下滑动时的内容更新方式。 |
 | [ShadowStyle](arkts-arkui-common-comp-shadowstyle-e.md) | 组件阴影效果。 |
@@ -363,7 +373,18 @@ Common()
 | [ThemeColorMode](arkts-arkui-common-comp-themecolormode-e.md) | 设置颜色模式。 |
 | [TouchTestStrategy](arkts-arkui-common-comp-touchteststrategy-e.md) | 事件派发策略。 |
 | [TransitionEdge](arkts-arkui-common-comp-transitionedge-e.md) | 转场边缘类型。 |
+
+<!--Del-->
+### 枚举（系统接口）
+
+| 名称 | 说明 |
+| --- | --- |
+| [DistortionMode](arkts-arkui-common-comp-distortionmode-e-sys.md) | 非线性形变动画模式的枚举。 |
+| [DragAnimationType](arkts-arkui-common-comp-draganimationtype-e-sys.md) | 拖拽动画类型。 |
+| [EdgeLightMode](arkts-arkui-common-comp-edgelightmode-e-sys.md) | 边缘光效动画模式枚举。 |
+| [SafeAreaInsetAlignment](arkts-arkui-common-comp-safeareainsetalignment-e-sys.md) | 沿边方向的内容对齐方式。上、下边沿水平方向对齐；起始边、结束边沿垂直方向对齐。 |
 | [TransitionHierarchyStrategy](arkts-arkui-common-comp-transitionhierarchystrategy-e-sys.md) | 共享元素动画过程中in/out组件层级位置移动策略枚举。 |
+<!--DelEnd-->
 
 ## 示例
 

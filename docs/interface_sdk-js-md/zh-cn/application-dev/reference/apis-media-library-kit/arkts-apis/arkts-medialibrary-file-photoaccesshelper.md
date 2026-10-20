@@ -20,7 +20,7 @@ import { photoAccessHelper } from '@kit.MediaLibraryKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper-1) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
+| [getPhotoAccessHelper](arkts-medialibrary-photoaccesshelper-getphotoaccesshelper-f.md#getphotoaccesshelper) | 获取相册管理模块的实例，用于访问和修改相册中的媒体文件。 |
 
 <!--Del-->
 ### 函数（系统接口）

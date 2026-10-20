@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function hasRight(deviceName: string): boolean
 ```
 
-判断是否有权访问该设备。
+判断是否有权访问该设备。适用于在调用requestRight申请权限或connectDevice建立连接前，先确认应用是否已拥有该设备的访问权限，避免重复申请的场景。
 
 如果应用有权访问设备则返回true；无权访问设备则返回false。
 

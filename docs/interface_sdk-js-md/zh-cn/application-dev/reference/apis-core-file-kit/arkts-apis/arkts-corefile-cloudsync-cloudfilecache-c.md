@@ -219,7 +219,7 @@ try {
 off(event: 'batchDownload', callback?: Callback<MultiDownloadProgress>): void
 ```
 
-云盘文件缓存对象移除由[on](#on-2)接口添加的云文件批量缓存过程事件的监听。
+云盘文件缓存对象移除由[on](#on)接口添加的云文件批量缓存过程事件的监听。
 
 **起始版本：** 20
 

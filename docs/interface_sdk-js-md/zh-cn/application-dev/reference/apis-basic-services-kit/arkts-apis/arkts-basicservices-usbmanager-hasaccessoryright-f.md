@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function hasAccessoryRight(accessory: USBAccessory): boolean
 ```
 
-检查应用是否有权访问USB配件。
+检查应用是否有权访问USB配件。适用于在调用requestAccessoryRight申请权限或openAccessory打开配件前，先确认应用是否已拥有该配件访问权限的场景。
 
 需要调用[usbManager.getAccessoryList](arkts-basicservices-usbmanager-getaccessorylist-f.md)获取配件列表，得到[USBAccessory](arkts-basicservices-usbmanager-usbaccessory-i.md)作为参数。
 

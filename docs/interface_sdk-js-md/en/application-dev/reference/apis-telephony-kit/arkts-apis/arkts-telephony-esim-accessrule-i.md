@@ -1,4 +1,4 @@
-# AccessRule (System API)
+# AccessRule
 
 ```TypeScript
 export interface AccessRule
@@ -11,8 +11,6 @@ Establishes a single UICC access rule pursuant to the GlobalPlatform Secure Elem
 <!--Device-eSIM-export interface AccessRule--><!--Device-eSIM-export interface AccessRule-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -36,8 +34,6 @@ The type of access.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
-**System API:** This is a system API.
-
 ## certificateHashHexStr
 
 ```TypeScript
@@ -54,8 +50,6 @@ Certificate hash hexadecimal string.
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
 
-**System API:** This is a system API.
-
 ## packageName
 
 ```TypeScript
@@ -71,5 +65,3 @@ The name of package.
 <!--Device-AccessRule-packageName: string--><!--Device-AccessRule-packageName: string-End-->
 
 **System capability:** SystemCapability.Telephony.CoreService.Esim
-
-**System API:** This is a system API.

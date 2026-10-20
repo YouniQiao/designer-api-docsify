@@ -4,6 +4,8 @@ As a part of the Unified Data Management Framework (UDMF), the **uniformDataStru
 
 **Since:** 12
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace uniformDataStruct--><!--Device-unnamed-declare namespace uniformDataStruct-End-->
 
 **System capability:** SystemCapability.DistributedDataManager.UDMF.Core
@@ -26,5 +28,5 @@ import { uniformDataStruct } from '@kit.ArkData';
 | [HTML](arkts-arkdata-uniformdatastruct-html-i.md) | Represents data of the HTML type. |
 | [Hyperlink](arkts-arkdata-uniformdatastruct-hyperlink-i.md) | Represents data of the hyperlink type. |
 | [OpenHarmonyAppItem](arkts-arkdata-uniformdatastruct-openharmonyappitem-i.md) | Represents data of the home screen icon type defined by the system. |
-| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md#pixelmap) | Represents data of the pixel map type defined by the system. |
+| [PixelMap](arkts-arkdata-uniformdatastruct-pixelmap-i.md) | Represents data of the pixel map type defined by the system. |
 | [PlainText](arkts-arkdata-uniformdatastruct-plaintext-i.md) | Represents data of the plain text type. |

@@ -198,7 +198,14 @@ Obtains an image. The [ImageAIOptions](../arkts-apis/arkts-arkui-imageaioptions-
 | [ImageErrorCallback](arkts-arkui-image-comp-imageerrorcallback-t.md) | Triggered when an error occurs during image loading. |
 | [ImageMatrix](arkts-arkui-image-comp-imagematrix-t.md) | Represents the current matrix object. |
 | [RequestDownloadInfo](arkts-arkui-image-comp-requestdownloadinfo-t.md) | Describes the download information when an online image fails to load or encounters an exception. This object contains resource information, network information, and performance statistics of the download task, which can be used to locate the cause of the loading exception. |
+
+<!--Del-->
+### Types(System API)
+
+| Name | Description |
+| --- | --- |
 | [ResolutionQuality](arkts-arkui-image-comp-resolutionquality-t-sys.md) | Sets a resolution quality level. |
+<!--DelEnd-->
 
 ### Enums
 

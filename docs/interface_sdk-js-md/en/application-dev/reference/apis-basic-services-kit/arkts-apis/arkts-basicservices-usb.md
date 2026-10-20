@@ -31,19 +31,19 @@ import { usb } from '@kit.BasicServicesKit';
 
 | Name | Description |
 | --- | --- |
-| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer-1) | Performs bulk transfer. |
-| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface-1) | Claims a USB interface. |
-| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe-1) | Closes a USB device pipe. |
-| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) | Connects to a USB device. |
-| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer-1) | Performs control transfer. |
-| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) | Obtains the USB device list. |
-| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor-1) | Obtains the file descriptor. |
-| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor-1) | Obtains the raw USB descriptor. |
-| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright-1) | Checks whether the application has the permission to access the device. |
-| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface-1) | Releases a USB interface. |
-| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) | Requests the temporary permission for the application to access a USB device. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
-| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration-1) | Sets the device configuration. |
-| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface-1) | Sets a USB interface. |
+| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer) | Performs bulk transfer. |
+| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) | Claims a USB interface. |
+| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe) | Closes a USB device pipe. |
+| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) | Connects to a USB device. |
+| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer) | Performs control transfer. |
+| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) | Obtains the USB device list. |
+| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor) | Obtains the file descriptor. |
+| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor) | Obtains the raw USB descriptor. |
+| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright) | Checks whether the application has the permission to access the device. |
+| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface) | Releases a USB interface. |
+| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright) | Requests the temporary permission for the application to access a USB device. This API uses a promise to return the result. System applications are granted the device access permission by default, and you do not need to apply for the permission separately. |
+| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration) | Sets the device configuration. |
+| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface) | Sets a USB interface. |
 
 <!--Del-->
 ### Functions(System API)

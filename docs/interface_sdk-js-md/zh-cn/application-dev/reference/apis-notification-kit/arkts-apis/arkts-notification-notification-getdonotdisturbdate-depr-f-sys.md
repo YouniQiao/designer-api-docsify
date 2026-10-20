@@ -33,6 +33,25 @@ function getDoNotDisturbDate(callback: AsyncCallback<DoNotDisturbDate>): void
 | --- | --- | --- | --- |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
 
+<!--Del-->
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getDoNotDisturbDateCallback = (err: Base.BusinessError, data: Notification.DoNotDisturbDate) => {
+  if (err) {
+    console.error("getDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("getDoNotDisturbDate success");
+  }
+}
+
+Notification.getDoNotDisturbDate(getDoNotDisturbDateCallback);
+```
+
+<!--DelEnd-->
+
 
 ## getDoNotDisturbDate
 
@@ -61,6 +80,21 @@ function getDoNotDisturbDate(): Promise<DoNotDisturbDate>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+Notification.getDoNotDisturbDate().then((data: Notification.DoNotDisturbDate) => {
+  console.info("getDoNotDisturbDate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getDoNotDisturbDate failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->
 
 
 ## getDoNotDisturbDate
@@ -91,6 +125,27 @@ function getDoNotDisturbDate(userId: number, callback: AsyncCallback<DoNotDistur
 | --- | --- | --- | --- |
 | userId | number | 是 | 用户ID。 |
 | callback | [AsyncCallback](../../apis-basic-services-kit/arkts-apis/arkts-basicservices-base-asynccallback-i.md)&lt;DoNotDisturbDate&gt; | 是 | 查询免打扰时间回调函数。 |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let getDoNotDisturbDateCallback = (err: Base.BusinessError, data: Notification.DoNotDisturbDate) => {
+  if (err) {
+    console.error("getDoNotDisturbDate failed " + JSON.stringify(err));
+  } else {
+    console.info("getDoNotDisturbDate success");
+  }
+}
+
+let userId: number = 1;
+
+Notification.getDoNotDisturbDate(userId, getDoNotDisturbDateCallback);
+```
+
+<!--DelEnd-->
 
 
 ## getDoNotDisturbDate
@@ -126,3 +181,20 @@ function getDoNotDisturbDate(userId: number): Promise<DoNotDisturbDate>
 | 类型 | 说明 |
 | --- | --- |
 | Promise&lt;DoNotDisturbDate&gt; | 以Promise形式返回查询到的免打扰时间。 |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import Base from '@ohos.base';
+
+let userId: number = 1;
+
+Notification.getDoNotDisturbDate(userId).then((data: Notification.DoNotDisturbDate) => {
+  console.info("getDoNotDisturbDate success, data: " + JSON.stringify(data));
+}).catch((err: Base.BusinessError) => {
+  console.error(`getDoNotDisturbDate failed, code is ${err}`);
+});
+```
+
+<!--DelEnd-->

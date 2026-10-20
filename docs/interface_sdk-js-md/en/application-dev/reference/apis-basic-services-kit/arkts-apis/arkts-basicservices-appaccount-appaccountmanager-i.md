@@ -1415,13 +1415,13 @@ Obtains the application accounts that can be accessed by the invoker based on th
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getAccountsByOwner](#getaccountsbyowner-1) instead.
+> [getAccountsByOwner](#getaccountsbyowner) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAccountsByOwner](#getaccountsbyowner-1)(owner: string)
+**Substitutes:** [getAccountsByOwner](#getaccountsbyowner)(owner: string)
 
 **Required permissions:** ohos.permission.GET_ALL_APP_ACCOUNTS
 
@@ -3611,14 +3611,14 @@ Adds an application account name and additional information. This API uses an as
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createaccount-1)
+> [createAccount](#createaccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](#createaccount-1)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
+**Substitutes:** [createAccount](#createaccount)(name: string, options: CreateAccountOptions, callback: AsyncCallback&lt;void&gt;)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void--><!--Device-AppAccountManager-addAccount(name: string, extraInfo: string, callback: AsyncCallback<void>): void-End-->
 
@@ -3652,14 +3652,14 @@ Adds an application account name and additional information. This API uses a pro
 
 > **NOTE:** 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [createAccount](#createaccount-2)
+> [createAccount](#createaccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [createAccount](#createaccount-2)(name: string, options?: CreateAccountOptions)
+**Substitutes:** [createAccount](#createaccount)(name: string, options?: CreateAccountOptions)
 
 <!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>--><!--Device-AppAccountManager-addAccount(name: string, extraInfo?: string): Promise<void>-End-->
 
@@ -3908,13 +3908,13 @@ Checks whether data synchronization is enabled for an application account. This 
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [checkDataSyncEnabled](#checkdatasyncenabled-1) instead.
+> [checkDataSyncEnabled](#checkdatasyncenabled) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkDataSyncEnabled](#checkdatasyncenabled-1)(name: string)
+**Substitutes:** [checkDataSyncEnabled](#checkdatasyncenabled)(name: string)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -4010,14 +4010,14 @@ Checks the visibility of an authorization token of the specified authentication 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [checkAuthTokenVisibility](#checkauthtokenvisibility-1)
+> [checkAuthTokenVisibility](#checkauthtokenvisibility)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility-1)(name: string, authType: string, bundleName: string)
+**Substitutes:** [checkAuthTokenVisibility](#checkauthtokenvisibility)(name: string, authType: string, bundleName: string)
 
 <!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>--><!--Device-AppAccountManager-checkOAuthTokenVisibility(name: string, authType: string, bundleName: string): Promise<boolean>-End-->
 
@@ -4102,14 +4102,14 @@ Deletes an application account. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [removeAccount](#removeaccount-1)
+> [removeAccount](#removeaccount)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [removeAccount](#removeaccount-1)(name: string)
+**Substitutes:** [removeAccount](#removeaccount)(name: string)
 
 <!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>--><!--Device-AppAccountManager-deleteAccount(name: string): Promise<void>-End-->
 
@@ -4199,14 +4199,14 @@ Deletes the authorization token of the specified authentication type for an appl
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [deleteAuthToken](#deleteauthtoken-1)
+> [deleteAuthToken](#deleteauthtoken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [deleteAuthToken](#deleteauthtoken-1)(name: string, owner: string, authType: string, token: string)
+**Substitutes:** [deleteAuthToken](#deleteauthtoken)(name: string, owner: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-deleteOAuthToken(name: string, owner: string, authType: string, token: string): Promise<void>-End-->
 
@@ -4292,14 +4292,14 @@ Disables an application account from accessing an application. This API uses a p
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setappaccess-1)
+> [setAppAccess](#setappaccess)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+**Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-disableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -4387,14 +4387,14 @@ Enables an application to access an application account. This API uses a promise
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setAppAccess](#setappaccess-1)
+> [setAppAccess](#setappaccess)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAppAccess](#setappaccess-1)(name: string, bundleName: string, isAccessible: boolean)
+**Substitutes:** [setAppAccess](#setappaccess)(name: string, bundleName: string, isAccessible: boolean)
 
 <!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>--><!--Device-AppAccountManager-enableAppAccess(name: string, bundleName: string): Promise<void>-End-->
 
@@ -4482,14 +4482,14 @@ Obtains the credential of an application account. This API uses a promise to ret
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCredential](#getcredential-1)
+> [getCredential](#getcredential)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCredential](#getcredential-1)(name: string, credentialType: string)
+**Substitutes:** [getCredential](#getcredential)(name: string, credentialType: string)
 
 <!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>--><!--Device-AppAccountManager-getAccountCredential(name: string, credentialType: string): Promise<string>-End-->
 
@@ -4576,13 +4576,13 @@ Obtains additional information of an application account. Additional information
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getcustomdata-1) instead.
+> [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
+**Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>--><!--Device-AppAccountManager-getAccountExtraInfo(name: string): Promise<string>-End-->
 
@@ -4759,13 +4759,13 @@ Obtains all tokens visible to the invoker for an application account. This API u
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAllAuthTokens](#getallauthtokens-1) instead.
+> [getAllAuthTokens](#getallauthtokens) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAllAuthTokens](#getallauthtokens-1)(name: string, owner: string)
+**Substitutes:** [getAllAuthTokens](#getallauthtokens)(name: string, owner: string)
 
 <!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>--><!--Device-AppAccountManager-getAllOAuthTokens(name: string, owner: string): Promise<Array<OAuthTokenInfo>>-End-->
 
@@ -4854,13 +4854,13 @@ Obtains data to be associated with an application account. This API uses a promi
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [getCustomData](#getcustomdata-1) instead.
+> [getCustomData](#getcustomdata) instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [getCustomData](#getcustomdata-1)(name: string, key: string)
+**Substitutes:** [getCustomData](#getcustomdata)(name: string, key: string)
 
 <!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>--><!--Device-AppAccountManager-getAssociatedData(name: string, key: string): Promise<string>-End-->
 
@@ -4959,13 +4959,13 @@ Obtains the authenticator callback for an authentication session. This API uses 
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthCallback](#getauthcallback-1) instead.
+> [getAuthCallback](#getauthcallback) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthCallback](#getauthcallback-1)(sessionId: string)
+**Substitutes:** [getAuthCallback](#getauthcallback)(sessionId: string)
 
 <!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>--><!--Device-AppAccountManager-getAuthenticatorCallback(sessionId: string): Promise<AuthenticatorCallback>-End-->
 
@@ -5064,13 +5064,13 @@ Obtains the authenticator information of an application. This API uses a promise
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [queryAuthenticatorInfo](#queryauthenticatorinfo-1) instead.
+> [queryAuthenticatorInfo](#queryauthenticatorinfo) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo-1)(owner: string)
+**Substitutes:** [queryAuthenticatorInfo](#queryauthenticatorinfo)(owner: string)
 
 <!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>--><!--Device-AppAccountManager-getAuthenticatorInfo(owner: string): Promise<AuthenticatorInfo>-End-->
 
@@ -5158,13 +5158,13 @@ Obtains the authorization list of the specified authentication type for an appli
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthList](#getauthlist-1) instead.
+> [getAuthList](#getauthlist) instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthList](#getauthlist-1)(name: string, authType: string)
+**Substitutes:** [getAuthList](#getauthlist)(name: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>--><!--Device-AppAccountManager-getOAuthList(name: string, authType: string): Promise<Array<string>>-End-->
 
@@ -5254,14 +5254,14 @@ Obtains the authorization token of the specified authentication type for an appl
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [getAuthToken](#getauthtoken-1)
+> [getAuthToken](#getauthtoken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [getAuthToken](#getauthtoken-1)(name: string, owner: string, authType: string)
+**Substitutes:** [getAuthToken](#getauthtoken)(name: string, owner: string, authType: string)
 
 <!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>--><!--Device-AppAccountManager-getOAuthToken(name: string, owner: string, authType: string): Promise<string>-End-->
 
@@ -5351,14 +5351,14 @@ Sets a credential for an application account. This API uses a promise to return 
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCredential](#setcredential-1)
+> [setCredential](#setcredential)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCredential](#setcredential-1)(name: string, credentialType: string, credential: string)
+**Substitutes:** [setCredential](#setcredential)(name: string, credentialType: string, credential: string)
 
 <!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>--><!--Device-AppAccountManager-setAccountCredential(name: string, credentialType: string, credential: string): Promise<void>-End-->
 
@@ -5447,14 +5447,14 @@ Sets additional information for an application account. This API uses a promise 
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setcustomdata-1)
+> [setCustomData](#setcustomdata)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+**Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>--><!--Device-AppAccountManager-setAccountExtraInfo(name: string, extraInfo: string): Promise<void>-End-->
 
@@ -5544,14 +5544,14 @@ Sets data synchronization for an application account. This API uses a promise to
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setDataSyncEnabled](#setdatasyncenabled-1)
+> [setDataSyncEnabled](#setdatasyncenabled)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setDataSyncEnabled](#setdatasyncenabled-1)(name: string, isEnabled: boolean)
+**Substitutes:** [setDataSyncEnabled](#setdatasyncenabled)(name: string, isEnabled: boolean)
 
 **Required permissions:** ohos.permission.DISTRIBUTED_DATASYNC
 
@@ -5642,14 +5642,14 @@ Sets data to be associated with an application account. This API uses a promise 
 > **NOTE:** 
 > 
 > This API is supported since API version 7 and deprecated since API version 9. You are advised to use
-> [setCustomData](#setcustomdata-1)
+> [setCustomData](#setcustomdata)
 > instead.
 
 **Since:** 7
 
 **Deprecated since:** 9
 
-**Substitutes:** [setCustomData](#setcustomdata-1)(name: string, key: string, value: string)
+**Substitutes:** [setCustomData](#setcustomdata)(name: string, key: string, value: string)
 
 <!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>--><!--Device-AppAccountManager-setAssociatedData(name: string, key: string, value: string): Promise<void>-End-->
 
@@ -5739,14 +5739,14 @@ Sets an authorization token of the specific authentication type for an applicati
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthToken](#setauthtoken-1)
+> [setAuthToken](#setauthtoken)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthToken](#setauthtoken-1)(name: string, authType: string, token: string)
+**Substitutes:** [setAuthToken](#setauthtoken)(name: string, authType: string, token: string)
 
 <!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>--><!--Device-AppAccountManager-setOAuthToken(name: string, authType: string, token: string): Promise<void>-End-->
 
@@ -5844,14 +5844,14 @@ Sets the visibility of an authorization token to an application. This API uses a
 > **NOTE:** 
 > 
 > This API is supported since API version 8 and deprecated since API version 9. You are advised to use
-> [setAuthTokenVisibility](#setauthtokenvisibility-1)
+> [setAuthTokenVisibility](#setauthtokenvisibility)
 > instead.
 
 **Since:** 8
 
 **Deprecated since:** 9
 
-**Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility-1)(name: string, authType: string, bundleName: string, isVisible: boolean)
+**Substitutes:** [setAuthTokenVisibility](#setauthtokenvisibility)(name: string, authType: string, bundleName: string, isVisible: boolean)
 
 <!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>--><!--Device-AppAccountManager-setOAuthTokenVisibility(name: string, authType: string, bundleName: string, isVisible: boolean): Promise<void>-End-->
 

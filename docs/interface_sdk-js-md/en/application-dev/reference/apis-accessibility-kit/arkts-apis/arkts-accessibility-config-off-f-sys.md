@@ -45,11 +45,11 @@ Cancels the listener for changes in the list of enabled accessibility extensions
 ```TypeScript
 import { config } from '@kit.AccessibilityKit';
 
-let callback = () => {
-  console.info('subscribe enabled accessibility extension list change state success');
+let callback = (data: boolean) => {
+  console.info(`subscribe highContrastText success, result: ${JSON.stringify(data)}`);
 };
-config.on('enabledAccessibilityExtensionListChange', callback);
-config.off('enabledAccessibilityExtensionListChange', callback);
+config.highContrastText.on(callback);
+config.highContrastText.off(callback);
 ```
 
 <!--DelEnd-->
@@ -91,14 +91,6 @@ Cancels the listener for changes in the list of installed accessibility extensio
 <!--Del-->
 **Examples**
 
-```TypeScript
-import { config } from '@kit.AccessibilityKit';
-
-let callback = () => {
-  console.info('subscribe installed accessibility extension list change state success');
-};
-config.on('installedAccessibilityListChange', callback);
-config.off('installedAccessibilityListChange', callback);
-```
+See off
 
 <!--DelEnd-->

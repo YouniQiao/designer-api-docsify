@@ -70,7 +70,7 @@ Whether to enable haptic feedback during dragging.
 
 **true**: Enable haptic feedback during dragging.
 
-**false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks (configured using [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1)).
+**false**: Disable haptic feedback during dragging. This parameter is effective only for previews with masks (configured using [bindContextMenu](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu)).
 
 Note: The settings take effect only when the application has the **ohos.permission.VIBRATE** permission and the user has enabled haptic feedback.
 

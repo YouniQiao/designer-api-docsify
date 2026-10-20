@@ -4,7 +4,7 @@
 interface AudioRenderer
 ```
 
-音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer-1)获取AudioRenderer实例。
+音频渲染。在使用AudioRenderer的接口之前，需先通过[audio.createAudioRenderer](arkts-audio-audio-createaudiorenderer-f.md#createaudiorenderer)获取AudioRenderer实例。
 
 **起始版本：** 8
 

@@ -4,7 +4,7 @@
 interface KVManager
 ```
 
-数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1)构建一个KVManager实例。
+数据管理实例，用于获取KVStore的相关信息。在调用KVManager的方法前，需要先通过[createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager)构建一个KVManager实例。
 
 **起始版本：** 7
 

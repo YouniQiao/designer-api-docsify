@@ -4,7 +4,7 @@
 interface AVRecorder
 ```
 
-AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md#createavrecorder-1) to create an AVRecorder instance.
+AVRecorder is a class for audio and video recording management. It provides APIs to record media assets. Before calling any API in AVRecorder, you must use [createAVRecorder()](arkts-media-media-createavrecorder-f.md#createavrecorder) to create an AVRecorder instance.
 
 For details about the audio and video recording demo, see [Audio Recording](../../../media/media/using-avrecorder-for-recording.md) and [Video Recording](../../../media/media/video-recording.md).
 
@@ -328,7 +328,7 @@ getAVRecorderConfig(): Promise<AVRecorderConfig>
 
 Obtains the real-time configuration of this AVRecorder. This API uses a promise to return the result.
 
-This API can be called only after [prepare()](#prepare-1) is called.
+This API can be called only after [prepare()](#prepare) is called.
 
 **Since:** 11
 
@@ -524,7 +524,7 @@ The caller obtains the surface buffer from this surface and fills in the corresp
 
 Note that the video data must carry the timestamp (in ns) and buffer size, and the start time of the timestamp must be based on the system startup time.
 
-This API can be called only after the [prepare()](#prepare-1) API is called.
+This API can be called only after the [prepare()](#prepare) API is called.
 
 **Since:** 9
 
@@ -1241,7 +1241,7 @@ reset(): Promise<void>
 
 Resets audio and video recording. This API uses a promise to return the result.
 
-For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare-1) and [getInputSurface()](#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 9
 
@@ -1511,7 +1511,7 @@ start(): Promise<void>
 
 Starts video recording. This API uses a promise to return the result.
 
-For audio-only recording, this API can be called only after the [prepare()](#prepare-1) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
+For audio-only recording, this API can be called only after the [prepare()](#prepare) API is called. For video-only recording, this API can be called only after the [getInputSurface()](#getinputsurface) API is called.
 
 **Since:** 9
 
@@ -1604,7 +1604,7 @@ Stops video recording. This API uses a promise to return the result.
 
 This API can be called only after the [start()](#start) or [pause()](#pause) API is called.
 
-For audio-only recording, you can call [prepare()](#prepare-1) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare-1) and [getInputSurface()](#getinputsurface) again for re-recording.
+For audio-only recording, you can call [prepare()](#prepare) again for re-recording. For video-only recording or audio and video recording, you can call [prepare()](#prepare) and [getInputSurface()](#getinputsurface) again for re-recording.
 
 **Since:** 9
 
@@ -1649,7 +1649,7 @@ updateRotation(rotation: number): Promise<void>
 
 Updates the video rotation angle, in degrees. This API uses a promise to return the result.
 
-This API can be called only after the [prepare()](#prepare-1) event is triggered and before the [start()](#start) API is called.
+This API can be called only after the [prepare()](#prepare) event is triggered and before the [start()](#start) API is called.
 
 **Since:** 12
 

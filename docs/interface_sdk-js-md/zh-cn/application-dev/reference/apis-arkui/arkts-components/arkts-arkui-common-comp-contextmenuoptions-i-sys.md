@@ -30,9 +30,9 @@ declare interface ContextMenuOptions
 | 接口 | 菜单默认位置 |  
 |------|-------------|  
 | [bindMenu](arkts-arkui-common-comp-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
-| [bindMenu<sup>11+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindmenu-1) | Placement.BottomLeft |  
+| [bindMenu<sup>11+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindmenu) | Placement.BottomLeft |  
 | [bindContextMenu<sup>8+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) | Placement.Top |  
-| [bindContextMenu<sup>12+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu-1) | Placement.BottomLeft |  
+| [bindContextMenu<sup>12+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenu) | Placement.BottomLeft |  
 | [bindContextMenuWithResponse<sup>23+</sup>](arkts-arkui-common-comp-commonmethod-c.md#bindcontextmenuwithresponse) | Placement.Top |
 
 **起始版本：** 10

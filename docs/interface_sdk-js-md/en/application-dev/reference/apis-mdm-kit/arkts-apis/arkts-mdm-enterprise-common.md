@@ -8,6 +8,8 @@ The module provides pure type definitions for common capabilities within MDM Kit
 
 **Since:** 22
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace common--><!--Device-unnamed-declare namespace common-End-->
 
 **System capability:** SystemCapability.Customization.EnterpriseDeviceManager
@@ -24,7 +26,7 @@ import { common } from '@kit.MDMKit';
 
 | Name | Description |
 | --- | --- |
-| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md#isfeaturesupported-1) | Checks whether a specified feature is supported. |
+| [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md#isfeaturesupported) | Checks whether a specified feature is supported. |
 
 ### Interfaces
 

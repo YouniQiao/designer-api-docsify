@@ -20,7 +20,7 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | Name | Description |
 | --- | --- |
-| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager-1) | Obtains a CalendarManager object based on the context. |
+| [getCalendarManager](arkts-calendar-calendarmanager-getcalendarmanager-f.md#getcalendarmanager) | Obtains a CalendarManager object based on the context. |
 
 ### Classes
 
@@ -33,13 +33,13 @@ import { calendarManager } from '@kit.CalendarKit';
 | Name | Description |
 | --- | --- |
 | [Attendee](arkts-calendar-calendarmanager-attendee-i.md) | Describes the attendees in a meeting. |
-| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) | In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar-1) or getCalendar() to obtain |
+| [Calendar](arkts-calendar-calendarmanager-calendar-i.md) | In the following API examples, you need to use [createCalendar()](arkts-calendar-calendarmanager-calendarmanager-i.md#createcalendar) or getCalendar() to obtain |
 | [CalendarAccount](arkts-calendar-calendarmanager-calendaraccount-i.md) | Describes the calendar account information. |
 | [CalendarConfig](arkts-calendar-calendarmanager-calendarconfig-i.md) | Describes the calendar configuration information. |
 | [CalendarManager](arkts-calendar-calendarmanager-calendarmanager-i.md) | Before calling any of the following APIs to manage the calendar, you must use [getCalendarManager()](arkts-calendar-calendarmanager-getcalendarmanager-f.md) to obtain a **CalendarManager** object first. |
 | [Event](arkts-calendar-calendarmanager-event-i.md) | Describes an **Event** object, including the event title, start time, and end time. |
 | [EventService](arkts-calendar-calendarmanager-eventservice-i.md) | Describes the event service. |
-| [Location](arkts-calendar-calendarmanager-location-i.md#location) | Describes the event location. |
+| [Location](arkts-calendar-calendarmanager-location-i.md) | Describes the event location. |
 | [RecurrenceRule](arkts-calendar-calendarmanager-recurrencerule-i.md) | Describes the recurrence rule of a recurring event. |
 
 ### Enums

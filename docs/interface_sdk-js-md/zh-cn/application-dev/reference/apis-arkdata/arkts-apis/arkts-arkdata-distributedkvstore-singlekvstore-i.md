@@ -185,7 +185,7 @@ try {
 closeResultSet(resultSet: KVStoreResultSet, callback: AsyncCallback<void>): void
 ```
 
-关闭由[SingleKVStore.getResultSet](#getresultset-1)返回的KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
+关闭由[SingleKVStore.getResultSet](#getresultset)返回的KVStoreResultSet对象，使用callback异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
 **起始版本：** 9
 
@@ -244,7 +244,7 @@ try {
 closeResultSet(resultSet: KVStoreResultSet): Promise<void>
 ```
 
-关闭由[SingleKVStore.getResultSet](#getresultset-1)返回的KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
+关闭由[SingleKVStore.getResultSet](#getresultset)返回的KVStoreResultSet对象，使用Promise异步回调。关闭结果集后，该结果集对象将不可再用，相关数据库资源被释放。
 
 **起始版本：** 9
 
@@ -522,7 +522,7 @@ try {
 deleteBackup(files: Array<string>, callback: AsyncCallback<Array<[string, number]>>): void
 ```
 
-根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过[restore](#restore-1)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
+根据指定名称从默认路径（context.databaseDir）删除备份文件，使用callback异步回调。删除备份文件后，将无法再通过[restore](#restore)接口恢复该备份文件中的数据。如需从自定义路径删除备份，请使用[deleteBackupEx](#deletebackupex)接口。
 
 **起始版本：** 9
 
@@ -1962,7 +1962,7 @@ try {
 off(event: 'dataChange', listener?: Callback<ChangeNotification>): void
 ```
 
-取消订阅数据变更通知。必须先调用[on('dataChange')](#on-1)订阅后，才能调用off取消订阅。
+取消订阅数据变更通知。必须先调用[on('dataChange')](#on)订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
 
@@ -2024,7 +2024,7 @@ class KvstoreModel {
 off(event: 'syncComplete', syncCallback?: Callback<Array<[string, number]>>): void
 ```
 
-取消订阅端端同步完成事件回调通知。必须先调用[on('syncComplete')](#on-2)订阅后，才能调用off取消订阅。
+取消订阅端端同步完成事件回调通知。必须先调用[on('syncComplete')](#on)订阅后，才能调用off取消订阅。
 
 **起始版本：** 9
 
@@ -2085,7 +2085,7 @@ class KvstoreModel {
 on(event: 'dataChange', type: SubscribeType, listener: Callback<ChangeNotification>): void
 ```
 
-订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用[off('dataChange')](#off-1)取消订阅。
+订阅指定类型的数据变更通知。调用on订阅后，在不需要监听时必须调用[off('dataChange')](#off)取消订阅。
 
 **起始版本：** 9
 
@@ -2130,7 +2130,7 @@ try {
 on(event: 'syncComplete', syncCallback: Callback<Array<[string, number]>>): void
 ```
 
-订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用[off('syncComplete')](#off-2)取消订阅。
+订阅端端同步完成事件回调通知。调用on订阅后，在不需要监听时必须调用[off('syncComplete')](#off)取消订阅。
 
 **起始版本：** 9
 
@@ -3243,7 +3243,7 @@ try {
 sync(deviceIds: string[], mode: SyncMode, delayMs?: number): void
 ```
 
-在手动同步方式下，触发数据库端端同步。同步结果可通过订阅[on('syncComplete')](#on-2)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+在手动同步方式下，触发数据库端端同步。同步结果可通过订阅[on('syncComplete')](#on)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
 > **说明：** 
 > 
@@ -3339,7 +3339,7 @@ export default class EntryAbility extends UIAbility {
 sync(deviceIds: string[], query: Query, mode: SyncMode, delayMs?: number): void
 ```
 
-在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅[on('syncComplete')](#on-2)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
+在手动同步方式下，触发数据库端端同步，支持按查询条件过滤同步数据。同步结果可通过订阅[on('syncComplete')](#on)事件获取。关于键值型数据库的端端同步方式说明，请见[键值型数据库跨设备数据同步](../../../database/data-sync-of-kv-store.md)。
 
 > **说明：** 
 > 

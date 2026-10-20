@@ -125,7 +125,7 @@ let ndefTagType : tag.NfcForumType = ndefTag.getNdefTagType();
 console.info("ndef ndefTagType: " + ndefTagType);
 ```
 
-## getNdefTagTypeString
+## getNdefTagTypeString('tag.NfcForumType')
 
 ```TypeScript
 getNdefTagTypeString(type: tag.NfcForumType): string

@@ -61,7 +61,7 @@ Scroll(scroller?: Scroller)
 | [ScrollPageOptions](arkts-arkui-scroll-comp-scrollpageoptions-i.md) | 翻页模式的参数选项。 |
 | [ScrollSnapOptions](arkts-arkui-scroll-comp-scrollsnapoptions-i.md) | 限位滚动模式对象。 |
 | [ScrollToIndexOptions](arkts-arkui-scroll-comp-scrolltoindexoptions-i.md) | 滑动到指定Index的参数选项。 |
-| [UIScrollEvent](arkts-arkui-scroll-comp-uiscrollevent-i.md) | frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-1)方法的返回值，可用于给Scroll节点设置滚动事件。 |
+| [UIScrollEvent](arkts-arkui-scroll-comp-uiscrollevent-i.md) | frameNode中[getEvent('Scroll')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent)方法的返回值，可用于给Scroll节点设置滚动事件。 |
 
 ### 类型
 

@@ -11,6 +11,8 @@
 
 **起始版本：** 26.0.1
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace boardInfo--><!--Device-unnamed-declare namespace boardInfo-End-->
 
 **系统能力：** SystemCapability.Startup.BoardInfo

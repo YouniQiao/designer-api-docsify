@@ -238,7 +238,7 @@ disappearTextStyle(style: Optional<PickerTextStyle>)
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle<sup>18+</sup>](#disappeartextstyle-1)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置边缘项（以选中项为基准向上或向下的第二项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[disappearTextStyle<sup>18+</sup>](#disappeartextstyle)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -656,7 +656,7 @@ selectedTextStyle(style: Optional<PickerTextStyle>)
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle<sup>18+</sup>](#selectedtextstyle-1)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置选中项的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[selectedTextStyle<sup>18+</sup>](#selectedtextstyle)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 
@@ -728,7 +728,7 @@ textStyle(style: Optional<PickerTextStyle>)
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle<sup>18+</sup>](#textstyle-1)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
+设置待选项（以选中项为基准向上或向下的第一项）的文本颜色、字号、字体粗细、最大字号、最小字号、超长文本截断方式。与[textStyle<sup>18+</sup>](#textstyle)相比，style参数新增了对[TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md)类型的支持。
 
 **起始版本：** 20
 

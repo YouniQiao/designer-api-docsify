@@ -40,6 +40,11 @@ isMacroSupported(): boolean
 | --- | --- |
 | boolean | 返回是否支持微距能力。true表示支持，false表示不支持。 |
 
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+
 **示例**
 
 ```TypeScript

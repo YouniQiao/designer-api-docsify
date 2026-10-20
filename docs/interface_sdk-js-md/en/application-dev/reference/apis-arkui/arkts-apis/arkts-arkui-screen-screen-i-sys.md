@@ -6,7 +6,7 @@ interface Screen
 
 Defines the [physical screen](../../../displaymanager/display-terminology.md#physical-screen) instance.
 
-Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md) to obtain a Screen instance.
+Before calling any API in Screen, you must use [getAllScreens()](arkts-arkui-screen-getallscreens-f-sys.md#getallscreens) or [createVirtualScreen()](arkts-arkui-screen-createvirtualscreen-f-sys.md#createvirtualscreen) to obtain a Screen instance.
 
 **Since:** 9
 

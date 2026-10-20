@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace cdsm--><!--Device-unnamed-declare namespace cdsm-End-->
 
 **系统能力：** SystemCapability.Communication.NearLink.Base
@@ -20,7 +22,7 @@ import { cdsm } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient-1) | 创建CDSM客户端实例。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
+| [createCdsmClient](arkts-connectivity-cdsm-createcdsmclient-f.md#createcdsmclient) | 创建CDSM客户端实例。调用此接口前，您可以调用[isNearLinkSupported](arkts-connectivity-manager-isnearlinksupported-f.md)查询设备是否支持星闪。 |
 
 ### 接口
 

@@ -47,3 +47,19 @@ function isVolumeInUse(volumePath: string): Promise<boolean>
 | 13600001 | IPC error. |
 | 13600010 | The input parameter is invalid. |
 | 13600033 | Failed to query whether the specified volume is currently in use. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let volumePath: string = "";
+volumeManager.isVolumeInUse(volumePath).then(() => {
+  console.info("isVolumeInUse successfully.");
+}).catch((error: BusinessError) => {
+  console.error(`isVolumeInUse failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

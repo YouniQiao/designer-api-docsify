@@ -6,7 +6,7 @@
 import { sensor } from '@kit.SensorServiceKit';
 ```
 
-## on
+## on('SensorId.ACCELEROMETER')
 
 ```TypeScript
 function on(type: SensorId.ACCELEROMETER, callback: Callback<AccelerometerResponse>,
@@ -66,7 +66,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,
@@ -127,7 +127,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.AMBIENT_LIGHT')
 
 ```TypeScript
 function on(type: SensorId.AMBIENT_LIGHT, callback: Callback<LightResponse>, options?: Options): void
@@ -179,7 +179,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function on(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,
@@ -232,7 +232,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.BAROMETER')
 
 ```TypeScript
 function on(type: SensorId.BAROMETER, callback: Callback<BarometerResponse>, options?: Options): void
@@ -284,7 +284,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.GRAVITY')
 
 ```TypeScript
 function on(type: SensorId.GRAVITY, callback: Callback<GravityResponse>,
@@ -339,7 +339,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.GYROSCOPE')
 
 ```TypeScript
 function on(type: SensorId.GYROSCOPE, callback: Callback<GyroscopeResponse>,
@@ -399,7 +399,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,
@@ -460,7 +460,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.HALL')
 
 ```TypeScript
 function on(type: SensorId.HALL, callback: Callback<HallResponse>, options?: Options): void
@@ -512,7 +512,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.HEART_RATE')
 
 ```TypeScript
 function on(type: SensorId.HEART_RATE, callback: Callback<HeartRateResponse>,
@@ -568,7 +568,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.HUMIDITY')
 
 ```TypeScript
 function on(type: SensorId.HUMIDITY, callback: Callback<HumidityResponse>,
@@ -621,7 +621,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.LINEAR_ACCELEROMETER')
 
 ```TypeScript
 function on(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback<LinearAccelerometerResponse>,
@@ -679,7 +679,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.MAGNETIC_FIELD')
 
 ```TypeScript
 function on(type: SensorId.MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,
@@ -734,7 +734,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,
@@ -792,7 +792,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.ORIENTATION')
 
 ```TypeScript
 function on(type: SensorId.ORIENTATION, callback: Callback<OrientationResponse>,
@@ -853,7 +853,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.PEDOMETER')
 
 ```TypeScript
 function on(type: SensorId.PEDOMETER, callback: Callback<PedometerResponse>, options?: Options): void
@@ -912,7 +912,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.PEDOMETER_DETECTION')
 
 ```TypeScript
 function on(type: SensorId.PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,
@@ -968,7 +968,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.PROXIMITY')
 
 ```TypeScript
 function on(type: SensorId.PROXIMITY, callback: Callback<ProximityResponse>, options?: Options): void
@@ -1020,7 +1020,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.ROTATION_VECTOR')
 
 ```TypeScript
 function on(type: SensorId.ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,
@@ -1074,7 +1074,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.SIGNIFICANT_MOTION')
 
 ```TypeScript
 function on(type: SensorId.SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,
@@ -1125,7 +1125,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.WEAR_DETECTION')
 
 ```TypeScript
 function on(type: SensorId.WEAR_DETECTION, callback: Callback<WearDetectionResponse>,
@@ -1176,7 +1176,7 @@ try {
 ```
 
 
-## on
+## on('SensorId.FUSION_PRESSURE')
 
 ```TypeScript
 function on(type: SensorId.FUSION_PRESSURE, callback: Callback<FusionPressureResponse>,
@@ -1229,7 +1229,7 @@ try {
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_ACCELEROMETER')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<AccelerometerResponse>,
@@ -1241,14 +1241,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER, callback: Callback<Ac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.ACCELEROMETER](#on-3)
+> [sensor.on.ACCELEROMETER](#onsensoridaccelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-3)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridaccelerometer)(type: SensorId.ACCELEROMETER, callback: Callback&lt;AccelerometerResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1279,7 +1279,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER, (data: sensor.Accelero
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback: Callback<AccelerometerUncalibratedResponse>,
@@ -1291,14 +1291,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, callback
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.ACCELEROMETER_UNCALIBRATED](#on-4)
+> [sensor.on.ACCELEROMETER_UNCALIBRATED](#onsensoridaccelerometer_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-4)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridaccelerometer_uncalibrated)(type: SensorId.ACCELEROMETER_UNCALIBRATED, callback: Callback&lt;AccelerometerUncalibratedResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1332,7 +1332,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ACCELEROMETER_UNCALIBRATED, (data: se
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,
@@ -1344,14 +1344,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<Li
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.AMBIENT_LIGHT](#on-5)
+> [sensor.on.AMBIENT_LIGHT](#onsensoridambient_light)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-5)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridambient_light)(type: SensorId.AMBIENT_LIGHT, callback: Callback&lt;LightResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, callback: Callback<LightResponse>,    options?: Options): void-End-->
 
@@ -1378,7 +1378,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_LIGHT, (data: sensor.LightRes
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,
@@ -1390,14 +1390,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.AMBIENT_TEMPERATURE](#on-6)
+> [sensor.on.AMBIENT_TEMPERATURE](#onsensoridambient_temperature)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-6)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridambient_temperature)(type: SensorId.AMBIENT_TEMPERATURE, callback: Callback&lt;AmbientTemperatureResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, callback: Callback<AmbientTemperatureResponse>,    options?: Options): void-End-->
 
@@ -1424,7 +1424,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_AMBIENT_TEMPERATURE, (data: sensor.Am
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_BAROMETER')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,
@@ -1436,14 +1436,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<Barome
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.BAROMETER](#on-7)
+> [sensor.on.BAROMETER](#onsensoridbarometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-7)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridbarometer)(type: SensorId.BAROMETER, callback: Callback&lt;BarometerResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_BAROMETER, callback: Callback<BarometerResponse>,    options?: Options): void-End-->
 
@@ -1470,7 +1470,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_BAROMETER, (data: sensor.BarometerRes
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_GRAVITY')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,
@@ -1482,14 +1482,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityR
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.GRAVITY](#on-8)
+> [sensor.on.GRAVITY](#onsensoridgravity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-8)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridgravity)(type: SensorId.GRAVITY, callback: Callback&lt;GravityResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_GRAVITY, callback: Callback<GravityResponse>,    options?: Options): void-End-->
 
@@ -1518,7 +1518,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_GRAVITY, (data: sensor.GravityRespons
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_GYROSCOPE')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<GyroscopeResponse>,
@@ -1530,14 +1530,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE, callback: Callback<Gyrosc
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.GYROSCOPE](#on-9)
+> [sensor.on.GYROSCOPE](#onsensoridgyroscope)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-9)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridgyroscope)(type: SensorId.GYROSCOPE, callback: Callback&lt;GyroscopeResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1568,7 +1568,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE, (data: sensor.GyroscopeRes
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Callback<GyroscopeUncalibratedResponse>,
@@ -1580,14 +1580,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, callback: Ca
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.GYROSCOPE_UNCALIBRATED](#on-10)
+> [sensor.on.GYROSCOPE_UNCALIBRATED](#onsensoridgyroscope_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-10)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridgyroscope_uncalibrated)(type: SensorId.GYROSCOPE_UNCALIBRATED, callback: Callback&lt;GyroscopeUncalibratedResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.GYROSCOPE
 
@@ -1621,7 +1621,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_GYROSCOPE_UNCALIBRATED, (data: sensor
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_HALL')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,
@@ -1633,14 +1633,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallRespons
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.HALL](#on-11)
+> [sensor.on.HALL](#onsensoridhall)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-11)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridhall)(type: SensorId.HALL, callback: Callback&lt;HallResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HALL, callback: Callback<HallResponse>,    options?: Options): void-End-->
 
@@ -1667,7 +1667,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_HALL, (data: sensor.HallResponse) => 
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_HEART_RATE')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<HeartRateResponse>,
@@ -1679,14 +1679,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.HEART_RATE](#on-12)
+> [sensor.on.HEART_RATE](#onsensoridheart_rate)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-12)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridheart_rate)(type: SensorId.HEART_RATE, callback: Callback&lt;HeartRateResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.HEALTH_DATA
 
@@ -1703,7 +1703,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_HEART_RATE, callback: Callback<Heart
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_HUMIDITY')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,
@@ -1715,14 +1715,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<Humidit
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.HUMIDITY](#on-13)
+> [sensor.on.HUMIDITY](#onsensoridhumidity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-13)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridhumidity)(type: SensorId.HUMIDITY, callback: Callback&lt;HumidityResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_HUMIDITY, callback: Callback<HumidityResponse>,    options?: Options): void-End-->
 
@@ -1749,7 +1749,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_HUMIDITY, (data: sensor.HumidityRespo
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callback<LinearAccelerometerResponse>,
@@ -1761,14 +1761,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.LINEAR_ACCELEROMETER](#on-14)
+> [sensor.on.LINEAR_ACCELEROMETER](#onsensoridlinear_accelerometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-14)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridlinear_accelerometer)(type: SensorId.LINEAR_ACCELEROMETER, callback: Callback&lt;LinearAccelerometerResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACCELEROMETER
 
@@ -1785,7 +1785,7 @@ function on(type: SensorType.SENSOR_TYPE_ID_LINEAR_ACCELERATION, callback: Callb
 | options | [Options](arkts-sensorservice-sensor-options-i.md) | 否 | 用于设置传感器上报频率，默认值为200000000ns（即200ms）。 |
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,
@@ -1797,14 +1797,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<M
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.MAGNETIC_FIELD](#on-15)
+> [sensor.on.MAGNETIC_FIELD](#onsensoridmagnetic_field)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-15)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridmagnetic_field)(type: SensorId.MAGNETIC_FIELD, callback: Callback&lt;MagneticFieldResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, callback: Callback<MagneticFieldResponse>,    options?: Options): void-End-->
 
@@ -1833,7 +1833,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD, (data: sensor.Magneti
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,
@@ -1845,14 +1845,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callbac
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.MAGNETIC_FIELD_UNCALIBRATED](#on-16)
+> [sensor.on.MAGNETIC_FIELD_UNCALIBRATED](#onsensoridmagnetic_field_uncalibrated)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-16)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridmagnetic_field_uncalibrated)(type: SensorId.MAGNETIC_FIELD_UNCALIBRATED, callback: Callback&lt;MagneticFieldUncalibratedResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, callback: Callback<MagneticFieldUncalibratedResponse>,    options?: Options): void-End-->
 
@@ -1884,7 +1884,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_MAGNETIC_FIELD_UNCALIBRATED, (data: s
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_ORIENTATION')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,
@@ -1896,14 +1896,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<Orie
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.ORIENTATION](#on-17)
+> [sensor.on.ORIENTATION](#onsensoridorientation)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-17)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridorientation)(type: SensorId.ORIENTATION, callback: Callback&lt;OrientationResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ORIENTATION, callback: Callback<OrientationResponse>,    options?: Options): void-End-->
 
@@ -1932,7 +1932,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ORIENTATION, (data: sensor.Orientatio
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_PEDOMETER')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<PedometerResponse>,
@@ -1944,14 +1944,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER, callback: Callback<Pedome
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.PEDOMETER](#on-18)
+> [sensor.on.PEDOMETER](#onsensoridpedometer)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-18)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridpedometer)(type: SensorId.PEDOMETER, callback: Callback&lt;PedometerResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -1980,7 +1980,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER, (data: sensor.PedometerRes
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callback<PedometerDetectionResponse>,
@@ -1992,14 +1992,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, callback: Callb
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.PEDOMETER_DETECTION](#on-19)
+> [sensor.on.PEDOMETER_DETECTION](#onsensoridpedometer_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-19)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridpedometer_detection)(type: SensorId.PEDOMETER_DETECTION, callback: Callback&lt;PedometerDetectionResponse&gt;, options?: Options)
 
 **需要权限：** ohos.permission.ACTIVITY_MOTION
 
@@ -2028,7 +2028,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_PEDOMETER_DETECTION, (data: sensor.Pe
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_PROXIMITY')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,
@@ -2040,14 +2040,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<Proxim
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.PROXIMITY](#on-20)
+> [sensor.on.PROXIMITY](#onsensoridproximity)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-20)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridproximity)(type: SensorId.PROXIMITY, callback: Callback&lt;ProximityResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_PROXIMITY, callback: Callback<ProximityResponse>,    options?: Options): void-End-->
 
@@ -2074,7 +2074,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_PROXIMITY, (data: sensor.ProximityRes
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,
@@ -2086,14 +2086,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.ROTATION_VECTOR](#on-21)
+> [sensor.on.ROTATION_VECTOR](#onsensoridrotation_vector)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-21)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridrotation_vector)(type: SensorId.ROTATION_VECTOR, callback: Callback&lt;RotationVectorResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, callback: Callback<RotationVectorResponse>,    options?: Options): void-End-->
 
@@ -2123,7 +2123,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_ROTATION_VECTOR, (data: sensor.Rotati
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,
@@ -2135,14 +2135,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callba
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.SIGNIFICANT_MOTION](#on-22)
+> [sensor.on.SIGNIFICANT_MOTION](#onsensoridsignificant_motion)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-22)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridsignificant_motion)(type: SensorId.SIGNIFICANT_MOTION, callback: Callback&lt;SignificantMotionResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, callback: Callback<SignificantMotionResponse>,    options?: Options): void-End-->
 
@@ -2169,7 +2169,7 @@ sensor.on(sensor.SensorType.SENSOR_TYPE_ID_SIGNIFICANT_MOTION, (data: sensor.Sig
 ```
 
 
-## on
+## on('SensorType.SENSOR_TYPE_ID_WEAR_DETECTION')
 
 ```TypeScript
 function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,
@@ -2181,14 +2181,14 @@ function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<W
 > **说明：** 
 > 
 > 从API version 8 开始支持，从API version 9 开始废弃，建议使用
-> [sensor.on.WEAR_DETECTION](#on-23)
+> [sensor.on.WEAR_DETECTION](#onsensoridwear_detection)
 > 替代。
 
 **起始版本：** 8
 
 **废弃版本：** 9
 
-**替代接口：** [on](#on-23)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
+**替代接口：** [on](#onsensoridwear_detection)(type: SensorId.WEAR_DETECTION, callback: Callback&lt;WearDetectionResponse&gt;, options?: Options)
 
 <!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void--><!--Device-sensor-function on(type: SensorType.SENSOR_TYPE_ID_WEAR_DETECTION, callback: Callback<WearDetectionResponse>,    options?: Options): void-End-->
 

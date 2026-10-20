@@ -10,7 +10,7 @@
 > 
 > * 从API version 11开始，在RelativeContainer组件中，[width](arkts-arkui-common-comp-commonmethod-c.md#width)、[height](arkts-arkui-common-comp-commonmethod-c.md#height)设置"auto"表示自适应子组件。当width设置"auto"时，如果水平方向上子组件以容器作为锚点，则"auto"不生效（即视为不设置width），垂直方向上同理。
 > 
-> * 从API version 20开始，在RelativeContainer组件中，[width](arkts-arkui-common-comp-commonmethod-c.md#width-1)、[height](arkts-arkui-common-comp-commonmethod-c.md#height-1)设置LayoutPolicy.wrapContent表示自适应子组件且被祖先节点尺寸约束，设置LayoutPolicy.fixAtIdealSize表示自适应子组件且不被祖先节点尺寸约束。当width设置wrapContent或fixAtIdealSize时，如果水平方向上子组件直接或间接以容器作为锚点，则容器在该方向上的尺寸不自适应该组件，垂直方向上同理。
+> * 从API version 20开始，在RelativeContainer组件中，[width](arkts-arkui-common-comp-commonmethod-c.md#width)、[height](arkts-arkui-common-comp-commonmethod-c.md#height)设置LayoutPolicy.wrapContent表示自适应子组件且被祖先节点尺寸约束，设置LayoutPolicy.fixAtIdealSize表示自适应子组件且不被祖先节点尺寸约束。当width设置wrapContent或fixAtIdealSize时，如果水平方向上子组件直接或间接以容器作为锚点，则容器在该方向上的尺寸不自适应该组件，垂直方向上同理。
 > 
 > * RelativeContainer中子组件的[margin](arkts-arkui-common-comp-commonmethod-c.md#margin)不同于通用属性margin，指子组件到该方向上锚点的距离。例如，当alignRules设置了left锚点时，margin.left表示子组件到left锚点的距离。若alignRules未设置某个边界方向的锚点（如未设置left或right锚点），则该方向的margin不生效。
 

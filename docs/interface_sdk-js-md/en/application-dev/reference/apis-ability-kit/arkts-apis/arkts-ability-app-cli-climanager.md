@@ -4,6 +4,8 @@ This module provides the capability to interact with system command-line interfa
 
 **Since:** 26.0.1
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace cliManager--><!--Device-unnamed-declare namespace cliManager-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -20,14 +22,14 @@ import { cliManager, CliHook, ExecToolParam, ExecCmdParam, ExecResultWrap } from
 
 | Name | Description |
 | --- | --- |
-| [clearSession](arkts-ability-climanager-clearsession-f.md#clearsession-1) | Closes a session and forcibly terminates the associated command process. |
-| [execCmd](arkts-ability-climanager-execcmd-f.md#execcmd-1) | Executes a raw command string in the system shell environment. |
-| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f.md#gettoolinfobyname-1) | Get detailed information of a single tool by its name |
-| [querySession](arkts-ability-climanager-querysession-f.md#querysession-1) | Queries the current status and execution result of a session. |
-| [queryTools](arkts-ability-climanager-querytools-f.md#querytools-1) | Query all detailed information of tools |
-| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f.md#querytoolsummaries-1) | Query all tool summary information. The summary information only contains the fields: name, description, version. |
-| [sendMessage](arkts-ability-climanager-sendmessage-f.md#sendmessage-1) | Sends a message to the standard input of a running command process. |
-| [subscribeSession](arkts-ability-climanager-subscribesession-f.md#subscribesession-1) | Subscribes to events from a CLI tool or command execution session. |
+| [clearSession](arkts-ability-climanager-clearsession-f.md#clearsession) | Closes a session and forcibly terminates the associated command process. |
+| [execCmd](arkts-ability-climanager-execcmd-f.md#execcmd) | Executes a raw command string in the system shell environment. |
+| [getToolInfoByName](arkts-ability-climanager-gettoolinfobyname-f.md#gettoolinfobyname) | Get detailed information of a single tool by its name |
+| [querySession](arkts-ability-climanager-querysession-f.md#querysession) | Queries the current status and execution result of a session. |
+| [queryTools](arkts-ability-climanager-querytools-f.md#querytools) | Query all detailed information of tools |
+| [queryToolSummaries](arkts-ability-climanager-querytoolsummaries-f.md#querytoolsummaries) | Query all tool summary information. The summary information only contains the fields: name, description, version. |
+| [sendMessage](arkts-ability-climanager-sendmessage-f.md#sendmessage) | Sends a message to the standard input of a running command process. |
+| [subscribeSession](arkts-ability-climanager-subscribesession-f.md#subscribesession) | Subscribes to events from a CLI tool or command execution session. |
 
 <!--Del-->
 ### Functions(System API)

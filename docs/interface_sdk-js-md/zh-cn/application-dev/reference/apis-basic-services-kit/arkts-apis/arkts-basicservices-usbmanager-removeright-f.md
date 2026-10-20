@@ -12,7 +12,7 @@ import { usbManager } from '@kit.BasicServicesKit';
 function removeRight(deviceName: string): boolean
 ```
 
-移除应用访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。
+移除应用访问设备的权限。系统应用默认拥有访问设备权限，调用此接口不会产生影响。返回true表示权限移除成功；返回false则表示权限移除失败。
 
 **起始版本：** 9
 

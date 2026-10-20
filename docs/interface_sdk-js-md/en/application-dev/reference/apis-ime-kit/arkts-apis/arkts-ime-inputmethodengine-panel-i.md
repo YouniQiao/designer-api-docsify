@@ -552,7 +552,7 @@ Disables listening for the panel size change. This API uses an asynchronous call
 > the actual panel size to refresh the panel layout. <br>
 > <br>
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-1) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
 
 **Since:** 12
 
@@ -650,7 +650,7 @@ Enables listening for the panel size change. This API uses an asynchronous callb
 > the actual panel size to refresh the panel layout. <br>
 > <br>
 > - This API is supported from API version 12 to 14. The callback function of this API contains only mandatory <br>parameters of the [window.Size](../../apis-arkui/arkts-apis/arkts-arkui-window-size-i.md) type. <br><br>
-> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect-1) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
+> - Since API version 15, after the <br>[adjustPanelRect](#adjustpanelrect) API <br>is called, an optional parameter of the [KeyboardArea](arkts-ime-inputmethodengine-keyboardarea-i.md) type is added to <br>the callback function of this API.
 
 **Since:** 12
 
@@ -789,7 +789,7 @@ panel.resize(500, 1000).then(() => {
 setImmersiveEffect(effect: ImmersiveEffect): void
 ```
 
-Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br>- [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br>- [adjustPanelRect](#adjustpanelrect-1) (available since API version 15) <br>- [resize](#resize) (available since API version 10)
+Sets the immersive effect of the input method application. <br> <br>- Gradient mode and fluid light mode can be used only when the [immersive mode](#setimmersivemode) is enabled. <br>- The fluid light mode can be used only when the gradient mode is enabled. <br>- If the gradient mode is disabled, the gradient height must be 0 px. <br>- Only system applications can set the fluid light mode. <br>- The current API can be called only after any of the following APIs is called: <br>- [adjustPanelRect](#adjustpanelrect) (available since API version 12) <br>- [adjustPanelRect](#adjustpanelrect) (available since API version 15) <br>- [resize](#resize) (available since API version 10)
 
 **Since:** 20
 

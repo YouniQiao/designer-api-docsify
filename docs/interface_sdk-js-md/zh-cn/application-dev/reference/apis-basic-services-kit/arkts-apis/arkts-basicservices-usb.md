@@ -29,19 +29,19 @@ import { usb } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer-1) | 批量传输。 |
-| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface-1) | 注册通信接口。 |
-| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe-1) | 关闭设备消息控制通道。 |
-| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice-1) | 打开USB设备。 |
-| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer-1) | 控制传输。 |
-| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices-1) | 获取USB设备列表。 |
-| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor-1) | 获取文件描述符。 |
-| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor-1) | 获取原始的USB描述符。 |
-| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright-1) | 判断是否有权访问该设备。 |
-| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface-1) | 释放注册过的通信接口。 |
-| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright-1) | 请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。 |
-| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration-1) | 设置设备配置。 |
-| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface-1) | 设置设备接口。 |
+| [bulkTransfer](arkts-basicservices-usb-bulktransfer-f.md#bulktransfer) | 批量传输。 |
+| [claimInterface](arkts-basicservices-usb-claiminterface-f.md#claiminterface) | 注册通信接口。 |
+| [closePipe](arkts-basicservices-usb-closepipe-f.md#closepipe) | 关闭设备消息控制通道。 |
+| [connectDevice](arkts-basicservices-usb-connectdevice-f.md#connectdevice) | 打开USB设备。 |
+| [controlTransfer](arkts-basicservices-usb-controltransfer-f.md#controltransfer) | 控制传输。 |
+| [getDevices](arkts-basicservices-usb-getdevices-f.md#getdevices) | 获取USB设备列表。 |
+| [getFileDescriptor](arkts-basicservices-usb-getfiledescriptor-f.md#getfiledescriptor) | 获取文件描述符。 |
+| [getRawDescriptor](arkts-basicservices-usb-getrawdescriptor-f.md#getrawdescriptor) | 获取原始的USB描述符。 |
+| [hasRight](arkts-basicservices-usb-hasright-f.md#hasright) | 判断是否有权访问该设备。 |
+| [releaseInterface](arkts-basicservices-usb-releaseinterface-f.md#releaseinterface) | 释放注册过的通信接口。 |
+| [requestRight](arkts-basicservices-usb-requestright-f.md#requestright) | 请求软件包的临时权限以访问设备。使用Promise异步回调。系统应用默认拥有访问设备权限，无需调用此接口申请。 |
+| [setConfiguration](arkts-basicservices-usb-setconfiguration-f.md#setconfiguration) | 设置设备配置。 |
+| [setInterface](arkts-basicservices-usb-setinterface-f.md#setinterface) | 设置设备接口。 |
 
 <!--Del-->
 ### 函数（系统接口）

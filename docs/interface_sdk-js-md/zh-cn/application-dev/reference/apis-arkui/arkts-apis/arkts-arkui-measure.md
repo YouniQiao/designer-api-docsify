@@ -28,7 +28,7 @@ import { MeasureText, MeasureOptions } from '@kit.ArkUI';
 
 | 名称 | 说明 |
 | --- | --- |
-| [MeasureText](arkts-arkui-measure-measuretext-c.md#measuretext) | 定义测算文本相关接口。 |
+| [MeasureText](arkts-arkui-measure-measuretext-c.md) | 定义测算文本相关接口。 |
 
 ### 接口
 

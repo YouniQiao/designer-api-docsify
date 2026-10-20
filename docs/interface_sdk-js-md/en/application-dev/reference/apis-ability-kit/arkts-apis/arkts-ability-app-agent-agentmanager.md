@@ -4,6 +4,8 @@ The agentManager module provides agent management capabilities, supporting opera
 
 **Since:** 24
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace agentManager--><!--Device-unnamed-declare namespace agentManager-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core

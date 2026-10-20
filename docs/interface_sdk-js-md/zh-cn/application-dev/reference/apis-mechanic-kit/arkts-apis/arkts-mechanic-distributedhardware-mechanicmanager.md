@@ -20,15 +20,15 @@ import { mechanicManager } from '@kit.MechanicKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getattachedmechdevices-1) | 获取已连接的机械设备列表 |
-| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled-1) | 获取相机跟踪状态 |
-| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout-1) | 获取当前摄像头跟踪布局 |
-| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported-1) | 判断当前设备是否支持某类设备的具身控制 |
+| [getAttachedMechDevices](arkts-mechanic-mechanicmanager-getattachedmechdevices-f.md#getattachedmechdevices) | 获取已连接的机械设备列表 |
+| [getCameraTrackingEnabled](arkts-mechanic-mechanicmanager-getcameratrackingenabled-f.md#getcameratrackingenabled) | 获取相机跟踪状态 |
+| [getCameraTrackingLayout](arkts-mechanic-mechanicmanager-getcameratrackinglayout-f.md#getcameratrackinglayout) | 获取当前摄像头跟踪布局 |
+| [isControlSupported](arkts-mechanic-mechanicmanager-iscontrolsupported-f.md#iscontrolsupported) | 判断当前设备是否支持某类设备的具身控制 |
 | [off('attachStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offattachstatechange) | Unsubscribes from device attachment state change events. |
 | [off('trackingStateChange')](arkts-mechanic-mechanicmanager-off-f.md#offtrackingstatechange) | 设置相机跟踪布局 |
 | [on('attachStateChange')](arkts-mechanic-mechanicmanager-on-f.md#onattachstatechange) | Subscribes to device attachment state change events. |
 | [on('trackingStateChange')](arkts-mechanic-mechanicmanager-on-f.md#ontrackingstatechange) | Subscribes to tracking events. |
-| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled-1) | 启用或禁用摄像机跟踪 |
+| [setCameraTrackingEnabled](arkts-mechanic-mechanicmanager-setcameratrackingenabled-f.md#setcameratrackingenabled) | 启用或禁用摄像机跟踪 |
 
 <!--Del-->
 ### 函数（系统接口）

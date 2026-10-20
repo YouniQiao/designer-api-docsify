@@ -4,7 +4,7 @@
 interface DownloadTask
 ```
 
-下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-2)获取，callback形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile-1)获取。
+下载任务，使用下列方法前，需要先获取DownloadTask对象，promise形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取，callback形式通过[request.downloadFile](arkts-basicservices-request-downloadfile-f.md#downloadfile)获取。
 
 **起始版本：** 6
 

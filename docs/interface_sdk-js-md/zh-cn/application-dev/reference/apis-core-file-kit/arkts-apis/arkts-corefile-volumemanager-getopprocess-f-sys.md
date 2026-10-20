@@ -47,3 +47,20 @@ function getOpProcess(volumeId: string): Promise<number>
 | 13600001 | IPC error. |
 | 13600002 | Not supported filesystem. |
 | 13600010 | The input parameter is invalid. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// volumeId可通过getAllVolumes()接口获取
+let volumeId: string = "";
+volumeManager.getOpProcess(volumeId).then((progress: number) => {
+  console.info("getOpProcess successfully, progress:" + progress);
+}).catch((error: BusinessError) => {
+  console.error(`Failed to getOpProcess. Code: ${error.code}, message: ${error.message}`);
+});
+```
+
+<!--DelEnd-->

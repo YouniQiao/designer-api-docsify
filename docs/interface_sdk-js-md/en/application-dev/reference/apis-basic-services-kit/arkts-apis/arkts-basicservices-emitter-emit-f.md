@@ -92,6 +92,18 @@ let eventData: emitter.EventData = {
 emitter.emit('eventId', eventData);
 ```
 
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', eventData);
+```
+
 
 ## emit
 
@@ -140,6 +152,27 @@ let eventData: emitter.GenericEventData<Sample> = {
 emitter.emit('eventId', eventData);
 ```
 
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', eventData);
+```
+
 
 ## emit
 
@@ -184,6 +217,22 @@ let options: emitter.Options = {
 };
 
 emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.EventData = {
+  data: {
+    "content": "content",
+    "id": 1,
+  }
+};
+
+emitter1.emit('eventId', options, eventData);
 ```
 
 
@@ -237,4 +286,28 @@ let eventData: emitter.GenericEventData<Sample> = {
 };
 
 emitter.emit('eventId', options, eventData);
+```
+
+```TypeScript
+@Sendable
+class Sample {
+  constructor() {
+    this.count = 100;
+  }
+  printCount() {
+    console.info('Print count : ' + this.count);
+  }
+  count: number;
+}
+
+let emitter1: emitter.Emitter = new emitter.Emitter();
+
+let options: emitter.Options = {
+  priority: emitter.EventPriority.HIGH
+};
+let eventData: emitter.GenericEventData<Sample> = {
+  data: new Sample()
+};
+
+emitter1.emit('eventId', options, eventData);
 ```

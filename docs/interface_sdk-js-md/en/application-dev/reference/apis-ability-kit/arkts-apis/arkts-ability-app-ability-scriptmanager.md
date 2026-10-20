@@ -12,6 +12,8 @@ This module provides the capability to manage and organize script information, a
 
 **Since:** 26.0.0
 
+**Model restriction:** This API can be used only in the stage model.
+
 <!--Device-unnamed-declare namespace scriptManager--><!--Device-unnamed-declare namespace scriptManager-End-->
 
 **System capability:** SystemCapability.Ability.AgentRuntime.Core
@@ -28,7 +30,7 @@ import { scriptManager } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp-1) | Completes the ArkTS script execution of an app and reports the execution result. This API uses a promise to return the result. |
+| [completeArkTSScriptInApp](arkts-ability-scriptmanager-completearktsscriptinapp-f.md#completearktsscriptinapp) | Completes the ArkTS script execution of an app and reports the execution result. This API uses a promise to return the result. |
 
 ### Interfaces
 

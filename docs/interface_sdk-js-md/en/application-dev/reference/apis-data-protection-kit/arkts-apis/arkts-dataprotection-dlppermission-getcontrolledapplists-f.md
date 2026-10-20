@@ -16,7 +16,7 @@ Obtains the list of applications controlled by enterprise DLP for the current us
 
 > **NOTE:** 
 > This API can only be used to query the list of applications controlled by enterprise DLP, which is set using
-> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md#setcontrolledapplists-1).
+> [setControlledAppLists](arkts-dataprotection-dlppermission-setcontrolledapplists-f.md).
 
 **Since:** 26.0.0
 

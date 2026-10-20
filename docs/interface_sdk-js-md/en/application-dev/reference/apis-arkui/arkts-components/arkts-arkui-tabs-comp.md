@@ -84,7 +84,7 @@ Creates a **Tabs** container.
 | [AnimationMode](arkts-arkui-tabs-comp-animationmode-e.md) | Enumerates the animation forms for switching **TabContent** when a [TabBar](arkts-arkui-tabcontent-comp-attribute.md#tabbar) tab is tapped. |
 | [BarMode](arkts-arkui-tabs-comp-barmode-e.md) | Enumerates layout modes of the tab bar. |
 | [BarPosition](arkts-arkui-tabs-comp-barposition-e.md) | Enumerates the positions of the **Tabs** component. |
-| [LayoutStyle](arkts-arkui-tabs-comp-layoutstyle-e.md) | Enumerates the tab layout modes when the tab bar is not scrolled in [Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode-2) mode. |
+| [LayoutStyle](arkts-arkui-tabs-comp-layoutstyle-e.md) | Enumerates the tab layout modes when the tab bar is not scrolled in [Scrollable](arkts-arkui-tabs-comp-attribute.md#barmode) mode. |
 | [TabBarDisplayMode](arkts-arkui-tabs-comp-tabbardisplaymode-e.md) | Enumerates the actual display modes of the tab bar under different Tabs container sizes. This enum is used in [barDisplayModeBreakpoint](arkts-arkui-tabs-comp-attribute.md#bardisplaymodebreakpoint) to specify the display mode for different breakpoint sizes. It is only meaningful when **TabBarStyle** is set to **SIDEBAR_ADAPTABLE** or **SIDEBAR**. |
 | [TabBarStyle](arkts-arkui-tabs-comp-tabbarstyle-e.md) | Enumerates the display styles of the tab bar. |
 | [TabsCacheMode](arkts-arkui-tabs-comp-tabscachemode-e.md) | Enumerates the caching modes for child components. |

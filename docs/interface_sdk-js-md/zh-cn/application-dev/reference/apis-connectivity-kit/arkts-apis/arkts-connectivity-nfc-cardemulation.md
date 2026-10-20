@@ -20,6 +20,8 @@ HCE卡模拟和AID列表的声明定义
 
 **起始版本：** 6
 
+**模型约束：** 此接口可在Stage模型和FA模型下使用。
+
 <!--Device-unnamed-declare namespace cardEmulation--><!--Device-unnamed-declare namespace cardEmulation-End-->
 
 **系统能力：** SystemCapability.Communication.NFC.CardEmulation
@@ -36,9 +38,9 @@ import { cardEmulation } from '@kit.ConnectivityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability-1) | 判断设备是否支持HCE卡模拟功能。 |
-| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice-1) | 判断指定的应用是否为指定业务类型的默认应用。 |
-| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported-1) | 是否支持某种类型的卡模拟。 |
+| [hasHceCapability](arkts-connectivity-cardemulation-hashcecapability-f.md#hashcecapability) | 判断设备是否支持HCE卡模拟功能。 |
+| [isDefaultService](arkts-connectivity-cardemulation-isdefaultservice-f.md#isdefaultservice) | 判断指定的应用是否为指定业务类型的默认应用。 |
+| [isSupported](arkts-connectivity-cardemulation-issupported-f.md#issupported) | 是否支持某种类型的卡模拟。 |
 
 <!--Del-->
 ### 函数（系统接口）

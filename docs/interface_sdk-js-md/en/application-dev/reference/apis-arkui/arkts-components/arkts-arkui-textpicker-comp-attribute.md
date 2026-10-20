@@ -238,7 +238,7 @@ Sets the text color, font size, and font weight of edge items (the second item a
 disappearTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of edge items (the second item above or below the selected item). Compared with [disappearTextStyle<sup>18+</sup>](#disappeartextstyle-1), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
+Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of edge items (the second item above or below the selected item). Compared with [disappearTextStyle<sup>18+</sup>](#disappeartextstyle), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
 
 **Since:** 20
 
@@ -656,7 +656,7 @@ Sets the text color, font size, and font weight of the selected item. Compared w
 selectedTextStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of the selected item. Compared with [selectedTextStyle<sup>18+</sup>](#selectedtextstyle-1), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
+Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of the selected item. Compared with [selectedTextStyle<sup>18+</sup>](#selectedtextstyle), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
 
 **Since:** 20
 
@@ -728,7 +728,7 @@ Sets the text color, font size, and font weight of candidate items (the first it
 textStyle(style: Optional<PickerTextStyle | TextPickerTextStyle>)
 ```
 
-Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of candidate items (the first item immediately above or below the selected item). Compared with [textStyle<sup>18+</sup>](#textstyle-1), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
+Sets the text color, font size, font weight, maximum font size, minimum font size, and truncation mode of candidate items (the first item immediately above or below the selected item). Compared with [textStyle<sup>18+</sup>](#textstyle), the style parameter adds support for the [TextPickerTextStyle](arkts-arkui-textpicker-comp-textpickertextstyle-i.md) type.
 
 **Since:** 20
 

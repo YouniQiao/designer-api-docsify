@@ -88,13 +88,20 @@ Creates a list container.
 
 | Name | Description |
 | --- | --- |
-| [ChainAnimationOptions](arkts-arkui-list-comp-chainanimationoptions-i-sys.md) | Defines a collection of chain animation effect attributes, used to set the maximum spacing, minimum spacing, animation intensity, conduction coefficient, edge effect, stiffness, and damping of the list. When the list requires fine-grained control over the chained linkage elastic effect, different animation feels can be achieved by adjusting the parameters in this object. |
 | [CloseSwipeActionOptions](arkts-arkui-list-comp-closeswipeactionoptions-i.md) | Implements the callbacks and events for the [ListItem](arkts-arkui-listitem-comp.md) in the [expanded](arkts-arkui-listitem-comp-swipeactionstate-e.md) state. |
 | [ListBackPressBehavior](arkts-arkui-list-comp-listbackpressbehavior-i.md) | Defines the system back button behavior of the **List** component. |
 | [ListDividerOptions](arkts-arkui-list-comp-listdivideroptions-i.md) | Defines the divider style of the list or list item group. |
 | [ListOptions](arkts-arkui-list-comp-listoptions-i.md) | Defines the options of the **List** component. |
-| [UIListEvent](arkts-arkui-list-comp-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent-2) method in **frameNode**, which can be used to set scroll events for a **List** node. |
+| [UIListEvent](arkts-arkui-list-comp-uilistevent-i.md) | Represents the return value of the [getEvent('List')](../arkts-apis/arkts-arkui-typenode-getevent-f.md#getevent) method in **frameNode**, which can be used to set scroll events for a **List** node. |
 | [VisibleListContentInfo](arkts-arkui-list-comp-visiblelistcontentinfo-i.md) | Describes the details of the child components in the visible area of a list. |
+
+<!--Del-->
+### Interfaces(System API)
+
+| Name | Description |
+| --- | --- |
+| [ChainAnimationOptions](arkts-arkui-list-comp-chainanimationoptions-i-sys.md) | Defines a collection of chain animation effect attributes, used to set the maximum spacing, minimum spacing, animation intensity, conduction coefficient, edge effect, stiffness, and damping of the list. When the list requires fine-grained control over the chained linkage elastic effect, different animation feels can be achieved by adjusting the parameters in this object. |
+<!--DelEnd-->
 
 ### Types
 
@@ -108,13 +115,20 @@ Creates a list container.
 
 | Name | Description |
 | --- | --- |
-| [ChainEdgeEffect](arkts-arkui-list-comp-chainedgeeffect-e-sys.md) | Sets the edge effect of the chain animation effect, which determines how the spacing between list items changes when the list continues to be dragged after being scrolled to the edge. |
 | [ListItemAlign](arkts-arkui-list-comp-listitemalign-e.md) | Sets the alignment mode of child components in the cross-axis direction of the list. |
 | [ListItemGroupArea](arkts-arkui-list-comp-listitemgrouparea-e.md) | Enumerates the areas of **ListItemGroup**. |
 | [ScrollSnapAlign](arkts-arkui-list-comp-scrollsnapalign-e.md) | Enumerates the alignment modes of list items when scrolling ends. |
 | [ScrollSnapAnimationSpeed](arkts-arkui-list-comp-scrollsnapanimationspeed-e.md) | Enumerates the speeds of the snap animation for list scrolling. |
 | [ScrollState](arkts-arkui-list-comp-scrollstate-e.md) | Enumerates the scrolling states. |
 | [StickyStyle](arkts-arkui-list-comp-stickystyle-e.md) | Enumerates the sticky styles. |
+
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [ChainEdgeEffect](arkts-arkui-list-comp-chainedgeeffect-e-sys.md) | Sets the edge effect of the chain animation effect, which determines how the spacing between list items changes when the list continues to be dragged after being scrolled to the edge. |
+<!--DelEnd-->
 
 ## Examples
 

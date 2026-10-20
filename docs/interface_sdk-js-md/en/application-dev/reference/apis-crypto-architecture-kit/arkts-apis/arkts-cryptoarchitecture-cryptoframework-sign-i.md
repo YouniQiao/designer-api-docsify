@@ -812,7 +812,7 @@ Updates data to be signed. This API uses a promise to return the result.
 > **NOTE:** 
 > 
 > You can call **update** multiple times or do not use **update** (call
-> [sign](#sign-1) after
+> [sign](#sign) after
 > [init](#init)), depending on the
 > data volume.
 > 

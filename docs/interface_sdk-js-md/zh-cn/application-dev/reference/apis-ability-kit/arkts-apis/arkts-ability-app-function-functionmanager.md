@@ -6,6 +6,8 @@ Function是定义在应用包中的一个业务逻辑单元，可以接收大模
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace functionManager--><!--Device-unnamed-declare namespace functionManager-End-->
 
 **系统能力：** SystemCapability.Ability.AgentRuntime.Core

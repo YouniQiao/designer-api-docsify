@@ -24,7 +24,7 @@ import { inputConsumer } from '@kit.InputKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys-1) | 获取所有系统快捷键，使用Promise异步回调。 |
+| [getAllSystemHotkeys](arkts-input-inputconsumer-getallsystemhotkeys-f.md#getallsystemhotkeys) | 获取所有系统快捷键，使用Promise异步回调。 |
 | [off('hotkeyChange')](arkts-input-inputconsumer-off-f.md#offhotkeychange) | 取消订阅应用快捷键。使用callback异步回调。 |
 | [off('keyPressed')](arkts-input-inputconsumer-off-f.md#offkeypressed) | 取消对'keyPressed'事件的订阅，使用callback异步回调。调用该方法后，被屏蔽的系统按键默认行为将恢复，即系统对音量调节等默认响应将恢复。 |
 | [on('hotkeyChange')](arkts-input-inputconsumer-on-f.md#onhotkeychange) | 订阅应用快捷键。获取满足条件的组合按键输入事件，使用callback异步回调。 |

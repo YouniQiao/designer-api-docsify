@@ -10,7 +10,7 @@ Child components can define their alignment rules within the container using [al
 > 
 > * Since API version 11, in the **RelativeContainer** component, setting [width](arkts-arkui-common-comp-commonmethod-c.md#width) and [height](arkts-arkui-common-comp-commonmethod-c.md#height) to "auto"means adapting to child components. When width is set to "auto", if a child component uses the container as an anchor in the horizontal direction, "auto" does not take effect (that is, it is treated as if width is not set).The same applies to the vertical direction.
 > 
-> * Since API version 20, in the **RelativeContainer** component, setting [width](arkts-arkui-common-comp-commonmethod-c.md#width-1) and [height](arkts-arkui-common-comp-commonmethod-c.md#height-1) to **LayoutPolicy.wrapContent** means adapting to child components while being constrained by the ancestor node size, and setting them to
+> * Since API version 20, in the **RelativeContainer** component, setting [width](arkts-arkui-common-comp-commonmethod-c.md#width) and [height](arkts-arkui-common-comp-commonmethod-c.md#height) to **LayoutPolicy.wrapContent** means adapting to child components while being constrained by the ancestor node size, and setting them to
 > **LayoutPolicy.fixAtIdealSize** means adapting to child components without being constrained by the ancestor node
 > size. When **width** is set to **wrapContent** or **fixAtIdealSize**, if a child component directly or indirectly
 > uses the container as an anchor in the horizontal direction, the container size in that direction does not adapt to

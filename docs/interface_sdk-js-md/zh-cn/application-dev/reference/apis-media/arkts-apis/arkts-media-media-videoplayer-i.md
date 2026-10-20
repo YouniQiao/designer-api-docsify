@@ -4,7 +4,7 @@
 interface VideoPlayer
 ```
 
-视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer-1)构建一个VideoPlayer实例。
+视频播放管理类，用于管理和播放视频媒体。在调用VideoPlayer的方法前，需要先通过[createVideoPlayer()](arkts-media-media-createvideoplayer-f.md#createvideoplayer)构建一个VideoPlayer实例。
 
 > **说明：** 
 > 

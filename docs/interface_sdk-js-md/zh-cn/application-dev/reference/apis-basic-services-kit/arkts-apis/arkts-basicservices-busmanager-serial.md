@@ -4,6 +4,8 @@
 
 **起始版本：** 26.0.0
 
+**模型约束：** 此接口仅可在Stage模型下使用。
+
 <!--Device-unnamed-declare namespace serial--><!--Device-unnamed-declare namespace serial-End-->
 
 **系统能力：** SystemCapability.BusManager.Serial
@@ -20,7 +22,7 @@ import { serial } from '@kit.BasicServicesKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist-1) | 查询串口设备列表，返回[SerialPort](arkts-basicservices-serial-serialport-i.md)对象数组。使用Promise异步回调。用于需要识别可用串口设备的场景，如工业设备连接、物联网设备管理、嵌入式系统调试等场景。 |
+| [getSerialPortList](arkts-basicservices-serial-getserialportlist-f.md#getserialportlist) | 查询串口设备列表，返回[SerialPort](arkts-basicservices-serial-serialport-i.md)对象数组。使用Promise异步回调。用于需要识别可用串口设备的场景，如工业设备连接、物联网设备管理、嵌入式系统调试等场景。 |
 
 <!--Del-->
 ### 函数（系统接口）

@@ -4,7 +4,7 @@
 interface KVManager
 ```
 
-Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager-1) to create a **KVManager** object.
+Creates a **KVManager** object to obtain KV store information. Before calling any method in **KVManager**, you must use [createKVManager](arkts-arkdata-distributeddata-createkvmanager-f.md#createkvmanager) to create a **KVManager** object.
 
 **Since:** 7
 

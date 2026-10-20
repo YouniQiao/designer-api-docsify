@@ -48,3 +48,20 @@ function getPartitionTable(diskId: string): Promise<PartitionTableInfo>
 | 13600008 | No such object. |
 | 13600010 | The input parameter is invalid. |
 | 13600021 | Get partition table failed. |
+
+<!--Del-->
+**示例**
+
+```TypeScript
+import { BusinessError } from '@kit.BasicServicesKit';
+
+// diskId可通过getAllDisks()接口获取
+let diskId: string = "";
+volumeManager.getPartitionTable(diskId).then((partitionTableInfo: volumeManager.PartitionTableInfo) => {
+  console.info("getPartitionTable successfully:" + JSON.stringify(partitionTableInfo));
+}).catch((error: BusinessError) => {
+  console.error(`getPartitionTable failed with error, code is: ${error.code}, message is: ${error.message}`);
+});
+```
+
+<!--DelEnd-->
