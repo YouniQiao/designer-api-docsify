@@ -1,4 +1,4 @@
-# PiPController
+# PiPController (System API)
 
 ```TypeScript
 interface PiPController

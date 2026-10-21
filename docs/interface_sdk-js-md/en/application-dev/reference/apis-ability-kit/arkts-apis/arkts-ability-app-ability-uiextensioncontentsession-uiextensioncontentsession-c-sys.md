@@ -1,4 +1,4 @@
-# UIExtensionContentSession
+# UIExtensionContentSession (System API)
 
 ```TypeScript
 declare class UIExtensionContentSession

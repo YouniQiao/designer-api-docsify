@@ -1,4 +1,4 @@
-# InputMethodExtensionContext
+# InputMethodExtensionContext（系统接口）
 
 ```TypeScript
 declare class InputMethodExtensionContext extends ExtensionContext

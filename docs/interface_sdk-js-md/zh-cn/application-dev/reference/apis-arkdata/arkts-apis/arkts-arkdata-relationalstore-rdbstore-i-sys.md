@@ -1,4 +1,4 @@
-# RdbStore
+# RdbStore（系统接口）
 
 ```TypeScript
 interface RdbStore

@@ -1,4 +1,4 @@
-# AudioCapturer
+# AudioCapturer (System API)
 
 ```TypeScript
 interface AudioCapturer

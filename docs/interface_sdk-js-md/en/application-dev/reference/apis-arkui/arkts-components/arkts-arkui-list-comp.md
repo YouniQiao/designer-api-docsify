@@ -1374,3 +1374,77 @@ struct ListExample {
   }
 }
 ```
+
+### Example 18: Implementing Swipe-based Multi-Selection
+
+This example implements the finger-swipe multi-select effect on List by using the [enableEditMode](#enableeditmode) API and the [onEditModeChange](#oneditmodechange) event.
+
+Since API version 26.0.0, the List component adds the enableEditMode API and the onEditModeChange event.
+
+For details about ListDataSource and the complete code, see [Example 1: Adding a Scroll Event](#example-1-adding-a-scroll-event).
+
+```TypeScript
+// xxx.ets
+import { ListDataSource } from './ListDataSource';
+
+@Entry
+@Component
+struct ListExample {
+  private arr: ListDataSource = new ListDataSource([]);
+  @State @Watch('onEditModeChanged') enableEditMode: boolean = false;
+  @State selectedIndexes: number[] = [];
+
+  onEditModeChanged() {
+    console.info(`enableEditMode changed to: ${this.enableEditMode}`);
+    if (!this.enableEditMode) {
+      console.info('enableEditMode changed to false, clearing selectedIndexes');
+      this.selectedIndexes = [];
+    }
+  }
+
+  aboutToAppear() {
+    let list: number[] = [];
+    for (let i = 0; i < 10; i++) {
+        list.push(i);
+    }
+    this.arr = new ListDataSource(list);
+  }
+
+  build() {
+    Column({ space: 5 }) {
+      List({ space: 10 }) {
+        LazyForEach(this.arr, (item: number, index: number) => {
+          ListItem() {
+            Text(item.toString())
+              .fontSize(16)
+              .width('100%')
+              .height(50)
+              .textAlign(TextAlign.Center)
+          }
+          .backgroundColor(Color.White)
+          .selected(this.selectedIndexes.includes(index))
+          .onSelect((isSelected: boolean) => {
+            if (isSelected) {
+              this.selectedIndexes.push(index);
+            } else {
+              let deleted = this.selectedIndexes.findIndex((value) => value === index);
+              if (deleted !== -1) {
+                this.selectedIndexes.splice(deleted, 1);
+              }
+            }
+          })
+        }, (item: number) => item.toString())
+      }
+      .width('90%')
+      .height(300)
+      .scrollBar(BarState.Off)
+      .enableEditMode(this.enableEditMode!!)
+      .onEditModeChange((data: boolean) => {
+        // Implement the business logic of onEditModeChanged here as well.
+        console.info(`onEditModeChange:${data}`)
+      })
+      .editModeOptions({ useDefaultMultiSelectStyle: true, enableTwoFingerMultiSelect: true })
+    }.width('100%').padding({ top: 10 }).backgroundColor('#FFDCDCDC')
+  }
+}
+```

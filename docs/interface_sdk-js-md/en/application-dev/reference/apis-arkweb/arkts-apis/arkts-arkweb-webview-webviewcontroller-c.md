@@ -3827,6 +3827,35 @@ Queries whether the subframe error page feature is enabled.
 
 **Examples**
 
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebComponent {
+  controller: webview.WebviewController = new webview.WebviewController();
+
+  build() {
+    Column() {
+      Web({ src: $rawfile("iframe_error.html"), controller: this.controller })
+        .onControllerAttached(() => {
+          // Enable the error page feature for mainframe and subframe.
+          this.controller.setErrorPageEnabled(true, true);
+          // Check whether the subframe error page feature is enabled.
+          let isSubframeEnabled: boolean = this.controller.getSubframeErrorPageEnabled();
+          console.info("Subframe error page enabled: " + isSubframeEnabled);
+
+          // Enable only the mainframe error page feature, not the subframe.
+          this.controller.setErrorPageEnabled(true, false);
+          let isSubframeEnabled2: boolean = this.controller.getSubframeErrorPageEnabled();
+          console.info("Subframe error page enabled after disable: " + isSubframeEnabled2);
+        })
+    }
+  }
+}
+```
+
 ## getSurfaceId
 
 ```TypeScript

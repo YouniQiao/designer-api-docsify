@@ -1,4 +1,4 @@
-# AVRecorder
+# AVRecorder (System API)
 
 ```TypeScript
 interface AVRecorder

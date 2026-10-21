@@ -1255,6 +1255,8 @@ int32_t OH_NativeXComponent_AttachNativeRootNode(OH_NativeXComponent* component,
 
 **废弃版本：** 20
 
+**替代接口：** OH_ArkUI_NodeContent_AddNode
+
 **参数：**
 
 | 参数项 | 描述 |
@@ -1283,6 +1285,8 @@ int32_t OH_NativeXComponent_DetachNativeRootNode(OH_NativeXComponent* component,
 **起始版本：** 12
 
 **废弃版本：** 20
+
+**替代接口：** OH_ArkUI_NodeContent_RemoveNode
 
 **参数：**
 

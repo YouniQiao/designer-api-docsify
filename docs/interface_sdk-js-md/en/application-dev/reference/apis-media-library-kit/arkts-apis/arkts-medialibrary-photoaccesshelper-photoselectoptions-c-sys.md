@@ -1,4 +1,4 @@
-# PhotoSelectOptions
+# PhotoSelectOptions (System API)
 
 ```TypeScript
 class PhotoSelectOptions extends BaseSelectOptions

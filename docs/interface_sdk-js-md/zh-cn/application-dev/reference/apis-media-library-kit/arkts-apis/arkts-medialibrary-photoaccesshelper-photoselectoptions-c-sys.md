@@ -1,4 +1,4 @@
-# PhotoSelectOptions
+# PhotoSelectOptions（系统接口）
 
 ```TypeScript
 class PhotoSelectOptions extends BaseSelectOptions

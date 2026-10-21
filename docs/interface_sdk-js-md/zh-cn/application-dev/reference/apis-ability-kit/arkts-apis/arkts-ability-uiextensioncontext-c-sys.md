@@ -1,4 +1,4 @@
-# UIExtensionContext
+# UIExtensionContext（系统接口）
 
 ```TypeScript
 declare class UIExtensionContext extends ExtensionContext

@@ -788,7 +788,7 @@ Sets the alignment mode for child components within the component's drawing area
 alignRules(value: AlignRuleOption): T
 ```
 
-Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is RelativeContainer, and supports dynamic configuration via [attributeModifier](#attributemodifier).
+Sets the alignment rule for child components within the relative container. This attribute only takes effect when the parent container is [RelativeContainer](arkts-arkui-relativecontainer-comp.md), and supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 9
 
@@ -818,7 +818,7 @@ Sets the alignment rule for child components within the relative container. This
 alignRules(alignRule: LocalizedAlignRuleOptions): T
 ```
 
-Sets the alignment rules in the relative container. This API is valid only when the container is RelativeContainer, This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
+Sets the alignment rules in the relative container. This API is valid only when the container is [RelativeContainer](arkts-arkui-relativecontainer-comp.md), This attribute replaces the original **left** and **right** directional parameters with **start** and **end** to support proper mirroring in right-to-left (RTL) layout modes. It is recommended that you use this attribute for configuring child component alignment rules in relative containers. This attribute supports dynamic configuration via [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -866,7 +866,7 @@ The alignment mode of the child component along the cross axis (the direction pe
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment format of the child component on the cross axis of the parent container, which overrides the alignItems setting in the Flex, Column, Row, DynamicLayout, and GridRow layout containers. Use it when a child component needs a different alignment from other child components in the parent container (typical scenarios: most child components in the parent container are center-aligned, but a specific child component needs top or bottom alignment; or a special alignment needs to be specified for a single child component).<br>GridCol can bind the alignSelf attribute to change its own layout in the cross axis direction.<br>Default value: ItemAlign.Auto (indicates inheriting the alignment setting of the parent container) |
+| value | [ItemAlign](../arkts-apis/arkts-arkui-itemalign-e.md) | Yes | Alignment format of the child component on the cross axis of the parent container, which overrides the alignItems setting in the [Flex](arkts-arkui-flex-comp.md), [Column](arkts-arkui-column-comp.md), [Row](arkts-arkui-row-comp.md), DynamicLayout, and GridRow layout containers. Use it when a child component needs a different alignment from other child components in the parent container (typical scenarios: most child components in the parent container are center-aligned, but a specific child component needs top or bottom alignment; or a special alignment needs to be specified for a single child component).<br>GridCol can bind the alignSelf attribute to change its own layout in the cross axis direction.<br>Default value: ItemAlign.Auto (indicates inheriting the alignment setting of the parent container) |
 
 **Return value:**
 
@@ -2596,7 +2596,7 @@ Sets the parameters of the chain in which the component is the head. This attrib
 chainWeight(chainWeight: ChainWeightOptions): T
 ```
 
-Sets the weight of the component in a chain, which is used to re-lay out components that form the chain. This attribute takes effect only when the parent container is RelativeContainer.
+Sets the weight of the component in a chain, which is used to re-lay out components that form the chain. This attribute takes effect only when the parent container is [RelativeContainer](arkts-arkui-relativecontainer-comp.md).
 
 **NOTE:** 
 
@@ -3205,7 +3205,7 @@ Sets the display priority of the current component in a Row/Column/Flex (single-
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Sets the display priority of the current component in the layout container. The value range is 0, +∞). <br>Default value: **1** <br>**NOTE:** <br> Takes effect only in [Row/Column/Flex (single-line) container components. <br>Used when the container space is limited and the display order of components needs to be controlled or low-priority components need to be hidden (for example, dynamically displaying content based on the available space in a Flex container). It is recommended to set the priority based on the importance of the component, with a larger value (such as 2-10) for key components and a smaller value (such as 1) for secondary components. <br>The digits after the decimal point do not affect the priority. All values not greater than 1 have the same priority. When the value is greater than 1, the larger the integer part of displayPriority, the higher the priority; values within the same integer range have the same priority. For example, **0.5** and **1.0** have the same priority (both are not greater than 1); **1.5** and **1.9** have the same priority (both have an integer part of 1); **2.0** and **2.9** have the same priority (both have an integer part of 2), and their priority is higher than that of 1.x. <br>If the parent container has insufficient space, child components with lower priority are hidden. If child components at a certain priority level are hidden, all child components with lower priority are also hidden. |
+| value | number | Yes | Sets the display priority of the current component in the layout container. The value range is [0, +∞). <br>Default value: **1** <br>**NOTE:** <br> Takes effect only in [Row](arkts-arkui-row-comp.md)/[Column](arkts-arkui-column-comp.md)/Flex (single-line) container components. <br>Used when the container space is limited and the display order of components needs to be controlled or low-priority components need to be hidden (for example, dynamically displaying content based on the available space in a Flex container). It is recommended to set the priority based on the importance of the component, with a larger value (such as 2-10) for key components and a smaller value (such as 1) for secondary components. <br>The digits after the decimal point do not affect the priority. All values not greater than 1 have the same priority. When the value is greater than 1, the larger the integer part of displayPriority, the higher the priority; values within the same integer range have the same priority. For example, **0.5** and **1.0** have the same priority (both are not greater than 1); **1.5** and **1.9** have the same priority (both have an integer part of 1); **2.0** and **2.9** have the same priority (both have an integer part of 2), and their priority is higher than that of 1.x. <br>If the parent container has insufficient space, child components with lower priority are hidden. If child components at a certain priority level are hidden, all child components with lower priority are also hidden. |
 
 **Return value:**
 
@@ -3593,7 +3593,7 @@ Sets the proportion of the component in the remaining space of the parent contai
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Sets the proportion of the remaining space in the parent container along the main axis (horizontal for row layout and vertical for column layout) allocated to the component where this attribute resides. The value 0 means the component does not participate in the allocation of remaining space and keeps its original size. When the value is greater than 0, the remaining space of the parent container is allocated proportionally; the larger the value, the more space is allocated.<br>Value range: 0, +∞)<br>Default value: 0<br>When the parent container is [Column or Row, you need to set the size along the main axis (width/height/size); otherwise, the remaining space allocation effect of flexGrow may be affected.<br>[constraintSize](#constraintsize) restricts the size range of the component. When the component size after flexGrow expansion exceeds the maximum limit of constraintSize, it is constrained by constraintSize.<br>When an invalid value is set, this attribute takes the default value. |
+| value | number | Yes | Sets the proportion of the remaining space in the parent container along the main axis (horizontal for row layout and vertical for column layout) allocated to the component where this attribute resides. The value 0 means the component does not participate in the allocation of remaining space and keeps its original size. When the value is greater than 0, the remaining space of the parent container is allocated proportionally; the larger the value, the more space is allocated.<br>Value range: [0, +∞)<br>Default value: 0<br>When the parent container is [Column](arkts-arkui-column-comp.md) or [Row](arkts-arkui-row-comp.md), you need to set the size along the main axis (width/height/size); otherwise, the remaining space allocation effect of flexGrow may be affected.<br>[constraintSize](#constraintsize) restricts the size range of the component. When the component size after flexGrow expansion exceeds the maximum limit of constraintSize, it is constrained by constraintSize.<br>When an invalid value is set, this attribute takes the default value. |
 
 **Return value:**
 
@@ -3632,7 +3632,7 @@ Sets the proportion of the shrink size allocated to the component where this att
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| value | number | Yes | Sets the proportion of the compressed size allocated to the component to which this attribute belongs when the parent container space is insufficient. The value 0 indicates that the component does not participate in compression; when the value is greater than 0, compression is performed proportionally, and a larger value indicates a larger compression amount.<br>When the parent container is Column or Row, default value: 0, value range: 0, +∞).<br>When the parent container is [Flex, default value: 1, value range: [0, +∞).<br>[constraintSize](#constraintsize) restricts the size range of the component. Even if [constraintSize](#constraintsize) is set for Column and Row, when the main axis size (width/height/size) is not set in the parent container, the default layout behavior is still followed, and the component size is adapted to the children on the main axis. In this case, flexShrink does not take effect.<br>When an exception value is set, this attribute uses the default value. |
+| value | number | Yes | Sets the proportion of the compressed size allocated to the component to which this attribute belongs when the parent container space is insufficient. The value 0 indicates that the component does not participate in compression; when the value is greater than 0, compression is performed proportionally, and a larger value indicates a larger compression amount.<br>When the parent container is [Column](arkts-arkui-column-comp.md) or [Row](arkts-arkui-row-comp.md), default value: 0, value range: [0, +∞).<br>When the parent container is [Flex](arkts-arkui-flex-comp.md), default value: 1, value range: [0, +∞).<br>[constraintSize](#constraintsize) restricts the size range of the component. Even if [constraintSize](#constraintsize) is set for [Column](arkts-arkui-column-comp.md) and [Row](arkts-arkui-row-comp.md), when the main axis size (width/height/size) is not set in the parent container, the default layout behavior is still followed, and the component size is adapted to the children on the main axis. In this case, flexShrink does not take effect.<br>When an exception value is set, this attribute uses the default value. |
 
 **Return value:**
 
@@ -4338,7 +4338,7 @@ Sets the height of the component itself. By default, the height required for the
 
 > **NOTE:** 
 > 
-> In the Row, Column, and RelativeContainer
+> In the [Row](arkts-arkui-row-comp.md), [Column](arkts-arkui-column-comp.md), and [RelativeContainer](arkts-arkui-relativecontainer-comp.md)
 > components, setting **width** and **height** to **auto** means that the size adapts to the size of their
 > child components.
 
@@ -7648,11 +7648,11 @@ Sets the absolute positioning, which determines the position of a child componen
 > **NOTE:** 
 > 
 > - The effect of **position** on the position takes effect after the component's size measurement is complete.
-> - When the parent component is Row, Column, or Flex, a child component with **position** set does not occupy space. In this scenario, if all child components contained in the parent component have **position** set, the parent component's size cannot be determined by other child components, and layout measurement is performed based on the size (0, 0).
+> - When the parent component is [Row](arkts-arkui-row-comp.md), [Column](arkts-arkui-column-comp.md), or [Flex](arkts-arkui-flex-comp.md), a child component with **position** set does not occupy space. In this scenario, if all child components contained in the parent component have **position** set, the parent component's size cannot be determined by other child components, and layout measurement is performed based on the size (0, 0).
 > - The Position type determines the position based on the upper left corner of the parent component's content area. The Edges type determines the position based on the four edges of the parent component's content area, where **top**, **left**, **right**, and **bottom** are the distances from each edge of the component to the corresponding edge of the parent component's content area, and the component's position relative to the parent component's content area is determined by these distances. The [LocalizedEdges](../arkts-apis/arkts-arkui-localizededges-i.md) type determines the position based on the four edges of the parent component's content area and supports mirroring mode.
 > - This attribute is applicable to scenarios where components such as top-displayed elements and floating buttons have fixed positions within the parent component.
 > - This attribute is not supported on layout components with zero width and height.
-> - When the parent component is RelativeContainer and the child component has the [alignRules](#alignrules) attribute set, the child component's **position** attribute does not take effect.
+> - When the parent component is [RelativeContainer](arkts-arkui-relativecontainer-comp.md) and the child component has the [alignRules](#alignrules) attribute set, the child component's **position** attribute does not take effect.
 > - If the parent component of the component where this attribute is located does not have a fixed width and height, this component performs absolute positioning with reference to the first ancestor component that has a fixed width and height.
 
 **Since:** 7
@@ -9377,7 +9377,7 @@ Sets the width of the component itself. By default, the width required for the c
 > - In the [AlphabetIndexer](./ts-container-alphabet-indexer.md) component, setting **width** to
 > **auto** means adapting to the width of the largest index item.
 > 
-> - In the Row, Column, and RelativeContainercomponents, setting width to auto means adapting to the child components.
+> - In the [Row](arkts-arkui-row-comp.md), [Column](arkts-arkui-column-comp.md), and [RelativeContainer](arkts-arkui-relativecontainer-comp.md)components, setting width to auto means adapting to the child components.
 
 **Since:** 7
 

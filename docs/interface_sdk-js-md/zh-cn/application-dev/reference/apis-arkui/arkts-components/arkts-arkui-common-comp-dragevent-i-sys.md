@@ -1,4 +1,4 @@
-# DragEvent
+# DragEvent（系统接口）
 
 ```TypeScript
 declare interface DragEvent

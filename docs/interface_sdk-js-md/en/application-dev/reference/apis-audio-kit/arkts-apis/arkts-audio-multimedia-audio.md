@@ -211,6 +211,7 @@ import { audio } from '@kit.AudioKit';
 | [NoiseReductionMode](arkts-audio-audio-noisereductionmode-e.md) | Enumerates the noise reduction modes. |
 | [OutputDeviceChangeRecommendedAction](arkts-audio-audio-outputdevicechangerecommendedaction-e.md) | Enumerates the recommended actions to take after an output device changes. |
 | [PlaybackCaptureStartState](arkts-audio-audio-playbackcapturestartstate-e.md) | Defines the playback capture start state, which is returned asynchronously after calling [requestPlaybackCaptureStart](arkts-audio-audio-audiocapturer-i.md#requestplaybackcapturestart) function. |
+| [SoundCardType](arkts-audio-audio-soundcardtype-e.md) | Enumerates sound card types. |
 | [SourceType](arkts-audio-audio-sourcetype-e.md) | Enumerates the types of audio streams captured. |
 | [StreamUsage](arkts-audio-audio-streamusage-e.md) | Enumerates the types of audio streams played. |
 | [ActiveDeviceType](arkts-audio-audio-activedevicetype-e.md) | Enumerates the active device types. |

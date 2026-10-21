@@ -1,4 +1,4 @@
-# BackgroundTaskMode
+# BackgroundTaskMode（系统接口）
 
 ```TypeScript
 export enum BackgroundTaskMode

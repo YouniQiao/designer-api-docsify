@@ -1671,3 +1671,48 @@ struct Index {
   }
 }
 ```
+
+### 示例30（设置位图图片边缘抗锯齿）
+
+该示例演示了如何通过设置[antialiased](arkts-arkui-image-comp-attribute.md#antialiased)接口开启位图图片边缘的抗锯齿功能。
+
+从API version 23开始，新增[antialiased](arkts-arkui-image-comp-attribute.md#antialiased)接口。
+
+```TypeScript
+@Entry
+@Component
+struct ImageExample {
+  // $r('app.media.icon')需要替换为开发者所需的图像资源文件。
+  @State imageResource: Resource = $r('app.media.icon');
+
+  build() {
+    Row() {
+      Blank()
+        .width(50)
+
+      Column() {
+        Blank()
+          .height(20)
+        Text('没有设置抗锯齿的有旋转角度的图片')
+        Blank()
+          .height(20)
+        Image(this.imageResource)
+          .width(50)
+          .height(50)
+          .rotate({angle: 1})
+
+        Blank()
+          .height(20)
+        Text('设置了抗锯齿的有旋转角度的图片')
+        Blank()
+          .height(20)
+        Image(this.imageResource)
+          .width(50)
+          .height(50)
+          .rotate({angle: 1})
+          .antialiased(true)
+      }
+    }
+  }
+}
+```

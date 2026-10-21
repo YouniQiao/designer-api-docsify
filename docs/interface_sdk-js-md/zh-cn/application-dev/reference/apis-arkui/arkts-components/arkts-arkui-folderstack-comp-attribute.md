@@ -4,7 +4,13 @@
 declare class FolderStackAttribute extends CommonMethod<FolderStackAttribute>
 ```
 
-In addition to the [universal events](arkts-arkui-common-comp-commonmethod-c.md), the following events are supported.
+支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)。
+
+支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
+
+> **说明：** 
+> 
+> 设置offset和margin属性，可能会导致上下半屏遮挡折痕区，不建议使用。
 
 **继承/实现关系：** FolderStackAttribute extends CommonMethod&lt;FolderStackAttribute&gt;
 

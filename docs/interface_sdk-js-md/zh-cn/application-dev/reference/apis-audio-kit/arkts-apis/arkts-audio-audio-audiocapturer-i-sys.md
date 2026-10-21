@@ -1,4 +1,4 @@
-# AudioCapturer
+# AudioCapturer（系统接口）
 
 ```TypeScript
 interface AudioCapturer

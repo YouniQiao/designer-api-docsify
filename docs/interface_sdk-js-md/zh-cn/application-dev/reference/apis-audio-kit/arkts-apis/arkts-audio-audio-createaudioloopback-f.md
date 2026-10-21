@@ -48,3 +48,17 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 | [6800104](../errorcode-audio.md#6800104-参数选项不支持) | Loopback mode is unsupported. |
 
 **示例**
+
+```TypeScript
+import { audio } from '@kit.AudioKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let audioLoopback: audio.AudioLoopback;
+
+audio.createAudioLoopback(audio.AudioLoopbackMode.HARDWARE).then((data) => {
+  audioLoopback = data;
+  console.info('AudioLoopback Created : SUCCESS');
+}).catch((err: BusinessError) => {
+  console.error(`AudioLoopback Created : ERROR : ${err}`);
+});
+```

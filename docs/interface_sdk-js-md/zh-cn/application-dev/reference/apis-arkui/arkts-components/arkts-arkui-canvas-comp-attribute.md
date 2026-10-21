@@ -4,7 +4,7 @@
 declare class CanvasAttribute extends CommonMethod<CanvasAttribute>
 ```
 
-除支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)外，还支持以下属性：
+支持[通用属性](arkts-arkui-common-comp-commonmethod-c.md)。
 
 设置组件支持AI分析，当前支持主体识别、文字识别和对象查找等功能，支持[attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier)动态设置属性方法。
 
@@ -12,7 +12,7 @@ declare class CanvasAttribute extends CommonMethod<CanvasAttribute>
 
 不能和[overlay](arkts-arkui-common-comp-commonmethod-c.md#overlay)属性同时使用，两者同时设置时overlay中CustomBuilder属性将失效。该特性依赖设备能力，可通过[ImageAnalyzerController.getImageAnalyzerSupportTypes](../arkts-apis/arkts-arkui-imageanalyzercontroller-c.md#getimageanalyzersupporttypes)接口查询设备支持的分析类型。
 
-除支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)外，还支持如下事件：
+支持[通用事件](arkts-arkui-common-comp-commonmethod-c.md)。
 
 **继承/实现关系：** CanvasAttribute extends CommonMethod&lt;CanvasAttribute&gt;
 

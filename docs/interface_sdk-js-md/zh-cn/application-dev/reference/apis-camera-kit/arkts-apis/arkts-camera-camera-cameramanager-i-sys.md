@@ -1,4 +1,4 @@
-# CameraManager
+# CameraManager（系统接口）
 
 ```TypeScript
 interface CameraManager

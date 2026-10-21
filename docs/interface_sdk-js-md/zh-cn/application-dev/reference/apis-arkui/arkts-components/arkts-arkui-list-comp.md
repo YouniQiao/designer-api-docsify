@@ -1370,3 +1370,77 @@ struct ListExample {
   }
 }
 ```
+
+### 示例18（设置滑动多选）
+
+该示例通过使用[enableEditMode](#enableeditmode)接口和[onEditModeChange](#oneditmodechange)事件，在List上实现了手指滑动多选的效果。
+
+从API版本26.0.0开始，List组件新增enableEditMode接口和onEditModeChange事件。
+
+ListDataSource说明及完整代码参考[示例1（添加滚动事件）](#示例1添加滚动事件)。
+
+```TypeScript
+// xxx.ets
+import { ListDataSource } from './ListDataSource';
+
+@Entry
+@Component
+struct ListExample {
+  private arr: ListDataSource = new ListDataSource([]);
+  @State @Watch('onEditModeChanged') enableEditMode: boolean = false;
+  @State selectedIndexes: number[] = [];
+
+  onEditModeChanged() {
+    console.info(`enableEditMode changed to: ${this.enableEditMode}`);
+    if (!this.enableEditMode) {
+      console.info('enableEditMode changed to false, clearing selectedIndexes');
+      this.selectedIndexes = [];
+    }
+  }
+
+  aboutToAppear() {
+    let list: number[] = [];
+    for (let i = 0; i < 10; i++) {
+        list.push(i);
+    }
+    this.arr = new ListDataSource(list);
+  }
+
+  build() {
+    Column({ space: 5 }) {
+      List({ space: 10 }) {
+        LazyForEach(this.arr, (item: number, index: number) => {
+          ListItem() {
+            Text(item.toString())
+              .fontSize(16)
+              .width('100%')
+              .height(50)
+              .textAlign(TextAlign.Center)
+          }
+          .backgroundColor(Color.White)
+          .selected(this.selectedIndexes.includes(index))
+          .onSelect((isSelected: boolean) => {
+            if (isSelected) {
+              this.selectedIndexes.push(index);
+            } else {
+              let deleted = this.selectedIndexes.findIndex((value) => value === index);
+              if (deleted !== -1) {
+                this.selectedIndexes.splice(deleted, 1);
+              }
+            }
+          })
+        }, (item: number) => item.toString())
+      }
+      .width('90%')
+      .height(300)
+      .scrollBar(BarState.Off)
+      .enableEditMode(this.enableEditMode!!)
+      .onEditModeChange((data: boolean) => {
+        // 在此处也可实现onEditModeChanged中的业务逻辑
+        console.info(`onEditModeChange:${data}`)
+      })
+      .editModeOptions({ useDefaultMultiSelectStyle: true, enableTwoFingerMultiSelect: true })
+    }.width('100%').padding({ top: 10 }).backgroundColor('#FFDCDCDC')
+  }
+}
+```

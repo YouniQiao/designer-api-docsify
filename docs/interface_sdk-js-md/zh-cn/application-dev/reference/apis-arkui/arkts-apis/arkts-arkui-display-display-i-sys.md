@@ -1,4 +1,4 @@
-# Display
+# Display（系统接口）
 
 ```TypeScript
 interface Display

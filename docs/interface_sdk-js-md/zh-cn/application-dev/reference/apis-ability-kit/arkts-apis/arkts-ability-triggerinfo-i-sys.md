@@ -1,4 +1,4 @@
-# TriggerInfo
+# TriggerInfo（系统接口）
 
 ```TypeScript
 export interface TriggerInfo

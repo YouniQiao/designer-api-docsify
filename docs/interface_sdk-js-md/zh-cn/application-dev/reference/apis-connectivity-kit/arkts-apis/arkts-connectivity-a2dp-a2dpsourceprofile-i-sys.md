@@ -1,4 +1,4 @@
-# A2dpSourceProfile
+# A2dpSourceProfile（系统接口）
 
 ```TypeScript
 interface A2dpSourceProfile extends BaseProfile

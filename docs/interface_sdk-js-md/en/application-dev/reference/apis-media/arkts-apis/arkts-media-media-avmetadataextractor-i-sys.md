@@ -1,4 +1,4 @@
-# AVMetadataExtractor
+# AVMetadataExtractor (System API)
 
 ```TypeScript
 interface AVMetadataExtractor

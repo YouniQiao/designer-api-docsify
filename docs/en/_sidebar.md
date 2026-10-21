@@ -9,7 +9,7 @@
 - [Arkui (2166)](interface_sdk-js-md/en/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-animation-windowanimationmanager.md)
 - [Arkweb (134)](interface_sdk-js-md/en/application-dev/reference/apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist.md)
 - [Asset Store Kit (52)](interface_sdk-js-md/en/application-dev/reference/apis-asset-store-kit/arkts-apis/arkts-assetstore-security-asset.md)
-- [Audio Kit (313)](interface_sdk-js-md/en/application-dev/reference/apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md)
+- [Audio Kit (314)](interface_sdk-js-md/en/application-dev/reference/apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md)
 - [Automatic (10)](interface_sdk-js-md/en/application-dev/reference/apis-automatic/arkts-apis/arkts-automatic-customization-assessment.md)
 - [Avcodec Kit (62)](interface_sdk_c-md/en/application-dev/reference/apis-avcodec-kit/c-apis/capi-core.md)
 - [Avsession Kit (233)](interface_sdk-js-md/en/application-dev/reference/apis-avsession-kit/arkts-apis/arkts-avsession-app-ability-mediacontrolextensionability.md)

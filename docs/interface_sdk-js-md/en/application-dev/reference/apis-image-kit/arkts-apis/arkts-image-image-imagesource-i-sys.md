@@ -1,4 +1,4 @@
-# ImageSource
+# ImageSource (System API)
 
 ```TypeScript
 interface ImageSource

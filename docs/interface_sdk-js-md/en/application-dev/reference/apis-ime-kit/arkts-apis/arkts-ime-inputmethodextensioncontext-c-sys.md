@@ -1,4 +1,4 @@
-# InputMethodExtensionContext
+# InputMethodExtensionContext (System API)
 
 ```TypeScript
 declare class InputMethodExtensionContext extends ExtensionContext

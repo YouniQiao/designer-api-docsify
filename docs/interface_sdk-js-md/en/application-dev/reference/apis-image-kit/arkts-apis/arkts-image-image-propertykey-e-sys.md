@@ -1,4 +1,4 @@
-# PropertyKey
+# PropertyKey (System API)
 
 ```TypeScript
 enum PropertyKey

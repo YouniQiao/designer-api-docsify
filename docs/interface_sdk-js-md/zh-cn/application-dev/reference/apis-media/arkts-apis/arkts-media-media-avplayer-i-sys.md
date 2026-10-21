@@ -1,4 +1,4 @@
-# AVPlayer
+# AVPlayer（系统接口）
 
 ```TypeScript
 interface AVPlayer
@@ -61,6 +61,14 @@ enableCameraPostprocessing(): Promise<void>
 
 <!--Del-->
 **示例**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // 此处仅为示意，实际开发中需要在stateChange事件成功触发至initialized状态后才能调用。
+  avPlayer.enableCameraPostprocessing();
+}
+```
 
 <!--DelEnd-->
 

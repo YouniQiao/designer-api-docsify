@@ -1,4 +1,4 @@
-# Display
+# Display (System API)
 
 ```TypeScript
 interface Display

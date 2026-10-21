@@ -1,4 +1,4 @@
-# AVPlayer
+# AVPlayer (System API)
 
 ```TypeScript
 interface AVPlayer
@@ -59,6 +59,14 @@ Enable the post-processing function of Camera for video playback.
 
 <!--Del-->
 **Examples**
+
+```TypeScript
+async function test(){
+  let avPlayer = await media.createAVPlayer();
+  // Here is only an example. In real development, you must wait for the stateChange event to successfully trigger and reach the initialized state before proceeding.
+  avPlayer.enableCameraPostprocessing();
+}
+```
 
 <!--DelEnd-->
 

@@ -77,6 +77,7 @@ Scroll(scroller?: Scroller)
 
 | 名称 | 说明 |
 | --- | --- |
+| [FastScrollMode](arkts-arkui-scroll-comp-fastscrollmode-e.md) | 枚举滚动到指定索引的快速滚动模式。 |
 | [ScrollAlign](arkts-arkui-scroll-comp-scrollalign-e.md) | 对齐方式枚举。 |
 | [ScrollDirection](arkts-arkui-scroll-comp-scrolldirection-e.md) | 滚动方向枚举。 |
 

@@ -1,4 +1,4 @@
-# InputMethodSetting
+# InputMethodSetting（系统接口）
 
 ```TypeScript
 interface InputMethodSetting

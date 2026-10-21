@@ -1,4 +1,4 @@
-# InputMethodSetting
+# InputMethodSetting (System API)
 
 ```TypeScript
 interface InputMethodSetting

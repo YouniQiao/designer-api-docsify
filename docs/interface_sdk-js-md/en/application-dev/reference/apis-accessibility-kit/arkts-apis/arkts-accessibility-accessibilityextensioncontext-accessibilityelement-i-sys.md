@@ -1,4 +1,4 @@
-# AccessibilityElement
+# AccessibilityElement (System API)
 
 ```TypeScript
 export declare interface AccessibilityElement

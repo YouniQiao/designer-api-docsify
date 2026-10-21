@@ -1,4 +1,4 @@
-# DeviceInfo
+# DeviceInfo (System API)
 
 ```TypeScript
 interface DeviceInfo

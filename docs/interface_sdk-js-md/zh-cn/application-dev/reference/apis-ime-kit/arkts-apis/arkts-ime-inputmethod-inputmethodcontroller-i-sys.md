@@ -1,4 +1,4 @@
-# InputMethodController
+# InputMethodController（系统接口）
 
 ```TypeScript
 interface InputMethodController

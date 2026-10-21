@@ -1,4 +1,4 @@
-# StartOptions
+# StartOptions (System API)
 
 ```TypeScript
 declare class StartOptions

@@ -1,4 +1,4 @@
-# Window
+# Window（系统接口）
 
 ```TypeScript
 interface Window

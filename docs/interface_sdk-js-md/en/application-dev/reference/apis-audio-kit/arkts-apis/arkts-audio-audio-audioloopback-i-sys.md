@@ -1,4 +1,4 @@
-# AudioLoopback
+# AudioLoopback (System API)
 
 ```TypeScript
 interface AudioLoopback

@@ -1,4 +1,4 @@
-# Scene
+# Scene (System API)
 
 ```TypeScript
 export declare class Scene

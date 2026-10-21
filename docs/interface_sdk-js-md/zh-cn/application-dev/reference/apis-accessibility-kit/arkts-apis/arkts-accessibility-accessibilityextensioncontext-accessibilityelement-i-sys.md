@@ -1,4 +1,4 @@
-# AccessibilityElement
+# AccessibilityElement（系统接口）
 
 ```TypeScript
 export declare interface AccessibilityElement

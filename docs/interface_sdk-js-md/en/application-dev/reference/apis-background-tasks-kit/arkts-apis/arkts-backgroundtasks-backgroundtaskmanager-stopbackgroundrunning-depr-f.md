@@ -121,3 +121,24 @@ backgroundTaskManager.stopBackgroundRunning(featureAbility.getContext()).then(()
   console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
 });
 ```
+
+stage model example:
+
+```TypeScript
+import UIAbility from '@ohos.app.ability.UIAbility';
+import backgroundTaskManager from '@ohos.backgroundTaskManager';
+import Want from '@ohos.app.ability.Want';
+import AbilityConstant from '@ohos.app.ability.AbilityConstant';
+import { BusinessError } from '@ohos.base';
+
+export default class EntryAbility extends UIAbility {
+  onCreate(want: Want, launchParam: AbilityConstant.LaunchParam) {
+    // Cancel a continuous task.
+    backgroundTaskManager.stopBackgroundRunning(this.context).then(() => {
+      console.info('Operation stopBackgroundRunning succeeded');
+    }).catch((err: BusinessError) => {
+      console.error(`Operation stopBackgroundRunning failed. code is ${err.code} message is ${err.message}`);
+    });
+  }
+};
+```

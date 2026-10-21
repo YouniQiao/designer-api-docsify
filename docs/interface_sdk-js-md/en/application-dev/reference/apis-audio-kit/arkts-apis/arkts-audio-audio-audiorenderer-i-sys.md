@@ -1,4 +1,4 @@
-# AudioRenderer
+# AudioRenderer (System API)
 
 ```TypeScript
 interface AudioRenderer

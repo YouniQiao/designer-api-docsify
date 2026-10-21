@@ -1,4 +1,4 @@
-# UIExtensionContext
+# UIExtensionContext (System API)
 
 ```TypeScript
 declare class UIExtensionContext extends ExtensionContext

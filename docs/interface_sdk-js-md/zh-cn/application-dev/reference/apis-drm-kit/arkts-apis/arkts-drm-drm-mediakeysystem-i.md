@@ -169,6 +169,13 @@ destroy(): void
 
 **示例**
 
+```TypeScript
+import { drm } from '@kit.DrmKit';
+
+let mediaKeySystem: drm.MediaKeySystem = drm.createMediaKeySystem('com.clearplay.drm');
+mediaKeySystem.destroy();
+```
+
 ## generateKeySystemRequest
 
 ```TypeScript

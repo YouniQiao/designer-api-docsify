@@ -1,4 +1,4 @@
-# RenderResourceFactory
+# RenderResourceFactory（系统接口）
 
 ```TypeScript
 export interface RenderResourceFactory

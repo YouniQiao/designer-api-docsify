@@ -1,4 +1,4 @@
-# CommonMethod
+# CommonMethod (System API)
 
 ```TypeScript
 declare class CommonMethod<T>

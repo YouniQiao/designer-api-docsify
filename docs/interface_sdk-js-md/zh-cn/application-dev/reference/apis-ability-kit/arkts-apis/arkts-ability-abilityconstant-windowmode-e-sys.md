@@ -1,4 +1,4 @@
-# WindowMode
+# WindowMode（系统接口）
 
 ```TypeScript
 export enum WindowMode

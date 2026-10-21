@@ -1,4 +1,4 @@
-# WindowMode
+# WindowMode (System API)
 
 ```TypeScript
 export enum WindowMode

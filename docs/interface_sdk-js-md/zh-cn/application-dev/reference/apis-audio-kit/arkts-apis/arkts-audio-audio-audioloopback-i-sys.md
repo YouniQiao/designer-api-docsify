@@ -1,4 +1,4 @@
-# AudioLoopback
+# AudioLoopback（系统接口）
 
 ```TypeScript
 interface AudioLoopback

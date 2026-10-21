@@ -4,7 +4,7 @@
 declare class RowSplitAttribute extends CommonMethod<RowSplitAttribute>
 ```
 
-In addition to the [universal attributes](arkts-arkui-common-comp-commonmethod-c.md), the following attributes are supported.
+The [universal attributes](arkts-arkui-common-comp-commonmethod-c.md) are supported.
 
 > **NOTE:** 
 > 

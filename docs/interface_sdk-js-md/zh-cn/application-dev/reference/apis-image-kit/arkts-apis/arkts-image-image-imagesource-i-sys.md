@@ -1,4 +1,4 @@
-# ImageSource
+# ImageSource（系统接口）
 
 ```TypeScript
 interface ImageSource

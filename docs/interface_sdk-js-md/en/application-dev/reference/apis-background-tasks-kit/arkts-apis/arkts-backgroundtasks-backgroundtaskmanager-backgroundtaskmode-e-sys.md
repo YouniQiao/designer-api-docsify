@@ -1,4 +1,4 @@
-# BackgroundTaskMode
+# BackgroundTaskMode (System API)
 
 ```TypeScript
 export enum BackgroundTaskMode

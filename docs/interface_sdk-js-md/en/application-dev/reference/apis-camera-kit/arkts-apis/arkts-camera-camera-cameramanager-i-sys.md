@@ -1,4 +1,4 @@
-# CameraManager
+# CameraManager (System API)
 
 ```TypeScript
 interface CameraManager

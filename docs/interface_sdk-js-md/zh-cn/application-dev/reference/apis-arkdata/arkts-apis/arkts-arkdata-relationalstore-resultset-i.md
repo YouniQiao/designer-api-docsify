@@ -45,6 +45,12 @@ close(): void
 
 **示例**
 
+```TypeScript
+if (resultSet != undefined) {
+  (resultSet as relationalStore.ResultSet).close();
+}
+```
+
 ## getAsset
 
 ```TypeScript

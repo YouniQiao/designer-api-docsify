@@ -1,4 +1,4 @@
-# ColorMetrics
+# ColorMetrics（系统接口）
 
 ```TypeScript
 declare class ColorMetrics

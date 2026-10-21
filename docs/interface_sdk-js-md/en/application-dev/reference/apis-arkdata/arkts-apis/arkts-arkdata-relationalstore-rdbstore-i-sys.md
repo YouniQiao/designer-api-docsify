@@ -1,4 +1,4 @@
-# RdbStore
+# RdbStore (System API)
 
 ```TypeScript
 interface RdbStore

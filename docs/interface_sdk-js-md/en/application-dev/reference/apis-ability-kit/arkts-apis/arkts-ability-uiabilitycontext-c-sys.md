@@ -1,4 +1,4 @@
-# UIAbilityContext
+# UIAbilityContext (System API)
 
 ```TypeScript
 declare class UIAbilityContext extends Context

@@ -36,8 +36,8 @@ import { formHost } from '@kit.FormKit';
 | [castToNormalForm](arkts-form-formhost-casttonormalform-f-sys.md#casttonormalform-2) | 将指定的临时卡片转换为普通卡片。使用Promise异步回调。 |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md#clearrouterproxy-1) | 清除卡片跳转代理。使用callback异步回调。 |
 | [clearRouterProxy](arkts-form-formhost-clearrouterproxy-f-sys.md#clearrouterproxy-2) | 清除卡片跳转代理。使用Promise异步回调。 |
-| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-1) | 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用callback异步回调。 |
-| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-2) | 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务不再保留有关该卡片的信息。使用Promise异步回调。 |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-1) | 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理服务不再保留有关该卡片的信息。使用callback异步回调。 |
+| [deleteForm](arkts-form-formhost-deleteform-f-sys.md#deleteform-2) | 删除指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理服务不再保留有关该卡片的信息。使用Promise异步回调。 |
 | [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-1) | 根据有效的卡片列表，删除应用程序不在有效列表中的卡片。使用callback异步回调。 |
 | [deleteInvalidForms](arkts-form-formhost-deleteinvalidforms-f-sys.md#deleteinvalidforms-2) | 根据列表删除应用程序的无效卡片。使用Promise异步回调。 |
 | [disableFormsUpdate](arkts-form-formhost-disableformsupdate-f-sys.md#disableformsupdate-1) | 向卡片框架发送通知以使指定的卡片不可以更新。该方法调用成功后，卡片刷新状态设置为去使能，卡片不可以接收来自卡片提供方的更新。使用callback异步回调。 |
@@ -87,9 +87,9 @@ import { formHost } from '@kit.FormKit';
 | [recoverForms](arkts-form-formhost-recoverforms-f-sys.md#recoverforms-2) | 恢复被回收的卡片，并将它的状态更新为不可回收。如果卡片未被回收，则只更新状态为不可回收。使用callback异步回调。 |
 | [recycleForms](arkts-form-formhost-recycleforms-f-sys.md#recycleforms-1) | 立即回收卡片内存。使用Promise异步回调。 |
 | [registerFormHostService](arkts-form-formhost-registerformhostservice-f-sys.md#registerformhostservice-1) | 注册卡片使用方服务信息。注册成功后，可用于跨设备卡片发布。使用Promise异步回调。 |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-1) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，但卡片管理器服务仍然保留有关该卡片的缓存信息和存储信息。使用callback异步回调。 |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-2) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用callback异步回调。 |
-| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-3) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理器服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用Promise异步回调。 |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-1) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，但卡片管理服务仍然保留有关该卡片的缓存信息和存储信息。使用callback异步回调。 |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-2) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用callback异步回调。 |
+| [releaseForm](arkts-form-formhost-releaseform-f-sys.md#releaseform-3) | 释放指定的卡片。调用此方法后，应用程序将无法使用该卡片，卡片管理服务保留有关该卡片的存储信息，可以选择是否保留缓存信息。使用Promise异步回调。 |
 | [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform-1) | 请求卡片更新。使用callback异步回调。 |
 | [requestForm](arkts-form-formhost-requestform-f-sys.md#requestform-2) | 请求卡片更新。使用Promise异步回调。 |
 | [requestFormWithParams](arkts-form-formhost-requestformwithparams-f-sys.md#requestformwithparams-1) | 携带参数请求卡片更新。使用Promise异步回调。 |

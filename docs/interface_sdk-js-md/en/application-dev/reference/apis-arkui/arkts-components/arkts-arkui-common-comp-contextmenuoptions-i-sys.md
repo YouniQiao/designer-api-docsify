@@ -1,4 +1,4 @@
-# ContextMenuOptions
+# ContextMenuOptions (System API)
 
 ```TypeScript
 declare interface ContextMenuOptions

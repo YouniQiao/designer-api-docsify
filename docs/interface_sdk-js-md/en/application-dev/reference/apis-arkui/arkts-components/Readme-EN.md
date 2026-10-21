@@ -1244,6 +1244,7 @@
   - [ScrollOnDidZoomCallback](arkts-arkui-scroll-comp-scrollondidzoomcallback-t.md)
   - [ScrollOnScrollCallback](arkts-arkui-scroll-comp-scrollonscrollcallback-t.md)
   - [ScrollOnWillScrollCallback](arkts-arkui-scroll-comp-scrollonwillscrollcallback-t.md)
+  - [FastScrollMode](arkts-arkui-scroll-comp-fastscrollmode-e.md)
   - [ScrollAlign](arkts-arkui-scroll-comp-scrollalign-e.md)
   - [ScrollDirection](arkts-arkui-scroll-comp-scrolldirection-e.md)
 - [ScrollBar](arkts-arkui-scrollbar-comp.md)

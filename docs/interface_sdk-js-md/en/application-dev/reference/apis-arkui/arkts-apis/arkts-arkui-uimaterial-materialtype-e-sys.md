@@ -1,4 +1,4 @@
-# MaterialType
+# MaterialType (System API)
 
 ```TypeScript
 enum MaterialType

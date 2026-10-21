@@ -1,4 +1,4 @@
-# UIAbilityContext
+# UIAbilityContext（系统接口）
 
 ```TypeScript
 declare class UIAbilityContext extends Context

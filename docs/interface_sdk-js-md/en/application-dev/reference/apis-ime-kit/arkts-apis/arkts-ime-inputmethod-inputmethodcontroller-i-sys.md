@@ -1,4 +1,4 @@
-# InputMethodController
+# InputMethodController (System API)
 
 ```TypeScript
 interface InputMethodController

@@ -1,4 +1,4 @@
-# RenderResourceFactory
+# RenderResourceFactory (System API)
 
 ```TypeScript
 export interface RenderResourceFactory
