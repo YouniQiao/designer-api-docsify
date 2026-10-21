@@ -494,7 +494,7 @@ If this method is used together with [selectionMenuOptions<sup>(deprecated)</sup
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Custom text menu options for the Web component. <br>The number of menu items, the content size, and the icon size are consistent with those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md) component. <br>Among the system-provided ID enum values ([TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)) in the menu, only CUT, COPY, PASTE, SELECT_ALL, TRANSLATE, SEARCH, and AI_WRITER are supported in the Web component. <br>In the onMenuItemClick function, the textRange parameter is meaningless in the Web component, and the value passed in is -1. |
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | Yes | Custom text menu options for the Web component. <br>The number of menu items, the content size, and the icon size are consistent with those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu) component. <br>Among the system-provided ID enum values ([TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)) in the menu, only CUT, COPY, PASTE, SELECT_ALL, TRANSLATE, SEARCH, and AI_WRITER are supported in the Web component. <br>In the onMenuItemClick function, the textRange parameter is meaningless in the Web component, and the value passed in is -1. |
 
 ## enableAutoFill
 
@@ -1547,7 +1547,7 @@ Sets nested scrolling options.
 > 
 > - You can set the up, down, left, and right directions, or set the forward and backward nested scrolling modes to implement scrolling linkage with the parent component.
 > 
-> - Containers that support nested scrolling: [Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-comp.md), [List](../../apis-arkui/arkts-components/arkts-arkui-list-comp.md), [Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-comp.md),[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-comp.md), [Tabs](../../apis-arkui/arkts-components/arkts-arkui-tabs-comp.md), [WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-waterflow-comp.md), [Refresh](../../apis-arkui/arkts-components/arkts-arkui-refresh-comp.md) and [bindSheet](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindsheet).
+> - Containers that support nested scrolling: Grid, List, Scroll,Swiper, [Tabs](../../apis-arkui/arkts-components/arkts-arkui-tabs-comp.md#tabs), WaterFlow, Refresh and [bindSheet](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindsheet).
 > 
 > - Input sources that support nested scrolling: gestures, mouse device, and touchpad.
 > 
@@ -4135,7 +4135,7 @@ The API only supports the selection of plain text; if the selected content conta
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | Yes | Extended options of the custom context menu on selection. <br>The number of menu options, menu content size, and start icon size must be the same as those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md) component. |
+| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | Yes | Extended options of the custom context menu on selection. <br>The number of menu options, menu content size, and start icon size must be the same as those of the ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu) component. |
 
 ## tableData
 

@@ -14,7 +14,11 @@ function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>
 
 Creates an <b>AudioLoopback</b> instance, which provides low-latency in-ear monitoring using a fast capturer and renderer.
 
-**Since:** 26.0.0
+**Since:** 20
+
+**Required permissions:** 
+- API version 25 and later: N/A
+- API versions 20 to 24: ohos.permission.MICROPHONE
 
 <!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>--><!--Device-audio-function createAudioLoopback(mode: AudioLoopbackMode): Promise<AudioLoopback>-End-->
 
@@ -36,6 +40,8 @@ Creates an <b>AudioLoopback</b> instance, which provides low-latency in-ear moni
 
 | Error Code ID | Error Message |
 | --- | --- |
+| [201](../../errorcode-universal.md#201-permission-denied) | Permission denied.<br>**Applicable version:** 20 - 24 |
+| [801](../../errorcode-universal.md#801-api-not-supported) | Unsupported API.<br>**Applicable version:** 20 - 24 |
 | [6800101](../errorcode-audio.md#6800101-invalid-parameter) | Parameter verification failed. |
 | [6800104](../errorcode-audio.md#6800104-unsupported-parameter-value) | Loopback mode is unsupported. |
 

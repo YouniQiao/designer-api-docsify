@@ -2367,7 +2367,7 @@ borderColor(value: ResourceColor | EdgeColors | LocalizedEdgeColors): T
 borderImage(value: BorderImageOption): T
 ```
 
-Sets the border image of the component.
+设置组件的边框图片。
 
 **起始版本：** 11
 
@@ -2383,7 +2383,7 @@ Sets the border image of the component.
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | 是 |  |
+| value | [BorderImageOption](arkts-arkui-common-comp-borderimageoption-i.md) | 是 | 边框图片或边框渐变。 |
 
 **返回值：**
 

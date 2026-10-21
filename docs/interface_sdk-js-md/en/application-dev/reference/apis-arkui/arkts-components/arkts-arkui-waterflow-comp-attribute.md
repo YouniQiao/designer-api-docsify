@@ -375,6 +375,14 @@ This event is triggered when either of the preceding indexes changes.
 > 
 > This API can be called in [attributeModifier](arkts-arkui-common-comp-commonmethod-c.md#attributemodifier) since API version 20.
 
+The **last** parameter can be used to determine whether to continue to load data. For details, see the processing logic of adding data in advance when the bottom is about to be touched in [Example 3](#example-3-using-waterflowsections). When the **WaterFlow** component is empty, the return values of the **onScrollIndex** event vary according to the **WaterFlowOptions** parameter. For details, see the following table.
+
+| layoutMode | sections | first | last |  
+| --- | --- | --- | --- |  
+| ALWAYS_TOP_DOWN | None| 0 | 0 |  
+| ALWAYS_TOP_DOWN | Available| 0 | -1 |  
+| SLIDING_WINDOW | Optional| 1000000 | -1 |
+
 **Since:** 11
 
 **Model restriction:** This API can be used only in the stage model.

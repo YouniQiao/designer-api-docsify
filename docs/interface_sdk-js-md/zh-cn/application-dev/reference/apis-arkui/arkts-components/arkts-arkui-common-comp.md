@@ -105,7 +105,7 @@ Common()
 | [ContextMenuOptions](arkts-arkui-common-comp-contextmenuoptions-i.md) | 菜单项的信息。 |
 | [CrownEvent](arkts-arkui-common-comp-crownevent-i.md) | 组件接收表冠事件的数据结构。内容包括时间戳、旋转角速度、旋转角度、表冠动作和阻止事件冒泡。 |
 | [CustomPopupOptions](arkts-arkui-common-comp-custompopupoptions-i.md) | 弹出自定义气泡的信息。 |
-| [DateRange](arkts-arkui-common-comp-daterange-i.md) | Defines a range of dates. |
+| [DateRange](arkts-arkui-common-comp-daterange-i.md) | 日期区间，用于描述起止日期区间。 |
 | [DismissContentCoverAction](arkts-arkui-common-comp-dismisscontentcoveraction-i.md) |  |
 | [DismissPopupAction](arkts-arkui-common-comp-dismisspopupaction-i.md) | 气泡关闭的信息。 |
 | [DismissSheetAction](arkts-arkui-common-comp-dismisssheetaction-i.md) | 半模态关闭前的回调。 |
@@ -165,7 +165,7 @@ Common()
 | [NestedScrollOptions](arkts-arkui-common-comp-nestedscrolloptions-i.md) | nestedScroll属性参数对象。 |
 | [OverlayOffset](arkts-arkui-common-comp-overlayoffset-i.md) | 设置浮层基于自身左上角的偏移量。浮层默认处于组件左上角。 |
 | [OverlayOptions](arkts-arkui-common-comp-overlayoptions-i.md) | 浮层的定位。 |
-| [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | Provide an interface for the button style of picker |
+| [PickerDialogButtonStyle](arkts-arkui-common-comp-pickerdialogbuttonstyle-i.md) | 提供选择器按钮样式的接口。 |
 | [PickerTextStyle](arkts-arkui-common-comp-pickertextstyle-i.md) | Provide an interface for the text style of picker |
 | [PixelRoundPolicy](arkts-arkui-common-comp-pixelroundpolicy-i.md) | 指定组件级像素取整的方向。 |
 | [PixelStretchEffectOptions](arkts-arkui-common-comp-pixelstretcheffectoptions-i.md) | 像素扩展属性集合，用于描述像素扩展的信息。 |

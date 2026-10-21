@@ -8,7 +8,7 @@ The **telephonyManager** module provides the telephony management capability.
 > [MDM Kit Development](../../../mdm/mdm-kit-guide.md).
 > 
 > The global restriction policy is provided by **restrictions**. To disable telephony globally, see
-> [@ohos.enterprise.restrictions (Restrictions)](arkts-mdm-enterprise-restrictions.md).
+> [@ohos.enterprise.restrictions (restrictions)](arkts-mdm-enterprise-restrictions.md).
 
 **Since:** 20
 

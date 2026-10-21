@@ -138,6 +138,7 @@ import { audio } from '@kit.AudioKit';
 | [TonePlayer](arkts-audio-audio-toneplayer-i-sys.md) | 提供播放和管理DTMF（Dual Tone Multi Frequency，双音多频）音调的方法，包括各种系统监听音调、专有音调，如拨号音、通话回铃音等。在调用TonePlayer的接口前，需要先通过[createTonePlayer](arkts-audio-audio-createtoneplayer-f-sys.md#createtoneplayer-1)创建实例。 |
 | [VolumeEvent](arkts-audio-audio-volumeevent-i-sys.md) | 音量改变时，应用接收的事件。 |
 | [VolumeGroupInfo](arkts-audio-audio-volumegroupinfo-i-sys.md) | 音量组信息。 |
+| [VolumeLimitExceededEvent](arkts-audio-audio-volumelimitexceededevent-i-sys.md) | 描述音量超过阈值时的通知事件。收到通知后，应用在继续调整音量前必须通过[confirmVolumeLimitExceeded](arkts-audio-audio-audiovolumemanager-i-sys.md#confirmvolumelimitexceeded) 发送确认结果。 |
 <!--DelEnd-->
 
 ### 类型

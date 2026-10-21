@@ -86,7 +86,7 @@ clipContent(clip: ContentClipMode | RectShape): T
 
 设置滚动容器的内容层裁剪区域。
 
-从API版本26.0.0开始，内容层裁剪区域内的子组件支持正常显示。API版本26.0.0以前的版本，当List、Grid和WaterFlow组件的内容层裁剪区域大于组件自身时，完全在组件区域外但在裁剪区域内的子组件默认不会显示。若需要显示，可将组件的cachedCount属性的show参数设置为true。但由于cachedCount属性设置的预加载子组件仅在空闲时隙执行，在组件大小变化、数据更新等场景下可能存在更新不及时导致闪烁的问题。
+从API版本26.0.0开始，内容层裁剪区域内的子组件支持正常显示。API版本26.0.0以前的版本，当List组件的内容层裁剪区域大于组件自身时，完全在组件区域外但在裁剪区域内的子组件默认不会显示。若需要显示，可将组件的cachedCount属性的show参数设置为true。但由于cachedCount属性设置的预加载子组件仅在空闲时隙执行，在组件大小变化、数据更新等场景下可能存在更新不及时导致闪烁的问题。
 
 **起始版本：** 14
 
@@ -1040,7 +1040,7 @@ scrollBarWidth(value: number | string): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; string | 是 | 滚动条的宽度。 |
+| value | number &#124; string | 是 | 滚动条的宽度。<br>默认值：4<br>单位：vp <br>取值范围：设置为小于0的值时，按默认值4vp处理。设置为0时，不显示滚动条。 |
 
 **返回值：**
 
@@ -1072,7 +1072,7 @@ scrollBarWidth(value: number | string | Resource): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的宽度。 |
+| value | number &#124; string &#124; [Resource](../arkts-apis/arkts-arkui-resource-t.md) | 是 | 滚动条的宽度。<br>默认值：4<br>单位：vp <br>取值范围：设置为小于0的值时，按默认值4vp处理。设置为0时，不显示滚动条。 |
 
 **返回值：**
 

@@ -4,6 +4,8 @@
 declare namespace abilityAccessCtrl
 ```
 
+Provides permission verification and management capabilities for apps, supporting permission status checks before accessing protected resources, runtime authorization requests, settings page authorization guidance, and permission status change monitoring.
+
 **Since:** 8
 
 **Model restriction:** This API can be used in both the stage model and FA model.

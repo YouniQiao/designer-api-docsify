@@ -3407,6 +3407,30 @@ struct Index {
 }
 ```
 
+## isTransPageEnabled
+
+```TypeScript
+isTransPageEnabled(): boolean
+```
+
+Checks whether the transPages configuration is currently enabled.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-UIContext-isTransPageEnabled(): boolean--><!--Device-UIContext-isTransPageEnabled(): boolean-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Returns true if transPages behavior is enabled; returns false otherwise. |
+
 ## isWindowInfoInitialized
 
 ```TypeScript
@@ -4730,6 +4754,30 @@ struct Index {
   }
 }
 ```
+
+## setTransPageEnabled
+
+```TypeScript
+setTransPageEnabled(enabled: boolean): void
+```
+
+Enables or disables the transPages configuration of the easy split (parallel view). When disabled, transition pages configured in transPages will participate in the right-push-left behavior instead of being fixed on the right side. This interface only takes effect in displace mode (shopping mode). The change takes effect on the next route transition, not on the current page. Default value is true (consistent with static configuration behavior).
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-UIContext-setTransPageEnabled(enabled: boolean): void--><!--Device-UIContext-setTransPageEnabled(enabled: boolean): void-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enabled | boolean | Yes | true to enable transPages behavior (default), false to disable. |
 
 ## showActionSheet
 
