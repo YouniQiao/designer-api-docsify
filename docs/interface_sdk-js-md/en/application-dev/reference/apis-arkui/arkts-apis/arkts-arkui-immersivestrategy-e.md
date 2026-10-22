@@ -54,6 +54,24 @@ Avoid the three-button navigation bar area on the phone.
 
 **System capability:** SystemCapability.ArkUI.ArkUI.Full
 
+## AVOID_WINDOW_CONTROLS
+
+```TypeScript
+AVOID_WINDOW_CONTROLS = 6
+```
+
+Avoid the window control buttons, which are the close, minimize and zoom buttons.
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+
+<!--Device-ImmersiveStrategy-AVOID_WINDOW_CONTROLS = 6--><!--Device-ImmersiveStrategy-AVOID_WINDOW_CONTROLS = 6-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
 ## BIND_SHEET_EXPAND_SAFE_AREA
 
 ```TypeScript

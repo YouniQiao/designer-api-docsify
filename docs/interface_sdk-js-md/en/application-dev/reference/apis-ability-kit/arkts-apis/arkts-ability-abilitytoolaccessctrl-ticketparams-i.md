@@ -1,14 +1,14 @@
-# TicketOpions
+# TicketParams
 
 ```TypeScript
-interface TicketOpions
+interface TicketParams
 ```
 
-Optional parameters for the ticket.
+Parameters for the ticket.
 
 **Since:** 26.2.0
 
-<!--Device-abilityToolAccessCtrl-interface TicketOpions--><!--Device-abilityToolAccessCtrl-interface TicketOpions-End-->
+<!--Device-abilityToolAccessCtrl-interface TicketParams--><!--Device-abilityToolAccessCtrl-interface TicketParams-End-->
 
 **System capability:** SystemCapability.Security.Asset
 
@@ -32,6 +32,6 @@ Ticket expiration time in milliseconds. Unit: milliseconds.
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
-<!--Device-TicketOpions-ticketExpireTimeMs?: long--><!--Device-TicketOpions-ticketExpireTimeMs?: long-End-->
+<!--Device-TicketParams-ticketExpireTimeMs?: long--><!--Device-TicketParams-ticketExpireTimeMs?: long-End-->
 
 **System capability:** SystemCapability.Security.Asset

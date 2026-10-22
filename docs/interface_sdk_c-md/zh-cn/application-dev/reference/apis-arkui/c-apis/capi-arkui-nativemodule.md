@@ -27,7 +27,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [native_dialog.h](capi-native-dialog-h.md) | 提供ArkUI在Native侧的自定义弹窗接口定义集合。 |
 | [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
 | [common_type.h](capi-common-type-h.md) | 定义ArkUI Native API的公共类型。 |
-| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | 提供NativeDrawableDescriptor接口的类型定义。 |
+| [drawable_descriptor.h](capi-drawable-descriptor-h.md) | 提供DrawableDescriptor接口的类型定义。 |
 | [ui_json_wrapper.h](capi-ui-json-wrapper-h.md) | 声明UI感知与控制等接口共用的JSON数据对象。<br> 错误通过文档中规定的返回值报告。这些接口不使用errno传递错误； 调用后的errno值未定义，不得用它判断调用是否成功。<br> 在满足对象生命周期要求的前提下，这些函数可在任意线程（包括UI线程）调用。 对同一个有效对象的只读查询可并发执行，调用方必须保证销毁操作不与对象及其借用数据的任何使用并发。 对独立对象的操作可并发执行。这些函数不触发应用回调；满足所有权和生命周期要求时，可在回调中调用。 这些函数不具备异步信号安全性，不得在信号处理函数中调用。 查询同步读取本地内存，创建和销毁还会分配或释放内存，不提供异步完成或取消操作，也不保证内存分配器的最大耗时。 |
 | [native_node_napi.h](capi-native-node-napi-h.md) | 提供ArkTS侧的FrameNode转换NodeHandle的方式。 |
 | [ui_info_collection.h](capi-ui-info-collection-h.md) | 声明供应用内智能体和UI自动化使用的接口，用于监听UI交互事件并获取命中的节点。<br> 返回状态码的函数通过ArkUI_ErrorCode报告错误，异步执行结果通过相应的完成回调报告。 这些接口不使用errno传递错误；调用后的errno值未定义，不得用它判断调用是否成功。 |
@@ -53,7 +53,7 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [checkbox.h](capi-checkbox-h.md) | Provides Checkbox node type definitions for <b>NativeNode</b> APIs. |
 | [list.h](capi-list-h.md) | 定义List组件相关的枚举和接口。 |
 | [text.h](capi-text-h.md) | 定义Text相关的枚举和接口，用于配置文本样式、控制跑马灯效果、实现文本实体识别以及管理文本控制器等功能。适用于需要自定义文本显示效果、实现动态文本交互、识别文本中特殊实体（如地址、电话号码） 以及精确控制文本字体粗细等场景。通过这些配置接口，开发者可以灵活控制文本组件的显示效果和交互行为，提升用户体验。 |
-| [image.h](capi-image-h.md) | 为NativeNode API提供Image节点类型定义。 |
+| [image.h](capi-image-h.md) | 为NativeNode API提供Image节点类型定义，用于在Native应用中创建和配置Image组件， 支持图片重复铺设、宽高样式、填充效果、插值优化、动态范围、旋转方向和渲染模式等多种属性配置。 |
 | [embedded_component.h](capi-embedded-component-h.md) | 声明EmbeddedComponent组件选项（ArkUI_EmbeddedComponentOption）相关的结构体和方法。 开发者可通过这些方法创建、销毁组件选项对象，并为EmbeddedComponent组件设置运行异常回调（onError）和正常退出回调（onTerminated）。 适用于需要在应用中嵌入EmbeddedUIExtensionAbility组件并管理其生命周期、监听运行异常与正常退出事件的应用场景，帮助开发者灵活处理组件运行过程中的状态变化。 |
 | [picker.h](capi-picker-h.md) | 为NativeNode API提供Picker节点类型定义，支持日期选择器、文本选择器等多种类型的选择器组件， 适用于需要在原生层实现滚动选择功能的场景， 提供了丰富的样式配置和数据联动能力，帮助开发者灵活构建各类选择交互。 |
 | [button.h](capi-button-h.md) | Provides Button node type definitions for <b>NativeNode</b> APIs. |

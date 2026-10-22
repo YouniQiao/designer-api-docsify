@@ -131,7 +131,7 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 ### 示例1（更新文本样式）
 
-通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口更新已有文本样式，更改样式后，使用[getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans)获取文本新的样式信息。
+通过[updateSpanStyle](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#updatespanstyle)接口更新已有文本样式，更改样式后，使用[getSpans](#getspans)获取文本新的样式信息。
 
 
 
@@ -1990,7 +1990,7 @@ struct Index {
 
 ### 示例10（使用和管理组件内的BuilderSpan）
 
-通过[addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan)接口添加的自定义布局Span，[getSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getspans)、[onWillChange](#onwillchange12)等API不会返回BuilderSpan内部的信息。开发者需要自行维护BuilderSpan的状态，并且在组件内容发生变化时同步更新。
+通过[addBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addbuilderspan)接口添加的自定义布局Span，[getSpans](#getspans)、[onWillChange](#onwillchange12)等API不会返回BuilderSpan内部的信息。开发者需要自行维护BuilderSpan的状态，并且在组件内容发生变化时同步更新。
 
 
 

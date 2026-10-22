@@ -1132,6 +1132,7 @@
 - [Repeat](arkts-arkui-repeat-comp.md)
   - [Repeat properties/events](arkts-arkui-repeat-comp-attribute.md)
   - [RepeatItem](arkts-arkui-repeat-comp-repeatitem-i.md)
+  - [RepeatOptions](arkts-arkui-repeat-comp-repeatoptions-i.md)
   - [TemplateOptions](arkts-arkui-repeat-comp-templateoptions-i.md)
   - [VirtualScrollOptions](arkts-arkui-repeat-comp-virtualscrolloptions-i.md)
   - [RepeatArray](arkts-arkui-repeat-comp-repeatarray-t.md)

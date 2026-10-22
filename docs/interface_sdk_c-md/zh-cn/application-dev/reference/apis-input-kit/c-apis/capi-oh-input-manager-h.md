@@ -3388,7 +3388,7 @@ Input_Result OH_Input_AddKeyEventMonitor(Input_KeyEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **起始版本：** 12
 
@@ -3416,7 +3416,7 @@ Input_Result OH_Input_AddMouseEventMonitor(Input_MouseEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **起始版本：** 12
 
@@ -3444,7 +3444,7 @@ Input_Result OH_Input_AddTouchEventMonitor(Input_TouchEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **起始版本：** 12
 
@@ -3472,7 +3472,7 @@ Input_Result OH_Input_AddAxisEventMonitorForAll(Input_AxisEventCallback callback
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **起始版本：** 12
 
@@ -3500,7 +3500,7 @@ Input_Result OH_Input_AddAxisEventMonitor(InputEvent_AxisEventType axisEventType
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **起始版本：** 12
 
@@ -3529,7 +3529,7 @@ Input_Result OH_Input_RemoveKeyEventMonitor(Input_KeyEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **起始版本：** 12
 
@@ -3557,7 +3557,7 @@ Input_Result OH_Input_RemoveMouseEventMonitor(Input_MouseEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **起始版本：** 12
 
@@ -3585,7 +3585,7 @@ Input_Result OH_Input_RemoveTouchEventMonitor(Input_TouchEventCallback callback)
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **起始版本：** 12
 
@@ -3613,7 +3613,7 @@ Input_Result OH_Input_RemoveAxisEventMonitorForAll(Input_AxisEventCallback callb
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **起始版本：** 12
 
@@ -3641,7 +3641,7 @@ Input_Result OH_Input_RemoveAxisEventMonitor(InputEvent_AxisEventType axisEventT
 
 **系统能力：** SystemCapability.MultimodalInput.Input.Core
 
-**需要权限：** ohos.permission.INPUT_MONITORING
+**需要权限：** ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **起始版本：** 12
 

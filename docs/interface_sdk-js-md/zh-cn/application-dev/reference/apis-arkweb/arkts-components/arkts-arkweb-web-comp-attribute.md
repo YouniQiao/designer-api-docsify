@@ -527,7 +527,7 @@ enableAutoFill(value: boolean)
 enableBlankScreenMonitor(enable: boolean)
 ```
 
-设置是否开启白屏监控。开启白屏监控后，监测到白屏时会触发onMonitoredBlankScreen回调。
+设置是否开启白屏监控。开启白屏监控后，监测到白屏时会触发回调onMonitoredBlankScreen。
 
 **起始版本：** 26.0.1
 
@@ -2471,7 +2471,11 @@ onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback)
 ```
 
-注册白屏监控归因回调。Web组件监测到白屏并完成根因归因时，触发该回调。
+Web组件监测到白屏并完成根因归因时触发此回调。
+
+> **说明：** 
+> 
+> - 需配合enableBlankScreenMonitor使用。未开启白屏监控时，不会触发本回调。
 
 **起始版本：** 26.0.1
 
@@ -2485,7 +2489,7 @@ onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| callback | [OnMonitorBlankScreenCallback](arkts-arkweb-web-comp-onmonitorblankscreencallback-t.md) | 是 | 白屏监控归因回调。 |
+| callback | [OnMonitorBlankScreenCallback](arkts-arkweb-web-comp-onmonitorblankscreencallback-t.md) | 是 | 监测到白屏并完成根因归因时触发。事件对象包含页面URL、白屏根因、归因详情等诊断信息。 |
 
 ## onNativeEmbedGestureEvent
 

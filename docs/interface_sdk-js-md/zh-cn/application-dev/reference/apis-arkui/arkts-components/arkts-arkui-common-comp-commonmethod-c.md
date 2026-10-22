@@ -2039,7 +2039,7 @@ Menu control
 bindPopup(show: boolean, popup: PopupOptions | CustomPopupOptions): T
 ```
 
-Popup control <p><strong>NOTE</strong>: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
+Popup控制。<p><strong>NOTE</strong>: <br>The popup can be displayed only after the entire page is fully constructed. Therefore, to avoid incorrect display positions and shapes, do not set this parameter to true while the page is still being constructed. </p>
 
 **起始版本：** 11
 
@@ -2104,7 +2104,7 @@ bindSheet(isShow: boolean, builder: CustomBuilder, options?: SheetOptions): T
 bindTips(message: TipsMessageType, options?: TipsOptions): T
 ```
 
-Tips control
+Tips控制。
 
 **起始版本：** 19
 

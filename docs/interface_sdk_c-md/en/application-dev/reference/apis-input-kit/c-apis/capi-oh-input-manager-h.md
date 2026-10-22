@@ -3388,7 +3388,7 @@ Adds a listener for key events. Only the initial addition takes effect. Subseque
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **Since**: 12
 
@@ -3416,7 +3416,7 @@ Adds a listener for mouse events, including mouse click and movement events, but
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **Since**: 12
 
@@ -3444,7 +3444,7 @@ Adds a listener for touch input events.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **Since**: 12
 
@@ -3472,7 +3472,7 @@ Adds a listener for all types of axis events, which are defined in [InputEvent_A
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **Since**: 12
 
@@ -3500,7 +3500,7 @@ Adds a listener for the specified type of axis events, which are defined in [Inp
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING or ohos.permission.INPUT_RECORDING [since 26.2.0]
 
 **Since**: 12
 
@@ -3529,7 +3529,7 @@ Removes the listener for key events.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **Since**: 12
 
@@ -3557,7 +3557,7 @@ Removes the listener for mouse events.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **Since**: 12
 
@@ -3585,7 +3585,7 @@ Removes the listener for touch events.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **Since**: 12
 
@@ -3613,7 +3613,7 @@ Removes the listener for all types of axis events.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **Since**: 12
 
@@ -3641,7 +3641,7 @@ Removes the listener for the specified type of axis events, which are defined in
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 
-**Required permission**: ohos.permission.INPUT_MONITORING
+**Required permission**: ohos.permission.INPUT_MONITORING [since 12 - 26.0.1]
 
 **Since**: 12
 

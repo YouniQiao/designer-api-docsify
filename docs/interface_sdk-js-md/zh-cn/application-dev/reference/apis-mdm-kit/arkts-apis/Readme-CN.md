@@ -65,8 +65,6 @@
   <!--Del-->
   - [EnterpriseInfo（系统接口）](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md)<!--DelEnd-->
   - [AdminType](arkts-mdm-adminmanager-admintype-e.md)
-  <!--Del-->
-  - [AdminType（系统接口）](arkts-mdm-adminmanager-admintype-e-sys.md)<!--DelEnd-->
   - [ManagedEvent](arkts-mdm-adminmanager-managedevent-e.md)
   - [Policy](arkts-mdm-adminmanager-policy-e.md)
   <!--Del-->
@@ -99,6 +97,7 @@
   - [isAppKioskAllowed](arkts-mdm-applicationmanager-isappkioskallowed-f.md)
   - [isModifyAutoStartAppsDisallowed](arkts-mdm-applicationmanager-ismodifyautostartappsdisallowed-f.md)
   - [isModifyKeepAliveAppsDisallowed](arkts-mdm-applicationmanager-ismodifykeepaliveappsdisallowed-f.md)
+  - [publishFormToDesktop](arkts-mdm-applicationmanager-publishformtodesktop-f.md)
   - [queryBundleStatsInfos](arkts-mdm-applicationmanager-querybundlestatsinfos-f.md)
   - [queryTrafficStats](arkts-mdm-applicationmanager-querytrafficstats-f.md)
   - [releaseExemptionResource](arkts-mdm-applicationmanager-releaseexemptionresource-f.md)
@@ -124,6 +123,7 @@
   - [removeDisallowedRunningBundles（系统接口）](arkts-mdm-applicationmanager-removedisallowedrunningbundles-f-sys.md)<!--DelEnd-->
   - [BundleStatsInfo](arkts-mdm-applicationmanager-bundlestatsinfo-i.md)
   - [DockInfo](arkts-mdm-applicationmanager-dockinfo-i.md)
+  - [FormInfo](arkts-mdm-applicationmanager-forminfo-i.md)
   - [WindowStateInfo](arkts-mdm-applicationmanager-windowstateinfo-i.md)
   - [KioskFeature](arkts-mdm-applicationmanager-kioskfeature-e.md)
   - [ServiceType](arkts-mdm-applicationmanager-servicetype-e.md)
@@ -443,6 +443,7 @@
   - [getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md)
   - [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md)
   - [getUpdateResult](arkts-mdm-systemmanager-getupdateresult-f.md)
+  - [getVolumeDegree](arkts-mdm-systemmanager-getvolumedegree-f.md)
   - [isActivationLockDisabled](arkts-mdm-systemmanager-isactivationlockdisabled-f.md)
   - [isOtaUpdateNonceEnable](arkts-mdm-systemmanager-isotaupdatenonceenable-f.md)
   - [notifyUpdatePackages](arkts-mdm-systemmanager-notifyupdatepackages-f.md)
@@ -457,6 +458,7 @@
   - [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md)
   - [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md)
   - [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md)
+  - [setVolumeDegree](arkts-mdm-systemmanager-setvolumedegree-f.md)
   - [startCollectLog](arkts-mdm-systemmanager-startcollectlog-f.md)
   - [startExactTimer](arkts-mdm-systemmanager-startexacttimer-f.md)
   - [stopExactTimer](arkts-mdm-systemmanager-stopexacttimer-f.md)
@@ -472,6 +474,7 @@
   - [SystemUpdateInfo](arkts-mdm-systemmanager-systemupdateinfo-i.md)
   - [UpdatePackageInfo](arkts-mdm-systemmanager-updatepackageinfo-i.md)
   - [UpdateResult](arkts-mdm-systemmanager-updateresult-i.md)
+  - [AudioVolumeType](arkts-mdm-systemmanager-audiovolumetype-e.md)
   - [KeyAction](arkts-mdm-systemmanager-keyaction-e.md)
   - [KeyCode](arkts-mdm-systemmanager-keycode-e.md)
   - [KeyPolicy](arkts-mdm-systemmanager-keypolicy-e.md)

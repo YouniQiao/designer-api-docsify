@@ -2483,6 +2483,10 @@ onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback)
 
 Registers a callback for blank screen monitoring attribution. The callback is triggered when the Web component monitors a blank screen and completes root cause attribution.
 
+> **NOTE:** 
+> 
+> - This method must be used with [enableBlankScreenMonitor](#enableblankscreenmonitor).Otherwise, the blank screen monitor is disabled by default, and this callback is not triggered.
+
 **Since:** 26.0.1
 
 **Model restriction:** This API can be used only in the stage model.

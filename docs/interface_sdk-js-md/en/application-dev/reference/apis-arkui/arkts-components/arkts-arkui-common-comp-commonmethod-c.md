@@ -1774,6 +1774,12 @@ bindContextMenu(content: CustomBuilder, responseType: ResponseType, options?: Co
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported.
 
+> **NOTE:** 
+> 
+> - **bindContextMenu** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
+> - Long pressing with a mouse device is not supported when **responseType** is **ResponseType.RightClick**.
+
 **Since:** 8
 
 **Atomic service API:** This API can be used in atomic services since API version 11.
@@ -1803,6 +1809,11 @@ bindContextMenu(isShown: boolean, content: CustomBuilder, options?: ContextMenuO
 ```
 
 Binds a context menu to the component, whose visibility is subject to the isShown settings.
+
+> **NOTE:** 
+> 
+> - **bindContextMenu** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 12
 
@@ -1835,6 +1846,11 @@ bindContextMenuByIsShow(isShow: boolean, content: CustomBuilder | Array<MenuElem
 ```
 
 Binds a context menu to the component, whose visibility is subject to the isShow settings.
+
+> **NOTE:** 
+> 
+> - **bindContextMenuByIsShow** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 26.0.0
 
@@ -1869,6 +1885,12 @@ bindContextMenuByResponseType(content: CustomBuilder | Array<MenuElement>, respo
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported.
 
+> **NOTE:** 
+> 
+> - **bindContextMenuByResponseType** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
+> - Long pressing with a mouse device is not supported when **responseType** is **ResponseType.RightClick**.
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1900,6 +1922,11 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | undefined, o
 ```
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Only custom menu items are supported. Long pressing with a mouse device is not supported.
+
+> **NOTE:** 
+> 
+> - **bindContextMenuWithResponse** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
 
 **Since:** 23
 
@@ -1933,6 +1960,11 @@ bindContextMenuWithResponse(content: CustomBuilderT<ResponseType> | Array<MenuEl
 
 Binds a context menu to this component, which is displayed when the user long-presses or right-clicks the component. Custom or fixed-style menu items are supported. Long pressing with a mouse device is not supported.
 
+> **NOTE:** 
+> 
+> - **bindContextMenuWithResponse** (implemented in subwindows by default) is not supported in input method windows.
+> - This API cannot be called within [attributeModifier](#attributemodifier).
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -1963,6 +1995,12 @@ bindMenu(content: Array<MenuElement> | CustomBuilder, options?: MenuOptions): T
 ```
 
 Menu control
+
+> **NOTE:** 
+> 
+> - This API can be called within [attributeModifier](#attributemodifier) since API version 20only if the input parameter type of **content** is Array&lt;MenuElement&gt;.
+> - Multi-level menus cannot be displayed using **bindMenu** in **CustomBuilder**. Use the Menu component instead.
+> - **bindMenu** can be configured to display in subwindows by setting the **showInSubWindow** property in MenuOptions.
 
 **Since:** 7
 
@@ -2089,6 +2127,11 @@ bindTips(message: TipsMessageType, options?: TipsOptions): T
 ```
 
 Tips control
+
+> **NOTE:** 
+> 
+> When the [enabled](#enabled) universal attribute of the component bound with **bindTips** is
+> set to **false**, the floating bubble can still be displayed.
 
 **Since:** 19
 

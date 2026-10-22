@@ -1812,6 +1812,46 @@ struct Index {
 }
 ```
 
+## setFont
+
+```TypeScript
+setFont(font: string, enableAnimation: boolean): void
+```
+
+Sets the font for this application. This API can be called only on the main thread.
+
+> **NOTE:** 
+> 
+> Before calling this API, ensure that the window has been created and the page corresponding to the UIAbility has
+> been loaded (using the
+> [loadContent](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md#loadcontent-1) API in the
+> [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-ApplicationContext-setFont(font: string, enableAnimation: boolean): void--><!--Device-ApplicationContext-setFont(font: string, enableAnimation: boolean): void-End-->
+
+**System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| font | string | Yes | Font, which can be registered by calling UIContext.registerFont. |
+| enableAnimation | boolean | Yes | Whether using animation during this setting, using animation if true or not using animation if false. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [16000011](../errorcode-ability.md#16000011-context-does-not-exist) | The context does not exist. |
+
+**Examples**
+
+See [setFont](#setfont)
+
 ## setFontSizeScale
 
 ```TypeScript

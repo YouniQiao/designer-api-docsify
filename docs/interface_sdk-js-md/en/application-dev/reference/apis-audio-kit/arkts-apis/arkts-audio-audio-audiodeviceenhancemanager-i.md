@@ -45,7 +45,7 @@ returned.
 
 | Type | Description |
 | --- | --- |
-| Promise&lt;Array&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i-sys.md)&gt;&gt; | Promise used to return the sound card information list. |
+| Promise&lt;Array&lt;[SoundCardInfo](arkts-audio-audio-soundcardinfo-i.md)&gt;&gt; | Promise used to return the sound card information list. |
 
 **Error codes:**
 

@@ -10,7 +10,6 @@ For details about the audio and video recording demo, see [Audio Recording](../.
 
 > **NOTE:** 
 > 
-> 
 > To use the camera to record videos, the camera module is required. For details about how to use the APIs
 > provided by the camera module, see [Camera Management](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md).
 

@@ -92,6 +92,5 @@ import { adminManager } from '@kit.MDMKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AdminType](arkts-mdm-adminmanager-admintype-e-sys.md) | 设备管理应用的类型。 |
 | [RunningMode](arkts-mdm-adminmanager-runningmode-e-sys.md) | 设备管理的运行模式。 |
 <!--DelEnd-->

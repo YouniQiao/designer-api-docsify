@@ -1,4 +1,4 @@
-# SoundCardInfo (System API)
+# SoundCardInfo
 
 ```TypeScript
 interface SoundCardInfo
@@ -6,13 +6,11 @@ interface SoundCardInfo
 
 Describes sound card information.
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 <!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -26,11 +24,11 @@ import { audio } from '@kit.AudioKit';
 busAddress: string
 ```
 
-Sound card bus address.
+Sound card bus address. The maximum length is 256.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -38,7 +36,41 @@ Sound card bus address.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
-**System API:** This is a system API.
+## cardId
+
+```TypeScript
+cardId?: string
+```
+
+Sound card ID. The maximum length is 128. Default value: Default sound card ID of the onboard sound card.
+
+**Type:** string
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SoundCardInfo-cardId?: string--><!--Device-SoundCardInfo-cardId?: string-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
+
+## cardType
+
+```TypeScript
+cardType?: SoundCardType
+```
+
+Sound card type. Default value: The default is the onboard sound card type.
+
+**Type:** [SoundCardType](arkts-audio-audio-soundcardtype-e.md)
+
+**Since:** 26.2.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-SoundCardInfo-cardType?: SoundCardType--><!--Device-SoundCardInfo-cardType?: SoundCardType-End-->
+
+**System capability:** SystemCapability.Multimedia.Audio.Core
 
 ## driver
 
@@ -46,11 +78,11 @@ Sound card bus address.
 driver: string
 ```
 
-Sound card driver.
+Sound card driver. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,19 +90,17 @@ Sound card driver.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
-**System API:** This is a system API.
-
 ## model
 
 ```TypeScript
 model: string
 ```
 
-Sound card model.
+Sound card model. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -78,19 +108,17 @@ Sound card model.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
-**System API:** This is a system API.
-
 ## name
 
 ```TypeScript
 name: string
 ```
 
-Sound card name.
+Sound card name. The maximum length is 256.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -98,24 +126,20 @@ Sound card name.
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
 
-**System API:** This is a system API.
-
 ## vendor
 
 ```TypeScript
 vendor: string
 ```
 
-Sound card vendor.
+Sound card vendor. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.0.0
+**Since:** 26.2.0
 
 **Model restriction:** This API can be used only in the stage model.
 
 <!--Device-SoundCardInfo-vendor: string--><!--Device-SoundCardInfo-vendor: string-End-->
 
 **System capability:** SystemCapability.Multimedia.Audio.Core
-
-**System API:** This is a system API.

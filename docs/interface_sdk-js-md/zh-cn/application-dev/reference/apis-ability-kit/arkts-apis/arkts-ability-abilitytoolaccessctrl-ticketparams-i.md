@@ -1,14 +1,14 @@
-# TicketOpions
+# TicketParams
 
 ```TypeScript
-interface TicketOpions
+interface TicketParams
 ```
 
 生成票据的可选参数
 
 **起始版本：** 26.2.0
 
-<!--Device-abilityToolAccessCtrl-interface TicketOpions--><!--Device-abilityToolAccessCtrl-interface TicketOpions-End-->
+<!--Device-abilityToolAccessCtrl-interface TicketParams--><!--Device-abilityToolAccessCtrl-interface TicketParams-End-->
 
 **系统能力：** SystemCapability.Security.Asset
 
@@ -32,6 +32,6 @@ ticketExpireTimeMs?: number
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
-<!--Device-TicketOpions-ticketExpireTimeMs?: long--><!--Device-TicketOpions-ticketExpireTimeMs?: long-End-->
+<!--Device-TicketParams-ticketExpireTimeMs?: long--><!--Device-TicketParams-ticketExpireTimeMs?: long-End-->
 
 **系统能力：** SystemCapability.Security.Asset

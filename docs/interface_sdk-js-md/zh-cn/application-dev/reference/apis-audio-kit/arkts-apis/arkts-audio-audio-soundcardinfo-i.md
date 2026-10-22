@@ -1,4 +1,4 @@
-# SoundCardInfo（系统接口）
+# SoundCardInfo
 
 ```TypeScript
 interface SoundCardInfo
@@ -6,13 +6,11 @@ interface SoundCardInfo
 
 描述声卡信息。
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 <!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -26,11 +24,11 @@ import { audio } from '@kit.AudioKit';
 busAddress: string
 ```
 
-声卡总线地址。
+声卡总线地址。最大长度为256。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -38,7 +36,41 @@ busAddress: string
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-**系统接口：** 此接口为系统接口。
+## cardId
+
+```TypeScript
+cardId?: string
+```
+
+声卡ID。最大长度为128。默认值：默认使用板载声卡的声卡Id。
+
+**类型：** string
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoundCardInfo-cardId?: string--><!--Device-SoundCardInfo-cardId?: string-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
+
+## cardType
+
+```TypeScript
+cardType?: SoundCardType
+```
+
+声卡类型。默认值：默认是板载声卡类型。
+
+**类型：** [SoundCardType](arkts-audio-audio-soundcardtype-e.md)
+
+**起始版本：** 26.2.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-SoundCardInfo-cardType?: SoundCardType--><!--Device-SoundCardInfo-cardType?: SoundCardType-End-->
+
+**系统能力：** SystemCapability.Multimedia.Audio.Core
 
 ## driver
 
@@ -46,11 +78,11 @@ busAddress: string
 driver: string
 ```
 
-声卡驱动信息。
+声卡驱动信息。最大长度为128。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -58,19 +90,17 @@ driver: string
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-**系统接口：** 此接口为系统接口。
-
 ## model
 
 ```TypeScript
 model: string
 ```
 
-声卡型号。
+声卡型号。最大长度为128。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -78,19 +108,17 @@ model: string
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-**系统接口：** 此接口为系统接口。
-
 ## name
 
 ```TypeScript
 name: string
 ```
 
-声卡名称。
+声卡名称。最大长度为256。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -98,24 +126,20 @@ name: string
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
 
-**系统接口：** 此接口为系统接口。
-
 ## vendor
 
 ```TypeScript
 vendor: string
 ```
 
-声卡厂商。
+声卡厂商。最大长度为128。
 
 **类型：** string
 
-**起始版本：** 26.0.0
+**起始版本：** 26.2.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
 <!--Device-SoundCardInfo-vendor: string--><!--Device-SoundCardInfo-vendor: string-End-->
 
 **系统能力：** SystemCapability.Multimedia.Audio.Core
-
-**系统接口：** 此接口为系统接口。
