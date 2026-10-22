@@ -1457,6 +1457,7 @@
 - [@ohos.ability.wantConstant（wantConstant）](arkts-ability-ability-wantconstant.md)
   - [Action](arkts-ability-wantconstant-action-depr-e.md)
   - [Entity](arkts-ability-wantconstant-entity-depr-e.md)
+  - [Flags](arkts-ability-wantconstant-flags-depr-e.md)
   <!--Del-->
   - [Flags（系统接口）](arkts-ability-wantconstant-flags-depr-e-sys.md)<!--DelEnd-->
 <!--Del-->

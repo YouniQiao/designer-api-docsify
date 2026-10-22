@@ -16,8 +16,6 @@ Flags说明。用于表示处理Want的方式。
 
 **系统能力：** SystemCapability.Ability.AbilityBase
 
-**系统接口：** 此接口为系统接口。
-
 ## FLAG_ABILITY_CONTINUATION_REVERSIBLE
 
 ```TypeScript

@@ -491,7 +491,7 @@ editMenuOptions(editMenu: EditMenuOptions)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | Web自定义文本菜单选项。<br>菜单项数量，及菜单的content大小、icon图标尺寸，与ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md)组件保持一致。<br>菜单中系统自带的id枚举值（[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)）在Web中仅支持CUT、COPY、PASTE、SELECT_ALL、TRANSLATE、SEARCH、AI_WRITER七项。<br>onMenuItemClick函数中textRange参数在Web中无意义，传入值为-1。 |
+| editMenu | [EditMenuOptions](../../apis-arkui/arkts-apis/arkts-arkui-editmenuoptions-i.md) | 是 | Web自定义文本菜单选项。<br>菜单项数量，及菜单的content大小、icon图标尺寸，与ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu)组件保持一致。<br>菜单中系统自带的id枚举值（[TextMenuItemId](../../apis-arkui/arkts-apis/arkts-arkui-textmenuitemid-c.md)）在Web中仅支持CUT、COPY、PASTE、SELECT_ALL、TRANSLATE、SEARCH、AI_WRITER七项。<br>onMenuItemClick函数中textRange参数在Web中无意义，传入值为-1。 |
 
 ## enableAutoFill
 
@@ -520,6 +520,28 @@ enableAutoFill(value: boolean)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | value | boolean | 是 | 是否启用网页自动填充，true表示启用，false表示不启用。<br>传入undefined或null时为true。 |
+
+## enableBlankScreenMonitor
+
+```TypeScript
+enableBlankScreenMonitor(enable: boolean)
+```
+
+设置是否开启白屏监控。开启白屏监控后，监测到白屏时会触发onMonitoredBlankScreen回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-enableBlankScreenMonitor(enable: boolean): WebAttribute--><!--Device-WebAttribute-enableBlankScreenMonitor(enable: boolean): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否开启白屏监控。true表示开启，false表示关闭。 |
 
 ## enableDataDetector
 
@@ -1517,7 +1539,7 @@ nestedScroll(value: NestedScrollOptions | NestedScrollOptionsExt)
 > 
 > - 可以设置上下左右四个方向，或者设置向前、向后两个方向的嵌套滚动模式，实现与父组件的滚动联动。
 > 
-> - 支持嵌套滚动的容器：[Grid](../../apis-arkui/arkts-components/arkts-arkui-grid-comp.md)、[List](../../apis-arkui/arkts-components/arkts-arkui-list-comp.md)、[Scroll](../../apis-arkui/arkts-components/arkts-arkui-scroll-comp.md)、[Swiper](../../apis-arkui/arkts-components/arkts-arkui-swiper-comp.md)、[Tabs](../../apis-arkui/arkts-components/arkts-arkui-tabs-comp.md)、[WaterFlow](../../apis-arkui/arkts-components/arkts-arkui-waterflow-comp.md)、[Refresh](../../apis-arkui/arkts-components/arkts-arkui-refresh-comp.md)、[bindSheet](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindsheet)。
+> - 支持嵌套滚动的容器：Grid、List、Scroll、Swiper、[Tabs](../../apis-arkui/arkts-components/arkts-arkui-tabs-comp.md#tabs)、WaterFlow、Refresh、[bindSheet](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#bindsheet)。
 > 
 > - 支持嵌套滚动的输入事件：使用手势、鼠标、触控板。
 > 
@@ -2442,6 +2464,28 @@ onMicrophoneCaptureStateChange(callback: OnMicrophoneCaptureStateChangeCallback)
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | callback | [OnMicrophoneCaptureStateChangeCallback](arkts-arkweb-web-comp-onmicrophonecapturestatechangecallback-t.md) | 是 | 回调函数。当麦克风捕获状态改变时触发，返回原来的状态和改变后的状态。 |
+
+## onMonitoredBlankScreen
+
+```TypeScript
+onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback)
+```
+
+注册白屏监控归因回调。Web组件监测到白屏并完成根因归因时，触发该回调。
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebAttribute-onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback): WebAttribute--><!--Device-WebAttribute-onMonitoredBlankScreen(callback: OnMonitorBlankScreenCallback): WebAttribute-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| callback | [OnMonitorBlankScreenCallback](arkts-arkweb-web-comp-onmonitorblankscreencallback-t.md) | 是 | 白屏监控归因回调。 |
 
 ## onNativeEmbedGestureEvent
 
@@ -4097,7 +4141,7 @@ Web组件自定义菜单扩展项接口，允许用户设置扩展项的文本�
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | 是 | 扩展菜单选项。<br>菜单项数量，及菜单的content大小、startIcon图标尺寸，与ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md)组件保持一致。 |
+| expandedMenuOptions | Array&lt;[ExpandedMenuItemOptions](arkts-arkweb-web-comp-expandedmenuitemoptions-i.md)&gt; | 是 | 扩展菜单选项。<br>菜单项数量，及菜单的content大小、startIcon图标尺寸，与ArkUI [Menu](../../apis-arkui/arkts-components/arkts-arkui-menu-comp.md#menu)组件保持一致。 |
 
 ## tableData
 

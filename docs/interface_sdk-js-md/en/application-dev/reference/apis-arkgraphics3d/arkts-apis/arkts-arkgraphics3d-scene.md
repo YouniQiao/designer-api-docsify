@@ -41,5 +41,6 @@
 | Name | Description |
 | --- | --- |
 | [RenderResourceFactory](arkts-arkgraphics3d-scene-renderresourcefactory-i-sys.md) | Creates rendering resources that can be shared in multiple scenes ([Scene](arkts-arkgraphics3d-scene-c.md)) that share [RenderContext](arkts-arkgraphics3d-scene-rendercontext-i.md). |
+| [RenderTargetParameters](arkts-arkgraphics3d-scene-rendertargetparameters-i-sys.md) | render target parameters object, used to decribe render target |
 | [SceneLoadParams](arkts-arkgraphics3d-scene-sceneloadparams-i-sys.md) | Scene load parameters object, used to specify additional configuration options when loading 3D model resources. A typical use case is loading an embedded glb model from an MP4 container file. |
 <!--DelEnd-->

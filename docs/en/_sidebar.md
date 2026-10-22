@@ -4,7 +4,7 @@
 - [Api10 Less Deprecated Modules (4)](interface_sdk-js-md/en/application-dev/reference/apis-api10-less-deprecated-modules/arkts-apis/arkts-api10lessdeprecatedmodules-bytrace.md)
 - [Arkdata (465)](interface_sdk-js-md/en/application-dev/reference/apis-arkdata/arkts-apis/arkts-arkdata-application-datashareextensionability.md)
 - [Arkgraphics2D (426)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics2d/arkts-apis/arkts-arkgraphics2d-effectkit.md)
-- [Arkgraphics3D (97)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-graphics-scene.md)
+- [Arkgraphics3D (99)](interface_sdk-js-md/en/application-dev/reference/apis-arkgraphics3d/arkts-apis/arkts-arkgraphics3d-graphics-scene.md)
 - [Arkts (320)](interface_sdk-js-md/en/application-dev/reference/apis-arkts/arkts-apis/arkts-arkts-collections.md)
 - [Arkui (2166)](interface_sdk-js-md/en/application-dev/reference/apis-arkui/arkts-apis/arkts-arkui-animation-windowanimationmanager.md)
 - [Arkweb (134)](interface_sdk-js-md/en/application-dev/reference/apis-arkweb/arkts-apis/arkts-arkweb-web-neterrorlist.md)

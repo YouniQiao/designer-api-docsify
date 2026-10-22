@@ -127,7 +127,7 @@ entities?: Array<string>
 flags?: number
 ```
 
-表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-depr-e-sys.md)。
+表示处理Want的方式。默认传数字，具体参考：[flags说明](arkts-ability-wantconstant-flags-depr-e.md)。
 
 **类型：** number
 

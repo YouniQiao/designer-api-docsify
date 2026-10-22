@@ -38,6 +38,26 @@ authenticationStatus?: number
 
 **系统接口：** 此接口为系统接口。
 
+## brMacAddress
+
+```TypeScript
+brMacAddress?: string
+```
+
+分布式设备的蓝牙静态MAC地址、仅在分布式设备上报蓝牙MAC时可用。需要申请权限Ohos.permission.USE_BLUETOOTH。默认值：""。
+
+**类型：** string
+
+**起始版本：** 26.0.1
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-DeviceInfo-brMacAddress?: string--><!--Device-DeviceInfo-brMacAddress?: string-End-->
+
+**系统能力：** SystemCapability.Multimedia.AVSession.AVCast
+
+**系统接口：** 此接口为系统接口。
+
 ## hiPlayDeviceInfo
 
 ```TypeScript

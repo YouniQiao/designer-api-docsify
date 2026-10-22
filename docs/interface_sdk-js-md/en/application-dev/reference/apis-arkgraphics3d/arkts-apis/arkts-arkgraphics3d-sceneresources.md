@@ -32,6 +32,7 @@
 
 | Name | Description |
 | --- | --- |
+| [RenderTarget](arkts-arkgraphics3d-sceneresources-rendertarget-i-sys.md) | render target object, used for offscreen rendering |
 | [UnlitShadowAlphaMaterial](arkts-arkgraphics3d-sceneresources-unlitshadowalphamaterial-i-sys.md) | This material inherits from [Material](arkts-arkgraphics3d-sceneresources-material-i.md) and draws only the surface shadows. When the [Blend](arkts-arkgraphics3d-sceneresources-blend-i.md) property is enabled, the material can be blended with the background to simulate transparency. |
 <!--DelEnd-->
 

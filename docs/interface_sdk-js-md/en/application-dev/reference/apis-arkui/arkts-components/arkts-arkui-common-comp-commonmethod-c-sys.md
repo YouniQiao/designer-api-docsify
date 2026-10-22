@@ -213,6 +213,8 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 Applies a spatial effect to component.
 
+This effect takes effect only on the child components of **DepthComponent** and only when the related parameters are correctly set. It is not supported on the **Web**, **XComponent**, **RichEditor**, **RichText**, **Video**, **Component3D**, or **EmbeddedComponent** components.
+
 **Since:** 26.0.0
 
 **Model restriction:** This API can be used only in the stage model.
@@ -229,7 +231,7 @@ Applies a spatial effect to component.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) &#124; undefined | Yes | Spatial effect parameters. |
+| params | [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) &#124; undefined | Yes | Spatial effect parameters. If this parameter is set to **undefined**, the spatial effect is removed. |
 
 **Return value:**
 

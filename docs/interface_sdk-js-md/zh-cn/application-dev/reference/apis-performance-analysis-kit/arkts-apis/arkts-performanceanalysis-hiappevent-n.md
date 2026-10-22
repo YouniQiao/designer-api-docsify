@@ -44,6 +44,8 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | [configure](arkts-performanceanalysis-hiappevent-configure-f.md#configure-1) | 应用事件打点配置方法，支持配置打点开关和目录存储配额大小。 |
 | [getUserId](arkts-performanceanalysis-hiappevent-getuserid-f.md#getuserid-1) | 获取通过setUserId接口设置的value值。 |
 | [getUserProperty](arkts-performanceanalysis-hiappevent-getuserproperty-f.md#getuserproperty-1) | 获取通过setUserProperty接口设置的value值。 |
+| [isExternalLogManagerRegistered](arkts-performanceanalysis-hiappevent-isexternallogmanagerregistered-f.md#isexternallogmanagerregistered-1) | 查询外部日志管理者是否已注册 |
+| [registerExternalLogManager](arkts-performanceanalysis-hiappevent-registerexternallogmanager-f.md#registerexternallogmanager-1) | 注册外部日志管理者 |
 | [removeProcessor](arkts-performanceanalysis-hiappevent-removeprocessor-f.md#removeprocessor-1) | 移除上报事件的数据处理者。 |
 | [removeWatcher](arkts-performanceanalysis-hiappevent-removewatcher-f.md#removewatcher-1) | 移除事件观察者。 |
 | [setEventConfig](arkts-performanceanalysis-hiappevent-seteventconfig-f.md#seteventconfig-1) | 事件相关的配置参数设置方法，使用Promise方式作为异步回调。在同一生命周期中，可以通过事件名称，设置事件相关的配置参数。 |
@@ -58,6 +60,9 @@ import { hiAppEvent } from '@kit.PerformanceAnalysisKit';
 | 名称 | 说明 |
 | --- | --- |
 | [AppEventPackageHolder](arkts-performanceanalysis-hiappevent-appeventpackageholder-c.md) | 订阅数据持有者类，用于对事件信息进行处理。 |
+| [ExternalLogContainer](arkts-performanceanalysis-hiappevent-externallogcontainer-c.md) | 一个外部日志容器，包含所有外部日志文件。 |
+| [ExternalLogManager](arkts-performanceanalysis-hiappevent-externallogmanager-c.md) | 定义外部日志管理者，用于外部日志管理 |
+| [ExternalLogWrapper](arkts-performanceanalysis-hiappevent-externallogwrapper-c.md) | 外部日志的包装器，提供各种信息。 |
 
 ### 接口
 

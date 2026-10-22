@@ -193,7 +193,7 @@ enum ArkUI_ContentClipMode
 | -- | -- |
 | ARKUI_CONTENT_CLIP_MODE_CONTENT_ONLY = 0 | 按内容区裁剪。 |
 | ARKUI_CONTENT_CLIP_MODE_BOUNDARY | 按组件区域裁剪。 |
-| ARKUI_CONTENT_CLIP_MODE_SAFE_AREA | Clip to the safe area configured for the component. |
+| ARKUI_CONTENT_CLIP_MODE_SAFE_AREA | 按组件配置的safe area裁剪。 |
 
 ### ArkUI_ScrollNestedMode
 
@@ -296,7 +296,7 @@ enum ArkUI_ScrollSource
 | -- | -- |
 | ARKUI_SCROLL_SOURCE_DRAG = 0 | 手指拖动。 |
 | ARKUI_SCROLL_SOURCE_FLING | 手指拖动后的惯性滚动。 |
-| ARKUI_SCROLL_SOURCE_EDGE_EFFECT | EdgeEffect.Spring for boundary crossing. |
+| ARKUI_SCROLL_SOURCE_EDGE_EFFECT | 在过界时执行EdgeEffect.Spring边缘特效。 |
 | ARKUI_SCROLL_SOURCE_OTHER_USER_INPUT | 除了拖动以外的其他用户输入，如鼠标滚轮、键盘事件等。 |
 | ARKUI_SCROLL_SOURCE_SCROLL_BAR | 拖动滚动条。 |
 | ARKUI_SCROLL_SOURCE_SCROLL_BAR_FLING | 拖动滚动条后的惯性滚动。 |

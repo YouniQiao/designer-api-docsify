@@ -11,6 +11,14 @@ the proxy module identifies the target app based on the **action** field (for ex
 - Link state monitoring: Monitors the connection status changes of the proxy channel throughout its lifecycle in real  
 time through callbacks. This helps the phone app respond to connection exceptions in a timely manner and adjust service policies, thereby improving data transmission reliability. Connection exceptions include connection restoration, abnormal disconnection, and pairing relationship deletion.
 
+**Since:** 20
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-unnamed-declare namespace proxyChannelManager--><!--Device-unnamed-declare namespace proxyChannelManager-End-->
+
+**System capability:** SystemCapability.DistributedSched.AppCollaboration
+
 ## Instructions
 
 Before calling the APIs of this module, complete the following configurations:
@@ -27,14 +35,6 @@ The typical calling process is as follows:
 to receive data from the peer end, and call **on('channelStateChange')** to monitor channel connection state changes (such as disconnection and recovery). You can subscribe to both events at the same time. You are advised to use them together in data transmission scenarios so that data sending can be paused promptly and disconnection recovery logic can be handled when the channel is abnormal.
 3. After using the event, call **off('receiveData')** or **off('channelStateChange')** to unsubscribe from the event.
 4. Call **closeProxyChannel** to close the proxy channel and release resources.
-
-**Since:** 20
-
-**Model restriction:** This API can be used only in the stage model.
-
-<!--Device-unnamed-declare namespace proxyChannelManager--><!--Device-unnamed-declare namespace proxyChannelManager-End-->
-
-**System capability:** SystemCapability.DistributedSched.AppCollaboration
 
 ## Modules to Import
 
