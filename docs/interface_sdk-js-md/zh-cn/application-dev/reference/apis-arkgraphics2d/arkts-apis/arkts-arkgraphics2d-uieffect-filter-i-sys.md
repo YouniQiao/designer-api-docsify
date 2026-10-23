@@ -784,6 +784,40 @@ mapColorByBrightness(colors: Array<Color>, positions: Array<number>): Filter
 | --- | --- |
 | [Filter](arkts-arkgraphics2d-uieffect-filter-i.md) | 返回挂载了颜色亮度映射效果的Filter。 |
 
+<!--Del-->
+**示例**
+
+```TypeScript
+import { uiEffect } from '@kit.ArkGraphics2D';
+
+@Entry
+@Component
+struct Index {
+  @State colors: Array<uiEffect.Color> = [
+    { red: 0.0, green: 0.0, blue: 0.0, alpha: 1.0 },
+    { red: 1.0, green: 0.1, blue: 0.1, alpha: 1.0 },
+    { red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0 }
+  ];
+  @State positions: Array<number> = [0.0, 0.5, 1.0];
+
+  build() {
+    RelativeContainer() {
+      Stack() {
+        Image($r("app.media.startIcon"))
+          .width(200)
+          .height(200)
+          // 根据图片的明暗程度进行颜色渐变映射
+          .foregroundFilter(uiEffect.createFilter().mapColorByBrightness(this.colors, this.positions))
+      }
+    }
+    .height('100%')
+    .width('100%')
+  }
+}
+```
+
+<!--DelEnd-->
+
 ## maskDispersion
 
 ```TypeScript

@@ -20,3 +20,7 @@ type OnContextMenuUpdateCallback = (menuItemId: WebContextMenuItemId, options?: 
 | --- | --- | --- | --- |
 | menuItemId | [WebContextMenuItemId](arkts-arkweb-web-comp-webcontextmenuitemid-e.md) | 是 | 上下文菜单项的ID。 |
 | options | [WebContextMenuOptions](arkts-arkweb-web-comp-webcontextmenuoptions-i.md) | 否 | 上下文菜单项的选项。<br>默认值：见options的默认值。 |
+
+**示例**
+
+完整示例代码请参考[onContextMenuUpdate](./arkts-basic-components-web-events.md#oncontextmenuupdate)。

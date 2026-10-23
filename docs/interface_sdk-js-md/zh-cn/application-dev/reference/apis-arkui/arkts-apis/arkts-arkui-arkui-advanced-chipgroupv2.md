@@ -121,6 +121,9 @@ struct Index {
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
         },
+        onItemsChange: (items: ChipGroupV2Items) => {
+          console.info('chip items changed');
+        },
       })
     }
   }
@@ -216,6 +219,9 @@ struct Index {
         chipGroupPadding: new ChipGroupV2Padding({ top: 10, bottom: 10 }),
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
+        },
+        onItemsChange: (items: ChipGroupV2Items) => {
+          console.info('chip items changed');
         },
         // ChipGroupV2最右侧显示的自定义组件。
         suffix: this.ChipGroupSuffix
@@ -318,6 +324,9 @@ struct Index {
         chipGroupPadding: new ChipGroupV2Padding({ top: 10, bottom: 10 }),
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
+        },
+        onItemsChange: (items: ChipGroupV2Items) => {
+          console.info('chip items changed');
         },
         // ChipGroupV2最右侧显示的自定义组件。
         suffix: this.ChipGroupSuffix

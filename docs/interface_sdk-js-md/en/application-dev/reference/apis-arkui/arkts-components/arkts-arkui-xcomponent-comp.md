@@ -108,6 +108,12 @@ Constructor parameters
 
 ## Summary
 
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [XComponentController](arkts-arkui-xcomponent-comp-xcomponentcontroller-c.md) | Defines the controller of the **XComponent**. You can bind the controller to the **XComponent** to call the component APIs through the controller. |
+
 ### Interfaces
 
 | Name | Description |

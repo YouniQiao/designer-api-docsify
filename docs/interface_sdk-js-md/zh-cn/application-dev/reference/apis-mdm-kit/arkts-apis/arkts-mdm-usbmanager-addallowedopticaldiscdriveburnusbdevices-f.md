@@ -47,3 +47,21 @@ function addAllowedOpticalDiscDriveBurnUsbDevices(usbDevices: Array<UsbDevice>):
 | [9200012](../errorcode-enterpriseDeviceManager.md#9200012-参数校验失败) | Parameter verification failed. |
 | [9200016](../errorcode-enterpriseDeviceManager.md#9200016-服务超时) | Service timeout. |
 | [9200019](../errorcode-enterpriseDeviceManager.md#9200019-策略列表超限) | The policy list has exceeded the limit. |
+
+**示例**
+
+```TypeScript
+import { usbManager } from '@kit.MDMKit';
+import { BusinessError } from '@kit.BasicServicesKit';
+
+let usbDevices: Array<usbManager.UsbDevice> = [{
+  vendorId: 1234,
+  productId: 5678,
+  serial: 'SN123456789'
+}];
+usbManager.addAllowedOpticalDiscDriveBurnUsbDevices(usbDevices).then(() => {
+  console.info('Succeeded in adding allowed optical disc drive burn USB devices.');
+}).catch((err: BusinessError) => {
+  console.error(`Failed to add allowed optical disc drive burn USB devices. Code is ${err.code}, message is ${err.message}`);
+});
+```

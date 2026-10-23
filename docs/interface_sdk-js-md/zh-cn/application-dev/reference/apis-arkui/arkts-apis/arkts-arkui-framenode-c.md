@@ -566,6 +566,10 @@ dispatchInputEvent(event: InputEventType, competitionStrategy?: CompetitionStrat
 | --- | --- |
 | boolean | 是否成功派发事件。 |
 
+**示例**
+
+请参考节点操作示例。
+
 ## dispatchKeyEvent
 
 ```TypeScript
@@ -595,6 +599,10 @@ dispatchKeyEvent(event: KeyEvent): boolean
 | 类型 | 说明 |
 | --- | --- |
 | boolean | 按键事件是否被消费。 |
+
+**示例**
+
+请参考节点操作示例。
 
 ## dispose
 

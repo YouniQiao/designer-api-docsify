@@ -1,7 +1,7 @@
 # AtomicIntegerArray
 
 ```TypeScript
-type AtomicIntegerArray = collections.Int8Array | collections.Uint8Arraycollections.Int16Array | collections.Uint16Arraycollections.Int32Array | collections.Uint32Array
+type AtomicIntegerArray = collections.Int8Array | collections.Uint8Array | collections.Int16Array | collections.Uint16Array | collections.Int32Array | collections.Uint32Array
 ```
 
 支持原子元素操作的ArkTS整数TypedArray类型。

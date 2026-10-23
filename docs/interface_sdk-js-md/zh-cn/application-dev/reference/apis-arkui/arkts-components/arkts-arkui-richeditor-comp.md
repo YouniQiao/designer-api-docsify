@@ -60,6 +60,14 @@ RichEditor(options: RichEditorStyledStringOptions)
 
 ## 汇总
 
+### 类
+
+| 名称 | 说明 |
+| --- | --- |
+| [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md) | RichEditor组件控制器基类。 |
+| [RichEditorController](arkts-arkui-richeditor-comp-richeditorcontroller-c.md) | RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md)。 |
+| [RichEditorStyledStringController](arkts-arkui-richeditor-comp-richeditorstyledstringcontroller-c.md) | 使用属性字符串构建的RichEditor组件的控制器，继承自[RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md)。 |
+
 ### 接口
 
 | 名称 | 说明 |
@@ -4858,7 +4866,7 @@ struct RichEditorResizablePage {
 
 该示例演示通过[addRichEditorBuilderSpan](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#addricheditorbuilderspan)添加带身份标识的BuilderSpan，并通过[getRichEditorBuilderSpans](arkts-arkui-richeditor-comp-richeditorcontroller-c.md#getricheditorbuilderspans)获取BuilderSpan信息，在日志中打印返回结果。
 
-从API版本26.2.0开始，新增addRichEditorBuilderSpan和getRichEditorBuilderSpans接口。
+从API版本26.1.0开始，新增addRichEditorBuilderSpan和getRichEditorBuilderSpans接口。
 
 ```TypeScript
 @Entry

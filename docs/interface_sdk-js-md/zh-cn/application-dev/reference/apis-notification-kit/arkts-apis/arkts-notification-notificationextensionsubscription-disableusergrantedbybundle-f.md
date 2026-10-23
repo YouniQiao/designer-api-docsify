@@ -45,3 +45,17 @@ function disableUserGrantedByBundle(bundle: GrantedBundleInfo): Promise<void>
 | [1600001](../errorcode-notification.md#1600001-内部错误) | Internal error. Possible cause: 1.IPC communication failed. 2.Memory operation error. 3.Database operation failed. |
 | [1600003](../errorcode-notification.md#1600003-连接通知服务失败) | Failed to connect to the service. |
 | [1600022](../errorcode-notification.md#1600022-无效的包信息) | The specified bundle is invaild. |
+
+**示例**
+
+```TypeScript
+let bundle: notificationExtensionSubscription.GrantedBundleInfo = {
+  bundleName: 'com.example.myapplication',
+  appIndex: 0
+};
+notificationExtensionSubscription.disableUserGrantedByBundle(bundle).then(() => {
+  console.info(`disableUserGrantedByBundle successfully`);
+}).catch((err: BusinessError) => {
+  console.error(`disableUserGrantedByBundle fail, code is ${err.code}, message is ${err.message}`);
+});
+```

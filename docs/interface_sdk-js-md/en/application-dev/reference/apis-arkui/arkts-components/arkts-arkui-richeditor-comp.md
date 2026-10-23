@@ -62,6 +62,14 @@ Called when create RichEditor.
 
 ## Summary
 
+### Classes
+
+| Name | Description |
+| --- | --- |
+| [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md) | Represents the base class of the **RichEditor** component controller. |
+| [RichEditorController](arkts-arkui-richeditor-comp-richeditorcontroller-c.md) | Implements the **RichEditor** component controller. Inherits from [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md). |
+| [RichEditorStyledStringController](arkts-arkui-richeditor-comp-richeditorstyledstringcontroller-c.md) | Represents the controller of the **RichEditor** component built with the styled string. Inherits from [RichEditorBaseController](arkts-arkui-richeditor-comp-richeditorbasecontroller-c.md). |
+
 ### Interfaces
 
 | Name | Description |

@@ -11329,6 +11329,8 @@ setZoomFactor(zoomFactor: number): void
 
 **示例**
 
+以下示例通过按钮设置当前网页的页面缩放倍率。
+
 ```TypeScript
 // xxx.ets
 import { webview } from '@kit.ArkWeb';
@@ -11345,6 +11347,46 @@ struct WebComponent {
           this.controller.setZoomFactor(1.5);
         })
       Web({ src: 'https://www.example.com', controller: this.controller })
+    }
+  }
+}
+```
+
+以下示例将目标倍率应用于首次加载的网页，并在同一Web组件切换到不同Host时，于页面开始加载阶段再次设置该倍率。
+
+```TypeScript
+// xxx.ets
+import { webview } from '@kit.ArkWeb';
+
+@Entry
+@Component
+struct WebZoomAcrossHosts {
+  private controller: webview.WebviewController = new webview.WebviewController();
+  private controllerAttached: boolean = false;
+  private targetFactor: number = 1.5;
+
+  private applyTargetFactor(): void {
+    if (this.controllerAttached) {
+      this.controller.setZoomFactor(this.targetFactor);
+    }
+  }
+
+  build() {
+    Column() {
+      Row() {
+        Button('网页A').onClick(() => this.controller.loadUrl('https://www.example.com'))
+        Button('网页B').onClick(() => this.controller.loadUrl('https://www.example.org'))
+      }
+
+      Web({ src: 'https://www.example.com', controller: this.controller })
+        .onControllerAttached(() => {
+          this.controllerAttached = true;
+          this.applyTargetFactor();
+        })
+        .onPageBegin(() => {
+          this.applyTargetFactor();
+        })
+        .height('80%')
     }
   }
 }

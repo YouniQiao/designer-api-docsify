@@ -47,3 +47,22 @@ static toString(urlParams: URLParams): string
 | 类型 | 说明 |
 | --- | --- |
 | string | 返回序列化后的字符串，其中空格被编码为%20。 |
+
+**示例**
+
+```TypeScript
+// 序列化URLParams对象，空格编码为%20
+let params = new url.URLParams('detailAddress=a%20b');
+let result = url.URLUtil.toString(params); // Output 'detailAddress=a%20b'
+// 对比URLParams.toString：遵循application/x-www-form-urlencoded规范，空格编码为'+'
+let result1 = params.toString(); // Output 'detailAddress=a+b'
+
+// 序列化时对特殊字符进行百分比编码
+let params1 = new url.URLParams();
+params1.append('k&y', 'v=l');
+let result2 = url.URLUtil.toString(params1); // Output 'k%26y=v%3Dl'
+
+// 通过URL对象的params属性获取URLParams对象并序列化
+let urlObject = url.URL.parseURL('https://www.example.com/path?a=b c');
+let result3 = url.URLUtil.toString(urlObject.params); // Output 'a=b%20c'
+```

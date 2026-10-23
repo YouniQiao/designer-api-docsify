@@ -37,3 +37,29 @@ VoIP通话状态更新时取消回调。
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission denied. |
 | [8800002](../errorcode-telephony.md#8800002-服务连接失败) | Service connection failed. |
 | [8800003](../errorcode-telephony.md#8800003-系统内部错误) | System internal error. |
+
+**示例**
+
+```TypeScript
+import { observer } from '@kit.TelephonyKit';
+
+let callback: (data: observer.VoIPCallStateInfo) => void = (data: observer.VoIPCallStateInfo) => {
+  console.info(`onVoIPStateChange, appName: ${data.appName}, contactName: ${data.contactName}, ` +
+    `callType: ${data.callType}, callState: ${data.callState} ` +
+    `isVoiceAnswerSupported: ${data.isVoiceAnswerSupported}`);
+}
+
+// 取消订阅：指定回调取消单条订阅
+try {
+  observer.offVoIPStateChange(callback);
+} catch (err) {
+  console.error(`observer.offVoIPStateChange failed: ${JSON.stringify(err)}`);
+}
+
+// 取消订阅：不带参数取消全部订阅
+try {
+  observer.offVoIPStateChange();
+} catch (err) {
+  console.error(`observer.offVoIPStateChange failed: ${JSON.stringify(err)}`);
+}
+```

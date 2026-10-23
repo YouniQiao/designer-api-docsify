@@ -102,6 +102,9 @@ struct Index {
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
         },
+        onItemsChange: (items: ChipGroupItemOptions[]) => {
+          console.info('chip items changed');
+        },
       })
     }
   }
@@ -195,6 +198,9 @@ struct Index {
         chipGroupPadding: { top: 10, bottom: 10 },
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
+        },
+        onItemsChange: (items: ChipGroupItemOptions[]) => {
+          console.info('chip items changed');
         },
         // 自定义builder，在组件最右侧显示自定义的内容。
         suffix: this.ChipGroupSuffix
@@ -295,6 +301,9 @@ struct Index {
         chipGroupPadding: { top: 10, bottom: 10 },
         onChange: (activatedChipsIndex: Array<number>) => {
           console.info('chips on clicked, activated index ' + activatedChipsIndex);
+        },
+        onItemsChange: (items: ChipGroupItemOptions[]) => {
+          console.info('chip items changed');
         },
         // 自定义builder，在组件最右侧显示自定义的内容。
         suffix: this.ChipGroupSuffix
