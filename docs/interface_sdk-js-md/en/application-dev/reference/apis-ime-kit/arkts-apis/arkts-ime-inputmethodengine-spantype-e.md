@@ -13,7 +13,7 @@ Enumerates the types of spans in the rich text.<br> <br>
 | SYMBOL | 2 | Symbol.|  
 | CUSTOM | 3 | Custom.|
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-inputMethodEngine-export enum SpanType--><!--Device-inputMethodEngine-export enum SpanType-End-->
 
@@ -27,7 +27,7 @@ CUSTOM = 3
 
 Custom.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -43,7 +43,7 @@ IMAGE = 1
 
 Image.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -59,7 +59,7 @@ SYMBOL = 2
 
 Symbol.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -75,7 +75,7 @@ TEXT = 0
 
 Plain text.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@ export enum AutomationControlStatus
 
 自动化控制开关状态值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityAccessCtrl-export enum AutomationControlStatus--><!--Device-abilityAccessCtrl-export enum AutomationControlStatus-End-->
 
@@ -22,7 +22,7 @@ DISABLED = 0
 
 关闭自动化控制权限
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +40,7 @@ ENABLED = 1
 
 授予自动化控制权限。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -6,7 +6,7 @@ export interface SystemEventAttributes
 
 系统事件类场景属性。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface SystemEventAttributes--><!--Device-behaviorAwareness-export interface SystemEventAttributes-End-->
 

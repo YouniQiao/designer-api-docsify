@@ -6,7 +6,7 @@ interface AuthClientInfo
 
 Defines the client session information.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthClientInfo--><!--Device-securityGuard-interface AuthClientInfo-End-->
 
@@ -30,7 +30,7 @@ App bundle name.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Unique ID of a client session.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Client response timeout interval. Unit: millisecond.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +90,7 @@ Default authorization policy upon timeout.
 
 **Type:** [AuthStrategy](arkts-securityguard-securityguard-authstrategy-e-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -110,7 +110,7 @@ ID list of event types subscribed to by the client.
 
 **Type:** number[]
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

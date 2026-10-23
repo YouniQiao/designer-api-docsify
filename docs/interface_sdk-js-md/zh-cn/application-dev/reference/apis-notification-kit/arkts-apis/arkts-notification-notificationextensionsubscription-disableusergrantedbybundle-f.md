@@ -14,7 +14,7 @@ function disableUserGrantedByBundle(bundle: GrantedBundleInfo): Promise<void>
 
 关闭本应用中“已获取的本机通知”列表中指定应用的开关状态。使用promise异步回调。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 

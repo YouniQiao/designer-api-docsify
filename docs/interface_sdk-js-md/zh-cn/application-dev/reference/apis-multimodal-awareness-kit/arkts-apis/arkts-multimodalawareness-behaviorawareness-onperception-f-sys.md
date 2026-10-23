@@ -19,7 +19,7 @@ export function onPerception(
 
 当用户执行 Action 时，MSDP 从感知事件表过滤匹配项并通过 callback 实时推送。同一订阅目标重复订阅时，后传入的 callback 覆盖之前的 callback。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

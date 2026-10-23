@@ -6,7 +6,7 @@ interface AppInfo
 
 应用的相关信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface AppInfo--><!--Device-abilityToolAccessCtrl-interface AppInfo-End-->
 
@@ -30,7 +30,7 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -50,7 +50,7 @@ index: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

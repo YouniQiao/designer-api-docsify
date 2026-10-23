@@ -6,7 +6,7 @@ interface TaskIdentity
 
 任务标识。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TaskIdentity--><!--Device-abilityToolAccessCtrl-interface TaskIdentity-End-->
 
@@ -30,7 +30,7 @@ challenge: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -50,7 +50,7 @@ identity: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -70,7 +70,7 @@ taskAttributes: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

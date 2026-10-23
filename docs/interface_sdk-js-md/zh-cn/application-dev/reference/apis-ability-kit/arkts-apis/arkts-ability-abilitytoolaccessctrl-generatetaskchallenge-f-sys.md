@@ -14,7 +14,7 @@ export function generateTaskChallenge(taskIdentityInfo: TaskIdentityInfo): Promi
 
 为任务认证令牌生成挑战值。此函数基于任务身份信息生成挑战值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

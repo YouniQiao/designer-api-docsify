@@ -6,7 +6,7 @@ export enum PatternType
 
 感知模式类型。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export enum PatternType--><!--Device-behaviorAwareness-export enum PatternType-End-->
 

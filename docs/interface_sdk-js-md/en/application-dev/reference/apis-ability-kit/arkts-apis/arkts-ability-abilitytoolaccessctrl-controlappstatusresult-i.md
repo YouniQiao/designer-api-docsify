@@ -6,7 +6,7 @@ interface ControlAppStatusResult
 
 Control permission status result for an application.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface ControlAppStatusResult--><!--Device-abilityToolAccessCtrl-interface ControlAppStatusResult-End-->
 
@@ -28,7 +28,7 @@ Application information.
 
 **Type:** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -46,7 +46,7 @@ Control permission status.
 
 **Type:** [ControlAppStatus](arkts-ability-abilitytoolaccessctrl-controlappstatus-e.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

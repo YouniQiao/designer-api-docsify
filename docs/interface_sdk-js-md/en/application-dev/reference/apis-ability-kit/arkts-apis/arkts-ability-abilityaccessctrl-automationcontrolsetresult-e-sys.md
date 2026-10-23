@@ -6,7 +6,7 @@ export enum AutomationControlSetResult
 
 Enumerates the results for setting automation control status per target app.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityAccessCtrl-export enum AutomationControlSetResult--><!--Device-abilityAccessCtrl-export enum AutomationControlSetResult-End-->
 
@@ -22,7 +22,7 @@ SUCCESS = 0
 
 Set successfully.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ TOKEN_ID_NOT_EXIST = 1
 
 The specified target app tokenID does not exist, or the corresponding process is not an application process.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

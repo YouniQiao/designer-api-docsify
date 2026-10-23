@@ -130,7 +130,7 @@ taskIdentity?: TaskIdentity
 
 **类型：** [TaskIdentity](arkts-ability-abilitytoolaccessctrl-taskidentity-i-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

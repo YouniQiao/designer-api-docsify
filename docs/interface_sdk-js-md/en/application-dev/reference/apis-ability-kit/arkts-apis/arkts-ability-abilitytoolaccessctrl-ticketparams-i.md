@@ -6,7 +6,7 @@ interface TicketParams
 
 Parameters for the ticket.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TicketParams--><!--Device-abilityToolAccessCtrl-interface TicketParams-End-->
 
@@ -28,7 +28,7 @@ Ticket expiration time in milliseconds. Unit: milliseconds.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

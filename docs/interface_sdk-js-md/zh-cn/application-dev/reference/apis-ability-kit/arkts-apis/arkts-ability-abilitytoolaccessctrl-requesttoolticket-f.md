@@ -14,7 +14,7 @@ export function requestToolTicket(cliCmdInfos: CliCmdInfo[], ticketParams: Ticke
 
 获取CLI工具的执行认证票据。该函数用于获取CLI工具及子命令的执行认证票据。如果CLI工具所需权限用户尚未授权，会返回需要授权的权限列表及权限状态。如果CLI工具所需权限用户均授权，会返回授权的票据。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.EXEC_PUBLIC_CLI_TOOL
 

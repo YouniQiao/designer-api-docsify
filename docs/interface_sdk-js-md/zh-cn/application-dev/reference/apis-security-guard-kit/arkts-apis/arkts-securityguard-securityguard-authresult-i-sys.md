@@ -6,7 +6,7 @@ interface AuthResult
 
 所有客户端阻断结果。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-securityGuard-interface AuthResult--><!--Device-securityGuard-interface AuthResult-End-->
 
@@ -30,7 +30,7 @@ clientAuthResult: ClientAuthResult[]
 
 **类型：** [ClientAuthResult](arkts-securityguard-securityguard-clientauthresult-i-sys.md)[]
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ mergedAuthStrategy: AuthStrategy
 
 **类型：** [AuthStrategy](arkts-securityguard-securityguard-authstrategy-e-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

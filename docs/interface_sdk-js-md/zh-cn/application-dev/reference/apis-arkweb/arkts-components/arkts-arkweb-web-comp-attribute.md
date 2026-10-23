@@ -244,7 +244,7 @@ caretColor(value: ResourceColor)
 > 
 > - 精确颜色值 **#00000000** 保留为重置哨兵值。重置后使用网页CSS `caret-color`；CSS为 **auto** 或未设置时使用内置默认颜色。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -904,7 +904,7 @@ flingSpeedLimit(speedLimit: number)
 
 通过该TypeScript API配置的值优先于通过其他API配置的值生效。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -1835,7 +1835,7 @@ onContextMenuUpdate(callback: OnContextMenuUpdateCallback)
 
 shouldOfferLinkToText()方法返回同步初始值，此回调提供异步最终值，两者互补。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -3488,7 +3488,7 @@ onZoomChange(callback: OnZoomChangeCallback)
 
 当网页的浏览器级缩放倍率变化时触发。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

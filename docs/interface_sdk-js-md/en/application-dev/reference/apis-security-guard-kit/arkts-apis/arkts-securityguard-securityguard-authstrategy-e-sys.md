@@ -6,7 +6,7 @@ enum AuthStrategy
 
 Enumerates authorization policies.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-enum AuthStrategy--><!--Device-securityGuard-enum AuthStrategy-End-->
 
@@ -22,7 +22,7 @@ ALLOW = 0
 
 Allowed.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ DENY = 1
 
 Denied.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -58,7 +58,7 @@ TIMEOUT = 2
 
 Timeout.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -6,7 +6,7 @@ interface AuthProvider
 
 Authorization service provider class, which is created by the **createAuthProvider** factory function.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthProvider--><!--Device-securityGuard-interface AuthProvider-End-->
 
@@ -28,7 +28,7 @@ requestAuthResult(event: AuthEventInfo): Promise<AuthResult>
 
 Authorization result of a request event.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.AUTH_SERVICE_ACCESS
 

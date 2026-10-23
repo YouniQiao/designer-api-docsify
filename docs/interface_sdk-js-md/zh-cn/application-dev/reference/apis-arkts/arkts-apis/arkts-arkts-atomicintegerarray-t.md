@@ -6,11 +6,11 @@ type AtomicIntegerArray = collections.Int8Array | collections.Uint8Array | colle
 
 支持原子元素操作的ArkTS整数TypedArray类型。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-unnamed-type AtomicIntegerArray = collections.Int8Array | collections.Uint8Array |  collections.Int16Array | collections.Uint16Array |  collections.Int32Array | collections.Uint32Array--><!--Device-unnamed-type AtomicIntegerArray = collections.Int8Array | collections.Uint8Array |  collections.Int16Array | collections.Uint16Array |  collections.Int32Array | collections.Uint32Array-End-->
 

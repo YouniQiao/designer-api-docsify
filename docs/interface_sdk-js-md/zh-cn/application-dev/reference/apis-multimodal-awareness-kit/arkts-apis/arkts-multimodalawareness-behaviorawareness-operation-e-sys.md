@@ -6,7 +6,7 @@ export enum Operation
 
 操作目标枚举。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export enum Operation--><!--Device-behaviorAwareness-export enum Operation-End-->
 

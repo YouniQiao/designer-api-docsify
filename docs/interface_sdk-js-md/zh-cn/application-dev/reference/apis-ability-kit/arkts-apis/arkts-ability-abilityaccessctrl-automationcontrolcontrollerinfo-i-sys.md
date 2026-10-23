@@ -6,7 +6,7 @@ interface AutomationControlControllerInfo
 
 对目标应用具有自动化控制权限的控制方应用信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityAccessCtrl-interface AutomationControlControllerInfo--><!--Device-abilityAccessCtrl-interface AutomationControlControllerInfo-End-->
 
@@ -30,7 +30,7 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ controllerTokenID: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

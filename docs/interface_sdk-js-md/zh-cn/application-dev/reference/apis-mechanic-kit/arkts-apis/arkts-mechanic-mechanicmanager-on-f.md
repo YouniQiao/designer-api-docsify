@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function on(type: 'attachStateChange', callback: Callback<AttachStateChangeInfo>): void
 ```
 
-Subscribes to device attachment state change events.
+注册连接状态变化事件的回调监听，等待连接状态变化。使用callback异步回调。
 
 **起始版本：** 20
 
@@ -62,7 +62,7 @@ console.info('Succeeded in registering callback.');
 function on(type: 'trackingStateChange', callback: Callback<TrackingEventInfo>): void
 ```
 
-Subscribes to tracking events.
+注册跟踪状态变化事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
 

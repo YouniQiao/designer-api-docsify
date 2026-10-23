@@ -6,7 +6,7 @@ export enum AdjustmentDirection
 
 调节方向枚举。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export enum AdjustmentDirection--><!--Device-behaviorAwareness-export enum AdjustmentDirection-End-->
 

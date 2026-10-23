@@ -90,7 +90,7 @@ FEATURED_SINGLE_PET = 18
 
 Recommended pet.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

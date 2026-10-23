@@ -14,7 +14,7 @@ export function queryControlAppStatus(appInfo: AppInfo[]): Promise<ControlAppSta
 
 Queries the control permission status for the specified applications. This function checks whether each application in the input list is allowed or denied to be controlled by external tools. The result list corresponds to the input order.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

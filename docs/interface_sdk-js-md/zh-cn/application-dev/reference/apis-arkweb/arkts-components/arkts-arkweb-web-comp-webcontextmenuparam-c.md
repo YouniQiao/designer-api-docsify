@@ -289,7 +289,7 @@ getTextFragmentGeneratedLink(): string
 
 建议在**onContextMenuShow**事件回调中使用此接口。调用此接口前，建议先调用shouldOfferLinkToText()检查当前选中文本是否支持链接生成。若选中文本不支持链接生成，返回空字符串。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -361,7 +361,7 @@ isOverTextFragment(): boolean
 
 建议在**onContextMenuShow**事件回调中使用此接口。结果与Chromium的**GetExistingSelectors**行为一致。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -389,7 +389,7 @@ shouldOfferLinkToText(): boolean
 
 建议在**onContextMenuShow**事件回调中使用此接口，以决定是否显示"复制指向高亮的链接"菜单项。结果与Chromium的**ShouldOfferLinkToText**行为一致。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

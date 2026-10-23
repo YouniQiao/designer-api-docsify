@@ -5498,7 +5498,7 @@ Creates a microtask scope in the current ArkTS runtime. Within this scope, micro
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Napi
 
-**Since**: 26.2.0
+**Since**: 26.1.0
 
 **Parameters**:
 
@@ -5529,7 +5529,7 @@ To destroy the microtask scope in current ArkTS runtime. After the scope is dest
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Napi
 
-**Since**: 26.2.0
+**Since**: 26.1.0
 
 **Parameters**:
 

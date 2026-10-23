@@ -4087,7 +4087,7 @@ backToCallerAbilityWithResult(abilityResult: AbilityResult, requestCode: string)
 
 **起始版本：** 12
 
-**废弃版本：** 26.2.0
+**废弃版本：** 26.1.0
 
 **替代接口：** backToCallerAppWithResult(abilityResult: AbilityResult, requestCode: string)
 

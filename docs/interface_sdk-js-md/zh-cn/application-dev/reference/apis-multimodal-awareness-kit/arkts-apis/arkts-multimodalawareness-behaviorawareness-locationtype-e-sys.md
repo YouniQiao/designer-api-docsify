@@ -6,7 +6,7 @@ export enum LocationType
 
 位置类型枚举。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export enum LocationType--><!--Device-behaviorAwareness-export enum LocationType-End-->
 

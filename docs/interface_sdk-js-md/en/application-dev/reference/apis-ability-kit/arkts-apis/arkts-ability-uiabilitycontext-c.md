@@ -4050,7 +4050,7 @@ Returns the startup result to the caller of [startAbilityForResult](#startabilit
 
 **Since:** 12
 
-**Deprecated since:** 26.2.0
+**Deprecated since:** 26.1.0
 
 **Substitutes:** backToCallerAppWithResult(abilityResult: AbilityResult, requestCode: string)
 

@@ -6,7 +6,7 @@ interface TaskIdentityInfo
 
 用于生成任务标识的任务标识输入信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TaskIdentityInfo--><!--Device-abilityToolAccessCtrl-interface TaskIdentityInfo-End-->
 
@@ -30,7 +30,7 @@ allowableDuration?: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -50,7 +50,7 @@ allowScreenLockExecution: boolean
 
 **类型：** boolean
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -70,7 +70,7 @@ authToken?: Uint8Array
 
 **类型：** Uint8Array
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -90,7 +90,7 @@ executeType: ExecuteType
 
 **类型：** [ExecuteType](arkts-ability-abilitytoolaccessctrl-executetype-e-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -110,7 +110,7 @@ taskExpireTime: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -130,7 +130,7 @@ taskId: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

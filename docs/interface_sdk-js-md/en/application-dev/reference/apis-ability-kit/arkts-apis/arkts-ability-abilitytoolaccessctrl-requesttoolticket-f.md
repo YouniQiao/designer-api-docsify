@@ -14,7 +14,7 @@ export function requestToolTicket(cliCmdInfos: CliCmdInfo[], ticketParams: Ticke
 
 Obtain the execution authentication ticket for CLI tools. This function retrieves the execution authentication ticket for CLI tools and their subcommands. If the user has not yet authorized the permissions required by CLI tools, a list of permissions requiring authorization along with their status will be returned. If all permissions required by CLI tools have been authorized by the user, the authenticated ticket will be returned.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.EXEC_PUBLIC_CLI_TOOL
 

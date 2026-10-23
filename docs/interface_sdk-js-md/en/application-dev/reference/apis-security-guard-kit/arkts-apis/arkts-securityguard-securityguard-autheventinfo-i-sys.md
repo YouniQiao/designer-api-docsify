@@ -6,7 +6,7 @@ interface AuthEventInfo
 
 Defines the authorization event information.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthEventInfo--><!--Device-securityGuard-interface AuthEventInfo-End-->
 
@@ -30,7 +30,7 @@ Client session status list.
 
 **Type:** [AuthClientStatus](arkts-securityguard-securityguard-authclientstatus-i-sys.md)[]
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Event content, in JSON string format.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Event type ID.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -90,7 +90,7 @@ Event version number.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

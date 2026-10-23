@@ -18,7 +18,7 @@ export function offPerception(
 
 如果传入 callback，则仅取消与该回调匹配的订阅；如果不传 callback，则取消当前包名下的所有订阅。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

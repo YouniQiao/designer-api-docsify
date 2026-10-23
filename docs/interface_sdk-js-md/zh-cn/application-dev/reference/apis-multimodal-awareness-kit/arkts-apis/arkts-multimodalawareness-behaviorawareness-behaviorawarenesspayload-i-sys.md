@@ -6,7 +6,7 @@ export interface BehaviorAwarenessPayload
 
 习惯感知领域 payload。HABIT_AWARENESS 领域的具体数据。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface BehaviorAwarenessPayload--><!--Device-behaviorAwareness-export interface BehaviorAwarenessPayload-End-->
 

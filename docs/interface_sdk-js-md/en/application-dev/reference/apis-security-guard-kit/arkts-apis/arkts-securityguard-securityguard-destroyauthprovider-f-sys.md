@@ -14,7 +14,7 @@ function destroyAuthProvider(provider: AuthProvider): void
 
 Destroys an **AuthProvider** session.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.AUTH_SERVICE_ACCESS
 

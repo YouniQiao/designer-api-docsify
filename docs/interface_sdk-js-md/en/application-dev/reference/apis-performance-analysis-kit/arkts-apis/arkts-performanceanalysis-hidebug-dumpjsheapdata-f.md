@@ -21,7 +21,7 @@ Dumps VM heap data.
 
 **Since:** 9
 
-**Deprecated since:** 26.2.0
+**Deprecated since:** 26.1.0
 
 **Substitutes:** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 
@@ -70,7 +70,7 @@ Dumps VM heap data and clears the nodeId cache.
 
 **Since:** 24
 
-**Deprecated since:** 26.2.0
+**Deprecated since:** 26.1.0
 
 **Substitutes:** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 

@@ -6,7 +6,7 @@ export enum AudioVolumeType
 
 Enumerates audio volume types.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-systemManager-export enum AudioVolumeType--><!--Device-systemManager-export enum AudioVolumeType-End-->
 
@@ -20,7 +20,7 @@ STREAM_MUSIC = 1
 
 media volume type.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

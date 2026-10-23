@@ -6,7 +6,7 @@ export enum GrantStatus
 
 Enumerates the status of the URI permission granted by user.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-fileShare-export enum GrantStatus--><!--Device-fileShare-export enum GrantStatus-End-->
 
@@ -20,7 +20,7 @@ DENIED = -1
 
 The URI permission is not granted.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -36,7 +36,7 @@ GRANTED = 0
 
 The URI permission is granted.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

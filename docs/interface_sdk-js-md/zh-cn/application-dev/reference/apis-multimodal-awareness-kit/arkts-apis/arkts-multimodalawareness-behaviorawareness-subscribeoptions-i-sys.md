@@ -6,7 +6,7 @@ export interface SubscribeOptions
 
 订阅选项。定义订阅的过滤条件。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface SubscribeOptions--><!--Device-behaviorAwareness-export interface SubscribeOptions-End-->
 

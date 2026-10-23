@@ -6,7 +6,7 @@ enum ExecuteType
 
 任务执行类别。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-enum ExecuteType--><!--Device-abilityToolAccessCtrl-enum ExecuteType-End-->
 
@@ -22,7 +22,7 @@ DELAYED = 0x02
 
 延时任务。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -40,7 +40,7 @@ INSTANT = 0x01
 
 即时任务。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

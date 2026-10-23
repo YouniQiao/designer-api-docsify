@@ -6,7 +6,7 @@ interface AutomationControlTargetParam
 
 表示目标应用及其自动化控制状态。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityAccessCtrl-interface AutomationControlTargetParam--><!--Device-abilityAccessCtrl-interface AutomationControlTargetParam-End-->
 
@@ -30,7 +30,7 @@ status: AutomationControlStatus
 
 **类型：** [AutomationControlStatus](arkts-ability-abilityaccessctrl-automationcontrolstatus-e-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ targetTokenID: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

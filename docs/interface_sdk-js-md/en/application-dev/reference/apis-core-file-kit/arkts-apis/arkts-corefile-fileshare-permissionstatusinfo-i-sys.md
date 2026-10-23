@@ -6,7 +6,7 @@ export interface PermissionStatusInfo
 
 Indicates the URI permission status information of the application.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-fileShare-export interface PermissionStatusInfo--><!--Device-fileShare-export interface PermissionStatusInfo-End-->
 
@@ -30,7 +30,7 @@ URI permission authorization status.
 
 **Type:** [GrantStatus](arkts-corefile-fileshare-grantstatus-e.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Policy information of the URI permission.
 
 **Type:** [PolicyInfo](arkts-corefile-fileshare-policyinfo-i.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -70,7 +70,7 @@ Token ID of the application. The value should be an integer.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

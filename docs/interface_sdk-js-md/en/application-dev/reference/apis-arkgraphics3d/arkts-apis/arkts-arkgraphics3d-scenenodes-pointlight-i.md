@@ -10,7 +10,7 @@ A point light emits light uniformly in all directions from a single point in spa
 
 **Inheritance/Implementation:** PointLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-export interface PointLight extends Light--><!--Device-unnamed-export interface PointLight extends Light-End-->
 
@@ -28,7 +28,7 @@ Maximum distance that the point light affects. Beyond this range, the light inte
 
 **Default:** need to be decided
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

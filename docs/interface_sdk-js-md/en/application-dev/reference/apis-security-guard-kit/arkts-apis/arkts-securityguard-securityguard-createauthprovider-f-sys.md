@@ -14,7 +14,7 @@ function createAuthProvider(callback: AuthProviderCallback, serviceId: string): 
 
 Creates an **AuthProvider** session. A maximum of one **AuthProvider** instance is allowed in a process, and a maximum of 16 instances are allowed globally. After the creation succeeds, the **onClientStatusChanged** callback will be used to receive information about existing clients.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.AUTH_SERVICE_ACCESS
 

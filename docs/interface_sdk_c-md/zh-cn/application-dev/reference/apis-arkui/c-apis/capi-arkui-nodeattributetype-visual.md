@@ -416,6 +416,6 @@ NODE_LINEAR_GRADIENT_BLUR = 129
 
 定义线性渐变模糊属性，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：线性渐变模糊选项对象。参数类型为[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)*。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.object：线性渐变模糊选项对象。类型为[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)*。 该对象为内部静态对象，无需调用[OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_destroy)释放。 当属性未设置或已重置时，返回的对象包含默认值（blurRadius = 0，fractionStops = {0.0, 0.0, 0.0, 1.0}， direction = [OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_BOTTOM](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection)）。</li> </ul>
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 

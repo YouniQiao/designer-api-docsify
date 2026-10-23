@@ -2778,7 +2778,7 @@ standby(on: boolean): Promise<void>
 
 进入或退出音频standby状态。standby状态主要用于音频播放过程中短暂无数据的情况，如流媒体播放等待网络下载。进入standby状态后，音频通路保持不变，仅向应用请求数据的循环线程暂停，也不接收主动写入数据，已写入系统的数据会继续播放。只有在播放流状态为[STATE_RUNNING](arkts-audio-audio-audiostate-e.md#state_running)时可以调用此接口进入standby状态。standby状态下才能再次调用接口退出。standby状态下也可以直接调用[pause](#pause), stop, release停止播放，但不可调用start。注意，此接口并不会改变通过state获取的状态。使用Promise异步回调。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

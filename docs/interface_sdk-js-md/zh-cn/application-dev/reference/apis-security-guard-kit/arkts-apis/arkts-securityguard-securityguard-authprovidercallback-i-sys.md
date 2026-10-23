@@ -6,7 +6,7 @@ interface AuthProviderCallback
 
 Provider 回调接口，在 createAuthProvider 时传入。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-securityGuard-interface AuthProviderCallback--><!--Device-securityGuard-interface AuthProviderCallback-End-->
 
@@ -28,7 +28,7 @@ onClientStatusChanged: (clientInfos: AuthClientInfo[]) => void
 
 关联的客户端会话状态变更时回调。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

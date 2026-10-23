@@ -14,7 +14,7 @@ function setVolumeDegree(volumeType: AudioVolumeType, degree: number): void
 
 Set the volume degree for a special volume type.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 

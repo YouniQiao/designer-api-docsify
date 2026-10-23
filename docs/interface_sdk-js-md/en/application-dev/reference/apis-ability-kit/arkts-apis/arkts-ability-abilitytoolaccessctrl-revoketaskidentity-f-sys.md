@@ -14,7 +14,7 @@ export function revokeTaskIdentity(taskId: string[]): Promise<void>
 
 Batch revoke task authentication identities for agent commands. This function batch revokes the task authentication identities and deletes the local cache of task attributes.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

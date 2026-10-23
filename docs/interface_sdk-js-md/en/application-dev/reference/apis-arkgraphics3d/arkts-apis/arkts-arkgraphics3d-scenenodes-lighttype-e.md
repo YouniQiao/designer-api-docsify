@@ -34,7 +34,7 @@ POINT = 3
 
 The enumerated value corresponding to the point light source type is added.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ RECT = 4
 
 Rect light.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -10,7 +10,7 @@ A rect light emits light from a rectangular area, simulating soft area lighting 
 
 **Inheritance/Implementation:** RectLight extends [Light](arkts-arkgraphics3d-scenenodes-light-i.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-export interface RectLight extends Light--><!--Device-unnamed-export interface RectLight extends Light-End-->
 
@@ -28,7 +28,7 @@ Height of the rectangular light emitting surface. The unit is the scene unit (su
 
 **Default:** 1.0
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ Whether the rect light emits light from both sides of the rectangle. true if two
 
 **Default:** false
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -68,7 +68,7 @@ Width of the rectangular light emitting surface. The unit is the scene unit (suc
 
 **Default:** 1.0
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

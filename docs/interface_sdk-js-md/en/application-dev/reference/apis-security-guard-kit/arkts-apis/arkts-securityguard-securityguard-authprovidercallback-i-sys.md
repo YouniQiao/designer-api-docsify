@@ -6,7 +6,7 @@ interface AuthProviderCallback
 
 Represents the **AuthProvider** callback, which is passed when **createAuthProvider** is called.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthProviderCallback--><!--Device-securityGuard-interface AuthProviderCallback-End-->
 
@@ -28,7 +28,7 @@ onClientStatusChanged: (clientInfos: AuthClientInfo[]) => void
 
 Callback triggered when the status of the associated client session changes.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

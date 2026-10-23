@@ -34,7 +34,7 @@ getSoundCardInfoList(): Promise<Array<SoundCardInfo>>
 - 应用必须申请ohos.permission.GET_AUDIO_ADAPTER_INFO权限。  
 -此接口仅支持PC设备。非PC设备调用该接口，返回错误码801。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.GET_AUDIO_ADAPTER_INFO
 

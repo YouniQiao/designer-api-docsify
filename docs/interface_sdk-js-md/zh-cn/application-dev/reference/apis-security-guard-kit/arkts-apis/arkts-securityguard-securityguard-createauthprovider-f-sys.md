@@ -14,7 +14,7 @@ function createAuthProvider(callback: AuthProviderCallback, serviceId: string): 
 
 创建 AuthProvider 会话。同一进程最多 1 个 Provider 实例，全局最多 16 个。成功后 onClientStatusChanged 回调可收到已有客户端的信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.AUTH_SERVICE_ACCESS
 

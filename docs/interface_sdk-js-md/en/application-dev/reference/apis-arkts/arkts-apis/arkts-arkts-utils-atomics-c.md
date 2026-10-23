@@ -6,7 +6,7 @@ class Atomics
 
 Provides atomic operations for ArkTS integer typed arrays backed by an ArkTS ArrayBuffer. Unlike the ECMAScript built-in Atomics object, this class is exposed through the utils module and provides only static methods for ArkTS typed arrays.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-utils-class Atomics--><!--Device-utils-class Atomics-End-->
 
@@ -26,11 +26,11 @@ static add(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 Atomically adds a value and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static add(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static add(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -64,11 +64,11 @@ static and(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 Atomically applies bitwise AND and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static and(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static and(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -103,11 +103,11 @@ static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedVa
 
 Atomically replaces a matching value and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedValue: number,      replacementValue: number): number--><!--Device-Atomics-static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedValue: number,      replacementValue: number): number-End-->
 
@@ -142,11 +142,11 @@ static exchange(typedArray: AtomicIntegerArray, index: number, value: number): n
 
 Atomically replaces a value and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static exchange(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static exchange(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -180,11 +180,11 @@ static isLockFree(size: number): boolean
 
 Returns whether atomic operations of the specified byte size are lock-free.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static isLockFree(size: number): boolean--><!--Device-Atomics-static isLockFree(size: number): boolean-End-->
 
@@ -210,11 +210,11 @@ static load(typedArray: AtomicIntegerArray, index: number): number
 
 Atomically loads and returns a value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static load(typedArray: AtomicIntegerArray, index: number): number--><!--Device-Atomics-static load(typedArray: AtomicIntegerArray, index: number): number-End-->
 
@@ -247,11 +247,11 @@ static notify(typedArray: collections.Int32Array, index: number, count?: number)
 
 Notifies waiters on the selected Int32 element and returns the number notified.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static notify(typedArray: collections.Int32Array, index: number, count?: number): number--><!--Device-Atomics-static notify(typedArray: collections.Int32Array, index: number, count?: number): number-End-->
 
@@ -285,11 +285,11 @@ static or(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 Atomically applies bitwise OR and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static or(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static or(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -323,11 +323,11 @@ static store(typedArray: AtomicIntegerArray, index: number, value: number): numb
 
 Atomically stores a value and returns the converted stored value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static store(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static store(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -361,11 +361,11 @@ static sub(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 Atomically subtracts a value and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static sub(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static sub(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -400,11 +400,11 @@ static wait(typedArray: collections.Int32Array, index: number, value: number,
 
 Waits while the selected Int32 element equals the expected value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static wait(typedArray: collections.Int32Array, index: number, value: number,      timeout?: number): 'ok' | 'not-equal' | 'timed-out'--><!--Device-Atomics-static wait(typedArray: collections.Int32Array, index: number, value: number,      timeout?: number): 'ok' | 'not-equal' | 'timed-out'-End-->
 
@@ -439,11 +439,11 @@ static xor(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 Atomically applies bitwise XOR and returns the previous value.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-Atomics-static xor(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static xor(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 

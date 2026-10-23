@@ -15,7 +15,7 @@ export function requestControlAppPermissionFromUser(context: Context, appInfo: A
 
 向用户请求指定应用的控制权限。该函数会弹出一个用户对话框，获取对每个应用的控制授权决 。返回结果反映用户对每个应用的允许或拒绝决策。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 

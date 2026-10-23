@@ -6,7 +6,7 @@ interface ControlAppStatusResult
 
 应用的相关信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface ControlAppStatusResult--><!--Device-abilityToolAccessCtrl-interface ControlAppStatusResult-End-->
 
@@ -28,7 +28,7 @@ appInfo: AppInfo
 
 **类型：** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 
@@ -46,7 +46,7 @@ status: ControlAppStatus
 
 **类型：** [ControlAppStatus](arkts-ability-abilitytoolaccessctrl-controlappstatus-e.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

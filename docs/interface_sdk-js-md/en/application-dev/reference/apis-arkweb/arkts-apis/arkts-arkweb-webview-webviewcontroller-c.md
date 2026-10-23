@@ -4246,7 +4246,7 @@ getZoomFactor(): number
 
 Gets the current browser zoom factor of this web page.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -11326,7 +11326,7 @@ setZoomFactor(zoomFactor: number): void
 
 Sets the browser zoom factor of this web page. Both text and images are scaled simultaneously, and the page is re-laid out (reflow) to fit the width of the **Web** component. This API works independently of [zoom](#zoom), [zoomIn](#zoomin), and [zoomOut](#zoomout) (visual scaling without re-layout) and [textZoomRatio](../arkts-components/arkts-arkweb-web-comp-attribute.md#textzoomratio) (text-only scaling). The zoom factor takes effect on the current web component instance only and is retained after in-page cross-document navigation.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

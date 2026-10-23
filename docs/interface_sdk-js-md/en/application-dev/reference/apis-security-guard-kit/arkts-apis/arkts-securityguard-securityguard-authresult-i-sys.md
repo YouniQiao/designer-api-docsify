@@ -6,7 +6,7 @@ interface AuthResult
 
 Represents the authorization results of all clients.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthResult--><!--Device-securityGuard-interface AuthResult-End-->
 
@@ -30,7 +30,7 @@ List of client authorization results.
 
 **Type:** [ClientAuthResult](arkts-securityguard-securityguard-clientauthresult-i-sys.md)[]
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Aggregated authorization policies of all clients.
 
 **Type:** [AuthStrategy](arkts-securityguard-securityguard-authstrategy-e-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

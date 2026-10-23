@@ -4212,7 +4212,7 @@ getZoomFactor(): number
 
 获取当前网页的浏览器级缩放倍率。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -11307,7 +11307,7 @@ setZoomFactor(zoomFactor: number): void
 
 调用此接口设置当前网页的浏览器级缩放倍率。文字与图片同时缩放，页面重新布局（reflow）以适应Web组件宽度。该接口与[zoom](#zoom)、[zoomIn](#zoomin)、[zoomOut](#zoomout)（仅视觉缩放，不触发重新布局）以及[textZoomRatio](../arkts-components/arkts-arkweb-web-comp-attribute.md#textzoomratio)（仅缩放文字）相互独立。缩放倍率仅作用于当前Web组件实例，页面内跨文档跳转后保持不变。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

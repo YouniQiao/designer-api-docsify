@@ -6,7 +6,7 @@ interface AutomationControlControllerInfo
 
 Represents a controller app that has automation control over a target app.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityAccessCtrl-interface AutomationControlControllerInfo--><!--Device-abilityAccessCtrl-interface AutomationControlControllerInfo-End-->
 
@@ -30,7 +30,7 @@ Bundle name of the controller app.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Token ID of the controller app.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

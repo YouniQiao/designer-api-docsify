@@ -14,7 +14,7 @@ export function generateTaskChallenge(taskIdentityInfo: TaskIdentityInfo): Promi
 
 Generate the challenge for task auth token generation. This function generates a challenge based on task identity info.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

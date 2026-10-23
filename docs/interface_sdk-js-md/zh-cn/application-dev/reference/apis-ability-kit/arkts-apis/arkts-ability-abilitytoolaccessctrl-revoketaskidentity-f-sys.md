@@ -14,7 +14,7 @@ export function revokeTaskIdentity(taskId: string[]): Promise<void>
 
 批量撤销代理命令的任务认证标识。批量撤销任务鉴权标识，删除任务属性的本地缓存。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

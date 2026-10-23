@@ -14,7 +14,7 @@ export function submitFeedback(feedback: FeedbackData): Promise<void>
 
 提交用户反馈。业务侧将用户对感知事件的反馈传递给 MSDP。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

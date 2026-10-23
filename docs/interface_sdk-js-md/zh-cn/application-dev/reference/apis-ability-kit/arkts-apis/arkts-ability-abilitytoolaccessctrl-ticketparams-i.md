@@ -6,7 +6,7 @@ interface TicketParams
 
 生成票据的可选参数
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TicketParams--><!--Device-abilityToolAccessCtrl-interface TicketParams-End-->
 
@@ -28,7 +28,7 @@ ticketExpireTimeMs?: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。
 

@@ -72,14 +72,14 @@ ArkUI C API的运行时检查类型枚举。<br> 每种检查类型对应一种A
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_UI_THREAD = 0 | UI线程检查类型：部分ArkUI C API要求必须在UI线程调用， 此类型用于检测这些API是否被非UI线程调用。<br>**起始版本：** 26.2.0 |
-| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_NODE_DISPOSED = 1 | 节点销毁检查类型：检测传递给C API的ArkUI_NodeHandle是否已经被销毁。<br>**起始版本：** 26.2.0 |
-| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_ATTRIBUTE_MATCH = 2 | 属性匹配检查类型：检测传递给SetAttribute/GetAttribute/ResetAttribute的 ArkUI_NodeAttributeType是否与节点实际组件类型匹配。<br>**起始版本：** 26.2.0 |
-| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_MULTI_THREAD = 3 | 多线程竞争检查类型：检测调用多线程API时，是否已有其他线程 正在操作同一棵组件树。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_UI_THREAD = 0 | UI线程检查类型：部分ArkUI C API要求必须在UI线程调用， 此类型用于检测这些API是否被非UI线程调用。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_NODE_DISPOSED = 1 | 节点销毁检查类型：检测传递给C API的ArkUI_NodeHandle是否已经被销毁。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_ATTRIBUTE_MATCH = 2 | 属性匹配检查类型：检测传递给SetAttribute/GetAttribute/ResetAttribute的 ArkUI_NodeAttributeType是否与节点实际组件类型匹配。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_TYPE_MULTI_THREAD = 3 | 多线程竞争检查类型：检测调用多线程API时，是否已有其他线程 正在操作同一棵组件树。<br>**起始版本：** 26.1.0 |
 
 ### OH_ArkUI_NativeModule_RuntimeCheckMode
 
@@ -93,13 +93,13 @@ ArkUI C API运行时检查的模式枚举。<br> 所有C API的运行时检查�
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_ARKUI_NATIVEMODULE_CHECK_MODE_DISABLED = 0 | 禁用指定的运行时检查。C API行为与引入该检查之前一致。<br>**起始版本：** 26.2.0 |
-| OH_ARKUI_NATIVEMODULE_CHECK_MODE_LOG = 1 | 打印诊断日志（检查类型、API名称、原因、native堆栈）并继续C API调用。<br>**起始版本：** 26.2.0 |
-| OH_ARKUI_NATIVEMODULE_CHECK_MODE_CRASH = 2 | 打印诊断日志并立即终止应用程序。<br>**起始版本：** 26.2.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_MODE_DISABLED = 0 | 禁用指定的运行时检查。C API行为与引入该检查之前一致。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_MODE_LOG = 1 | 打印诊断日志（检查类型、API名称、原因、native堆栈）并继续C API调用。<br>**起始版本：** 26.1.0 |
+| OH_ARKUI_NATIVEMODULE_CHECK_MODE_CRASH = 2 | 打印诊断日志并立即终止应用程序。<br>**起始版本：** 26.1.0 |
 
 
 ## 函数说明
@@ -163,7 +163,7 @@ ArkUI_ErrorCode OH_ArkUI_NativeModule_SetRuntimeCheckMode(OH_ArkUI_NativeModule_
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **参数：**
 

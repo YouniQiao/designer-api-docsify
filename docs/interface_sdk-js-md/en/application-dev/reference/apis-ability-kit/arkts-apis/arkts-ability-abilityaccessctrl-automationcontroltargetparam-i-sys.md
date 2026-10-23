@@ -6,7 +6,7 @@ interface AutomationControlTargetParam
 
 Represents a target app and its automation control status.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityAccessCtrl-interface AutomationControlTargetParam--><!--Device-abilityAccessCtrl-interface AutomationControlTargetParam-End-->
 
@@ -30,7 +30,7 @@ Automation control status.
 
 **Type:** [AutomationControlStatus](arkts-ability-abilityaccessctrl-automationcontrolstatus-e-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Token ID of the target app.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

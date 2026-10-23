@@ -6,7 +6,7 @@ export interface TimeAttributes
 
 时间类场景属性。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface TimeAttributes--><!--Device-behaviorAwareness-export interface TimeAttributes-End-->
 

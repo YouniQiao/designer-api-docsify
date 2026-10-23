@@ -1565,3 +1565,5 @@
   - [XComponentOptions(system api)](arkts-arkui-xcomponent-comp-xcomponentoptions-i-sys.md)<!--DelEnd-->
   - [OnNativeLoadCallback](arkts-arkui-xcomponent-comp-onnativeloadcallback-t.md)
   - [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md)
+  <!--Del-->
+  - [XComponentExtraFlag(system api)](arkts-arkui-xcomponent-comp-xcomponentextraflag-e-sys.md)<!--DelEnd-->

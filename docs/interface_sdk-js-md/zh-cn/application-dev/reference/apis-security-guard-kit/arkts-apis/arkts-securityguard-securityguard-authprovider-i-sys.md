@@ -6,7 +6,7 @@ interface AuthProvider
 
 AuthProvider 接口，由 createAuthProvider 工厂函数创建。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-securityGuard-interface AuthProvider--><!--Device-securityGuard-interface AuthProvider-End-->
 
@@ -28,7 +28,7 @@ requestAuthResult(event: AuthEventInfo): Promise<AuthResult>
 
 请求事件的阻断结果。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.AUTH_SERVICE_ACCESS
 

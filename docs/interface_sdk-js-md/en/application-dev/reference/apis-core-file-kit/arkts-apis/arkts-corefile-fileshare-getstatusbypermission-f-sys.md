@@ -14,7 +14,7 @@ function getStatusByPermission(tokenIDList: Array<number>): Promise<Array<Permis
 
 Get the status of URIs permission for applications.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 

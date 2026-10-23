@@ -6,7 +6,7 @@ export interface ActionData
 
 Action 动作数据。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface ActionData--><!--Device-behaviorAwareness-export interface ActionData-End-->
 

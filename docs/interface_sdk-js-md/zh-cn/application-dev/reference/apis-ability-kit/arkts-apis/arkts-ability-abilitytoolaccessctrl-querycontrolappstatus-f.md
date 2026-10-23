@@ -14,7 +14,7 @@ export function queryControlAppStatus(appInfo: AppInfo[]): Promise<ControlAppSta
 
 查询指定应用的控制权限状态。此函数检查输入列表中的每个应用程序是否被允许或拒绝被外部工具控制。结果列表与输入顺序相对应。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.CONTROL_DEVICE
 

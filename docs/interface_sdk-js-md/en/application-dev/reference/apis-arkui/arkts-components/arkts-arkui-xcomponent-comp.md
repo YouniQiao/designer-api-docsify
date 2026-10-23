@@ -136,6 +136,14 @@ Constructor parameters
 | --- | --- |
 | [HdrType](arkts-arkui-xcomponent-comp-hdrtype-e.md) | Enumerates the high dynamic range rendering types of HDR content. |
 
+<!--Del-->
+### Enums(System API)
+
+| Name | Description |
+| --- | --- |
+| [XComponentExtraFlag](arkts-arkui-xcomponent-comp-xcomponentextraflag-e-sys.md) | Defines the extra flags for XComponent. |
+<!--DelEnd-->
+
 ## Examples
 
 ### Example 1: Enabling AI Image Analyzer

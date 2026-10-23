@@ -26,7 +26,7 @@ getAutomationControlControllers(targetTokenID: number): Promise<Array<Automation
 
 查询对目标应用有自动化控制能力的控制方应用。返回控制方应用信息列表。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -67,7 +67,7 @@ getAutomationControlTargets(controllerTokenID: number): Promise<Array<Automation
 
 查询指定应用的自动化控制目标应用的信息。返回目标应用列表及其状态。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -1242,7 +1242,7 @@ setAutomationControlStatus(
 
 设置控制方应用对目标应用的自动化控制开关，返回每个目标应用的结果。该开关状态包含允许和禁止。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 

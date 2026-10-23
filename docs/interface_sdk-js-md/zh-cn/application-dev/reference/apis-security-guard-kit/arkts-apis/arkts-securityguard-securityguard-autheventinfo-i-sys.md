@@ -6,7 +6,7 @@ interface AuthEventInfo
 
 阻断事件信息。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-securityGuard-interface AuthEventInfo--><!--Device-securityGuard-interface AuthEventInfo-End-->
 
@@ -30,7 +30,7 @@ clientStatus?: AuthClientStatus[]
 
 **类型：** [AuthClientStatus](arkts-securityguard-securityguard-authclientstatus-i-sys.md)[]
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ content: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +70,7 @@ eventId: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -90,7 +90,7 @@ version: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

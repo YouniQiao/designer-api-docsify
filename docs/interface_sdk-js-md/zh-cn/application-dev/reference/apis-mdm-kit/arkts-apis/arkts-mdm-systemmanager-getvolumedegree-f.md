@@ -14,7 +14,7 @@ function getVolumeDegree(volumeType: AudioVolumeType): number
 
 获取指定音量类型的音量值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.ENTERPRISE_MANAGE_SYSTEM
 

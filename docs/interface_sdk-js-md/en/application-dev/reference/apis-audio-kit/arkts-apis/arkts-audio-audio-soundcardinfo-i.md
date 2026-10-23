@@ -6,7 +6,7 @@ interface SoundCardInfo
 
 Describes sound card information.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-audio-interface SoundCardInfo--><!--Device-audio-interface SoundCardInfo-End-->
 
@@ -28,7 +28,7 @@ Sound card bus address. The maximum length is 256.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -46,7 +46,7 @@ Sound card ID. The maximum length is 128. Default value: Default sound card ID o
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -64,7 +64,7 @@ Sound card type. Default value: The default is the onboard sound card type.
 
 **Type:** [SoundCardType](arkts-audio-audio-soundcardtype-e.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -82,7 +82,7 @@ Sound card driver. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -100,7 +100,7 @@ Sound card model. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -118,7 +118,7 @@ Sound card name. The maximum length is 256.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -136,7 +136,7 @@ Sound card vendor. The maximum length is 128.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

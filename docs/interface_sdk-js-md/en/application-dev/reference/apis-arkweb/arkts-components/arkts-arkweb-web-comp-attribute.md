@@ -244,7 +244,7 @@ When this attribute is not explicitly called or is reset, the caret uses the pag
 > 
 > - The exact color value **#00000000** is reserved as the reset sentinel. After reset, the CSS `caret-color` value is used. If the CSS value is **auto** or not set, the built-in default color is used.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -911,7 +911,7 @@ Sets the maximum fling speed for the Web component.
 
 The value configured through this TypeScript API takes precedence over values configured through other APIs.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -1845,7 +1845,7 @@ Registers a callback to be invoked when the context menu item status is updated 
 
 The shouldOfferLinkToText() method returns a synchronous initial value, while this callback provides the asynchronous final value. The two are complementary.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -3481,7 +3481,7 @@ onZoomChange(callback: OnZoomChangeCallback)
 
 The callback is triggered when the browser zoom factor of the page changes.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

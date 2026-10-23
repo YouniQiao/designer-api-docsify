@@ -40,11 +40,11 @@ DisplayMode.DATE_TIME，且[mode](arkts-arkui-arkui-advanced-datepickercomponent
 
 **类型：** boolean
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-DateOptions-hideYear?: boolean--><!--Device-DateOptions-hideYear?: boolean-End-->
 

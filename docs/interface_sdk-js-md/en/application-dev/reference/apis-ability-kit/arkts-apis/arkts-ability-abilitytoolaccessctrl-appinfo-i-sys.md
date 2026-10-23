@@ -6,7 +6,7 @@ interface AppInfo
 
 Information about an application.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface AppInfo--><!--Device-abilityToolAccessCtrl-interface AppInfo-End-->
 
@@ -30,7 +30,7 @@ Bundle name of the application.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -50,7 +50,7 @@ Index of the application.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

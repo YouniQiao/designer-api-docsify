@@ -6,7 +6,7 @@ enum ExecuteType
 
 Task execute type.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-enum ExecuteType--><!--Device-abilityToolAccessCtrl-enum ExecuteType-End-->
 
@@ -22,7 +22,7 @@ DELAYED = 0x02
 
 Delayed task.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -40,7 +40,7 @@ INSTANT = 0x01
 
 Instant task.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

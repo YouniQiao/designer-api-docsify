@@ -6,7 +6,7 @@ enum SoundCardType
 
 枚举声卡类型。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-audio-enum SoundCardType--><!--Device-audio-enum SoundCardType-End-->
 
@@ -20,7 +20,7 @@ ONBOARD = 0
 
 板载声卡。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -36,7 +36,7 @@ USB = 1
 
 USB声卡。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

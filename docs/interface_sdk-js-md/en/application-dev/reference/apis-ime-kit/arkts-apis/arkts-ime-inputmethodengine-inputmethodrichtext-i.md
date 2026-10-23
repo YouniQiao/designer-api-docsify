@@ -6,7 +6,7 @@ export interface InputMethodRichText
 
 Defines the rich text.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-inputMethodEngine-export interface InputMethodRichText--><!--Device-inputMethodEngine-export interface InputMethodRichText-End-->
 
@@ -26,7 +26,7 @@ getSpans(): Array<RichTextSpan>
 
 Obtains the spans that make up the rich text.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -48,7 +48,7 @@ getString(): string
 
 Extracts the plain text from the rich text.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

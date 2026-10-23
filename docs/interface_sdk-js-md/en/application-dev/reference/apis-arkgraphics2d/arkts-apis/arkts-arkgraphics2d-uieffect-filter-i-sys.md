@@ -727,7 +727,7 @@ Performs color gradient mapping on the image based on its brightness. The mappin
 > 
 > It is recommended to use as a foreground filter.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

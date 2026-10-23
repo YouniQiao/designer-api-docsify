@@ -14,7 +14,7 @@ export function generateTaskIdentity(taskIdentityInfo: TaskIdentityInfo): Promis
 
 为代理命令生成基于任务的身份验证身份。该函数根据调用者身份和基本任务属性（例如任务 ID 和任务过期时间）生成认证标识。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.QUERY_TOOL_PERMISSIONS
 

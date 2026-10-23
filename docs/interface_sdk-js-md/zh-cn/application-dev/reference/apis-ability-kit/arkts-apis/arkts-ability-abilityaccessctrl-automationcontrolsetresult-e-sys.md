@@ -6,7 +6,7 @@ export enum AutomationControlSetResult
 
 设置目标应用自动化控制状态结果的枚举。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityAccessCtrl-export enum AutomationControlSetResult--><!--Device-abilityAccessCtrl-export enum AutomationControlSetResult-End-->
 
@@ -22,7 +22,7 @@ SUCCESS = 0
 
 成功。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -40,7 +40,7 @@ TOKEN_ID_NOT_EXIST = 1
 
 指定的目标应用token ID不存在。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

@@ -14,7 +14,7 @@ function destroyAuthProvider(provider: AuthProvider): void
 
 销毁 AuthProvider 会话。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.AUTH_SERVICE_ACCESS
 

@@ -6,7 +6,7 @@ export interface SystemActionAttributes
 
 系统控制类场景属性。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-behaviorAwareness-export interface SystemActionAttributes--><!--Device-behaviorAwareness-export interface SystemActionAttributes-End-->
 

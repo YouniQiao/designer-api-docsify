@@ -15,7 +15,7 @@ export function requestControlAppPermissionFromUser(context: Context, appInfo: A
 
 Requests the control permission for the specified applications from the user. This function displays a user dialog to obtain authorization decisions for controlling each application. The result reflects the user's allow or deny decision for each app.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.CONTROL_DEVICE
 

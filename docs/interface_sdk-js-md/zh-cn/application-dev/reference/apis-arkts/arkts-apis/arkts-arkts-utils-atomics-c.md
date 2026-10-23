@@ -6,7 +6,7 @@ class Atomics
 
 为以ArkTS ArrayBuffer为底层缓冲区的整数TypedArray提供原子操作。与ECMAScript内置Atomics对象不同，此类通过utils模块提供，仅包含面向ArkTS TypedArray的静态方法。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-utils-class Atomics--><!--Device-utils-class Atomics-End-->
 
@@ -26,11 +26,11 @@ static add(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 以原子方式将指定值与目标元素相加，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static add(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static add(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -64,11 +64,11 @@ static and(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 以原子方式执行按位与运算，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static and(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static and(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -103,11 +103,11 @@ static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedVa
 
 目标元素与预期值相等时，以原子方式替换并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedValue: number,      replacementValue: number): number--><!--Device-Atomics-static compareExchange(typedArray: AtomicIntegerArray, index: number, expectedValue: number,      replacementValue: number): number-End-->
 
@@ -142,11 +142,11 @@ static exchange(typedArray: AtomicIntegerArray, index: number, value: number): n
 
 以原子方式替换目标元素，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static exchange(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static exchange(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -180,11 +180,11 @@ static isLockFree(size: number): boolean
 
 返回指定字节大小的原子操作是否无锁。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static isLockFree(size: number): boolean--><!--Device-Atomics-static isLockFree(size: number): boolean-End-->
 
@@ -210,11 +210,11 @@ static load(typedArray: AtomicIntegerArray, index: number): number
 
 以原子方式读取并返回目标元素。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static load(typedArray: AtomicIntegerArray, index: number): number--><!--Device-Atomics-static load(typedArray: AtomicIntegerArray, index: number): number-End-->
 
@@ -247,11 +247,11 @@ static notify(typedArray: collections.Int32Array, index: number, count?: number)
 
 通知等待指定Int32元素的线程，并返回已通知的线程数。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static notify(typedArray: collections.Int32Array, index: number, count?: number): number--><!--Device-Atomics-static notify(typedArray: collections.Int32Array, index: number, count?: number): number-End-->
 
@@ -285,11 +285,11 @@ static or(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 以原子方式执行按位或运算，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static or(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static or(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -323,11 +323,11 @@ static store(typedArray: AtomicIntegerArray, index: number, value: number): numb
 
 以原子方式存储值，并返回转换后的存储值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static store(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static store(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -361,11 +361,11 @@ static sub(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 以原子方式从目标元素减去指定值，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static sub(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static sub(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 
@@ -400,11 +400,11 @@ static wait(typedArray: collections.Int32Array, index: number, value: number,
 
 当指定Int32元素等于预期值时等待。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static wait(typedArray: collections.Int32Array, index: number, value: number,      timeout?: number): 'ok' | 'not-equal' | 'timed-out'--><!--Device-Atomics-static wait(typedArray: collections.Int32Array, index: number, value: number,      timeout?: number): 'ok' | 'not-equal' | 'timed-out'-End-->
 
@@ -439,11 +439,11 @@ static xor(typedArray: AtomicIntegerArray, index: number, value: number): number
 
 以原子方式执行按位异或运算，并返回操作前的值。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-Atomics-static xor(typedArray: AtomicIntegerArray, index: number, value: number): number--><!--Device-Atomics-static xor(typedArray: AtomicIntegerArray, index: number, value: number): number-End-->
 

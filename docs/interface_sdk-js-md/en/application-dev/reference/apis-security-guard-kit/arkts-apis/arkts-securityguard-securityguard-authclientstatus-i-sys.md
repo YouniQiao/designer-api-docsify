@@ -6,7 +6,7 @@ interface AuthClientStatus
 
 Defines the client session status.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface AuthClientStatus--><!--Device-securityGuard-interface AuthClientStatus-End-->
 
@@ -30,7 +30,7 @@ Unique ID of a client session.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Indicates whether an event is downgraded. A downgraded event is only reported, a
 
 **Type:** boolean
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

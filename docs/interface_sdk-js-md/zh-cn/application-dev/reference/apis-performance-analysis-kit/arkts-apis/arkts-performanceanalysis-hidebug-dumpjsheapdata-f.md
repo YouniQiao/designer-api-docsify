@@ -20,7 +20,7 @@ function dumpJsHeapData(filename : string) : void
 
 **起始版本：** 9
 
-**废弃版本：** 26.2.0
+**废弃版本：** 26.1.0
 
 **替代接口：** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 
@@ -68,7 +68,7 @@ function dumpJsHeapData(filename : string, needClean : boolean) : void
 
 **起始版本：** 24
 
-**废弃版本：** 26.2.0
+**废弃版本：** 26.1.0
 
 **替代接口：** [dumpJsRawHeapData](arkts-performanceanalysis-hidebug-dumpjsrawheapdata-f.md)
 

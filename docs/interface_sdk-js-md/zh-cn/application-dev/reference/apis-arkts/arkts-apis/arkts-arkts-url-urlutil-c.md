@@ -6,7 +6,7 @@ class URLUtil
 
 URL相关工具类，提供URL相关的工具方法。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-url-class URLUtil--><!--Device-url-class URLUtil-End-->
 
@@ -26,11 +26,11 @@ static toString(urlParams: URLParams): string
 
 将指定的URLParams对象序列化为字符串，其中空格被百分比编码为%20（而非'+'）。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-URLUtil-static toString(urlParams: URLParams): string--><!--Device-URLUtil-static toString(urlParams: URLParams): string-End-->
 

@@ -14,7 +14,7 @@ export function generateTaskIdentity(taskIdentityInfo: TaskIdentityInfo): Promis
 
 Generate the task-based authentication identity for agent commands. This function generates a authentication identity based on caller identity and basic task attributes, such as task ID and task expire time.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.QUERY_TOOL_PERMISSIONS
 

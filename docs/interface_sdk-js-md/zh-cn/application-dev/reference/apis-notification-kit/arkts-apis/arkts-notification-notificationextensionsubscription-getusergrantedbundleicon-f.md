@@ -14,7 +14,7 @@ function getUserGrantedBundleIcon(bundleName: string): Promise<image.PixelMap>
 
 查询本应用中“已获取的本机通知”列表中开关状态为开的应用图标。使用Promise异步回调。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **需要权限：** ohos.permission.SUBSCRIBE_NOTIFICATION
 

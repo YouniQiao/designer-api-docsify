@@ -343,11 +343,11 @@ firstDayOfWeek?: CalendarFirstDayOfWeek
 
 **默认值：** CalendarFirstDayOfWeek.LOCAL
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
-**原子化服务API：** 从API版本26.2.0开始，该接口支持在原子化服务中使用。
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
 
 <!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek--><!--Device-CalendarDialogOptions-firstDayOfWeek?: CalendarFirstDayOfWeek-End-->
 

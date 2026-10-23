@@ -6,7 +6,7 @@ interface AutomationControlTargetResult
 
 针对指定的控制方应用，对应的被自动化控制应用的信息和控制状态。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-abilityAccessCtrl-interface AutomationControlTargetResult--><!--Device-abilityAccessCtrl-interface AutomationControlTargetResult-End-->
 
@@ -30,7 +30,7 @@ bundleName: string
 
 **类型：** string
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -50,7 +50,7 @@ status: AutomationControlStatus
 
 **类型：** [AutomationControlStatus](arkts-ability-abilityaccessctrl-automationcontrolstatus-e-sys.md)
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -70,7 +70,7 @@ targetTokenID: number
 
 **类型：** number
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

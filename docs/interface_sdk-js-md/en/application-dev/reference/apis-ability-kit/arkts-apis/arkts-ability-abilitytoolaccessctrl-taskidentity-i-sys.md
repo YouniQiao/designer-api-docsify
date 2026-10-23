@@ -6,7 +6,7 @@ interface TaskIdentity
 
 Task identity.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TaskIdentity--><!--Device-abilityToolAccessCtrl-interface TaskIdentity-End-->
 
@@ -30,7 +30,7 @@ Challenge value.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -50,7 +50,7 @@ Identity info of task attributes.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -70,7 +70,7 @@ Task attributes.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

@@ -2771,7 +2771,7 @@ standby(on: boolean): Promise<void>
 
 Enters or exits the audio standby state. The standby state is used when there is no data during audio playback. For example, the streaming media is waiting for network download. After the audio channel enters the standby state, the audio channel remains unchanged. The cyclic thread that only requests data from the application pauses and does not receive proactively written data. The data that has been written to the system continues to be played. This interface can be invoked to enter the standby state only when the palyback stream is in [STATE_RUNNING](arkts-audio-audio-audiostate-e.md#state_running) state. The interface cna be invoked to exit only when the interface is in standby state. In the standby state, you can directly call [pause](#pause), stop, release to stop the playback. but start cannot be called. Note that this interface does not change the state obtained through state. This API uses a promise to return the result.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

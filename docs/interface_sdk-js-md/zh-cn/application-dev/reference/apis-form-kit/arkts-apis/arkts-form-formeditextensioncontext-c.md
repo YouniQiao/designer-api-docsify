@@ -22,7 +22,7 @@ setWindowBackgroundColor(color: string): Promise<void>
 
 设置卡片编辑页的背景色
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

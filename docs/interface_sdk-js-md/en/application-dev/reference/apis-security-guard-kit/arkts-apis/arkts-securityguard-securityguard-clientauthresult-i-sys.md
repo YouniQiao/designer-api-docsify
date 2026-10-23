@@ -6,7 +6,7 @@ interface ClientAuthResult
 
 Represents the authorization result of a single client.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-securityGuard-interface ClientAuthResult--><!--Device-securityGuard-interface ClientAuthResult-End-->
 
@@ -30,7 +30,7 @@ Authorization policy.
 
 **Type:** [AuthStrategy](arkts-securityguard-securityguard-authstrategy-e-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -50,7 +50,7 @@ Unique ID of a client session.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

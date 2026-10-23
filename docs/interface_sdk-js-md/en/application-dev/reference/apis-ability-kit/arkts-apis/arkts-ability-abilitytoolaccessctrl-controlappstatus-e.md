@@ -6,7 +6,7 @@ enum ControlAppStatus
 
 Control permission status.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-enum ControlAppStatus--><!--Device-abilityToolAccessCtrl-enum ControlAppStatus-End-->
 
@@ -20,7 +20,7 @@ ALLOW = 0x01
 
 Control permission is allowed.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -36,7 +36,7 @@ DENY = 0x02
 
 Control permission is denied.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 

@@ -222,7 +222,7 @@ encodeToString(src: Uint8Array | collections.Uint8Array, options?: Type): Promis
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.2.0 |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.1.0 |
 | options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。<br>可取值如下：<br>- **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME**：Base64 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>- **util.Type.BASIC_URL_SAFE**：Base64URL 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 10 |
 
 **返回值：**
@@ -278,7 +278,7 @@ encodeToStringSync(src: Uint8Array | collections.Uint8Array, options?: Type): st
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.2.0 |
+| src | Uint8Array &#124; [collections.Uint8Array](arkts-arkts-collections-uint8array-c.md) | 是 | 要编码的 Uint8Array 对象。<br>**适用版本：** 26.1.0 |
 | options | [Type](arkts-arkts-util-type-e.md) | 否 | 编码格式。<br>可取值如下：<br>- **util.Type.BASIC**（默认）：Base64 编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME**：Base64 编码。如果返回值超过 76 个字符，则每 76 个字符插入一个换行，每行以 '\r\n' 结尾。如果返回值少于 76 个字符，则抛出异常。<br>- **util.Type.BASIC_URL_SAFE**：Base64URL编码。返回值不包含回车符或换行符。<br>- **util.Type.MIME_URL_SAFE**：Base64URL 编码。返回值每行最多 76 个字符且以 '\r\n' 结尾。<br>**适用版本：** 12 |
 
 **返回值：**

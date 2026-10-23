@@ -12,7 +12,7 @@ import { mechanicManager } from '@kit.MechanicKit';
 function off(type: 'attachStateChange', callback?: Callback<AttachStateChangeInfo>): void
 ```
 
-Unsubscribes from device attachment state change events.
+取消注册连接状态变化事件的回调监听。使用callback异步回调。
 
 **起始版本：** 20
 

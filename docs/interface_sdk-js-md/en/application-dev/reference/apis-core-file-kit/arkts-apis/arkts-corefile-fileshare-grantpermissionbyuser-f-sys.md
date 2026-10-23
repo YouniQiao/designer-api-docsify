@@ -14,7 +14,7 @@ function grantPermissionByUser(tokenID: number, policies: Array<PolicyInfo>): Pr
 
 Grant the URIs permission by user.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 

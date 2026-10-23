@@ -6,7 +6,7 @@ export interface InputMethodRichText
 
 定义富文本。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-inputMethodEngine-export interface InputMethodRichText--><!--Device-inputMethodEngine-export interface InputMethodRichText-End-->
 
@@ -26,7 +26,7 @@ getSpans(): Array<RichTextSpan>
 
 获取组成富文本的span。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -48,7 +48,7 @@ getString(): string
 
 从富文本中提取纯文本。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

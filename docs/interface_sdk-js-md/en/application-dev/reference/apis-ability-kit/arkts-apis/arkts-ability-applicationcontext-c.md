@@ -1827,7 +1827,7 @@ Sets the font for this application. This API can be called only on the main thre
 > [loadContent](../../apis-arkui/arkts-apis/arkts-arkui-window-windowstage-i.md#loadcontent-1) API in the
 > [onWindowStageCreate()](arkts-ability-app-ability-uiability-uiability-c.md#onwindowstagecreate) lifecycle).
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

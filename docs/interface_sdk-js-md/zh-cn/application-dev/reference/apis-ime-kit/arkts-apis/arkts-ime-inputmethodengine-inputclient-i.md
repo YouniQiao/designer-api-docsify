@@ -847,7 +847,7 @@ getLeftRichText(length: number): Promise<InputMethodRichText>
 获取光标前指定长度的富文本。该接口使用promise返回结果。<br> <br>  
 > **注意** <br> <br> &gt;如果输入法应用当前绑定的编辑框是ArkUI富文本组件，则富文本返回内容。如果绑定的组件不是ArkUI富文本组件，则会桥接到文本实现。<br> <br> &gt;最大可获取的富文本总长度为128KB，超过这个限制将请求失败。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -882,7 +882,7 @@ getLeftRichTextSync(length: number): InputMethodRichText
 获取光标前指定长度的富文本。<br> <br>  
 > **注意** <br> <br> &gt;如果输入法应用当前绑定的编辑框是ArkUI富文本组件，则富文本返回内容。如果绑定的组件不是ArkUI富文本组件，则会桥接到文本实现。<br> <br> &gt;最大可获取的富文本总长度为128KB，超过这个限制将请求失败。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -917,7 +917,7 @@ getRightRichText(length: number): Promise<InputMethodRichText>
 获取光标后指定长度的富文本。该接口使用promise返回结果。<br> <br>  
 > **注意** <br> <br> &gt;如果输入法应用当前绑定的编辑框是ArkUI富文本组件，则富文本返回内容。如果绑定的组件不是ArkUI富文本组件，则会桥接到文本实现。<br> <br> &gt;最大可获取的富文本总长度为128KB，超过这个限制将请求失败。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 
@@ -952,7 +952,7 @@ getRightRichTextSync(length: number): InputMethodRichText
 获取光标后指定长度的富文本。<br> <br>  
 > **注意** <br> <br> &gt;如果输入法应用当前绑定的编辑框是ArkUI富文本组件，则富文本返回内容。如果绑定的组件不是ArkUI富文本组件，则会桥接到文本实现。<br> <br> &gt;最大可获取的富文本总长度为128KB，超过这个限制将请求失败。
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

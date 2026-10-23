@@ -827,7 +827,7 @@ Obtains the rich text of the specified length before the cursor. This API uses a
 > If the edit box currently bound to the input method application is an ArkUI rich text component, the rich text content is returned. If the bound component is not an ArkUI rich text component, this API is bridged to the plain text implementation. <br> <br>
 > The maximum total size of the richtext that can be obtained is 128KB. Exceeding this limit causes the request to fail.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -864,7 +864,7 @@ Obtains the rich text of the specified length before the cursor. <br> <br>
 > If the edit box currently bound to the input method application is an ArkUI rich text component, the rich text content is returned. If the bound component is not an ArkUI rich text component, this API is bridged to the plain text implementation. <br> <br>
 > The maximum total size of the richtext that can be obtained is 128KB. Exceeding this limit causes the request to fail.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -901,7 +901,7 @@ Obtains the rich text of the specified length after the cursor. This API uses a 
 > If the edit box currently bound to the input method application is an ArkUI rich text component, the rich text content is returned. If the bound component is not an ArkUI rich text component, this API is bridged to the plain text implementation. <br> <br>
 > The maximum total size of the richtext that can be obtained is 128KB. Exceeding this limit causes the request to fail.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -938,7 +938,7 @@ Obtains the rich text of the specified length after the cursor. <br> <br>
 > If the edit box currently bound to the input method application is an ArkUI rich text component, the rich text content is returned. If the bound component is not an ArkUI rich text component, this API is bridged to the plain text implementation. <br> <br>
 > The maximum total size of the richtext that can be obtained is 128KB. Exceeding this limit causes the request to fail.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

@@ -14,7 +14,7 @@ function revokePermissionByUser(tokenID: number, policies: Array<PolicyInfo>): P
 
 Revoke the URIs permission by user.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.REVOKE_SENSITIVE_PERMISSIONS
 

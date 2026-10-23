@@ -6,7 +6,7 @@ export enum AudioVolumeType
 
 音量类型.
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 <!--Device-systemManager-export enum AudioVolumeType--><!--Device-systemManager-export enum AudioVolumeType-End-->
 
@@ -20,7 +20,7 @@ STREAM_MUSIC = 1
 
 媒体音量.
 
-**起始版本：** 26.2.0
+**起始版本：** 26.1.0
 
 **模型约束：** 此接口仅可在Stage模型下使用。
 

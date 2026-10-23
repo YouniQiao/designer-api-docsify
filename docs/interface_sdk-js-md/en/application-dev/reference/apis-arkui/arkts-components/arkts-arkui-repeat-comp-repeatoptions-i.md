@@ -6,7 +6,7 @@ interface RepeatOptions
 
 Defines the options for creating a **Repeat** component.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-unnamed-interface RepeatOptions--><!--Device-unnamed-interface RepeatOptions-End-->
 
@@ -22,11 +22,11 @@ Whether to allow child components to be reused during the animation when the **R
 
 **Type:** boolean
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
-**Atomic service API:** This API can be used in atomic services since API version 26.2.0.
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
 
 <!--Device-RepeatOptions-allowReuseInAnimation?: boolean--><!--Device-RepeatOptions-allowReuseInAnimation?: boolean-End-->
 

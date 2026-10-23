@@ -26,7 +26,7 @@ getAutomationControlControllers(targetTokenID: number): Promise<Array<Automation
 
 Queries the controller apps that have automation control over a target app. Returns the list of controller app information.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -67,7 +67,7 @@ getAutomationControlTargets(controllerTokenID: number): Promise<Array<Automation
 
 Queries the automation control target apps for a controller app. After the call is successful, the list of target apps and their status is returned.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GET_SENSITIVE_PERMISSIONS
 
@@ -1229,7 +1229,7 @@ setAutomationControlStatus(
 
 Sets the automation control status for a controller app over target apps. After the call is successful, the result for each target app is returned. The status accepts DISABLED (0, deny) and ENABLED (1, allow).
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Required permissions:** ohos.permission.GRANT_SENSITIVE_PERMISSIONS
 

@@ -6,7 +6,7 @@ export enum AutomationControlStatus
 
 Enumerates the automation control status values.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityAccessCtrl-export enum AutomationControlStatus--><!--Device-abilityAccessCtrl-export enum AutomationControlStatus-End-->
 
@@ -22,7 +22,7 @@ DISABLED = 0
 
 Automation control is denied.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 
@@ -40,7 +40,7 @@ ENABLED = 1
 
 Automation control is allowed.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used only in the stage model.
 

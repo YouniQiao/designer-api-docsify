@@ -6,7 +6,7 @@ interface TaskIdentityInfo
 
 Task identity input info used to generate TaskIdentity.
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 <!--Device-abilityToolAccessCtrl-interface TaskIdentityInfo--><!--Device-abilityToolAccessCtrl-interface TaskIdentityInfo-End-->
 
@@ -30,7 +30,7 @@ Valid duration of auth token. Unit: seconds. Value range: (0,60].
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -50,7 +50,7 @@ Whether task is allowed to execute under screen locks.
 
 **Type:** boolean
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -70,7 +70,7 @@ Auth token of trusted device.
 
 **Type:** Uint8Array
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -90,7 +90,7 @@ Task execute type.
 
 **Type:** [ExecuteType](arkts-ability-abilitytoolaccessctrl-executetype-e-sys.md)
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -110,7 +110,7 @@ Task expire time. Unit: seconds.
 
 **Type:** number
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
@@ -130,7 +130,7 @@ Task ID.
 
 **Type:** string
 
-**Since:** 26.2.0
+**Since:** 26.1.0
 
 **Model restriction:** This API can be used in both the stage model and FA model.
 
