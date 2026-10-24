@@ -4,6 +4,8 @@
 
 Defines **Picker** node types for **NativeNode** APIs, which support various picker components including the date picker and text picker. It is applicable to scenarios requiring scroll‑selection implementation at the native layer. It provides rich style configuration and data‑linkage capabilities for you to flexibly construct diverse selection interactions.
 
+**Include**: <arkui/node_attributes/picker.h>
+
 **Library**: libace_ndk.z.so
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full

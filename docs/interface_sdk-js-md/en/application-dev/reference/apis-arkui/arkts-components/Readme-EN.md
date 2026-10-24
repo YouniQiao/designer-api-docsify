@@ -457,6 +457,7 @@
   - [DrawContext](arkts-arkui-common-comp-drawcontext-t.md)
   - [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md)
   - [EnvDecorator](arkts-arkui-common-comp-envdecorator-t.md)
+  - [ExtendVersionDecorator](arkts-arkui-common-comp-extendversiondecorator-t.md)
   - [Filter](arkts-arkui-common-comp-filter-t.md)
   - [FractionStop](arkts-arkui-common-comp-fractionstop-t.md)
   - [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md)

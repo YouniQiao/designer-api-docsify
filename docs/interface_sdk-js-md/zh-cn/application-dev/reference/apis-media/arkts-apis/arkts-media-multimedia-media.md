@@ -170,6 +170,7 @@
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | 需要获取的缩略图时间点与视频帧的对应关系。 |
 | [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md) | 表示媒体服务支持的指标事件的枚举。 |
 | [AVMimeTypes](arkts-media-media-avmimetypes-e.md) | 媒体MIME类型，通过[setMimeType](arkts-media-media-mediasource-i.md#setmimetype)设置。 |
+| [AVScreenCaptureAutoPauseCaptureScene](arkts-media-media-avscreencaptureautopausecapturescene-e.md) | 自动暂停屏幕录制的场景枚举定义。 |
 | [AVScreenCaptureFillMode](arkts-media-media-avscreencapturefillmode-e.md) | 进行屏幕录制时视频填充模式的枚举。 |
 | [AVScreenCaptureRecordPreset](arkts-media-media-avscreencapturerecordpreset-e.md) | 进行屏幕录制时的编码、封装格式参数的枚举。 |
 | [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) | 屏幕录制的状态回调。 |
@@ -183,6 +184,7 @@
 | [MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md) | 媒体信息描述枚举。 |
 | [MediaType](arkts-media-media-mediatype-e.md) | 媒体类型枚举。 |
 | [PickerMode](arkts-media-media-pickermode-e.md) | 表示屏幕录制Picker模式的枚举。 |
+| [PlaybackCommand](arkts-media-media-playbackcommand-e.md) | 可执行的播控指令枚举定义，用于应用在Prepare()完成后，查询该片源是否可以执行对应的播放控制操作； |
 | [PlaybackInfoKey](arkts-media-media-playbackinfokey-e.md) | 播放信息描述枚举。 |
 | [PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md) | 表示播放器指标信息的枚举。 |
 | [PlaybackSpeed](arkts-media-media-playbackspeed-e.md) | 视频播放的倍速枚举，可通过setSpeed方法作为参数传递下去。 |

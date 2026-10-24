@@ -325,6 +325,42 @@ async function test() {
 }
 ```
 
+## checkSupportPlaybackCommand
+
+```TypeScript
+checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>
+```
+
+Queries whether a specified playback control command can be executed under the current playback source. The function can be called only after Prepare() is successfully executed.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-AVPlayer-checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>--><!--Device-AVPlayer-checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVPlayer
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| command | [PlaybackCommand](arkts-media-media-playbackcommand-e.md) | Yes | Enumerated value of the playback control instruction to be queried. <br>Value constraint: See Enumeration PlaybackCommand. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise used to return the result. The value **true** indicates that the command can be executed. The value **false** indicates that the command cannot be executed. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-unsupported-operation) | Operation not allowed. If this function is invoked before Prepare(), it is returned. |
+
 ## clearPlaybackList
 
 ```TypeScript

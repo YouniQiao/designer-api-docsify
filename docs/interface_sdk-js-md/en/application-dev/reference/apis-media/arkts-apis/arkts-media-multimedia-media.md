@@ -169,6 +169,7 @@ The multimedia subsystem provides a set of simple and easy-to-use APIs for you t
 | [AVImageQueryOptions](arkts-media-media-avimagequeryoptions-e.md) | Enumerates the relationship between the video frame and the time at which the video thumbnail is obtained. |
 | [AVMetricsEventType](arkts-media-media-avmetricseventtype-e.md) | Enumerates the metric events supported by the media service. |
 | [AVMimeTypes](arkts-media-media-avmimetypes-e.md) | Enumerates the MIME type, which is set by using [setMimeType](arkts-media-media-mediasource-i.md#setmimetype). |
+| [AVScreenCaptureAutoPauseCaptureScene](arkts-media-media-avscreencaptureautopausecapturescene-e.md) | Scene enumeration definition for automatically pausing screen capture |
 | [AVScreenCaptureFillMode](arkts-media-media-avscreencapturefillmode-e.md) | Enumerates the video fill modes during screen capture. |
 | [AVScreenCaptureRecordPreset](arkts-media-media-avscreencapturerecordpreset-e.md) | Enumerates the encoding and container formats used during screen capture. |
 | [AVScreenCaptureStateCode](arkts-media-media-avscreencapturestatecode-e.md) | Enumerates the screen capture states used in callbacks. |
@@ -182,6 +183,7 @@ The multimedia subsystem provides a set of simple and easy-to-use APIs for you t
 | [MediaDescriptionKey](arkts-media-media-mediadescriptionkey-e.md) | Enumerates the media description keys. |
 | [MediaType](arkts-media-media-mediatype-e.md) | Enumerates the media types. |
 | [PickerMode](arkts-media-media-pickermode-e.md) | Enumerates the display mode for the screen capture picker. |
+| [PlaybackCommand](arkts-media-media-playbackcommand-e.md) | Enumeration definition of executable playback control instructions, This interface is used by the application to query whether the corresponding playback control operation can be performed on the media asset after Prepare() is complete. |
 | [PlaybackInfoKey](arkts-media-media-playbackinfokey-e.md) | Enumerates the playback description keys. |
 | [PlaybackMetricsKey](arkts-media-media-playbackmetricskey-e.md) | Enumerates the playback metric keys. |
 | [PlaybackSpeed](arkts-media-media-playbackspeed-e.md) | Enumerates the video playback speeds, which can be passed in the **setSpeed** API. |

@@ -327,6 +327,42 @@ async function test() {
 }
 ```
 
+## checkSupportPlaybackCommand
+
+```TypeScript
+checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>
+```
+
+查询当前播放源下是否可以执行指定的播控命令。该函数必须在Prepare()执行成功后才能被调用。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
+
+<!--Device-AVPlayer-checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>--><!--Device-AVPlayer-checkSupportPlaybackCommand(command: PlaybackCommand): Promise<boolean>-End-->
+
+**系统能力：** SystemCapability.Multimedia.Media.AVPlayer
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| command | [PlaybackCommand](arkts-media-media-playbackcommand-e.md) | 是 | 需要查询的播控指令的枚举值。<br>取值约束：请参阅枚举回放命令。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| Promise&lt;boolean&gt; | Promise用于返回结果。**true**表示可以执行该命令。**false**表示不允许执行该命令。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [5400102](../../apis-media-kit/errorcode-media.md#5400102-当前状态不支持此操作) | Operation not allowed. If this function is invoked before Prepare(), it is returned. |
+
 ## clearPlaybackList
 
 ```TypeScript

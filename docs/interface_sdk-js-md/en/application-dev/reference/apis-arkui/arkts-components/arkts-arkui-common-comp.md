@@ -299,6 +299,7 @@ Constructor
 | [DrawContext](arkts-arkui-common-comp-drawcontext-t.md) | DrawContext |
 | [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) | Defines the EllipseShape type. |
 | [EnvDecorator](arkts-arkui-common-comp-envdecorator-t.md) | Defines the **EnvDecorator** property decorator type. |
+| [ExtendVersionDecorator](arkts-arkui-common-comp-extendversiondecorator-t.md) | Define Extend Decorator type with version control. |
 | [Filter](arkts-arkui-common-comp-filter-t.md) | Represents a filter object. |
 | [FractionStop](arkts-arkui-common-comp-fractionstop-t.md) | Defines a gradient blur stop. |
 | [GestureCollectInterceptCallback](arkts-arkui-common-comp-gesturecollectinterceptcallback-t.md) | Defines the callback type used in [onGestureCollectIntercept](arkts-arkui-common-comp-commonmethod-c.md#ongesturecollectintercept). |

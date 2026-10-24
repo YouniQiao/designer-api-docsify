@@ -683,6 +683,10 @@
   - [BackgroundLuminanceSamplingConfigs(system api)](arkts-arkui-arkui-uicontext-backgroundluminancesamplingconfigs-i-sys.md)<!--DelEnd-->
   - [GestureObserverConfigs](arkts-arkui-arkui-uicontext-gestureobserverconfigs-i.md)
   - [GestureTriggerInfo](arkts-arkui-arkui-uicontext-gesturetriggerinfo-i.md)
+  <!--Del-->
+  - [ModalUIExtensionCallback(system api)](arkts-arkui-arkui-uicontext-modaluiextensioncallback-i-sys.md)<!--DelEnd-->
+  <!--Del-->
+  - [ModalUIExtensionOptions(system api)](arkts-arkui-arkui-uicontext-modaluiextensionoptions-i-sys.md)<!--DelEnd-->
   - [OrderOverlayOptions](arkts-arkui-arkui-uicontext-orderoverlayoptions-i.md)
   - [OverlayManagerOptions](arkts-arkui-arkui-uicontext-overlaymanageroptions-i.md)
   - [PageInfo](arkts-arkui-arkui-uicontext-pageinfo-i.md)

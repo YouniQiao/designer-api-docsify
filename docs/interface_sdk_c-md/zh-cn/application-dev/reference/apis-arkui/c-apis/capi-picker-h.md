@@ -4,6 +4,8 @@
 
 为NativeNode API提供Picker节点类型定义，支持日期选择器、文本选择器等多种类型的选择器组件， 适用于需要在原生层实现滚动选择功能的场景， 提供了丰富的样式配置和数据联动能力，帮助开发者灵活构建各类选择交互。
 
+**引用文件：** <arkui/node_attributes/picker.h>
+
 **库：** libace_ndk.z.so
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full

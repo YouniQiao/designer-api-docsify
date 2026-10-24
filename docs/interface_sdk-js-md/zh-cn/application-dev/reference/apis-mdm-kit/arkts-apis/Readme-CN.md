@@ -166,6 +166,7 @@
   - [addDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-adddisalloweduninstallbundlessync-f.md)
   - [addInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-addinstallationallowedappdistributiontypes-f.md)
   - [getAllowedInstallBundlesSync](arkts-mdm-bundlemanager-getallowedinstallbundlessync-f.md)
+  - [getDefaultApplicationBundleName](arkts-mdm-bundlemanager-getdefaultapplicationbundlename-f.md)
   - [getDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-getdisallowedinstallbundlessync-f.md)
   - [getDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-getdisalloweduninstallbundlessync-f.md)
   - [getInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-getinstallationallowedappdistributiontypes-f.md)
@@ -177,6 +178,7 @@
   - [removeDisallowedInstallBundlesSync](arkts-mdm-bundlemanager-removedisallowedinstallbundlessync-f.md)
   - [removeDisallowedUninstallBundlesSync](arkts-mdm-bundlemanager-removedisalloweduninstallbundlessync-f.md)
   - [removeInstallationAllowedAppDistributionTypes](arkts-mdm-bundlemanager-removeinstallationallowedappdistributiontypes-f.md)
+  - [setDefaultApplication](arkts-mdm-bundlemanager-setdefaultapplication-f.md)
   <!--Del-->
   - [addAllowedInstallBundles（系统接口）](arkts-mdm-bundlemanager-addallowedinstallbundles-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -209,6 +211,7 @@
   - [SignatureInfo](arkts-mdm-bundlemanager-signatureinfo-i.md)
   - [AppDistributionType](arkts-mdm-bundlemanager-appdistributiontype-e.md)
   - [BundleInfoGetFlag](arkts-mdm-bundlemanager-bundleinfogetflag-e.md)
+  - [DefaultApplicationType](arkts-mdm-bundlemanager-defaultapplicationtype-e.md)
 - [@ohos.enterprise.common（Enterprise公共模块）](arkts-mdm-enterprise-common.md)
   - [isFeatureSupported](arkts-mdm-common-isfeaturesupported-f.md)
   - [ApplicationInstance](arkts-mdm-common-applicationinstance-i.md)
@@ -243,12 +246,16 @@
   - [Operation](arkts-mdm-devicecontrol-operation-e.md)
 - [@ohos.enterprise.deviceInfo（设备信息管理）](arkts-mdm-enterprise-deviceinfo.md)
   - [getDeviceInfo](arkts-mdm-deviceinfo-getdeviceinfo-f.md)
+  - [getPatchInfo](arkts-mdm-deviceinfo-getpatchinfo-f.md)
   <!--Del-->
   - [getDeviceName（系统接口）](arkts-mdm-deviceinfo-getdevicename-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDeviceSerial（系统接口）](arkts-mdm-deviceinfo-getdeviceserial-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getDisplayVersion（系统接口）](arkts-mdm-deviceinfo-getdisplayversion-f-sys.md)<!--DelEnd-->
+  - [PatchDescription](arkts-mdm-deviceinfo-patchdescription-i.md)
+  - [PatchDescriptionBody](arkts-mdm-deviceinfo-patchdescriptionbody-i.md)
+  - [PatchInfo](arkts-mdm-deviceinfo-patchinfo-i.md)
 - [@ohos.enterprise.deviceSettings（设备设置管理）](arkts-mdm-enterprise-devicesettings.md)
   - [addHiddenSettingsMenu](arkts-mdm-devicesettings-addhiddensettingsmenu-f.md)
   - [getHiddenSettingsMenu](arkts-mdm-devicesettings-gethiddensettingsmenu-f.md)
@@ -304,6 +311,7 @@
   - [getGlobalProxySync](arkts-mdm-networkmanager-getglobalproxysync-f.md)
   - [getIpAddressSync](arkts-mdm-networkmanager-getipaddresssync-f.md)
   - [getMacSync](arkts-mdm-networkmanager-getmacsync-f.md)
+  - [getSharedList](arkts-mdm-networkmanager-getsharedlist-f.md)
   - [isNetworkInterfaceDisabledSync](arkts-mdm-networkmanager-isnetworkinterfacedisabledsync-f.md)
   <!--Del-->
   - [listIptablesFilterRules（系统接口）](arkts-mdm-networkmanager-listiptablesfilterrules-f-sys.md)<!--DelEnd-->
@@ -339,8 +347,10 @@
   - [DomainFilterRule](arkts-mdm-networkmanager-domainfilterrule-i.md)
   - [FirewallRule](arkts-mdm-networkmanager-firewallrule-i.md)
   - [InterfaceConfig](arkts-mdm-networkmanager-interfaceconfig-i.md)
+  - [PathSharedData](arkts-mdm-networkmanager-pathshareddata-i.md)
   <!--Del-->
   - [RemoveFilterRule（系统接口）](arkts-mdm-networkmanager-removefilterrule-i-sys.md)<!--DelEnd-->
+  - [UserPathInfo](arkts-mdm-networkmanager-userpathinfo-i.md)
   - [Action](arkts-mdm-networkmanager-action-e.md)
   <!--Del-->
   - [AddMethod（系统接口）](arkts-mdm-networkmanager-addmethod-e-sys.md)<!--DelEnd-->
