@@ -1259,7 +1259,7 @@ setAutomationControlStatus(
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | controllerTokenID | number | 是 | 控制方应用的身份标识，参数值大于0。<br>取值限定为整数。 |
-| targetList | Array&lt;[AutomationControlTargetParam](arkts-ability-abilityaccessctrl-automationcontroltargetparam-i-sys.md)&gt; | 是 | 被控制目标应用列表及其自动化控制开关状态。参数列表最多1024个。<br>最大长度为1024且不能为空。 |
+| targetList | Array&lt;[AutomationControlTargetParam](arkts-ability-abilityaccessctrl-automationcontroltargetparam-i-sys.md)&gt; | 是 | 被控制目标应用列表及其自动化控制开关状态。<br>最大长度为1024且不能为空。 |
 
 **返回值：**
 

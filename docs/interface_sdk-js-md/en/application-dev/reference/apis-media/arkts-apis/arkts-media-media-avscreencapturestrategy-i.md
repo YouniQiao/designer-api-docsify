@@ -51,6 +51,24 @@ Indicates whether to enable B-frame encoding, which is used to reduce the size o
 
 **System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
 
+## enableHDR
+
+```TypeScript
+enableHDR?: boolean
+```
+
+Sets whether to output videos in HDR vivid format. Default value: The default value is false, indicating that videos in SDR format are output.
+
+**Type:** boolean
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-AVScreenCaptureStrategy-enableHDR?: boolean--><!--Device-AVScreenCaptureStrategy-enableHDR?: boolean-End-->
+
+**System capability:** SystemCapability.Multimedia.Media.AVScreenCapture
+
 ## enablePause
 
 ```TypeScript

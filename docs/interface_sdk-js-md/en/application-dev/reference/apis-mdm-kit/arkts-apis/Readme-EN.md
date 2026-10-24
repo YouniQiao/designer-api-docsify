@@ -394,6 +394,7 @@
   - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
+  - [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md)
   - [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md)
   <!--Del-->
   - [getPasswordPolicy(system api)](arkts-mdm-securitymanager-getpasswordpolicy-f-sys.md)<!--DelEnd-->

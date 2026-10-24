@@ -37,6 +37,7 @@ import { securityManager } from '@kit.MDMKit';
 | [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md#getdisallowedpermissions-1) | 获取指定用户下禁用的权限列表。 |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-1) | 获取外部来源扩展程序的管控策略。 |
 | [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md#getexternalsourceextensionspolicy-2) | 获取外部来源扩展程序的管控策略。 |
+| [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md#getpasswordlastchangedtime-1) | 根据账号ID获取最近一次修改密码时间。同步返回时间。企业可以通过该接口查询最近一次修改密码时间，用于密码策略审计和合规性检查。 |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md#getpasswordpolicy-1) | 获取设备锁屏口令策略。企业可通过此接口查询当前配置的口令策略，用于策略审计、合规性检查等场景，确保设备口令策略符合企业安全规范。 |
 | [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md#getpasswordpolicy-2) | 获取设备锁屏口令策略。企业可通过此接口查询当前配置的口令策略，用于策略审计、合规性检查等场景，确保设备口令策略符合企业安全规范。 |
 | [getPermissionManagedState](arkts-mdm-securitymanager-getpermissionmanagedstate-f.md#getpermissionmanagedstate-1) | 获取指定应用的指定user_grant权限的管理策略。 |

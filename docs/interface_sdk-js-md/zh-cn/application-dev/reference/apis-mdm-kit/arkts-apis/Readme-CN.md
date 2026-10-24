@@ -388,6 +388,7 @@
   - [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
+  - [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md)
   - [getPasswordPolicy](arkts-mdm-securitymanager-getpasswordpolicy-f.md)
   <!--Del-->
   - [getPasswordPolicy（系统接口）](arkts-mdm-securitymanager-getpasswordpolicy-f-sys.md)<!--DelEnd-->

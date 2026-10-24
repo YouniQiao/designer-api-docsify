@@ -39,7 +39,7 @@
 - [Kernel Enhance Kit (10)](interface_sdk_c-md/en/application-dev/reference/apis-kernel-enhance-kit/c-apis/capi-memory.md)
 - [Localization Kit (153)](interface_sdk-js-md/en/application-dev/reference/apis-localization-kit/arkts-apis/arkts-localization-fontmanager.md)
 - [Location Kit (167)](interface_sdk-js-md/en/application-dev/reference/apis-location-kit/arkts-apis/arkts-location-app-ability-fenceextensionability.md)
-- [Mdm Kit (486)](interface_sdk-js-md/en/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-accountmanager.md)
+- [Mdm Kit (487)](interface_sdk-js-md/en/application-dev/reference/apis-mdm-kit/arkts-apis/arkts-mdm-enterprise-accountmanager.md)
 - [Mechanic Kit (68)](interface_sdk-js-md/en/application-dev/reference/apis-mechanic-kit/arkts-apis/arkts-mechanic-distributedhardware-mechanicmanager.md)
 - [Media (137)](interface_sdk-js-md/en/application-dev/reference/apis-media/arkts-apis/arkts-media-multimedia-media.md)
 - [Media Kit (105)](interface_sdk-js-md/en/application-dev/reference/apis-media-kit/arkts-apis/arkts-media-multimedia-videoprocessing.md)
