@@ -442,6 +442,7 @@
   - [DialogBaseAlignment](arkts-arkui-arkui-dialog-dialogbasealignment-e.md)
   - [DialogButtonOrientation](arkts-arkui-arkui-dialog-dialogbuttonorientation-e.md)
   - [DialogState](arkts-arkui-arkui-dialog-dialogstate-e.md)
+  - [HandednessFollowMode](arkts-arkui-arkui-dialog-handednessfollowmode-e.md)
 - [@ohos.arkui.dragController（拖拽控制）](arkts-arkui-arkui-dragcontroller.md)
   - [createDragAction](arkts-arkui-dragcontroller-createdragaction-f.md)
   - [executeDrag](arkts-arkui-dragcontroller-executedrag-f.md)
