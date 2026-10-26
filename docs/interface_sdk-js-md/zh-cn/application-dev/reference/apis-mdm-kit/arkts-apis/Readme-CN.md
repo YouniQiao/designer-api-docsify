@@ -31,6 +31,7 @@
   - [enableAdmin（系统接口）](arkts-mdm-adminmanager-enableadmin-f-sys.md)<!--DelEnd-->
   - [enableDeviceAdmin](arkts-mdm-adminmanager-enabledeviceadmin-f.md)
   - [enableSelfDeviceAdmin](arkts-mdm-adminmanager-enableselfdeviceadmin-f.md)
+  - [getAdminInfos](arkts-mdm-adminmanager-getadmininfos-f.md)
   <!--Del-->
   - [getAdmins（系统接口）](arkts-mdm-adminmanager-getadmins-f-sys.md)<!--DelEnd-->
   - [getDelegatedBundleNames](arkts-mdm-adminmanager-getdelegatedbundlenames-f.md)
@@ -44,6 +45,7 @@
   <!--Del-->
   - [isAdminEnabled（系统接口）](arkts-mdm-adminmanager-isadminenabled-f-sys.md)<!--DelEnd-->
   - [isByodAdmin](arkts-mdm-adminmanager-isbyodadmin-f.md)
+  - [isSelfSuperAdmin](arkts-mdm-adminmanager-isselfsuperadmin-f.md)
   <!--Del-->
   - [isSuperAdmin（系统接口）](arkts-mdm-adminmanager-issuperadmin-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -62,6 +64,7 @@
   - [subscribeManagedEvent（系统接口）](arkts-mdm-adminmanager-subscribemanagedevent-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [unsubscribeManagedEvent（系统接口）](arkts-mdm-adminmanager-unsubscribemanagedevent-f-sys.md)<!--DelEnd-->
+  - [AdminInfo](arkts-mdm-adminmanager-admininfo-i.md)
   <!--Del-->
   - [EnterpriseInfo（系统接口）](arkts-mdm-adminmanager-enterpriseinfo-i-sys.md)<!--DelEnd-->
   - [AdminType](arkts-mdm-adminmanager-admintype-e.md)
@@ -392,10 +395,13 @@
   - [SettingsForDevice](arkts-mdm-restrictions-settingsfordevice-e.md)
 - [@ohos.enterprise.securityManager（安全管理）](arkts-mdm-enterprise-securitymanager.md)
   - [addAllowedPermissionBundle](arkts-mdm-securitymanager-addallowedpermissionbundle-f.md)
+  - [addUserExtendCredential](arkts-mdm-securitymanager-adduserextendcredential-f.md)
   - [cancelScreenWatermarkImage](arkts-mdm-securitymanager-cancelscreenwatermarkimage-f.md)
   - [cancelWatermarkImage](arkts-mdm-securitymanager-cancelwatermarkimage-f.md)
+  - [closeSession](arkts-mdm-securitymanager-closesession-f.md)
   - [getAllowedPermissionBundles](arkts-mdm-securitymanager-getallowedpermissionbundles-f.md)
   - [getAppClipboardPolicy](arkts-mdm-securitymanager-getappclipboardpolicy-f.md)
+  - [getDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-getdevicesecuritylevelpolicy-f.md)
   - [getDisallowedPermissions](arkts-mdm-securitymanager-getdisallowedpermissions-f.md)
   - [getExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-getexternalsourceextensionspolicy-f.md)
   - [getPasswordLastChangedTime](arkts-mdm-securitymanager-getpasswordlastchangedtime-f.md)
@@ -404,20 +410,26 @@
   - [getPasswordPolicy（系统接口）](arkts-mdm-securitymanager-getpasswordpolicy-f-sys.md)<!--DelEnd-->
   - [getPermissionManagedState](arkts-mdm-securitymanager-getpermissionmanagedstate-f.md)
   - [getSecurityStatus](arkts-mdm-securitymanager-getsecuritystatus-f.md)
+  - [getUnlockPolicy](arkts-mdm-securitymanager-getunlockpolicy-f.md)
   - [getUserCertificates](arkts-mdm-securitymanager-getusercertificates-f.md)
+  - [getUserExtendCredential](arkts-mdm-securitymanager-getuserextendcredential-f.md)
   - [getWatermarkImageApps](arkts-mdm-securitymanager-getwatermarkimageapps-f.md)
   - [installEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-installenterpriseresignaturecertificate-f.md)
   - [installUserCertificate](arkts-mdm-securitymanager-installusercertificate-f.md)
   - [isScreenLockDisabledForAccount](arkts-mdm-securitymanager-isscreenlockdisabledforaccount-f.md)
   - [isWeakPinEnabled](arkts-mdm-securitymanager-isweakpinenabled-f.md)
+  - [openSession](arkts-mdm-securitymanager-opensession-f.md)
   - [removeAllowedPermissionBundle](arkts-mdm-securitymanager-removeallowedpermissionbundle-f.md)
+  - [removeUserExtendCredential](arkts-mdm-securitymanager-removeuserextendcredential-f.md)
   - [setAppClipboardPolicy](arkts-mdm-securitymanager-setappclipboardpolicy-f.md)
+  - [setDeviceSecurityLevelPolicy](arkts-mdm-securitymanager-setdevicesecuritylevelpolicy-f.md)
   - [setDisallowedPermission](arkts-mdm-securitymanager-setdisallowedpermission-f.md)
   - [setExternalSourceExtensionsPolicy](arkts-mdm-securitymanager-setexternalsourceextensionspolicy-f.md)
   - [setPasswordPolicy](arkts-mdm-securitymanager-setpasswordpolicy-f.md)
   - [setPermissionManagedState](arkts-mdm-securitymanager-setpermissionmanagedstate-f.md)
   - [setScreenLockDisabledForAccount](arkts-mdm-securitymanager-setscreenlockdisabledforaccount-f.md)
   - [setScreenWatermarkImage](arkts-mdm-securitymanager-setscreenwatermarkimage-f.md)
+  - [setUnlockPolicy](arkts-mdm-securitymanager-setunlockpolicy-f.md)
   - [setWatermarkImage](arkts-mdm-securitymanager-setwatermarkimage-f.md)
   - [setWeakPinEnable](arkts-mdm-securitymanager-setweakpinenable-f.md)
   - [uninstallEnterpriseReSignatureCertificate](arkts-mdm-securitymanager-uninstallenterpriseresignaturecertificate-f.md)
@@ -426,15 +438,20 @@
   - [getDeviceEncryptionStatus（系统接口）](arkts-mdm-securitymanager-getdeviceencryptionstatus-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [getSecurityPatchTag（系统接口）](arkts-mdm-securitymanager-getsecuritypatchtag-f-sys.md)<!--DelEnd-->
+  - [AddCredentialInfo](arkts-mdm-securitymanager-addcredentialinfo-i.md)
   - [ApplicationInstance](arkts-mdm-securitymanager-applicationinstance-i.md)
   - [CertBlob](arkts-mdm-securitymanager-certblob-i.md)
   <!--Del-->
   - [DeviceEncryptionStatus（系统接口）](arkts-mdm-securitymanager-deviceencryptionstatus-i-sys.md)<!--DelEnd-->
   - [PasswordPolicy](arkts-mdm-securitymanager-passwordpolicy-i.md)
+  - [RemoveCredentialInfo](arkts-mdm-securitymanager-removecredentialinfo-i.md)
+  - [UserExtCredentialInfo](arkts-mdm-securitymanager-userextcredentialinfo-i.md)
   - [WatermarkProperties](arkts-mdm-securitymanager-watermarkproperties-i.md)
   - [ClipboardPolicy](arkts-mdm-securitymanager-clipboardpolicy-e.md)
+  - [DeviceSecurityLevelPolicy](arkts-mdm-securitymanager-devicesecuritylevelpolicy-e.md)
   - [PasswordAlgs](arkts-mdm-securitymanager-passwordalgs-e.md)
   - [PermissionManagedState](arkts-mdm-securitymanager-permissionmanagedstate-e.md)
+  - [UnlockPolicy](arkts-mdm-securitymanager-unlockpolicy-e.md)
 - [@ohos.enterprise.systemManager（系统管理）](arkts-mdm-enterprise-systemmanager.md)
   - [addAllowedPrinterIPAddressesForAccount](arkts-mdm-systemmanager-addallowedprinteripaddressesforaccount-f.md)
   - [addAllowedPrinterIPAddressesForDevice](arkts-mdm-systemmanager-addallowedprinteripaddressesfordevice-f.md)
@@ -450,6 +467,7 @@
   - [getInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabled-f.md)
   - [getInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-getinstalllocalenterpriseappenabledforaccount-f.md)
   - [getKeyEventPolicies](arkts-mdm-systemmanager-getkeyeventpolicies-f.md)
+  - [getLocalHotaDomain](arkts-mdm-systemmanager-getlocalhotadomain-f.md)
   - [getNTPServer](arkts-mdm-systemmanager-getntpserver-f.md)
   - [getOtaUpdatePolicy](arkts-mdm-systemmanager-getotaupdatepolicy-f.md)
   - [getUpdateAuthData](arkts-mdm-systemmanager-getupdateauthdata-f.md)
@@ -466,6 +484,7 @@
   - [setAutoUnlockAfterReboot](arkts-mdm-systemmanager-setautounlockafterreboot-f.md)
   - [setInstallLocalEnterpriseAppEnabled](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabled-f.md)
   - [setInstallLocalEnterpriseAppEnabledForAccount](arkts-mdm-systemmanager-setinstalllocalenterpriseappenabledforaccount-f.md)
+  - [setLocalHotaDomain](arkts-mdm-systemmanager-setlocalhotadomain-f.md)
   - [setNTPServer](arkts-mdm-systemmanager-setntpserver-f.md)
   - [setOtaUpdateNonceEnable](arkts-mdm-systemmanager-setotaupdatenonceenable-f.md)
   - [setOtaUpdatePolicy](arkts-mdm-systemmanager-setotaupdatepolicy-f.md)

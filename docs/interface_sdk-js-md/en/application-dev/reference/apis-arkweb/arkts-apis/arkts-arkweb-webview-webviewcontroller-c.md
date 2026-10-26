@@ -1807,6 +1807,42 @@ struct WebComponent {
 }
 ```
 
+## enableAutoReload
+
+```TypeScript
+enableAutoReload(enable: boolean): void
+```
+
+Enables or disables automatic reload for error pages.
+
+When enabled, the Web component automatically retries loading on network errors using a retry backoff sequence: 1s → 5s → 30s → 1min → 5min → 10min → 30min. Retries stop after 7 attempts with increasing delays.
+
+> **NOTE:** 
+> 
+> - Only network errors trigger auto-reload. The following are excluded:certificate errors, SSL (Secure Sockets Layer) protocol errors, authentication errors,POST requests, non-HTTP(S) protocols, and errors blocked by the client.
+> - Auto-reload does not affect the [onOverrideErrorPage](../arkts-components/arkts-arkweb-web-comp-attribute.md#onoverrideerrorpage) callback.
+> - When auto-reload is triggered, the onErrorReceive callback will be invoked again for each retry attempt.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-enableAutoReload(enable: boolean): void--><!--Device-WebviewController-enableAutoReload(enable: boolean): void-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| enable | boolean | Yes | Whether to enable automatic reload. The value **true** enables it, and **false** disables it. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. Ensure that the WebviewController is associated with a Web component before calling this API. |
+
 ## enableBackForwardCache
 
 ```TypeScript
@@ -4917,6 +4953,34 @@ struct WebComponent {
   }
 }
 ```
+
+## isAutoReloadEnabled
+
+```TypeScript
+isAutoReloadEnabled(): boolean
+```
+
+Returns whether automatic reload for error pages is enabled.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+<!--Device-WebviewController-isAutoReloadEnabled(): boolean--><!--Device-WebviewController-isAutoReloadEnabled(): boolean-End-->
+
+**System capability:** SystemCapability.Web.Webview.Core
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| boolean | Whether automatic reload is enabled. Returns **true** if enabled, **false** otherwise. |
+
+**Error codes:**
+
+| Error Code ID | Error Message |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller-not-associated-with-a-web-component) | Init error. The WebviewController must be associated with a Web component. Ensure that the WebviewController is associated with a Web component before calling this API. |
 
 ## isIncognitoMode
 

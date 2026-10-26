@@ -78,26 +78,6 @@ UID of the caller. The value should be an integer.
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-## instanceId
-
-```TypeScript
-instanceId: number
-```
-
-Unique ID of an intent instance. The value should be an integer.
-
-**Type:** number
-
-**Since:** 26.1.0
-
-**Model restriction:** This API can be used only in the stage model.
-
-**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
-
-<!--Device-InsightIntentExecutionInfo-instanceId: int--><!--Device-InsightIntentExecutionInfo-instanceId: int-End-->
-
-**System capability:** SystemCapability.Ability.AbilityRuntime.Core
-
 ## intentName
 
 ```TypeScript

@@ -208,7 +208,7 @@ spatialEffect(params: SpatialEffectParams | undefined): T
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| params | [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) &#124; undefined | 是 | 空间效果参数。 |
+| params | [SpatialEffectParams](arkts-arkui-common-comp-spatialeffectparams-i-sys.md) &#124; undefined | 是 | 空间效果参数。如果该参数设置为undefined，则移除空间效果。 |
 
 **返回值：**
 

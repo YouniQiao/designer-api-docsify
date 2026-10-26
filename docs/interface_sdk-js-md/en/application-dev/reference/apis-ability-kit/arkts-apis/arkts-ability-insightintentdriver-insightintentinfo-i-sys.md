@@ -311,7 +311,7 @@ Data format of intent parameters, which is used to define the input data format 
 readonly permissions?: string[]
 ```
 
-The permissions required by the intent.
+Optional list of permissions required to invoke this intent. This is for caller-side query/reference only. The system does not enforce these permissions automatically. Permission validation must be implemented on the intent provider (server side).
 
 **Type:** string[]
 

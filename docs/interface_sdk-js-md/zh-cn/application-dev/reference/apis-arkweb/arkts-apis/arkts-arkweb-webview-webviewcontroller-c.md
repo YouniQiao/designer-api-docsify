@@ -1800,6 +1800,42 @@ struct WebComponent {
 }
 ```
 
+## enableAutoReload
+
+```TypeScript
+enableAutoReload(enable: boolean): void
+```
+
+设置是否启用错误页面的自动重载。
+
+启用后，Web组件会在出现网络错误时自动重试加载，使用重试退避序列：1s → 5s → 30s → 1min → 5min → 10min → 30min。最多重试7次后停止。
+
+> **说明：** 
+> 
+> - 只有网络错误才会触发自动重新加载。不包括以下内容：证书错误、SSL（安全套接字层）协议错误、身份验证错误、POST请求、非HTTP(S)协议和客户端拦截的错误。
+> - 自动重新加载不会影响[onOverrideErrorPage](../arkts-components/arkts-arkweb-web-comp-attribute.md#onoverrideerrorpage)回调。
+> - 当触发自动重新加载时，onErrorReceive回调将被每次重试都会重新调用。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-enableAutoReload(enable: boolean): void--><!--Device-WebviewController-enableAutoReload(enable: boolean): void-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**参数：**
+
+| 参数名 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| enable | boolean | 是 | 是否启用自动重载。值**true**启用它，和**false**禁用它。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | 初始化错误。WebviewController必须与Web组件关联。调用该接口前，请确保WebviewController关联了Web组件。 |
+
 ## enableBackForwardCache
 
 ```TypeScript
@@ -4906,6 +4942,34 @@ struct WebComponent {
   }
 }
 ```
+
+## isAutoReloadEnabled
+
+```TypeScript
+isAutoReloadEnabled(): boolean
+```
+
+获取是否启用错误页面的自动重载。
+
+**起始版本：** 26.1.0
+
+**模型约束：** 此接口仅可在Stage模型下使用。
+
+<!--Device-WebviewController-isAutoReloadEnabled(): boolean--><!--Device-WebviewController-isAutoReloadEnabled(): boolean-End-->
+
+**系统能力：** SystemCapability.Web.Webview.Core
+
+**返回值：**
+
+| 类型 | 说明 |
+| --- | --- |
+| boolean | 是否使能自动重新加载。如果启用，则返回**true**，否则返回**false**。 |
+
+**错误码：**
+
+| 错误码ID | 错误信息 |
+| --- | --- |
+| [17100001](../errorcode-webview.md#17100001-webviewcontroller没有和具体的web组件关联) | 初始化错误。WebviewController必须与Web组件关联。调用该接口前，请确保WebviewController关联了Web组件。 |
 
 ## isIncognitoMode
 

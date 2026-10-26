@@ -20,12 +20,12 @@ Provides UI capabilities of ArkUI on the native side, such as UI component creat
 | [native_node_ani.h](capi-native-node-ani-h.md) | 提供ArkTS1.2的FrameNode转换NodeHandle的方式。 |
 | [native_key_event.h](capi-native-key-event-h.md) | 提供NativeKeyEvent相关接口定义。 |
 | [drag_and_drop.h](capi-drag-and-drop-h.md) | 提供NativeDrag相关接口定义。 |
-| [native_interface.h](capi-native-interface-h.md) | Provides a unified entry for the native module APIs. |
+| [native_interface.h](capi-native-interface-h.md) | 提供NativeModule接口的统一入口函数。 |
 | [native_interface_focus.h](capi-native-interface-focus-h.md) | 定义焦点管理接口，主要用于主动转移焦点、清除焦点、管理焦点转移默认行为、控制焦点激活态，以及设置按键事件的处理模式。适用于页面切换、键盘导航等需要统一管理焦点状态和焦点转移行为的场景， 有助于提升焦点控制的可预测性和交互体验。 |
 | [ui_event_injection.h](capi-ui-event-injection-h.md) | 声明供应用内智能体和UI自动化使用的接口，用于向指定UI节点注入控制命令。 |
-| [native_type.h](capi-native-type-h.md) | Defines the common types for the native module. |
+| [native_type.h](capi-native-type-h.md) | 提供NativeModule公共的类型定义。 |
 | [native_dialog.h](capi-native-dialog-h.md) | 提供ArkUI在Native侧的自定义弹窗接口定义集合。 |
-| [error_code.h](capi-error-code-h.md) | Defines the error code for the native module. |
+| [error_code.h](capi-error-code-h.md) | 定义ArkUI Native API的错误码枚举值，用于表示接口调用结果或失败原因。 |
 | [common_type.h](capi-common-type-h.md) | 定义ArkUI Native API的公共类型。 |
 | [drawable_descriptor.h](capi-drawable-descriptor-h.md) | 提供DrawableDescriptor接口的类型定义。 |
 | [ui_json_wrapper.h](capi-ui-json-wrapper-h.md) | 声明UI感知与控制等接口共用的JSON数据对象。<br> 错误通过文档中规定的返回值报告。这些接口不使用errno传递错误； 调用后的errno值未定义，不得用它判断调用是否成功。<br> 在满足对象生命周期要求的前提下，这些函数可在任意线程（包括UI线程）调用。 对同一个有效对象的只读查询可并发执行，调用方必须保证销毁操作不与对象及其借用数据的任何使用并发。 对独立对象的操作可并发执行。这些函数不触发应用回调；满足所有权和生命周期要求时，可在回调中调用。 这些函数不具备异步信号安全性，不得在信号处理函数中调用。 查询同步读取本地内存，创建和销毁还会分配或释放内存，不提供异步完成或取消操作，也不保证内存分配器的最大耗时。 |

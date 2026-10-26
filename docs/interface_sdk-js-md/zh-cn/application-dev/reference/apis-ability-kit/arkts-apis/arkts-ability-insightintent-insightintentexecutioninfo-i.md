@@ -78,26 +78,6 @@ callerUid: number
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-## instanceId
-
-```TypeScript
-instanceId: number
-```
-
-表示意图实例的唯一ID。该值应为整数。
-
-**类型：** number
-
-**起始版本：** 26.1.0
-
-**模型约束：** 此接口仅可在Stage模型下使用。
-
-**原子化服务API：** 从API版本26.1.0开始，该接口支持在原子化服务中使用。
-
-<!--Device-InsightIntentExecutionInfo-instanceId: int--><!--Device-InsightIntentExecutionInfo-instanceId: int-End-->
-
-**系统能力：** SystemCapability.Ability.AbilityRuntime.Core
-
 ## intentName
 
 ```TypeScript

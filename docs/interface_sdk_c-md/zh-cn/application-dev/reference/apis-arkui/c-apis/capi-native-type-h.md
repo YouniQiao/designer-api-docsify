@@ -2,7 +2,7 @@
 
 ## 概述
 
-Defines the common types for the native module.
+提供NativeModule公共的类型定义。
 
 **库：** libace_ndk.z.so
 
@@ -56,11 +56,11 @@ Defines the common types for the native module.
 | [ArkUI_SwiperNestedScrollMode](#arkui_swipernestedscrollmode) | ArkUI_SwiperNestedScrollMode | Nested scrolling mode for Swiper components and parent components. |
 | [ArkUI_PageFlipMode](#arkui_pageflipmode) | ArkUI_PageFlipMode | Enumerates the page flipping modes using the mouse wheel for the <b>Swiper</b> component. |
 | [ArkUI_SwiperAnimationMode](#arkui_swiperanimationmode) | ArkUI_SwiperAnimationMode | Enumerates the animation modes for [NODE_SWIPER_INDEX](capi-native-node-h.md#arkui_nodeattributetype). |
-| [ArkUI_AccessibilityMode](#arkui_accessibilitymode) | ArkUI_AccessibilityMode | Enumerates the accessibility modes. |
+| [ArkUI_AccessibilityMode](#arkui_accessibilitymode) | ArkUI_AccessibilityMode | 定义无障碍辅助服务模式。 |
 | [ArkUI_AnimationPlayMode](#arkui_animationplaymode) | ArkUI_AnimationPlayMode | Enumerates the animation playback modes. |
 | [ArkUI_AdaptiveColor](#arkui_adaptivecolor) | ArkUI_AdaptiveColor | Enumerates the adaptive color modes. |
 | [ArkUI_ColorMode](#arkui_colormode) | ArkUI_ColorMode | Enumerates the color modes. |
-| [ArkUI_SystemColorMode](#arkui_systemcolormode) | ArkUI_SystemColorMode | Enumerates the system color modes. |
+| [ArkUI_SystemColorMode](#arkui_systemcolormode) | ArkUI_SystemColorMode | 定义系统深浅色模式。 |
 | [ArkUI_BlurStyle](#arkui_blurstyle) | ArkUI_BlurStyle | Enumerates the blur styles. |
 | [ArkUI_BlurStyleActivePolicy](#arkui_blurstyleactivepolicy) | ArkUI_BlurStyleActivePolicy | Enumerates the activation policies for the background blur effect. |
 | [ArkUI_BlendMode](#arkui_blendmode) | ArkUI_BlendMode | Enumerates the blend modes. |
@@ -71,16 +71,16 @@ Defines the common types for the native module.
 | [ArkUI_LinearGradientDirection](#arkui_lineargradientdirection) | ArkUI_LinearGradientDirection | Enumerates the gradient directions. |
 | [ArkUI_TransitionEdge](#arkui_transitionedge) | ArkUI_TransitionEdge | Enumerates the slide-in and slide-out positions of the component from the screen edge during transition. |
 | [ArkUI_BlendApplyType](#arkui_blendapplytype) | ArkUI_BlendApplyType | Defines how the specified blend mode is applied. |
-| [ArkUI_FinishCallbackType](#arkui_finishcallbacktype) | ArkUI_FinishCallbackType | Enumerates the animation onFinish callback types. |
+| [ArkUI_FinishCallbackType](#arkui_finishcallbacktype) | ArkUI_FinishCallbackType | 在动画中定义[OH_ArkUI_AnimatorOption_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_animatoroption_registeronfinishcallback)回调的类型。 |
 | [ArkUI_LengthMetricUnit](#arkui_lengthmetricunit) | ArkUI_LengthMetricUnit | Enumerates the component units. |
 | [ArkUI_RenderFit](#arkui_renderfit) | ArkUI_RenderFit | Enumerates the render fit. |
 | [ArkUI_SwiperIndicatorType](#arkui_swiperindicatortype) | ArkUI_SwiperIndicatorType | Define the navigation indicator type of the swiper. |
 | [ArkUI_AnimationStatus](#arkui_animationstatus) | ArkUI_AnimationStatus | Defines the playback status for the image animator. |
 | [ArkUI_AnimationFillMode](#arkui_animationfillmode) | ArkUI_AnimationFillMode | Defines the status before and after execution of the animation in the current playback direction. |
-| [ArkUI_AccessibilityCheckedState](#arkui_accessibilitycheckedstate) | ArkUI_AccessibilityCheckedState | Defines the state type for the accessibility checkbox. |
+| [ArkUI_AccessibilityCheckedState](#arkui_accessibilitycheckedstate) | ArkUI_AccessibilityCheckedState | 定义无障碍复选框状态类型枚举值。 |
 | [ArkUI_AnimationDirection](#arkui_animationdirection) | ArkUI_AnimationDirection | Enumerates the animation playback modes. |
-| [ArkUI_AccessibilityActionType](#arkui_accessibilityactiontype) | ArkUI_AccessibilityActionType | Define accessible action types. |
-| [ArkUI_NavDestinationState](#arkui_navdestinationstate) | ArkUI_NavDestinationState | Defines the state of the NavDestination component. |
+| [ArkUI_AccessibilityActionType](#arkui_accessibilityactiontype) | ArkUI_AccessibilityActionType | 定义无障碍操作类型。 |
+| [ArkUI_NavDestinationState](#arkui_navdestinationstate) | ArkUI_NavDestinationState | 定义NavDestination组件的状态，用于描述NavDestination在导航过程中的生命周期状态变化。 |
 | [ArkUI_RouterPageState](#arkui_routerpagestate) | ArkUI_RouterPageState | Define the state of Router Page. |
 | [ArkUI_SafeAreaType](#arkui_safeareatype) | ArkUI_SafeAreaType | 定义扩展安全区域的枚举值。 |
 | [ArkUI_KeyboardAvoidMode](#arkui_keyboardavoidmode) | ArkUI_KeyboardAvoidMode | defines the enumerated value of the customDialog's keyboard avoid mode. |
@@ -89,7 +89,7 @@ Defines the common types for the native module.
 | [ArkUI_EdgeDirection](#arkui_edgedirection) | ArkUI_EdgeDirection | 定义矩形边方向。 |
 | [ArkUI_CornerDirection](#arkui_cornerdirection) | ArkUI_CornerDirection | 定义角度方向。 |
 | [ArkUI_MenuPolicy](#arkui_menupolicy) | ArkUI_MenuPolicy | Menu pop-up strategy. |
-| [ArkUI_RenderStrategy](#arkui_renderstrategy) | ArkUI_RenderStrategy | Enumerates the graphics rendering strategy. |
+| [ArkUI_RenderStrategy](#arkui_renderstrategy) | ArkUI_RenderStrategy | 定义图形渲染策略。 |
 | [OH_ArkUI_CrossLanguageOperatingStatus](#oh_arkui_crosslanguageoperatingstatus) | OH_ArkUI_CrossLanguageOperatingStatus | Enumerates the tree operating status for the cross-language option. |
 | [OH_ArkUI_NodeMountPolicy](#oh_arkui_nodemountpolicy) | OH_ArkUI_NodeMountPolicy | Enumeration of the policy for mounting child node to the target node. |
 
@@ -642,7 +642,7 @@ enum ArkUI_AccessibilityMode
 
 **描述：**
 
-Enumerates the accessibility modes.
+定义无障碍辅助服务模式。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -650,10 +650,10 @@ Enumerates the accessibility modes.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ACCESSIBILITY_MODE_AUTO = 0 | Whether the component can be identified by the accessibility service is dependent on the component. |
-| ARKUI_ACCESSIBILITY_MODE_ENABLED | The component can be identified by the accessibility service. |
-| ARKUI_ACCESSIBILITY_MODE_DISABLED | The component cannot be identified by the accessibility service. |
-| ARKUI_ACCESSIBILITY_MODE_DISABLED_FOR_DESCENDANTS | The component and all its child components cannot be identified by the accessibility service. |
+| ARKUI_ACCESSIBILITY_MODE_AUTO = 0 | 根据组件不同会转换为“enabled”或者“disabled”。 |
+| ARKUI_ACCESSIBILITY_MODE_ENABLED | 当前组件可被无障碍辅助服务所识别。 |
+| ARKUI_ACCESSIBILITY_MODE_DISABLED | 当前组件不可被无障碍辅助服务所识别。 |
+| ARKUI_ACCESSIBILITY_MODE_DISABLED_FOR_DESCENDANTS | 当前组件及其所有子组件不可被无障碍辅助服务所识别。 |
 
 ### ArkUI_AnimationPlayMode
 
@@ -723,7 +723,7 @@ enum ArkUI_SystemColorMode
 
 **描述：**
 
-Enumerates the system color modes.
+定义系统深浅色模式。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -731,8 +731,8 @@ Enumerates the system color modes.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_SYSTEM_COLOR_MODE_LIGHT = 0 | Light color mode. |
-| ARKUI_SYSTEM_COLOR_MODE_DARK | Dark color mode. |
+| ARKUI_SYSTEM_COLOR_MODE_LIGHT = 0 | 浅色模式。 |
+| ARKUI_SYSTEM_COLOR_MODE_DARK | 深色模式。 |
 
 ### ArkUI_BlurStyle
 
@@ -990,7 +990,7 @@ enum ArkUI_FinishCallbackType
 
 **描述：**
 
-Enumerates the animation onFinish callback types.
+在动画中定义[OH_ArkUI_AnimatorOption_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_animatoroption_registeronfinishcallback)回调的类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -998,8 +998,8 @@ Enumerates the animation onFinish callback types.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_FINISH_CALLBACK_REMOVED = 0 | The callback is invoked when the entire animation is removed once it has finished. |
-| ARKUI_FINISH_CALLBACK_LOGICALLY | The callback is invoked when the animation logically enters the falling state, though it may still be in its long tail state. |
+| ARKUI_FINISH_CALLBACK_REMOVED = 0 | 当整个动画结束并立即删除时，将触发回调。 |
+| ARKUI_FINISH_CALLBACK_LOGICALLY | 当动画在逻辑上已完成，但可能仍处于其长尾状态时，将触发回调。长尾状态是指动画即将完全停止前的 残余变化过程，此时动画的数值变化已非常微小，接近目标值。 |
 
 ### ArkUI_LengthMetricUnit
 
@@ -1124,7 +1124,7 @@ enum ArkUI_AccessibilityCheckedState
 
 **描述：**
 
-Defines the state type for the accessibility checkbox.
+定义无障碍复选框状态类型枚举值。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1132,8 +1132,8 @@ Defines the state type for the accessibility checkbox.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ACCESSIBILITY_UNCHECKED = 0 | The Checkbox unchecked. |
-| ARKUI_ACCESSIBILITY_CHECKED | The Checkbox checked. |
+| ARKUI_ACCESSIBILITY_UNCHECKED = 0 | 复选框未被选中。 |
+| ARKUI_ACCESSIBILITY_CHECKED | 复选框被选中。 |
 
 ### ArkUI_AnimationDirection
 
@@ -1164,7 +1164,7 @@ enum ArkUI_AccessibilityActionType
 
 **描述：**
 
-Define accessible action types.
+定义无障碍操作类型。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1172,11 +1172,11 @@ Define accessible action types.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_ACCESSIBILITY_ACTION_CLICK = 1 << 0 | click action. |
-| ARKUI_ACCESSIBILITY_ACTION_LONG_CLICK = 1 << 1 | long click action. |
-| ARKUI_ACCESSIBILITY_ACTION_CUT = 1 << 2 | cut action. |
-| ARKUI_ACCESSIBILITY_ACTION_COPY = 1 << 3 | copy action. |
-| ARKUI_ACCESSIBILITY_ACTION_PASTE = 1 << 4 | paste action. |
+| ARKUI_ACCESSIBILITY_ACTION_CLICK = 1 << 0 | 点击操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_LONG_CLICK = 1 << 1 | 长按操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_CUT = 1 << 2 | 剪切操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_COPY = 1 << 3 | 复制操作。 |
+| ARKUI_ACCESSIBILITY_ACTION_PASTE = 1 << 4 | 粘贴操作。 |
 
 ### ArkUI_NavDestinationState
 
@@ -1186,7 +1186,7 @@ enum ArkUI_NavDestinationState
 
 **描述：**
 
-Defines the state of the NavDestination component.
+定义NavDestination组件的状态，用于描述NavDestination在导航过程中的生命周期状态变化。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1194,17 +1194,17 @@ Defines the state of the NavDestination component.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_NAV_DESTINATION_STATE_ON_SHOW = 0 | The NavDestination show. |
-| ARKUI_NAV_DESTINATION_STATE_ON_HIDE = 1 | The NavDestination hide. |
-| ARKUI_NAV_DESTINATION_STATE_ON_APPEAR = 2 | The NavDestination is mounted to the component tree. |
-| ARKUI_NAV_DESTINATION_STATE_ON_DISAPPEAR = 3 | The NavDestination removed from the component tree. |
-| ARKUI_NAV_DESTINATION_STATE_ON_WILL_SHOW = 4 | Before the NavDestination show. |
-| ARKUI_NAV_DESTINATION_STATE_ON_WILL_HIDE = 5 | Before the NavDestination hide. |
-| ARKUI_NAV_DESTINATION_STATE_ON_WILL_APPEAR = 6 | Before the NavDestination mount to the component tree. |
-| ARKUI_NAV_DESTINATION_STATE_ON_WILL_DISAPPEAR = 7 | Before the NavDestination removed from the component tree. |
+| ARKUI_NAV_DESTINATION_STATE_ON_SHOW = 0 | NavDestination组件显示。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_HIDE = 1 | NavDestination组件隐藏。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_APPEAR = 2 | NavDestination挂载到组件树上。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_DISAPPEAR = 3 | NavDestination从组件树上卸载。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_WILL_SHOW = 4 | NavDestination组件显示之前。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_WILL_HIDE = 5 | NavDestination组件隐藏之前。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_WILL_APPEAR = 6 | NavDestination挂载到组件树之前。 |
+| ARKUI_NAV_DESTINATION_STATE_ON_WILL_DISAPPEAR = 7 | NavDestination从组件树上卸载之前。 |
 | ARKUI_NAV_DESTINATION_STATE_ON_ACTIVE = 8 |  |
 | ARKUI_NAV_DESTINATION_STATE_ON_INACTIVE = 9 |  |
-| ARKUI_NAV_DESTINATION_STATE_ON_BACK_PRESS = 100 | The NavDestination returns from the component. |
+| ARKUI_NAV_DESTINATION_STATE_ON_BACK_PRESS = 100 | NavDestination组件接收到返回操作时触发，例如用户点击返回键或调用返回导航接口。 |
 
 ### ArkUI_RouterPageState
 
@@ -1378,7 +1378,7 @@ enum ArkUI_RenderStrategy
 
 **描述：**
 
-Enumerates the graphics rendering strategy.
+定义图形渲染策略。
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
@@ -1386,8 +1386,8 @@ Enumerates the graphics rendering strategy.
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_RENDERSTRATEGY_FAST = 0 | The current component and its child components will be drawn directly onto the screen canvas. |
-| ARKUI_RENDERSTRATEGY_OFFSCREEN | The current component and its child components will first be drawn onto an off-screen canvas, then undergo some graphic rendering operations, and finally be drawn onto the main canvas. |
+| ARKUI_RENDERSTRATEGY_FAST = 0 | 在线绘制模式。当前组件及其子组件将直接绘制到屏幕画布上。 |
+| ARKUI_RENDERSTRATEGY_OFFSCREEN | 离屏绘制模式。当前组件及其子组件将先绘制到离屏画布上，再经过一些图形渲染处理， 最终绘制到主画布上。 |
 
 ### OH_ArkUI_CrossLanguageOperatingStatus
 

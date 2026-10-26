@@ -584,6 +584,8 @@
   - [ReturnMode](arkts-ability-insightintent-returnmode-e.md)
 - [@ohos.app.ability.InsightIntentContext（意图执行上下文）](arkts-ability-app-ability-insightintentcontext.md)
   - [InsightIntentContext](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c.md)
+  <!--Del-->
+  - [InsightIntentContext（系统接口）](arkts-ability-app-ability-insightintentcontext-insightintentcontext-c-sys.md)<!--DelEnd-->
 - [@ohos.app.ability.InsightIntentDecorator（意图装饰器定义）](arkts-ability-app-ability-insightintentdecorator.md)
   - [@InsightIntentEntity](arkts-ability-app-ability-insightintentdecorator-insightintententity-d.md)
   - [@InsightIntentEntry](arkts-ability-app-ability-insightintentdecorator-insightintententry-d.md)
