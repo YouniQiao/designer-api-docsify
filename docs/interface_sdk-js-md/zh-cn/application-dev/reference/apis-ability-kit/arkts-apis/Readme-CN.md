@@ -106,8 +106,7 @@
   - [verifyControlledDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-verifycontrolleddevicepackage-f-sys.md)<!--DelEnd-->
   <!--Del-->
   - [verifyControllerDevicePackage（系统接口）](arkts-ability-abilitytoolaccessctrl-verifycontrollerdevicepackage-f-sys.md)<!--DelEnd-->
-  <!--Del-->
-  - [AppInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)<!--DelEnd-->
+  - [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)
   <!--Del-->
   - [AuthStatusInfo（系统接口）](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md)<!--DelEnd-->
   - [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md)
@@ -346,6 +345,8 @@
 - [@ohos.app.ability.appMemoryOptimizer（应用内存优化器）](arkts-ability-app-ability-appmemoryoptimizer.md)
   - [evictFilePages](arkts-ability-appmemoryoptimizer-evictfilepages-f.md)
   - [evictModuleFilePages](arkts-ability-appmemoryoptimizer-evictmodulefilepages-f.md)
+- [@ohos.app.ability.AppProcessStateObserver](arkts-ability-app-ability-appprocessstateobserver.md)
+  - [AppProcessStateObserver](arkts-ability-app-ability-appprocessstateobserver-appprocessstateobserver-i.md)
 - [@ohos.app.ability.appRecovery（应用故障恢复）](arkts-ability-app-ability-apprecovery.md)
   - [enableAppRecovery](arkts-ability-apprecovery-enableapprecovery-f.md)
   - [restartApp](arkts-ability-apprecovery-restartapp-f.md)

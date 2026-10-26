@@ -92,6 +92,7 @@
 | [PlaybackInfo](arkts-media-media-playbackinfo-i.md) | 提供播放统计数据信息。 |
 | [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md) | 播放策略，播放器首选播放设置。 |
 | [Range](arkts-media-media-range-i.md) | 包含上下限的范围。 |
+| [RectangleRegion](arkts-media-media-rectangleregion-i.md) | 矩形区域的配置接口。矩形区域的位置从左上角开始，大小定义为矩形的长宽数据。 |
 | [SeiMessage](arkts-media-media-seimessage-i.md) | 描述 SEI 消息的信息。 |
 | [SubtitleInfo](arkts-media-media-subtitleinfo-i.md) | 提供字幕信息。当订阅了字幕更新事件时，关于外部字幕的信息会通过回调返回。可以同步到AVPlayer#timeUpdate事件报告的时间 |
 | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | Describes the filter conditions for track selection. |
@@ -112,7 +113,6 @@
 | [AVPlayer](arkts-media-media-avplayer-i-sys.md) | 播放管理类，用于管理和播放媒体资源。支持音视频播放、播放控制（播放、暂停、停止、跳转、倍速等）、状态管理和事件监听。在调用AVPlayer的方法前，需要先通过[createAVPlayer()](arkts-media-media-createavplayer-f.md#createavplayer-1)构建一个AVPlayer实例。 |
 | [AVRecorder](arkts-media-media-avrecorder-i-sys.md) | AVRecorder是音视频录制管理类，用于音视频录制的全流程管理，支持音频录制、视频录制及音视频混合录制，可灵活配置编码参数、添加水印、设置元数据、监听录制状态和错误事件等。适用于录制音视频并保存到文件的场景，包括需要在音频流打断期间保持录制连续性、实时监控音频振幅等场景。在调用AVRecorder的方法前，需要先调用[createAVRecorder](arkts-media-media-createavrecorder-f.md)接口构建一个AVRecorder实例。典型录制流程：[createAVRecorder](arkts-media-media-createavrecorder-f.md) → [prepare](arkts-media-media-avrecorder-i.md#prepare-2) → [getInputSurface](arkts-media-media-avrecorder-i.md#getinputsurface)（纯视频/音视频录制时） → [start](arkts-media-media-avrecorder-i.md#start) → [pause](arkts-media-media-avrecorder-i.md#pause)/[resume](arkts-media-media-avrecorder-i.md#resume) → [stop](arkts-media-media-avrecorder-i.md#stop) → [release](arkts-media-media-avrecorder-i.md#release)。 |
 | [AVRecorderConfig](arkts-media-media-avrecorderconfig-i-sys.md) | 表示音视频录制的参数设置。<br>通过audioSourceType和videoSourceType区分纯音频录制、纯视频录制或音视频录制。纯音频录制时，仅需要设置audioSourceType；纯视频录制时，仅需要设置videoSourceType；音视频录制时，audioSourceType和videoSourceType均需要设置。 |
-| [AVRecorderProfile](arkts-media-media-avrecorderprofile-i-sys.md) | 音视频录制配置参数。 |
 | [AVScreenCaptureStrategy](arkts-media-media-avscreencapturestrategy-i-sys.md) | 录屏策略。 |
 | [PixelMapParams](arkts-media-media-pixelmapparams-i-sys.md) | 获取视频缩略图时，输出缩略图的格式参数。 |
 | [PlaybackStrategy](arkts-media-media-playbackstrategy-i-sys.md) | 播放策略，播放器首选播放设置。 |

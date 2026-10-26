@@ -26,7 +26,7 @@ appInfo: AppInfo
 
 Application information.
 
-**Type:** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)
+**Type:** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)
 
 **Since:** 26.1.0
 

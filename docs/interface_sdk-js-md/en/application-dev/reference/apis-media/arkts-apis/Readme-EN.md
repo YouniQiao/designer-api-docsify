@@ -75,6 +75,7 @@
   <!--Del-->
   - [PlaybackStrategy(system api)](arkts-media-media-playbackstrategy-i-sys.md)<!--DelEnd-->
   - [Range](arkts-media-media-range-i.md)
+  - [RectangleRegion](arkts-media-media-rectangleregion-i.md)
   <!--Del-->
   - [ScreenCaptureMonitor(system api)](arkts-media-media-screencapturemonitor-i-sys.md)<!--DelEnd-->
   - [SeiMessage](arkts-media-media-seimessage-i.md)

@@ -30,7 +30,7 @@ export function requestControlAppPermissionFromUser(context: Context, appInfo: A
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | context | Context | 是 | 用于显示用户对话框的上下文对象。 |
-| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)[] | 是 | 应用信息列表。 |
+| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)[] | 是 | 应用信息列表。 |
 
 **返回值：**
 

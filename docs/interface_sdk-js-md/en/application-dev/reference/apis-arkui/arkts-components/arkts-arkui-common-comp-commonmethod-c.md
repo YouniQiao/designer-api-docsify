@@ -8503,6 +8503,68 @@ Applies a shadow effect to the component. Compared to [shadow](#shadow-1), the *
 | --- | --- |
 | T | Current component. |
 
+## shadowClipMode
+
+```TypeScript
+shadowClipMode(mode: ShadowClipMode | undefined): T
+```
+
+Sets the clip mode for the [shadow](#shadow-1) when it is not filled. This API takes effect only when [ShadowOptions#fill](arkts-arkui-common-comp-shadowoptions-i.md#fill) is set to **false**.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-shadowClipMode(mode: ShadowClipMode | undefined): T--><!--Device-CommonMethod-shadowClipMode(mode: ShadowClipMode | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| mode | [ShadowClipMode](../arkts-apis/arkts-arkui-shadowclipmode-e.md) &#124; undefined | Yes | Clip mode of the shadow. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
+## shadowShape
+
+```TypeScript
+shadowShape(shape: CircleShape | EllipseShape | PathShape | RectShape | undefined): T
+```
+
+Sets the shadow shape for the component. The shadow is rendered according to the specified shape.
+
+This API works with the [shadow](#shadow-1) attribute. The shadow shape is recalculated when the component size changes.
+
+**Since:** 26.1.0
+
+**Model restriction:** This API can be used only in the stage model.
+
+**Atomic service API:** This API can be used in atomic services since API version 26.1.0.
+
+<!--Device-CommonMethod-shadowShape(shape: CircleShape | EllipseShape | PathShape | RectShape | undefined): T--><!--Device-CommonMethod-shadowShape(shape: CircleShape | EllipseShape | PathShape | RectShape | undefined): T-End-->
+
+**System capability:** SystemCapability.ArkUI.ArkUI.Full
+
+**Parameters:**
+
+| Name | Type | Mandatory | Description |
+| --- | --- | --- | --- |
+| shape | [CircleShape](arkts-arkui-common-comp-circleshape-t.md) &#124; [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md) &#124; [PathShape](arkts-arkui-common-comp-pathshape-t.md) &#124; [RectShape](arkts-arkui-common-comp-rectshape-t.md) &#124; undefined | Yes | Shadow shape. When the value type is [CircleShape](arkts-arkui-common-comp-circleshape-t.md), [EllipseShape](arkts-arkui-common-comp-ellipseshape-t.md), [PathShape](arkts-arkui-common-comp-pathshape-t.md), or [RectShape](arkts-arkui-common-comp-rectshape-t.md), the shadow is rendered as the corresponding shape. When the value is **undefined**, the shadow shape is cleared. |
+
+**Return value:**
+
+| Type | Description |
+| --- | --- |
+| T | Current component. |
+
 ## sharedTransition
 
 ```TypeScript

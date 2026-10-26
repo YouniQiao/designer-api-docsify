@@ -28,7 +28,7 @@ export function queryControlAppStatus(appInfo: AppInfo[]): Promise<ControlAppSta
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)[] | 是 | 应用信息列表。 |
+| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)[] | 是 | 应用信息列表。 |
 
 **返回值：**
 

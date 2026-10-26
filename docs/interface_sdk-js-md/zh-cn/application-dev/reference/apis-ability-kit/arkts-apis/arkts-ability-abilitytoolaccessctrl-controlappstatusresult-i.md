@@ -26,7 +26,7 @@ appInfo: AppInfo
 
 应用信息。
 
-**类型：** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)
+**类型：** [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)
 
 **起始版本：** 26.1.0
 

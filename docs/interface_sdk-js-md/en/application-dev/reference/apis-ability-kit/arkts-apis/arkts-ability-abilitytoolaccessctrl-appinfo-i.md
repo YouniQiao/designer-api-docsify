@@ -1,4 +1,4 @@
-# AppInfo (System API)
+# AppInfo
 
 ```TypeScript
 interface AppInfo
@@ -11,8 +11,6 @@ Information about an application.
 <!--Device-abilityToolAccessCtrl-interface AppInfo--><!--Device-abilityToolAccessCtrl-interface AppInfo-End-->
 
 **System capability:** SystemCapability.Security.Asset
-
-**System API:** This is a system API.
 
 ## Modules to Import
 
@@ -38,8 +36,6 @@ Bundle name of the application.
 
 **System capability:** SystemCapability.Security.Asset
 
-**System API:** This is a system API.
-
 ## index
 
 ```TypeScript
@@ -57,5 +53,3 @@ Index of the application.
 <!--Device-AppInfo-index: number--><!--Device-AppInfo-index: number-End-->
 
 **System capability:** SystemCapability.Security.Asset
-
-**System API:** This is a system API.

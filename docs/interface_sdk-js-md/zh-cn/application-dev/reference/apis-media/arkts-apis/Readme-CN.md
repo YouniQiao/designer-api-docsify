@@ -50,8 +50,6 @@
   <!--Del-->
   - [AVRecorderConfig（系统接口）](arkts-media-media-avrecorderconfig-i-sys.md)<!--DelEnd-->
   - [AVRecorderProfile](arkts-media-media-avrecorderprofile-i.md)
-  <!--Del-->
-  - [AVRecorderProfile（系统接口）](arkts-media-media-avrecorderprofile-i-sys.md)<!--DelEnd-->
   - [AVScreenCaptureRecordConfig](arkts-media-media-avscreencapturerecordconfig-i.md)
   - [AVScreenCaptureRecorder](arkts-media-media-avscreencapturerecorder-i.md)
   - [AVScreenCaptureStrategy](arkts-media-media-avscreencapturestrategy-i.md)
@@ -77,6 +75,7 @@
   <!--Del-->
   - [PlaybackStrategy（系统接口）](arkts-media-media-playbackstrategy-i-sys.md)<!--DelEnd-->
   - [Range](arkts-media-media-range-i.md)
+  - [RectangleRegion](arkts-media-media-rectangleregion-i.md)
   <!--Del-->
   - [ScreenCaptureMonitor（系统接口）](arkts-media-media-screencapturemonitor-i-sys.md)<!--DelEnd-->
   - [SeiMessage](arkts-media-media-seimessage-i.md)

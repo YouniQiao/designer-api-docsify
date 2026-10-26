@@ -48,6 +48,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
+| [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md) | Information about an application. |
 | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) | CLI command information. |
 | [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md) | Control permission status result for an application. |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md) | Permission information. |
@@ -59,7 +60,6 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | Name | Description |
 | --- | --- |
-| [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md) | Information about an application. |
 | [AuthStatusInfo](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md) | Authorization status information. |
 | [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md) | Operation information. |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md) | Permission information. |

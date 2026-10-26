@@ -909,7 +909,7 @@ flingSpeedLimit(speedLimit: number)
 
 Sets the maximum fling speed for the Web component.
 
-The value configured through this TypeScript API takes precedence over values configured through other APIs.
+The value configured through this TypeScript API takes precedence over the front-end viewport max-fling-speed-x/y.
 
 **Since:** 26.1.0
 
@@ -923,7 +923,7 @@ The value configured through this TypeScript API takes precedence over values co
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| speedLimit | number | Yes | Maximum fling speed, in vp/s. If the value is less than or equal to 0, `NaN`, `+Infinity`, or `-Infinity`, the default value is used: 9000 vp/s on PCs and 17000 vp/s on non-PC devices. |
+| speedLimit | number | Yes | Maximum fling speed, in vp/s. If a value outside this range is passed, the default value is used: 9000 vp/s on PCs and 17000 vp/s on non-PC devices. <br>Value range: (0, +∞). |
 
 ## forceDarkAccess
 

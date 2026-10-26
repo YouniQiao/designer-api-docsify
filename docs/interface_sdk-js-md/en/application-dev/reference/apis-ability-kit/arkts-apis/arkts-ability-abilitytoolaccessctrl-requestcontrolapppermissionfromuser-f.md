@@ -30,7 +30,7 @@ Requests the control permission for the specified applications from the user. Th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | Context | Yes | Context object for displaying the user dialog. |
-| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)[] | Yes | Application information list. |
+| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)[] | Yes | Application information list. |
 
 **Return value:**
 

@@ -48,6 +48,7 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
+| [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md) | 应用的相关信息。 |
 | [CliCmdInfo](arkts-ability-abilitytoolaccessctrl-clicmdinfo-i.md) | CLI命令信息。 |
 | [ControlAppStatusResult](arkts-ability-abilitytoolaccessctrl-controlappstatusresult-i.md) | 应用的相关信息。 |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i.md) | 权限信息。 |
@@ -59,7 +60,6 @@ import { abilityToolAccessCtrl } from '@kit.AbilityKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md) | 应用的相关信息。 |
 | [AuthStatusInfo](arkts-ability-abilitytoolaccessctrl-authstatusinfo-i-sys.md) | 授权状态信息。 |
 | [OperationInfo](arkts-ability-abilitytoolaccessctrl-operationinfo-i-sys.md) | 操作信息。 |
 | [PermissionInfo](arkts-ability-abilitytoolaccessctrl-permissioninfo-i-sys.md) | 权限信息。 |

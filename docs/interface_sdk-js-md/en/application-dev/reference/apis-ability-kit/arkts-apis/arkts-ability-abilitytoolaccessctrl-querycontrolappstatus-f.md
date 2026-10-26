@@ -28,7 +28,7 @@ Queries the control permission status for the specified applications. This funct
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i-sys.md)[] | Yes | Application information list. |
+| appInfo | [AppInfo](arkts-ability-abilitytoolaccessctrl-appinfo-i.md)[] | Yes | Application information list. |
 
 **Return value:**
 

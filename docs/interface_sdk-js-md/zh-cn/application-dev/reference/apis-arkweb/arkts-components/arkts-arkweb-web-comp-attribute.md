@@ -902,7 +902,7 @@ flingSpeedLimit(speedLimit: number)
 
 设置Web组件惯性滚动的最大速度。
 
-通过该TypeScript API配置的值优先于通过其他API配置的值生效。
+通过该TypeScript API配置的值优先于通过前端viewport max-fling-speed-x/y接口设置的值。
 
 **起始版本：** 26.1.0
 
@@ -916,7 +916,7 @@ flingSpeedLimit(speedLimit: number)
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| speedLimit | number | 是 | 惯性滚动最大速度，单位vp/s。当值小于等于0、`NaN`、`+Infinity`或`-Infinity`时，使用默认值：PC设备为9000 vp/s，非PC设备为17000 vp/s。 |
+| speedLimit | number | 是 | 惯性滚动的速度上限，单位为vp/s。取值范围为(0, +∞)。传入范围外的值时使用默认值：PC设备默认9000 vp/s，非PC设备默认17000 vp/s。 |
 
 ## forceDarkAccess
 

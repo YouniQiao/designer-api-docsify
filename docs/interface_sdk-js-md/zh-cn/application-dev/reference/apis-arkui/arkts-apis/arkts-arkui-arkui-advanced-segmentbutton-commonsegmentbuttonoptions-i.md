@@ -172,7 +172,7 @@ buttonPadding?: Padding | Dimension
 
 **类型：** Padding &#124; [Dimension](arkts-arkui-dimension-t.md)
 
-**默认值：** For text only / icon only buttons Padding { top: 4, right: 8, bottom: 4, left: 8 }. For text & icon buttons Padding { top: 6, right: 8, bottom: 6, left: 8 }.
+**默认值：** 仅图标按钮和仅文字按钮默认值：`{ top: 4, right: 8, bottom: 4, left: 8 }`图标+文本按钮默认值：`{ top: 6, right: 8, bottom: 6, left: 8 }`
 
 **起始版本：** 11
 
@@ -390,7 +390,7 @@ localizedButtonPadding?: LocalizedPadding
 
 **类型：** [LocalizedPadding](arkts-arkui-localizedpadding-i.md)
 
-**默认值：** For text only / icon only buttons LocalizedPadding { top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }. For text & icon buttons LocalizedPadding {{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8)}.
+**默认值：** 仅图标按钮和仅文字按钮默认值：`{ top: LengthMetrics.vp(4), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(4), start: LengthMetrics.vp(8) }`图标+文本按钮默认值：`{ top: LengthMetrics.vp(6), end: LengthMetrics.vp(8), bottom: LengthMetrics.vp(6), start: LengthMetrics.vp(8) }`
 
 **起始版本：** 12
 

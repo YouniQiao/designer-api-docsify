@@ -92,6 +92,7 @@ The multimedia subsystem provides a set of simple and easy-to-use APIs for you t
 | [PlaybackInfo](arkts-media-media-playbackinfo-i.md) | Provides player statistic info. |
 | [PlaybackStrategy](arkts-media-media-playbackstrategy-i.md) | Provides preferred playback settings for player. |
 | [Range](arkts-media-media-range-i.md) | Provides Range with lower and upper limit. |
+| [RectangleRegion](arkts-media-media-rectangleregion-i.md) | This API is used to configure a rectangular area. The position of the rectangular region starts from the upper left corner, and the size is defined as the length and width of the rectangle. |
 | [SeiMessage](arkts-media-media-seimessage-i.md) | Describes the information of an SEI message. |
 | [SubtitleInfo](arkts-media-media-subtitleinfo-i.md) | Provides subtitle information. When a subtitle update event is subscribed to, the information about the external subtitle is returned through a callback. Can be synchronized to the time reported by AVPlayer#timeUpdate event |
 | [TrackSelectionFilter](arkts-media-media-trackselectionfilter-i.md) | Describes the filter conditions for track selection. |

@@ -1416,6 +1416,7 @@
   - [ResponseRegionSupportedTool](arkts-arkui-responseregionsupportedtool-e.md)
   - [ResponseType](arkts-arkui-responsetype-e.md)
   - [ScrollSource](arkts-arkui-scrollsource-e.md)
+  - [ShadowClipMode](arkts-arkui-shadowclipmode-e.md)
   - [SharedTransitionEffectType](arkts-arkui-sharedtransitioneffecttype-e.md)
   - [SmartGestureAction](arkts-arkui-smartgestureaction-e.md)
   - [TextAlign](arkts-arkui-textalign-e.md)

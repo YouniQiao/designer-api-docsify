@@ -1,4 +1,4 @@
-# AppInfo（系统接口）
+# AppInfo
 
 ```TypeScript
 interface AppInfo
@@ -11,8 +11,6 @@ interface AppInfo
 <!--Device-abilityToolAccessCtrl-interface AppInfo--><!--Device-abilityToolAccessCtrl-interface AppInfo-End-->
 
 **系统能力：** SystemCapability.Security.Asset
-
-**系统接口：** 此接口为系统接口。
 
 ## 导入模块
 
@@ -38,8 +36,6 @@ bundleName: string
 
 **系统能力：** SystemCapability.Security.Asset
 
-**系统接口：** 此接口为系统接口。
-
 ## index
 
 ```TypeScript
@@ -57,5 +53,3 @@ index: number
 <!--Device-AppInfo-index: number--><!--Device-AppInfo-index: number-End-->
 
 **系统能力：** SystemCapability.Security.Asset
-
-**系统接口：** 此接口为系统接口。

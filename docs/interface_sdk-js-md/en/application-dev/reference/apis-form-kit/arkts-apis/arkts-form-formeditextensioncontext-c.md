@@ -24,7 +24,7 @@ declare class FormEditExtensionContext extends UIExtensionContext
 setWindowBackgroundColor(color: string): Promise<void>
 ```
 
-Sets the background color for the FormEditExtensionAbility.
+Sets the background color for the FormEditExtensionAbility.This API uses a promise to return the result.
 
 **Since:** 26.1.0
 
@@ -38,7 +38,7 @@ Sets the background color for the FormEditExtensionAbility.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **#00FF00** or **#FF00FF00**. It can also be a resource string. |
+| color | string | Yes | Background color to set. The value is a hexadecimal RGB or ARGB color code and is case insensitive, for example, **#00FF00** or **#FF00FF00**. |
 
 **Return value:**
 
