@@ -549,6 +549,7 @@
   - [ExtensionAbility](arkts-ability-app-ability-extensionability-extensionability-c.md)
 - [@ohos.app.ability.hyperSnapManager(Application Quick Startup Management)](arkts-ability-app-ability-hypersnapmanager.md)
   - [getLastError](arkts-ability-hypersnapmanager-getlasterror-f.md)
+  - [isHyperSnapInitializing](arkts-ability-hypersnapmanager-ishypersnapinitializing-f.md)
   - [requestRebuildHyperSnap](arkts-ability-hypersnapmanager-requestrebuildhypersnap-f.md)
   - [setHyperSnapEnabled](arkts-ability-hypersnapmanager-sethypersnapenabled-f.md)
   - [HyperSnapErrorInfo](arkts-ability-hypersnapmanager-hypersnaperrorinfo-i.md)
