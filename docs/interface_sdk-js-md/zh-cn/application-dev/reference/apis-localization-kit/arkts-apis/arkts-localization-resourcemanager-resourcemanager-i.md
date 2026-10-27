@@ -24,8 +24,6 @@ export interface ResourceManager
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## 导入模块
 
 ```TypeScript
@@ -102,8 +100,6 @@ closeRawFd(path: string, callback: _AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -162,8 +158,6 @@ closeRawFd(path: string): Promise<void>
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -221,8 +215,6 @@ closeRawFdSync(path: string): void
 <!--Device-ResourceManager-closeRawFdSync(path: string): void--><!--Device-ResourceManager-closeRawFdSync(path: string): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -4538,8 +4530,6 @@ getRawFd(path: string, callback: _AsyncCallback<RawFileDescriptor>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -4604,8 +4594,6 @@ getRawFd(path: string): Promise<RawFileDescriptor>
 <!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFd(path: string): Promise<RawFileDescriptor>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -4675,8 +4663,6 @@ getRawFdSync(path: string): RawFileDescriptor
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -4731,8 +4717,6 @@ getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void
 <!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void--><!--Device-ResourceManager-getRawFileContent(path: string, callback: _AsyncCallback<Uint8Array>): void-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -4789,8 +4773,6 @@ getRawFileContent(path: string): Promise<Uint8Array>
 <!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFileContent(path: string): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -4850,8 +4832,6 @@ getRawFileContentSync(path: string): Uint8Array
 <!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array--><!--Device-ResourceManager-getRawFileContentSync(path: string): Uint8Array-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -6876,8 +6856,6 @@ isRawDir(path: string): boolean
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -7051,8 +7029,6 @@ closeRawFileDescriptor(path: string, callback: AsyncCallback<void>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -7091,8 +7067,6 @@ closeRawFileDescriptor(path: string): Promise<void>
 <!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>--><!--Device-ResourceManager-closeRawFileDescriptor(path: string): Promise<void>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -8176,8 +8150,6 @@ getRawFile(path: string, callback: AsyncCallback<Uint8Array>): void
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -8218,8 +8190,6 @@ getRawFile(path: string): Promise<Uint8Array>
 <!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>--><!--Device-ResourceManager-getRawFile(path: string): Promise<Uint8Array>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 
@@ -8265,8 +8235,6 @@ getRawFileDescriptor(path: string, callback: AsyncCallback<RawFileDescriptor>): 
 
 **系统能力：** SystemCapability.Global.ResourceManager
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数：**
 
 | 参数名 | 类型 | 必填 | 说明 |
@@ -8309,8 +8277,6 @@ getRawFileDescriptor(path: string): Promise<RawFileDescriptor>
 <!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>--><!--Device-ResourceManager-getRawFileDescriptor(path: string): Promise<RawFileDescriptor>-End-->
 
 **系统能力：** SystemCapability.Global.ResourceManager
-
-**测试接口：** 此接口仅在自动化测试脚本中使用。
 
 **参数：**
 

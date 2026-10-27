@@ -1546,7 +1546,7 @@ List of custom actions supported by the element.
 customComponentType?: string
 ```
 
-Custom component type. Corresponds to the [AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md) type of the element.
+Custom component type. Corresponds to the AccessibilityRoleType type of the element.
 
 **Type:** string
 

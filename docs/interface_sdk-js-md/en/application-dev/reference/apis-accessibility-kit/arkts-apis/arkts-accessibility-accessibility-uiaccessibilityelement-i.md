@@ -27,7 +27,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 readonly accessibilityDescription?: string
 ```
 
-Accessibility description of the element. This property can be set by using [accessibilityDescription](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitydescription).
+Accessibility description of the element. This property can be set by using accessibilityDescription.
 
 **Type:** string
 
@@ -69,7 +69,7 @@ Whether the element is an accessibility group. The value **true** indicates that
 
 Default value: **false**.
 
-This property can be set by using [accessibilityGroup](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitygroup).
+This property can be set by using accessibilityGroup.
 
 **Type:** boolean
 
@@ -97,7 +97,7 @@ Accessibility level of the component.
 
 **'no-hide-descendants'**: The component and all its child components cannot be recognized by accessibility. Default value: **'auto'**.
 
-This property can be set by using [accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel).
+This property can be set by using accessibilityLevel.
 
 **Type:** string
 
@@ -115,7 +115,7 @@ This property can be set by using [accessibilityLevel](../../apis-arkui/arkts-co
 readonly accessibilityNextFocusId?: number
 ```
 
-ID of the next component to gain focus. This property can be set by using [accessibilityNextFocusId](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitynextfocusid).
+ID of the next component to gain focus. The ID is the componentId of the target component, which is different from the identifier attribute. This property can be set by using accessibilityNextFocusId.
 
 Default value: **-1**.
 
@@ -135,7 +135,7 @@ Default value: **-1**.
 readonly accessibilityPreviousFocusId?: number
 ```
 
-ID of the previous component to gain focus.
+ID of the previous component to gain focus. The ID is the componentId of the target component, which is different from the identifier attribute.
 
 Default value: **-1**.
 
@@ -155,7 +155,7 @@ Default value: **-1**.
 readonly accessibilityRole?: string
 ```
 
-Custom accessibility component type. This property can be set by using [accessibilityRole](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilityrole).
+Custom accessibility component type. This property can be set by using accessibilityRole.
 
 **Type:** string
 
@@ -195,7 +195,7 @@ Default value: **false**.
 readonly accessibilityStateDescription?: string
 ```
 
-Custom accessibility state announcement text of the element. This property can be set by using [accessibilityStateDescription](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitystatedescription).
+Custom accessibility state announcement text of the element. This property can be set by using accessibilityStateDescription.
 
 **Type:** string
 
@@ -213,7 +213,7 @@ Custom accessibility state announcement text of the element. This property can b
 readonly accessibilityText?: string
 ```
 
-Accessibility text information of the element. This property can be set by using [accessibilityText](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext).
+Accessibility text information of the element. This property can be set by using accessibilityText.
 
 **Type:** string
 
@@ -345,7 +345,7 @@ Type of the component to which the element belongs. It corresponds to the compon
 readonly customActions?: Array<string>
 ```
 
-List of custom actions supported by the element. This property can be set by using [accessibilityCustomActions](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitycustomactions).
+List of custom actions supported by the element. This property can be set by using accessibilityCustomActions.
 
 **Type:** Array&lt;string&gt;
 
@@ -383,7 +383,7 @@ Default value: **false**.
 readonly error?: string
 ```
 
-The error text displayed when the element is in an incorrect state. This property can be set by using [showError](../../apis-arkui/arkts-components/arkts-arkui-textinput-comp-attribute.md#showerror).
+The error text displayed when the element is in an incorrect state. This property can be set by using showError.
 
 **Type:** string
 
@@ -421,7 +421,7 @@ Default value: **false**.
 readonly hintText?: string
 ```
 
-Hint text when there is no input. This property can be set by using [placeholder](../../apis-arkui/arkts-components/arkts-arkui-textinput-comp-textinputoptions-i.md#placeholder).
+Hint text when there is no input. This property can be set by using placeholder.
 
 **Type:** string
 
@@ -439,7 +439,7 @@ Hint text when there is no input. This property can be set by using [placeholder
 readonly identifier?: string
 ```
 
-Unique ID of a component. This property can be set by using [id](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id).
+Unique ID of a component. This property can be set by using id.
 
 **Type:** string
 
@@ -541,7 +541,7 @@ Whether the element is visible. The value **true** indicates that the element is
 
 Default value: **false**.
 
-This property can be set by using [visibility](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#visibility).
+This property can be set by using visibility.
 
 **Type:** boolean
 
@@ -731,7 +731,7 @@ Maximum text length of the element. Default value: **0**.
 readonly valueMax?: number
 ```
 
-Maximum value.
+The maximum value within the range of an element, applicable to value-based components such as sliders. The unit is defined by the component and is usually a percentage.
 
 Default value: **0**.
 
@@ -751,7 +751,7 @@ Default value: **0**.
 readonly valueMin?: number
 ```
 
-Minimum value.
+The minimum value within the range of an element, applicable to value-based components such as sliders. The unit is defined by the component and is usually a percentage.
 
 Default value: **0**.
 
@@ -771,7 +771,7 @@ Default value: **0**.
 readonly valueNow?: number
 ```
 
-Current value.
+Current value of the element. The value is within the range defined by valueMin and valueMax. The unit is defined by the component, and is usually a percentage.
 
 Default value: **0**.
 

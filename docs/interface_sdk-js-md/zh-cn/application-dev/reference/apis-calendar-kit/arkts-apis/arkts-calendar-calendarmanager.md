@@ -26,7 +26,7 @@ import { calendarManager } from '@kit.CalendarKit';
 
 | 名称 | 说明 |
 | --- | --- |
-| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 日程过滤器，查询日程时进行筛选过滤，获取符合条件的日程。 |
+| [EventFilter](arkts-calendar-calendarmanager-eventfilter-c.md) | 日程过滤器，查询日程时进行筛选过滤，获取符合条件的日程。通过[filterById()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbyid)、[filterByTime()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytime)、[filterByTitle()](arkts-calendar-calendarmanager-eventfilter-c.md#filterbytitle)任一方法获取日程过滤器，传入getEvents()过滤。 |
 
 ### 接口
 

@@ -16,8 +16,6 @@ export interface ShellCmdResult
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 ## exitCode
 
 ```TypeScript

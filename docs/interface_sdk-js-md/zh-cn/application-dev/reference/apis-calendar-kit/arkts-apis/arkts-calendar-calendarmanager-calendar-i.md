@@ -29,8 +29,8 @@ addEvent(event: Event): Promise<number>
 **起始版本：** 10
 
 **需要权限：** 
-- API版本23+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
-- API版本10-22：N/A
+- API版本21+：ohos.permission.WRITE_CALENDAR or ohos.permission.WRITE_WHOLE_CALENDAR
+- API版本10-20：ohos.permission.WRITE_CALENDAR
 
 **原子化服务API：** 从API版本11开始，该接口支持在原子化服务中使用。
 
@@ -908,7 +908,7 @@ calendarMgr?.getCalendar((err: BusinessError, data:calendarManager.Calendar) => 
 openEventEditPage(id: number): Promise<void>
 ```
 
-Opens the event edit page.
+通过日程id获取Calendar下符合查看或编辑条件的日程实例，使用Promise异步回调。使用该接口，系统日历可以进行查看和编辑日程。
 
 **起始版本：** 26.0.0
 

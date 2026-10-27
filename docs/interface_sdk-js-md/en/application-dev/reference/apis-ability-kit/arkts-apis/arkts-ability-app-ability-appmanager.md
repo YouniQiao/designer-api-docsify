@@ -8,8 +8,6 @@ The appManager module implements application management. You can use the APIs of
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
-**Test API:** This API is used only in automated test scripts.
-
 ## Modules to Import
 
 ```TypeScript

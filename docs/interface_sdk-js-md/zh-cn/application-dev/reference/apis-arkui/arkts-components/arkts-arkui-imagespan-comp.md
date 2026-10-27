@@ -28,8 +28,6 @@ ImageSpan(value: ResourceStr | PixelMap)
 
 **系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
-**测试接口：** 此接口仅在自动化测试脚本中使用。
-
 **参数:**
 
 | 参数名 | 类型 | 必填 | 说明 |
