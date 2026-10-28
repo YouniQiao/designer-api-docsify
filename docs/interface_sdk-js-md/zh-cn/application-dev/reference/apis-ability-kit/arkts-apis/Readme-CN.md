@@ -293,9 +293,11 @@
   - [off](arkts-ability-appmanager-off-f.md)
   <!--Del-->
   - [off（系统接口）](arkts-ability-appmanager-off-f-sys.md)<!--DelEnd-->
+  - [offFocusedApplicationChanged](arkts-ability-appmanager-offfocusedapplicationchanged-f.md)
   - [on](arkts-ability-appmanager-on-f.md)
   <!--Del-->
   - [on（系统接口）](arkts-ability-appmanager-on-f-sys.md)<!--DelEnd-->
+  - [onFocusedApplicationChanged](arkts-ability-appmanager-onfocusedapplicationchanged-f.md)
   <!--Del-->
   - [preloadApplication（系统接口）](arkts-ability-appmanager-preloadapplication-f-sys.md)<!--DelEnd-->
   <!--Del-->
@@ -319,6 +321,8 @@
   - [AppForegroundStateObserver（系统接口）](arkts-ability-appmanager-appforegroundstateobserver-t-sys.md)<!--DelEnd-->
   - [ApplicationStateObserver](arkts-ability-appmanager-applicationstateobserver-t.md)
   - [AppStateData](arkts-ability-appmanager-appstatedata-t.md)
+  - [FocusedApplicationInfo](arkts-ability-appmanager-focusedapplicationinfo-t.md)
+  - [FocusedApplicationObserver](arkts-ability-appmanager-focusedapplicationobserver-t.md)
   - [ProcessData](arkts-ability-appmanager-processdata-t.md)
   - [ProcessInformation](arkts-ability-appmanager-processinformation-t.md)
   <!--Del-->
@@ -1833,6 +1837,10 @@
   - [ExtensionRunningInfo（ExtensionRunningInfo）](arkts-ability-extensionrunninginfo.md)<!--DelEnd-->
     <!--Del-->
     - [ExtensionRunningInfo（系统接口）](arkts-ability-extensionrunninginfo-i-sys.md)<!--DelEnd-->
+  - [FocusedApplicationInfo](arkts-ability-focusedapplicationinfo.md)
+    - [FocusedApplicationInfo](arkts-ability-focusedapplicationinfo-i.md)
+  - [FocusedApplicationObserver](arkts-ability-focusedapplicationobserver.md)
+    - [FocusedApplicationObserver](arkts-ability-focusedapplicationobserver-i.md)
   <!--Del-->
   - [FunctionHook（Function Hook）](arkts-ability-functionhook.md)<!--DelEnd-->
     <!--Del-->

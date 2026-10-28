@@ -1585,7 +1585,7 @@ customActions?: Array<string>
 customComponentType?: string
 ```
 
-自定义组件类型。与元素的AccessibilityRoleType类型所对应。
+自定义组件类型。与元素的[AccessibilityRoleType](../../apis-arkui/arkts-components/arkts-arkui-common-comp-accessibilityroletype-e.md)类型所对应。
 
 **类型：** string
 

@@ -32,8 +32,10 @@ import { appManager } from '@kit.AbilityKit';
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f.md#killprocessesbybundlename-2) | 终止指定应用包名的应用进程。使用Promise异步回调。 |
 | [off('applicationState')](arkts-ability-appmanager-off-f.md#offapplicationstate) | 注销应用状态监听器。使用callback异步回调。 |
 | [off('applicationState')](arkts-ability-appmanager-off-f.md#offapplicationstate) | 注销应用状态监听器。使用Promise异步回调。 |
+| [offFocusedApplicationChanged](arkts-ability-appmanager-offfocusedapplicationchanged-f.md#offfocusedapplicationchanged-1) | 注销用于监听获焦应用变化的观察者。 |
 | [on('applicationState')](arkts-ability-appmanager-on-f.md#onapplicationstate) | 注册所有应用程序的状态监听器。 |
 | [on('applicationState')](arkts-ability-appmanager-on-f.md#onapplicationstate) | 注册指定应用程序的状态监听器。 |
+| [onFocusedApplicationChanged](arkts-ability-appmanager-onfocusedapplicationchanged-f.md#onfocusedapplicationchanged-1) | 注册观察者以监听获焦应用变化。 |
 
 <!--Del-->
 ### 函数（系统接口）
@@ -95,6 +97,8 @@ import { appManager } from '@kit.AbilityKit';
 | [AbilityStateData](arkts-ability-appmanager-abilitystatedata-t.md) | Ability状态信息。 |
 | [ApplicationStateObserver](arkts-ability-appmanager-applicationstateobserver-t.md) | 应用状态监听器。 |
 | [AppStateData](arkts-ability-appmanager-appstatedata-t.md) | 应用状态信息。 |
+| [FocusedApplicationInfo](arkts-ability-appmanager-focusedapplicationinfo-t.md) | 定义获焦应用变化时上报的获焦应用信息。 |
+| [FocusedApplicationObserver](arkts-ability-appmanager-focusedapplicationobserver-t.md) | 定义用于监听获焦应用变化的观察者。 |
 | [ProcessData](arkts-ability-appmanager-processdata-t.md) | 进程数据。 |
 | [ProcessInformation](arkts-ability-appmanager-processinformation-t.md) | 进程信息。 |
 

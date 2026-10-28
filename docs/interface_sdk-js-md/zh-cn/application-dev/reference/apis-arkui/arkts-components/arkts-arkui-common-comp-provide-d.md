@@ -8,6 +8,8 @@ declare const Provide: PropertyDecorator & ((value: string | ProvideOptions) => 
 
 开发指南参考：[@Provide装饰器和@Consume装饰器：与后代组件双向同步](../../../ui/state-management/arkts-provide-and-consume.md)。
 
+value：用于设置别名或允许重写的别名。<br>类型为string时，将直接作为别名，后代组件可通过该别名访问数据。<br>类型为ProvideOptions时，若设置了allowOverride，allowOverride的值将作为别名且该别名允许重写；若未设置allowOverride，则别名为变量名，不允许重写。<br>value缺省时别名为变量名，不允许重写。若此时定义同名\@Provide，运行时会报错。PropertyDecorator：属性装饰器，开发者无需关注该返回值。
+
 **起始版本：** 7
 
 **模型约束：** 此接口可在Stage模型和FA模型下使用。

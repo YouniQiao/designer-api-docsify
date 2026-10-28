@@ -27,7 +27,7 @@ import { AccessibilityEventType, AccessibilityAction, FocusMoveResultCode, Injec
 readonly accessibilityDescription?: string
 ```
 
-元素的无障碍说明。组件可通过accessibilityDescription设置该属性。
+元素的无障碍说明。组件可通过[accessibilityDescription](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitydescription)设置该属性。
 
 **类型：** string
 
@@ -69,7 +69,7 @@ readonly accessibilityGroup?: boolean
 
 默认值：false。
 
-组件可通过accessibilityGroup设置该属性。
+组件可通过[accessibilityGroup](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitygroup)设置该属性。
 
 **类型：** boolean
 
@@ -97,7 +97,7 @@ readonly accessibilityLevel?: string
 
 'no-hide-descendants'：当前组件及其所有子组件不可被辅助功能识别。默认值：'auto'。
 
-组件可通过accessibilityLevel设置该属性。
+组件可通过[accessibilityLevel](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitylevel)设置该属性。
 
 **类型：** string
 
@@ -115,7 +115,7 @@ readonly accessibilityLevel?: string
 readonly accessibilityNextFocusId?: number
 ```
 
-下一个要获得焦点的组件的ID。该ID为目标组件的componentId，区别于identifier属性。组件可通过accessibilityNextFocusId设置该属性。
+下一个要获得焦点的组件的ID。该ID为目标组件的componentId，区别于identifier属性。组件可通过[accessibilityNextFocusId](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitynextfocusid)设置该属性。
 
 默认值：-1。
 
@@ -155,7 +155,7 @@ readonly accessibilityPreviousFocusId?: number
 readonly accessibilityRole?: string
 ```
 
-自定义无障碍组件类型。组件可通过accessibilityRole设置该属性。
+自定义无障碍组件类型。组件可通过[accessibilityRole](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilityrole)设置该属性。
 
 **类型：** string
 
@@ -195,7 +195,7 @@ true表示元素可滚动，false表示元素不可滚动。
 readonly accessibilityStateDescription?: string
 ```
 
-元素的自定义无障碍状态播报文本信息。组件可通过accessibilityStateDescription设置该属性。
+元素的自定义无障碍状态播报文本信息。组件可通过[accessibilityStateDescription](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitystatedescription)设置该属性。
 
 **类型：** string
 
@@ -213,7 +213,7 @@ readonly accessibilityStateDescription?: string
 readonly accessibilityText?: string
 ```
 
-元素的无障碍文本信息。组件可通过accessibilityText设置该属性。
+元素的无障碍文本信息。组件可通过[accessibilityText](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitytext)设置该属性。
 
 **类型：** string
 
@@ -345,7 +345,7 @@ readonly componentType?: string
 readonly customActions?: Array<string>
 ```
 
-元素支持的自定义操作列表。组件可通过accessibilityCustomActions设置该属性。
+元素支持的自定义操作列表。组件可通过[accessibilityCustomActions](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#accessibilitycustomactions)设置该属性。
 
 **类型：** Array&lt;string&gt;
 
@@ -383,7 +383,7 @@ readonly editable?: boolean
 readonly error?: string
 ```
 
-元素错误状态下提示的错误文本。组件可通过showError设置该属性。
+元素错误状态下提示的错误文本。组件可通过[showError](../../apis-arkui/arkts-components/arkts-arkui-textinput-comp-attribute.md#showerror)设置该属性。
 
 **类型：** string
 
@@ -421,7 +421,7 @@ readonly focusable?: boolean
 readonly hintText?: string
 ```
 
-无输入时的提示文本。组件可通过placeholder设置该属性。
+无输入时的提示文本。组件可通过[placeholder](../../apis-arkui/arkts-components/arkts-arkui-textinput-comp-textinputoptions-i.md#placeholder)设置该属性。
 
 **类型：** string
 
@@ -439,7 +439,7 @@ readonly hintText?: string
 readonly identifier?: string
 ```
 
-组件的唯一标识。组件可通过id设置该属性。
+组件的唯一标识。组件可通过[id](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#id)设置该属性。
 
 **类型：** string
 
@@ -541,7 +541,7 @@ readonly isVisible?: boolean
 
 默认值：false。
 
-组件可通过visibility设置该属性。
+组件可通过[visibility](../../apis-arkui/arkts-components/arkts-arkui-common-comp-commonmethod-c.md#visibility)设置该属性。
 
 **类型：** boolean
 

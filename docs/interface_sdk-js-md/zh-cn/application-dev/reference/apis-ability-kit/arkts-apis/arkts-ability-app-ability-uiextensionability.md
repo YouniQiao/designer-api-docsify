@@ -4,6 +4,7 @@
 
 ```TypeScript
 import { UIExtensionAbility } from '@kit.AbilityKit';
+import { ConfigurationStrategy } from '@kit.AbilityKit';
 ```
 
 ## 汇总

@@ -47,6 +47,7 @@ setWindowBackgroundColor(color: string): Promise<void>
 | 错误码ID | 错误信息 |
 | --- | --- |
 | [16500050](../errorcode-form.md#16500050-进程间通信失败) | An IPC connection error happened. |
+| 16501026 | Invalid color value. |
 
 ## startSecondPage
 

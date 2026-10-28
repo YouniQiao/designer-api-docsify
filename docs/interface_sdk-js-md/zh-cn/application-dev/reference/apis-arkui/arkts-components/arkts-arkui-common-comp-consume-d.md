@@ -1,4 +1,6 @@
-# @Consume
+# StateManagementV1Decorators
+
+## Consume
 
 ```TypeScript
 declare const Consume: PropertyDecorator & ((value: string) => PropertyDecorator)
@@ -15,6 +17,8 @@ declare const Consume: PropertyDecorator & ((value: string) => PropertyDecorator
 > 
 > 从API version 20开始，支持跨BuilderNode配对@Provide/@Consume。在BuilderNode场景下，BuilderNode会在上树前构造节点，
 > 所以BuilderNode内部定义的@Consume需要设置默认值，并在BuilderNode上树后，重新获取最近的@Provide数据，与之建立双向同步关系。
+
+value：用于设置别名，缺省时默认为变量名。设置别名后，@Consume通过别名与@Provide装饰的变量进行匹配绑定；未设置别名时，通过变量名进行匹配绑定，实现跨组件层级的数据双向同步。PropertyDecorator：属性装饰器，开发者无需关注该返回值。
 
 **起始版本：** 7
 

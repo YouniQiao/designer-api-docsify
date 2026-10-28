@@ -8,6 +8,8 @@ declare const Consumer: (aliasName?: string) => PropertyDecorator
 
 开发指南参考：[@Provider装饰器和@Consumer装饰器：跨组件层级双向同步](../../../ui/state-management/arkts-new-provider-and-consumer.md)。
 
+aliasName：用于设置别名，作为\@Consumer与\@Provider匹配的标识，需与\@Provider的别名一致；缺省时为变量名。PropertyDecorator：属性装饰器。开发者无需关注该返回值。
+
 **起始版本：** 12
 
 **模型约束：** 此接口仅可在Stage模型下使用。

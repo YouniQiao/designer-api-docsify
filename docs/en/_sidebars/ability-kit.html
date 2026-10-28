@@ -1,6 +1,6 @@
 <div class="tree-section">
   <details>
-    <summary class="tree-section-label">ArkTS API <span class="tree-count">(1491)</span></summary>
+    <summary class="tree-section-label">ArkTS API <span class="tree-count">(1503)</span></summary>
     <ul class="tree-l1">
 <li class="has-children"><details>
 <summary>@ohos.ability.ability(Ability Module) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ability-ability.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
@@ -268,8 +268,10 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-killprocesswithaccount-f-sys.md">killProcessWithAccount(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-off-f.md">off</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-off-f-sys.md">off(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-offfocusedapplicationchanged-f.md">offFocusedApplicationChanged</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-on-f.md">on</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-on-f-sys.md">on(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-onfocusedapplicationchanged-f.md">onFocusedApplicationChanged</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-preloadapplication-f-sys.md">preloadApplication(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-setkeepaliveforappserviceextension-f-sys.md">setKeepAliveForAppServiceExtension(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-setkeepaliveforbundle-f-sys.md">setKeepAliveForBundle(system api)</a></li>
@@ -283,6 +285,8 @@
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-appforegroundstateobserver-t-sys.md">AppForegroundStateObserver(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-applicationstateobserver-t.md">ApplicationStateObserver</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-appstatedata-t.md">AppStateData</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-focusedapplicationinfo-t.md">FocusedApplicationInfo</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-focusedapplicationobserver-t.md">FocusedApplicationObserver</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-processdata-t.md">ProcessData</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-processinformation-t.md">ProcessInformation</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-appmanager-runningmultiappinfo-t-sys.md">RunningMultiAppInfo(system api)</a></li>
@@ -485,6 +489,7 @@
 <li class="has-children"><details>
 <summary>@ohos.app.ability.ConfigurationConstant(Constants Related to Environment Variables) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-app-ability-configurationconstant.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-brandcolorstrategy-e-sys.md">BrandColorStrategy(system api)</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-colormode-e.md">ColorMode</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-direction-e.md">Direction</a></li>
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-configurationconstant-screendensity-e.md">ScreenDensity</a></li>
@@ -829,6 +834,9 @@
 <summary>@ohos.app.ability.UIExtensionAbility(ExtensionAbility with UI) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l2">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c.md">UIExtensionAbility</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-uiextensionability-c-sys.md">UIExtensionAbility(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-app-ability-uiextensionability-configurationstrategy-i-sys.md">ConfigurationStrategy(system api)</a></li>
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-ongetconfigurationstrategyfn-t-sys.md">OnGetConfigurationStrategyFn(system api)</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
@@ -2004,6 +2012,18 @@
 <summary>ExtensionRunningInfo(ExtensionRunningInfo) <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-extensionrunninginfo.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
 <ul class="tree-l3">
 <li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-extensionrunninginfo-i-sys.md">ExtensionRunningInfo(system api)</a></li>
+</ul>
+</details></li>
+<li class="has-children"><details>
+<summary>FocusedApplicationInfo <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-focusedapplicationinfo.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
+<ul class="tree-l3">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-focusedapplicationinfo-i.md">FocusedApplicationInfo</a></li>
+</ul>
+</details></li>
+<li class="has-children"><details>
+<summary>FocusedApplicationObserver <a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-focusedapplicationobserver.md" class="tree-nav" onclick="event.stopPropagation()" title="Open page">↗</a></summary>
+<ul class="tree-l3">
+<li><a href="#/interface_sdk-js-md/en/application-dev/reference/apis-ability-kit/arkts-apis/arkts-ability-focusedapplicationobserver-i.md">FocusedApplicationObserver</a></li>
 </ul>
 </details></li>
 <li class="has-children"><details>
