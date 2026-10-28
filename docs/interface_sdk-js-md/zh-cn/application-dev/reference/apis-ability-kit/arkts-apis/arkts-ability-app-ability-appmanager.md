@@ -65,8 +65,8 @@ import { appManager } from '@kit.AbilityKit';
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename-1) | 通过Bundle名称终止进程。使用Promise异步回调。 |
 | [killProcessesByBundleName](arkts-ability-appmanager-killprocessesbybundlename-f-sys.md#killprocessesbybundlename-3) | 通过Bundle名称终止进程。使用callback异步回调。 |
 | [killProcessesInBatch](arkts-ability-appmanager-killprocessesinbatch-f-sys.md#killprocessesinbatch-1) | 批量终止进程。使用Promise异步回调。该接口在PC/2in1中可正常调用，在其他设备类型中返回801错误码。 |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-1) | 终止account进程。使用Promise异步回调。 |
-| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-2) | 终止account进程。使用Promise异步回调。 |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-1) | 终止指定系统账号下的应用进程。使用Promise异步回调。 |
+| [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-2) | 终止指定系统账号下的应用进程。使用Promise异步回调。 |
 | [killProcessWithAccount](arkts-ability-appmanager-killprocesswithaccount-f-sys.md#killprocesswithaccount-3) | 终止account进程。使用callback异步回调。 |
 | [off('appForegroundState')](arkts-ability-appmanager-off-f-sys.md#offappforegroundstate) | 注销应用启动和退出的监听器。 |
 | [off('abilityFirstFrameState')](arkts-ability-appmanager-off-f-sys.md#offabilityfirstframestate) | 取消注册监听Ability首帧绘制完成事件观察者对象。 |

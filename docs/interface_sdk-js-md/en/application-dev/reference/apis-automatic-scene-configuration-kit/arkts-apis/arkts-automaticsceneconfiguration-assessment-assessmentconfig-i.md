@@ -15,6 +15,7 @@ Assessment scenario configuration information.
 ## Modules to Import
 
 ```TypeScript
+import { assessment } from '@kit.AutomaticSceneConfigurationKit';
 ```
 
 ## allowedApps

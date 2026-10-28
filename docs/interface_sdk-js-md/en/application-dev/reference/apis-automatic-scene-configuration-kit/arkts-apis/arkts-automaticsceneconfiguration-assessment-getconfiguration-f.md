@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { assessment } from '@kit.AutomaticSceneConfigurationKit';
 ```
 
 ## getConfiguration
@@ -27,7 +28,7 @@ Queries the current assessment configuration.
 
 | Type | Description |
 | --- | --- |
-| [AssessmentConfig](arkts-automatic-assessment-assessmentconfig-i.md) | Returns the current assessment configuration. |
+| [AssessmentConfig](arkts-automaticsceneconfiguration-assessment-assessmentconfig-i.md) | Returns the current assessment configuration. |
 
 **Error codes:**
 

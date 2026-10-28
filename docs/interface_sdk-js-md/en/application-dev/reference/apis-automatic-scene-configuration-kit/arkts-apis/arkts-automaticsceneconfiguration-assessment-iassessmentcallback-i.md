@@ -15,6 +15,7 @@ Assessment callback interface.
 ## Modules to Import
 
 ```TypeScript
+import { assessment } from '@kit.AutomaticSceneConfigurationKit';
 ```
 
 ## onBegin
@@ -37,7 +38,7 @@ Assessment start notification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| error | [AssessmentError](arkts-automatic-assessment-assessmenterror-i.md) | Yes | Error information. code=0 indicates success. |
+| error | [AssessmentError](arkts-automaticsceneconfiguration-assessment-assessmenterror-i.md) | Yes | Error information. code=0 indicates success. |
 
 ## onEnd
 
@@ -75,4 +76,4 @@ Assessment interrupt notification.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| info | [AssessmentInterruptInfo](arkts-automatic-assessment-assessmentinterruptinfo-i.md) | Yes | Interrupt information, including the reason and detailed description. |
+| info | [AssessmentInterruptInfo](arkts-automaticsceneconfiguration-assessment-assessmentinterruptinfo-i.md) | Yes | Interrupt information, including the reason and detailed description. |

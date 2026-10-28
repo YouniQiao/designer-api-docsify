@@ -15,6 +15,7 @@ Assessment error information.
 ## Modules to Import
 
 ```TypeScript
+import { assessment } from '@kit.AutomaticSceneConfigurationKit';
 ```
 
 ## code
@@ -25,7 +26,7 @@ code: AssessmentErrorCode
 
 Error code. The value 0 indicates success, and a non-zero value indicates failure.
 
-**Type:** [AssessmentErrorCode](arkts-automatic-assessment-assessmenterrorcode-e.md)
+**Type:** [AssessmentErrorCode](arkts-automaticsceneconfiguration-assessment-assessmenterrorcode-e.md)
 
 **Since:** 26.0.1
 

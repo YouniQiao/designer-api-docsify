@@ -3,6 +3,7 @@
 ## Modules to Import
 
 ```TypeScript
+import { assessment } from '@kit.AutomaticSceneConfigurationKit';
 ```
 
 ## begin
@@ -28,8 +29,8 @@ Begins an assessment session. A confirmation dialog box will be displayed for th
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
 | context | [UIAbilityContext](../../apis-ability-kit/arkts-apis/arkts-ability-uiabilitycontext-c.md) | Yes | Context of the UIAbility that needs to enter assessment mode. |
-| config | [AssessmentConfig](arkts-automatic-assessment-assessmentconfig-i.md) | Yes | Assessment configuration. |
-| callback | [IAssessmentCallback](arkts-automatic-assessment-iassessmentcallback-i.md) | Yes | Assessment callback. |
+| config | [AssessmentConfig](arkts-automaticsceneconfiguration-assessment-assessmentconfig-i.md) | Yes | Assessment configuration. |
+| callback | [IAssessmentCallback](arkts-automaticsceneconfiguration-assessment-iassessmentcallback-i.md) | Yes | Assessment callback. |
 
 **Error codes:**
 
