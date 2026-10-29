@@ -6,7 +6,7 @@ typedef struct ArkUI_TextEditMenuOptions ArkUI_TextEditMenuOptions
 
 ## Overview
 
-Defines editable text menu extension options, used to extend the functionality of the text editing menu. It is applicable to scenarios where you need to customize text editing menu operations.
+Defines the text menu item for edit menu options.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

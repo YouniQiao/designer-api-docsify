@@ -6,8 +6,6 @@ The file declares the APIs for image encoding.
 
 **Library**: libimage_packer.so
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Related module**: [Image_NativeModule](capi-image-nativemodule.md)
@@ -77,8 +75,6 @@ enum IMAGE_PACKER_DYNAMIC_RANGE
 
 Enumerates the dynamic range for encoding.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 | Enum item | Description |
@@ -98,8 +94,6 @@ Image_ErrorCode OH_PackingOptions_Create(OH_PackingOptions **options)
 **Description**
 
 Creates the pointer to an OH_PackingOptions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -127,8 +121,6 @@ Image_ErrorCode OH_PackingOptions_GetMimeType(OH_PackingOptions *options, Image_
 
 Obtains the MIME type. **value.data** obtained through this API lacks the string terminator **\0**. Please use it with caution.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -153,8 +145,6 @@ Image_ErrorCode OH_PackingOptions_GetMimeTypeWithNull(OH_PackingOptions *options
 **Description**
 
 Obtains the MIME type in the packing options. The output **format.data** ends with the string terminator **\0**.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 19
 
@@ -181,8 +171,6 @@ Image_ErrorCode OH_PackingOptions_SetMimeType(OH_PackingOptions *options, Image_
 
 Sets the MIME type.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -207,8 +195,6 @@ Image_ErrorCode OH_PackingOptions_GetQuality(OH_PackingOptions *options, uint32_
 **Description**
 
 Obtains the encoding quality.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -235,8 +221,6 @@ Image_ErrorCode OH_PackingOptions_SetQuality(OH_PackingOptions *options, uint32_
 
 Sets the encoding quality.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -261,8 +245,6 @@ Image_ErrorCode OH_PackingOptions_GetNeedsPackProperties(OH_PackingOptions *opti
 **Description**
 
 Obtains the **needsPackProperties** parameter in the OH_PackingOptions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -289,8 +271,6 @@ Image_ErrorCode OH_PackingOptions_SetNeedsPackProperties(OH_PackingOptions *opti
 
 Sets the **needsPackProperties** parameter in the OH_PackingOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -315,8 +295,6 @@ Image_ErrorCode OH_PackingOptions_GetDesiredDynamicRange(OH_PackingOptions *opti
 **Description**
 
 Obtains the desired dynamic range during encoding.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -343,8 +321,6 @@ Image_ErrorCode OH_PackingOptions_SetDesiredDynamicRange(OH_PackingOptions *opti
 
 Sets the desired dynamic range during encoding.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -370,8 +346,6 @@ Image_ErrorCode OH_PackingOptions_Release(OH_PackingOptions *options)
 
 Releases the pointer to an OH_PackingOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -396,8 +370,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_Create(OH_PackingOptionsForSequence
 
 Creates the pointer to an OH_PackingOptionsForSequence struct.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -421,8 +393,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_SetFrameCount(OH_PackingOptionsForS
 **Description**
 
 Sets the number of frames for image sequence encoding.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -449,8 +419,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_GetFrameCount(OH_PackingOptionsForS
 
 Obtains the number of frames for image sequence encoding.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -475,8 +443,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_SetDelayTimeList(OH_PackingOptionsF
 **Description**
 
 Sets the delay time array for image sequence encoding.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -504,8 +470,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_GetDelayTimeList(OH_PackingOptionsF
 
 Obtains the delay time array for image sequence encoding.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -531,8 +495,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_SetDisposalTypes(OH_PackingOptionsF
 **Description**
 
 Sets the disposal type array for image sequence encoding.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -560,8 +522,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_GetDisposalTypes(OH_PackingOptionsF
 
 Obtains the disposal type array for image sequence encoding.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -588,8 +548,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_SetLoopCount(OH_PackingOptionsForSe
 
 Sets the number of loops for image sequence encoding. The value range is [0, 65535], where **0** means an infinite loop. If this field is not carried, loop playback is not performed.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -614,8 +572,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_GetLoopCount(OH_PackingOptionsForSe
 **Description**
 
 Obtains the number of loops for image sequence encoding.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -642,8 +598,6 @@ Image_ErrorCode OH_PackingOptionsForSequence_Release(OH_PackingOptionsForSequenc
 
 Releases the pointer to an OH_PackingOptionsForSequence struct.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 18
 
 **Parameters**:
@@ -667,8 +621,6 @@ Image_ErrorCode OH_ImagePackerNative_Create(OH_ImagePackerNative **imagePacker)
 **Description**
 
 Creates the pointer to an OH_ImagePackerNative struct.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -695,8 +647,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromImageSource(OH_ImagePackerNat
 **Description**
 
 Encodes an image source into data in a given format.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -726,8 +676,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPixelmap(OH_ImagePackerNative
 
 Encodes a PixelMap into data in a given format.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -756,8 +704,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPicture(OH_ImagePackerNative 
 
 Encodes a picture into data in a given format.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 13
 
 **Parameters**:
@@ -785,8 +731,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToDataFromPixelmapSequence(OH_ImagePack
 **Description**
 
 Encodes a PixelMap sequence into data.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -817,8 +761,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromImageSource(OH_ImagePackerNat
 
 Encodes an image source into a file.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -845,8 +787,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPixelmap(OH_ImagePackerNative
 **Description**
 
 Encodes a PixelMap into a file.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 12
 
@@ -875,8 +815,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPicture(OH_ImagePackerNative 
 
 Encodes a picture into a file.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 13
 
 **Parameters**:
@@ -903,8 +841,6 @@ Image_ErrorCode OH_ImagePackerNative_PackToFileFromPixelmapSequence(OH_ImagePack
 **Description**
 
 Encodes a PixelMap sequence into a file.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 18
 
@@ -934,8 +870,6 @@ Image_ErrorCode OH_ImagePackerNative_Release(OH_ImagePackerNative *imagePacker)
 
 Releases the pointer to an OH_ImagePackerNative struct.
 
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
-
 **Since**: 12
 
 **Parameters**:
@@ -959,8 +893,6 @@ Image_ErrorCode OH_ImagePackerNative_GetSupportedFormats(Image_MimeType** suppor
 **Description**
 
 Obtains the supported image formats that can be encoded.
-
-**System capability**: SystemCapability.Multimedia.Image.ImagePacker
 
 **Since**: 20
 

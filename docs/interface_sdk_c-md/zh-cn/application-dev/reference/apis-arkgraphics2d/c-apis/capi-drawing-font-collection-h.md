@@ -6,8 +6,6 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 **相关模块：** [Drawing](capi-drawing.md)
@@ -18,7 +16,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | 创建字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。(API26.0.1废弃) |
+| [OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)](#oh_drawing_createfontcollection) | 创建字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。(API26.1.0废弃) |
 | [void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_destroyfontcollection) | 释放被字体集对象占据的内存。 |
 | [void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionfallback) | 禁用系统字体。(API18废弃) |
 | [void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontCollection)](#oh_drawing_disablefontcollectionsystemfont) | 禁用系统字体。禁用后，该字体集对象仅能使用已注册的自定义字体进行文本渲染。 |
@@ -38,13 +36,11 @@ OH_Drawing_FontCollection* OH_Drawing_CreateFontCollection(void)
 
 创建字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 **资源释放：** OH_Drawing_DestroyFontCollection {return}
 
-**废弃版本：** 26.0.1
+**废弃版本：** 26.1.0
 
 **替代接口：** OH_Drawing_CreateSharedFontCollection
 
@@ -64,8 +60,6 @@ void OH_Drawing_DestroyFontCollection(OH_Drawing_FontCollection* fontCollection)
 
 释放被字体集对象占据的内存。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 **参数：**
@@ -83,8 +77,6 @@ void OH_Drawing_DisableFontCollectionFallback(OH_Drawing_FontCollection* fontCol
 **描述：**
 
 禁用系统字体。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -108,8 +100,6 @@ void OH_Drawing_DisableFontCollectionSystemFont(OH_Drawing_FontCollection* fontC
 
 禁用系统字体。禁用后，该字体集对象仅能使用已注册的自定义字体进行文本渲染。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 12
 
 **参数：**
@@ -127,8 +117,6 @@ OH_Drawing_FontCollection* OH_Drawing_CreateSharedFontCollection(void)
 **描述：**
 
 创建可共享的字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 
@@ -150,8 +138,6 @@ void OH_Drawing_ClearFontCaches(OH_Drawing_FontCollection* fontCollection)
 
 清理字体排版缓存（字体排版缓存本身设有内存上限和清理机制，所占内存有限，如无内存要求，不建议清理）。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 12
 
 **参数：**
@@ -169,8 +155,6 @@ OH_Drawing_FontCollection* OH_Drawing_GetFontCollectionGlobalInstance(void)
 **描述：**
 
 获取全局字体集对象[OH_Drawing_FontCollection](capi-drawing-oh-drawing-fontcollection.md)，可获取主题字信息，禁止释放该对象。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 14
 

@@ -6,8 +6,6 @@ Declares the audio session base data structure.
 
 **Library**: libohaudio.so
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 24
 
 **Related module**: [OHAudio](capi-ohaudio.md)
@@ -39,8 +37,6 @@ enum OH_AudioSession_BehaviorFlags
 
 Enumerates the audio session behavior flags.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 24
 
 | Enum item | Description |
@@ -58,8 +54,6 @@ enum OH_AudioSession_ConcurrencyMode
 **Description**
 
 Declares the audio concurrency modes.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 

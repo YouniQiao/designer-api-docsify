@@ -8,8 +8,6 @@ struct OH_AVMetadataExtractor_FrameInfo {...}
 
 定义从视频中提取出的帧的信息。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVMetadataExtractor
-
 **起始版本：** 23
 
 **相关模块：** [AVMetadataExtractor](capi-avmetadataextractor.md)

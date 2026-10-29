@@ -8,8 +8,6 @@
 
 **库：** libavrecorder.so
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 **相关模块：** [AVRecorder](capi-avrecorder.md)
@@ -75,8 +73,6 @@ enum OH_AVRecorder_AudioSourceType
 
 AVRecorder的音频源类型。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -98,8 +94,6 @@ enum OH_AVRecorder_VideoSourceType
 
 AVRecorder的视频源类型。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -116,8 +110,6 @@ enum OH_AVRecorder_CodecMimeType
 **描述：**
 
 编码器MIME类型，用于指定录制时音视频数据的编码格式。编码器类型需与容器格式类型匹配使用，不匹配时将导致录制失败，具体匹配关系请参见对应编码器类型的枚举项说明。
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 
@@ -142,8 +134,6 @@ enum OH_AVRecorder_ContainerFormatType
 
 容器格式类型（CFT），用于指定录制文件的封装格式。容器格式需与编码器MIME类型兼容，不兼容时将导致录制失败，各容器格式支持的编码器类型请参见对应容器格式类型的枚举项说明。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -164,8 +154,6 @@ enum OH_AVRecorder_State
 **描述：**
 
 AVRecorder状态，用于表示录制器在生命周期中的不同阶段，不同状态下可执行的操作不同。
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 
@@ -189,8 +177,6 @@ enum OH_AVRecorder_StateChangeReason
 
 AVRecorder状态变化的原因，用于区分状态变化是由用户操作还是后台事件触发，便于应用根据不同原因执行相应的处理逻辑。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -207,8 +193,6 @@ enum OH_AVRecorder_FileGenerationMode
 **描述：**
 
 录制文件的生成模式，用于指定媒体文件的创建方式，适用于需要选择由应用自行管理文件还是由系统自动管理文件的录制场景。
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 
@@ -229,8 +213,6 @@ typedef void (*OH_AVRecorder_OnStateChange)(OH_AVRecorder *recorder, OH_AVRecord
 **描述：**
 
 当录制状态发生变化时调用。
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 
@@ -253,8 +235,6 @@ typedef void (*OH_AVRecorder_OnError)(OH_AVRecorder *recorder, int32_t errorCode
 
 当录制过程中发生错误时调用。
 
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
-
 **起始版本：** 18
 
 **参数：**
@@ -275,8 +255,6 @@ typedef void (*OH_AVRecorder_OnUri)(OH_AVRecorder *recorder, OH_MediaAsset *asse
 **描述：**
 
 当录制文件的生成模式为[OH_AVRecorder_FileGenerationMode](capi-avrecorder-base-h.md#oh_avrecorder_filegenerationmode).AVRECORDER_AUTO_CREATE_CAMERA_SCENE时调用，用于通知应用获取录制生成的媒体资源。
-
-**系统能力：** SystemCapability.Multimedia.Media.AVRecorder
 
 **起始版本：** 18
 

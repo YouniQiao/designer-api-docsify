@@ -8,8 +8,6 @@
 
 **库：** libohinputmethod.so
 
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
 **起始版本：** 12
 
 **相关模块：** [InputMethod](capi-inputmethod.md)
@@ -20,7 +18,13 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | InputMethod_CursorInfo是光标信息的不透明类型（opaque type），用于描述文本输入时光标在物理屏幕上的位置和尺寸，包括光标 的水平坐标（left）、垂直坐标（top）、宽度（width）和高度（height）。 单位为px。 <br> <br>用途：为输入法服务提供光标的精确位置和尺寸信息，输入法根据此信息实现以下功能： <br>- 光标跟随：键盘面板根据光标位置调整显示位置，确保键盘不遮挡光标所在区域。 <br>- 候选词定位：输入法的候选词区域在光标附近显示，提供精准的输入体验。 <br>- 避让计算：输入法根据光标高度和位置计算需要避让的区域。 <br> <br>使用场景： <br>1. 在TextConfig中携带光标信息：应用在[OH_TextEditorProxy_GetTextConfigFunc](capi-inputmethod-text-editor-proxy-capi-h. md#oh_texteditorproxy_gettextconfigfunc)回调中返回TextConfig时，其中包含的 CursorInfo告知输入法当前光标位置和尺寸。 <br>2. 主动通知光标更新：当光标位置发生变化时（如用户移动光标、文本插入导致光标偏移），应用通过 [OH_InputMethodProxy_NotifyCursorUpdate](capi-inputmethod-inputmethod-proxy-capi-h. md#oh_inputmethodproxy_notifycursorupdate)主动通知输入法最新的光标位置。 <br> <br>与其他结构体的关系： <br>- 与InputMethod_TextConfig的关系：CursorInfo是TextConfig的子属性。应用在[OH_TextEditorProxy_GetTextConfigFunc] (capi-inputmethod-text-editor-proxy-capi-h. md#oh_texteditorproxy_gettextconfigfunc)回调中返回TextConfig时，TextConfig 内部包含CursorInfo，输入法通过[OH_TextConfig_GetCursorInfo](capi-inputmethod-text-config-capi-h. md#oh_textconfig_getcursorinfo)获取光标信息。因此应用需先创建CursorInfo并设置正确的光标坐标，然后在GetTextConfig回调中将 CursorInfo放入TextConfig。 <br>- 与OH_InputMethodProxy_NotifyCursorUpdate的关系：CursorInfo作为NotifyCursorUpdate函数的参数直接传入，用于在光标 位置变化时主动通知输入法。应用创建或更新CursorInfo后，通过NotifyCursorUpdate将最新光标信息发送给输入法。<br> <br>- 与InputMethod_InputMethodProxy的关系：NotifyCursorUpdate函数需要InputMethod_InputMethodProxy参数（由Attach返 回）和InputMethod_CursorInfo参数配合使用，inputMethodProxy标识交互通道，cursorInfo携带光标信息。 |
+| [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) | InputMethod_CursorInfo | InputMethod_CursorInfo是光标信息的不透明类型（opaque type），用于描述文本输入时光标在物理屏幕上的位置和尺寸，包括光标 的水平坐标（left）、垂直坐标（top）、宽度（width）和高度（height）。 单位为px。 <br> <br>用途：为输入法服务提供光标的精确位置和尺寸信息，输入法根据此信息实现以下功能： <br>- 光标跟随：键盘面板根据光标位置调整显示位置，确保键盘不遮挡光标所在区域。 <br>- 候选词定位：输入法的候选词区域在光标附近显示，提供精准的输入体验。 <br>- 避让计算：输入法根据光标高度和位置计算需要避让的区域。 <br> <br>使用场景： <br>1. 在TextConfig中携带光标信息：应用在[OH_TextEditorProxy_GetTextConfigFunc] (capi-inputmethod-text-editor-proxy-capi-h.md#oh_texteditorproxy_gettextconfigfunc)回调中返回TextConfig时，其中包含的 CursorInfo告知输入法当前光标位置和尺寸。 <br>2. 主动通知光标更新：当光标位置发生变化时（如用户移动光标、文本插入导致光标偏移），应用通过 [OH_InputMethodProxy_NotifyCursorUpdate](capi-inputmethod-inputmethod-proxy-capi-h. md#oh_inputmethodproxy_notifycursorupdate)主动通知输入法最新的光标位置。 <br> <br>相关函数：<br>
+\| 函数 \| 说明 \|
+\| -- \| -- \|
+\| [OH_CursorInfo_Create](capi-inputmethod-cursor-info-capi-h.md#oh_cursorinfo_create) \| 创建CursorInfo实例，需 传入left、top、width、height。 \|
+\| [OH_CursorInfo_Destroy](capi-inputmethod-cursor-info-capi-h.md#oh_cursorinfo_destroy) \| 销毁CursorInfo实例。 \|
+\| [OH_CursorInfo_SetRect](capi-inputmethod-cursor-info-capi-h.md#oh_cursorinfo_setrect) \| 设置光标的位置和尺寸。 \|
+\| [OH_CursorInfo_GetRect](capi-inputmethod-cursor-info-capi-h.md#oh_cursorinfo_getrect) \| 获取光标的位置和尺寸。 \| <br> <br>与其他结构体的关系： <br>- 与InputMethod_TextConfig的关系：CursorInfo是TextConfig的子属性。应用在[OH_TextEditorProxy_GetTextConfigFunc] (capi-inputmethod-text-editor-proxy-capi-h.md#oh_texteditorproxy_gettextconfigfunc)回调中返回TextConfig时，TextConfig 内部包含CursorInfo，输入法通过[OH_TextConfig_GetCursorInfo](capi-inputmethod-text-config-capi-h. md#oh_textconfig_getcursorinfo)获取光标信息。因此应用需先创建CursorInfo并设置正确的光标坐标，然后在GetTextConfig回调中将 CursorInfo放入TextConfig。 <br>- 与OH_InputMethodProxy_NotifyCursorUpdate的关系：CursorInfo作为NotifyCursorUpdate函数的参数直接传入，用于在光标 位置变化时主动通知输入法。应用创建或更新CursorInfo后，通过NotifyCursorUpdate将最新光标信息发送给输入法。<br> <br>- 与InputMethod_InputMethodProxy的关系：NotifyCursorUpdate函数需要InputMethod_InputMethodProxy参数（由Attach返 回）和InputMethod_CursorInfo参数配合使用，inputMethodProxy标识交互通道，cursorInfo携带光标信息。 |
 
 ### 函数
 
@@ -42,8 +46,6 @@ InputMethod_CursorInfo *OH_CursorInfo_Create(double left, double top, double wid
 **描述：**
 
 创建一个新的[InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)实例，初始化光标的位置和尺寸信息。 <br> <br>配对调用：必须与[OH_CursorInfo_Destroy](#oh_cursorinfo_destroy)配对调用，Create创建的对象必须通过Destroy销毁，否 则会导致内存泄漏。 <br> <br>生命周期管理： <br>- 创建后可通过SetRect修改光标信息，通过GetRect读取光标信息。 <br>- CursorInfo实例可作为TextConfig的属性传递给输入法（在GetTextConfig回调中返回）。 <br>- CursorInfo实例也可作为NotifyCursorUpdate的参数主动通知输入法光标更新。 <br>- 在这两种场景中，CursorInfo的内存由调用者管理，输入法仅在回调执行期间或NotifyCursorUpdate调用期间读取数据，完成后不 再持有引用。 <br>- 不再需要时必须通过Destroy销毁。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
 
@@ -72,8 +74,6 @@ void OH_CursorInfo_Destroy(InputMethod_CursorInfo *cursorInfo)
 
 销毁一个[InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md)实例，释放由Create函数分配的内存资源。 <br> <br>配对调用：必须与OH_CursorInfo_Create配对调用。每个Create创建的实例必须且只能调用一次Destroy。 <br> <br>生命周期管理： <br>- Destroy后，cursorInfo指针不再有效，不可继续使用。 <br>- 不可对同一个cursorInfo指针调用两次Destroy，否则会导致重复释放（double-free）。 <br>- 若cursorInfo正在被输入法回调使用（如处于GetTextConfig回调执行期间），不可在此期间调用Destroy，应在回调返回后再销 毁。
 
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
-
 **起始版本：** 12
 
 **参数：**
@@ -91,8 +91,6 @@ InputMethod_ErrorCode OH_CursorInfo_SetRect(InputMethod_CursorInfo *cursorInfo, 
 **描述：**
 
 设置光标信息内容，更新光标的位置和尺寸。适用于在已有的CursorInfo实例上修改光标信息，无需重新创建实例。 <br> <br>前置条件：cursorInfo必须是通过OH_CursorInfo_Create创建的有效实例。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
 
@@ -121,8 +119,6 @@ InputMethod_ErrorCode OH_CursorInfo_GetRect(InputMethod_CursorInfo *cursorInfo, 
 **描述：**
 
 获取光标信息内容，读取光标的位置和尺寸。 <br> <br>前置条件：cursorInfo必须是通过OH_CursorInfo_Create创建的有效实例。left、top、width、height必须指向有效的double变 量。
-
-**系统能力：** SystemCapability.MiscServices.InputMethodFramework
 
 **起始版本：** 12
 

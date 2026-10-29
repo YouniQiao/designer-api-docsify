@@ -6,11 +6,9 @@ Provides C APIs for the Ethernet NIC module.
 
 **Library**: libnet_ethernet.so
 
-**System capability**: SystemCapability.Communication.NetManager.Ethernet
-
 **Since**: 26.0.0
 
-**Related module**: [NetEthernet](capi-netethernet.md)
+**Related module**: [netmanager_ext](capi-netmanager-ext.md)
 
 ## Summary
 
@@ -33,8 +31,6 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 
 Obtains the MAC address list of Ethernet NICs.
 
-**System capability**: SystemCapability.Communication.NetManager.Ethernet
-
 **Required permission**: ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **Since**: 26.0.0
@@ -43,7 +39,7 @@ Obtains the MAC address list of Ethernet NICs.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_MacAddrInfoList](capi-netethernet-ethernet-macaddrinfolist.md) *macAddrList | Pointer to the MAC address list of NICs. |
+| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) *macAddrList | Pointer to the MAC address list of NICs. |
 
 **Returns**:
 
@@ -61,8 +57,6 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 
 Obtains the IP address list of Ethernet NICs.
 
-**System capability**: SystemCapability.Communication.NetManager.Ethernet
-
 **Required permission**: ohos.permission.GET_NETWORK_INFO
 
 **Since**: 26.0.0
@@ -71,7 +65,7 @@ Obtains the IP address list of Ethernet NICs.
 
 | Parameter | Description |
 | -- | -- |
-| [Ethernet_NetAddrList](capi-netethernet-ethernet-netaddrlist.md) *netAddrList | Pointer to the IP address list of NICs. |
+| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) *netAddrList | Pointer to the IP address list of NICs. |
 
 **Returns**:
 

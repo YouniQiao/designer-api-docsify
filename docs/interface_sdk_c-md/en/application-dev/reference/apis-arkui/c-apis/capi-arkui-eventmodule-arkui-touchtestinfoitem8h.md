@@ -6,7 +6,7 @@ typedef ArkUI_TouchTestInfoItem* ArkUI_TouchTestInfoItemHandle
 
 ## Overview
 
-Defines a touch test information item handle, which represents information such as the coordinates, region, and component ID of a child component during a touch test. For details about the touch test APIs, see ui_input_event.h.
+Defines the touch test info item handle.
 
 **Since**: 22
 

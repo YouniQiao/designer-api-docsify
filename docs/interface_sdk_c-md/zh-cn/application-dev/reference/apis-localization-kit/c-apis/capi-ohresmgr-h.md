@@ -6,8 +6,6 @@
 
 **库：** libohresmgr.so
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **相关模块：** [resourcemanager](capi-resourcemanager.md)
@@ -77,8 +75,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaBase64(const NativeResource
 
 通过指定资源ID和屏幕密度，获取对应的media资源的Base64编码字符串。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -106,8 +102,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaBase64Data(const NativeReso
 **描述：**
 
 通过指定资源ID和屏幕密度，获取对应的media资源的Base64编码字符串。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -137,8 +131,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaBase64ByName(const NativeRe
 
 通过指定资源名称和屏幕密度，获取对应的media资源的Base64编码字符串。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -166,8 +158,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaBase64DataByName(const Nati
 **描述：**
 
 通过指定资源名称和屏幕密度，获取对应的media资源的Base64编码字符串。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -197,8 +187,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMedia(const NativeResourceManage
 
 通过指定资源ID和屏幕密度，获取对应的media资源的二进制数据。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -226,8 +214,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaData(const NativeResourceMa
 **描述：**
 
 通过指定资源ID和屏幕密度，获取对应的media资源的二进制数据。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -257,8 +243,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaByName(const NativeResource
 
 通过指定资源名称和屏幕密度，获取对应的media资源的二进制数据。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -286,8 +270,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetMediaDataByName(const NativeReso
 **描述：**
 
 通过指定资源名称和屏幕密度，获取对应的media资源的二进制数据。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -317,8 +299,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptor(const NativeR
 
 通过指定资源ID、屏幕密度、图标类型，获取图标资源对应的DrawableDescriptor对象。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -346,8 +326,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorData(const Nat
 **描述：**
 
 通过指定资源ID、屏幕密度、图标类型，获取图标资源对应的DrawableDescriptor对象。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -377,8 +355,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorByName(const N
 
 通过指定资源名称、屏幕密度、图标类型，获取图标资源对应的DrawableDescriptor对象。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -406,8 +382,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDrawableDescriptorDataByName(con
 **描述：**
 
 通过指定资源名称和屏幕密度，获取对应的图标资源的DrawableDescriptor对象。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -437,8 +411,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetSymbol(const NativeResourceManag
 
 获取指定资源ID对应的Symbol图标的Unicode编码。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -465,8 +437,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetSymbolByName(const NativeResourc
 
 获取指定资源名称对应的Symbol图标的Unicode编码。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -492,8 +462,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetLocales(const NativeResourceMana
 **描述：**
 
 获取应用支持的语言列表。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -522,8 +490,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetLocalesData(const NativeResource
 
 获取应用支持的语言列表。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -550,8 +516,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetConfiguration(const NativeResour
 **描述：**
 
 获取设备的屏幕方向、语言区域、设备类型、屏幕密度、颜色模式等配置信息。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -582,8 +546,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetResourceConfiguration(const Nati
 
 获取设备的屏幕方向、语言区域、设备类型、屏幕密度、颜色模式等配置信息。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 20
 
 **参数：**
@@ -609,8 +571,6 @@ ResourceManager_ErrorCode OH_ResourceManager_ReleaseConfiguration(ResourceManage
 
 释放[OH_ResourceManager_GetConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getconfiguration)或[OH_ResourceManager_GetResourceConfiguration](capi-ohresmgr-h.md#oh_resourcemanager_getresourceconfiguration)函数申请的内存。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -634,8 +594,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetString(const NativeResourceManag
 **描述：**
 
 获取指定资源ID对应的普通字符串或格式化字符串。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -664,8 +622,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetStringByName(const NativeResourc
 
 获取指定资源名称对应的普通字符串或格式化字符串。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -692,8 +648,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetStringArray(const NativeResource
 **描述：**
 
 获取指定资源ID对应的字符串数组。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -722,8 +676,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetStringArrayByName(const NativeRe
 
 获取指定资源名称对应的字符串数组。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -751,8 +703,6 @@ ResourceManager_ErrorCode OH_ResourceManager_ReleaseStringArray(char ***resValue
 
 释放字符串数组内存。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -777,8 +727,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetPluralString(const NativeResourc
 **描述：**
 
 获取指定资源ID对应的复数字符串。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -811,8 +759,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetPluralStringByName(const NativeR
 
 获取指定资源名称对应的复数字符串。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **废弃版本：** 16
@@ -844,8 +790,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralString(const NativeReso
 
 通过指定资源ID、整数数量值和可变参数，获取对应的复数字符串并进行格式化。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 18
 
 **参数：**
@@ -873,8 +817,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetIntPluralStringByName(const Nati
 **描述：**
 
 通过指定资源名称、整数数量值和可变参数，获取对应的复数字符串并进行格式化。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 18
 
@@ -904,8 +846,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralString(const NativeR
 
 通过指定资源ID、浮点数数量值和可变参数，获取对应的复数字符串并进行格式化。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 18
 
 **参数：**
@@ -933,8 +873,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetDoublePluralStringByName(const N
 **描述：**
 
 通过指定资源名称、浮点数数量值和可变参数，获取对应的复数字符串并进行格式化。 <br>中文环境下，字符串不区分单复数；其他语言环境下，字符串区分单复数，具体规则参考语言单复数规则。 <br>在英语、德语等语言中，单复数类型包括基数词（如1、2、3）和序数词（如1st、2nd、3rd），本函数仅支持在基数词类型下使用。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 18
 
@@ -964,8 +902,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetColor(const NativeResourceManage
 
 获取指定资源ID对应的颜色资源值。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -991,8 +927,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetColorByName(const NativeResource
 **描述：**
 
 获取指定资源名称对应的颜色资源值。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -1020,8 +954,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetInt(const NativeResourceManager 
 
 获取指定资源ID对应的整数资源值。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -1047,8 +979,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetIntByName(const NativeResourceMa
 **描述：**
 
 获取指定资源名称对应的整数资源值。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -1076,8 +1006,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetFloat(const NativeResourceManage
 
 获取指定资源ID对应的浮点数资源值。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -1103,8 +1031,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetFloatByName(const NativeResource
 **描述：**
 
 获取指定资源名称对应的浮点数资源值。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -1132,8 +1058,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetBool(const NativeResourceManager
 
 获取指定资源ID对应的布尔资源值。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -1159,8 +1083,6 @@ ResourceManager_ErrorCode OH_ResourceManager_GetBoolByName(const NativeResourceM
 **描述：**
 
 获取指定资源名称对应的布尔资源值。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 
@@ -1188,8 +1110,6 @@ ResourceManager_ErrorCode OH_ResourceManager_AddResource(const NativeResourceMan
 
 在应用程序运行时，动态加载overlay资源，实现主题切换或资源覆盖。
 
-**系统能力：** SystemCapability.Global.ResourceManager
-
 **起始版本：** 12
 
 **参数：**
@@ -1214,8 +1134,6 @@ ResourceManager_ErrorCode OH_ResourceManager_RemoveResource(const NativeResource
 **描述：**
 
 在应用程序运行时，移除指定的overlay资源，还原被覆盖前的资源。
-
-**系统能力：** SystemCapability.Global.ResourceManager
 
 **起始版本：** 12
 

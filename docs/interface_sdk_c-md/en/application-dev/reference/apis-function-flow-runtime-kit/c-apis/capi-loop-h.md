@@ -6,8 +6,6 @@ Declares the event loop interfaces in C.
 
 **Library**: libffrt.z.so
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 **Related module**: [FFRT](capi-ffrt.md)
@@ -50,8 +48,6 @@ FFRT_C_API ffrt_loop_t ffrt_loop_create(ffrt_queue_t queue)
 
 Creates a loop on the specified queue for running an event loop.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -76,8 +72,6 @@ FFRT_C_API int ffrt_loop_destroy(ffrt_loop_t loop)
 
 Destroys a loop.<br> Call this interface to release the resources associated with the loop.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -101,8 +95,6 @@ FFRT_C_API int ffrt_loop_run(ffrt_loop_t loop)
 **Description**
 
 Starts a loop run.<br> This function occupies the calling thread, running the event loop synchronously on the current thread until [ffrt_loop_stop](capi-loop-h.md#ffrt_loop_stop) is invoked.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -133,8 +125,6 @@ FFRT_C_API void ffrt_loop_stop(ffrt_loop_t loop)
 
 Stops a loop run.<br> After this call, the thread executing [ffrt_loop_run](capi-loop-h.md#ffrt_loop_run) stops the loop and returns.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -157,8 +147,6 @@ FFRT_C_API int ffrt_loop_epoll_ctl(ffrt_loop_t loop, int op, int fd, uint32_t ev
 **Description**
 
 Controls an epoll file descriptor on ffrt loop.<br> Adds, modifies, or deletes the monitored events on the target file descriptor.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -188,8 +176,6 @@ FFRT_C_API ffrt_timer_t ffrt_loop_timer_start(ffrt_loop_t loop, uint64_t timeout
 **Description**
 
 Starts a timer on ffrt loop.<br> The callback is invoked after the timeout elapses, and is repeated if `repeat` is `true`.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -223,8 +209,6 @@ FFRT_C_API int ffrt_loop_timer_stop(ffrt_loop_t loop, ffrt_timer_t handle)
 **Description**
 
 Stops a timer on ffrt loop.<br> After this call, the timer no longer fires.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 

@@ -6,8 +6,6 @@ Declare audio device related interfaces for audio device descriptor.<br> Defines
 
 **Library**: libohaudio.so
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Related module**: [OHAudio](capi-ohaudio.md)
@@ -58,8 +56,6 @@ enum OH_AudioDevice_ChangeType
 
 Defines the audio device change type.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -77,8 +73,6 @@ enum OH_AudioDevice_Role
 
 Defines the audio device role.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -95,8 +89,6 @@ enum OH_AudioDevice_Type
 **Description**
 
 Defines the audio device type.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -131,8 +123,6 @@ enum OH_AudioDevice_Flag
 
 Defines the audio device flag.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -151,8 +141,6 @@ enum OH_AudioDevice_Usage
 **Description**
 
 Defines the audio device usage.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -175,8 +163,6 @@ enum OH_AudioDevice_BlockStatus
 
 Declaring the audio device blocked status. By default, the audio device is considered as unblocked.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 13
 
 | Enum item | Description |
@@ -196,8 +182,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceRole(OH_AudioDeviceDescr
 **Description**
 
 Query the device role of the target audio device descriptor.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -224,8 +208,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceType(OH_AudioDeviceDescr
 
 Query the device type of the target audio device descriptor.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -250,8 +232,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceId(OH_AudioDeviceDescrip
 **Description**
 
 Query the device id of the target audio device descriptor.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -278,8 +258,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceName(OH_AudioDeviceDescr
 
 Query the device name of the target audio device descriptor.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -305,8 +283,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceAddress(OH_AudioDeviceDe
 
 Query the device address of the target audio device descriptor.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -331,8 +307,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceSampleRates(OH_AudioDevi
 **Description**
 
 Query the sample rate array of the target audio device descriptor.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 
@@ -360,8 +334,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceChannelCounts(OH_AudioDe
 
 Query the device channel count array of the target audio device descriptor.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -388,8 +360,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceDisplayName(OH_AudioDevi
 
 Query the display name of the target audio device descriptor.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -414,8 +384,6 @@ OH_AudioCommon_Result OH_AudioDeviceDescriptor_GetDeviceEncodingTypes(OH_AudioDe
 **Description**
 
 Query the encoding type array of the target audio device descriptor.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 12
 

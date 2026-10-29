@@ -6,8 +6,6 @@ Defines the basic APIs of the camera device.
 
 **Library**: libohcamera.so
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Related module**: [OH_Camera](capi-oh-camera.md)
@@ -46,8 +44,6 @@ Camera_ErrorCode OH_CameraDevice_GetCameraOrientation(Camera_Device* camera, uin
 
 Obtains the sensor direction of a camera device.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -72,8 +68,6 @@ Camera_ErrorCode OH_CameraDevice_GetHostDeviceName(Camera_Device* camera, char**
 **Description**
 
 Obtains the name of a remote device.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 15
 
@@ -100,8 +94,6 @@ Camera_ErrorCode OH_CameraDevice_GetHostDeviceType(Camera_Device* camera, Camera
 
 Obtains the type of a remote device.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 15
 
 **Parameters**:
@@ -126,8 +118,6 @@ Camera_ErrorCode OH_CameraDevice_GetLensEquivalentFocalLengths(const Camera_Devi
 **Description**
 
 Gets the equivalent focal lengths of a camera device.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -155,8 +145,6 @@ Camera_ErrorCode OH_CameraDevice_IsLogicalCamera(const Camera_Device* camera, bo
 
 Checks if a camera device is a logical camera.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -181,8 +169,6 @@ Camera_ErrorCode OH_CameraDevice_GetLogicalCameraConstituentCameraDevices(const 
 **Description**
 
 Gets the constituent camera devices of a logical camera. Release resources of the constituent cameras by calling [OH_CameraDevice_DeleteConstituentCameraDevices](capi-camera-device-h.md#oh_cameradevice_deleteconstituentcameradevices) .
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -210,8 +196,6 @@ Camera_ErrorCode OH_CameraDevice_DeleteConstituentCameraDevices(const Camera_Dev
 
 delete the constituent cameras of logicalCamera.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -238,8 +222,6 @@ Camera_ErrorCode OH_CameraDevice_GetLensFocalLength(const Camera_Device* camera,
 
 Gets the focal length of a camera lens.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -265,8 +247,6 @@ Camera_ErrorCode OH_CameraDevice_GetMinimumFocusDistance(const Camera_Device* ca
 
 Gets the minimum focus distance of a camera device.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -291,8 +271,6 @@ Camera_ErrorCode OH_CameraDevice_GetLensDistortion(const Camera_Device* camera, 
 **Description**
 
 Gets the lens distortion parameters of a camera device.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -320,8 +298,6 @@ Camera_ErrorCode OH_CameraDevice_GetIntrinsicCalibration(const Camera_Device* ca
 
 Gets the intrinsic calibration parameters of a camera device.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -347,8 +323,6 @@ Camera_ErrorCode OH_CameraDevice_GetSensorPhysicalSize(const Camera_Device* came
 **Description**
 
 Gets the physical size of a camera sensor.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 24
 
@@ -376,8 +350,6 @@ Camera_ErrorCode OH_CameraDevice_GetSensorPixelArraySize(const Camera_Device* ca
 
 Gets the pixel array size of a camera sensor.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -404,8 +376,6 @@ Camera_ErrorCode OH_CameraDevice_GetSensorColorFilterArrangement(const Camera_De
 
 Gets the color filter arrangement of a camera sensor.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -430,8 +400,6 @@ Camera_ErrorCode OH_CameraDevice_GetAutomotiveCameraPosition(const Camera_Device
 **Description**
 
 Gets the automotive position of a camera sensor.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 

@@ -22,10 +22,7 @@ indicates a dirty region where content is updated.
 
 | Name | Description |
 | -- | -- |
-| rects.x |  |
-| rects.y |  |
-| rects.w |  |
-| rects.h |  |
+| struct Rect | if rects is nullptr, fill the Buffer dirty size by default |
 | int32_t rectNumber | if rectNumber is 0, fill the Buffer dirty size by default |
 
 

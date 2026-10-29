@@ -16,12 +16,3 @@ webSocket客户端和服务端建立连接的参数。
 
 **所在头文件：** [net_websocket_type.h](capi-net-websocket-type-h.md)
 
-## 汇总
-
-### 成员变量
-
-| 名称 | 描述 |
-| -- | -- |
-| struct WebSocket_Header *headers |  |
-
-

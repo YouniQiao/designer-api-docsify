@@ -6,8 +6,6 @@ Provides APIs for managing the purgeable memory. <br>For example, you can create
 
 **Library**: libpurgeable_memory_ndk.z.so
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Related module**: [memory](capi-memory.md)
@@ -53,8 +51,6 @@ typedef bool (*OH_PurgeableMemory_ModifyFunc)(void *, size_t, void *)
 
 function pointer, it points to a function which is used to build content of a PurgMem obj.<br> *
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Parameters**:
@@ -80,8 +76,6 @@ OH_PurgeableMemory *OH_PurgeableMemory_Create(size_t size, OH_PurgeableMemory_Mo
 **Description**
 
 create a PurgMem obj.<br> *
-
-**System capability**: SystemCapability.Kernel.Memory
 
 **Since**: 10
 
@@ -109,8 +103,6 @@ bool OH_PurgeableMemory_Destroy(OH_PurgeableMemory *purgObj)
 
 destroy a PurgMem obj.<br> *
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Parameters**:
@@ -134,8 +126,6 @@ bool OH_PurgeableMemory_BeginRead(OH_PurgeableMemory *purgObj)
 **Description**
 
 begin read a PurgMem obj.<br> *
-
-**System capability**: SystemCapability.Kernel.Memory
 
 **Since**: 10
 
@@ -161,8 +151,6 @@ void OH_PurgeableMemory_EndRead(OH_PurgeableMemory *purgObj)
 
 end read a PurgMem obj.<br> *
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Parameters**:
@@ -180,8 +168,6 @@ bool OH_PurgeableMemory_BeginWrite(OH_PurgeableMemory *purgObj)
 **Description**
 
 begin write a PurgMem obj.<br> *
-
-**System capability**: SystemCapability.Kernel.Memory
 
 **Since**: 10
 
@@ -207,8 +193,6 @@ void OH_PurgeableMemory_EndWrite(OH_PurgeableMemory *purgObj)
 
 end write a PurgMem obj.<br> *
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Parameters**:
@@ -226,8 +210,6 @@ void *OH_PurgeableMemory_GetContent(OH_PurgeableMemory *purgObj)
 **Description**
 
 get content ptr of a PurgMem obj.<br> *
-
-**System capability**: SystemCapability.Kernel.Memory
 
 **Since**: 10
 
@@ -253,8 +235,6 @@ size_t OH_PurgeableMemory_ContentSize(OH_PurgeableMemory *purgObj)
 
 get content size of a PurgMem obj.<br> *
 
-**System capability**: SystemCapability.Kernel.Memory
-
 **Since**: 10
 
 **Parameters**:
@@ -278,8 +258,6 @@ bool OH_PurgeableMemory_AppendModify(OH_PurgeableMemory *purgObj, OH_PurgeableMe
 **Description**
 
 append a modify to a PurgMem obj.<br> *
-
-**System capability**: SystemCapability.Kernel.Memory
 
 **Since**: 10
 

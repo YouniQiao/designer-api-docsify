@@ -8,8 +8,6 @@
 
 **库：** libscsi.z.so
 
-**系统能力：** SystemCapability.Driver.SCSI.Extension
-
 **起始版本：** 18
 
 **相关模块：** [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
@@ -65,8 +63,6 @@ enum ScsiPeripheral_DdkErrCode
 
 SCSI Peripheral DDK错误码。
 
-**系统能力：** SystemCapability.Driver.SCSI.Extension
-
 **起始版本：** 18
 
 | 枚举项 | 描述 |
@@ -91,8 +87,6 @@ enum ScsiPeripheral_Status
 **描述：**
 
 定义用于响应的SCSI状态。
-
-**系统能力：** SystemCapability.Driver.SCSI.Extension
 
 **起始版本：** 18
 

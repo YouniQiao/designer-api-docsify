@@ -6,8 +6,6 @@ Provides BASE DDK types and declares the macros, enums, and data structures requ
 
 **Library**: libddk_base.z.so
 
-**System capability**: SystemCapability.Driver.DDK.Extension
-
 **Since**: 12
 
 **Related module**: [Ddk](capi-ddk.md)
@@ -37,8 +35,6 @@ enum DDK_RetCode
 **Description**
 
 Enumerates error codes used in the BASE DDK.
-
-**System capability**: SystemCapability.Driver.DDK.Extension
 
 **Since**: 12
 

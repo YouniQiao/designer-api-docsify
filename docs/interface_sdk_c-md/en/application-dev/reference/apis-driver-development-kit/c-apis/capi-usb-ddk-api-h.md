@@ -6,8 +6,6 @@ Declares the USB DDK APIs used by the USB host to access USB devices.
 
 **Library**: libusb_ndk.z.so
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Since**: 10
 
 **Related module**: [UsbDdk](capi-usbddk.md)
@@ -50,8 +48,6 @@ int32_t OH_Usb_Init(void)
 
 Initializes the USB DDK.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -72,8 +68,6 @@ void OH_Usb_Release(void)
 
 Releases the USB DDK.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -87,8 +81,6 @@ int32_t OH_Usb_ReleaseResource(void)
 **Description**
 
 Releases the USB DDK.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -109,8 +101,6 @@ int32_t OH_Usb_GetDeviceDescriptor(uint64_t deviceId, struct UsbDeviceDescriptor
 **Description**
 
 Obtains the device descriptor.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -138,8 +128,6 @@ int32_t OH_Usb_GetConfigDescriptor(uint64_t deviceId, uint8_t configIndex, struc
 **Description**
 
 Obtains the configuration descriptor. To avoid memory leakage, use [OH_Usb_FreeConfigDescriptor](capi-usb-ddk-api-h.md#oh_usb_freeconfigdescriptor) to release a descriptor after use.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -169,8 +157,6 @@ void OH_Usb_FreeConfigDescriptor(struct UsbDdkConfigDescriptor * const config)
 
 Releases a configuration descriptor after use to prevent memory leakage.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -190,8 +176,6 @@ int32_t OH_Usb_ClaimInterface(uint64_t deviceId, uint8_t interfaceIndex, uint64_
 **Description**
 
 Claims a USB interface.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -221,8 +205,6 @@ int32_t OH_Usb_ReleaseInterface(uint64_t interfaceHandle)
 
 Releases a USB interface.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -248,8 +230,6 @@ int32_t OH_Usb_SelectInterfaceSetting(uint64_t interfaceHandle, uint8_t settingI
 **Description**
 
 Activates the alternate setting of a USB interface.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -278,8 +258,6 @@ int32_t OH_Usb_GetCurrentInterfaceSetting(uint64_t interfaceHandle, uint8_t *set
 
 Obtains the activated alternate setting of a USB interface.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -306,8 +284,6 @@ int32_t OH_Usb_SendControlReadRequest(uint64_t interfaceHandle, const struct Usb
 **Description**
 
 Sends a control read transfer request. This API works in a synchronous manner.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -339,8 +315,6 @@ int32_t OH_Usb_SendControlWriteRequest(uint64_t interfaceHandle, const struct Us
 
 Sends a control write transfer request. This API works in a synchronous manner.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -371,8 +345,6 @@ int32_t OH_Usb_SendPipeRequest(const struct UsbRequestPipe *pipe, UsbDeviceMemMa
 
 Sends a pipe request. This API works in a synchronous manner. It applies to interrupt transfer and bulk transfer.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -400,8 +372,6 @@ int32_t OH_Usb_SendPipeRequestWithAshmem(const struct UsbRequestPipe *pipe, DDK_
 
 Sends a pipe request based on the shared memory. This API returns the result synchronously. It applies to interrupt transfer and bulk transfer.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 12
@@ -428,8 +398,6 @@ int32_t OH_Usb_CreateDeviceMemMap(uint64_t deviceId, size_t size, UsbDeviceMemMa
 **Description**
 
 Creates a buffer. To avoid resource leakage, use [OH_Usb_DestroyDeviceMemMap](capi-usb-ddk-api-h.md#oh_usb_destroydevicememmap) to destroy a buffer after use.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -459,8 +427,6 @@ void OH_Usb_DestroyDeviceMemMap(UsbDeviceMemMap *devMmap)
 
 Destroys a buffer. To prevent resource leakage, destroy a buffer in time after use.
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
 **Since**: 10
@@ -480,8 +446,6 @@ int32_t OH_Usb_GetDevices(struct Usb_DeviceArray *devices)
 **Description**
 
 Obtains the USB device ID list. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested device ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur. Besides, make sure that the obtained USB device ID has been filtered by **vid** in the driver configuration information.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -508,8 +472,6 @@ int32_t OH_Usb_ControlTransfer(uint64_t deviceID, const struct UsbControlRequest
 **Description**
 
 Performs a USB control transfer. This API works in a synchronous manner.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 
@@ -539,8 +501,6 @@ int32_t OH_Usb_GetNonRootHubs(struct Usb_NonRootHubArray *nonRootHub)
 **Description**
 
 Queries and returns the list of non-root hubs. Ensure that the pointer parameters passed in are valid. To avoid excessive memory usage, the size of the requested non-root hub ID array is recommended not to exceed 128. After using the struct, release the memory of its members; otherwise, resource leaks may occur.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Required permission**: ohos.permission.ACCESS_DDK_USB
 

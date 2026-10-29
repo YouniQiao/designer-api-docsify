@@ -8,8 +8,6 @@ Provides methods for creating, destroying, reading, and writing private data obj
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Related module**: [InputMethod](capi-inputmethod.md)
@@ -50,8 +48,6 @@ InputMethod_PrivateCommand *OH_PrivateCommand_Create(char key[], size_t keyLengt
 
 Create a new [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -77,8 +73,6 @@ void OH_PrivateCommand_Destroy(InputMethod_PrivateCommand *command)
 
 Destroy a [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -96,8 +90,6 @@ InputMethod_ErrorCode OH_PrivateCommand_SetKey(InputMethod_PrivateCommand *comma
 **Description**
 
 Set key value into [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -125,8 +117,6 @@ InputMethod_ErrorCode OH_PrivateCommand_SetBoolValue(InputMethod_PrivateCommand 
 
 Set bool data value into [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -152,8 +142,6 @@ InputMethod_ErrorCode OH_PrivateCommand_SetIntValue(InputMethod_PrivateCommand *
 
 Set integer data value into [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -178,8 +166,6 @@ InputMethod_ErrorCode OH_PrivateCommand_SetStrValue(InputMethod_PrivateCommand *
 **Description**
 
 Set string data value into [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -207,8 +193,6 @@ InputMethod_ErrorCode OH_PrivateCommand_GetKey(InputMethod_PrivateCommand *comma
 
 Get key value from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -235,8 +219,6 @@ InputMethod_ErrorCode OH_PrivateCommand_GetValueType(InputMethod_PrivateCommand 
 
 Get value type from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -261,8 +243,6 @@ InputMethod_ErrorCode OH_PrivateCommand_GetBoolValue(InputMethod_PrivateCommand 
 **Description**
 
 Get bool data value from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -289,8 +269,6 @@ InputMethod_ErrorCode OH_PrivateCommand_GetIntValue(InputMethod_PrivateCommand *
 
 Get integer data value from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -315,8 +293,6 @@ InputMethod_ErrorCode OH_PrivateCommand_GetStrValue(InputMethod_PrivateCommand *
 **Description**
 
 Get string data value from [InputMethod_PrivateCommand](capi-inputmethod-inputmethod-privatecommand.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 

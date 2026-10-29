@@ -2,7 +2,7 @@
 
 ## Overview
 
-Enumerates the attribute types that can be set by ArkUI on the native side.
+Defines the ArkUI style attributes that can be set on the native side.
 
 **Since**: 12
 

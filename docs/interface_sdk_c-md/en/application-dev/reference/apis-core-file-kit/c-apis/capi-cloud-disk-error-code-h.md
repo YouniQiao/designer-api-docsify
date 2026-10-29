@@ -6,8 +6,6 @@ This file defines the error codes for the cloud disk management module.
 
 **Library**: libohclouddiskmanager.so
 
-**System capability**: SystemCapability.FileManagement.CloudDiskManager
-
 **Since**: 21
 
 **Related module**: [CloudDisk](capi-clouddisk.md)
@@ -32,8 +30,6 @@ enum CloudDisk_ErrorCode
 
 Enumerates the error codes of the cloud disk management module.
 
-**System capability**: SystemCapability.FileManagement.CloudDiskManager
-
 **Since**: 21
 
 | Enum item | Description |
@@ -56,24 +52,15 @@ Enumerates the error codes of the cloud disk management module.
 | CLOUD_DISK_INVALID_CHANGE_SEQUENCE = 34400013 | The change sequence is invalid. You are advised to query all change sequences.<br>**Since**: 21 |
 | CLOUD_DISK_TRY_AGAIN = 34400014 | Temporary failure (for example, due to high underlying I/O load or insufficient memory). Please try again.<br>**Since**: 21 |
 | CLOUD_DISK_NOT_ALLOWED = 34400015 | This feature is not allowed on the current device.<br>**Since**: 21 |
-| OH_CLOUD_DISK_FILE_ALREADY_EXISTS = 34400016 | A file with the same name already exists in the target path.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_NOT_A_PLACEHOLDER = 34400017 | The target path is not a placeholder file.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_IS_A_PLACEHOLDER = 34400018 | The target path is already a placeholder file.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_HYDRATE_IN_PROGRESS = 34400019 | Hydration in progress.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_NO_SPACE_LEFT = 34400020 | The available disk space is insufficient.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_NOT_REGISTERED = 34400021 | The callback table is not registered.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CALLBACK_ALREADY_REGISTERED = 34400022 | The callback table has been registered.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_NOT_A_DIRECTORY = 34400023 | The parent directory of the target path is not a directory.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_FILE_NOT_EXIST = 34400024 | The target path does not exist.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_NAME_TOO_LONG = 34400025 | The file name or path is too long.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_FILE_TOO_LARGE = 34400026 | The file is too large.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_PLACEHOLDER_CUSTOM_INFO_NOT_FOUND = 34400027 | The placeholder does not have custom information.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_PLACEHOLDER_NOT_FULLY_HYDRATED = 34400028 | The placeholder file is not fully hydrated.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_DEHYDRATE_DENIED = 34400029 | The dehydrate operation is denied by the application callback.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_CANCELLED = 34400030 | The hydration task has been cancelled.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_ALREADY_HYDRATED = 34400031 | The placeholder file is already hydrated.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_NO_HYDRATION_IN_PROGRESS = 34400032 | No hydration task is in progress.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_INVALID_PLACEHOLDER_STATE = 34400033 | The stored placeholder state is invalid.<br>**Since**: 26.0.1 |
-| OH_CLOUD_DISK_HYDRATION_TASK_LIMIT_REACHED = 34400034 | The number of pending placeholder hydration tasks has reached the limit.<br>**Since**: 26.0.1 |
+| OH_CLOUD_DISK_FILE_ALREADY_EXISTS = 34400016 | A file with the same name already exists in the target path.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_NOT_A_PLACEHOLDER = 34400017 | The target path is not a placeholder file.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_IS_A_PLACEHOLDER = 34400018 | The target path is already a placeholder file.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_HYDRATE_IN_PROGRESS = 34400019 | Hydration in progress.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_NO_SPACE_LEFT = 34400020 | The available disk space is insufficient.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_CALLBACK_NOT_REGISTERED = 34400021 | The callback table is not registered.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_CALLBACK_ALREADY_REGISTERED = 34400022 | The callback table has been registered.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_NOT_A_DIRECTORY = 34400023 | The parent directory of the target path is not a directory.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_FILE_NOT_EXIST = 34400024 | The target path does not exist.<br>**Since**: 26.1.0 |
+| OH_CLOUD_DISK_NAME_TOO_LONG = 34400025 | The file name or path is too long.<br>**Since**: 26.1.0 |
 
 

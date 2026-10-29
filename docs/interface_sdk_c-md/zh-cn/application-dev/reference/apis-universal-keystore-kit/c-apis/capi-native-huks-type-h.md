@@ -8,8 +8,6 @@
 
 **库：** libhuks_ndk.z.so
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 **相关模块：** [HuksTypeApi](capi-hukstypeapi.md)
@@ -44,7 +42,18 @@
 | [OH_Huks_CipherMode](#oh_huks_ciphermode) | OH_Huks_CipherMode | 加密模式。 |
 | [OH_Huks_KeySize](#oh_huks_keysize) | OH_Huks_KeySize | 算法密钥长度。 |
 | [OH_Huks_KeyAlg](#oh_huks_keyalg) | OH_Huks_KeyAlg | 密钥使用的算法。 |
-| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | 密文导入所需的算法套件类型。 <br>OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING对应的密钥材料格式。 <br>\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad <br>\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag <br>\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad <br>\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag <br>\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING对应的密钥材料格式。 <br>\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad <br>\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag <br>\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad <br>\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag <br>\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING对应的密钥材料格式。 <br>\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc |
+| [OH_Huks_AlgSuite](#oh_huks_algsuite) | OH_Huks_AlgSuite | 密文导入所需的算法套件类型。 <br>OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING对应的密钥材料格式。
+\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING对应的密钥材料格式。
+\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING对应的密钥材料格式。
+\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc |
 | [OH_Huks_KeyGenerateType](#oh_huks_keygeneratetype) | OH_Huks_KeyGenerateType | 生成的密钥类型。 |
 | [OH_Huks_KeyFlag](#oh_huks_keyflag) | OH_Huks_KeyFlag | 密钥的产生方式。 |
 | [OH_Huks_KeyStorageType](#oh_huks_keystoragetype) | OH_Huks_KeyStorageType | 密钥的存储方式。 |
@@ -60,7 +69,7 @@
 | [OH_Huks_ChallengePosition](#oh_huks_challengeposition) | OH_Huks_ChallengePosition | challenge类型为用户自定义类型时，生成的challenge有效长度仅为8字节连续的数据，且仅支持4种位置。 |
 | [OH_Huks_SecureSignType](#oh_huks_securesigntype) | OH_Huks_SecureSignType | 生成或导入密钥时，指定该密钥的安全签名类型。 |
 | [OH_Huks_KeyClassType](#oh_huks_keyclasstype) | OH_Huks_KeyClassType | 密钥类型。 |
-| [OH_Huks_KeyWrapType](#oh_huks_keywraptype) | OH_Huks_KeyWrapType | 生成或导入密钥时，指定该密钥的封装类型。 |
+| [OH_Huks_KeyWrapType](#oh_huks_keywraptype) | OH_Huks_KeyWrapType |  |
 | [OH_Huks_Tag](#oh_huks_tag) | OH_Huks_Tag | 参数集所用的TAG值枚举。 <br>1-200：密钥参数标签值。 <br>301-500：密钥使用访问控制和使用认证相关的标签值。 <br>501-600：密钥认证相关的标签值。 <br>601-1000：其他类型的标签值预留值。 <br>1001-9999：扩展标签值。 <br>11000-12000：预留值。 <br>20001-N：其他标签预留值。 |
 
 ### 宏定义
@@ -96,8 +105,6 @@ enum OH_Huks_KeyPurpose
 
 密钥用途类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -122,8 +129,6 @@ enum OH_Huks_KeyDigest
 
 摘要算法类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -147,8 +152,6 @@ enum OH_Huks_KeyPadding
 
 填充算法类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -159,8 +162,8 @@ enum OH_Huks_KeyPadding
 | OH_HUKS_PADDING_PKCS1_V1_5 = 3 | 使用PKCS1_V1_5填充算法。 |
 | OH_HUKS_PADDING_PKCS5 = 4 | 使用PKCS5填充算法。 |
 | OH_HUKS_PADDING_PKCS7 = 5 | 使用PKCS7填充算法。 |
-| OH_HUKS_PADDING_ISO_IEC_9796_2 = 6 | 使用ISO IEC 9796-2填充算法。<br>**起始版本：** 18 |
-| OH_HUKS_PADDING_ISO_IEC_9797_1 = 7 | 使用ISO IEC 9797-1填充算法。<br>**起始版本：** 18 |
+| OH_HUKS_PADDING_ISO_IEC_9796_2 = 6 |  |
+| OH_HUKS_PADDING_ISO_IEC_9797_1 = 7 |  |
 
 ### OH_Huks_CipherMode
 
@@ -172,8 +175,6 @@ enum OH_Huks_CipherMode
 
 加密模式。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -182,7 +183,7 @@ enum OH_Huks_CipherMode
 | OH_HUKS_MODE_CBC = 2 | 使用CBC模式。 |
 | OH_HUKS_MODE_CTR = 3 | 使用CTR模式。 |
 | OH_HUKS_MODE_OFB = 4 | 使用OFB模式。 |
-| OH_HUKS_MODE_CFB = 5 | 使用CFB模式。<br>**起始版本：** 12 |
+| OH_HUKS_MODE_CFB = 5 |  |
 | OH_HUKS_MODE_CCM = 31 | 使用CCM模式。 |
 | OH_HUKS_MODE_GCM = 32 | 使用GCM模式。 |
 
@@ -195,8 +196,6 @@ enum OH_Huks_KeySize
 **描述：**
 
 算法密钥长度。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -222,9 +221,9 @@ enum OH_Huks_KeySize
 | OH_HUKS_DH_KEY_SIZE_4096 = 4096 | 使用DH算法的密钥长度为4096bit。 |
 | OH_HUKS_SM2_KEY_SIZE_256 = 256 | 使用SM2算法的密钥长度为256bit。 |
 | OH_HUKS_SM4_KEY_SIZE_128 = 128 | 使用SM4算法支持的密钥长度为128bit。 |
-| OH_HUKS_DES_KEY_SIZE_64 = 64 | 使用DES算法的密钥长度为64bit。<br>**起始版本：** 18 |
-| OH_HUKS_3DES_KEY_SIZE_128 = 128 | 使用3DES算法的密钥长度为128bit。<br>**起始版本：** 18 |
-| OH_HUKS_3DES_KEY_SIZE_192 = 192 | 使用3DES算法的密钥长度为192bit。<br>**起始版本：** 18 |
+| OH_HUKS_DES_KEY_SIZE_64 = 64 |  |
+| OH_HUKS_3DES_KEY_SIZE_128 = 128 |  |
+| OH_HUKS_3DES_KEY_SIZE_192 = 192 |  |
 
 ### OH_Huks_KeyAlg
 
@@ -235,8 +234,6 @@ enum OH_Huks_KeyAlg
 **描述：**
 
 密钥使用的算法。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -256,9 +253,9 @@ enum OH_Huks_KeyAlg
 | OH_HUKS_ALG_SM2 = 150 | 使用SM2算法。 |
 | OH_HUKS_ALG_SM3 = 151 | SM3摘要算法。 |
 | OH_HUKS_ALG_SM4 = 152 | 使用SM4算法。 |
-| OH_HUKS_ALG_DES = 160 | 使用DES算法。<br>**起始版本：** 18 |
-| OH_HUKS_ALG_3DES = 161 | 使用3DES算法。<br>**起始版本：** 18 |
-| OH_HUKS_ALG_CMAC = 162 | 使用CMAC算法。<br>**起始版本：** 18 |
+| OH_HUKS_ALG_DES = 160 |  |
+| OH_HUKS_ALG_3DES = 161 |  |
+| OH_HUKS_ALG_CMAC = 162 |  |
 
 ### OH_Huks_AlgSuite
 
@@ -268,9 +265,18 @@ enum OH_Huks_AlgSuite
 
 **描述：**
 
-密文导入所需的算法套件类型。 <br>OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING对应的密钥材料格式。 <br>\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad <br>\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag <br>\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad <br>\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag <br>\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING对应的密钥材料格式。 <br>\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad <br>\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag <br>\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad <br>\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag <br>\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING对应的密钥材料格式。 <br>\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc
-
-**系统能力：** SystemCapability.Security.Huks.Core
+密文导入所需的算法套件类型。 <br>OH_HUKS_UNWRAP_SUITE_X25519_AES_256_GCM_NOPADDING对应的密钥材料格式。
+\| x25519_plain_pubkey_length (4 Byte) \| x25519_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_ECDH_AES_256_GCM_NOPADDING对应的密钥材料格式。
+\| ECC_plain_pubkey_length (4 Byte) \| ECC_plain_pubkey \| agreekey_aad_length (4 Byte) \| agreekey_aad
+\| agreekey_nonce_length (4 Byte) \| agreekey_nonce \| agreekey_aead_tag_len(4 Byte) \| agreekey_aead_tag
+\| kek_enc_data_length (4 Byte) \| kek_enc_data \| kek_aad_length (4 Byte) \| kek_aad
+\| kek_nonce_length (4 Byte) \| kek_nonce \| kek_aead_tag_len (4 Byte) \| kek_aead_tag
+\| key_material_size_len (4 Byte) \| key_material_size \| key_mat_enc_length (4 Byte) \| key_mat_enc_data<br> <br>OH_HUKS_UNWRAP_SUITE_SM2_SM4_ECB_NOPADDING对应的密钥材料格式。
+\| kek_SM4_enc_length (4 Byte) \| EN_SM4_key \| importkey_enc_length (4 Byte) \| importkey_enc
 
 **起始版本：** 9
 
@@ -290,8 +296,6 @@ enum OH_Huks_KeyGenerateType
 
 生成的密钥类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -309,8 +313,6 @@ enum OH_Huks_KeyFlag
 **描述：**
 
 密钥的产生方式。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -331,8 +333,6 @@ enum OH_Huks_KeyStorageType
 
 密钥的存储方式。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -352,8 +352,6 @@ enum OH_Huks_ImportKeyType
 
 导入密钥的类型，默认为导入公钥，导入对称密钥时不需要该字段。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -372,8 +370,6 @@ enum OH_Huks_RsaPssSaltLenType
 
 PSS填充模式下盐值长度类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 10
 
 | 枚举项 | 描述 |
@@ -390,8 +386,6 @@ enum OH_Huks_ErrCode
 **描述：**
 
 错误码。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -416,16 +410,16 @@ enum OH_Huks_ErrCode
 | OH_HUKS_ERR_CODE_CREDENTIAL_NOT_EXIST = 12000013 | 认证凭据不存在。 |
 | OH_HUKS_ERR_CODE_INSUFFICIENT_MEMORY = 12000014 | 内存不足。 |
 | OH_HUKS_ERR_CODE_CALL_SERVICE_FAILED = 12000015 | 调用服务失败。 |
-| OH_HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016 | 需要锁屏密码，但没有设置。<br>**起始版本：** 11 |
-| OH_HUKS_ERR_CODE_KEY_ALREADY_EXIST = 12000017 | 同名密钥已存在。<br>**起始版本：** 20 |
-| OH_HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018 | 输入的参数无效。<br>**起始版本：** 20 |
-| OH_HUKS_ERR_CODE_ITEM_EXISTS = 12000019 | 该项实体已存在。<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020 | 提供者或UKey内部执行失败。<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_PIN_LOCKED = 12000021 | PIN码被锁定<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_PIN_INCORRECT = 12000022 | PIN码错误。<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_PIN_NO_AUTH = 12000023 | PIN码未认证通过。<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_BUSY = 12000024 | 提供者或UKey中的资源正在被使用。<br>**起始版本：** 22 |
-| OH_HUKS_ERR_CODE_EXCEED_LIMIT = 12000025 | 资源超过限制。<br>**起始版本：** 22 |
+| OH_HUKS_ERR_CODE_DEVICE_PASSWORD_UNSET = 12000016 |  |
+| OH_HUKS_ERR_CODE_KEY_ALREADY_EXIST = 12000017 |  |
+| OH_HUKS_ERR_CODE_INVALID_ARGUMENT = 12000018 |  |
+| OH_HUKS_ERR_CODE_ITEM_EXISTS = 12000019 |  |
+| OH_HUKS_ERR_CODE_EXTERNAL_MODULE = 12000020 |  |
+| OH_HUKS_ERR_CODE_PIN_LOCKED = 12000021 |  |
+| OH_HUKS_ERR_CODE_PIN_INCORRECT = 12000022 |  |
+| OH_HUKS_ERR_CODE_PIN_NO_AUTH = 12000023 |  |
+| OH_HUKS_ERR_CODE_BUSY = 12000024 |  |
+| OH_HUKS_ERR_CODE_EXCEED_LIMIT = 12000025 |  |
 
 ### OH_Huks_TagType
 
@@ -436,8 +430,6 @@ enum OH_Huks_TagType
 **描述：**
 
 参数集中参数的类型。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -465,8 +457,6 @@ enum OH_Huks_UserAuthType
 
 密钥访问控制中的用户认证类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -474,7 +464,7 @@ enum OH_Huks_UserAuthType
 | OH_HUKS_USER_AUTH_TYPE_FINGERPRINT = 1 << 0 | 用户认证类型为指纹。 |
 | OH_HUKS_USER_AUTH_TYPE_FACE = 1 << 1 | 用户认证类型为人脸。 |
 | OH_HUKS_USER_AUTH_TYPE_PIN = 1 << 2 | 用户认证类型为PIN码。 |
-| OH_HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5 | 用户认证类型为TUI PIN码。<br>**起始版本：** 20 |
+| OH_HUKS_USER_AUTH_TYPE_TUI_PIN = 1 << 5 |  |
 
 ### OH_Huks_AuthAccessType
 
@@ -485,8 +475,6 @@ enum OH_Huks_AuthAccessType
 **描述：**
 
 安全访问控制类型，表示密钥失效的原则。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -506,15 +494,13 @@ enum OH_Huks_AuthStorageLevel
 
 表示生成或导入密钥时，指定该密钥的存储安全等级。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_HUKS_AUTH_STORAGE_LEVEL_DE = 0 | 表示密钥仅在开机后可访问。<br>**起始版本：** 11 |
-| OH_HUKS_AUTH_STORAGE_LEVEL_CE = 1 | 表示密钥仅在首次解锁后可访问。<br>**起始版本：** 11 |
-| OH_HUKS_AUTH_STORAGE_LEVEL_ECE = 2 | 表示密钥仅在解锁状态时可访问。<br>**起始版本：** 11 |
+| OH_HUKS_AUTH_STORAGE_LEVEL_DE = 0 |  |
+| OH_HUKS_AUTH_STORAGE_LEVEL_CE = 1 |  |
+| OH_HUKS_AUTH_STORAGE_LEVEL_ECE = 2 |  |
 
 ### OH_Huks_UserAuthMode
 
@@ -526,14 +512,12 @@ enum OH_Huks_UserAuthMode
 
 密钥访问控制中的用户认证模式。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_HUKS_USER_AUTH_MODE_LOCAL = 0 | 本地认证模式。<br>**起始版本：** 12 |
-| OH_HUKS_USER_AUTH_MODE_COAUTH = 1 | 跨端协同认证模式。<br>**起始版本：** 12 |
+| OH_HUKS_USER_AUTH_MODE_LOCAL = 0 |  |
+| OH_HUKS_USER_AUTH_MODE_COAUTH = 1 |  |
 
 ### OH_Huks_ChallengeType
 
@@ -544,8 +528,6 @@ enum OH_Huks_ChallengeType
 **描述：**
 
 密钥使用时生成challenge的类型。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -570,8 +552,6 @@ enum OH_Huks_ChallengePosition
 
 challenge类型为用户自定义类型时，生成的challenge有效长度仅为8字节连续的数据，且仅支持4种位置。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -591,8 +571,6 @@ enum OH_Huks_SecureSignType
 
 生成或导入密钥时，指定该密钥的安全签名类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 9
 
 | 枚举项 | 描述 |
@@ -609,8 +587,6 @@ enum OH_Huks_KeyClassType
 
 密钥类型。
 
-**系统能力：** SystemCapability.Security.Huks.Core
-
 **起始版本：** 22
 
 | 枚举项 | 描述 |
@@ -626,15 +602,9 @@ enum OH_Huks_KeyWrapType
 
 **描述：**
 
-生成或导入密钥时，指定该密钥的封装类型。
-
-**系统能力：** SystemCapability.Security.Huks.Core
-
-**起始版本：** 20
-
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_HUKS_KEY_WRAP_TYPE_HUK_BASED = 2 | 硬件唯一密钥的封装类型。<br>**起始版本：** 20 |
+| OH_HUKS_KEY_WRAP_TYPE_HUK_BASED = 2 |  |
 
 ### OH_Huks_Tag
 
@@ -645,8 +615,6 @@ enum OH_Huks_Tag
 **描述：**
 
 参数集所用的TAG值枚举。 <br>1-200：密钥参数标签值。 <br>301-500：密钥使用访问控制和使用认证相关的标签值。 <br>501-600：密钥认证相关的标签值。 <br>601-1000：其他类型的标签值预留值。 <br>1001-9999：扩展标签值。 <br>11000-12000：预留值。 <br>20001-N：其他标签预留值。
-
-**系统能力：** SystemCapability.Security.Huks.Core
 
 **起始版本：** 9
 
@@ -687,8 +655,8 @@ enum OH_Huks_Tag
 | OH_HUKS_TAG_CHALLENGE_TYPE = OH_HUKS_TAG_TYPE_UINT \| 309 | 表示密钥使用时生成的challenge类型，类型可在枚举[OH_Huks_ChallengeType](capi-native-huks-type-h.md#oh_huks_challengetype)中选择。 |
 | OH_HUKS_TAG_CHALLENGE_POS = OH_HUKS_TAG_TYPE_UINT \| 310 | 表示challenge类型为用户自定义类型时，huks产生的challenge有效长度仅为8字节连续的数据的位置，类型可在枚举[OH_Huks_ChallengePosition](capi-native-huks-type-h.md#oh_huks_challengeposition)中选择。 |
 | OH_HUKS_TAG_KEY_AUTH_PURPOSE = OH_HUKS_TAG_TYPE_UINT \| 311 | 表示密钥认证用途的类型。 |
-| OH_HUKS_TAG_AUTH_STORAGE_LEVEL = OH_HUKS_TAG_TYPE_UINT \| 316 | 密钥文件存储访问控制的类别，类型可在枚举[OH_Huks_AuthStorageLevel](capi-native-huks-type-h.md#oh_huks_authstoragelevel)中选择。<br>**起始版本：** 11 |
-| OH_HUKS_TAG_USER_AUTH_MODE = OH_HUKS_TAG_TYPE_UINT \| 319 | 表示密钥访问控制中用户认证模式，类型可在枚举[OH_Huks_UserAuthMode](capi-native-huks-type-h.md#oh_huks_userauthmode)中选择。<br>**起始版本：** 12 |
+| OH_HUKS_TAG_AUTH_STORAGE_LEVEL = OH_HUKS_TAG_TYPE_UINT \| 316 |  |
+| OH_HUKS_TAG_USER_AUTH_MODE = OH_HUKS_TAG_TYPE_UINT \| 319 |  |
 | OH_HUKS_TAG_ATTESTATION_CHALLENGE = OH_HUKS_TAG_TYPE_BYTES \| 501 | 密钥认证时的挑战值。 |
 | OH_HUKS_TAG_ATTESTATION_APPLICATION_ID = OH_HUKS_TAG_TYPE_BYTES \| 502 | 密钥认证时拥有该密钥的application的Id。 |
 | OH_HUKS_TAG_ATTESTATION_ID_ALIAS = OH_HUKS_TAG_TYPE_BYTES \| 511 | 密钥认证时的别名。 |
@@ -698,7 +666,6 @@ enum OH_Huks_Tag
 | OH_HUKS_TAG_AE_TAG_LEN = OH_HUKS_TAG_TYPE_UINT \| 521 |  |
 | OH_HUKS_TAG_KEY_CLASS = OH_HUKS_TAG_TYPE_UINT \| 522 |  |
 | OH_HUKS_TAG_KEY_ACCESS_GROUP = OH_HUKS_TAG_TYPE_BYTES \| 523 |  |
-| OH_HUKS_TAG_TIMEOUT = OH_HUKS_TAG_TYPE_UINT \| 529 |  |
 | OH_HUKS_TAG_IS_KEY_ALIAS = OH_HUKS_TAG_TYPE_BOOL \| 1001 | 是否是密钥别名。 |
 | OH_HUKS_TAG_KEY_STORAGE_FLAG = OH_HUKS_TAG_TYPE_UINT \| 1002 | 密钥存储方式的标签，类型可在枚举 [OH_Huks_KeyStorageType](capi-native-huks-type-h.md#oh_huks_keystoragetype)选择。 |
 | OH_HUKS_TAG_IS_ALLOWED_WRAP = OH_HUKS_TAG_TYPE_BOOL \| 1003 | 是否允许密钥封装。 |
@@ -708,7 +675,7 @@ enum OH_Huks_Tag
 | OH_HUKS_TAG_KEY_FLAG = OH_HUKS_TAG_TYPE_UINT \| 1007 | 密钥标记，类型可在枚举[OH_Huks_KeyFlag](capi-native-huks-type-h.md#oh_huks_keyflag)选择。 |
 | OH_HUKS_TAG_IS_ASYNCHRONIZED = OH_HUKS_TAG_TYPE_UINT \| 1008 | 是否异步。 |
 | OH_HUKS_TAG_KEY_DOMAIN = OH_HUKS_TAG_TYPE_UINT \| 1011 | 密钥域。 |
-| OH_HUKS_TAG_IS_DEVICE_PASSWORD_SET = OH_HUKS_TAG_TYPE_BOOL \| 1012 | 表示密钥锁屏密码访问控制字段，可限制密钥只有在用户设置了锁屏密码时可用。 <br> true表示只有在密码设置时才能生成和使用密钥。false表示不需要设置锁屏密码即能生成和使用密钥。<br>**起始版本：** 11 |
+| OH_HUKS_TAG_IS_DEVICE_PASSWORD_SET = OH_HUKS_TAG_TYPE_BOOL \| 1012 |  |
 | OH_HUKS_TAG_AE_TAG = OH_HUKS_TAG_TYPE_BYTES \| 10009 | 用于传入GCM模式中的AEAD数据的字段。 |
 | OH_HUKS_TAG_SYMMETRIC_KEY_DATA = OH_HUKS_TAG_TYPE_BYTES \| 20001 | 非对称密钥公钥数据。 |
 | OH_HUKS_TAG_ASYMMETRIC_PUBLIC_KEY_DATA = OH_HUKS_TAG_TYPE_BYTES \| 20002 | 非对称密钥公钥数据。 |

@@ -8,8 +8,6 @@
 
 **库：** libnative_rdb_ndk.z.so
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **相关模块：** [RDB](capi-rdb.md)
@@ -66,8 +64,6 @@ OH_Data_Values *OH_Values_Create(void)
 
 创建[OH_Data_Values](capi-rdb-oh-data-values.md)实例，用于存储多个数据值。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **返回值：**
@@ -90,8 +86,6 @@ int OH_Values_Destroy(OH_Data_Values *values)
 **描述：**
 
 销毁[OH_Data_Values](capi-rdb-oh-data-values.md)对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -116,8 +110,6 @@ int OH_Values_Put(OH_Data_Values *values, const OH_Data_Value *val)
 **描述：**
 
 添加OH_Data_Value类型数据给OH_Data_Values对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -144,8 +136,6 @@ int OH_Values_PutNull(OH_Data_Values *values)
 
 添加空数据给OH_Data_Values对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -169,8 +159,6 @@ int OH_Values_PutInt(OH_Data_Values *values, int64_t val)
 **描述：**
 
 添加整型数据给OH_Data_Values对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -197,8 +185,6 @@ int OH_Values_PutReal(OH_Data_Values *values, double val)
 
 添加REAL类型数据给OH_Data_Values对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -224,8 +210,6 @@ int OH_Values_PutText(OH_Data_Values *values, const char *val)
 
 添加字符串类型数据给OH_Data_Values对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -250,8 +234,6 @@ int OH_Values_PutBlob(OH_Data_Values *values, const unsigned char *val, size_t l
 **描述：**
 
 添加BLOB类型数据给OH_Data_Values对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -279,8 +261,6 @@ int OH_Values_PutAsset(OH_Data_Values *values, const Data_Asset *val)
 
 添加ASSET类型数据给OH_Data_Values对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -305,8 +285,6 @@ int OH_Values_PutAssets(OH_Data_Values *values, const Data_Asset * const * val, 
 **描述：**
 
 添加ASSETS类型数据给OH_Data_Values对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -334,8 +312,6 @@ int OH_Values_PutFloatVector(OH_Data_Values *values, const float *val, size_t le
 
 添加float数组类型数据给OH_Data_Values对象。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -361,8 +337,6 @@ int OH_Values_PutUnlimitedInt(OH_Data_Values *values, int sign, const uint64_t *
 **描述：**
 
 添加任意长度的整型数组数据给OH_Data_Values对象。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -391,8 +365,6 @@ int OH_Values_Count(OH_Data_Values *values, size_t *count)
 
 获取数据个数。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -417,8 +389,6 @@ int OH_Values_GetType(OH_Data_Values *values, int index, OH_ColumnType *type)
 **描述：**
 
 获取数据类型。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -446,8 +416,6 @@ int OH_Values_Get(OH_Data_Values *values, int index, OH_Data_Value **val)
 
 获取OH_Data_Value类型数据。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -473,8 +441,6 @@ int OH_Values_IsNull(OH_Data_Values *values, int index, bool *val)
 **描述：**
 
 检查数据是否为空。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -502,8 +468,6 @@ int OH_Values_GetInt(OH_Data_Values *values, int index, int64_t *val)
 
 获取整型数据。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -529,8 +493,6 @@ int OH_Values_GetReal(OH_Data_Values *values, int index, double *val)
 **描述：**
 
 获取REAL类型数据。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -558,8 +520,6 @@ int OH_Values_GetText(OH_Data_Values *values, int index, const char **val)
 
 获取字符串类型数据。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -585,8 +545,6 @@ int OH_Values_GetBlob(OH_Data_Values *values, int index, const uint8_t **val, si
 **描述：**
 
 获取BLOB类型数据。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -615,8 +573,6 @@ int OH_Values_GetAsset(OH_Data_Values *values, int index, Data_Asset *val)
 
 获取ASSET类型数据。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -643,8 +599,6 @@ int OH_Values_GetAssetsCount(OH_Data_Values *values, int index, size_t *length)
 
 获取ASSETS类型数据的大小。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -670,8 +624,6 @@ int OH_Values_GetAssets(OH_Data_Values *values, int index, Data_Asset **val, siz
 **描述：**
 
 获取ASSETS类型数据。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -706,8 +658,6 @@ int OH_Values_GetFloatVectorCount(OH_Data_Values *values, int index, size_t *len
 
 获取float数组类型数据的大小。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -733,8 +683,6 @@ int OH_Values_GetFloatVector(OH_Data_Values *values, int index, float *val, size
 **描述：**
 
 获取float数组类型数据。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 
@@ -769,8 +717,6 @@ int OH_Values_GetUnlimitedIntBand(OH_Data_Values *values, int index, size_t *len
 
 获取任意长度的整型数据的大小。
 
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **起始版本：** 18
 
 **参数：**
@@ -796,8 +742,6 @@ int OH_Values_GetUnlimitedInt(OH_Data_Values *values, int index, int *sign, uint
 **描述：**
 
 获取任意长度的整型数据。
-
-**系统能力：** SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **起始版本：** 18
 

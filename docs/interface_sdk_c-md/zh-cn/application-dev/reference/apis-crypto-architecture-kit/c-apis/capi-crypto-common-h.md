@@ -8,8 +8,6 @@
 
 **库：** libohcrypto.so
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 12
 
 **相关模块：** [CryptoCommonApi](capi-cryptocommonapi.md)
@@ -47,8 +45,6 @@ enum OH_Crypto_ErrCode
 
 枚举错误码。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -71,8 +67,6 @@ enum Crypto_CipherMode
 
 定义加解密模式。
 
-**系统能力：** SystemCapability.Security.CryptoFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -92,8 +86,6 @@ void OH_Crypto_FreeDataBlob(Crypto_DataBlob *dataBlob)
 **描述：**
 
 释放数据Blob的内存。
-
-**系统能力：** SystemCapability.Security.CryptoFramework
 
 **起始版本：** 12
 

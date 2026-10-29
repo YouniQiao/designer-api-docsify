@@ -6,7 +6,7 @@ typedef struct ArkUI_Matrix4TranslationOptions ArkUI_Matrix4TranslationOptions
 
 ## Overview
 
-Defines the configuration options for matrix translation.
+Defines a matrix translation object.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

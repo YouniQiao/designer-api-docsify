@@ -2,7 +2,7 @@
 
 ## Overview
 
-This file provides C APIs for IPC serialization and deserialization, which are used to serialize and deserialize data during IPC communication.
+Defines C interfaces for IPC serialization and deserialization.
 
 **System capability**: SystemCapability.Communication.IPC.Core
 
@@ -12,4 +12,4 @@ This file provides C APIs for IPC serialization and deserialization, which are u
 
 | Name | Description |
 | -- | -- |
-| [ipc_cparcel.h](capi-ipc-cparcel-h.md) | This file provides C APIs for IPC serialization and deserialization, which are used to serialize and deserialize data during IPC communication. |
+| [ipc_cparcel.h](capi-ipc-cparcel-h.md) | Provides C APIs for IPC serialization and deserialization. |

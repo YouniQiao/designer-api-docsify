@@ -8,8 +8,6 @@
 
 **库：** libohswapfs.so
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -35,8 +33,6 @@ enum OH_Swapfs_ErrCode
 **描述：**
 
 swapfs模块的错误码。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 

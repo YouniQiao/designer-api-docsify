@@ -6,8 +6,6 @@ The file declares the structs and enums for the media asset manager.
 
 **Library**: libmedia_asset_manager.so
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
@@ -69,8 +67,6 @@ enum MediaLibrary_ErrorCode
 
 Enumerates the error codes of the media library.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -95,8 +91,6 @@ enum MediaLibrary_DeliveryMode
 
 Enumerates the delivery modes of the requested media asset.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -115,8 +109,6 @@ enum MediaLibrary_MediaType
 
 Enumerates the media asset types.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -133,8 +125,6 @@ enum MediaLibrary_MediaSubType
 **Description**
 
 Enumerates the media asset subtypes.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 
@@ -154,8 +144,6 @@ enum MediaLibrary_ResourceType
 
 Enumerates the media library resource types.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -172,8 +160,6 @@ enum MediaLibrary_ImageFileType
 **Description**
 
 Enumerates the image file types.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 
@@ -193,8 +179,6 @@ enum MediaLibrary_MediaQuality
 
 Enumerates the media resource quality,
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -211,8 +195,6 @@ enum MediaLibrary_MediaContentType
 **Description**
 
 Enumerates the media content types.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 12
 
@@ -234,8 +216,6 @@ typedef void (*OH_MediaLibrary_OnDataPrepared)(int32_t result, MediaLibrary_Requ
 
 Called when the requested media asset is ready.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -255,8 +235,6 @@ typedef void (*OH_MediaLibrary_OnImageDataPrepared)(MediaLibrary_ErrorCode resul
 
 Called when the requested image is ready.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -267,7 +245,7 @@ Called when the requested image is ready.
 | [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md) requestId | Request ID, which is specified by [MediaLibrary_RequestId](capi-mediaassetmanager-medialibrary-requestid.md). |
 | [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality) mediaQuality | Quality of the requested source, which is specified by [MediaLibrary_MediaQuality](capi-media-asset-base-capi-h.md#medialibrary_mediaquality). |
 | [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype) type | Media content type of the requested source, which is specified by [MediaLibrary_MediaContentType](capi-media-asset-base-capi-h.md#medialibrary_mediacontenttype). |
-| [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md)* imageSourceNative | Pointer to the [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image is ready. |
+| [OH_ImageSourceNative](../../apis-image-kit/c-apis/capi-image-nativemodule-oh-imagesourcenative.md)* imageSourceNative | Pointer to the [OH_ImageSourceNative](capi-image-nativemodule-oh-imagesourcenative.md) instance obtained when the requested image is ready. |
 
 ### OH_MediaLibrary_OnMovingPhotoDataPrepared()
 
@@ -278,8 +256,6 @@ typedef void (*OH_MediaLibrary_OnMovingPhotoDataPrepared)(MediaLibrary_ErrorCode
 **Description**
 
 Called when the requested moving photo is ready.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 13
 
@@ -302,8 +278,6 @@ typedef void (*OH_MediaLibrary_OnQuickImageDataPrepared)(MediaLibrary_ErrorCode 
 **Description**
 
 This callback is called when the requested image source is ready. If an image buffer exists in the system, an image object is returned, reducing the encoding time.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Since**: 23
 

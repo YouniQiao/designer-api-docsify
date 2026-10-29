@@ -8,8 +8,6 @@ Provides methods for creating, destroying, reading, and writing cursor informati
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Related module**: [InputMethod](capi-inputmethod.md)
@@ -43,8 +41,6 @@ InputMethod_CursorInfo *OH_CursorInfo_Create(double left, double top, double wid
 
 Create a new [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -72,8 +68,6 @@ void OH_CursorInfo_Destroy(InputMethod_CursorInfo *cursorInfo)
 
 Destroy a [InputMethod_CursorInfo](capi-inputmethod-inputmethod-cursorinfo.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -91,8 +85,6 @@ InputMethod_ErrorCode OH_CursorInfo_SetRect(InputMethod_CursorInfo *cursorInfo, 
 **Description**
 
 Set cursor info.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -121,8 +113,6 @@ InputMethod_ErrorCode OH_CursorInfo_GetRect(InputMethod_CursorInfo *cursorInfo, 
 **Description**
 
 Get cursor info.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 

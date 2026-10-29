@@ -6,7 +6,7 @@ typedef struct OH_PixelmapNative OH_PixelmapNative
 
 ## Overview
 
-Defines the PixelMap, used to represent and manipulate pixel image data, supporting operations such as image creation, reading, modification, and rendering.
+Pixel map.
 
 **System capability**: SystemCapability.MultimodalInput.Input.Core
 

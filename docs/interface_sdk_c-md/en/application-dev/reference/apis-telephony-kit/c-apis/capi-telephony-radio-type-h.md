@@ -6,8 +6,6 @@ Provides the data structures for the C APIs of the the telephony radio.
 
 **Library**: libtelephony_radio.so
 
-**System capability**: SystemCapability.Telephony.CoreService
-
 **Since**: 13
 
 **Related module**: [](capi-.md)
@@ -48,8 +46,6 @@ enum Telephony_RadioResult
 
 Result codes.
 
-**System capability**: SystemCapability.Telephony.CoreService
-
 **Since**: 13
 
 | Enum item | Description |
@@ -71,8 +67,6 @@ enum Telephony_RegState
 
 Network registration status of the device.
 
-**System capability**: SystemCapability.Telephony.CoreService
-
 **Since**: 13
 
 | Enum item | Description |
@@ -91,8 +85,6 @@ enum Telephony_RadioTechnology
 **Description**
 
 RAT type of the device.
-
-**System capability**: SystemCapability.Telephony.CoreService
 
 **Since**: 13
 
@@ -121,8 +113,6 @@ enum Telephony_NsaState
 **Description**
 
 NSA network registration status of the device.
-
-**System capability**: SystemCapability.Telephony.CoreService
 
 **Since**: 13
 

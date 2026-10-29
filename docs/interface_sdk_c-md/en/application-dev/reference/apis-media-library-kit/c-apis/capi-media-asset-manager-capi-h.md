@@ -6,8 +6,6 @@ The file declares the APIs of the media asset manager. You can use the functions
 
 **Library**: libmedia_asset_manager.so
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Related module**: [MediaAssetManager](capi-mediaassetmanager.md)
@@ -39,8 +37,6 @@ OH_MediaAssetManager* OH_MediaAssetManager_Create(void)
 
 Creates an **OH_MediaAssetManager** instance.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 12
 
 **Returns**:
@@ -58,8 +54,6 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestImageForPath(OH_MediaAssetMan
 **Description**
 
 Requests an image in the specified directory.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
@@ -91,8 +85,6 @@ MediaLibrary_RequestId OH_MediaAssetManager_RequestVideoForPath(OH_MediaAssetMan
 
 Requests a video in the specified directory.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -123,8 +115,6 @@ bool OH_MediaAssetManager_CancelRequest(OH_MediaAssetManager* manager, const Med
 
 Cancels a request based on the request ID.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -151,8 +141,6 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestMovingPhoto(OH_MediaAssetMana
 **Description**
 
 Requests a moving photo based on different policies.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
@@ -184,8 +172,6 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_RequestImage(OH_MediaAssetManager* m
 
 Requests an image based on different policies.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 
 **Since**: 12
@@ -216,8 +202,6 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_Release(OH_MediaAssetManager* manage
 
 Releases an [OH_MediaAssetManager](capi-mediaassetmanager-oh-mediaassetmanager.md) instance.
 
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -241,8 +225,6 @@ MediaLibrary_ErrorCode OH_MediaAssetManager_QuickRequestImage(OH_MediaAssetManag
 **Description**
 
 Requests an image based on different policies.
-
-**System capability**: SystemCapability.FileManagement.PhotoAccessHelper.Core
 
 **Required permission**: ohos.permission.READ_IMAGEVIDEO
 

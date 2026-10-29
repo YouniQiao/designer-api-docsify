@@ -6,8 +6,6 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 **相关模块：** [Drawing](capi-drawing.md)
@@ -47,7 +45,7 @@
 | [OH_Drawing_FontFeatures](capi-drawing-oh-drawing-fontfeatures.md) | OH_Drawing_FontFeatures | 用于描述字体特征容器。字体特征是字体内置的排版规则，控制字形显示。例如：连字、替代字形、上下标等。 |
 | [OH_Drawing_MemoryStream](capi-drawing-oh-drawing-memorystream.md) | OH_Drawing_MemoryStream | 用于描述内存流。 |
 | [OH_Drawing_FontArguments](capi-drawing-oh-drawing-fontarguments.md) | OH_Drawing_FontArguments | 用于描述字型参数。 |
-| [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) | OH_Drawing_Typeface | 用于描述字体。 |
+| [OH_Drawing_Typeface](capi-drawing-oh-drawing-typeface.md) | OH_Drawing_Typeface | 用于描述字形。 |
 | [OH_Drawing_TextBlob](capi-drawing-oh-drawing-textblob.md) | OH_Drawing_TextBlob | 定义一个文本对象，表示将多个文本组合到一个不可变的容器中。每个文本行由字形和位置组成。 |
 | [OH_Drawing_Image](capi-drawing-oh-drawing-image.md) | OH_Drawing_Image | 定义一个用于描述绘制二维像素数组的图片。 |
 | [OH_Drawing_ImageFilter](capi-drawing-oh-drawing-imagefilter.md) | OH_Drawing_ImageFilter | 定义图像滤波器，用于对构成图像像素的所有颜色位进行操作。 |
@@ -88,8 +86,6 @@ enum OH_Drawing_ColorFormat
 
 用于描述位图像素的存储格式。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -111,8 +107,6 @@ enum OH_Drawing_AlphaFormat
 
 用于描述位图像素的透明度分量。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -131,8 +125,6 @@ enum OH_Drawing_BlendMode
 **描述：**
 
 混合模式枚举。混合模式的操作会为两种颜色（源色、目标色）生成一种新的颜色。 <br>这些操作在红、绿、蓝3个颜色通道上是相同的（透明度有另外的处理规则）。 <br>对于这些，我们使用透明度通道作为示例，而不是单独命名每个通道。为简洁起见，我们使用以下缩写： <br>s : source，源的缩写。 <br>d : destination，目标的缩写。 <br>sa : source alpha，源透明度的缩写。 <br>da : destination alpha，目标透明度的缩写。 <br>计算结果用如下缩写表示： <br>r : 如果4个通道的计算方式相同，用r表示。 <br>ra : 如果只操作透明度通道，用ra表示。 <br>rc : 如果操作3个颜色通道，用rc表示。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 11
 
@@ -177,8 +169,6 @@ enum OH_Drawing_TextEncoding
 **描述：**
 
 文本编码类型枚举。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 12
 

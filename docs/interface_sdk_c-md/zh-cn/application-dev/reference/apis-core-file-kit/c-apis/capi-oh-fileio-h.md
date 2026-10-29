@@ -8,8 +8,6 @@ fileio模块接口定义，提供获取文件存储位置的native接口，帮�
 
 **库：** libohfileio.so
 
-**系统能力：** SystemCapability.FileManagement.File.FileIO
-
 **起始版本：** 12
 
 **相关模块：** [FileIO](capi-fileio.md)
@@ -40,8 +38,6 @@ enum FileIO_FileLocation
 
 文件存储位置枚举值。
 
-**系统能力：** SystemCapability.FileManagement.File.FileIO
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -62,8 +58,6 @@ enum FileIO_FileLocation
 **描述：**
 
 Obtains the location of a file.
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **起始版本：** 12
 

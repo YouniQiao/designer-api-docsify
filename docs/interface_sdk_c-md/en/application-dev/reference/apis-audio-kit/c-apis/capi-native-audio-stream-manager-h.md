@@ -6,8 +6,6 @@ Declare audio stream manager related interfaces.<br> This file interface is used
 
 **Library**: libohaudio.so
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 19
 
 **Related module**: [OHAudio](capi-ohaudio.md)
@@ -46,8 +44,6 @@ OH_AudioCommon_Result OH_AudioManager_GetAudioStreamManager(OH_AudioStreamManage
 
 Fetch the audio streammanager handle, which is a singleton.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 19
 
 **Parameters**:
@@ -71,8 +67,6 @@ OH_AudioCommon_Result OH_AudioStreamManager_GetDirectPlaybackSupport(OH_AudioStr
 **Description**
 
 Gets the mode of direct playback available for a given audio format with current active device.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 19
 
@@ -101,8 +95,6 @@ OH_AudioCommon_Result OH_AudioStreamManager_IsAcousticEchoCancelerSupported(OH_A
 
 Query whether acoustic echo canceler is supported by input source.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -128,8 +120,6 @@ bool OH_AudioStreamManager_IsFastPlaybackSupported(OH_AudioStreamManager *stream
 **Description**
 
 Return if fast playback is supported for the specific audio stream info and usage type in current device situation.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -157,8 +147,6 @@ bool OH_AudioStreamManager_IsFastRecordingSupported(OH_AudioStreamManager *strea
 
 Return if fast recording is supported for the specific audio stream info and source type in current device situation.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -185,8 +173,6 @@ bool OH_AudioStreamManager_IsIntelligentNoiseReductionEnabledForCurrentDevice(OH
 
 Return if the system recording enables intelligent noise reduction for current device.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 21
 
 **Parameters**:
@@ -211,8 +197,6 @@ bool OH_AudioStreamManager_IsMultichannelPlaybackSupported(OH_AudioStreamManager
 **Description**
 
 Returns if multichannel playback is supported for the specific audio stream info and usage type in current device situation.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
@@ -240,8 +224,6 @@ bool OH_AudioStreamManager_IsDirectPlaybackSupported(OH_AudioStreamManager *stre
 
 Returns if direct playback is supported for the specific audio stream info and usage type in current device situation.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -267,8 +249,6 @@ bool OH_AudioStreamManager_IsOffloadPlaybackSupported(OH_AudioStreamManager *str
 **Description**
 
 Returns if offload playback is supported for the specific audio stream info and usage type in current device situation.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 

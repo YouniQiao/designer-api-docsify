@@ -2,11 +2,11 @@
 
 ## 概述
 
-提供USB管理器模块的C接口，支持USB设备枚举、连接、权限管理和管道操作。
+Provides the C interface for the USB Manager module, enabling USB device enumeration, connection, permission management, and pipe operations.
 
 **系统能力：** SystemCapability.USB.USBManager
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 ## 文件汇总
 

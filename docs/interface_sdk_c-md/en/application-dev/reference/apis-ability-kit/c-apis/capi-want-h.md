@@ -6,8 +6,6 @@ Want is a carrier for information transfer between objects (application componen
 
 **Library**: libability_base_want.so
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Related module**: [AbilityBase](capi-abilitybase.md)
@@ -56,8 +54,6 @@ AbilityBase_Want* OH_AbilityBase_CreateWant(AbilityBase_Element element)
 
 Creates Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -82,8 +78,6 @@ AbilityBase_ErrorCode OH_AbilityBase_DestroyWant(AbilityBase_Want* want)
 
 Destroys Want. Want cannot be used after being destroyed. Otherwise, undefined behavior may occur.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -107,8 +101,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantElement(AbilityBase_Want* want, Abil
 **Description**
 
 Sets the Element struct, which consists of **bundleName**, **moduleName**, and **abilityName** in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -135,8 +127,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantElement(AbilityBase_Want* want, Abil
 
 Obtains the Element struct, which consists of **bundleName**, **moduleName**, and **abilityName** in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -161,8 +151,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantCharParam(AbilityBase_Want* want, co
 **Description**
 
 Sets **Param** in Want. For details about **Param**, see parameters in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -189,8 +177,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantCharParam(AbilityBase_Want* want, co
 **Description**
 
 Obtains **Param** set by [OH_AbilityBase_SetWantCharParam](capi-want-h.md#oh_abilitybase_setwantcharparam) in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -219,8 +205,6 @@ AbilityBase_ErrorCode OH_AbilityBase_AddWantFd(AbilityBase_Want* want, const cha
 
 Adds a Want file descriptor. The file descriptor can be obtained through fs.open.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 15
 
 **Parameters**:
@@ -246,8 +230,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantFd(AbilityBase_Want* want, const cha
 **Description**
 
 Obtains a Want file descriptor.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 15
 
@@ -275,8 +257,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantUri(AbilityBase_Want* want, const ch
 
 Sets **uri** in Want. For details about the URI, see uri in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -301,8 +281,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantUri(AbilityBase_Want* want, char* ur
 **Description**
 
 Obtains **uri** set in Want. For details about the URI, see uri in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -330,8 +308,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantInt32Param(AbilityBase_Want* want, c
 
 Sets a value of the int32_t type in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -357,8 +333,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantInt32Param(AbilityBase_Want* want, c
 **Description**
 
 Obtains a value of the int32_t type set in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -386,8 +360,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantBoolParam(AbilityBase_Want* want, co
 
 Sets a value of the bool type in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -414,8 +386,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantBoolParam(AbilityBase_Want* want, co
 
 Obtains a value of the bool type set in Want.
 
-**System capability**: SystemCapability.Ability.AbilityBase
-
 **Since**: 17
 
 **Parameters**:
@@ -441,8 +411,6 @@ AbilityBase_ErrorCode OH_AbilityBase_SetWantDoubleParam(AbilityBase_Want* want, 
 **Description**
 
 Sets a value of the double type in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 
@@ -471,8 +439,6 @@ AbilityBase_ErrorCode OH_AbilityBase_GetWantDoubleParam(AbilityBase_Want* want, 
 **Description**
 
 Obtains a value of the double type set in Want.
-
-**System capability**: SystemCapability.Ability.AbilityBase
 
 **Since**: 17
 

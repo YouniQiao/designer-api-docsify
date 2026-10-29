@@ -6,8 +6,6 @@ Declares the APIs that can access a pixel map.
 
 **Library**: libpixelmap.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Related module**: [Image_NativeModule](capi-image-nativemodule.md)
@@ -68,15 +66,13 @@ Declares the APIs that can access a pixel map.
 | [Image_ErrorCode OH_PixelmapImageInfo_GetDynamicRange(OH_Pixelmap_ImageInfo *info, bool *isHdr)](#oh_pixelmapimageinfo_getdynamicrange) | Get isHdr boolean for imageinfo struct. |
 | [Image_ErrorCode OH_PixelmapImageInfo_Release(OH_Pixelmap_ImageInfo *info)](#oh_pixelmapimageinfo_release) | Delete imageinfo struct pointer. |
 | [Image_ErrorCode OH_PixelmapNative_CreatePixelmap(uint8_t *data, size_t dataLength, OH_Pixelmap_InitializationOptions *options, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmap) | Creates a <b>PixelMap</b> object. |
-| [Image_ErrorCode OH_PixelmapNative_CreatePixelmapUsingAllocator(uint8_t *data, size_t dataLength, OH_Pixelmap_InitializationOptions *options, IMAGE_ALLOCATOR_MODE allocator, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmapusingallocator) | Creates a pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride. |
+| [Image_ErrorCode OH_PixelmapNative_CreatePixelmapUsingAllocator(uint8_t *data, size_t dataLength, OH_Pixelmap_InitializationOptions *options, IMAGE_ALLOCATOR_MODE allocator, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmapusingallocator) | Creates a pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride. |
 | [Image_ErrorCode OH_PixelmapNative_ConvertPixelmapNativeToNapi(napi_env env, OH_PixelmapNative *pixelmapNative, napi_value *pixelmapNapi)](#oh_pixelmapnative_convertpixelmapnativetonapi) | Convert a native <b>PixelMap</b> object to <b>PixelMap</b> napi object. |
 | [Image_ErrorCode OH_PixelmapNative_ConvertPixelmapNativeFromNapi(napi_env env, napi_value pixelmapNapi, OH_PixelmapNative **pixelmapNative)](#oh_pixelmapnative_convertpixelmapnativefromnapi) | Convert a <b>PixelMap</b> napi object to native <b>PixelMap</b> object. |
 | [Image_ErrorCode OH_PixelmapNative_ReadPixels(OH_PixelmapNative *pixelmap, uint8_t *destination, size_t *bufferSize)](#oh_pixelmapnative_readpixels) | Reads data of this pixel map to an Buffer. If this pixel map is created in the BGRA_8888 format, the data read is the same as the original data. |
 | [Image_ErrorCode OH_PixelmapNative_WritePixels(OH_PixelmapNative *pixelmap, uint8_t *source, size_t bufferSize)](#oh_pixelmapnative_writepixels) | Reads image data in an Buffer and writes the data to a Pixelmap object. |
-| [Image_ErrorCode OH_PixelmapNative_WritePixelsWithPixelFormat(OH_PixelmapNative *pixelmap, const uint8_t *source, uint32_t bufferSize, PIXEL_FORMAT sourcePixelFormat)](#oh_pixelmapnative_writepixelswithpixelformat) | Writes pixel data in the specified pixel format from a buffer to the entire PixelMap.<br> Supported source pixel formats are [PIXEL_FORMAT_RGBA_8888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_565](capi-pixelmap-native-h.md#pixel_format), and [PIXEL_FORMAT_RGBA_F16](capi-pixelmap-native-h.md#pixel_format). Source rows must be tightly packed without row padding. The minimum required buffer size is the PixelMap width multiplied by the PixelMap height and the number of bytes per pixel of sourcePixelFormat. To write source data with a customized row stride or offset, use [OH_PixelmapNative_WritePixelsToAreaWithPixelFormat](capi-pixelmap-native-h.md#oh_pixelmapnative_writepixelstoareawithpixelformat).<br> This function executes synchronously and may allocate memory and convert pixel data. Execution time depends on the number of pixels and the pixel formats. For large images, call this function from a worker thread to avoid blocking the UI thread. The source buffer must remain valid and unchanged until this function returns. The caller must serialize access to the same PixelMap, including reads, writes, pixel access, and release. Do not make reentrant calls on the same PixelMap or call this function from a signal handler. If the PixelMap is locked or not editable, this function returns IMAGE_UNSUPPORTED_OPERATION without waiting for it to become writable. Failed operations are not automatically retried. A failed write does not guarantee that the PixelMap pixel data remains unchanged. Do not use the pixel contents from a failed write; restore them from a known-good source or recreate the PixelMap after resolving the failure. For parameter or conversion errors, correct the input or select a supported format. For allocation or copy errors, check the available memory and buffer validity before performing another write. |
 | [Image_ErrorCode OH_PixelmapNative_ReadPixelsFromArea(OH_PixelmapNative *pixelmap, Image_PositionArea *area)](#oh_pixelmapnative_readpixelsfromarea) | Reads data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format. |
 | [Image_ErrorCode OH_PixelmapNative_WritePixelsToArea(OH_PixelmapNative *pixelmap, Image_PositionArea *area)](#oh_pixelmapnative_writepixelstoarea) | Writes data from a buffer to a certain area of the PixelMap. The source data should be in BGRA_8888 format. |
-| [Image_ErrorCode OH_PixelmapNative_WritePixelsToAreaWithPixelFormat(OH_PixelmapNative *pixelmap, const Image_PositionArea *area, PIXEL_FORMAT sourcePixelFormat)](#oh_pixelmapnative_writepixelstoareawithpixelformat) | Writes pixel data in the specified pixel format from a buffer to a certain area of the PixelMap.<br> Supported source pixel formats are [PIXEL_FORMAT_RGBA_8888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_565](capi-pixelmap-native-h.md#pixel_format), and [PIXEL_FORMAT_RGBA_F16](capi-pixelmap-native-h.md#pixel_format). area->stride must be greater than or equal to area->region.width multiplied by the number of bytes per pixel of sourcePixelFormat. The minimum required buffer size is calculated as follows: area->offset + (area->region.height - 1) * area->stride + area->region.width * bytesPerPixel(sourcePixelFormat).<br> This function executes synchronously and may allocate memory and convert pixel data. Execution time depends on the number of pixels in the region and the pixel formats. For large regions, call this function from a worker thread to avoid blocking the UI thread. The area information and source pixel buffer must remain valid and unchanged until this function returns. The caller must serialize access to the same PixelMap, including reads, writes, pixel access, and release. Do not make reentrant calls on the same PixelMap or call this function from a signal handler. If the PixelMap is locked or not editable, this function returns IMAGE_UNSUPPORTED_OPERATION without waiting for it to become writable. Failed operations are not automatically retried. A failed write does not guarantee that the pixel data in the specified region remains unchanged. Do not use the pixel contents from a failed write; restore them from a known-good source or recreate the PixelMap after resolving the failure. For parameter or conversion errors, correct the input or select a supported format. For allocation or copy errors, check the available memory and buffer validity before performing another write. |
 | [Image_ErrorCode OH_PixelmapNative_GetArgbPixels(OH_PixelmapNative *pixelmap, uint8_t *destination, size_t *bufferSize)](#oh_pixelmapnative_getargbpixels) | Get argb pixel buffer from pixelmap. |
 | [Image_ErrorCode OH_PixelmapNative_ToSdr(OH_PixelmapNative *pixelmap)](#oh_pixelmapnative_tosdr) | Convert [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) to standard dynamic range. |
 | [Image_ErrorCode OH_PixelmapNative_GetImageInfo(OH_PixelmapNative *pixelmap, OH_Pixelmap_ImageInfo *imageInfo)](#oh_pixelmapnative_getimageinfo) | Obtains pixel map information of this image. |
@@ -104,7 +100,7 @@ Declares the APIs that can access a pixel map.
 | [Image_ErrorCode OH_PixelmapNative_ConvertAlphaType(OH_PixelmapNative *srcPixelmap, OH_PixelmapNative *dstPixelmap, const bool toPremul)](#oh_pixelmapnative_convertalphatype) | Converts the alpha type of the PixelMap to either premultiplied or unpremultiplied. The conversion only supports pixel formats that have an alpha channel, except RGBA_F16. |
 | [Image_ErrorCode OH_PixelmapNative_ConvertAlphaFormat(OH_PixelmapNative* srcpixelmap, OH_PixelmapNative* dstpixelmap, const bool isPremul)](#oh_pixelmapnative_convertalphaformat) | Converting images to alpha format It is recommended to use [OH_PixelmapNative_ConvertAlphaType](capi-pixelmap-native-h.md#oh_pixelmapnative_convertalphatype). |
 | [Image_ErrorCode OH_PixelmapNative_CreateEmptyPixelmap(OH_Pixelmap_InitializationOptions *options, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createemptypixelmap) | Create a empty <b>PixelMap</b> object. |
-| [Image_ErrorCode OH_PixelmapNative_CreateEmptyPixelmapUsingAllocator(OH_Pixelmap_InitializationOptions *options, IMAGE_ALLOCATOR_MODE allocator, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createemptypixelmapusingallocator) | Creates a empty pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride. |
+| [Image_ErrorCode OH_PixelmapNative_CreateEmptyPixelmapUsingAllocator(OH_Pixelmap_InitializationOptions *options, IMAGE_ALLOCATOR_MODE allocator, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createemptypixelmapusingallocator) | Creates a empty pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride. |
 | [Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromSurface(const char *surfaceId, size_t length, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmapfromsurface) | Creates a PixelMap from a Surface with the Surface ID. |
 | [Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromSurfaceWithTransformation(const char *surfaceId, size_t length, bool transformEnabled, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmapfromsurfacewithtransformation) | Creates a PixelMap object based on the ID of a Surface with transformation. |
 | [Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromNativeBuffer(OH_NativeBuffer *nativeBuffer, OH_PixelmapNative **pixelmap)](#oh_pixelmapnative_createpixelmapfromnativebuffer) | Creates a PixelMap from a native buffer. |
@@ -133,8 +129,6 @@ enum PIXELMAP_ALPHA_TYPE
 
 Define a pixelmap alpha type.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -153,8 +147,6 @@ enum PIXEL_FORMAT
 **Description**
 
 Define a pixelmap alpha type.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12 /
 typedef enum {
@@ -195,8 +187,6 @@ enum OH_PixelmapNative_AntiAliasingLevel
 
 Defines the anti-aliasing level.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -216,8 +206,6 @@ enum OH_Pixelmap_HdrMetadataKey
 
 Enumerates the HDR metadata types that need to be stored in Pixelmap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -236,8 +224,6 @@ enum OH_Pixelmap_HdrMetadataType
 **Description**
 
 Value for HDR_METADATA_TYPE.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -260,8 +246,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_Create(OH_Pixelmap_Initializati
 **Description**
 
 Create a for InitializationOtions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -286,8 +270,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetWidth(OH_Pixelmap_Initializa
 **Description**
 
 Get width number for InitializationOtions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -314,8 +296,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetWidth(OH_Pixelmap_Initializa
 
 Set width number for InitializationOtions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -340,8 +320,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetHeight(OH_Pixelmap_Initializ
 **Description**
 
 Get height number for InitializationOtions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -368,8 +346,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetHeight(OH_Pixelmap_Initializ
 
 Set height number for InitializationOtions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -394,8 +370,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetPixelFormat(OH_Pixelmap_Init
 **Description**
 
 Get pixelFormat number for InitializationOtions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -422,8 +396,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetPixelFormat(OH_Pixelmap_Init
 
 Set pixelFormat number for InitializationOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -448,8 +420,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetSrcPixelFormat(OH_Pixelmap_I
 **Description**
 
 Get pixelFormat number for InitializationOptions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -476,8 +446,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetSrcPixelFormat(OH_Pixelmap_I
 
 Set pixelFormat number for InitializationOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -502,8 +470,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetRowStride(OH_Pixelmap_Initia
 **Description**
 
 Get rowStride for InitializationOptions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -530,8 +496,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetRowStride(OH_Pixelmap_Initia
 
 Set rowStride number for InitializationOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -556,8 +520,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetAlphaType(OH_Pixelmap_Initia
 **Description**
 
 Get alphaType number for InitializationOtions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -584,8 +546,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetAlphaType(OH_Pixelmap_Initia
 
 Set alphaType number for InitializationOtions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -610,8 +570,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_GetEditable(OH_Pixelmap_Initial
 **Description**
 
 Get editable for InitializationOptions struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 18
 
@@ -638,8 +596,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_SetEditable(OH_Pixelmap_Initial
 
 Set editable for InitializationOptions struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -665,8 +621,6 @@ Image_ErrorCode OH_PixelmapInitializationOptions_Release(OH_Pixelmap_Initializat
 
 delete InitializationOtions pointer.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -691,8 +645,6 @@ Image_ErrorCode OH_PixelmapImageInfo_Create(OH_Pixelmap_ImageInfo **info)
 
 Create imageinfo struct .
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -716,8 +668,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetWidth(OH_Pixelmap_ImageInfo *info, uint3
 **Description**
 
 Get width number for imageinfo struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -744,8 +694,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetHeight(OH_Pixelmap_ImageInfo *info, uint
 
 Get height number for imageinfo struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -770,8 +718,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetAlphaMode(OH_Pixelmap_ImageInfo *info, i
 **Description**
 
 Get alphaMode number for imageinfo struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 20
 
@@ -798,8 +744,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetRowStride(OH_Pixelmap_ImageInfo *info, u
 
 Get rowStride number for imageinfo struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -824,8 +768,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetPixelFormat(OH_Pixelmap_ImageInfo *info,
 **Description**
 
 Get pixelFormat number for imageinfo struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -852,8 +794,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetAlphaType(OH_Pixelmap_ImageInfo *info, i
 
 Get alphaType number for imageinfo struct.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -878,8 +818,6 @@ Image_ErrorCode OH_PixelmapImageInfo_GetDynamicRange(OH_Pixelmap_ImageInfo *info
 **Description**
 
 Get isHdr boolean for imageinfo struct.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -906,8 +844,6 @@ Image_ErrorCode OH_PixelmapImageInfo_Release(OH_Pixelmap_ImageInfo *info)
 
 Delete imageinfo struct pointer.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -931,8 +867,6 @@ Image_ErrorCode OH_PixelmapNative_CreatePixelmap(uint8_t *data, size_t dataLengt
 **Description**
 
 Creates a <b>PixelMap</b> object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -959,9 +893,7 @@ Image_ErrorCode OH_PixelmapNative_CreatePixelmapUsingAllocator(uint8_t *data, si
 
 **Description**
 
-Creates a pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
+Creates a pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride.
 
 **Since**: 20
 
@@ -991,8 +923,6 @@ Image_ErrorCode OH_PixelmapNative_ConvertPixelmapNativeToNapi(napi_env env, OH_P
 
 Convert a native <b>PixelMap</b> object to <b>PixelMap</b> napi object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1018,8 +948,6 @@ Image_ErrorCode OH_PixelmapNative_ConvertPixelmapNativeFromNapi(napi_env env, na
 **Description**
 
 Convert a <b>PixelMap</b> napi object to native <b>PixelMap</b> object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -1047,8 +975,6 @@ Image_ErrorCode OH_PixelmapNative_ReadPixels(OH_PixelmapNative *pixelmap, uint8_
 
 Reads data of this pixel map to an Buffer. If this pixel map is created in the BGRA_8888 format, the data read is the same as the original data.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1075,8 +1001,6 @@ Image_ErrorCode OH_PixelmapNative_WritePixels(OH_PixelmapNative *pixelmap, uint8
 
 Reads image data in an Buffer and writes the data to a Pixelmap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1093,35 +1017,6 @@ Reads image data in an Buffer and writes the data to a Pixelmap object.
 | -- | -- |
 | [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | Function result code: [IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the execution is successful. [IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode) Parameter error. Possible causes: 1.Parameter is nullptr 2.pixelmap's inner pixelmap is nullptr. 3.Parameter bufferSize is less than the actual data size. [IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) If the pixelmap is not editable. [IMAGE_UNKNOWN_ERROR](capi-image-common-h.md#image_errorcode) Internal unknown error, e.g. memory copy failed or pixelmap's attributes are incorrect. |
 
-### OH_PixelmapNative_WritePixelsWithPixelFormat()
-
-```c
-Image_ErrorCode OH_PixelmapNative_WritePixelsWithPixelFormat(OH_PixelmapNative *pixelmap, const uint8_t *source, uint32_t bufferSize, PIXEL_FORMAT sourcePixelFormat)
-```
-
-**Description**
-
-Writes pixel data in the specified pixel format from a buffer to the entire PixelMap.<br> Supported source pixel formats are [PIXEL_FORMAT_RGBA_8888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_565](capi-pixelmap-native-h.md#pixel_format), and [PIXEL_FORMAT_RGBA_F16](capi-pixelmap-native-h.md#pixel_format). Source rows must be tightly packed without row padding. The minimum required buffer size is the PixelMap width multiplied by the PixelMap height and the number of bytes per pixel of sourcePixelFormat. To write source data with a customized row stride or offset, use [OH_PixelmapNative_WritePixelsToAreaWithPixelFormat](capi-pixelmap-native-h.md#oh_pixelmapnative_writepixelstoareawithpixelformat).<br> This function executes synchronously and may allocate memory and convert pixel data. Execution time depends on the number of pixels and the pixel formats. For large images, call this function from a worker thread to avoid blocking the UI thread. The source buffer must remain valid and unchanged until this function returns. The caller must serialize access to the same PixelMap, including reads, writes, pixel access, and release. Do not make reentrant calls on the same PixelMap or call this function from a signal handler. If the PixelMap is locked or not editable, this function returns IMAGE_UNSUPPORTED_OPERATION without waiting for it to become writable. Failed operations are not automatically retried. A failed write does not guarantee that the PixelMap pixel data remains unchanged. Do not use the pixel contents from a failed write; restore them from a known-good source or recreate the PixelMap after resolving the failure. For parameter or conversion errors, correct the input or select a supported format. For allocation or copy errors, check the available memory and buffer validity before performing another write.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | [in,out] Pointer to the PixelMap whose pixel data will be modified. This pointer must not be NULL. |
-| const uint8_t *source | [in] Pointer to the source pixel buffer. This pointer must not be NULL. |
-| uint32_t bufferSize | [in] Size of the source buffer, in bytes. It must be at least the minimum required buffer size described above and must not exceed UINT32_MAX. |
-| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) sourcePixelFormat | [in] Pixel format of the source data. RGBA_8888, RGB_888, RGB_565, and RGBA_F16 are supported. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li> <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) if the PixelMap is not editable or is locked.</li> <li>[IMAGE_UNSUPPORTED_CONVERSION](capi-image-common-h.md#image_errorcode) if conversion between sourcePixelFormat and the PixelMap pixel format is not supported.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if pixelmap or source is NULL, bufferSize is insufficient, or sourcePixelFormat is invalid or unsupported.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) if memory allocation fails.</li> <li>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) if the pixel data cannot be copied or converted.</li> </ul> |
-
 ### OH_PixelmapNative_ReadPixelsFromArea()
 
 ```c
@@ -1131,8 +1026,6 @@ Image_ErrorCode OH_PixelmapNative_ReadPixelsFromArea(OH_PixelmapNative *pixelmap
 **Description**
 
 Reads data from a certain area of the PixelMap to a buffer. The resulting data will be in BGRA_8888 format.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 
@@ -1164,8 +1057,6 @@ Image_ErrorCode OH_PixelmapNative_WritePixelsToArea(OH_PixelmapNative *pixelmap,
 
 Writes data from a buffer to a certain area of the PixelMap. The source data should be in BGRA_8888 format.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -1186,34 +1077,6 @@ Writes data from a buffer to a certain area of the PixelMap. The source data sho
 [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md)
 
 
-### OH_PixelmapNative_WritePixelsToAreaWithPixelFormat()
-
-```c
-Image_ErrorCode OH_PixelmapNative_WritePixelsToAreaWithPixelFormat(OH_PixelmapNative *pixelmap, const Image_PositionArea *area, PIXEL_FORMAT sourcePixelFormat)
-```
-
-**Description**
-
-Writes pixel data in the specified pixel format from a buffer to a certain area of the PixelMap.<br> Supported source pixel formats are [PIXEL_FORMAT_RGBA_8888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_888](capi-pixelmap-native-h.md#pixel_format), [PIXEL_FORMAT_RGB_565](capi-pixelmap-native-h.md#pixel_format), and [PIXEL_FORMAT_RGBA_F16](capi-pixelmap-native-h.md#pixel_format). area->stride must be greater than or equal to area->region.width multiplied by the number of bytes per pixel of sourcePixelFormat. The minimum required buffer size is calculated as follows: area->offset + (area->region.height - 1) * area->stride + area->region.width * bytesPerPixel(sourcePixelFormat).<br> This function executes synchronously and may allocate memory and convert pixel data. Execution time depends on the number of pixels in the region and the pixel formats. For large regions, call this function from a worker thread to avoid blocking the UI thread. The area information and source pixel buffer must remain valid and unchanged until this function returns. The caller must serialize access to the same PixelMap, including reads, writes, pixel access, and release. Do not make reentrant calls on the same PixelMap or call this function from a signal handler. If the PixelMap is locked or not editable, this function returns IMAGE_UNSUPPORTED_OPERATION without waiting for it to become writable. Failed operations are not automatically retried. A failed write does not guarantee that the pixel data in the specified region remains unchanged. Do not use the pixel contents from a failed write; restore them from a known-good source or recreate the PixelMap after resolving the failure. For parameter or conversion errors, correct the input or select a supported format. For allocation or copy errors, check the available memory and buffer validity before performing another write.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) *pixelmap | [in,out] Pointer to the PixelMap whose pixel data will be modified. This pointer must not be NULL. |
-| const Image_PositionArea *area | [in] Pointer to the area information. Both area and area->pixels must not be NULL. Pixel data is read from area->pixels and written to area->region. The source buffer size area->pixelsSize must be at least the minimum required buffer size described above. |
-| [PIXEL_FORMAT](capi-pixelmap-native-h.md#pixel_format) sourcePixelFormat | [in] Pixel format of the source data. RGBA_8888, RGB_888, RGB_565, and RGBA_F16 are supported. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Image_ErrorCode](capi-image-common-h.md#image_errorcode) | <ul> <li>[IMAGE_SUCCESS](capi-image-common-h.md#image_errorcode) if the operation is successful.</li> <li>[IMAGE_UNSUPPORTED_OPERATION](capi-image-common-h.md#image_errorcode) if the PixelMap is not editable or is locked.</li> <li>[IMAGE_UNSUPPORTED_CONVERSION](capi-image-common-h.md#image_errorcode) if conversion between sourcePixelFormat and the PixelMap pixel format is not supported.</li> <li>[IMAGE_INVALID_PARAMETER](capi-image-common-h.md#image_errorcode) if pixelmap, area, or area->pixels is NULL; the buffer size, offset, stride, or region is invalid; or sourcePixelFormat is invalid or unsupported.</li> <li>[IMAGE_ALLOC_FAILED](capi-image-common-h.md#image_errorcode) if memory allocation fails.</li> <li>[IMAGE_COPY_FAILED](capi-image-common-h.md#image_errorcode) if the pixel data cannot be copied or converted.</li> </ul> |
-
 ### OH_PixelmapNative_GetArgbPixels()
 
 ```c
@@ -1223,8 +1086,6 @@ Image_ErrorCode OH_PixelmapNative_GetArgbPixels(OH_PixelmapNative *pixelmap, uin
 **Description**
 
 Get argb pixel buffer from pixelmap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -1257,8 +1118,6 @@ Image_ErrorCode OH_PixelmapNative_ToSdr(OH_PixelmapNative *pixelmap)
 
 Convert [OH_PixelmapNative](capi-image-nativemodule-oh-pixelmapnative.md) to standard dynamic range.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1282,8 +1141,6 @@ Image_ErrorCode OH_PixelmapNative_GetImageInfo(OH_PixelmapNative *pixelmap, OH_P
 **Description**
 
 Obtains pixel map information of this image.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -1310,8 +1167,6 @@ Image_ErrorCode OH_PixelmapNative_SetOpacity(OH_PixelmapNative *pixelmap, float 
 
 Sets opacity of the PixelMap. Every pixel will be set to the same opacity value.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1337,8 +1192,6 @@ Image_ErrorCode OH_PixelmapNative_Opacity(OH_PixelmapNative *pixelmap, float rat
 
 Sets an opacity rate for this image pixel map. It is recommended to use [OH_PixelmapNative_SetOpacity](capi-pixelmap-native-h.md#oh_pixelmapnative_setopacity).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1363,8 +1216,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyScale(OH_PixelmapNative *pixelmap, float 
 **Description**
 
 Scales the PixelMap in the horizontal and/or vertical dimensions.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -1392,8 +1243,6 @@ Image_ErrorCode OH_PixelmapNative_Scale(OH_PixelmapNative *pixelmap, float scale
 
 Scales this image based on the input width and height. It is recommended to use [OH_PixelmapNative_ApplyScale](capi-pixelmap-native-h.md#oh_pixelmapnative_applyscale).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1419,8 +1268,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyScaleWithAntiAliasing(OH_PixelmapNative *
 **Description**
 
 Scales the PixelMap in the horizontal and/or vertical dimensions with anti-aliasing.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -1448,8 +1295,6 @@ Image_ErrorCode OH_PixelmapNative_ScaleWithAntiAliasing(OH_PixelmapNative *pixel
 **Description**
 
 Scales this image based on the input width and height with anti-aliasing. It is recommended to use [OH_PixelmapNative_ApplyScaleWithAntiAliasing](capi-pixelmap-native-h.md#oh_pixelmapnative_applyscalewithantialiasing).
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -1483,8 +1328,6 @@ Image_ErrorCode OH_PixelmapNative_CreateScaledPixelMap(OH_PixelmapNative *srcPix
 
 Create a scaled pixelmap based on the source pixelmap and the input width and height.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -1516,8 +1359,6 @@ Image_ErrorCode OH_PixelmapNative_CreateScaledPixelMapWithAntiAliasing(OH_Pixelm
 **Description**
 
 Create a scaled pixelmap based on the source pixelmap and the input width and height with anti-aliasing.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 18
 
@@ -1552,8 +1393,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyTranslate(OH_PixelmapNative *pixelmap, fl
 
 Repositions the PixelMap in the horizontal and/or vertical directions.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1580,8 +1419,6 @@ Image_ErrorCode OH_PixelmapNative_Translate(OH_PixelmapNative *pixelmap, float x
 
 Translates this image based on the input coordinates. It is recommended to use [OH_PixelmapNative_ApplyTranslate](capi-pixelmap-native-h.md#oh_pixelmapnative_applytranslate).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1607,8 +1444,6 @@ Image_ErrorCode OH_PixelmapNative_CreateAlphaPixelmap(OH_PixelmapNative *srcPixe
 **Description**
 
 Creates a PixelMap with only alpha channel from the source PixelMap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 
@@ -1640,8 +1475,6 @@ Image_ErrorCode OH_PixelmapNative_Clone(OH_PixelmapNative *srcPixelmap, OH_Pixel
 
 Clones a PixelMap from the source PixelMap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -1671,8 +1504,6 @@ Image_ErrorCode OH_PixelmapNative_CreateCroppedAndScaledPixelMap(OH_PixelmapNati
 **Description**
 
 Creates a cropped and then scaled PixelMap based on the source PixelMap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 
@@ -1707,8 +1538,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyRotate(OH_PixelmapNative *pixelmap, float
 
 Rotates the PixelMap. Note: YUV format PixelMaps only support rotation angles that are multiples of 90 degrees.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1734,8 +1563,6 @@ Image_ErrorCode OH_PixelmapNative_Rotate(OH_PixelmapNative *pixelmap, float angl
 
 Rotates this image based on the input angle. It is recommended to use [OH_PixelmapNative_ApplyRotate](capi-pixelmap-native-h.md#oh_pixelmapnative_applyrotate).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1760,8 +1587,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyFlip(OH_PixelmapNative *pixelmap, bool sh
 **Description**
 
 Flips the PixelMap in the horizontal and/or vertical directions.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -1789,8 +1614,6 @@ Image_ErrorCode OH_PixelmapNative_Flip(OH_PixelmapNative *pixelmap, bool shouldF
 
 Flips this image horizontally or vertically, or both. It is recommended to use [OH_PixelmapNative_ApplyFlip](capi-pixelmap-native-h.md#oh_pixelmapnative_applyflip).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1817,8 +1640,6 @@ Image_ErrorCode OH_PixelmapNative_ApplyCrop(OH_PixelmapNative *pixelmap, Image_R
 
 Crops the PixelMap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1843,8 +1664,6 @@ Image_ErrorCode OH_PixelmapNative_Crop(OH_PixelmapNative *pixelmap, Image_Region
 **Description**
 
 Crops this image based on the input size. It is recommended to use [OH_PixelmapNative_ApplyCrop](capi-pixelmap-native-h.md#oh_pixelmapnative_applycrop).
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -1871,8 +1690,6 @@ Image_ErrorCode OH_PixelmapNative_Release(OH_PixelmapNative *pixelmap)
 
 Releases an <b>OH_Pixelmap</b> object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1897,8 +1714,6 @@ Image_ErrorCode OH_PixelmapNative_Destroy(OH_PixelmapNative **pixelmap)
 
 Destroys an <b>OH_PixelmapNative</b> object and deallocates its resources.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -1922,8 +1737,6 @@ Image_ErrorCode OH_PixelmapNative_ConvertAlphaType(OH_PixelmapNative *srcPixelma
 **Description**
 
 Converts the alpha type of the PixelMap to either premultiplied or unpremultiplied. The conversion only supports pixel formats that have an alpha channel, except RGBA_F16.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 26.0.0
 
@@ -1951,8 +1764,6 @@ Image_ErrorCode OH_PixelmapNative_ConvertAlphaFormat(OH_PixelmapNative* srcpixel
 
 Converting images to alpha format It is recommended to use [OH_PixelmapNative_ConvertAlphaType](capi-pixelmap-native-h.md#oh_pixelmapnative_convertalphatype).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1979,8 +1790,6 @@ Image_ErrorCode OH_PixelmapNative_CreateEmptyPixelmap(OH_Pixelmap_Initialization
 
 Create a empty <b>PixelMap</b> object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2004,9 +1813,7 @@ Image_ErrorCode OH_PixelmapNative_CreateEmptyPixelmapUsingAllocator(OH_Pixelmap_
 
 **Description**
 
-Creates a empty pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_allocator_mode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
+Creates a empty pixelmap based on options [OH_Pixelmap_InitializationOptions](capi-image-nativemodule-oh-pixelmap-initializationoptions.md), the memory type used by the pixelmap can be specified by allocatorType [IMAGE_ALLOCATOR_MODE](capi-image-common-h.md#image_errorcode). By default, the system selects the memory type based on the image type, image size, platform capability, etc. When processing the pixelmap returned by this interface, please always consider the impact of stride.
 
 **Since**: 20
 
@@ -2033,8 +1840,6 @@ Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromSurface(const char *surfaceI
 **Description**
 
 Creates a PixelMap from a Surface with the Surface ID.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 
@@ -2066,8 +1871,6 @@ Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromSurfaceWithTransformation(co
 **Description**
 
 Creates a PixelMap object based on the ID of a Surface with transformation.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 23
 
@@ -2101,8 +1904,6 @@ Image_ErrorCode OH_PixelmapNative_CreatePixelmapFromNativeBuffer(OH_NativeBuffer
 
 Creates a PixelMap from a native buffer.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 22
 
 **Parameters**:
@@ -2132,8 +1933,6 @@ Image_ErrorCode OH_PixelmapNative_GetMetadata(OH_PixelmapNative *pixelmap, OH_Pi
 **Description**
 
 Get metadata.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -2166,8 +1965,6 @@ Image_ErrorCode OH_PixelmapNative_SetMetadata(OH_PixelmapNative *pixelmap, OH_Pi
 
 Set metadata.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2199,8 +1996,6 @@ Image_ErrorCode OH_PixelmapNative_GetNativeBuffer(OH_PixelmapNative *pixelmap, O
 
 Get the native buffer from the PixelMap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -2230,8 +2025,6 @@ Image_ErrorCode OH_PixelmapNative_GetColorSpaceNative(OH_PixelmapNative *pixelma
 **Description**
 
 Get the native colorspace from the PixelMap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -2263,8 +2056,6 @@ Image_ErrorCode OH_PixelmapNative_SetColorSpaceNative(OH_PixelmapNative *pixelma
 
 Set the native colorspace for the PixelMap.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -2294,8 +2085,6 @@ Image_ErrorCode OH_PixelmapNative_SetMemoryName(OH_PixelmapNative *pixelmap, cha
 **Description**
 
 Set pixelmap memory name.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 13
 
@@ -2328,8 +2117,6 @@ Image_ErrorCode OH_PixelmapNative_GetByteCount(OH_PixelmapNative *pixelmap, uint
 
 Get the total number of bytes occupied by all pixels in the Pixelmap, without any padding.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -2359,8 +2146,6 @@ Image_ErrorCode OH_PixelmapNative_GetAllocationByteCount(OH_PixelmapNative *pixe
 **Description**
 
 Get the size of the allocated memory used to store this pixelmap's pixels.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 18
 
@@ -2392,8 +2177,6 @@ Image_ErrorCode OH_PixelmapNative_AccessPixels(OH_PixelmapNative *pixelmap, void
 
 Obtains the memory address of a PixelMap and locks the memory. When the memory is locked, any operation that modifies or releases the PixelMap will fail and return [IMAGE_BAD_PARAMETER](capi-image-common-h.md#image_errorcode).
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 15
 
 **Parameters**:
@@ -2424,8 +2207,6 @@ Image_ErrorCode OH_PixelmapNative_UnaccessPixels(OH_PixelmapNative *pixelmap)
 
 Unlocks the memory of the PixelMap data. This function is used with [OH_PixelmapNative_AccessPixels](capi-pixelmap-native-h.md#oh_pixelmapnative_accesspixels) in pairs.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 15
 
 **Parameters**:
@@ -2454,8 +2235,6 @@ Image_ErrorCode OH_PixelmapNative_GetUniqueId(OH_PixelmapNative *pixelmap, uint3
 **Description**
 
 Gets the unique ID of a PixelMap.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 
@@ -2486,8 +2265,6 @@ Image_ErrorCode OH_PixelmapNative_IsReleased(OH_PixelmapNative *pixelmap, bool *
 **Description**
 
 Checks whether the PixelMap has been released.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 22
 

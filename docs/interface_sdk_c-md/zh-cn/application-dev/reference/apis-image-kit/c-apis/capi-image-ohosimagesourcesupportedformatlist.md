@@ -24,7 +24,7 @@ struct OhosImageSourceSupportedFormatList {...}
 | -- | -- |
 | struct OhosImageSourceSupportedFormat** supportedFormatList = nullptr |  |
 | size_t size = 0 |  |
-| struct OhosImageSourceSupportedFormat** supportedFormatList |  |
+| [struct OhosImageSourceSupportedFormat*](capi-image-ohosimagesourcesupportedformat.md)* supportedFormatList |  |
 | size_t size |  |
 
 

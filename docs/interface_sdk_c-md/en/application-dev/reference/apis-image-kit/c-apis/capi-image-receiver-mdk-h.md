@@ -6,8 +6,6 @@ Declares the APIs for obtaining image data from the native layer.
 
 **Library**: libimage_receiver_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Related module**: [Image](capi-image.md)
@@ -56,8 +54,6 @@ typedef void (*OH_Image_Receiver_On_Callback)(void)
 
 Defines the callbacks for images at the native layer.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 ### OH_Image_Receiver_CreateImageReceiver()
@@ -69,8 +65,6 @@ int32_t OH_Image_Receiver_CreateImageReceiver(napi_env env, struct OhosImageRece
 **Description**
 
 Creates an <b>ImageReceiver</b> object at the application layer.
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -103,8 +97,6 @@ ImageReceiverNative* OH_Image_Receiver_InitImageReceiverNative(napi_env env, nap
 
 Initializes an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer through an <b>ImageReceiver</b> object at the application layer.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
@@ -134,8 +126,6 @@ int32_t OH_Image_Receiver_GetReceivingSurfaceId(const ImageReceiverNative* nativ
 **Description**
 
 Obtains the receiver ID through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -168,8 +158,6 @@ int32_t OH_Image_Receiver_ReadLatestImage(const ImageReceiverNative* native, nap
 
 Obtains the latest image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
@@ -199,8 +187,6 @@ int32_t OH_Image_Receiver_ReadNextImage(const ImageReceiverNative* native, napi_
 **Description**
 
 Obtains the next image through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -232,8 +218,6 @@ int32_t OH_Image_Receiver_On(const ImageReceiverNative* native, OH_Image_Receive
 
 Registers an [OH_Image_Receiver_On_Callback](capi-image-receiver-mdk-h.md#oh_image_receiver_on_callback) callback event.<br> This callback event is triggered whenever a new image is received.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
@@ -263,8 +247,6 @@ int32_t OH_Image_Receiver_GetSize(const ImageReceiverNative* native, struct Ohos
 **Description**
 
 Obtains the size of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 
@@ -296,8 +278,6 @@ int32_t OH_Image_Receiver_GetCapacity(const ImageReceiverNative* native, int32_t
 
 Obtains the capacity of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
@@ -328,8 +308,6 @@ int32_t OH_Image_Receiver_GetFormat(const ImageReceiverNative* native, int32_t* 
 
 Obtains the format of the image receiver through an [ImageReceiverNative](capi-image-imagereceivernative.md) object.
 
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
-
 **Since**: 10
 
 **Parameters**:
@@ -359,8 +337,6 @@ int32_t OH_Image_Receiver_Release(ImageReceiverNative* native)
 **Description**
 
 Releases an [ImageReceiverNative](capi-image-imagereceivernative.md) object at the native layer.<br> This API is not used to release an <b>ImageReceiver</b> object at the application layer.
-
-**System capability**: SystemCapability.Multimedia.Image.ImageReceiver
 
 **Since**: 10
 

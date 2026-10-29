@@ -6,8 +6,6 @@
 
 **库：** libohpreferences.so
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **相关模块：** [Preferences](capi-preferences.md)
@@ -72,8 +70,6 @@ enum Preference_ValueType
 
 定义PreferencesValue的数据类型。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
@@ -105,8 +101,6 @@ const char *OH_PreferencesPair_GetKey(const OH_PreferencesPair *pairs, uint32_t 
 
 获取键值对数据中索引对应数据的键。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -136,8 +130,6 @@ const OH_PreferencesValue *OH_PreferencesPair_GetPreferencesValue(const OH_Prefe
 **描述：**
 
 获取键值对数据数组中索引对应的值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -169,8 +161,6 @@ void OH_PreferencesPair_Destroy(OH_PreferencesPair *pairs, uint32_t count)
 
 销毁一个[OH_PreferencesPair](capi-preferences-oh-preferencespair.md)实例。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -194,8 +184,6 @@ Preference_ValueType OH_PreferencesValue_GetValueType(const OH_PreferencesValue 
 **描述：**
 
 获取PreferencesValue对象的数据类型。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -225,8 +213,6 @@ int OH_PreferencesValue_GetInt(const OH_PreferencesValue *object, int *value)
 **描述：**
 
 从PreferencesValue对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)中获取一个整型值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -258,8 +244,6 @@ int OH_PreferencesValue_GetBool(const OH_PreferencesValue *object, bool *value)
 
 从PreferencesValue对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)中获取一个布尔值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -289,8 +273,6 @@ int OH_PreferencesValue_GetString(const OH_PreferencesValue *object, char **valu
 **描述：**
 
 从PreferencesValue对象[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)中获取字符串。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 13
 
@@ -323,8 +305,6 @@ OH_PreferencesValue* OH_PreferencesValue_Create(void)
 
 创建一个[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **返回值：**
@@ -348,8 +328,6 @@ void OH_PreferencesValue_Destroy(OH_PreferencesValue *value)
 
 销毁一个[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -372,8 +350,6 @@ int OH_PreferencesValue_SetInt(const OH_PreferencesValue *object, int value)
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置整型值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -405,8 +381,6 @@ int OH_PreferencesValue_SetBool(const OH_PreferencesValue *object, bool value)
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置布尔值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -436,8 +410,6 @@ int OH_PreferencesValue_SetString(const OH_PreferencesValue *object, const char 
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置字符串值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -469,8 +441,6 @@ int OH_PreferencesValue_SetInt64(const OH_PreferencesValue *object, int64_t valu
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置int64值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -500,8 +470,6 @@ int OH_PreferencesValue_GetInt64(const OH_PreferencesValue *object, int64_t *val
 **描述：**
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的int64值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -533,8 +501,6 @@ int OH_PreferencesValue_SetDouble(const OH_PreferencesValue *object, double valu
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置double值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -565,8 +531,6 @@ int OH_PreferencesValue_GetDouble(const OH_PreferencesValue *object, double *val
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的double值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -596,8 +560,6 @@ int OH_PreferencesValue_SetIntArray(const OH_PreferencesValue *object, const int
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置整型数组值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -630,8 +592,6 @@ int OH_PreferencesValue_GetIntArray(const OH_PreferencesValue *object, int **val
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的整型数组值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -662,8 +622,6 @@ int OH_PreferencesValue_SetBoolArray(const OH_PreferencesValue *object, const bo
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置布尔数组值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -696,8 +654,6 @@ int OH_PreferencesValue_GetBoolArray(const OH_PreferencesValue *object, bool **v
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的布尔数组值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -728,8 +684,6 @@ int OH_PreferencesValue_SetStringArray(const OH_PreferencesValue *object, const 
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置字符串数组值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -762,8 +716,6 @@ int OH_PreferencesValue_GetStringArray(const OH_PreferencesValue *object, char *
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的字符串数组值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -794,8 +746,6 @@ int OH_PreferencesValue_SetInt64Array(const OH_PreferencesValue *object, const i
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置int64数组值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -828,8 +778,6 @@ int OH_PreferencesValue_GetInt64Array(const OH_PreferencesValue *object, int64_t
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的int64数组值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -860,8 +808,6 @@ int OH_PreferencesValue_SetDoubleArray(const OH_PreferencesValue *object, const 
 **描述：**
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置double数组值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 
@@ -894,8 +840,6 @@ int OH_PreferencesValue_GetDoubleArray(const OH_PreferencesValue *object, double
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的double数组值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -927,8 +871,6 @@ int OH_PreferencesValue_SetBlob(const OH_PreferencesValue *object, const uint8_t
 
 为[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例设置二进制值。
 
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
-
 **起始版本：** 23
 
 **参数：**
@@ -959,8 +901,6 @@ int OH_PreferencesValue_GetBlob(const OH_PreferencesValue *object, uint8_t **val
 **描述：**
 
 获取[OH_PreferencesValue](capi-preferences-oh-preferencesvalue.md)实例的二进制值。
-
-**系统能力：** SystemCapability.DistributedDataManager.Preferences.Core
 
 **起始版本：** 23
 

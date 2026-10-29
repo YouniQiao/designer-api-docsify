@@ -6,8 +6,6 @@ Provides functions and enumerations related to the data value.
 
 **Library**: libnative_rdb_ndk.z.so
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Related module**: [RDB](capi-rdb.md)
@@ -67,8 +65,6 @@ enum OH_ColumnType
 
 Indicates the column type.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -96,8 +92,6 @@ OH_Data_Value *OH_Value_Create(void)
 
 Creates an OH_Data_Value instance object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Returns**:
@@ -120,8 +114,6 @@ int OH_Value_Destroy(OH_Data_Value *value)
 **Description**
 
 Destroys an OH_Data_Value instance object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -147,8 +139,6 @@ int OH_Value_PutNull(OH_Data_Value *value)
 
 Set empty data to the OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -172,8 +162,6 @@ int OH_Value_PutInt(OH_Data_Value *value, int64_t val)
 **Description**
 
 Set integer data to the OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -200,8 +188,6 @@ int OH_Value_PutReal(OH_Data_Value *value, double val)
 
 Set decimal data to the OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -227,8 +213,6 @@ int OH_Value_PutText(OH_Data_Value *value, const char *val)
 
 Set string data to the OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -253,8 +237,6 @@ int OH_Value_PutBlob(OH_Data_Value *value, const unsigned char *val, size_t leng
 **Description**
 
 Set binary data to the OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -282,8 +264,6 @@ int OH_Value_PutAsset(OH_Data_Value *value, const Data_Asset *val)
 
 Set Data_Asset data to the OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -308,8 +288,6 @@ int OH_Value_PutAssets(OH_Data_Value *value, const Data_Asset * const * val, siz
 **Description**
 
 Set multiple Data_Asset data to the OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -337,8 +315,6 @@ int OH_Value_PutFloatVector(OH_Data_Value *value, const float *val, size_t lengt
 
 Set float array data to the OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -364,8 +340,6 @@ int OH_Value_PutUnlimitedInt(OH_Data_Value *value, int sign, const uint64_t *tru
 **Description**
 
 Set an integer of any length data to the OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -394,8 +368,6 @@ int OH_Value_GetType(OH_Data_Value *value, OH_ColumnType *type)
 
 Get data type from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -420,8 +392,6 @@ int OH_Value_IsNull(OH_Data_Value *value, bool *val)
 **Description**
 
 Check whether the data is empty from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -448,8 +418,6 @@ int OH_Value_GetInt(OH_Data_Value *value, int64_t *val)
 
 Get integer data from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -474,8 +442,6 @@ int OH_Value_GetReal(OH_Data_Value *value, double *val)
 **Description**
 
 Get decimal data from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -502,8 +468,6 @@ int OH_Value_GetText(OH_Data_Value *value, const char **val)
 
 Get string data from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -528,8 +492,6 @@ int OH_Value_GetBlob(OH_Data_Value *value, const uint8_t **val, size_t *length)
 **Description**
 
 Get binary data from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -557,8 +519,6 @@ int OH_Value_GetAsset(OH_Data_Value *value, Data_Asset *val)
 
 Get Data_Asset data from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -584,8 +544,6 @@ int OH_Value_GetAssetsCount(OH_Data_Value *value, size_t *length)
 
 Get multiple Data_Asset size from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -610,8 +568,6 @@ int OH_Value_GetAssets(OH_Data_Value *value, Data_Asset **val, size_t inLen, siz
 **Description**
 
 Get multiple Data_Asset data from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -645,8 +601,6 @@ int OH_Value_GetFloatVectorCount(OH_Data_Value *value, size_t *length)
 
 Get float array data size from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -671,8 +625,6 @@ int OH_Value_GetFloatVector(OH_Data_Value *value, float *val, size_t inLen, size
 **Description**
 
 Get float array from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 
@@ -706,8 +658,6 @@ int OH_Value_GetUnlimitedIntBand(OH_Data_Value *value, size_t *length)
 
 Get an integer of any length data size from OH_Data_Value object.
 
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
-
 **Since**: 18
 
 **Parameters**:
@@ -732,8 +682,6 @@ int OH_Value_GetUnlimitedInt(OH_Data_Value *value, int *sign, uint64_t *trueForm
 **Description**
 
 Get an integer of any length data from OH_Data_Value object.
-
-**System capability**: SystemCapability.DistributedDataManager.RelationalStore.Core
 
 **Since**: 18
 

@@ -6,7 +6,7 @@ struct OH_NativeBundle_AbilityResourceInfo
 
 ## Overview
 
-Represents the ability resource information, which is used to store and pass the basic configuration information of an ability, including attributes such as name and type. It is applicable to scenarios where the native layer queries and manages ability resources.
+The struct describes the ability resource information.
 
 **System capability**: SystemCapability.BundleManager.BundleFramework.Core
 

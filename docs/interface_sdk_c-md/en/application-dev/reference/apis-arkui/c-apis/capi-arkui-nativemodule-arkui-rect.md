@@ -22,9 +22,9 @@ Defines a rectangular area.
 
 | Name | Description |
 | -- | -- |
-| float x | X coordinate of the rectangular area.<br>**Since**: 12 |
-| float y | Y coordinate of the rectangular area.<br>**Since**: 12 |
-| float width | Width of the rectangular area.<br>**Since**: 12 |
-| float height | Height of the rectangular area.<br>**Since**: 12 |
+| float x |  |
+| float y |  |
+| float width |  |
+| float height |  |
 
 

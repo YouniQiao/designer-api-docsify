@@ -6,8 +6,6 @@ Declares APIs for discovering and connecting to printers, printing files, and qu
 
 **库：** libohprint.so
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **相关模块：** [Print](capi-print.md)
@@ -101,8 +99,6 @@ enum Print_ErrorCode
 
 定义错误码。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -129,8 +125,6 @@ enum Print_PrinterState
 
 表示打印机状态。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -148,8 +142,6 @@ enum Print_DiscoveryEvent
 **描述：**
 
 表示打印机发现事件。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 12
 
@@ -170,8 +162,6 @@ enum Print_PrinterEvent
 
 表示打印机变更事件。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -191,8 +181,6 @@ enum Print_DuplexMode
 
 表示双面打印模式。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -211,8 +199,6 @@ enum Print_ColorMode
 
 表示色彩模式。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -230,8 +216,6 @@ enum Print_OrientationMode
 **描述：**
 
 表示方向模式。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 12
 
@@ -253,8 +237,6 @@ enum Print_Quality
 
 表示打印质量。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -272,8 +254,6 @@ enum Print_DocumentFormat
 **描述：**
 
 表示文档的 MIME 媒体类型。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 12
 
@@ -294,8 +274,6 @@ enum Print_JobDocAdapterState
 **描述：**
 
 表示打印任务文档适配器状态。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 13
 
@@ -319,8 +297,6 @@ enum OH_Print_JobState
 
 表示打印任务状态。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -343,8 +319,6 @@ typedef void(*Print_WriteResultCallback)(const char *jobId, uint32_t code)
 
 写文件结果回调。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 13
 
 **参数：**
@@ -363,8 +337,6 @@ typedef void(*Print_OnStartLayoutWrite)(const char *jobId, uint32_t fd, const Pr
 **描述：**
 
 打印开始布局回调。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 13
 
@@ -388,8 +360,6 @@ typedef void(*Print_OnJobStateChanged)(const char *jobId, uint32_t state)
 
 打印任务状态回调。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 13
 
 **参数：**
@@ -408,8 +378,6 @@ typedef void (*Print_PrinterDiscoveryCallback)(Print_DiscoveryEvent event, const
 **描述：**
 
 打印机发现回调。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **起始版本：** 12
 
@@ -430,8 +398,6 @@ typedef void (*Print_PrinterChangeCallback)(Print_PrinterEvent event, const Prin
 
 打印机变更回调。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **参数：**
@@ -450,8 +416,6 @@ Print_ErrorCode OH_Print_Init()
 **描述：**
 
 此 API 检查并拉起打印服务，初始化打印客户端，并建立与打印服务的连接。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -473,8 +437,6 @@ Print_ErrorCode OH_Print_Release()
 
 此 API 关闭与打印服务的连接，解散先前的回调，并释放打印客户端资源。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **返回值：**
@@ -492,8 +454,6 @@ Print_ErrorCode OH_Print_StartPrinterDiscovery(Print_PrinterDiscoveryCallback ca
 **描述：**
 
 此 API 开始发现打印机。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -521,8 +481,6 @@ Print_ErrorCode OH_Print_StopPrinterDiscovery()
 
 此 API 停止发现打印机。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **需要权限：** {@code ohos.permission.PRINT}
 
 **起始版本：** 12
@@ -542,8 +500,6 @@ Print_ErrorCode OH_Print_ConnectPrinter(const char *printerId)
 **描述：**
 
 此 API 使用打印机 ID 连接打印机。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -571,8 +527,6 @@ Print_ErrorCode OH_Print_StartPrintJob(const Print_PrintJob *printJob)
 
 此 API 开始发起打印任务。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **需要权限：** {@code ohos.permission.PRINT}
 
 **起始版本：** 12
@@ -598,8 +552,6 @@ Print_ErrorCode OH_Print_RegisterPrinterChangeListener(Print_PrinterChangeCallba
 **描述：**
 
 此 API 注册打印机变更回调。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -627,8 +579,6 @@ void OH_Print_UnregisterPrinterChangeListener()
 
 此 API 注销打印机变更回调。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **需要权限：** {@code ohos.permission.PRINT}
 
 **起始版本：** 12
@@ -642,8 +592,6 @@ Print_ErrorCode OH_Print_QueryPrinterList(Print_StringList *printerIdList)
 **描述：**
 
 此 API 查询已添加的打印机列表。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -671,8 +619,6 @@ void OH_Print_ReleasePrinterList(Print_StringList *printerIdList)
 
 此 API 释放用于查询的打印机列表内存。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **参数：**
@@ -690,8 +636,6 @@ Print_ErrorCode OH_Print_QueryPrinterInfo(const char *printerId, Print_PrinterIn
 **描述：**
 
 此 API 根据打印机 ID 查询打印机信息。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -720,8 +664,6 @@ void OH_Print_ReleasePrinterInfo(Print_PrinterInfo *printerInfo)
 
 此 API 释放用于查询的打印机信息内存。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **参数：**
@@ -740,8 +682,6 @@ Print_ErrorCode OH_Print_LaunchPrinterManager()
 
 此 API 启动系统的打印机管理窗口。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **返回值：**
@@ -759,8 +699,6 @@ Print_ErrorCode OH_Print_QueryPrinterProperties(const char *printerId, const Pri
 **描述：**
 
 此 API 根据属性关键字列表查询对应的打印机属性值。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -790,8 +728,6 @@ void OH_Print_ReleasePrinterProperties(Print_PropertyList *propertyList)
 
 此 API 释放用于查询的属性列表内存。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 12
 
 **参数：**
@@ -809,8 +745,6 @@ Print_ErrorCode OH_Print_UpdatePrinterProperties(const char *printerId, const Pr
 **描述：**
 
 此 API 根据属性键值对列表设置打印机属性。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -839,8 +773,6 @@ Print_ErrorCode OH_Print_RestorePrinterProperties(const char *printerId, const P
 
 此 API 根据属性关键字列表将打印机属性恢复为默认设置。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **需要权限：** {@code ohos.permission.PRINT}
 
 **起始版本：** 12
@@ -867,8 +799,6 @@ Print_ErrorCode OH_Print_StartPrintByNative(const char *printJobName, Print_Prin
 **描述：**
 
 此 API 提供启动打印对话框的能力。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** {@code ohos.permission.PRINT}
 
@@ -898,8 +828,6 @@ typedef void(*OH_Print_OnJobStateChanged)(const char *jobId, OH_Print_JobState s
 
 打印任务状态回调。
 
-**系统能力：** SystemCapability.Print.PrintFramework
-
 **起始版本：** 24
 
 **参数：**
@@ -918,8 +846,6 @@ Print_ErrorCode OH_Print_StartPrintWithJobStateCallback(const Print_PrintJob *pr
 **描述：**
 
 此API下发打印任务，并附带任务状态变更回调功能。
-
-**系统能力：** SystemCapability.Print.PrintFramework
 
 **需要权限：** ohos.permission.PRINT
 

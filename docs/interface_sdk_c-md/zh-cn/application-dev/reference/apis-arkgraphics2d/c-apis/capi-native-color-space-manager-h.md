@@ -6,8 +6,6 @@
 
 **库：** libnative_color_space_manager.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **起始版本：** 13
 
 **相关模块：** [NativeColorSpaceManager](capi-nativecolorspacemanager.md)
@@ -50,8 +48,6 @@ enum ColorSpaceName
 **描述：**
 
 色彩空间枚举。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **起始版本：** 13
 
@@ -104,8 +100,6 @@ OH_NativeColorSpaceManager* OH_NativeColorSpaceManager_CreateFromName(ColorSpace
 
 通过colorSpaceName创建OH_NativeColorSpaceManager实例。 <br>每次调用此函数时，都会创建一个新的OH_NativeColorSpaceManager实例。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -129,8 +123,6 @@ OH_NativeColorSpaceManager* OH_NativeColorSpaceManager_CreateFromPrimariesAndGam
 **描述：**
 
 通过原色和伽马值创建OH_NativeColorSpaceManager实例。 <br>每次调用此函数时，都会创建一个新的OH_NativeColorSpaceManager实例。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **起始版本：** 13
 
@@ -157,8 +149,6 @@ void OH_NativeColorSpaceManager_Destroy(OH_NativeColorSpaceManager* nativeColorS
 
 销毁OH_NativeColorSpaceManager实例。当不再需要OH_NativeColorSpaceManager实例时，需要调用此函数进行销毁以释放内存。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -176,8 +166,6 @@ int OH_NativeColorSpaceManager_GetColorSpaceName(OH_NativeColorSpaceManager* nat
 **描述：**
 
 获取色彩空间名称。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **起始版本：** 13
 
@@ -203,8 +191,6 @@ WhitePointArray OH_NativeColorSpaceManager_GetWhitePoint(OH_NativeColorSpaceMana
 
 获取白点。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **起始版本：** 13
 
 **参数：**
@@ -228,8 +214,6 @@ float OH_NativeColorSpaceManager_GetGamma(OH_NativeColorSpaceManager* nativeColo
 **描述：**
 
 获取伽马值。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **起始版本：** 13
 

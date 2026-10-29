@@ -6,7 +6,7 @@ typedef struct AbilityRuntime_NativeAbilityWrapper AbilityRuntime_NativeAbilityW
 
 ## Overview
 
-Defines the AbilityRuntime_NativeAbilityWrapper struct type, which is used to encapsulate the information about UIAbility.
+Defines the AbilityRuntime_NativeAbilityWrapper structure type.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 

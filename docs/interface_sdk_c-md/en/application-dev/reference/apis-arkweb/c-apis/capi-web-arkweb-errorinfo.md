@@ -10,7 +10,7 @@ The error info for setting response error details.
 
 **System capability**: SystemCapability.Web.Webview.Core
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Related module**: [Web](capi-web.md)
 

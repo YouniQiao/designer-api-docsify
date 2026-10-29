@@ -6,8 +6,6 @@
 
 **库：** libhttp_interceptor.so
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 24
 
 **相关模块：** [netstack](capi-netstack.md)
@@ -55,8 +53,6 @@ enum OH_Interceptor_Stage
 
 定义拦截器的执行阶段。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -74,8 +70,6 @@ enum OH_Interceptor_Type
 
 定义拦截器的类型。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -92,8 +86,6 @@ enum OH_Interceptor_Result
 **描述：**
 
 定义拦截器的处理结果。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 24
 
@@ -114,8 +106,6 @@ typedef OH_Interceptor_Result (*OH_Http_InterceptorHandler)(OH_Http_Interceptor_
 **描述：**
 
 定义HTTP拦截器处理函数。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 24
 

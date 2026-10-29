@@ -2,13 +2,9 @@
 
 ## 概述
 
-输入设备的轴事件枚举，轴类型定义了输入设备在不同交互场景下的物理行为特征，系统通过轴类型来区分和传递不同的手势交互信息。
-
 **引用文件：** <multimodalinput/oh_axis_type.h>
 
 **库：** libohinput.so
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 
@@ -36,8 +32,6 @@ enum InputEvent_AxisType
 
 输入设备的轴类型。
 
-**系统能力：** SystemCapability.MultimodalInput.Input.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -58,8 +52,6 @@ enum InputEvent_AxisEventType
 
 输入设备的轴事件类型。
 
-**系统能力：** SystemCapability.MultimodalInput.Input.Core
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -76,8 +68,6 @@ enum InputEvent_AxisAction
 **描述：**
 
 轴事件动作。
-
-**系统能力：** SystemCapability.MultimodalInput.Input.Core
 
 **起始版本：** 12
 

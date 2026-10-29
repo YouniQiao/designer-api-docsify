@@ -6,8 +6,6 @@ Declares the APIs that can lock, access, and unlock a pixel map.
 
 **Library**: libpixelmap_ndk.z.so
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Related module**: [Image](capi-image.md)
@@ -68,8 +66,6 @@ enum anonymous0
 
 Enumerates the pixel map alpha types.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -89,8 +85,6 @@ enum anonymous1
 
 Enumerates the pixel map editing types.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -107,8 +101,6 @@ enum OH_PixelMap_AntiAliasingLevel
 **Description**
 
 Enumerates the anti-aliasing level.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -132,8 +124,6 @@ int32_t OH_PixelMap_CreatePixelMap(napi_env env, OhosPixelMapCreateOps info, voi
 
 Creates a PixelMap object. Currently, only BGRA input streams are supported.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -150,7 +140,7 @@ Creates a PixelMap object. Currently, only BGRA input streams are supported.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_DECODE_HEAD_ABNORMAL: An error occurs during decoding of the image header.</li> <li>IMAGE_RESULT_CREATE_DECODER_FAILED: The decoder fails to be created.</li> <li>IMAGE_RESULT_CREATE_ENCODER_FAILED: The encoder fails to be created.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DECODE_ABNORMAL: Image decoding fails.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ENCODE_FAILED: The image fails to be encoded.</li> <li>IMAGE_RESULT_HW_DECODE_UNSUPPORT: Hardware decoding is not supported.</li> <li>IMAGE_RESULT_HW_DECODE_FAILED: Hardware decoding fails.</li> <li>IMAGE_RESULT_INDEX_INVALID: Index fails.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_DECODE_HEAD_ABNORMAL: An error occurs during decoding of the image header.</li> <li>IMAGE_RESULT_CREATE_DECODER_FAILED: The decoder fails to be created.</li> <li>IMAGE_RESULT_CREATE_ENCODER_FAILED: The encoder fails to be created.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DECODE_ABNORMAL: Image decoding fails.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ENCODE_FAILED: The image fails to be encoded.</li> <li>IMAGE_RESULT_HW_DECODE_UNSUPPORT: Hardware decoding is not supported.</li> <li>IMAGE_RESULT_HW_DECODE_FAILED: Hardware decoding fails.</li> <li>IMAGE_RESULT_INDEX_INVALID: Index fails.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -166,8 +156,6 @@ int32_t OH_PixelMap_CreatePixelMapWithStride(napi_env env, OhosPixelMapCreateOps
 **Description**
 
 Creates a PixelMap object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -186,7 +174,7 @@ Creates a PixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li></ul> |
 
 **Reference**:
 
@@ -203,8 +191,6 @@ int32_t OH_PixelMap_CreateAlphaPixelMap(napi_env env, napi_value source, napi_va
 
 Creates a PixelMap object that contains only alpha channel information.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -219,7 +205,7 @@ Creates a PixelMap object that contains only alpha channel information.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_DECODE_HEAD_ABNORMAL: An error occurs during decoding of the image header.</li> <li>IMAGE_RESULT_CREATE_DECODER_FAILED: The decoder fails to be created.</li> <li>IMAGE_RESULT_CREATE_ENCODER_FAILED: The encoder fails to be created.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DECODE_ABNORMAL: Image decoding fails.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ENCODE_FAILED: The image fails to be encoded.</li> <li>IMAGE_RESULT_HW_DECODE_UNSUPPORT: Hardware decoding is not supported.</li> <li>IMAGE_RESULT_HW_DECODE_FAILED: Hardware decoding fails.</li> <li>IMAGE_RESULT_INDEX_INVALID: Index fails.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_DECODE_HEAD_ABNORMAL: An error occurs during decoding of the image header.</li> <li>IMAGE_RESULT_CREATE_DECODER_FAILED: The decoder fails to be created.</li> <li>IMAGE_RESULT_CREATE_ENCODER_FAILED: The encoder fails to be created.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_DECODE_ABNORMAL: Image decoding fails.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ENCODE_FAILED: The image fails to be encoded.</li> <li>IMAGE_RESULT_HW_DECODE_UNSUPPORT: Hardware decoding is not supported.</li> <li>IMAGE_RESULT_HW_DECODE_FAILED: Hardware decoding fails.</li> <li>IMAGE_RESULT_INDEX_INVALID: Index fails.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -235,8 +221,6 @@ NativePixelMap* OH_PixelMap_InitNativePixelMap(napi_env env, napi_value source)
 **Description**
 
 Initializes a NativePixelMap object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 10
 
@@ -268,8 +252,6 @@ int32_t OH_PixelMap_GetBytesNumberPerRow(const NativePixelMap* native, int32_t* 
 
 Obtains the number of bytes per row of a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -283,7 +265,7 @@ Obtains the number of bytes per row of a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -300,8 +282,6 @@ int32_t OH_PixelMap_GetIsEditable(const NativePixelMap* native, int32_t* editabl
 
 Checks whether a NativePixelMap object is editable.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -315,7 +295,7 @@ Checks whether a NativePixelMap object is editable.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -332,8 +312,6 @@ int32_t OH_PixelMap_IsSupportAlpha(const NativePixelMap* native, int32_t* alpha)
 
 Checks whether a NativePixelMap object supports alpha channels.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -347,7 +325,7 @@ Checks whether a NativePixelMap object supports alpha channels.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -364,8 +342,6 @@ int32_t OH_PixelMap_SetAlphaAble(const NativePixelMap* native, int32_t alpha)
 
 Sets an alpha channel for a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -379,7 +355,7 @@ Sets an alpha channel for a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -396,8 +372,6 @@ int32_t OH_PixelMap_GetDensity(const NativePixelMap* native, int32_t* density)
 
 Obtains the pixel density of a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -411,7 +385,7 @@ Obtains the pixel density of a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -428,8 +402,6 @@ int32_t OH_PixelMap_SetDensity(const NativePixelMap* native, int32_t density)
 
 Sets the pixel density for a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -443,7 +415,7 @@ Sets the pixel density for a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -460,8 +432,6 @@ int32_t OH_PixelMap_SetOpacity(const NativePixelMap* native, float opacity)
 
 Sets the opacity for a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -475,7 +445,7 @@ Sets the opacity for a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li></ul> |
 
 **Reference**:
 
@@ -492,8 +462,6 @@ int32_t OH_PixelMap_Scale(const NativePixelMap* native, float x, float y)
 
 Scales a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -508,7 +476,7 @@ Scales a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_INIT_ABNORMAL: The image fails to be initialized.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -525,8 +493,6 @@ int32_t OH_PixelMap_ScaleWithAntiAliasing(const NativePixelMap* native, float x,
 
 Scales a NativePixelMap object based on the specified anti-aliasing level, width, and height.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -542,7 +508,7 @@ Scales a NativePixelMap object based on the specified anti-aliasing level, width
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li></ul> |
 
 **Reference**:
 
@@ -559,8 +525,6 @@ int32_t OH_PixelMap_Translate(const NativePixelMap* native, float x, float y)
 
 Translates a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -575,7 +539,7 @@ Translates a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -592,8 +556,6 @@ int32_t OH_PixelMap_Rotate(const NativePixelMap* native, float angle)
 
 Rotates a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -607,7 +569,7 @@ Rotates a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -624,8 +586,6 @@ int32_t OH_PixelMap_Flip(const NativePixelMap* native, int32_t x, int32_t y)
 
 Flips a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -640,7 +600,7 @@ Flips a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -656,8 +616,6 @@ int32_t OH_PixelMap_Crop(const NativePixelMap* native, int32_t x, int32_t y, int
 **Description**
 
 Crops a NativePixelMap object.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 10
 
@@ -675,7 +633,7 @@ Crops a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -692,8 +650,6 @@ int32_t OH_PixelMap_GetImageInfo(const NativePixelMap* native, OhosPixelMapInfos
 
 Obtains the image information of a NativePixelMap object.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -707,7 +663,7 @@ Obtains the image information of a NativePixelMap object.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -724,8 +680,6 @@ int32_t OH_PixelMap_AccessPixels(const NativePixelMap* native, void** addr)
 
 Obtains the memory address of a NativePixelMap object and locks the memory.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -739,7 +693,7 @@ Obtains the memory address of a NativePixelMap object and locks the memory.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 
@@ -756,8 +710,6 @@ int32_t OH_PixelMap_UnAccessPixels(const NativePixelMap* native)
 
 Unlocks the memory of a NativePixelMap object. This function is used with [OH_PixelMap_AccessPixels](capi-image-pixel-map-mdk-h.md#oh_pixelmap_accesspixels) in pairs.
 
-**System capability**: SystemCapability.Multimedia.Image.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -770,7 +722,7 @@ Unlocks the memory of a NativePixelMap object. This function is used with [OH_Pi
 
 | Type | Description |
 | -- | -- |
-| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>IMAGE_RESULT_SUCCESS: The operation is successful.</li> <li>IMAGE_RESULT_BAD_PARAMETER: A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
+| int32_t | Result code defined in [IRNdkErrCode](capi-image-mdk-common-h.md#irndkerrcode): <ul><li>[IMAGE_RESULT_SUCCESS](capi-image-pixel-map-napi-h.md#anonymous0): The operation is successful.</li> <li>[IMAGE_RESULT_BAD_PARAMETER](capi-image-pixel-map-napi-h.md#anonymous0): A parameter is incorrect.</li> <li>IMAGE_RESULT_JNI_ENV_ABNORMAL: The JNI environment is abnormal.</li> <li>IMAGE_RESULT_INVALID_PARAMETER: A parameter is invalid.</li> <li>IMAGE_RESULT_GET_DATA_ABNORMAL: An error occurs during image data retrieval.</li> <li>IMAGE_RESULT_DECODE_FAILED: Decoding fails.</li> <li>IMAGE_RESULT_CHECK_FORMAT_ERROR: The format check fails.</li> <li>IMAGE_RESULT_THIRDPART_SKIA_ERROR: Skia decoding fails.</li> <li>IMAGE_RESULT_DATA_ABNORMAL: The image input data is incorrect.</li> <li>IMAGE_RESULT_ERR_SHAMEM_NOT_EXIST: Sharing the memory fails.</li> <li>IMAGE_RESULT_ERR_SHAMEM_DATA_ABNORMAL: Data in the shared memory is incorrect.</li> <li>IMAGE_RESULT_MALLOC_ABNORMAL: An error occurs during memory allocation.</li> <li>IMAGE_RESULT_DATA_UNSUPPORT: The attribute is invalid or the image data is not supported.</li> <li>IMAGE_RESULT_CROP: Cropping fails.</li> <li>IMAGE_RESULT_UNKNOWN_FORMAT: The image format is unknown.</li> <li>IMAGE_RESULT_PLUGIN_REGISTER_FAILED: The plugin fails to be registered.</li> <li>IMAGE_RESULT_PLUGIN_CREATE_FAILED: The plugin fails to be created.</li> <li>IMAGE_RESULT_ALPHA_TYPE_ERROR: The alpha type is incorrect.</li> <li>IMAGE_RESULT_ALLOCATER_TYPE_ERROR: The memory allocator type is incorrect.</li></ul> |
 
 **Reference**:
 

@@ -2,7 +2,7 @@
 
 ## Overview
 
-The file declares the APIs for obtaining the following ability resource information: bundle name, module name, ability name, icon, clone index, and whether the application is a default application.
+Describe the functions of AbilityResourceInfo.
 
 **System capability**: SystemCapability.BundleManager.BundleFramework.Core
 

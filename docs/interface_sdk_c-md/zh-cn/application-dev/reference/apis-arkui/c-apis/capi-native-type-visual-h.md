@@ -6,8 +6,6 @@
 
 **库：** libace_ndk.z.so
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -28,7 +26,6 @@
 | [ArkUI_Matrix4ScaleOptions](capi-arkui-nativemodule-arkui-matrix4scaleoptions.md) | ArkUI_Matrix4ScaleOptions | 定义4×4矩阵缩放变换的参数配置对象，各参数及其取值原则详见成员变量说明。 |
 | [ArkUI_Matrix4RotationOptions](capi-arkui-nativemodule-arkui-matrix4rotationoptions.md) | ArkUI_Matrix4RotationOptions | 定义矩阵旋转变换的参数配置对象。 |
 | [ArkUI_Matrix4TranslationOptions](capi-arkui-nativemodule-arkui-matrix4translationoptions.md) | ArkUI_Matrix4TranslationOptions | 定义矩阵平移变换的参数配置对象。 |
-| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) | OH_ArkUI_LinearGradientBlurOptions | 定义线性渐变模糊效果的选项。<br> 选项包括模糊半径、渐变停止点和方向。通过[OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_create)创建时， 默认值为：blurRadius = 0（不模糊），fractionStops = {0.0, 0.0, 0.0, 1.0}（两个停止点：位置0处模糊值为0， 位置1处模糊值为0，表示整个渐变方向上无模糊），direction = [OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_BOTTOM](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection)。 |
 
 ### 枚举
 
@@ -52,10 +49,6 @@
 | [ArkUI_RenderFit](#arkui_renderfit) | ArkUI_RenderFit | 定义动画终态内容大小与位置的枚举值。 |
 | [ArkUI_AnimationFillMode](#arkui_animationfillmode) | ArkUI_AnimationFillMode | 定义帧动画组件在动画开始前和结束后的状态。 |
 | [ArkUI_AnimationDirection](#arkui_animationdirection) | ArkUI_AnimationDirection | 动画播放方向。 |
-| [OH_ArkUI_AnimationPropertyType](#oh_arkui_animationpropertytype) | OH_ArkUI_AnimationPropertyType | 枚举属性动画、关键帧动画和路径动画的可动画属性类型。 |
-| [OH_ArkUI_AnimationGroupState](#oh_arkui_animationgroupstate) | OH_ArkUI_AnimationGroupState | 枚举动画组的播放状态。 |
-| [OH_ArkUI_AnimationFinishMode](#oh_arkui_animationfinishmode) | OH_ArkUI_AnimationFinishMode | 枚举动画组的结束模式。 |
-| [OH_ArkUI_LinearGradientBlurDirection](#oh_arkui_lineargradientblurdirection) | OH_ArkUI_LinearGradientBlurDirection | 枚举线性渐变模糊的渐变方向。 |
 
 ### 函数
 
@@ -100,11 +93,11 @@
 | [ArkUI_Matrix4RotationOptions* OH_ArkUI_Matrix4RotationOptions_Create()](#oh_arkui_matrix4rotationoptions_create) | 创建矩阵运算的旋转参数对象的指针。在新创建的对象中，单次矩阵变换中心点相对于组件变换中心点的x轴偏移值centerX、单次矩阵变换中心点相对于组件变换中心点的y轴偏移值centerY、旋转角度angle的默认值，为0。 如果未指定x、y、z方向的方向向量中的任何一个，旋转效果等同于绕z轴旋转（即计算时方向向量取x=0、y=0、z=1）。一旦指定了x、y、z方向的方向向量中的任意一个，以指定的方向向量生效。 |
 | [void OH_ArkUI_Matrix4RotationOptions_Dispose(ArkUI_Matrix4RotationOptions* options)](#oh_arkui_matrix4rotationoptions_dispose) | 销毁指向矩阵运算的旋转参数对象的指针。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetX(ArkUI_Matrix4RotationOptions* options, const float x)](#oh_arkui_matrix4rotationoptions_setx) | 设置矩阵运算的旋转参数对象x方向的方向向量。 |
-| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetX(const ArkUI_Matrix4RotationOptions* options, float* x)](#oh_arkui_matrix4rotationoptions_getx) | 获取矩阵运算的旋转参数对象x方向的方向向量。如果从未设置过x值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetX(const ArkUI_Matrix4RotationOptions* options, float* x)](#oh_arkui_matrix4rotationoptions_getx) | 获取矩阵运算的旋转参数对象x方向的方向向量。如果从未设置过x值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetY(ArkUI_Matrix4RotationOptions* options, const float y)](#oh_arkui_matrix4rotationoptions_sety) | 设置矩阵运算的旋转参数对象y方向的方向向量。 |
-| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetY(const ArkUI_Matrix4RotationOptions* options, float* y)](#oh_arkui_matrix4rotationoptions_gety) | 获取矩阵运算的旋转参数对象y方向的方向向量。如果从未设置过y值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetY(const ArkUI_Matrix4RotationOptions* options, float* y)](#oh_arkui_matrix4rotationoptions_gety) | 获取矩阵运算的旋转参数对象y方向的方向向量。如果从未设置过y值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetZ(ArkUI_Matrix4RotationOptions* options, const float z)](#oh_arkui_matrix4rotationoptions_setz) | 设置矩阵运算的旋转参数对象z方向的方向向量。 |
-| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetZ(const ArkUI_Matrix4RotationOptions* options, float* z)](#oh_arkui_matrix4rotationoptions_getz) | 获取矩阵运算的旋转参数对象z方向的方向向量。如果从未设置过z值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetZ(const ArkUI_Matrix4RotationOptions* options, float* z)](#oh_arkui_matrix4rotationoptions_getz) | 获取矩阵运算的旋转参数对象z方向的方向向量。如果从未设置过z值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetAngle(ArkUI_Matrix4RotationOptions* options, const float angle)](#oh_arkui_matrix4rotationoptions_setangle) | 设置矩阵运算的旋转参数对象中旋转角度的值。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetAngle(const ArkUI_Matrix4RotationOptions* options, float* angle)](#oh_arkui_matrix4rotationoptions_getangle) | 获取矩阵运算的旋转参数对象中旋转角度的值。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterX(ArkUI_Matrix4RotationOptions* options, const float centerX)](#oh_arkui_matrix4rotationoptions_setcenterx) | 设置单次矩阵变换中心点相对于组件变换中心点的x轴偏移值。 |
@@ -132,14 +125,6 @@
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_TransformPoint(const ArkUI_Matrix4* matrix, const ArkUI_PointF* oriPoint, ArkUI_PointF* result)](#oh_arkui_matrix4_transformpoint) | 计算一个点经过矩阵变换后的新坐标位置。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_SetPolyToPoly(ArkUI_Matrix4* matrix, const ArkUI_PointF* src, const ArkUI_PointF* dst, const uint32_t pointCount)](#oh_arkui_matrix4_setpolytopoly) | 将一个多边形的顶点坐标映射到另一个多边形的顶点坐标，并计算所需的矩阵。 |
 | [ArkUI_ErrorCode OH_ArkUI_Matrix4_GetElements(const ArkUI_Matrix4* matrix, float* result)](#oh_arkui_matrix4_getelements) | 获取四阶矩阵的16个元素。 |
-| [OH_ArkUI_LinearGradientBlurOptions* OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create(void)](#oh_arkui_nativemodule_lineargradientbluroptions_create) | 创建线性渐变模糊选项对象。 |
-| [void OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy(OH_ArkUI_LinearGradientBlurOptions *options)](#oh_arkui_nativemodule_lineargradientbluroptions_destroy) | 销毁线性渐变模糊选项对象。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius(OH_ArkUI_LinearGradientBlurOptions *options, float blurRadius)](#oh_arkui_nativemodule_lineargradientbluroptions_setblurradius) | 设置线性渐变模糊选项的模糊半径。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius(const OH_ArkUI_LinearGradientBlurOptions *options, float *blurRadius)](#oh_arkui_nativemodule_lineargradientbluroptions_getblurradius) | 获取线性渐变模糊选项的模糊半径。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops(OH_ArkUI_LinearGradientBlurOptions *options, const float *fractionStops, int32_t stopsLength)](#oh_arkui_nativemodule_lineargradientbluroptions_setfractionstops) | 设置线性渐变模糊选项的渐变停止点。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops(const OH_ArkUI_LinearGradientBlurOptions *options, float *fractionStops, int32_t stopsSize, int32_t *writeLength)](#oh_arkui_nativemodule_lineargradientbluroptions_getfractionstops) | 获取线性渐变模糊选项的渐变停止点。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection(OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection direction)](#oh_arkui_nativemodule_lineargradientbluroptions_setdirection) | 设置线性渐变模糊选项的渐变方向。 |
-| [ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection(const OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection *direction)](#oh_arkui_nativemodule_lineargradientbluroptions_getdirection) | 获取线性渐变模糊选项的渐变方向。 |
 
 ## 枚举类型说明
 
@@ -152,8 +137,6 @@ enum ArkUI_ShadowType
 **描述：**
 
 定义阴影类型枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -171,8 +154,6 @@ enum ArkUI_ShadowStyle
 **描述：**
 
 阴影效果枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -194,8 +175,6 @@ enum ArkUI_AnimationCurve
 **描述：**
 
 动画曲线枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -225,8 +204,6 @@ enum ArkUI_AnimationPlayMode
 
 定义动画播放模式。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -245,8 +222,6 @@ enum ArkUI_BlurStyle
 **描述：**
 
 定义背景模糊样式。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -276,8 +251,6 @@ enum ArkUI_BlurStyleActivePolicy
 
 定义背景模糊激活策略。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 19
 
 | 枚举项 | 描述 |
@@ -295,8 +268,6 @@ enum ArkUI_BlendMode
 **描述：**
 
 混合模式枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -343,8 +314,6 @@ enum ArkUI_ColorStrategy
 
 前景和阴影颜色的枚举值。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -362,8 +331,6 @@ enum ArkUI_MaskType
 **描述：**
 
 遮罩类型枚举。遮罩是一种用于限制组件显示区域的手段，它利用特定的形状对组件内容进行裁剪，从而实现只有遮罩区域内的内容才可见的效果。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -385,8 +352,6 @@ enum ArkUI_ClipType
 
 裁剪类型枚举。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -406,8 +371,6 @@ enum ArkUI_ShapeType
 
 定义形状类型的枚举值。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -426,8 +389,6 @@ enum ArkUI_LinearGradientDirection
 **描述：**
 
 定义线性渐变方向枚举。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -454,8 +415,6 @@ enum ArkUI_TransitionEdge
 
 定义转场从边缘滑入和滑出的效果。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -475,8 +434,6 @@ enum ArkUI_BlendApplyType
 
 指定的混合模式应用于视图的内容选项。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -494,8 +451,6 @@ enum ArkUI_FinishCallbackType
 
 在动画中定义[OH_ArkUI_AnimatorOption_RegisterOnFinishCallback](capi-native-animate-h.md#oh_arkui_animatoroption_registeronfinishcallback)回调的类型。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -512,8 +467,6 @@ enum ArkUI_RenderFit
 **描述：**
 
 定义动画终态内容大小与位置的枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -546,8 +499,6 @@ enum ArkUI_AnimationFillMode
 
 定义帧动画组件在动画开始前和结束后的状态。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -567,8 +518,6 @@ enum ArkUI_AnimationDirection
 
 动画播放方向。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -577,106 +526,6 @@ enum ArkUI_AnimationDirection
 | ARKUI_ANIMATION_DIRECTION_REVERSE | 动画反向循环播放。 |
 | ARKUI_ANIMATION_DIRECTION_ALTERNATE | 动画交替循环播放，在奇数次正向播放，在偶数次反向播放。 |
 | ARKUI_ANIMATION_DIRECTION_ALTERNATE_REVERSE | 动画反向交替循环播放，在奇数次反向播放，在偶数次正向播放。 |
-
-### OH_ArkUI_AnimationPropertyType
-
-```c
-enum OH_ArkUI_AnimationPropertyType
-```
-
-**描述：**
-
-枚举属性动画、关键帧动画和路径动画的可动画属性类型。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.0.1
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION = 0 | 在x和y方向上的平移。 设置或获取该属性值时，需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y方向的平移量，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_X = 1 | 在x方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Y = 2 | 在y方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_TRANSLATION_Z = 3 | 在z方向上的平移。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE = 4 | 在x和y方向上的缩放。 设置或获取该属性值时，需要两个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y方向的缩放比例。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE_X = 5 | 在x方向上的缩放。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_SCALE_Y = 6 | 在y方向上的缩放。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION = 7 | 所有轴的旋转角度。 设置或获取该属性值时，需要三个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x、y、z轴的旋转角度，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_X = 8 | 围绕x轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Y = 9 | 围绕y轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_ROTATION_Z = 10 | 围绕z轴的旋转角度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为度。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_OPACITY = 11 | 组件的不透明度。 设置或获取该属性值时，需要一个f32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。 取值范围：[0, 1]。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS = 12 | 边界（位置和大小）。 设置或获取该属性值时，需要四个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，依次为x坐标、y坐标、宽度、高度，单位为px。 其中宽度和高度的取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_X = 13 | 边界左上角的x坐标位置。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_Y = 14 | 边界左上角的y坐标位置。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_WIDTH = 15 | 边界的宽度。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BOUNDS_HEIGHT = 16 | 边界的高度。 设置或获取该属性值时，需要一个i32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素，单位为px。取值范围为大于等于0。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_PROPERTY_BACKGROUND_COLOR = 17 | 组件的背景颜色。 设置或获取该属性值时，需要一个u32类型的[ArkUI_NumberValue](capi-arkui-nativemodule-arkui-numbervalue.md)元素。<br>**起始版本：** 26.0.1 |
-
-### OH_ArkUI_AnimationGroupState
-
-```c
-enum OH_ArkUI_AnimationGroupState
-```
-
-**描述：**
-
-枚举动画组的播放状态。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.0.1
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_ANIMATION_GROUP_STATE_RUNNING = 0 | 动画组正在运行。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_GROUP_STATE_PAUSED = 1 | 动画组已暂停。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_GROUP_STATE_INACTIVE = 2 | 动画组处于非活动状态，例如动画已结束或动画组处于无效状态。<br>**起始版本：** 26.0.1 |
-
-### OH_ArkUI_AnimationFinishMode
-
-```c
-enum OH_ArkUI_AnimationFinishMode
-```
-
-**描述：**
-
-枚举动画组的结束模式。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.0.1
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_ANIMATION_FINISH_TO_START = 0 | 结束动画组并跳转到起始状态。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_FINISH_TO_CURRENT = 1 | 结束动画组并保持在当前值。<br>**起始版本：** 26.0.1 |
-| OH_ARKUI_ANIMATION_FINISH_TO_END = 2 | 结束动画组并跳转到结束状态。<br>**起始版本：** 26.0.1 |
-
-### OH_ArkUI_LinearGradientBlurDirection
-
-```c
-enum OH_ArkUI_LinearGradientBlurDirection
-```
-
-**描述：**
-
-枚举线性渐变模糊的渐变方向。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT = 0 | 线性渐变模糊从右到左。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_TOP = 1 | 线性渐变模糊从下到上。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT = 2 | 线性渐变模糊从左到右。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_BOTTOM = 3 | 线性渐变模糊从上到下。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT_TOP = 4 | 线性渐变模糊从右下到左上。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_LEFT_BOTTOM = 5 | 线性渐变模糊从右上到左下。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT_TOP = 6 | 线性渐变模糊从左下到右上。<br>**起始版本：** 26.1.0 |
-| OH_ARKUI_LINEAR_GRADIENT_BLUR_DIRECTION_RIGHT_BOTTOM = 7 | 线性渐变模糊从左上到右下。<br>**起始版本：** 26.1.0 |
 
 
 ## 函数说明
@@ -690,8 +539,6 @@ ArkUI_MotionPathOptions* OH_ArkUI_MotionPathOptions_Create()
 **描述：**
 
 创建路径动画的运动路径配置项。当该对象不再使用时，请调用[OH_ArkUI_MotionPathOptions_Dispose](capi-native-type-visual-h.md#oh_arkui_motionpathoptions_dispose)销毁。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -711,8 +558,6 @@ void OH_ArkUI_MotionPathOptions_Dispose(ArkUI_MotionPathOptions* options)
 
 销毁路径动画的运动路径配置项。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 **参数：**
@@ -731,8 +576,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetPath(ArkUI_MotionPathOptions* opti
 
 设置路径动画的运动路径。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 **参数：**
@@ -746,7 +589,7 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetPath(ArkUI_MotionPathOptions* opti
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID options为空指针或svgPath为空指针，请确保传入有效的运动路径配置项指针和路径字符串。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) options为空指针或svgPath为空指针，请确保传入有效的运动路径配置项指针和路径字符串。 |
 
 ### OH_ArkUI_MotionPathOptions_GetPath()
 
@@ -758,8 +601,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetPath(const ArkUI_MotionPathOptions
 
 获取路径动画的运动路径配置项中存储的运动路径字符串。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 **参数：**
@@ -768,14 +609,14 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetPath(const ArkUI_MotionPathOptions
 | -- | -- |
 | [const ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)* options | 指向路径动画的运动路径配置项[ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)的指针。 |
 | char* svgPathBuffer | 存储运动路径字符串的缓冲区指针。不能为空指针，缓冲区大小须足够容纳路径字符串。 |
-| const int32_t bufferSize | svgPathBuffer参数的缓冲区大小，必须大于0。传入0或负数时返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
-| int32_t* writeLength | 返回ARKUI_ERROR_CODE_NO_ERROR时，表示实际写入缓冲区的字符串长度（含终止符）。 <br>返回ARKUI_ERROR_CODE_PARAM_INVALID时，如果为入参异常，writeLength不会被赋值；如果为拷贝异常，writeLength为可容纳目标字符串的最小缓冲区大小。 <br>返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时，表示可容纳目标字符串的最小缓冲区大小。 |
+| const int32_t bufferSize | svgPathBuffer参数的缓冲区大小，必须大于0。传入0或负数时返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
+| int32_t* writeLength | 返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)时，表示实际写入缓冲区的字符串长度（含终止符）。 <br>返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)时，如果为入参异常，writeLength不会被赋值；如果为拷贝异常，writeLength为可容纳目标字符串的最小缓冲区大小。 <br>返回[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-native-type-h.md#arkui_errorcode)时，表示可容纳目标字符串的最小缓冲区大小。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。<br>如果缓冲区大小不足，返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。<br>如果缓冲区大小不足，返回[ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_MotionPathOptions_SetFrom()
 
@@ -787,8 +628,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetFrom(ArkUI_MotionPathOptions* opti
 
 设置路径动画起点进度。进度指已移动路径长度与总路径长度的比值。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 **参数：**
@@ -796,13 +635,13 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetFrom(ArkUI_MotionPathOptions* opti
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)* options | 指向路径动画的运动路径配置项[ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)的指针。 |
-| const float from | 路径动画的起点进度，取值范围为[0.0, 1.0]，且需满足from小于或等于终点进度to，否则将返回ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE错误码。 <br>to的含义参考[OH_ArkUI_MotionPathOptions_SetTo](capi-native-type-visual-h.md#oh_arkui_motionpathoptions_setto)。 |
+| const float from | 路径动画的起点进度，取值范围为[0.0, 1.0]，且需满足from小于或等于终点进度to，否则将返回[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-native-type-h.md#arkui_errorcode)错误码。 <br>to的含义参考[OH_ArkUI_MotionPathOptions_SetTo](capi-native-type-visual-h.md#oh_arkui_motionpathoptions_setto)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。<br>ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE from超出[0.0, 1.0]范围，或from大于终点进度to，请将from值设置在[0.0, 1.0]范围内且确保from不大于终点进度to。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-native-type-h.md#arkui_errorcode) from超出[0.0, 1.0]范围，或from大于终点进度to，请将from值设置在[0.0, 1.0]范围内且确保from不大于终点进度to。 |
 
 ### OH_ArkUI_MotionPathOptions_GetFrom()
 
@@ -813,8 +652,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetFrom(const ArkUI_MotionPathOptions
 **描述：**
 
 获取路径动画的运动路径配置项中的路径动画起点进度。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -829,7 +666,7 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetFrom(const ArkUI_MotionPathOptions
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_MotionPathOptions_SetTo()
 
@@ -841,8 +678,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetTo(ArkUI_MotionPathOptions* option
 
 设置路径动画终点进度。进度指已移动路径长度与总路径长度的比值。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 23
 
 **参数：**
@@ -850,13 +685,13 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetTo(ArkUI_MotionPathOptions* option
 | 参数项 | 描述 |
 | -- | -- |
 | [ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)* options | 指向路径动画的运动路径配置项[ArkUI_MotionPathOptions](capi-arkui-nativemodule-arkui-motionpathoptions.md)的指针。 |
-| const float to | 路径动画的终点进度，取值范围为[0.0, 1.0]，且需满足to大于或等于起点进度from；否则将返回ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE错误码。 <br>from的含义参考[OH_ArkUI_MotionPathOptions_SetFrom](capi-native-type-visual-h.md#oh_arkui_motionpathoptions_setfrom)。 |
+| const float to | 路径动画的终点进度，取值范围为[0.0, 1.0]，且需满足to大于或等于起点进度from；否则将返回[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-native-type-h.md#arkui_errorcode)错误码。 <br>from的含义参考[OH_ArkUI_MotionPathOptions_SetFrom](capi-native-type-visual-h.md#oh_arkui_motionpathoptions_setfrom)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。<br>ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE to超出[0.0, 1.0]范围，或to小于起点进度from。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。<br>[ARKUI_ERROR_CODE_PARAM_OUT_OF_RANGE](capi-native-type-h.md#arkui_errorcode) to超出[0.0, 1.0]范围，或to小于起点进度from。 |
 
 ### OH_ArkUI_MotionPathOptions_GetTo()
 
@@ -867,8 +702,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetTo(const ArkUI_MotionPathOptions* 
 **描述：**
 
 获取路径动画的运动路径配置项中的路径动画终点进度。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -883,7 +716,7 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetTo(const ArkUI_MotionPathOptions* 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_MotionPathOptions_SetRotatable()
 
@@ -894,8 +727,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetRotatable(ArkUI_MotionPathOptions*
 **描述：**
 
 设置组件是否沿运动路径旋转。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -910,7 +741,7 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_SetRotatable(ArkUI_MotionPathOptions*
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_MotionPathOptions_GetRotatable()
 
@@ -921,8 +752,6 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetRotatable(const ArkUI_MotionPathOp
 **描述：**
 
 获取组件是否沿运动路径旋转。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 23
 
@@ -937,7 +766,7 @@ ArkUI_ErrorCode OH_ArkUI_MotionPathOptions_GetRotatable(const ArkUI_MotionPathOp
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>ARKUI_ERROR_CODE_NO_ERROR 成功。<br>ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode) 成功。<br>[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode) 函数参数异常。 |
 
 ### OH_ArkUI_ShadowOptions_Create()
 
@@ -948,8 +777,6 @@ OH_ArkUI_ShadowOptions* OH_ArkUI_ShadowOptions_Create()
 **描述：**
 
 创建一个阴影选项对象。在新创建的对象中，模糊半径radius的默认值为0，阴影在x轴上的偏移量offsetX的默认值为0，阴影在y轴上的偏移量offsetY的默认值为0，阴影颜色color的默认值为0xFF000000， 阴影类型type的默认值为ARKUI_SHADOW_TYPE_COLOR，是否用阴影填充组件内部isFill的默认值为false。当该对象不再使用时，请调用[OH_ArkUI_ShadowOptions_Destroy](capi-native-type-visual-h.md#oh_arkui_shadowoptions_destroy) 销毁。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -969,8 +796,6 @@ void OH_ArkUI_ShadowOptions_Destroy(OH_ArkUI_ShadowOptions* options)
 
 销毁阴影选项对象。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -989,8 +814,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetRadius(OH_ArkUI_ShadowOptions* options
 
 设置阴影选项的模糊半径。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -1004,7 +827,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetRadius(OH_ArkUI_ShadowOptions* options
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若options为空指针，返回ARKUI_ERROR_CODE_PARAM_INVALID，请确保传入有效的阴影选项对象指针。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若options为空指针，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)，请确保传入有效的阴影选项对象指针。 |
 
 ### OH_ArkUI_ShadowOptions_GetRadius()
 
@@ -1015,8 +838,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetRadius(OH_ArkUI_ShadowOptions* options
 **描述：**
 
 获取阴影选项的模糊半径。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1031,7 +852,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetRadius(OH_ArkUI_ShadowOptions* options
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_SetType()
 
@@ -1042,8 +863,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetType(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 设置阴影选项的阴影类型。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1058,7 +877,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetType(OH_ArkUI_ShadowOptions* options, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_GetType()
 
@@ -1069,8 +888,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetType(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 获取阴影选项的阴影类型。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1085,7 +902,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetType(OH_ArkUI_ShadowOptions* options, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_SetColor()
 
@@ -1096,8 +913,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetColor(OH_ArkUI_ShadowOptions* options,
 **描述：**
 
 设置阴影选项的阴影颜色。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1112,7 +927,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetColor(OH_ArkUI_ShadowOptions* options,
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_GetColor()
 
@@ -1123,8 +938,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetColor(OH_ArkUI_ShadowOptions* options,
 **描述：**
 
 获取阴影选项的阴影颜色。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1139,7 +952,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetColor(OH_ArkUI_ShadowOptions* options,
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_SetOffsetX()
 
@@ -1150,8 +963,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetX(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 设置阴影在x轴上的偏移量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1166,7 +977,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetX(OH_ArkUI_ShadowOptions* option
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_GetOffsetX()
 
@@ -1177,8 +988,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetX(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 获取阴影在x轴上的偏移量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1193,7 +1002,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetX(OH_ArkUI_ShadowOptions* option
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_SetOffsetY()
 
@@ -1204,8 +1013,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetY(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 设置阴影在y轴上的偏移量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1220,7 +1027,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetOffsetY(OH_ArkUI_ShadowOptions* option
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_GetOffsetY()
 
@@ -1231,8 +1038,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetY(OH_ArkUI_ShadowOptions* option
 **描述：**
 
 获取阴影在y轴上的偏移量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1247,7 +1052,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetOffsetY(OH_ArkUI_ShadowOptions* option
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_SetFill()
 
@@ -1258,8 +1063,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetFill(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 设置是否用阴影填充组件内部。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1274,7 +1077,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_SetFill(OH_ArkUI_ShadowOptions* options, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_ShadowOptions_GetFill()
 
@@ -1285,8 +1088,6 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetFill(OH_ArkUI_ShadowOptions* options, 
 **描述：**
 
 获取是否用阴影填充组件内部。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1301,7 +1102,7 @@ ArkUI_ErrorCode OH_ArkUI_ShadowOptions_GetFill(OH_ArkUI_ShadowOptions* options, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>若参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 返回结果码。<br>若操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>若参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_Create()
 
@@ -1312,8 +1113,6 @@ ArkUI_Matrix4ScaleOptions* OH_ArkUI_Matrix4ScaleOptions_Create()
 **描述：**
 
 创建指向矩阵运算的缩放参数对象的指针。在新创建的对象中，x、y和z轴方向的缩放系数默认值为1。变换中心点的x轴坐标centerX、变换中心点的y轴坐标centerY默认值为0。当该对象不再使用时，请调用 [OH_ArkUI_Matrix4ScaleOptions_Dispose](capi-native-type-visual-h.md#oh_arkui_matrix4scaleoptions_dispose)销毁。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1333,8 +1132,6 @@ void OH_ArkUI_Matrix4ScaleOptions_Dispose(ArkUI_Matrix4ScaleOptions* options)
 
 销毁指向矩阵运算的缩放参数对象的指针。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -1353,8 +1150,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetX(ArkUI_Matrix4ScaleOptions* opt
 
 设置矩阵运算的缩放参数对象x方向的缩放因子。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -1368,7 +1163,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetX(ArkUI_Matrix4ScaleOptions* opt
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetX()
 
@@ -1379,8 +1174,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetX(const ArkUI_Matrix4ScaleOption
 **描述：**
 
 获取矩阵运算的缩放参数对象x方向的缩放因子。如果从未设置x的值，则x方向的缩放因子默认值为1。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1395,7 +1188,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetX(const ArkUI_Matrix4ScaleOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetY()
 
@@ -1406,8 +1199,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetY(ArkUI_Matrix4ScaleOptions* opt
 **描述：**
 
 设置矩阵运算的缩放参数对象y方向的缩放因子。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1422,7 +1213,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetY(ArkUI_Matrix4ScaleOptions* opt
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetY()
 
@@ -1433,8 +1224,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetY(const ArkUI_Matrix4ScaleOption
 **描述：**
 
 获取矩阵运算的缩放参数对象y方向的缩放因子。如果从未设置y的值，则y方向的缩放因子默认值为1。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1449,7 +1238,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetY(const ArkUI_Matrix4ScaleOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetZ()
 
@@ -1460,8 +1249,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetZ(ArkUI_Matrix4ScaleOptions* opt
 **描述：**
 
 设置矩阵运算的缩放参数对象z方向的缩放因子。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1476,7 +1263,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetZ(ArkUI_Matrix4ScaleOptions* opt
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetZ()
 
@@ -1487,8 +1274,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetZ(const ArkUI_Matrix4ScaleOption
 **描述：**
 
 获取矩阵运算的缩放参数对象z方向的缩放因子。如果从未设置z的值，则z方向的缩放因子默认值为1。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1503,7 +1288,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetZ(const ArkUI_Matrix4ScaleOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetCenterX()
 
@@ -1514,8 +1299,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterX(ArkUI_Matrix4ScaleOption
 **描述：**
 
 设置矩阵运算的缩放参数对象变换中心点的x轴坐标。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1530,7 +1313,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterX(ArkUI_Matrix4ScaleOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetCenterX()
 
@@ -1541,8 +1324,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterX(const ArkUI_Matrix4Scale
 **描述：**
 
 获取矩阵运算的缩放参数对象变换中心点的x轴坐标。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1557,7 +1338,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterX(const ArkUI_Matrix4Scale
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_SetCenterY()
 
@@ -1568,8 +1349,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterY(ArkUI_Matrix4ScaleOption
 **描述：**
 
 设置矩阵运算的缩放参数对象变换中心点的y轴坐标。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1584,7 +1363,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_SetCenterY(ArkUI_Matrix4ScaleOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4ScaleOptions_GetCenterY()
 
@@ -1595,8 +1374,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterY(const ArkUI_Matrix4Scale
 **描述：**
 
 获取矩阵运算的缩放参数对象变换中心点的y轴坐标。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1611,7 +1388,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4ScaleOptions_GetCenterY(const ArkUI_Matrix4Scale
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_Create()
 
@@ -1622,8 +1399,6 @@ ArkUI_Matrix4RotationOptions* OH_ArkUI_Matrix4RotationOptions_Create()
 **描述：**
 
 创建矩阵运算的旋转参数对象的指针。在新创建的对象中，单次矩阵变换中心点相对于组件变换中心点的x轴偏移值centerX、单次矩阵变换中心点相对于组件变换中心点的y轴偏移值centerY、旋转角度angle的默认值，为0。 如果未指定x、y、z方向的方向向量中的任何一个，旋转效果等同于绕z轴旋转（即计算时方向向量取x=0、y=0、z=1）。一旦指定了x、y、z方向的方向向量中的任意一个，以指定的方向向量生效。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1643,8 +1418,6 @@ void OH_ArkUI_Matrix4RotationOptions_Dispose(ArkUI_Matrix4RotationOptions* optio
 
 销毁指向矩阵运算的旋转参数对象的指针。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -1663,8 +1436,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetX(ArkUI_Matrix4RotationOption
 
 设置矩阵运算的旋转参数对象x方向的方向向量。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -1678,7 +1449,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetX(ArkUI_Matrix4RotationOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetX()
 
@@ -1688,9 +1459,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetX(const ArkUI_Matrix4Rotation
 
 **描述：**
 
-获取矩阵运算的旋转参数对象x方向的方向向量。如果从未设置过x值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+获取矩阵运算的旋转参数对象x方向的方向向量。如果从未设置过x值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。
 
 **起始版本：** 24
 
@@ -1705,7 +1474,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetX(const ArkUI_Matrix4Rotation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetY()
 
@@ -1716,8 +1485,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetY(ArkUI_Matrix4RotationOption
 **描述：**
 
 设置矩阵运算的旋转参数对象y方向的方向向量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1732,7 +1499,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetY(ArkUI_Matrix4RotationOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetY()
 
@@ -1742,9 +1509,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetY(const ArkUI_Matrix4Rotation
 
 **描述：**
 
-获取矩阵运算的旋转参数对象y方向的方向向量。如果从未设置过y值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+获取矩阵运算的旋转参数对象y方向的方向向量。如果从未设置过y值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。
 
 **起始版本：** 24
 
@@ -1759,7 +1524,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetY(const ArkUI_Matrix4Rotation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetZ()
 
@@ -1770,8 +1535,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetZ(ArkUI_Matrix4RotationOption
 **描述：**
 
 设置矩阵运算的旋转参数对象z方向的方向向量。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1786,7 +1549,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetZ(ArkUI_Matrix4RotationOption
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetZ()
 
@@ -1796,9 +1559,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetZ(const ArkUI_Matrix4Rotation
 
 **描述：**
 
-获取矩阵运算的旋转参数对象z方向的方向向量。如果从未设置过z值，其值将处于未定义状态，此时函数将返回ARKUI_ERROR_CODE_PARAM_INVALID。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+获取矩阵运算的旋转参数对象z方向的方向向量。如果从未设置过z值，其值将处于未定义状态，此时函数将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。
 
 **起始版本：** 24
 
@@ -1813,7 +1574,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetZ(const ArkUI_Matrix4Rotation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetAngle()
 
@@ -1824,8 +1585,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetAngle(ArkUI_Matrix4RotationOp
 **描述：**
 
 设置矩阵运算的旋转参数对象中旋转角度的值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1840,7 +1599,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetAngle(ArkUI_Matrix4RotationOp
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetAngle()
 
@@ -1851,8 +1610,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetAngle(const ArkUI_Matrix4Rota
 **描述：**
 
 获取矩阵运算的旋转参数对象中旋转角度的值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1867,7 +1624,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetAngle(const ArkUI_Matrix4Rota
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetCenterX()
 
@@ -1878,8 +1635,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterX(ArkUI_Matrix4Rotation
 **描述：**
 
 设置单次矩阵变换中心点相对于组件变换中心点的x轴偏移值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1894,7 +1649,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterX(ArkUI_Matrix4Rotation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetCenterX()
 
@@ -1905,8 +1660,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterX(const ArkUI_Matrix4Ro
 **描述：**
 
 获取单次矩阵变换中心点相对于组件变换中心点的x轴偏移值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1921,7 +1674,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterX(const ArkUI_Matrix4Ro
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_SetCenterY()
 
@@ -1932,8 +1685,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterY(ArkUI_Matrix4Rotation
 **描述：**
 
 设置单次矩阵变换中心点相对于组件变换中心点的y轴偏移值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1948,7 +1699,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_SetCenterY(ArkUI_Matrix4Rotation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4RotationOptions_GetCenterY()
 
@@ -1959,8 +1710,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterY(const ArkUI_Matrix4Ro
 **描述：**
 
 获取单次矩阵变换中心点相对于组件变换中心点的y轴偏移值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -1975,7 +1724,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4RotationOptions_GetCenterY(const ArkUI_Matrix4Ro
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_Create()
 
@@ -1986,8 +1735,6 @@ ArkUI_Matrix4TranslationOptions* OH_ArkUI_Matrix4TranslationOptions_Create()
 **描述：**
 
 创建指向矩阵运算的平移对象的指针。在新创建的对象中，x轴的平移距离x、y轴的平移距离y和z轴的平移距离z的默认值为0。当该对象不再使用时，请调用 [OH_ArkUI_Matrix4TranslationOptions_Dispose](capi-native-type-visual-h.md#oh_arkui_matrix4translationoptions_dispose)销毁。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2007,8 +1754,6 @@ void OH_ArkUI_Matrix4TranslationOptions_Dispose(ArkUI_Matrix4TranslationOptions*
 
 销毁指向矩阵运算的平移对象的指针。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -2027,8 +1772,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetX(ArkUI_Matrix4Translation
 
 设置矩阵运算的平移对象x轴方向的平移值，单位为px。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -2042,7 +1785,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetX(ArkUI_Matrix4Translation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetX()
 
@@ -2053,8 +1796,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetX(const ArkUI_Matrix4Trans
 **描述：**
 
 获取矩阵运算的平移对象x轴方向的平移值，单位为px。如果从未设置x的值，其默认值为0。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2069,7 +1810,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetX(const ArkUI_Matrix4Trans
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_SetY()
 
@@ -2080,8 +1821,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetY(ArkUI_Matrix4Translation
 **描述：**
 
 设置矩阵运算的平移对象y轴方向的平移值，单位为px。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2096,7 +1835,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetY(ArkUI_Matrix4Translation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetY()
 
@@ -2107,8 +1846,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetY(const ArkUI_Matrix4Trans
 **描述：**
 
 获取矩阵运算的平移对象y轴方向的平移值，单位为px。如果从未设置y的值，其默认值为0。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2123,7 +1860,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetY(const ArkUI_Matrix4Trans
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_SetZ()
 
@@ -2134,8 +1871,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetZ(ArkUI_Matrix4Translation
 **描述：**
 
 设置矩阵运算的平移对象z轴方向的平移值，单位为px。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2150,7 +1885,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_SetZ(ArkUI_Matrix4Translation
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4TranslationOptions_GetZ()
 
@@ -2161,8 +1896,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetZ(const ArkUI_Matrix4Trans
 **描述：**
 
 获取矩阵运算的平移对象z轴方向的平移值，单位为px。如果从未设置z的值，其默认值为0。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2177,7 +1910,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4TranslationOptions_GetZ(const ArkUI_Matrix4Trans
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_CreateIdentity()
 
@@ -2188,8 +1921,6 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_CreateIdentity()
 **描述：**
 
 创建一个单位四阶矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2208,8 +1939,6 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_CreateByElements(const float* elements)
 **描述：**
 
 通过指定矩阵的每个元素来创建一个四阶矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2235,8 +1964,6 @@ void OH_ArkUI_Matrix4_Dispose(ArkUI_Matrix4* matrix)
 
 销毁矩阵对象的指针。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -2254,8 +1981,6 @@ ArkUI_Matrix4* OH_ArkUI_Matrix4_Copy(const ArkUI_Matrix4* matrix)
 **描述：**
 
 创建四阶矩阵对象的副本。通过复制原始矩阵，可以对其进行独立操作以获取不同矩阵变换结果。当该副本对象不再使用时，请调用[OH_ArkUI_Matrix4_Dispose](capi-native-type-visual-h.md#oh_arkui_matrix4_dispose)销毁。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2281,8 +2006,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Invert(ArkUI_Matrix4* matrix)
 
 对输入矩阵执行逆矩阵变换，变换后将修改输入的矩阵对象。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -2295,7 +2018,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Invert(ArkUI_Matrix4* matrix)
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常（如传入空指针），返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常（如传入空指针），返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_Combine()
 
@@ -2306,8 +2029,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Combine(ArkUI_Matrix4* oriMatrix, const ArkUI_M
 **描述：**
 
 将另一个矩阵与原始矩阵合并，并将结果矩阵存储在oriMatrix中。结果矩阵相当于先应用oriMatrix的变换，然后再应用anotherMatrix的变换。此函数将修改oriMatrix对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2322,7 +2043,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Combine(ArkUI_Matrix4* oriMatrix, const ArkUI_M
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果oriMatrix或anotherMatrix为空指针，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果oriMatrix或anotherMatrix为空指针，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_Translate()
 
@@ -2333,8 +2054,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Translate(ArkUI_Matrix4* matrix, const ArkUI_Ma
 **描述：**
 
 对原始矩阵应用平移变换以获取平移后的矩阵。每次平移变换都是在先前的矩阵上累积的。变换后将修改输入的矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2349,7 +2068,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Translate(ArkUI_Matrix4* matrix, const ArkUI_Ma
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果matrix或translate为空指针，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果matrix或translate为空指针，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_Scale()
 
@@ -2360,8 +2079,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Scale(ArkUI_Matrix4* matrix, const ArkUI_Matrix
 **描述：**
 
 对原始矩阵应用缩放变换以获取缩放后的矩阵。每次缩放变换都是在先前的矩阵上累积的。此函数将修改输入的矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2376,7 +2093,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Scale(ArkUI_Matrix4* matrix, const ArkUI_Matrix
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果options为空指针，返回ARKUI_ERROR_CODE_PARAM_INVALID，请确保传入有效的缩放参数对象指针。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果options为空指针，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)，请确保传入有效的缩放参数对象指针。 |
 
 ### OH_ArkUI_Matrix4_Rotate()
 
@@ -2387,8 +2104,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Rotate(ArkUI_Matrix4* matrix, const ArkUI_Matri
 **描述：**
 
 对原始矩阵应用旋转变换以获取旋转后的矩阵。每次旋转变换都是在先前的矩阵上累积的。此函数将修改输入的矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2403,7 +2118,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Rotate(ArkUI_Matrix4* matrix, const ArkUI_Matri
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果matrix或rotate为空指针，返回ARKUI_ERROR_CODE_PARAM_INVALID，请确保传入有效的对象指针。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果matrix或rotate为空指针，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)，请确保传入有效的对象指针。 |
 
 ### OH_ArkUI_Matrix4_Skew()
 
@@ -2414,8 +2129,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Skew(ArkUI_Matrix4* matrix, const float skewX, 
 **描述：**
 
 对原始矩阵应用倾斜变换以获取倾斜后的矩阵。每次倾斜变换都是在先前的矩阵上累积的。变换后将修改输入的矩阵对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2431,7 +2144,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_Skew(ArkUI_Matrix4* matrix, const float skewX, 
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_TransformPoint()
 
@@ -2442,8 +2155,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_TransformPoint(const ArkUI_Matrix4* matrix, con
 **描述：**
 
 计算一个点经过矩阵变换后的新坐标位置。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2459,7 +2170,7 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_TransformPoint(const ArkUI_Matrix4* matrix, con
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_SetPolyToPoly()
 
@@ -2471,8 +2182,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_SetPolyToPoly(ArkUI_Matrix4* matrix, const ArkU
 
 将一个多边形的顶点坐标映射到另一个多边形的顶点坐标，并计算所需的矩阵。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 24
 
 **参数：**
@@ -2482,13 +2191,13 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_SetPolyToPoly(ArkUI_Matrix4* matrix, const ArkU
 | [ArkUI_Matrix4](capi-arkui-nativemodule-arkui-matrix4.md)* matrix | 指向四阶矩阵对象的指针，用于存放结果矩阵。 |
 | [const ArkUI_PointF](capi-arkui-nativemodule-arkui-pointf.md)* src | 指向原始多边形坐标点数组的指针。数组长度应至少为pointCount，否则将导致未定义行为。 |
 | [const ArkUI_PointF](capi-arkui-nativemodule-arkui-pointf.md)* dst | 指向映射后多边形坐标点数组的指针。数组长度应至少为pointCount，否则将导致未定义行为。 |
-| const uint32_t pointCount | 多边形点的数量，必须是0、1、2、3或4中的一个值。传入其他值时将返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| const uint32_t pointCount | 多边形点的数量，必须是0、1、2、3或4中的一个值。传入其他值时将返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 ### OH_ArkUI_Matrix4_GetElements()
 
@@ -2499,8 +2208,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_GetElements(const ArkUI_Matrix4* matrix, float*
 **描述：**
 
 获取四阶矩阵的16个元素。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 24
 
@@ -2515,213 +2222,6 @@ ArkUI_ErrorCode OH_ArkUI_Matrix4_GetElements(const ArkUI_Matrix4* matrix, float*
 
 | 类型 | 说明 |
 | -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回ARKUI_ERROR_CODE_NO_ERROR。<br>如果发生参数异常，返回ARKUI_ERROR_CODE_PARAM_INVALID。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create()
-
-```c
-OH_ArkUI_LinearGradientBlurOptions* OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create(void)
-```
-
-**描述：**
-
-创建线性渐变模糊选项对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**资源释放：** 调用者不再使用该对象时，需要调用[OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_destroy)释放该对象。
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_ArkUI_LinearGradientBlurOptions*](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) | 返回指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。调用者拥有返回的对象，不再使用时需要调用[OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_destroy)释放该对象。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy()
-
-```c
-void OH_ArkUI_NativeModule_LinearGradientBlurOptions_Destroy(OH_ArkUI_LinearGradientBlurOptions *options)
-```
-
-**描述：**
-
-销毁线性渐变模糊选项对象。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示由[OH_ArkUI_NativeModule_LinearGradientBlurOptions_Create](capi-native-type-visual-h.md#oh_arkui_nativemodule_lineargradientbluroptions_create)返回的 [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象指针。传入<b>NULL</b>无效果。 该函数对非NULL句柄返回后，句柄即失效，不得再次使用或销毁。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetBlurRadius(OH_ArkUI_LinearGradientBlurOptions *options, float blurRadius)
-```
-
-**描述：**
-
-设置线性渐变模糊选项的模糊半径。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| float blurRadius | [in] 表示模糊半径，单位为px。值越大模糊程度越高。值为<b>0</b>时表示不模糊。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID options为空、blurRadius为负数或blurRadius为NaN。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetBlurRadius(const OH_ArkUI_LinearGradientBlurOptions *options, float *blurRadius)
-```
-
-**描述：**
-
-获取线性渐变模糊选项的模糊半径。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| float *blurRadius | [out] 表示用于接收模糊半径的指针，单位为px。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID options或blurRadius为空。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetFractionStops(OH_ArkUI_LinearGradientBlurOptions *options, const float *fractionStops, int32_t stopsLength)
-```
-
-**描述：**
-
-设置线性渐变模糊选项的渐变停止点。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| const float *fractionStops | [in] 表示(模糊值, 位置)对的扁平float数组。 每两个元素一组(fractionStops[i], fractionStops[i+1])表示一个停止点。 模糊值(fractionStops[i])表示该位置处应用的模糊半径比例，0.0表示不模糊，1.0表示按blurRadius完全模糊。 位置(fractionStops[i+1])表示沿渐变方向的相对位置，0.0表示起点，1.0表示终点。 位置值必须严格单调递增。每个元素不能为NaN，且必须在[0.0, 1.0]范围内。 |
-| int32_t stopsLength | [in] 表示fractionStops数组中的float元素个数。必须为偶数且不小于4。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID options或fractionStops为空、stopsLength为奇数、stopsLength小于4、位置未严格单调递增、或fractionStops中存在NaN或超出[0.0, 1.0]范围的元素。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetFractionStops(const OH_ArkUI_LinearGradientBlurOptions *options, float *fractionStops, int32_t stopsSize, int32_t *writeLength)
-```
-
-**描述：**
-
-获取线性渐变模糊选项的渐变停止点。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| float *fractionStops | [out] 表示用于接收(模糊值, 位置)对的扁平float数组的缓冲区指针。 |
-| int32_t stopsSize | [in] 表示调用者为fractionStops数组分配的缓冲区大小（float元素个数）。若缓冲区不足以容纳所有渐变停止点数据， 则返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR，并将writeLength设为所需大小。 |
-| int32_t *writeLength | [out] 表示返回ARKUI_ERROR_CODE_NO_ERROR时实际写入fractionStops缓冲区的float元素个数； 返回ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR时表示容纳fractionStops所需的最小缓冲区大小。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID 函数参数异常。ARKUI_ERROR_CODE_BUFFER_SIZE_ERROR stopsSize小于实际fractionStops数量。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_SetDirection(OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection direction)
-```
-
-**描述：**
-
-设置线性渐变模糊选项的渐变方向。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| [OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection) direction | [in] 表示线性渐变模糊的方向。参数类型为[OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection)。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID options为空或direction不是有效的枚举值。 |
-
-### OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection()
-
-```c
-ArkUI_ErrorCode OH_ArkUI_NativeModule_LinearGradientBlurOptions_GetDirection(const OH_ArkUI_LinearGradientBlurOptions *options, OH_ArkUI_LinearGradientBlurDirection *direction)
-```
-
-**描述：**
-
-获取线性渐变模糊选项的渐变方向。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
-**起始版本：** 26.1.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md) *options | [in] 表示指向[OH_ArkUI_LinearGradientBlurOptions](capi-arkui-nativemodule-oh-arkui-lineargradientbluroptions.md)对象的指针。 |
-| [OH_ArkUI_LinearGradientBlurDirection](capi-native-type-visual-h.md#oh_arkui_lineargradientblurdirection) *direction | [out] 表示用于接收线性渐变模糊方向的指针。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。ARKUI_ERROR_CODE_NO_ERROR 成功。ARKUI_ERROR_CODE_PARAM_INVALID options或direction为空。 |
+| [ArkUI_ErrorCode](capi-error-code-h.md#arkui_errorcode) | 错误码。<br>如果操作成功，返回[ARKUI_ERROR_CODE_NO_ERROR](capi-native-type-h.md#arkui_errorcode)。<br>如果发生参数异常，返回[ARKUI_ERROR_CODE_PARAM_INVALID](capi-native-type-h.md#arkui_errorcode)。 |
 
 

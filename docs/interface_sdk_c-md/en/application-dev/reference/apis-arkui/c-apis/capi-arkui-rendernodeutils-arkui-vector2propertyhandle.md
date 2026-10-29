@@ -6,7 +6,7 @@ typedef struct ArkUI_Vector2PropertyHandle ArkUI_Vector2PropertyHandle
 
 ## Overview
 
-Defines a pointer to a two-dimensional vector property, used to create, attach, set, obtain, and release two-dimensional vector properties in the ArkUI native rendering property API.
+Defines a 2D vector property pointer.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

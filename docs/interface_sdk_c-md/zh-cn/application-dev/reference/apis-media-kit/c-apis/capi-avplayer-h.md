@@ -8,8 +8,6 @@
 
 **库：** libavplayer.so
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **相关模块：** [AVPlayer](capi-avplayer.md)
@@ -105,11 +103,8 @@
 | [OH_AVErrCode OH_AVPlayer_SetMediaSource(OH_AVPlayer *player, OH_AVMediaSource *source)](#oh_avplayer_setmediasource) | - | 将OH_AVMediaSource设置给播放器。 |
 | [uint32_t OH_AVPlayer_GetTrackCount(OH_AVPlayer *player)](#oh_avplayer_gettrackcount) | - | 获取播放器媒体源的轨道数量。 |
 | [OH_AVFormat *OH_AVPlayer_GetTrackFormat(OH_AVPlayer *player, uint32_t trackIndex)](#oh_avplayer_gettrackformat) | - | 通过索引获取播放器轨道信息。 |
-| [OH_AVErrCode OH_AVPlayer_SetPCMOutputCallback(OH_AVPlayer *player, OH_AVPlayerPCMOutputCallback callback, void *userData)](#oh_avplayer_setpcmoutputcallback) | - | 方法设置音频pcm数据回调。 |
 | [OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNativeWindow *window)](#oh_avplayer_setvideosideoutput) | - | 设置视频解码帧输出回调的方法。此接口仅在播放器处于空闲或已初始化状态时可调用。 |
 | [OH_VideoOutputResult OH_AVPlayerVideoOutput_GetNewestVideoSample(OH_AVPlayerVideoOutput *videoOutput)](#oh_avplayervideooutput_getnewestvideosample) | - | 获取一个已解码视频帧的方法。此接口仅在播放器处于暂停或播放状态时可调用。 |
-| [OH_AVErrCode OH_AVPlayer_SetPCMProcessorCallback(OH_AVPlayer *player, OH_AVPlayerPCMProcessorCallback callback, void *userData)](#oh_avplayer_setpcmprocessorcallback) | - | 方法设置音频pcm数据处理回调。 |
-| [OH_AVErrCode OH_AVPlayer_SetPCMProcessorMaxLen(OH_AVPlayer *player, int32_t maxProcessedPCMLen)](#oh_avplayer_setpcmprocessormaxlen) | - | 设置音频后处理一次返回的最大数据量。 允许缓存一些PCM数据并与下一个PCM数据一起返回 |
 
 ### 变量
 
@@ -128,8 +123,6 @@ typedef void (*Player_MediaKeySystemInfoCallback)(OH_AVPlayer *player, DRM_Media
 **描述：**
 
 播放器DRM信息更新时调用。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 
@@ -150,8 +143,6 @@ OH_AVPlayer *OH_AVPlayer_Create(void)
 
 创建播放器。 推荐单个应用创建的音视频播放器实例（即音频、视频、音视频三类相加）不超过16个。 <!--Del-->可创建的音视频播放器实例数量依赖于设备芯片的支持情况，如芯片支持创建的数量少于上述情况，请以芯片规格为准。如RK3568推荐单个应用创建6个以内的音视频播放器实例。<!--DelEnd-->
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **返回值：**
@@ -169,8 +160,6 @@ OH_AVErrCode OH_AVPlayer_SetURLSource(OH_AVPlayer *player, const char *url)
 **描述：**
 
 设置播放器的播放源。对应的源可以是HTTP URL或HTTPS URL。设置完成后，可通过OH_AVPlayer_AddUrlSubtitleSource添加外挂字幕。适用于播放网络视频、在线音频、直播流等场景。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -196,8 +185,6 @@ OH_AVErrCode OH_AVPlayer_SetFDSource(OH_AVPlayer *player, int32_t fd, int64_t of
 **描述：**
 
 设置播放器的媒体文件描述符来源。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -226,8 +213,6 @@ OH_AVErrCode OH_AVPlayer_SetDataSource(OH_AVPlayer *player, OH_AVDataSourceExt* 
 
 设置播放器的媒体源，该媒体源的数据由应用程序提供。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 21
 
 **参数：**
@@ -254,8 +239,6 @@ OH_AVErrCode OH_AVPlayer_Prepare(OH_AVPlayer *player)
 
 准备播放环境，异步缓存媒体数据。 此函数必须在SetSource之后调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -279,8 +262,6 @@ OH_AVErrCode OH_AVPlayer_Play(OH_AVPlayer *player)
 **描述：**
 
 开始播放。 此函数必须在[OH_AVPlayer_Prepare](capi-avplayer-h.md#oh_avplayer_prepare)之后调用。 如果播放器状态为\<Prepared>，调用此函数开始播放。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -306,8 +287,6 @@ OH_AVErrCode OH_AVPlayer_Pause(OH_AVPlayer *player)
 
 暂停播放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -331,8 +310,6 @@ OH_AVErrCode OH_AVPlayer_Stop(OH_AVPlayer *player)
 **描述：**
 
 停止播放。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -358,8 +335,6 @@ OH_AVErrCode OH_AVPlayer_Reset(OH_AVPlayer *player)
 
 将播放器恢复到初始状态。 函数调用完成后，调用SetSource添加播放源。调用[OH_AVPlayer_Prepare](capi-avplayer-h.md#oh_avplayer_prepare)后，再调用[OH_AVPlayer_Play](capi-avplayer-h.md#oh_avplayer_play)重新开始播放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -383,8 +358,6 @@ OH_AVErrCode OH_AVPlayer_Release(OH_AVPlayer *player)
 **描述：**
 
 异步释放播放器资源。 异步释放可以提升性能，但不能确保播放画面的SurfaceBuffer已释放。调用者需要确保播放画面窗口的生命周期安全。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -410,8 +383,6 @@ OH_AVErrCode OH_AVPlayer_ReleaseSync(OH_AVPlayer *player)
 
 同步释放播放器资源。 同步过程保证了播放画面的SurfaceBuffer释放，但该过程耗时较长，建议调用者自行设计异步机制。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -435,8 +406,6 @@ OH_AVFormat *OH_AVPlayer_GetMediaDescription(OH_AVPlayer *player)
 **描述：**
 
 获取播放器媒体源信息。设置完播放资源并且播放处于initialized/prepared/playing/paused/completed/stopped状态，可调用该接口。 需要注意返回值OH_AVFormat指针对象的生命周期需要用户手动释放。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 22
 
@@ -462,8 +431,6 @@ OH_AVFormat *OH_AVPlayer_GetTrackDescription(OH_AVPlayer *player, uint32_t index
 
 通过索引下标获取播放器媒体源轨道信息。设置完播放资源并且播放处于initialized/prepared/playing/paused/completed/stopped状态，可调用该接口。 需要注意返回值OH_AVFormat指针对象的生命周期需要用户手动释放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 22
 
 **参数：**
@@ -488,8 +455,6 @@ OH_AVErrCode OH_AVPlayer_SetVolume(OH_AVPlayer *player, float leftVolume, float 
 **描述：**
 
 设置播放器的音量。 可以在播放或暂停的过程中使用。0表示无声音，1为原始值，取值范围[0.0, 1.0]。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -517,8 +482,6 @@ OH_AVErrCode OH_AVPlayer_Seek(OH_AVPlayer *player, int32_t mSeconds, AVPlayerSee
 
 改变播放位置。 此函数可以在播放或暂停时使用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -545,8 +508,6 @@ OH_AVErrCode OH_AVPlayer_GetCurrentTime(OH_AVPlayer *player, int32_t *currentTim
 
 获取播放位置，精确到毫秒。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -571,8 +532,6 @@ OH_AVErrCode OH_AVPlayer_GetVideoWidth(OH_AVPlayer *player, int32_t *videoWidth)
 **描述：**
 
 获取视频宽度。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -599,8 +558,6 @@ OH_AVErrCode OH_AVPlayer_GetVideoHeight(OH_AVPlayer *player, int32_t *videoHeigh
 
 获取视频高度。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -625,8 +582,6 @@ OH_AVErrCode OH_AVPlayer_SetPlaybackSpeed(OH_AVPlayer *player, AVPlaybackSpeed s
 **描述：**
 
 根据指定的[AVPlaybackSpeed](capi-avplayer-base-h.md#avplaybackspeed)，设置播放器的播放速率。支持的状态包括prepared、playing、paused、completed。 默认播放速率为1.0倍速（正常速度），若未调用本接口设置速率则使用该默认值。 差异说明：OH_AVPlayer_SetPlaybackRate也用于设置播放速率，但使用float类型支持更灵活的速率范围。 本方法使用固定枚举档位，适合标准播放场景；SetPlaybackRate适合需要精确控制速率值的场景。适用于倍速播放、慢动作回放、快进预览等场景。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -653,8 +608,6 @@ OH_AVErrCode OH_AVPlayer_GetPlaybackSpeed(OH_AVPlayer *player, AVPlaybackSpeed *
 
 获取当前播放器的播放速率。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -679,8 +632,6 @@ OH_AVErrCode OH_AVPlayer_GetPlaybackRate(OH_AVPlayer *player, float *rate)
 **描述：**
 
 获取当前播放器播放速率。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -707,8 +658,6 @@ OH_AVErrCode OH_AVPlayer_SetAudioRendererInfo(OH_AVPlayer *player, OH_AudioStrea
 
 设置player音频流类型。此接口仅可在AVPlayer处于idle或initialized状态时调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 12
 
 **参数：**
@@ -733,8 +682,6 @@ OH_AVErrCode OH_AVPlayer_SetAudioInterruptMode(OH_AVPlayer *player, OH_AudioInte
 **描述：**
 
 设置player音频流的打断模式。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 
@@ -761,8 +708,6 @@ OH_AVErrCode OH_AVPlayer_SetAudioEffectMode(OH_AVPlayer *player, OH_AudioStream_
 
 设置player音频流的音效模式。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 12
 
 **参数：**
@@ -787,8 +732,6 @@ OH_AVErrCode OH_AVPlayer_SelectBitRate(OH_AVPlayer *player, uint32_t bitRate)
 **描述：**
 
 设置hls播放器使用的码率。仅对HLS协议网络流有效。 默认情况下，播放器会根据网络连接情况选择合适的码率和速度。 通过INFO_TYPE_BITRATE_COLLECT上报有效码率链表，设置并选择指定的码率，选择小于且最接近的码率。准备好后，读取以查询当前选择的比特率。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -815,8 +758,6 @@ OH_AVErrCode OH_AVPlayer_SetVideoSurface(OH_AVPlayer *player, OHNativeWindow *wi
 
 设置播放画面窗口。 此函数必须在SetSource之后，Prepare之前调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -824,7 +765,7 @@ OH_AVErrCode OH_AVPlayer_SetVideoSurface(OH_AVPlayer *player, OHNativeWindow *wi
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../../apis-avcodec-kit/c-apis/capi-codecbase-ohnativewindow.md) *window | 指向OHNativeWindow实例的指针。 |
+| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) *window | 指向OHNativeWindow实例的指针。 |
 
 **返回值：**
 
@@ -841,8 +782,6 @@ OH_AVErrCode OH_AVPlayer_GetDuration(OH_AVPlayer *player, int32_t *duration)
 **描述：**
 
 获取媒体文件的总时长，精确到毫秒。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -869,8 +808,6 @@ OH_AVErrCode OH_AVPlayer_GetState(OH_AVPlayer *player, AVPlayerState *state)
 
 获取当前播放状态。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -896,8 +833,6 @@ bool OH_AVPlayer_IsPlaying(OH_AVPlayer *player)
 
 判断播放器是否在播放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -921,8 +856,6 @@ bool OH_AVPlayer_IsLooping(OH_AVPlayer *player)
 **描述：**
 
 判断是否循环播放。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -948,8 +881,6 @@ OH_AVErrCode OH_AVPlayer_SetLooping(OH_AVPlayer *player, bool loop)
 
 设置循环播放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -974,8 +905,6 @@ OH_AVErrCode OH_AVPlayer_SetPlayerCallback(OH_AVPlayer *player, AVPlayerCallback
 **描述：**
 
 设置播放器回调函数。 由于通过此方法设置的信息监听回调函数[OH_AVPlayerOnInfo](capi-avplayer-base-h.md#oh_avplayeroninfo)和错误监听回调函数[OH_AVPlayerOnError](capi-avplayer-base-h.md#oh_avplayeronerror)可以传递的信息有限，也不便于应用区分多个播放器实例。 从API version 12开始，应使用[OH_AVPlayer_SetOnInfoCallback](capi-avplayer-h.md#oh_avplayer_setoninfocallback)、[OH_AVPlayer_SetOnErrorCallback](capi-avplayer-h.md#oh_avplayer_setonerrorcallback)接口分别设置信息监听回调函数[OH_AVPlayerOnInfoCallback](capi-avplayer-base-h.md#oh_avplayeroninfocallback) 和错误监听回调函数[OH_AVPlayerOnErrorCallback](capi-avplayer-base-h.md#oh_avplayeronerrorcallback)。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -1006,8 +935,6 @@ OH_AVErrCode OH_AVPlayer_SelectTrack(OH_AVPlayer *player, int32_t index)
 
 选择音频或字幕轨道。 默认播放第一个带数据的音轨，不播放字幕轨道。 设置生效后，原音轨将失效。请设置字幕处于准备/播放/暂停/完成状态，并将音轨设置为准备状态。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -1033,8 +960,6 @@ OH_AVErrCode OH_AVPlayer_DeselectTrack(OH_AVPlayer *player, int32_t index)
 
 取消选择当前音频或字幕轨道。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 11
 
 **参数：**
@@ -1059,8 +984,6 @@ OH_AVErrCode OH_AVPlayer_GetCurrentTrack(OH_AVPlayer *player, int32_t trackType,
 **描述：**
 
 获取当前有效的轨道索引。请将状态设置为准备/正在播放/暂停/完成。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 11
 
@@ -1088,8 +1011,6 @@ OH_AVErrCode OH_AVPlayer_SetMediaKeySystemInfoCallback(OH_AVPlayer *player, Play
 
 设置播放器媒体密钥系统信息回调的方法。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 12
 
 **参数：**
@@ -1115,8 +1036,6 @@ OH_AVErrCode OH_AVPlayer_GetMediaKeySystemInfo(OH_AVPlayer *player, DRM_MediaKey
 
 获取媒体密钥系统信息以创建媒体密钥会话。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 12
 
 **参数：**
@@ -1141,8 +1060,6 @@ OH_AVErrCode OH_AVPlayer_SetDecryptionConfig(OH_AVPlayer *player, MediaKeySessio
 **描述：**
 
 设置解密信息。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 
@@ -1170,8 +1087,6 @@ OH_AVErrCode OH_AVPlayer_SetOnInfoCallback(OH_AVPlayer *player, OH_AVPlayerOnInf
 
 设置播放器消息回调监听函数。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 12
 
 **参数：**
@@ -1197,8 +1112,6 @@ OH_AVErrCode OH_AVPlayer_SetOnErrorCallback(OH_AVPlayer *player, OH_AVPlayerOnEr
 **描述：**
 
 设置播放器错误回调监听函数。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 12
 
@@ -1226,8 +1139,6 @@ OH_AVErrCode OH_AVPlayer_SetVolumeMode(OH_AVPlayer *player, OH_AudioStream_Volum
 
 设置player音频流音量模式。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 19
 
 **参数：**
@@ -1252,8 +1163,6 @@ OH_AVErrCode OH_AVPlayer_SetPlaybackRate(OH_AVPlayer *player, float rate)
 **描述：**
 
 在有效范围内，设置播放器的播放速率。 支持的状态：已准备/正在播放/已暂停/已完成。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 20
 
@@ -1280,8 +1189,6 @@ OH_AVErrCode OH_AVPlayer_SetLoudnessGain(OH_AVPlayer *player, float loudnessGain
 
 设置播放器的响度。当播放处于prepared/playing/paused/completed/stopped状态时，可调用该接口。 默认响度增益0.0dB。播放器流的usage参数必须是[OH_AudioStream_Usage](../../apis-audio-kit/c-apis/capi-native-audiostream-base-h.md#oh_audiostream_usage).AUDIOSTREAM_USAGE_MUSIC， [OH_AudioStream_Usage](../../apis-audio-kit/c-apis/capi-native-audiostream-base-h.md#oh_audiostream_usage).AUDIOSTREAM_USAGE_MOVIE，[OH_AudioStream_Usage](../../apis-audio-kit/c-apis/capi-native-audiostream-base-h.md#oh_audiostream_usage).AUDIOSTREAM_USAGE_AUDIOBOOK 之一。 音频渲染器的延迟模式必须是[OH_AudioStream_LatencyMode](../../apis-audio-kit/c-apis/capi-native-audiostream-base-h.md#oh_audiostream_latencymode).AUDIOSTREAM_LATENCY_MODE_NORMAL。 如果通过高分辨率管道播放，则不支持此操作。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 21
 
 **参数：**
@@ -1307,8 +1214,6 @@ OH_AVFormat *OH_AVPlayer_GetPlaybackStatisticMetrics(OH_AVPlayer *player)
 
 获取当前播放器的统计指标信息。设置完播放资源，并且当播放处于准备（prepared）/播放（playing）/暂停（paused）/完成（completed）/停止（stopped）状态时，可调用该接口。 需要注意返回值[OH_AVFormat](capi-core-oh-avformat.md)指针对象的生命周期需要用户手动释放。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1332,8 +1237,6 @@ OH_AVErrCode OH_AVPlayer_AddFdSubtitleSource(OH_AVPlayer *player, int32_t fd, in
 **描述：**
 
 将由文件描述符表示的字幕资源添加到播放器。目前，外挂字幕必须在AVPlayer设置完视频资源的fdSrc之后再设置。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1362,8 +1265,6 @@ OH_AVErrCode OH_AVPlayer_AddUrlSubtitleSource(OH_AVPlayer *player, const char *u
 
 将由URL表示的字幕资源添加到播放器。外挂字幕必须在AVPlayer设置完url之后再设置。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1389,8 +1290,6 @@ OH_AVErrCode OH_AVPlayer_SetPlaybackRange(OH_AVPlayer *player, int32_t mSecondsS
 
 设置播放起始位置和结束位置。设置后，仅播放音视频文件中指定范围内的内容。可在初始化、已准备、暂停、停止或完成状态下调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1415,8 +1314,6 @@ OH_AVErrCode OH_AVPlayer_SetMediaMuted(OH_AVPlayer *player, OH_MediaType mediaTy
 ```
 
 **描述：**
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1444,8 +1341,6 @@ int32_t OH_AVPlayer_GetPlaybackPosition(OH_AVPlayer *player)
 
 获取播放位置，精确到毫秒。此API仅可在AVPlayer处于已准备、播放中、暂停或完成状态时调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1470,8 +1365,6 @@ bool OH_AVPlayer_IsSeekContinuousSupported(OH_AVPlayer *player)
 
 检查媒体源是否支持连续跳转。在已准备、播放中、暂停或完成状态下调用时返回实际值；在其他状态下调用时返回 false。对于不支持[AV_SEEK_CONTINUOUS](capi-avplayer-base-h.md#avplayerseekmode)模式跳转操作的设备，返回false。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1495,8 +1388,6 @@ OH_AVErrCode OH_AVPlayer_SelectTrackWithMode(OH_AVPlayer *player, int32_t index,
 **描述：**
 
 在播放包含多个音视频轨道的资源时，使用指定的切换模式选择轨道。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1524,8 +1415,6 @@ OH_AVErrCode OH_AVPlayer_SetAmplitudeUpdateCallback(OH_AVPlayer *player, OH_AVPl
 
 订阅最大音频电平值的更新事件，该值在播放音频资源时周期性上报。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1551,8 +1440,6 @@ OH_AVErrCode OH_AVPlayer_SetSeiReceivedCallback(OH_AVPlayer *player, const int32
 **描述：**
 
 订阅接收到补充增强信息（SEI）消息的事件。仅适用于HTTP-FLV直播流，当视频流中存在SEI消息时触发。必须在调用prepare之前发起订阅。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1582,8 +1469,6 @@ uint32_t OH_AVSeiMessage_GetSeiCount(OH_AVSeiMessageArray *message)
 
 获取SEI消息数组中的消息项数量。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1607,8 +1492,6 @@ OH_AVFormat *OH_AVSeiMessage_GetSei(OH_AVSeiMessageArray *message, uint32_t inde
 **描述：**
 
 通过索引获取SEI消息数组中某一项的SEI。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1634,8 +1517,6 @@ OH_AVErrCode OH_AVPlayer_SetTargetVideoWindowSize(OH_AVPlayer *player, int32_t w
 **描述：**
 
 为超分辨率设置视频窗口大小。此API可在AVPlayer处于初始化、已准备、播放中、暂停、完成或停止状态时调用。输入参数值必须在320x320至1920x1080（像素）范围内。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1663,8 +1544,6 @@ OH_AVErrCode OH_AVPlayer_SetVideoSuperResolutionEnable(OH_AVPlayer *player, bool
 
 动态启用或禁用超分辨率。此API可在AVPlayer处于初始化、已准备、播放中、暂停、完成或停止状态时调用。必须在调用prepare之前在[OH_AVPlaybackStrategy](capi-avplayer-oh-avplaybackstrategy.md)中启用超分辨率功能。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1690,8 +1569,6 @@ OH_AVPlaybackStrategy *OH_AVPlaybackStrategy_Create(void)
 
 创建一个播放策略实例。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **返回值：**
@@ -1709,8 +1586,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_Destroy(OH_AVPlaybackStrategy *strategy)
 **描述：**
 
 释放一个播放策略实例。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1735,8 +1610,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredWidth(OH_AVPlaybackStrategy *stra
 **描述：**
 
 选择接近指定宽度的流。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1763,8 +1636,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredHeight(OH_AVPlaybackStrategy *str
 
 选择接近指定高度的流。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1789,8 +1660,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredBufferDuration(OH_AVPlaybackStrat
 **描述：**
 
 选择接近指定值的首选缓冲时长。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1817,8 +1686,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredHdr(OH_AVPlaybackStrategy *strate
 
 启用或禁用首选HDR模式。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1843,8 +1710,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredSubtitleLanguage(OH_AVPlaybackStr
 **描述：**
 
 设置首选字幕语言。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1871,8 +1736,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredAudioLanguage(OH_AVPlaybackStrate
 
 设置首选音频语言。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1897,8 +1760,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetMutedMediaType(OH_AVPlaybackStrategy *stra
 **描述：**
 
 设置播放时要静音的媒体类型。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1925,8 +1786,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetShowFirstFrameOnPrepare(OH_AVPlaybackStrat
 
 设置是否在prepare时显示首帧。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -1951,8 +1810,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetThresholdForAutoQuickPlay(OH_AVPlaybackStr
 **描述：**
 
 设置自动快速播放的阈值。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -1979,8 +1836,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetSuperResolutionEnable(OH_AVPlaybackStrateg
 
 启用或禁用超分辨率。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -2005,8 +1860,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetPreferredBufferDurationForPlaying(OH_AVPla
 **描述：**
 
 设置播放时的首选缓冲时长（秒，double类型）。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -2033,8 +1886,6 @@ OH_AVErrCode OH_AVPlaybackStrategy_SetKeepDecodingOnMute(OH_AVPlaybackStrategy *
 
 设置静音时是否继续解码。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -2059,8 +1910,6 @@ OH_AVErrCode OH_AVPlayer_SetPlaybackStrategy(OH_AVPlayer *player, OH_AVPlaybackS
 **描述：**
 
 将播放策略设置给avplayer。此API仅可在avplayer处于初始化状态时调用。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -2087,8 +1936,6 @@ OH_AVFormat* OH_AVPlayer_GetPlaybackInfo(OH_AVPlayer *player)
 
 获取当前播放器的统计信息。此API仅可在avplayer处于已准备、播放中或暂停状态时调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -2112,8 +1959,6 @@ OH_AVErrCode OH_AVPlayer_SetMediaSource(OH_AVPlayer *player, OH_AVMediaSource *s
 **描述：**
 
 将OH_AVMediaSource设置给播放器。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
 
 **起始版本：** 23
 
@@ -2140,8 +1985,6 @@ uint32_t OH_AVPlayer_GetTrackCount(OH_AVPlayer *player)
 
 获取播放器媒体源的轨道数量。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -2166,8 +2009,6 @@ OH_AVFormat *OH_AVPlayer_GetTrackFormat(OH_AVPlayer *player, uint32_t trackIndex
 
 通过索引获取播放器轨道信息。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 23
 
 **参数：**
@@ -2183,34 +2024,6 @@ OH_AVFormat *OH_AVPlayer_GetTrackFormat(OH_AVPlayer *player, uint32_t trackIndex
 | -- | -- |
 | OH_AVFormat * | 返回指向OH_AVFormat实例的指针。若player为空指针或无效，或trackIndex无效，则返回空指针。 |
 
-### OH_AVPlayer_SetPCMOutputCallback()
-
-```c
-OH_AVErrCode OH_AVPlayer_SetPCMOutputCallback(OH_AVPlayer *player, OH_AVPlayerPCMOutputCallback callback, void *userData)
-```
-
-**描述：**
-
-方法设置音频pcm数据回调。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
-**起始版本：** 26.0.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | 指向OH_AVPlayer实例的指针。 |
-| [OH_AVPlayerPCMOutputCallback](capi-avplayer-base-h.md#oh_avplayerpcmoutputcallback) callback | 回调函数指针，nullptr表示取消注册回调。 |
-| void *userData | 指向用户特定数据的指针。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | 函数返回码。[AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)执行成功。[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)如果输入播放器为空或播放器SetOnErrorCallback失败。 |
-
 ### OH_AVPlayer_SetVideoSideOutput()
 
 ```c
@@ -2221,8 +2034,6 @@ OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNa
 
 设置视频解码帧输出回调的方法。此接口仅在播放器处于空闲或已初始化状态时可调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -2230,7 +2041,7 @@ OH_AVPlayerVideoOutput* OH_AVPlayer_SetVideoSideOutput(OH_AVPlayer *player, OHNa
 | 参数项 | 描述 |
 | -- | -- |
 | [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | 指向OH_AVPlayer实例的指针。 |
-| [OHNativeWindow](../../apis-avcodec-kit/c-apis/capi-codecbase-ohnativewindow.md) *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../../apis-avcodec-kit/c-apis/capi-codecbase-ohnativewindow.md) |
+| [OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) *window | 指向OHNativeWindow实例的指针，请参见[OHNativeWindow](../../apis-arkgraphics2d/c-apis/capi-nativewindow-ohnativewindow.md) |
 
 **返回值：**
 
@@ -2248,8 +2059,6 @@ OH_VideoOutputResult OH_AVPlayerVideoOutput_GetNewestVideoSample(OH_AVPlayerVide
 
 获取一个已解码视频帧的方法。此接口仅在播放器处于暂停或播放状态时可调用。
 
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -2263,60 +2072,5 @@ OH_VideoOutputResult OH_AVPlayerVideoOutput_GetNewestVideoSample(OH_AVPlayerVide
 | 类型 | 说明 |
 | -- | -- |
 | [OH_VideoOutputResult](capi-avplayer-base-h.md#oh_videooutputresult) | 获取帧时返回OH_VIDEO_OUTPUT_OK。当没有准备渲染的帧时，返回OH_VIDEO_OUTPUT_NO_IMAGE。 |
-
-### OH_AVPlayer_SetPCMProcessorCallback()
-
-```c
-OH_AVErrCode OH_AVPlayer_SetPCMProcessorCallback(OH_AVPlayer *player, OH_AVPlayerPCMProcessorCallback callback, void *userData)
-```
-
-**描述：**
-
-方法设置音频pcm数据处理回调。
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
-**起始版本：** 26.0.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | 指向OH_AVPlayer实例的指针。 |
-| [OH_AVPlayerPCMProcessorCallback](capi-avplayer-base-h.md#oh_avplayerpcmprocessorcallback) callback | 回调函数指针，nullptr表示取消注册回调。 |
-| void *userData | 指向用户特定数据的指针。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | 函数结果码。[AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)执行成功。[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)如果输入播放器为空或播放器SetPCMProcessorCallback失败。 |
-
-### OH_AVPlayer_SetPCMProcessorMaxLen()
-
-```c
-OH_AVErrCode OH_AVPlayer_SetPCMProcessorMaxLen(OH_AVPlayer *player, int32_t maxProcessedPCMLen)
-```
-
-**描述：**
-
-设置音频后处理一次返回的最大数据量。 允许缓存一些PCM数据并与下一个PCM数据一起返回
-
-**系统能力：** Syscap SystemCapability.Multimedia.Media.AVPlayer
-
-**起始版本：** 26.0.0
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_AVPlayer](capi-avplayer-oh-avplayer.md) *player | 指向OH_AVPlayer实例的指针。 |
-| int32_t maxProcessedPCMLen | 一次返回的最大PCM数据量。 OH_AVPlayerPCMProcessorCallback保证返回的pcmBuffer的Capacity不小于这个值。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [OH_AVErrCode](../../apis-avcodec-kit/c-apis/capi-native-averrors-h.md#oh_averrcode) | 函数返回码。[AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode)执行成功。[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode)如果输入播放器为空或maxProcessedPCMLen为错误。 |
 
 

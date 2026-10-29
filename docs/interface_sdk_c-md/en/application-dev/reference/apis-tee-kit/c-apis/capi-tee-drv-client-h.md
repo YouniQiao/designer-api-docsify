@@ -6,8 +6,6 @@ Declare tee driver client API.
 
 **Library**: NA
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Related module**: [TeeTrusted](capi-teetrusted.md)
@@ -33,8 +31,6 @@ int64_t tee_drv_open(const char *drv_name, const void *param, uint32_t param_len
 **Description**
 
 Open the specified driver in the TEE.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -62,8 +58,6 @@ int64_t tee_drv_ioctl(int64_t fd, uint32_t cmd_id, const void *param, uint32_t p
 
 Cancels an operation.
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -90,8 +84,6 @@ int64_t tee_drv_close(int64_t fd)
 **Description**
 
 Open the specified driver in the TEE.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

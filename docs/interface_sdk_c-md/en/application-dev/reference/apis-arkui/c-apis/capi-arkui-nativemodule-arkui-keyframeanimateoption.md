@@ -6,7 +6,7 @@ typedef struct ArkUI_KeyframeAnimateOption ArkUI_KeyframeAnimateOption
 
 ## Overview
 
-Defines a keyframe animation option, which is used as an input parameter of the keyframe animation API. The related APIs must be called on the main thread.
+Defines the keyframe animation parameter object.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

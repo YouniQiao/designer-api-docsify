@@ -6,8 +6,6 @@
 
 **库：** libace_ndk.z.so
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 **相关模块：** [ArkUI_NativeModule](capi-arkui-nativemodule.md)
@@ -18,7 +16,7 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [ArkUI_TextInputType](#arkui_textinputtype) | ArkUI_TextInputType | 定义单行文本输入类型枚举值。 |
+| [ArkUI_TextInputType](#arkui_textinputtype) | ArkUI_TextInputType | 定义单行文本输入法类型枚举值。 |
 | [ArkUI_CancelButtonStyle](#arkui_cancelbuttonstyle) | ArkUI_CancelButtonStyle | 定义清除按钮样式枚举值。 |
 | [ArkUI_TextInputContentType](#arkui_textinputcontenttype) | ArkUI_TextInputContentType | 定义自动填充类型。 |
 | [ArkUI_TextInputStyle](#arkui_textinputstyle) | ArkUI_TextInputStyle | 定义输入框风格。 |
@@ -33,24 +31,22 @@ enum ArkUI_TextInputType
 
 **描述：**
 
-定义单行文本输入类型枚举值。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
+定义单行文本输入法类型枚举值。
 
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_TEXTINPUT_TYPE_NORMAL = 0 | 基本输入模式，无特殊限制。 |
-| ARKUI_TEXTINPUT_TYPE_NUMBER = 2 | 纯数字输入模式。 |
-| ARKUI_TEXTINPUT_TYPE_PHONE_NUMBER = 3 | 电话号码输入模式。<br>支持输入数字、空格、+ 、-、*、#、(、)，长度不限。 |
-| ARKUI_TEXTINPUT_TYPE_EMAIL = 5 | 邮箱地址输入模式。<br>支持数字、字母、下划线、小数点、!、#、$、%、&、'、*、+、-、/、=、?、^、`、{、\|、}、~以及@字符（只能存在一个@字符）。邮箱地址格式需符合基本规范：@字符前为用户名部分，@ 字符后为域名部分。 |
-| ARKUI_TEXTINPUT_TYPE_PASSWORD = 7 | 密码输入模式。<br>默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。<br>TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。 |
-| ARKUI_TEXTINPUT_TYPE_NUMBER_PASSWORD = 8 | 纯数字密码输入模式。<br>默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。<br>TV设备上输入框末尾默认不显示小眼睛图标， 其他设备输入框末尾默认显示小眼睛图标。 |
-| ARKUI_TEXTINPUT_TYPE_SCREEN_LOCK_PASSWORD = 9 | 锁屏应用密码输入模式。支持输入数字、字母、下划线、空格、特殊字符。密码显示小眼睛图标并且默认会将文字变成圆点，从API version 12开始，Wearable设备上输入文字直接显示为圆点。密码输入模式不支持下划线样式。 |
-| ARKUI_TEXTINPUT_TYPE_USER_NAME = 10 | 用户名输入模式，无特殊限制。<br>在已启用密码保险箱的情况下，支持用户名的自动保存和自动填充。 |
-| ARKUI_TEXTINPUT_TYPE_NEW_PASSWORD = 11 | 新密码输入模式。<br>默认输入文字短暂显示后变成圆点。从API version 12开始，PC/2in1设备上输入文字直接显示为圆点。<br>TV设备上输入框末尾默认不显示小眼睛图标，其他设备输入框末尾默认显示小眼睛图标。 |
-| ARKUI_TEXTINPUT_TYPE_NUMBER_DECIMAL = 12 | 带小数点的数字输入模式。<br>支持数字，小数点（只能存在一个小数点）。不支持负数（包括负数整数和负数小数）。 |
+| ARKUI_TEXTINPUT_TYPE_NORMAL = 0 | 基本输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_NUMBER = 2 | 纯数字模式。 |
+| ARKUI_TEXTINPUT_TYPE_PHONE_NUMBER = 3 | 电话号码输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_EMAIL = 5 | 邮箱地址输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_PASSWORD = 7 | 密码输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_NUMBER_PASSWORD = 8 | 纯数字密码输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_SCREEN_LOCK_PASSWORD = 9 | 锁屏应用密码输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_USER_NAME = 10 | 用户名输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_NEW_PASSWORD = 11 | 新密码输入模式。 |
+| ARKUI_TEXTINPUT_TYPE_NUMBER_DECIMAL = 12 | 带小数点的数字输入模式。 |
 | ARKUI_TEXTINPUT_TYPE_ONE_TIME_CODE = 14 |  |
 
 ### ArkUI_CancelButtonStyle
@@ -63,15 +59,13 @@ enum ArkUI_CancelButtonStyle
 
 定义清除按钮样式枚举值。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_CANCELBUTTON_STYLE_CONSTANT = 0 | 清除按钮常显样式。适用于需要始终显示清除按钮的场景，如搜索框等需要频繁清除内容的输入框。 |
-| ARKUI_CANCELBUTTON_STYLE_INVISIBLE | 清除按钮常隐样式。适用于不需要显示清除按钮的场景。 |
-| ARKUI_CANCELBUTTON_STYLE_INPUT | 清除按钮输入样式。即在有输入内容时显示清除按钮，无输入内容时隐藏清除按钮。适用于按需显示清除按钮的场景，为推荐使用的默认行为。 |
+| ARKUI_CANCELBUTTON_STYLE_CONSTANT = 0 | 清除按钮常显样式。 |
+| ARKUI_CANCELBUTTON_STYLE_INVISIBLE | 清除按钮常隐样式。 |
+| ARKUI_CANCELBUTTON_STYLE_INPUT | 清除按钮输入样式。 |
 
 ### ArkUI_TextInputContentType
 
@@ -82,8 +76,6 @@ enum ArkUI_TextInputContentType
 **描述：**
 
 定义自动填充类型。
-
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
 
 **起始版本：** 12
 
@@ -133,13 +125,11 @@ enum ArkUI_TextInputStyle
 
 定义输入框风格。
 
-**系统能力：** SystemCapability.ArkUI.ArkUI.Full
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
 | -- | -- |
-| ARKUI_TEXTINPUT_STYLE_DEFAULT = 0 | 默认风格，光标宽度为1.5vp，选中底板高度与字体大小相关。适用于大多数输入框场景。 |
-| ARKUI_TEXTINPUT_STYLE_INLINE | 内联输入风格，文本选中底板高度与输入框高度相同。适用于输入框高度固定且需要文本选中底板高度与输入框高度一致的场景，如紧凑布局或内联编辑的输入框。 |
+| ARKUI_TEXTINPUT_STYLE_DEFAULT = 0 | 默认风格，光标宽1.5vp，光标高度与文本选中底板高度和字体大小相关。 |
+| ARKUI_TEXTINPUT_STYLE_INLINE | 内联输入风格。文本选中底板高度与输入框高度相同。 |
 
 

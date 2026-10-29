@@ -6,8 +6,6 @@ Defines audio and video metadata keys.
 
 **Library**: libavmedia_base.so
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 23
 
 **Related module**: [AVMediaBase](capi-avmediabase.md)

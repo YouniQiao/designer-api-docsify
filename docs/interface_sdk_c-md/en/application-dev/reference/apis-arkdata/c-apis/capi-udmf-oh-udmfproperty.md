@@ -6,7 +6,7 @@ typedef struct OH_UdmfProperty OH_UdmfProperty
 
 ## Overview
 
-Defines a struct for a data record property in a unified data object.
+Describes some property parameters of unified data.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

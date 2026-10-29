@@ -8,8 +8,6 @@
 
 **库：** libtransient_task.so
 
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **起始版本：** 13
 
 **相关模块：** [TransientTask](capi-transienttask.md)
@@ -37,8 +35,6 @@ int32_t OH_BackgroundTaskManager_RequestSuspendDelay(const char* reason, Transie
 
 申请短时任务。用于在应用进入后台或被挂起时，继续执行一些需要短时间的后台操作，如数据同步、状态保存等场景。
 
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **起始版本：** 13
 
 **参数：**
@@ -65,8 +61,6 @@ int32_t OH_BackgroundTaskManager_GetRemainingDelayTime(int32_t requestId, int32_
 
 获取本次短时任务的剩余时间。
 
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **起始版本：** 13
 
 **参数：**
@@ -92,8 +86,6 @@ int32_t OH_BackgroundTaskManager_CancelSuspendDelay(int32_t requestId)
 
 取消短时任务。
 
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
-
 **起始版本：** 13
 
 **参数：**
@@ -117,8 +109,6 @@ int32_t OH_BackgroundTaskManager_GetTransientTaskInfo(TransientTask_TransientTas
 **描述：**
 
 获取所有短时任务信息，如当日剩余总配额等。
-
-**系统能力：** SystemCapability.ResourceSchedule.BackgroundTaskManager.TransientTask
 
 **起始版本：** 20
 

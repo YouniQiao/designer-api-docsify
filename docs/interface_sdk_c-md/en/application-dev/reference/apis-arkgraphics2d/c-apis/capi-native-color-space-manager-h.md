@@ -6,8 +6,6 @@ This file declares the functions for creating and using a color space.
 
 **Library**: libnative_color_space_manager.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **Since**: 13
 
 **Related module**: [NativeColorSpaceManager](capi-nativecolorspacemanager.md)
@@ -50,8 +48,6 @@ enum ColorSpaceName
 **Description**
 
 Defines an enum for the color space names.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Since**: 13
 
@@ -104,8 +100,6 @@ OH_NativeColorSpaceManager* OH_NativeColorSpaceManager_CreateFromName(ColorSpace
 
 Creates an **OH_NativeColorSpaceManager** instance based on a color space name. <br>A new **OH_NativeColorSpaceManager** instance is created each time this function is called.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -129,8 +123,6 @@ OH_NativeColorSpaceManager* OH_NativeColorSpaceManager_CreateFromPrimariesAndGam
 **Description**
 
 Creates an **OH_NativeColorSpaceManager** instance based on the color primaries and gamma value. <br>A new **OH_NativeColorSpaceManager** instance is created each time this function is called.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Since**: 13
 
@@ -157,8 +149,6 @@ void OH_NativeColorSpaceManager_Destroy(OH_NativeColorSpaceManager* nativeColorS
 
 Destroys an **OH_NativeColorSpaceManager** instance. When the OH_NativeColorSpaceManager instance is no longer needed, you need to call this function to destroy the instance to release the memory.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -176,8 +166,6 @@ int OH_NativeColorSpaceManager_GetColorSpaceName(OH_NativeColorSpaceManager* nat
 **Description**
 
 Obtains the color space name.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Since**: 13
 
@@ -203,8 +191,6 @@ WhitePointArray OH_NativeColorSpaceManager_GetWhitePoint(OH_NativeColorSpaceMana
 
 Obtains the white points.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -228,8 +214,6 @@ float OH_NativeColorSpaceManager_GetGamma(OH_NativeColorSpaceManager* nativeColo
 **Description**
 
 Obtains the gamma value.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.ColorManager.Core
 
 **Since**: 13
 

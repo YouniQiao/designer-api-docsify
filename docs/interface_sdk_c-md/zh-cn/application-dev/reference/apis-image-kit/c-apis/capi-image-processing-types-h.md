@@ -6,8 +6,6 @@
 
 **库：** libimage_processing.so
 
-**系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
-
 **起始版本：** 13
 
 **相关模块：** [ImageProcessing](capi-imageprocessing.md)
@@ -53,8 +51,6 @@ enum ImageDetailEnhancer_QualityLevel
 
 质量级别，用于细节增强能力。 <br>键参数的值IMAGE_DETAIL_ENHANCER_PARAMETER_KEY_QUALITY_LEVEL。
 
-**系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
-
 **起始版本：** 13
 
 | 枚举项 | 描述 |
@@ -78,8 +74,6 @@ enum ImageProcessing_ErrorCode
 **描述：**
 
 图片处理接口错误码说明。
-
-**系统能力：** SystemCapability.Multimedia.VideoProcessingEngine
 
 **起始版本：** 13
 

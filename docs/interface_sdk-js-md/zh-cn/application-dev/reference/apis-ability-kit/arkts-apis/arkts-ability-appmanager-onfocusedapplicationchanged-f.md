@@ -42,4 +42,4 @@ function onFocusedApplicationChanged(observer: FocusedApplicationObserver): numb
 | --- | --- |
 | [201](../../errorcode-universal.md#201-api权限校验失败) | Permission verification failed. The application does not have the permission required to call the API. |
 | [16000050](../errorcode-ability.md#16000050-内部错误) | Connect to system server failed. |
-| 16000165 | The number of registered observers for the current application has reached the upper limit. |
+| [16000165](../errorcode-ability.md#16000165-应用注册的观察者数量已达到上限) | The number of registered observers for the current application has reached the upper limit. |

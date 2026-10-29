@@ -6,8 +6,6 @@
 
 **库：** libnet_connection.so
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
 **相关模块：** [NetConnection](capi-netconnection.md)
@@ -93,8 +91,6 @@ enum NetConn_NetCap
 
 网络能力集。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -117,8 +113,6 @@ enum NetConn_NetBearerType
 
 网络载体类型。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -138,8 +132,6 @@ enum NetConn_ErrorCode
 **描述：**
 
 网络连接返回值错误码。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 15
 
@@ -161,8 +153,6 @@ enum NetConn_PacketsType
 
 枚举跟踪路由的数据包类型。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 20
 
 | 枚举项 | 描述 |
@@ -182,8 +172,6 @@ typedef int (*OH_NetConn_CustomDnsResolver)(const char *host, const char *serv, 
 **描述：**
 
 指向自定义DNS解析器的指针。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 11
 
@@ -206,8 +194,6 @@ typedef void (*OH_NetConn_AppHttpProxyChange)(NetConn_HttpProxy *proxy)
 
 应用的http代理信息变化回调。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -225,8 +211,6 @@ typedef void (*OH_NetConn_GlobalHttpProxyRefreshCallback)(int32_t result, const 
 **描述：**
 
 全局HTTP代理重新认证结果的回调。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 26.0.0
 
@@ -248,8 +232,6 @@ typedef void (*OH_NetConn_NetworkAvailable)(NetConn_NetHandle *netHandle)
 
 网络可用回调。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -267,8 +249,6 @@ typedef void (*OH_NetConn_NetCapabilitiesChange)(NetConn_NetHandle *netHandle, N
 **描述：**
 
 网络能力集变更回调。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 12
 
@@ -289,8 +269,6 @@ typedef void (*OH_NetConn_NetConnectionPropertiesChange)(NetConn_NetHandle *netH
 
 网络连接属性变更回调。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -310,8 +288,6 @@ typedef void (*OH_NetConn_NetLost)(NetConn_NetHandle *netHandle)
 
 网络断开回调。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 **参数：**
@@ -330,8 +306,6 @@ typedef void (*OH_NetConn_NetUnavailable)(void)
 
 网络不可用回调，在指定的超时时间内网络未激活时触发该回调，如果未设置超时时间则不会触发该回调。
 
-**系统能力：** SystemCapability.Communication.NetManager.Core
-
 **起始版本：** 12
 
 ### OH_NetConn_NetBlockStatusChange()
@@ -343,8 +317,6 @@ typedef void (*OH_NetConn_NetBlockStatusChange)(NetConn_NetHandle *netHandle, bo
 **描述：**
 
 网络阻塞状态变更回调。
-
-**系统能力：** SystemCapability.Communication.NetManager.Core
 
 **起始版本：** 12
 

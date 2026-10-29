@@ -6,8 +6,6 @@ Provide environment APIS.
 
 **Library**: libohenvironment.so
 
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
-
 **Since**: 12
 
 **Related module**: [Environment](capi-environment.md)
@@ -34,8 +32,6 @@ FileManagement_ErrCode OH_Environment_GetUserDownloadDir(char **result)
 
 Obtains the sandbox path of the Download root directory.
 
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
-
 **Since**: 12
 
 **Parameters**:
@@ -60,8 +56,6 @@ FileManagement_ErrCode OH_Environment_GetUserDesktopDir(char **result)
 
 Obtains the sandbox path of the Desktop root directory.
 
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
-
 **Since**: 12
 
 **Parameters**:
@@ -85,8 +79,6 @@ FileManagement_ErrCode OH_Environment_GetUserDocumentDir(char **result)
 **Description**
 
 Obtains the sandbox path of the Document root directory.
-
-**System capability**: SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **Since**: 12
 

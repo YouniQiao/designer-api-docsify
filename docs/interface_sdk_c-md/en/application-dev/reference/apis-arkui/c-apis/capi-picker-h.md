@@ -2,13 +2,9 @@
 
 ## Overview
 
-Defines **Picker** node types for **NativeNode** APIs, which support various picker components including the date picker and text picker. It is applicable to scenarios requiring scroll‑selection implementation at the native layer. It provides rich style configuration and data‑linkage capabilities for you to flexibly construct diverse selection interactions.
-
-**Include**: <arkui/node_attributes/picker.h>
+Defines **Picker** node types for **NativeNode** APIs.
 
 **Library**: libace_ndk.z.so
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -20,13 +16,13 @@ Defines **Picker** node types for **NativeNode** APIs, which support various pic
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ARKUI_TextPickerRangeContent](capi-arkui-nativemodule-arkui-textpickerrangecontent.md) | ARKUI_TextPickerRangeContent | Defines the image resource supported by a single-column text picker. This struct is used to display both images and text in the **TextPicker** component, and is suitable for scenarios where icons and text combinations need to be displayed in a single-column text picker. It supports custom icon paths and text content. Each item can be set with an independent icon and text, or only one of them, helping you implement flexible image-text picker configurations. |
-| [ARKUI_TextPickerCascadeRangeContent](capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md) | ARKUI_TextPickerCascadeRangeContent | Defines a multi-column text cascade picker, which describes the hierarchical data structure of the multi- column text cascade picker. This struct forms a tree structure through children members to support multi-level cascade selection. It is suitable for scenarios that require displaying hierarchical data such as province/city/ district and year/month/day, and can simplify the development of the multi-level text cascade picker. |
-| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md) | ArkUI_PickerIndicatorBackground | Defines the style parameter of the background-style indicator of the selected item. The background-style indicator highlights the selected item with a background color and rounded corners, including the background color and corner radius of the selected item.<br>Usage scenarios: |
-| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md) | ArkUI_PickerIndicatorDivider | Defines the style parameter of the divider-style indicator. This struct supports customizing the stroke width of the divider, color of the divider, and distance between the divider and the container edges. It applies to scenarios where the appearance of the **Picker** control's divider needs to be beautified. You can configure this struct to achieve personalized divider effects, improving the aesthetics of the UI and the user experience. |
-| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle | Defines the style of the selected item indicator. It contains attribute configurations such as the indicator color and size, used to enhance the visual effect of the selected item in the **Picker** component and improve the user interaction experience. |
-| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md) | ArkUI_TextPickerRangeContentArray | Defines the option content array of a text picker. This struct is used to configure the option list of a text picker, setting the icon and text content of each option by index. It applies to scenarios such as date selection, time selection, and list selection that require displaying multiple options for users to select by scrolling. |
-| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md) | ArkUI_TextCascadePickerRangeContentArray | Defines an option array of a multi-column text cascade picker. This struct is used to configure the hierarchical data of a multi-column text cascade picker, that is, configure the text and child-level data of each column's options through indexes. It is applicable to scenarios that require multi-column data cascade, such as province-city-district cascade and product category selection. |
+| [ARKUI_TextPickerRangeContent](capi-arkui-nativemodule-arkui-textpickerrangecontent.md) | ARKUI_TextPickerRangeContent | Defines the option content supported by the single-column text picker, including text and image resources. |
+| [ARKUI_TextPickerCascadeRangeContent](capi-arkui-nativemodule-arkui-textpickercascaderangecontent.md) | ARKUI_TextPickerCascadeRangeContent | Defines a multi-column cascade picker. |
+| [ArkUI_PickerIndicatorBackground](capi-arkui-nativemodule-arkui-pickerindicatorbackground.md) | ArkUI_PickerIndicatorBackground | Defines the style parameter of the background-style indicator of the selected item. |
+| [ArkUI_PickerIndicatorDivider](capi-arkui-nativemodule-arkui-pickerindicatordivider.md) | ArkUI_PickerIndicatorDivider | Defines the style parameter of the divider-style indicator. |
+| [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | ArkUI_PickerIndicatorStyle | Defines the style of the selected item indicator. |
+| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md) | ArkUI_TextPickerRangeContentArray | Defines the data list for the text picker. |
+| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md) | ArkUI_TextCascadePickerRangeContentArray | Defines an array of multi-column cascade pickers. |
 
 ### Enum
 
@@ -41,16 +37,16 @@ Defines **Picker** node types for **NativeNode** APIs, which support various pic
 
 | Name | Description |
 | -- | -- |
-| [ArkUI_TextPickerRangeContentArray* OH_ArkUI_TextPickerRangeContentArray_Create(int32_t length)](#oh_arkui_textpickerrangecontentarray_create) | Creates an **ArkUI_TextPickerRangeContentArray** array object, which is used to construct the data list of a single-column sliding data picker, commonly seen in scenarios such as date selection, time selection, and list selection. After creation, you must call **OH_ArkUI_TextPickerRangeContentArray_Destroy** to release resources after use; otherwise, a memory leak occurs. |
-| [void OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* icon, int32_t index)](#oh_arkui_textpickerrangecontentarray_seticonatindex) | Sets the icon data at the specified position of the **ArkUI_TextPickerRangeContentArray** array, which is used to set options with icons in a single-column text picker, commonly seen in scenarios such as mixed text-and- image lists and option lists with icon hints. |
-| [void OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textpickerrangecontentarray_settextatindex) | Sets the text data at the specified position of the **ArkUI_TextPickerRangeContentArray** array, which is used to set the text content in a data picker. This is an essential step for constructing picker options. This API is commonly used in scenarios such as setting date text in a date picker, setting city names in a city picker, and setting category names in a product category picker. |
-| [void OH_ArkUI_TextPickerRangeContentArray_Destroy(ArkUI_TextPickerRangeContentArray* handle)](#oh_arkui_textpickerrangecontentarray_destroy) | Destroys the **ArkUI_TextPickerRangeContentArray** array object. This API must be used in pair with **<br>OH_ArkUI_TextPickerRangeContentArray_Create** to release the created array object resources. |
-| [ArkUI_TextCascadePickerRangeContentArray* OH_ArkUI_TextCascadePickerRangeContentArray_Create(int32_t length)](#oh_arkui_textcascadepickerrangecontentarray_create) | Creates an **ArkUI_TextCascadePickerRangeContentArray** array object, which is used to construct a multi-column cascade data picker, commonly seen in scenarios such as year-month-day linkage selection and province-city-district three-level linkage selection. After creation, you must call **OH_ArkUI_TextCascadePickerRangeContentArray_Destroy** to release resources after use; otherwise, a memory leak occurs. |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_settextatindex) | Sets the text data at the specified position of the **ArkUI_TextCascadePickerRangeContentArray** array, which is used to set the text content of a multi-column cascade picker. This API is commonly used in scenarios such as setting province names in a province-city-district three-level cascade picker, setting years in a year-month-day cascade picker, and setting brand names in a brand-vehicle model cascade picker. |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, ArkUI_TextCascadePickerRangeContentArray* child, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_setchildatindex) | Sets the child data at the specified position of the **ArkUI_TextCascadePickerRangeContentArray** array, which is used to set the child-level data of a multi-column cascade picker to implement the linkage effect. This API is commonly used in scenarios such as setting the city-level data corresponding to a province in a province-city- district three-level cascade picker, setting the date data corresponding to a month in a year-month-day cascade picker, and setting the model list corresponding to a brand in a brand-vehicle model cascade picker. |
-| [void OH_ArkUI_TextCascadePickerRangeContentArray_Destroy(ArkUI_TextCascadePickerRangeContentArray* handle)](#oh_arkui_textcascadepickerrangecontentarray_destroy) | Destroys the **ArkUI_TextCascadePickerRangeContentArray** array object. This API must be used in pair with **<br>OH_ArkUI_TextCascadePickerRangeContentArray_Create** to release the created array object resources. |
-| [ArkUI_PickerIndicatorStyle* OH_ArkUI_PickerIndicatorStyle_Create(ArkUI_PickerIndicatorType type)](#oh_arkui_pickerindicatorstyle_create) | Creates a style instance of the selected item indicator, which is used to highlight the option currently selected by the user and improve the user interaction experience. After creation, you must call **<br>OH_ArkUI_PickerIndicatorStyle_Dispose** to release resources after use; otherwise, a memory leak occurs. |
-| [void OH_ArkUI_PickerIndicatorStyle_Dispose(ArkUI_PickerIndicatorStyle* style)](#oh_arkui_pickerindicatorstyle_dispose) | Disposes of the style instance of the selected item indicator. This API must be used in pair with **<br>OH_ArkUI_PickerIndicatorStyle_Create** to release the created style instance resources. |
+| [ArkUI_TextPickerRangeContentArray* OH_ArkUI_TextPickerRangeContentArray_Create(int32_t length)](#oh_arkui_textpickerrangecontentarray_create) | Creates an object of the TextPickerRangeContent array. |
+| [void OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* icon, int32_t index)](#oh_arkui_textpickerrangecontentarray_seticonatindex) | Configures the icon data at a specified position in the **TextPickerRangeContent** array. |
+| [void OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex(ArkUI_TextPickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textpickerrangecontentarray_settextatindex) | Configures the text data at a specified position in the **TextPickerRangeContent** array. |
+| [void OH_ArkUI_TextPickerRangeContentArray_Destroy(ArkUI_TextPickerRangeContentArray* handle)](#oh_arkui_textpickerrangecontentarray_destroy) | Destroys a **TextPickerRangeContent** array object. |
+| [ArkUI_TextCascadePickerRangeContentArray* OH_ArkUI_TextCascadePickerRangeContentArray_Create(int32_t length)](#oh_arkui_textcascadepickerrangecontentarray_create) | Creates an object of the TextCascadePickerRangeContent array. |
+| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, char* text, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_settextatindex) | Configures the text data at a specified position in the **TextCascadePickerRangeContent** array. |
+| [void OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex(ArkUI_TextCascadePickerRangeContentArray* handle, ArkUI_TextCascadePickerRangeContentArray* child, int32_t index)](#oh_arkui_textcascadepickerrangecontentarray_setchildatindex) | Configures the child data at a specified position in the **TextCascadePickerRangeContent** array. |
+| [void OH_ArkUI_TextCascadePickerRangeContentArray_Destroy(ArkUI_TextCascadePickerRangeContentArray* handle)](#oh_arkui_textcascadepickerrangecontentarray_destroy) | Destroys a **TextCascadePickerRangeContent** array object. |
+| [ArkUI_PickerIndicatorStyle* OH_ArkUI_PickerIndicatorStyle_Create(ArkUI_PickerIndicatorType type)](#oh_arkui_pickerindicatorstyle_create) | Creates a style instance of the selected item indicator. |
+| [void OH_ArkUI_PickerIndicatorStyle_Dispose(ArkUI_PickerIndicatorStyle* style)](#oh_arkui_pickerindicatorstyle_dispose) | Disposes of the style instance of the selected item indicator. |
 
 ## Enum type description
 
@@ -63,8 +59,6 @@ enum ArkUI_DatePickerMode
 **Description**
 
 Enumerates the column display modes of the date picker.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 18
 
@@ -83,8 +77,6 @@ enum ArkUI_TextPickerRangeType
 **Description**
 
 Enumerates the types of the text picker.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -105,8 +97,6 @@ enum ArkUI_CalendarAlignment
 
 Enumerates the alignment modes between the calendar picker and the entry component.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 12
 
 | Enum item | Description |
@@ -124,8 +114,6 @@ enum ArkUI_PickerIndicatorType
 **Description**
 
 Enumerates the indicator types of the selected item.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 23
 
@@ -145,9 +133,7 @@ ArkUI_TextPickerRangeContentArray* OH_ArkUI_TextPickerRangeContentArray_Create(i
 
 **Description**
 
-Creates an **ArkUI_TextPickerRangeContentArray** array object, which is used to construct the data list of a single-column sliding data picker, commonly seen in scenarios such as date selection, time selection, and list selection. After creation, you must call **OH_ArkUI_TextPickerRangeContentArray_Destroy** to release resources after use; otherwise, a memory leak occurs.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Creates an object of the TextPickerRangeContent array.
 
 **Since**: 19
 
@@ -157,13 +143,13 @@ Creates an **ArkUI_TextPickerRangeContentArray** array object, which is used to 
 
 | Parameter | Description |
 | -- | -- |
-| int32_t length | Length of the **ArkUI_TextPickerRangeContentArray** array. The value must be greater than 0. A null pointer is returned if a non-positive integer is passed in or creation fails. |
+| int32_t length | Length of the **TextPickerRangeContent** array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_TextPickerRangeContentArray*](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md) | Pointer to the **ArkUI_TextPickerRangeContentArray** array object (the array length is specified by the ** length** parameter). If a null pointer is returned, the creation fails. |
+| [ArkUI_TextPickerRangeContentArray*](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md) | Pointer to an empty **TextPickerRangeContent** array. |
 
 ### OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex()
 
@@ -173,9 +159,11 @@ void OH_ArkUI_TextPickerRangeContentArray_SetIconAtIndex(ArkUI_TextPickerRangeCo
 
 **Description**
 
-Sets the icon data at the specified position of the **ArkUI_TextPickerRangeContentArray** array, which is used to set options with icons in a single-column text picker, commonly seen in scenarios such as mixed text-and- image lists and option lists with icon hints.
+Configures the icon data at a specified position in the **TextPickerRangeContent** array.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+> **Note**:
+>
+> If an icon was already set at <b>index</b>, the previous buffer is released before assigning the new value.
 
 **Since**: 19
 
@@ -183,9 +171,9 @@ Sets the icon data at the specified position of the **ArkUI_TextPickerRangeConte
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **ArkUI_TextPickerRangeContentArray** array, which must first be created through **<br>OH_ArkUI_TextPickerRangeContentArray_Create**. |
-| char* icon | Pointer to the icon path, which supports a relative path or an absolute path. A relative path is relative to the application resource directory. The path must point to a valid icon resource file. |
-| int32_t index | Array index, with a value range of [0, Array length - 1], starting from 0. The value is not effective when out of range. If an icon was already set at <b>index</b>, the previous buffer is released before assigning the new value. |
+| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **TextPickerRangeContent** array. |
+| char* icon | Pointer to the icon path. |
+| int32_t index | Array index, starting from 0. |
 
 ### OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex()
 
@@ -195,9 +183,11 @@ void OH_ArkUI_TextPickerRangeContentArray_SetTextAtIndex(ArkUI_TextPickerRangeCo
 
 **Description**
 
-Sets the text data at the specified position of the **ArkUI_TextPickerRangeContentArray** array, which is used to set the text content in a data picker. This is an essential step for constructing picker options. This API is commonly used in scenarios such as setting date text in a date picker, setting city names in a city picker, and setting category names in a product category picker.
+Configures the text data at a specified position in the **TextPickerRangeContent** array.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+> **Note**:
+>
+> If text was already set at <b>index</b>, the previous buffer is released before assigning the new value.
 
 **Since**: 19
 
@@ -205,9 +195,9 @@ Sets the text data at the specified position of the **ArkUI_TextPickerRangeConte
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **ArkUI_TextPickerRangeContentArray** array, which must first be created through **<br>OH_ArkUI_TextPickerRangeContentArray_Create**. |
+| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **TextPickerRangeContent** array. |
 | char* text | Pointer to the text content. |
-| int32_t index | Array index, with a value range of [0, Array length - 1], starting from 0. The value is not effective when out of range. If text was already set at <b>index</b>, the previous buffer is released before assigning the new value. |
+| int32_t index | Position in the array, starting from 0. |
 
 ### OH_ArkUI_TextPickerRangeContentArray_Destroy()
 
@@ -217,9 +207,11 @@ void OH_ArkUI_TextPickerRangeContentArray_Destroy(ArkUI_TextPickerRangeContentAr
 
 **Description**
 
-Destroys the **ArkUI_TextPickerRangeContentArray** array object. This API must be used in pair with **<br>OH_ArkUI_TextPickerRangeContentArray_Create** to release the created array object resources.
+Destroys a **TextPickerRangeContent** array object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+> **Note**:
+>
+> After this call, <b>handle</b> must not be used. Do not pass pointers that were not returned by [OH_ArkUI_TextPickerRangeContentArray_Create](capi-picker-h.md#oh_arkui_textpickerrangecontentarray_create).
 
 **Since**: 19
 
@@ -227,7 +219,7 @@ Destroys the **ArkUI_TextPickerRangeContentArray** array object. This API must b
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **ArkUI_TextPickerRangeContentArray** array. After this call, <b>handle</b> must not be used. Do not pass pointers that were not returned by [OH_ArkUI_TextPickerRangeContentArray_Create](capi-picker-h.md#oh_arkui_textpickerrangecontentarray_create). |
+| [ArkUI_TextPickerRangeContentArray](capi-arkui-nativemodule-arkui-textpickerrangecontentarray.md)* handle | Pointer to the **TextPickerRangeContent** array. |
 
 ### OH_ArkUI_TextCascadePickerRangeContentArray_Create()
 
@@ -237,9 +229,7 @@ ArkUI_TextCascadePickerRangeContentArray* OH_ArkUI_TextCascadePickerRangeContent
 
 **Description**
 
-Creates an **ArkUI_TextCascadePickerRangeContentArray** array object, which is used to construct a multi-column cascade data picker, commonly seen in scenarios such as year-month-day linkage selection and province-city-district three-level linkage selection. After creation, you must call **OH_ArkUI_TextCascadePickerRangeContentArray_Destroy** to release resources after use; otherwise, a memory leak occurs.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Creates an object of the TextCascadePickerRangeContent array.
 
 **Since**: 19
 
@@ -249,13 +239,13 @@ Creates an **ArkUI_TextCascadePickerRangeContentArray** array object, which is u
 
 | Parameter | Description |
 | -- | -- |
-| int32_t length | Length of the **ArkUI_TextCascadePickerRangeContentArray** array. The value must be greater than 0. |
+| int32_t length | Length of the **TextPickerRangeContent** array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_TextCascadePickerRangeContentArray*](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md) | Pointer to the **ArkUI_TextCascadePickerRangeContentArray** array object (the array length is specified by the **length** parameter). If a null pointer is returned, the creation fails. |
+| [ArkUI_TextCascadePickerRangeContentArray*](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md) | Pointer to an empty **TextCascadePickerRangeContent** array. |
 
 ### OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex()
 
@@ -265,9 +255,11 @@ void OH_ArkUI_TextCascadePickerRangeContentArray_SetTextAtIndex(ArkUI_TextCascad
 
 **Description**
 
-Sets the text data at the specified position of the **ArkUI_TextCascadePickerRangeContentArray** array, which is used to set the text content of a multi-column cascade picker. This API is commonly used in scenarios such as setting province names in a province-city-district three-level cascade picker, setting years in a year-month-day cascade picker, and setting brand names in a brand-vehicle model cascade picker.
+Configures the text data at a specified position in the **TextCascadePickerRangeContent** array.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+> **Note**:
+>
+> If text was already set at <b>index</b>, the previous buffer is released before assigning the new value.
 
 **Since**: 19
 
@@ -275,9 +267,9 @@ Sets the text data at the specified position of the **ArkUI_TextCascadePickerRan
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the  **ArkUI_TextCascadePickerRangeContentArray** array, which must first be created through **OH_ArkUI_TextCascadePickerRangeContentArray_Create**. |
+| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the **TextCascadePickerRangeContentHandle** instance. |
 | char* text | Pointer to the text content. |
-| int32_t index | Array index, with a value range of [0, Array length - 1], starting from 0. The value is not effective when out of range. If text was already set at <b>index</b>, the previous buffer is released before assigning the new value. |
+| int32_t index | Position in the array, starting from 0. |
 
 ### OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex()
 
@@ -287,9 +279,7 @@ void OH_ArkUI_TextCascadePickerRangeContentArray_SetChildAtIndex(ArkUI_TextCasca
 
 **Description**
 
-Sets the child data at the specified position of the **ArkUI_TextCascadePickerRangeContentArray** array, which is used to set the child-level data of a multi-column cascade picker to implement the linkage effect. This API is commonly used in scenarios such as setting the city-level data corresponding to a province in a province-city- district three-level cascade picker, setting the date data corresponding to a month in a year-month-day cascade picker, and setting the model list corresponding to a brand in a brand-vehicle model cascade picker.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Configures the child data at a specified position in the **TextCascadePickerRangeContent** array.
 
 **Since**: 19
 
@@ -297,9 +287,9 @@ Sets the child data at the specified position of the **ArkUI_TextCascadePickerRa
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the  **ArkUI_TextCascadePickerRangeContentArray** array, which must first be created through **OH_ArkUI_TextCascadePickerRangeContentArray_Create**. |
-| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* child | Pointer to the child data list at the specified position of the cascade picker, which must first be created through **OH_ArkUI_TextCascadePickerRangeContentArray_Create**. |
-| int32_t index | Array index, with a value range of [0, Array length - 1], starting from 0. The value is not effective when out of range. |
+| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the **TextCascadePickerRangeContentHandle** instance. |
+| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* child | Pointer to the child node array. |
+| int32_t index | Position in the array, starting from 0. |
 
 ### OH_ArkUI_TextCascadePickerRangeContentArray_Destroy()
 
@@ -309,9 +299,11 @@ void OH_ArkUI_TextCascadePickerRangeContentArray_Destroy(ArkUI_TextCascadePicker
 
 **Description**
 
-Destroys the **ArkUI_TextCascadePickerRangeContentArray** array object. This API must be used in pair with **<br>OH_ArkUI_TextCascadePickerRangeContentArray_Create** to release the created array object resources.
+Destroys a **TextCascadePickerRangeContent** array object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+> **Note**:
+>
+> Do not call [OH_ArkUI_TextCascadePickerRangeContentArray_Destroy](capi-picker-h.md#oh_arkui_textcascadepickerrangecontentarray_destroy) on a <b>child</b> while it is still stored in a parent's {@code children}.
 
 **Since**: 19
 
@@ -319,7 +311,7 @@ Destroys the **ArkUI_TextCascadePickerRangeContentArray** array object. This API
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the  **ArkUI_TextCascadePickerRangeContentArray** array. After this call, <b>handle</b> must not be used. Do not pass pointers that were not returned by [OH_ArkUI_TextCascadePickerRangeContentArray_Create](capi-picker-h.md#oh_arkui_textcascadepickerrangecontentarray_create). Do not call [OH_ArkUI_TextCascadePickerRangeContentArray_Destroy](capi-picker-h.md#oh_arkui_textcascadepickerrangecontentarray_destroy) on a <b>child</b> while it is still stored in a parent's {@code children}. |
+| [ArkUI_TextCascadePickerRangeContentArray](capi-arkui-nativemodule-arkui-textcascadepickerrangecontentarray.md)* handle | Pointer to the **TextCascadePickerRangeContentHandle** instance. |
 
 ### OH_ArkUI_PickerIndicatorStyle_Create()
 
@@ -329,9 +321,7 @@ ArkUI_PickerIndicatorStyle* OH_ArkUI_PickerIndicatorStyle_Create(ArkUI_PickerInd
 
 **Description**
 
-Creates a style instance of the selected item indicator, which is used to highlight the option currently selected by the user and improve the user interaction experience. After creation, you must call **<br>OH_ArkUI_PickerIndicatorStyle_Dispose** to release resources after use; otherwise, a memory leak occurs.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Creates a style instance of the selected item indicator.
 
 **Since**: 23
 
@@ -339,13 +329,13 @@ Creates a style instance of the selected item indicator, which is used to highli
 
 | Parameter | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorType](capi-picker-h.md#arkui_pickerindicatortype) type | Type of the selected item indicator in the picker. |
+| [ArkUI_PickerIndicatorType](capi-picker-h.md#arkui_pickerindicatortype) type | Type of the selected item indicator. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [ArkUI_PickerIndicatorStyle*](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | Pointer to the **ArkUI_PickerIndicatorStyle** instance. If a null pointer is returned, the creation fails. The failure may be caused by a full address space or an unsupported type. |
+| [ArkUI_PickerIndicatorStyle*](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) | Pointer to the [ArkUI_PickerIndicatorStyle](capi-arkui-nativemodule-arkui-pickerindicatorstyle.md) instance. If a null pointer is returned, the creation fails. The possible cause is that the address space is full or the type is not supported. |
 
 ### OH_ArkUI_PickerIndicatorStyle_Dispose()
 
@@ -355,9 +345,7 @@ void OH_ArkUI_PickerIndicatorStyle_Dispose(ArkUI_PickerIndicatorStyle* style)
 
 **Description**
 
-Disposes of the style instance of the selected item indicator. This API must be used in pair with **<br>OH_ArkUI_PickerIndicatorStyle_Create** to release the created style instance resources.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Disposes of the style instance of the selected item indicator.
 
 **Since**: 23
 

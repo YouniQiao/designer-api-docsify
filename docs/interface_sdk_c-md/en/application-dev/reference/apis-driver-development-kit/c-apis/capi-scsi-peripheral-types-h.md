@@ -6,8 +6,6 @@ Provides the enum variables, structures, and macros used in the SCSI Peripheral 
 
 **Library**: libscsi.z.so
 
-**System capability**: SystemCapability.Driver.SCSI.Extension
-
 **Since**: 18
 
 **Related module**: [ScsiPeripheralDDK](capi-scsiperipheralddk.md)
@@ -63,8 +61,6 @@ enum ScsiPeripheral_DdkErrCode
 
 SCSI Peripheral DDK error codes.
 
-**System capability**: SystemCapability.Driver.SCSI.Extension
-
 **Since**: 18
 
 | Enum item | Description |
@@ -89,8 +85,6 @@ enum ScsiPeripheral_Status
 **Description**
 
 Enumerates the SCSI status codes used for the response.
-
-**System capability**: SystemCapability.Driver.SCSI.Extension
 
 **Since**: 18
 

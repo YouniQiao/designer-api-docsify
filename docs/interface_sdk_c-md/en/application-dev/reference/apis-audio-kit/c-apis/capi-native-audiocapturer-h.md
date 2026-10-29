@@ -6,8 +6,6 @@ Declare audio stream related interfaces for input type.
 
 **Library**: libohaudio.so
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Related module**: [OHAudio](capi-ohaudio.md)
@@ -72,8 +70,6 @@ OH_AudioStream_Result OH_AudioCapturer_Release(OH_AudioCapturer* capturer)
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Required permission**: ohos.permission.MICROPHONE
 
 **Since**: 10
@@ -97,8 +93,6 @@ OH_AudioStream_Result OH_AudioCapturer_Start(OH_AudioCapturer* capturer)
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Required permission**: ohos.permission.MICROPHONE
 
@@ -124,8 +118,6 @@ OH_AudioStream_Result OH_AudioCapturer_Pause(OH_AudioCapturer* capturer)
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Required permission**: ohos.permission.MICROPHONE
 
 **Since**: 10
@@ -149,8 +141,6 @@ OH_AudioStream_Result OH_AudioCapturer_Stop(OH_AudioCapturer* capturer)
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Required permission**: ohos.permission.MICROPHONE
 
@@ -176,8 +166,6 @@ OH_AudioStream_Result OH_AudioCapturer_Flush(OH_AudioCapturer* capturer)
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -199,8 +187,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetCurrentState(OH_AudioCapturer* capture
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
 
@@ -225,8 +211,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetLatencyMode(OH_AudioCapturer* capturer
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -249,8 +233,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetStreamId(OH_AudioCapturer* capturer, u
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
 
@@ -275,8 +257,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetSamplingRate(OH_AudioCapturer* capture
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -299,8 +279,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetChannelCount(OH_AudioCapturer* capture
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
 
@@ -325,8 +303,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetSampleFormat(OH_AudioCapturer* capture
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -349,8 +325,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetEncodingType(OH_AudioCapturer* capture
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
 
@@ -375,8 +349,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetCapturerInfo(OH_AudioCapturer* capture
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -400,8 +372,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetFrameSizeInCallback(OH_AudioCapturer* 
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -424,8 +394,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetTimestamp(OH_AudioCapturer* capturer, 
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 10
 
@@ -452,8 +420,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetFramesRead(OH_AudioCapturer* capturer,
 
 **Description**
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 10
 
 **Parameters**:
@@ -479,8 +445,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetOverflowCount(OH_AudioCapturer* captur
 
 Gets the overflow count on this stream.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -505,8 +469,6 @@ typedef void (*OH_AudioCapturer_OnReadDataCallback)(OH_AudioCapturer* capturer, 
 **Description**
 
 Called when audio data is available to read. This function is similar to OH_AudioCapturer_Callbacks_Struct.OH_AudioCapturer_OnReadData.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -534,8 +496,6 @@ typedef void (*OH_AudioCapturer_OnDeviceChangeCallback)(OH_AudioCapturer* captur
 
 Called when the input device of an AudioCapturer instance changes. This function is similar to OH_AudioCapturer_Callbacks_Struct.OH_AudioCapturer_OnStreamEvent.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -560,8 +520,6 @@ typedef void (*OH_AudioCapturer_OnInterruptCallback)(OH_AudioCapturer* capturer,
 **Description**
 
 Called when an interrupt event occurs in an AudioCapturer instance. This function is similar to OH_AudioCapturer_Callbacks_Struct.OH_AudioCapturer_OnInterruptEvent.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -589,8 +547,6 @@ typedef void (*OH_AudioCapturer_OnErrorCallback)(OH_AudioCapturer* capturer, voi
 
 Called when an error event occurs in an AudioCapturer instance. This function is similar to OH_AudioCapturer_Callbacks_Struct.OH_AudioCapturer_OnError.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -615,8 +571,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetFastStatus(OH_AudioCapturer* capturer,
 **Description**
 
 Gets audio capturer running status, check if it works in fast status.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 20
 
@@ -643,8 +597,6 @@ typedef void (*OH_AudioCapturer_OnFastStatusChange)(OH_AudioCapturer* capturer, 
 
 Callback function of fast status change event for audio capturer.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -665,8 +617,6 @@ typedef void (*OH_AudioCapturer_OnPlaybackCaptureStartCallback)(OH_AudioCapturer
 
 Callback function to get playback capture start result.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -684,8 +634,6 @@ OH_AudioStream_Result OH_AudioCapturer_RequestPlaybackCaptureStart(OH_AudioCaptu
 ```
 
 **Description**
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 23
 
@@ -713,8 +661,6 @@ OH_AudioStream_Result OH_AudioCapturer_SetMuteHint(OH_AudioCapturer* capturer, b
 
 Sets recording mute state to audio system. This method is used as a hint for power optimization, it does not mute the recording stream, only affects internal processing strategy. Audio system may disable some recording effects when application notifies its muted state to system. Mute hint state can only be set when current stream is in running state.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 24
 
 **Parameters**:
@@ -739,8 +685,6 @@ OH_AudioStream_Result OH_AudioCapturer_SetIndependentAudioSessionStrategy(OH_Aud
 **Description**
 
 Configure audio session strategy and behavior parameters to adjust the focus preemption policy. Each time you call this interface to set parameters, you need to call the interface [OH_AudioCapturer_Start](capi-native-audiocapturer-h.md#oh_audiocapturer_start) again for the settings to take effect.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 24
 
@@ -768,8 +712,6 @@ typedef void (*OH_AudioCapturer_SensitiveRecordPermitCallback)(OH_AudioCapturer*
 
 Callback used to receive when the sensitive warning message playback for cellular call recording is finished. The application must wait for the permitted result before starting cellular call recording.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -789,8 +731,6 @@ OH_AudioStream_Result OH_AudioCapturer_SetNoiseReductionMode(OH_AudioCapturer* c
 **Description**
 
 Sets noise reduction mode for current audio capturer. The supported mode should be obtained by getSupportedNoiseReductionModes. The actual effect may vary from different audio devices, and will be invalid when there are multiple direct streams running simultaneously. The mode can only be changed in created and stopped state.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 
@@ -817,8 +757,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetNoiseReductionMode(OH_AudioCapturer* c
 
 Gets the noise reduction mode for current audio capturer. The mode will only consider the default and setted status, audio input device and stream concurrency will not be considered.
 
-**System capability**: SystemCapability.Multimedia.Audio.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -843,8 +781,6 @@ OH_AudioStream_Result OH_AudioCapturer_GetSupportedNoiseReductionModes(OH_AudioC
 **Description**
 
 Gets all the supported noise reduction modes for current device platform. Currently the noise reduction effect is only supported when using [AUDIOSTREAM_SOURCE_TYPE_VOICE_MESSAGE](capi-native-audiostream-base-h.md#oh_audiostream_sourcetype), other supported usage may be extened later. The supported modes will only consider the audio format and device platform, audio input device and stream concurrency will not be considered.
-
-**System capability**: SystemCapability.Multimedia.Audio.Core
 
 **Since**: 26.0.0
 

@@ -6,8 +6,6 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **相关模块：** [Drawing](capi-drawing.md)
@@ -35,8 +33,6 @@ OH_Drawing_LineTypography* OH_Drawing_CreateLineTypography(OH_Drawing_Typography
 
 创建一个排版行对象[OH_Drawing_LineTypography](capi-drawing-oh-drawing-linetypography.md)的指针，排版行对象是保存文本内容以及样式的载体，可以用于计算单行排版信息。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -61,8 +57,6 @@ void OH_Drawing_DestroyLineTypography(OH_Drawing_LineTypography* lineTypography)
 
 释放排版行对象[OH_Drawing_LineTypography](capi-drawing-oh-drawing-linetypography.md)占用的内存。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 18
 
 **参数：**
@@ -80,8 +74,6 @@ size_t OH_Drawing_LineTypographyGetLineBreak(OH_Drawing_LineTypography* lineTypo
 **描述：**
 
 计算在限定排版宽度的情况下，从指定位置处开始可以排版的字符个数。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 
@@ -108,8 +100,6 @@ OH_Drawing_TextLine* OH_Drawing_LineTypographyCreateLine(OH_Drawing_LineTypograp
 **描述：**
 
 根据指定区间文本内容创建一个指向文本行对象[OH_Drawing_TextLine](capi-drawing-oh-drawing-textline.md)的指针。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 18
 

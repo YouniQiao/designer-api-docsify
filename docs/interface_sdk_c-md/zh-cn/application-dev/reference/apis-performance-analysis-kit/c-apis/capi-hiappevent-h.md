@@ -6,8 +6,6 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 
 **库：** libhiappevent_ndk.z.so
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **相关模块：** [HiAppEvent](capi-hiappevent.md)
@@ -20,7 +18,6 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 | -- | -- | -- |
 | [HiAppEvent_AppEventInfo](capi-hiappevent-hiappevent-appeventinfo.md) | - | 单个事件信息，包含事件领域、事件名称、事件类型和事件携带的用JSON格式字符串表示的自定义参数列表。 |
 | [HiAppEvent_AppEventGroup](capi-hiappevent-hiappevent-appeventgroup.md) | - | 一组事件信息，用于管理和组织具有相同名称的事件信息。该结构体包含事件组的名称，按名称分组的单个事件信息数组，事件数组的长度。 |
-| [OH_HiAppEvent_ExternalLog](capi-hiappevent-oh-hiappevent-externallog.md) | - | The OH_HiAppEvent_ExternalLog 结构体用于描述外部日志信息，包括 文件路径、生成时间戳、文件大小、系统事件类型。 |
 | [ParamList](capi-hiappevent-paramlist.md) | ParamList | 事件参数列表节点。用于组织和管理事件参数列表信息，通过ParamListNode可以构建参数链表，支持多参数事件的参数传递。 |
 | [HiAppEvent_Watcher](capi-hiappevent-hiappevent-watcher.md) | HiAppEvent_Watcher | 接收应用事件的事件观察者。用于对应用事件进行监听和处理。 |
 | [HiAppEvent_Processor](capi-hiappevent-hiappevent-processor.md) | HiAppEvent_Processor | 应用事件上报的处理者。用于事件的上报和管理，开发者可自定义数据处理配置，满足不同的数据处理需求。 |
@@ -33,7 +30,6 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 | [HiAppEvent_ErrorCode](#hiappevent_errorcode) | HiAppEvent_ErrorCode | 错误码定义。 |
 | [EventType](#eventtype) | EventType | 事件类型。建议开发者根据不同的使用场景选择不同的事件类型。 |
 | [OH_HiAppEvent_FrameworkType](#oh_hiappevent_frameworktype) | OH_HiAppEvent_FrameworkType | 应用框架类型。建议开发者根据实际的使用场景选择对应的应用框架类型。 |
-| [OH_HiAppEvent_SysEvent](#oh_hiappevent_sysevent) | OH_HiAppEvent_SysEvent | 系统事件类型。<br> *建议根据不同的使用场景选择不同的系统事件类型。 |
 
 ### 函数
 
@@ -87,10 +83,8 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 | [HiAppEvent_Config* OH_HiAppEvent_CreateConfig(void)](#oh_hiappevent_createconfig) | - | 创建一个指向设置系统事件自定义规格的配置对象的指针。注意：创建的指向设置系统事件自定义规格的配置对象的指针不再使用后，必须通过[OH_HiAppEvent_DestroyConfig](capi-hiappevent-h.md#oh_hiappevent_destroyconfig)接口进行销毁。 |
 | [void OH_HiAppEvent_DestroyConfig(HiAppEvent_Config* config)](#oh_hiappevent_destroyconfig) | - | 销毁已创建的配置对象。注意：已创建的配置对象不再使用后，需要将其销毁，释放内存，防止内存泄漏，销毁后需要将对应指针置空。 |
 | [int OH_HiAppEvent_SetConfigItem(HiAppEvent_Config* config, const char* itemName, const char* itemValue)](#oh_hiappevent_setconfigitem) | - | 设置配置对象中的配置项。 |
-| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | 事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： **MAIN_THREAD_JANK**。 **MAIN_THREAD_JANK_V2**。 **EVENT_APP_CRASH**，从API version 24开始支持该事件。 |
+| [int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)](#oh_hiappevent_seteventconfig) | - | 事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： MAIN_THREAD_JANK（参数配置详见主线程超时事件检测） MAIN_THREAD_JANK_V2（参数配置详见主线程超时事件检测） EVENT_APP_CRASH（参数配置详见崩溃事件介绍），从API version 24开始支持该事件。 |
 | [int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType frameworkType, const char* frameworkVersion, const char* description)](#oh_hiappevent_reportframeworkmemanomaly) | - | 报告应用框架内存占用异常的信息。 <br>该接口的调用频率限制为：1分钟最多能成功调用1次，超过频率限制会返回错误码HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED。 <br>当应用检测到应用框架内存占用异常，并且调用该接口返回操作成功时： <br>1. 若开发者已经订阅了事件领域domain为“HIVIEWDFX”，且事件名称names为“FW_MEM_ANOMALY”的应用事件，则应用中将会收到应用框架内存占用异常信息的回调。 <br>2. 若开发者未订阅该应用事件，则应用中将不会收到应用框架内存占用异常信息的回调。 |
-| [typedef void (\*OH_HiAppEvent_ExternalLogCapacityReachedCallback)(OH_HiAppEvent_ExternalLog* externalLogArr, uint32_t arrLen)](#oh_hiappevent_externallogcapacityreachedcallback) | OH_HiAppEvent_ExternalLogCapacityReachedCallback | OH_HiAppEvent_RegExternalLogCapacityReachedCallback函数的参数 当外部日志目录容量达到时，作为回调函数。 |
-| [int OH_HiAppEvent_RegExternalLogCapacityReachedCallback(OH_HiAppEvent_ExternalLogCapacityReachedCallback callback)](#oh_hiappevent_regexternallogcapacityreachedcallback) | - | 设置外部日志目录容量达到时的回调。 |
 
 ### 变量
 
@@ -99,7 +93,6 @@ HiAppEvent模块为应用开发者提供的事件订阅和事件打点函数定�
 | void (*OH_HiAppEvent_OnReceive)( const char* domain, const struct HiAppEvent_AppEventGroup* appEventGroups, uint32_t groupLen) | 事件观察者接收到事件后，将触发该回调，将事件内容传递给调用方。注意：回调中的指针所指对象的生命周期仅限于该回调函数内，请勿在该回调函数外直接使用该指针，若需缓存该信息，请对指针指向的内容进行深拷贝。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiAppEvent |
 | void (*OH_HiAppEvent_OnTrigger)(int row, int size) | 事件观察者收到事件后，若事件观察者中未设置OH_HiAppEvent_OnReceive回调，将保存该事件。 当保存的事件满足通过[OH_HiAppEvent_SetTriggerCondition](capi-hiappevent-h.md#oh_hiappevent_settriggercondition)设定的条件后，将触发该回调。回调结束后，当新保存的事件消息再次满足设定的条件后，将再次进行回调。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiAppEvent |
 | void (*OH_HiAppEvent_OnTake)(const char* const *events, uint32_t eventLen) | 使用[OH_HiAppEvent_TakeWatcherData](capi-hiappevent-h.md#oh_hiappevent_takewatcherdata)获取事件观察者接收到的事件时，事件观察者接收到的事件将通过该回调函数传递给调用者。注意：回调中的指针所指对象的生命周期仅限于该回调函数内， 请勿在该回调函数外直接使用该指针。若需缓存该信息，请对指针指向的内容进行深拷贝。<br>**起始版本：** 12<br>**系统能力：** SystemCapability.HiviewDFX.HiAppEvent |
-| void (*OH_HiAppEvent_ExternalLogCapacityReachedCallback)( OH_HiAppEvent_ExternalLog* externalLogArr, uint32_t arrLen) | OH_HiAppEvent_RegExternalLogCapacityReachedCallback函数的参数 当外部日志目录容量达到时，作为回调函数。<br>**起始版本：** 26.0.1<br>**系统能力：** SystemCapability.HiviewDFX.HiAppEvent |
 
 ## 枚举类型说明
 
@@ -112,8 +105,6 @@ enum HiAppEvent_ErrorCode
 **描述：**
 
 错误码定义。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 15
 
@@ -139,8 +130,6 @@ enum EventType
 
 事件类型。建议开发者根据不同的使用场景选择不同的事件类型。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 | 枚举项 | 描述 |
@@ -160,38 +149,13 @@ enum OH_HiAppEvent_FrameworkType
 
 应用框架类型。建议开发者根据实际的使用场景选择对应的应用框架类型。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_FLUTTER_DART = 0 | Flutter_dart类型。<br>**起始版本：** 26.0.0 |
-| OH_REACT_NATIVE_HERMES = 1 | React_native_hermes类型。<br>**起始版本：** 26.0.0 |
-| OH_KMP_KOTLIN = 2 | Kmp_kotlin类型。<br>**起始版本：** 26.0.0 |
-
-### OH_HiAppEvent_SysEvent
-
-```c
-enum OH_HiAppEvent_SysEvent
-```
-
-**描述：**
-
-系统事件类型。<br> *建议根据不同的使用场景选择不同的系统事件类型。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
-**起始版本：** 26.0.1
-
-| 枚举项 | 描述 |
-| -- | -- |
-| OH_APP_CRASH = 1 |  |
-| OH_APP_FREEZE = 2 |  |
-| OH_RESOURCE_OVERLIMIT = 3 |  |
-| OH_ADDRESS_SANITIZER = 4 |  |
-| OH_APP_HICOLLIE = 5 |  |
-| OH_CPU_USAGE_HIGH = 6 |  |
+| OH_FLUTTER_DART = 0 |  |
+| OH_REACT_NATIVE_HERMES = 1 |  |
+| OH_KMP_KOTLIN = 2 |  |
 
 
 ## 函数说明
@@ -205,8 +169,6 @@ typedef void (*OH_HiAppEvent_OnReceive)(const char* domain, const struct HiAppEv
 **描述：**
 
 事件观察者接收到事件后，将触发该回调，将事件内容传递给调用方。注意：回调中的指针所指对象的生命周期仅限于该回调函数内，请勿在该回调函数外直接使用该指针，若需缓存该信息，请对指针指向的内容进行深拷贝。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -228,8 +190,6 @@ typedef void (*OH_HiAppEvent_OnTrigger)(int row, int size)
 
 事件观察者收到事件后，若事件观察者中未设置OH_HiAppEvent_OnReceive回调，将保存该事件。 当保存的事件满足通过[OH_HiAppEvent_SetTriggerCondition](capi-hiappevent-h.md#oh_hiappevent_settriggercondition)设定的条件后，将触发该回调。回调结束后，当新保存的事件消息再次满足设定的条件后，将再次进行回调。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -248,8 +208,6 @@ typedef void (*OH_HiAppEvent_OnTake)(const char* const *events, uint32_t eventLe
 **描述：**
 
 使用[OH_HiAppEvent_TakeWatcherData](capi-hiappevent-h.md#oh_hiappevent_takewatcherdata)获取事件观察者接收到的事件时，事件观察者接收到的事件将通过该回调函数传递给调用者。注意：回调中的指针所指对象的生命周期仅限于该回调函数内， 请勿在该回调函数外直接使用该指针。若需缓存该信息，请对指针指向的内容进行深拷贝。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -270,8 +228,6 @@ ParamList OH_HiAppEvent_CreateParamList(void)
 
 创建一个指向参数列表对象的指针。用于存储应用事件打点时需要携带的自定义参数。注意：创建的指向参数列表对象的指针不再使用后， 必须通过[OH_HiAppEvent_DestroyParamList](capi-hiappevent-h.md#oh_hiappevent_destroyparamlist)接口进行销毁。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **返回值：**
@@ -290,8 +246,6 @@ void OH_HiAppEvent_DestroyParamList(ParamList list)
 
 销毁一个指向参数列表对象的指针，释放其分配内存。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -309,8 +263,6 @@ ParamList OH_HiAppEvent_AddBoolParam(ParamList list, const char* name, bool bool
 **描述：**
 
 添加一个布尔参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -337,8 +289,6 @@ ParamList OH_HiAppEvent_AddBoolArrayParam(ParamList list, const char* name, cons
 **描述：**
 
 添加一个布尔数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -367,8 +317,6 @@ ParamList OH_HiAppEvent_AddInt8Param(ParamList list, const char* name, int8_t nu
 
 添加一个int8_t参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -394,8 +342,6 @@ ParamList OH_HiAppEvent_AddInt8ArrayParam(ParamList list, const char* name, cons
 **描述：**
 
 添加一个int8_t数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -424,8 +370,6 @@ ParamList OH_HiAppEvent_AddInt16Param(ParamList list, const char* name, int16_t 
 
 添加一个int16_t参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -451,8 +395,6 @@ ParamList OH_HiAppEvent_AddInt16ArrayParam(ParamList list, const char* name, con
 **描述：**
 
 添加一个int16_t数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -481,8 +423,6 @@ ParamList OH_HiAppEvent_AddInt32Param(ParamList list, const char* name, int32_t 
 
 添加一个int32_t参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -508,8 +448,6 @@ ParamList OH_HiAppEvent_AddInt32ArrayParam(ParamList list, const char* name, con
 **描述：**
 
 添加一个int32_t数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -538,8 +476,6 @@ ParamList OH_HiAppEvent_AddInt64Param(ParamList list, const char* name, int64_t 
 
 添加一个int64_t参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -565,8 +501,6 @@ ParamList OH_HiAppEvent_AddInt64ArrayParam(ParamList list, const char* name, con
 **描述：**
 
 添加一个int64_t数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -595,8 +529,6 @@ ParamList OH_HiAppEvent_AddFloatParam(ParamList list, const char* name, float nu
 
 添加一个float参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -622,8 +554,6 @@ ParamList OH_HiAppEvent_AddFloatArrayParam(ParamList list, const char* name, con
 **描述：**
 
 添加一个float数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -652,8 +582,6 @@ ParamList OH_HiAppEvent_AddDoubleParam(ParamList list, const char* name, double 
 
 添加一个double参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -679,8 +607,6 @@ ParamList OH_HiAppEvent_AddDoubleArrayParam(ParamList list, const char* name, co
 **描述：**
 
 添加一个double数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -709,8 +635,6 @@ ParamList OH_HiAppEvent_AddStringParam(ParamList list, const char* name, const c
 
 添加一个字符串参数到参数列表中。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -736,8 +660,6 @@ ParamList OH_HiAppEvent_AddStringArrayParam(ParamList list, const char* name, co
 **描述：**
 
 添加一个字符串数组参数到参数列表中。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 8
 
@@ -766,8 +688,6 @@ int OH_HiAppEvent_Write(const char* domain, const char* name, enum EventType typ
 
 实现对参数为列表类型的应用事件打点。在应用事件打点前，该接口会先对该事件的参数进行校验。如果校验成功，则接口会将事件写入事件文件。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -795,8 +715,6 @@ bool OH_HiAppEvent_Configure(const char* name, const char* value)
 
 实现应用事件打点的配置功能。应用事件打点配置接口，用于配置事件打点开关、事件文件目录存储配额大小等功能。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 8
 
 **参数：**
@@ -822,8 +740,6 @@ HiAppEvent_Watcher* OH_HiAppEvent_CreateWatcher(const char* name)
 
 创建一个用于监听应用事件的事件观察者。注意：创建的事件观察者不再使用后，必须通过[OH_HiAppEvent_DestroyWatcher](capi-hiappevent-h.md#oh_hiappevent_destroywatcher)接口进行销毁。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -848,8 +764,6 @@ void OH_HiAppEvent_DestroyWatcher(HiAppEvent_Watcher* watcher)
 
 销毁已创建的事件观察者。注意：已创建的事件观察者不再使用后，需要将其销毁，释放内存，防止内存泄漏，销毁后需将对应指针置空。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -867,8 +781,6 @@ int OH_HiAppEvent_SetTriggerCondition(HiAppEvent_Watcher* watcher, int row, int 
 **描述：**
 
 用于设置事件观察者[OH_HiAppEvent_OnTrigger](capi-hiappevent-h.md#oh_hiappevent_ontrigger)回调的触发条件。 分别可以从事件观察者新接收事件数量、新接收事件大小、onTrigger触发超时时间，设置触发条件。调用方应至少保证从一个方面设置触发条件。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -896,8 +808,6 @@ int OH_HiAppEvent_SetAppEventFilter(HiAppEvent_Watcher* watcher, const char* dom
 **描述：**
 
 用于设置事件观察者需要监听的事件的类型。该函数可以重复调用，可添加多个过滤规则，而非替换，事件观察者将收到满足任一过滤规则的事件的通知。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -927,8 +837,6 @@ int OH_HiAppEvent_SetWatcherOnTrigger(HiAppEvent_Watcher* watcher, OH_HiAppEvent
 
 用于设置事件观察者onTrigger回调的接口。 如果未设置OnReceive回调或已将其设置为nullptr，则将保存观察者接收到的应用事件。当保存的应用事件满足onTrigger回调的触发条件时，将调用onTrigger回调。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -954,8 +862,6 @@ int OH_HiAppEvent_SetWatcherOnReceive(HiAppEvent_Watcher* watcher, OH_HiAppEvent
 
 用于设置事件观察者onReceive回调函数的接口。当事件观察者监听到相应事件后，onReceive回调函数将被调用。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -980,8 +886,6 @@ int OH_HiAppEvent_TakeWatcherData(HiAppEvent_Watcher* watcher, uint32_t eventNum
 **描述：**
 
 用于获取事件观察者收到后保存的事件。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -1009,8 +913,6 @@ int OH_HiAppEvent_AddWatcher(HiAppEvent_Watcher* watcher)
 
 添加事件观察者的接口，事件观察者开始监听系统消息。<br> > **注意：**<br>> [OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher)接口涉及I/O操作。在对性能敏感的业务场景中，开发者应根据实际需要确定该接口是在主线程还是在子线程中调用。 > 订阅接口[OH_HiAppEvent_AddWatcher](capi-hiappevent-h.md#oh_hiappevent_addwatcher)传入的名称name是唯一的，相同的name，后一次调用会覆盖前一次的订阅。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 **参数：**
@@ -1034,8 +936,6 @@ int OH_HiAppEvent_RemoveWatcher(HiAppEvent_Watcher* watcher)
 **描述：**
 
 移除事件观察者的接口，事件观察者停止监听系统消息。注意：该接口仅仅使事件观察者停止监听系统消息，并未销毁该事件观察者，该事件观察者依然常驻内存，直至调用 [OH_HiAppEvent_DestroyWatcher](capi-hiappevent-h.md#oh_hiappevent_destroywatcher)接口，内存才会释放。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 12
 
@@ -1061,8 +961,6 @@ void OH_HiAppEvent_ClearData()
 
 清除所有事件观察者保存的所有事件。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 12
 
 ### OH_HiAppEvent_CreateProcessor()
@@ -1074,8 +972,6 @@ HiAppEvent_Processor* OH_HiAppEvent_CreateProcessor(const char* name)
 **描述：**
 
 创建一个用于处理应用事件上报的处理者。注意：创建的处理者不再使用后，必须通过[OH_HiAppEvent_DestroyProcessor](capi-hiappevent-h.md#oh_hiappevent_destroyprocessor)接口进行销毁。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 18
 
@@ -1100,8 +996,6 @@ int OH_HiAppEvent_SetReportRoute(HiAppEvent_Processor* processor, const char* ap
 **描述：**
 
 设置处理者事件上报路由的接口。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 18
 
@@ -1128,8 +1022,6 @@ int OH_HiAppEvent_SetReportPolicy(HiAppEvent_Processor* processor, int periodRep
 **描述：**
 
 设置处理者事件上报策略的接口。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 18
 
@@ -1159,8 +1051,6 @@ int OH_HiAppEvent_SetReportEvent(HiAppEvent_Processor* processor, const char* do
 
 设置处理者上报事件的接口。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1188,8 +1078,6 @@ int OH_HiAppEvent_SetCustomConfig(HiAppEvent_Processor* processor, const char* k
 
 设置处理者自定义扩展参数的接口。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1216,8 +1104,6 @@ int OH_HiAppEvent_SetConfigId(HiAppEvent_Processor* processor, int configId)
 
 设置处理者配置ID的接口。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1243,8 +1129,6 @@ int OH_HiAppEvent_SetConfigName(HiAppEvent_Processor* processor, const char* con
 
 设置处理者的配置名称的接口。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 20
 
 **参数：**
@@ -1269,8 +1153,6 @@ int OH_HiAppEvent_SetReportUserId(HiAppEvent_Processor* processor, const char* c
 **描述：**
 
 设置处理者用户ID的接口。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 18
 
@@ -1298,8 +1180,6 @@ int OH_HiAppEvent_SetReportUserProperty(HiAppEvent_Processor* processor, const c
 
 设置处理者用户属性的接口。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1326,8 +1206,6 @@ int64_t OH_HiAppEvent_AddProcessor(HiAppEvent_Processor* processor)
 
 添加数据处理者的接口。开发者可添加数据处理者，用于提供事件上云功能。数据处理者的实现可预置在设备中，开发者可根据数据处理者的约束设置属性。注意：Processor的配置信息需要由数据处理者提供， 目前设备内暂未预置可供交互的数据处理者，因此当前事件上云功能不可用。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1352,8 +1230,6 @@ void OH_HiAppEvent_DestroyProcessor(HiAppEvent_Processor* processor)
 
 销毁已创建的数据处理者。注意：已创建的处理者不再使用后，需要将其销毁，释放内存，防止内存泄漏，销毁后需将对应指针置空。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 18
 
 **参数：**
@@ -1371,8 +1247,6 @@ int OH_HiAppEvent_RemoveProcessor(int64_t processorId)
 **描述：**
 
 移除数据处理者的接口，处理者停止上报事件。注意：该接口仅仅使处理者停止上报事件，并未销毁该处理者，该处理者依然常驻内存，直至调用[OH_HiAppEvent_DestroyProcessor](capi-hiappevent-h.md#oh_hiappevent_destroyprocessor)接口， 内存才会释放。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 18
 
@@ -1398,8 +1272,6 @@ HiAppEvent_Config* OH_HiAppEvent_CreateConfig(void)
 
 创建一个指向设置系统事件自定义规格的配置对象的指针。注意：创建的指向设置系统事件自定义规格的配置对象的指针不再使用后，必须通过[OH_HiAppEvent_DestroyConfig](capi-hiappevent-h.md#oh_hiappevent_destroyconfig)接口进行销毁。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 15
 
 **返回值：**
@@ -1418,8 +1290,6 @@ void OH_HiAppEvent_DestroyConfig(HiAppEvent_Config* config)
 
 销毁已创建的配置对象。注意：已创建的配置对象不再使用后，需要将其销毁，释放内存，防止内存泄漏，销毁后需要将对应指针置空。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 15
 
 **参数：**
@@ -1437,8 +1307,6 @@ int OH_HiAppEvent_SetConfigItem(HiAppEvent_Config* config, const char* itemName,
 **描述：**
 
 设置配置对象中的配置项。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
 
 **起始版本：** 15
 
@@ -1464,9 +1332,7 @@ int OH_HiAppEvent_SetEventConfig(const char* name, HiAppEvent_Config* config)
 
 **描述：**
 
-事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： **MAIN_THREAD_JANK**。 **MAIN_THREAD_JANK_V2**。 **EVENT_APP_CRASH**，从API version 24开始支持该事件。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
+事件相关的配置参数设置方法。<br> 不同的事件有不同的配置项，目前仅支持以下事件： MAIN_THREAD_JANK（参数配置详见主线程超时事件检测） MAIN_THREAD_JANK_V2（参数配置详见主线程超时事件检测） EVENT_APP_CRASH（参数配置详见崩溃事件介绍），从API version 24开始支持该事件。
 
 **起始版本：** 15
 
@@ -1493,8 +1359,6 @@ int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType fra
 
 报告应用框架内存占用异常的信息。 <br>该接口的调用频率限制为：1分钟最多能成功调用1次，超过频率限制会返回错误码HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED。 <br>当应用检测到应用框架内存占用异常，并且调用该接口返回操作成功时： <br>1. 若开发者已经订阅了事件领域domain为“HIVIEWDFX”，且事件名称names为“FW_MEM_ANOMALY”的应用事件，则应用中将会收到应用框架内存占用异常信息的回调。 <br>2. 若开发者未订阅该应用事件，则应用中将不会收到应用框架内存占用异常信息的回调。
 
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
 **起始版本：** 26.0.0
 
 **参数：**
@@ -1510,52 +1374,5 @@ int OH_HiAppEvent_ReportFrameworkMemAnomaly(enum OH_HiAppEvent_FrameworkType fra
 | 类型 | 说明 |
 | -- | -- |
 | int | <ul> <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) 操作成功。</li> <li>[HIAPPEVENT_INVALID_PARAM_VALUE](capi-hiappevent-h.md#hiappevent_errorcode) 参数值无效。</li> <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) 系统/应用事件写入失败或时间戳提取失败。</li> <li>[HIAPPEVENT_REPORT_FREQUENCY_EXCEEDED](capi-hiappevent-h.md#hiappevent_errorcode) 报告频率超出。</li> </ul> |
-
-### OH_HiAppEvent_ExternalLogCapacityReachedCallback()
-
-```c
-typedef void (*OH_HiAppEvent_ExternalLogCapacityReachedCallback)(OH_HiAppEvent_ExternalLog* externalLogArr, uint32_t arrLen)
-```
-
-**描述：**
-
-OH_HiAppEvent_RegExternalLogCapacityReachedCallback函数的参数 当外部日志目录容量达到时，作为回调函数。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
-**起始版本：** 26.0.1
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_HiAppEvent_ExternalLog](capi-hiappevent-oh-hiappevent-externallog.md)* externalLogArr | 外部日志信息数组。 |
-| uint32_t arrLen | 外部LogArr的长度。 |
-
-### OH_HiAppEvent_RegExternalLogCapacityReachedCallback()
-
-```c
-int OH_HiAppEvent_RegExternalLogCapacityReachedCallback(OH_HiAppEvent_ExternalLogCapacityReachedCallback callback)
-```
-
-**描述：**
-
-设置外部日志目录容量达到时的回调。
-
-**系统能力：** SystemCapability.HiviewDFX.HiAppEvent
-
-**起始版本：** 26.0.1
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [OH_HiAppEvent_ExternalLogCapacityReachedCallback](capi-hiappevent-h.md#oh_hiappevent_externallogcapacityreachedcallback) callback | 当外部日志目录容量达到时的回调函数。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| int | <ul> <li>[HIAPPEVENT_SUCCESS](capi-hiappevent-h.md#hiappevent_errorcode) 操作成功。</li> <li>[HIAPPEVENT_OPERATE_FAILED](capi-hiappevent-h.md#hiappevent_errorcode) 操作失败。</li> </ul> |
 
 

@@ -6,7 +6,7 @@ typedef struct OH_UdsHtml OH_UdsHtml
 
 ## Overview
 
-Defines a struct for the unified data of the Hypertext Markup Language (HTML) type.
+Describes the unified data struct of html.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

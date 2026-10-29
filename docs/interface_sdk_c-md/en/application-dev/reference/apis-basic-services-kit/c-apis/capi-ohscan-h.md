@@ -6,8 +6,6 @@ Declares APIs for discovering and connecting to scanners, scanning pictures, que
 
 **Library**: libohscan.so
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Since**: 12
 
 **Related module**: [OH_Scan](capi-oh-scan.md)
@@ -62,8 +60,6 @@ enum Scan_ErrorCode
 
 Enumerates the error codes.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -97,8 +93,6 @@ typedef void (*Scan_ScannerDiscoveryCallback)(Scan_ScannerDevice** devices, int3
 
 Discovers scanners. The memory pointed to by the pointer registered via [OH_Scan_StartScannerDiscovery](capi-ohscan-h.md#oh_scan_startscannerdiscovery) will be released when the callback function ends.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -117,8 +111,6 @@ int32_t OH_Scan_Init()
 **Description**
 
 Initiates the scan service, initializes the scan client, and connects the client to the scan service.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -139,8 +131,6 @@ int32_t OH_Scan_StartScannerDiscovery(Scan_ScannerDiscoveryCallback callback)
 **Description**
 
 Starts scanner discovery and registers a callback used to process the discovered scanners.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -168,8 +158,6 @@ int32_t OH_Scan_OpenScanner(const char* scannerId)
 
 Opens a scanner.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Required permission**: {@code ohos.permission.PRINT}
 
 **Since**: 12
@@ -195,8 +183,6 @@ int32_t OH_Scan_CloseScanner(const char* scannerId)
 **Description**
 
 Closes a connected scanner.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -224,8 +210,6 @@ Scan_ScannerOptions* OH_Scan_GetScannerParameter(const char* scannerId, int32_t*
 
 Obtains the scanner setting options. The memory to which the returned struct pointer points is automatically released when [OH_Scan_Exit](capi-ohscan-h.md#oh_scan_exit) is called. Only one copy of each scanner model is stored in the memory.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Required permission**: {@code ohos.permission.PRINT}
 
 **Since**: 12
@@ -252,8 +236,6 @@ int32_t OH_Scan_SetScannerParameter(const char* scannerId, const int32_t option,
 **Description**
 
 Sets the option parameters of a scanner. The option values are obtained through the [OH_Scan_GetScannerParameter](capi-ohscan-h.md#oh_scan_getscannerparameter) API.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -283,8 +265,6 @@ int32_t OH_Scan_StartScan(const char* scannerId, bool batchMode)
 
 Starts scanning.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Required permission**: {@code ohos.permission.PRINT}
 
 **Since**: 12
@@ -312,8 +292,6 @@ int32_t OH_Scan_CancelScan(const char* scannerId)
 
 Cancels scanning.
 
-**System capability**: SystemCapability.Print.PrintFramework
-
 **Required permission**: {@code ohos.permission.PRINT}
 
 **Since**: 12
@@ -339,8 +317,6 @@ int32_t OH_Scan_GetPictureScanProgress(const char* scannerId, Scan_PictureScanPr
 **Description**
 
 Obtains the progress of scanning a picture by the scanner. A non-null value must be passed. The scan progress will be written into the struct pointed to by the pointer.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 
@@ -368,8 +344,6 @@ int32_t OH_Scan_Exit()
 **Description**
 
 Exits the scan service, releases the memory of the scan framework, and deregisters the scanner discovery callback.
-
-**System capability**: SystemCapability.Print.PrintFramework
 
 **Required permission**: {@code ohos.permission.PRINT}
 

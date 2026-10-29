@@ -10,7 +10,7 @@ Connection tracking match condition<br> Matches packets based on connection trac
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Related module**: [TrafficFilter](capi-trafficfilter.md)
 
@@ -22,7 +22,7 @@ Connection tracking match condition<br> Matches packets based on connection trac
 
 | Name | Description |
 | -- | -- |
-| bool enable | Enable conntrack matching<br>**Since**: 26.0.1 |
-| uint8_t stateMask | Connection states (use OH_TRAFFICFILTER_CT_STATE_* bitmap)<br>**Since**: 26.0.1 |
+| bool enable | Enable conntrack matching<br>**Since**: 26.1.0 |
+| uint8_t stateMask | Connection states (use OH_TRAFFICFILTER_CT_STATE_* bitmap)<br>**Since**: 26.1.0 |
 
 

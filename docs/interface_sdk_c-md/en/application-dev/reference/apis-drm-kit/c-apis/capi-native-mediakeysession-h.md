@@ -6,8 +6,6 @@ The file declares the MediaKeySession APIs for DRM operations. The APIs can be u
 
 **Library**: libnative_drm.so
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Related module**: [Drm](capi-drm.md)
@@ -63,8 +61,6 @@ typedef Drm_ErrCode (*MediaKeySession_EventCallback)(DRM_EventType eventType, ui
 
 Defines the callback used to listen for media key session events, for example, key expiration events.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -92,8 +88,6 @@ typedef Drm_ErrCode (*MediaKeySession_KeyChangeCallback)(DRM_KeysInfo *keysInfo,
 
 Call back will be invoked when key changes.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -118,8 +112,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_EventCallback)(MediaKeySession *mediaKe
 **Description**
 
 Defines the callback used to listen for media key session events.
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 12
 
@@ -149,8 +141,6 @@ typedef Drm_ErrCode (*OH_MediaKeySession_KeyChangeCallback)(MediaKeySession *med
 
 Call back will be invoked when key changes.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -177,8 +167,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateMediaKeyRequest(MediaKeySession *mediaKey
 
 Generate media key request.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -204,8 +192,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessMediaKeyResponse(MediaKeySession *mediaKey
 **Description**
 
 Process media key response.
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -235,8 +221,6 @@ Drm_ErrCode OH_MediaKeySession_CheckMediaKeyStatus(MediaKeySession *mediaKeySess
 
 Check media key status.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -262,8 +246,6 @@ Drm_ErrCode OH_MediaKeySession_ClearMediaKeys(MediaKeySession *mediaKeySession)
 
 Clear media keys of the current session .
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -287,8 +269,6 @@ Drm_ErrCode OH_MediaKeySession_GenerateOfflineReleaseRequest(MediaKeySession *me
 **Description**
 
 Generate offline media key release request.
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -318,8 +298,6 @@ Drm_ErrCode OH_MediaKeySession_ProcessOfflineReleaseResponse(MediaKeySession *me
 
 Process offline media key release response.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -348,8 +326,6 @@ Drm_ErrCode OH_MediaKeySession_RestoreOfflineMediaKeys(MediaKeySession *mediaKey
 
 Restore offline media keys by ID.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -376,8 +352,6 @@ Drm_ErrCode OH_MediaKeySession_GetContentProtectionLevel(MediaKeySession *mediaK
 
 Get content protection level of the session.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -402,8 +376,6 @@ Drm_ErrCode OH_MediaKeySession_RequireSecureDecoderModule(MediaKeySession *media
 **Description**
 
 Whether the encrypted content require a secure decoder or not.
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 
@@ -431,8 +403,6 @@ Drm_ErrCode OH_MediaKeySession_SetMediaKeySessionCallback(MediaKeySession *media
 
 Set media key session event callback.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -458,8 +428,6 @@ Drm_ErrCode OH_MediaKeySession_SetCallback(MediaKeySession *mediaKeySession, OH_
 
 Set media key session event callback.
 
-**System capability**: SystemCapability.Multimedia.Drm.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -484,8 +452,6 @@ Drm_ErrCode OH_MediaKeySession_Destroy(MediaKeySession *mediaKeySession)
 **Description**
 
 Release the resource before the session going to be unused.
-
-**System capability**: SystemCapability.Multimedia.Drm.Core
 
 **Since**: 11
 

@@ -8,8 +8,6 @@
 
 **库：** libnative_media_codecbase.so
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **相关模块：** [AVCapability](capi-avcapability.md)
@@ -83,8 +81,6 @@ enum OH_AVCodecCategory
 
 编解码器类别。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 | 枚举项 | 描述 |
@@ -101,8 +97,6 @@ enum OH_AVCodecType
 **描述：**
 
 编解码器类型。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 24
 
@@ -122,8 +116,6 @@ enum OH_AVCapabilityFeature
 **描述：**
 
 可以在特定编解码器场景中使用的可选特性。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 12
 
@@ -150,8 +142,6 @@ OH_AVCapability *OH_AVCodec_GetCapability(const char *mime, bool isEncoder)
 
 获取系统推荐的编解码器能力。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -176,8 +166,6 @@ OH_AVCapability *OH_AVCodec_GetCapabilityByCategory(const char *mime, bool isEnc
 **描述：**
 
 获取指定类别中的编解码器能力。 通过指定类别，匹配的编解码器仅限于硬件编解码器或软件编解码器。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -209,8 +197,6 @@ OH_AVCapability **OH_AVCodec_GetCapabilityList(OH_AVCodecType codecType, uint32_
 >
 > 编解码器能力列表的内存由系统底层全局维护，调用者无需管理其生命周期，不得手动分配或释放此内存。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 24
 
 **参数：**
@@ -236,8 +222,6 @@ bool OH_AVCapability_IsHardware(OH_AVCapability *capability)
 
 检查能力实例是否描述了硬件编解码器。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -261,8 +245,6 @@ bool OH_AVCapability_IsSecure(OH_AVCapability *capability)
 **描述：**
 
 检查能力实例是否描述了一个安全解码器。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 24
 
@@ -288,8 +270,6 @@ const char *OH_AVCapability_GetName(OH_AVCapability *capability)
 
 获取编解码器名称。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -314,8 +294,6 @@ const char *OH_AVCapability_GetMimeType(OH_AVCapability *capability)
 
 获取编解码器的MIME类型。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 24
 
 **参数：**
@@ -339,8 +317,6 @@ bool OH_AVCapability_CheckMimeType(OH_AVCapability *capability, const char *mime
 **描述：**
 
 检查编解码器的MIME类型是否与指定的MIME类型匹配。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 24
 
@@ -367,8 +343,6 @@ int32_t OH_AVCapability_GetMaxSupportedInstances(OH_AVCapability *capability)
 
 获取编解码器支持的最大实例数。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -392,8 +366,6 @@ OH_AVErrCode OH_AVCapability_GetEncoderBitrateRange(OH_AVCapability *capability,
 **描述：**
 
 获取编码器支持的比特率范围。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -420,8 +392,6 @@ bool OH_AVCapability_IsEncoderBitrateModeSupported(OH_AVCapability *capability, 
 
 检查编码器是否支持特定的比特率模式。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -446,8 +416,6 @@ OH_AVErrCode OH_AVCapability_GetEncoderQualityRange(OH_AVCapability *capability,
 **描述：**
 
 获取编码器支持的质量范围。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -474,8 +442,6 @@ OH_AVErrCode OH_AVCapability_GetEncoderComplexityRange(OH_AVCapability *capabili
 
 获取编码器支持的编码器复杂性范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -500,8 +466,6 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRates(OH_AVCapability *capab
 **描述：**
 
 获取音频编解码器支持的采样率。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -529,8 +493,6 @@ OH_AVErrCode OH_AVCapability_GetAudioSupportedSampleRateRanges(OH_AVCapability *
 
 获取音频编解码器支持的采样率范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 20
 
 **参数：**
@@ -557,8 +519,6 @@ OH_AVErrCode OH_AVCapability_GetAudioChannelCountRange(OH_AVCapability *capabili
 
 获取音频编解码器支持的音频通道计数范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -583,8 +543,6 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthAlignment(OH_AVCapability *capability,
 **描述：**
 
 获取视频编解码器支持的视频宽度对齐。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -611,8 +569,6 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightAlignment(OH_AVCapability *capability
 
 获取视频编解码器支持的视频高度对齐。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -637,8 +593,6 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRangeForHeight(OH_AVCapability *capabi
 **描述：**
 
 获取指定高度情况下视频编解码器支持的视频宽度范围。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -666,8 +620,6 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRangeForWidth(OH_AVCapability *capabi
 
 获取指定宽度情况下视频编解码器支持的视频高度范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -694,8 +646,6 @@ OH_AVErrCode OH_AVCapability_GetVideoWidthRange(OH_AVCapability *capability, OH_
 
 获取视频编解码器支持的视频宽度范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -721,8 +671,6 @@ OH_AVErrCode OH_AVCapability_GetVideoHeightRange(OH_AVCapability *capability, OH
 
 获取视频编解码器支持的视频高度范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -747,8 +695,6 @@ bool OH_AVCapability_IsVideoSizeSupported(OH_AVCapability *capability, int32_t w
 **描述：**
 
 检查视频编解码器是否支持特定的视频大小。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -776,8 +722,6 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRange(OH_AVCapability *capability,
 
 获取视频编解码器支持的视频帧率范围。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -802,8 +746,6 @@ OH_AVErrCode OH_AVCapability_GetVideoFrameRateRangeForSize(OH_AVCapability *capa
 **描述：**
 
 获取指定视频大小的视频编解码器支持的视频帧率范围。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -832,8 +774,6 @@ bool OH_AVCapability_AreVideoSizeAndFrameRateSupported(OH_AVCapability *capabili
 
 检查视频编解码器是否支持视频大小和帧率的特定组合。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -861,8 +801,6 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedPixelFormats(OH_AVCapability *capa
 
 获取视频编解码器支持的视频像素格式。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -888,8 +826,6 @@ OH_AVErrCode OH_AVCapability_GetVideoSupportedNativeBufferFormats(OH_AVCapabilit
 **描述：**
 
 获取视频编解码器支持的OH_NativeBuffer格式。<br> 该函数提供了视频编解码器能够处理的OH_NativeBuffer格式信息，具体取值可见OH_NativeBuffer_Format。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 22
 
@@ -917,8 +853,6 @@ OH_AVErrCode OH_AVCapability_GetSupportedProfiles(OH_AVCapability *capability, c
 
 获取编解码器支持的档次。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -944,8 +878,6 @@ OH_AVErrCode OH_AVCapability_GetSupportedLevelsForProfile(OH_AVCapability *capab
 **描述：**
 
 获取特定档次支持的编解码器级别。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 10
 
@@ -974,8 +906,6 @@ bool OH_AVCapability_AreProfileAndLevelSupported(OH_AVCapability *capability, in
 
 检查编解码器是否支持档次和级别的特定组合。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 10
 
 **参数：**
@@ -1002,8 +932,6 @@ bool OH_AVCapability_IsFeatureSupported(OH_AVCapability *capability, OH_AVCapabi
 
 检查编解码器是否支持指定特性。
 
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
-
 **起始版本：** 12
 
 **参数：**
@@ -1028,8 +956,6 @@ OH_AVFormat *OH_AVCapability_GetFeatureProperties(OH_AVCapability *capability, O
 **描述：**
 
 获取指定特性的属性。 需要注意的是，返回值指向的OH_AVFormat实例的生命周期需要调用者手动释放。
-
-**系统能力：** SystemCapability.Multimedia.Media.CodecBase
 
 **起始版本：** 12
 

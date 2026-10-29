@@ -8,8 +8,6 @@ Provides methods for creating, destroying, reading, and writing the option objec
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Related module**: [InputMethod](capi-inputmethod.md)
@@ -44,8 +42,6 @@ InputMethod_AttachOptions *OH_AttachOptions_Create(bool showKeyboard)
 
 Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -69,8 +65,6 @@ InputMethod_AttachOptions *OH_AttachOptions_CreateWithRequestKeyboardReason(bool
 **Description**
 
 Create a new [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 15
 
@@ -97,8 +91,6 @@ void OH_AttachOptions_Destroy(InputMethod_AttachOptions *options)
 
 Delete a [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md) instance.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -116,8 +108,6 @@ InputMethod_ErrorCode OH_AttachOptions_IsShowKeyboard(InputMethod_AttachOptions 
 **Description**
 
 Get showKeyboard value from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -143,8 +133,6 @@ InputMethod_ErrorCode OH_AttachOptions_GetRequestKeyboardReason(InputMethod_Atta
 **Description**
 
 Obtains the reason that triggers the input method from [InputMethod_AttachOptions](capi-inputmethod-inputmethod-attachoptions.md).
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 15
 

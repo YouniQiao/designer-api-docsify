@@ -6,8 +6,6 @@ Declares the HID DDK functions for accessing an input device from the host.
 
 **Library**: libhid.z.so
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Since**: 11
 
 **Related module**: [HidDdk](capi-hidddk.md)
@@ -49,8 +47,6 @@ int32_t OH_Hid_CreateDevice(Hid_Device *hidDevice, Hid_EventProperties *hidEvent
 
 Creates a device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 11
@@ -77,8 +73,6 @@ int32_t OH_Hid_EmitEvent(int32_t deviceId, const Hid_EmitItem items[], uint16_t 
 **Description**
 
 Sends an event list to a device.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -108,8 +102,6 @@ int32_t OH_Hid_DestroyDevice(int32_t deviceId)
 
 Destroys a device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 11
@@ -136,8 +128,6 @@ int32_t OH_Hid_Init(void)
 
 Initializes an HID DDK.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -158,8 +148,6 @@ int32_t OH_Hid_Release(void)
 
 Releases an HID DDK.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -179,8 +167,6 @@ int32_t OH_Hid_Open(uint64_t deviceId, uint8_t interfaceIndex, Hid_DeviceHandle 
 **Description**
 
 Opens the device specified by **deviceId** and **interfaceIndex**.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -210,8 +196,6 @@ int32_t OH_Hid_Close(Hid_DeviceHandle **dev)
 
 Closes an HID device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -237,8 +221,6 @@ int32_t OH_Hid_Write(Hid_DeviceHandle *dev, uint8_t *data, uint32_t length, uint
 **Description**
 
 Writes a report to an HID device.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -268,8 +250,6 @@ int32_t OH_Hid_ReadTimeout(Hid_DeviceHandle *dev, uint8_t *data, uint32_t bufSiz
 **Description**
 
 Reads a report from the HID device within the specified timeout interval.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -301,8 +281,6 @@ int32_t OH_Hid_Read(Hid_DeviceHandle *dev, uint8_t *data, uint32_t bufSize, uint
 
 Reads a report from the HID device. The blocking mode (that is, blocking remains active until data can be read) is used by default. You can call [OH_Hid_SetNonBlocking](capi-hid-ddk-api-h.md#oh_hid_setnonblocking) to change the mode.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -332,8 +310,6 @@ int32_t OH_Hid_SetNonBlocking(Hid_DeviceHandle *dev, int nonBlock)
 
 Sets the device read mode to non-blocking mode.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -361,8 +337,6 @@ int32_t OH_Hid_GetRawInfo(Hid_DeviceHandle *dev, Hid_RawDevInfo *rawDevInfo)
 
 Obtains the original device information.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -389,8 +363,6 @@ int32_t OH_Hid_GetRawName(Hid_DeviceHandle *dev, char *data, uint32_t bufSize)
 **Description**
 
 Obtains the original device name.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -420,8 +392,6 @@ int32_t OH_Hid_GetPhysicalAddress(Hid_DeviceHandle *dev, char *data, uint32_t bu
 
 Obtains the physical address of the HID device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -450,8 +420,6 @@ int32_t OH_Hid_GetRawUniqueId(Hid_DeviceHandle *dev, uint8_t *data, uint32_t buf
 
 Obtains the original unique identifier of a device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -479,8 +447,6 @@ int32_t OH_Hid_SendReport(Hid_DeviceHandle *dev, Hid_ReportType reportType, cons
 **Description**
 
 Sends a report to the HID device.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
@@ -511,8 +477,6 @@ int32_t OH_Hid_GetReport(Hid_DeviceHandle *dev, Hid_ReportType reportType, uint8
 
 Obtains a report from the HID device.
 
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
-
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 
 **Since**: 18
@@ -541,8 +505,6 @@ int32_t OH_Hid_GetReportDescriptor(Hid_DeviceHandle *dev, uint8_t *buf, uint32_t
 **Description**
 
 Obtains the report descriptor of the HID device.
-
-**System capability**: SystemCapability.Driver.HID.Extension File to include: <hid/hid_ddk_api.h>
 
 **Required permission**: ohos.permission.ACCESS_DDK_HID
 

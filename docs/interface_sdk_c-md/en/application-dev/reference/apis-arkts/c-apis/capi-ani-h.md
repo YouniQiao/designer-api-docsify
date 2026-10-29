@@ -6,8 +6,6 @@ Defines native api of ArkTS 1.2 native module.
 
 **Library**: libani.z.so
 
-**System capability**: SystemCapability.ArkCompiler.ANI
-
 **Since**: 23
 
 **Related module**: [](capi-.md)
@@ -59,8 +57,6 @@ enum
 
 Defines native api of ArkTS 1.2 native module.
 
-**System capability**: SystemCapability.ArkCompiler.ANI
-
 **Since**: 23
 
 | Enum item | Description |
@@ -76,8 +72,6 @@ enum
 
 Defines native api of ArkTS 1.2 native module.
 
-**System capability**: SystemCapability.ArkCompiler.ANI
-
 **Since**: 23
 
 | Enum item | Description |
@@ -92,8 +86,6 @@ enum ani_status
 **Description**
 
 Defines native api of ArkTS 1.2 native module.
-
-**System capability**: SystemCapability.ArkCompiler.ANI
 
 **Since**: 23
 

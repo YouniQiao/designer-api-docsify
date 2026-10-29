@@ -6,8 +6,6 @@ Declares common types.
 
 **Library**: libffrt.z.so
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 10
 
 **Related module**: [FFRT](capi-ffrt.md)
@@ -79,8 +77,6 @@ enum ffrt_queue_priority_t
 
 Enumerates the task priority types used by concurrent queues to order task dispatch.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -99,8 +95,6 @@ enum ffrt_qos_default_t
 **Description**
 
 Enumerates the task QoS types.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -125,8 +119,6 @@ enum ffrt_storage_size_t
 
 Defines the storage size of multiple types of structs, in bytes.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -149,8 +141,6 @@ enum ffrt_function_kind_t
 
 Enumerates the task types, distinguishing general concurrent tasks from queue-scheduled tasks.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -168,8 +158,6 @@ enum ffrt_dependence_type_t
 
 Enumerates the dependency types.<br> Specifies how tasks depend on each other (data readiness or task completion).
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 10
 
 | Enum item | Description |
@@ -186,8 +174,6 @@ enum ffrt_error_t
 **Description**
 
 Enumerates the error codes returned by FFRT APIs.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -210,8 +196,6 @@ enum ffrt_mutex_type
 
 Enumerates the mutex types.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 12
 
 | Enum item | Description |
@@ -229,8 +213,6 @@ enum qos_default
 **Description**
 
 Enumerates the task QoS types.<br> Each enumerator mirrors the corresponding enumerator in [ffrt_qos_default_t](capi-type-def-h.md#ffrt_qos_default_t).
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 10
 
@@ -258,8 +240,6 @@ typedef void (*ffrt_function_t)(void*)
 
 Defines the task function pointer type.<br> The function pointer defines the entry point of an FFRT task. FFRT invokes this function when the task is scheduled for execution, passing the user data pointer through the single `void*` argument.
 
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
-
 **Since**: 10
 
 ### ffrt_poller_cb()
@@ -271,8 +251,6 @@ typedef void (*ffrt_poller_cb)(void* data, uint32_t event)
 **Description**
 
 Defines the poller callback function type.<br> The callback is invoked when the poller detects a registered event. The data pointer carries user data passed in at registration time, and the event value identifies the triggered event type.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 
@@ -292,8 +270,6 @@ typedef void (*ffrt_timer_cb)(void* data)
 **Description**
 
 Defines the timer callback function type.<br> The callback is invoked when the timer expires. The data pointer carries user data passed in at timer registration.
-
-**System capability**: SystemCapability.Resourceschedule.Ffrt.Core
 
 **Since**: 12
 

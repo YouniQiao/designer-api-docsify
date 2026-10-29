@@ -10,7 +10,7 @@ NFQueue configuration structure - If `config` is **NULL**, the implementation ap
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Related module**: [TrafficFilter](capi-trafficfilter.md)
 
@@ -22,10 +22,10 @@ NFQueue configuration structure - If `config` is **NULL**, the implementation ap
 
 | Name | Description |
 | -- | -- |
-| uint32_t size | Must be set to `sizeof(OH_TrafficFilter_Config)` by the caller. The caller is required to zero-initialize the structure first, then set this field. The implementation uses this value to determine the valid data range for binary compatibility.<br>**Since**: 26.0.1 |
-| uint32_t packetCopyMode | NFQueue packet copy mode, see OH_TrafficFilter_PacketCopyMode<br>**Since**: 26.0.1 |
-| uint32_t packetCopyLen | NFQueue packet copy length in bytes, 0xFFFF means entire packet, smaller values copy only header<br>**Since**: 26.0.1 |
-| uint32_t nfqueueMaxlen | NFQueue maximum queue length (number of packets), 0 means system default (1024)<br>**Since**: 26.0.1 |
-| uint32_t nfqueueFlags | NFQueue queue flags, see OH_TRAFFICFILTER_NFQUEUE_FLAG_* definitions<br>**Since**: 26.0.1 |
+| uint32_t size | Must be set to `sizeof(OH_TrafficFilter_Config)` by the caller. The caller is required to zero-initialize the structure first, then set this field. The implementation uses this value to determine the valid data range for binary compatibility.<br>**Since**: 26.1.0 |
+| uint32_t packetCopyMode | NFQueue packet copy mode, see OH_TrafficFilter_PacketCopyMode<br>**Since**: 26.1.0 |
+| uint32_t packetCopyLen | NFQueue packet copy length in bytes, 0xFFFF means entire packet, smaller values copy only header<br>**Since**: 26.1.0 |
+| uint32_t nfqueueMaxlen | NFQueue maximum queue length (number of packets), 0 means system default (1024)<br>**Since**: 26.1.0 |
+| uint32_t nfqueueFlags | NFQueue queue flags, see OH_TRAFFICFILTER_NFQUEUE_FLAG_* definitions<br>**Since**: 26.1.0 |
 
 

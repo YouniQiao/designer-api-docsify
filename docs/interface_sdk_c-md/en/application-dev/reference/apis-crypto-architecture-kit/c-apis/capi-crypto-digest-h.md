@@ -8,8 +8,6 @@ Defines the digest algorithm interfaces.
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Related module**: [CryptoDigestApi](capi-cryptodigestapi.md)
@@ -45,8 +43,6 @@ OH_Crypto_ErrCode OH_CryptoDigest_Create(const char *algoName, OH_CryptoDigest *
 
 Creates a digest context based on the given algorithm name.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Resource release**: crypto_digest/OH_DigestCrypto_Destroy {ctx}
@@ -79,8 +75,6 @@ OH_Crypto_ErrCode OH_CryptoDigest_Update(OH_CryptoDigest *ctx, Crypto_DataBlob *
 
 Updates digest data.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -111,8 +105,6 @@ OH_Crypto_ErrCode OH_CryptoDigest_Final(OH_CryptoDigest *ctx, Crypto_DataBlob *o
 
 Finishes the digest operation and outputs the result.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
@@ -140,8 +132,6 @@ uint32_t OH_CryptoDigest_GetLength(OH_CryptoDigest *ctx)
 
 Obtains the length of the digest result.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -166,8 +156,6 @@ const char *OH_CryptoDigest_GetAlgoName(OH_CryptoDigest *ctx)
 
 Obtains the algorithm name of the digest context.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 12
 
 **Parameters**:
@@ -191,8 +179,6 @@ void OH_DigestCrypto_Destroy(OH_CryptoDigest *ctx)
 **Description**
 
 Destroys the digest context.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 12
 

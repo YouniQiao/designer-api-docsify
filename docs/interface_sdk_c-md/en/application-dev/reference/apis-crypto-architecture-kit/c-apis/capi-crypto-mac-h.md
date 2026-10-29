@@ -8,8 +8,6 @@ Defines the message authentication code interfaces.
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Related module**: [CryptoMacApi](capi-cryptomacapi.md)
@@ -52,8 +50,6 @@ enum CryptoMac_ParamType
 
 Defines MAC algorithm parameter types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
@@ -73,8 +69,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Create(const char *algoName, OH_CryptoMac **ctx)
 **Description**
 
 Creates a MAC context based on the given algorithm name.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -108,8 +102,6 @@ OH_Crypto_ErrCode OH_CryptoMac_SetParam(OH_CryptoMac *ctx, CryptoMac_ParamType t
 
 Sets the specified parameter of the MAC context.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -141,8 +133,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Init(OH_CryptoMac *ctx, const OH_CryptoSymKey *ke
 
 Initializes the MAC context with a symmetric key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -172,8 +162,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Update(OH_CryptoMac *ctx, const Crypto_DataBlob *
 **Description**
 
 Updates MAC data.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -205,8 +193,6 @@ OH_Crypto_ErrCode OH_CryptoMac_Final(OH_CryptoMac *ctx, Crypto_DataBlob *out)
 
 Finishes the MAC operation.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
@@ -234,8 +220,6 @@ OH_Crypto_ErrCode OH_CryptoMac_GetLength(OH_CryptoMac *ctx, uint32_t *length)
 
 Obtains the MAC result length.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -260,8 +244,6 @@ void OH_CryptoMac_Destroy(OH_CryptoMac *ctx)
 **Description**
 
 Destroys the MAC context.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

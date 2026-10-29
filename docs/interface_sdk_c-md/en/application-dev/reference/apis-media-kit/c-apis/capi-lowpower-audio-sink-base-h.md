@@ -6,8 +6,6 @@ The file declares the structs and enums of the LowPowerAudioSink.
 
 **Library**: liblowpower_avsink.so
 
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
-
 **Since**: 20
 
 **Related module**: [LowPowerAudioSink](capi-lowpoweraudiosink.md)
@@ -55,8 +53,6 @@ typedef void (*OH_LowPowerAudioSink_OnError)(OH_LowPowerAudioSink* sink, OH_AVEr
 
 Called when an error occurs in the LowPowerAudioSink.
 
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
-
 **Since**: 20
 
 **Parameters**:
@@ -78,8 +74,6 @@ typedef void (*OH_LowPowerAudioSink_OnPositionUpdated)(OH_LowPowerAudioSink* sin
 
 Called when the playback position is updated in the LowPowerAudioSink.
 
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
-
 **Since**: 20
 
 **Parameters**:
@@ -100,8 +94,6 @@ typedef void (*OH_LowPowerAudioSink_OnDataNeeded)(OH_LowPowerAudioSink* sink, OH
 
 Called when the LowPowerAudioSink needs more data.
 
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
-
 **Since**: 20
 
 **Parameters**:
@@ -121,8 +113,6 @@ typedef void (*OH_LowPowerAudioSink_OnInterrupted)(OH_LowPowerAudioSink* sink, O
 **Description**
 
 Called when the audio focus is interrupted in the LowPowerAudioSink.
-
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 
@@ -145,8 +135,6 @@ typedef void (*OH_LowPowerAudioSink_OnDeviceChanged)(OH_LowPowerAudioSink* sink,
 
 Called when the audio device changes in the LowPowerAudioSink.
 
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
-
 **Since**: 20
 
 **Parameters**:
@@ -166,8 +154,6 @@ typedef void (*OH_LowPowerAudioSink_OnEos)(OH_LowPowerAudioSink* sink, void* use
 **Description**
 
 Called when the playback is complete in the LowPowerAudioSink. This callback is included in [OH_LowPowerAudioSinkCallback](capi-lowpoweraudiosink-oh-lowpoweraudiosinkcallback.md).
-
-**System capability**: SystemCapability.Multimedia.Media.LowPowerAVSink
 
 **Since**: 20
 

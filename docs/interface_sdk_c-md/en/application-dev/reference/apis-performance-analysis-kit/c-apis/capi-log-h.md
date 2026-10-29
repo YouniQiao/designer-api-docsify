@@ -2,13 +2,11 @@
 
 ## Overview
 
-Defines the logging functions of the HiLog module. Before outputting logs, you must define the service domain, and log tag, use the API with the specified log type and level, and specify the privacy identifier. <br>**Service domain**: service domain of logs. You can define the value as required. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. <br>**Log tag**: a string used to identify the class, file, or service behavior. <br>**Log level**: DEBUG, INFO, WARN, ERROR, or FATAL. <br>**Parameter format**: printf format string, which starts with a % character, including a parameter type identifier and a variable parameter. <br>**Privacy identifier**: **{public}** or **{private}** added between the % character and the parameter type identifier in each parameter. **Note**: If no privacy identifier is added, the parameter is considered to be **<br>private**.
+Defines the logging functions of the HiLog module.<br> Before outputting logs, you must define the service domain, and log tag, use the function with the specified log type and level, and specify the privacy identifier. <ul><li>Service domain: used to identify the subsystem and module of a service. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF.  <li>Log tag: a string used to identify the class, file, or service.</li>  <li>Log level: <b>DEBUG</b>, <b>INFO</b>, <b>WARN</b>, <b>ERROR</b>, and <b>FATAL</b></li>  <li>Parameter format: a printf format string that starts with a % character, including format specifiers and variable parameters.</li>  <li>Privacy identifier: {public} or {private} added between the % character and the format specifier in each parameter. Note that each parameter has a privacy identifier. If no privacy identifier is added, the parameter is considered to be <b>private</b>.</li></ul> <br> Sample code: Defining the service domain and log tag: #include <hilog/log.h> #define LOG_DOMAIN 0x0201 #define LOG_TAG "MY_TAG" Outputting logs: HILOG_WARN([LOG_APP](capi-log-h.md#logtype), "Failed to visit %{private}s, reason:%{public}d.", url, errno); Output result: 05-06 15:01:06.870 1051 1051 W 0201/MY_TAG: Failed to visit <private>, reason:503.
 
 **Include**: <hilog/log.h>
 
 **Library**: libhilog_ndk.z.so
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
 
 **Since**: 8
 
@@ -20,14 +18,16 @@ Defines the logging functions of the HiLog module. Before outputting logs, you m
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [LogType](#logtype) | LogType | Enumerates the log types. You can use this function to specify the type of output logs. Currently, only **<br>LOG_APP** is available. |
-| [LogLevel](#loglevel) | LogLevel | Enumerates the log levels. You are advised to select log levels based on their respective use cases. Log levels: <br>**DEBUG**: provides more detailed process information than INFO logs to help developers analyze service processes and locate faults. DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled. <br>**INFO**: indicates the key service process nodes and exceptions (for example, no network signal or login failure) that occur during service running. These logs should be recorded by the dominant module in the service to avoid repeated logging conducted by multiple invoked modules or low-level functions. <br>**WARN**: indicates a severe, unexpected fault that has little impact on users and can be rectified by the programs themselves or through simple operations. <br>**ERROR**: indicates a program or functional error that affects the normal running or use of the functionality and can be fixed at a high cost, for example, by resetting data. <br>**FATAL**: indicates that a program or functionality is about to crash and the fault cannot be rectified. |
-| [PreferStrategy](#preferstrategy) | PreferStrategy | Enumerates the preference strategies. This enum is used in [OH_LOG_SetLogLevel](capi-log-h.md#oh_log_setloglevel). The minimum log level that takes effect varies according to the strategy. |
+| [LogType](#logtype) | LogType | Enumerates log types.<br> Currently, <b>LOG_APP</b> is available. |
+| [LogLevel](#loglevel) | LogLevel | Enumerates log levels.<br> You are advised to select log levels based on their respective usage scenarios: <ul><li><b>DEBUG</b>: used for debugging and disabled from commercial releases</li> <li><b>INFO</b>: used for logging important system running status and steps in key processes</li> <li><b>WARN</b>: used for logging unexpected exceptions that have little impact on user experience and can automatically recover. Logs at this level are generally output when such exceptions are detected and captured.</li> <li><b>ERROR</b>: used for logging malfunction that affects user experience and cannot automatically recover</li> <li><b>FATAL</b>: used for logging major exceptions that have severely affected user experience and should not occur.</li></ul> |
+| [PreferStrategy](#preferstrategy) | PreferStrategy | Enumerates preference strategy to be used in [OH_LOG_SetLogLevel](capi-log-h.md#oh_log_setloglevel).<br> You are advised to select preference strategy based on their respective usage scenarios. |
 
 ### Macro
 
 | Name | Description |
 | -- | -- |
+| LOG_DOMAIN 0 | Defines the service domain for a log file.<br> The service domain is used to identify the subsystem and module of a service. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value is beyond the range, its significant bits are automatically truncated.<br>**Since**: 8 |
+| LOG_TAG NULL | Defines a string constant used to identify the class, file, or service.<br>**Since**: 8 |
 | OH_LOG_DEBUG(type, ...) ((void)OH_LOG_Print((type), LOG_DEBUG, LOG_DOMAIN, LOG_TAG, \_\_VA_ARGS\_\_)) | Outputs debug logs. This is a function-like macro.<br> Before calling this function, define the log service domain and log tag. Generally, you need to define them at the beginning of the source file.<br>**Since**: 8 |
 | OH_LOG_INFO(type, ...) ((void)OH_LOG_Print((type), LOG_INFO, LOG_DOMAIN, LOG_TAG, \_\_VA_ARGS\_\_)) | Outputs informational logs. This is a function-like macro.<br> Before calling this function, define the log service domain and log tag. Generally, you need to define them at the beginning of the source file.<br>**Since**: 8 |
 | OH_LOG_WARN(type, ...) ((void)OH_LOG_Print((type), LOG_WARN, LOG_DOMAIN, LOG_TAG, \_\_VA_ARGS\_\_)) | Outputs warning logs. This is a function-like macro.<br> Before calling this function, define the log service domain and log tag. Generally, you need to define them at the beginning of the source file.<br>**Since**: 8 |
@@ -38,21 +38,21 @@ Defines the logging functions of the HiLog module. Before outputting logs, you m
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [int OH_LOG_Print(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *fmt, ...)](#oh_log_print) | - | Outputs logs of the specified **type**, **level**, **domain**, **tag**, and variables determined by the format specifier and privacy identifier in the printf format. |
-| [int OH_LOG_PrintMsg(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *message)](#oh_log_printmsg) | - | Outputs constant log strings of the specified **type**, **level**, **domain**, and **tag**. |
-| [int OH_LOG_PrintMsgByLen(LogType type, LogLevel level, unsigned int domain, const char *tag, size_t tagLen, const char *message, size_t messageLen)](#oh_log_printmsgbylen) | - | Outputs log constant strings of the specified **domain**, **tag**, and **level**. The tag and string length must be specified. Unlike **OH_LOG_PrintMsg**, this API allows strings without terminators. |
-| [int OH_LOG_VPrint(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *fmt, va_list ap)](#oh_log_vprint) | - | Outputs logs of the specified **type**, **level**, **domain**, **tag**, and variables determined by the format specifier and privacy identifier in the printf format. The variables are of the **va_list** type. |
-| [bool OH_LOG_IsLoggable(unsigned int domain, const char *tag, LogLevel level)](#oh_log_isloggable) | - | Checks whether logs of the specified service domain, tag, and level can be printed. |
-| [typedef void (\*LogCallback)(const LogType type, const LogLevel level, const unsigned int domain, const char *tag, const char *msg)](#logcallback) | LogCallback | Customizes the processing of HiLog logs in the callback. |
-| [void OH_LOG_SetCallback(LogCallback callback)](#oh_log_setcallback) | - | Registers a callback function. After this function is called, the custom callback can receive all HiLog logs of the current process. <br>Note that whether this API is called or not, it does not change the default log processing of the current process. |
-| [void OH_LOG_SetMinLogLevel(LogLevel level)](#oh_log_setminloglevel) | - | Sets the minimum log level. <br>NOTE: <br>1. If the set log level is lower than the global log level, the setting does not take effect. <br>2. This function does not take effect for debug applications. |
-| [void OH_LOG_SetLogLevel(LogLevel level, PreferStrategy prefer)](#oh_log_setloglevel) | - | Sets the minimum log level of the current application process. <br>You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG**<br>strategy has the same effect as the **OH_LOG_SetMinLogLevel()** function. <br>Note: This function does not take effect for debug applications. |
+| [int OH_LOG_Print(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *fmt, ...)](#oh_log_print) | - | Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and variable parameters determined by the format specifier and privacy identifier in the printf format. |
+| [int OH_LOG_PrintMsg(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *message)](#oh_log_printmsg) | - | Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and message text. |
+| [int OH_LOG_PrintMsgByLen(LogType type, LogLevel level, unsigned int domain, const char *tag, size_t tagLen, const char *message, size_t messageLen)](#oh_log_printmsgbylen) | - | Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, message text and message length. |
+| [int OH_LOG_VPrint(LogType type, LogLevel level, unsigned int domain, const char *tag, const char *fmt, va_list ap)](#oh_log_vprint) | - | Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and a va_list instead of variable parameters determined by the format specifier and privacy identifier in the printf format. |
+| [bool OH_LOG_IsLoggable(unsigned int domain, const char *tag, LogLevel level)](#oh_log_isloggable) | - | Checks whether logs of the specified service domain, log tag, and log level can be output. |
+| [typedef void (\*LogCallback)(const LogType type, const LogLevel level, const unsigned int domain, const char *tag, const char *msg)](#logcallback) | LogCallback | Defines the function pointer type for the user-defined log processing function. |
+| [void OH_LOG_SetCallback(LogCallback callback)](#oh_log_setcallback) | - | Set the user-defined log processing function.<br> After calling this function, the callback function implemented by the user can receive all hilogs of the current process. Note that it will not change the default behavior of hilog logs of the current process, no matter whether this interface is called or not. |
+| [void OH_LOG_SetMinLogLevel(LogLevel level)](#oh_log_setminloglevel) | - | Sets the lowest log level of the current application process. |
+| [void OH_LOG_SetLogLevel(LogLevel level, PreferStrategy prefer)](#oh_log_setloglevel) | - | Sets the lowest log level of the current application process. Different preference strategy can be set. |
 
 ### Variable
 
 | Name | Description |
 | -- | -- |
-| void (*LogCallback)(const LogType type, const LogLevel level, const unsigned int domain, const char *tag, const char *msg) | Customizes the processing of HiLog logs in the callback.<br>**Since**: 11<br>**System capability**: SystemCapability.HiviewDFX.HiLog |
+| void (*LogCallback)(const LogType type, const LogLevel level, const unsigned int domain, const char *tag, const char *msg) | Defines the function pointer type for the user-defined log processing function.<br>**Since**: 11<br>**System capability**: SystemCapability.HiviewDFX.HiLog |
 
 ## Enum type description
 
@@ -64,15 +64,13 @@ enum LogType
 
 **Description**
 
-Enumerates the log types. You can use this function to specify the type of output logs. Currently, only **<br>LOG_APP** is available.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Enumerates log types.<br> Currently, <b>LOG_APP</b> is available.
 
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| LOG_APP = 0 | Application log. |
+| LOG_APP = 0 | Third-party application logs |
 
 ### LogLevel
 
@@ -82,19 +80,17 @@ enum LogLevel
 
 **Description**
 
-Enumerates the log levels. You are advised to select log levels based on their respective use cases. Log levels: <br>**DEBUG**: provides more detailed process information than INFO logs to help developers analyze service processes and locate faults. DEBUG logs are not recorded in official versions by default. They are available in debug versions or in official versions with the debug function enabled. <br>**INFO**: indicates the key service process nodes and exceptions (for example, no network signal or login failure) that occur during service running. These logs should be recorded by the dominant module in the service to avoid repeated logging conducted by multiple invoked modules or low-level functions. <br>**WARN**: indicates a severe, unexpected fault that has little impact on users and can be rectified by the programs themselves or through simple operations. <br>**ERROR**: indicates a program or functional error that affects the normal running or use of the functionality and can be fixed at a high cost, for example, by resetting data. <br>**FATAL**: indicates that a program or functionality is about to crash and the fault cannot be rectified.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Enumerates log levels.<br> You are advised to select log levels based on their respective usage scenarios: <ul><li><b>DEBUG</b>: used for debugging and disabled from commercial releases</li> <li><b>INFO</b>: used for logging important system running status and steps in key processes</li> <li><b>WARN</b>: used for logging unexpected exceptions that have little impact on user experience and can automatically recover. Logs at this level are generally output when such exceptions are detected and captured.</li> <li><b>ERROR</b>: used for logging malfunction that affects user experience and cannot automatically recover</li> <li><b>FATAL</b>: used for logging major exceptions that have severely affected user experience and should not occur.</li></ul>
 
 **Since**: 8
 
 | Enum item | Description |
 | -- | -- |
-| LOG_DEBUG = 3 | DEBUG level to be used by **OH_LOG_DEBUG**. |
-| LOG_INFO = 4 | INFO level to be used by **OH_LOG_INFO**. |
-| LOG_WARN = 5 | WARN level to be used by **OH_LOG_WARN**. |
-| LOG_ERROR = 6 | ERROR level to be used by **OH_LOG_ERROR**. |
-| LOG_FATAL = 7 | FATAL level to be used by **OH_LOG_FATAL**. |
+| LOG_DEBUG = 3 | Debug level to be used by [OH_LOG_DEBUG](capi-log-h.md#宏定义) |
+| LOG_INFO = 4 | Informational level to be used by [OH_LOG_INFO](capi-log-h.md#宏定义) |
+| LOG_WARN = 5 | Warning level to be used by [OH_LOG_WARN](capi-log-h.md#宏定义) |
+| LOG_ERROR = 6 | Error level to be used by [OH_LOG_ERROR](capi-log-h.md#宏定义) |
+| LOG_FATAL = 7 | Fatal level to be used by [OH_LOG_FATAL](capi-log-h.md#宏定义) |
 
 ### PreferStrategy
 
@@ -104,17 +100,15 @@ enum PreferStrategy
 
 **Description**
 
-Enumerates the preference strategies. This enum is used in [OH_LOG_SetLogLevel](capi-log-h.md#oh_log_setloglevel). The minimum log level that takes effect varies according to the strategy.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Enumerates preference strategy to be used in [OH_LOG_SetLogLevel](capi-log-h.md#oh_log_setloglevel).<br> You are advised to select preference strategy based on their respective usage scenarios.
 
 **Since**: 21
 
 | Enum item | Description |
 | -- | -- |
-| UNSET_LOGLEVEL = 0 | The setting is cleared. The minimum log level that actually takes effect is the system-controlled minimum log level. |
-| PREFER_CLOSE_LOG = 1 | The minimum log level that actually takes effect is the larger value of the new log level and the system- controlled minimum log level. |
-| PREFER_OPEN_LOG = 2 | The minimum log level that actually takes effect is the smaller value of the new log level and the system- controlled minimum log level. |
+| UNSET_LOGLEVEL = 0 | Used to unset SetLogLevel, then none is set |
+| PREFER_CLOSE_LOG = 1 | The actual lowest log level is determined by the maximum level between the new level and the system-controlled level. This is equivalent to calling OH_LOG_SetMinLogLevel. |
+| PREFER_OPEN_LOG = 2 | The actual lowest log level is determined by the minimum level between the new level and the system-controlled level. |
 
 
 ## Function description
@@ -127,9 +121,7 @@ int OH_LOG_Print(LogType type, LogLevel level, unsigned int domain, const char *
 
 **Description**
 
-Outputs logs of the specified **type**, **level**, **domain**, **tag**, and variables determined by the format specifier and privacy identifier in the printf format.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and variable parameters determined by the format specifier and privacy identifier in the printf format.
 
 **Since**: 8
 
@@ -137,18 +129,18 @@ Outputs logs of the specified **type**, **level**, **domain**, **tag**, and vari
 
 | Parameter | Description |
 | -- | -- |
-| [LogType](capi-log-h.md#logtype) type | Log type. The type for third-party applications is defined by **LOG_APP**. |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
-| unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
-| const char *tag | Log tag, which is a string used to identify the class, file, or service. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| const char *fmt | Format string, which is an enhancement of a printf format string and supports the privacy identifier. Specifically, **{public}** or **{private}** is added between the % character and the format specifier in each parameter. |
-| [](capi-log-h.md#).[](capi-log-h.md#).[](capi-log-h.md#).[](capi-log-h.md#) | Parameter list corresponding to the parameter type in the format string. The number and type of parameters must be mapped onto the identifier in the format string. |
+| [LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>, <b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
+| unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
+| const char *tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |
+| const char *fmt | Indicates the format string, which is an enhancement of a printf format string and supports the privacy identifier. Specifically, {public} or {private} is added between the % character and the format specifier in each parameter. |
+| [](capi-log-h.md#).[](capi-log-h.md#).[](capi-log-h.md#).[](capi-log-h.md#) | Indicates a list of parameters. The number and type of parameters must map onto the format specifiers in the format string. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | **0** or a larger value if the operation is successful; a value smaller than **0** otherwise. <br>Possible failure causes: The **LogLevel** passed in is lower than the allowed log level; the **domain** is out of range; the **tag** is a null pointer; the CPU is overloaded; the memory is insufficient; the number of logs on the device is too large. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller than <b>0</b> otherwise. |
 
 ### OH_LOG_PrintMsg()
 
@@ -158,9 +150,7 @@ int OH_LOG_PrintMsg(LogType type, LogLevel level, unsigned int domain, const cha
 
 **Description**
 
-Outputs constant log strings of the specified **type**, **level**, **domain**, and **tag**.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and message text.
 
 **Since**: 18
 
@@ -168,17 +158,17 @@ Outputs constant log strings of the specified **type**, **level**, **domain**, a
 
 | Parameter | Description |
 | -- | -- |
-| [LogType](capi-log-h.md#logtype) type | Log type. The type for third-party applications is defined by **LOG_APP**. |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
-| unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
-| const char *tag | Log tag, which is a string used to identify the class, file, or service. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| const char *message | Constant log string. |
+| [LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>, <b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
+| unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
+| const char *tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |
+| const char *message | Indicates the log string. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | **0** or a larger value if the operation is successful; a value smaller than **0** otherwise. <br>Possible failure causes: The **LogLevel** passed in is lower than the allowed log level; the **domain** is out of range; the **tag** is a null pointer; the CPU is overloaded; the memory is insufficient; the number of logs on the device is too large. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller than <b>0</b> otherwise. |
 
 ### OH_LOG_PrintMsgByLen()
 
@@ -188,9 +178,7 @@ int OH_LOG_PrintMsgByLen(LogType type, LogLevel level, unsigned int domain, cons
 
 **Description**
 
-Outputs log constant strings of the specified **domain**, **tag**, and **level**. The tag and string length must be specified. Unlike **OH_LOG_PrintMsg**, this API allows strings without terminators.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, message text and message length.
 
 **Since**: 18
 
@@ -198,19 +186,19 @@ Outputs log constant strings of the specified **domain**, **tag**, and **level**
 
 | Parameter | Description |
 | -- | -- |
-| [LogType](capi-log-h.md#logtype) type | Log type. The type for third-party applications is defined by **LOG_APP**. |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
-| unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
-| const char *tag | Log tag, which is a string used to identify the class, file, or service. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| size_t tagLen | Length of the tag. |
-| const char *message | Constant log string. |
-| size_t messageLen | Length of the constant string, which is less than 3500 characters. |
+| [LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>, <b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
+| unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
+| const char *tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |
+| size_t tagLen | Indicates the length of tag. |
+| const char *message | Indicates the log string. |
+| size_t messageLen | Indicates the length of message. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | **0** or a larger value if the operation is successful; a value smaller than **0** otherwise. <br>Possible failure causes: The **LogLevel** passed in is lower than the allowed log level; the **domain** is out of range; the **tag** is a null pointer; the CPU is overloaded; the memory is insufficient; the number of logs on the device is too large. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller than <b>0</b> otherwise. |
 
 ### OH_LOG_VPrint()
 
@@ -220,9 +208,7 @@ int OH_LOG_VPrint(LogType type, LogLevel level, unsigned int domain, const char 
 
 **Description**
 
-Outputs logs of the specified **type**, **level**, **domain**, **tag**, and variables determined by the format specifier and privacy identifier in the printf format. The variables are of the **va_list** type.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Outputs logs.<br> You can use this function to output logs based on the specified log type, log level, service domain, log tag, and a va_list instead of variable parameters determined by the format specifier and privacy identifier in the printf format.
 
 **Since**: 18
 
@@ -230,18 +216,18 @@ Outputs logs of the specified **type**, **level**, **domain**, **tag**, and vari
 
 | Parameter | Description |
 | -- | -- |
-| [LogType](capi-log-h.md#logtype) type | Log type. The type for third-party applications is defined by **LOG_APP**. |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
-| unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
-| const char *tag | Log tag, which is a string used to identify the class, file, or service. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| const char *fmt | Format string, which is an enhancement of a printf format string and supports the privacy identifier. Specifically, **{public}** or **{private}** is added between the % character and the format specifier in each parameter. |
-| va_list ap | Parameter list of the **va_list** type that corresponds to the parameter type in the format string. The number and type of parameters must be mapped onto the identifier in the format string. |
+| [LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>, <b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
+| unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
+| const char *tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |
+| const char *fmt | Indicates the format string, which is an enhancement of a printf format string and supports the privacy identifier. Specifically, {public} or {private} is added between the % character and the format specifier in each parameter. |
+| va_list ap | Indicates a list of parameters. The number and type of parameters must map onto the format specifiers in the format string. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | **0** or a larger value if the operation is successful; a value smaller than **0** otherwise. <br>Possible failure causes: The **LogLevel** passed in is lower than the allowed log level; the **domain** is out of range; the **tag** is a null pointer; the CPU is overloaded; the memory is insufficient; the number of logs on the device is too large. |
+| int | Returns <b>0</b> or a larger value if the operation is successful; returns a value smaller than <b>0</b> otherwise. |
 
 ### OH_LOG_IsLoggable()
 
@@ -251,9 +237,7 @@ bool OH_LOG_IsLoggable(unsigned int domain, const char *tag, LogLevel level)
 
 **Description**
 
-Checks whether logs of the specified service domain, tag, and level can be printed.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Checks whether logs of the specified service domain, log tag, and log level can be output.
 
 **Since**: 8
 
@@ -261,15 +245,15 @@ Checks whether logs of the specified service domain, tag, and level can be print
 
 | Parameter | Description |
 | -- | -- |
-| unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
-| const char *tag | Log tag, which is a string used to identify the class, file, or service. A tag can contain a maximum of 31 bytes. If a tag exceeds this limit, it will be truncated. Chinese characters are not recommended because garbled characters or alignment problems may occur. |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
+| unsigned int domain | Indicates the service domain of logs. |
+| const char *tag | Indicates the log tag. |
+| [LogLevel](capi-log-h.md#loglevel) level | Indicates the log level. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| bool | **true** if the specified logs can be output; **false** otherwise. |
+| bool | Returns <b>true</b> if the specified logs can be output; returns <b>false</b> otherwise. |
 
 ### LogCallback()
 
@@ -279,9 +263,7 @@ typedef void (*LogCallback)(const LogType type, const LogLevel level, const unsi
 
 **Description**
 
-Customizes the processing of HiLog logs in the callback.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Defines the function pointer type for the user-defined log processing function.
 
 **Since**: 11
 
@@ -289,9 +271,9 @@ Customizes the processing of HiLog logs in the callback.
 
 | Parameter | Description |
 | -- | -- |
-| [const LogType](capi-log-h.md#logtype) type | Log type. The third-party application log type is [LOG_APP](capi-log-h.md#logtype). |
-| [const LogLevel](capi-log-h.md#loglevel) level | Log level. The value can be **LOG_DEBUG**, **LOG_INFO**, **LOG_WARN**, **LOG_ERROR**, and **LOG_FATAL**. |
-| const unsigned int domain | Service domain. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. If the value exceeds the range, logs cannot be printed. |
+| [const LogType](capi-log-h.md#logtype) type | Indicates the log type. The type for third-party applications is defined by [LOG_APP](capi-log-h.md#logtype). |
+| [const LogLevel](capi-log-h.md#loglevel) level | Indicates the log level, which can be <b>LOG_DEBUG</b>, <b>LOG_INFO</b>, <b>LOG_WARN</b>, <b>LOG_ERROR</b>, and <b>LOG_FATAL</b>. |
+| const unsigned int domain | Indicates the service domain of logs. Its value is a hexadecimal integer ranging from 0x0 to 0xFFFF. |
 | const char *tag | Indicates the log tag, which is a string used to identify the class, file, or service behavior. |
 | const char *msg | Indicates the log message itself, which is a formatted log string. |
 
@@ -303,9 +285,7 @@ void OH_LOG_SetCallback(LogCallback callback)
 
 **Description**
 
-Registers a callback function. After this function is called, the custom callback can receive all HiLog logs of the current process. <br>Note that whether this API is called or not, it does not change the default log processing of the current process.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Set the user-defined log processing function.<br> After calling this function, the callback function implemented by the user can receive all hilogs of the current process. Note that it will not change the default behavior of hilog logs of the current process, no matter whether this interface is called or not.
 
 **Since**: 11
 
@@ -313,7 +293,7 @@ Registers a callback function. After this function is called, the custom callbac
 
 | Parameter | Description |
 | -- | -- |
-| [LogCallback](capi-log-h.md#logcallback) callback | Custom callback function. If processing of logs is not needed, a null pointer can be transferred. |
+| [LogCallback](capi-log-h.md#logcallback) callback | Indicates the callback function implemented by the user. If you do not need to process hilog logs, you can transfer a null pointer. |
 
 ### OH_LOG_SetMinLogLevel()
 
@@ -323,9 +303,7 @@ void OH_LOG_SetMinLogLevel(LogLevel level)
 
 **Description**
 
-Sets the minimum log level. <br>NOTE: <br>1. If the set log level is lower than the global log level, the setting does not take effect. <br>2. This function does not take effect for debug applications.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Sets the lowest log level of the current application process.
 
 **Since**: 15
 
@@ -333,7 +311,7 @@ Sets the minimum log level. <br>NOTE: <br>1. If the set log level is lower than 
 
 | Parameter | Description |
 | -- | -- |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. |
+| [LogLevel](capi-log-h.md#loglevel) level | log level |
 
 ### OH_LOG_SetLogLevel()
 
@@ -343,9 +321,7 @@ void OH_LOG_SetLogLevel(LogLevel level, PreferStrategy prefer)
 
 **Description**
 
-Sets the minimum log level of the current application process. <br>You can configure different preference strategies using the **prefer** parameter. The **PREFER_CLOSE_LOG**<br>strategy has the same effect as the **OH_LOG_SetMinLogLevel()** function. <br>Note: This function does not take effect for debug applications.
-
-**System capability**: SystemCapability.HiviewDFX.HiLog
+Sets the lowest log level of the current application process. Different preference strategy can be set.
 
 **Since**: 21
 
@@ -353,7 +329,7 @@ Sets the minimum log level of the current application process. <br>You can confi
 
 | Parameter | Description |
 | -- | -- |
-| [LogLevel](capi-log-h.md#loglevel) level | Log level. |
-| [PreferStrategy](capi-log-h.md#preferstrategy) prefer | Preference strategy. |
+| [LogLevel](capi-log-h.md#loglevel) level | log level. |
+| [PreferStrategy](capi-log-h.md#preferstrategy) prefer | preference strategy. See [PreferStrategy](capi-log-h.md#preferstrategy). |
 
 

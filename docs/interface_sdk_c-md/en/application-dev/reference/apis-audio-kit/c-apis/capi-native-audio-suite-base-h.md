@@ -6,8 +6,6 @@ Declare underlying data structure.
 
 **Library**: libohaudiosuite.so
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 **Related module**: [OHAudioSuite](capi-ohaudiosuite.md)
@@ -82,8 +80,6 @@ enum OH_AudioNode_Type
 
 Define audio node type.
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -113,8 +109,6 @@ enum OH_AudioSuite_PipelineWorkMode
 
 Define pipeline work mode
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -132,8 +126,6 @@ enum OH_AudioSuite_PipelineState
 
 Define pipeline state
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -150,8 +142,6 @@ enum OH_AudioSuite_Result
 **Description**
 
 Define the result of the function execution.
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 22
 
@@ -182,8 +172,6 @@ enum OH_Audio_SampleFormat
 
 Define the audio sample format.
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -204,8 +192,6 @@ enum OH_Audio_EncodingType
 
 Define the audio encoding type.
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -221,8 +207,6 @@ enum OH_Audio_SampleRate
 **Description**
 
 Define the audio sample rate.
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 22
 
@@ -253,8 +237,6 @@ enum OH_SoundFieldType
 
 Define the sound field type.
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -273,8 +255,6 @@ enum OH_EnvironmentType
 **Description**
 
 Define the environment type.
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 22
 
@@ -295,8 +275,6 @@ enum OH_VoiceBeautifierType
 
 Define voice beautifier type.
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 22
 
 | Enum item | Description |
@@ -316,8 +294,6 @@ enum OH_AudioSuite_SurroundDirection
 
 Space rendering surround Direction
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 23
 
 | Enum item | Description |
@@ -335,8 +311,6 @@ enum OH_AudioSuite_PureVoiceChangeGenderOption
 
 Define speaker gender in change voice option
 
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
-
 **Since**: 23
 
 | Enum item | Description |
@@ -353,8 +327,6 @@ enum OH_AudioSuite_PureVoiceChangeType
 **Description**
 
 Define voice type in change voice option
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 23
 
@@ -377,8 +349,6 @@ enum OH_AudioSuite_GeneralVoiceChangeType
 **Description**
 
 Define voice type in general voice change.
-
-**System capability**: SystemCapability.Multimedia.Audio.SuiteEngine
 
 **Since**: 23
 

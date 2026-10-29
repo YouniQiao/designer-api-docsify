@@ -6,8 +6,6 @@ The file declares the photo output concepts.
 
 **Library**: libohcamera.so
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Related module**: [OH_Camera](capi-oh-camera.md)
@@ -20,7 +18,6 @@ The file declares the photo output concepts.
 | -- | -- | -- |
 | [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) | - | The struct describes the callbacks related to photo output. |
 | [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md) | Camera_PhotoOutput | The struct describes the photo output object. |
-| [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) | OH_Camera_C2PASignatureConfig | Defines the C2PA signature configuration. |
 | [OH_Camera_PhotoCaptureSettingExt](capi-oh-camera-oh-camera-photocapturesettingext.md) | OH_Camera_PhotoCaptureSettingExt | The struct describes the photo capture setting ext. |
 
 ### Function
@@ -76,14 +73,6 @@ The file declares the photo output concepts.
 | [Camera_ErrorCode OH_PhotoCaptureSettingExt_SetLocation(OH_Camera_PhotoCaptureSettingExt* photoCaptureSettingExt, Camera_Location location)](#oh_photocapturesettingext_setlocation) | - | Sets the image location for the photo capture extension configuration. |
 | [Camera_ErrorCode OH_PhotoOutput_EnableAutoExtendedGainmapDelivery(Camera_PhotoOutput* photoOutput, bool enabled)](#oh_photooutput_enableautoextendedgainmapdelivery) | - | Enables auto extended gainmap delivery. |
 | [bool OH_PhotoOutput_IsAutoExtendedGainmapDeliverySupported(const Camera_PhotoOutput* photoOutput)](#oh_photooutput_isautoextendedgainmapdeliverysupported) | - | Checks whether the auto extended gainmap delivery is supported. |
-| [Camera_ErrorCode OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported(const Camera_PhotoOutput* photoOutput, OH_Camera_AuxiliaryPhotoType auxPhotoType, bool* isSupported)](#oh_photooutput_isautoauxiliaryphotodeliverysupported) | - | Check if the automatic auxiliary photo delivery is supported. |
-| [Camera_ErrorCode OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled(Camera_PhotoOutput* photoOutput, const OH_Camera_AuxiliaryPhotoType* auxPhotoTypes, uint32_t size, bool enable)](#oh_photooutput_setautoauxiliaryphotosdeliveryenabled) | - | Enable or disable auto auxiliary photo delivery. |
-| [Camera_ErrorCode OH_PhotoOutput_IsC2PASignatureSupported(const Camera_PhotoOutput* photoOutput, bool* isSupported)](#oh_photooutput_isc2pasignaturesupported) | - | Checks whether C2PA signature is supported. |
-| [OH_Camera_C2PASignatureConfig* OH_Camera_C2PASignatureConfig_Create(void)](#oh_camera_c2pasignatureconfig_create) | - | Creates an [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance. Release the C2PA signature configuration by calling [OH_Camera_C2PASignatureConfig_Destroy](capi-photo-output-h.md#oh_camera_c2pasignatureconfig_destroy). |
-| [void OH_Camera_C2PASignatureConfig_Destroy(OH_Camera_C2PASignatureConfig* config)](#oh_camera_c2pasignatureconfig_destroy) | - | Destroys an [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance. |
-| [Camera_ErrorCode OH_Camera_C2PASignatureConfig_SetAuthorName(OH_Camera_C2PASignatureConfig* config, const char* authorName)](#oh_camera_c2pasignatureconfig_setauthorname) | - | Sets the author name for the C2PA signature configuration. |
-| [Camera_ErrorCode OH_Camera_C2PASignatureConfig_SetAuthorID(OH_Camera_C2PASignatureConfig* config, const char* authorID)](#oh_camera_c2pasignatureconfig_setauthorid) | - | Sets the author ID for the C2PA signature configuration. |
-| [Camera_ErrorCode OH_PhotoOutput_ConfigureC2PASignature(Camera_PhotoOutput* photoOutput, bool enableC2PA, OH_Camera_C2PASignatureConfig* config)](#oh_photooutput_configurec2pasignature) | - | Configures the C2PA signature settings. This function enables or disables C2PA signature and optionally sets the author information for the C2PA signature.<br> Before calling this function, check whether C2PA signature is supported by calling [OH_PhotoOutput_IsC2PASignatureSupported](capi-photo-output-h.md#oh_photooutput_isc2pasignaturesupported). |
 
 ### Variable
 
@@ -113,8 +102,6 @@ typedef void (*OH_PhotoOutput_OnFrameStart)(Camera_PhotoOutput* photoOutput)
 
 Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame start events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -132,8 +119,6 @@ typedef void (*OH_PhotoOutput_OnFrameShutter)(Camera_PhotoOutput* photoOutput, C
 **Description**
 
 Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report frame shutter events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -154,8 +139,6 @@ typedef void (*OH_PhotoOutput_OnFrameEnd)(Camera_PhotoOutput* photoOutput, int32
 
 Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output frame end events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -174,8 +157,6 @@ typedef void (*OH_PhotoOutput_OnError)(Camera_PhotoOutput* photoOutput, Camera_E
 **Description**
 
 Defines the callback defined in the [PhotoOutput_Callbacks](capi-oh-camera-photooutput-callbacks.md) struct and used to report photo output errors.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -201,8 +182,6 @@ typedef void (*OH_PhotoOutput_CaptureEnd)(Camera_PhotoOutput* photoOutput, int32
 
 Defines the callback invoked when the capture ends.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -221,8 +200,6 @@ typedef void (*OH_PhotoOutput_CaptureStartWithInfo)(Camera_PhotoOutput* photoOut
 **Description**
 
 Defines the callback invoked when the capture starts.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -243,8 +220,6 @@ typedef void (*OH_PhotoOutput_OnFrameShutterEnd)(Camera_PhotoOutput* photoOutput
 
 Defines the callback invoked when frame shutter ends.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -264,8 +239,6 @@ typedef void (*OH_PhotoOutput_CaptureReady)(Camera_PhotoOutput* photoOutput)
 
 Defines the callback invoked when the camera is ready to take photos. When the callback is received, the next capture can be performed.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -283,8 +256,6 @@ typedef void (*OH_PhotoOutput_EstimatedCaptureDuration)(Camera_PhotoOutput* phot
 **Description**
 
 Defines the callback for the estimated capture duration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -305,8 +276,6 @@ typedef void (*OH_PhotoOutput_PhotoAvailable)(Camera_PhotoOutput* photoOutput, O
 
 Defines the callback invoked when a high-resolution photo is available.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -326,8 +295,6 @@ typedef void (*OH_PhotoOutput_PhotoAssetAvailable)(Camera_PhotoOutput* photoOutp
 
 Defines the callback invoked when a photo asset is available.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -346,8 +313,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterCallback(Camera_PhotoOutput* photoOutput
 **Description**
 
 Registers a callback to listen for photo output events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -374,8 +339,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterCallback(Camera_PhotoOutput* photoOutp
 
 Unregisters the callback used to listen for photo output events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -401,8 +364,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterCaptureStartWithInfoCallback(Camera_Phot
 
 Registers a callback to listen for capture start events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -427,8 +388,6 @@ Camera_ErrorCode OH_PhotoOutput_GetPhotoRotation(Camera_PhotoOutput* photoOutput
 **Description**
 
 Obtains the photo rotation angle.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -456,8 +415,6 @@ Camera_ErrorCode OH_PhotoOutput_GetPhotoRotationWithoutDeviceDegree(Camera_Photo
 
 Obtains the photo rotation angle.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 23
 
 **Parameters**:
@@ -482,8 +439,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterCaptureStartWithInfoCallback(Camera_Ph
 **Description**
 
 Unregisters the callback used to listen for capture start events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -510,8 +465,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterCaptureEndCallback(Camera_PhotoOutput* p
 
 Registers a callback to listen for capture end events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -536,8 +489,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterCaptureEndCallback(Camera_PhotoOutput*
 **Description**
 
 Unregisters the callback used to listen for capture end events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -564,8 +515,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterFrameShutterEndCallback(Camera_PhotoOutp
 
 Registers a callback to listen for frame shutter end events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -590,8 +539,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterFrameShutterEndCallback(Camera_PhotoOu
 **Description**
 
 Unregisters the callback used to listen for frame shutter end events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -618,8 +565,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterCaptureReadyCallback(Camera_PhotoOutput*
 
 Registers a callback to listen for camera ready events. When the callback is received, the next capture can be performed.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -644,8 +589,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterCaptureReadyCallback(Camera_PhotoOutpu
 **Description**
 
 Unregisters the callback used to listen for camera ready events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -672,8 +615,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterEstimatedCaptureDurationCallback(Camera_
 
 Registers a callback to listen for estimated capture duration events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -698,8 +639,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterEstimatedCaptureDurationCallback(Camer
 **Description**
 
 Unregisters the callback used to listen for estimated capture duration events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -726,8 +665,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterPhotoAvailableCallback(Camera_PhotoOutpu
 
 Registers a callback to listen for photo availability events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -752,8 +689,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterPhotoAvailableCallback(Camera_PhotoOut
 **Description**
 
 Unregisters the callback used to listen for photo availability events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -780,8 +715,6 @@ Camera_ErrorCode OH_PhotoOutput_RegisterPhotoAssetAvailableCallback(Camera_Photo
 
 Registers a callback to listen for photo asset availability events.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -806,8 +739,6 @@ Camera_ErrorCode OH_PhotoOutput_UnregisterPhotoAssetAvailableCallback(Camera_Pho
 **Description**
 
 Unregisters the callback used to listen for photo asset availability events.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -834,8 +765,6 @@ Camera_ErrorCode OH_PhotoOutput_Capture(Camera_PhotoOutput* photoOutput)
 
 Captures a photo. This function must be called in prior to [OH_PreviewOutput_Release](capi-preview-output-h.md#oh_previewoutput_release). Otherwise, photo capture fails.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -859,8 +788,6 @@ Camera_ErrorCode OH_PhotoOutput_Capture_WithCaptureSetting(Camera_PhotoOutput* p
 **Description**
 
 Captures a photo with photographing parameters.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -887,8 +814,6 @@ Camera_ErrorCode OH_PhotoOutput_Release(Camera_PhotoOutput* photoOutput)
 
 Releases a PhotoOutput instance.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -912,8 +837,6 @@ Camera_ErrorCode OH_PhotoOutput_IsMirrorSupported(Camera_PhotoOutput* photoOutpu
 **Description**
 
 Checks whether mirroring is supported.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 11
 
@@ -940,8 +863,6 @@ Camera_ErrorCode OH_PhotoOutput_EnableMirror(Camera_PhotoOutput* photoOutput, bo
 
 Enables dynamic photo capture.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 13
 
 **Parameters**:
@@ -966,8 +887,6 @@ Camera_ErrorCode OH_PhotoOutput_GetActiveProfile(Camera_PhotoOutput* photoOutput
 **Description**
 
 Obtains the profile of a PhotoOutput instance.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -994,8 +913,6 @@ Camera_ErrorCode OH_PhotoOutput_DeleteProfile(Camera_Profile* profile)
 
 Deletes the profile of a PhotoOutput instance.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1019,8 +936,6 @@ Camera_ErrorCode OH_PhotoOutput_IsMovingPhotoSupported(Camera_PhotoOutput* photo
 **Description**
 
 Checks whether moving photos are supported.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 12
 
@@ -1047,8 +962,6 @@ Camera_ErrorCode OH_PhotoOutput_EnableMovingPhoto(Camera_PhotoOutput* photoOutpu
 
 Enables or disables moving photos.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 12
 
 **Parameters**:
@@ -1073,8 +986,6 @@ Camera_ErrorCode OH_PhotoOutput_IsPhotoQualityPrioritizationSupported(Camera_Pho
 **Description**
 
 Checks whether the specified photo quality prioritization strategy is supported.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 21
 
@@ -1102,8 +1013,6 @@ Camera_ErrorCode OH_PhotoOutput_SetPhotoQualityPrioritization(Camera_PhotoOutput
 
 Sets the photo quality prioritization strategy.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 21
 
 **Parameters**:
@@ -1128,8 +1037,6 @@ Camera_ErrorCode OH_PhotoOutput_Capture_WithCaptureSettingExt(Camera_PhotoOutput
 **Description**
 
 Captures a photo with photo capture setting extension.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1156,8 +1063,6 @@ Camera_ErrorCode OH_PhotoOutput_CreatePhotoCaptureSettingExt(Camera_PhotoOutput*
 
 Creates a **OH_Camera_PhotoCaptureSettingExt** instance. Release the photo capture setting ext memory by calling [OH_PhotoOutput_DestroyPhotoCaptureSettingExt](capi-photo-output-h.md#oh_photooutput_destroyphotocapturesettingext).
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1182,8 +1087,6 @@ Camera_ErrorCode OH_PhotoCaptureSettingExt_SetCompressionQuality(OH_Camera_Photo
 **Description**
 
 Sets the image compression quality for the photo capture extension configuration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1210,8 +1113,6 @@ Camera_ErrorCode OH_PhotoCaptureSettingExt_SetImageRotation(OH_Camera_PhotoCaptu
 
 Sets the image rotation for the photo capture extension configuration.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1236,8 +1137,6 @@ Camera_ErrorCode OH_PhotoCaptureSettingExt_SetMirror(OH_Camera_PhotoCaptureSetti
 **Description**
 
 Sets the image mirror for the photo capture extension configuration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1264,8 +1163,6 @@ Camera_ErrorCode OH_PhotoOutput_DestroyPhotoCaptureSettingExt(OH_Camera_PhotoCap
 
 Destroy the photo capture setting ext.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1289,8 +1186,6 @@ Camera_ErrorCode OH_PhotoCaptureSettingExt_SetLocation(OH_Camera_PhotoCaptureSet
 **Description**
 
 Sets the image location for the photo capture extension configuration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
 
 **Since**: 26.0.0
 
@@ -1317,8 +1212,6 @@ Camera_ErrorCode OH_PhotoOutput_EnableAutoExtendedGainmapDelivery(Camera_PhotoOu
 
 Enables auto extended gainmap delivery.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1344,8 +1237,6 @@ bool OH_PhotoOutput_IsAutoExtendedGainmapDeliverySupported(const Camera_PhotoOut
 
 Checks whether the auto extended gainmap delivery is supported.
 
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1359,213 +1250,5 @@ Checks whether the auto extended gainmap delivery is supported.
 | Type | Description |
 | -- | -- |
 | bool | **true** if supported, **false** otherwise. |
-
-### OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported()
-
-```c
-Camera_ErrorCode OH_PhotoOutput_IsAutoAuxiliaryPhotoDeliverySupported(const Camera_PhotoOutput* photoOutput, OH_Camera_AuxiliaryPhotoType auxPhotoType, bool* isSupported)
-```
-
-**Description**
-
-Check if the automatic auxiliary photo delivery is supported.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | [in] Pointer to the target PhotoOutput instance. |
-| [OH_Camera_AuxiliaryPhotoType](capi-camera-h.md#oh_camera_auxiliaryphototype) auxPhotoType | [in] Target auxiliary photo type. |
-| bool* isSupported | [out] Pointer to the check result for the support of capturing auxiliary photo. **true** if supported, **false** otherwise. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK**: The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> <li>**CAMERA_ERROR_PARAM_OUT_OF_RANGE**: A parameter is out of the range.</li> <li>**CAMERA_SERVICE_FATAL_ERROR**: The camera service is abnormal.</li> </ul> |
-
-### OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled()
-
-```c
-Camera_ErrorCode OH_PhotoOutput_SetAutoAuxiliaryPhotosDeliveryEnabled(Camera_PhotoOutput* photoOutput, const OH_Camera_AuxiliaryPhotoType* auxPhotoTypes, uint32_t size, bool enable)
-```
-
-**Description**
-
-Enable or disable auto auxiliary photo delivery.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | [in] Pointer to the target PhotoOutput instance. |
-| [const OH_Camera_AuxiliaryPhotoType](capi-camera-h.md#oh_camera_auxiliaryphototype)* auxPhotoTypes | [in] Pointer to the target auxiliary photo types array. |
-| uint32_t size | [in] The size of the auxiliary photo types array(number of elements). |
-| bool enable | [in] Whether to enable or disable auxiliary photo delivery. **true** to enable, **false** otherwise. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK**: The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> <li>**CAMERA_ERROR_PARAM_OUT_OF_RANGE**: A parameter is out of the range.</li> <li>**CAMERA_SERVICE_FATAL_ERROR**: The camera service is abnormal.</li> </ul> |
-
-### OH_PhotoOutput_IsC2PASignatureSupported()
-
-```c
-Camera_ErrorCode OH_PhotoOutput_IsC2PASignatureSupported(const Camera_PhotoOutput* photoOutput, bool* isSupported)
-```
-
-**Description**
-
-Checks whether C2PA signature is supported.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [const Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| bool* isSupported | Pointer to the check result for the support of C2PA signature. **true** if supported, **false**<br>otherwise. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK** : The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> </ul> |
-
-### OH_Camera_C2PASignatureConfig_Create()
-
-```c
-OH_Camera_C2PASignatureConfig* OH_Camera_C2PASignatureConfig_Create(void)
-```
-
-**Description**
-
-Creates an [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance. Release the C2PA signature configuration by calling [OH_Camera_C2PASignatureConfig_Destroy](capi-photo-output-h.md#oh_camera_c2pasignatureconfig_destroy).
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Resource release**: OH_Camera_C2PASignatureConfig_Destroy {return};
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [OH_Camera_C2PASignatureConfig*](capi-oh-camera-oh-camera-c2pasignatureconfig.md) | Returns the pointer to the [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance created, or **NULL** if the creation fails. |
-
-### OH_Camera_C2PASignatureConfig_Destroy()
-
-```c
-void OH_Camera_C2PASignatureConfig_Destroy(OH_Camera_C2PASignatureConfig* config)
-```
-
-**Description**
-
-Destroys an [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md)* config | Pointer to the [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance to destroy. |
-
-### OH_Camera_C2PASignatureConfig_SetAuthorName()
-
-```c
-Camera_ErrorCode OH_Camera_C2PASignatureConfig_SetAuthorName(OH_Camera_C2PASignatureConfig* config, const char* authorName)
-```
-
-**Description**
-
-Sets the author name for the C2PA signature configuration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md)* config | Pointer to the target [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance. |
-| const char* authorName | Pointer to the author name string to set. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK** : The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> </ul> |
-
-### OH_Camera_C2PASignatureConfig_SetAuthorID()
-
-```c
-Camera_ErrorCode OH_Camera_C2PASignatureConfig_SetAuthorID(OH_Camera_C2PASignatureConfig* config, const char* authorID)
-```
-
-**Description**
-
-Sets the author ID for the C2PA signature configuration.
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md)* config | Pointer to the target [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance. |
-| const char* authorID | Pointer to the author ID string to set. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK** : The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> </ul> |
-
-### OH_PhotoOutput_ConfigureC2PASignature()
-
-```c
-Camera_ErrorCode OH_PhotoOutput_ConfigureC2PASignature(Camera_PhotoOutput* photoOutput, bool enableC2PA, OH_Camera_C2PASignatureConfig* config)
-```
-
-**Description**
-
-Configures the C2PA signature settings. This function enables or disables C2PA signature and optionally sets the author information for the C2PA signature.<br> Before calling this function, check whether C2PA signature is supported by calling [OH_PhotoOutput_IsC2PASignatureSupported](capi-photo-output-h.md#oh_photooutput_isc2pasignaturesupported).
-
-**System capability**: SystemCapability.Multimedia.Camera.Core
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [Camera_PhotoOutput](capi-oh-camera-camera-photooutput.md)* photoOutput | Pointer to the target PhotoOutput instance. |
-| bool enableC2PA | Whether to enable C2PA signature. **true** to enable, **false** to disable. |
-| [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md)* config | Pointer to the [OH_Camera_C2PASignatureConfig](capi-oh-camera-oh-camera-c2pasignatureconfig.md) instance, which includes the author name and author ID. If **NULL**, the C2PA signature will be generated without author information. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| [Camera_ErrorCode](capi-camera-h.md#camera_errorcode) | <ul> <li>**CAMERA_OK**: The operation is successful.</li> <li>**CAMERA_INVALID_ARGUMENT**: A parameter is missing or the parameter type is incorrect.</li> <li>**CAMERA_SERVICE_FATAL_ERROR**: The camera service is abnormal.</li> </ul> |
 
 

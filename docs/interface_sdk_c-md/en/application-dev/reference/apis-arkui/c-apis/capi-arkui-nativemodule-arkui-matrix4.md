@@ -6,7 +6,7 @@ typedef struct ArkUI_Matrix4 ArkUI_Matrix4
 
 ## Overview
 
-Defines a fourth-order matrix object used to describe matrix transformation operations such as translation, rotation, and scaling of UI components. For details, see ArkUI_NativeModule.
+Defines a fourth-order matrix object.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

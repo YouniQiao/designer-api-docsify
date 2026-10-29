@@ -6,8 +6,6 @@
 
 **库：** libohgame_controller.z.so
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **相关模块：** [GameController](capi-gamecontroller.md)
@@ -76,8 +74,6 @@ enum GamePad_AxisSourceType
 
 此枚举定义手柄轴事件来源类型。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -97,8 +93,6 @@ enum GamePad_Button_ActionType
 **描述：**
 
 此枚举定义手柄按键动作类型。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -120,8 +114,6 @@ typedef void(* GamePad_ButtonInputMonitorCallback)(const struct GamePad_ButtonEv
 
 定义在按键事件注册监听接口中使用的回调函数。当玩家按下按键时，该回调函数将被调用。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -140,8 +132,6 @@ typedef void(* GamePad_AxisInputMonitorCallback)(const struct GamePad_AxisEvent*
 
 定义在轴事件注册监听接口中使用的回调函数。当玩家操作摇杆时，该回调函数将被调用。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -159,8 +149,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetDeviceId(const struct GamePad
 **描述：**
 
 从按键事件中获取设备ID。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -187,8 +175,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonAction(const struct Gam
 
 从按键事件中获取按键动作类型。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -213,8 +199,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonCode(const struct GameP
 **描述：**
 
 从按键事件中获取按键编码。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -241,8 +225,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetButtonCodeName(const struct G
 
 从按键事件中获取按键名称。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -268,8 +250,6 @@ GameController_ErrorCode OH_GamePad_PressedButtons_GetCount(const struct GamePad
 
 从按键事件中获取按下的按键数量。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -294,8 +274,6 @@ GameController_ErrorCode OH_GamePad_PressedButtons_GetButtonInfo(const struct Ga
 **描述：**
 
 从按键事件中获取指定索引的按键信息。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -328,8 +306,6 @@ GameController_ErrorCode OH_GamePad_DestroyPressedButton(GamePad_PressedButton**
 
 销毁按下的按键实例。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -353,8 +329,6 @@ GameController_ErrorCode OH_GamePad_PressedButton_GetButtonCode(const struct Gam
 **描述：**
 
 从按下的按键中获取按键编码。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -381,8 +355,6 @@ GameController_ErrorCode OH_GamePad_PressedButton_GetButtonCodeName(const struct
 
 从按下的按键中获取按键名称。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -407,8 +379,6 @@ GameController_ErrorCode OH_GamePad_ButtonEvent_GetActionTime(const struct GameP
 **描述：**
 
 从按键事件中获取动作时间。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -435,8 +405,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetDeviceId(const struct GamePad_A
 
 从轴事件中获取设备ID。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -461,8 +429,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetAxisSourceType(const struct Gam
 **描述：**
 
 从轴事件中获取轴事件来源类型。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -489,8 +455,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetXAxisValue(const struct GamePad
 
 从轴事件中获取X轴的值。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -515,8 +479,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetYAxisValue(const struct GamePad
 **描述：**
 
 从轴事件中获取Y轴的值。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -543,8 +505,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetZAxisValue(const struct GamePad
 
 从轴事件中获取Z轴的值。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -569,8 +529,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetRZAxisValue(const struct GamePa
 **描述：**
 
 从轴事件中获取RZ轴的值。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -597,8 +555,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetHatXAxisValue(const struct Game
 
 从轴事件中获取HatX轴的值。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -623,8 +579,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetHatYAxisValue(const struct Game
 **描述：**
 
 从轴事件中获取HatY轴的值。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -651,8 +605,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetBrakeAxisValue(const struct Gam
 
 从轴事件中获取Brake轴的值。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -678,8 +630,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetGasAxisValue(const struct GameP
 
 从轴事件中获取Gas轴的值。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -704,8 +654,6 @@ GameController_ErrorCode OH_GamePad_AxisEvent_GetActionTime(const struct GamePad
 **描述：**
 
 从轴事件中获取动作时间。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 

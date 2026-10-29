@@ -6,8 +6,6 @@ Defines APIs for game devices.
 
 **Library**: libohgame_controller.z.so
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Related module**: [GameController](capi-gamecontroller.md)
@@ -43,8 +41,6 @@ GameController_ErrorCode OH_GameDevice_GetAllDeviceInfos(GameDevice_AllDeviceInf
 
 Obtains information about all online devices.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -73,8 +69,6 @@ GameController_ErrorCode OH_GameDevice_RegisterDeviceMonitor(GameDevice_DeviceMo
 **Description**
 
 Registers a callback for device status change events.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -105,8 +99,6 @@ GameController_ErrorCode OH_GameDevice_UnregisterDeviceMonitor(void)
 
 Unregisters the callback for device status change events.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Returns**:
@@ -124,8 +116,6 @@ GameController_ErrorCode OH_GameDevice_DestroyAllDeviceInfos(GameDevice_AllDevic
 **Description**
 
 Destroys all device information instances.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 
@@ -151,8 +141,6 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetCount(const struct Game
 
 Obtains the number of devices.
 
-**System capability**: SystemCapability.Game.GameController
-
 **Since**: 21
 
 **Parameters**:
@@ -177,8 +165,6 @@ GameController_ErrorCode OH_GameDevice_AllDeviceInfos_GetDeviceInfo(const struct
 **Description**
 
 Obtains the device information at the specified index.
-
-**System capability**: SystemCapability.Game.GameController
 
 **Since**: 21
 

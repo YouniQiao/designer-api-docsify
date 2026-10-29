@@ -10,7 +10,7 @@ TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Related module**: [TrafficFilter](capi-trafficfilter.md)
 
@@ -22,8 +22,8 @@ TCP flags match condition<br> Matches TCP packets based on TCP flag settings
 
 | Name | Description |
 | -- | -- |
-| bool enable | Enable TCP flags matching<br>**Since**: 26.0.1 |
-| uint8_t flagMask | Flag mask (which flags to check, use OH_TRAFFICFILTER_TCP_FLAG_* constants)<br>**Since**: 26.0.1 |
-| uint8_t flagComp | Flag to compare (which flags must be set)<br>**Since**: 26.0.1 |
+| bool enable | Enable TCP flags matching<br>**Since**: 26.1.0 |
+| uint8_t flagMask | Flag mask (which flags to check, use OH_TRAFFICFILTER_TCP_FLAG_* constants)<br>**Since**: 26.1.0 |
+| uint8_t flagComp | Flag to compare (which flags must be set)<br>**Since**: 26.1.0 |
 
 

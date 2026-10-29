@@ -6,8 +6,6 @@
 
 **库：** libnative_drawing.so
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 13
 
 **相关模块：** [Drawing](capi-drawing.md)
@@ -38,8 +36,6 @@ OH_Drawing_RecordCmdUtils* OH_Drawing_RecordCmdUtilsCreate(void)
 
 创建一个指令录制工具对象。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 13
 
 **返回值：**
@@ -57,8 +53,6 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdUtilsDestroy(OH_Drawing_RecordCmdUtils*
 **描述：**
 
 销毁一个指令录制工具对象，并回收该对象占用的内存。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 13
 
@@ -83,8 +77,6 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdUtilsBeginRecording(OH_Drawing_RecordCm
 **描述：**
 
 开始录制。此接口需要与[OH_Drawing_RecordCmdUtilsFinishRecording](capi-drawing-record-cmd-h.md#oh_drawing_recordcmdutilsfinishrecording)接口成对使用。 <br>指令录制工具生成录制类型的画布对象，可调用drawing的绘制接口，记录接下来所有的绘制指令。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 13
 
@@ -113,8 +105,6 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdUtilsFinishRecording(OH_Drawing_RecordC
 
 结束录制。在调用此接口前，需要先调用[OH_Drawing_RecordCmdUtilsBeginRecording](capi-drawing-record-cmd-h.md#oh_drawing_recordcmdutilsbeginrecording)接口。 <br>指令录制工具结束录制指令，将录制类型画布对象记录的绘制指令存入生成的录制指令对象。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **起始版本：** 13
 
 **参数：**
@@ -140,9 +130,7 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdUtilsGetHeight(const OH_Drawing_RecordC
 
 获取录制画布的高度。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **参数：**
 
@@ -167,9 +155,7 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdUtilsGetWidth(const OH_Drawing_RecordCm
 
 获取录制画布的宽度。
 
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
-
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **参数：**
 
@@ -193,8 +179,6 @@ OH_Drawing_ErrorCode OH_Drawing_RecordCmdDestroy(OH_Drawing_RecordCmd* recordCmd
 **描述：**
 
 销毁录制指令对象，并回收该对象占用的内存。
-
-**系统能力：** SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **起始版本：** 13
 

@@ -8,8 +8,6 @@ Provides methods for binding and unbinding input methods.
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Related module**: [InputMethod](capi-inputmethod.md)
@@ -35,8 +33,6 @@ InputMethod_ErrorCode OH_InputMethodController_Attach(InputMethod_TextEditorProx
 **Description**
 
 Attach application to the input method service.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -64,8 +60,6 @@ InputMethod_ErrorCode OH_InputMethodController_AttachWithUIContext(ArkUI_Context
 
 Attach application to the input method service.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 23
 
 **Parameters**:
@@ -92,8 +86,6 @@ InputMethod_ErrorCode OH_InputMethodController_Detach(InputMethod_InputMethodPro
 **Description**
 
 Detach application from the input method service.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 

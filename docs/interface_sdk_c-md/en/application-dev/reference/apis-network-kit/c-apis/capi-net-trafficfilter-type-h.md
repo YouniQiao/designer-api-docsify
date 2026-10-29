@@ -6,8 +6,6 @@ Declares the common types and error codes required for network traffic filtering
 
 **Library**: libnet_trafficfilter.so
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
 **Since**: 26.0.0
 
 **Related module**: [TrafficFilter](capi-trafficfilter.md)
@@ -63,7 +61,7 @@ Declares the common types and error codes required for network traffic filtering
 | OH_TRAFFICFILTER_DEFAULT_COPY_LEN    0xFFFF | Default length of the copied NFQueue packet, in bytes. If the value is **0xFFFF**, the entire packet is copied; if a smaller value, such as **128**, is used, only the packet header is copied.<br>**Since**: 26.0.0 |
 | OH_TRAFFICFILTER_DEFAULT_QUEUE_MAXLEN  1024 | Default maximum length of the NFQueue queue (number of packets).<br>**Since**: 26.0.0 |
 | OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN  0x1 | NFQueue queue flag: FAIL-OPEN mode. When a user-mode process crashes, the kernel automatically allows packets to pass to avoid network interruption.<br>**Since**: 26.0.0 |
-| OH_TRAFFICFILTER_MAC_ADDRSTRLEN       18 | Maximum length of MAC address string (XX:XX:XX:XX:XX:XX)<br>**Since**: 26.0.1 |
+| OH_TRAFFICFILTER_MAC_ADDRSTRLEN       18 | Maximum length of MAC address string (XX:XX:XX:XX:XX:XX)<br>**Since**: 26.1.0 |
 | OH_TRAFFICFILTER_MIN_PRIORITY        1 | Minimum priority.<br>**Since**: 26.0.0 |
 | OH_TRAFFICFILTER_MAX_PRIORITY        10000 | Maximum priority.<br>**Since**: 26.0.0 |
 | OH_TRAFFICFILTER_MIN_GROUP_ID        1 | Minimum group ID value.<br>**Since**: 26.0.0 |
@@ -85,7 +83,7 @@ Declares the common types and error codes required for network traffic filtering
 
 | Name | Description |
 | -- | -- |
-| OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)( const OH_TrafficFilter_PacketDesc* packet, void* userData ) | Packet callback function type<br>**Since**: 26.0.1<br>**System capability**: SystemCapability.Communication.NetManager.NetFirewall |
+| OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)( const OH_TrafficFilter_PacketDesc* packet, void* userData ) | Packet callback function type<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Communication.NetManager.NetFirewall |
 
 ## Enum type description
 
@@ -98,8 +96,6 @@ enum OH_TrafficFilter_ErrCode
 **Description**
 
 Defines the error codes for traffic filtering and redirection.
-
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
 **Since**: 26.0.0
 
@@ -124,8 +120,6 @@ enum OH_TrafficFilter_IPMatchType
 
 Defines an IP match type.
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -146,8 +140,6 @@ enum OH_TrafficFilter_IPFamily
 
 Defines an IP address family.
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
 **Since**: 26.0.0
 
 | Enum item | Description |
@@ -165,8 +157,6 @@ enum OH_TrafficFilter_PortMatchType
 **Description**
 
 Defines a port match type.
-
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
 **Since**: 26.0.0
 
@@ -186,8 +176,6 @@ enum OH_TrafficFilter_HookPoint
 **Description**
 
 Enumerates the hook points, specifying where the rule takes effect in the network protocol stack. As packets pass through the kernel network protocol stack, hook points are triggered at different stages, and the rule intercepts packets at the corresponding hook points. For example, the INPUT chain processes packets entering the local device, and the OUTPUT chain processes packets sent from the local device.
-
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
 **Since**: 26.0.0
 
@@ -209,14 +197,12 @@ enum OH_TrafficFilter_PacketDecision
 
 Packet decision type
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | Accept packet<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_DECISION_DROP | Drop packet<br>**Since**: 26.0.1 |
+| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | Accept packet<br>**Since**: 26.1.0 |
+| OH_TRAFFICFILTER_DECISION_DROP | Drop packet<br>**Since**: 26.1.0 |
 
 ### OH_TrafficFilter_PacketCopyMode
 
@@ -228,16 +214,14 @@ enum OH_TrafficFilter_PacketCopyMode
 
 Packet copy mode enumeration
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 | Enum item | Description |
 | -- | -- |
-| OH_TRAFFICFILTER_COPY_MODE_META = 0 | Copy only metadata (no packet data)<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | Copy packet header only (specified by packetCopyLen)<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | Copy entire packet<br>**Since**: 26.0.1 |
-| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | Copy packet with specified maximum length<br>**Since**: 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_META = 0 | Copy only metadata (no packet data)<br>**Since**: 26.1.0 |
+| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | Copy packet header only (specified by packetCopyLen)<br>**Since**: 26.1.0 |
+| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | Copy entire packet<br>**Since**: 26.1.0 |
+| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | Copy packet with specified maximum length<br>**Since**: 26.1.0 |
 
 
 ## Function description
@@ -252,9 +236,7 @@ typedef OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)(const
 
 Packet callback function type
 
-**System capability**: SystemCapability.Communication.NetManager.NetFirewall
-
-**Since**: 26.0.1
+**Since**: 26.1.0
 
 **Parameters**:
 

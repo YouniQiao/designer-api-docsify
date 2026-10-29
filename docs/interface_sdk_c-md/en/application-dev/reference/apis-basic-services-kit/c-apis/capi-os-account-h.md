@@ -6,13 +6,17 @@ Defines the APIs for accessing and managing OS account information.
 
 **Library**: libos_account_ndk.so
 
-**System capability**: SystemCapability.Account.OsAccount
-
 **Since**: 12
 
 **Related module**: [OsAccount](capi-osaccount.md)
 
 ## Summary
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OS_ACCOUNT_H | Defines the APIs for accessing and managing OS account information.<br>**Since**: 12<br>**System capability**: SystemCapability.Account.OsAccount |
 
 ### Function
 
@@ -32,8 +36,6 @@ OsAccount_ErrCode OH_OsAccount_GetName(char *buffer, size_t buffer_size)
 **Description**
 
 Obtains the name of the OS account, to which the caller process belongs.
-
-**System capability**: SystemCapability.Account.OsAccount
 
 **Since**: 12
 
@@ -59,8 +61,6 @@ OsAccount_ErrCode OH_OsAccount_GetNameByLocalId(int32_t localId, char *name, siz
 **Description**
 
 Obtains the name of the target OS account based on its local ID.
-
-**System capability**: SystemCapability.Account.OsAccount
 
 **Required permission**: ohos.permission.GET_LOCAL_ACCOUNT_IDENTIFIERS
 

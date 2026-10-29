@@ -6,8 +6,6 @@
 
 **库：** libohaudio.so
 
-**系统能力：** SystemCapability.Multimedia.Audio.Core
-
 **起始版本：** 26.0.0
 
 **相关模块：** [OHAudio](capi-ohaudio.md)
@@ -43,12 +41,10 @@ enum OH_AudioAccessoryType
 
 枚举音频配件连接类型。
 
-**系统能力：** SystemCapability.Multimedia.Audio.Core
-
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
 | -- | -- |
-| AUDIO_ACCESSORY_TYPE_BT_SPP = 1 | 蓝牙SPP（Serial Port Profile，即串口通信协议）连接。<br>**起始版本：** 26.0.0 |
+| AUDIO_ACCESSORY_TYPE_BT_SPP = 1 | 蓝牙SPP（串行端口协议）连接。<br>**起始版本：** 26.0.0 |
 
 

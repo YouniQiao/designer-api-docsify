@@ -6,8 +6,6 @@ Provides the enumerated variables, structures, and macros used in USB DDK APIs.
 
 **Library**: libusb_ndk.z.so
 
-**System capability**: SystemCapability.Driver.USB.Extension
-
 **Since**: 10
 
 **Related module**: [UsbDdk](capi-usbddk.md)
@@ -49,8 +47,6 @@ enum UsbDdkErrCode
 **Description**
 
 USB DDK error code definitions.
-
-**System capability**: SystemCapability.Driver.USB.Extension
 
 **Since**: 10
 

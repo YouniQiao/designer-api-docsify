@@ -6,7 +6,7 @@ typedef struct ArkUI_AnimatorOption ArkUI_AnimatorOption
 
 ## Overview
 
-Defines an animator animation option object, which is used to set animation attributes when creating an animator animation.
+Defines the animator parameter object.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

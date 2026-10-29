@@ -6,7 +6,7 @@ typedef struct ArkUI_ListItemSwipeActionOption ArkUI_ListItemSwipeActionOption
 
 ## Overview
 
-Defines a configuration of a swipe action on a list item.
+Defines the configuration information of the **ListItemSwipeActionOption**.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

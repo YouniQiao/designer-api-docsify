@@ -10,7 +10,7 @@ typedef struct OH_HiDebug_ProfilerOptions OH_HiDebug_ProfilerOptions
 
 **系统能力：** SystemCapability.HiviewDFX.HiProfiler.HiDebug
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **相关模块：** [HiDebug](capi-hidebug.md)
 

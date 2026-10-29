@@ -6,8 +6,6 @@
 
 **库：** libnet_ssl.so
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 **相关模块：** [netstack](capi-netstack.md)
@@ -42,8 +40,6 @@ enum NetStack_CertType
 
 Certificate type enums.
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -62,8 +58,6 @@ enum NetStack_CertificatePinningKind
 
 Certificate pinning type enums.
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -79,8 +73,6 @@ enum NetStack_HashAlgorithm
 **描述：**
 
 Hash algorithm enums.
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 12
 

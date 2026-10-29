@@ -6,7 +6,7 @@ typedef struct ArkUI_AnimatorEvent ArkUI_AnimatorEvent
 
 ## Overview
 
-Defines the animator callback event object, which is used to receive events in the animation status change callback.
+Defines the animator callback event object.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

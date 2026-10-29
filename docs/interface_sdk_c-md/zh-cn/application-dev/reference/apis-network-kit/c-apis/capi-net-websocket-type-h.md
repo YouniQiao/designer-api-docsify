@@ -6,8 +6,6 @@
 
 **库：** libnet_websocket.so
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 **相关模块：** [netstack](capi-netstack.md)
@@ -66,8 +64,6 @@ enum WebSocket_ErrCode
 
 Defines the WebSocket client structure.
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -105,8 +101,6 @@ typedef void (*WebSocket_OnOpenCallback)(struct WebSocket *client, WebSocket_Ope
 
 websocket客户端接收open消息的回调函数定义。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 **参数：**
@@ -125,8 +119,6 @@ typedef void (*WebSocket_OnMessageCallback)(struct WebSocket *client, char *data
 **描述：**
 
 websocket客户端接收数据的回调函数定义。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 11
 
@@ -148,8 +140,6 @@ typedef void (*WebSocket_OnErrorCallback)(struct WebSocket *client, WebSocket_Er
 
 websocket客户端接收error错误消息的回调函数定义。
 
-**系统能力：** SystemCapability.Communication.NetStack
-
 **起始版本：** 11
 
 **参数：**
@@ -168,8 +158,6 @@ typedef void (*WebSocket_OnCloseCallback)(struct WebSocket *client, WebSocket_Cl
 **描述：**
 
 webSocket客户端接收close消息的回调函数定义。
-
-**系统能力：** SystemCapability.Communication.NetStack
 
 **起始版本：** 11
 

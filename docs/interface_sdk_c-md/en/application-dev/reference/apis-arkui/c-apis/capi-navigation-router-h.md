@@ -2,11 +2,9 @@
 
 ## Overview
 
-Defines the enumerations related to the **NavDestination** and **Router** components.
+Defines a set of navigation or router enum and interface.
 
 **Library**: libace_ndk.z.so
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 12
 
@@ -18,8 +16,8 @@ Defines the enumerations related to the **NavDestination** and **Router** compon
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [ArkUI_NavDestinationState](#arkui_navdestinationstate) | ArkUI_NavDestinationState | Enumerates the states of the **NavDestination** component, used to describe the lifecycle state changes of **<br>NavDestination** during navigation. |
-| [ArkUI_RouterPageState](#arkui_routerpagestate) | ArkUI_RouterPageState | Enumerates the states of the Router component (route page), used to describe the lifecycle state changes of **Router** during routing. |
+| [ArkUI_NavDestinationState](#arkui_navdestinationstate) | ArkUI_NavDestinationState | Defines the state of the NavDestination component. |
+| [ArkUI_RouterPageState](#arkui_routerpagestate) | ArkUI_RouterPageState | Define the state of Router Page. |
 
 ## Enum type description
 
@@ -31,9 +29,7 @@ enum ArkUI_NavDestinationState
 
 **Description**
 
-Enumerates the states of the **NavDestination** component, used to describe the lifecycle state changes of **<br>NavDestination** during navigation.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Defines the state of the NavDestination component.
 
 **Since**: 12
 
@@ -47,8 +43,6 @@ Enumerates the states of the **NavDestination** component, used to describe the 
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_HIDE = 5 |  |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_APPEAR = 6 |  |
 | ARKUI_NAV_DESTINATION_STATE_ON_WILL_DISAPPEAR = 7 |  |
-| ARKUI_NAV_DESTINATION_STATE_ON_ACTIVE = 8 |  |
-| ARKUI_NAV_DESTINATION_STATE_ON_INACTIVE = 9 |  |
 | ARKUI_NAV_DESTINATION_STATE_ON_BACK_PRESS = 100 |  |
 
 ### ArkUI_RouterPageState
@@ -59,9 +53,7 @@ enum ArkUI_RouterPageState
 
 **Description**
 
-Enumerates the states of the Router component (route page), used to describe the lifecycle state changes of **Router** during routing.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
+Define the state of Router Page.
 
 **Since**: 12
 

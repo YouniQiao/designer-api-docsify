@@ -6,8 +6,6 @@ Declares the APIs used to access the native Accessibility.
 
 **Library**: libace_ndk.z.so
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Related module**: [ArkUI_Accessibility](capi-arkui-accessibility.md)
@@ -109,10 +107,6 @@ Declares the APIs used to access the native Accessibility.
 | [int32_t OH_ArkUI_FindAccessibilityActionArgumentByKey(ArkUI_AccessibilityActionArguments* arguments, const char* key, char** value)](#oh_arkui_findaccessibilityactionargumentbykey) | Obtains the value of a key from an <b>ArkUI_AccessibilityActionArguments</b> object. |
 | [int32_t OH_ArkUI_NativeModule_GetNativeAccessibilityProvider(ArkUI_NodeHandle* node, ArkUI_AccessibilityProvider** provider)](#oh_arkui_nativemodule_getnativeaccessibilityprovider) | Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>ArkUI_NodeHandle</b> instance. |
 | [int32_t OH_ArkUI_AccessibilityElementInfoSetComponentIdentifier(ArkUI_AccessibilityElementInfo* elementInfo, const char* identifier)](#oh_arkui_accessibilityelementinfosetcomponentidentifier) | Sets the component identifier for an <b>ArkUI_AccessibilityElementInfo</b> object. |
-| [int32_t OH_ArkUI_Accessibility_BindExportTree(ArkUI_NodeHandle owner, int64_t bindId, ArkUI_NodeHandle exportedRoot)](#oh_arkui_accessibility_bindexporttree) | Binds an external ArkUI sub-tree to the third-party framework's accessibility tree at the specified placeholder node.<br> When a third-party framework (for example, CMP) renders pages using RenderNode and has mixed ArkUI native components on the RenderNode tree, those ArkUI native components form an external sub-tree that is not accessible to the accessibility service. This function binds the external ArkUI sub-tree to a placeholder node in the third-party framework's accessibility tree, so that accessibility focus traversal can enter the mixed ArkUI sub-tree, traverse through its internal components, and then return to the third-party framework's accessibility tree to continue traversal.<br> This API must be called on the UI main thread. The call is executed synchronously, does not invoke any callbacks back into the caller, and must not be called from a signal handler. If the third-party framework's accessibility tree has not yet been registered with the accessibility service when this API is called, the binding takes effect asynchronously once that registration completes.<br> Bindings are identified by the (owner, bindId) pair. Multiple bindings with different bindId values on the same owner are supported, and each exported sub-tree can have at most one active binding. Calling this API again with the same (owner, bindId) pair neither replaces nor merges the binding: the existing binding is kept unchanged and ARKUI_ERROR_CODE_NO_ERROR is returned; binding an exportedRoot that already has an active binding is rejected with ARKUI_ERROR_CODE_PARAM_INVALID. After [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) completes, the bound sub-tree is fully detached from the accessibility tree, all binding resources are released, and binding the same (owner, bindId) pair again performs the complete registration flow. |
-| [int32_t OH_ArkUI_Accessibility_UnbindExportTree(ArkUI_NodeHandle owner, int64_t bindId)](#oh_arkui_accessibility_unbindexporttree) | Unbinds a previously bound external ArkUI sub-tree from the third-party framework's accessibility tree.<br> When the mixed ArkUI sub-tree is destroyed or replaced, this function should be called to remove the binding relationship established by [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree). After unbinding, the accessibility service will no longer traverse into the previously bound ArkUI sub-tree.<br> This API must be called on the UI main thread. The call is executed synchronously, does not invoke any callbacks back into the caller, and must not be called from a signal handler. Only the binding identified by the (owner, bindId) pair is removed; other bindings on the same owner are not affected. Unbinding an unknown or already unbound (owner, bindId) pair is idempotent and returns success. When a binding exists, after this API returns ARKUI_ERROR_CODE_NO_ERROR the bound sub-tree is fully detached from the accessibility tree and all binding resources are released; the same (owner, bindId) pair can be bound again by calling [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree), which then performs the complete registration flow. |
-| [int32_t OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler(ArkUI_NodeHandle node, void *userData, void (\*handleAccessibilityHoverEvent)(void *userData, int32_t x, int32_t y, int32_t requestId, ArkUI_AccessibilityElementInfo *elementInfo))](#oh_arkui_accessibility_registeraccessibilityhovereventhandler) | Registers an accessibility hover event handler on a host node of a third-party framework.<br> When the screen reader is enabled and the user touches the host node area, ArkUI synchronously invokes the registered callback with coordinates relative to the host node. The third-party framework performs its own hit test and fills the output **elementInfo** with information about the hit node before the callback returns. ArkUI then reports the corresponding accessibility hover event to the screen reader to focus the returned node. The third-party framework does not report the event itself. Hover event types, such as enter, move, and exit, are maintained by ArkUI and are not passed to the callback.<br> While the handler is registered, hover hit testing for the host subtree uses the third-party framework's result instead of the system's node-tree hit test result. Swipe focus navigation is unchanged. Nodes without a registered handler retain their existing hover behavior. Registering again on the same node replaces the previous callback and **userData** and returns ARKUI_ERROR_CODE_NO_ERROR; subsequent callbacks use only the new registration.<br> This function is not thread-safe. The callback runs synchronously on the UI main thread and should return promptly to avoid blocking touch processing. |
-| [int32_t OH_ArkUI_Accessibility_UnregisterAccessibilityHoverEventHandler(ArkUI_NodeHandle node)](#oh_arkui_accessibility_unregisteraccessibilityhovereventhandler) | Unregisters the accessibility hover event handler from the specified node.<br> After unregistration, the ArkUI accessibility framework will no longer invoke the callback registered by [OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_registeraccessibilityhovereventhandler), and the node resumes its existing hover behavior. Unregistering a handler from a supported node that has no registered handler returns ARKUI_ERROR_CODE_NO_ERROR and leaves its hover behavior unchanged. ArkUI does not release the memory pointed to by **userData**; the caller manages its lifetime.<br> This function is not thread-safe. |
 
 ## Enum type description
 
@@ -125,8 +119,6 @@ enum ArkUI_Accessibility_ActionType
 **Description**
 
 Defines an enum for accessibility action types.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -158,8 +150,6 @@ enum ArkUI_AccessibilityEventType
 
 Defines an enum for accessibility event types.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 | Enum item | Description |
@@ -190,8 +180,6 @@ enum ArkUI_AcessbilityErrorCode
 
 Enumerates the accessibility error codes.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 | Enum item | Description |
@@ -210,8 +198,6 @@ enum ArkUI_AccessibilitySearchMode
 **Description**
 
 Defines an enum for the accessibility search modes.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -233,8 +219,6 @@ enum ArkUI_AccessibilityFocusType
 
 Defines an enum for the accessibility focus types.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 | Enum item | Description |
@@ -252,8 +236,6 @@ enum ArkUI_AccessibilityFocusMoveDirection
 **Description**
 
 Enumerates the directions for moving the accessibility focus.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -280,8 +262,6 @@ int32_t OH_ArkUI_AccessibilityProviderRegisterCallback(ArkUI_AccessibilityProvid
 
 Registers a callback for this <b>ArkUI_AccessibilityProvider</b> instance.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -306,8 +286,6 @@ int32_t OH_ArkUI_AccessibilityProviderRegisterCallbackWithInstance(const char* i
 **Description**
 
 Registers a callback with instance for this <b>ArkUI_AccessibilityProvider</b> instance.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 15
 
@@ -335,8 +313,6 @@ void OH_ArkUI_SendAccessibilityAsyncEvent(ArkUI_AccessibilityProvider* provider,
 
 Sends accessibility event information.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -356,8 +332,6 @@ ArkUI_AccessibilityElementInfo* OH_ArkUI_AddAndGetAccessibilityElementInfo(ArkUI
 **Description**
 
 Adds and obtains the pointer to an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -382,8 +356,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetElementId(ArkUI_AccessibilityElement
 **Description**
 
 Sets the element ID for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -410,8 +382,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetParentId(ArkUI_AccessibilityElementI
 
 Sets the parent ID for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -436,8 +406,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetComponentType(ArkUI_AccessibilityEle
 **Description**
 
 Sets the component type for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -464,8 +432,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetContents(ArkUI_AccessibilityElementI
 
 Sets the component content for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -490,8 +456,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetHintText(ArkUI_AccessibilityElementI
 **Description**
 
 Sets the hint text for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -518,8 +482,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityText(ArkUI_Accessibilit
 
 Sets the accessibility text for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -545,8 +507,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityDescription(ArkUI_Acces
 
 Sets the accessibility description for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -571,8 +531,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetChildNodeIds(ArkUI_AccessibilityElem
 **Description**
 
 Set the number of child nodes and child node IDs for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -600,8 +558,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetOperationActions(ArkUI_Accessibility
 
 Sets the operation actions for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -628,8 +584,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetScreenRect(ArkUI_AccessibilityElemen
 
 Sets the screen area for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -654,8 +608,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetCheckable(ArkUI_AccessibilityElement
 **Description**
 
 Sets whether the element is checkable for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -682,8 +634,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetChecked(ArkUI_AccessibilityElementIn
 
 Sets whether the element is checked for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -708,8 +658,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetFocusable(ArkUI_AccessibilityElement
 **Description**
 
 Sets whether the element is focusable for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -736,8 +684,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetFocused(ArkUI_AccessibilityElementIn
 
 Sets whether the element is focused for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -762,8 +708,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetVisible(ArkUI_AccessibilityElementIn
 **Description**
 
 Sets whether the element is visible for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -790,8 +734,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityFocused(ArkUI_Accessibi
 
 Sets the accessibility focus state for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -816,8 +758,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetSelected(ArkUI_AccessibilityElementI
 **Description**
 
 Sets whether the element is selected for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -844,8 +784,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetClickable(ArkUI_AccessibilityElement
 
 Sets whether the element is clickable for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -870,8 +808,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetLongClickable(ArkUI_AccessibilityEle
 **Description**
 
 Sets whether the element is long clickable for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -898,8 +834,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetEnabled(ArkUI_AccessibilityElementIn
 
 Sets whether the element is enabled for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -924,8 +858,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetIsPassword(ArkUI_AccessibilityElemen
 **Description**
 
 Sets whether the element is a password for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -952,8 +884,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetScrollable(ArkUI_AccessibilityElemen
 
 Sets whether the element is scrollable for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -978,8 +908,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetEditable(ArkUI_AccessibilityElementI
 **Description**
 
 Sets whether the element is editable for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1006,8 +934,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetIsHint(ArkUI_AccessibilityElementInf
 
 Sets whether the element is a hint for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1032,8 +958,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetRangeInfo(ArkUI_AccessibilityElement
 **Description**
 
 Sets the range information for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1060,8 +984,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetGridInfo(ArkUI_AccessibilityElementI
 
 Sets the grid information for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1086,8 +1008,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetGridItemInfo(ArkUI_AccessibilityElem
 **Description**
 
 Sets the grid item for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1114,8 +1034,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetSelectedTextStart(ArkUI_Accessibilit
 
 Sets the starting index of the selected text for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1140,8 +1058,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetSelectedTextEnd(ArkUI_AccessibilityE
 **Description**
 
 Sets the end index of the selected text for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1168,8 +1084,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetCurrentItemIndex(ArkUI_Accessibility
 
 Sets the index of the currently selected item for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1194,8 +1108,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetStartItemIndex(ArkUI_AccessibilityEl
 **Description**
 
 Sets the index of the first item for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1222,8 +1134,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetEndItemIndex(ArkUI_AccessibilityElem
 
 Sets the index of the last item for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1248,8 +1158,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetItemCount(ArkUI_AccessibilityElement
 **Description**
 
 Sets the number of items for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1276,8 +1184,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityOffset(ArkUI_Accessibil
 
 Sets the offset for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1302,8 +1208,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityGroup(ArkUI_Accessibili
 **Description**
 
 Sets the accessibility group for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1330,8 +1234,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityLevel(ArkUI_Accessibili
 
 Sets the accessibility level for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1356,8 +1258,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetZIndex(ArkUI_AccessibilityElementInf
 **Description**
 
 Sets the z-index for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1384,8 +1284,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetAccessibilityOpacity(ArkUI_Accessibi
 
 Sets the opacity for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1410,8 +1308,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetBackgroundColor(ArkUI_AccessibilityE
 **Description**
 
 Sets the background color for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1438,8 +1334,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetBackgroundImage(ArkUI_AccessibilityE
 
 Sets the background image for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1464,8 +1358,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetBlur(ArkUI_AccessibilityElementInfo*
 **Description**
 
 Sets the blur effect for an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1492,8 +1384,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetHitTestBehavior(ArkUI_AccessibilityE
 
 Sets the hit test behavior for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1519,8 +1409,6 @@ ArkUI_AccessibilityElementInfo* OH_ArkUI_CreateAccessibilityElementInfo(void)
 
 Creates an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Returns**:
@@ -1538,8 +1426,6 @@ void OH_ArkUI_DestoryAccessibilityElementInfo(ArkUI_AccessibilityElementInfo* el
 **Description**
 
 Destroys an <b>ArkUI_AccessibilityElementInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1559,8 +1445,6 @@ ArkUI_AccessibilityEventInfo* OH_ArkUI_CreateAccessibilityEventInfo(void)
 
 Creates an <b>ArkUI_AccessibilityEventInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Returns**:
@@ -1579,8 +1463,6 @@ void OH_ArkUI_DestoryAccessibilityEventInfo(ArkUI_AccessibilityEventInfo* eventI
 
 Destroys an <b>ArkUI_AccessibilityEventInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1598,8 +1480,6 @@ int32_t OH_ArkUI_AccessibilityEventSetEventType(ArkUI_AccessibilityEventInfo* ev
 **Description**
 
 Sets the event type for an <b>ArkUI_AccessibilityEventInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1626,8 +1506,6 @@ int32_t OH_ArkUI_AccessibilityEventSetTextAnnouncedForAccessibility(ArkUI_Access
 
 Sets the text announced for accessibility for an <b>ArkUI_AccessibilityEventInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1652,8 +1530,6 @@ int32_t OH_ArkUI_AccessibilityEventSetRequestFocusId(ArkUI_AccessibilityEventInf
 **Description**
 
 Sets the request focus ID for an <b>ArkUI_AccessibilityEventInfo</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1680,8 +1556,6 @@ int32_t OH_ArkUI_AccessibilityEventSetElementInfo(ArkUI_AccessibilityEventInfo* 
 
 Sets the element information for an <b>ArkUI_AccessibilityEventInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 13
 
 **Parameters**:
@@ -1706,8 +1580,6 @@ int32_t OH_ArkUI_FindAccessibilityActionArgumentByKey(ArkUI_AccessibilityActionA
 **Description**
 
 Obtains the value of a key from an <b>ArkUI_AccessibilityActionArguments</b> object.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
 
 **Since**: 13
 
@@ -1735,8 +1607,6 @@ int32_t OH_ArkUI_NativeModule_GetNativeAccessibilityProvider(ArkUI_NodeHandle* n
 
 Obtains the pointer to the <b> ArkUI_AccessibilityProvider</b> instance of this <b>ArkUI_NodeHandle</b> instance.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 23
 
 **Parameters**:
@@ -1762,8 +1632,6 @@ int32_t OH_ArkUI_AccessibilityElementInfoSetComponentIdentifier(ArkUI_Accessibil
 
 Sets the component identifier for an <b>ArkUI_AccessibilityElementInfo</b> object.
 
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
 **Since**: 24
 
 **Parameters**:
@@ -1778,129 +1646,5 @@ Sets the component identifier for an <b>ArkUI_AccessibilityElementInfo</b> objec
 | Type | Description |
 | -- | -- |
 | int32_t | Returns [ARKUI_ACCESSIBILITY_NATIVE_RESULT_SUCCESSFUL](capi-native-interface-accessibility-h.md#arkui_acessbilityerrorcode) if the operation is successful. Returns [ARKUI_ACCESSIBILITY_NATIVE_RESULT_BAD_PARAMETER](capi-native-interface-accessibility-h.md#arkui_acessbilityerrorcode) if a parameter is incorrect. |
-
-### OH_ArkUI_Accessibility_BindExportTree()
-
-```c
-int32_t OH_ArkUI_Accessibility_BindExportTree(ArkUI_NodeHandle owner, int64_t bindId, ArkUI_NodeHandle exportedRoot)
-```
-
-**Description**
-
-Binds an external ArkUI sub-tree to the third-party framework's accessibility tree at the specified placeholder node.<br> When a third-party framework (for example, CMP) renders pages using RenderNode and has mixed ArkUI native components on the RenderNode tree, those ArkUI native components form an external sub-tree that is not accessible to the accessibility service. This function binds the external ArkUI sub-tree to a placeholder node in the third-party framework's accessibility tree, so that accessibility focus traversal can enter the mixed ArkUI sub-tree, traverse through its internal components, and then return to the third-party framework's accessibility tree to continue traversal.<br> This API must be called on the UI main thread. The call is executed synchronously, does not invoke any callbacks back into the caller, and must not be called from a signal handler. If the third-party framework's accessibility tree has not yet been registered with the accessibility service when this API is called, the binding takes effect asynchronously once that registration completes.<br> Bindings are identified by the (owner, bindId) pair. Multiple bindings with different bindId values on the same owner are supported, and each exported sub-tree can have at most one active binding. Calling this API again with the same (owner, bindId) pair neither replaces nor merges the binding: the existing binding is kept unchanged and ARKUI_ERROR_CODE_NO_ERROR is returned; binding an exportedRoot that already has an active binding is rejected with ARKUI_ERROR_CODE_PARAM_INVALID. After [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) completes, the bound sub-tree is fully detached from the accessibility tree, all binding resources are released, and binding the same (owner, bindId) pair again performs the complete registration flow.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) owner | [in] Pointer to the ArkUI host node of the third-party framework. This is the node in the RenderNode tree where the third-party framework is mounted (for example, an XComponent or Custom node). The node must be a valid ArkUI_NodeHandle. The handle is borrowed, not retained: this API does not take ownership of the node or extend its lifetime. If the node is destroyed or replaced while the binding exists, the binding becomes inactive immediately (the accessibility service no longer traverses into the bound sub-tree); its remaining internal resources are released when the host window is destroyed. To keep the binding effective, the node must remain valid until [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) is called. |
-| int64_t bindId | [in] Accessibility ID of the placeholder node in the third-party framework's internal accessibility tree. This is the node in the third-party framework's accessibility tree where the mixed ArkUI sub-tree is to be mounted. When the accessibility service traverses to this node, it will enter the bound ArkUI sub-tree. The value is the accessibility ID assigned by the third-party framework to that node; any such ID is accepted and no values are reserved. The ID must identify an existing node of the third-party framework's accessibility tree, but the node does not need to have been reported to the accessibility service when this API is called — the binding takes effect once the third-party tree is registered. The ID must be unique among the active bindings of the same owner. |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) exportedRoot | [in] Pointer to the root node of the mixed ArkUI sub-tree to be bound. This node and its descendants will be registered as a sub-tree in the accessibility tree under the placeholder node specified by bindId. The handle is borrowed, not retained: this API does not take ownership of the node or extend its lifetime. If the node is destroyed or replaced while the binding exists, the binding becomes inactive immediately; its remaining internal resources are released when [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) is called with the same (owner, bindId) pair or the host window is destroyed. To keep the binding effective, the node and its sub-tree must remain valid until [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) is called. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int32_t | <ul> <li>Status code.</li> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs.</li> <li><br>Parameter error: 1. The input parameter **owner** or **exportedRoot** is a null pointer or an invalid handle.</li> <li><br>2. The **exportedRoot** already has an active binding.</li> <li><br>Both errors are deterministic validation results with no side effects: no binding is created and existing bindings are not modified. After correcting the arguments (for error 2, call [OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree) first or use another sub-tree), the call can be retried safely.</li> </ul> |
-
-**Reference**:
-
-[OH_ArkUI_Accessibility_UnbindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unbindexporttree)
-
-
-### OH_ArkUI_Accessibility_UnbindExportTree()
-
-```c
-int32_t OH_ArkUI_Accessibility_UnbindExportTree(ArkUI_NodeHandle owner, int64_t bindId)
-```
-
-**Description**
-
-Unbinds a previously bound external ArkUI sub-tree from the third-party framework's accessibility tree.<br> When the mixed ArkUI sub-tree is destroyed or replaced, this function should be called to remove the binding relationship established by [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree). After unbinding, the accessibility service will no longer traverse into the previously bound ArkUI sub-tree.<br> This API must be called on the UI main thread. The call is executed synchronously, does not invoke any callbacks back into the caller, and must not be called from a signal handler. Only the binding identified by the (owner, bindId) pair is removed; other bindings on the same owner are not affected. Unbinding an unknown or already unbound (owner, bindId) pair is idempotent and returns success. When a binding exists, after this API returns ARKUI_ERROR_CODE_NO_ERROR the bound sub-tree is fully detached from the accessibility tree and all binding resources are released; the same (owner, bindId) pair can be bound again by calling [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree), which then performs the complete registration flow.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
-**Since**: 26.0.1
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) owner | [in] Pointer to the ArkUI host node of the third-party framework. This must be the same node that was passed to [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree) when the binding was created. The node must be a valid ArkUI_NodeHandle. The handle is used only to identify the binding within this call and is not retained after the call returns; it does not need to remain valid afterwards. If the node has already been destroyed, its bindings have become inactive automatically and no explicit unbinding is required; their remaining internal resources are released when the host window is destroyed. |
-| int64_t bindId | [in] Accessibility ID of the placeholder node in the third-party framework's internal accessibility tree. This must be the same bindId that was passed to [OH_ArkUI_Accessibility_BindExportTree](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_bindexporttree) when the binding was created. No values are reserved; unbinding an (owner, bindId) pair that has no active binding is idempotent and returns ARKUI_ERROR_CODE_NO_ERROR. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int32_t | <ul> <li>Status code.</li> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if a parameter error occurs.</li> <li><br>Parameter error: 1. The input parameter **owner** is a null pointer or an invalid handle.</li> <li><br>This error is a deterministic validation result with no side effects: no binding is removed and existing bindings are not modified. After correcting the arguments, the call can be retried safely.</li> </ul> |
-
-### OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler()
-
-```c
-int32_t OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler(ArkUI_NodeHandle node, void *userData, void (*handleAccessibilityHoverEvent)(void *userData, int32_t x, int32_t y, int32_t requestId, ArkUI_AccessibilityElementInfo *elementInfo))
-```
-
-**Description**
-
-Registers an accessibility hover event handler on a host node of a third-party framework.<br> When the screen reader is enabled and the user touches the host node area, ArkUI synchronously invokes the registered callback with coordinates relative to the host node. The third-party framework performs its own hit test and fills the output **elementInfo** with information about the hit node before the callback returns. ArkUI then reports the corresponding accessibility hover event to the screen reader to focus the returned node. The third-party framework does not report the event itself. Hover event types, such as enter, move, and exit, are maintained by ArkUI and are not passed to the callback.<br> While the handler is registered, hover hit testing for the host subtree uses the third-party framework's result instead of the system's node-tree hit test result. Swipe focus navigation is unchanged. Nodes without a registered handler retain their existing hover behavior. Registering again on the same node replaces the previous callback and **userData** and returns ARKUI_ERROR_CODE_NO_ERROR; subsequent callbacks use only the new registration.<br> This function is not thread-safe. The callback runs synchronously on the UI main thread and should return promptly to avoid blocking touch processing.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| rkUI_NodeHandle node | [in] Indicates the host node of the third-party framework. Only <b>ARKUI_NODE_XCOMPONENT</b>, <b>ARKUI_NODE_CUSTOM</b>, and <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> nodes are supported. This parameter must not be null. |
-| void *userData | [in] Indicates the custom data passed by the developer. This data will be passed back unchanged when the callback is invoked. The caller manages its lifetime; ArkUI does not release the memory pointed to by **userData**. |
-| void (*handleAccessibilityHoverEvent)(void *userData | [in] Indicates the callback used to determine the hit node. This parameter must not be null. The callback parameters are as follows: <ul> <li><b>userData</b> [in]: Custom data supplied during registration.</li> <li><b>x</b> [in]: X coordinate relative to the host node, in px.</li> <li><b>y</b> [in]: Y coordinate relative to the host node, in px.</li> <li><b>requestId</b> [in]: Identifier of the current hover request, supplied by ArkUI.</li> <li><b>elementInfo</b> [out]: Pointer to an [ArkUI_AccessibilityElementInfo](capi-arkui-accessibility-arkui-accessibilityelementinfo.md) object provided by ArkUI. The third-party framework fills this object with the hit node's information using the element-info setter APIs. ArkUI manages its allocation and release. The pointer is valid only during the callback and must not be retained or released by the third-party framework.</li> </ul> |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int32_t | <ul> <li>Status code.</li> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if **node** is a null pointer.</li> <li>ARKUI_ERROR_CODE_PARAM_ERROR if **handleAccessibilityHoverEvent** is a null pointer.</li> <li>ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED if the **node** type is not <b>ARKUI_NODE_XCOMPONENT</b>, <b>ARKUI_NODE_CUSTOM</b>, or <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b>.</li> </ul> |
-
-**Reference**:
-
-[OH_ArkUI_Accessibility_UnregisterAccessibilityHoverEventHandler](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_unregisteraccessibilityhovereventhandler)
-
-
-### OH_ArkUI_Accessibility_UnregisterAccessibilityHoverEventHandler()
-
-```c
-int32_t OH_ArkUI_Accessibility_UnregisterAccessibilityHoverEventHandler(ArkUI_NodeHandle node)
-```
-
-**Description**
-
-Unregisters the accessibility hover event handler from the specified node.<br> After unregistration, the ArkUI accessibility framework will no longer invoke the callback registered by [OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_registeraccessibilityhovereventhandler), and the node resumes its existing hover behavior. Unregistering a handler from a supported node that has no registered handler returns ARKUI_ERROR_CODE_NO_ERROR and leaves its hover behavior unchanged. ArkUI does not release the memory pointed to by **userData**; the caller manages its lifetime.<br> This function is not thread-safe.
-
-**System capability**: SystemCapability.ArkUI.ArkUI.Full
-
-**Since**: 26.1.0
-
-**Parameters**:
-
-| Parameter | Description |
-| -- | -- |
-| [ArkUI_NodeHandle](capi-arkui-nativemodule-arkui-nodehandle.md) node | [in] Indicates the host node from which the accessibility hover event handler is to be unregistered. This must be the same node that was passed to [OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_registeraccessibilityhovereventhandler) when the handler was registered. Only <b>ARKUI_NODE_XCOMPONENT</b>, <b>ARKUI_NODE_CUSTOM</b>, and <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b> nodes are supported. This parameter must not be null. |
-
-**Returns**:
-
-| Type | Description |
-| -- | -- |
-| int32_t | <ul> <li>Status code.</li> <li>ARKUI_ERROR_CODE_NO_ERROR if the operation is successful, including when no handler is registered on the node.</li> <li>ARKUI_ERROR_CODE_PARAM_INVALID if **node** is a null pointer.</li> <li>ARKUI_ERROR_CODE_ATTRIBUTE_OR_EVENT_NOT_SUPPORTED if the **node** type is not <b>ARKUI_NODE_XCOMPONENT</b>, <b>ARKUI_NODE_CUSTOM</b>, or <b>ARKUI_NODE_XCOMPONENT_TEXTURE</b>.</li> </ul> |
-
-**Reference**:
-
-[OH_ArkUI_Accessibility_RegisterAccessibilityHoverEventHandler](capi-native-interface-accessibility-h.md#oh_arkui_accessibility_registeraccessibilityhovereventhandler)
-
 
 

@@ -2,13 +2,9 @@
 
 ## Overview
 
-Declares the data types for filter effects, used to define the matrices, status codes, and tile modes for filter effects, and supports scenarios such as creating custom filter effects and processing image shader tiling. <br>The status code types defined in this document are used for status returns of related APIs. For the usage instructions of status codes for specific APIs, see the corresponding API documentation.
-
-**Include**: <native_effect/effect_types.h>
+Declares the data types for filter effects, used to define the matrices, status codes, and tile modes for filter effects, and supports scenarios such as creating custom filter effects and processing image shader tiling.
 
 **Library**: libnative_effect.so
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 12
 
@@ -28,7 +24,7 @@ Declares the data types for filter effects, used to define the matrices, status 
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [EffectErrorCode](#effecterrorcode) | EffectErrorCode | Enumerates the status codes of the filter effect. These status codes are returned when filter effect APIs are used. Developers should determine the operation result based on the returned status code and handle it accordingly. For usage instructions of the status codes for specific APIs, see the corresponding API documentation. |
+| [EffectErrorCode](#effecterrorcode) | EffectErrorCode | Enumerates the status codes of the filter effect. |
 | [EffectTileMode](#effecttilemode) | EffectTileMode | Enumerates the tile modes of the shader effect. |
 
 ## Enum type description
@@ -41,9 +37,7 @@ enum EffectErrorCode
 
 **Description**
 
-Enumerates the status codes of the filter effect. These status codes are returned when filter effect APIs are used. Developers should determine the operation result based on the returned status code and handle it accordingly. For usage instructions of the status codes for specific APIs, see the corresponding API documentation.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
+Enumerates the status codes of the filter effect.
 
 **Since**: 12
 
@@ -63,8 +57,6 @@ enum EffectTileMode
 **Description**
 
 Enumerates the tile modes of the shader effect.
-
-**System capability**: SystemCapability.Multimedia.Image.Core
 
 **Since**: 14
 

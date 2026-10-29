@@ -6,8 +6,6 @@ The file declares the APIs related to the Picture in Picture (PiP) feature, incl
 
 **Library**: libnative_window_manager.so
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Related module**: [WindowManager](capi-windowmanager.md)
@@ -29,6 +27,12 @@ The file declares the APIs related to the Picture in Picture (PiP) feature, incl
 | [PictureInPicture_PipControlType](#pictureinpicture_pipcontroltype) | PictureInPicture_PipControlType | Enumerates the types of components displayed on the PiP controller. |
 | [PictureInPicture_PipControlStatus](#pictureinpicture_pipcontrolstatus) | PictureInPicture_PipControlStatus | Enumerates the statuses of components displayed on the PiP controller. |
 | [PictureInPicture_PipState](#pictureinpicture_pipstate) | PictureInPicture_PipState | Enumerates the PiP lifecycle states. |
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| OH_WINDOW_PIP_H | The file declares the APIs related to the Picture in Picture (PiP) feature, including creating and deleting a PiP controller, and starting and stopping PiP. PiP is mainly used in video playback, live streaming, video calls, or video meetings.<br>**Since**: 20<br>**System capability**: SystemCapability.Window.SessionManager |
 
 ### Function
 
@@ -91,8 +95,6 @@ enum PictureInPicture_PipTemplateType
 
 Enumerates the types of PiP templates.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 | Enum item | Description |
@@ -111,8 +113,6 @@ enum PictureInPicture_PipControlGroup
 **Description**
 
 Enumerates the types of component groups displayed on the PiP controller.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -141,8 +141,6 @@ enum PictureInPicture_PipControlType
 
 Enumerates the types of components displayed on the PiP controller.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 | Enum item | Description |
@@ -167,8 +165,6 @@ enum PictureInPicture_PipControlStatus
 
 Enumerates the statuses of components displayed on the PiP controller.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 | Enum item | Description |
@@ -187,8 +183,6 @@ enum PictureInPicture_PipState
 **Description**
 
 Enumerates the PiP lifecycle states.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -214,8 +208,6 @@ typedef void (*WebPipStartPipCallback)(uint32_t controllerId, uint8_t requestId,
 
 Defines a callback function for PiP window creation.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -235,8 +227,6 @@ typedef void (*WebPipLifecycleCallback)(uint32_t controllerId, PictureInPicture_
 **Description**
 
 Defines a callback function for PiP window lifecycle changes.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -258,8 +248,6 @@ typedef void (*WebPipControlEventCallback)(uint32_t controllerId, PictureInPictu
 
 Defines a callback function for the component click event of the PiP window.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -279,8 +267,6 @@ typedef void (*WebPipResizeCallback)(uint32_t controllerId, uint32_t width, uint
 **Description**
 
 Defines a callback function for PiP window size changes.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -303,8 +289,6 @@ int32_t OH_PictureInPicture_CreatePipConfig(PictureInPicture_PipConfig* pipConfi
 
 Creates a PiP configuration.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -317,7 +301,7 @@ Creates a PiP configuration.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
 
 ### OH_PictureInPicture_DestroyPipConfig()
 
@@ -328,8 +312,6 @@ int32_t OH_PictureInPicture_DestroyPipConfig(PictureInPicture_PipConfig* pipConf
 **Description**
 
 Destroys a PiP configuration.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -343,7 +325,7 @@ Destroys a PiP configuration.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
 
 ### OH_PictureInPicture_SetPipMainWindowId()
 
@@ -354,8 +336,6 @@ int32_t OH_PictureInPicture_SetPipMainWindowId(PictureInPicture_PipConfig pipCon
 **Description**
 
 Sets the ID of the main window that launches PiP.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -370,7 +350,7 @@ Sets the ID of the main window that launches PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
 
 ### OH_PictureInPicture_SetPipTemplateType()
 
@@ -381,8 +361,6 @@ int32_t OH_PictureInPicture_SetPipTemplateType(PictureInPicture_PipConfig pipCon
 **Description**
 
 Sets the PiP template type. The default value is video playback.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -397,7 +375,7 @@ Sets the PiP template type. The default value is video playback.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
 
 ### OH_PictureInPicture_SetPipRect()
 
@@ -408,8 +386,6 @@ int32_t OH_PictureInPicture_SetPipRect(PictureInPicture_PipConfig pipConfig, uin
 **Description**
 
 Sets the size of the PiP window for calculating the aspect ratio.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -425,7 +401,7 @@ Sets the size of the PiP window for calculating the aspect ratio.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
 
 ### OH_PictureInPicture_SetPipControlGroup()
 
@@ -436,8 +412,6 @@ int32_t OH_PictureInPicture_SetPipControlGroup(PictureInPicture_PipConfig pipCon
 **Description**
 
 Sets a PiP component group, which must match the template type.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -453,7 +427,7 @@ Sets a PiP component group, which must match the template type.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
 
 ### OH_PictureInPicture_SetPipNapiEnv()
 
@@ -464,8 +438,6 @@ int32_t OH_PictureInPicture_SetPipNapiEnv(PictureInPicture_PipConfig pipConfig, 
 **Description**
 
 Sets the runtime environment for launching PiP.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -480,7 +452,7 @@ Sets the runtime environment for launching PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. |
 
 ### OH_PictureInPicture_CreatePip()
 
@@ -491,8 +463,6 @@ int32_t OH_PictureInPicture_CreatePip(PictureInPicture_PipConfig pipConfig, uint
 **Description**
 
 Creates a PiP controller.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -507,7 +477,7 @@ Creates a PiP controller.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_DeletePip()
 
@@ -519,8 +489,6 @@ int32_t OH_PictureInPicture_DeletePip(uint32_t controllerId)
 
 Deletes a PiP controller.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -533,7 +501,7 @@ Deletes a PiP controller.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) The function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) The function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
 
 ### OH_PictureInPicture_StartPip()
 
@@ -545,8 +513,6 @@ int32_t OH_PictureInPicture_StartPip(uint32_t controllerId)
 
 Starts PiP.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -559,7 +525,7 @@ Starts PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the PiP window state is abnormal. [WINDOW_MANAGER_ERRORCODE_PIP_CREATE_FAILED](capi-oh-window-comm-h.md#windowmanager_errorcode) failed to create the PiP window. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. [WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION](capi-oh-window-comm-h.md#windowmanager_errorcode) repeated PiP operation. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the PiP window state is abnormal. [WINDOW_MANAGER_ERRORCODE_PIP_CREATE_FAILED](capi-oh-window-comm-h.md#windowmanager_errorcode) failed to create the PiP window. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. [WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION](capi-oh-window-comm-h.md#windowmanager_errorcode) repeated PiP operation. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
 
 ### OH_PictureInPicture_StopPip()
 
@@ -571,8 +537,6 @@ int32_t OH_PictureInPicture_StopPip(uint32_t controllerId)
 
 Stops PiP.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -585,7 +549,7 @@ Stops PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_PIP_DESTROY_FAILED](capi-oh-window-comm-h.md#windowmanager_errorcode) failed to destroy the PiP window. [WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the PiP window state is abnormal. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. [WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION](capi-oh-window-comm-h.md#windowmanager_errorcode) repeated PiP operation. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_PIP_DESTROY_FAILED](capi-oh-window-comm-h.md#windowmanager_errorcode) failed to destroy the PiP window. [WINDOW_MANAGER_ERRORCODE_PIP_STATE_ABNORMAL](capi-oh-window-comm-h.md#windowmanager_errorcode) the PiP window state is abnormal. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. [WINDOW_MANAGER_ERRORCODE_PIP_REPEATED_OPERATION](capi-oh-window-comm-h.md#windowmanager_errorcode) repeated PiP operation. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. |
 
 ### OH_PictureInPicture_UpdatePipContentSize()
 
@@ -596,8 +560,6 @@ int32_t OH_PictureInPicture_UpdatePipContentSize(uint32_t controllerId, uint32_t
 **Description**
 
 Updates the media content size when the media content changes.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -613,7 +575,7 @@ Updates the media content size when the media content changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UpdatePipControlStatus()
 
@@ -624,8 +586,6 @@ int32_t OH_PictureInPicture_UpdatePipControlStatus(uint32_t controllerId, Pictur
 **Description**
 
 Updates the PiP component status.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -641,7 +601,7 @@ Updates the PiP component status.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_SetPipControlEnabled()
 
@@ -652,8 +612,6 @@ int32_t OH_PictureInPicture_SetPipControlEnabled(uint32_t controllerId, PictureI
 **Description**
 
 Sets the PiP component enabled status.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -669,7 +627,7 @@ Sets the PiP component enabled status.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_SetParentWindowId()
 
@@ -680,8 +638,6 @@ int32_t OH_PictureInPicture_SetParentWindowId(uint32_t controllerId, uint32_t wi
 **Description**
 
 Sets the main window ID for PiP.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 22
 
@@ -696,7 +652,7 @@ Sets the main window ID for PiP.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_SetPipInitialSurfaceRect()
 
@@ -707,8 +663,6 @@ int32_t OH_PictureInPicture_SetPipInitialSurfaceRect(uint32_t controllerId, int3
 **Description**
 
 Sets the initial position and size of the PiP surface when the PiP launch animation starts. It can be used to achieve a seamless transition effect.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -726,7 +680,7 @@ Sets the initial position and size of the PiP surface when the PiP launch animat
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnsetPipInitialSurfaceRect()
 
@@ -738,8 +692,6 @@ int32_t OH_PictureInPicture_UnsetPipInitialSurfaceRect(uint32_t controllerId)
 
 Cancels the previously set initial position and size for the PiP surface.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -752,7 +704,7 @@ Cancels the previously set initial position and size for the PiP surface.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_RegisterStartPipCallback()
 
@@ -764,8 +716,6 @@ int32_t OH_PictureInPicture_RegisterStartPipCallback(uint32_t controllerId, WebP
 
 Registers a callback to listen for the completion of PiP surface creation.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -779,7 +729,7 @@ Registers a callback to listen for the completion of PiP surface creation.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterStartPipCallback()
 
@@ -791,8 +741,6 @@ int32_t OH_PictureInPicture_UnregisterStartPipCallback(uint32_t controllerId, We
 
 Unregisters the callback used to listen for the completion of PiP surface creation.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -806,7 +754,7 @@ Unregisters the callback used to listen for the completion of PiP surface creati
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllStartPipCallbacks()
 
@@ -818,8 +766,6 @@ int32_t OH_PictureInPicture_UnregisterAllStartPipCallbacks(uint32_t controllerId
 
 Unregisters all the callbacks used to listen for the completion of PiP surface creation.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -832,7 +778,7 @@ Unregisters all the callbacks used to listen for the completion of PiP surface c
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_RegisterLifecycleListener()
 
@@ -844,8 +790,6 @@ int32_t OH_PictureInPicture_RegisterLifecycleListener(uint32_t controllerId, Web
 
 Registers a callback to listen for PiP lifecycle state changes.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -859,7 +803,7 @@ Registers a callback to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterLifecycleListener()
 
@@ -871,8 +815,6 @@ int32_t OH_PictureInPicture_UnregisterLifecycleListener(uint32_t controllerId, W
 
 Unregisters the callback used to listen for PiP lifecycle state changes.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -886,7 +828,7 @@ Unregisters the callback used to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllLifecycleListeners()
 
@@ -898,8 +840,6 @@ int32_t OH_PictureInPicture_UnregisterAllLifecycleListeners(uint32_t controllerI
 
 Unregisters all the callbacks used to listen for PiP lifecycle state changes.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -912,7 +852,7 @@ Unregisters all the callbacks used to listen for PiP lifecycle state changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_RegisterControlEventListener()
 
@@ -924,8 +864,6 @@ int32_t OH_PictureInPicture_RegisterControlEventListener(uint32_t controllerId, 
 
 Registers a callback to listen for control panel action events in PiP mode.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -939,7 +877,7 @@ Registers a callback to listen for control panel action events in PiP mode.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterControlEventListener()
 
@@ -951,8 +889,6 @@ int32_t OH_PictureInPicture_UnregisterControlEventListener(uint32_t controllerId
 
 Unregisters the callback used to listen for control panel action events in PiP mode.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -966,7 +902,7 @@ Unregisters the callback used to listen for control panel action events in PiP m
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllControlEventListeners()
 
@@ -978,8 +914,6 @@ int32_t OH_PictureInPicture_UnregisterAllControlEventListeners(uint32_t controll
 
 Unregisters all the callbacks used to listen for control panel action events in PiP mode.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -992,7 +926,7 @@ Unregisters all the callbacks used to listen for control panel action events in 
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_RegisterResizeListener()
 
@@ -1004,8 +938,6 @@ int32_t OH_PictureInPicture_RegisterResizeListener(uint32_t controllerId, WebPip
 
 Registers a callback to listen for PiP window size changes.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -1019,7 +951,7 @@ Registers a callback to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterResizeListener()
 
@@ -1031,8 +963,6 @@ int32_t OH_PictureInPicture_UnregisterResizeListener(uint32_t controllerId, WebP
 
 Unregisters the callback used to listen for PiP window size changes.
 
-**System capability**: SystemCapability.Window.SessionManager
-
 **Since**: 20
 
 **Parameters**:
@@ -1046,7 +976,7 @@ Unregisters the callback used to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_UnregisterAllResizeListeners()
 
@@ -1057,8 +987,6 @@ int32_t OH_PictureInPicture_UnregisterAllResizeListeners(uint32_t controllerId)
 **Description**
 
 Unregisters all the callbacks used to listen for PiP window size changes.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 20
 
@@ -1072,7 +1000,7 @@ Unregisters all the callbacks used to listen for PiP window size changes.
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. [OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
+| int32_t | Return the result code. [OK](capi-uchar-h.md#ublockcode) the function call is successful. [WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. [WINDOW_MANAGER_ERRORCODE_DEVICE_NOT_SUPPORTED](capi-oh-window-comm-h.md#windowmanager_errorcode) capability not supported. [WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. |
 
 ### OH_PictureInPicture_SetAutoStartEnabled()
 
@@ -1083,8 +1011,6 @@ int32_t OH_PictureInPicture_SetAutoStartEnabled(uint32_t controllerId, bool enab
 **Description**
 
 Sets whether to automatically start a PiP window when the user returns to the home screen. By default, no PiP window is started.
-
-**System capability**: SystemCapability.Window.SessionManager
 
 **Since**: 26.0.0
 
@@ -1099,6 +1025,6 @@ Sets whether to automatically start a PiP window when the user returns to the ho
 
 | Type | Description |
 | -- | -- |
-| int32_t | Return the result code. <ul> <li>[OK](capi-oh-window-comm-h.md#windowmanager_errorcode) the function call is successful. </li> <li>[WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. Possible cause: Can not find the PiP controller corresponding to the controllerId ID.</li> <li>[WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. Possible cause: The PiP controller has been destroyed.</li> </ul> |
+| int32_t | Return the result code. <ul> <li>[OK](capi-uchar-h.md#ublockcode) the function call is successful. </li> <li>[WINDOW_MANAGER_ERRORCODE_INCORRECT_PARAM](capi-oh-window-comm-h.md#windowmanager_errorcode) parameter error. Possible cause: Can not find the PiP controller corresponding to the controllerId ID.</li> <li>[WINDOW_MANAGER_ERRORCODE_PIP_INTERNAL_ERROR](capi-oh-window-comm-h.md#windowmanager_errorcode) pip internal error. Possible cause: The PiP controller has been destroyed.</li> </ul> |
 
 

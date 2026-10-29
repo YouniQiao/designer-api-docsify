@@ -6,8 +6,6 @@ Defines functions related to the font manager in the drawing module, providing c
 
 **Library**: libnative_drawing.so
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 11
 
 **Related module**: [Drawing](capi-drawing.md)
@@ -38,8 +36,6 @@ uint32_t OH_Drawing_RegisterFont(OH_Drawing_FontCollection* fontCollection, cons
 
 Registers a custom font with the font manager. The supported font file formats are .ttf and .otf.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 11
 
 **Parameters**:
@@ -65,8 +61,6 @@ uint32_t OH_Drawing_RegisterFontBuffer(OH_Drawing_FontCollection* fontCollection
 **Description**
 
 Registers a font buffer in the font manager, supporting data read from ttf and otf files.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 11
 
@@ -95,8 +89,6 @@ uint32_t OH_Drawing_RegisterFontByIndex(OH_Drawing_FontCollection* fontCollectio
 
 Registers a custom font using a ttc/otc file, with the index parameter specifying the font index to register.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -123,8 +115,6 @@ uint32_t OH_Drawing_RegisterFontBufferByIndex(OH_Drawing_FontCollection* fontCol
 **Description**
 
 Registers a font using the font buffer of a TTC/OTC file.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 
@@ -154,8 +144,6 @@ uint32_t OH_Drawing_UnregisterFont(OH_Drawing_FontCollection* fontCollection, co
 
 Unregisters a custom font by font name. <br>Unregistering a font that is currently in use may lead to text rendering exceptions (such as garbled characters or missing glyphs). <br>All typesetting objects that use the unregistered font name should be destroyed and recreated.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 20
 
 **Parameters**:
@@ -181,8 +169,6 @@ bool OH_Drawing_IsFontSupportedFromPath(const char* path)
 
 Checks whether the system supports the font format of the specified path.
 
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
-
 **Since**: 23
 
 **Parameters**:
@@ -206,8 +192,6 @@ bool OH_Drawing_IsFontSupportedFromBuffer(uint8_t* data, size_t dataLength)
 **Description**
 
 Checks whether the system supports the font format specified in the buffer.
-
-**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 23
 

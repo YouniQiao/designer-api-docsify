@@ -6,8 +6,6 @@ Provides APIs for managing the Trusted Execution Environment (TEE) time.<br> You
 
 **Library**: NA
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Related module**: [TeeTrusted](capi-teetrusted.md)
@@ -36,8 +34,6 @@ void TEE_GetSystemTime(TEE_Time *time)
 
 Obtains the current TEE system time.
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -55,8 +51,6 @@ TEE_Result TEE_Wait(uint32_t timeout)
 **Description**
 
 Waits for the specified period of time, in milliseconds.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -82,8 +76,6 @@ TEE_Result TEE_GetTAPersistentTime(TEE_Time *time)
 
 Obtains the persistent time of this trusted application (TA).
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -108,8 +100,6 @@ TEE_Result TEE_SetTAPersistentTime(TEE_Time *time)
 
 Sets the persistent time for this TA.
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -133,8 +123,6 @@ void TEE_GetREETime(TEE_Time *time)
 **Description**
 
 Obtains the current Rich Execution Environment (REE) system time.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

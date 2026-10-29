@@ -6,8 +6,6 @@
 
 **库：** libohgame_controller.z.so
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **相关模块：** [GameController](capi-gamecontroller.md)
@@ -32,14 +30,13 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [typedef void(\* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)](#gamedevice_devicemonitorcallback) | GameDevice_DeviceMonitorCallback | 定义[OH_GameDevice_RegisterDeviceMonitor](capi-game-device-h.md#oh_gamedevice_registerdevicemonitor)中使用的回调函数。当设备上线或下线时，该回调函数将被调用。 |
+| [typedef void (\*GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)](#gamedevice_devicemonitorcallback) | GameDevice_DeviceMonitorCallback | 定义[OH_GameDevice_RegisterDeviceMonitor](capi-game-device-h.md#oh_gamedevice_registerdevicemonitor)中使用的回调函数。当设备上线或下线时，该回调函数将被调用。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceEvent_GetChangedType(const struct GameDevice_DeviceEvent* deviceEvent, GameDevice_StatusChangedType* statusChangedType)](#oh_gamedevice_deviceevent_getchangedtype) | - | 从设备状态变化事件中获取状态变化类型。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceEvent_GetDeviceInfo(const struct GameDevice_DeviceEvent* deviceEvent, GameDevice_DeviceInfo** deviceInfo)](#oh_gamedevice_deviceevent_getdeviceinfo) | - | 从设备状态变化事件中获取设备信息。 |
 | [GameController_ErrorCode OH_GameDevice_DestroyDeviceInfo(GameDevice_DeviceInfo** deviceInfo)](#oh_gamedevice_destroydeviceinfo) | - | 销毁设备信息实例。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceId(const struct GameDevice_DeviceInfo* deviceInfo, char** deviceId)](#oh_gamedevice_deviceinfo_getdeviceid) | - | 从设备信息中获取设备ID。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetName(const struct GameDevice_DeviceInfo* deviceInfo, char** name)](#oh_gamedevice_deviceinfo_getname) | - | 从设备信息中获取设备名称。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetProduct(const struct GameDevice_DeviceInfo* deviceInfo, int32_t* product)](#oh_gamedevice_deviceinfo_getproduct) | - | 从设备信息中获取产品信息。 |
-| [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVendor(const struct GameDevice_DeviceInfo* deviceInfo, int32_t* vendor)](#oh_gamedevice_deviceinfo_getvendor) | - | 从设备信息中获取厂商信息。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVersion(const struct GameDevice_DeviceInfo* deviceInfo, int32_t* version)](#oh_gamedevice_deviceinfo_getversion) | - | 从设备信息中获取版本信息。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struct GameDevice_DeviceInfo* deviceInfo, char** physicalAddress)](#oh_gamedevice_deviceinfo_getphysicaladdress) | - | 从设备信息中获取物理地址。 |
 | [GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct GameDevice_DeviceInfo* deviceInfo, GameDevice_DeviceType* deviceType)](#oh_gamedevice_deviceinfo_getdevicetype) | - | 从设备信息中获取设备类型。 |
@@ -48,7 +45,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| void(* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent) | 定义[OH_GameDevice_RegisterDeviceMonitor](capi-game-device-h.md#oh_gamedevice_registerdevicemonitor)中使用的回调函数。当设备上线或下线时，该回调函数将被调用。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.Game.GameController |
+| void (*GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent) | 定义[OH_GameDevice_RegisterDeviceMonitor](capi-game-device-h.md#oh_gamedevice_registerdevicemonitor)中使用的回调函数。当设备上线或下线时，该回调函数将被调用。<br>**起始版本：** 21<br>**系统能力：** SystemCapability.Game.GameController |
 
 ## 枚举类型说明
 
@@ -61,8 +58,6 @@ enum GameDevice_StatusChangedType
 **描述：**
 
 此枚举定义设备的状态变化类型。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -81,8 +76,6 @@ enum GameDevice_DeviceType
 
 此枚举定义设备类型。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -96,14 +89,12 @@ enum GameDevice_DeviceType
 ### GameDevice_DeviceMonitorCallback()
 
 ```c
-typedef void(* GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)
+typedef void (*GameDevice_DeviceMonitorCallback)(const struct GameDevice_DeviceEvent* deviceEvent)
 ```
 
 **描述：**
 
 定义[OH_GameDevice_RegisterDeviceMonitor](capi-game-device-h.md#oh_gamedevice_registerdevicemonitor)中使用的回调函数。当设备上线或下线时，该回调函数将被调用。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -122,8 +113,6 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetChangedType(const struct G
 **描述：**
 
 从设备状态变化事件中获取状态变化类型。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -149,8 +138,6 @@ GameController_ErrorCode OH_GameDevice_DeviceEvent_GetDeviceInfo(const struct Ga
 **描述：**
 
 从设备状态变化事件中获取设备信息。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -182,8 +169,6 @@ GameController_ErrorCode OH_GameDevice_DestroyDeviceInfo(GameDevice_DeviceInfo**
 
 销毁设备信息实例。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -207,8 +192,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceId(const struct GameD
 **描述：**
 
 从设备信息中获取设备ID。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -235,8 +218,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetName(const struct GameDevic
 
 从设备信息中获取设备名称。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -262,8 +243,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetProduct(const struct GameDe
 
 从设备信息中获取产品信息。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -277,34 +256,7 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetProduct(const struct GameDe
 
 | 类型 | 说明 |
 | -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li> <li>如果参数deviceInfo或product为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
-
-### OH_GameDevice_DeviceInfo_GetVendor()
-
-```c
-GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVendor(const struct GameDevice_DeviceInfo* deviceInfo, int32_t* vendor)
-```
-
-**描述：**
-
-从设备信息中获取厂商信息。
-
-**系统能力：** SystemCapability.Game.GameController
-
-**起始版本：** 26.0.1
-
-**参数：**
-
-| 参数项 | 描述 |
-| -- | -- |
-| [const struct GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)* deviceInfo | [in]指向[GameDevice_DeviceInfo](capi-gamecontroller-gamedevice-deviceinfo.md)实例的指针。指针不能为空。 |
-| int32_t* vendor | [out]输出参数。供应商信息。 |
-
-**返回值：**
-
-| 类型 | 说明 |
-| -- | -- |
-| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果操作成功，则返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li> <li>如果deviceInfo或vendor参数为空，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
+| [GameController_ErrorCode](capi-game-controller-type-h.md#gamecontroller_errorcode) | <ul><li>如果执行成功，返回[GAME_CONTROLLER_SUCCESS](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li>     <li>如果参数deviceInfo为null，返回[GAME_CONTROLLER_PARAM_ERROR](capi-game-controller-type-h.md#gamecontroller_errorcode)。</li></ul> |
 
 ### OH_GameDevice_DeviceInfo_GetVersion()
 
@@ -315,8 +267,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetVersion(const struct GameDe
 **描述：**
 
 从设备信息中获取版本信息。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 
@@ -343,8 +293,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetPhysicalAddress(const struc
 
 从设备信息中获取物理地址。
 
-**系统能力：** SystemCapability.Game.GameController
-
 **起始版本：** 21
 
 **参数：**
@@ -369,8 +317,6 @@ GameController_ErrorCode OH_GameDevice_DeviceInfo_GetDeviceType(const struct Gam
 **描述：**
 
 从设备信息中获取设备类型。
-
-**系统能力：** SystemCapability.Game.GameController
 
 **起始版本：** 21
 

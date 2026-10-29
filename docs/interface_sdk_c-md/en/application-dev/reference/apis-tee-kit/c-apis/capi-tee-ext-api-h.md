@@ -6,8 +6,6 @@ Provides extended interfaces.
 
 **Library**: NA
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Related module**: [TeeTrusted](capi-teetrusted.md)
@@ -54,8 +52,6 @@ TEE_Result tee_ext_get_caller_info(caller_info *caller_info_data, uint32_t lengt
 
 Get caller info of current session, refer caller_info struct for more details.
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Parameters**:
@@ -80,8 +76,6 @@ TEE_Result AddCaller_CA(const uint8_t *cainfo_hash, uint32_t length)
 **Description**
 
 Adds information about a caller that can invoke this TA. This API applies to the client applications (CAs) in the native CA and HAP format.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 
@@ -108,8 +102,6 @@ TEE_Result AddCaller_TA_all(void)
 
 TA call this API allow others TA open session with itself.
 
-**System capability**: SystemCapability.Tee.TeeClient
-
 **Since**: 20
 
 **Returns**:
@@ -127,8 +119,6 @@ uint32_t tee_get_session_type(void)
 **Description**
 
 Obtains the session type.
-
-**System capability**: SystemCapability.Tee.TeeClient
 
 **Since**: 20
 

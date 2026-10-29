@@ -6,11 +6,9 @@
 
 **库：** libnet_ethernet.so
 
-**系统能力：** SystemCapability.Communication.NetManager.Ethernet
-
 **起始版本：** 26.0.0
 
-**相关模块：** [NetEthernet](capi-netethernet.md)
+**相关模块：** [netmanager_ext](capi-netmanager-ext.md)
 
 ## 汇总
 
@@ -33,8 +31,6 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 
 获取以太网网卡MAC地址列表。
 
-**系统能力：** SystemCapability.Communication.NetManager.Ethernet
-
 **需要权限：** ohos.permission.GET_ETHERNET_LOCAL_MAC
 
 **起始版本：** 26.0.0
@@ -43,7 +39,7 @@ int32_t OH_Ethernet_GetMacAddress(Ethernet_MacAddrInfoList *macAddrList)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [Ethernet_MacAddrInfoList](capi-netethernet-ethernet-macaddrinfolist.md) *macAddrList | 以太网网卡MAC地址列表。 |
+| [Ethernet_MacAddrInfoList](capi-netmanager-ext-ethernet-macaddrinfolist.md) *macAddrList | 以太网网卡MAC地址列表。 |
 
 **返回值：**
 
@@ -61,8 +57,6 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 
 获取以太网网卡IP地址列表。
 
-**系统能力：** SystemCapability.Communication.NetManager.Ethernet
-
 **需要权限：** ohos.permission.GET_NETWORK_INFO
 
 **起始版本：** 26.0.0
@@ -71,7 +65,7 @@ int32_t OH_Ethernet_GetNetAddress(Ethernet_NetAddrList *netAddrList)
 
 | 参数项 | 描述 |
 | -- | -- |
-| [Ethernet_NetAddrList](capi-netethernet-ethernet-netaddrlist.md) *netAddrList | 以太网网卡IP地址列表。 |
+| [Ethernet_NetAddrList](capi-netmanager-ext-ethernet-netaddrlist.md) *netAddrList | 以太网网卡IP地址列表。 |
 
 **返回值：**
 

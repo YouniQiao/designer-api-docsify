@@ -14,6 +14,10 @@ The AppServiceExtensionAbility module provides extended capabilities for backgro
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
 
+## ExtensionAbility Usage Restrictions
+
+To ensure system security and stability, AppServiceExtensionAbility is restricted from abusing system resources. The system controls its capabilities and does not support referencing some modules. For details, see [Appendix](#appendix).
+
 ## Modules to Import
 
 ```TypeScript
@@ -240,3 +244,11 @@ Context environment for an AppServiceExtensionAbility. This context inherits fro
 <!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext--><!--Device-AppServiceExtensionAbility-context: AppServiceExtensionContext-End-->
 
 **System capability:** SystemCapability.Ability.AbilityRuntime.Core
+
+## Appendix
+
+AppServiceExtensionAbility does not support referencing the following modules.
+
+| Kit | Module |
+| --- | --- |
+| ArkUI | [@ohos.window](../../apis-arkui/arkts-apis/arkts-arkui-window.md) |

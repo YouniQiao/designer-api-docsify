@@ -8,8 +8,6 @@ Provides the input method types.
 
 **Library**: libohinputmethod.so
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 **Related module**: [InputMethod](capi-inputmethod.md)
@@ -47,8 +45,6 @@ enum InputMethod_KeyboardStatus
 
 Enumerates the keyboard status.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -66,8 +62,6 @@ enum InputMethod_EnterKeyType
 **Description**
 
 Enumerates the Enter key types.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -93,8 +87,6 @@ enum InputMethod_Direction
 
 Enumerates the moving directions.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -115,8 +107,6 @@ enum InputMethod_ExtendAction
 
 Enumerates the types of the extended edit action on the text box.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -135,8 +125,6 @@ enum InputMethod_TextInputType
 **Description**
 
 Enumerates the text input types.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -168,8 +156,6 @@ enum InputMethod_CommandValueType
 
 Enumerates the private data types.
 
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
-
 **Since**: 12
 
 | Enum item | Description |
@@ -188,8 +174,6 @@ enum InputMethod_ErrorCode
 **Description**
 
 Enumerates the input method error codes.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 12
 
@@ -218,8 +202,6 @@ enum InputMethod_RequestKeyboardReason
 **Description**
 
 Enumerates the reasons for requesting the keyboard.
-
-**System capability**: SystemCapability.MiscServices.InputMethodFramework
 
 **Since**: 15
 

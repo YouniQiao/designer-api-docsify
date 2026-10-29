@@ -6,7 +6,7 @@ typedef struct ArkUI_AnimateOption ArkUI_AnimateOption
 
 ## Overview
 
-Defines the animation configuration, which is used to set the animation-related attributes.
+Defines the animation configuration.
 
 **System capability**: SystemCapability.ArkUI.ArkUI.Full
 

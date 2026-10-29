@@ -8,13 +8,17 @@ Declares the APIs used to access HUKS.
 
 **Library**: libhuks_ndk.z.so
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Related module**: [HuksKeyApi](capi-hukskeyapi.md)
 
 ## Summary
+
+### Macro
+
+| Name | Description |
+| -- | -- |
+| NATIVE_HUKS_API_H | Declares the APIs used to access HUKS.<br>**Since**: 9<br>**System capability**: SystemCapability.Security.Huks.Core |
 
 ### Function
 
@@ -50,8 +54,6 @@ struct OH_Huks_Result OH_Huks_GetSdkVersion(struct OH_Huks_Blob *sdkVersion)
 
 Obtains the current HUKS SDK version number.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -75,8 +77,6 @@ struct OH_Huks_Result OH_Huks_GenerateKeyItem(const struct OH_Huks_Blob *keyAlia
 **Description**
 
 Generates a key.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -104,8 +104,6 @@ struct OH_Huks_Result OH_Huks_ImportKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Imports a key in plaintext.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -131,8 +129,6 @@ struct OH_Huks_Result OH_Huks_ImportWrappedKeyItem(const struct OH_Huks_Blob *ke
 **Description**
 
 Imports a key in ciphertext.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -161,8 +157,6 @@ struct OH_Huks_Result OH_Huks_ExportPublicKeyItem(const struct OH_Huks_Blob *key
 
 Exports the public key.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -189,8 +183,6 @@ struct OH_Huks_Result OH_Huks_DeleteKeyItem(const struct OH_Huks_Blob *keyAlias,
 
 Deletes a key.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -215,8 +207,6 @@ struct OH_Huks_Result OH_Huks_GetKeyItemParamSet(const struct OH_Huks_Blob *keyA
 **Description**
 
 Obtains the properties of a key.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -244,8 +234,6 @@ struct OH_Huks_Result OH_Huks_IsKeyItemExist(const struct OH_Huks_Blob *keyAlias
 
 Checks whether a key exists.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -270,8 +258,6 @@ struct OH_Huks_Result OH_Huks_AttestKeyItem(const struct OH_Huks_Blob *keyAlias,
 **Description**
 
 Obtains the certificate chain of a key. This API is open only to system applications.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Required permission**: ohos.permission.ATTEST_KEY
 
@@ -301,8 +287,6 @@ struct OH_Huks_Result OH_Huks_AnonAttestKeyItem(const struct OH_Huks_Blob *keyAl
 
 Obtains the certificate chain of a key. This is a networking duration interface caller need to get the certChain in asynchronous thread
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 11
 
 **Parameters**:
@@ -328,8 +312,6 @@ struct OH_Huks_Result OH_Huks_InitSession(const struct OH_Huks_Blob *keyAlias, c
 **Description**
 
 Initializes a key session. This function returns a session handle (mandatory) and a challenge value (optional) .
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -365,8 +347,6 @@ struct OH_Huks_Result OH_Huks_UpdateSession(const struct OH_Huks_Blob *handle, c
 
 Adds data by segment for the key operation, performs the related key operation, and outputs the processed data.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -400,8 +380,6 @@ struct OH_Huks_Result OH_Huks_FinishSession(const struct OH_Huks_Blob *handle, c
 **Description**
 
 Finishes a key session.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 9
 
@@ -437,8 +415,6 @@ struct OH_Huks_Result OH_Huks_AbortSession(const struct OH_Huks_Blob *handle, co
 
 Aborts a key session.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 9
 
 **Parameters**:
@@ -471,8 +447,6 @@ struct OH_Huks_Result OH_Huks_ListAliases(const struct OH_Huks_ParamSet *paramSe
 
 Obtains the key alias set.
 
-**System capability**: SystemCapability.Security.Huks.Core
-
 **Since**: 20
 
 **Parameters**:
@@ -497,8 +471,6 @@ struct OH_Huks_Result OH_Huks_WrapKey(const struct OH_Huks_Blob *keyAlias, const
 **Description**
 
 Exports a wrapped key.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 
@@ -525,8 +497,6 @@ struct OH_Huks_Result OH_Huks_UnwrapKey(const struct OH_Huks_Blob *keyAlias, con
 **Description**
 
 Imports a wrapped key.
-
-**System capability**: SystemCapability.Security.Huks.Core
 
 **Since**: 20
 

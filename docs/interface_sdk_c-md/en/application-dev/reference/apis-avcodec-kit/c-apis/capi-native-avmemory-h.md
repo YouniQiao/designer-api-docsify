@@ -6,8 +6,6 @@ The file declares the attribute definition of the media struct AVMemory.
 
 **Library**: libnative_media_core.so
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 9
 
 **Related module**: [Core](capi-core.md)
@@ -41,8 +39,6 @@ OH_AVMemory *OH_AVMemory_Create(int32_t size)
 
 Creates an OH_AVMemory instance.
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 10
 
 **Deprecated**: 11
@@ -70,8 +66,6 @@ uint8_t *OH_AVMemory_GetAddr(struct OH_AVMemory *mem)
 **Description**
 
 Obtains the virtual memory address.
-
-**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 9
 
@@ -101,8 +95,6 @@ int32_t OH_AVMemory_GetSize(struct OH_AVMemory *mem)
 
 Obtains the memory length.
 
-**System capability**: SystemCapability.Multimedia.Media.Core
-
 **Since**: 9
 
 **Deprecated**: 11
@@ -130,8 +122,6 @@ OH_AVErrCode OH_AVMemory_Destroy(struct OH_AVMemory *mem)
 **Description**
 
 Releases an OH_AVMemory instance.
-
-**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 10
 

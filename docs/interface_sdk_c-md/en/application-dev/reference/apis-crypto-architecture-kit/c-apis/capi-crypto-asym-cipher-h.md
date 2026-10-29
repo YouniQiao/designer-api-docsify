@@ -8,8 +8,6 @@ Defines the asymmetric cipher interfaces.
 
 **Library**: libohcrypto.so
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Related module**: [CryptoAsymCipherApi](capi-cryptoasymcipherapi.md)
@@ -55,8 +53,6 @@ enum CryptoSm2CiphertextSpec_item
 
 Defines SM2 ciphertext specification item types.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 | Enum item | Description |
@@ -78,8 +74,6 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Create(const char *algoName, OH_CryptoAsym
 **Description**
 
 Creates an asymmetric cipher context based on the given algorithm name.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -113,8 +107,6 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Init(OH_CryptoAsymCipher *ctx, Crypto_Ciph
 
 Initializes the asymmetric cipher context with the given cipher mode and key.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -146,8 +138,6 @@ OH_Crypto_ErrCode OH_CryptoAsymCipher_Final(OH_CryptoAsymCipher *ctx, const Cryp
 
 Finishes the cipher operation.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
@@ -176,8 +166,6 @@ void OH_CryptoAsymCipher_Destroy(OH_CryptoAsymCipher *ctx)
 
 Destroys the asymmetric cipher context.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Parameters**:
@@ -195,8 +183,6 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Create(Crypto_DataBlob *sm2Cipherte
 **Description**
 
 Creates an SM2 ciphertext specification.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -231,8 +217,6 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_GetItem(OH_CryptoSm2CiphertextSpec 
 
 Obtains the specified item of the SM2 ciphertext.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
@@ -260,8 +244,6 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_SetItem(OH_CryptoSm2CiphertextSpec 
 **Description**
 
 Sets the specified item of the SM2 ciphertext specification.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 
@@ -294,8 +276,6 @@ OH_Crypto_ErrCode OH_CryptoSm2CiphertextSpec_Encode(OH_CryptoSm2CiphertextSpec *
 
 Encodes the SM2 ciphertext specification to DER format ciphertext.
 
-**System capability**: SystemCapability.Security.CryptoFramework
-
 **Since**: 20
 
 **Resource release**: crypto_common/OH_Crypto_FreeDataBlob {out}
@@ -322,8 +302,6 @@ void OH_CryptoSm2CiphertextSpec_Destroy(OH_CryptoSm2CiphertextSpec *spec)
 **Description**
 
 Destroys the SM2 ciphertext specification.
-
-**System capability**: SystemCapability.Security.CryptoFramework
 
 **Since**: 20
 

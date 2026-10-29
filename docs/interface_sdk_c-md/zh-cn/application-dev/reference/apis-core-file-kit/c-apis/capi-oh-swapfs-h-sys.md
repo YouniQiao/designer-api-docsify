@@ -8,8 +8,6 @@
 
 **库：** libohswapfs.so
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -67,8 +65,6 @@ enum OH_SwapfsKeyStatus
 
 被swapfs换出的数据将以key（换出数据交换单元）的形式被swapfs管理，该枚举定义已经被swapfs换出的key的状态。
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -87,8 +83,6 @@ enum OH_SwapfsDisableReason
 **描述：**
 
 定义换出功能被禁用的原因。仅在featureEnabled为false时有效。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 
@@ -111,8 +105,6 @@ OH_Swapfs_ErrCode OH_Swapfs_CreateManager(const OH_SwapfsConfig *config, OH_Swap
 **描述：**
 
 创建swapfs管理器。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 
@@ -148,8 +140,6 @@ OH_Swapfs_ErrCode OH_Swapfs_DestroyManager(OH_SwapfsManager *manager)
 
 销毁swapfs管理器并释放所有资源。 等待最多5s以使操作完成。如果所有操作在等待时间内完成，管理器拥有的所有交换数据将被自动删除，管理器将被销毁。 如果等待超时，此函数取消关闭状态并返回[SWAPFS_E_BUSY](capi-swapfs-errcode-h.md#oh_swapfs_errcode)；调用方可稍后重试。 操作完成后，该功能进入关闭状态，拒绝新的[OH_Swapfs_SwapOut](capi-oh-swapfs-h.md#oh_swapfs_swapout)、[OH_Swapfs_SwapIn](capi-oh-swapfs-h.md#oh_swapfs_swapin)、[OH_Swapfs_RemoveData](capi-oh-swapfs-h.md#oh_swapfs_removedata)和[OH_Swapfs_RemoveAllData](capi-oh-swapfs-h.md#oh_swapfs_removealldata)操作。
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -180,8 +170,6 @@ OH_Swapfs_ErrCode OH_Swapfs_SwapOut(OH_SwapfsManager *manager, const OH_SwapfsSw
 **描述：**
 
 将数据从内存换出到磁盘。 当[OH_SwapfsConfig](capi-swapfs-oh-swapfsconfig.md)中的useDirectIo为false时，使用缓冲IO。为true时，要求使用Direct I/O，未对齐的缓冲区将导致错误。 在Direct I/O模式下，换出文件大小会被填充到SWAPFS_DIO_ALIGNMENT（occupiedSize大于等于dataSize）。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 
@@ -216,8 +204,6 @@ OH_Swapfs_ErrCode OH_Swapfs_SwapIn(OH_SwapfsManager *manager, const OH_SwapfsSwa
 
 将数据从磁盘换入内存。 在Direct I/O模式下，缓冲区地址和大小必须对齐到SWAPFS_DIO_ALIGNMENT，且bufferSize必须大于等于occupiedSize。 在缓冲模式下，bufferSize必须大于等于dataSize。 成功时，readSize接收原始dataSize（非occupiedSize）。
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -250,8 +236,6 @@ OH_Swapfs_ErrCode OH_Swapfs_QueryData(OH_SwapfsManager *manager, uint64_t keyId,
 **描述：**
 
 查询特定swapfs key的信息，包括key的状态、数据大小等。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 
@@ -286,8 +270,6 @@ OH_Swapfs_ErrCode OH_Swapfs_GetStats(OH_SwapfsManager *manager, OH_SwapfsStats *
 
 获取当前swapfs管理器的统计信息。
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -320,8 +302,6 @@ OH_Swapfs_ErrCode OH_Swapfs_RemoveData(OH_SwapfsManager *manager, uint64_t keyId
 
 逻辑删除指定的swapfs key。触发后key立即被标记OH_SWAPFS_KEY_STATUS_REMOVING状态。 触发时若已有[OH_Swapfs_SwapIn](capi-oh-swapfs-h.md#oh_swapfs_swapin)操作则仍可完成swapin，完成后开始删除。 开始删除后，对该key的新[OH_Swapfs_SwapIn](capi-oh-swapfs-h.md#oh_swapfs_swapin)或[OH_Swapfs_QueryData](capi-oh-swapfs-h.md#oh_swapfs_querydata)操作将返回[SWAPFS_E_KEY_STATE_INVALID](capi-swapfs-errcode-h.md#oh_swapfs_errcode)。
 
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
-
 **起始版本：** 26.0.0
 
 **系统接口：** 此接口为系统接口。
@@ -353,8 +333,6 @@ OH_Swapfs_ErrCode OH_Swapfs_RemoveAllData(OH_SwapfsManager *manager)
 **描述：**
 
 删除管理器中的所有swapfs key。 如果存在进行中的操作（[OH_Swapfs_SwapOut](capi-oh-swapfs-h.md#oh_swapfs_swapout)或[OH_Swapfs_SwapIn](capi-oh-swapfs-h.md#oh_swapfs_swapin)），或任何key处于OH_SWAPFS_KEY_STATUS_REMOVING状态， 此函数返回[SWAPFS_E_BUSY](capi-swapfs-errcode-h.md#oh_swapfs_errcode)而不开始任何删除操作。
-
-**系统能力：** SystemCapability.FileManagement.File.Swapfs
 
 **起始版本：** 26.0.0
 

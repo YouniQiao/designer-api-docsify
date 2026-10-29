@@ -8,8 +8,6 @@ Declare the error codes of file management module.
 
 **库：** NA
 
-**系统能力：** SystemCapability.FileManagement.File.FileIO
-
 **起始版本：** 12
 
 **相关模块：** [FileIO](capi-fileio.md)
@@ -33,8 +31,6 @@ enum FileManagement_ErrCode
 **描述：**
 
 error codes of file management
-
-**系统能力：** SystemCapability.FileManagement.File.FileIO
 
 **起始版本：** 12
 

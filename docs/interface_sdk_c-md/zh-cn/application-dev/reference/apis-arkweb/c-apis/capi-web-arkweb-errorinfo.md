@@ -10,7 +10,7 @@ OH_ArkWebResourceHandler_DidFailWithErrorInfo的错误信息；
 
 **系统能力：** SystemCapability.Web.Webview.Core
 
-**起始版本：** 26.0.1
+**起始版本：** 26.1.0
 
 **相关模块：** [Web](capi-web.md)
 

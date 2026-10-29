@@ -6,7 +6,7 @@ typedef struct Sensor_Event Sensor_Event
 
 ## Overview
 
-Defines a struct for the sensor event, including the sensor type, timestamp, and sensor data.
+Defines a struct for the sensor data information.
 
 **System capability**: SystemCapability.Sensors.Sensor
 
