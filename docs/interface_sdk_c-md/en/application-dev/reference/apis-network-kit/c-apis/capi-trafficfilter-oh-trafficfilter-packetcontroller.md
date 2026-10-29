@@ -10,7 +10,7 @@ Packet controller
 
 **System capability**: SystemCapability.Communication.NetManager.NetFirewall
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 **Related module**: [TrafficFilter](capi-trafficfilter.md)
 

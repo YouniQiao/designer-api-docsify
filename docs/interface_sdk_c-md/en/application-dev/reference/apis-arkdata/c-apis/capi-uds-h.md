@@ -2,9 +2,11 @@
 
 ## Overview
 
-Provides uniform data struct(UDS).
+Defines the APIs and structs related to the uniform data structs. If the parameter type is char*, the string must end with a null character ('\0').
 
 **Library**: libudmf.so
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -18,11 +20,11 @@ Provides uniform data struct(UDS).
 | -- | -- | -- |
 | [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) | OH_UdsPlainText | Describes the unified data struct of plaintext. |
 | [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) | OH_UdsHyperlink | Describes the unified data struct of hyperlink. |
-| [OH_UdsHtml](capi-udmf-oh-udshtml.md) | OH_UdsHtml | Describes the unified data struct of html. |
+| [OH_UdsHtml](capi-udmf-oh-udshtml.md) | OH_UdsHtml | Defines a struct for the unified data of the Hypertext Markup Language (HTML) type. |
 | [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) | OH_UdsAppItem | Describes the unified data struct of open harmony application item. |
 | [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) | OH_UdsFileUri | Describes the unified data struct of file uri. |
 | [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) | OH_UdsPixelMap | Describes the unified data struct of open harmony pixel map. |
-| [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) | OH_UdsContentForm | Describes the unified data struct of content form. |
+| [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) | OH_UdsContentForm | Defines a struct for the unified data of the content card type. |
 | [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) | OH_UdsArrayBuffer | Describes the unified data struct of array buffer. |
 | [OH_UdsDetails](capi-udmf-oh-udsdetails.md) | OH_UdsDetails | Describes the key-value object of UDS data. |
 
@@ -30,13 +32,13 @@ Provides uniform data struct(UDS).
 
 | Name | typedef keyword | Description |
 | -- | -- | -- |
-| [Udmf_AuthPermission](#udmf_authpermission) | Udmf_AuthPermission | Describes authorization permission values. |
+| [Udmf_AuthPermission](#udmf_authpermission) | Udmf_AuthPermission | Enumerates the URI authorization policies in the drag scenario.<br> > **NOTE**<br>> > This authorization policy takes effect only in drag scenarios.<br> The **NONE**, **READ**, **WRITE**, and **PERSIST** policies are supported. They can be combined, and only the following combinations take effect:<br> - **NONE**: No file permission is granted. - **READ**: Only one-time read permission is granted. - **WRITE**: Only one-time read and write permissions are granted. (Write permission includes read permission.) - **READ+WRITE**: One-time read and write authorization is performed, which is equivalent to **WRITE** authorization. - **READ+PERSIST**: Persistent read permission is granted. - **WRITE+PERSIST**: Persistent read and write permissions are granted. - **READ+WRITE+PERSIST**: Persistent read and write permissions are granted. The rules for applying the drag authorization policies are as follows (in descending order of priority): - Single data level: The **FileUri** and **HTML** (UDSs) support the configuration of authorization policy parameters, which take effect only once for a single record and have the highest priority. - [OH_UdmfData](capi-udmf-oh-udmfdata.md) level: The authorization parameters provided in [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) are valid for a single drag operation. If an authorization policy is configured for a piece of data, the configuration of the data is preferentially used. This level has the second highest priority. - Default level: If no authorization policy is configured for a single piece of data or [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md), proxy authorization is performed based on the default drag logic. The default logic is as follows: - FileUri data: By default, the **READ**, **WRITE**, and **PERSIST** permissions are granted in drag scenarios. - HTML data: Grants read permission only to the URIs in the img tags of the HTML text. |
 
 ### Function
 
 | Name | Description |
 | -- | -- |
-| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | Creates a pointer to the instance of the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
+| [OH_UdsPlainText* OH_UdsPlainText_Create()](#oh_udsplaintext_create) | Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur. |
 | [void OH_UdsPlainText_Destroy(OH_UdsPlainText* pThis)](#oh_udsplaintext_destroy) | Destroy a pointer that points to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance. |
 | [const char* OH_UdsPlainText_GetType(OH_UdsPlainText* pThis)](#oh_udsplaintext_gettype) | Get type id from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
 | [const char* OH_UdsPlainText_GetContent(OH_UdsPlainText* pThis)](#oh_udsplaintext_getcontent) | Get content from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
@@ -47,7 +49,7 @@ Provides uniform data struct(UDS).
 | [int OH_UdsPlainText_SetDetails(OH_UdsPlainText* pThis, const OH_UdsDetails* details)](#oh_udsplaintext_setdetails) | Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
 | [OH_UdsHyperlink* OH_UdsHyperlink_Create()](#oh_udshyperlink_create) | Creates a pointer to the instance of the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [void OH_UdsHyperlink_Destroy(OH_UdsHyperlink* pThis)](#oh_udshyperlink_destroy) | Destroy a pointer that points to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
-| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | Get type from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
+| [const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)](#oh_udshyperlink_gettype) | Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance. |
 | [const char* OH_UdsHyperlink_GetUrl(OH_UdsHyperlink* pThis)](#oh_udshyperlink_geturl) | Get url from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [const char* OH_UdsHyperlink_GetDescription(OH_UdsHyperlink* pThis)](#oh_udshyperlink_getdescription) | Get description from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [int OH_UdsHyperlink_GetDetails(OH_UdsHyperlink* pThis, OH_UdsDetails* details)](#oh_udshyperlink_getdetails) | Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
@@ -56,7 +58,7 @@ Provides uniform data struct(UDS).
 | [int OH_UdsHyperlink_SetDetails(OH_UdsHyperlink* pThis, const OH_UdsDetails* details)](#oh_udshyperlink_setdetails) | Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md). |
 | [OH_UdsHtml* OH_UdsHtml_Create()](#oh_udshtml_create) | Creates a pointer to the instance of the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [void OH_UdsHtml_Destroy(OH_UdsHtml* pThis)](#oh_udshtml_destroy) | Destroy a pointer that points to the [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
-| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | Get html from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
+| [const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)](#oh_udshtml_gettype) | Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance. |
 | [const char* OH_UdsHtml_GetContent(OH_UdsHtml* pThis)](#oh_udshtml_getcontent) | Get content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [const char* OH_UdsHtml_GetPlainContent(OH_UdsHtml* pThis)](#oh_udshtml_getplaincontent) | Get plain content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
 | [int OH_UdsHtml_GetDetails(OH_UdsHtml* pThis, OH_UdsDetails* details)](#oh_udshtml_getdetails) | Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
@@ -108,13 +110,13 @@ Provides uniform data struct(UDS).
 | [int OH_UdsContentForm_GetThumbData(OH_UdsContentForm* pThis, unsigned char** thumbData, unsigned int* len)](#oh_udscontentform_getthumbdata) | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetDescription(OH_UdsContentForm* pThis)](#oh_udscontentform_getdescription) | Get description from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetTitle(OH_UdsContentForm* pThis)](#oh_udscontentform_gettitle) | Get title from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIcon, unsigned int* len)](#oh_udscontentform_getappicon) | Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
 | [const char* OH_UdsContentForm_GetAppName(OH_UdsContentForm* pThis)](#oh_udscontentform_getappname) | Get app name from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [const char* OH_UdsContentForm_GetLinkUri(OH_UdsContentForm* pThis)](#oh_udscontentform_getlinkuri) | Get link url from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetThumbData(OH_UdsContentForm* pThis, const unsigned char* thumbData, unsigned int len)](#oh_udscontentform_setthumbdata) | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetDescription(OH_UdsContentForm* pThis, const char* description)](#oh_udscontentform_setdescription) | Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetTitle(OH_UdsContentForm* pThis, const char* title)](#oh_udscontentform_settitle) | Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
-| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
+| [int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* appIcon, unsigned int len)](#oh_udscontentform_setappicon) | Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance. |
 | [int OH_UdsContentForm_SetAppName(OH_UdsContentForm* pThis, const char* appName)](#oh_udscontentform_setappname) | Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [int OH_UdsContentForm_SetLinkUri(OH_UdsContentForm* pThis, const char* linkUri)](#oh_udscontentform_setlinkuri) | Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md). |
 | [OH_UdsDetails* OH_UdsDetails_Create()](#oh_udsdetails_create) | Creates a pointer to the instance of the [OH_UdsDetails](capi-udmf-oh-udsdetails.md). |
@@ -136,16 +138,18 @@ enum Udmf_AuthPermission
 
 **Description**
 
-Describes authorization permission values.
+Enumerates the URI authorization policies in the drag scenario.<br> > **NOTE**<br>> > This authorization policy takes effect only in drag scenarios.<br> The **NONE**, **READ**, **WRITE**, and **PERSIST** policies are supported. They can be combined, and only the following combinations take effect:<br> - **NONE**: No file permission is granted. - **READ**: Only one-time read permission is granted. - **WRITE**: Only one-time read and write permissions are granted. (Write permission includes read permission.) - **READ+WRITE**: One-time read and write authorization is performed, which is equivalent to **WRITE** authorization. - **READ+PERSIST**: Persistent read permission is granted. - **WRITE+PERSIST**: Persistent read and write permissions are granted. - **READ+WRITE+PERSIST**: Persistent read and write permissions are granted. The rules for applying the drag authorization policies are as follows (in descending order of priority): - Single data level: The **FileUri** and **HTML** (UDSs) support the configuration of authorization policy parameters, which take effect only once for a single record and have the highest priority. - [OH_UdmfData](capi-udmf-oh-udmfdata.md) level: The authorization parameters provided in [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md) are valid for a single drag operation. If an authorization policy is configured for a piece of data, the configuration of the data is preferentially used. This level has the second highest priority. - Default level: If no authorization policy is configured for a single piece of data or [OH_UdmfProperty](capi-udmf-oh-udmfproperty.md), proxy authorization is performed based on the default drag logic. The default logic is as follows: - FileUri data: By default, the **READ**, **WRITE**, and **PERSIST** permissions are granted in drag scenarios. - HTML data: Grants read permission only to the URIs in the img tags of the HTML text.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
-| UDMF_PERM_NONE = 0 | No permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_READ = 1u << 0 | Read permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_WRITE = 1u << 1 | Write permission.<br>**Since**: 26.0.0 |
-| UDMF_PERM_PERSIST = 1u << 2 | Persist permission.<br>**Since**: 26.0.0 |
+| UDMF_PERM_NONE = 0 | No permission granted.<br>**Since**: 26.0.0 |
+| UDMF_PERM_READ = 1u << 0 | Permission to read or view data.<br>**Since**: 26.0.0 |
+| UDMF_PERM_WRITE = 1u << 1 | Permission to modify data (including READ).<br>**Since**: 26.0.0 |
+| UDMF_PERM_PERSIST = 1u << 2 | Permission to persist files.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -158,7 +162,9 @@ OH_UdsPlainText* OH_UdsPlainText_Create()
 
 **Description**
 
-Creates a pointer to the instance of the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
+Creates an [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance and a pointer to it. If this pointer is no longer required, use {@lOH_UdsPlainText_Destroy} to destroy it. Otherwise, memory leaks may occur.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -183,6 +189,8 @@ void OH_UdsPlainText_Destroy(OH_UdsPlainText* pThis)
 
 Destroy a pointer that points to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -205,6 +213,8 @@ const char* OH_UdsPlainText_GetType(OH_UdsPlainText* pThis)
 **Description**
 
 Get type id from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -235,6 +245,8 @@ const char* OH_UdsPlainText_GetContent(OH_UdsPlainText* pThis)
 
 Get content from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -264,6 +276,8 @@ const char* OH_UdsPlainText_GetAbstract(OH_UdsPlainText* pThis)
 
 Get abstract from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -292,6 +306,8 @@ int OH_UdsPlainText_GetDetails(OH_UdsPlainText* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -323,6 +339,8 @@ int OH_UdsPlainText_SetContent(OH_UdsPlainText* pThis, const char* content)
 
 Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -330,7 +348,7 @@ Set content to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md)* pThis | Represents a pointer to an instance of [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md). |
-| const char* content | Represents a new content string. |
+| const char* content | Pointer to the plain text content to set. |
 
 **Returns**:
 
@@ -352,6 +370,8 @@ int OH_UdsPlainText_SetAbstract(OH_UdsPlainText* pThis, const char* abstract)
 **Description**
 
 Set abstract to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -383,6 +403,8 @@ int OH_UdsPlainText_SetDetails(OH_UdsPlainText* pThis, const OH_UdsDetails* deta
 
 Set details to the [OH_UdsPlainText](capi-udmf-oh-udsplaintext.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -413,6 +435,8 @@ OH_UdsHyperlink* OH_UdsHyperlink_Create()
 
 Creates a pointer to the instance of the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Returns**:
@@ -436,6 +460,8 @@ void OH_UdsHyperlink_Destroy(OH_UdsHyperlink* pThis)
 
 Destroy a pointer that points to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -457,7 +483,9 @@ const char* OH_UdsHyperlink_GetType(OH_UdsHyperlink* pThis)
 
 **Description**
 
-Get type from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
+Obtains the type ID from an [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -488,6 +516,8 @@ const char* OH_UdsHyperlink_GetUrl(OH_UdsHyperlink* pThis)
 
 Get url from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -517,6 +547,8 @@ const char* OH_UdsHyperlink_GetDescription(OH_UdsHyperlink* pThis)
 
 Get description from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -545,6 +577,8 @@ int OH_UdsHyperlink_GetDetails(OH_UdsHyperlink* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -576,6 +610,8 @@ int OH_UdsHyperlink_SetUrl(OH_UdsHyperlink* pThis, const char* url)
 
 Set url to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -605,6 +641,8 @@ int OH_UdsHyperlink_SetDescription(OH_UdsHyperlink* pThis, const char* descripti
 **Description**
 
 Set description to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -636,6 +674,8 @@ int OH_UdsHyperlink_SetDetails(OH_UdsHyperlink* pThis, const OH_UdsDetails* deta
 
 Set details to the [OH_UdsHyperlink](capi-udmf-oh-udshyperlink.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -666,6 +706,8 @@ OH_UdsHtml* OH_UdsHtml_Create()
 
 Creates a pointer to the instance of the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Returns**:
@@ -689,6 +731,8 @@ void OH_UdsHtml_Destroy(OH_UdsHtml* pThis)
 
 Destroy a pointer that points to the [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -710,7 +754,9 @@ const char* OH_UdsHtml_GetType(OH_UdsHtml* pThis)
 
 **Description**
 
-Get html from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
+Obtains the type ID from an [OH_UdsHtml](capi-udmf-oh-udshtml.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -741,6 +787,8 @@ const char* OH_UdsHtml_GetContent(OH_UdsHtml* pThis)
 
 Get content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -770,6 +818,8 @@ const char* OH_UdsHtml_GetPlainContent(OH_UdsHtml* pThis)
 
 Get plain content from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -798,6 +848,8 @@ int OH_UdsHtml_GetDetails(OH_UdsHtml* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -829,6 +881,8 @@ int OH_UdsHtml_SetContent(OH_UdsHtml* pThis, const char* content)
 
 Set content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -858,6 +912,8 @@ int OH_UdsHtml_SetPlainContent(OH_UdsHtml* pThis, const char* plainContent)
 **Description**
 
 Set plain content to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -889,6 +945,8 @@ int OH_UdsHtml_SetDetails(OH_UdsHtml* pThis, const OH_UdsDetails* details)
 
 Set details to the [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -919,6 +977,8 @@ int OH_UdsHtml_SetAuthPolicy(OH_UdsHtml* pThis, uint32_t authPolicy)
 
 Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -926,7 +986,7 @@ Set the authorization policy to [OH_UdsHtml](capi-udmf-oh-udshtml.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsHtml](capi-udmf-oh-udshtml.md)* pThis | Represents a pointer to an instance of [OH_UdsHtml](capi-udmf-oh-udshtml.md). |
-| uint32_t authPolicy | Represents auth policy. |
+| uint32_t authPolicy | URI authorization policy in drag scenarios. The default value is READ (read-only authorization), which takes effect only in scenarios such as the img tag. This policy is used only for a single record and has the highest priority. For details about the policy, see [Udmf_AuthPermission](capi-uds-h.md#udmf_authpermission). |
 
 **Returns**:
 
@@ -948,6 +1008,8 @@ OH_UdsAppItem* OH_UdsAppItem_Create()
 **Description**
 
 Creates a pointer to the instance of the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -972,6 +1034,8 @@ void OH_UdsAppItem_Destroy(OH_UdsAppItem* pThis)
 
 Destroy a pointer that points to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -994,6 +1058,8 @@ const char* OH_UdsAppItem_GetType(OH_UdsAppItem* pThis)
 **Description**
 
 Get type from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1024,6 +1090,8 @@ const char* OH_UdsAppItem_GetId(OH_UdsAppItem* pThis)
 
 Get app id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1052,6 +1120,8 @@ const char* OH_UdsAppItem_GetName(OH_UdsAppItem* pThis)
 **Description**
 
 Get app name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1082,6 +1152,8 @@ const char* OH_UdsAppItem_GetIconId(OH_UdsAppItem* pThis)
 
 Get app icon id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1110,6 +1182,8 @@ const char* OH_UdsAppItem_GetLabelId(OH_UdsAppItem* pThis)
 **Description**
 
 Get app label id from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1140,6 +1214,8 @@ const char* OH_UdsAppItem_GetBundleName(OH_UdsAppItem* pThis)
 
 Get bundle name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1169,6 +1245,8 @@ const char* OH_UdsAppItem_GetAbilityName(OH_UdsAppItem* pThis)
 
 Get ability name from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1197,6 +1275,8 @@ int OH_UdsAppItem_GetDetails(OH_UdsAppItem* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -1228,6 +1308,8 @@ int OH_UdsAppItem_SetId(OH_UdsAppItem* pThis, const char* appId)
 
 Set application id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1257,6 +1339,8 @@ int OH_UdsAppItem_SetName(OH_UdsAppItem* pThis, const char* appName)
 **Description**
 
 Set application name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1288,6 +1372,8 @@ int OH_UdsAppItem_SetIconId(OH_UdsAppItem* pThis, const char* appIconId)
 
 Set application icon id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1317,6 +1403,8 @@ int OH_UdsAppItem_SetLabelId(OH_UdsAppItem* pThis, const char* appLabelId)
 **Description**
 
 Set application label id to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1348,6 +1436,8 @@ int OH_UdsAppItem_SetBundleName(OH_UdsAppItem* pThis, const char* bundleName)
 
 Set bundle name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 12
 
 **Parameters**:
@@ -1377,6 +1467,8 @@ int OH_UdsAppItem_SetAbilityName(OH_UdsAppItem* pThis, const char* abilityName)
 **Description**
 
 Set ability name to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 12
 
@@ -1408,6 +1500,8 @@ int OH_UdsAppItem_SetDetails(OH_UdsAppItem* pThis, const OH_UdsDetails* details)
 
 Set details to the [OH_UdsAppItem](capi-udmf-oh-udsappitem.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -1438,6 +1532,8 @@ OH_UdsFileUri* OH_UdsFileUri_Create()
 
 Creates a pointer to the instance of the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Returns**:
@@ -1461,6 +1557,8 @@ void OH_UdsFileUri_Destroy(OH_UdsFileUri* pThis)
 
 Destroy a pointer that points to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1483,6 +1581,8 @@ const char* OH_UdsFileUri_GetType(OH_UdsFileUri* pThis)
 **Description**
 
 Get type id from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1513,6 +1613,8 @@ const char* OH_UdsFileUri_GetFileUri(OH_UdsFileUri* pThis)
 
 Get file uri from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1542,6 +1644,8 @@ const char* OH_UdsFileUri_GetFileType(OH_UdsFileUri* pThis)
 
 Get file type from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1570,6 +1674,8 @@ int OH_UdsFileUri_GetDetails(OH_UdsFileUri* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -1601,6 +1707,8 @@ int OH_UdsFileUri_SetFileUri(OH_UdsFileUri* pThis, const char* fileUri)
 
 Set file uri to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1630,6 +1738,8 @@ int OH_UdsFileUri_SetFileType(OH_UdsFileUri* pThis, const char* fileType)
 **Description**
 
 Set file type to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1661,6 +1771,8 @@ int OH_UdsFileUri_SetDetails(OH_UdsFileUri* pThis, const OH_UdsDetails* details)
 
 Set details to the [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -1691,6 +1803,8 @@ int OH_UdsFileUri_SetAuthPolicy(OH_UdsFileUri* pThis, uint32_t authPolicy)
 
 Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1698,13 +1812,13 @@ Set the authorization policy to [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md).
 | Parameter | Description |
 | -- | -- |
 | [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md)* pThis | Represents a pointer to an instance of [OH_UdsFileUri](capi-udmf-oh-udsfileuri.md). |
-| uint32_t authPolicy | Indicates the identity authorization policy. |
+| uint32_t authPolicy | URI authorization policy in the drag scenario. The default value is READ+WRITE+PERSIST, which is used only for a single record and has the highest priority. For details about the policy, see [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). [UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success. [UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args. |
+| int | Returns the status code of the execution. See [Udmf_ErrCode](capi-udmf-err-code-h.md#udmf_errcode). <br>[UDMF_E_OK](capi-udmf-err-code-h.md#udmf_errcode) success. <br>[UDMF_E_INVALID_PARAM](capi-udmf-err-code-h.md#udmf_errcode) The error code for common invalid args. |
 
 **Reference**:
 
@@ -1720,6 +1834,8 @@ OH_UdsPixelMap* OH_UdsPixelMap_Create()
 **Description**
 
 Creates a pointer to the instance of the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1744,6 +1860,8 @@ void OH_UdsPixelMap_Destroy(OH_UdsPixelMap* pThis)
 
 Destroy a pointer that points to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1766,6 +1884,8 @@ const char* OH_UdsPixelMap_GetType(OH_UdsPixelMap* pThis)
 **Description**
 
 Get type id from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1796,6 +1916,8 @@ void OH_UdsPixelMap_GetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelm
 
 Get pixel map from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1819,6 +1941,8 @@ int OH_UdsPixelMap_GetDetails(OH_UdsPixelMap* pThis, OH_UdsDetails* details)
 **Description**
 
 Get details from the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -1850,6 +1974,8 @@ int OH_UdsPixelMap_SetPixelMap(OH_UdsPixelMap* pThis, OH_PixelmapNative* pixelma
 
 Set pixel map to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -1879,6 +2005,8 @@ int OH_UdsPixelMap_SetDetails(OH_UdsPixelMap* pThis, const OH_UdsDetails* detail
 **Description**
 
 Set details to the [OH_UdsPixelMap](capi-udmf-oh-udspixelmap.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -1910,6 +2038,8 @@ OH_UdsArrayBuffer* OH_UdsArrayBuffer_Create()
 
 Creates a pointer to the instance of the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Returns**:
@@ -1932,6 +2062,8 @@ int OH_UdsArrayBuffer_Destroy(OH_UdsArrayBuffer* buffer)
 **Description**
 
 Destroy a pointer that points to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1961,6 +2093,8 @@ int OH_UdsArrayBuffer_SetData(OH_UdsArrayBuffer* buffer, unsigned char* data, un
 **Description**
 
 Set array buffer data to the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 13
 
@@ -1993,6 +2127,8 @@ int OH_UdsArrayBuffer_GetData(OH_UdsArrayBuffer* buffer, unsigned char** data, u
 
 Get array buffer data from the [OH_UdsArrayBuffer](capi-udmf-oh-udsarraybuffer.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 13
 
 **Parameters**:
@@ -2024,6 +2160,8 @@ OH_UdsContentForm* OH_UdsContentForm_Create()
 
 Creates a pointer to the instance of the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Returns**:
@@ -2047,6 +2185,8 @@ void OH_UdsContentForm_Destroy(OH_UdsContentForm* pThis)
 
 Destroy a pointer that points to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2069,6 +2209,8 @@ const char* OH_UdsContentForm_GetType(OH_UdsContentForm* pThis)
 **Description**
 
 Get type id from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2098,6 +2240,8 @@ int OH_UdsContentForm_GetThumbData(OH_UdsContentForm* pThis, unsigned char** thu
 **Description**
 
 Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2130,6 +2274,8 @@ const char* OH_UdsContentForm_GetDescription(OH_UdsContentForm* pThis)
 
 Get description from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2159,6 +2305,8 @@ const char* OH_UdsContentForm_GetTitle(OH_UdsContentForm* pThis)
 
 Get title from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2186,7 +2334,9 @@ int OH_UdsContentForm_GetAppIcon(OH_UdsContentForm* pThis, unsigned char** appIc
 
 **Description**
 
-Get thumb data from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+Obtains the application icon data from an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2219,6 +2369,8 @@ const char* OH_UdsContentForm_GetAppName(OH_UdsContentForm* pThis)
 
 Get app name from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2248,6 +2400,8 @@ const char* OH_UdsContentForm_GetLinkUri(OH_UdsContentForm* pThis)
 
 Get link url from the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2276,6 +2430,8 @@ int OH_UdsContentForm_SetThumbData(OH_UdsContentForm* pThis, const unsigned char
 **Description**
 
 Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2308,6 +2464,8 @@ int OH_UdsContentForm_SetDescription(OH_UdsContentForm* pThis, const char* descr
 
 Set description to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2338,6 +2496,8 @@ int OH_UdsContentForm_SetTitle(OH_UdsContentForm* pThis, const char* title)
 
 Set title to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2366,7 +2526,9 @@ int OH_UdsContentForm_SetAppIcon(OH_UdsContentForm* pThis, const unsigned char* 
 
 **Description**
 
-Set thumb data to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+Sets the application icon data for an [OH_UdsContentForm](capi-udmf-oh-udscontentform.md) instance.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2399,6 +2561,8 @@ int OH_UdsContentForm_SetAppName(OH_UdsContentForm* pThis, const char* appName)
 
 Set app name to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 14
 
 **Parameters**:
@@ -2428,6 +2592,8 @@ int OH_UdsContentForm_SetLinkUri(OH_UdsContentForm* pThis, const char* linkUri)
 **Description**
 
 Set link uri to the [OH_UdsContentForm](capi-udmf-oh-udscontentform.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 14
 
@@ -2459,6 +2625,8 @@ OH_UdsDetails* OH_UdsDetails_Create()
 
 Creates a pointer to the instance of the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Returns**:
@@ -2482,6 +2650,8 @@ void OH_UdsDetails_Destroy(OH_UdsDetails* pThis)
 
 Destroy a pointer that points to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) instance.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -2504,6 +2674,8 @@ bool OH_UdsDetails_HasKey(const OH_UdsDetails* pThis, const char* key)
 **Description**
 
 Determine whether the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) contain the specified key.
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -2535,6 +2707,8 @@ int OH_UdsDetails_Remove(OH_UdsDetails* pThis, const char* key)
 
 Remove the value corresponding to this key from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -2565,6 +2739,8 @@ int OH_UdsDetails_Clear(OH_UdsDetails* pThis)
 
 Clear all data in the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -2593,6 +2769,8 @@ int OH_UdsDetails_SetValue(OH_UdsDetails* pThis, const char* key, const char* va
 **Description**
 
 Set key-value data to the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
+
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 
 **Since**: 22
 
@@ -2625,6 +2803,8 @@ const char* OH_UdsDetails_GetValue(const OH_UdsDetails* pThis, const char* key)
 
 Get the value from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) using the key.
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -2655,6 +2835,8 @@ char** OH_UdsDetails_GetAllKeys(OH_UdsDetails* pThis, unsigned int* count)
 
 Get the all keys from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
+**System capability**: SystemCapability.DistributedDataManager.UDMF.Core
+
 **Since**: 22
 
 **Parameters**:
@@ -2668,7 +2850,7 @@ Get the all keys from the [OH_UdsDetails](capi-udmf-oh-udsdetails.md).
 
 | Type | Description |
 | -- | -- |
-| char** | Returns string list of keys. Memory will be released after calling the OH_UdsDetails_Destroy function. |
+| char** | Returns a double pointer to the result set if the operation is successful; <br>returns nullptr otherwise. <br>When [OH_UdsDetails_Destroy](capi-uds-h.md#oh_udsdetails_destroy) is used to destroy the [OH_UdsDetails](capi-udmf-oh-udsdetails.md) instance, the return value is also released. |
 
 **Reference**:
 

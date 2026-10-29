@@ -6,6 +6,8 @@ This file declares the functions related to the font in the drawing module.
 
 **Library**: libnative_drawing.so
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Related module**: [Drawing](capi-drawing.md)
@@ -14,9 +16,10 @@ This file declares the functions related to the font in the drawing module.
 
 ### Struct
 
-| Name | Description |
-| -- | -- |
-| [OH_Drawing_Font_Metrics](capi-drawing-oh-drawing-font-metrics.md) | This struct describes the measurement information about a font. |
+| Name | typedef keyword | Description |
+| -- | -- | -- |
+| [OH_Drawing_TypefaceFallbackInfo](capi-drawing-oh-drawing-typefacefallbackinfo.md) | OH_Drawing_TypefaceFallbackInfo | Defines the typeface fallback info structure for a run of glyphs that share the same fallback typeface. |
+| [OH_Drawing_Font_Metrics](capi-drawing-oh-drawing-font-metrics.md) | - | This struct describes the measurement information about a font. |
 
 ### Enum
 
@@ -42,11 +45,14 @@ This file declares the functions related to the font in the drawing module.
 | [float OH_Drawing_FontGetTextSize(const OH_Drawing_Font* font)](#oh_drawing_fontgettextsize) | Obtains the text size of a font object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [int OH_Drawing_FontCountText(OH_Drawing_Font* font, const void* text, size_t byteLength, OH_Drawing_TextEncoding encoding)](#oh_drawing_fontcounttext) | Obtains the number of glyphs represented by text. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **font** or **text** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
 | [uint32_t OH_Drawing_FontTextToGlyphs(const OH_Drawing_Font* font, const void* text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, uint16_t* glyphs, int maxGlyphCount)](#oh_drawing_fonttexttoglyphs) | Converts text into glyph indices. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **font**, **text**, and **glyphs** is NULL, **byteLength** is **0**, or **maxGlyphCount** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. |
+| [OH_Drawing_ErrorCode OH_Drawing_FontTextToGlyphsWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, OH_Drawing_TypefaceFallbackInfo **typefaceFallbackInfo, uint32_t *infosCount)](#oh_drawing_fonttexttoglyphswithfallback) | Converts text into glyph indices with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. |
 | [void OH_Drawing_FontGetWidths(const OH_Drawing_Font* font, const uint16_t* glyphs, int count, float* widths)](#oh_drawing_fontgetwidths) | Obtains the width of each glyph in a string of text. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **font**, **glyphs**, and **widths** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER**<br>is returned. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontMeasureSingleCharacter(const OH_Drawing_Font* font, const char* str, float* textWidth)](#oh_drawing_fontmeasuresinglecharacter) | Measures the width of a single character. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontMeasureSingleCharacterWithFeatures(const OH_Drawing_Font* font, const char* str, const OH_Drawing_FontFeatures* fontFeatures, float* textWidth)](#oh_drawing_fontmeasuresinglecharacterwithfeatures) | Measures the width of a single character with font features. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontMeasureText(const OH_Drawing_Font* font, const void* text, size_t byteLength, OH_Drawing_TextEncoding encoding, OH_Drawing_Rect* bounds, float* textWidth)](#oh_drawing_fontmeasuretext) | Obtains the text width and bounding box. |
+| [OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, OH_Drawing_Rect *bounds, float *textWidth)](#oh_drawing_fontmeasuretextwithfallback) | Obtains the text width and bounding box with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithBrushOrPen(const OH_Drawing_Font* font, const void* text, size_t byteLength, OH_Drawing_TextEncoding encoding, const OH_Drawing_Brush* brush, const OH_Drawing_Pen* pen, OH_Drawing_Rect* bounds, float* textWidth)](#oh_drawing_fontmeasuretextwithbrushorpen) | Obtains the width and bounding box of the text with a brush or pen. |
+| [OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithBrushOrPenWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, const OH_Drawing_Brush *brush, const OH_Drawing_Pen *pen, OH_Drawing_Rect *bounds, float *textWidth)](#oh_drawing_fontmeasuretextwithbrushorpenwithfallback) | Obtains the width and bounding box of the text with a brush or pen and font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontGetWidthsBounds(const OH_Drawing_Font* font, const uint16_t* glyphs, int count, const OH_Drawing_Brush* brush, const OH_Drawing_Pen* pen, float* widths, OH_Drawing_Array* bounds)](#oh_drawing_fontgetwidthsbounds) | Obtains the width and bounding box of each glyph in a glyph array. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontGetPos(const OH_Drawing_Font* font, const uint16_t* glyphs, int count, const OH_Drawing_Point* origin, OH_Drawing_Point2D* points)](#oh_drawing_fontgetpos) | Obtains the relative position of each glyph from the specified origin. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontGetSpacing(const OH_Drawing_Font* font, float* spacing)](#oh_drawing_fontgetspacing) | Obtains the recommended line spacing for a font. |
@@ -73,6 +79,7 @@ This file declares the functions related to the font in the drawing module.
 | [OH_Drawing_FontFeatures* OH_Drawing_FontFeaturesCreate(void)](#oh_drawing_fontfeaturescreate) | Creates an **OH_Drawing_FontFeatures** object. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontFeaturesAddFeature(OH_Drawing_FontFeatures* fontFeatures, const char* name, float value)](#oh_drawing_fontfeaturesaddfeature) | Adds a font feature to an **OH_Drawing_FontFeatures** object. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontFeaturesDestroy(OH_Drawing_FontFeatures* fontFeatures)](#oh_drawing_fontfeaturesdestroy) | Destroys an **OH_Drawing_FontFeatures** object and reclaims the memory occupied by the object. |
+| [OH_Drawing_ErrorCode OH_Drawing_FontTypefaceFallbackInfoDestroy(OH_Drawing_TypefaceFallbackInfo *infos, uint32_t count)](#oh_drawing_fonttypefacefallbackinfodestroy) | Releases an array of <b>OH_Drawing_TypefaceFallbackInfo</b> objects and reclaims the memory occupied by the array. This function destroys every typeface and glyphIds in the array and releases the array itself; <b>count</b> must be exactly the number reported when the array was created; passing any other value results in undefined behavior. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontSetThemeFontFollowed(OH_Drawing_Font* font, bool followed)](#oh_drawing_fontsetthemefontfollowed) | Sets whether to follow the theme font. When **followed** is set to **true**, the theme font is used if it is enabled by the system and no typeface is set. |
 | [OH_Drawing_ErrorCode OH_Drawing_FontIsThemeFontFollowed(const OH_Drawing_Font* font, bool* followed)](#oh_drawing_fontisthemefontfollowed) | Checks whether the font follows the theme font. By default, the theme font is not followed. |
 
@@ -87,6 +94,8 @@ enum OH_Drawing_FontHinting
 **Description**
 
 Defines an enum for the font hinting types.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -106,6 +115,8 @@ enum OH_Drawing_FontEdging
 **Description**
 
 Enumerates the font edging types.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -128,6 +139,8 @@ OH_Drawing_Font* OH_Drawing_FontCreate(void)
 
 Creates an **OH_Drawing_Font** object.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Returns**:
@@ -145,6 +158,8 @@ void OH_Drawing_FontSetBaselineSnap(OH_Drawing_Font* font, bool baselineSnap)
 **Description**
 
 Sets whether the font baselines and pixels alignment when the transformation matrix is axis aligned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -164,6 +179,8 @@ bool OH_Drawing_FontIsBaselineSnap(const OH_Drawing_Font* font)
 **Description**
 
 Gets whether the font baselines and pixels alignment when the transformation matrix is axis aligned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -189,6 +206,8 @@ void OH_Drawing_FontSetSubpixel(OH_Drawing_Font* font, bool isSubpixel)
 
 Sets whether to use sub-pixel rendering for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -207,6 +226,8 @@ bool OH_Drawing_FontIsSubpixel(const OH_Drawing_Font* font)
 **Description**
 
 Checks whether sub-pixel rendering is used for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -232,6 +253,8 @@ void OH_Drawing_FontSetForceAutoHinting(OH_Drawing_Font* font, bool isForceAutoH
 
 Sets whether to forcibly use auto hinting, that is, whether to always hint glyphs. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -250,6 +273,8 @@ bool OH_Drawing_FontIsForceAutoHinting(const OH_Drawing_Font* font)
 **Description**
 
 Checks whether auto hinting is forcibly used. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -275,6 +300,8 @@ void OH_Drawing_FontSetTypeface(OH_Drawing_Font* font, OH_Drawing_Typeface* type
 
 Sets a typeface for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -293,6 +320,8 @@ OH_Drawing_Typeface* OH_Drawing_FontGetTypeface(OH_Drawing_Font* font)
 **Description**
 
 Obtains the typeface of a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -318,6 +347,8 @@ void OH_Drawing_FontSetTextSize(OH_Drawing_Font* font, float textSize)
 
 Sets the text size for a font object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -336,6 +367,8 @@ float OH_Drawing_FontGetTextSize(const OH_Drawing_Font* font)
 **Description**
 
 Obtains the text size of a font object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -360,6 +393,8 @@ int OH_Drawing_FontCountText(OH_Drawing_Font* font, const void* text, size_t byt
 **Description**
 
 Obtains the number of glyphs represented by text. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **font** or **text** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -388,6 +423,8 @@ uint32_t OH_Drawing_FontTextToGlyphs(const OH_Drawing_Font* font, const void* te
 
 Converts text into glyph indices. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **font**, **text**, and **glyphs** is NULL, **byteLength** is **0**, or **maxGlyphCount** is less than or equal to 0, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -407,6 +444,39 @@ Converts text into glyph indices. This API may return an error code. For details
 | -- | -- |
 | uint32_t | Returns the number of glyph indices. |
 
+### OH_Drawing_FontTextToGlyphsWithFallback()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_FontTextToGlyphsWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, OH_Drawing_TypefaceFallbackInfo **typefaceFallbackInfo, uint32_t *infosCount)
+```
+
+**Description**
+
+Converts text into glyph indices with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.0.1
+
+**Resource release**: drawing_font/OH_Drawing_FontTypefaceFallbackInfoDestroy {typefaceFallbackInfo}
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_Font](capi-drawing-oh-drawing-font.md) *font | [in] Pointer to the [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) object. |
+| const void *text | [in] Pointer to the start address of the storage. |
+| uint32_t byteLength | [in] Length of the text, in bytes. |
+| [OH_Drawing_TextEncoding](capi-drawing-types-h.md#oh_drawing_textencoding) encoding | [in] Encoding type of the text. |
+| [OH_Drawing_TypefaceFallbackInfo](capi-drawing-oh-drawing-typefacefallbackinfo.md) **typefaceFallbackInfo | [out] Pointer to the first element of an <b>OH_Drawing_TypefaceFallbackInfo</b> array. It is used as an output parameter. Uses [OH_Drawing_FontTypefaceFallbackInfoDestroy](capi-drawing-font-h.md#oh_drawing_fonttypefacefallbackinfodestroy) to release the array when it is no longer needed. |
+| uint32_t *infosCount | [out] The size of typefaceFallbackInfo array. It is used as an output parameter. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text, typefaceFallbackInfo and infosCount is NULL, or byteLength is 0.</li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) if encoding is not set to one of the enumerated values.</li> </ul> |
+
 ### OH_Drawing_FontGetWidths()
 
 ```c
@@ -416,6 +486,8 @@ void OH_Drawing_FontGetWidths(const OH_Drawing_Font* font, const uint16_t* glyph
 **Description**
 
 Obtains the width of each glyph in a string of text. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If any of **font**, **glyphs**, and **widths** is NULL, or **count** is **0**, **OH_DRAWING_ERROR_INVALID_PARAMETER**<br>is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -437,6 +509,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontMeasureSingleCharacter(const OH_Drawing_Font
 **Description**
 
 Measures the width of a single character. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -463,6 +537,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontMeasureSingleCharacterWithFeatures(const OH_
 **Description**
 
 Measures the width of a single character with font features. If the typeface of the current font does not support the character to measure, the system typeface is used to measure the character width.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -491,6 +567,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontMeasureText(const OH_Drawing_Font* font, con
 
 Obtains the text width and bounding box.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -510,6 +588,37 @@ Obtains the text width and bounding box.
 | -- | -- |
 | [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Returns one of the following result codes: **OH_DRAWING_SUCCESS** if the operation is successful. **OH_DRAWING_ERROR_INVALID_PARAMETER** if at least one of the parameters **font**, **text**, and **textWidth** is NULL, or **byteLength** is **0**. |
 
+### OH_Drawing_FontMeasureTextWithFallback()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, OH_Drawing_Rect *bounds, float *textWidth)
+```
+
+**Description**
+
+Obtains the text width and bounding box with font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_Font](capi-drawing-oh-drawing-font.md) *font | [in] Pointer to the [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) object. |
+| const void *text | [in] Pointer to the text. |
+| uint32_t byteLength | [in] Length of the text, in bytes. |
+| [OH_Drawing_TextEncoding](capi-drawing-types-h.md#oh_drawing_textencoding) encoding | [in] Encoding type of the text. |
+| [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) *bounds | [out] Used to carry the obtained bounding box. The value can be NULL. When it is NULL, the bounding box information is not returned, and only the text width is returned. It is used as an output parameter. |
+| float *textWidth | [out] Used to store the obtained text width as an output parameter. The unit is physical pixel (px). It is used as an output parameter. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text, and textWidth is NULL, or byteLength is 0.</li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) if encoding is not set to one of the enumerated values.</li> </ul> |
+
 ### OH_Drawing_FontMeasureTextWithBrushOrPen()
 
 ```c
@@ -519,6 +628,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithBrushOrPen(const OH_Drawing_F
 **Description**
 
 Obtains the width and bounding box of the text with a brush or pen.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 19
 
@@ -541,6 +652,39 @@ Obtains the width and bounding box of the text with a brush or pen.
 | -- | -- |
 | [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Operation code. **OH_DRAWING_SUCCESS** if the operation is successful. Returns **OH_DRAWING_ERROR_INVALID_PARAMETER** if any of **font**, **text**, or **textWidth** is NULL, **byteLength** is **0**, or a brush and a pen both exist. |
 
+### OH_Drawing_FontMeasureTextWithBrushOrPenWithFallback()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_FontMeasureTextWithBrushOrPenWithFallback(const OH_Drawing_Font *font, const void *text, uint32_t byteLength, OH_Drawing_TextEncoding encoding, const OH_Drawing_Brush *brush, const OH_Drawing_Pen *pen, OH_Drawing_Rect *bounds, float *textWidth)
+```
+
+**Description**
+
+Obtains the width and bounding box of the text with a brush or pen and font fallback support. When the typeface of the current font does not support certain characters, it automatically finds fallback typefaces from the system. If no fallback typeface is found, the typeface of the current font is still used.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [const OH_Drawing_Font](capi-drawing-oh-drawing-font.md) *font | [in] Pointer to the [OH_Drawing_Font](capi-drawing-oh-drawing-font.md) object. |
+| const void *text | [in] Pointer to the text. |
+| uint32_t byteLength | [in] Length of the text, in bytes. |
+| [OH_Drawing_TextEncoding](capi-drawing-types-h.md#oh_drawing_textencoding) encoding | [in] Encoding type of the text. |
+| [const OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) *brush | [in] Pointer to the [OH_Drawing_Brush](capi-drawing-oh-drawing-brush.md) object. |
+| [const OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) *pen | [in] Pointer to the [OH_Drawing_Pen](capi-drawing-oh-drawing-pen.md) object. |
+| [OH_Drawing_Rect](capi-drawing-oh-drawing-rect.md) *bounds | [out] Used to carry the obtained bounding box. The value can be NULL. When it is NULL, the bounding box information is not returned, and only the text width is returned. It is used as an output parameter. |
+| float *textWidth | [out] Used to store the obtained text width as an output parameter. The unit is physical pixel (px). It is used as an output parameter. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if any of font, text, and textWidth is NULL, byteLength is 0, or a brush and a pen both exist.</li> <li>[OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE](capi-drawing-error-code-h.md#oh_drawing_errorcode) if encoding is not set to one of the enumerated values.</li> </ul> |
+
 ### OH_Drawing_FontGetWidthsBounds()
 
 ```c
@@ -550,6 +694,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetWidthsBounds(const OH_Drawing_Font* font,
 **Description**
 
 Obtains the width and bounding box of each glyph in a glyph array.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 19
 
@@ -581,6 +727,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetPos(const OH_Drawing_Font* font, const ui
 
 Obtains the relative position of each glyph from the specified origin.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 19
 
 **Parameters**:
@@ -609,6 +757,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetSpacing(const OH_Drawing_Font* font, floa
 
 Obtains the recommended line spacing for a font.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 19
 
 **Parameters**:
@@ -634,6 +784,8 @@ void OH_Drawing_FontSetLinearText(OH_Drawing_Font* font, bool isLinearText)
 
 Sets linear scaling for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -652,6 +804,8 @@ bool OH_Drawing_FontIsLinearText(const OH_Drawing_Font* font)
 **Description**
 
 Checks whether linear scaling is used for a font object. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -677,6 +831,8 @@ void OH_Drawing_FontSetTextSkewX(OH_Drawing_Font* font, float skewX)
 
 Sets a horizontal skew factor for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -695,6 +851,8 @@ float OH_Drawing_FontGetTextSkewX(const OH_Drawing_Font* font)
 **Description**
 
 Obtains the horizontal skew factor of a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -720,6 +878,8 @@ void OH_Drawing_FontSetFakeBoldText(OH_Drawing_Font* font, bool isFakeBoldText)
 
 Sets fake bold for a font by increasing the stroke width. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -738,6 +898,8 @@ bool OH_Drawing_FontIsFakeBoldText(const OH_Drawing_Font* font)
 **Description**
 
 Checks whether fake bold is used for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -763,6 +925,8 @@ void OH_Drawing_FontSetScaleX(OH_Drawing_Font* font, float scaleX)
 
 Sets a horizontal scale factor for a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -781,6 +945,8 @@ float OH_Drawing_FontGetScaleX(const OH_Drawing_Font* font)
 **Description**
 
 Obtains the horizontal scale ratio of this font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -806,6 +972,8 @@ void OH_Drawing_FontSetHinting(OH_Drawing_Font* font, OH_Drawing_FontHinting fon
 
 Sets a font hinting effect. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **fontHinting** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -824,6 +992,8 @@ OH_Drawing_FontHinting OH_Drawing_FontGetHinting(const OH_Drawing_Font* font)
 **Description**
 
 Obtains the font hinting effect. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -849,6 +1019,8 @@ void OH_Drawing_FontSetEmbeddedBitmaps(OH_Drawing_Font* font, bool isEmbeddedBit
 
 Sets whether to use bitmaps in a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -867,6 +1039,8 @@ bool OH_Drawing_FontIsEmbeddedBitmaps(const OH_Drawing_Font* font)
 **Description**
 
 Checks whether bitmaps are used in a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -892,6 +1066,8 @@ void OH_Drawing_FontSetEdging(OH_Drawing_Font* font, OH_Drawing_FontEdging fontE
 
 Sets a font edging effect. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned. If **fontEdging** is not set to one of the enumerated values, **OH_DRAWING_ERROR_PARAMETER_OUT_OF_RANGE** is returned.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 12
 
 **Parameters**:
@@ -910,6 +1086,8 @@ OH_Drawing_FontEdging OH_Drawing_FontGetEdging(const OH_Drawing_Font* font)
 **Description**
 
 Obtains the font edging effect. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If **font** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -935,6 +1113,8 @@ void OH_Drawing_FontDestroy(OH_Drawing_Font* font)
 
 Destroys an **OH_Drawing_Font** object and reclaims the memory occupied by the object.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 11
 
 **Parameters**:
@@ -952,6 +1132,8 @@ float OH_Drawing_FontGetMetrics(OH_Drawing_Font* font, OH_Drawing_Font_Metrics* 
 **Description**
 
 Obtains the measurement information about a font. This API may return an error code. For details, call [OH_Drawing_ErrorCodeGet](capi-drawing-error-code-h.md#oh_drawing_errorcodeget). If either **font** or **fontMetrics** is NULL, **OH_DRAWING_ERROR_INVALID_PARAMETER** is returned.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 12
 
@@ -977,6 +1159,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetBounds(const OH_Drawing_Font* font, const
 **Description**
 
 Obtains the rectangular bounding box for each glyph in the glyph array.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -1005,6 +1189,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetPathForGlyph(const OH_Drawing_Font* font,
 
 Obtains the path of a glyph.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 18
 
 **Parameters**:
@@ -1030,6 +1216,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetTextPath(const OH_Drawing_Font* font, con
 **Description**
 
 Obtains the text outline path.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 18
 
@@ -1061,6 +1249,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontGetTextPathWithFallback(const OH_Drawing_Fon
 
 Gets the path outline for the given text with font fallback support.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -1091,6 +1281,8 @@ OH_Drawing_FontFeatures* OH_Drawing_FontFeaturesCreate(void)
 
 Creates an **OH_Drawing_FontFeatures** object.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Returns**:
@@ -1108,6 +1300,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontFeaturesAddFeature(OH_Drawing_FontFeatures* 
 **Description**
 
 Adds a font feature to an **OH_Drawing_FontFeatures** object.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 20
 
@@ -1135,6 +1329,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontFeaturesDestroy(OH_Drawing_FontFeatures* fon
 
 Destroys an **OH_Drawing_FontFeatures** object and reclaims the memory occupied by the object.
 
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
 **Since**: 20
 
 **Parameters**:
@@ -1149,6 +1345,33 @@ Destroys an **OH_Drawing_FontFeatures** object and reclaims the memory occupied 
 | -- | -- |
 | [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | Execution result. **OH_DRAWING_SUCCESS** if the operation is successful. Returns **OH_DRAWING_ERROR_INVALID_PARAMETER** if **fontFeatures** is NULL. |
 
+### OH_Drawing_FontTypefaceFallbackInfoDestroy()
+
+```c
+OH_Drawing_ErrorCode OH_Drawing_FontTypefaceFallbackInfoDestroy(OH_Drawing_TypefaceFallbackInfo *infos, uint32_t count)
+```
+
+**Description**
+
+Releases an array of <b>OH_Drawing_TypefaceFallbackInfo</b> objects and reclaims the memory occupied by the array. This function destroys every typeface and glyphIds in the array and releases the array itself; <b>count</b> must be exactly the number reported when the array was created; passing any other value results in undefined behavior.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
+
+**Since**: 26.0.1
+
+**Parameters**:
+
+| Parameter | Description |
+| -- | -- |
+| [OH_Drawing_TypefaceFallbackInfo](capi-drawing-oh-drawing-typefacefallbackinfo.md) *infos | [in] Pointer to the array of <b>OH_Drawing_TypefaceFallbackInfo</b> objects. |
+| uint32_t count | [in] The size of infos array. |
+
+**Returns**:
+
+| Type | Description |
+| -- | -- |
+| [OH_Drawing_ErrorCode](capi-drawing-error-code-h.md#oh_drawing_errorcode) | <ul> <li>[OH_DRAWING_SUCCESS](capi-drawing-error-code-h.md#oh_drawing_errorcode) if the operation is successful.</li> <li>[OH_DRAWING_ERROR_INCORRECT_PARAMETER](capi-drawing-error-code-h.md#oh_drawing_errorcode) if infos is NULL or count is 0.</li> </ul> |
+
 ### OH_Drawing_FontSetThemeFontFollowed()
 
 ```c
@@ -1158,6 +1381,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontSetThemeFontFollowed(OH_Drawing_Font* font, 
 **Description**
 
 Sets whether to follow the theme font. When **followed** is set to **true**, the theme font is used if it is enabled by the system and no typeface is set.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 15
 
@@ -1183,6 +1408,8 @@ OH_Drawing_ErrorCode OH_Drawing_FontIsThemeFontFollowed(const OH_Drawing_Font* f
 **Description**
 
 Checks whether the font follows the theme font. By default, the theme font is not followed.
+
+**System capability**: SystemCapability.Graphic.Graphic2D.NativeDrawing
 
 **Since**: 15
 

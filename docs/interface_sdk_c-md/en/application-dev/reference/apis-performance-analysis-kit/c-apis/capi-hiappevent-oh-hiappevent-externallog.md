@@ -10,7 +10,7 @@ The OH_HiAppEvent_ExternalLog structure is used to describe external log informa
 
 **System capability**: SystemCapability.HiviewDFX.HiAppEvent
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 **Related module**: [HiAppEvent](capi-hiappevent.md)
 

@@ -6,6 +6,8 @@ Declare the interface used for video encoding.
 
 **Library**: libnative_media_venc.so
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Related module**: [VideoEncoder](capi-videoencoder.md)
@@ -25,8 +27,8 @@ Declare the interface used for video encoding.
 | [typedef void (\*OH_VideoEncoder_OnNeedInputParameter)(OH_AVCodec *codec, uint32_t index, OH_AVFormat *parameter, void *userData)](#oh_videoencoder_onneedinputparameter) | OH_VideoEncoder_OnNeedInputParameter | Defines the pointer to the function that is called when new input parameters are required for a frame with the specified index.<br> This callback can be used only in surface mode after it is registered by calling OH_VideoEncoder_RegisterParameterCallback.<br> In buffer mode, OH_AVBuffer can directly carry the encoding parameter associated with each frame. Currently, it can manage parameters, including **QPMin**, **QPMax**, and reference frames for Long Term Reference (LTR), on a per-frame basis. |
 | [OH_AVCodec *OH_VideoEncoder_CreateByMime(const char *mime)](#oh_videoencoder_createbymime) | - | Creates a video encoder instance based on a MIME type. This function is recommended. |
 | [OH_AVCodec *OH_VideoEncoder_CreateByName(const char *name)](#oh_videoencoder_createbyname) | - | Creates a video encoder instance based on an encoder name. To use this function, you must know the exact name of the encoder. The encoder name can be obtained through capability query.<br> For details, see [Obtaining Supported Codecs](../../../media/avcodec/obtain-supported-codecs.md#creating-a-codec-with-the-specified-name). |
-| [OH_AVErrCode OH_VideoEncoder_CreatePrimaryWithPreproc(const char *mime, OH_AVCodec **codec)](#oh_videoencoder_createprimarywithpreproc) | - | Creates a primary video encoder with preprocessor.<br> Creates a primary video encoder instance that supports: 1. Preprocessing features (downsampling, cropping, drop frame) 2. Creating a secondary encoder for one-input-dual-output encoding |
-| [OH_AVErrCode OH_VideoEncoder_CreateSecondaryFromPrimary(OH_AVCodec *primary, OH_AVCodec **codec)](#oh_videoencoder_createsecondaryfromprimary) | - | Creates a secondary video encoder from a primary video encoder.<br> Creates a secondary video encoder instance from a primary encoder created by [OH_VideoEncoder_CreatePrimaryWithPreproc](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_createprimarywithpreproc). The secondary encoder: 1. Shares the input source with the primary encoder 2. Can be configured with independent encoding parameters 3. Can use different preprocessing parameters 4. Can be started/stopped independently from the primary encoder 5. The lifecycle of primary encoder must be longer than secondary encoder 6. One primary encoder can only have one secondary encoder at the same time |
+| [OH_AVErrCode OH_VideoEncoder_CreatePrimaryWithPreproc(const char *mime, OH_AVCodec **codec)](#oh_videoencoder_createprimarywithpreproc) | - | Creates a primary video encoder instance that supports pre-processing. The encoder provides the following capabilities:<br> 1. Pre-processing features (downsampling, cropping, and frame dropping).<br> 2. Creation of a secondary encoder from this primary encoder to enable dual-output encoding with one input.<br> The encoder created via this API supports only the surface mode, and does not support the buffer mode or synchronous mode. After the encoder is successfully created, it must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). |
+| [OH_AVErrCode OH_VideoEncoder_CreateSecondaryFromPrimary(OH_AVCodec *primary, OH_AVCodec **codec)](#oh_videoencoder_createsecondaryfromprimary) | - | Creates a secondary video encoder instance from the primary encoder. The secondary encoder:<br> 1. Shares the input source with the primary encoder.<br> 2. Can be configured with independent encoding parameters.<br> 3. Supports different pre-processing parameters.<br> 4. Can be started and stopped independently (not dependent on the start/stop state of the primary encoder).<br> 5. Has a lifecycle shorter than that of the primary encoder.<br> 6. A primary encoder can have only one secondary encoder at a time.<br> A secondary encoder must be created after the primary encoder is successfully created. Once a secondary encoder is successfully created, it must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). You are advised to destroy the secondary encoder before destroying the primary encoder. |
 | [OH_AVErrCode OH_VideoEncoder_Destroy(OH_AVCodec *codec)](#oh_videoencoder_destroy) | - | Clears the internal resources of a video encoder and destroys the encoder instance. You only need to call the function once. |
 | [OH_AVErrCode OH_VideoEncoder_SetCallback(OH_AVCodec *codec, OH_AVCodecAsyncCallback callback, void *userData)](#oh_videoencoder_setcallback) | - | Sets an OH_AVCodecAsyncCallback callback so that your application can respond to events generated by a video encoder. This function must be called prior to [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare).(Deprecated in API11) |
 | [OH_AVErrCode OH_VideoEncoder_RegisterCallback(OH_AVCodec *codec, OH_AVCodecCallback callback, void *userData)](#oh_videoencoder_registercallback) | - | Registers an OH_AVCodecCallback callback so that your application can respond to events generated by a video encoder. This function must be called prior to [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare). |
@@ -71,7 +73,7 @@ Declare the interface used for video encoding.
 | [OH_AVErrCode OH_VideoEncoder_QueryOutputBuffer(struct OH_AVCodec *codec, uint32_t *index, int64_t timeoutUs)](#oh_videoencoder_queryoutputbuffer) | - | Obtains the index of the next available output buffer. Through the buffer instance obtained via [OH_VideoEncoder_GetOutputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_getoutputbuffer), you can return the processed output buffer to the encoder by calling [OH_VideoEncoder_FreeOutputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_freeoutputbuffer).<br> Note that the preceding operations are supported only in synchronous mode. |
 | [OH_AVBuffer *OH_VideoEncoder_GetOutputBuffer(struct OH_AVCodec *codec, uint32_t index)](#oh_videoencoder_getoutputbuffer) | - | Obtains the instance of the available output buffer.<br> Note that this function works only in synchronous mode. |
 | [OH_AVFormat *OH_VideoEncoder_GetInputDescription(OH_AVCodec *codec)](#oh_videoencoder_getinputdescription) | - | Obtains the description of the image received by a video encoder. This function must be called after [OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure) is called.<br> You must call [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy) to release the OH_AVFormat instance in the return value. |
-| [OH_AVErrCode OH_VideoEncoder_IsValid(OH_AVCodec *codec, bool *isValid)](#oh_videoencoder_isvalid) | - | Checks whether the encoder service is valid when an encoder instance exists. |
+| [OH_AVErrCode OH_VideoEncoder_IsValid(OH_AVCodec *codec, bool *isValid)](#oh_videoencoder_isvalid) | - | Check whether the current codec instance is valid. |
 
 ### Variable
 
@@ -90,6 +92,8 @@ enum OH_VideoEncodeBitrateMode
 **Description**
 
 Enumerates the bit rate modes of a video encoder.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -116,6 +120,8 @@ typedef void (*OH_VideoEncoder_OnNeedInputParameter)(OH_AVCodec *codec, uint32_t
 
 Defines the pointer to the function that is called when new input parameters are required for a frame with the specified index.<br> This callback can be used only in surface mode after it is registered by calling OH_VideoEncoder_RegisterParameterCallback.<br> In buffer mode, OH_AVBuffer can directly carry the encoding parameter associated with each frame. Currently, it can manage parameters, including **QPMin**, **QPMax**, and reference frames for Long Term Reference (LTR), on a per-frame basis.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 12
 
 **Parameters**:
@@ -136,6 +142,8 @@ OH_AVCodec *OH_VideoEncoder_CreateByMime(const char *mime)
 **Description**
 
 Creates a video encoder instance based on a MIME type. This function is recommended.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -161,6 +169,8 @@ OH_AVCodec *OH_VideoEncoder_CreateByName(const char *name)
 
 Creates a video encoder instance based on an encoder name. To use this function, you must know the exact name of the encoder. The encoder name can be obtained through capability query.<br> For details, see [Obtaining Supported Codecs](../../../media/avcodec/obtain-supported-codecs.md#creating-a-codec-with-the-specified-name).
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -183,7 +193,9 @@ OH_AVErrCode OH_VideoEncoder_CreatePrimaryWithPreproc(const char *mime, OH_AVCod
 
 **Description**
 
-Creates a primary video encoder with preprocessor.<br> Creates a primary video encoder instance that supports: 1. Preprocessing features (downsampling, cropping, drop frame) 2. Creating a secondary encoder for one-input-dual-output encoding
+Creates a primary video encoder instance that supports pre-processing. The encoder provides the following capabilities:<br> 1. Pre-processing features (downsampling, cropping, and frame dropping).<br> 2. Creation of a secondary encoder from this primary encoder to enable dual-output encoding with one input.<br> The encoder created via this API supports only the surface mode, and does not support the buffer mode or synchronous mode. After the encoder is successfully created, it must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy).
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 26.0.0
 
@@ -191,14 +203,14 @@ Creates a primary video encoder with preprocessor.<br> Creates a primary video e
 
 | Parameter | Description |
 | -- | -- |
-| const char *mime | Mime type description string, refer to AVCODEC_MIME_TYPE. Cannot be NULL, must be a supported MIME type (e.g., [OH_AVCODEC_MIMETYPE_VIDEO_AVC](capi-native-avcodec-base-h.md#变量), [OH_AVCODEC_MIMETYPE_VIDEO_HEVC](capi-native-avcodec-base-h.md#变量)). |
-| [OH_AVCodec](capi-codecbase-oh-avcodec.md) **codec | Double pointer to an OH_AVCodec instance, used to receive the created encoder. Cannot be NULL. If creation is successful, the encoder needs to be released by calling [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). |
+| const char *mime | MIME type string, which cannot be **NULL**. It must be a supported type. refer to AVCODEC_MIME_TYPE. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) **codec | Double pointer used to receive the created codec instance. It cannot be **NULL**. Once successfully created, the instance must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the execution is successful. For other error codes, refer to [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode). Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if: - mime is NULL. - codec is NULL. - mime type is not supported. Returns [AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode) if memory allocation fails. |
+| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode):The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The **mime** parameter is **NULL**, the **codec** parameter is **NULL**, or the MIME type is not supported. <br>[AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode): Memory allocation fails. |
 
 ### OH_VideoEncoder_CreateSecondaryFromPrimary()
 
@@ -208,11 +220,13 @@ OH_AVErrCode OH_VideoEncoder_CreateSecondaryFromPrimary(OH_AVCodec *primary, OH_
 
 **Description**
 
-Creates a secondary video encoder from a primary video encoder.<br> Creates a secondary video encoder instance from a primary encoder created by [OH_VideoEncoder_CreatePrimaryWithPreproc](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_createprimarywithpreproc). The secondary encoder: 1. Shares the input source with the primary encoder 2. Can be configured with independent encoding parameters 3. Can use different preprocessing parameters 4. Can be started/stopped independently from the primary encoder 5. The lifecycle of primary encoder must be longer than secondary encoder 6. One primary encoder can only have one secondary encoder at the same time
+Creates a secondary video encoder instance from the primary encoder. The secondary encoder:<br> 1. Shares the input source with the primary encoder.<br> 2. Can be configured with independent encoding parameters.<br> 3. Supports different pre-processing parameters.<br> 4. Can be started and stopped independently (not dependent on the start/stop state of the primary encoder).<br> 5. Has a lifecycle shorter than that of the primary encoder.<br> 6. A primary encoder can have only one secondary encoder at a time.<br> A secondary encoder must be created after the primary encoder is successfully created. Once a secondary encoder is successfully created, it must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). You are advised to destroy the secondary encoder before destroying the primary encoder.
 
 > **Note**:
 >
 > Lifecycle management: - The lifecycle of primary encoder must be longer than secondary encoder. - Recommended destruction order: destroy secondary encoder first, then primary encoder. - If primary encoder is destroyed before secondary encoder, the system will automatically destroy the secondary encoder before releasing the primary encoder. - Both encoders must be destroyed by calling [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). - One primary encoder can only have one secondary encoder at the same time. After the secondary encoder is destroyed, a new secondary encoder can be created from the same primary encoder again.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 26.0.0
 
@@ -220,14 +234,14 @@ Creates a secondary video encoder from a primary video encoder.<br> Creates a se
 
 | Parameter | Description |
 | -- | -- |
-| [OH_AVCodec](capi-codecbase-oh-avcodec.md) *primary | Pointer to a primary OH_AVCodec instance created by [OH_VideoEncoder_CreatePrimaryWithPreproc](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_createprimarywithpreproc). Cannot be NULL. |
-| [OH_AVCodec](capi-codecbase-oh-avcodec.md) **codec | Double pointer to an OH_AVCodec instance, used to receive the created encoder. Cannot be NULL. If creation is successful, the encoder needs to be released by calling [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) *primary | Handle to the primary encoder, which must be created via [OH_VideoEncoder_CreatePrimaryWithPreproc](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_createprimarywithpreproc) and cannot be **NULL**. |
+| [OH_AVCodec](capi-codecbase-oh-avcodec.md) **codec | Double pointer used to receive the created secondary encoder instance. It cannot be **NULL**. Once successfully created, the instance must be destroyed via [OH_VideoEncoder_Destroy](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_destroy). |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| OH_AVErrCode | Returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode) if the execution is successful. For other error codes, refer to [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode). Returns [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) if: - primary is NULL. - codec is NULL. - primary is not a valid primary encoder. Returns [AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode) if primary encoder already has an existing secondary encoder. Returns [AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode) if memory allocation fails. |
+| OH_AVErrCode | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode):The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): The **primary** parameter is **NULL**, the **codec** parameter is **NULL**, or the encoder corresponding to **primary** is not a valid primary encoder. <br>[AV_ERR_OPERATE_NOT_PERMIT](capi-native-averrors-h.md#oh_averrcode): The primary encoder already has an associated secondary encoder. <br>[AV_ERR_NO_MEMORY](capi-native-averrors-h.md#oh_averrcode): Memory allocation fails. |
 
 ### OH_VideoEncoder_Destroy()
 
@@ -238,6 +252,8 @@ OH_AVErrCode OH_VideoEncoder_Destroy(OH_AVCodec *codec)
 **Description**
 
 Clears the internal resources of a video encoder and destroys the encoder instance. You only need to call the function once.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -262,6 +278,8 @@ OH_AVErrCode OH_VideoEncoder_SetCallback(OH_AVCodec *codec, OH_AVCodecAsyncCallb
 **Description**
 
 Sets an OH_AVCodecAsyncCallback callback so that your application can respond to events generated by a video encoder. This function must be called prior to [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare).
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -293,6 +311,8 @@ OH_AVErrCode OH_VideoEncoder_RegisterCallback(OH_AVCodec *codec, OH_AVCodecCallb
 
 Registers an OH_AVCodecCallback callback so that your application can respond to events generated by a video encoder. This function must be called prior to [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare).
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 11
 
 **Parameters**:
@@ -318,6 +338,8 @@ OH_AVErrCode OH_VideoEncoder_RegisterParameterCallback(OH_AVCodec *codec, OH_Vid
 **Description**
 
 Registers an input parameter callback so that your application can respond to events generated by a video encoder. In surface encoding mode, this function must be called when frame parameters need to be set, and it must be called before [OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure).
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 12
 
@@ -365,6 +387,8 @@ Configures encoding parameters for a video encoder. Typically, you need to confi
 \| \\ \| \\ \| BITRATE_MODE_VBR and BITRATE_MODE_CBR \| AV_ERR_OK \| The default bit rate of the encoder is used.\|
 \| \\ \| \\ \| BITRATE_MODE_CQ \| AV_ERR_OK \| The default quality is used. \|
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -390,6 +414,8 @@ OH_AVErrCode OH_VideoEncoder_Prepare(OH_AVCodec *codec)
 
 Prepares internal resources for a video encoder. This function must be called after [OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure).
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -413,6 +439,8 @@ OH_AVErrCode OH_VideoEncoder_Start(OH_AVCodec *codec)
 **Description**
 
 Starts a video encoder. This function should be called after a successful call of [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare). After being started, the encoder starts to report the registered event.<br> In surface mode, when there is a correct input on the surface, **OnNewOutputBuffer** is triggered each time a frame is encoded.<br> In buffer mode, the encoder immediately triggers the input callback. Each time the caller completes an input, the encoder performs encoding. **OnNewOutputBuffer** is triggered each time a frame is encoded.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -438,6 +466,8 @@ OH_AVErrCode OH_VideoEncoder_Stop(OH_AVCodec *codec)
 
 Stops a video encoder and releases the input and output buffers. After the video encoder is stopped, you can call [OH_VideoEncoder_Start](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_start) to enter the running state again.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -461,6 +491,8 @@ OH_AVErrCode OH_VideoEncoder_Flush(OH_AVCodec *codec)
 **Description**
 
 Clears the input and output data and parameters, for example, H.264 PPS/SPS, cached in a video encoder. This function invalidates the indexes of all buffers previously reported through the asynchronous callback.<br> Therefore, before calling this function, ensure that the buffers with the specified indexes are no longer required. This function cannot be called consecutively.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -486,6 +518,8 @@ OH_AVErrCode OH_VideoEncoder_Reset(OH_AVCodec *codec)
 
 Resets a video encoder. The encoder returns to the initial state. To continue encoding, you must call [OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure) to configure the encoder again.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -510,6 +544,8 @@ OH_AVFormat *OH_VideoEncoder_GetOutputDescription(OH_AVCodec *codec)
 
 Obtains the OH_AVFormat information about the output data of a video encoder.<br> You must call [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy) to release the OH_AVFormat instance in the return value.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -533,6 +569,8 @@ OH_AVErrCode OH_VideoEncoder_SetParameter(OH_AVCodec *codec, OH_AVFormat *format
 **Description**
 
 Sets the encoder parameter when a video encoder is running.<br> This function can be called only after the encoder is started. Incorrect parameter settings may cause encoding failure.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -559,6 +597,8 @@ OH_AVErrCode OH_VideoEncoder_GetSurface(OH_AVCodec *codec, OHNativeWindow **wind
 
 Obtains the input surface from a video encoder. This function must be called after **<br>OH_VideoEncoder_Configure** but before [OH_VideoEncoder_Prepare](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_prepare).
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -583,6 +623,8 @@ OH_AVErrCode OH_VideoEncoder_FreeOutputData(OH_AVCodec *codec, uint32_t index)
 **Description**
 
 Frees an output buffer of a video encoder.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 9
 
@@ -613,6 +655,8 @@ OH_AVErrCode OH_VideoEncoder_NotifyEndOfStream(OH_AVCodec *codec)
 
 Notifies a video encoder that input streams end. You are advised to use this function for notification. This function is used only in surface mode. In buffer mode, OH_AVBuffer is used to carry the EOS information to notify the end of the input stream.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 9
 
 **Parameters**:
@@ -636,6 +680,8 @@ OH_AVErrCode OH_VideoEncoder_PushInputData(OH_AVCodec *codec, uint32_t index, OH
 **Description**
 
 Pushes the input buffer filled with data to a video encoder.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 10
 
@@ -667,6 +713,8 @@ OH_AVErrCode OH_VideoEncoder_PushInputBuffer(OH_AVCodec *codec, uint32_t index)
 
 Pushes the OH_AVBuffer corresponding to the index to a video encoder in buffer mode.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 11
 
 **Parameters**:
@@ -691,6 +739,8 @@ OH_AVErrCode OH_VideoEncoder_PushInputParameter(OH_AVCodec *codec, uint32_t inde
 **Description**
 
 Pushes the parameter configured for a frame with the given index to a video encoder in surface mode.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 12
 
@@ -717,6 +767,8 @@ OH_AVErrCode OH_VideoEncoder_FreeOutputBuffer(OH_AVCodec *codec, uint32_t index)
 
 Returns the processed OH_AVBuffer corresponding to the index to a video encoder. You need to call this function to release the output buffer in a timely manner. Otherwise, the encoding process is blocked.<br> For details, see step 13 in surface mode or step 11 in buffer mode in [Video Encoding](../../../media/avcodec/video-encoding.md#surface-mode).
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 11
 
 **Parameters**:
@@ -741,6 +793,8 @@ OH_AVErrCode OH_VideoEncoder_QueryInputBuffer(struct OH_AVCodec *codec, uint32_t
 **Description**
 
 Obtains the index of the next available input buffer.<br> After calling this function, you must call [OH_VideoEncoder_GetInputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_getinputbuffer) to obtain the buffer instance and call [OH_VideoEncoder_PushInputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_pushinputbuffer) to pass the buffer instance to the encoder.<br> Note that the preceding operations are supported only in synchronous mode.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 20
 
@@ -768,6 +822,8 @@ OH_AVBuffer *OH_VideoEncoder_GetInputBuffer(struct OH_AVCodec *codec, uint32_t i
 
 Obtains the instance of the available input buffer.<br> Note that this function works only in synchronous mode.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 20
 
 **Parameters**:
@@ -792,6 +848,8 @@ OH_AVErrCode OH_VideoEncoder_QueryOutputBuffer(struct OH_AVCodec *codec, uint32_
 **Description**
 
 Obtains the index of the next available output buffer. Through the buffer instance obtained via [OH_VideoEncoder_GetOutputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_getoutputbuffer), you can return the processed output buffer to the encoder by calling [OH_VideoEncoder_FreeOutputBuffer](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_freeoutputbuffer).<br> Note that the preceding operations are supported only in synchronous mode.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 20
 
@@ -819,6 +877,8 @@ OH_AVBuffer *OH_VideoEncoder_GetOutputBuffer(struct OH_AVCodec *codec, uint32_t 
 
 Obtains the instance of the available output buffer.<br> Note that this function works only in synchronous mode.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 20
 
 **Parameters**:
@@ -844,6 +904,8 @@ OH_AVFormat *OH_VideoEncoder_GetInputDescription(OH_AVCodec *codec)
 
 Obtains the description of the image received by a video encoder. This function must be called after [OH_VideoEncoder_Configure](capi-native-avcodec-videoencoder-h.md#oh_videoencoder_configure) is called.<br> You must call [OH_AVFormat_Destroy](capi-native-avformat-h.md#oh_avformat_destroy) to release the OH_AVFormat instance in the return value.
 
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
+
 **Since**: 10
 
 **Parameters**:
@@ -866,7 +928,9 @@ OH_AVErrCode OH_VideoEncoder_IsValid(OH_AVCodec *codec, bool *isValid)
 
 **Description**
 
-Checks whether the encoder service is valid when an encoder instance exists.
+Check whether the current codec instance is valid.
+
+**System capability**: SystemCapability.Multimedia.Media.VideoEncoder
 
 **Since**: 10
 
@@ -875,7 +939,7 @@ Checks whether the encoder service is valid when an encoder instance exists.
 | Parameter | Description |
 | -- | -- |
 | [OH_AVCodec](capi-codecbase-oh-avcodec.md) *codec | Pointer to a video encoder instance. |
-| bool *isValid | Pointer of the Boolean type. The value indicates the validity of the encoder service only when the function returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode). The value **true** means that the encoder service is valid, and **false** means the opposite. It is recommended that you initialize **isValid** to **false**. |
+| bool *isValid | Pointer of the Boolean type. The value indicates the validity of the encoder instance only when the function returns [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode). The value **true** means that the encoder instance is valid, and **false** means the opposite. It is recommended that you initialize **isValid** to **false**. |
 
 **Returns**:
 

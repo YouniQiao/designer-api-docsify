@@ -8,6 +8,8 @@ environment模块接口定义，使用environment提供的native接口，获取�
 
 **库：** libohenvironment.so
 
+**系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
+
 **起始版本：** 12
 
 **相关模块：** [Environment](capi-environment.md)
@@ -34,6 +36,8 @@ environment模块接口定义，使用environment提供的native接口，获取�
 
 获取当前用户下载目录的沙箱路径，用于访问对应目录中的文件。
 
+**系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
+
 **起始版本：** 12
 
 **参数：**
@@ -58,6 +62,8 @@ environment模块接口定义，使用environment提供的native接口，获取�
 
 获取当前用户桌面目录的沙箱路径，用于访问对应目录中的文件。
 
+**系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
+
 **起始版本：** 12
 
 **参数：**
@@ -81,6 +87,8 @@ environment模块接口定义，使用environment提供的native接口，获取�
 **描述：**
 
 获取当前用户文档目录的沙箱路径，用于访问对应目录中的文件。
+
+**系统能力：** SystemCapability.FileManagement.File.Environment.FolderObtain
 
 **起始版本：** 12
 

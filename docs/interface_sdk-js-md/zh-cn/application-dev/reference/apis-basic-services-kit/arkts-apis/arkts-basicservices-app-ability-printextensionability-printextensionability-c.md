@@ -12,10 +12,6 @@ declare class PrintExtensionAbility
 
 **系统能力：** SystemCapability.Print.PrintFramework
 
-## ExtensionAbility使用限制
-
-为保障系统安全性和稳定性，防止PrintExtensionAbility滥用系统资源，系统对其能力进行管控，不支持部分模块的引用，详情请参考[附录](#附录)。
-
 ## 导入模块
 
 ```TypeScript
@@ -216,13 +212,13 @@ public onRequestPrinterCapability(printerId: number): print.PrinterCapability
 
 | 参数名 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
-| printerId | number | 是 | 表示打印机ID，应为已连接的打印机，取值于打印机发现流程上报的有效打印机标识。 |
+| printerId | number | 是 | 表示打印机ID，取值于打印机发现流程上报的有效打印机标识。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | --- | --- |
-| [print.PrinterCapability](arkts-basicservices-print-printercapability-i.md) | printer capability. |
+| [print.PrinterCapability](arkts-basicservices-print-printercapability-i.md) | 表示打印机支持的能力信息，用于描述打印机的各项功能特性，如色彩模式、双面打印模式、支持的纸张尺寸等。 |
 
 **错误码：**
 
@@ -363,19 +359,3 @@ context: PrintExtensionContext
 <!--Device-PrintExtensionAbility-context: PrintExtensionContext--><!--Device-PrintExtensionAbility-context: PrintExtensionContext-End-->
 
 **系统能力：** SystemCapability.Print.PrintFramework
-
-## 附录
-
-PrintExtensionAbility不支持以下模块的引用。
-
-| Kit | 模块 |
-| --- | --- |
-| Contacts Kit | [@ohos.contact](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact.md) |
-| Location Kit | [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md) |
-| Location Kit | [@ohos.geoLocationManager](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md) |
-| Camera Kit | [@ohos.multimedia.camera](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md) |
-| Audio Kit | [@ohos.multimedia.audio](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md) |
-| media | [@ohos.multimedia.media](../../apis-media/arkts-apis/arkts-media-multimedia-media.md) |
-| Telephony Kit | [@ohos.telephony.call](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-call.md) |
-| Telephony Kit | [@ohos.telephony.sim](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sim.md) |
-| Telephony Kit | [@ohos.telephony.sms](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sms.md) |

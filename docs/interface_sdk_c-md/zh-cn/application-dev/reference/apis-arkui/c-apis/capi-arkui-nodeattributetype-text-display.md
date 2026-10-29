@@ -294,7 +294,7 @@ NODE_TEXT_LINE_SPACING
 
 **描述：**
 
-文本行间距属性，支持属性设置、属性重置和属性获取接口。适用于调整多行文本的间距，如优化阅读体验、或实现特定的排版风格效果。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>?.object：可选。指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于设置行间距选项。 从API version 26.1.0开始支持。 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Create](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_create)创建对象， 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy)销毁对象。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。</li> <li>.object：指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于获取行间距选项。 从API version 26.1.0开始支持。</li> </ul>
+文本行间距属性，支持属性设置、属性重置和属性获取接口。适用于调整多行文本的间距，如优化阅读体验、或实现特定的排版风格效果。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。取值范围：[0, +∞)。传入负数时参数不生效。</li> <li>?.object：可选。指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于设置行间距选项。 从API version 26.0.1开始支持。 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Create](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_create)创建对象， 使用[OH_ArkUI_NativeModule_LineSpacingOptions_Destroy](capi-text-h.md#oh_arkui_nativemodule_linespacingoptions_destroy)销毁对象。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：表示行间距值，单位为fp。</li> <li>.object：指向[OH_ArkUI_NativeModule_LineSpacingOptions](capi-arkui-nativemodule-oh-arkui-nativemodule-linespacingoptions.md)对象的指针，用于获取行间距选项。 从API version 26.0.1开始支持。</li> </ul>
 
 **起始版本：** 12
 
@@ -658,6 +658,42 @@ NODE_TEXT_CONTROLLER = 1054
 
 **起始版本：** 26.0.0
 
+### NODE_TEXT_STROKE_WIDTH
+
+```c
+NODE_TEXT_STROKE_WIDTH = 1057
+```
+
+**描述：**
+
+设置文本描边宽度，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：文本描边宽度，单位为vp。默认值：0，表示无描边效果。小于0时显示实心字，大于0时显示空心字。不支持百分比。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：文本描边宽度，单位为vp。</li> </ul>
+
+**起始版本：** 26.1.0
+
+### NODE_TEXT_STROKE_COLOR
+
+```c
+NODE_TEXT_STROKE_COLOR = 1058
+```
+
+**描述：**
+
+设置文本描边颜色，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本描边颜色，0xARGB格式。默认值为字体颜色，设置异常值时取默认值。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].u32：文本描边颜色，0xARGB格式。</li> </ul>
+
+**起始版本：** 26.1.0
+
+### NODE_TEXT_STROKE_JOIN_STYLE
+
+```c
+NODE_TEXT_STROKE_JOIN_STYLE = 1059
+```
+
+**描述：**
+
+设置文本描边拐角样式，支持属性设置、属性重置和属性获取接口。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].i32：文本描边拐角样式，参数类型为[OH_ArkUI_StrokeJoinStyle](capi-text-common-h.md#oh_arkui_strokejoinstyle)。默认值为OH_ARKUI_STROKE_JOIN_STYLE_MITER_JOIN，表示尖角连接。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].i32：文本描边拐角样式，参数类型为[OH_ArkUI_StrokeJoinStyle](capi-text-common-h.md#oh_arkui_strokejoinstyle)。</li> </ul>
+
+**起始版本：** 26.1.0
+
 ### NODE_SPAN_CONTENT
 
 ```c
@@ -800,6 +836,6 @@ NODE_IMAGE_SPAN_RESIZABLE = 3006
 
 imageSpan组件图片拉伸时，支持通过设置边框大小或者使用矩阵方格对象调整其大小，支持属性设置、属性重置和属性获取接口。接口调用时需要保证设置和获取的参数类型是相同的。<br> **属性设置方法参数[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：左边缘宽度，单位为vp。</li> <li>.value[1].f32：上边缘宽度，单位为vp。</li> <li>.value[2].f32：右边缘宽度，单位为vp。</li> <li>.value[3].f32：下边缘宽度，单位为vp。</li> <li>.object：参数类型为[OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)。</li> </ul><br> **属性获取方法返回值[ArkUI_AttributeItem](capi-arkui-nativemodule-arkui-attributeitem.md)格式：**<br><ul> <li>.value[0].f32：左边缘宽度，单位为vp。</li> <li>.value[1].f32：上边缘宽度，单位为vp。</li> <li>.value[2].f32：右边缘宽度，单位为vp。</li> <li>.value[3].f32：下边缘宽度，单位为vp。</li> <li>.object：参数类型为[OH_Drawing_Lattice](../../apis-arkgraphics2d/c-apis/capi-drawing-oh-drawing-lattice.md)。</li> </ul>
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 

@@ -6,6 +6,8 @@
 
 **库：** libnet_trafficfilter.so
 
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
 **起始版本：** 26.0.0
 
 **相关模块：** [TrafficFilter](capi-trafficfilter.md)
@@ -61,7 +63,7 @@
 | OH_TRAFFICFILTER_DEFAULT_COPY_LEN    0xFFFF | 默认NFQueue报文拷贝长度（字节）。设置为0xFFFF表示拷贝整个报文，较小的值（如128）仅拷贝报文头。<br>**起始版本：** 26.0.0 |
 | OH_TRAFFICFILTER_DEFAULT_QUEUE_MAXLEN  1024 | 默认NFQueue最大队列长度（报文数量）。<br>**起始版本：** 26.0.0 |
 | OH_TRAFFICFILTER_NFQUEUE_FLAG_FAIL_OPEN  0x1 | NFQueue队列标志：FAIL-OPEN模式。当用户态进程崩溃时，内核自动放行报文以避免网络中断。<br>**起始版本：** 26.0.0 |
-| OH_TRAFFICFILTER_MAC_ADDRSTRLEN       18 | MAC地址字符串最大长度（XX:XX:XX:XX:XX:XX）<br>**起始版本：** 26.1.0 |
+| OH_TRAFFICFILTER_MAC_ADDRSTRLEN       18 | MAC地址字符串最大长度（XX:XX:XX:XX:XX:XX）<br>**起始版本：** 26.0.1 |
 | OH_TRAFFICFILTER_MIN_PRIORITY        1 | 最小优先级值。<br>**起始版本：** 26.0.0 |
 | OH_TRAFFICFILTER_MAX_PRIORITY        10000 | 最大优先级值。<br>**起始版本：** 26.0.0 |
 | OH_TRAFFICFILTER_MIN_GROUP_ID        1 | 最小Group ID值。<br>**起始版本：** 26.0.0 |
@@ -79,7 +81,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)( const OH_TrafficFilter_PacketDesc* packet, void* userData ) | 报文回调函数类型<br>**起始版本：** 26.1.0<br>**系统能力：** SystemCapability.Communication.NetManager.NetFirewall |
+| OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)( const OH_TrafficFilter_PacketDesc* packet, void* userData ) | 报文回调函数类型<br>**起始版本：** 26.0.1<br>**系统能力：** SystemCapability.Communication.NetManager.NetFirewall |
 
 ## 枚举类型说明
 
@@ -92,6 +94,8 @@ enum OH_TrafficFilter_ErrCode
 **描述：**
 
 流量过滤与重定向错误码。
+
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
@@ -116,6 +120,8 @@ enum OH_TrafficFilter_IPMatchType
 
 IP匹配类型。
 
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
@@ -136,6 +142,8 @@ enum OH_TrafficFilter_IPFamily
 
 IP地址族。
 
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
@@ -153,6 +161,8 @@ enum OH_TrafficFilter_PortMatchType
 **描述：**
 
 端口匹配类型。
+
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
@@ -172,6 +182,8 @@ enum OH_TrafficFilter_HookPoint
 **描述：**
 
 钩子点类型，指定规则在网络协议栈中生效的位置。报文经过内核网络协议栈时会在不同阶段触发钩子点，规则在对应钩子点处对报文进行拦截。例如INPUT链处理进入本机的报文，OUTPUT链处理本机发出的报文。
+
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
 **起始版本：** 26.0.0
 
@@ -193,12 +205,14 @@ enum OH_TrafficFilter_PacketDecision
 
 报文决策类型
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
+**起始版本：** 26.0.1
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | 接收报文<br>**起始版本：** 26.1.0 |
-| OH_TRAFFICFILTER_DECISION_DROP | 丢弃报文<br>**起始版本：** 26.1.0 |
+| OH_TRAFFICFILTER_DECISION_ACCEPT = 0 | 接收报文<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_DECISION_DROP | 丢弃报文<br>**起始版本：** 26.0.1 |
 
 ### OH_TrafficFilter_PacketCopyMode
 
@@ -210,14 +224,16 @@ enum OH_TrafficFilter_PacketCopyMode
 
 报文拷贝模式枚举
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
+**起始版本：** 26.0.1
 
 | 枚举项 | 描述 |
 | -- | -- |
-| OH_TRAFFICFILTER_COPY_MODE_META = 0 | 仅拷贝元数据（不拷贝报文数据）<br>**起始版本：** 26.1.0 |
-| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | 仅拷贝报文头（由packetCopyLen指定）<br>**起始版本：** 26.1.0 |
-| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | 拷贝整个报文<br>**起始版本：** 26.1.0 |
-| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | 按指定最大长度拷贝报文<br>**起始版本：** 26.1.0 |
+| OH_TRAFFICFILTER_COPY_MODE_META = 0 | 仅拷贝元数据（不拷贝报文数据）<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_HEADER = 1 | 仅拷贝报文头（由packetCopyLen指定）<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_FULL = 2 | 拷贝整个报文<br>**起始版本：** 26.0.1 |
+| OH_TRAFFICFILTER_COPY_MODE_MAXLEN = 3 | 按指定最大长度拷贝报文<br>**起始版本：** 26.0.1 |
 
 
 ## 函数说明
@@ -232,7 +248,9 @@ typedef OH_TrafficFilter_PacketDecision (*OH_TrafficFilter_PacketCallback)(const
 
 报文回调函数类型
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.Communication.NetManager.NetFirewall
+
+**起始版本：** 26.0.1
 
 **参数：**
 

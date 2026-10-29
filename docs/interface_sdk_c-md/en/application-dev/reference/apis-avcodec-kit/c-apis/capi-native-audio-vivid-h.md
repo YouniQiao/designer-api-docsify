@@ -8,6 +8,8 @@ The file declares the functions and enums related to Audio Vivid.
 
 **Library**: libnative_media_core.so
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 26.0.0
 
 **Related module**: [Core](capi-core.md)
@@ -56,14 +58,17 @@ enum OH_AudioVividSignalFormat
 
 Enumerates the signal formats of the Audio Vivid encoder.
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 26.0.0
 
 | Enum item | Description |
 | -- | -- |
 | OH_AUDIO_VIVID_SIGNAL_FORMAT_MONO = 0 | Mono. The encoder accepts mono data and internally sets the channel layout to [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_MONO.<br>**Since**: 26.0.0 |
 | OH_AUDIO_VIVID_SIGNAL_FORMAT_STEREO = 1 | Stereo. The encoder accepts stereo data and internally sets the channel layout to [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_STEREO.<br>**Since**: 26.0.0 |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_MC = 2 | Multi-channel audio. The encoder supports the following channel layouts: [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT2, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT4, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT2 and [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT4.<br>**Since**: 26.0.0 |
-| OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX = 4 | Hybrid mode, including a bed and an object. The bed supports the following channel layouts: [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_STEREO, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT2, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT4, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT2 and [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT4.<br>**Since**: 26.0.0 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_MC = 2 | Multi-channel audio. The encoder supports the following channel layouts: [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT2, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT4, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT2.<br>**Since**: 26.0.0 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_HOA = 3 | Audio Vivid encoding HOA type ID. In this encoding mode, the audio channel type needs to be configured. The supported audio channel types are as follows: [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_AMB_ORDER1_ACN_N3D, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_AMB_ORDER1_ACN_SN3D, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_AMB_ORDER2_ACN_N3D, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_AMB_ORDER2_ACN_SN3D. OH_AudioCodec_Configure takes effect in the configuration phase. If an unsupported audio channel type is configured, [AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode) is returned.<br>**Since**: 26.0.1 |
+| OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX = 4 | Hybrid mode, including a bed and an object. The bed supports the following channel layouts: [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_STEREO, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT2, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_5POINT1POINT4, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1, [OH_AudioChannelLayout](capi-native-audio-channel-layout-h.md#oh_audiochannellayout).CH_LAYOUT_7POINT1POINT2.<br>**Since**: 26.0.0 |
 
 
 ## Function description
@@ -81,6 +86,8 @@ Creates an Audio Vivid metadata builder.
 > **Note**:
 >
 > Lifecycle Management:* *     The instance created by this function must be manually released by calling [OH_AudioVividMetaBuilder_Destroy](capi-native-audio-vivid-h.md#oh_audiovividmetabuilder_destroy) when it is no longer needed to prevent memory leaks.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -106,6 +113,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectPos(OH_AudioVividMetaBuilder *
 **Description**
 
 Updates the position of the audio object when the Audio Vivid signal format is [OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX. In this signal format, the channel arrangement in the input encoded Pulse Code Modulation (PCM) data is as follows: bed channels come first, followed by object channels.<br> The object channels correspond to **objectIndex** in sequence, starting from 0.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -133,6 +142,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_UpdateObjectGain(OH_AudioVividMetaBuilder 
 
 Updates the linear gain of audio object rendering when the Audio Vivid signal format is [OH_AudioVividSignalFormat](capi-native-audio-vivid-h.md#oh_audiovividsignalformat).OH_AUDIO_VIVID_SIGNAL_FORMAT_MIX.
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -158,6 +169,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_GetMetaLen(const OH_AudioVividMetaBuilder 
 **Description**
 
 Obtains the length of metadata.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -185,6 +198,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_GetMeta(const OH_AudioVividMetaBuilder *bu
 
 Obtains the metadata buffer.
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -211,6 +226,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_Destroy(OH_AudioVividMetaBuilder *builder)
 **Description**
 
 Destroys an Audio Vivid metadata builder and releases resources.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -240,6 +257,8 @@ Creates an empty Audio Vivid metadata builder.<br> This function is used for mer
 >
 > Lifecycle Management:* *      The instance created by this function must be manually released by calling [OH_AudioVividMetaBuilder_Destroy](capi-native-audio-vivid-h.md#oh_audiovividmetabuilder_destroy) when it is no longer needed to prevent memory leaks.
 
+**System capability**: SystemCapability.Multimedia.Media.Core
+
 **Since**: 26.0.0
 
 **Parameters**:
@@ -266,7 +285,9 @@ Updates the base metadata of the builder.<br> The buffer contains complete Audio
 
 > **Note**:
 >
-> Constraint:* *      The total number of soundbed channels plus base objects plus added objects must not exceed 16.
+> Constraint:* *      The total number of soundbed channels plus base objects plus added objects must not exceed 11.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -282,7 +303,7 @@ Updates the base metadata of the builder.<br> The buffer contains complete Audio
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, buffer is nullptr or len is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): builder is nullptr or invalid, buffer is nullptr or len is invalid. |
 
 ### OH_AudioVividMetaBuilder_AddObject()
 
@@ -296,7 +317,9 @@ Adds a new audio object to the builder.<br> After adding an object, you can upda
 
 > **Note**:
 >
-> Constraint:* *      The total number of soundbed channels plus base objects plus added objects must not exceed 16.
+> Constraint:* *      The total number of soundbed channels plus base objects plus added objects must not exceed 11.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -311,7 +334,7 @@ Adds a new audio object to the builder.<br> After adding an object, you can upda
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is nullptr. <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode), add object fail with unknown error. For details, check logs. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): builder is nullptr or invalid, objectIndex is nullptr. <br>[AV_ERR_UNKNOWN](capi-native-averrors-h.md#oh_averrcode): add object fail with unknown error. For details, check logs. |
 
 ### OH_AudioVividMetaBuilder_RemoveObject()
 
@@ -322,6 +345,8 @@ OH_AVErrCode OH_AudioVividMetaBuilder_RemoveObject(OH_AudioVividMetaBuilder *bui
 **Description**
 
 Removes an audio object from the builder.<br> Only objects added by [OH_AudioVividMetaBuilder_AddObject](capi-native-audio-vivid-h.md#oh_audiovividmetabuilder_addobject) can be removed. Base objects from the base metadata cannot be removed. After removal, the indices of remaining objects remain unchanged.
+
+**System capability**: SystemCapability.Multimedia.Media.Core
 
 **Since**: 26.0.0
 
@@ -336,6 +361,6 @@ Removes an audio object from the builder.<br> Only objects added by [OH_AudioViv
 
 | Type | Description |
 | -- | -- |
-| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode), builder is nullptr or invalid, objectIndex is invalid. |
+| [OH_AVErrCode](capi-native-averrors-h.md#oh_averrcode) | [AV_ERR_OK](capi-native-averrors-h.md#oh_averrcode): The operation is successful. <br>[AV_ERR_INVALID_VAL](capi-native-averrors-h.md#oh_averrcode): builder is nullptr or invalid, objectIndex is invalid. |
 
 

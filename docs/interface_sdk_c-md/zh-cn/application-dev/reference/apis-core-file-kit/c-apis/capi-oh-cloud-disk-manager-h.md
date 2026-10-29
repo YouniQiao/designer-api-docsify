@@ -6,6 +6,8 @@
 
 **库：** libohclouddiskmanager.so
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **相关模块：** [CloudDisk](capi-clouddisk.md)
@@ -24,7 +26,16 @@
 | [CloudDisk_ResultList](capi-clouddisk-clouddisk-resultlist.md) | - | 表示一个文件同步操作的结果。该结构体包含文件的绝对路径、同步结果，以及同步状态或失败原因。 |
 | [CloudDisk_DisplayNameInfo](capi-clouddisk-clouddisk-displaynameinfo.md) | - | 定义同步根路径的显示名称信息。 |
 | [CloudDisk_SyncFolder](capi-clouddisk-clouddisk-syncfolder.md) | - | 同步根属性信息。 |
+| [OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) | - | 定义带占位符支持的云盘同步文件夹。 必须将版本字段设置为有效的版本宏(例如[OH_CLOUD_DISK_SYNC_FOLDER_EX_VERSION_1](capi-oh-cloud-disk-manager-h.md#宏定义))，然后才能传递结构到任何API。 运行时使用版本来确定字段有效；当指定低版本时，在较高版本中引入的字段将被忽略。 |
 | [OH_CloudDisk_PlaceholderInfo](capi-clouddisk-oh-clouddisk-placeholderinfo.md) | - | 占位符文件的元数据信息。 |
+| [OH_CloudDisk_DataBuf](capi-clouddisk-oh-clouddisk-databuf.md) | - | 云盘数据缓冲区信息。 |
+| [OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) | - | 云盘回调请求头信息。 |
+| [OH_CloudDisk_DehydrateInfo](capi-clouddisk-oh-clouddisk-dehydrateinfo.md) | - | 脱水授权信息。 |
+| [OH_CloudDisk_FetchRangeDataRequest](capi-clouddisk-oh-clouddisk-fetchrangedatarequest.md) | - | 获取范围数据请求信息。 |
+| [OH_CloudDisk_FetchDataRequest](capi-clouddisk-oh-clouddisk-fetchdatarequest.md) | - | 获取数据请求信息。 |
+| [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) | - | 回调请求上下文信息联合体。 |
+| [OH_CloudDisk_FetchData](capi-clouddisk-oh-clouddisk-fetchdata.md) | - | 云端文件数据获取结果。 |
+| [OH_CloudDisk_CallbackResponse](capi-clouddisk-oh-clouddisk-callbackresponse.md) | - | 回调响应信息联合体。 |
 
 ### 枚举
 
@@ -34,6 +45,14 @@
 | [CloudDisk_OperationType](#clouddisk_operationtype) | CloudDisk_OperationType | 文件变更类型枚举值。 |
 | [CloudDisk_ErrorReason](#clouddisk_errorreason) | CloudDisk_ErrorReason | 文件同步失败原因的枚举值。 |
 | [CloudDisk_SyncFolderState](#clouddisk_syncfolderstate) | CloudDisk_SyncFolderState | 同步根路径状态的枚举值。 |
+| [OH_CloudDisk_CallbackType](#oh_clouddisk_callbacktype) | OH_CloudDisk_CallbackType | 云盘回调类型枚举值。 |
+| [OH_CloudDisk_HydratePriority](#oh_clouddisk_hydratepriority) | OH_CloudDisk_HydratePriority | 水合优先级枚举值。 |
+
+### 宏定义
+
+| 名称 | 描述 |
+| -- | -- |
+| OH_CLOUD_DISK_SYNC_FOLDER_EX_VERSION_1 1 | OH_CloudDisk_SyncFolderEx服务的版本1。 当结构体被扩展时，将定义新的版本宏。 运行库使用版本字段确定哪些字段有效。<br>**起始版本：** 26.0.1 |
 
 ### 函数
 
@@ -54,6 +73,13 @@
 | [CloudDisk_ErrorCode OH_CloudDisk_IsPlaceholderFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, bool *isPlaceholder)](#oh_clouddisk_isplaceholderfile) | 检查同步根中的文件是否为占位符文件。 |
 | [CloudDisk_ErrorCode OH_CloudDisk_ConvertPlaceholderToFile(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo)](#oh_clouddisk_convertplaceholdertofile) | 将占位符文件转换为0字节普通文件。 |
 | [CloudDisk_ErrorCode OH_CloudDisk_UpdatePlaceholder(const CloudDisk_SyncFolderPath syncFolderPath, const CloudDisk_PathInfo relativePathInfo, const OH_CloudDisk_PlaceholderInfo placeholderInfo)](#oh_clouddisk_updateplaceholder) | 更新文件元数据（支持占位符和普通文件）。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_RegisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath, void (\*callback)(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext))](#oh_clouddisk_registercallbacktable) | 注册用于水合和脱水请求的回调表。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_UnregisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath)](#oh_clouddisk_unregistercallbacktable) | 取消注册用于水合和脱水请求的回调表。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)](#oh_clouddisk_execute) | 响应回调请求。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_HydratePlaceholder(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath, OH_CloudDisk_CallbackType type, OH_CloudDisk_HydratePriority priority)](#oh_clouddisk_hydrateplaceholder) | 主动水合占位符文件或取消水合。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_DehydrateFile(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath)](#oh_clouddisk_dehydratefile) | 对完全水合的占位符文件执行脱水。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFolderEx *syncFolder)](#oh_clouddisk_registersyncfolderex) | 使用占位符支持信息注册同步文件夹。 |
+| [CloudDisk_ErrorCode OH_CloudDisk_GetSyncFoldersEx(OH_CloudDisk_SyncFolderEx **syncFolders, size_t *count)](#oh_clouddisk_getsyncfoldersex) | 获取具有占位符支持信息的同步文件夹。 |
 
 ### 变量
 
@@ -73,6 +99,8 @@ enum CloudDisk_SyncState
 **描述：**
 
 文件同步状态的枚举值。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -95,6 +123,8 @@ enum CloudDisk_OperationType
 
 文件变更类型枚举值。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -105,7 +135,7 @@ enum CloudDisk_OperationType
 | MOVE_TO = 3 | 移动到此文件或目录。<br>**起始版本：** 21 |
 | CLOSE_WRITE = 4 | 在写入操作后关闭文件。<br>**起始版本：** 21 |
 | SYNC_FOLDER_INVALID = 5 | 同步根路径无效。<br>**起始版本：** 21 |
-| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | 修改内容后关闭文件。<br>**起始版本：** 26.1.0 |
+| OH_CLOUD_DISK_CLOSE_MODIFY = 6 | 修改内容后关闭文件。<br>**起始版本：** 26.0.1 |
 
 ### CloudDisk_ErrorReason
 
@@ -116,6 +146,8 @@ enum CloudDisk_ErrorReason
 **描述：**
 
 文件同步失败原因的枚举值。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -137,12 +169,55 @@ enum CloudDisk_SyncFolderState
 
 同步根路径状态的枚举值。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
 | -- | -- |
 | INACTIVE = 0 | 表示同步根路径的状态是未激活的。<br>**起始版本：** 21 |
 | ACTIVE = 1 | 表示同步根路径的状态是激活的。<br>**起始版本：** 21 |
+
+### OH_CloudDisk_CallbackType
+
+```c
+enum OH_CloudDisk_CallbackType
+```
+
+**描述：**
+
+云盘回调类型枚举值。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_DATA = 0 | 获取云端文件数据，用于水合。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_CALLBACK_TYPE_CANCEL_FETCH_DATA = 1 | 取消获取云端文件数据。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_CALLBACK_TYPE_DEHYDRATE = 2 | 请求脱水授权。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_CALLBACK_TYPE_FETCH_RANGE_DATA = 3 | 获取指定范围数据，用于读取。<br>**起始版本：** 26.1.0 |
+
+### OH_CloudDisk_HydratePriority
+
+```c
+enum OH_CloudDisk_HydratePriority
+```
+
+**描述：**
+
+水合优先级枚举值。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_LOW = 0 | 低优先级。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_NORMAL = 1 | 常规优先级。<br>**起始版本：** 26.0.1 |
+| OH_CLOUD_DISK_HYDRATE_PRIORITY_HIGH = 2 | 高优先级。<br>**起始版本：** 26.0.1 |
 
 
 ## 函数说明
@@ -156,6 +231,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderChanges(const CloudDisk_SyncF
 **描述：**
 
 应用注册一个回调函数，用于获取同步根路径下文件的变更。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -182,6 +259,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnregisterSyncFolderChanges(const CloudDisk_Syn
 
 应用取消注册同步根路径下文件变更的回调。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **参数：**
@@ -205,6 +284,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolderChanges(const CloudDisk_SyncFolder
 **描述：**
 
 获取同步根路径下的历史操作记录。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -232,6 +313,8 @@ CloudDisk_ErrorCode OH_CloudDisk_SetFileSyncStates(const CloudDisk_SyncFolderPat
 **描述：**
 
 应用设置同步根路径下文件的同步状态。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -261,6 +344,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetFileSyncStates(const CloudDisk_SyncFolderPat
 
 应用查询同步根路径下文件同步状态。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **参数：**
@@ -289,6 +374,8 @@ CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolder(const CloudDisk_SyncFolder *
 
 应用注册同步根。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **参数：**
@@ -312,6 +399,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UnregisterSyncFolder(const CloudDisk_SyncFolder
 **描述：**
 
 应用取消注册同步根。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -337,6 +426,8 @@ CloudDisk_ErrorCode OH_CloudDisk_ActiveSyncFolder(const CloudDisk_SyncFolderPath
 
 应用激活同步根。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **参数：**
@@ -360,6 +451,8 @@ CloudDisk_ErrorCode OH_CloudDisk_DeactiveSyncFolder(const CloudDisk_SyncFolderPa
 **描述：**
 
 应用取消激活同步根。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -385,6 +478,8 @@ CloudDisk_ErrorCode OH_CloudDisk_GetSyncFolders(CloudDisk_SyncFolder **syncFolde
 
 应用获取所有同步根。
 
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
 **起始版本：** 21
 
 **参数：**
@@ -409,6 +504,8 @@ CloudDisk_ErrorCode OH_CloudDisk_UpdateCustomAlias(const CloudDisk_SyncFolderPat
 **描述：**
 
 应用更新同步根别名。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
 
 **起始版本：** 21
 
@@ -436,7 +533,9 @@ CloudDisk_ErrorCode OH_CloudDisk_CreatePlaceholder(const CloudDisk_SyncFolderPat
 
 在已注册的同步文件夹中创建占位符。
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
 
 **参数：**
 
@@ -462,7 +561,9 @@ CloudDisk_ErrorCode OH_CloudDisk_IsPlaceholderFile(const CloudDisk_SyncFolderPat
 
 检查同步根中的文件是否为占位符文件。
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
 
 **参数：**
 
@@ -488,7 +589,9 @@ CloudDisk_ErrorCode OH_CloudDisk_ConvertPlaceholderToFile(const CloudDisk_SyncFo
 
 将占位符文件转换为0字节普通文件。
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
 
 **参数：**
 
@@ -513,7 +616,9 @@ CloudDisk_ErrorCode OH_CloudDisk_UpdatePlaceholder(const CloudDisk_SyncFolderPat
 
 更新文件元数据（支持占位符和普通文件）。
 
-**起始版本：** 26.1.0
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
 
 **参数：**
 
@@ -528,5 +633,200 @@ CloudDisk_ErrorCode OH_CloudDisk_UpdatePlaceholder(const CloudDisk_SyncFolderPat
 | 类型 | 说明 |
 | -- | -- |
 | [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+### OH_CloudDisk_RegisterCallbackTable()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_RegisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath, void (*callback)(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext))
+```
+
+**描述：**
+
+注册用于水合和脱水请求的回调表。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| onst CloudDisk_SyncFolderPath syncFolderPath | [in] 已注册同步根路径。 |
+| void (*callback)(const OH_CloudDisk_CallbackReqHead reqHead | [in] 注册的回调函数。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+**参考：**
+
+[OH_CloudDisk_UnregisterCallbackTable](capi-oh-cloud-disk-manager-h.md#oh_clouddisk_unregistercallbacktable)
+
+
+### OH_CloudDisk_UnregisterCallbackTable()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_UnregisterCallbackTable(const CloudDisk_SyncFolderPath syncFolderPath)
+```
+
+**描述：**
+
+取消注册用于水合和脱水请求的回调表。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| const CloudDisk_SyncFolderPath syncFolderPath | [in] 已注册同步根路径。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+### OH_CloudDisk_Execute()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_Execute(const OH_CloudDisk_CallbackReqHead reqHead, OH_CloudDisk_CallbackContext reqContext, OH_CloudDisk_CallbackResponse rsp)
+```
+
+**描述：**
+
+响应回调请求。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_CloudDisk_CallbackReqHead](capi-clouddisk-oh-clouddisk-callbackreqhead.md) reqHead | [in] 回调请求头。 |
+| [OH_CloudDisk_CallbackContext](capi-clouddisk-oh-clouddisk-callbackcontext.md) reqContext | [in] 回调请求上下文。 |
+| [OH_CloudDisk_CallbackResponse](capi-clouddisk-oh-clouddisk-callbackresponse.md) rsp | [in] 回调响应。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+### OH_CloudDisk_HydratePlaceholder()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_HydratePlaceholder(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath, OH_CloudDisk_CallbackType type, OH_CloudDisk_HydratePriority priority)
+```
+
+**描述：**
+
+主动水合占位符文件或取消水合。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| const CloudDisk_SyncFolderPath *syncFolderPath | [in] 已注册同步根路径。 |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) *filePath | [in] 同步根内相对路径。 |
+| [OH_CloudDisk_CallbackType](capi-oh-cloud-disk-manager-h.md#oh_clouddisk_callbacktype) type | [in] 水合或取消水合的回调类型。 |
+| [OH_CloudDisk_HydratePriority](capi-oh-cloud-disk-manager-h.md#oh_clouddisk_hydratepriority) priority | [in] 水合优先级。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+### OH_CloudDisk_DehydrateFile()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_DehydrateFile(const CloudDisk_SyncFolderPath *syncFolderPath, const CloudDisk_PathInfo *filePath)
+```
+
+**描述：**
+
+对完全水合的占位符文件执行脱水。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| const CloudDisk_SyncFolderPath *syncFolderPath | [in] 已注册同步根路径。 |
+| [const CloudDisk_PathInfo](capi-clouddisk-clouddisk-pathinfo.md) *filePath | [in] 同步根内相对路径。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果接口调用成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br>否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)。 |
+
+### OH_CloudDisk_RegisterSyncFolderEx()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_RegisterSyncFolderEx(const OH_CloudDisk_SyncFolderEx *syncFolder)
+```
+
+**描述：**
+
+使用占位符支持信息注册同步文件夹。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [const OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) *syncFolder | 指示具有占位符支持的同步文件夹。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果操作成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br> 否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)中定义的错误代码。 |
+
+### OH_CloudDisk_GetSyncFoldersEx()
+
+```c
+CloudDisk_ErrorCode OH_CloudDisk_GetSyncFoldersEx(OH_CloudDisk_SyncFolderEx **syncFolders, size_t *count)
+```
+
+**描述：**
+
+获取具有占位符支持信息的同步文件夹。
+
+**系统能力：** SystemCapability.FileManagement.CloudDiskManager
+
+**起始版本：** 26.0.1
+
+**参数：**
+
+| 参数项 | 描述 |
+| -- | -- |
+| [OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md) **syncFolders | 输出参数。 <br> 返回[OH_CloudDisk_SyncFolderEx](capi-clouddisk-oh-clouddisk-syncfolderex.md)的数组，用于存储同步文件夹。 |
+| size_t *count | 输出参数。返回同步文件夹的数量。 |
+
+**返回值：**
+
+| 类型 | 说明 |
+| -- | -- |
+| [CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode) | 如果操作成功，则返回[CLOUD_DISK_OK](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)；<br> 否则返回[CloudDisk_ErrorCode](capi-cloud-disk-error-code-h.md#clouddisk_errorcode)中定义的错误代码。 |
 
 

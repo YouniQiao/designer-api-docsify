@@ -10,7 +10,7 @@ typedef struct *OH_AbilityRuntime_ChildProcessInfosHandle *OH_AbilityRuntime_Chi
 
 **系统能力：** SystemCapability.Ability.AbilityRuntime.Core
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **相关模块：** [AbilityRuntime](capi-abilityruntime.md)
 

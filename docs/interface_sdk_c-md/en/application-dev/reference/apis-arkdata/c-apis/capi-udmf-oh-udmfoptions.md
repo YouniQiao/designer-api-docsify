@@ -6,7 +6,7 @@ typedef struct OH_UdmfOptions OH_UdmfOptions
 
 ## Overview
 
-Describes the optional arguments of data operation
+Defines the optional parameters for data operations.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

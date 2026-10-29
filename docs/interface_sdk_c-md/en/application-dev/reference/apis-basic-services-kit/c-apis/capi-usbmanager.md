@@ -6,7 +6,7 @@ Provides the C interface for the USB Manager module, enabling USB device enumera
 
 **System capability**: SystemCapability.USB.USBManager
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 ## Files
 

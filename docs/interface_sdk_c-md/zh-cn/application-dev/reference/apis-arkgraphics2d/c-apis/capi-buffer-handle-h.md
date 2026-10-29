@@ -6,6 +6,8 @@
 
 **库：** libnative_window.so
 
+**系统能力：** SystemCapability.Graphic.Graphic2D.NativeWindow
+
 **起始版本：** 8
 
 **相关模块：** [NativeWindow](capi-nativewindow.md)
@@ -16,5 +18,5 @@
 
 | 名称 | typedef关键字 | 描述 |
 | -- | -- | -- |
-| [BufferHandle](capi-nativewindow-bufferhandle.md) | BufferHandle | Buffer handle used to transfer and obtain information about the buffer. |
+| [BufferHandle](capi-nativewindow-bufferhandle.md) | BufferHandle | 用于传输和获取缓冲区信息的BufferHandle。 |
 

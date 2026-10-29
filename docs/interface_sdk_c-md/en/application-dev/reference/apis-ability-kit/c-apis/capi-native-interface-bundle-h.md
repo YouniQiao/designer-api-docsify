@@ -6,6 +6,8 @@ The file declares the APIs for obtaining the application information, including 
 
 **Library**: libbundle_ndk.z.so
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 9
 
 **Related module**: [Native_Bundle](capi-native-bundle.md)
@@ -52,13 +54,15 @@ OH_NativeBundle_ApplicationInfo OH_NativeBundle_GetCurrentApplicationInfo()
 
 Obtains the current application information, including the bundle name and fingerprint information.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 9
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBundle_ApplicationInfo](capi-native-bundle-oh-nativebundle-applicationinfo.md) | Pointer to the OH_NativeBundle_ApplicationInfo object. If the attribute of the returned object is NULL, the creation fails. The possible cause is that the application address space is full, causing space allocation to fail. |
+| [OH_NativeBundle_ApplicationInfo](capi-native-bundle-oh-nativebundle-applicationinfo.md) | OH_NativeBundle_ApplicationInfo object. If any field in the returned object is NULL, creation fails. The possible cause is that the application address space is full, causing space allocation to fail. |
 
 ### OH_NativeBundle_GetAppId()
 
@@ -70,13 +74,15 @@ char* OH_NativeBundle_GetAppId()
 
 Obtains the appId of the current application. The appId is the unique identifier of an application and is determined by the bundle name and signature information of the application. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 11
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| char* | Pointer to a new string that indicates the appID. If the returned object is NULL, the creation fails. <br> The possible cause is that the application address space is full, causing space allocation to fail. |
+| char* | Returns a newly created string used to indicate the appId information. If the returned object is NULL, it indicates that creation failed. A possible cause of failure is that the application address space is full, causing space allocation failure. |
 
 ### OH_NativeBundle_GetAppIdentifier()
 
@@ -87,6 +93,8 @@ char* OH_NativeBundle_GetAppIdentifier()
 **Description**
 
 Obtains the appIdentifier of the current application. The appIdentifier does not change throughout the application lifecycle, including version updates, certificate changes, public and private key changes, and application migration. After using this function, you must manually release the pointer returned to prevent memory leakage.
+
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
 
 **Since**: 11
 
@@ -106,13 +114,15 @@ OH_NativeBundle_ElementName OH_NativeBundle_GetMainElementName()
 
 Obtains the mainElement information of the current application, including the bundle name, module name, and ability name. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 13
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBundle_ElementName](capi-native-bundle-oh-nativebundle-elementname.md) | Pointer to the OH_NativeBundle_ElementName object. If the attribute of the returned object is NULL, the creation fails. The possible cause is that the application address space is full, causing space allocation to fail. |
+| [OH_NativeBundle_ElementName](capi-native-bundle-oh-nativebundle-elementname.md) | Returns a newly created OH_NativeBundle_ElementName object. If any field in the returned object is NULL, it indicates that creation failed. A possible cause of failure is that the application address space is full, causing space allocation failure. |
 
 ### OH_NativeBundle_GetCompatibleDeviceType()
 
@@ -124,13 +134,15 @@ char* OH_NativeBundle_GetCompatibleDeviceType()
 
 Obtains the compatible device type of the current application. It helps you optimize the layout and font size when distributing mobile applications to tablets or 2-in-1 devices. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 14
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| char* | Pointer to a new string that indicates the compatible device type. If the returned object is NULL, the creation fails. <br> The possible cause is that the application address space is full, causing space allocation to fail. |
+| char* | Pointer to a new string that indicates the compatible device type. If the returned object is NULL, the creation fails. The possible cause is that the application address space is full, causing space allocation to fail. |
 
 ### OH_NativeBundle_IsDebugMode()
 
@@ -142,13 +154,15 @@ bool OH_NativeBundle_IsDebugMode(bool* isDebugMode)
 
 Checks whether the current application is in debug mode.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 20
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| bool* isDebugMode | Pointer to the check result indicating whether the application is in debug mode. **true** if in debug mode, **false** otherwise. |
+| bool* isDebugMode | [in] Pointer to the check result indicating whether the application is in debug mode. **true**<br>if in debug mode, **false** otherwise. |
 
 **Returns**:
 
@@ -166,19 +180,21 @@ OH_NativeBundle_ModuleMetadata* OH_NativeBundle_GetModuleMetadata(size_t* size)
 
 Obtains the module metadata array of the current application. After using this function, you must manually release the pointer returned to prevent memory leakage.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Since**: 20
 
 **Parameters**:
 
 | Parameter | Description |
 | -- | -- |
-| size_t* size | Pointer to the size of the module metadata array. |
+| size_t* size | [in] Pointer to the size of the module metadata array. |
 
 **Returns**:
 
 | Type | Description |
 | -- | -- |
-| [OH_NativeBundle_ModuleMetadata*](capi-native-bundle-oh-nativebundle-modulemetadata.md) | An array of module metadata. If the returned object is NULL, the retrieval fails. <br> The possible cause is that the application address space is full, causing space allocation to fail. |
+| [OH_NativeBundle_ModuleMetadata*](capi-native-bundle-oh-nativebundle-modulemetadata.md) | Returns the module metadata array. If the returned object is NULL, it indicates that the acquisition failed. The possible cause of failure is that the application address space is full, causing space allocation failure. |
 
 ### OH_NativeBundle_GetAbilityResourceInfo()
 
@@ -190,6 +206,8 @@ BundleManager_ErrorCode OH_NativeBundle_GetAbilityResourceInfo(char* fileType, O
 
 Obtain a list of ability that support opening files in a certain format.
 
+**System capability**: SystemCapability.BundleManager.BundleFramework.Core
+
 **Required permission**: ohos.permission.GET_ABILITY_INFO
 
 **Since**: 21
@@ -198,9 +216,9 @@ Obtain a list of ability that support opening files in a certain format.
 
 | Parameter | Description |
 | -- | -- |
-| char* fileType | Indicates the file type. |
-| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)** abilityResourceInfo | Indicates the ability resource array. |
-| size_t* size | Indicates the ability resource array size. |
+| char* fileType | [in] Indicates the file type. |
+| [OH_NativeBundle_AbilityResourceInfo](capi-native-bundle-oh-nativebundle-abilityresourceinfo.md)** abilityResourceInfo | [in] Indicates the ability resource array. |
+| size_t* size | [in] Indicates the ability resource array size. |
 
 **Returns**:
 

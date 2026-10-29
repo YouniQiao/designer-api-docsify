@@ -10,7 +10,7 @@ struct OH_UsbManager_UsbPipe {...}
 
 **系统能力：** SystemCapability.USB.USBManager
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **相关模块：** [UsbManager](capi-usbmanager.md)
 
@@ -22,7 +22,7 @@ struct OH_UsbManager_UsbPipe {...}
 
 | 名称 | 描述 |
 | -- | -- |
-| uint8_t busNum | 所连接设备的总线编号。<br>**起始版本：** 26.1.0 |
-| uint8_t devAddress | 所连接设备的设备地址。<br>**起始版本：** 26.1.0 |
+| uint8_t busNum | 所连接设备的总线编号。<br>**起始版本：** 26.0.1 |
+| uint8_t devAddress | 所连接设备的设备地址。<br>**起始版本：** 26.0.1 |
 
 

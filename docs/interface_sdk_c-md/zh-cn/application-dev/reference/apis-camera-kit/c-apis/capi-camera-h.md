@@ -6,6 +6,8 @@
 
 **库：** libohcamera.so
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 **相关模块：** [OH_Camera](capi-oh-camera.md)
@@ -78,6 +80,7 @@
 | [Camera_HostDeviceType](#camera_hostdevicetype) | Camera_HostDeviceType | 远程设备类型枚举。 |
 | [Camera_FoldStatus](#camera_foldstatus) | Camera_FoldStatus | 折叠状态枚举。 |
 | [Camera_QualityPrioritization](#camera_qualityprioritization) | Camera_QualityPrioritization | 录像质量优先级的枚举。 |
+| [OH_Camera_AuxiliaryPhotoType](#oh_camera_auxiliaryphototype) | OH_Camera_AuxiliaryPhotoType | 辅助图类型的枚举。在用于拍摄皮肤健康评估的辅助图时，使用该枚举类型来指定检测目标。 |
 | [Camera_ConcurrentType](#camera_concurrenttype) | Camera_ConcurrentType | 相机并发状态的枚举。 |
 | [Camera_SystemPressureLevel](#camera_systempressurelevel) | Camera_SystemPressureLevel | 系统压力等级的枚举。 |
 | [Camera_PhotoQualityPrioritization](#camera_photoqualityprioritization) | Camera_PhotoQualityPrioritization | 拍照画质优先策略枚举。 |
@@ -105,6 +108,8 @@ enum Camera_ErrorCode
 
 相机错误代码的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -123,6 +128,8 @@ enum Camera_ErrorCode
 | CAMERA_ERROR_OPTIONAL_PROPERTY_NOT_EXIST = 7400113 |  |
 | CAMERA_SERVICE_FATAL_ERROR = 7400201 | 相机服务异常。<br> 比如没有相机权限、相机服务重启、跨进程调用异常等。 |
 | CAMERA_ERROR_CAPABILITY_NOT_SUPPORTED = 7400114 |  |
+| CAMERA_ERROR_UNSUPPORTED_MULTI_CAMERA_COMBINATION = 7400115 | 不支持的多摄组合。当因为硬件限制或驱动约束而尝试使用不支持的多摄组合时会返回此错误。请考虑使用其他相机组合，或查看设备支持的相机配置。<br>**起始版本：** 26.0.1 |
+| CAMERA_ERROR_PARAM_OUT_OF_RANGE = 7400116 | 参数超出范围。当参数值（如ISO、曝光时间或对焦距离）超出有效范围时会返回此错误。请确保取值在当前相机配置支持的范围内。<br>**起始版本：** 26.0.1 |
 
 ### Camera_Status
 
@@ -133,6 +140,8 @@ enum Camera_Status
 **描述：**
 
 相机状态的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -153,6 +162,8 @@ enum Camera_SceneMode
 
 相机模式的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -171,6 +182,8 @@ enum Camera_Position
 
 相机位置的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -188,6 +201,8 @@ enum OH_Camera_AutomotiveCameraPosition
 **描述：**
 
 Car设备摄像头位置的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -219,6 +234,8 @@ enum Camera_Type
 
 相机类型的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -239,6 +256,8 @@ enum Camera_Connection
 
 相机连接类型的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -256,6 +275,8 @@ enum OH_Camera_SensorColorFilterArrangement
 **描述：**
 
 传感器滤色阵列排列方式。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 24
 
@@ -275,6 +296,8 @@ enum Camera_Format
 **描述：**
 
 相机格式类型的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -299,6 +322,8 @@ enum Camera_FlashMode
 
 闪光模式的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -318,6 +343,8 @@ enum OH_Camera_FlashState
 
 闪光灯状态枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -335,6 +362,8 @@ enum Camera_ExposureMode
 **描述：**
 
 曝光模式的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -356,6 +385,8 @@ enum OH_Camera_ExposureMeteringMode
 
 曝光测光模式枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -374,6 +405,8 @@ enum OH_Camera_ExposureState
 
 枚举相机曝光状态。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 26.0.0
 
 | 枚举项 | 描述 |
@@ -390,6 +423,8 @@ enum Camera_WhiteBalanceMode
 **描述：**
 
 白平衡模式枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -413,6 +448,8 @@ enum Camera_FocusMode
 
 聚焦模式的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -432,6 +469,8 @@ enum Camera_FocusState
 
 焦点状态的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -449,6 +488,8 @@ enum Camera_VideoStabilizationMode
 **描述：**
 
 录像防抖模式的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -469,6 +510,8 @@ enum Camera_ImageRotation
 **描述：**
 
 图像旋转角度的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -493,6 +536,8 @@ enum Camera_QualityLevel
 
 图像质量等级的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 11
 
 | 枚举项 | 描述 |
@@ -510,6 +555,8 @@ enum Camera_MetadataObjectType
 **描述：**
 
 元数据对象类型的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -536,6 +583,8 @@ enum Camera_TorchMode
 
 手电筒模式的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -557,6 +606,8 @@ enum Camera_SmoothZoomMode
 
 平滑变焦模式的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -573,6 +624,8 @@ enum Camera_PreconfigType
 **描述：**
 
 预配置照片分辨率的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 12
 
@@ -594,6 +647,8 @@ enum Camera_PreconfigRatio
 
 预配置照片比例的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 12
 
 | 枚举项 | 描述 |
@@ -612,6 +667,8 @@ enum Camera_HostDeviceType
 
 远程设备类型枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 15
 
 | 枚举项 | 描述 |
@@ -629,6 +686,8 @@ enum Camera_FoldStatus
 **描述：**
 
 折叠状态枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 13
 
@@ -651,12 +710,33 @@ enum Camera_QualityPrioritization
 
 录像质量优先级的枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 14
 
 | 枚举项 | 描述 |
 | -- | -- |
 | HIGH_QUALITY = 0 | 高录像质量。 |
 | POWER_BALANCE = 1 | 功耗平衡录像质量。 |
+
+### OH_Camera_AuxiliaryPhotoType
+
+```c
+enum OH_Camera_AuxiliaryPhotoType
+```
+
+**描述：**
+
+辅助图类型的枚举。在用于拍摄皮肤健康评估的辅助图时，使用该枚举类型来指定检测目标。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
+**起始版本：** 26.0.1
+
+| 枚举项 | 描述 |
+| -- | -- |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_OXYGEN = 0 | 血氧图。<br>**起始版本：** 26.0.1 |
+| OH_CAMERA_AUXILIARY_PHOTO_TYPE_PIGMENTATION = 1 | 色斑图。<br>**起始版本：** 26.0.1 |
 
 ### Camera_ConcurrentType
 
@@ -667,6 +747,8 @@ enum Camera_ConcurrentType
 **描述：**
 
 相机并发状态的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 18
 
@@ -684,6 +766,8 @@ enum Camera_SystemPressureLevel
 **描述：**
 
 系统压力等级的枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -705,6 +789,8 @@ enum Camera_PhotoQualityPrioritization
 
 拍照画质优先策略枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 21
 
 | 枚举项 | 描述 |
@@ -721,6 +807,8 @@ enum Camera_ControlCenterEffectType
 **描述：**
 
 控制器效果类型枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 20
 
@@ -741,6 +829,8 @@ enum OH_Camera_OISMode
 
 光学防抖（Optical Image Stabilization）模式枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -759,6 +849,8 @@ enum OH_Camera_OISAxes
 
 光学防抖（OIS）轴枚举。
 
+**系统能力：** SystemCapability.Multimedia.Camera.Core
+
 **起始版本：** 24
 
 | 枚举项 | 描述 |
@@ -775,6 +867,8 @@ enum OH_Camera_MetadataObjectEmotion
 **描述：**
 
 元数据对象情绪类型枚举。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 26.0.0
 
@@ -797,6 +891,8 @@ Camera_ErrorCode OH_Camera_GetCameraManager(Camera_Manager** cameraManager)
 **描述：**
 
 创建CameraManager实例。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 
@@ -821,6 +917,8 @@ Camera_ErrorCode OH_Camera_DeleteCameraManager(Camera_Manager* cameraManager)
 **描述：**
 
 删除CameraManager实例。
+
+**系统能力：** SystemCapability.Multimedia.Camera.Core
 
 **起始版本：** 11
 

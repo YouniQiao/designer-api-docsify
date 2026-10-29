@@ -6,6 +6,8 @@ Type definitions for video processing.
 
 **Library**: libvideo_processing.so
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Related module**: [VideoProcessing](capi-videoprocessing.md)
@@ -48,9 +50,9 @@ Type definitions for video processing.
 | const int32_t VIDEO_PROCESSING_TYPE_DETAIL_ENHANCER | Used to create an video processing instance of detail enhancement.<br> Scale or resize video with the specified quality or just enhance details for rendering without changing its resolution.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
 | const char *VIDEO_DETAIL_ENHANCER_PARAMETER_KEY_QUALITY_LEVEL | The key is used to specify the quality level for video detail enhancement.<br> See [VideoDetailEnhancer_QualityLevel](capi-video-processing-types-h.md#videodetailenhancer_qualitylevel) for its values. Use OH_VideoProcessing_SetParameter to set the quality level. Use OH_VideoProcessing_GetParameter to get the current quality level.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
 | const char *VIDEO_METADATA_GENERATOR_STYLE_CONTROL | The key is used to specify the style control for video metadata generator.<br> See [VideoMetadataGeneratorStyleControl](capi-video-processing-types-h.md#videometadatageneratorstylecontrol) for its values. Use OH_AVFormat_SetIntValue to set the mode value into AVFormat parameter. Use OH_VideoProcessing_SetParameter to set parameter into video processing instance. Use OH_VideoProcessing_GetParameter to get the current mode.<br>**Since**: 22<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
-| const int32_t VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR | Used to define video aisr autoeffect in XComponent.<br> Use OH_VideoProcessing_IsAutoEffectSupported to query if aisr autoeffect is supported.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
-| const char *VIDEO_AUTOEFFECT_ENABLE | Sets the key value for enabling or disabling AutoEffect.<br> Use OH_AVFormat_SetIntValue to set the enable value (0 is false, 1 is true) to the AVFormat parameter. Use OH_VideoProcessing_SetAutoEffectParam to set the parameters to the video processing instance.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
-| const char *VIDEO_AUTOEFFECT_AISR_STRENGTH | Sets the AISR strength.<br> Use OH_AVFormat_SetFloatValue to set the strength value to the AVFormat parameter. When the value is in the range [0.0, 1.0], the larger the value, the better the image quality, If this parameter is set to a value less than 0, the image quality enhancement is adaptive. Use OH_VideoProcessing_SetAutoEffectParam to set the parameters of the video processing instance.<br>**Since**: 26.1.0<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
+| const int32_t VIDEO_PROCESSING_TYPE_AUTOEFFECT_AISR | Used to define video aisr autoeffect in XComponent.<br> Use OH_VideoProcessing_IsAutoEffectSupported to query if aisr autoeffect is supported.<br>**Since**: 26.0.1<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
+| const char *VIDEO_AUTOEFFECT_ENABLE | Sets the key value for enabling or disabling AutoEffect.<br> Use OH_AVFormat_SetIntValue to set the enable value (0 is false, 1 is true) to the AVFormat parameter. Use OH_VideoProcessing_SetAutoEffectParam to set the parameters to the video processing instance.<br>**Since**: 26.0.1<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
+| const char *VIDEO_AUTOEFFECT_AISR_STRENGTH | Sets the AISR strength.<br> Use OH_AVFormat_SetFloatValue to set the strength value to the AVFormat parameter. When the value is in the range [0.0, 1.0], the larger the value, the better the image quality, If this parameter is set to a value less than 0, the image quality enhancement is adaptive. Use OH_VideoProcessing_SetAutoEffectParam to set the parameters of the video processing instance.<br>**Since**: 26.0.1<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
 | void (*OH_VideoProcessingCallback_OnError)(OH_VideoProcessing* videoProcessor, VideoProcessing_ErrorCode error, void* userData) | The callback function pointer definition for reporting error during video processing.<br> Errors: [VIDEO_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-video-processing-types-h.md#videoprocessing_errorcode), the processing is not supported. For example, the color space conversion according to the source and destination videos' properties is not supported. [VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode), some property of the video is invalid. For example, the color space of the video is invalid. [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode), out of memory. [VIDEO_PROCESSING_ERROR_PROCESS_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode), some processing error occurs. For more errors, see [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode).<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
 | void (*OH_VideoProcessingCallback_OnState)(OH_VideoProcessing* videoProcessor, VideoProcessing_State state, void* userData) | The callback function pointer definition for reporting video processing state.<br> The state will be [VIDEO_PROCESSING_STATE_RUNNING](capi-video-processing-types-h.md#videoprocessing_state) after OH_VideoProcessing_Start is called successfully. The state will be [VIDEO_PROCESSING_STATE_STOPPED](capi-video-processing-types-h.md#videoprocessing_state) after all the buffers cached before OH_VideoProcessing_Stop is called are processed.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
 | void (*OH_VideoProcessingCallback_OnNewOutputBuffer)(OH_VideoProcessing* videoProcessor, uint32_t index, void* userData) | The callback function pointer definition for reporting a new output buffer is filled with processed data.<br> Every new output buffer's index will report to user once the buffer is filled with processed data. Then call OH_VideoProcessing_RenderOutputBuffer with the buffer's index to send the output buffer out. If this function is not registered, the output buffer is sent out as soon as the buffer is filled with processed data without reporting.<br>**Since**: 12<br>**System capability**: SystemCapability.Multimedia.VideoProcessingEngine |
@@ -66,6 +68,8 @@ enum VideoDetailEnhancer_QualityLevel
 **Description**
 
 The quality level is used for detail enhancement.<br> It is the value of the key parameter [VIDEO_DETAIL_ENHANCER_PARAMETER_KEY_QUALITY_LEVEL](capi-video-processing-types-h.md#变量).
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -92,6 +96,8 @@ enum VideoMetadataGeneratorStyleControl
 
 The style control is used for video metadata generator.<br> It is the value of the key parameter [VIDEO_METADATA_GENERATOR_STYLE_CONTROL](capi-video-processing-types-h.md#变量).
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 22
 
 | Enum item | Description |
@@ -115,6 +121,8 @@ enum VideoProcessing_ErrorCode
 **Description**
 
 Video processing error code.
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -142,6 +150,8 @@ enum VideoProcessing_State
 
 Video processing states.<br> The state is reported to user by callback function OH_VideoProcessing_OnState.
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 | Enum item | Description |
@@ -161,6 +171,8 @@ typedef void (*OH_VideoProcessingCallback_OnError)(OH_VideoProcessing* videoProc
 **Description**
 
 The callback function pointer definition for reporting error during video processing.<br> Errors: [VIDEO_PROCESSING_ERROR_UNSUPPORTED_PROCESSING](capi-video-processing-types-h.md#videoprocessing_errorcode), the processing is not supported. For example, the color space conversion according to the source and destination videos' properties is not supported. [VIDEO_PROCESSING_ERROR_INVALID_VALUE](capi-video-processing-types-h.md#videoprocessing_errorcode), some property of the video is invalid. For example, the color space of the video is invalid. [VIDEO_PROCESSING_ERROR_NO_MEMORY](capi-video-processing-types-h.md#videoprocessing_errorcode), out of memory. [VIDEO_PROCESSING_ERROR_PROCESS_FAILED](capi-video-processing-types-h.md#videoprocessing_errorcode), some processing error occurs. For more errors, see [VideoProcessing_ErrorCode](capi-video-processing-types-h.md#videoprocessing_errorcode).
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 
@@ -182,6 +194,8 @@ typedef void (*OH_VideoProcessingCallback_OnState)(OH_VideoProcessing* videoProc
 
 The callback function pointer definition for reporting video processing state.<br> The state will be [VIDEO_PROCESSING_STATE_RUNNING](capi-video-processing-types-h.md#videoprocessing_state) after OH_VideoProcessing_Start is called successfully. The state will be [VIDEO_PROCESSING_STATE_STOPPED](capi-video-processing-types-h.md#videoprocessing_state) after all the buffers cached before OH_VideoProcessing_Stop is called are processed.
 
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
+
 **Since**: 12
 
 **Parameters**:
@@ -201,6 +215,8 @@ typedef void (*OH_VideoProcessingCallback_OnNewOutputBuffer)(OH_VideoProcessing*
 **Description**
 
 The callback function pointer definition for reporting a new output buffer is filled with processed data.<br> Every new output buffer's index will report to user once the buffer is filled with processed data. Then call OH_VideoProcessing_RenderOutputBuffer with the buffer's index to send the output buffer out. If this function is not registered, the output buffer is sent out as soon as the buffer is filled with processed data without reporting.
+
+**System capability**: SystemCapability.Multimedia.VideoProcessingEngine
 
 **Since**: 12
 

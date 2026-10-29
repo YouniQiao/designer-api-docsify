@@ -6,7 +6,7 @@ typedef struct OH_UdmfRecordProvider OH_UdmfRecordProvider
 
 ## Overview
 
-Defines the data provider.
+Defines the data record provider in a unified data object.
 
 **System capability**: SystemCapability.DistributedDataManager.UDMF.Core
 

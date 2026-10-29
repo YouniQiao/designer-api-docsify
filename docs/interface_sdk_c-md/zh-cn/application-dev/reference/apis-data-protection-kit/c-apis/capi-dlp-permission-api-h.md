@@ -2,9 +2,11 @@
 
 ## 概述
 
-声明用于跨设备的文件的权限管理、加密存储、授权访问等能力的接口。
+声明用于跨设备的文件权限管理、加密存储、授权访问等能力的接口。
 
 **库：** libohdlp_permission.so
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 
@@ -23,7 +25,7 @@
 
 | 名称 | 描述 |
 | -- | -- |
-| [DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t *flags)](#oh_dlp_getdlppermissioninfo) | 查询 DLP 文件的权限信息 |
+| [DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t *flags)](#oh_dlp_getdlppermissioninfo) | 获取当前DLP沙箱的权限信息。 |
 | [DLP_ErrCode OH_DLP_GetOriginalFileName(const char *fileName, char **originalFileName)](#oh_dlp_getoriginalfilename) | 获取指定DLP文件名的原始文件名。 |
 | [DLP_ErrCode OH_DLP_IsInSandbox(bool *isInSandbox)](#oh_dlp_isinsandbox) | 查询当前应用是否运行在DLP沙箱环境。 |
 | [DLP_ErrCode OH_DLP_SetSandboxAppConfig(const char *configInfo)](#oh_dlp_setsandboxappconfig) | 设置沙箱应用配置信息。 |
@@ -42,11 +44,14 @@ enum DLP_ErrCode
 
 DLP错误码的枚举。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 | 枚举项 | 描述 |
 | -- | -- |
 | ERR_OH_SUCCESS = 0 | 表示操作成功。 |
+| OH_DLP_NOT_SUPPORTED = 801 |  |
 | ERR_OH_INVALID_PARAMETER = 19100001 | 表示入参错误。 |
 | ERR_OH_API_ONLY_FOR_SANDBOX = 19100006 | 表示非DLP沙箱应用。 |
 | ERR_OH_API_NOT_FOR_SANDBOX = 19100007 | 表示DLP沙箱应用不允许调用此接口。 |
@@ -63,6 +68,8 @@ enum DLP_FileAccess
 **描述：**
 
 DLP文件授权类型的枚举。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 
@@ -84,7 +91,9 @@ DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t 
 
 **描述：**
 
-查询 DLP 文件的权限信息
+获取当前DLP沙箱的权限信息。
+
+**系统能力：** SystemCapability.Security.DataLossPrevention
 
 **起始版本：** 14
 
@@ -92,14 +101,14 @@ DLP_ErrCode OH_DLP_GetDlpPermissionInfo(DLP_FileAccess *dlpFileAccess, uint32_t 
 
 | 参数项 | 描述 |
 | -- | -- |
-| [DLP_FileAccess](capi-dlp-permission-api-h.md#dlp_fileaccess) *dlpFileAccess | 表示DLP文件针对用户的授权类型，例如：只读。 |
-| uint32_t *flags | 表示DLP文件的详细操作权限，操作权限的具体含义为： <br>0x00000000-表示无文件权限。 <br>0x00000001-表示文件的查看权限。 <br>0x00000002-表示文件的保存权限。 <br>0x00000004-表示文件的另存为权限。 <br>0x00000008-表示文件的编辑权限。 <br>0x00000010-表示文件的截屏权限。 <br>0x00000020-表示文件的共享屏幕权限。 <br>0x00000040-表示文件的录屏权限。 <br>0x00000080-表示文件的复制权限。 <br>0x00000100-表示文件的打印权限。 <br>0x00000200-表示文件的导出权限。 <br>0x00000400-表示文件的修改文件权限。 |
+| [DLP_FileAccess](capi-dlp-permission-api-h.md#dlp_fileaccess) *dlpFileAccess | [out] 表示DLP文件针对用户的授权类型，例如：只读。 |
+| uint32_t *flags | [out] 表示DLP文件的详细操作权限，具体含义为： <br>0x00000000-表示无文件权限。 <br>0x00000001-表示文件的查看权限。 <br>0x00000002-表示文件的保存权限。 <br>0x00000004-表示文件的另存为权限。 <br>0x00000008-表示文件的编辑权限。 <br>0x00000010-表示文件的截屏权限。 <br>0x00000020-表示文件的共享屏幕权限。 <br>0x00000040-表示文件的录屏权限。 <br>0x00000080-表示文件的复制权限。 <br>0x00000100-表示文件的打印权限。 <br>0x00000200-表示文件的导出权限。 <br>0x00000400-表示文件的修改文件权限。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100001 - 入参错误。<br>19100006 - 非DLP沙箱应用。<br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100001 - 入参错误。<br>19100006 - 非DLP沙箱应用。<br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。 |
 
 ### OH_DLP_GetOriginalFileName()
 
@@ -111,20 +120,22 @@ DLP_ErrCode OH_DLP_GetOriginalFileName(const char *fileName, char **originalFile
 
 获取指定DLP文件名的原始文件名。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| const char *fileName | 指定要查询的文件名。 |
-| char **originalFileName | DLP文件的原始文件名。 |
+| const char *fileName | [in] 指定要查询的文件名。长度不超过256字节。 |
+| char **originalFileName | [out] DLP文件的原始文件名。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100001 - 入参错误。<br>19100012 - 内存申请失败。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100001 - 入参错误。<br>19100012 - 内存申请失败。 |
 
 ### OH_DLP_IsInSandbox()
 
@@ -136,19 +147,21 @@ DLP_ErrCode OH_DLP_IsInSandbox(bool *isInSandbox)
 
 查询当前应用是否运行在DLP沙箱环境。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| bool *isInSandbox | true表示当前应用运行在DLP沙箱环境，false表示当前应用不是运行在DLP沙箱环境。 |
+| bool *isInSandbox | [out] true表示当前应用运行在DLP沙箱环境，false表示当前应用不是运行在DLP沙箱环境。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。 |
 
 ### OH_DLP_SetSandboxAppConfig()
 
@@ -160,19 +173,21 @@ DLP_ErrCode OH_DLP_SetSandboxAppConfig(const char *configInfo)
 
 设置沙箱应用配置信息。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| const char *configInfo | 沙箱应用配置信息。 |
+| const char *configInfo | [in] 沙箱应用配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100001 - 入参错误。<br>19100007 - DLP沙箱应用不允许调用此接口。<br>19100011 - 系统服务工作异常。<br>19100018 - 应用未授权。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100001 - 入参错误。<br>19100007 - DLP沙箱应用不允许调用此接口。<br>19100011 - 系统服务工作异常。<br>19100018 - 应用未授权。 |
 
 ### OH_DLP_GetSandboxAppConfig()
 
@@ -184,19 +199,21 @@ DLP_ErrCode OH_DLP_GetSandboxAppConfig(char **configInfo)
 
 获取沙箱应用配置信息。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **参数：**
 
 | 参数项 | 描述 |
 | -- | -- |
-| char **configInfo | 沙箱应用配置信息。 |
+| char **configInfo | [out] 沙箱应用配置信息。 |
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。<br>19100018 - 应用未授权。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100011 - 系统服务工作异常。<br>19100012 - 内存申请失败。<br>19100018 - 应用未授权。 |
 
 ### OH_DLP_CleanSandboxAppConfig()
 
@@ -208,12 +225,14 @@ DLP_ErrCode OH_DLP_CleanSandboxAppConfig()
 
 清理沙箱应用配置信息。
 
+**系统能力：** SystemCapability.Security.DataLossPrevention
+
 **起始版本：** 14
 
 **返回值：**
 
 | 类型 | 说明 |
 | -- | -- |
-| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>19100007 - DLP沙箱应用不允许调用此接口。<br>19100011 - 系统服务工作异常。<br>19100018 - 应用未授权。 |
+| [DLP_ErrCode](capi-dlp-permission-api-h.md#dlp_errcode) | 0 - 操作成功。<br>801 - 功能不支持。可能原因：车不支持。在API版本26.0.1及其以上版本，将返回该错误码。[since 26.0.1] <br>19100007 - DLP沙箱应用不允许调用此接口。<br>19100011 - 系统服务工作异常。<br>19100018 - 应用未授权。 |
 
 

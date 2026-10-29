@@ -10,7 +10,7 @@ Defines the pointer to OH_AbilityRuntime_ChildProcessInfos.
 
 **System capability**: SystemCapability.Ability.AbilityRuntime.Core
 
-**Since**: 26.1.0
+**Since**: 26.0.1
 
 **Related module**: [AbilityRuntime](capi-abilityruntime.md)
 

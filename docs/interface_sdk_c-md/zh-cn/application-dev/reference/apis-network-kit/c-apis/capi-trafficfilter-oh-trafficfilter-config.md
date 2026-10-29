@@ -10,7 +10,7 @@ NFQueue配置结构体 - 如果`config`为**NULL**，实现将应用以下默认
 
 **系统能力：** SystemCapability.Communication.NetManager.NetFirewall
 
-**起始版本：** 26.1.0
+**起始版本：** 26.0.1
 
 **相关模块：** [TrafficFilter](capi-trafficfilter.md)
 
@@ -22,10 +22,10 @@ NFQueue配置结构体 - 如果`config`为**NULL**，实现将应用以下默认
 
 | 名称 | 描述 |
 | -- | -- |
-| uint32_t size | 调用者必须将其设置为`sizeof(OH_TrafficFilter_Config)`。 调用者需要先零初始化结构体，然后设置此字段。 实现使用此值来确定有效数据范围，以实现二进制兼容。<br>**起始版本：** 26.1.0 |
-| uint32_t packetCopyMode | NFQueue报文拷贝模式，参见OH_TrafficFilter_PacketCopyMode<br>**起始版本：** 26.1.0 |
-| uint32_t packetCopyLen | NFQueue报文拷贝长度（字节），0xFFFF表示拷贝整个报文，较小的值仅拷贝报文头<br>**起始版本：** 26.1.0 |
-| uint32_t nfqueueMaxlen | NFQueue最大队列长度（报文数量），0表示系统默认值（1024）<br>**起始版本：** 26.1.0 |
-| uint32_t nfqueueFlags | NFQueue队列标志，参见OH_TRAFFICFILTER_NFQUEUE_FLAG_*定义<br>**起始版本：** 26.1.0 |
+| uint32_t size | 调用者必须将其设置为`sizeof(OH_TrafficFilter_Config)`。 调用者需要先零初始化结构体，然后设置此字段。 实现使用此值来确定有效数据范围，以实现二进制兼容。<br>**起始版本：** 26.0.1 |
+| uint32_t packetCopyMode | NFQueue报文拷贝模式，参见OH_TrafficFilter_PacketCopyMode<br>**起始版本：** 26.0.1 |
+| uint32_t packetCopyLen | NFQueue报文拷贝长度（字节），0xFFFF表示拷贝整个报文，较小的值仅拷贝报文头<br>**起始版本：** 26.0.1 |
+| uint32_t nfqueueMaxlen | NFQueue最大队列长度（报文数量），0表示系统默认值（1024）<br>**起始版本：** 26.0.1 |
+| uint32_t nfqueueFlags | NFQueue队列标志，参见OH_TRAFFICFILTER_NFQUEUE_FLAG_*定义<br>**起始版本：** 26.0.1 |
 
 

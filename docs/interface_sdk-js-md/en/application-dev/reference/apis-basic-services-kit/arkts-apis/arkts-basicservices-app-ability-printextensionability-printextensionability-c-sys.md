@@ -4,17 +4,13 @@
 declare class PrintExtensionAbility
 ```
 
-class of print extension ability.
+This module provides the APIs for calling the print extension ability. **PrintExtensionAbility** runs based on the lifecycle callback mechanism. The system invokes the corresponding callback methods to connect to the print extension, discover printers, connect to or disconnect from printers, query printer capabilities, and start or cancel print jobs. You need to implement the print extension logic in each callback.
 
 **Since:** 14
 
 <!--Device-unnamed-declare class PrintExtensionAbility--><!--Device-unnamed-declare class PrintExtensionAbility-End-->
 
 **System capability:** SystemCapability.Print.PrintFramework
-
-## ExtensionAbility Usage Restrictions
-
-To ensure system security and stability, PrintExtensionAbility is restricted from abusing system resources. The system controls its capabilities and does not support referencing some modules. For details, see [Appendix](#appendix).
 
 ## Modules to Import
 
@@ -28,7 +24,7 @@ import { PrintExtensionAbility } from '@kit.BasicServicesKit';
 onRequestPreview(jobInfo: print.PrintJob): string
 ```
 
-Called once to request preview and send result to Print SA.
+Defines a method called when the system print service requests a preview. You need to inherit the **PrintExtensionAbility** class and implement this method to return the preview result to the system print service.
 
 **Since:** 10
 
@@ -44,13 +40,13 @@ Called once to request preview and send result to Print SA.
 
 | Name | Type | Mandatory | Description |
 | --- | --- | --- | --- |
-| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Indicates the information of job. |
+| jobInfo | [print.PrintJob](arkts-basicservices-print-printjob-i.md) | Yes | Information about the print job. |
 
 **Return value:**
 
 | Type | Description |
 | --- | --- |
-| string | preview result. |
+| string | Preview result. |
 
 **Error codes:**
 
@@ -75,19 +71,3 @@ export default class HWPrintExtension extends PrintExtensionAbility {
 ```
 
 <!--DelEnd-->
-
-## Appendix
-
-PrintExtensionAbility does not support referencing the following modules.
-
-| Kit | Module |
-| --- | --- |
-| Contacts Kit | [@ohos.contact](../../apis-contacts-kit/arkts-apis/arkts-contacts-contact.md) |
-| Location Kit | [@ohos.geolocation](../../apis-location-kit/arkts-apis/arkts-location-geolocation.md) |
-| Location Kit | [@ohos.geoLocationManager](../../apis-location-kit/arkts-apis/arkts-location-geolocationmanager.md) |
-| Camera Kit | [@ohos.multimedia.camera](../../apis-camera-kit/arkts-apis/arkts-camera-multimedia-camera.md) |
-| Audio Kit | [@ohos.multimedia.audio](../../apis-audio-kit/arkts-apis/arkts-audio-multimedia-audio.md) |
-| media | [@ohos.multimedia.media](../../apis-media/arkts-apis/arkts-media-multimedia-media.md) |
-| Telephony Kit | [@ohos.telephony.call](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-call.md) |
-| Telephony Kit | [@ohos.telephony.sim](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sim.md) |
-| Telephony Kit | [@ohos.telephony.sms](../../apis-telephony-kit/arkts-apis/arkts-telephony-telephony-sms.md) |
